@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1.2 Subspaces – Linear Algebra</title>
+
+    <!-- Styles -->
+    <!-- Styles -->
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- MathJax Configuration with Custom Macros -->
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['\\(', '\\)']],
+                displayMath: [['\\[', '\\]']],
+                processEscapes: true,
+                processEnvironments: true,
+                tags: 'ams',
+                macros: {
+                    0: "\\mathbf{0}",
+                    1: "\\mathbf{1}",
+                    A: "\\mathbf{A}",
+                    B: "\\mathbf{B}",
+                    C: "\\mathbf{C}",
+                    Cor: "\\operatorname*{Cor}",
+                    Corr: "\\operatorname*{Corr}",
+                    Cov: "\\operatorname*{Cov}",
+                    D: "\\mathbf{D}",
+                    E: "\\mathbf{E}",
+                    Ev: "\\operatorname*{\\mathbb{E}}",
+                    F: "\\mathbf{F}",
+                    G: "\\mathbf{G}",
+                    H: "\\mathbf{H}",
+                    I: "\\mathbf{I}",
+                    J: "\\mathbf{J}",
+                    K: "\\mathbf{K}",
+                    L: "\\mathbf{L}",
+                    M: "\\mathbf{M}",
+                    N: "\\mathbf{N}",
+                    O: "\\mathbf{O}",
+                    P: "\\mathbf{P}",
+                    Pr: "\\operatorname{Pr}",
+                    Q: "\\mathbf{Q}",
+                    R: "\\mathbf{R}",
+                    S: "\\mathbf{S}",
+                    Span: "\\operatorname{span}",
+                    T: "\\mathbf{T}",
+                    U: "\\mathbf{U}",
+                    V: "\\mathbf{V}",
+                    Var: "\\operatorname*{Var}",
+                    W: "\\mathbf{W}",
+                    X: "\\mathbf{X}",
+                    Y: "\\mathbf{Y}",
+                    Z: "\\mathbf{Z}",
+                    a: "\\mathbf{a}",
+                    adj: "\\operatorname{adj}",
+                    b: "\\mathbf{b}",
+                    c: "\\mathbf{c}",
+                    cA: "\\mathcal{A}",
+                    cB: "\\mathcal{B}",
+                    cC: "\\mathcal{C}",
+                    cD: "\\mathcal{D}",
+                    cE: "\\mathcal{E}",
+                    cF: "\\mathcal{F}",
+                    cG: "\\mathcal{G}",
+                    cH: "\\mathcal{H}",
+                    cI: "\\mathcal{I}",
+                    cJ: "\\mathcal{J}",
+                    cK: "\\mathcal{K}",
+                    cL: "\\mathcal{L}",
+                    cM: "\\mathcal{M}",
+                    cN: "\\mathcal{N}",
+                    cO: "\\mathcal{O}",
+                    cP: "\\mathcal{P}",
+                    cQ: "\\mathcal{Q}",
+                    cR: "\\mathcal{R}",
+                    cS: "\\mathcal{S}",
+                    cT: "\\mathcal{T}",
+                    cU: "\\mathcal{U}",
+                    cV: "\\mathcal{V}",
+                    cW: "\\mathcal{W}",
+                    cX: "\\mathcal{X}",
+                    cY: "\\mathcal{Y}",
+                    cZ: "\\mathcal{Z}",
+                    col: "\\text{col}",
+                    coloneqq: "\\mathrel{:=}",
+                    d: "\\mathbf{d}",
+                    dd: "\\mathrm{d}",
+                    defeq: "\\stackrel{\\smash{\\textnormal{\\tiny def}}}{=}",
+                    diag: "\\operatorname{diag}",
+                    distBern: "\\operatorname{Ber}",
+                    distBeta: "\\operatorname{Beta}",
+                    distBin: "\\operatorname{Bin}",
+                    distCauchy: "\\operatorname{Cauchy}",
+                    distDir: "\\operatorname{Dir}",
+                    distExp: "\\operatorname{Exp}",
+                    distGamma: "\\operatorname{Gamma}",
+                    distGeom: "\\operatorname{Geo}",
+                    distHyp: "\\operatorname{Hyp}",
+                    distInvWishart: "\\operatorname{InvWishart}",
+                    distLognormal: "\\operatorname{Lognormal}",
+                    distMult: "\\operatorname{Mult}",
+                    distN: "\\operatorname{\\mathcal{N}}",
+                    distNB: "\\operatorname{NB}",
+                    distPareto: "\\operatorname{Pareto}",
+                    distPois: "\\operatorname{Poi}",
+                    distUnif: "\\operatorname{Unif}",
+                    distWeibull: "\\operatorname{Weibull}",
+                    distWishart: "\\operatorname{Wishart}",
+                    e: "\\mathbf{e}",
+                    eqqcolon: "\\mathrel{=:}",
+                    f: "\\mathbf{f}",
+                    g: "\\mathbf{g}",
+                    h: "\\mathbf{h}",
+                    i: "\\mathbf{i}",
+                    id: "\\operatorname{id}",
+                    im: "\\operatorname{im}",
+                    img: "\\operatorname{img}",
+                    j: "\\mathbf{j}",
+                    k: "\\mathbf{k}",
+                    ker: "\\operatorname{ker}",
+                    l: "\\mathbf{l}",
+                    m: "\\mathbf{m}",
+                    n: "\\mathbf{n}",
+                    nA: "\\mathbb{A}",
+                    nB: "\\mathbb{B}",
+                    nC: "\\mathbb{C}",
+                    nD: "\\mathbb{D}",
+                    nE: "\\mathbb{E}",
+                    nF: "\\mathbb{F}",
+                    nG: "\\mathbb{G}",
+                    nH: "\\mathbb{H}",
+                    nI: "\\mathbb{I}",
+                    nJ: "\\mathbb{J}",
+                    nK: "\\mathbb{K}",
+                    nL: "\\mathbb{L}",
+                    nM: "\\mathbb{M}",
+                    nN: "\\mathbb{N}",
+                    nO: "\\mathbb{O}",
+                    nP: "\\mathbb{P}",
+                    nQ: "\\mathbb{Q}",
+                    nR: "\\mathbb{R}",
+                    nS: "\\mathbb{S}",
+                    nT: "\\mathbb{T}",
+                    nU: "\\mathbb{U}",
+                    nV: "\\mathbb{V}",
+                    nW: "\\mathbb{W}",
+                    nX: "\\mathbb{X}",
+                    nY: "\\mathbb{Y}",
+                    nZ: "\\mathbb{Z}",
+                    nul: "\\text{nul}",
+                    nullity: "\\text{nullity}",
+                    o: "\\mathbf{o}",
+                    p: "\\mathbf{p}",
+                    q: "\\mathbf{q}",
+                    r: "\\mathbf{r}",
+                    rank: "\\text{rank}",
+                    row: "\\text{row}",
+                    s: "\\mathbf{s}",
+                    sA: "\\mathcal{A}",
+                    sB: "\\mathcal{B}",
+                    sC: "\\mathcal{C}",
+                    sD: "\\mathcal{D}",
+                    sE: "\\mathcal{E}",
+                    sF: "\\mathcal{F}",
+                    sG: "\\mathcal{G}",
+                    sH: "\\mathcal{H}",
+                    sI: "\\mathcal{I}",
+                    sJ: "\\mathcal{J}",
+                    sK: "\\mathcal{K}",
+                    sL: "\\mathcal{L}",
+                    sM: "\\mathcal{M}",
+                    sN: "\\mathcal{N}",
+                    sO: "\\mathcal{O}",
+                    sP: "\\mathcal{P}",
+                    sQ: "\\mathcal{Q}",
+                    sR: "\\mathcal{R}",
+                    sS: "\\mathcal{S}",
+                    sT: "\\mathcal{T}",
+                    sU: "\\mathcal{U}",
+                    sV: "\\mathcal{V}",
+                    sW: "\\mathcal{W}",
+                    sX: "\\mathcal{X}",
+                    sY: "\\mathcal{Y}",
+                    sZ: "\\mathcal{Z}",
+                    spn: "\\text{span}",
+                    t: "\\mathbf{t}",
+                    tr: "\\text{tr}",
+                    u: "\\mathbf{u}",
+                    v: "\\mathbf{v}",
+                    vDelta: "\\bm{\\Delta}",
+                    vGamma: "\\bm{\\Gamma}",
+                    vLambda: "\\bm{\\Lambda}",
+                    vOmega: "\\bm{\\Omega}",
+                    vPhi: "\\bm{\\Phi}",
+                    vPi: "\\bm{\\Pi}",
+                    vPsi: "\\bm{\\Psi}",
+                    vSigma: "\\bm{\\Sigma}",
+                    vTheta: "\\bm{\\Theta}",
+                    vUpsilon: "\\bm{\\Upsilon}",
+                    vXi: "\\bm{\\Xi}",
+                    valpha: "\\bm{\\upalpha}",
+                    vbeta: "\\bm{\\upbeta}",
+                    vchi: "\\bm{\\upchi}",
+                    vdelta: "\\bm{\\updelta}",
+                    vepsilon: "\\bm{\\upepsilon}",
+                    veta: "\\bm{\\upeta}",
+                    vgamma: "\\bm{\\upgamma}",
+                    viota: "\\bm{\\upiota}",
+                    vkappa: "\\bm{\\upkappa}",
+                    vlambda: "\\bm{\\uplambda}",
+                    vmu: "\\bm{\\upmu}",
+                    vnu: "\\bm{\\upnu}",
+                    vomega: "\\bm{\\upomega}",
+                    vphi: "\\bm{\\upphi}",
+                    vpi: "\\bm{\\uppi}",
+                    vpsi: "\\bm{\\uppsi}",
+                    vrho: "\\bm{\\uprho}",
+                    vsigma: "\\bm{\\upsigma}",
+                    vtau: "\\bm{\\uptau}",
+                    vtheta: "\\bm{\\uptheta}",
+                    vupsilon: "\\bm{\\upupsilon}",
+                    vvarepsilon: "\\bm{\\upvarepsilon}",
+                    vvarphi: "\\bm{\\upvarphi}",
+                    vvarpi: "\\bm{\\upvarpi}",
+                    vvarrho: "\\bm{\\upvarrho}",
+                    vvarsigma: "\\bm{\\upvarsigma}",
+                    vvartheta: "\\bm{\\upvartheta}",
+                    vxi: "\\bm{\\upxi}",
+                    vzeta: "\\bm{\\upzeta}",
+                    w: "\\mathbf{w}",
+                    x: "\\mathbf{x}",
+                    y: "\\mathbf{y}",
+                    z: "\\mathbf{z}"
+                },
+                // Define environments not in base amsmath
+                environments: {
+                    dcases: ["\\left\\{\\begin{array}{ll}", "\\end{array}\\right."]
+                }
+            },
+            options: {
+                skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"></script>
+
+    <!-- Tippy.js for tooltips -->
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
+    <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/shift-away.css">
+
+        
+        <script>
+        (function(){
+          if (typeof window.MathJax === 'undefined') window.MathJax = {};
+          if (typeof window.MathJax.tex === 'undefined') window.MathJax.tex = {};
+          if (typeof window.MathJax.tex.macros === 'undefined') window.MathJax.tex.macros = {};
+          Object.assign(window.MathJax.tex.macros, {
+                    "\Var": "\\text{Var}\\left( #1 \\right)",
+                    "\powerset": "\\mathcal{P}\\left( #1 \\right)",
+                    "\Exp": "\\mathbb{E}\\left[ #1 \\right]",
+                    "\closure": "\\overline{#1}",
+                    "\defeq": "\\stackrel{\\smash{\\textnormal{\\tiny def}}}{=}",
+                    "\abs": "\\left| #1 \\right|",
+                    "\ket": "| #1 \\rangle",
+                    "\row": "\\text{row}",
+                    "\Cov": "\\text{Cov}\\left( #1, #2 \\right)",
+                    "\rom": "\\mathrm{#1}",
+                    "\norm": "\\left\\| #1 \\right\\|",
+                    "\td": "\\frac{d #1}{d #2}",
+                    "\card": "\\left| #1 \\right|",
+                    "\boundary": "\\partial #1",
+                    "\col": "\\text{col}",
+                    "\bm": "\\mathbf{#1}",
+                    "\cl": "\\mathcal{#1}",
+                    "\bb": "\\mathbb{#1}",
+                    "\tr": "\\text{tr}",
+                    "\limz": "\\lim_{#1 \\to 0}",
+                    "\bra": "\\langle #1 |",
+                    "\ketbra": "| #1 \\rangle\\langle #2 |",
+                    "\pd": "\\frac{\\partial #1}{\\partial #2}",
+                    "\spn": "\\text{span}",
+                    "\rank": "\\text{rank}",
+                    "\tdd": "\\frac{d^2 #1}{d #2^2}",
+                    "\braket": "\\langle #1 | #2 \\rangle",
+                    "\Uniform": "\\text{Uniform}\\left( #1, #2 \\right)",
+                    "\pdd": "\\frac{\\partial^2 #1}{\\partial #2^2}",
+                    "\interior": "\\text{int}\\left( #1 \\right)",
+                    "\Prob": "\\mathbb{P}\\left( #1 \\right)",
+                    "\nullity": "\\text{nullity}",
+                    "\expect": "\\langle #1 \\rangle",
+                    "\nul": "\\text{nul}",
+                    "\Normal": "\\mathcal{N}\\left( #1, #2 \\right)",
+                    "\limi": "\\lim_{#1 \\to \\infty}"
+          });
+        })();
+        </script>
+    </head>
+
+<body>
+    <div id="quarto-container">
+        <!-- Left Sidebar Navigation -->
+        <nav id="quarto-sidebar">
+            <div class="sidebar-header">
+                <a href="../index.html" class="sidebar-title">
+                    Linear Algebra
+                </a>
+                <div class="sidebar-tools">
+                    <a href="../book/book.pdf" title="Full Book PDF" target="_blank">
+                        <i class="bi bi-file-pdf" style="font-size: 1.1rem"></i>
+                    </a>
+                    <a href="https://github.com/youruser/yourrepo" title="Source Code" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            viewBox="0 0 16 16">
+                            <path
+                                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="sidebar-search">
+                <i class="bi bi-search"></i>
+                <input type="text" class="search-input" id="search-input" placeholder="">
+            </div>
+
+            <nav class="sidebar-nav">
+                                <ul class="nav-list">
+                    <li><a href="../index.html">Preface</a></li>
+                </ul>
+                            </nav>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main id="quarto-content">
+
+
+            <article class="content">
+                <!-- Page title removed to avoid duplication with content H1 -->
+                <!-- Quarto-style Title Block -->
+                <header id="title-block-header" class="quarto-title-block default">
+                                        <nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block"
+                        aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="../ch01-vector-spaces/index.html">Vector Spaces and Dimensions</a></li>
+                        <li class="breadcrumb-item"><a href="../ch01-vector-spaces/02-subspaces.html"><span class="chapter-number">1.2</span>&nbsp; <span class="chapter-title">Subspaces</span></a></li>
+                        </ol>
+                    </nav>
+                                        <div class="quarto-title">
+                        <h1 class="title">
+                            <span class="chapter-number">1.2</span>&nbsp; 
+                            <span class="chapter-title">Subspaces</span>
+                        </h1>
+                    </div>
+                </header>
+
+                <div id="subspaces">
+
+                </div>
+                <p>Some vector spaces might be “too big” and be unwieldy
+                to deal with. Therefore, it is often convenient to look
+                at “smaller vector spaces” inside a given vector space.
+                These are called <strong>subspaces</strong>.</p>
+                <h2 id="definition-and-the-subspace-test"><span
+                class="header-section-number">1.2.1. </span> Definition
+                and the Subspace Test</h2>
+                <div id="def-subspace" class="definition"
+                data-env-type="definition"
+                style="border-left-color: #c94c6c; background-color: #fdf2f4; "
+                data-number="1.2.1">
+                <span
+                class="theorem-title theorem-title-resolved"><strong>Definition</strong><strong>
+                1.2.1</strong> (Subspace)</span>
+                <p>Let <span class="math inline">\(V\)</span> be a
+                vector space over <span
+                class="math inline">\(F\)</span>. A subset <span
+                class="math inline">\(W\)</span> of <span
+                class="math inline">\(V\)</span> is called a
+                <strong>subspace</strong> of <span
+                class="math inline">\(V\)</span>, if <span
+                class="math inline">\(W\)</span> is also a vector space
+                over <span class="math inline">\(F\)</span> with
+                addition and scalar multiplication inherited from <span
+                class="math inline">\(V\)</span>.</p>
+                </div>
+                <div class="remark small-env" data-env-type="remark">
+                <p><em>Remark</em><em>.</em> Let <span
+                class="math inline">\((V, +, \cdot)\)</span> be a vector
+                space over <span class="math inline">\(F\)</span>, and
+                <span class="math inline">\(W \subseteq V\)</span>. If
+                <span class="math inline">\((W, +, \cdot)\)</span> is
+                also a vector space over <span
+                class="math inline">\(F\)</span> then <span
+                class="math inline">\(W\)</span> is a subspace of <span
+                class="math inline">\(V\)</span>.</p>
+                </div>
+                <div id="exm-trivial-subspaces" class="example"
+                data-env-type="example"
+                style="border-left-color: #3a8a3a; background-color: #eef7ee; "
+                data-number="">
+                <span
+                class="theorem-title theorem-title-resolved"><strong>Example</strong>
+                (Trivial Subspaces)</span>
+                <p>Given a vector space <span
+                class="math inline">\(V\)</span>, then</p>
+                <ul>
+                <li><span class="math inline">\(V\)</span> is a subspace
+                of <span class="math inline">\(V\)</span> itself;</li>
+                <li><span class="math inline">\(\left\{ \mathbf{0}
+                \right\}\)</span> is a subspace of <span
+                class="math inline">\(V\)</span> (also known as the
+                “zero subspace”);</li>
+                <li><span class="math inline">\(\varnothing\)</span> is
+                <strong>not</strong> a subspace of <span
+                class="math inline">\(V\)</span>.</li>
+                </ul>
+                </div>
+                <div id="thm-subspace-test" class="theorem"
+                data-env-type="theorem"
+                style="border-left-color: #3b6eda; background-color: #f0f5ff; "
+                data-number="1.2.1">
+                <span
+                class="theorem-title theorem-title-resolved"><strong>Theorem</strong><strong>
+                1.2.1</strong> (Subspace Test)</span>
+                <p>Let <span class="math inline">\(V\)</span> be a
+                vector space over <span class="math inline">\(F\)</span>
+                and <span class="math inline">\(W \subseteq V\)</span>.
+                Then <span class="math inline">\(W\)</span> is a
+                subspace of <span class="math inline">\(V\)</span> if
+                and only if the following are satisfied:</p>
+                <ul>
+                <li><span class="math inline">\(W\)</span> is
+                non-empty;</li>
+                <li><span class="math inline">\(W\)</span> is closed
+                under addition: <span class="math inline">\(\w_1 + \w_2
+                \in W\)</span> for all <span class="math inline">\(\w_1,
+                \w_2 \in W\)</span>;</li>
+                <li><span class="math inline">\(W\)</span> is closed
+                under scalar multiplication: <span
+                class="math inline">\(\alpha \w \in W\)</span> for all
+                <span class="math inline">\(\alpha \in F\)</span> and
+                <span class="math inline">\(\w \in W\)</span>.</li>
+                </ul>
+                </div>
+                <div class="proof small-env" data-env-type="proof">
+                <p><em>Proof</em><em>.</em> <span
+                class="math inline">\((\Rightarrow)\)</span> If <span
+                class="math inline">\(W\)</span> is a subspace, then
+                <span class="math inline">\(W\)</span> is a vector
+                space, so it contains the zero vector (hence non-empty)
+                and is closed under addition and scalar multiplication
+                by definition.</p>
+                <p><span class="math inline">\((\Leftarrow)\)</span>
+                Assume the three conditions hold. Since <span
+                class="math inline">\(W \subseteq V\)</span>, the
+                operations on <span class="math inline">\(W\)</span> are
+                inherited from <span class="math inline">\(V\)</span>,
+                so associativity, commutativity, and distributivity are
+                automatically satisfied. It remains to verify the
+                existence of identity elements and inverses.</p>
+                <ul>
+                <li><strong>Zero vector:</strong> Since <span
+                class="math inline">\(W \neq \varnothing\)</span>, there
+                exists <span class="math inline">\(\w \in W\)</span>. By
+                closure under scalar multiplication, <span
+                class="math inline">\(0 \cdot \w = \mathbf{0} \in
+                W\)</span>.</li>
+                <li><strong>Additive inverse:</strong> For any <span
+                class="math inline">\(\w \in W\)</span>, closure under
+                scalar multiplication gives <span
+                class="math inline">\((-1) \cdot \w = -\w \in
+                W\)</span>.</li>
+                </ul>
+                <p>Thus <span class="math inline">\(W\)</span> is a
+                vector space under the inherited operations, i.e., a
+                subspace of <span class="math inline">\(V\)</span>.</p>
+                </div>
+                <div class="remark small-env" data-env-type="remark">
+                <p><em>Remark</em><em>.</em> Note that from the proof,
+                the first condition of the Subspace Test can be replaced
+                by the requirement that <span
+                class="math inline">\(W\)</span> contains the zero
+                vector of <span class="math inline">\(V\)</span>.</p>
+                </div>
+                <div class="remark small-env" data-env-type="remark">
+                <p><em>Remark</em><em>.</em> In practice, to test
+                whether a given subset of a vector space is a subspace,
+                we use <a href="#thm-subspace-test" class="xref"
+                data-ref="thm-subspace-test">Theorem 1.2.1</a> instead
+                of checking all eight vector space axioms from scratch,
+                which is much less tedious. Moreover, some introductory
+                textbooks use <a href="#thm-subspace-test" class="xref"
+                data-ref="thm-subspace-test">Theorem 1.2.1</a> as the
+                definition of a subspace. While this is logically
+                equivalent, it can be somewhat less intuitive than
+                defining a subspace as a subset that is itself a vector
+                space.</p>
+                </div>
+                <h2 id="examples-of-subspaces"><span
+                class="header-section-number">1.2.2. </span> Examples of
+                Subspaces</h2>
+                <div id="exm-line-subspace" class="example"
+                data-env-type="example"
+                style="border-left-color: #3a8a3a; background-color: #eef7ee; "
+                data-number="">
+                <span
+                class="theorem-title theorem-title-resolved"><strong>Example</strong>
+                (Line as Subspace)</span>
+                <p><span class="math inline">\(W = \left\{ (x, y) \in
+                \nR^2 : x + 2y = 0 \right\}\)</span> is a subspace of
+                <span class="math inline">\(\nR^2\)</span>. Indeed:</p>
+                <ul>
+                <li><strong>Zero vector:</strong> <span
+                class="math inline">\((0, 0) \in W\)</span> since <span
+                class="math inline">\(0 + 2(0) = 0\)</span>.</li>
+                <li><strong>Addition:</strong> If <span
+                class="math inline">\((x_1, y_1), (x_2, y_2) \in
+                W\)</span>, then <span class="math inline">\((x_1+x_2) +
+                2(y_1+y_2) = (x_1+2y_1) + (x_2+2y_2) = 0 + 0 =
+                0\)</span>, so their sum is in <span
+                class="math inline">\(W\)</span>.</li>
+                <li><strong>Scalar multiplication:</strong> If <span
+                class="math inline">\((x, y) \in W\)</span> and <span
+                class="math inline">\(c \in \nR\)</span>, then <span
+                class="math inline">\((cx) + 2(cy) = c(x+2y) = c(0) =
+                0\)</span>, so <span class="math inline">\(c(x, y) \in
+                W\)</span>.</li>
+                </ul>
+                </div>
+                <div id="exm-line-not-subspace" class="example"
+                data-env-type="example"
+                style="border-left-color: #3a8a3a; background-color: #eef7ee; "
+                data-number="">
+                <span
+                class="theorem-title theorem-title-resolved"><strong>Example</strong>
+                (Translated Line is Not a Subspace)</span>
+                <p><span class="math inline">\(W = \left\{ (x, y) \in
+                \nR^2 : x + 2y = 3 \right\}\)</span> is
+                <strong>not</strong> a subspace of <span
+                class="math inline">\(\nR^2\)</span>. This is because it
+                does not contain the zero vector: <span
+                class="math inline">\(0 + 2(0) = 0 \neq 3\)</span>, so
+                <span class="math inline">\((0, 0) \notin
+                W\)</span>.</p>
+                </div>
+                <div id="exm-poly-degree-bound" class="example"
+                data-env-type="example"
+                style="border-left-color: #3a8a3a; background-color: #eef7ee; "
+                data-number="">
+                <span
+                class="theorem-title theorem-title-resolved"><strong>Example</strong>
+                (Polynomials of Bounded Degree)</span>
+                <p>Let <span class="math inline">\(F[x]\)</span> be the
+                vector space of all polynomials over a field <span
+                class="math inline">\(F\)</span>. For a fixed <span
+                class="math inline">\(n \in \nN\)</span>, the set <span
+                class="math inline">\(F[x]_{\leq n}\)</span> of
+                polynomials of degree at most <span
+                class="math inline">\(n\)</span> is a subspace of <span
+                class="math inline">\(F[x]\)</span>.</p>
+                <ul>
+                <li><strong>Zero vector:</strong> The zero polynomial
+                has degree <span class="math inline">\(-\infty\)</span>,
+                so <span class="math inline">\(0 \in F[x]_{\leq
+                n}\)</span>.</li>
+                <li><strong>Addition:</strong> If <span
+                class="math inline">\(\deg p \leq n\)</span> and <span
+                class="math inline">\(\deg q \leq n\)</span>, then <span
+                class="math inline">\(\deg(p+q) \leq \max(\deg p, \deg
+                q) \leq n\)</span>.</li>
+                <li><strong>Scalar multiplication:</strong> If <span
+                class="math inline">\(\deg p \leq n\)</span> and <span
+                class="math inline">\(c \in F\)</span>, then <span
+                class="math inline">\(\deg(cp) \leq \deg p \leq
+                n\)</span>.</li>
+                </ul>
+                </div>
+                <div id="exm-poly-exact-degree" class="example"
+                data-env-type="example"
+                style="border-left-color: #3a8a3a; background-color: #eef7ee; "
+                data-number="">
+                <span
+                class="theorem-title theorem-title-resolved"><strong>Example</strong>
+                (Polynomials of Exact Degree)</span>
+                <p>The set <span
+                class="math inline">\(F[x]_{=n}\)</span> of polynomials
+                of degree <strong>exactly</strong> <span
+                class="math inline">\(n\)</span> is <strong>not</strong>
+                a subspace of <span
+                class="math inline">\(F[x]\)</span>.</p>
+                <ul>
+                <li>It does not contain the zero vector (since <span
+                class="math inline">\(\deg 0 = -\infty \neq
+                n\)</span>).</li>
+                <li>It is not closed under addition. For example, if
+                <span class="math inline">\(p(x) = x^n + x\)</span> and
+                <span class="math inline">\(q(x) = -x^n\)</span>, both
+                have degree <span class="math inline">\(n\)</span>, but
+                <span class="math inline">\(p(x) + q(x) = x\)</span>,
+                which has degree <span class="math inline">\(1 \neq
+                n\)</span> (assuming <span class="math inline">\(n &gt;
+                1\)</span>).</li>
+                </ul>
+                </div>
+                <div id="exm-differentiable-functions" class="example"
+                data-env-type="example"
+                style="border-left-color: #3a8a3a; background-color: #eef7ee; "
+                data-number="">
+                <span
+                class="theorem-title theorem-title-resolved"><strong>Example</strong>
+                (Differentiable Functions)</span>
+                <p>Let <span class="math inline">\(C(\nR) = \{f : \nR
+                \to \nR \mid f \text{ is continuous}\}\)</span> be the
+                set of all continuous functions on <span
+                class="math inline">\(\nR\)</span>. We consider the set
+                of differentiable functions: <span
+                class="math display">\[
+                    D(\nR) = \{ f : \nR \to \nR \mid f \text{ is
+                differentiable} \}
+                \]</span> To verify that <span
+                class="math inline">\(D(\nR)\)</span> is a subspace of
+                <span class="math inline">\(C(\nR)\)</span>:</p>
+                <ul>
+                <li><strong>Subset:</strong> Since differentiability
+                implies continuity, we have <span
+                class="math inline">\(D(\nR) \subseteq
+                C(\nR)\)</span>.</li>
+                <li><strong>Zero vector:</strong> The zero function
+                <span class="math inline">\(f(x) = 0\)</span> is
+                differentiable, so <span
+                class="math inline">\(\mathbf{0} \in
+                D(\nR)\)</span>.</li>
+                <li><strong>Closure under addition:</strong> If <span
+                class="math inline">\(f, g \in D(\nR)\)</span>, then
+                <span class="math inline">\(f+g\)</span> is
+                differentiable with <span
+                class="math inline">\((f+g)&#39; = f&#39; +
+                g&#39;\)</span>, so <span class="math inline">\(f+g \in
+                D(\nR)\)</span>.</li>
+                <li><strong>Closure under scalar
+                multiplication:</strong> If <span
+                class="math inline">\(f \in D(\nR)\)</span> and <span
+                class="math inline">\(c \in \nR\)</span>, then <span
+                class="math inline">\(cf\)</span> is differentiable with
+                <span class="math inline">\((cf)&#39; = c
+                f&#39;\)</span>, so <span class="math inline">\(cf \in
+                D(\nR)\)</span>.</li>
+                </ul>
+                <p>Thus, <span class="math inline">\(D(\nR)\)</span> is
+                a subspace of <span
+                class="math inline">\(C(\nR)\)</span>.</p>
+                </div>
+                <div id="exm-symmetric-matrices" class="example"
+                data-env-type="example"
+                style="border-left-color: #3a8a3a; background-color: #eef7ee; "
+                data-number="">
+                <span
+                class="theorem-title theorem-title-resolved"><strong>Example</strong>
+                (Symmetric Matrices)</span>
+                <p>The set of all symmetric matrices in <span
+                class="math inline">\(M_n(F)\)</span>, denoted by <span
+                class="math inline">\(S_n(F) = \{ \A \in M_n(F) : \A =
+                \A^{\top} \}\)</span>, is a subspace of <span
+                class="math inline">\(M_n(F)\)</span>.</p>
+                <ul>
+                <li><strong>Zero vector:</strong> The zero matrix <span
+                class="math inline">\(\O\)</span> is symmetric since
+                <span class="math inline">\(\O^{\top} = \O\)</span>, so
+                <span class="math inline">\(\O \in S_n(F)\)</span>.</li>
+                <li><strong>Addition:</strong> If <span
+                class="math inline">\(\A, \B \in S_n(F)\)</span>, then
+                <span class="math inline">\((\A+\B)^{\top} = \A^{\top} +
+                \B^{\top} = \A + \B\)</span>, so <span
+                class="math inline">\(\A+\B \in S_n(F)\)</span>.</li>
+                <li><strong>Scalar multiplication:</strong> If <span
+                class="math inline">\(\A \in S_n(F)\)</span> and <span
+                class="math inline">\(c \in F\)</span>, then <span
+                class="math inline">\((c\A)^{\top} = c\A^{\top} =
+                c\A\)</span>, so <span class="math inline">\(c\A \in
+                S_n(F)\)</span>.</li>
+                </ul>
+                </div>
+                <div id="exm-trace-free-matrices" class="example"
+                data-env-type="example"
+                style="border-left-color: #3a8a3a; background-color: #eef7ee; "
+                data-number="">
+                <span
+                class="theorem-title theorem-title-resolved"><strong>Example</strong>
+                (Trace-free Matrices)</span>
+                <p>The set of all trace-free matrices in <span
+                class="math inline">\(M_n(F)\)</span>, denoted by <span
+                class="math inline">\(W = \{ \A \in M_n(F) : \tr(\A) = 0
+                \}\)</span>, is a subspace of <span
+                class="math inline">\(M_n(F)\)</span>.</p>
+                <ul>
+                <li><strong>Zero vector:</strong> <span
+                class="math inline">\(\tr(\O) = 0 + 0 + \cdots + 0 =
+                0\)</span>, so <span class="math inline">\(\O \in
+                W\)</span>.</li>
+                <li><strong>Addition:</strong> If <span
+                class="math inline">\(\A, \B \in W\)</span>, then <span
+                class="math inline">\(\tr(\A+\B) = \tr(\A) + \tr(\B) = 0
+                + 0 = 0\)</span>, so <span class="math inline">\(\A+\B
+                \in W\)</span>.</li>
+                <li><strong>Scalar multiplication:</strong> If <span
+                class="math inline">\(\A \in W\)</span> and <span
+                class="math inline">\(c \in F\)</span>, then <span
+                class="math inline">\(\tr(c\A) = c \tr(\A) = c(0) =
+                0\)</span>, so <span class="math inline">\(c\A \in
+                W\)</span>.</li>
+                </ul>
+                </div>
+                <h2 id="intersections-and-unions"><span
+                class="header-section-number">1.2.3. </span>
+                Intersections and Unions</h2>
+                <div id="thm-intersection-subspaces" class="theorem"
+                data-env-type="theorem"
+                style="border-left-color: #3b6eda; background-color: #f0f5ff; "
+                data-number="1.2.2">
+                <span
+                class="theorem-title theorem-title-resolved"><strong>Theorem</strong><strong>
+                1.2.2</strong> (Intersection of Subspaces)</span>
+                <p>Let <span class="math inline">\(W_1\)</span> and
+                <span class="math inline">\(W_2\)</span> be subspaces of
+                a vector space <span class="math inline">\(V\)</span>.
+                Then the intersection <span class="math inline">\(W_1
+                \cap W_2\)</span> is also a subspace of <span
+                class="math inline">\(V\)</span>.</p>
+                </div>
+                <div class="proof small-env" data-env-type="proof">
+                <p><em>Proof</em><em>.</em> We use the Subspace Test on
+                <span class="math inline">\(W = W_1 \cap
+                W_2\)</span>:</p>
+                <ul>
+                <li><strong>Zero vector:</strong> Since <span
+                class="math inline">\(W_1\)</span> and <span
+                class="math inline">\(W_2\)</span> are subspaces, <span
+                class="math inline">\(\mathbf{0} \in W_1\)</span> and
+                <span class="math inline">\(\mathbf{0} \in W_2\)</span>.
+                Thus <span class="math inline">\(\mathbf{0} \in W_1 \cap
+                W_2\)</span>.</li>
+                <li><strong>Closure under addition:</strong> Let <span
+                class="math inline">\(\w, \z \in W_1 \cap W_2\)</span>.
+                Then <span class="math inline">\(\w, \z \in W_1\)</span>
+                and <span class="math inline">\(\w, \z \in W_2\)</span>.
+                Since <span class="math inline">\(W_1\)</span> and <span
+                class="math inline">\(W_2\)</span> are subspaces, they
+                are closed under addition, so <span
+                class="math inline">\(\w + \z \in W_1\)</span> and <span
+                class="math inline">\(\w + \z \in W_2\)</span>. Hence
+                <span class="math inline">\(\w + \z \in W_1 \cap
+                W_2\)</span>.</li>
+                <li><strong>Closure under scalar
+                multiplication:</strong> Let <span
+                class="math inline">\(\w \in W_1 \cap W_2\)</span> and
+                <span class="math inline">\(c \in F\)</span>. Then <span
+                class="math inline">\(\w \in W_1\)</span> and <span
+                class="math inline">\(\w \in W_2\)</span>. Since <span
+                class="math inline">\(W_1\)</span> and <span
+                class="math inline">\(W_2\)</span> are closed under
+                scalar multiplication, <span class="math inline">\(c\w
+                \in W_1\)</span> and <span class="math inline">\(c\w \in
+                W_2\)</span>. Hence <span class="math inline">\(c\w \in
+                W_1 \cap W_2\)</span>.</li>
+                </ul>
+                <p>Since all three conditions of the Subspace Test are
+                satisfied, <span class="math inline">\(W_1 \cap
+                W_2\)</span> is a subspace of <span
+                class="math inline">\(V\)</span>.</p>
+                </div>
+                <div class="remark small-env" data-env-type="remark">
+                <p><em>Remark</em><em>.</em> Unlike the intersection,
+                the <strong>union</strong> of two subspaces is not
+                necessarily a subspace. For <span
+                class="math inline">\(W_1 \cup W_2\)</span> to be a
+                subspace, one subspace must be contained within the
+                other (i.e., <span class="math inline">\(W_1 \subseteq
+                W_2\)</span> or <span class="math inline">\(W_2
+                \subseteq W_1\)</span>).</p>
+                </div>
+                <div id="exm-union-axes" class="example"
+                data-env-type="example"
+                style="border-left-color: #3a8a3a; background-color: #eef7ee; "
+                data-number="">
+                <span
+                class="theorem-title theorem-title-resolved"><strong>Example</strong>
+                (Union of Axes)</span>
+                <p>Consider the vector space <span
+                class="math inline">\(V = \nR^2\)</span>. Let <span
+                class="math inline">\(W_1\)</span> be the <span
+                class="math inline">\(x\)</span>-axis and <span
+                class="math inline">\(W_2\)</span> be the <span
+                class="math inline">\(y\)</span>-axis: <span
+                class="math display">\[
+                    W_1 = \{ (x, 0) : x \in \nR \}, \quad W_2 = \{ (0,
+                y) : y \in \nR \}.
+                \]</span> Both <span class="math inline">\(W_1\)</span>
+                and <span class="math inline">\(W_2\)</span> are
+                subspaces of <span class="math inline">\(\nR^2\)</span>.
+                However, their union <span class="math inline">\(W_1
+                \cup W_2\)</span> is <strong>not</strong> a subspace
+                because it is not closed under addition.</p>
+                <p>Indeed, <span class="math inline">\((1, 0) \in W_1
+                \subseteq W_1 \cup W_2\)</span> and <span
+                class="math inline">\((0, 1) \in W_2 \subseteq W_1 \cup
+                W_2\)</span>, but their sum: <span
+                class="math display">\[
+                    (1, 0) + (0, 1) = (1, 1)
+                \]</span> is not in <span class="math inline">\(W_1 \cup
+                W_2\)</span> since <span class="math inline">\((1,
+                1)\)</span> is neither on the <span
+                class="math inline">\(x\)</span>-axis nor the <span
+                class="math inline">\(y\)</span>-axis.</p>
+                </div>
+                <div id="prp-union-subspaces" class="proposition"
+                data-env-type="proposition"
+                style="border-left-color: #5c5cb8; background-color: #ededfa; "
+                data-number="1.2.3">
+                <span
+                class="theorem-title theorem-title-resolved"><strong>Proposition</strong><strong>
+                1.2.3</strong> (Union of Subspaces)</span>
+                <p>Let <span class="math inline">\(W_1, W_2\)</span> be
+                subspaces of <span class="math inline">\(V\)</span>.
+                Then <span class="math inline">\(W_1 \cup W_2\)</span>
+                is a subspace of <span class="math inline">\(V\)</span>
+                if and only if <span class="math inline">\(W_1 \subseteq
+                W_2\)</span> or <span class="math inline">\(W_2
+                \subseteq W_1\)</span>.</p>
+                </div>
+                <div class="proof small-env" data-env-type="proof">
+                <p><em>Proof</em><em>.</em> <span
+                class="math inline">\((\Leftarrow)\)</span> If <span
+                class="math inline">\(W_1 \subseteq W_2\)</span>, then
+                <span class="math inline">\(W_1 \cup W_2 = W_2\)</span>,
+                which is a subspace. Similarly, if <span
+                class="math inline">\(W_2 \subseteq W_1\)</span>, the
+                union is <span class="math inline">\(W_1\)</span>, which
+                is also a subspace.</p>
+                <p><span class="math inline">\((\Rightarrow)\)</span> We
+                prove the contrapositive: if neither is contained in the
+                other, then the union is not a subspace. Assume <span
+                class="math inline">\(W_1 \not\subseteq W_2\)</span> and
+                <span class="math inline">\(W_2 \not\subseteq
+                W_1\)</span>.</p>
+                <ul>
+                <li>Since <span class="math inline">\(W_1 \not\subseteq
+                W_2\)</span>, there exists a vector <span
+                class="math inline">\(\u \in W_1\)</span> such that
+                <span class="math inline">\(\u \notin W_2\)</span>.</li>
+                <li>Since <span class="math inline">\(W_2 \not\subseteq
+                W_1\)</span>, there exists a vector <span
+                class="math inline">\(\v \in W_2\)</span> such that
+                <span class="math inline">\(\v \notin W_1\)</span>.</li>
+                </ul>
+                <p>Consider the sum <span class="math inline">\(\w = \u
+                + \v\)</span>. We show that <span
+                class="math inline">\(\w \notin W_1 \cup
+                W_2\)</span>:</p>
+                <ul>
+                <li>If <span class="math inline">\(\w \in W_1\)</span>,
+                then <span class="math inline">\(\v = \w - \u\)</span>.
+                Since <span class="math inline">\(\w \in W_1\)</span>
+                and <span class="math inline">\(\u \in W_1\)</span>,
+                their difference <span class="math inline">\(\v\)</span>
+                must be in <span class="math inline">\(W_1\)</span> (by
+                closure). But we chose <span class="math inline">\(\v
+                \notin W_1\)</span>, which is a contradiction.</li>
+                <li>If <span class="math inline">\(\w \in W_2\)</span>,
+                then <span class="math inline">\(\u = \w - \v\)</span>.
+                Since <span class="math inline">\(\w \in W_2\)</span>
+                and <span class="math inline">\(\v \in W_2\)</span>,
+                their difference <span class="math inline">\(\u\)</span>
+                must be in <span class="math inline">\(W_2\)</span>. But
+                we chose <span class="math inline">\(\u \notin
+                W_2\)</span>, which is a contradiction.</li>
+                </ul>
+                <p>Therefore, <span class="math inline">\(\u +
+                \v\)</span> is in neither <span
+                class="math inline">\(W_1\)</span> nor <span
+                class="math inline">\(W_2\)</span>, so it is not in
+                <span class="math inline">\(W_1 \cup W_2\)</span>. Thus,
+                the union is not closed under addition and is therefore
+                not a subspace.</p>
+                </div>
+            </article>
+
+            <!-- Page Navigation -->
+            <nav class="page-navigation">
+                <div class="nav-page nav-page-previous">
+                                        <a href="01-vector-spaces.html" class="pagination-link" aria-label="Vector
+Spaces">
+                        <i class="bi bi-arrow-left-short"></i>
+                        <span
+                            class="nav-page-text">1.1 Vector
+Spaces</span>
+                    </a>
+                                    </div>
+                <div class="nav-page nav-page-next">
+                                        <a href="03-span.html" class="pagination-link" aria-label="Linear
+Combinations and Span">
+                        <span
+                            class="nav-page-text">1.3 Linear
+Combinations and Span</span>
+                        <i class="bi bi-arrow-right-short"></i>
+                    </a>
+                                    </div>
+            </nav>
+        </main>
+
+        <!-- Right Sidebar (TOC) -->
+        <aside id="quarto-margin-sidebar">
+            <nav class="toc">
+                <h2>Table of contents</h2>
+                            </nav>
+
+            <div class="other-formats">
+                <h3>Other Formats</h3>
+                <ul>
+                    <li><a href="../pdf/ch01-vector-spaces/02-subspaces.pdf" target="_blank">PDF</a></li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Tooltip Script -->
+    <script src="../main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1.7 Sums of Subspaces – Linear Algebra</title>
+
+    <!-- Styles -->
+    <!-- Styles -->
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- MathJax Configuration with Custom Macros -->
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['\\(', '\\)']],
+                displayMath: [['\\[', '\\]']],
+                processEscapes: true,
+                processEnvironments: true,
+                tags: 'ams',
+                macros: {
+                    0: "\\mathbf{0}",
+                    1: "\\mathbf{1}",
+                    A: "\\mathbf{A}",
+                    B: "\\mathbf{B}",
+                    C: "\\mathbf{C}",
+                    Cor: "\\operatorname*{Cor}",
+                    Corr: "\\operatorname*{Corr}",
+                    Cov: "\\operatorname*{Cov}",
+                    D: "\\mathbf{D}",
+                    E: "\\mathbf{E}",
+                    Ev: "\\operatorname*{\\mathbb{E}}",
+                    F: "\\mathbf{F}",
+                    G: "\\mathbf{G}",
+                    H: "\\mathbf{H}",
+                    I: "\\mathbf{I}",
+                    J: "\\mathbf{J}",
+                    K: "\\mathbf{K}",
+                    L: "\\mathbf{L}",
+                    M: "\\mathbf{M}",
+                    N: "\\mathbf{N}",
+                    O: "\\mathbf{O}",
+                    P: "\\mathbf{P}",
+                    Pr: "\\operatorname{Pr}",
+                    Q: "\\mathbf{Q}",
+                    R: "\\mathbf{R}",
+                    S: "\\mathbf{S}",
+                    Span: "\\operatorname{span}",
+                    T: "\\mathbf{T}",
+                    U: "\\mathbf{U}",
+                    V: "\\mathbf{V}",
+                    Var: "\\operatorname*{Var}",
+                    W: "\\mathbf{W}",
+                    X: "\\mathbf{X}",
+                    Y: "\\mathbf{Y}",
+                    Z: "\\mathbf{Z}",
+                    a: "\\mathbf{a}",
+                    adj: "\\operatorname{adj}",
+                    b: "\\mathbf{b}",
+                    c: "\\mathbf{c}",
+                    cA: "\\mathcal{A}",
+                    cB: "\\mathcal{B}",
+                    cC: "\\mathcal{C}",
+                    cD: "\\mathcal{D}",
+                    cE: "\\mathcal{E}",
+                    cF: "\\mathcal{F}",
+                    cG: "\\mathcal{G}",
+                    cH: "\\mathcal{H}",
+                    cI: "\\mathcal{I}",
+                    cJ: "\\mathcal{J}",
+                    cK: "\\mathcal{K}",
+                    cL: "\\mathcal{L}",
+                    cM: "\\mathcal{M}",
+                    cN: "\\mathcal{N}",
+                    cO: "\\mathcal{O}",
+                    cP: "\\mathcal{P}",
+                    cQ: "\\mathcal{Q}",
+                    cR: "\\mathcal{R}",
+                    cS: "\\mathcal{S}",
+                    cT: "\\mathcal{T}",
+                    cU: "\\mathcal{U}",
+                    cV: "\\mathcal{V}",
+                    cW: "\\mathcal{W}",
+                    cX: "\\mathcal{X}",
+                    cY: "\\mathcal{Y}",
+                    cZ: "\\mathcal{Z}",
+                    col: "\\text{col}",
+                    coloneqq: "\\mathrel{:=}",
+                    d: "\\mathbf{d}",
+                    dd: "\\mathrm{d}",
+                    defeq: "\\stackrel{\\smash{\\textnormal{\\tiny def}}}{=}",
+                    diag: "\\operatorname{diag}",
+                    distBern: "\\operatorname{Ber}",
+                    distBeta: "\\operatorname{Beta}",
+                    distBin: "\\operatorname{Bin}",
+                    distCauchy: "\\operatorname{Cauchy}",
+                    distDir: "\\operatorname{Dir}",
+                    distExp: "\\operatorname{Exp}",
+                    distGamma: "\\operatorname{Gamma}",
+                    distGeom: "\\operatorname{Geo}",
+                    distHyp: "\\operatorname{Hyp}",
+                    distInvWishart: "\\operatorname{InvWishart}",
+                    distLognormal: "\\operatorname{Lognormal}",
+                    distMult: "\\operatorname{Mult}",
+                    distN: "\\operatorname{\\mathcal{N}}",
+                    distNB: "\\operatorname{NB}",
+                    distPareto: "\\operatorname{Pareto}",
+                    distPois: "\\operatorname{Poi}",
+                    distUnif: "\\operatorname{Unif}",
+                    distWeibull: "\\operatorname{Weibull}",
+                    distWishart: "\\operatorname{Wishart}",
+                    e: "\\mathbf{e}",
+                    eqqcolon: "\\mathrel{=:}",
+                    f: "\\mathbf{f}",
+                    g: "\\mathbf{g}",
+                    h: "\\mathbf{h}",
+                    i: "\\mathbf{i}",
+                    id: "\\operatorname{id}",
+                    im: "\\operatorname{im}",
+                    img: "\\operatorname{img}",
+                    j: "\\mathbf{j}",
+                    k: "\\mathbf{k}",
+                    ker: "\\operatorname{ker}",
+                    l: "\\mathbf{l}",
+                    m: "\\mathbf{m}",
+                    n: "\\mathbf{n}",
+                    nA: "\\mathbb{A}",
+                    nB: "\\mathbb{B}",
+                    nC: "\\mathbb{C}",
+                    nD: "\\mathbb{D}",
+                    nE: "\\mathbb{E}",
+                    nF: "\\mathbb{F}",
+                    nG: "\\mathbb{G}",
+                    nH: "\\mathbb{H}",
+                    nI: "\\mathbb{I}",
+                    nJ: "\\mathbb{J}",
+                    nK: "\\mathbb{K}",
+                    nL: "\\mathbb{L}",
+                    nM: "\\mathbb{M}",
+                    nN: "\\mathbb{N}",
+                    nO: "\\mathbb{O}",
+                    nP: "\\mathbb{P}",
+                    nQ: "\\mathbb{Q}",
+                    nR: "\\mathbb{R}",
+                    nS: "\\mathbb{S}",
+                    nT: "\\mathbb{T}",
+                    nU: "\\mathbb{U}",
+                    nV: "\\mathbb{V}",
+                    nW: "\\mathbb{W}",
+                    nX: "\\mathbb{X}",
+                    nY: "\\mathbb{Y}",
+                    nZ: "\\mathbb{Z}",
+                    nul: "\\text{nul}",
+                    nullity: "\\text{nullity}",
+                    o: "\\mathbf{o}",
+                    p: "\\mathbf{p}",
+                    q: "\\mathbf{q}",
+                    r: "\\mathbf{r}",
+                    rank: "\\text{rank}",
+                    row: "\\text{row}",
+                    s: "\\mathbf{s}",
+                    sA: "\\mathcal{A}",
+                    sB: "\\mathcal{B}",
+                    sC: "\\mathcal{C}",
+                    sD: "\\mathcal{D}",
+                    sE: "\\mathcal{E}",
+                    sF: "\\mathcal{F}",
+                    sG: "\\mathcal{G}",
+                    sH: "\\mathcal{H}",
+                    sI: "\\mathcal{I}",
+                    sJ: "\\mathcal{J}",
+                    sK: "\\mathcal{K}",
+                    sL: "\\mathcal{L}",
+                    sM: "\\mathcal{M}",
+                    sN: "\\mathcal{N}",
+                    sO: "\\mathcal{O}",
+                    sP: "\\mathcal{P}",
+                    sQ: "\\mathcal{Q}",
+                    sR: "\\mathcal{R}",
+                    sS: "\\mathcal{S}",
+                    sT: "\\mathcal{T}",
+                    sU: "\\mathcal{U}",
+                    sV: "\\mathcal{V}",
+                    sW: "\\mathcal{W}",
+                    sX: "\\mathcal{X}",
+                    sY: "\\mathcal{Y}",
+                    sZ: "\\mathcal{Z}",
+                    spn: "\\text{span}",
+                    t: "\\mathbf{t}",
+                    tr: "\\text{tr}",
+                    u: "\\mathbf{u}",
+                    v: "\\mathbf{v}",
+                    vDelta: "\\bm{\\Delta}",
+                    vGamma: "\\bm{\\Gamma}",
+                    vLambda: "\\bm{\\Lambda}",
+                    vOmega: "\\bm{\\Omega}",
+                    vPhi: "\\bm{\\Phi}",
+                    vPi: "\\bm{\\Pi}",
+                    vPsi: "\\bm{\\Psi}",
+                    vSigma: "\\bm{\\Sigma}",
+                    vTheta: "\\bm{\\Theta}",
+                    vUpsilon: "\\bm{\\Upsilon}",
+                    vXi: "\\bm{\\Xi}",
+                    valpha: "\\bm{\\upalpha}",
+                    vbeta: "\\bm{\\upbeta}",
+                    vchi: "\\bm{\\upchi}",
+                    vdelta: "\\bm{\\updelta}",
+                    vepsilon: "\\bm{\\upepsilon}",
+                    veta: "\\bm{\\upeta}",
+                    vgamma: "\\bm{\\upgamma}",
+                    viota: "\\bm{\\upiota}",
+                    vkappa: "\\bm{\\upkappa}",
+                    vlambda: "\\bm{\\uplambda}",
+                    vmu: "\\bm{\\upmu}",
+                    vnu: "\\bm{\\upnu}",
+                    vomega: "\\bm{\\upomega}",
+                    vphi: "\\bm{\\upphi}",
+                    vpi: "\\bm{\\uppi}",
+                    vpsi: "\\bm{\\uppsi}",
+                    vrho: "\\bm{\\uprho}",
+                    vsigma: "\\bm{\\upsigma}",
+                    vtau: "\\bm{\\uptau}",
+                    vtheta: "\\bm{\\uptheta}",
+                    vupsilon: "\\bm{\\upupsilon}",
+                    vvarepsilon: "\\bm{\\upvarepsilon}",
+                    vvarphi: "\\bm{\\upvarphi}",
+                    vvarpi: "\\bm{\\upvarpi}",
+                    vvarrho: "\\bm{\\upvarrho}",
+                    vvarsigma: "\\bm{\\upvarsigma}",
+                    vvartheta: "\\bm{\\upvartheta}",
+                    vxi: "\\bm{\\upxi}",
+                    vzeta: "\\bm{\\upzeta}",
+                    w: "\\mathbf{w}",
+                    x: "\\mathbf{x}",
+                    y: "\\mathbf{y}",
+                    z: "\\mathbf{z}"
+                },
+                // Define environments not in base amsmath
+                environments: {
+                    dcases: ["\\left\\{\\begin{array}{ll}", "\\end{array}\\right."]
+                }
+            },
+            options: {
+                skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"></script>
+
+    <!-- Tippy.js for tooltips -->
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
+    <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/shift-away.css">
+
+        
+        <script>
+        (function(){
+          if (typeof window.MathJax === 'undefined') window.MathJax = {};
+          if (typeof window.MathJax.tex === 'undefined') window.MathJax.tex = {};
+          if (typeof window.MathJax.tex.macros === 'undefined') window.MathJax.tex.macros = {};
+          Object.assign(window.MathJax.tex.macros, {
+                    "\bra": "\\langle #1 |",
+                    "\pd": "\\frac{\\partial #1}{\\partial #2}",
+                    "\td": "\\frac{d #1}{d #2}",
+                    "\interior": "\\text{int}\\left( #1 \\right)",
+                    "\ket": "| #1 \\rangle",
+                    "\Prob": "\\mathbb{P}\\left( #1 \\right)",
+                    "\defeq": "\\stackrel{\\smash{\\textnormal{\\tiny def}}}{=}",
+                    "\spn": "\\text{span}",
+                    "\Cov": "\\text{Cov}\\left( #1, #2 \\right)",
+                    "\Exp": "\\mathbb{E}\\left[ #1 \\right]",
+                    "\norm": "\\left\\| #1 \\right\\|",
+                    "\rom": "\\mathrm{#1}",
+                    "\nullity": "\\text{nullity}",
+                    "\nul": "\\text{nul}",
+                    "\bm": "\\mathbf{#1}",
+                    "\expect": "\\langle #1 \\rangle",
+                    "\tr": "\\text{tr}",
+                    "\powerset": "\\mathcal{P}\\left( #1 \\right)",
+                    "\braket": "\\langle #1 | #2 \\rangle",
+                    "\boundary": "\\partial #1",
+                    "\pdd": "\\frac{\\partial^2 #1}{\\partial #2^2}",
+                    "\rank": "\\text{rank}",
+                    "\closure": "\\overline{#1}",
+                    "\cl": "\\mathcal{#1}",
+                    "\Uniform": "\\text{Uniform}\\left( #1, #2 \\right)",
+                    "\limz": "\\lim_{#1 \\to 0}",
+                    "\Var": "\\text{Var}\\left( #1 \\right)",
+                    "\abs": "\\left| #1 \\right|",
+                    "\tdd": "\\frac{d^2 #1}{d #2^2}",
+                    "\col": "\\text{col}",
+                    "\row": "\\text{row}",
+                    "\ketbra": "| #1 \\rangle\\langle #2 |",
+                    "\limi": "\\lim_{#1 \\to \\infty}",
+                    "\Normal": "\\mathcal{N}\\left( #1, #2 \\right)",
+                    "\bb": "\\mathbb{#1}",
+                    "\card": "\\left| #1 \\right|"
+          });
+        })();
+        </script>
+    </head>
+
+<body>
+    <div id="quarto-container">
+        <!-- Left Sidebar Navigation -->
+        <nav id="quarto-sidebar">
+            <div class="sidebar-header">
+                <a href="../index.html" class="sidebar-title">
+                    Linear Algebra
+                </a>
+                <div class="sidebar-tools">
+                    <a href="../book/book.pdf" title="Full Book PDF" target="_blank">
+                        <i class="bi bi-file-pdf" style="font-size: 1.1rem"></i>
+                    </a>
+                    <a href="https://github.com/youruser/yourrepo" title="Source Code" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            viewBox="0 0 16 16">
+                            <path
+                                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="sidebar-search">
+                <i class="bi bi-search"></i>
+                <input type="text" class="search-input" id="search-input" placeholder="">
+            </div>
+
+            <nav class="sidebar-nav">
+                                <ul class="nav-list">
+                    <li><a href="../index.html">Preface</a></li>
+                </ul>
+                            </nav>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main id="quarto-content">
+
+
+            <article class="content">
+                <!-- Page title removed to avoid duplication with content H1 -->
+                <!-- Quarto-style Title Block -->
+                <header id="title-block-header" class="quarto-title-block default">
+                                        <nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block"
+                        aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="../ch01-vector-spaces/index.html">Vector Spaces and Dimensions</a></li>
+                        <li class="breadcrumb-item"><a href="../ch01-vector-spaces/07-sums-and-direct-sums.html"><span class="chapter-number">1.7</span>&nbsp; <span class="chapter-title">Sums of Subspaces</span></a></li>
+                        </ol>
+                    </nav>
+                                        <div class="quarto-title">
+                        <h1 class="title">
+                            <span class="chapter-number">1.7</span>&nbsp; 
+                            <span class="chapter-title">Sums of
+Subspaces</span>
+                        </h1>
+                    </div>
+                </header>
+
+                <div id="sums-of-subspaces">
+
+                </div>
+                <p>In the previous sections, we studied intersections
+                and unions of subspaces. While the intersection of two
+                subspaces is always a subspace, the union typically is
+                not. This raises a natural question: what is the “right”
+                way to combine two subspaces into a larger one?</p>
+                <p>The answer is the <strong>sum</strong> of subspaces.
+                Given two subspaces <span
+                class="math inline">\(W_1\)</span> and <span
+                class="math inline">\(W_2\)</span>, their sum <span
+                class="math inline">\(W_1 + W_2\)</span> consists of all
+                vectors that can be written as <span
+                class="math inline">\(\w_1 + \w_2\)</span> for some
+                <span class="math inline">\(\w_1 \in W_1\)</span> and
+                <span class="math inline">\(\w_2 \in W_2\)</span>. This
+                construction always yields a subspace—in fact, it is the
+                smallest subspace containing both <span
+                class="math inline">\(W_1\)</span> and <span
+                class="math inline">\(W_2\)</span>.</p>
+                <p>A particularly nice situation occurs when <span
+                class="math inline">\(W_1\)</span> and <span
+                class="math inline">\(W_2\)</span> have only the zero
+                vector in common. In this case, their sum is called a
+                <strong>direct sum</strong>, and every vector in the sum
+                can be decomposed uniquely into a piece from <span
+                class="math inline">\(W_1\)</span> and a piece from
+                <span class="math inline">\(W_2\)</span>. Direct sums
+                are fundamental in decomposing vector spaces into
+                simpler, independent components.</p>
+                <h2 id="definition-and-properties"><span
+                class="header-section-number">1.7.1. </span> Definition
+                and Properties</h2>
+                <div id="def-sum-of-subspaces" class="definition"
+                data-env-type="definition" data-number="1.7.1"
+                style="border-left-color: #c94c6c; background-color: #fdf2f4; ">
+                <span
+                class="theorem-title theorem-title-resolved"><strong>Definition</strong><strong>
+                1.7.1</strong> (Sum of Subspaces)</span>
+                <p>Let <span class="math inline">\(W_1\)</span>, <span
+                class="math inline">\(W_2\)</span> be subspaces of a
+                vector space <span class="math inline">\(V\)</span>.
+                Then we define <span class="math display">\[
+                    W_1 + W_2 \coloneqq \left\{ \w_1 + \w_2 : \w_1 \in
+                W_1 \text{ and } \w_2 \in W_2 \right\}.
+                \]</span></p>
+                </div>
+                <div id="thm-subapce-sum-theorem" class="theorem"
+                data-env-type="theorem" data-number="1.7.1"
+                style="border-left-color: #3b6eda; background-color: #f0f5ff; ">
+                <span
+                class="theorem-title theorem-title-resolved"><strong>Theorem</strong><strong>
+                1.7.1</strong> (Sum of Subspaces Theorem)</span>
+                <p><span class="math inline">\(W_1 + W_2\)</span> is a
+                subspace of <span class="math inline">\(V\)</span>.
+                Furthermore, this is the smallest subspace containing
+                both <span class="math inline">\(W_1\)</span> and <span
+                class="math inline">\(W_2\)</span>.</p>
+                </div>
+                <div class="proof small-env" data-env-type="proof">
+                <p><em>Proof</em><em>.</em> To prove that <span
+                class="math inline">\(W_1 + W_2\)</span> is a subspace
+                <span class="math inline">\(V\)</span>. We prove that
+                three conditions of the subspace test:</p>
+                <ul>
+                <li><p>Non-emptiness: As <span
+                class="math inline">\(W_1\)</span>, <span
+                class="math inline">\(W_2\)</span> are subspaces, they
+                both contains <span
+                class="math inline">\(\mathbf{0}\)</span>. And since
+                <span class="math inline">\(\mathbf{0} =
+                \mathbf{0}_{W_1} + \mathbf{0}_{W_2}\)</span>, therefore
+                <span class="math inline">\(W_1 + W_2\)</span> is
+                non-empty.</p></li>
+                <li><p>Closed under addition: Let <span
+                class="math inline">\(\a, \b \in W_1 + W_2\)</span>.
+                Then we have <span class="math display">\[
+                      \begin{dcases}
+                          \a = \w_1 + \w_2, &amp; \text{ for some } \w_1
+                \in W_1, \w_2 \in W_2 \\
+                          \b = \w_1&#39; + \w_2&#39;, &amp; \text{ for
+                some } \w_1&#39; \in W_1, \w_2&#39; \in W_2 \\
+                      \end{dcases}
+                  \]</span> Then <span class="math inline">\(\a + \b =
+                \underbrace{(\w_1 + \w_1&#39;)}_{\in W_1} +
+                \underbrace{(\w_2 + \w_2&#39;)}_{W_2} \in W_1 +
+                W_2\)</span>. So <span class="math inline">\(W_1 +
+                W_2\)</span> is closed under addition.</p></li>
+                <li><p>Closed under scalar multiplication: Let <span
+                class="math inline">\(\a \in W_1 + W_2\)</span>, and
+                <span class="math inline">\(\lambda \in F\)</span>. Then
+                we have <span class="math inline">\(\a = \w_1 +
+                \w_2\)</span> for some <span class="math inline">\(\w_1
+                \in W_1, \w_2 \in W_2\)</span>. Then <span
+                class="math inline">\(\lambda \a = \underbrace{\lambda
+                \w_1}_{\in W_1} + \underbrace{\lambda \w_2}_{\in W_2}
+                \in W_1 + W_2\)</span>. So <span
+                class="math inline">\(W_1 + W_2\)</span> is closed under
+                scalar multiplication.</p></li>
+                </ul>
+                <p>This concludes that <span class="math inline">\(W_1 +
+                W_2\)</span> is a subspace.</p>
+                <p>To prove that <span class="math inline">\(W_1 +
+                W_2\)</span> is the smallest subspace containing both
+                <span class="math inline">\(W_1\)</span> and <span
+                class="math inline">\(W_2\)</span>, we first prove that
+                it actually contains <span
+                class="math inline">\(W_1\)</span> and <span
+                class="math inline">\(W_2\)</span>, then we prove that
+                it is the smallest subspace of <span
+                class="math inline">\(V\)</span> containing so.</p>
+                <ul>
+                <li><p>Containment: Since <span
+                class="math inline">\(W_1\)</span> and <span
+                class="math inline">\(W_2\)</span> are subspaces, they
+                both contain the zero vector <span
+                class="math inline">\(\mathbf{0}\)</span>. Since for any
+                <span class="math inline">\(\w_1 \in W_1\)</span>, we
+                can write <span class="math inline">\(\w_1 = \w_1 +
+                \mathbf{0}\)</span>, by <span
+                class="math inline">\(\mathbf{0} \in W_2\)</span>, we
+                have <span class="math inline">\(\w_1 \in W_1 +
+                W_2\)</span>. Thus <span class="math inline">\(W_1
+                \subseteq W_1 + W_2\)</span>. The same logic applies to
+                <span class="math inline">\(W_2\)</span> therefore <span
+                class="math inline">\(W_2 \subseteq W_1 +
+                W_2\)</span>.</p></li>
+                <li><p>Minimality: Let <span
+                class="math inline">\(U\)</span> be any subspace of
+                <span class="math inline">\(V\)</span> such that <span
+                class="math inline">\(W_1 \subseteq U\)</span> and <span
+                class="math inline">\(W_2 \subseteq U\)</span>. We want
+                to show that <span class="math inline">\(W_1 + W_2
+                \subseteq U\)</span>. Take any element <span
+                class="math inline">\(W_1 + W_2\)</span>. By definition
+                <span class="math inline">\(\v = \w_1 + \w_2\)</span>
+                for some <span class="math inline">\(\w_1 \in
+                W_1\)</span> and <span class="math inline">\(\w_2 \in
+                W_2\)</span>. Because <span class="math inline">\(W_1
+                \subseteq U\)</span>, then <span
+                class="math inline">\(\w_1 \in U\)</span>. Similarly,
+                because <span class="math inline">\(W_2 \subseteq
+                U\)</span>, then <span class="math inline">\(\w_2 \in
+                U\)</span>. At last, since <span
+                class="math inline">\(U\)</span> is a subspace, it is
+                closed under addition. Therefore <span
+                class="math display">\[
+                      \w_1 + \w_2 \in U \implies \v \in U.
+                  \]</span> This concludes that <span
+                class="math inline">\(W_1 + W_2\)</span> is the smallest
+                subspace of <span class="math inline">\(V\)</span>
+                containing <span class="math inline">\(W_1\)</span> and
+                <span class="math inline">\(W_2\)</span>.</p></li>
+                </ul>
+                </div>
+                <h2 id="dimension-of-w_1-w_2"><span
+                class="header-section-number">1.7.2. </span> Dimension
+                of <span class="math inline">\(W_1 + W_2\)</span></h2>
+                <div id="thm-dimension-formula-subspace-dim"
+                class="theorem" data-env-type="theorem"
+                data-number="1.7.2"
+                style="border-left-color: #3b6eda; background-color: #f0f5ff; ">
+                <span
+                class="theorem-title theorem-title-resolved"><strong>Theorem</strong><strong>
+                1.7.2</strong> (Dimension Formula of Subspace
+                Sum)</span>
+                <p>Let <span class="math inline">\(V\)</span> be a
+                finite-dimensional vector space, and let <span
+                class="math inline">\(W_1\)</span>, <span
+                class="math inline">\(W_2\)</span> subspaces of <span
+                class="math inline">\(V\)</span>. Then <span
+                class="math display">\[
+                    \dim(W_1 + W_2) = \dim (W_1) + \dim (W_2) - \dim(W_1
+                \cap W_2).
+                \]</span></p>
+                </div>
+                <div class="proof small-env" data-env-type="proof">
+                <p><em>Proof</em><em>.</em> </p>
+                <div class="content-visible" data-when-format="html">
+                <figure>
+                <img src="fig-subspace-1.png" style="width:70.0%"
+                alt="Inclusion diagram for subspaces W_1 and W_2" />
+                <figcaption aria-hidden="true">Inclusion diagram for
+                subspaces <span class="math inline">\(W_1\)</span> and
+                <span class="math inline">\(W_2\)</span></figcaption>
+                </figure>
+                </div>
+                <p>We use the above diagram to build intuition for the
+                proof.</p>
+                <p>Let <span class="math inline">\(n = \dim(W_1 \cap
+                W_2)\)</span>. Let <span class="math inline">\(B = \{
+                \b_1, \dots, \b_n \}\)</span> be a basis of the
+                intersection <span class="math inline">\(W_1 \cap
+                W_2\)</span>.</p>
+                <p>Since <span class="math inline">\(B\)</span> is a
+                linearly independent subset of both <span
+                class="math inline">\(W_1\)</span> and <span
+                class="math inline">\(W_2\)</span>, by the Basis
+                Extension Theorem (<a
+                href="ch01-vector-spaces/06-dimension.html#thm-basis-extension"
+                class="xref" data-ref="thm-basis-extension">Theorem
+                1.6.5</a>), we can extend it to form bases for both
+                subspaces:</p>
+                <ol type="1">
+                <li><p><strong>For <span
+                class="math inline">\(W_1\)</span></strong>: Extend
+                <span class="math inline">\(B\)</span> with <span
+                class="math inline">\(\{ \s_1, \dots, \s_p \}\)</span>
+                such that <span class="math inline">\(B_1 = \{ \b_1,
+                \dots, \b_n, \s_1, \dots, \s_p \}\)</span> is a basis of
+                <span class="math inline">\(W_1\)</span>. Note that
+                <span class="math inline">\(\dim(W_1) = n +
+                p\)</span>.</p></li>
+                <li><p><strong>For <span
+                class="math inline">\(W_2\)</span></strong>: Extend
+                <span class="math inline">\(B\)</span> with <span
+                class="math inline">\(\{ \t_1, \dots, \t_q \}\)</span>
+                such that <span class="math inline">\(B_2 = \{ \b_1,
+                \dots, \b_n, \t_1, \dots, \t_q \}\)</span> is a basis of
+                <span class="math inline">\(W_2\)</span>. Note that
+                <span class="math inline">\(\dim(W_2) = n +
+                q\)</span>.</p></li>
+                </ol>
+                <div class="claim small-env" data-env-type="claim">
+                <p><em>Claim</em><em>.</em> The set <span
+                class="math inline">\(S = \{ \b_1, \dots, \b_n, \s_1,
+                \dots, \s_p, \t_1, \dots, \t_q \}\)</span> is a basis of
+                <span class="math inline">\(W_1 + W_2\)</span>.</p>
+                </div>
+                <div class="proof small-env" data-env-type="proof">
+                <p><em>Proof</em><em>.</em> </p>
+                <ul>
+                <li><p><span class="math inline">\(S\)</span> spans
+                <span class="math inline">\(W_1 + W_2\)</span></p>
+                <p>Let <span class="math inline">\(\w \in W_1 +
+                W_2\)</span>. By definition, <span
+                class="math inline">\(\w = \w_1 + \w_2\)</span> for some
+                <span class="math inline">\(\w_1 \in W_1, \w_2 \in
+                W_2\)</span>. Since <span
+                class="math inline">\(B_1\)</span> spans <span
+                class="math inline">\(W_1\)</span> and <span
+                class="math inline">\(B_2\)</span> spans <span
+                class="math inline">\(W_2\)</span>, both <span
+                class="math inline">\(\w_1\)</span> and <span
+                class="math inline">\(\w_2\)</span> can be written as
+                linear combinations of vectors in <span
+                class="math inline">\(S\)</span>. Thus, their sum <span
+                class="math inline">\(\w\)</span> is also in <span
+                class="math inline">\(\Span(S)\)</span>.</p></li>
+                <li><p><span class="math inline">\(S\)</span> is
+                Linearly Independent</p>
+                <div id="eq-linear-combo" class="equation"
+                style="display: flex; align-items: center; width: 100%; margin: 1em 0;">
+                <div style="flex-grow: 1; text-align: center;">
+                <span class="math display">\[
+                      \sum_{i=1}^n \alpha_i \b_i + \sum_{j=1}^p \beta_j
+                \s_j + \sum_{k=1}^q \gamma_k \t_k = \mathbf{0}
+                  \]</span>
+                </div>
+                <div style="flex-shrink: 0; margin-left: 1em;">
+                (1.7.1)
+                </div>
+                </div>
+                <p>Rearrange the equation to isolate the terms involving
+                <span class="math inline">\(\t_k\)</span>: <span
+                class="math display">\[
+                      \v \coloneqq \sum_{i=1}^n \alpha_i \b_i +
+                \sum_{j=1}^p \beta_j \s_j = - \sum_{k=1}^q \gamma_k \t_k
+                  \]</span></p>
+                <p>Observe the vector <span
+                class="math inline">\(\v\)</span>. From the LHS, we have
+                <span class="math inline">\(\v \in W_1\)</span>. From
+                the RHS, we have <span class="math inline">\(\v \in
+                W_2\)</span>. Therefore, <span class="math inline">\(\v
+                \in W_1 \cap W_2\)</span>.</p>
+                <p>Since <span class="math inline">\(\v \in W_1 \cap
+                W_2\)</span>, it can be written uniquely as a linear
+                combination of the basis <span
+                class="math inline">\(B\)</span> of the intersection:
+                <span class="math display">\[
+                      \v = \sum_{i=1}^n \delta_i \b_i
+                  \]</span></p>
+                <p>Equating this with the RHS expression of <span
+                class="math inline">\(\v\)</span>: <span
+                class="math display">\[
+                      \sum_{i=1}^n \delta_i \b_i = - \sum_{k=1}^q
+                \gamma_k \t_k \implies \sum_{i=1}^n \delta_i \b_i +
+                \sum_{k=1}^q \gamma_k \t_k = \mathbf{0}.
+                  \]</span></p>
+                <p>The set <span class="math inline">\(B_2 = \{ \b_1,
+                \dots, \b_n, \t_1, \dots, \t_q \}\)</span> is a basis of
+                <span class="math inline">\(W_2\)</span> and is
+                therefore linearly independent. This forces all
+                coefficients to be zero. Specifically, all <span
+                class="math inline">\(\gamma_k = 0\)</span>.</p>
+                <p>Substitute <span class="math inline">\(\gamma_k =
+                0\)</span> back into <a href="#eq-linear-combo"
+                class="xref" data-ref="eq-linear-combo">Eq. 1.7.1</a>:
+                <span class="math display">\[
+                      \sum_{i=1}^n \alpha_i \b_i + \sum_{j=1}^p \beta_j
+                \s_j = \mathbf{0}
+                  \]</span></p>
+                <p>Since <span class="math inline">\(B_1 = \{ \b_1,
+                \dots, \b_n, \s_1, \dots, \s_p \}\)</span> is a basis of
+                <span class="math inline">\(W_1\)</span>, it is linearly
+                independent. This forces all <span
+                class="math inline">\(\alpha_i = 0\)</span> and all
+                <span class="math inline">\(\beta_j =
+                0\)</span>.</p></li>
+                </ul>
+                <p>Since all <span class="math inline">\(\alpha, \beta,
+                \gamma\)</span> are zero, <span
+                class="math inline">\(S\)</span> is linearly
+                independent.</p>
+                </div>
+                <p>Use dimension counting, since <span
+                class="math inline">\(S\)</span> is a basis for <span
+                class="math inline">\(W_1 + W_2\)</span>: <span
+                class="math display">\[\begin{align*}
+                \dim (W_1 + W_2) &amp;= |S| \\
+                &amp;= n + p + q \\
+                &amp;= (n + p) + (n + q) - n \\
+                &amp;= \dim(W_1) + \dim(W_2) - \dim(W_1 \cap W_2).
+                \end{align*}\]</span></p>
+                </div>
+                <div class="remark small-env" data-env-type="remark">
+                <p><em>Remark</em><em>.</em> <strong>Counter-example for
+                3 Subspaces</strong></p>
+                <p>It is a coincidence that this formula resembles the
+                “Inclusion-Exclusion Principle” from set theory. This
+                intuition fails for three or more subspaces. The
+                formula: <span class="math display">\[\begin{align*}
+                    \dim (W_1 + W_2 + W_3) &amp;\neq \sum \dim(W_i) -
+                \sum \dim (W_i \cap W_j) + \dim (W_1 \cap W_2 \cap W_3)
+                \end{align*}\]</span></p>
+                <p><strong>Counter-example</strong>: Consider three
+                distinct lines through the origin in <span
+                class="math inline">\(\mathbb{R}^2\)</span> (e.g.,
+                x-axis, y-axis, and <span
+                class="math inline">\(y=x\)</span>).</p>
+                <ul>
+                <li>LHS: The sum of three lines fills the plane, so
+                dimension is <strong>2</strong>.</li>
+                <li>RHS: <span class="math inline">\(1+1+1 - (0+0+0) + 0
+                = 3\)</span>.</li>
+                </ul>
+                <p>Since <span class="math inline">\(2 \neq 3\)</span>,
+                the formula is false.</p>
+                </div>
+                <h2 id="direct-sum-of-two-subspaces"><span
+                class="header-section-number">1.7.3. </span> Direct Sum
+                of Two Subspaces</h2>
+                <div id="def-direct-sum" class="definition"
+                data-env-type="definition" data-number="1.7.2"
+                style="border-left-color: #c94c6c; background-color: #fdf2f4; ">
+                <span
+                class="theorem-title theorem-title-resolved"><strong>Definition</strong><strong>
+                1.7.2</strong> (Direct Sum of Two Subspaces)</span>
+                <p>Let <span class="math inline">\(W_1\)</span>, <span
+                class="math inline">\(W_2\)</span> be subspaces of a
+                vector space <span class="math inline">\(V\)</span>. If
+                <span class="math inline">\(W_1 \cap W_2 = \{ \mathbf{0}
+                \}\)</span>, then we write <span
+                class="math inline">\(W_1 + W2\)</span> as <span
+                class="math display">\[
+                    W_1 \oplus W_2
+                \]</span> and call it the <strong>direct sum</strong> of
+                <span class="math inline">\(W_1\)</span> and <span
+                class="math inline">\(W_2\)</span>.</p>
+                </div>
+                <div id="exm-direct-sum-of-matrix" class="example"
+                data-env-type="example" data-number=""
+                style="border-left-color: #3a8a3a; background-color: #eef7ee; ">
+                <span
+                class="theorem-title theorem-title-resolved"><strong>Example</strong></span>
+                <p>Consider the vector space <span
+                class="math inline">\(V = M_n (\nC)\)</span>, and two of
+                its subspaces:</p>
+                <ul>
+                <li><p><span class="math inline">\(W_1 = \{ \A \in M_n
+                (\nC) : \A^{\top} = \A \}\)</span> (the subspace of
+                symmetric matrices);</p></li>
+                <li><p><span class="math inline">\(W_2 = \{ \A \in M_n
+                (\nC) : \A^{\top} = - \A \}\)</span> (the subspace of
+                skew-symmetric matrices).</p></li>
+                </ul>
+                <p>We can derive that <span class="math inline">\(V =
+                W_1 \oplus W_2\)</span>.</p>
+                <p><em>Proof.</em> We first show that <span
+                class="math inline">\(V = W_1 + W_2\)</span>. That is,
+                any square matrix is a sum of a symmetric matrix and a
+                skew-symmetric matrix. Let <span
+                class="math inline">\(\A \in M_n (\nC)\)</span>, notice
+                that we have the identity: <span class="math display">\[
+                    \A = \frac{1}{2} (\A + \A^{\top}) + \frac{1}{2} (\A
+                - \A^{\top})
+                \]</span> where the first term is symmetric and the
+                second term is skew-symmetric. Therefore, any square
+                matrix is a sum of a symmetric matrix and a
+                skew-symmetric matrix.</p>
+                <p>To establish that <span class="math inline">\(W_1
+                \cap W_2 = \{ \O \}\)</span>, let <span
+                class="math inline">\(\A \in W_1 \cap W_2\)</span>. By
+                definition, this implies <span class="math inline">\(\A
+                \in W_1\)</span> and <span class="math inline">\(\A \in
+                W_2\)</span>. Consequently, the identities <span
+                class="math inline">\(\A = \A^{\top}\)</span> and <span
+                class="math inline">\(\A = - \A^{\top}\)</span> must
+                hold simultaneously. Substituting the former into the
+                latter yields <span class="math inline">\(\A = -
+                \A\)</span>. This implies <span
+                class="math inline">\(2\A = \O\)</span>, and thus <span
+                class="math inline">\(\A = \O\)</span>.</p>
+                </div>
+            </article>
+
+            <!-- Page Navigation -->
+            <nav class="page-navigation">
+                <div class="nav-page nav-page-previous">
+                                        <a href="06-dimension.html" class="pagination-link" aria-label="Sifting
+and the Replacement Theorem">
+                        <i class="bi bi-arrow-left-short"></i>
+                        <span
+                            class="nav-page-text">1.6 Sifting and the
+Replacement Theorem</span>
+                    </a>
+                                    </div>
+                <div class="nav-page nav-page-next">
+                                        <a href="../ch02-linear-transformations/index.html" class="pagination-link" aria-label="Linear
+Transformations {.unnumbered}">
+                        <span
+                            class="nav-page-text">Linear Transformations
+{.unnumbered}</span>
+                        <i class="bi bi-arrow-right-short"></i>
+                    </a>
+                                    </div>
+            </nav>
+        </main>
+
+        <!-- Right Sidebar (TOC) -->
+        <aside id="quarto-margin-sidebar">
+            <nav class="toc">
+                <h2>Table of contents</h2>
+                            </nav>
+
+            <div class="other-formats">
+                <h3>Other Formats</h3>
+                <ul>
+                    <li><a href="../pdf/ch01-vector-spaces/07-sums-and-direct-sums.pdf" target="_blank">PDF</a></li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Tooltip Script -->
+    <script src="../main.js"></script>
+</body>
+
+</html>

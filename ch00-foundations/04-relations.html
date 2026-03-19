@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0.4 Equivalence Relations – Linear Algebra</title>
+
+    <!-- Styles -->
+    <!-- Styles -->
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- MathJax Configuration with Custom Macros -->
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['\\(', '\\)']],
+                displayMath: [['\\[', '\\]']],
+                processEscapes: true,
+                processEnvironments: true,
+                tags: 'ams',
+                macros: {
+                    0: "\\mathbf{0}",
+                    1: "\\mathbf{1}",
+                    A: "\\mathbf{A}",
+                    B: "\\mathbf{B}",
+                    C: "\\mathbf{C}",
+                    Cor: "\\operatorname*{Cor}",
+                    Corr: "\\operatorname*{Corr}",
+                    Cov: "\\operatorname*{Cov}",
+                    D: "\\mathbf{D}",
+                    E: "\\mathbf{E}",
+                    Ev: "\\operatorname*{\\mathbb{E}}",
+                    F: "\\mathbf{F}",
+                    G: "\\mathbf{G}",
+                    H: "\\mathbf{H}",
+                    I: "\\mathbf{I}",
+                    J: "\\mathbf{J}",
+                    K: "\\mathbf{K}",
+                    L: "\\mathbf{L}",
+                    M: "\\mathbf{M}",
+                    N: "\\mathbf{N}",
+                    O: "\\mathbf{O}",
+                    P: "\\mathbf{P}",
+                    Pr: "\\operatorname{Pr}",
+                    Q: "\\mathbf{Q}",
+                    R: "\\mathbf{R}",
+                    S: "\\mathbf{S}",
+                    Span: "\\operatorname{span}",
+                    T: "\\mathbf{T}",
+                    U: "\\mathbf{U}",
+                    V: "\\mathbf{V}",
+                    Var: "\\operatorname*{Var}",
+                    W: "\\mathbf{W}",
+                    X: "\\mathbf{X}",
+                    Y: "\\mathbf{Y}",
+                    Z: "\\mathbf{Z}",
+                    a: "\\mathbf{a}",
+                    adj: "\\operatorname{adj}",
+                    b: "\\mathbf{b}",
+                    c: "\\mathbf{c}",
+                    cA: "\\mathcal{A}",
+                    cB: "\\mathcal{B}",
+                    cC: "\\mathcal{C}",
+                    cD: "\\mathcal{D}",
+                    cE: "\\mathcal{E}",
+                    cF: "\\mathcal{F}",
+                    cG: "\\mathcal{G}",
+                    cH: "\\mathcal{H}",
+                    cI: "\\mathcal{I}",
+                    cJ: "\\mathcal{J}",
+                    cK: "\\mathcal{K}",
+                    cL: "\\mathcal{L}",
+                    cM: "\\mathcal{M}",
+                    cN: "\\mathcal{N}",
+                    cO: "\\mathcal{O}",
+                    cP: "\\mathcal{P}",
+                    cQ: "\\mathcal{Q}",
+                    cR: "\\mathcal{R}",
+                    cS: "\\mathcal{S}",
+                    cT: "\\mathcal{T}",
+                    cU: "\\mathcal{U}",
+                    cV: "\\mathcal{V}",
+                    cW: "\\mathcal{W}",
+                    cX: "\\mathcal{X}",
+                    cY: "\\mathcal{Y}",
+                    cZ: "\\mathcal{Z}",
+                    col: "\\text{col}",
+                    coloneqq: "\\mathrel{:=}",
+                    d: "\\mathbf{d}",
+                    dd: "\\mathrm{d}",
+                    defeq: "\\stackrel{\\smash{\\textnormal{\\tiny def}}}{=}",
+                    diag: "\\operatorname{diag}",
+                    distBern: "\\operatorname{Ber}",
+                    distBeta: "\\operatorname{Beta}",
+                    distBin: "\\operatorname{Bin}",
+                    distCauchy: "\\operatorname{Cauchy}",
+                    distDir: "\\operatorname{Dir}",
+                    distExp: "\\operatorname{Exp}",
+                    distGamma: "\\operatorname{Gamma}",
+                    distGeom: "\\operatorname{Geo}",
+                    distHyp: "\\operatorname{Hyp}",
+                    distInvWishart: "\\operatorname{InvWishart}",
+                    distLognormal: "\\operatorname{Lognormal}",
+                    distMult: "\\operatorname{Mult}",
+                    distN: "\\operatorname{\\mathcal{N}}",
+                    distNB: "\\operatorname{NB}",
+                    distPareto: "\\operatorname{Pareto}",
+                    distPois: "\\operatorname{Poi}",
+                    distUnif: "\\operatorname{Unif}",
+                    distWeibull: "\\operatorname{Weibull}",
+                    distWishart: "\\operatorname{Wishart}",
+                    e: "\\mathbf{e}",
+                    eqqcolon: "\\mathrel{=:}",
+                    f: "\\mathbf{f}",
+                    g: "\\mathbf{g}",
+                    h: "\\mathbf{h}",
+                    i: "\\mathbf{i}",
+                    id: "\\operatorname{id}",
+                    im: "\\operatorname{im}",
+                    img: "\\operatorname{img}",
+                    j: "\\mathbf{j}",
+                    k: "\\mathbf{k}",
+                    ker: "\\operatorname{ker}",
+                    l: "\\mathbf{l}",
+                    m: "\\mathbf{m}",
+                    n: "\\mathbf{n}",
+                    nA: "\\mathbb{A}",
+                    nB: "\\mathbb{B}",
+                    nC: "\\mathbb{C}",
+                    nD: "\\mathbb{D}",
+                    nE: "\\mathbb{E}",
+                    nF: "\\mathbb{F}",
+                    nG: "\\mathbb{G}",
+                    nH: "\\mathbb{H}",
+                    nI: "\\mathbb{I}",
+                    nJ: "\\mathbb{J}",
+                    nK: "\\mathbb{K}",
+                    nL: "\\mathbb{L}",
+                    nM: "\\mathbb{M}",
+                    nN: "\\mathbb{N}",
+                    nO: "\\mathbb{O}",
+                    nP: "\\mathbb{P}",
+                    nQ: "\\mathbb{Q}",
+                    nR: "\\mathbb{R}",
+                    nS: "\\mathbb{S}",
+                    nT: "\\mathbb{T}",
+                    nU: "\\mathbb{U}",
+                    nV: "\\mathbb{V}",
+                    nW: "\\mathbb{W}",
+                    nX: "\\mathbb{X}",
+                    nY: "\\mathbb{Y}",
+                    nZ: "\\mathbb{Z}",
+                    nul: "\\text{nul}",
+                    nullity: "\\text{nullity}",
+                    o: "\\mathbf{o}",
+                    p: "\\mathbf{p}",
+                    q: "\\mathbf{q}",
+                    r: "\\mathbf{r}",
+                    rank: "\\text{rank}",
+                    row: "\\text{row}",
+                    s: "\\mathbf{s}",
+                    sA: "\\mathcal{A}",
+                    sB: "\\mathcal{B}",
+                    sC: "\\mathcal{C}",
+                    sD: "\\mathcal{D}",
+                    sE: "\\mathcal{E}",
+                    sF: "\\mathcal{F}",
+                    sG: "\\mathcal{G}",
+                    sH: "\\mathcal{H}",
+                    sI: "\\mathcal{I}",
+                    sJ: "\\mathcal{J}",
+                    sK: "\\mathcal{K}",
+                    sL: "\\mathcal{L}",
+                    sM: "\\mathcal{M}",
+                    sN: "\\mathcal{N}",
+                    sO: "\\mathcal{O}",
+                    sP: "\\mathcal{P}",
+                    sQ: "\\mathcal{Q}",
+                    sR: "\\mathcal{R}",
+                    sS: "\\mathcal{S}",
+                    sT: "\\mathcal{T}",
+                    sU: "\\mathcal{U}",
+                    sV: "\\mathcal{V}",
+                    sW: "\\mathcal{W}",
+                    sX: "\\mathcal{X}",
+                    sY: "\\mathcal{Y}",
+                    sZ: "\\mathcal{Z}",
+                    spn: "\\text{span}",
+                    t: "\\mathbf{t}",
+                    tr: "\\text{tr}",
+                    u: "\\mathbf{u}",
+                    v: "\\mathbf{v}",
+                    vDelta: "\\bm{\\Delta}",
+                    vGamma: "\\bm{\\Gamma}",
+                    vLambda: "\\bm{\\Lambda}",
+                    vOmega: "\\bm{\\Omega}",
+                    vPhi: "\\bm{\\Phi}",
+                    vPi: "\\bm{\\Pi}",
+                    vPsi: "\\bm{\\Psi}",
+                    vSigma: "\\bm{\\Sigma}",
+                    vTheta: "\\bm{\\Theta}",
+                    vUpsilon: "\\bm{\\Upsilon}",
+                    vXi: "\\bm{\\Xi}",
+                    valpha: "\\bm{\\upalpha}",
+                    vbeta: "\\bm{\\upbeta}",
+                    vchi: "\\bm{\\upchi}",
+                    vdelta: "\\bm{\\updelta}",
+                    vepsilon: "\\bm{\\upepsilon}",
+                    veta: "\\bm{\\upeta}",
+                    vgamma: "\\bm{\\upgamma}",
+                    viota: "\\bm{\\upiota}",
+                    vkappa: "\\bm{\\upkappa}",
+                    vlambda: "\\bm{\\uplambda}",
+                    vmu: "\\bm{\\upmu}",
+                    vnu: "\\bm{\\upnu}",
+                    vomega: "\\bm{\\upomega}",
+                    vphi: "\\bm{\\upphi}",
+                    vpi: "\\bm{\\uppi}",
+                    vpsi: "\\bm{\\uppsi}",
+                    vrho: "\\bm{\\uprho}",
+                    vsigma: "\\bm{\\upsigma}",
+                    vtau: "\\bm{\\uptau}",
+                    vtheta: "\\bm{\\uptheta}",
+                    vupsilon: "\\bm{\\upupsilon}",
+                    vvarepsilon: "\\bm{\\upvarepsilon}",
+                    vvarphi: "\\bm{\\upvarphi}",
+                    vvarpi: "\\bm{\\upvarpi}",
+                    vvarrho: "\\bm{\\upvarrho}",
+                    vvarsigma: "\\bm{\\upvarsigma}",
+                    vvartheta: "\\bm{\\upvartheta}",
+                    vxi: "\\bm{\\upxi}",
+                    vzeta: "\\bm{\\upzeta}",
+                    w: "\\mathbf{w}",
+                    x: "\\mathbf{x}",
+                    y: "\\mathbf{y}",
+                    z: "\\mathbf{z}"
+                },
+                // Define environments not in base amsmath
+                environments: {
+                    dcases: ["\\left\\{\\begin{array}{ll}", "\\end{array}\\right."]
+                }
+            },
+            options: {
+                skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"></script>
+
+    <!-- Tippy.js for tooltips -->
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
+    <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/shift-away.css">
+
+        
+        <script>
+        (function(){
+          if (typeof window.MathJax === 'undefined') window.MathJax = {};
+          if (typeof window.MathJax.tex === 'undefined') window.MathJax.tex = {};
+          if (typeof window.MathJax.tex.macros === 'undefined') window.MathJax.tex.macros = {};
+          Object.assign(window.MathJax.tex.macros, {
+                    "\ketbra": "| #1 \\rangle\\langle #2 |",
+                    "\tr": "\\text{tr}",
+                    "\td": "\\frac{d #1}{d #2}",
+                    "\braket": "\\langle #1 | #2 \\rangle",
+                    "\defeq": "\\stackrel{\\smash{\\textnormal{\\tiny def}}}{=}",
+                    "\pd": "\\frac{\\partial #1}{\\partial #2}",
+                    "\cl": "\\mathcal{#1}",
+                    "\boundary": "\\partial #1",
+                    "\ket": "| #1 \\rangle",
+                    "\closure": "\\overline{#1}",
+                    "\bm": "\\mathbf{#1}",
+                    "\abs": "\\left| #1 \\right|",
+                    "\Var": "\\text{Var}\\left( #1 \\right)",
+                    "\nullity": "\\text{nullity}",
+                    "\nul": "\\text{nul}",
+                    "\Uniform": "\\text{Uniform}\\left( #1, #2 \\right)",
+                    "\rank": "\\text{rank}",
+                    "\rom": "\\mathrm{#1}",
+                    "\limi": "\\lim_{#1 \\to \\infty}",
+                    "\bb": "\\mathbb{#1}",
+                    "\interior": "\\text{int}\\left( #1 \\right)",
+                    "\powerset": "\\mathcal{P}\\left( #1 \\right)",
+                    "\spn": "\\text{span}",
+                    "\bra": "\\langle #1 |",
+                    "\col": "\\text{col}",
+                    "\Cov": "\\text{Cov}\\left( #1, #2 \\right)",
+                    "\limz": "\\lim_{#1 \\to 0}",
+                    "\pdd": "\\frac{\\partial^2 #1}{\\partial #2^2}",
+                    "\tdd": "\\frac{d^2 #1}{d #2^2}",
+                    "\expect": "\\langle #1 \\rangle",
+                    "\Exp": "\\mathbb{E}\\left[ #1 \\right]",
+                    "\norm": "\\left\\| #1 \\right\\|",
+                    "\card": "\\left| #1 \\right|",
+                    "\row": "\\text{row}",
+                    "\Normal": "\\mathcal{N}\\left( #1, #2 \\right)",
+                    "\Prob": "\\mathbb{P}\\left( #1 \\right)"
+          });
+        })();
+        </script>
+    </head>
+
+<body>
+    <div id="quarto-container">
+        <!-- Left Sidebar Navigation -->
+        <nav id="quarto-sidebar">
+            <div class="sidebar-header">
+                <a href="../index.html" class="sidebar-title">
+                    Linear Algebra
+                </a>
+                <div class="sidebar-tools">
+                    <a href="../book/book.pdf" title="Full Book PDF" target="_blank">
+                        <i class="bi bi-file-pdf" style="font-size: 1.1rem"></i>
+                    </a>
+                    <a href="https://github.com/youruser/yourrepo" title="Source Code" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            viewBox="0 0 16 16">
+                            <path
+                                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="sidebar-search">
+                <i class="bi bi-search"></i>
+                <input type="text" class="search-input" id="search-input" placeholder="">
+            </div>
+
+            <nav class="sidebar-nav">
+                                <ul class="nav-list">
+                    <li><a href="../index.html">Preface</a></li>
+                </ul>
+                            </nav>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main id="quarto-content">
+
+
+            <article class="content">
+                <!-- Page title removed to avoid duplication with content H1 -->
+                <!-- Quarto-style Title Block -->
+                <header id="title-block-header" class="quarto-title-block default">
+                                        <nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block"
+                        aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="../ch00-foundations/index.html">Preliminary</a></li>
+                        <li class="breadcrumb-item"><a href="../ch00-foundations/04-relations.html"><span class="chapter-number">0.4</span>&nbsp; <span class="chapter-title">Equivalence Relations</span></a></li>
+                        </ol>
+                    </nav>
+                                        <div class="quarto-title">
+                        <h1 class="title">
+                            <span class="chapter-number">0.4</span>&nbsp; 
+                            <span class="chapter-title">Equivalence
+Relations</span>
+                        </h1>
+                    </div>
+                </header>
+
+                <div id="equivalence-relations">
+
+                </div>
+                <p>In mathematics, we often want to say that two objects
+                are “the same” in some sense, even if they are not
+                identical. For instance:</p>
+                <ul>
+                <li>Two fractions <span
+                class="math inline">\(\frac{1}{2}\)</span> and <span
+                class="math inline">\(\frac{2}{4}\)</span> represent the
+                same rational number.</li>
+                <li>Two matrices <span class="math inline">\(\A\)</span>
+                and <span class="math inline">\(\B\)</span> are
+                <strong>similar</strong> if <span
+                class="math inline">\(\B = \P^{-1}\A\P\)</span> for some
+                invertible <span class="math inline">\(\P\)</span>—they
+                represent the same linear transformation in different
+                bases.</li>
+                <li>Two vector spaces are <strong>isomorphic</strong> if
+                there exists a bijective linear map between them—they
+                have the same “structure.”</li>
+                </ul>
+                <p>Each of these notions of “sameness” is captured by an
+                <strong>equivalence relation</strong>. Understanding
+                equivalence relations helps us recognize when
+                different-looking objects are fundamentally alike.</p>
+                <h2 id="relations"><span
+                class="header-section-number">0.4.1. </span>
+                Relations</h2>
+                <div id="def-relation" class="definition"
+                data-env-type="definition"
+                style="border-left-color: #c94c6c; background-color: #fdf2f4; "
+                data-number="0.4.1">
+                <span
+                class="theorem-title theorem-title-resolved"><strong>Definition</strong><strong>
+                0.4.1</strong> (Relation)</span>
+                <p>A <strong>(binary) relation</strong> on a set <span
+                class="math inline">\(A\)</span> is a subset <span
+                class="math inline">\(R \subseteq A \times A\)</span>.
+                If <span class="math inline">\((a, b) \in R\)</span>, we
+                write <span class="math inline">\(a \sim b\)</span> (or
+                <span class="math inline">\(a \mathrel{R} b\)</span>)
+                and say “<span class="math inline">\(a\)</span> is
+                related to <span class="math inline">\(b\)</span>.”</p>
+                </div>
+                <div id="exm-relations" class="example"
+                data-env-type="example"
+                style="border-left-color: #3a8a3a; background-color: #eef7ee; "
+                data-number="">
+                <span
+                class="theorem-title theorem-title-resolved"><strong>Example</strong>
+                (Examples of Relations)</span>
+                <p>Here are some common examples of relations:</p>
+                <ol type="1">
+                <li><p>On <span class="math inline">\(\nZ\)</span>,
+                define <span class="math inline">\(a \sim b\)</span> if
+                <span class="math inline">\(a \leq b\)</span>. This is
+                the “less than or equal to” relation.</p></li>
+                <li><p>On <span class="math inline">\(\nR\)</span>,
+                define <span class="math inline">\(a \sim b\)</span> if
+                <span class="math inline">\(|a - b| &lt; 1\)</span>.
+                This says <span class="math inline">\(a\)</span> and
+                <span class="math inline">\(b\)</span> are
+                “close.”</p></li>
+                <li><p>On the set of all people, define <span
+                class="math inline">\(a \sim b\)</span> if <span
+                class="math inline">\(a\)</span> and <span
+                class="math inline">\(b\)</span> have the same
+                birthday.</p></li>
+                </ol>
+                </div>
+                <h2 id="equivalence-relations-1"><span
+                class="header-section-number">0.4.2. </span> Equivalence
+                Relations</h2>
+                <p>Not all relations behave like “sameness.” An
+                <strong>equivalence relation</strong> is one that
+                satisfies three natural properties that any notion of
+                sameness should have.</p>
+                <div id="def-equivalence-relation" class="definition"
+                data-env-type="definition"
+                style="border-left-color: #c94c6c; background-color: #fdf2f4; "
+                data-number="0.4.2">
+                <span
+                class="theorem-title theorem-title-resolved"><strong>Definition</strong><strong>
+                0.4.2</strong> (Equivalence Relation)</span>
+                <p>A relation <span class="math inline">\(\sim\)</span>
+                on a set <span class="math inline">\(A\)</span> is an
+                <strong>equivalence relation</strong> if it
+                satisfies:</p>
+                <ol type="1">
+                <li><p><strong>Reflexivity:</strong> <span
+                class="math inline">\(\forall a \in A : a \sim
+                a\)</span>.</p>
+                <p>(Every element is related to itself.)</p></li>
+                <li><p><strong>Symmetry:</strong> <span
+                class="math inline">\(\forall a, b \in A : a \sim b
+                \Rightarrow b \sim a\)</span>.</p>
+                <p>(If <span class="math inline">\(a\)</span> is related
+                to <span class="math inline">\(b\)</span>, then <span
+                class="math inline">\(b\)</span> is related to <span
+                class="math inline">\(a\)</span>.)</p></li>
+                <li><p><strong>Transitivity:</strong> <span
+                class="math inline">\(\forall a, b, c \in A : (a \sim b
+                \land b \sim c) \Rightarrow a \sim c\)</span>.</p>
+                <p>(If <span class="math inline">\(a\)</span> is related
+                to <span class="math inline">\(b\)</span> and <span
+                class="math inline">\(b\)</span> is related to <span
+                class="math inline">\(c\)</span>, then <span
+                class="math inline">\(a\)</span> is related to <span
+                class="math inline">\(c\)</span>.)</p></li>
+                </ol>
+                </div>
+                <div id="exm-equivalence-relations" class="example"
+                data-env-type="example"
+                style="border-left-color: #3a8a3a; background-color: #eef7ee; "
+                data-number="">
+                <span
+                class="theorem-title theorem-title-resolved"><strong>Example</strong>
+                (Examples of Equivalence Relations)</span>
+                <p>The following are all equivalence relations:</p>
+                <ol type="1">
+                <li><p><strong>Equality:</strong> On any set <span
+                class="math inline">\(A\)</span>, the relation <span
+                class="math inline">\(a \sim b \iff a = b\)</span> is an
+                equivalence relation (the finest one possible).</p></li>
+                <li><p><strong>Congruence modulo <span
+                class="math inline">\(n\)</span>:</strong> On <span
+                class="math inline">\(\nZ\)</span>, define <span
+                class="math inline">\(a \equiv b \pmod{n}\)</span> if
+                <span class="math inline">\(n \mid (a - b)\)</span>.</p>
+                <ul>
+                <li>Reflexive: <span class="math inline">\(n \mid
+                0\)</span>, so <span class="math inline">\(a \equiv
+                a\)</span>.</li>
+                <li>Symmetric: If <span class="math inline">\(n \mid (a
+                - b)\)</span>, then <span class="math inline">\(n \mid
+                (b - a)\)</span>.</li>
+                <li>Transitive: If <span class="math inline">\(n \mid (a
+                - b)\)</span> and <span class="math inline">\(n \mid (b
+                - c)\)</span>, then <span class="math inline">\(n \mid
+                ((a - b) + (b - c)) = (a - c)\)</span>.</li>
+                </ul></li>
+                <li><p><strong>Same birthday:</strong> On the set of
+                people, “<span class="math inline">\(a\)</span> has the
+                same birthday as <span class="math inline">\(b\)</span>”
+                is an equivalence relation.</p></li>
+                <li><p><strong>Same absolute value:</strong> On <span
+                class="math inline">\(\nR\)</span>, define <span
+                class="math inline">\(a \sim b \iff |a| = |b|\)</span>.
+                This is an equivalence relation.</p></li>
+                </ol>
+                </div>
+                <div id="exm-non-equivalence" class="example"
+                data-env-type="example"
+                style="border-left-color: #3a8a3a; background-color: #eef7ee; "
+                data-number="">
+                <span
+                class="theorem-title theorem-title-resolved"><strong>Example</strong>
+                (Non-Examples)</span>
+                <p>The following relations fail to be equivalence
+                relations:</p>
+                <ol type="1">
+                <li><p>On <span class="math inline">\(\nZ\)</span>, the
+                relation <span class="math inline">\(a \leq b\)</span>
+                is <strong>not</strong> an equivalence relation:</p>
+                <ul>
+                <li>Reflexive: Yes, <span class="math inline">\(a \leq
+                a\)</span>.</li>
+                <li>Symmetric: <strong>No.</strong> <span
+                class="math inline">\(1 \leq 2\)</span> but <span
+                class="math inline">\(2 \not\leq 1\)</span>.</li>
+                </ul></li>
+                <li><p>On <span class="math inline">\(\nR\)</span>, the
+                relation <span class="math inline">\(|a - b| &lt;
+                1\)</span> is <strong>not</strong> an equivalence
+                relation:</p>
+                <ul>
+                <li>Reflexive: Yes, <span class="math inline">\(|a - a|
+                = 0 &lt; 1\)</span>.</li>
+                <li>Symmetric: Yes.</li>
+                <li>Transitive: <strong>No.</strong> We have <span
+                class="math inline">\(|0 - 0.6| &lt; 1\)</span> and
+                <span class="math inline">\(|0.6 - 1.2| &lt; 1\)</span>,
+                but <span class="math inline">\(|0 - 1.2| = 1.2 \not&lt;
+                1\)</span>.</li>
+                </ul></li>
+                </ol>
+                </div>
+                <h2 id="equivalence-classes"><span
+                class="header-section-number">0.4.3. </span> Equivalence
+                Classes</h2>
+                <p>An equivalence relation partitions a set into
+                disjoint groups of “equivalent” elements. Each such
+                group is called an <strong>equivalence
+                class</strong>.</p>
+                <div id="def-equivalence-class" class="definition"
+                data-env-type="definition"
+                style="border-left-color: #c94c6c; background-color: #fdf2f4; "
+                data-number="0.4.3">
+                <span
+                class="theorem-title theorem-title-resolved"><strong>Definition</strong><strong>
+                0.4.3</strong> (Equivalence Class)</span>
+                <p>Let <span class="math inline">\(\sim\)</span> be an
+                equivalence relation on <span
+                class="math inline">\(A\)</span>. The
+                <strong>equivalence class</strong> of an element <span
+                class="math inline">\(a \in A\)</span> is the set of all
+                elements equivalent to <span
+                class="math inline">\(a\)</span>: <span
+                class="math display">\[
+                        [a] = \{ b \in A : b \sim a \}
+                \]</span> The element <span
+                class="math inline">\(a\)</span> is called a
+                <strong>representative</strong> of the class <span
+                class="math inline">\([a]\)</span>.</p>
+                </div>
+                <div id="exm-equivalence-classes" class="example"
+                data-env-type="example"
+                style="border-left-color: #3a8a3a; background-color: #eef7ee; "
+                data-number="">
+                <span
+                class="theorem-title theorem-title-resolved"><strong>Example</strong>
+                (Examples of Equivalence Classes)</span>
+                <p>We illustrate equivalence classes with two
+                examples:</p>
+                <ol type="1">
+                <li><p><strong>Congruence modulo 3:</strong> The
+                equivalence classes of <span
+                class="math inline">\(\nZ\)</span> under <span
+                class="math inline">\(\equiv \pmod{3}\)</span> are:
+                <span class="math display">\[\begin{align*}
+                          [0] &amp;= \{ \ldots, -6, -3, 0, 3, 6, 9,
+                \ldots \} \\
+                          [1] &amp;= \{ \ldots, -5, -2, 1, 4, 7, 10,
+                \ldots \} \\
+                          [2] &amp;= \{ \ldots, -4, -1, 2, 5, 8, 11,
+                \ldots \}
+                  \end{align*}\]</span> Note that <span
+                class="math inline">\([0] = [3] = [6] = \cdots\)</span>
+                and <span class="math inline">\([1] = [4] = [7] =
+                \cdots\)</span>. Different representatives can name the
+                same class.</p></li>
+                <li><p><strong>Same absolute value on <span
+                class="math inline">\(\nR\)</span>:</strong> The
+                equivalence class of <span
+                class="math inline">\(2\)</span> is <span
+                class="math inline">\([2] = \{ -2, 2 \}\)</span>. The
+                equivalence class of <span
+                class="math inline">\(0\)</span> is <span
+                class="math inline">\([0] = \{ 0 \}\)</span>.</p></li>
+                </ol>
+                </div>
+                <div id="thm-partition" class="theorem"
+                data-env-type="theorem"
+                style="border-left-color: #3b6eda; background-color: #f0f5ff; "
+                data-number="0.4.1">
+                <span
+                class="theorem-title theorem-title-resolved"><strong>Theorem</strong><strong>
+                0.4.1</strong> (Equivalence Classes Partition the
+                Set)</span>
+                <p>Let <span class="math inline">\(\sim\)</span> be an
+                equivalence relation on <span
+                class="math inline">\(A\)</span>. Then:</p>
+                <ol type="1">
+                <li>Every element belongs to some equivalence class:
+                <span class="math inline">\(a \in [a]\)</span>.</li>
+                <li>Two equivalence classes are either equal or
+                disjoint: <span class="math inline">\([a] = [b]\)</span>
+                or <span class="math inline">\([a] \cap [b] =
+                \varnothing\)</span>.</li>
+                <li>The union of all equivalence classes is <span
+                class="math inline">\(A\)</span>.</li>
+                </ol>
+                <p>In other words, the equivalence classes form a
+                <strong>partition</strong> of <span
+                class="math inline">\(A\)</span>.</p>
+                </div>
+                <div class="proof small-env" data-env-type="proof">
+                <p><em>Proof</em><em>.</em> </p>
+                <ol type="1">
+                <li><p>By reflexivity, <span class="math inline">\(a
+                \sim a\)</span>, so <span class="math inline">\(a \in
+                [a]\)</span>.</p></li>
+                <li><p>Suppose <span class="math inline">\([a] \cap [b]
+                \neq \varnothing\)</span>, and let <span
+                class="math inline">\(c \in [a] \cap [b]\)</span>. Then
+                <span class="math inline">\(c \sim a\)</span> and <span
+                class="math inline">\(c \sim b\)</span>. By symmetry,
+                <span class="math inline">\(a \sim c\)</span>. By
+                transitivity, <span class="math inline">\(a \sim
+                b\)</span>.</p></li>
+                </ol>
+                <p>Now we show <span class="math inline">\([a] =
+                [b]\)</span>. Let <span class="math inline">\(x \in
+                [a]\)</span>, so <span class="math inline">\(x \sim
+                a\)</span>. Since <span class="math inline">\(a \sim
+                b\)</span>, by transitivity <span
+                class="math inline">\(x \sim b\)</span>, so <span
+                class="math inline">\(x \in [b]\)</span>. Thus <span
+                class="math inline">\([a] \subseteq [b]\)</span>. By
+                symmetry, <span class="math inline">\([b] \subseteq
+                [a]\)</span>, so <span class="math inline">\([a] =
+                [b]\)</span>.</p>
+                <ol start="3" type="1">
+                <li>Follows from (1): every element <span
+                class="math inline">\(a\)</span> is in <span
+                class="math inline">\([a]\)</span>.</li>
+                </ol>
+                </div>
+                <div id="def-quotient-set" class="definition"
+                data-env-type="definition"
+                style="border-left-color: #c94c6c; background-color: #fdf2f4; "
+                data-number="0.4.4">
+                <span
+                class="theorem-title theorem-title-resolved"><strong>Definition</strong><strong>
+                0.4.4</strong> (Quotient Set)</span>
+                <p>Let <span class="math inline">\(\sim\)</span> be an
+                equivalence relation on <span
+                class="math inline">\(A\)</span>. The <strong>quotient
+                set</strong> (or <strong>quotient of <span
+                class="math inline">\(A\)</span> by <span
+                class="math inline">\(\sim\)</span></strong>) is the set
+                of all equivalence classes: <span
+                class="math display">\[
+                        A / {\sim} = \{ [a] : a \in A \}
+                \]</span></p>
+                </div>
+                <div id="exm-quotient-set" class="example"
+                data-env-type="example"
+                style="border-left-color: #3a8a3a; background-color: #eef7ee; "
+                data-number="">
+                <span
+                class="theorem-title theorem-title-resolved"><strong>Example</strong>
+                (Quotient Sets)</span>
+                <p>The following are examples of quotient sets:</p>
+                <ol type="1">
+                <li><p><span class="math inline">\(\nZ / {\equiv_3} = \{
+                [0], [1], [2] \}\)</span> has three elements. This is
+                often written <span class="math inline">\(\nZ /
+                3\nZ\)</span> or <span
+                class="math inline">\(\nZ_3\)</span>.</p></li>
+                <li><p>The quotient of <span
+                class="math inline">\(\nR\)</span> by “same absolute
+                value” is in bijection with <span
+                class="math inline">\([0, \infty)\)</span>—each
+                equivalence class is determined by its absolute
+                value.</p></li>
+                </ol>
+                </div>
+                <h2 id="equivalence-relations-in-linear-algebra"><span
+                class="header-section-number">0.4.4. </span> Equivalence
+                Relations in Linear Algebra</h2>
+                <p>The following equivalence relations will appear
+                throughout your study of linear algebra:</p>
+                <div id="exm-similarity" class="example"
+                data-env-type="example"
+                style="border-left-color: #3a8a3a; background-color: #eef7ee; "
+                data-number="">
+                <span
+                class="theorem-title theorem-title-resolved"><strong>Example</strong>
+                (Matrix Similarity)</span>
+                <p>On <span class="math inline">\(M_n(F)\)</span>,
+                define <span class="math inline">\(\A \sim \B\)</span>
+                if there exists an invertible matrix <span
+                class="math inline">\(\P \in M_n(F)\)</span> such that
+                <span class="math inline">\(\B = \P^{-1}\A\P\)</span>.
+                This is called <strong>similarity</strong>.</p>
+                <ul>
+                <li>Reflexive: <span class="math inline">\(\A =
+                \I^{-1}\A\I\)</span>, so <span class="math inline">\(\A
+                \sim \A\)</span>.</li>
+                <li>Symmetric: If <span class="math inline">\(\B =
+                \P^{-1}\A\P\)</span>, then <span
+                class="math inline">\(\A = \P\B\P^{-1} =
+                (\P^{-1})^{-1}\B(\P^{-1})\)</span>, so <span
+                class="math inline">\(\B \sim \A\)</span>.</li>
+                <li>Transitive: If <span class="math inline">\(\B =
+                \P^{-1}\A\P\)</span> and <span class="math inline">\(\C
+                = \Q^{-1}\B\Q\)</span>, then <span
+                class="math inline">\(\C = \Q^{-1}\P^{-1}\A\P\Q =
+                (\P\Q)^{-1}\A(\P\Q)\)</span>.</li>
+                </ul>
+                <p>Similar matrices represent the same linear
+                transformation in different bases. They share many
+                properties: determinant, trace, eigenvalues, and
+                characteristic polynomial.</p>
+                </div>
+                <div id="exm-row-equivalence" class="example"
+                data-env-type="example"
+                style="border-left-color: #3a8a3a; background-color: #eef7ee; "
+                data-number="">
+                <span
+                class="theorem-title theorem-title-resolved"><strong>Example</strong>
+                (Row Equivalence)</span>
+                <p>Two matrices are <strong>row equivalent</strong> if
+                one can be obtained from the other by a sequence of
+                elementary row operations. This is an equivalence
+                relation on <span class="math inline">\(M_{m \times
+                n}(F)\)</span>.</p>
+                </div>
+                <div class="remark small-env" data-env-type="remark">
+                <p><em>Remark</em><em>.</em> When you encounter a new
+                equivalence relation, ask: “What properties do
+                equivalent objects share?” For similarity, the answer
+                includes eigenvalues and determinant. These shared
+                properties are called <strong>invariants</strong> of the
+                equivalence relation.</p>
+                </div>
+            </article>
+
+            <!-- Page Navigation -->
+            <nav class="page-navigation">
+                <div class="nav-page nav-page-previous">
+                                        <a href="03-functions.html" class="pagination-link" aria-label="Functions">
+                        <i class="bi bi-arrow-left-short"></i>
+                        <span
+                            class="nav-page-text">0.3 Functions</span>
+                    </a>
+                                    </div>
+                <div class="nav-page nav-page-next">
+                                        <a href="05-polynomials.html" class="pagination-link" aria-label="Polynomials">
+                        <span
+                            class="nav-page-text">0.5 Polynomials</span>
+                        <i class="bi bi-arrow-right-short"></i>
+                    </a>
+                                    </div>
+            </nav>
+        </main>
+
+        <!-- Right Sidebar (TOC) -->
+        <aside id="quarto-margin-sidebar">
+            <nav class="toc">
+                <h2>Table of contents</h2>
+                            </nav>
+
+            <div class="other-formats">
+                <h3>Other Formats</h3>
+                <ul>
+                    <li><a href="../pdf/ch00-foundations/04-relations.pdf" target="_blank">PDF</a></li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Tooltip Script -->
+    <script src="../main.js"></script>
+</body>
+
+</html>

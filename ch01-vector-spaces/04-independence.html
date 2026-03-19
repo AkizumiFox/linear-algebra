@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1.4 Linear Independence – Linear Algebra</title>
+
+    <!-- Styles -->
+    <!-- Styles -->
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- MathJax Configuration with Custom Macros -->
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['\\(', '\\)']],
+                displayMath: [['\\[', '\\]']],
+                processEscapes: true,
+                processEnvironments: true,
+                tags: 'ams',
+                macros: {
+                    0: "\\mathbf{0}",
+                    1: "\\mathbf{1}",
+                    A: "\\mathbf{A}",
+                    B: "\\mathbf{B}",
+                    C: "\\mathbf{C}",
+                    Cor: "\\operatorname*{Cor}",
+                    Corr: "\\operatorname*{Corr}",
+                    Cov: "\\operatorname*{Cov}",
+                    D: "\\mathbf{D}",
+                    E: "\\mathbf{E}",
+                    Ev: "\\operatorname*{\\mathbb{E}}",
+                    F: "\\mathbf{F}",
+                    G: "\\mathbf{G}",
+                    H: "\\mathbf{H}",
+                    I: "\\mathbf{I}",
+                    J: "\\mathbf{J}",
+                    K: "\\mathbf{K}",
+                    L: "\\mathbf{L}",
+                    M: "\\mathbf{M}",
+                    N: "\\mathbf{N}",
+                    O: "\\mathbf{O}",
+                    P: "\\mathbf{P}",
+                    Pr: "\\operatorname{Pr}",
+                    Q: "\\mathbf{Q}",
+                    R: "\\mathbf{R}",
+                    S: "\\mathbf{S}",
+                    Span: "\\operatorname{span}",
+                    T: "\\mathbf{T}",
+                    U: "\\mathbf{U}",
+                    V: "\\mathbf{V}",
+                    Var: "\\operatorname*{Var}",
+                    W: "\\mathbf{W}",
+                    X: "\\mathbf{X}",
+                    Y: "\\mathbf{Y}",
+                    Z: "\\mathbf{Z}",
+                    a: "\\mathbf{a}",
+                    adj: "\\operatorname{adj}",
+                    b: "\\mathbf{b}",
+                    c: "\\mathbf{c}",
+                    cA: "\\mathcal{A}",
+                    cB: "\\mathcal{B}",
+                    cC: "\\mathcal{C}",
+                    cD: "\\mathcal{D}",
+                    cE: "\\mathcal{E}",
+                    cF: "\\mathcal{F}",
+                    cG: "\\mathcal{G}",
+                    cH: "\\mathcal{H}",
+                    cI: "\\mathcal{I}",
+                    cJ: "\\mathcal{J}",
+                    cK: "\\mathcal{K}",
+                    cL: "\\mathcal{L}",
+                    cM: "\\mathcal{M}",
+                    cN: "\\mathcal{N}",
+                    cO: "\\mathcal{O}",
+                    cP: "\\mathcal{P}",
+                    cQ: "\\mathcal{Q}",
+                    cR: "\\mathcal{R}",
+                    cS: "\\mathcal{S}",
+                    cT: "\\mathcal{T}",
+                    cU: "\\mathcal{U}",
+                    cV: "\\mathcal{V}",
+                    cW: "\\mathcal{W}",
+                    cX: "\\mathcal{X}",
+                    cY: "\\mathcal{Y}",
+                    cZ: "\\mathcal{Z}",
+                    col: "\\text{col}",
+                    coloneqq: "\\mathrel{:=}",
+                    d: "\\mathbf{d}",
+                    dd: "\\mathrm{d}",
+                    defeq: "\\stackrel{\\smash{\\textnormal{\\tiny def}}}{=}",
+                    diag: "\\operatorname{diag}",
+                    distBern: "\\operatorname{Ber}",
+                    distBeta: "\\operatorname{Beta}",
+                    distBin: "\\operatorname{Bin}",
+                    distCauchy: "\\operatorname{Cauchy}",
+                    distDir: "\\operatorname{Dir}",
+                    distExp: "\\operatorname{Exp}",
+                    distGamma: "\\operatorname{Gamma}",
+                    distGeom: "\\operatorname{Geo}",
+                    distHyp: "\\operatorname{Hyp}",
+                    distInvWishart: "\\operatorname{InvWishart}",
+                    distLognormal: "\\operatorname{Lognormal}",
+                    distMult: "\\operatorname{Mult}",
+                    distN: "\\operatorname{\\mathcal{N}}",
+                    distNB: "\\operatorname{NB}",
+                    distPareto: "\\operatorname{Pareto}",
+                    distPois: "\\operatorname{Poi}",
+                    distUnif: "\\operatorname{Unif}",
+                    distWeibull: "\\operatorname{Weibull}",
+                    distWishart: "\\operatorname{Wishart}",
+                    e: "\\mathbf{e}",
+                    eqqcolon: "\\mathrel{=:}",
+                    f: "\\mathbf{f}",
+                    g: "\\mathbf{g}",
+                    h: "\\mathbf{h}",
+                    i: "\\mathbf{i}",
+                    id: "\\operatorname{id}",
+                    im: "\\operatorname{im}",
+                    img: "\\operatorname{img}",
+                    j: "\\mathbf{j}",
+                    k: "\\mathbf{k}",
+                    ker: "\\operatorname{ker}",
+                    l: "\\mathbf{l}",
+                    m: "\\mathbf{m}",
+                    n: "\\mathbf{n}",
+                    nA: "\\mathbb{A}",
+                    nB: "\\mathbb{B}",
+                    nC: "\\mathbb{C}",
+                    nD: "\\mathbb{D}",
+                    nE: "\\mathbb{E}",
+                    nF: "\\mathbb{F}",
+                    nG: "\\mathbb{G}",
+                    nH: "\\mathbb{H}",
+                    nI: "\\mathbb{I}",
+                    nJ: "\\mathbb{J}",
+                    nK: "\\mathbb{K}",
+                    nL: "\\mathbb{L}",
+                    nM: "\\mathbb{M}",
+                    nN: "\\mathbb{N}",
+                    nO: "\\mathbb{O}",
+                    nP: "\\mathbb{P}",
+                    nQ: "\\mathbb{Q}",
+                    nR: "\\mathbb{R}",
+                    nS: "\\mathbb{S}",
+                    nT: "\\mathbb{T}",
+                    nU: "\\mathbb{U}",
+                    nV: "\\mathbb{V}",
+                    nW: "\\mathbb{W}",
+                    nX: "\\mathbb{X}",
+                    nY: "\\mathbb{Y}",
+                    nZ: "\\mathbb{Z}",
+                    nul: "\\text{nul}",
+                    nullity: "\\text{nullity}",
+                    o: "\\mathbf{o}",
+                    p: "\\mathbf{p}",
+                    q: "\\mathbf{q}",
+                    r: "\\mathbf{r}",
+                    rank: "\\text{rank}",
+                    row: "\\text{row}",
+                    s: "\\mathbf{s}",
+                    sA: "\\mathcal{A}",
+                    sB: "\\mathcal{B}",
+                    sC: "\\mathcal{C}",
+                    sD: "\\mathcal{D}",
+                    sE: "\\mathcal{E}",
+                    sF: "\\mathcal{F}",
+                    sG: "\\mathcal{G}",
+                    sH: "\\mathcal{H}",
+                    sI: "\\mathcal{I}",
+                    sJ: "\\mathcal{J}",
+                    sK: "\\mathcal{K}",
+                    sL: "\\mathcal{L}",
+                    sM: "\\mathcal{M}",
+                    sN: "\\mathcal{N}",
+                    sO: "\\mathcal{O}",
+                    sP: "\\mathcal{P}",
+                    sQ: "\\mathcal{Q}",
+                    sR: "\\mathcal{R}",
+                    sS: "\\mathcal{S}",
+                    sT: "\\mathcal{T}",
+                    sU: "\\mathcal{U}",
+                    sV: "\\mathcal{V}",
+                    sW: "\\mathcal{W}",
+                    sX: "\\mathcal{X}",
+                    sY: "\\mathcal{Y}",
+                    sZ: "\\mathcal{Z}",
+                    spn: "\\text{span}",
+                    t: "\\mathbf{t}",
+                    tr: "\\text{tr}",
+                    u: "\\mathbf{u}",
+                    v: "\\mathbf{v}",
+                    vDelta: "\\bm{\\Delta}",
+                    vGamma: "\\bm{\\Gamma}",
+                    vLambda: "\\bm{\\Lambda}",
+                    vOmega: "\\bm{\\Omega}",
+                    vPhi: "\\bm{\\Phi}",
+                    vPi: "\\bm{\\Pi}",
+                    vPsi: "\\bm{\\Psi}",
+                    vSigma: "\\bm{\\Sigma}",
+                    vTheta: "\\bm{\\Theta}",
+                    vUpsilon: "\\bm{\\Upsilon}",
+                    vXi: "\\bm{\\Xi}",
+                    valpha: "\\bm{\\upalpha}",
+                    vbeta: "\\bm{\\upbeta}",
+                    vchi: "\\bm{\\upchi}",
+                    vdelta: "\\bm{\\updelta}",
+                    vepsilon: "\\bm{\\upepsilon}",
+                    veta: "\\bm{\\upeta}",
+                    vgamma: "\\bm{\\upgamma}",
+                    viota: "\\bm{\\upiota}",
+                    vkappa: "\\bm{\\upkappa}",
+                    vlambda: "\\bm{\\uplambda}",
+                    vmu: "\\bm{\\upmu}",
+                    vnu: "\\bm{\\upnu}",
+                    vomega: "\\bm{\\upomega}",
+                    vphi: "\\bm{\\upphi}",
+                    vpi: "\\bm{\\uppi}",
+                    vpsi: "\\bm{\\uppsi}",
+                    vrho: "\\bm{\\uprho}",
+                    vsigma: "\\bm{\\upsigma}",
+                    vtau: "\\bm{\\uptau}",
+                    vtheta: "\\bm{\\uptheta}",
+                    vupsilon: "\\bm{\\upupsilon}",
+                    vvarepsilon: "\\bm{\\upvarepsilon}",
+                    vvarphi: "\\bm{\\upvarphi}",
+                    vvarpi: "\\bm{\\upvarpi}",
+                    vvarrho: "\\bm{\\upvarrho}",
+                    vvarsigma: "\\bm{\\upvarsigma}",
+                    vvartheta: "\\bm{\\upvartheta}",
+                    vxi: "\\bm{\\upxi}",
+                    vzeta: "\\bm{\\upzeta}",
+                    w: "\\mathbf{w}",
+                    x: "\\mathbf{x}",
+                    y: "\\mathbf{y}",
+                    z: "\\mathbf{z}"
+                },
+                // Define environments not in base amsmath
+                environments: {
+                    dcases: ["\\left\\{\\begin{array}{ll}", "\\end{array}\\right."]
+                }
+            },
+            options: {
+                skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"></script>
+
+    <!-- Tippy.js for tooltips -->
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
+    <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/shift-away.css">
+
+        
+        <script>
+        (function(){
+          if (typeof window.MathJax === 'undefined') window.MathJax = {};
+          if (typeof window.MathJax.tex === 'undefined') window.MathJax.tex = {};
+          if (typeof window.MathJax.tex.macros === 'undefined') window.MathJax.tex.macros = {};
+          Object.assign(window.MathJax.tex.macros, {
+                    "\limi": "\\lim_{#1 \\to \\infty}",
+                    "\bra": "\\langle #1 |",
+                    "\limz": "\\lim_{#1 \\to 0}",
+                    "\Uniform": "\\text{Uniform}\\left( #1, #2 \\right)",
+                    "\Prob": "\\mathbb{P}\\left( #1 \\right)",
+                    "\abs": "\\left| #1 \\right|",
+                    "\rank": "\\text{rank}",
+                    "\closure": "\\overline{#1}",
+                    "\Cov": "\\text{Cov}\\left( #1, #2 \\right)",
+                    "\nul": "\\text{nul}",
+                    "\pdd": "\\frac{\\partial^2 #1}{\\partial #2^2}",
+                    "\tdd": "\\frac{d^2 #1}{d #2^2}",
+                    "\expect": "\\langle #1 \\rangle",
+                    "\ket": "| #1 \\rangle",
+                    "\ketbra": "| #1 \\rangle\\langle #2 |",
+                    "\spn": "\\text{span}",
+                    "\col": "\\text{col}",
+                    "\pd": "\\frac{\\partial #1}{\\partial #2}",
+                    "\interior": "\\text{int}\\left( #1 \\right)",
+                    "\td": "\\frac{d #1}{d #2}",
+                    "\rom": "\\mathrm{#1}",
+                    "\tr": "\\text{tr}",
+                    "\defeq": "\\stackrel{\\smash{\\textnormal{\\tiny def}}}{=}",
+                    "\nullity": "\\text{nullity}",
+                    "\boundary": "\\partial #1",
+                    "\bb": "\\mathbb{#1}",
+                    "\Normal": "\\mathcal{N}\\left( #1, #2 \\right)",
+                    "\Var": "\\text{Var}\\left( #1 \\right)",
+                    "\cl": "\\mathcal{#1}",
+                    "\norm": "\\left\\| #1 \\right\\|",
+                    "\bm": "\\mathbf{#1}",
+                    "\Exp": "\\mathbb{E}\\left[ #1 \\right]",
+                    "\card": "\\left| #1 \\right|",
+                    "\powerset": "\\mathcal{P}\\left( #1 \\right)",
+                    "\braket": "\\langle #1 | #2 \\rangle",
+                    "\row": "\\text{row}"
+          });
+        })();
+        </script>
+    </head>
+
+<body>
+    <div id="quarto-container">
+        <!-- Left Sidebar Navigation -->
+        <nav id="quarto-sidebar">
+            <div class="sidebar-header">
+                <a href="../index.html" class="sidebar-title">
+                    Linear Algebra
+                </a>
+                <div class="sidebar-tools">
+                    <a href="../book/book.pdf" title="Full Book PDF" target="_blank">
+                        <i class="bi bi-file-pdf" style="font-size: 1.1rem"></i>
+                    </a>
+                    <a href="https://github.com/youruser/yourrepo" title="Source Code" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            viewBox="0 0 16 16">
+                            <path
+                                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="sidebar-search">
+                <i class="bi bi-search"></i>
+                <input type="text" class="search-input" id="search-input" placeholder="">
+            </div>
+
+            <nav class="sidebar-nav">
+                                <ul class="nav-list">
+                    <li><a href="../index.html">Preface</a></li>
+                </ul>
+                            </nav>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main id="quarto-content">
+
+
+            <article class="content">
+                <!-- Page title removed to avoid duplication with content H1 -->
+                <!-- Quarto-style Title Block -->
+                <header id="title-block-header" class="quarto-title-block default">
+                                        <nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block"
+                        aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="../ch01-vector-spaces/index.html">Vector Spaces and Dimensions</a></li>
+                        <li class="breadcrumb-item"><a href="../ch01-vector-spaces/04-independence.html"><span class="chapter-number">1.4</span>&nbsp; <span class="chapter-title">Linear Independence</span></a></li>
+                        </ol>
+                    </nav>
+                                        <div class="quarto-title">
+                        <h1 class="title">
+                            <span class="chapter-number">1.4</span>&nbsp; 
+                            <span class="chapter-title">Linear
+Independence</span>
+                        </h1>
+                    </div>
+                </header>
+
+                <div id="linear-independence">
+
+                </div>
+                <p>A spanning set is like a toolbox that is guaranteed
+                to have every tool you need. But a messy toolbox might
+                have three different hammers that all do the same thing.
+                In mathematics, as in engineering, we value
+                <strong>efficiency</strong>.</p>
+                <p>If one of the vectors in your spanning set can
+                already be built using the others, then that vector is
+                “dead weight”—it isn’t helping you reach any new
+                territory. We call such a set <em>linearly
+                dependent</em>.</p>
+                <p>In this section, we search for the “cleanest”
+                possible sets. We want to know: “Is every vector in this
+                collection actually contributing something unique, or is
+                someone just coasting on the work of the others?”</p>
+                <h2 id="definition-and-examples"><span
+                class="header-section-number">1.4.1. </span> Definition
+                and Examples</h2>
+                <div id="def-linear-independence" class="definition"
+                data-number="1.4.1" data-env-type="definition"
+                style="border-left-color: #c94c6c; background-color: #fdf2f4; ">
+                <span
+                class="theorem-title theorem-title-resolved"><strong>Definition</strong><strong>
+                1.4.1</strong> (Linear Independence)</span>
+                <p>A subset <span class="math inline">\(S\)</span> of a
+                vector space <span class="math inline">\(V\)</span> is
+                said to be <strong>linearly independent</strong> if for
+                any distinct vectors <span class="math inline">\(\v_1,
+                \v_2, \dots, \v_n \in S\)</span>, the only solution to
+                the equation: <span class="math display">\[
+                    a_1 \v_1 + a_2 \v_2 + \dots + a_n \v_n = \mathbf{0}
+                \]</span> is the trivial solution <span
+                class="math inline">\(a_1 = a_2 = \dots = a_n =
+                0\)</span>.</p>
+                <p>If there exists a non-trivial solution (where at
+                least one <span class="math inline">\(a_i \neq
+                0\)</span>), then <span class="math inline">\(S\)</span>
+                is said to be <strong>linearly dependent</strong>.</p>
+                </div>
+                <div class="remark small-env" data-env-type="remark">
+                <p><em>Remark</em><em>.</em> Geometrically, in <span
+                class="math inline">\(\nR^2\)</span>, two vectors are
+                linearly dependent if and only if they lie on the same
+                line through the origin (one is a multiple of the
+                other). In <span class="math inline">\(\nR^3\)</span>,
+                three vectors are linearly dependent if and only if they
+                lie on the same plane through the origin.</p>
+                </div>
+                <div id="exm-linear-independence" class="example"
+                data-number="" data-env-type="example"
+                style="border-left-color: #3a8a3a; background-color: #eef7ee; ">
+                <span
+                class="theorem-title theorem-title-resolved"><strong>Example</strong>
+                (Examples of Linear Independence)</span>
+                <p>The following examples illustrate how to check for
+                linear independence in various settings:</p>
+                <ol type="1">
+                <li><p>Let <span class="math inline">\(S_1 = \{(1, 2,
+                3), (4, 5, 6)\} \subseteq \nR^3\)</span>. To check
+                linear independence, suppose <span
+                class="math display">\[
+                a(1, 2, 3) + b(4, 5, 6) = (0, 0, 0) \implies
+                \begin{cases} a + 4b = 0 \\ 2a + 5b = 0 \\ 3a + 6b = 0
+                \end{cases}
+                \]</span> The first two equations give <span
+                class="math inline">\(a = -4b\)</span> and <span
+                class="math inline">\(2(-4b) + 5b = 0 \implies -3b =
+                0\)</span>. Thus <span class="math inline">\(a = b =
+                0\)</span>, so <span class="math inline">\(S_1\)</span>
+                is <strong>linearly independent</strong>.</p></li>
+                <li><p>Let <span class="math inline">\(S_2 = \{(1, 2,
+                3), (4, 5, 6), (7, 8, 9)\} \subseteq \nR^3\)</span>.
+                Note that <span class="math display">\[
+                (1, 2, 3) - 2(4, 5, 6) + (7, 8, 9) = (1-8+7, 2-10+8,
+                3-12+9) = (0, 0, 0).
+                \]</span> Since there exists a non-trivial solution,
+                <span class="math inline">\(S_2\)</span> is
+                <strong>linearly dependent</strong>.</p></li>
+                <li><p>Consider <span class="math inline">\(\{2x + 1,
+                x^2 + 3\}\)</span> in <span
+                class="math inline">\(\nR[x]_{\leq 2}\)</span>. Suppose
+                <span class="math display">\[
+                a(2x + 1) + b(x^2 + 3) = 0 \implies bx^2 + 2ax + (a +
+                3b) = 0.
+                \]</span> Comparing coefficients of <span
+                class="math inline">\(x^2, x, 1\)</span>, we have <span
+                class="math inline">\(b = 0\)</span>, <span
+                class="math inline">\(2a = 0\)</span>, and <span
+                class="math inline">\(a + 3b = 0\)</span>. This implies
+                <span class="math inline">\(a = b = 0\)</span>, so the
+                set is <strong>linearly independent</strong>.</p></li>
+                <li><p>Consider <span class="math inline">\(\{ \sin x,
+                \cos x, e^x \}\)</span> in <span
+                class="math inline">\(D(\nR)\)</span>. Suppose for all
+                <span class="math inline">\(x \in \nR\)</span>: <span
+                class="math display">\[
+                a \sin x + b \cos x + c e^x = 0.
+                \]</span> Setting <span class="math inline">\(x =
+                0\)</span> gives <span class="math inline">\(b + c =
+                0\)</span>. Setting <span class="math inline">\(x =
+                \pi\)</span> gives <span class="math inline">\(-b + c
+                e^\pi = 0\)</span>. Adding these gives <span
+                class="math inline">\(c(1 + e^\pi) = 0\)</span>, so
+                <span class="math inline">\(c = 0\)</span> and hence
+                <span class="math inline">\(b = 0\)</span>. Finally,
+                setting <span class="math inline">\(x = \pi/2\)</span>
+                gives <span class="math inline">\(a + c e^{\pi/2} = 0
+                \implies a = 0\)</span>. Thus, the set is
+                <strong>linearly independent</strong>.</p></li>
+                </ol>
+                </div>
+                <div id="thm-linear-dependence-lemma" class="theorem"
+                data-number="1.4.1" data-env-type="theorem"
+                style="border-left-color: #3b6eda; background-color: #f0f5ff; ">
+                <span
+                class="theorem-title theorem-title-resolved"><strong>Theorem</strong><strong>
+                1.4.1</strong> (Linear Dependence Lemma)</span>
+                <p><span class="math inline">\(\left\{ \v_1, \v_2,
+                \dots, \v_m \right\}\)</span> is linearly dependent if
+                and only if either <span class="math inline">\(\v_1 =
+                \mathbf{0}\)</span> or for some <span
+                class="math inline">\(r\)</span>, <span
+                class="math inline">\(\v_r\)</span> is a linear
+                combination of <span class="math inline">\(\left\{ \v_1,
+                \v_2, \dots, \v_{r - 1} \right\}\)</span>.</p>
+                </div>
+                <div class="proof small-env" data-env-type="proof">
+                <p><em>Proof</em><em>.</em> <span
+                class="math inline">\((\Rightarrow)\)</span> Suppose
+                <span class="math inline">\(S = \left\{ \v_1, \dots,
+                \v_m \right\}\)</span> is linearly dependent. Then there
+                exist <span class="math inline">\(a_1, \dots, a_m \in
+                F\)</span>, not all zero, such that <span
+                class="math display">\[
+                    a_1 \v_1 + \cdots + a_m \v_m = \mathbf{0} .
+                \]</span> Let <span class="math inline">\(r\)</span> be
+                the largest index such that <span
+                class="math inline">\(a_r \neq 0\)</span>. Then <span
+                class="math display">\[
+                    a_1 \v_1 + \cdots + a_{r-1} \v_{r-1} + a_r \v_r =
+                \mathbf{0} .
+                \]</span> So <span class="math display">\[
+                    a_r \v_r = -\left( a_1 \v_1 + \cdots + a_{r-1}
+                \v_{r-1} \right),
+                \]</span> and dividing by <span
+                class="math inline">\(a_r\)</span> gives <span
+                class="math display">\[
+                    \v_r = -\frac{a_1}{a_r}\v_1 - \cdots -
+                \frac{a_{r-1}}{a_r}\v_{r-1}.
+                \]</span> Hence <span
+                class="math inline">\(\v_r\)</span> is a linear
+                combination of <span class="math inline">\(\left\{ \v_1,
+                \dots, \v_{r-1} \right\}\)</span>. (If <span
+                class="math inline">\(r=1\)</span>, this says <span
+                class="math inline">\(a_1 \v_1 = \mathbf{0}\)</span>
+                with <span class="math inline">\(a_1 \neq 0\)</span>, so
+                <span class="math inline">\(\v_1 =
+                \mathbf{0}\)</span>.)</p>
+                <p><span class="math inline">\((\Leftarrow)\)</span> We
+                prove by cases:</p>
+                <ul>
+                <li><p>If <span class="math inline">\(\v_1 =
+                \mathbf{0}\)</span>, then <span class="math display">\[
+                  1 \cdot \v_1 + 0 \cdot \v_2 + \cdots + 0 \cdot \v_m =
+                \mathbf{0} ,
+                \]</span> with coefficients not all zero, so <span
+                class="math inline">\(S\)</span> is linearly
+                dependent.</p></li>
+                <li><p>If for some <span
+                class="math inline">\(r\)</span> we have <span
+                class="math inline">\(\v_r\)</span> is a linear
+                combination of <span class="math inline">\(\left\{ \v_1,
+                \dots, \v_{r-1} \right\}\)</span>, then there exist
+                scalars <span class="math inline">\(c_1, \dots, c_{r-1}
+                \in F\)</span> such that <span class="math display">\[
+                  \v_r = c_1 \v_1 + \cdots + c_{r-1} \v_{r-1}.
+                \]</span> Move everything to one side: <span
+                class="math display">\[
+                  c_1 \v_1 + \cdots + c_{r-1} \v_{r-1} - 1 \cdot \v_r =
+                \mathbf{0} .
+                \]</span> Extending coefficients by zeros for <span
+                class="math inline">\(\v_{r+1}, \dots, \v_m\)</span>, we
+                get a nontrivial linear combination of <span
+                class="math inline">\(\v_1, \dots, \v_m\)</span> equal
+                to <span class="math inline">\(\mathbf{0}\)</span>, so
+                <span class="math inline">\(S\)</span> is linearly
+                dependent.</p></li>
+                </ul>
+                </div>
+                <div class="remark small-env" data-env-type="remark">
+                <p><em>Remark</em><em>.</em> The above theorem can be
+                paraphrased to: A set <span class="math inline">\(S = \{
+                \v_1, \dots, \v_n \}\)</span> with <span
+                class="math inline">\(n \geq 2\)</span> is linearly
+                dependent if and only if at least one vector in <span
+                class="math inline">\(S\)</span> can be written as a
+                linear combination of the others.</p>
+                </div>
+                <h2 id="the-redundant-members"><span
+                class="header-section-number">1.4.2. </span> The
+                Redundant Members</h2>
+                <p>Having the last remark in mind, we can develop an
+                intuition that says linear independence of a set is
+                equivalent to requiring the set containing no “redundant
+                members.” Next we want to develop the intuition saying
+                that throwing away these “redundant members” will not
+                change the linear span.</p>
+                <div id="thm-span-preservation" class="theorem"
+                data-number="1.4.2" data-env-type="theorem"
+                style="border-left-color: #3b6eda; background-color: #f0f5ff; ">
+                <span
+                class="theorem-title theorem-title-resolved"><strong>Theorem</strong><strong>
+                1.4.2</strong> (Span Preservation)</span>
+                <p>Let <span class="math inline">\(S = \{ \v_1, \dots,
+                \v_m, \w \} \subseteq V\)</span>. If <span
+                class="math inline">\(\w \in \Span \{ \v_1, \dots, \v_m
+                \}\)</span>, then <span class="math display">\[
+                    \Span(S) = \Span \{ \v_1, \dots, \v_m \}.
+                \]</span></p>
+                </div>
+                <div class="proof small-env" data-env-type="proof">
+                <p><em>Proof</em><em>.</em> Let <span
+                class="math inline">\(W = \Span \{ \v_1, \dots, \v_m
+                \}\)</span> and <span class="math inline">\(W&#39; =
+                \Span(S)\)</span>. Since <span class="math inline">\(\{
+                \v_1, \dots, \v_m \} \subseteq S\)</span>, it is clear
+                that <span class="math inline">\(W \subseteq
+                W&#39;\)</span>.</p>
+                <p>For the reverse inclusion, let <span
+                class="math inline">\(\v \in W&#39;\)</span>. Then <span
+                class="math inline">\(\v\)</span> is a linear
+                combination of vectors in <span
+                class="math inline">\(S\)</span>: <span
+                class="math display">\[
+                    \v = a_1 \v_1 + \dots + a_m \v_m + b \w
+                \]</span> for some scalars <span
+                class="math inline">\(a_i, b\)</span>. Since <span
+                class="math inline">\(\w \in W\)</span>, there exist
+                scalars <span class="math inline">\(c_1, \dots,
+                c_m\)</span> such that <span class="math inline">\(\w =
+                c_1 \v_1 + \dots + c_m \v_m\)</span>. Substituting this
+                into the expression for <span
+                class="math inline">\(\v\)</span>: <span
+                class="math display">\[
+                    \v = a_1 \v_1 + \dots + a_m \v_m + b(c_1 \v_1 +
+                \dots + c_m \v_m) = (a_1 + bc_1)\v_1 + \dots + (a_m +
+                bc_m)\v_m.
+                \]</span> Thus <span class="math inline">\(\v\)</span>
+                is a linear combination of <span
+                class="math inline">\(\v_1, \dots, \v_m\)</span>, so
+                <span class="math inline">\(\v \in W\)</span>. This
+                shows <span class="math inline">\(W&#39; \subseteq
+                W\)</span>. Hence <span class="math inline">\(W&#39; =
+                W\)</span>.</p>
+                </div>
+            </article>
+
+            <!-- Page Navigation -->
+            <nav class="page-navigation">
+                <div class="nav-page nav-page-previous">
+                                        <a href="03-span.html" class="pagination-link" aria-label="Linear
+Combinations and Span">
+                        <i class="bi bi-arrow-left-short"></i>
+                        <span
+                            class="nav-page-text">1.3 Linear
+Combinations and Span</span>
+                    </a>
+                                    </div>
+                <div class="nav-page nav-page-next">
+                                        <a href="05-basis.html" class="pagination-link" aria-label="Bases">
+                        <span
+                            class="nav-page-text">1.5 Bases</span>
+                        <i class="bi bi-arrow-right-short"></i>
+                    </a>
+                                    </div>
+            </nav>
+        </main>
+
+        <!-- Right Sidebar (TOC) -->
+        <aside id="quarto-margin-sidebar">
+            <nav class="toc">
+                <h2>Table of contents</h2>
+                            </nav>
+
+            <div class="other-formats">
+                <h3>Other Formats</h3>
+                <ul>
+                    <li><a href="../pdf/ch01-vector-spaces/04-independence.pdf" target="_blank">PDF</a></li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Tooltip Script -->
+    <script src="../main.js"></script>
+</body>
+
+</html>

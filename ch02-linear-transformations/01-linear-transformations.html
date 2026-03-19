@@ -1,0 +1,1306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2.1 Linear Transformations – Linear Algebra</title>
+
+    <!-- Styles -->
+    <!-- Styles -->
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- MathJax Configuration with Custom Macros -->
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['\\(', '\\)']],
+                displayMath: [['\\[', '\\]']],
+                processEscapes: true,
+                processEnvironments: true,
+                tags: 'ams',
+                macros: {
+                    0: "\\mathbf{0}",
+                    1: "\\mathbf{1}",
+                    A: "\\mathbf{A}",
+                    B: "\\mathbf{B}",
+                    C: "\\mathbf{C}",
+                    Cor: "\\operatorname*{Cor}",
+                    Corr: "\\operatorname*{Corr}",
+                    Cov: "\\operatorname*{Cov}",
+                    D: "\\mathbf{D}",
+                    E: "\\mathbf{E}",
+                    Ev: "\\operatorname*{\\mathbb{E}}",
+                    F: "\\mathbf{F}",
+                    G: "\\mathbf{G}",
+                    H: "\\mathbf{H}",
+                    I: "\\mathbf{I}",
+                    J: "\\mathbf{J}",
+                    K: "\\mathbf{K}",
+                    L: "\\mathbf{L}",
+                    M: "\\mathbf{M}",
+                    N: "\\mathbf{N}",
+                    O: "\\mathbf{O}",
+                    P: "\\mathbf{P}",
+                    Pr: "\\operatorname{Pr}",
+                    Q: "\\mathbf{Q}",
+                    R: "\\mathbf{R}",
+                    S: "\\mathbf{S}",
+                    Span: "\\operatorname{span}",
+                    T: "\\mathbf{T}",
+                    U: "\\mathbf{U}",
+                    V: "\\mathbf{V}",
+                    Var: "\\operatorname*{Var}",
+                    W: "\\mathbf{W}",
+                    X: "\\mathbf{X}",
+                    Y: "\\mathbf{Y}",
+                    Z: "\\mathbf{Z}",
+                    a: "\\mathbf{a}",
+                    adj: "\\operatorname{adj}",
+                    b: "\\mathbf{b}",
+                    c: "\\mathbf{c}",
+                    cA: "\\mathcal{A}",
+                    cB: "\\mathcal{B}",
+                    cC: "\\mathcal{C}",
+                    cD: "\\mathcal{D}",
+                    cE: "\\mathcal{E}",
+                    cF: "\\mathcal{F}",
+                    cG: "\\mathcal{G}",
+                    cH: "\\mathcal{H}",
+                    cI: "\\mathcal{I}",
+                    cJ: "\\mathcal{J}",
+                    cK: "\\mathcal{K}",
+                    cL: "\\mathcal{L}",
+                    cM: "\\mathcal{M}",
+                    cN: "\\mathcal{N}",
+                    cO: "\\mathcal{O}",
+                    cP: "\\mathcal{P}",
+                    cQ: "\\mathcal{Q}",
+                    cR: "\\mathcal{R}",
+                    cS: "\\mathcal{S}",
+                    cT: "\\mathcal{T}",
+                    cU: "\\mathcal{U}",
+                    cV: "\\mathcal{V}",
+                    cW: "\\mathcal{W}",
+                    cX: "\\mathcal{X}",
+                    cY: "\\mathcal{Y}",
+                    cZ: "\\mathcal{Z}",
+                    col: "\\text{col}",
+                    coloneqq: "\\mathrel{:=}",
+                    d: "\\mathbf{d}",
+                    dd: "\\mathrm{d}",
+                    defeq: "\\stackrel{\\smash{\\textnormal{\\tiny def}}}{=}",
+                    diag: "\\operatorname{diag}",
+                    distBern: "\\operatorname{Ber}",
+                    distBeta: "\\operatorname{Beta}",
+                    distBin: "\\operatorname{Bin}",
+                    distCauchy: "\\operatorname{Cauchy}",
+                    distDir: "\\operatorname{Dir}",
+                    distExp: "\\operatorname{Exp}",
+                    distGamma: "\\operatorname{Gamma}",
+                    distGeom: "\\operatorname{Geo}",
+                    distHyp: "\\operatorname{Hyp}",
+                    distInvWishart: "\\operatorname{InvWishart}",
+                    distLognormal: "\\operatorname{Lognormal}",
+                    distMult: "\\operatorname{Mult}",
+                    distN: "\\operatorname{\\mathcal{N}}",
+                    distNB: "\\operatorname{NB}",
+                    distPareto: "\\operatorname{Pareto}",
+                    distPois: "\\operatorname{Poi}",
+                    distUnif: "\\operatorname{Unif}",
+                    distWeibull: "\\operatorname{Weibull}",
+                    distWishart: "\\operatorname{Wishart}",
+                    e: "\\mathbf{e}",
+                    eqqcolon: "\\mathrel{=:}",
+                    f: "\\mathbf{f}",
+                    g: "\\mathbf{g}",
+                    h: "\\mathbf{h}",
+                    i: "\\mathbf{i}",
+                    id: "\\operatorname{id}",
+                    im: "\\operatorname{im}",
+                    img: "\\operatorname{img}",
+                    j: "\\mathbf{j}",
+                    k: "\\mathbf{k}",
+                    ker: "\\operatorname{ker}",
+                    l: "\\mathbf{l}",
+                    m: "\\mathbf{m}",
+                    n: "\\mathbf{n}",
+                    nA: "\\mathbb{A}",
+                    nB: "\\mathbb{B}",
+                    nC: "\\mathbb{C}",
+                    nD: "\\mathbb{D}",
+                    nE: "\\mathbb{E}",
+                    nF: "\\mathbb{F}",
+                    nG: "\\mathbb{G}",
+                    nH: "\\mathbb{H}",
+                    nI: "\\mathbb{I}",
+                    nJ: "\\mathbb{J}",
+                    nK: "\\mathbb{K}",
+                    nL: "\\mathbb{L}",
+                    nM: "\\mathbb{M}",
+                    nN: "\\mathbb{N}",
+                    nO: "\\mathbb{O}",
+                    nP: "\\mathbb{P}",
+                    nQ: "\\mathbb{Q}",
+                    nR: "\\mathbb{R}",
+                    nS: "\\mathbb{S}",
+                    nT: "\\mathbb{T}",
+                    nU: "\\mathbb{U}",
+                    nV: "\\mathbb{V}",
+                    nW: "\\mathbb{W}",
+                    nX: "\\mathbb{X}",
+                    nY: "\\mathbb{Y}",
+                    nZ: "\\mathbb{Z}",
+                    nul: "\\text{nul}",
+                    nullity: "\\text{nullity}",
+                    o: "\\mathbf{o}",
+                    p: "\\mathbf{p}",
+                    q: "\\mathbf{q}",
+                    r: "\\mathbf{r}",
+                    rank: "\\text{rank}",
+                    row: "\\text{row}",
+                    s: "\\mathbf{s}",
+                    sA: "\\mathcal{A}",
+                    sB: "\\mathcal{B}",
+                    sC: "\\mathcal{C}",
+                    sD: "\\mathcal{D}",
+                    sE: "\\mathcal{E}",
+                    sF: "\\mathcal{F}",
+                    sG: "\\mathcal{G}",
+                    sH: "\\mathcal{H}",
+                    sI: "\\mathcal{I}",
+                    sJ: "\\mathcal{J}",
+                    sK: "\\mathcal{K}",
+                    sL: "\\mathcal{L}",
+                    sM: "\\mathcal{M}",
+                    sN: "\\mathcal{N}",
+                    sO: "\\mathcal{O}",
+                    sP: "\\mathcal{P}",
+                    sQ: "\\mathcal{Q}",
+                    sR: "\\mathcal{R}",
+                    sS: "\\mathcal{S}",
+                    sT: "\\mathcal{T}",
+                    sU: "\\mathcal{U}",
+                    sV: "\\mathcal{V}",
+                    sW: "\\mathcal{W}",
+                    sX: "\\mathcal{X}",
+                    sY: "\\mathcal{Y}",
+                    sZ: "\\mathcal{Z}",
+                    spn: "\\text{span}",
+                    t: "\\mathbf{t}",
+                    tr: "\\text{tr}",
+                    u: "\\mathbf{u}",
+                    v: "\\mathbf{v}",
+                    vDelta: "\\bm{\\Delta}",
+                    vGamma: "\\bm{\\Gamma}",
+                    vLambda: "\\bm{\\Lambda}",
+                    vOmega: "\\bm{\\Omega}",
+                    vPhi: "\\bm{\\Phi}",
+                    vPi: "\\bm{\\Pi}",
+                    vPsi: "\\bm{\\Psi}",
+                    vSigma: "\\bm{\\Sigma}",
+                    vTheta: "\\bm{\\Theta}",
+                    vUpsilon: "\\bm{\\Upsilon}",
+                    vXi: "\\bm{\\Xi}",
+                    valpha: "\\bm{\\upalpha}",
+                    vbeta: "\\bm{\\upbeta}",
+                    vchi: "\\bm{\\upchi}",
+                    vdelta: "\\bm{\\updelta}",
+                    vepsilon: "\\bm{\\upepsilon}",
+                    veta: "\\bm{\\upeta}",
+                    vgamma: "\\bm{\\upgamma}",
+                    viota: "\\bm{\\upiota}",
+                    vkappa: "\\bm{\\upkappa}",
+                    vlambda: "\\bm{\\uplambda}",
+                    vmu: "\\bm{\\upmu}",
+                    vnu: "\\bm{\\upnu}",
+                    vomega: "\\bm{\\upomega}",
+                    vphi: "\\bm{\\upphi}",
+                    vpi: "\\bm{\\uppi}",
+                    vpsi: "\\bm{\\uppsi}",
+                    vrho: "\\bm{\\uprho}",
+                    vsigma: "\\bm{\\upsigma}",
+                    vtau: "\\bm{\\uptau}",
+                    vtheta: "\\bm{\\uptheta}",
+                    vupsilon: "\\bm{\\upupsilon}",
+                    vvarepsilon: "\\bm{\\upvarepsilon}",
+                    vvarphi: "\\bm{\\upvarphi}",
+                    vvarpi: "\\bm{\\upvarpi}",
+                    vvarrho: "\\bm{\\upvarrho}",
+                    vvarsigma: "\\bm{\\upvarsigma}",
+                    vvartheta: "\\bm{\\upvartheta}",
+                    vxi: "\\bm{\\upxi}",
+                    vzeta: "\\bm{\\upzeta}",
+                    w: "\\mathbf{w}",
+                    x: "\\mathbf{x}",
+                    y: "\\mathbf{y}",
+                    z: "\\mathbf{z}"
+                },
+                // Define environments not in base amsmath
+                environments: {
+                    dcases: ["\\left\\{\\begin{array}{ll}", "\\end{array}\\right."]
+                }
+            },
+            options: {
+                skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"></script>
+
+    <!-- Tippy.js for tooltips -->
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
+    <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/shift-away.css">
+
+        
+        <script>
+        (function(){
+          if (typeof window.MathJax === 'undefined') window.MathJax = {};
+          if (typeof window.MathJax.tex === 'undefined') window.MathJax.tex = {};
+          if (typeof window.MathJax.tex.macros === 'undefined') window.MathJax.tex.macros = {};
+          Object.assign(window.MathJax.tex.macros, {
+                    "\rank": "\\text{rank}",
+                    "\norm": "\\left\\| #1 \\right\\|",
+                    "\limi": "\\lim_{#1 \\to \\infty}",
+                    "\defeq": "\\stackrel{\\smash{\\textnormal{\\tiny def}}}{=}",
+                    "\rom": "\\mathrm{#1}",
+                    "\spn": "\\text{span}",
+                    "\bb": "\\mathbb{#1}",
+                    "\ket": "| #1 \\rangle",
+                    "\tr": "\\text{tr}",
+                    "\row": "\\text{row}",
+                    "\abs": "\\left| #1 \\right|",
+                    "\expect": "\\langle #1 \\rangle",
+                    "\Var": "\\text{Var}\\left( #1 \\right)",
+                    "\card": "\\left| #1 \\right|",
+                    "\pdd": "\\frac{\\partial^2 #1}{\\partial #2^2}",
+                    "\powerset": "\\mathcal{P}\\left( #1 \\right)",
+                    "\ketbra": "| #1 \\rangle\\langle #2 |",
+                    "\bra": "\\langle #1 |",
+                    "\Normal": "\\mathcal{N}\\left( #1, #2 \\right)",
+                    "\col": "\\text{col}",
+                    "\pd": "\\frac{\\partial #1}{\\partial #2}",
+                    "\tdd": "\\frac{d^2 #1}{d #2^2}",
+                    "\interior": "\\text{int}\\left( #1 \\right)",
+                    "\cl": "\\mathcal{#1}",
+                    "\bm": "\\mathbf{#1}",
+                    "\td": "\\frac{d #1}{d #2}",
+                    "\nul": "\\text{nul}",
+                    "\closure": "\\overline{#1}",
+                    "\boundary": "\\partial #1",
+                    "\limz": "\\lim_{#1 \\to 0}",
+                    "\braket": "\\langle #1 | #2 \\rangle",
+                    "\Exp": "\\mathbb{E}\\left[ #1 \\right]",
+                    "\Prob": "\\mathbb{P}\\left( #1 \\right)",
+                    "\Cov": "\\text{Cov}\\left( #1, #2 \\right)",
+                    "\Uniform": "\\text{Uniform}\\left( #1, #2 \\right)",
+                    "\nullity": "\\text{nullity}"
+          });
+        })();
+        </script>
+    </head>
+
+<body>
+    <div id="quarto-container">
+        <!-- Left Sidebar Navigation -->
+        <nav id="quarto-sidebar">
+            <div class="sidebar-header">
+                <a href="../index.html" class="sidebar-title">
+                    Linear Algebra
+                </a>
+                <div class="sidebar-tools">
+                    <a href="../book/book.pdf" title="Full Book PDF" target="_blank">
+                        <i class="bi bi-file-pdf" style="font-size: 1.1rem"></i>
+                    </a>
+                    <a href="https://github.com/youruser/yourrepo" title="Source Code" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            viewBox="0 0 16 16">
+                            <path
+                                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="sidebar-search">
+                <i class="bi bi-search"></i>
+                <input type="text" class="search-input" id="search-input" placeholder="">
+            </div>
+
+            <nav class="sidebar-nav">
+                                <ul class="nav-list">
+                    <li><a href="../index.html">Preface</a></li>
+                </ul>
+                            </nav>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main id="quarto-content">
+
+
+            <article class="content">
+                <!-- Page title removed to avoid duplication with content H1 -->
+                <!-- Quarto-style Title Block -->
+                <header id="title-block-header" class="quarto-title-block default">
+                                        <nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block"
+                        aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="../ch02-linear-transformations/index.html">Linear Transformations</a></li>
+                        <li class="breadcrumb-item"><a href="../ch02-linear-transformations/01-linear-transformations.html"><span class="chapter-number">2.1</span>&nbsp; <span class="chapter-title">Linear Transformations</span></a></li>
+                        </ol>
+                    </nav>
+                                        <div class="quarto-title">
+                        <h1 class="title">
+                            <span class="chapter-number">2.1</span>&nbsp; 
+                            <span class="chapter-title">Linear
+Transformations</span>
+                        </h1>
+                    </div>
+                </header>
+
+                <div id="linear-transformations">
+
+                </div>
+                <p>In Chapter 1, we studied vector spaces as static
+                objects—sets equipped with addition and scalar
+                multiplication. Now we turn to the study of
+                <strong>structure-preserving maps</strong> between
+                vector spaces. Just as group theory studies
+                homomorphisms and topology studies continuous functions,
+                linear algebra studies <strong>linear
+                transformations</strong>.</p>
+                <p>A linear transformation is a function that “respects”
+                the vector space structure: it preserves addition and
+                scalar multiplication. This simple requirement has
+                profound consequences. Linear transformations are the
+                morphisms in the category of vector spaces, and
+                understanding them is central to all of linear
+                algebra.</p>
+                <h2 id="definition-and-basic-properties"><span
+                class="header-section-number">2.1.1. </span> Definition
+                and Basic Properties</h2>
+                <div id="def-linear-transformation" class="definition"
+                data-number="2.1.1" data-env-type="definition"
+                style="border-left-color: #c94c6c; background-color: #fdf2f4; ">
+                <span
+                class="theorem-title theorem-title-resolved"><strong>Definition</strong><strong>
+                2.1.1</strong> (Linear Transformation)</span>
+                <p>Let <span class="math inline">\(V, W\)</span> be
+                vector spaces over <span
+                class="math inline">\(F\)</span>. A function <span
+                class="math inline">\(T : V \to W\)</span> is called a
+                <strong>linear transformation</strong> (or
+                <strong>linear map</strong>), if</p>
+                <div class="enumerate"
+                data-options="label=(LT\arabic*)">
+                <ol type="1">
+                <li><span class="math inline">\(T(\v_1 + \v_2) = T(\v_1)
+                + T(\v_2)\)</span>, for all <span
+                class="math inline">\(\v_1, \v_2 \in V\)</span>;</li>
+                <li><span class="math inline">\(T(\lambda \v) = \lambda
+                T(\v)\)</span>, for all <span
+                class="math inline">\(\lambda \in F\)</span> and <span
+                class="math inline">\(\v \in V\)</span>.</li>
+                </ol>
+                </div>
+                </div>
+                <h2 id="examples-of-linear-transformations"><span
+                class="header-section-number">2.1.2. </span> Examples of
+                Linear Transformations</h2>
+                <p>We now present a rich collection of examples. For
+                each, we determine whether the given function is a
+                linear transformation by verifying the two axioms (LT1)
+                and (LT2).</p>
+                <h3 id="geometric-transformations">Geometric
+                Transformations</h3>
+                <div id="exm-projection" class="example" data-number=""
+                data-env-type="example"
+                style="border-left-color: #3a8a3a; background-color: #eef7ee; ">
+                <span
+                class="theorem-title theorem-title-resolved"><strong>Example</strong>
+                (Projection onto a Coordinate Axis)</span>
+                <p>Determine whether <span class="math inline">\(T :
+                \nR^2 \to \nR^2\)</span> defined by <span
+                class="math inline">\(T(a_1, a_2) = (a_1, 0)\)</span> is
+                a linear transformation.</p>
+                </div>
+                <div class="solution small-env"
+                data-env-type="solution">
+                <p><em>Solution</em><em>.</em> Let <span
+                class="math inline">\(\v = (a_1, a_2)\)</span> and <span
+                class="math inline">\(\w = (b_1, b_2)\)</span> be
+                vectors in <span class="math inline">\(\nR^2\)</span>,
+                and let <span class="math inline">\(\lambda \in
+                \nR\)</span>.</p>
+                <ul>
+                <li><strong>Additivity:</strong> <span
+                class="math inline">\(T(\v + \w) = T(a_1 + b_1, a_2 +
+                b_2) = (a_1 + b_1, 0) = (a_1, 0) + (b_1, 0) = T(\v) +
+                T(\w)\)</span>.</li>
+                <li><strong>Homogeneity:</strong> <span
+                class="math inline">\(T(\lambda \v) = T(\lambda a_1,
+                \lambda a_2) = (\lambda a_1, 0) = \lambda (a_1, 0) =
+                \lambda T(\v)\)</span>.</li>
+                </ul>
+                <p>Thus <span class="math inline">\(T\)</span> is a
+                linear transformation.</p>
+                </div>
+                <div id="exm-rotation" class="example" data-number=""
+                data-env-type="example"
+                style="border-left-color: #3a8a3a; background-color: #eef7ee; ">
+                <span
+                class="theorem-title theorem-title-resolved"><strong>Example</strong>
+                (Rotation in the Plane)</span>
+                <p>Determine whether rotation by angle <span
+                class="math inline">\(\theta\)</span> (counterclockwise)
+                in the plane is a linear transformation. That is, let
+                <span class="math inline">\(T_\theta : \nR^2 \to
+                \nR^2\)</span> be the rotation map.</p>
+                </div>
+                <div class="solution small-env"
+                data-env-type="solution">
+                <p><em>Solution</em><em>.</em> Write <span
+                class="math inline">\((a_1, a_2)\)</span> in polar
+                coordinates: <span class="math inline">\(a_1 =
+                r\cos\phi\)</span> and <span class="math inline">\(a_2 =
+                r\sin\phi\)</span>. Then: <span
+                class="math display">\[\begin{align*}
+                    T_\theta(a_1, a_2) &amp;= (r\cos(\theta + \phi),
+                r\sin(\theta + \phi)) \\
+                    &amp;= (r\cos\theta\cos\phi - r\sin\theta\sin\phi,
+                \; r\sin\theta\cos\phi + r\cos\theta\sin\phi) \\
+                    &amp;= \cos\theta(r\cos\phi, r\sin\phi) +
+                \sin\theta(-r\sin\phi, r\cos\phi) \\
+                    &amp;= \cos\theta(a_1, a_2) + \sin\theta(-a_2, a_1).
+                \end{align*}\]</span></p>
+                <p>Thus <span class="math inline">\(T_\theta(a_1, a_2) =
+                (a_1\cos\theta - a_2\sin\theta, \; a_1\sin\theta +
+                a_2\cos\theta)\)</span>.</p>
+                <p>Linearity follows from this explicit formula: for
+                <span class="math inline">\(\v, \w \in \nR^2\)</span>
+                and <span class="math inline">\(\lambda \in
+                \nR\)</span>, <span
+                class="math display">\[\begin{align*}
+                    T_\theta(\v + \w) &amp;= \cos\theta(\v + \w) +
+                \sin\theta \cdot J(\v + \w) = T_\theta(\v) +
+                T_\theta(\w), \\
+                    T_\theta(\lambda\v) &amp;= \cos\theta(\lambda\v) +
+                \sin\theta \cdot J(\lambda\v) = \lambda T_\theta(\v),
+                \end{align*}\]</span> where <span
+                class="math inline">\(J(a_1, a_2) = (-a_2, a_1)\)</span>
+                is itself linear.</p>
+                </div>
+                <h3 id="matrix-induced-transformations">Matrix-Induced
+                Transformations</h3>
+                <div id="exm-matrix-transformation" class="example"
+                data-number="" data-env-type="example"
+                style="border-left-color: #3a8a3a; background-color: #eef7ee; ">
+                <span
+                class="theorem-title theorem-title-resolved"><strong>Example</strong>
+                (Left Multiplication by a Matrix)</span>
+                <p>Let <span class="math inline">\(\A \in M_{m \times
+                n}(F)\)</span> be an <span class="math inline">\(m
+                \times n\)</span> matrix. Determine whether <span
+                class="math inline">\(f_\A : F^n \to F^m\)</span>
+                defined by <span class="math inline">\(f_\A(\v) =
+                \A\v\)</span> (where <span
+                class="math inline">\(\v\)</span> is viewed as a column
+                vector) is a linear transformation.</p>
+                </div>
+                <div class="solution small-env"
+                data-env-type="solution">
+                <p><em>Solution</em><em>.</em> For <span
+                class="math inline">\(\v, \w \in F^n\)</span> and <span
+                class="math inline">\(\lambda \in F\)</span>:</p>
+                <ul>
+                <li><strong>Additivity:</strong> <span
+                class="math inline">\(f_\A(\v + \w) = \A(\v + \w) = \A\v
+                + \A\w = f_\A(\v) + f_\A(\w)\)</span>.</li>
+                <li><strong>Homogeneity:</strong> <span
+                class="math inline">\(f_\A(\lambda\v) = \A(\lambda\v) =
+                \lambda(\A\v) = \lambda f_\A(\v)\)</span>.</li>
+                </ul>
+                <p>These follow from the distributive and scalar
+                properties of matrix multiplication.</p>
+                </div>
+                <div id="exm-coordinate-transformation" class="example"
+                data-number="" data-env-type="example"
+                style="border-left-color: #3a8a3a; background-color: #eef7ee; ">
+                <span
+                class="theorem-title theorem-title-resolved"><strong>Example</strong>
+                (A Specific Matrix Transformation)</span>
+                <p>Determine whether <span class="math inline">\(T : F^3
+                \to F^2\)</span> defined by <span
+                class="math inline">\(T(a_1, a_2, a_3) = (2a_1 + a_3, \;
+                a_2 - a_1)\)</span> is a linear transformation.</p>
+                </div>
+                <div class="solution small-env"
+                data-env-type="solution">
+                <p><em>Solution</em><em>.</em> This is the matrix
+                transformation induced by <span class="math inline">\(\A
+                = \begin{bmatrix} 2 &amp; 0 &amp; 1 \\ -1 &amp; 1 &amp;
+                0 \end{bmatrix}\)</span>, since <span
+                class="math display">\[
+                    \begin{bmatrix} 2 &amp; 0 &amp; 1 \\ -1 &amp; 1
+                &amp; 0 \end{bmatrix} \begin{bmatrix} a_1 \\ a_2 \\ a_3
+                \end{bmatrix} = \begin{bmatrix} 2a_1 + a_3 \\ a_2 - a_1
+                \end{bmatrix}.
+                \]</span> By the previous example, <span
+                class="math inline">\(T\)</span> is linear.</p>
+                </div>
+                <div id="exm-trace-matrices" class="example"
+                data-number="" data-env-type="example"
+                style="border-left-color: #3a8a3a; background-color: #eef7ee; ">
+                <span
+                class="theorem-title theorem-title-resolved"><strong>Example</strong>
+                (Trace)</span>
+                <p>Determine whether the <strong>trace</strong> function
+                <span class="math inline">\(\tr : M_n(F) \to F\)</span>
+                defined by <span class="math inline">\(\tr(\A) =
+                \sum_{i=1}^n a_{ii}\)</span> is a linear
+                transformation.</p>
+                </div>
+                <div class="solution small-env"
+                data-env-type="solution">
+                <p><em>Solution</em><em>.</em> For matrices <span
+                class="math inline">\(\A, \B \in M_n(F)\)</span> and
+                <span class="math inline">\(\lambda \in F\)</span>:</p>
+                <ul>
+                <li><strong>Additivity:</strong> <span
+                class="math inline">\(\tr(\A + \B) = \sum_{i=1}^n
+                (a_{ii} + b_{ii}) = \sum_{i=1}^n a_{ii} + \sum_{i=1}^n
+                b_{ii} = \tr(\A) + \tr(\B)\)</span>.</li>
+                <li><strong>Homogeneity:</strong> <span
+                class="math inline">\(\tr(\lambda\A) = \sum_{i=1}^n
+                \lambda a_{ii} = \lambda \sum_{i=1}^n a_{ii} =
+                \lambda\tr(\A)\)</span>.</li>
+                </ul>
+                <p>Thus trace is a linear transformation from the vector
+                space of matrices to the scalar field.</p>
+                </div>
+                <h3
+                id="polynomial-and-function-space-transformations">Polynomial
+                and Function Space Transformations</h3>
+                <div id="exm-multiplication-by-x" class="example"
+                data-number="" data-env-type="example"
+                style="border-left-color: #3a8a3a; background-color: #eef7ee; ">
+                <span
+                class="theorem-title theorem-title-resolved"><strong>Example</strong>
+                (Multiplication by <span
+                class="math inline">\(x\)</span>)</span>
+                <p>Determine whether <span class="math inline">\(T :
+                F[x] \to F[x]\)</span> defined by <span
+                class="math inline">\(T(f(x)) = x \cdot f(x)\)</span> is
+                a linear transformation.</p>
+                </div>
+                <div class="solution small-env"
+                data-env-type="solution">
+                <p><em>Solution</em><em>.</em> For polynomials <span
+                class="math inline">\(f, g \in F[x]\)</span> and <span
+                class="math inline">\(\lambda \in F\)</span>:</p>
+                <ul>
+                <li><strong>Additivity:</strong> <span
+                class="math inline">\(T(f + g) = x(f + g) = xf + xg =
+                T(f) + T(g)\)</span>.</li>
+                <li><strong>Homogeneity:</strong> <span
+                class="math inline">\(T(\lambda f) = x(\lambda f) =
+                \lambda(xf) = \lambda T(f)\)</span>.</li>
+                </ul>
+                <p>Thus multiplication by <span
+                class="math inline">\(x\)</span> is a linear
+                transformation.</p>
+                </div>
+                <div id="exm-differentiation" class="example"
+                data-number="" data-env-type="example"
+                style="border-left-color: #3a8a3a; background-color: #eef7ee; ">
+                <span
+                class="theorem-title theorem-title-resolved"><strong>Example</strong>
+                (Differentiation)</span>
+                <p>Determine whether <span class="math inline">\(D :
+                \nR[x] \to \nR[x]\)</span> defined by <span
+                class="math inline">\(D(f(x)) = f&#39;(x)\)</span> (the
+                derivative) is a linear transformation.</p>
+                </div>
+                <div class="solution small-env"
+                data-env-type="solution">
+                <p><em>Solution</em><em>.</em> For polynomials <span
+                class="math inline">\(f, g \in \nR[x]\)</span> and <span
+                class="math inline">\(\lambda \in \nR\)</span>:</p>
+                <ul>
+                <li><strong>Additivity:</strong> <span
+                class="math inline">\(D(f + g) = (f + g)&#39; = f&#39; +
+                g&#39; = D(f) + D(g)\)</span>.</li>
+                <li><strong>Homogeneity:</strong> <span
+                class="math inline">\(D(\lambda f) = (\lambda f)&#39; =
+                \lambda f&#39; = \lambda D(f)\)</span>.</li>
+                </ul>
+                <p>These are the standard sum rule and constant multiple
+                rule from calculus.</p>
+                </div>
+                <div class="remark small-env" data-env-type="remark">
+                <p><em>Remark</em><em>.</em> More precisely, <span
+                class="math inline">\(D : \nR[x]_{\leq n} \to
+                \nR[x]_{\leq n-1}\)</span> maps polynomials of degree at
+                most <span class="math inline">\(n\)</span> to
+                polynomials of degree at most <span
+                class="math inline">\(n-1\)</span>.</p>
+                </div>
+                <div id="exm-integration" class="example" data-number=""
+                data-env-type="example"
+                style="border-left-color: #3a8a3a; background-color: #eef7ee; ">
+                <span
+                class="theorem-title theorem-title-resolved"><strong>Example</strong>
+                (Integration)</span>
+                <p>Determine whether <span class="math inline">\(T :
+                \nR[x] \to \nR[x]\)</span> defined by <span
+                class="math inline">\(T(f(x)) = \int_0^x f(t) \, \dd
+                t\)</span> is a linear transformation.</p>
+                </div>
+                <div class="solution small-env"
+                data-env-type="solution">
+                <p><em>Solution</em><em>.</em> For polynomials <span
+                class="math inline">\(f, g \in \nR[x]\)</span> and <span
+                class="math inline">\(\lambda \in \nR\)</span>:</p>
+                <ul>
+                <li><strong>Additivity:</strong> <span
+                class="math inline">\(T(f + g) = \int_0^x (f(t) + g(t))
+                \, \dd t = \int_0^x f(t) \, \dd t + \int_0^x g(t) \, \dd
+                t = T(f) + T(g)\)</span>.</li>
+                <li><strong>Homogeneity:</strong> <span
+                class="math inline">\(T(\lambda f) = \int_0^x \lambda
+                f(t) \, \dd t = \lambda \int_0^x f(t) \, \dd t = \lambda
+                T(f)\)</span>.</li>
+                </ul>
+                <p>These follow from the linearity of the integral.</p>
+                </div>
+                <div id="exm-shift" class="example" data-number=""
+                data-env-type="example"
+                style="border-left-color: #3a8a3a; background-color: #eef7ee; ">
+                <span
+                class="theorem-title theorem-title-resolved"><strong>Example</strong>
+                (Shift Operator)</span>
+                <p>Fix <span class="math inline">\(\theta \in
+                \nR\)</span>. Determine whether the <strong>shift
+                operator</strong> <span class="math inline">\(S_\theta :
+                C(\nR) \to C(\nR)\)</span> defined by <span
+                class="math inline">\(S_\theta(f)(x) = f(x -
+                \theta)\)</span> is a linear transformation. (This
+                operator translates the graph of <span
+                class="math inline">\(f\)</span> by <span
+                class="math inline">\(\theta\)</span> units to the
+                right.)</p>
+                </div>
+                <div class="solution small-env"
+                data-env-type="solution">
+                <p><em>Solution</em><em>.</em> For <span
+                class="math inline">\(f, g \in C(\nR)\)</span> and <span
+                class="math inline">\(\lambda \in \nR\)</span>:</p>
+                <ul>
+                <li><strong>Additivity:</strong> <span
+                class="math inline">\(S_\theta(f + g)(x) = (f + g)(x -
+                \theta) = f(x - \theta) + g(x - \theta) = S_\theta(f)(x)
+                + S_\theta(g)(x)\)</span>.</li>
+                <li><strong>Homogeneity:</strong> <span
+                class="math inline">\(S_\theta(\lambda f)(x) = (\lambda
+                f)(x - \theta) = \lambda f(x - \theta) = \lambda
+                S_\theta(f)(x)\)</span>.</li>
+                </ul>
+                <p>Thus the shift operator is linear.</p>
+                </div>
+                <div id="exm-matrix-composition" class="example"
+                data-number="" data-env-type="example"
+                style="border-left-color: #3a8a3a; background-color: #eef7ee; ">
+                <span
+                class="theorem-title theorem-title-resolved"><strong>Example</strong>
+                (Composition Operator)</span>
+                <p>Fix a continuous function <span
+                class="math inline">\(g : \nR \to \nR\)</span>.
+                Determine whether the <strong>composition
+                operator</strong> <span class="math inline">\(C_g :
+                C(\nR) \to C(\nR)\)</span> defined by <span
+                class="math inline">\(C_g(f) = f \circ g\)</span>, i.e.,
+                <span class="math inline">\(C_g(f)(x) =
+                f(g(x))\)</span>, is a linear transformation.</p>
+                </div>
+                <div class="solution small-env"
+                data-env-type="solution">
+                <p><em>Solution</em><em>.</em> For <span
+                class="math inline">\(f, h \in C(\nR)\)</span> and <span
+                class="math inline">\(\lambda \in \nR\)</span>:</p>
+                <ul>
+                <li><strong>Additivity:</strong> <span
+                class="math inline">\(C_g(f + h)(x) = (f + h)(g(x)) =
+                f(g(x)) + h(g(x)) = C_g(f)(x) + C_g(h)(x)\)</span>.</li>
+                <li><strong>Homogeneity:</strong> <span
+                class="math inline">\(C_g(\lambda f)(x) = (\lambda
+                f)(g(x)) = \lambda f(g(x)) = \lambda
+                C_g(f)(x)\)</span>.</li>
+                </ul>
+                <p>The shift operator is the special case where <span
+                class="math inline">\(g(x) = x - \theta\)</span>.</p>
+                </div>
+                <h3 id="identity-and-inclusion-maps">Identity and
+                Inclusion Maps</h3>
+                <div id="exm-identity" class="example" data-number=""
+                data-env-type="example"
+                style="border-left-color: #3a8a3a; background-color: #eef7ee; ">
+                <span
+                class="theorem-title theorem-title-resolved"><strong>Example</strong>
+                (Identity Map)</span>
+                <p>Let <span class="math inline">\(V\)</span> be a
+                vector space. Determine whether the <strong>identity
+                map</strong> <span class="math inline">\(\id_V : V \to
+                V\)</span> defined by <span
+                class="math inline">\(\id_V(\v) = \v\)</span> is a
+                linear transformation.</p>
+                </div>
+                <div class="solution small-env"
+                data-env-type="solution">
+                <p><em>Solution</em><em>.</em> For <span
+                class="math inline">\(\v, \w \in V\)</span> and <span
+                class="math inline">\(\lambda \in F\)</span>:</p>
+                <ul>
+                <li><strong>Additivity:</strong> <span
+                class="math inline">\(\id_V(\v + \w) = \v + \w =
+                \id_V(\v) + \id_V(\w)\)</span>.</li>
+                <li><strong>Homogeneity:</strong> <span
+                class="math inline">\(\id_V(\lambda\v) = \lambda\v =
+                \lambda\id_V(\v)\)</span>.</li>
+                </ul>
+                <p>The identity map is trivially linear.</p>
+                </div>
+                <div id="exm-inclusion" class="example" data-number=""
+                data-env-type="example"
+                style="border-left-color: #3a8a3a; background-color: #eef7ee; ">
+                <span
+                class="theorem-title theorem-title-resolved"><strong>Example</strong>
+                (Inclusion Map)</span>
+                <p>Let <span class="math inline">\(W \subseteq
+                V\)</span> be a subspace. Determine whether the
+                <strong>inclusion map</strong> <span
+                class="math inline">\(\iota : W \hookrightarrow
+                V\)</span> defined by <span
+                class="math inline">\(\iota(\w) = \w\)</span> is a
+                linear transformation.</p>
+                </div>
+                <div class="solution small-env"
+                data-env-type="solution">
+                <p><em>Solution</em><em>.</em> The inclusion map is
+                simply the identity map restricted to <span
+                class="math inline">\(W\)</span>, viewed as a map into
+                <span class="math inline">\(V\)</span>. The verification
+                is identical to the identity map.</p>
+                </div>
+                <div id="exm-zero-map" class="example" data-number=""
+                data-env-type="example"
+                style="border-left-color: #3a8a3a; background-color: #eef7ee; ">
+                <span
+                class="theorem-title theorem-title-resolved"><strong>Example</strong>
+                (Zero Map)</span>
+                <p>For any vector spaces <span
+                class="math inline">\(V\)</span> and <span
+                class="math inline">\(W\)</span>, determine whether the
+                <strong>zero map</strong> <span class="math inline">\(0
+                : V \to W\)</span> defined by <span
+                class="math inline">\(0(\v) = \mathbf{0}_W\)</span> for
+                all <span class="math inline">\(\v \in V\)</span> is a
+                linear transformation.</p>
+                </div>
+                <div class="solution small-env"
+                data-env-type="solution">
+                <p><em>Solution</em><em>.</em> For <span
+                class="math inline">\(\v_1, \v_2 \in V\)</span> and
+                <span class="math inline">\(\lambda \in F\)</span>:</p>
+                <ul>
+                <li><strong>Additivity:</strong> <span
+                class="math inline">\(0(\v_1 + \v_2) = \mathbf{0}_W =
+                \mathbf{0}_W + \mathbf{0}_W = 0(\v_1) +
+                0(\v_2)\)</span>.</li>
+                <li><strong>Homogeneity:</strong> <span
+                class="math inline">\(0(\lambda\v_1) = \mathbf{0}_W =
+                \lambda\mathbf{0}_W = \lambda \cdot
+                0(\v_1)\)</span>.</li>
+                </ul>
+                <p>The zero map is linear.</p>
+                </div>
+                <h3 id="field-dependent-examples">Field-Dependent
+                Examples</h3>
+                <div id="exm-complex-conjugation" class="example"
+                data-number="" data-env-type="example"
+                style="border-left-color: #3a8a3a; background-color: #eef7ee; ">
+                <span
+                class="theorem-title theorem-title-resolved"><strong>Example</strong>
+                (Complex Conjugation)</span>
+                <p>Determine whether complex conjugation <span
+                class="math inline">\(T : \nC \to \nC\)</span> defined
+                by <span class="math inline">\(T(z) =
+                \overline{z}\)</span>, where <span
+                class="math inline">\(\overline{a + bi} = a -
+                bi\)</span>, is a linear transformation.</p>
+                </div>
+                <div class="solution small-env"
+                data-env-type="solution">
+                <p><em>Solution</em><em>.</em> <strong>As a map of <span
+                class="math inline">\(\nC\)</span>-vector
+                spaces:</strong> <span class="math inline">\(T\)</span>
+                is <strong>not</strong> linear over <span
+                class="math inline">\(\nC\)</span>.</p>
+                <p>Consider <span class="math inline">\(z = 1\)</span>
+                and <span class="math inline">\(\alpha = i\)</span>.
+                Then: <span class="math display">\[
+                    T(\alpha z) = T(i) = -i, \quad \text{but} \quad
+                \alpha T(z) = i \cdot \overline{1} = i.
+                \]</span> Since <span class="math inline">\(T(i \cdot 1)
+                = -i \neq i = i \cdot T(1)\)</span>, the homogeneity
+                condition fails.</p>
+                <p><strong>As a map of <span
+                class="math inline">\(\nR\)</span>-vector
+                spaces:</strong> <span class="math inline">\(T\)</span>
+                <strong>is</strong> linear over <span
+                class="math inline">\(\nR\)</span>.</p>
+                <p>For <span class="math inline">\(z = a + bi\)</span>
+                and <span class="math inline">\(w = c + di\)</span> with
+                <span class="math inline">\(a, b, c, d \in \nR\)</span>,
+                and <span class="math inline">\(\lambda \in
+                \nR\)</span>:</p>
+                <ul>
+                <li><strong>Additivity:</strong> <span
+                class="math inline">\(T(z + w) = \overline{(a+c) +
+                (b+d)i} = (a+c) - (b+d)i = (a - bi) + (c - di) = T(z) +
+                T(w)\)</span>.</li>
+                <li><strong>Homogeneity:</strong> <span
+                class="math inline">\(T(\lambda z) = \overline{\lambda a
+                + \lambda bi} = \lambda a - \lambda bi = \lambda(a - bi)
+                = \lambda T(z)\)</span>.</li>
+                </ul>
+                <p>This example illustrates that <strong>linearity
+                depends on the choice of scalar field</strong>.</p>
+                </div>
+                <h2 id="non-examples-of-linear-transformations"><span
+                class="header-section-number">2.1.3. </span>
+                Non-Examples of Linear Transformations</h2>
+                <p>It is equally important to recognize functions that
+                are <strong>not</strong> linear transformations. We
+                verify non-linearity by finding a counterexample to
+                either (LT1) or (LT2).</p>
+                <div id="exm-squaring" class="example" data-number=""
+                data-env-type="example"
+                style="border-left-color: #3a8a3a; background-color: #eef7ee; ">
+                <span
+                class="theorem-title theorem-title-resolved"><strong>Example</strong>
+                (Squaring)</span>
+                <p>Determine whether <span class="math inline">\(T : F^2
+                \to F^2\)</span> defined by <span
+                class="math inline">\(T(a_1, a_2) = (a_1^2, 0)\)</span>
+                is a linear transformation.</p>
+                </div>
+                <div class="solution small-env"
+                data-env-type="solution">
+                <p><em>Solution</em><em>.</em> We show that <span
+                class="math inline">\(T\)</span> fails additivity.
+                Consider <span class="math inline">\(\v = (1,
+                0)\)</span>: <span class="math display">\[
+                    T(\v) + T(\v) = (1, 0) + (1, 0) = (2, 0),
+                \]</span> but <span class="math display">\[
+                    T(\v + \v) = T(2, 0) = (4, 0).
+                \]</span> Since <span class="math inline">\((2, 0) \neq
+                (4, 0)\)</span>, additivity fails and <span
+                class="math inline">\(T\)</span> is not linear.</p>
+                <p>Alternatively, homogeneity fails: <span
+                class="math inline">\(T(2\v) = T(2, 0) = (4, 0) \neq 2
+                \cdot (1, 0) = (2, 0) = 2T(\v)\)</span>.</p>
+                </div>
+                <div id="exm-norm" class="example" data-number=""
+                data-env-type="example"
+                style="border-left-color: #3a8a3a; background-color: #eef7ee; ">
+                <span
+                class="theorem-title theorem-title-resolved"><strong>Example</strong>
+                (Norm)</span>
+                <p>Determine whether <span class="math inline">\(T :
+                \nR^n \to \nR\)</span> defined by <span
+                class="math inline">\(T(\v) = \|\v\|\)</span> (the
+                Euclidean norm) is a linear transformation.</p>
+                </div>
+                <div class="solution small-env"
+                data-env-type="solution">
+                <p><em>Solution</em><em>.</em> Homogeneity fails for
+                negative scalars. Consider <span
+                class="math inline">\(\v = (1, 0, \ldots, 0)\)</span>
+                and <span class="math inline">\(\lambda = -1\)</span>:
+                <span class="math display">\[
+                    T(\lambda\v) = T(-1, 0, \ldots, 0) = \|(-1, 0,
+                \ldots, 0)\| = 1,
+                \]</span> but <span class="math display">\[
+                    \lambda T(\v) = (-1) \cdot \|(1, 0, \ldots, 0)\| =
+                -1.
+                \]</span> Since <span class="math inline">\(1 \neq
+                -1\)</span>, homogeneity fails and <span
+                class="math inline">\(T\)</span> is not a linear
+                transformation.</p>
+                <p>(The norm does satisfy <span
+                class="math inline">\(\|c\v\| = |c| \|\v\|\)</span>, but
+                this is not the same as <span
+                class="math inline">\(c\|\v\|\)</span> when <span
+                class="math inline">\(c &lt; 0\)</span>.)</p>
+                </div>
+                <h2 id="basic-theorems"><span
+                class="header-section-number">2.1.4. </span> Basic
+                Theorems</h2>
+                <div id="thm-zero-maps-to-zero" class="theorem"
+                data-number="2.1.1" data-env-type="theorem"
+                style="border-left-color: #3b6eda; background-color: #f0f5ff; ">
+                <span
+                class="theorem-title theorem-title-resolved"><strong>Theorem</strong><strong>
+                2.1.1</strong> (Zero Maps to Zero)</span>
+                <p>Let <span class="math inline">\(T: V \to W\)</span>
+                be a linear transformation. Then <span
+                class="math inline">\(T(\mathbf{0}_V) =
+                \mathbf{0}_W\)</span>.</p>
+                </div>
+                <div class="proof small-env" data-env-type="proof">
+                <p><em>Proof</em><em>.</em> Using additivity with <span
+                class="math inline">\(\v = \mathbf{0}_V\)</span>: <span
+                class="math display">\[
+                    T(\mathbf{0}_V) = T(\mathbf{0}_V + \mathbf{0}_V) =
+                T(\mathbf{0}_V) + T(\mathbf{0}_V).
+                \]</span> Adding <span
+                class="math inline">\(-T(\mathbf{0}_V)\)</span> to both
+                sides gives <span class="math inline">\(\mathbf{0}_W =
+                T(\mathbf{0}_V)\)</span>.</p>
+                </div>
+                <div class="remark small-env" data-env-type="remark">
+                <p><em>Remark</em><em>.</em> This theorem provides a
+                quick test for non-linearity: if <span
+                class="math inline">\(T(\mathbf{0}) \neq
+                \mathbf{0}\)</span>, then <span
+                class="math inline">\(T\)</span> is not linear.</p>
+                </div>
+                <div id="exm-constant-function" class="example"
+                data-number="" data-env-type="example"
+                style="border-left-color: #3a8a3a; background-color: #eef7ee; ">
+                <span
+                class="theorem-title theorem-title-resolved"><strong>Example</strong>
+                (Constant Function)</span>
+                <p>Determine whether <span class="math inline">\(T : \nR
+                \to \nR\)</span> defined by <span
+                class="math inline">\(T(x) = 5\)</span> for all <span
+                class="math inline">\(x \in \nR\)</span> is a linear
+                transformation.</p>
+                </div>
+                <div class="solution small-env"
+                data-env-type="solution">
+                <p><em>Solution</em><em>.</em> We use <a
+                href="#thm-zero-maps-to-zero" class="xref"
+                data-ref="thm-zero-maps-to-zero">Theorem 2.1.1</a>: any
+                linear transformation must map zero to zero.</p>
+                <p>Here, <span class="math inline">\(T(0) = 5 \neq
+                0\)</span>.</p>
+                <p>Therefore, <span class="math inline">\(T\)</span> is
+                not a linear transformation.</p>
+                </div>
+                <div id="exm-translation" class="example" data-number=""
+                data-env-type="example"
+                style="border-left-color: #3a8a3a; background-color: #eef7ee; ">
+                <span
+                class="theorem-title theorem-title-resolved"><strong>Example</strong>
+                (Translation)</span>
+                <p>Determine whether <span class="math inline">\(T :
+                \nR^2 \to \nR^2\)</span> defined by <span
+                class="math inline">\(T(\v) = \v + \mathbf{c}\)</span>
+                for some fixed nonzero <span
+                class="math inline">\(\mathbf{c} \in \nR^2\)</span> is a
+                linear transformation.</p>
+                </div>
+                <div class="solution small-env"
+                data-env-type="solution">
+                <p><em>Solution</em><em>.</em> Using <a
+                href="#thm-zero-maps-to-zero" class="xref"
+                data-ref="thm-zero-maps-to-zero">Theorem 2.1.1</a>:
+                <span class="math inline">\(T(\mathbf{0}) = \mathbf{0} +
+                \mathbf{c} = \mathbf{c} \neq \mathbf{0}\)</span>.</p>
+                <p>Therefore, translation by a nonzero vector is not
+                linear.</p>
+                <p>Maps of the form <span class="math inline">\(\v
+                \mapsto \A\v + \mathbf{c}\)</span> are called
+                <strong>affine transformations</strong>. They are linear
+                if and only if <span class="math inline">\(\mathbf{c} =
+                \mathbf{0}\)</span>.</p>
+                </div>
+                <div id="thm-preserves-negation" class="theorem"
+                data-number="2.1.2" data-env-type="theorem"
+                style="border-left-color: #3b6eda; background-color: #f0f5ff; ">
+                <span
+                class="theorem-title theorem-title-resolved"><strong>Theorem</strong><strong>
+                2.1.2</strong> (Linear Maps Preserve Negation)</span>
+                <p>Let <span class="math inline">\(T: V \to W\)</span>
+                be a linear transformation. Then <span
+                class="math inline">\(T(-\v) = -T(\v)\)</span> for all
+                <span class="math inline">\(\v \in V\)</span>.</p>
+                </div>
+                <div class="proof small-env" data-env-type="proof">
+                <p><em>Proof</em><em>.</em> Using homogeneity with <span
+                class="math inline">\(\lambda = -1\)</span>: <span
+                class="math display">\[
+                    T(-\v) = T((-1)\v) = (-1)T(\v) = -T(\v).
+                \]</span></p>
+                </div>
+                <div id="thm-equivalent-condition" class="theorem"
+                data-number="2.1.3" data-env-type="theorem"
+                style="border-left-color: #3b6eda; background-color: #f0f5ff; ">
+                <span
+                class="theorem-title theorem-title-resolved"><strong>Theorem</strong><strong>
+                2.1.3</strong> (Equivalent Characterization of
+                Linearity)</span>
+                <p>Let <span class="math inline">\(V, W\)</span> be
+                vector spaces over <span
+                class="math inline">\(F\)</span> and <span
+                class="math inline">\(T: V \to W\)</span> be a function.
+                Then <span class="math inline">\(T\)</span> is a linear
+                transformation if and only if <span
+                class="math display">\[
+                    T(\alpha \v_1 + \beta \v_2) = \alpha T(\v_1) + \beta
+                T(\v_2)
+                \]</span> for all <span class="math inline">\(\alpha,
+                \beta \in F\)</span> and <span
+                class="math inline">\(\v_1, \v_2 \in V\)</span>.</p>
+                </div>
+                <div class="proof small-env" data-env-type="proof">
+                <p><em>Proof</em><em>.</em> <span
+                class="math inline">\((\Rightarrow)\)</span> Suppose
+                <span class="math inline">\(T\)</span> is linear. Then
+                for any <span class="math inline">\(\alpha, \beta \in
+                F\)</span> and <span class="math inline">\(\v_1, \v_2
+                \in V\)</span>: <span
+                class="math display">\[\begin{align*}
+                    T(\alpha \v_1 + \beta \v_2) &amp;= T(\alpha \v_1) +
+                T(\beta \v_2) &amp; \text{(by LT1)} \\
+                    &amp;= \alpha T(\v_1) + \beta T(\v_2) &amp;
+                \text{(by LT2)}
+                \end{align*}\]</span></p>
+                <p><span class="math inline">\((\Leftarrow)\)</span>
+                Suppose <span class="math inline">\(T(\alpha \v_1 +
+                \beta \v_2) = \alpha T(\v_1) + \beta T(\v_2)\)</span>
+                for all <span class="math inline">\(\alpha, \beta \in
+                F\)</span> and <span class="math inline">\(\v_1, \v_2
+                \in V\)</span>.</p>
+                <ul>
+                <li><strong>Additivity (LT1):</strong> Setting <span
+                class="math inline">\(\alpha = \beta = 1\)</span>, we
+                get <span class="math inline">\(T(\v_1 + \v_2) = T(\v_1)
+                + T(\v_2)\)</span>.</li>
+                <li><strong>Homogeneity (LT2):</strong> Setting <span
+                class="math inline">\(\beta = 0\)</span>, we get <span
+                class="math inline">\(T(\alpha \v_1 + \mathbf{0}) =
+                \alpha T(\v_1) + 0 \cdot T(\v_2)\)</span>, i.e., <span
+                class="math inline">\(T(\alpha \v_1) = \alpha
+                T(\v_1)\)</span>.</li>
+                </ul>
+                <p>Thus <span class="math inline">\(T\)</span> satisfies
+                both (LT1) and (LT2), so <span
+                class="math inline">\(T\)</span> is linear.</p>
+                </div>
+                <div id="thm-linear-combination" class="theorem"
+                data-number="2.1.4" data-env-type="theorem"
+                style="border-left-color: #3b6eda; background-color: #f0f5ff; ">
+                <span
+                class="theorem-title theorem-title-resolved"><strong>Theorem</strong><strong>
+                2.1.4</strong> (Linear Maps Preserve Linear
+                Combinations)</span>
+                <p>Let <span class="math inline">\(T: V \to W\)</span>
+                be a linear transformation. Then for any vectors <span
+                class="math inline">\(\v_1, \ldots, \v_n \in V\)</span>
+                and scalars <span class="math inline">\(a_1, \ldots, a_n
+                \in F\)</span>: <span class="math display">\[
+                    T\left( \sum_{i=1}^n a_i \v_i \right) = \sum_{i=1}^n
+                a_i T(\v_i).
+                \]</span></p>
+                </div>
+                <div class="proof small-env" data-env-type="proof">
+                <p><em>Proof</em><em>.</em> By induction on <span
+                class="math inline">\(n\)</span>. The base case <span
+                class="math inline">\(n = 1\)</span> is homogeneity. For
+                the inductive step: <span
+                class="math display">\[\begin{align*}
+                    T\left( \sum_{i=1}^{n+1} a_i \v_i \right) &amp;=
+                T\left( \sum_{i=1}^n a_i \v_i + a_{n+1}\v_{n+1} \right)
+                \\
+                    &amp;= T\left( \sum_{i=1}^n a_i \v_i \right) +
+                T(a_{n+1}\v_{n+1}) &amp; \text{(additivity)} \\
+                    &amp;= \sum_{i=1}^n a_i T(\v_i) + a_{n+1}T(\v_{n+1})
+                &amp; \text{(induction + homogeneity)} \\
+                    &amp;= \sum_{i=1}^{n+1} a_i T(\v_i).
+                \end{align*}\]</span></p>
+                </div>
+                <h2 id="linear-transformation-determined-by-basis"><span
+                class="header-section-number">2.1.5. </span> Linear
+                Transformation Determined by Basis</h2>
+                <p>Another useful fact of a linear transformation is
+                that once we know how it acts on a basis, then we know
+                how it acts on every vector in the domain.</p>
+                <div id="thm-linear-transform-basis" class="theorem"
+                data-number="2.1.5" data-env-type="theorem"
+                style="border-left-color: #3b6eda; background-color: #f0f5ff; ">
+                <span
+                class="theorem-title theorem-title-resolved"><strong>Theorem</strong><strong>
+                2.1.5</strong> (Linear Transformations are Determined by
+                Their Action on a Basis)</span>
+                <p>Let <span class="math inline">\(T: V \to W\)</span>
+                be a linear transformation and <span
+                class="math inline">\(V\)</span> is finite dimensional,
+                and <span class="math inline">\(B = \{ \v_1, \dots, \v_n
+                \}\)</span> be a basis for <span
+                class="math inline">\(V\)</span>. Then we have:</p>
+                <ol type="1">
+                <li>For every <span class="math inline">\(\v \in
+                V\)</span>, <span class="math inline">\(f(\v)\)</span>
+                is a linear combination of <span
+                class="math inline">\(f(\v_1), f(\v_2), \dots,
+                f(\v_n)\)</span>.</li>
+                <li>Suppose the linear transformation <span
+                class="math inline">\(g : V \to W\)</span> satisfies
+                <span class="math inline">\(g(\v_i) = f(\v_i)\)</span>
+                for all <span class="math inline">\(i\)</span>. Then
+                <span class="math inline">\(g = f\)</span>.</li>
+                </ol>
+                <p>We say ‘<span class="math inline">\(f\)</span> is
+                determined by <span class="math inline">\(f(\v_1),
+                \dots, f(\v_n)\)</span>’ in this case.</p>
+                </div>
+                <div class="proof small-env" data-env-type="proof">
+                <p><em>Proof</em><em>.</em> Let <span
+                class="math inline">\(\v \in V\)</span>. Since <span
+                class="math inline">\(B\)</span> is a basis of <span
+                class="math inline">\(V\)</span>, we can write <span
+                class="math inline">\(\v = \alpha_1 \v_1 + \dots +
+                \alpha_n \v_n\)</span>. Then <span
+                class="math display">\[\begin{align*}
+                f(\v) &amp;= f(\alpha_1 \v_1 + \cdots + \alpha_n \v_n)
+                \\
+                &amp;=  \alpha_1 f (\v_1) + \cdots + \alpha_n f (\v_n) .
+                \end{align*}\]</span> This proves the first
+                condition.</p>
+                <p>Moreover, if <span class="math inline">\(g : V \to
+                W\)</span> satisfies <span class="math inline">\(g(\v_i)
+                = f(\v_i)\)</span>, then: <span
+                class="math display">\[\begin{align*}
+                g(\v) &amp;= g(\alpha_1 \v_1 + \cdots + \alpha_n \v_n)
+                \\
+                &amp;= \alpha_1 g(\v_1) + \cdots + \alpha_n g(\v_n) \\
+                &amp;= a_1 f(\v_1) + \cdots + \alpha_n f(\v_n) \\
+                &amp;= f(\alpha_1 \v_1 + \cdots + \alpha_n \v_n) \\
+                &amp;= f(\v).
+                \end{align*}\]</span></p>
+                <p>Since <span class="math inline">\(g(\v) =
+                f(\v)\)</span> for all <span class="math inline">\(\v
+                \in V\)</span>, we have <span class="math inline">\(f =
+                g\)</span>. This finishes the second condition.</p>
+                </div>
+                <div id="exm-deter" class="example" data-number=""
+                data-env-type="example"
+                style="border-left-color: #3a8a3a; background-color: #eef7ee; ">
+                <span
+                class="theorem-title theorem-title-resolved"><strong>Example</strong></span>
+                <p>Is it possible to have a linear map <span
+                class="math inline">\(f: \nR^2 \to \nR^3\)</span> such
+                that <span class="math display">\[
+                f(1, 0) = (2, 3, 4), \quad f(1, 1) = (3, 4, 5), \quad
+                f(2, 3) = (4, 5 6)?
+                \]</span></p>
+                </div>
+                <div class="solution small-env"
+                data-env-type="solution">
+                <p><em>Solution</em><em>.</em> Idea: Since <span
+                class="math inline">\(\left\{ (1, 0), (1, 1)
+                \right\}\)</span> forms a basis of <span
+                class="math inline">\(\nR^2\)</span>, these two function
+                value would determine <span
+                class="math inline">\(f\)</span> completely.</p>
+                <p>Suppose such a linear transformation <span
+                class="math inline">\(f\)</span> exists. Observe that
+                <span class="math display">\[
+                (2, 3) = -1 (1, 0) + 3 (1, 1).
+                \]</span></p>
+                <p>Apply <span class="math inline">\(f\)</span> then we
+                have: <span class="math display">\[\begin{align*}
+                f(2, 3) &amp;= f(-1(1, 0) + 3(1, 1)) \\
+                &amp;= -1 f (1, 0) + 3 f(1, 1) \\
+                &amp;= -1 (2, 3, 4) + 3 (3, 4 ,5) \\
+                &amp;= (7, 8 , 11) \\
+                &amp;\neq (4, 5 6).
+                \end{align*}\]</span></p>
+                <p>Which is inconsistent with the third equation,
+                therefore no such transformation exists.</p>
+                </div>
+                <div id="exm-deter-two" class="example" data-number=""
+                data-env-type="example"
+                style="border-left-color: #3a8a3a; background-color: #eef7ee; ">
+                <span
+                class="theorem-title theorem-title-resolved"><strong>Example</strong></span>
+                <p>Suppose we are give a linear transformation <span
+                class="math inline">\(f: \nR[x]_{\leq 3} \to
+                \nR[x]_{\leq 2}\)</span>. And it is also know that <span
+                class="math display">\[
+                f(x^3) = 3x^2, \quad f(x^2) = 2x, \quad f(x) = 1, \quad
+                f(1)= 0.
+                \]</span></p>
+                </div>
+                <div class="solution small-env"
+                data-env-type="solution">
+                <p><em>Solution</em><em>.</em> As <span
+                class="math inline">\(\left\{ 1, x, x^2, x^3
+                \right\}\)</span> forms a basis of <span
+                class="math inline">\(\nR[x]_{\leq 3}\)</span>. And
+                <span class="math inline">\(D(x^k) = f(x^k)\)</span>,
+                for <span class="math inline">\(k = 0, 1, 2, 3\)</span>,
+                as <span class="math inline">\(D\)</span> is
+                differentiation. We have that <span
+                class="math inline">\(D \equiv f\)</span> is the same
+                linear transformation.</p>
+                </div>
+            </article>
+
+            <!-- Page Navigation -->
+            <nav class="page-navigation">
+                <div class="nav-page nav-page-previous">
+                                        <a href="index.html" class="pagination-link" aria-label="Linear
+Transformations {.unnumbered}">
+                        <i class="bi bi-arrow-left-short"></i>
+                        <span
+                            class="nav-page-text">Linear Transformations
+{.unnumbered}</span>
+                    </a>
+                                    </div>
+                <div class="nav-page nav-page-next">
+                                        <a href="02-kernel-image.html" class="pagination-link" aria-label="Kernel
+and Image">
+                        <span
+                            class="nav-page-text">2.2 Kernel and
+Image</span>
+                        <i class="bi bi-arrow-right-short"></i>
+                    </a>
+                                    </div>
+            </nav>
+        </main>
+
+        <!-- Right Sidebar (TOC) -->
+        <aside id="quarto-margin-sidebar">
+            <nav class="toc">
+                <h2>Table of contents</h2>
+                            </nav>
+
+            <div class="other-formats">
+                <h3>Other Formats</h3>
+                <ul>
+                    <li><a href="../pdf/ch02-linear-transformations/01-linear-transformations.pdf" target="_blank">PDF</a></li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Tooltip Script -->
+    <script src="../main.js"></script>
+</body>
+
+</html>

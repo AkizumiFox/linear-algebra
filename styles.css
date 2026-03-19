@@ -1,0 +1,1464 @@
+/* ==========================================================================
+   Linear Algebra Notes - LaTeX-inspired Quarto Theme
+   ========================================================================== */
+
+/* --- Web Fonts --- */
+/* STIX Two Text - designed to match MathJax math fonts */
+@import url('https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+/* Fallback heading font */
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+
+/* ==========================================================================
+   Base Typography
+   ========================================================================== */
+
+:root {
+  /* Color palette */
+  --text-color: #2c2c2c;
+  --text-muted: #5a5a5a;
+  --heading-color: #1a1a1a;
+  --link-color: #1a5fb4;
+  --border-color: #d4d4d4;
+  --bg-subtle: #fafafa;
+
+  /* Typography scale */
+  --font-body: 'STIX Two Text', 'Times New Roman', serif;
+  --font-heading: 'STIX Two Text', 'Source Sans 3', sans-serif;
+  --font-mono: 'JetBrains Mono', 'Consolas', monospace;
+
+  /* Spacing */
+  --content-width: 50rem;
+  --layout-max-width: 85rem;  /* ~1360px: 250 + 50rem content + 250 + padding */
+  --line-height: 1.4;
+  --paragraph-spacing: 1em;
+}
+
+/* Main content area */
+body,
+#quarto-content,
+#quarto-content main,
+#quarto-content .content,
+.content,
+main,
+article,
+.quarto-section-identifier {
+  font-family: var(--font-body) !important;
+  font-size: 20px !important;
+  font-weight: 400;
+  line-height: var(--line-height);
+  color: var(--text-color);
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
+/* Text spacing - applied globally */
+body {
+  letter-spacing: -0.02em;
+  word-spacing: 0.12em;
+  margin: 0;
+  padding: 0;
+}
+
+/* Constrain content width for readability */
+#quarto-content main {
+  max-width: var(--content-width);
+  padding: 2rem 4rem;
+}
+
+/* ==========================================================================
+   Headings
+   ========================================================================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  color: var(--heading-color);
+  font-weight: 600;
+  margin-top: 1.4em;
+  margin-bottom: 0.5em;
+  line-height: 1.3;
+}
+
+h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.4em;
+  margin-top: 1em;
+}
+
+h2 {
+  font-size: 1.6rem;
+  margin-top: 1.6em;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.3em;
+}
+
+h3 {
+  font-size: 1.4rem;
+}
+
+h4 {
+  font-size: 1.2rem;
+}
+
+/* ==========================================================================
+   Paragraphs and Text
+   ========================================================================== */
+
+p {
+  margin-bottom: var(--paragraph-spacing);
+  text-align: left;
+  hyphens: none;
+  font-weight: 400;
+}
+
+/* Make text weight match MathJax */
+p,
+li,
+span,
+div {
+  -webkit-text-stroke: 0;
+}
+
+/* First paragraph after heading - no indent */
+h1+p,
+h2+p,
+h3+p,
+h4+p {
+  text-indent: 0;
+}
+
+/* Strong and emphasis */
+strong,
+b {
+  font-weight: 700;
+  color: var(--heading-color);
+}
+
+em,
+i {
+  font-style: italic;
+}
+
+/* ==========================================================================
+   Lists - Clean and Spacious
+   ========================================================================== */
+
+ul,
+ol {
+  margin-top: 0.75em;
+  margin-bottom: 1.25em;
+  padding-left: 1.75em;
+}
+
+li {
+  margin-bottom: 0.6em;
+  line-height: 1.65;
+}
+
+/* Nested lists */
+li>ul,
+li>ol {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+/* Tight lists inside environments */
+.theorem li,
+.definition li,
+.example li,
+.exercise li,
+.lemma li,
+.corollary li,
+.proposition li {
+  margin-bottom: 0.5em;
+}
+
+/* Remove gap when list immediately follows the environment title */
+.theorem-title+ul,
+.theorem-title+ol,
+.lemma-title+ul,
+.lemma-title+ol,
+.corollary-title+ul,
+.corollary-title+ol,
+.proposition-title+ul,
+.proposition-title+ol,
+.conjecture-title+ul,
+.conjecture-title+ol,
+.definition-title+ul,
+.definition-title+ol,
+.example-title+ul,
+.example-title+ol,
+.exercise-title+ul,
+.exercise-title+ol {
+  margin-top: 0;
+}
+
+/* Custom bullet styling */
+ul {
+  list-style-type: disc;
+}
+
+ul ul {
+  list-style-type: circle;
+}
+
+ul ul ul {
+  list-style-type: square;
+}
+
+/* Ordered list styling */
+ol {
+  list-style-type: decimal;
+}
+
+ol ol {
+  list-style-type: lower-alpha;
+}
+
+ol ol ol {
+  list-style-type: lower-roman;
+}
+
+/* --- Custom Enumerate Labels (matched via scripts/list-env.lua) --- */
+.enumerate-f ol {
+  list-style-type: none;
+  counter-reset: item;
+  padding-left: 0.5em;
+}
+
+.enumerate-f ol>li {
+  position: relative;
+  padding-left: 2.5em;
+}
+
+.enumerate-f ol>li:before {
+  content: "(F" counter(item) ")";
+  counter-increment: item;
+  font-weight: 600;
+  position: absolute;
+  left: 0;
+  color: var(--heading-color);
+}
+
+.enumerate-vs ol {
+  list-style-type: none;
+  counter-reset: item;
+  padding-left: 0.5em;
+}
+
+.enumerate-vs ol>li {
+  position: relative;
+  padding-left: 3.5em;
+}
+
+.enumerate-vs ol>li:before {
+  content: "(VS" counter(item) ")";
+  counter-increment: item;
+  font-weight: 600;
+  position: absolute;
+  left: 0;
+  color: var(--heading-color);
+}
+
+.enumerate-lt ol {
+  list-style-type: none;
+  counter-reset: item;
+  padding-left: 0.5em;
+}
+
+.enumerate-lt ol>li {
+  position: relative;
+  padding-left: 3em;
+}
+
+.enumerate-lt ol>li:before {
+  content: "(LT" counter(item) ")";
+  counter-increment: item;
+  font-weight: 600;
+  position: absolute;
+  left: 0;
+  color: var(--heading-color);
+}
+
+/* ==========================================================================
+   Mathematics - Better Integration
+   ========================================================================== */
+
+/* Display math */
+.math.display,
+mjx-container[display="true"] {
+  display: block;
+  margin: -0.1em 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0.1em 0;
+  scrollbar-width: none;
+  /* Firefox: hide scrollbar */
+  -ms-overflow-style: none;
+  /* IE/Edge: hide scrollbar */
+}
+
+/* WebKit: hide scrollbar by default */
+.math.display::-webkit-scrollbar,
+mjx-container[display="true"]::-webkit-scrollbar {
+  height: 0;
+  display: none;
+}
+
+/* Allow long equations to scale down slightly if needed */
+mjx-container[display="true"] {
+  max-width: 100%;
+}
+
+/* Inline math */
+.math.inline,
+mjx-container[display="false"] {
+  font-size: 1em;
+}
+
+/* Align math text size */
+mjx-container {
+  font-size: 100% !important;
+}
+
+/* ==========================================================================
+   Quarto-style Header & Breadcrumbs
+   ========================================================================== */
+
+.quarto-title-block.default {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.quarto-title-breadcrumbs {
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin-bottom: 1rem;
+  list-style: none;
+}
+
+.breadcrumb-item {
+  display: flex;
+  align-items: center;
+}
+
+.breadcrumb-item+.breadcrumb-item {
+  padding-left: 0.5rem;
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+  display: inline-block;
+  padding-right: 0.5rem;
+  color: #6c757d;
+  content: "›";
+  /* Chevron separator */
+  font-family: system-ui;
+  /* Ensure character renders */
+}
+
+.breadcrumb-item a {
+  color: var(--text-muted);
+  text-decoration: none;
+}
+
+.breadcrumb-item a:hover {
+  color: var(--link-color);
+  text-decoration: underline;
+}
+
+.quarto-title {
+  margin-bottom: 0.5rem;
+}
+
+.quarto-title h1.title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.4rem;
+  line-height: 1.2;
+}
+
+.chapter-number {
+  color: var(--text-muted);
+  font-weight: 400;
+  opacity: 0.8;
+}
+
+.chapter-title {
+  color: var(--heading-color);
+}
+
+.header-section-number {
+  color: var(--text-muted);
+  opacity: 0.8;
+  margin-right: 0.3em;
+}
+
+/* Metadata block (if added later) */
+.quarto-title-meta {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 2rem;
+  row-gap: 0.5rem;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+/* ==========================================================================
+   Theorem Environments - Refined Style
+   ========================================================================== */
+
+/* Base style for all theorem-like environments */
+.theorem,
+.lemma,
+.corollary,
+.proposition,
+.conjecture,
+.definition,
+.example,
+.exercise {
+  padding: 0.9rem 1.1rem 0.6rem 1.1rem;
+  margin: 1.25rem 0;
+  border-radius: 3px;
+  border-left: 3px solid;
+  font-style: normal;
+  background-color: var(--bg-subtle);
+  box-shadow: none;
+}
+
+/* Content inside environments */
+.theorem p,
+.lemma p,
+.corollary p,
+.proposition p,
+.conjecture p,
+.definition p,
+.example p,
+.exercise p {
+  font-style: normal;
+  margin-bottom: 0.75em;
+  text-align: left;
+}
+
+.theorem p:last-child,
+.lemma p:last-child,
+.corollary p:last-child,
+.proposition p:last-child,
+.conjecture p:last-child,
+.definition p:last-child,
+.example p:last-child,
+.exercise p:last-child {
+  margin-bottom: 0;
+}
+
+/* Environment titles */
+.theorem-title,
+.lemma-title,
+.corollary-title,
+.proposition-title,
+.conjecture-title,
+.definition-title,
+.example-title,
+.exercise-title,
+.algorithm-title {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.1em !important;
+  display: block;
+  margin-bottom: 0.0rem; 
+  font-style: normal;
+}
+
+/* --- Color Scheme (Subtle, Academic) --- */
+/* Colors are now handled via inline styles from config.json */
+
+
+/* ==========================================================================
+   Proof, Remark, Solution - Minimal Style
+   ========================================================================== */
+
+.solution,
+.remark,
+.proof,
+.claim,
+.algorithm,
+.small-env {
+  padding: 0.4rem 1.1rem;
+  margin: 1.25rem 0;
+  border-left: 2px solid #9ca3af;
+  background-color: transparent;
+  color: var(--text-body);
+  box-shadow: none;
+  border-radius: 0;
+}
+
+/* Content inside small environments - match big env paragraph styling */
+.small-env p {
+  margin-bottom: 0.75em;
+}
+
+.small-env p:first-child {
+  margin-top: 0;
+}
+
+.small-env p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* ==========================================================================
+   Links
+   ========================================================================== */
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+a:hover {
+  border-bottom-color: var(--link-color);
+}
+
+/* Cross-references */
+a.quarto-xref {
+  font-weight: 500;
+}
+
+/* ==========================================================================
+   Code and Preformatted Text
+   ========================================================================== */
+
+code {
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+  background-color: #f3f4f6;
+  padding: 0.15em 0.35em;
+  border-radius: 3px;
+}
+
+pre {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  line-height: 1.5;
+  padding: 1rem;
+  background-color: #f8f9fa;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  overflow-x: auto;
+}
+
+pre code {
+  background: none;
+  padding: 0;
+}
+
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+
+table {
+  width: 100%;
+  margin: 1.5em 0;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+th,
+td {
+  padding: 0.65em 1em;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+}
+
+th {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  background-color: var(--bg-subtle);
+  border-bottom-width: 2px;
+}
+
+/* ==========================================================================
+   Blockquotes
+   ========================================================================== */
+
+blockquote {
+  margin: 1.5em 0;
+  padding: 0.75em 1.5em;
+  border-left: 3px solid var(--border-color);
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+/* ==========================================================================
+   Tooltips (Tippy.js)
+   ========================================================================== */
+
+.tippy-box[data-theme="quarto"] {
+  max-width: 550px !important;
+  background-color: #ffffff !important;
+  border: 1px solid #d4d4d4 !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12) !important;
+  border-radius: 4px !important;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+}
+
+.tippy-box[data-theme="quarto"] .tippy-content {
+  padding: 10px 14px !important;
+  overflow: visible !important;
+  height: auto !important;
+  max-height: none !important;
+  line-height: 1.6;
+}
+
+.tippy-content .math.display {
+  display: block !important;
+  margin: 0.5em 0 !important;
+}
+
+.tippy-content p {
+  margin: 0 0 0.5em 0 !important;
+}
+
+.tippy-content p:last-child {
+  margin-bottom: 0 !important;
+}
+
+.tippy-box[data-theme="quarto"] .tippy-arrow::before {
+  border-bottom-color: #ffffff !important;
+  border-top-color: #ffffff !important;
+}
+
+/* ==========================================================================
+   Sidebar and Navigation
+   ========================================================================== */
+
+#quarto-sidebar {
+  font-family: var(--font-heading);
+}
+
+.sidebar-title {
+  font-weight: 700;
+}
+
+.sidebar-item-text {
+  font-size: 0.9rem;
+}
+
+/* Fix PDF link clickability in right sidebar */
+#quarto-margin-sidebar {
+  position: relative;
+  z-index: 1000 !important;
+}
+
+#quarto-margin-sidebar * {
+  pointer-events: auto !important;
+}
+
+/* Prevent main content from overlapping sidebar */
+#quarto-content {
+  position: relative;
+  z-index: 1;
+}
+
+.page-columns {
+  overflow: visible !important;
+}
+
+/* ==========================================================================
+   Print Styles
+   ========================================================================== */
+
+@media print {
+  body {
+    font-size: 11pt;
+  }
+
+  .theorem,
+  .definition,
+  .example,
+  .lemma,
+  .corollary,
+  .proposition,
+  .conjecture,
+  .exercise {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+}
+
+/* ==========================================================================
+   Responsive Adjustments
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  :root {
+    --line-height: 1.55;
+  }
+
+  .content,
+  main,
+  article {
+    font-size: 0.9rem;
+  }
+
+  h1 {
+    font-size: 1.75rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  h3 {
+    font-size: 1.4rem;
+  }
+
+  .theorem,
+  .lemma,
+  .corollary,
+  .proposition,
+  .conjecture,
+  .definition,
+  .example,
+  .exercise {
+    padding: 0.75rem;
+    margin: 1rem 0;
+  }
+
+  p {
+    text-align: left;
+    hyphens: none;
+  }
+}
+
+/* ==========================================================================
+   Dynamic Tooltip Loading Animation
+   ========================================================================== */
+
+@keyframes spin {
+  0% {
+    transform: translateY(-50%) rotate(0deg);
+  }
+
+  100% {
+    transform: translateY(-50%) rotate(360deg);
+  }
+}
+
+/* Default state: Hide text, show spinner */
+.tippy-box .theorem-title {
+  visibility: hidden;
+  position: relative;
+  display: block;
+  /* Force new line */
+  min-width: 20px;
+  /* Reserve space for spinner */
+  margin-bottom: 0.5em;
+  /* Space between title and content */
+}
+
+.tippy-box .theorem-title::after {
+  content: "";
+  visibility: visible;
+  /* Visible even if parent is hidden */
+  position: absolute;
+  left: 0;
+  top: 50%;
+  /* Center vertically */
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  background-image: url('spinner.svg');
+  /* Path relative to this CSS file */
+  background-size: contain;
+  background-repeat: no-repeat;
+  /* Removed border spinner styles */
+}
+
+/* Resolved state: Show text, hide spinner */
+.tippy-box .theorem-title.theorem-title-resolved {
+  visibility: visible;
+}
+
+.tippy-box .theorem-title.theorem-title-resolved::after {
+  display: none;
+}
+
+/* ==========================================================================
+   Quarto-style Three-Column Layout
+   ========================================================================== */
+
+/* Main container */
+#quarto-container {
+  display: grid;
+  grid-template-columns: 250px minmax(0, 1fr) 250px;
+  min-height: 100vh;
+  background-color: #fff;
+  max-width: var(--layout-max-width);
+  margin: 0 auto;
+}
+
+/* Left Sidebar */
+#quarto-sidebar {
+  background-color: #fff;
+  padding: 1rem 1rem 1rem 2rem;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+  box-sizing: border-box;
+  /* Ensure padding doesn't increase height beyond 100vh */
+  /* Hide scrollbar for IE, Edge and Firefox */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+#quarto-sidebar::-webkit-scrollbar {
+  display: none;
+}
+
+.sidebar-header {
+  padding: 0.5rem 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sidebar-title {
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--heading-color);
+  text-decoration: none;
+}
+
+.sidebar-title:hover {
+  color: var(--link-color);
+}
+
+.sidebar-tools {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.sidebar-tools a {
+  color: var(--text-muted);
+  padding: 0.25rem;
+}
+
+.sidebar-tools a:hover {
+  color: var(--link-color);
+}
+
+.sidebar-search {
+  padding: 0.5rem 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar-search .bi-search {
+  position: absolute;
+  left: 0;
+  /* Match padding-left of container */
+  color: #999;
+  font-size: 0.9rem;
+  pointer-events: none;
+}
+
+.sidebar-search input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.4rem 0 0.4rem 1.8rem;
+  /* Padding left for icon */
+  border: none;
+  border-bottom: 1px solid #ccc;
+  border-radius: 0;
+  font-size: 0.9rem;
+  background: transparent;
+  outline: none;
+  color: var(--text-color);
+}
+
+.sidebar-search input:focus {
+  border-bottom-color: #2151bf;
+}
+
+.sidebar-search input:focus+.bi-search {
+  color: #2151bf;
+}
+
+/* Search Results Dropdown */
+.search-results {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #fff;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-height: 400px;
+  overflow-y: auto;
+  z-index: 1000;
+  display: none;
+  margin-top: 5px;
+}
+
+.search-results.active {
+  display: block;
+}
+
+.search-result-item {
+  padding: 10px 15px;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+}
+
+.search-result-item:last-child {
+  border-bottom: none;
+}
+
+.search-result-item:hover {
+  background-color: #f8f9fa;
+}
+
+.search-result-item a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.search-result-title {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--link-color);
+  margin-bottom: 4px;
+}
+
+.search-result-preview {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.search-no-results {
+  padding: 15px;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.sidebar-nav {
+  padding: 0.5rem 0;
+}
+
+.sidebar-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-nav li {
+  margin: 0;
+}
+
+/* Base link styles for all nav items */
+.sidebar-nav a {
+  display: block;
+  padding: 4px 15px;
+  /* Reduced padding from 6px 20px */
+  color: #595959;
+  font-size: 14px;
+  /* Slightly smaller font */
+  line-height: 1.3;
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.sidebar-nav a:hover {
+  color: #2151bf;
+}
+
+/* Preface link */
+.nav-home {
+  margin-bottom: 2px;
+}
+
+.nav-home a {
+  display: block;
+  padding: 4px 15px;
+  /* Match reduced padding */
+  color: #595959;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.nav-home a:hover {
+  color: #2151bf;
+}
+
+/* Chapter container */
+.nav-chapter {
+  margin-top: 2px;
+  /* Reduced margin */
+}
+
+/* Chapter header - clickable row with title and toggle */
+.nav-chapter-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 4px 10px 4px 15px;
+  /* Reduced padding */
+  cursor: pointer;
+  color: #595959;
+  font-size: 14px;
+  line-height: 1.3;
+  transition: color 0.15s;
+}
+
+.nav-chapter-header:hover {
+  color: #2151bf;
+}
+
+.nav-chapter.active>.nav-chapter-header {
+  color: #2151bf;
+}
+
+/* Chapter title link - remove padding to avoid double indent with header */
+.nav-chapter-title-link {
+  padding: 0 !important;
+  color: inherit;
+  text-decoration: none;
+  flex: 1;
+  display: flex;
+}
+
+.nav-chapter-title-link:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Chapter title - allow text wrap */
+.nav-chapter-title {
+  flex: 1;
+  margin-right: 8px;
+}
+
+/* Toggle arrow - positioned on right */
+.nav-toggle {
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2px;
+  color: #999;
+  transition: transform 0.5s ease;
+  /* Match section animation */
+}
+
+.nav-toggle svg {
+  width: 10px;
+  height: 10px;
+}
+
+.nav-toggle.expanded {
+  transform: rotate(90deg);
+}
+
+.nav-chapter-header:hover .nav-toggle {
+  color: #2151bf;
+}
+
+/* Section list */
+.nav-sections {
+  overflow: hidden;
+  max-height: 2000px;
+  transition: max-height 0.5s ease;
+  /* Slower animation */
+  padding-left: 16px;
+}
+
+.nav-sections.collapsed {
+  max-height: 0;
+}
+
+/* Section items */
+.nav-section-item {
+  margin: 0;
+}
+
+.nav-section-item a {
+  display: block;
+  padding: 3px 20px 3px 32px;
+  /* Reduced vertical padding */
+  color: #595959;
+  font-size: 14px;
+  /* Slightly smaller font to match top-level */
+  line-height: 1.3;
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.nav-section-item a:hover {
+  color: #2151bf;
+}
+
+/* Active section - just color change, no border or background */
+.nav-section-item.active a {
+  color: #2151bf;
+}
+
+/* Section number inline with title */
+.nav-section-number {
+  margin-right: 0.25em;
+}
+
+/* Mobile sidebar overlay */
+.sidebar-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.sidebar-overlay.show {
+  display: block;
+  opacity: 1;
+}
+
+/* Main Content */
+#quarto-content {
+  background-color: #fff;
+  padding: 2rem 3rem;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.breadcrumbs {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+}
+
+.breadcrumbs a {
+  color: var(--text-muted);
+}
+
+.breadcrumbs a:hover {
+  color: var(--link-color);
+}
+
+.content {
+  max-width: var(--content-width);
+}
+
+.page-header {
+  margin-bottom: 1.5rem;
+}
+
+.page-title {
+  font-size: 1.8rem;
+  margin: 0;
+  color: var(--heading-color);
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.5rem;
+}
+
+.page-nav {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.nav-prev,
+.nav-next {
+  padding: 0.5rem 1rem;
+  background-color: var(--bg-subtle);
+  border-radius: 4px;
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.nav-prev:hover,
+.nav-next:hover {
+  background-color: #e9ecef;
+}
+
+/* Right Sidebar (TOC) */
+#quarto-margin-sidebar {
+  background-color: #fff;
+  padding: 2rem 1.5rem;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.toc h2 {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0 0 1rem 0;
+  border-bottom: none;
+}
+
+.toc ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.toc li {
+  margin: 0;
+}
+
+.toc a {
+  display: block;
+  padding: 0.3rem 0;
+  padding-left: 0.75rem;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  text-decoration: none;
+  border-left: 2px solid transparent;
+}
+
+.toc a:hover {
+  color: var(--link-color);
+}
+
+.toc a.active {
+  border-left-color: var(--link-color);
+  color: var(--link-color);
+  font-weight: 500;
+}
+
+/* Indented TOC items (h3 headings) */
+.toc .toc-indent a {
+  padding-left: 1.5rem;
+  font-size: 0.8rem;
+}
+
+.other-formats {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.other-formats h3 {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0 0 0.5rem 0;
+}
+
+.other-formats ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.other-formats a {
+  color: var(--link-color);
+  font-size: 0.85rem;
+}
+
+/* ==========================================================================
+   Tooltip Theme (for Tippy.js)
+   ========================================================================== */
+
+.tippy-box[data-theme~='quarto'],
+.tippy-box[data-theme~='theorem'] {
+  background-color: #ffffff;
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  max-width: 550px;
+}
+
+.tippy-box[data-theme~='quarto']>.tippy-arrow::before,
+.tippy-box[data-theme~='theorem']>.tippy-arrow::before {
+  border-top-color: #ffffff;
+  border-bottom-color: #ffffff;
+}
+
+.tooltip-theorem {
+  padding: 0.5rem;
+}
+
+.tooltip-title {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.tooltip-content {
+  line-height: 1.5;
+}
+
+.tooltip-content p {
+  margin: 0 0 0.5em 0;
+}
+
+.tooltip-content p:last-child {
+  margin-bottom: 0;
+}
+
+.tooltip-loading {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+}
+
+.tooltip-loading .spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid var(--border-color);
+  border-top-color: var(--link-color);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+.tooltip-error {
+  color: #c94c6c;
+  font-style: italic;
+}
+
+/* Cross-reference links */
+a.xref,
+a.quarto-xref {
+  font-weight: 500;
+  color: var(--link-color);
+}
+
+/* ==========================================================================
+   Responsive Layout
+   ========================================================================== */
+
+@media (max-width: 1200px) {
+  #quarto-container {
+    grid-template-columns: 250px 1fr;
+  }
+
+  #quarto-margin-sidebar {
+    display: none;
+  }
+}
+
+@media (max-width: 900px) {
+  #quarto-container {
+    grid-template-columns: 1fr;
+  }
+
+  #quarto-sidebar {
+    display: none;
+  }
+
+  #quarto-content {
+    padding: 1.5rem;
+  }
+}
+
+/* ==========================================================================
+   Page Navigation (Footer)
+   ========================================================================== */
+
+.page-navigation {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  margin-top: 40px;
+  border-top: 1px solid #dee2e6;
+  gap: 1rem;
+}
+
+.nav-page {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+}
+
+.nav-page-previous {
+  justify-content: flex-start;
+}
+
+.nav-page-next {
+  justify-content: flex-end;
+  text-align: right;
+}
+
+.pagination-link {
+  display: flex;
+  align-items: center;
+  color: #6c757d;
+  /* Muted gray text */
+  text-decoration: none;
+  font-size: 1rem;
+  line-height: 1.2;
+  transition: color 0.15s ease-in-out;
+  gap: 8px;
+  /* Space between arrow and text */
+  max-width: 100%;
+}
+
+.pagination-link:hover {
+  color: #1a5fb4;
+  /* Primary link color on hover */
+  text-decoration: none;
+}
+
+.nav-page-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Icons are handled by Bootstrap Icons class .bi */
+.pagination-link .bi {
+  font-size: 1.2em;
+  flex-shrink: 0;
+}

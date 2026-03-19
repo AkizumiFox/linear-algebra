@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1.1 Vector Spaces – Linear Algebra</title>
+
+    <!-- Styles -->
+    <!-- Styles -->
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- MathJax Configuration with Custom Macros -->
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['\\(', '\\)']],
+                displayMath: [['\\[', '\\]']],
+                processEscapes: true,
+                processEnvironments: true,
+                tags: 'ams',
+                macros: {
+                    0: "\\mathbf{0}",
+                    1: "\\mathbf{1}",
+                    A: "\\mathbf{A}",
+                    B: "\\mathbf{B}",
+                    C: "\\mathbf{C}",
+                    Cor: "\\operatorname*{Cor}",
+                    Corr: "\\operatorname*{Corr}",
+                    Cov: "\\operatorname*{Cov}",
+                    D: "\\mathbf{D}",
+                    E: "\\mathbf{E}",
+                    Ev: "\\operatorname*{\\mathbb{E}}",
+                    F: "\\mathbf{F}",
+                    G: "\\mathbf{G}",
+                    H: "\\mathbf{H}",
+                    I: "\\mathbf{I}",
+                    J: "\\mathbf{J}",
+                    K: "\\mathbf{K}",
+                    L: "\\mathbf{L}",
+                    M: "\\mathbf{M}",
+                    N: "\\mathbf{N}",
+                    O: "\\mathbf{O}",
+                    P: "\\mathbf{P}",
+                    Pr: "\\operatorname{Pr}",
+                    Q: "\\mathbf{Q}",
+                    R: "\\mathbf{R}",
+                    S: "\\mathbf{S}",
+                    Span: "\\operatorname{span}",
+                    T: "\\mathbf{T}",
+                    U: "\\mathbf{U}",
+                    V: "\\mathbf{V}",
+                    Var: "\\operatorname*{Var}",
+                    W: "\\mathbf{W}",
+                    X: "\\mathbf{X}",
+                    Y: "\\mathbf{Y}",
+                    Z: "\\mathbf{Z}",
+                    a: "\\mathbf{a}",
+                    adj: "\\operatorname{adj}",
+                    b: "\\mathbf{b}",
+                    c: "\\mathbf{c}",
+                    cA: "\\mathcal{A}",
+                    cB: "\\mathcal{B}",
+                    cC: "\\mathcal{C}",
+                    cD: "\\mathcal{D}",
+                    cE: "\\mathcal{E}",
+                    cF: "\\mathcal{F}",
+                    cG: "\\mathcal{G}",
+                    cH: "\\mathcal{H}",
+                    cI: "\\mathcal{I}",
+                    cJ: "\\mathcal{J}",
+                    cK: "\\mathcal{K}",
+                    cL: "\\mathcal{L}",
+                    cM: "\\mathcal{M}",
+                    cN: "\\mathcal{N}",
+                    cO: "\\mathcal{O}",
+                    cP: "\\mathcal{P}",
+                    cQ: "\\mathcal{Q}",
+                    cR: "\\mathcal{R}",
+                    cS: "\\mathcal{S}",
+                    cT: "\\mathcal{T}",
+                    cU: "\\mathcal{U}",
+                    cV: "\\mathcal{V}",
+                    cW: "\\mathcal{W}",
+                    cX: "\\mathcal{X}",
+                    cY: "\\mathcal{Y}",
+                    cZ: "\\mathcal{Z}",
+                    col: "\\text{col}",
+                    coloneqq: "\\mathrel{:=}",
+                    d: "\\mathbf{d}",
+                    dd: "\\mathrm{d}",
+                    defeq: "\\stackrel{\\smash{\\textnormal{\\tiny def}}}{=}",
+                    diag: "\\operatorname{diag}",
+                    distBern: "\\operatorname{Ber}",
+                    distBeta: "\\operatorname{Beta}",
+                    distBin: "\\operatorname{Bin}",
+                    distCauchy: "\\operatorname{Cauchy}",
+                    distDir: "\\operatorname{Dir}",
+                    distExp: "\\operatorname{Exp}",
+                    distGamma: "\\operatorname{Gamma}",
+                    distGeom: "\\operatorname{Geo}",
+                    distHyp: "\\operatorname{Hyp}",
+                    distInvWishart: "\\operatorname{InvWishart}",
+                    distLognormal: "\\operatorname{Lognormal}",
+                    distMult: "\\operatorname{Mult}",
+                    distN: "\\operatorname{\\mathcal{N}}",
+                    distNB: "\\operatorname{NB}",
+                    distPareto: "\\operatorname{Pareto}",
+                    distPois: "\\operatorname{Poi}",
+                    distUnif: "\\operatorname{Unif}",
+                    distWeibull: "\\operatorname{Weibull}",
+                    distWishart: "\\operatorname{Wishart}",
+                    e: "\\mathbf{e}",
+                    eqqcolon: "\\mathrel{=:}",
+                    f: "\\mathbf{f}",
+                    g: "\\mathbf{g}",
+                    h: "\\mathbf{h}",
+                    i: "\\mathbf{i}",
+                    id: "\\operatorname{id}",
+                    im: "\\operatorname{im}",
+                    img: "\\operatorname{img}",
+                    j: "\\mathbf{j}",
+                    k: "\\mathbf{k}",
+                    ker: "\\operatorname{ker}",
+                    l: "\\mathbf{l}",
+                    m: "\\mathbf{m}",
+                    n: "\\mathbf{n}",
+                    nA: "\\mathbb{A}",
+                    nB: "\\mathbb{B}",
+                    nC: "\\mathbb{C}",
+                    nD: "\\mathbb{D}",
+                    nE: "\\mathbb{E}",
+                    nF: "\\mathbb{F}",
+                    nG: "\\mathbb{G}",
+                    nH: "\\mathbb{H}",
+                    nI: "\\mathbb{I}",
+                    nJ: "\\mathbb{J}",
+                    nK: "\\mathbb{K}",
+                    nL: "\\mathbb{L}",
+                    nM: "\\mathbb{M}",
+                    nN: "\\mathbb{N}",
+                    nO: "\\mathbb{O}",
+                    nP: "\\mathbb{P}",
+                    nQ: "\\mathbb{Q}",
+                    nR: "\\mathbb{R}",
+                    nS: "\\mathbb{S}",
+                    nT: "\\mathbb{T}",
+                    nU: "\\mathbb{U}",
+                    nV: "\\mathbb{V}",
+                    nW: "\\mathbb{W}",
+                    nX: "\\mathbb{X}",
+                    nY: "\\mathbb{Y}",
+                    nZ: "\\mathbb{Z}",
+                    nul: "\\text{nul}",
+                    nullity: "\\text{nullity}",
+                    o: "\\mathbf{o}",
+                    p: "\\mathbf{p}",
+                    q: "\\mathbf{q}",
+                    r: "\\mathbf{r}",
+                    rank: "\\text{rank}",
+                    row: "\\text{row}",
+                    s: "\\mathbf{s}",
+                    sA: "\\mathcal{A}",
+                    sB: "\\mathcal{B}",
+                    sC: "\\mathcal{C}",
+                    sD: "\\mathcal{D}",
+                    sE: "\\mathcal{E}",
+                    sF: "\\mathcal{F}",
+                    sG: "\\mathcal{G}",
+                    sH: "\\mathcal{H}",
+                    sI: "\\mathcal{I}",
+                    sJ: "\\mathcal{J}",
+                    sK: "\\mathcal{K}",
+                    sL: "\\mathcal{L}",
+                    sM: "\\mathcal{M}",
+                    sN: "\\mathcal{N}",
+                    sO: "\\mathcal{O}",
+                    sP: "\\mathcal{P}",
+                    sQ: "\\mathcal{Q}",
+                    sR: "\\mathcal{R}",
+                    sS: "\\mathcal{S}",
+                    sT: "\\mathcal{T}",
+                    sU: "\\mathcal{U}",
+                    sV: "\\mathcal{V}",
+                    sW: "\\mathcal{W}",
+                    sX: "\\mathcal{X}",
+                    sY: "\\mathcal{Y}",
+                    sZ: "\\mathcal{Z}",
+                    spn: "\\text{span}",
+                    t: "\\mathbf{t}",
+                    tr: "\\text{tr}",
+                    u: "\\mathbf{u}",
+                    v: "\\mathbf{v}",
+                    vDelta: "\\bm{\\Delta}",
+                    vGamma: "\\bm{\\Gamma}",
+                    vLambda: "\\bm{\\Lambda}",
+                    vOmega: "\\bm{\\Omega}",
+                    vPhi: "\\bm{\\Phi}",
+                    vPi: "\\bm{\\Pi}",
+                    vPsi: "\\bm{\\Psi}",
+                    vSigma: "\\bm{\\Sigma}",
+                    vTheta: "\\bm{\\Theta}",
+                    vUpsilon: "\\bm{\\Upsilon}",
+                    vXi: "\\bm{\\Xi}",
+                    valpha: "\\bm{\\upalpha}",
+                    vbeta: "\\bm{\\upbeta}",
+                    vchi: "\\bm{\\upchi}",
+                    vdelta: "\\bm{\\updelta}",
+                    vepsilon: "\\bm{\\upepsilon}",
+                    veta: "\\bm{\\upeta}",
+                    vgamma: "\\bm{\\upgamma}",
+                    viota: "\\bm{\\upiota}",
+                    vkappa: "\\bm{\\upkappa}",
+                    vlambda: "\\bm{\\uplambda}",
+                    vmu: "\\bm{\\upmu}",
+                    vnu: "\\bm{\\upnu}",
+                    vomega: "\\bm{\\upomega}",
+                    vphi: "\\bm{\\upphi}",
+                    vpi: "\\bm{\\uppi}",
+                    vpsi: "\\bm{\\uppsi}",
+                    vrho: "\\bm{\\uprho}",
+                    vsigma: "\\bm{\\upsigma}",
+                    vtau: "\\bm{\\uptau}",
+                    vtheta: "\\bm{\\uptheta}",
+                    vupsilon: "\\bm{\\upupsilon}",
+                    vvarepsilon: "\\bm{\\upvarepsilon}",
+                    vvarphi: "\\bm{\\upvarphi}",
+                    vvarpi: "\\bm{\\upvarpi}",
+                    vvarrho: "\\bm{\\upvarrho}",
+                    vvarsigma: "\\bm{\\upvarsigma}",
+                    vvartheta: "\\bm{\\upvartheta}",
+                    vxi: "\\bm{\\upxi}",
+                    vzeta: "\\bm{\\upzeta}",
+                    w: "\\mathbf{w}",
+                    x: "\\mathbf{x}",
+                    y: "\\mathbf{y}",
+                    z: "\\mathbf{z}"
+                },
+                // Define environments not in base amsmath
+                environments: {
+                    dcases: ["\\left\\{\\begin{array}{ll}", "\\end{array}\\right."]
+                }
+            },
+            options: {
+                skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"></script>
+
+    <!-- Tippy.js for tooltips -->
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
+    <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/shift-away.css">
+
+        
+        <script>
+        (function(){
+          if (typeof window.MathJax === 'undefined') window.MathJax = {};
+          if (typeof window.MathJax.tex === 'undefined') window.MathJax.tex = {};
+          if (typeof window.MathJax.tex.macros === 'undefined') window.MathJax.tex.macros = {};
+          Object.assign(window.MathJax.tex.macros, {
+                    "\limz": "\\lim_{#1 \\to 0}",
+                    "\powerset": "\\mathcal{P}\\left( #1 \\right)",
+                    "\nullity": "\\text{nullity}",
+                    "\bm": "\\mathbf{#1}",
+                    "\norm": "\\left\\| #1 \\right\\|",
+                    "\Prob": "\\mathbb{P}\\left( #1 \\right)",
+                    "\td": "\\frac{d #1}{d #2}",
+                    "\Var": "\\text{Var}\\left( #1 \\right)",
+                    "\spn": "\\text{span}",
+                    "\braket": "\\langle #1 | #2 \\rangle",
+                    "\pd": "\\frac{\\partial #1}{\\partial #2}",
+                    "\boundary": "\\partial #1",
+                    "\card": "\\left| #1 \\right|",
+                    "\ket": "| #1 \\rangle",
+                    "\row": "\\text{row}",
+                    "\expect": "\\langle #1 \\rangle",
+                    "\interior": "\\text{int}\\left( #1 \\right)",
+                    "\bra": "\\langle #1 |",
+                    "\closure": "\\overline{#1}",
+                    "\tdd": "\\frac{d^2 #1}{d #2^2}",
+                    "\ketbra": "| #1 \\rangle\\langle #2 |",
+                    "\limi": "\\lim_{#1 \\to \\infty}",
+                    "\tr": "\\text{tr}",
+                    "\bb": "\\mathbb{#1}",
+                    "\rom": "\\mathrm{#1}",
+                    "\rank": "\\text{rank}",
+                    "\col": "\\text{col}",
+                    "\pdd": "\\frac{\\partial^2 #1}{\\partial #2^2}",
+                    "\Exp": "\\mathbb{E}\\left[ #1 \\right]",
+                    "\abs": "\\left| #1 \\right|",
+                    "\Normal": "\\mathcal{N}\\left( #1, #2 \\right)",
+                    "\defeq": "\\stackrel{\\smash{\\textnormal{\\tiny def}}}{=}",
+                    "\Cov": "\\text{Cov}\\left( #1, #2 \\right)",
+                    "\Uniform": "\\text{Uniform}\\left( #1, #2 \\right)",
+                    "\nul": "\\text{nul}",
+                    "\cl": "\\mathcal{#1}"
+          });
+        })();
+        </script>
+    </head>
+
+<body>
+    <div id="quarto-container">
+        <!-- Left Sidebar Navigation -->
+        <nav id="quarto-sidebar">
+            <div class="sidebar-header">
+                <a href="../index.html" class="sidebar-title">
+                    Linear Algebra
+                </a>
+                <div class="sidebar-tools">
+                    <a href="../book/book.pdf" title="Full Book PDF" target="_blank">
+                        <i class="bi bi-file-pdf" style="font-size: 1.1rem"></i>
+                    </a>
+                    <a href="https://github.com/youruser/yourrepo" title="Source Code" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            viewBox="0 0 16 16">
+                            <path
+                                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="sidebar-search">
+                <i class="bi bi-search"></i>
+                <input type="text" class="search-input" id="search-input" placeholder="">
+            </div>
+
+            <nav class="sidebar-nav">
+                                <ul class="nav-list">
+                    <li><a href="../index.html">Preface</a></li>
+                </ul>
+                            </nav>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main id="quarto-content">
+
+
+            <article class="content">
+                <!-- Page title removed to avoid duplication with content H1 -->
+                <!-- Quarto-style Title Block -->
+                <header id="title-block-header" class="quarto-title-block default">
+                                        <nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block"
+                        aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="../ch01-vector-spaces/index.html">Vector Spaces and Dimensions</a></li>
+                        <li class="breadcrumb-item"><a href="../ch01-vector-spaces/01-vector-spaces.html"><span class="chapter-number">1.1</span>&nbsp; <span class="chapter-title">Vector Spaces</span></a></li>
+                        </ol>
+                    </nav>
+                                        <div class="quarto-title">
+                        <h1 class="title">
+                            <span class="chapter-number">1.1</span>&nbsp; 
+                            <span class="chapter-title">Vector
+Spaces</span>
+                        </h1>
+                    </div>
+                </header>
+
+                <div id="vector-spaces">
+
+                </div>
+                <p>Why do we bother with a list of eight axioms? To a
+                student first encountering Linear Algebra, this can feel
+                like a bureaucratic exercise in “checking boxes.”
+                However, there is a profound beauty hidden in this
+                formality.</p>
+                <p>In our preliminary chapter, we saw three very
+                different worlds: the world of geometric arrows (<span
+                class="math inline">\(\nR^n\)</span>), the world of
+                functions (<span class="math inline">\(F[x]\)</span>),
+                and the world of matrices (<span
+                class="math inline">\(M_{m \times n}\)</span>). On the
+                surface, an arrow is not a polynomial, and a polynomial
+                is not a matrix. But if you squint, they all behave the
+                same: you can add them, and you can scale them.</p>
+                <p>By defining a <strong>Vector Space</strong> through
+                these axioms, we are choosing to ignore what the objects
+                <em>are</em> and focus entirely on how they
+                <em>act</em>. If we prove a theorem using only these
+                eight axioms, that theorem becomes a “universal law”
+                that applies to arrows, functions, and matrices all at
+                once. This is the power of abstraction: solve the
+                problem once, and you solve it for every universe that
+                obeys these rules.</p>
+                <h2 id="vector-spaces-and-vectors"><span
+                class="header-section-number">1.1.1. </span> Vector
+                Spaces and Vectors</h2>
+                <div id="def-vector-space" class="definition"
+                data-env-type="definition" data-number="1.1.1"
+                style="border-left-color: #c94c6c; background-color: #fdf2f4; ">
+                <span
+                class="theorem-title theorem-title-resolved"><strong>Definition</strong><strong>
+                1.1.1</strong> (Vector Space)</span>
+                <p>A set <span class="math inline">\(V\)</span> over a
+                field <span class="math inline">\(F\)</span> with two
+                operations: addition <span
+                class="math inline">\(+\)</span> and scalar
+                multiplication <span
+                class="math inline">\(\cdot\)</span> <span
+                class="math display">\[
+                    + : V \times V \to V, \quad  \cdot : F \times V \to
+                V
+                \]</span> such that satisfy the following axioms for all
+                <span class="math inline">\(\v_1, \v_2, \v_3 \in
+                V\)</span> and <span class="math inline">\(\alpha, \beta
+                \in F\)</span>:</p>
+                <div class="enumerate"
+                data-options="label=(VS\arabic*)">
+                <ol type="1">
+                <li><span class="math inline">\(\v_1 + \v_2 = \v_2 +
+                \v_1\)</span></li>
+                <li><span class="math inline">\((\v_1 + \v_2) + \v_3 =
+                \v_1 + (\v_2 + \v_3)\)</span></li>
+                <li>There exists <span class="math inline">\(\mathbf{0}
+                \in V\)</span> such that <span
+                class="math inline">\(\v_1 + \mathbf{0} =
+                \v_1\)</span></li>
+                <li>There exists <span class="math inline">\(\v_1&#39;
+                \in V\)</span> such that <span
+                class="math inline">\(\v_1 + \v_1&#39; =
+                \mathbf{0}\)</span></li>
+                <li><span class="math inline">\(\alpha(\v_1 + \v_2) =
+                \alpha\v_1 + \alpha\v_2\)</span></li>
+                <li><span class="math inline">\((\alpha+\beta)\v_1 =
+                \alpha\v_1 + \beta\v_1\)</span></li>
+                <li><span class="math inline">\(\alpha(\beta\v_1) =
+                (\alpha\beta)\v_1\)</span></li>
+                <li><span class="math inline">\(1\v_1 =
+                \v_1\)</span></li>
+                </ol>
+                </div>
+                </div>
+                <div class="remark small-env" data-env-type="remark">
+                <p><em>Remark</em><em>.</em> Instead of writing <span
+                class="math inline">\((V, +, \cdot)\)</span> is a vector
+                space over <span class="math inline">\(F\)</span>, we
+                usually simplify it to <span
+                class="math inline">\(V\)</span> is a vector space over
+                <span class="math inline">\(F\)</span>, or even just
+                <span class="math inline">\(V\)</span> is a vector space
+                if the context is clear.</p>
+                </div>
+                <div class="remark small-env" data-env-type="remark">
+                <p><em>Remark</em><em>.</em> We sometimes will abuse the
+                name and refer to <span class="math inline">\(\mathbf{0}
+                = \mathbf{0}_V \in V\)</span> as the “zero vector” of
+                the vector space <span class="math inline">\(V\)</span>.
+                Readers should not confuse <span
+                class="math inline">\(\mathbf{0}_V\)</span> with the
+                zero scalar <span class="math inline">\(0 = 0_F \in
+                F\)</span> from the field <span
+                class="math inline">\(F\)</span>.</p>
+                </div>
+                <div id="exm-vector-spaces" class="example"
+                data-env-type="example" data-number=""
+                style="border-left-color: #3a8a3a; background-color: #eef7ee; ">
+                <span
+                class="theorem-title theorem-title-resolved"><strong>Example</strong>
+                (Examples of Vector Spaces)</span>
+                <p>The following are classic examples of vector
+                spaces:</p>
+                <ol type="1">
+                <li><p>Most defaultly, <span
+                class="math inline">\(F^n\)</span> with the usual
+                operations of <span class="math inline">\(+\)</span> and
+                <span class="math inline">\(\cdot\)</span> is a vector
+                space over <span
+                class="math inline">\(F\)</span>.</p></li>
+                <li><p>Working with polynomials is common too: <span
+                class="math inline">\(F[x]\)</span> with the usual
+                operations of <span class="math inline">\(+\)</span> and
+                <span class="math inline">\(\cdot\)</span> is a vector
+                space over <span
+                class="math inline">\(F\)</span>.</p></li>
+                <li><p>Let <span class="math inline">\(\sD\)</span> be
+                any open interval. Let <span class="math display">\[
+                C(\sD) \coloneqq \left\{ f: \sD \to \nR: f \text{ is
+                continuous} \right\}.
+                \]</span> Then <span
+                class="math inline">\(C(\sD)\)</span> is a vector space
+                over <span class="math inline">\(\nR\)</span>. The zero
+                vector of this vector space is given by the zero
+                polynomial <span class="math inline">\((x \mapsto
+                0)\)</span>.</p></li>
+                <li><p>Let <span class="math inline">\(F\)</span> be any
+                field and fix <span class="math inline">\(n \in
+                \nN\)</span>. Then <span
+                class="math inline">\(M_n(F)\)</span> is a vector space
+                over <span class="math inline">\(F\)</span>.</p></li>
+                <li><p>The set <span class="math inline">\(V =
+                \mathbb{R}_{&gt;0}\)</span> of positive real numbers
+                forms a vector space over <span class="math inline">\(F
+                = \mathbb{R}\)</span> under the following operations:
+                for <span class="math inline">\(x, y \in V\)</span> and
+                <span class="math inline">\(\alpha \in F\)</span>,
+                define <span class="math display">\[
+                     x \oplus y \coloneqq xy, \quad \alpha \odot x
+                \coloneqq x^\alpha = e^{\alpha \log x}.
+                     \]</span> Under these operations, the zero vector
+                is <span class="math inline">\(\mathbf{0} = 1\)</span>,
+                and the additive inverse of <span
+                class="math inline">\(x\)</span> is <span
+                class="math inline">\(x^{-1}\)</span>.</p></li>
+                </ol>
+                <p>You can check if addition and scalar multiplication
+                make sense and follow all axioms of vector spaces.</p>
+                </div>
+                <div id="exm-q-adjoin-sqrt2" class="example"
+                data-env-type="example" data-number=""
+                style="border-left-color: #3a8a3a; background-color: #eef7ee; ">
+                <span
+                class="theorem-title theorem-title-resolved"><strong>Example</strong>
+                (<span class="math inline">\(\nQ\)</span> Adjoin <span
+                class="math inline">\(\sqrt{2}\)</span>)</span>
+                <p>Show that <span class="math inline">\(\nQ(\sqrt{2})
+                \coloneqq \left\{  a + b \sqrt{2} : a, b \in
+                \nQ  \right\}\)</span> is a vector space over <span
+                class="math inline">\(\nQ\)</span> by checking all eight
+                axioms.</p>
+                </div>
+                <div class="solution small-env"
+                data-env-type="solution">
+                <p><em>Solution</em><em>.</em> Let <span
+                class="math inline">\(\v_1 = a_1 + b_1\sqrt{2}\)</span>,
+                <span class="math inline">\(\v_2 = a_2 +
+                b_2\sqrt{2}\)</span>, <span class="math inline">\(\v_3 =
+                a_3 + b_3\sqrt{2} \in \nQ(\sqrt{2})\)</span> and <span
+                class="math inline">\(\alpha, \beta \in
+                \nQ\)</span>.</p>
+                <div class="enumerate"
+                data-options="label=(VS\arabic*)">
+                <ol type="1">
+                <li><p><span class="math display">\[\begin{align*}
+                  \v_1 + \v_2 &amp;= (a_1 + a_2) + (b_1 + b_2)\sqrt{2}
+                \\
+                  &amp;= (a_2 + a_1) + (b_2 + b_1)\sqrt{2} \\
+                  &amp;= \v_2 + \v_1
+                  \end{align*}\]</span></p></li>
+                <li><p><span class="math display">\[\begin{align*}
+                  (\v_1 + \v_2) + \v_3 &amp;= (a_1 + a_2 + a_3) + (b_1 +
+                b_2 + b_3)\sqrt{2} \\
+                  &amp;= \v_1 + (\v_2 + \v_3)
+                  \end{align*}\]</span></p></li>
+                <li><p>The element <span
+                class="math inline">\(\mathbf{0} = 0 + 0\sqrt{2} = 0 \in
+                \nQ(\sqrt{2})\)</span> satisfies <span
+                class="math display">\[\begin{align*}
+                  \v_1 + \mathbf{0} &amp;= (a_1 + 0) + (b_1 + 0)\sqrt{2}
+                \\
+                  &amp;= \v_1
+                  \end{align*}\]</span></p></li>
+                <li><p>For <span class="math inline">\(\v_1 = a_1 +
+                b_1\sqrt{2}\)</span>, define <span
+                class="math inline">\(-\v_1 \coloneqq (-a_1) +
+                (-b_1)\sqrt{2} \in \nQ(\sqrt{2})\)</span>. Then <span
+                class="math display">\[\begin{align*}
+                  \v_1 + (-\v_1) &amp;= (a_1 - a_1) + (b_1 -
+                b_1)\sqrt{2} \\
+                  &amp;= \mathbf{0}
+                  \end{align*}\]</span></p></li>
+                <li><p><span class="math display">\[\begin{align*}
+                  \alpha(\v_1 + \v_2) &amp;= \alpha(a_1 + a_2) +
+                \alpha(b_1 + b_2)\sqrt{2} \\
+                  &amp;= (\alpha a_1 + \alpha a_2) + (\alpha b_1 +
+                \alpha b_2)\sqrt{2} \\
+                  &amp;= \alpha\v_1 + \alpha\v_2
+                  \end{align*}\]</span></p></li>
+                <li><p><span class="math display">\[\begin{align*}
+                  (\alpha + \beta)\v_1 &amp;= (\alpha + \beta)a_1 +
+                (\alpha + \beta)b_1\sqrt{2} \\
+                  &amp;= (\alpha a_1 + \beta a_1) + (\alpha b_1 + \beta
+                b_1)\sqrt{2} \\
+                  &amp;= \alpha\v_1 + \beta\v_1
+                  \end{align*}\]</span></p></li>
+                <li><p><span class="math display">\[\begin{align*}
+                  \alpha(\beta\v_1) &amp;= \alpha(\beta a_1 + \beta
+                b_1\sqrt{2}) \\
+                  &amp;= \alpha\beta a_1 + \alpha\beta b_1\sqrt{2} \\
+                  &amp;= (\alpha\beta)\v_1
+                  \end{align*}\]</span></p></li>
+                <li><p><span class="math display">\[\begin{align*}
+                  1 \cdot \v_1 &amp;= 1 \cdot a_1 + 1 \cdot b_1\sqrt{2}
+                \\
+                  &amp;= a_1 + b_1\sqrt{2} \\
+                  &amp;= \v_1
+                  \end{align*}\]</span></p></li>
+                </ol>
+                </div>
+                <p>Thus <span
+                class="math inline">\(\nQ(\sqrt{2})\)</span> is a vector
+                space over <span class="math inline">\(\nQ\)</span>.</p>
+                </div>
+                <div id="def-vectors-scalars" class="definition"
+                data-env-type="definition" data-number="1.1.2"
+                style="border-left-color: #c94c6c; background-color: #fdf2f4; ">
+                <span
+                class="theorem-title theorem-title-resolved"><strong>Definition</strong><strong>
+                1.1.2</strong> (Vectors and Scalars)</span>
+                <p>Let <span class="math inline">\(V\)</span> be a
+                vector space over <span
+                class="math inline">\(F\)</span>. Then the elements of
+                <span class="math inline">\(V\)</span> are called
+                <strong>vectors</strong>, and the elements of <span
+                class="math inline">\(F\)</span> are called
+                <strong>scalars</strong>.</p>
+                <p>Additionally, <span class="math inline">\(\mathbf{0}
+                \in V\)</span> is called the <strong>zero
+                vector</strong>, and <span
+                class="math inline">\((\v_1&#39;)\)</span> in
+                <strong>(VS4)</strong> is called the <strong>inverse
+                element</strong> of <span
+                class="math inline">\(\v_1\)</span>.</p>
+                </div>
+                <h2 id="vector-space-theorems"><span
+                class="header-section-number">1.1.2. </span> Vector
+                Space Theorems</h2>
+                <div id="thm-left-cancellation" class="theorem"
+                data-env-type="theorem" data-number="1.1.1"
+                style="border-left-color: #3b6eda; background-color: #f0f5ff; ">
+                <span
+                class="theorem-title theorem-title-resolved"><strong>Theorem</strong><strong>
+                1.1.1</strong> (Left Cancellation Law)</span>
+                <p>Let <span class="math inline">\(V\)</span> be a
+                vector space over <span
+                class="math inline">\(F\)</span>, let <span
+                class="math inline">\(\u, \v_1, \v_2 \in V\)</span>. If
+                <span class="math inline">\(\u + \v_1 = \u +
+                \v_2\)</span>, then <span class="math inline">\(\v_1 =
+                \v_2\)</span>.</p>
+                </div>
+                <div class="proof small-env" data-env-type="proof">
+                <p><em>Proof</em><em>.</em> Let <span
+                class="math inline">\(\u&#39;\)</span> be an inverse of
+                <span class="math inline">\(\u\)</span>. <span
+                class="math display">\[\begin{align*}
+                \u + \v_1 &amp;= \u + \v_2 &amp; \text{(given)} \\
+                \u&#39; + (\u + \v_1) &amp;= \u&#39; + (\u + \v_2) &amp;
+                \text{(add } \u&#39; \text{ to both sides)} \\
+                (\u&#39; + \u) + \v_1 &amp;= (\u&#39; + \u) + \v_2 &amp;
+                \text{(by VS2)} \\
+                \mathbf{0} + \v_1 &amp;= \mathbf{0} + \v_2 &amp;
+                \text{(by VS4)} \\
+                \v_1 &amp;= \v_2 &amp; \text{(by VS3)}
+                \end{align*}\]</span></p>
+                </div>
+                <div id="thm-right-cancellation" class="theorem"
+                data-env-type="theorem" data-number="1.1.2"
+                style="border-left-color: #3b6eda; background-color: #f0f5ff; ">
+                <span
+                class="theorem-title theorem-title-resolved"><strong>Theorem</strong><strong>
+                1.1.2</strong> (Right Cancellation Law)</span>
+                <p>Let <span class="math inline">\(V\)</span> be a
+                vector space over <span
+                class="math inline">\(F\)</span>, let <span
+                class="math inline">\(\u, \v_1, \v_2 \in V\)</span>. If
+                <span class="math inline">\(\v_1 + \u = \v_2 +
+                \u\)</span>, then <span class="math inline">\(\v_1 =
+                \v_2\)</span>.</p>
+                </div>
+                <div class="proof small-env" data-env-type="proof">
+                <p><em>Proof</em><em>.</em> Since we have <span
+                class="math inline">\(\u + \v_1 = \u + \v_2 \implies
+                \v_1 = \v_2\)</span>, applying <strong>(VS1)</strong> to
+                it gives <span class="math inline">\(\v_1 + \u = \v_2 +
+                \u \implies \v_1 = \v_2\)</span>.</p>
+                </div>
+                <div id="thm-zero-unique" class="theorem"
+                data-env-type="theorem" data-number="1.1.3"
+                style="border-left-color: #3b6eda; background-color: #f0f5ff; ">
+                <span
+                class="theorem-title theorem-title-resolved"><strong>Theorem</strong><strong>
+                1.1.3</strong> (Zero Vector is Unique)</span>
+                <p>Let <span class="math inline">\(V\)</span> be a
+                vector space over <span
+                class="math inline">\(F\)</span>. The zero vector <span
+                class="math inline">\(\mathbf{0} \in V\)</span> is
+                unique.</p>
+                </div>
+                <div class="proof small-env" data-env-type="proof">
+                <p><em>Proof</em><em>.</em> Suppose that there are two
+                vectors <span class="math inline">\(\mathbf{0}_1,
+                \mathbf{0}_2\)</span>. <span
+                class="math display">\[\begin{align*}
+                \mathbf{0}_1 + \mathbf{0}_2 &amp;= \mathbf{0}_2 +
+                \mathbf{0}_1 &amp; \text{(by VS1)} \\
+                \mathbf{0}_1 &amp;= \mathbf{0}_2 &amp; \text{(by VS3)}
+                \end{align*}\]</span></p>
+                </div>
+                <div id="thm-inverse-unique" class="theorem"
+                data-env-type="theorem" data-number="1.1.4"
+                style="border-left-color: #3b6eda; background-color: #f0f5ff; ">
+                <span
+                class="theorem-title theorem-title-resolved"><strong>Theorem</strong><strong>
+                1.1.4</strong> (Additive Inverse is Unique)</span>
+                <p>Let <span class="math inline">\(V\)</span> be a
+                vector space over <span
+                class="math inline">\(F\)</span>. Then for every <span
+                class="math inline">\(\v \in V\)</span>, its additive
+                inverse described in <strong>(VS4)</strong>, which is
+                <span class="math inline">\(\v&#39;\)</span>, is
+                unique.</p>
+                </div>
+                <div class="proof small-env" data-env-type="proof">
+                <p><em>Proof</em><em>.</em> Let <span
+                class="math inline">\(\v_1&#39;, \v_2&#39;\)</span> both
+                be inverses of <span class="math inline">\(\v\)</span>.
+                Then <span class="math display">\[\begin{align*}
+                \v_1&#39; &amp;= \v_1&#39; + \mathbf{0} &amp; \text{(by
+                VS3)} \\
+                &amp;= \v_1&#39; + (\v + \v_2&#39;) &amp; \text{(by
+                VS4)} \\
+                &amp;= (\v_1&#39; + \v) + \v_2&#39; &amp; \text{(by
+                VS2)} \\
+                &amp;= \mathbf{0} + \v_2&#39; &amp; \text{(by VS4)} \\
+                &amp;= \v_2&#39; &amp; \text{(by VS3)}
+                \end{align*}\]</span></p>
+                </div>
+                <div id="def-additive-inverse-notation"
+                class="definition" data-env-type="definition"
+                data-number="1.1.3"
+                style="border-left-color: #c94c6c; background-color: #fdf2f4; ">
+                <span
+                class="theorem-title theorem-title-resolved"><strong>Definition</strong><strong>
+                1.1.3</strong> (Notation of Additive Inverse)</span>
+                <p>The unique inverse of a vector <span
+                class="math inline">\(\v \in V\)</span>, for a vector
+                space <span class="math inline">\(V\)</span> over <span
+                class="math inline">\(F\)</span>, will be denoted as
+                <span class="math inline">\(-\v\)</span>.</p>
+                </div>
+                <div id="thm-zero-scalar-mult" class="theorem"
+                data-env-type="theorem" data-number="1.1.5"
+                style="border-left-color: #3b6eda; background-color: #f0f5ff; ">
+                <span
+                class="theorem-title theorem-title-resolved"><strong>Theorem</strong><strong>
+                1.1.5</strong> (Zero Scalar Annihilates)</span>
+                <p>Let <span class="math inline">\(\v \in V\)</span> for
+                a vector space <span class="math inline">\(V\)</span>
+                over <span class="math inline">\(F\)</span>. Then <span
+                class="math inline">\(0 \cdot \v =
+                \mathbf{0}\)</span>.</p>
+                </div>
+                <div class="proof small-env" data-env-type="proof">
+                <p><em>Proof</em><em>.</em> Let <span
+                class="math inline">\(\w = 0 \cdot \v\)</span>. We show
+                that <span class="math inline">\(\w =
+                \mathbf{0}\)</span>. <span
+                class="math display">\[\begin{align*}
+                \w + \w &amp;= 0 \cdot \v + 0 \cdot \v \\
+                &amp;= (0 + 0) \cdot \v &amp; \text{(by VS6)} \\
+                &amp;= 0 \cdot \v &amp; \text{(arithmetic in } F
+                \text{)} \\
+                &amp;= \w \\
+                (\w + \w) + (-\w) &amp;= \w + (-\w) &amp; \text{(add }
+                -\w \text{ to both sides)} \\
+                \w + (\w + (-\w)) &amp;= \mathbf{0} &amp; \text{(by VS2,
+                VS4)} \\
+                \w + \mathbf{0} &amp;= \mathbf{0} &amp; \text{(by VS4)}
+                \\
+                \w &amp;= \mathbf{0} &amp; \text{(by VS3)}
+                \end{align*}\]</span></p>
+                </div>
+                <div id="thm-negation-scalar" class="theorem"
+                data-env-type="theorem" data-number="1.1.6"
+                style="border-left-color: #3b6eda; background-color: #f0f5ff; ">
+                <span
+                class="theorem-title theorem-title-resolved"><strong>Theorem</strong><strong>
+                1.1.6</strong> (Negation as Scalar
+                Multiplication)</span>
+                <p>Let <span class="math inline">\(V\)</span> be a
+                vector space over <span class="math inline">\(F\)</span>
+                and <span class="math inline">\(\v \in V\)</span> be any
+                vector. Then <span class="math inline">\(-\v = (-1)
+                \cdot \v\)</span>.</p>
+                </div>
+                <div class="proof small-env" data-env-type="proof">
+                <p><em>Proof</em><em>.</em> We show that <span
+                class="math inline">\((-1) \cdot \v\)</span> is an
+                additive inverse of <span
+                class="math inline">\(\v\)</span>: <span
+                class="math display">\[\begin{align*}
+                \v + (-1) \cdot \v &amp;= 1 \cdot \v + (-1) \cdot \v
+                &amp; \text{(by VS8)} \\
+                &amp;= (1 + (-1)) \cdot \v &amp; \text{(by VS6)} \\
+                &amp;= 0 \cdot \v &amp; \text{(arithmetic in } F
+                \text{)} \\
+                &amp;= \mathbf{0} &amp; \text{(*)}
+                \end{align*}\]</span> By (*), we use <a
+                href="#thm-zero-scalar-mult" class="xref"
+                data-ref="thm-zero-scalar-mult">Theorem 1.1.5</a>.</p>
+                <p>Since <span class="math inline">\((-1) \cdot
+                \v\)</span> is an additive inverse of <span
+                class="math inline">\(\v\)</span>, by uniqueness we have
+                <span class="math inline">\(-\v = (-1) \cdot
+                \v\)</span>.</p>
+                </div>
+                <div id="thm-negative-scalar-dist" class="theorem"
+                data-env-type="theorem" data-number="1.1.7"
+                style="border-left-color: #3b6eda; background-color: #f0f5ff; ">
+                <span
+                class="theorem-title theorem-title-resolved"><strong>Theorem</strong><strong>
+                1.1.7</strong> (Negative Scalar Distribution)</span>
+                <p>Let <span class="math inline">\(V\)</span> be a
+                vector space over <span
+                class="math inline">\(F\)</span>. For any <span
+                class="math inline">\(\alpha \in F\)</span> and <span
+                class="math inline">\(\v \in V\)</span>, we have <span
+                class="math inline">\((-\alpha)\v =
+                -(\alpha\v)\)</span>.</p>
+                </div>
+                <div class="proof small-env" data-env-type="proof">
+                <p><em>Proof</em><em>.</em> We show that <span
+                class="math inline">\((-\alpha)\v\)</span> is an
+                additive inverse of <span
+                class="math inline">\(\alpha\v\)</span>: <span
+                class="math display">\[\begin{align*}
+                \alpha\v + (-\alpha)\v &amp;= (\alpha + (-\alpha))\v
+                &amp; \text{(by VS6)} \\
+                &amp;= 0 \cdot \v &amp; \text{(arithmetic in } F
+                \text{)} \\
+                &amp;= \mathbf{0} &amp; \text{(*)}
+                \end{align*}\]</span> By (*), we use <a
+                href="#thm-zero-scalar-mult" class="xref"
+                data-ref="thm-zero-scalar-mult">Theorem 1.1.5</a>.</p>
+                <p>Since <span
+                class="math inline">\((-\alpha)\v\)</span> is an
+                additive inverse of <span
+                class="math inline">\(\alpha\v\)</span>, by uniqueness
+                we have <span class="math inline">\((-\alpha)\v =
+                -(\alpha\v)\)</span>.</p>
+                </div>
+                <div id="thm-scalar-zero-vector" class="theorem"
+                data-env-type="theorem" data-number="1.1.8"
+                style="border-left-color: #3b6eda; background-color: #f0f5ff; ">
+                <span
+                class="theorem-title theorem-title-resolved"><strong>Theorem</strong><strong>
+                1.1.8</strong> (Scalar Multiplication by Zero
+                Vector)</span>
+                <p>Let <span class="math inline">\(V\)</span> be a
+                vector space over <span
+                class="math inline">\(F\)</span>. For any scalar <span
+                class="math inline">\(\alpha \in F\)</span>, we have
+                <span class="math inline">\(\alpha\mathbf{0} =
+                \mathbf{0}\)</span>.</p>
+                </div>
+                <div class="proof small-env" data-env-type="proof">
+                <p><em>Proof</em><em>.</em> Let <span
+                class="math inline">\(\w = \alpha\mathbf{0}\)</span>. We
+                show that <span class="math inline">\(\w =
+                \mathbf{0}\)</span>. <span
+                class="math display">\[\begin{align*}
+                \w &amp;= \alpha\mathbf{0} \\
+                &amp;= \alpha(\mathbf{0} + \mathbf{0}) &amp; \text{(by
+                VS3)} \\
+                &amp;= \alpha\mathbf{0} + \alpha\mathbf{0} &amp;
+                \text{(by VS5)} \\
+                &amp;= \w + \w \\
+                \w + (-\w) &amp;= (\w + \w) + (-\w) &amp; \text{(add }
+                -\w \text{ to both sides)} \\
+                \mathbf{0} &amp;= \w + (\w + (-\w)) &amp; \text{(by VS4,
+                VS2)} \\
+                \mathbf{0} &amp;= \w + \mathbf{0} &amp; \text{(by VS4)}
+                \\
+                \mathbf{0} &amp;= \w &amp; \text{(by VS3)}
+                \end{align*}\]</span></p>
+                </div>
+                <div id="thm-zero-product" class="theorem"
+                data-env-type="theorem" data-number="1.1.9"
+                style="border-left-color: #3b6eda; background-color: #f0f5ff; ">
+                <span
+                class="theorem-title theorem-title-resolved"><strong>Theorem</strong><strong>
+                1.1.9</strong> (Zero Product Law)</span>
+                <p>Let <span class="math inline">\(V\)</span> be a
+                vector space over <span
+                class="math inline">\(F\)</span>, <span
+                class="math inline">\(\v \in V\)</span>, and <span
+                class="math inline">\(\alpha \in F\)</span>. If <span
+                class="math inline">\(\alpha\v = \mathbf{0}\)</span>,
+                then either <span class="math inline">\(\alpha =
+                0\)</span> or <span class="math inline">\(\v =
+                \mathbf{0}\)</span>.</p>
+                </div>
+                <div class="proof small-env" data-env-type="proof">
+                <p><em>Proof</em><em>.</em> Suppose <span
+                class="math inline">\(\alpha\v = \mathbf{0}\)</span>. We
+                consider two cases:</p>
+                <ul>
+                <li><p><strong>Case <span class="math inline">\(\alpha =
+                0\)</span>:</strong> Then the statement holds.</p></li>
+                <li><p><strong>Case <span class="math inline">\(\alpha
+                \neq 0\)</span>:</strong> Since <span
+                class="math inline">\(F\)</span> is a field, <span
+                class="math inline">\(\alpha\)</span> has a
+                multiplicative inverse <span
+                class="math inline">\(\alpha^{-1}\)</span>. <span
+                class="math display">\[\begin{align*}
+                  \alpha\v &amp;= \mathbf{0} &amp; \text{(given)} \\
+                  \alpha^{-1}(\alpha\v) &amp;= \alpha^{-1}\mathbf{0}
+                &amp; \text{(multiply by } \alpha^{-1} \text{)} \\
+                  (\alpha^{-1}\alpha)\v &amp;= \mathbf{0} &amp;
+                \text{(by VS7 and previous Theorem)} \\
+                  1 \cdot \v &amp;= \mathbf{0} &amp; \text{(field
+                inverse property)} \\
+                  \v &amp;= \mathbf{0} &amp; \text{(by VS8)}
+                  \end{align*}\]</span> Thus, if <span
+                class="math inline">\(\alpha \neq 0\)</span>, we must
+                have <span class="math inline">\(\v =
+                \mathbf{0}\)</span>.</p></li>
+                </ul>
+                </div>
+            </article>
+
+            <!-- Page Navigation -->
+            <nav class="page-navigation">
+                <div class="nav-page nav-page-previous">
+                                        <a href="index.html" class="pagination-link" aria-label="Vector
+Spaces and Dimensions">
+                        <i class="bi bi-arrow-left-short"></i>
+                        <span
+                            class="nav-page-text">Vector Spaces and
+Dimensions</span>
+                    </a>
+                                    </div>
+                <div class="nav-page nav-page-next">
+                                        <a href="02-subspaces.html" class="pagination-link" aria-label="Subspaces">
+                        <span
+                            class="nav-page-text">1.2 Subspaces</span>
+                        <i class="bi bi-arrow-right-short"></i>
+                    </a>
+                                    </div>
+            </nav>
+        </main>
+
+        <!-- Right Sidebar (TOC) -->
+        <aside id="quarto-margin-sidebar">
+            <nav class="toc">
+                <h2>Table of contents</h2>
+                            </nav>
+
+            <div class="other-formats">
+                <h3>Other Formats</h3>
+                <ul>
+                    <li><a href="../pdf/ch01-vector-spaces/01-vector-spaces.pdf" target="_blank">PDF</a></li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Tooltip Script -->
+    <script src="../main.js"></script>
+</body>
+
+</html>

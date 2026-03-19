@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2.2 Kernel and Image – Linear Algebra</title>
+
+    <!-- Styles -->
+    <!-- Styles -->
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- MathJax Configuration with Custom Macros -->
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['\\(', '\\)']],
+                displayMath: [['\\[', '\\]']],
+                processEscapes: true,
+                processEnvironments: true,
+                tags: 'ams',
+                macros: {
+                    0: "\\mathbf{0}",
+                    1: "\\mathbf{1}",
+                    A: "\\mathbf{A}",
+                    B: "\\mathbf{B}",
+                    C: "\\mathbf{C}",
+                    Cor: "\\operatorname*{Cor}",
+                    Corr: "\\operatorname*{Corr}",
+                    Cov: "\\operatorname*{Cov}",
+                    D: "\\mathbf{D}",
+                    E: "\\mathbf{E}",
+                    Ev: "\\operatorname*{\\mathbb{E}}",
+                    F: "\\mathbf{F}",
+                    G: "\\mathbf{G}",
+                    H: "\\mathbf{H}",
+                    I: "\\mathbf{I}",
+                    J: "\\mathbf{J}",
+                    K: "\\mathbf{K}",
+                    L: "\\mathbf{L}",
+                    M: "\\mathbf{M}",
+                    N: "\\mathbf{N}",
+                    O: "\\mathbf{O}",
+                    P: "\\mathbf{P}",
+                    Pr: "\\operatorname{Pr}",
+                    Q: "\\mathbf{Q}",
+                    R: "\\mathbf{R}",
+                    S: "\\mathbf{S}",
+                    Span: "\\operatorname{span}",
+                    T: "\\mathbf{T}",
+                    U: "\\mathbf{U}",
+                    V: "\\mathbf{V}",
+                    Var: "\\operatorname*{Var}",
+                    W: "\\mathbf{W}",
+                    X: "\\mathbf{X}",
+                    Y: "\\mathbf{Y}",
+                    Z: "\\mathbf{Z}",
+                    a: "\\mathbf{a}",
+                    adj: "\\operatorname{adj}",
+                    b: "\\mathbf{b}",
+                    c: "\\mathbf{c}",
+                    cA: "\\mathcal{A}",
+                    cB: "\\mathcal{B}",
+                    cC: "\\mathcal{C}",
+                    cD: "\\mathcal{D}",
+                    cE: "\\mathcal{E}",
+                    cF: "\\mathcal{F}",
+                    cG: "\\mathcal{G}",
+                    cH: "\\mathcal{H}",
+                    cI: "\\mathcal{I}",
+                    cJ: "\\mathcal{J}",
+                    cK: "\\mathcal{K}",
+                    cL: "\\mathcal{L}",
+                    cM: "\\mathcal{M}",
+                    cN: "\\mathcal{N}",
+                    cO: "\\mathcal{O}",
+                    cP: "\\mathcal{P}",
+                    cQ: "\\mathcal{Q}",
+                    cR: "\\mathcal{R}",
+                    cS: "\\mathcal{S}",
+                    cT: "\\mathcal{T}",
+                    cU: "\\mathcal{U}",
+                    cV: "\\mathcal{V}",
+                    cW: "\\mathcal{W}",
+                    cX: "\\mathcal{X}",
+                    cY: "\\mathcal{Y}",
+                    cZ: "\\mathcal{Z}",
+                    col: "\\text{col}",
+                    coloneqq: "\\mathrel{:=}",
+                    d: "\\mathbf{d}",
+                    dd: "\\mathrm{d}",
+                    defeq: "\\stackrel{\\smash{\\textnormal{\\tiny def}}}{=}",
+                    diag: "\\operatorname{diag}",
+                    distBern: "\\operatorname{Ber}",
+                    distBeta: "\\operatorname{Beta}",
+                    distBin: "\\operatorname{Bin}",
+                    distCauchy: "\\operatorname{Cauchy}",
+                    distDir: "\\operatorname{Dir}",
+                    distExp: "\\operatorname{Exp}",
+                    distGamma: "\\operatorname{Gamma}",
+                    distGeom: "\\operatorname{Geo}",
+                    distHyp: "\\operatorname{Hyp}",
+                    distInvWishart: "\\operatorname{InvWishart}",
+                    distLognormal: "\\operatorname{Lognormal}",
+                    distMult: "\\operatorname{Mult}",
+                    distN: "\\operatorname{\\mathcal{N}}",
+                    distNB: "\\operatorname{NB}",
+                    distPareto: "\\operatorname{Pareto}",
+                    distPois: "\\operatorname{Poi}",
+                    distUnif: "\\operatorname{Unif}",
+                    distWeibull: "\\operatorname{Weibull}",
+                    distWishart: "\\operatorname{Wishart}",
+                    e: "\\mathbf{e}",
+                    eqqcolon: "\\mathrel{=:}",
+                    f: "\\mathbf{f}",
+                    g: "\\mathbf{g}",
+                    h: "\\mathbf{h}",
+                    i: "\\mathbf{i}",
+                    id: "\\operatorname{id}",
+                    im: "\\operatorname{im}",
+                    img: "\\operatorname{img}",
+                    j: "\\mathbf{j}",
+                    k: "\\mathbf{k}",
+                    ker: "\\operatorname{ker}",
+                    l: "\\mathbf{l}",
+                    m: "\\mathbf{m}",
+                    n: "\\mathbf{n}",
+                    nA: "\\mathbb{A}",
+                    nB: "\\mathbb{B}",
+                    nC: "\\mathbb{C}",
+                    nD: "\\mathbb{D}",
+                    nE: "\\mathbb{E}",
+                    nF: "\\mathbb{F}",
+                    nG: "\\mathbb{G}",
+                    nH: "\\mathbb{H}",
+                    nI: "\\mathbb{I}",
+                    nJ: "\\mathbb{J}",
+                    nK: "\\mathbb{K}",
+                    nL: "\\mathbb{L}",
+                    nM: "\\mathbb{M}",
+                    nN: "\\mathbb{N}",
+                    nO: "\\mathbb{O}",
+                    nP: "\\mathbb{P}",
+                    nQ: "\\mathbb{Q}",
+                    nR: "\\mathbb{R}",
+                    nS: "\\mathbb{S}",
+                    nT: "\\mathbb{T}",
+                    nU: "\\mathbb{U}",
+                    nV: "\\mathbb{V}",
+                    nW: "\\mathbb{W}",
+                    nX: "\\mathbb{X}",
+                    nY: "\\mathbb{Y}",
+                    nZ: "\\mathbb{Z}",
+                    nul: "\\text{nul}",
+                    nullity: "\\text{nullity}",
+                    o: "\\mathbf{o}",
+                    p: "\\mathbf{p}",
+                    q: "\\mathbf{q}",
+                    r: "\\mathbf{r}",
+                    rank: "\\text{rank}",
+                    row: "\\text{row}",
+                    s: "\\mathbf{s}",
+                    sA: "\\mathcal{A}",
+                    sB: "\\mathcal{B}",
+                    sC: "\\mathcal{C}",
+                    sD: "\\mathcal{D}",
+                    sE: "\\mathcal{E}",
+                    sF: "\\mathcal{F}",
+                    sG: "\\mathcal{G}",
+                    sH: "\\mathcal{H}",
+                    sI: "\\mathcal{I}",
+                    sJ: "\\mathcal{J}",
+                    sK: "\\mathcal{K}",
+                    sL: "\\mathcal{L}",
+                    sM: "\\mathcal{M}",
+                    sN: "\\mathcal{N}",
+                    sO: "\\mathcal{O}",
+                    sP: "\\mathcal{P}",
+                    sQ: "\\mathcal{Q}",
+                    sR: "\\mathcal{R}",
+                    sS: "\\mathcal{S}",
+                    sT: "\\mathcal{T}",
+                    sU: "\\mathcal{U}",
+                    sV: "\\mathcal{V}",
+                    sW: "\\mathcal{W}",
+                    sX: "\\mathcal{X}",
+                    sY: "\\mathcal{Y}",
+                    sZ: "\\mathcal{Z}",
+                    spn: "\\text{span}",
+                    t: "\\mathbf{t}",
+                    tr: "\\text{tr}",
+                    u: "\\mathbf{u}",
+                    v: "\\mathbf{v}",
+                    vDelta: "\\bm{\\Delta}",
+                    vGamma: "\\bm{\\Gamma}",
+                    vLambda: "\\bm{\\Lambda}",
+                    vOmega: "\\bm{\\Omega}",
+                    vPhi: "\\bm{\\Phi}",
+                    vPi: "\\bm{\\Pi}",
+                    vPsi: "\\bm{\\Psi}",
+                    vSigma: "\\bm{\\Sigma}",
+                    vTheta: "\\bm{\\Theta}",
+                    vUpsilon: "\\bm{\\Upsilon}",
+                    vXi: "\\bm{\\Xi}",
+                    valpha: "\\bm{\\upalpha}",
+                    vbeta: "\\bm{\\upbeta}",
+                    vchi: "\\bm{\\upchi}",
+                    vdelta: "\\bm{\\updelta}",
+                    vepsilon: "\\bm{\\upepsilon}",
+                    veta: "\\bm{\\upeta}",
+                    vgamma: "\\bm{\\upgamma}",
+                    viota: "\\bm{\\upiota}",
+                    vkappa: "\\bm{\\upkappa}",
+                    vlambda: "\\bm{\\uplambda}",
+                    vmu: "\\bm{\\upmu}",
+                    vnu: "\\bm{\\upnu}",
+                    vomega: "\\bm{\\upomega}",
+                    vphi: "\\bm{\\upphi}",
+                    vpi: "\\bm{\\uppi}",
+                    vpsi: "\\bm{\\uppsi}",
+                    vrho: "\\bm{\\uprho}",
+                    vsigma: "\\bm{\\upsigma}",
+                    vtau: "\\bm{\\uptau}",
+                    vtheta: "\\bm{\\uptheta}",
+                    vupsilon: "\\bm{\\upupsilon}",
+                    vvarepsilon: "\\bm{\\upvarepsilon}",
+                    vvarphi: "\\bm{\\upvarphi}",
+                    vvarpi: "\\bm{\\upvarpi}",
+                    vvarrho: "\\bm{\\upvarrho}",
+                    vvarsigma: "\\bm{\\upvarsigma}",
+                    vvartheta: "\\bm{\\upvartheta}",
+                    vxi: "\\bm{\\upxi}",
+                    vzeta: "\\bm{\\upzeta}",
+                    w: "\\mathbf{w}",
+                    x: "\\mathbf{x}",
+                    y: "\\mathbf{y}",
+                    z: "\\mathbf{z}"
+                },
+                // Define environments not in base amsmath
+                environments: {
+                    dcases: ["\\left\\{\\begin{array}{ll}", "\\end{array}\\right."]
+                }
+            },
+            options: {
+                skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"></script>
+
+    <!-- Tippy.js for tooltips -->
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
+    <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/shift-away.css">
+
+        
+        <script>
+        (function(){
+          if (typeof window.MathJax === 'undefined') window.MathJax = {};
+          if (typeof window.MathJax.tex === 'undefined') window.MathJax.tex = {};
+          if (typeof window.MathJax.tex.macros === 'undefined') window.MathJax.tex.macros = {};
+          Object.assign(window.MathJax.tex.macros, {
+                    "\pd": "\\frac{\\partial #1}{\\partial #2}",
+                    "\Cov": "\\text{Cov}\\left( #1, #2 \\right)",
+                    "\card": "\\left| #1 \\right|",
+                    "\col": "\\text{col}",
+                    "\abs": "\\left| #1 \\right|",
+                    "\defeq": "\\stackrel{\\smash{\\textnormal{\\tiny def}}}{=}",
+                    "\interior": "\\text{int}\\left( #1 \\right)",
+                    "\nul": "\\text{nul}",
+                    "\expect": "\\langle #1 \\rangle",
+                    "\closure": "\\overline{#1}",
+                    "\rom": "\\mathrm{#1}",
+                    "\Exp": "\\mathbb{E}\\left[ #1 \\right]",
+                    "\powerset": "\\mathcal{P}\\left( #1 \\right)",
+                    "\row": "\\text{row}",
+                    "\Prob": "\\mathbb{P}\\left( #1 \\right)",
+                    "\ket": "| #1 \\rangle",
+                    "\rank": "\\text{rank}",
+                    "\limi": "\\lim_{#1 \\to \\infty}",
+                    "\tdd": "\\frac{d^2 #1}{d #2^2}",
+                    "\pdd": "\\frac{\\partial^2 #1}{\\partial #2^2}",
+                    "\norm": "\\left\\| #1 \\right\\|",
+                    "\Var": "\\text{Var}\\left( #1 \\right)",
+                    "\spn": "\\text{span}",
+                    "\cl": "\\mathcal{#1}",
+                    "\nullity": "\\text{nullity}",
+                    "\Normal": "\\mathcal{N}\\left( #1, #2 \\right)",
+                    "\limz": "\\lim_{#1 \\to 0}",
+                    "\ketbra": "| #1 \\rangle\\langle #2 |",
+                    "\bm": "\\mathbf{#1}",
+                    "\bb": "\\mathbb{#1}",
+                    "\boundary": "\\partial #1",
+                    "\td": "\\frac{d #1}{d #2}",
+                    "\braket": "\\langle #1 | #2 \\rangle",
+                    "\bra": "\\langle #1 |",
+                    "\tr": "\\text{tr}",
+                    "\Uniform": "\\text{Uniform}\\left( #1, #2 \\right)"
+          });
+        })();
+        </script>
+    </head>
+
+<body>
+    <div id="quarto-container">
+        <!-- Left Sidebar Navigation -->
+        <nav id="quarto-sidebar">
+            <div class="sidebar-header">
+                <a href="../index.html" class="sidebar-title">
+                    Linear Algebra
+                </a>
+                <div class="sidebar-tools">
+                    <a href="../book/book.pdf" title="Full Book PDF" target="_blank">
+                        <i class="bi bi-file-pdf" style="font-size: 1.1rem"></i>
+                    </a>
+                    <a href="https://github.com/youruser/yourrepo" title="Source Code" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            viewBox="0 0 16 16">
+                            <path
+                                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="sidebar-search">
+                <i class="bi bi-search"></i>
+                <input type="text" class="search-input" id="search-input" placeholder="">
+            </div>
+
+            <nav class="sidebar-nav">
+                                <ul class="nav-list">
+                    <li><a href="../index.html">Preface</a></li>
+                </ul>
+                            </nav>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main id="quarto-content">
+
+
+            <article class="content">
+                <!-- Page title removed to avoid duplication with content H1 -->
+                <!-- Quarto-style Title Block -->
+                <header id="title-block-header" class="quarto-title-block default">
+                                        <nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block"
+                        aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="../ch02-linear-transformations/index.html">Linear Transformations</a></li>
+                        <li class="breadcrumb-item"><a href="../ch02-linear-transformations/02-kernel-image.html"><span class="chapter-number">2.2</span>&nbsp; <span class="chapter-title">Kernel and Image</span></a></li>
+                        </ol>
+                    </nav>
+                                        <div class="quarto-title">
+                        <h1 class="title">
+                            <span class="chapter-number">2.2</span>&nbsp; 
+                            <span class="chapter-title">Kernel and
+Image</span>
+                        </h1>
+                    </div>
+                </header>
+
+                <div id="kernel-and-image">
+
+                </div>
+                <h2 id="definition"><span
+                class="header-section-number">2.2.1. </span>
+                Definition</h2>
+                <div id="def-kernel" class="definition"
+                style="border-left-color: #c94c6c; background-color: #fdf2f4; "
+                data-env-type="definition" data-number="2.2.1">
+                <span
+                class="theorem-title theorem-title-resolved"><strong>Definition</strong><strong>
+                2.2.1</strong> (Kernel)</span>
+                <p>Let <span class="math inline">\(f: V \to W\)</span>
+                be a linear transformation. Define the
+                <strong>kernel</strong> of <span
+                class="math inline">\(f\)</span> by <span
+                class="math display">\[
+                \ker (f) \coloneqq \left\{ \v \in V : f(\v) =
+                \mathbf{0}_W \right\}.
+                \]</span></p>
+                <p>i.e. The kernel contains everything in the domain
+                that becomes the zero vector under <span
+                class="math inline">\(f\)</span>.</p>
+                </div>
+                <div id="def-image" class="definition"
+                style="border-left-color: #c94c6c; background-color: #fdf2f4; "
+                data-env-type="definition" data-number="2.2.2">
+                <span
+                class="theorem-title theorem-title-resolved"><strong>Definition</strong><strong>
+                2.2.2</strong> (Image)</span>
+                <p>Let <span class="math inline">\(f: V \to W\)</span>
+                be a linear transformation. Define the
+                <strong>image</strong> of <span
+                class="math inline">\(f\)</span> by <span
+                class="math display">\[
+                \im (f) \coloneqq \left\{ \w \in W : \w = f(\v) \text{
+                for some } \v \in V \right\}.
+                \]</span></p>
+                <p>i.e. The image contains all the possible outputs of
+                the function <span class="math inline">\(f\)</span>.</p>
+                </div>
+                <div class="remark small-env" data-env-type="remark">
+                <p><em>Remark</em><em>.</em> The kernel is also known as
+                the nullspace, which you might be familiar from Gilbert
+                Strang’s book. And the image is also called the range.
+                Also, we sometimes denote the image as <span
+                class="math inline">\(f(V)\)</span>.</p>
+                </div>
+                <h2 id="sec-kernel-image-examples"><span
+                class="header-section-number">2.2.2. </span>
+                Examples</h2>
+                <div id="exm-differentiation-kernel-image"
+                class="example"
+                style="border-left-color: #3a8a3a; background-color: #eef7ee; "
+                data-env-type="example" data-number="">
+                <span
+                class="theorem-title theorem-title-resolved"><strong>Example</strong>
+                (Differentiation)</span>
+                <p>Let <span class="math inline">\(D : \nR[x]_{\leq 3}
+                \to \nR[x]_{\leq 2}\)</span> be defined by <span
+                class="math inline">\(D(f(x)) = f&#39;(x)\)</span>. Find
+                the kernel and image of <span
+                class="math inline">\(D\)</span>.</p>
+                </div>
+                <div class="solution small-env"
+                data-env-type="solution">
+                <p><em>Solution</em><em>.</em> <strong>Kernel:</strong>
+                We seek all polynomials <span class="math inline">\(f(x)
+                \in \nR[x]_{\leq 3}\)</span> such that <span
+                class="math inline">\(D(f(x)) = f&#39;(x) =
+                0\)</span>.</p>
+                <p>A polynomial has derivative zero if and only if it is
+                a constant. Thus: <span class="math display">\[
+                    \ker(D) = \{ c : c \in \nR \} = \Span\{1\}.
+                \]</span> So <span class="math inline">\(\dim(\ker(D)) =
+                1\)</span>.</p>
+                <p><strong>Image:</strong> We need to determine which
+                polynomials in <span class="math inline">\(\nR[x]_{\leq
+                2}\)</span> can be obtained as derivatives.</p>
+                <p>Let <span class="math inline">\(f(x) = a_0 + a_1 x +
+                a_2 x^2 + a_3 x^3 \in \nR[x]_{\leq 3}\)</span>. Then:
+                <span class="math display">\[
+                    D(f(x)) = f&#39;(x) = a_1 + 2a_2 x + 3a_3 x^2.
+                \]</span> As <span class="math inline">\(a_1, a_2,
+                a_3\)</span> range over all real numbers, we can obtain
+                any polynomial of degree at most 2. Therefore: <span
+                class="math display">\[
+                    \im(D) = \nR[x]_{\leq 2}.
+                \]</span> So <span class="math inline">\(\dim(\im(D)) =
+                3\)</span>.</p>
+                <p>Note that <span class="math inline">\(\dim(\ker(D)) +
+                \dim(\im(D)) = 1 + 3 = 4 = \dim(\nR[x]_{\leq
+                3})\)</span>.</p>
+                </div>
+                <div id="exm-trace-kernel-image" class="example"
+                style="border-left-color: #3a8a3a; background-color: #eef7ee; "
+                data-env-type="example" data-number="">
+                <span
+                class="theorem-title theorem-title-resolved"><strong>Example</strong>
+                (Trace)</span>
+                <p>Let <span class="math inline">\(\tr : M_2(\nR) \to
+                \nR\)</span> be defined by <span
+                class="math inline">\(\tr(\A) = a_{11} +
+                a_{22}\)</span>. Find the kernel and image of <span
+                class="math inline">\(\tr\)</span>.</p>
+                </div>
+                <div class="solution small-env"
+                data-env-type="solution">
+                <p><em>Solution</em><em>.</em> <strong>Kernel:</strong>
+                We seek all matrices <span class="math inline">\(\A \in
+                M_2(\nR)\)</span> such that <span
+                class="math inline">\(\tr(\A) = 0\)</span>.</p>
+                <p>Let <span class="math inline">\(\A = \begin{bmatrix}
+                a &amp; b \\ c &amp; d \end{bmatrix}\)</span>. Then
+                <span class="math inline">\(\tr(\A) = a + d =
+                0\)</span>, which means <span class="math inline">\(d =
+                -a\)</span>.</p>
+                <p>So the kernel consists of all matrices of the form:
+                <span class="math display">\[
+                    \A = \begin{bmatrix} a &amp; b \\ c &amp; -a
+                \end{bmatrix} = a\begin{bmatrix} 1 &amp; 0 \\ 0 &amp; -1
+                \end{bmatrix} + b\begin{bmatrix} 0 &amp; 1 \\ 0 &amp; 0
+                \end{bmatrix} + c\begin{bmatrix} 0 &amp; 0 \\ 1 &amp; 0
+                \end{bmatrix}.
+                \]</span> Therefore: <span class="math display">\[
+                    \ker(\tr) = \Span\left\{ \begin{bmatrix} 1 &amp; 0
+                \\ 0 &amp; -1 \end{bmatrix}, \begin{bmatrix} 0 &amp; 1
+                \\ 0 &amp; 0 \end{bmatrix}, \begin{bmatrix} 0 &amp; 0 \\
+                1 &amp; 0 \end{bmatrix} \right\}.
+                \]</span> So <span class="math inline">\(\dim(\ker(\tr))
+                = 3\)</span>.</p>
+                <p><strong>Image:</strong> For any <span
+                class="math inline">\(r \in \nR\)</span>, we can find a
+                matrix with trace <span
+                class="math inline">\(r\)</span>, for example <span
+                class="math inline">\(\begin{bmatrix} r &amp; 0 \\ 0
+                &amp; 0 \end{bmatrix}\)</span>.</p>
+                <p>Therefore: <span class="math display">\[
+                    \im(\tr) = \nR.
+                \]</span> So <span class="math inline">\(\dim(\im(\tr))
+                = 1\)</span>.</p>
+                <p>Note that <span class="math inline">\(\dim(\ker(\tr))
+                + \dim(\im(\tr)) = 3 + 1 = 4 =
+                \dim(M_2(\nR))\)</span>.</p>
+                </div>
+                <h2 id="basic-theorems"><span
+                class="header-section-number">2.2.3. </span> Basic
+                Theorems</h2>
+                <div id="thm-prop-kernel" class="theorem"
+                style="border-left-color: #3b6eda; background-color: #f0f5ff; "
+                data-env-type="theorem" data-number="2.2.1">
+                <span
+                class="theorem-title theorem-title-resolved"><strong>Theorem</strong><strong>
+                2.2.1</strong> (Properties of Kernel)</span>
+                <p>Let <span class="math inline">\(f: V \to W\)</span>
+                be a linear transformation. Then:</p>
+                <ol type="1">
+                <li><p><span class="math inline">\(\ker (f)\)</span> is
+                a subspace of <span
+                class="math inline">\(V\)</span>;</p></li>
+                <li><p><span class="math inline">\(f\)</span> is
+                injective iff <span class="math inline">\(\ker (f) =
+                \left\{ \mathbf{0}_V \right\}\)</span>.</p></li>
+                </ol>
+                </div>
+                <div class="proof small-env" data-env-type="proof">
+                <p><em>Proof</em><em>.</em> </p>
+                <ol type="1">
+                <li><ul>
+                <li>Non-emptiness: As <span
+                class="math inline">\(f\)</span> is linear, <span
+                class="math inline">\(f(\mathbf{0}_V) =
+                \mathbf{0}_W\)</span>, therefore <span
+                class="math inline">\(\mathbf{0}_V \in \ker
+                (f)\)</span>.</li>
+                <li>Closure under addition: Let <span
+                class="math inline">\(\v_1, \v_2 \in \ker(f)\)</span>,
+                it implies that <span class="math inline">\(f(\v_1) =
+                \mathbf{0}_W\)</span> and <span
+                class="math inline">\(f(\v_2) = \mathbf{0}_W\)</span>.
+                We have <span class="math display">\[ f(\v_1 + \v_2) = f
+                (\v_1) + f(\v_2) = \mathbf{0}_W + \mathbf{0}_W =
+                \mathbf{0}_W. \]</span> Therefore <span
+                class="math inline">\(\v_1 + \v_2 \in
+                \ker(f)\)</span>.</li>
+                <li>Closure under scalar multiplication: Let <span
+                class="math inline">\(\v \in \ker(f)\)</span>, it
+                implies that <span class="math inline">\(f(\v) =
+                \mathbf{0}_W\)</span>. We have <span
+                class="math display">\[
+                f(\lambda \v) = \lambda f(\v) = \lambda \mathbf{0}_W =
+                \mathbf{0}_W.
+                \]</span> Therefore <span class="math inline">\(\lambda
+                \v \in \ker(f)\)</span>.</li>
+                </ul></li>
+                <li><ul>
+                <li>(<span class="math inline">\(\Rightarrow\)</span>)
+                Suppose <span class="math inline">\(f\)</span> is
+                injective. Let <span class="math inline">\(\v \in \ker
+                (f)\)</span>, we have <span
+                class="math display">\[\begin{align*}
+                f(\v) &amp;= \mathbf{0}_W \\
+                &amp;= f(\mathbf{0}_V) &amp;&amp; \text{(linearity)}
+                \end{align*}\]</span> By having <span
+                class="math inline">\(f(\v) = f(\mathbf{0}_V)\)</span>
+                and <span class="math inline">\(f\)</span> is injective,
+                it implies that <span class="math inline">\(\v =
+                \mathbf{0}_V\)</span>, so <span
+                class="math inline">\(\ker (f) = \left\{ \mathbf{0}_V
+                \right\}\)</span>.</li>
+                <li>(<span class="math inline">\(\Leftarrow\)</span>)
+                Suppose <span class="math inline">\(\ker (f) = \left\{
+                \mathbf{0}_V \right\}\)</span>, and we consider <span
+                class="math inline">\(f(\v) = f(\w)\)</span>. Reordering
+                the terms we get <span class="math inline">\(f(\v) -
+                f(\w) = \mathbf{0}_W\)</span>, and since <span
+                class="math inline">\(f\)</span> is linear we have <span
+                class="math inline">\(f (\v - \w) =
+                \mathbf{0}_W\)</span>. Therefore <span
+                class="math inline">\(\v - \w \in \ker (f) = \left\{
+                \mathbf{0}_V \right\}\)</span>, implying that <span
+                class="math inline">\(\v - \w = \mathbf{0}_V\)</span>,
+                hence <span class="math inline">\(\v = \w\)</span>. So
+                <span class="math inline">\(f\)</span> is
+                injective.</li>
+                </ul></li>
+                </ol>
+                </div>
+                <div id="thm-prop-image" class="theorem"
+                style="border-left-color: #3b6eda; background-color: #f0f5ff; "
+                data-env-type="theorem" data-number="2.2.2">
+                <span
+                class="theorem-title theorem-title-resolved"><strong>Theorem</strong><strong>
+                2.2.2</strong> (Properties of Image)</span>
+                <p>Let <span class="math inline">\(f: V \to W\)</span>
+                be a linear transformation. Then:</p>
+                <ol type="1">
+                <li><p><span class="math inline">\(\im (f)\)</span> is a
+                subspace of <span
+                class="math inline">\(W\)</span>;</p></li>
+                <li><p><span class="math inline">\(f\)</span> is
+                surjective iff <span class="math inline">\(\im (f) =
+                W\)</span>.</p></li>
+                </ol>
+                </div>
+                <div class="proof small-env" data-env-type="proof">
+                <p><em>Proof</em><em>.</em> </p>
+                <ol type="1">
+                <li><ul>
+                <li>Non-emptiness: Since <span
+                class="math inline">\(f\)</span> is linear, <span
+                class="math inline">\(\mathbf{0}_W =
+                f(\mathbf{0}_V)\)</span>, therefore <span
+                class="math inline">\(\mathbf{0}_W \in \im
+                (f)\)</span>.</li>
+                <li>Closure under addition: Let <span
+                class="math inline">\(\w_1, \w_2 \in im (f)\)</span>. So
+                <span class="math inline">\(\w_1 = f(\v_1)\)</span>, and
+                <span class="math inline">\(\w_2 = f(\v_2)\)</span> for
+                some <span class="math inline">\(\v_1, \v_2 \in
+                V\)</span>. Notice that <span class="math display">\[
+                \w_1 + \w_2 = f(\v_1) + f(\v_2) = f(\v_1 + \v_2).
+                \]</span> Therefore <span class="math inline">\(\w_1 +
+                \w_2 \in \im (f)\)</span>.</li>
+                <li>Closure under scalar multiplication: Let <span
+                class="math inline">\(\w \in \im (f)\)</span>. So <span
+                class="math inline">\(\w = \f(\v)\)</span> for some
+                <span class="math inline">\(\v \in V\)</span>. Notice
+                that <span class="math display">\[
+                \lambda \w = \lambda f(\v) = f(\lambda \v).
+                \]</span> Therefore <span class="math inline">\(\lambda
+                \w \in \im (f)\)</span>.</li>
+                </ul></li>
+                <li><span class="math inline">\(f\)</span> is surjective
+                <span class="math inline">\(\Leftrightarrow\)</span>
+                <span class="math inline">\(\forall\w \in W\)</span>, we
+                have <span class="math inline">\(\w \in f(\v)\)</span>
+                for some <span class="math inline">\(\v \in V\)</span>,
+                that is equivalent to say <span class="math inline">\(W
+                \subseteq \im (f)\)</span>, and by the first condition
+                we know that <span class="math inline">\(\im (f)
+                \subseteq  W\)</span> is always true. Hence we have
+                <span class="math inline">\(f\)</span> is surjective
+                <span class="math inline">\(\Leftrightarrow\)</span>
+                <span class="math inline">\(W = \im (f)\)</span>.</li>
+                </ol>
+                </div>
+            </article>
+
+            <!-- Page Navigation -->
+            <nav class="page-navigation">
+                <div class="nav-page nav-page-previous">
+                                        <a href="01-linear-transformations.html" class="pagination-link" aria-label="Linear
+Transformations">
+                        <i class="bi bi-arrow-left-short"></i>
+                        <span
+                            class="nav-page-text">2.1 Linear
+Transformations</span>
+                    </a>
+                                    </div>
+                <div class="nav-page nav-page-next">
+                                        <a href="03-rank-nullity.html" class="pagination-link" aria-label="Rank-Nullity
+Theorem">
+                        <span
+                            class="nav-page-text">2.3 Rank-Nullity
+Theorem</span>
+                        <i class="bi bi-arrow-right-short"></i>
+                    </a>
+                                    </div>
+            </nav>
+        </main>
+
+        <!-- Right Sidebar (TOC) -->
+        <aside id="quarto-margin-sidebar">
+            <nav class="toc">
+                <h2>Table of contents</h2>
+                            </nav>
+
+            <div class="other-formats">
+                <h3>Other Formats</h3>
+                <ul>
+                    <li><a href="../pdf/ch02-linear-transformations/02-kernel-image.pdf" target="_blank">PDF</a></li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Tooltip Script -->
+    <script src="../main.js"></script>
+</body>
+
+</html>

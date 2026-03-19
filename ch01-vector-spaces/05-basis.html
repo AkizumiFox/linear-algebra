@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1.5 Bases – Linear Algebra</title>
+
+    <!-- Styles -->
+    <!-- Styles -->
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- MathJax Configuration with Custom Macros -->
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['\\(', '\\)']],
+                displayMath: [['\\[', '\\]']],
+                processEscapes: true,
+                processEnvironments: true,
+                tags: 'ams',
+                macros: {
+                    0: "\\mathbf{0}",
+                    1: "\\mathbf{1}",
+                    A: "\\mathbf{A}",
+                    B: "\\mathbf{B}",
+                    C: "\\mathbf{C}",
+                    Cor: "\\operatorname*{Cor}",
+                    Corr: "\\operatorname*{Corr}",
+                    Cov: "\\operatorname*{Cov}",
+                    D: "\\mathbf{D}",
+                    E: "\\mathbf{E}",
+                    Ev: "\\operatorname*{\\mathbb{E}}",
+                    F: "\\mathbf{F}",
+                    G: "\\mathbf{G}",
+                    H: "\\mathbf{H}",
+                    I: "\\mathbf{I}",
+                    J: "\\mathbf{J}",
+                    K: "\\mathbf{K}",
+                    L: "\\mathbf{L}",
+                    M: "\\mathbf{M}",
+                    N: "\\mathbf{N}",
+                    O: "\\mathbf{O}",
+                    P: "\\mathbf{P}",
+                    Pr: "\\operatorname{Pr}",
+                    Q: "\\mathbf{Q}",
+                    R: "\\mathbf{R}",
+                    S: "\\mathbf{S}",
+                    Span: "\\operatorname{span}",
+                    T: "\\mathbf{T}",
+                    U: "\\mathbf{U}",
+                    V: "\\mathbf{V}",
+                    Var: "\\operatorname*{Var}",
+                    W: "\\mathbf{W}",
+                    X: "\\mathbf{X}",
+                    Y: "\\mathbf{Y}",
+                    Z: "\\mathbf{Z}",
+                    a: "\\mathbf{a}",
+                    adj: "\\operatorname{adj}",
+                    b: "\\mathbf{b}",
+                    c: "\\mathbf{c}",
+                    cA: "\\mathcal{A}",
+                    cB: "\\mathcal{B}",
+                    cC: "\\mathcal{C}",
+                    cD: "\\mathcal{D}",
+                    cE: "\\mathcal{E}",
+                    cF: "\\mathcal{F}",
+                    cG: "\\mathcal{G}",
+                    cH: "\\mathcal{H}",
+                    cI: "\\mathcal{I}",
+                    cJ: "\\mathcal{J}",
+                    cK: "\\mathcal{K}",
+                    cL: "\\mathcal{L}",
+                    cM: "\\mathcal{M}",
+                    cN: "\\mathcal{N}",
+                    cO: "\\mathcal{O}",
+                    cP: "\\mathcal{P}",
+                    cQ: "\\mathcal{Q}",
+                    cR: "\\mathcal{R}",
+                    cS: "\\mathcal{S}",
+                    cT: "\\mathcal{T}",
+                    cU: "\\mathcal{U}",
+                    cV: "\\mathcal{V}",
+                    cW: "\\mathcal{W}",
+                    cX: "\\mathcal{X}",
+                    cY: "\\mathcal{Y}",
+                    cZ: "\\mathcal{Z}",
+                    col: "\\text{col}",
+                    coloneqq: "\\mathrel{:=}",
+                    d: "\\mathbf{d}",
+                    dd: "\\mathrm{d}",
+                    defeq: "\\stackrel{\\smash{\\textnormal{\\tiny def}}}{=}",
+                    diag: "\\operatorname{diag}",
+                    distBern: "\\operatorname{Ber}",
+                    distBeta: "\\operatorname{Beta}",
+                    distBin: "\\operatorname{Bin}",
+                    distCauchy: "\\operatorname{Cauchy}",
+                    distDir: "\\operatorname{Dir}",
+                    distExp: "\\operatorname{Exp}",
+                    distGamma: "\\operatorname{Gamma}",
+                    distGeom: "\\operatorname{Geo}",
+                    distHyp: "\\operatorname{Hyp}",
+                    distInvWishart: "\\operatorname{InvWishart}",
+                    distLognormal: "\\operatorname{Lognormal}",
+                    distMult: "\\operatorname{Mult}",
+                    distN: "\\operatorname{\\mathcal{N}}",
+                    distNB: "\\operatorname{NB}",
+                    distPareto: "\\operatorname{Pareto}",
+                    distPois: "\\operatorname{Poi}",
+                    distUnif: "\\operatorname{Unif}",
+                    distWeibull: "\\operatorname{Weibull}",
+                    distWishart: "\\operatorname{Wishart}",
+                    e: "\\mathbf{e}",
+                    eqqcolon: "\\mathrel{=:}",
+                    f: "\\mathbf{f}",
+                    g: "\\mathbf{g}",
+                    h: "\\mathbf{h}",
+                    i: "\\mathbf{i}",
+                    id: "\\operatorname{id}",
+                    im: "\\operatorname{im}",
+                    img: "\\operatorname{img}",
+                    j: "\\mathbf{j}",
+                    k: "\\mathbf{k}",
+                    ker: "\\operatorname{ker}",
+                    l: "\\mathbf{l}",
+                    m: "\\mathbf{m}",
+                    n: "\\mathbf{n}",
+                    nA: "\\mathbb{A}",
+                    nB: "\\mathbb{B}",
+                    nC: "\\mathbb{C}",
+                    nD: "\\mathbb{D}",
+                    nE: "\\mathbb{E}",
+                    nF: "\\mathbb{F}",
+                    nG: "\\mathbb{G}",
+                    nH: "\\mathbb{H}",
+                    nI: "\\mathbb{I}",
+                    nJ: "\\mathbb{J}",
+                    nK: "\\mathbb{K}",
+                    nL: "\\mathbb{L}",
+                    nM: "\\mathbb{M}",
+                    nN: "\\mathbb{N}",
+                    nO: "\\mathbb{O}",
+                    nP: "\\mathbb{P}",
+                    nQ: "\\mathbb{Q}",
+                    nR: "\\mathbb{R}",
+                    nS: "\\mathbb{S}",
+                    nT: "\\mathbb{T}",
+                    nU: "\\mathbb{U}",
+                    nV: "\\mathbb{V}",
+                    nW: "\\mathbb{W}",
+                    nX: "\\mathbb{X}",
+                    nY: "\\mathbb{Y}",
+                    nZ: "\\mathbb{Z}",
+                    nul: "\\text{nul}",
+                    nullity: "\\text{nullity}",
+                    o: "\\mathbf{o}",
+                    p: "\\mathbf{p}",
+                    q: "\\mathbf{q}",
+                    r: "\\mathbf{r}",
+                    rank: "\\text{rank}",
+                    row: "\\text{row}",
+                    s: "\\mathbf{s}",
+                    sA: "\\mathcal{A}",
+                    sB: "\\mathcal{B}",
+                    sC: "\\mathcal{C}",
+                    sD: "\\mathcal{D}",
+                    sE: "\\mathcal{E}",
+                    sF: "\\mathcal{F}",
+                    sG: "\\mathcal{G}",
+                    sH: "\\mathcal{H}",
+                    sI: "\\mathcal{I}",
+                    sJ: "\\mathcal{J}",
+                    sK: "\\mathcal{K}",
+                    sL: "\\mathcal{L}",
+                    sM: "\\mathcal{M}",
+                    sN: "\\mathcal{N}",
+                    sO: "\\mathcal{O}",
+                    sP: "\\mathcal{P}",
+                    sQ: "\\mathcal{Q}",
+                    sR: "\\mathcal{R}",
+                    sS: "\\mathcal{S}",
+                    sT: "\\mathcal{T}",
+                    sU: "\\mathcal{U}",
+                    sV: "\\mathcal{V}",
+                    sW: "\\mathcal{W}",
+                    sX: "\\mathcal{X}",
+                    sY: "\\mathcal{Y}",
+                    sZ: "\\mathcal{Z}",
+                    spn: "\\text{span}",
+                    t: "\\mathbf{t}",
+                    tr: "\\text{tr}",
+                    u: "\\mathbf{u}",
+                    v: "\\mathbf{v}",
+                    vDelta: "\\bm{\\Delta}",
+                    vGamma: "\\bm{\\Gamma}",
+                    vLambda: "\\bm{\\Lambda}",
+                    vOmega: "\\bm{\\Omega}",
+                    vPhi: "\\bm{\\Phi}",
+                    vPi: "\\bm{\\Pi}",
+                    vPsi: "\\bm{\\Psi}",
+                    vSigma: "\\bm{\\Sigma}",
+                    vTheta: "\\bm{\\Theta}",
+                    vUpsilon: "\\bm{\\Upsilon}",
+                    vXi: "\\bm{\\Xi}",
+                    valpha: "\\bm{\\upalpha}",
+                    vbeta: "\\bm{\\upbeta}",
+                    vchi: "\\bm{\\upchi}",
+                    vdelta: "\\bm{\\updelta}",
+                    vepsilon: "\\bm{\\upepsilon}",
+                    veta: "\\bm{\\upeta}",
+                    vgamma: "\\bm{\\upgamma}",
+                    viota: "\\bm{\\upiota}",
+                    vkappa: "\\bm{\\upkappa}",
+                    vlambda: "\\bm{\\uplambda}",
+                    vmu: "\\bm{\\upmu}",
+                    vnu: "\\bm{\\upnu}",
+                    vomega: "\\bm{\\upomega}",
+                    vphi: "\\bm{\\upphi}",
+                    vpi: "\\bm{\\uppi}",
+                    vpsi: "\\bm{\\uppsi}",
+                    vrho: "\\bm{\\uprho}",
+                    vsigma: "\\bm{\\upsigma}",
+                    vtau: "\\bm{\\uptau}",
+                    vtheta: "\\bm{\\uptheta}",
+                    vupsilon: "\\bm{\\upupsilon}",
+                    vvarepsilon: "\\bm{\\upvarepsilon}",
+                    vvarphi: "\\bm{\\upvarphi}",
+                    vvarpi: "\\bm{\\upvarpi}",
+                    vvarrho: "\\bm{\\upvarrho}",
+                    vvarsigma: "\\bm{\\upvarsigma}",
+                    vvartheta: "\\bm{\\upvartheta}",
+                    vxi: "\\bm{\\upxi}",
+                    vzeta: "\\bm{\\upzeta}",
+                    w: "\\mathbf{w}",
+                    x: "\\mathbf{x}",
+                    y: "\\mathbf{y}",
+                    z: "\\mathbf{z}"
+                },
+                // Define environments not in base amsmath
+                environments: {
+                    dcases: ["\\left\\{\\begin{array}{ll}", "\\end{array}\\right."]
+                }
+            },
+            options: {
+                skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"></script>
+
+    <!-- Tippy.js for tooltips -->
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
+    <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/shift-away.css">
+
+        
+        <script>
+        (function(){
+          if (typeof window.MathJax === 'undefined') window.MathJax = {};
+          if (typeof window.MathJax.tex === 'undefined') window.MathJax.tex = {};
+          if (typeof window.MathJax.tex.macros === 'undefined') window.MathJax.tex.macros = {};
+          Object.assign(window.MathJax.tex.macros, {
+                    "\ketbra": "| #1 \\rangle\\langle #2 |",
+                    "\powerset": "\\mathcal{P}\\left( #1 \\right)",
+                    "\closure": "\\overline{#1}",
+                    "\interior": "\\text{int}\\left( #1 \\right)",
+                    "\row": "\\text{row}",
+                    "\Prob": "\\mathbb{P}\\left( #1 \\right)",
+                    "\limz": "\\lim_{#1 \\to 0}",
+                    "\tdd": "\\frac{d^2 #1}{d #2^2}",
+                    "\Normal": "\\mathcal{N}\\left( #1, #2 \\right)",
+                    "\limi": "\\lim_{#1 \\to \\infty}",
+                    "\norm": "\\left\\| #1 \\right\\|",
+                    "\ket": "| #1 \\rangle",
+                    "\boundary": "\\partial #1",
+                    "\defeq": "\\stackrel{\\smash{\\textnormal{\\tiny def}}}{=}",
+                    "\bra": "\\langle #1 |",
+                    "\bm": "\\mathbf{#1}",
+                    "\nul": "\\text{nul}",
+                    "\bb": "\\mathbb{#1}",
+                    "\rom": "\\mathrm{#1}",
+                    "\cl": "\\mathcal{#1}",
+                    "\Exp": "\\mathbb{E}\\left[ #1 \\right]",
+                    "\pdd": "\\frac{\\partial^2 #1}{\\partial #2^2}",
+                    "\nullity": "\\text{nullity}",
+                    "\card": "\\left| #1 \\right|",
+                    "\braket": "\\langle #1 | #2 \\rangle",
+                    "\Cov": "\\text{Cov}\\left( #1, #2 \\right)",
+                    "\tr": "\\text{tr}",
+                    "\pd": "\\frac{\\partial #1}{\\partial #2}",
+                    "\td": "\\frac{d #1}{d #2}",
+                    "\col": "\\text{col}",
+                    "\rank": "\\text{rank}",
+                    "\expect": "\\langle #1 \\rangle",
+                    "\spn": "\\text{span}",
+                    "\Var": "\\text{Var}\\left( #1 \\right)",
+                    "\Uniform": "\\text{Uniform}\\left( #1, #2 \\right)",
+                    "\abs": "\\left| #1 \\right|"
+          });
+        })();
+        </script>
+    </head>
+
+<body>
+    <div id="quarto-container">
+        <!-- Left Sidebar Navigation -->
+        <nav id="quarto-sidebar">
+            <div class="sidebar-header">
+                <a href="../index.html" class="sidebar-title">
+                    Linear Algebra
+                </a>
+                <div class="sidebar-tools">
+                    <a href="../book/book.pdf" title="Full Book PDF" target="_blank">
+                        <i class="bi bi-file-pdf" style="font-size: 1.1rem"></i>
+                    </a>
+                    <a href="https://github.com/youruser/yourrepo" title="Source Code" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            viewBox="0 0 16 16">
+                            <path
+                                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="sidebar-search">
+                <i class="bi bi-search"></i>
+                <input type="text" class="search-input" id="search-input" placeholder="">
+            </div>
+
+            <nav class="sidebar-nav">
+                                <ul class="nav-list">
+                    <li><a href="../index.html">Preface</a></li>
+                </ul>
+                            </nav>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main id="quarto-content">
+
+
+            <article class="content">
+                <!-- Page title removed to avoid duplication with content H1 -->
+                <!-- Quarto-style Title Block -->
+                <header id="title-block-header" class="quarto-title-block default">
+                                        <nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block"
+                        aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="../ch01-vector-spaces/index.html">Vector Spaces and Dimensions</a></li>
+                        <li class="breadcrumb-item"><a href="../ch01-vector-spaces/05-basis.html"><span class="chapter-number">1.5</span>&nbsp; <span class="chapter-title">Bases</span></a></li>
+                        </ol>
+                    </nav>
+                                        <div class="quarto-title">
+                        <h1 class="title">
+                            <span class="chapter-number">1.5</span>&nbsp; 
+                            <span class="chapter-title">Bases</span>
+                        </h1>
+                    </div>
+                </header>
+
+                <div id="bases">
+
+                </div>
+                <p>We have reached what many consider the “Goldilocks
+                Zone” of Linear Algebra.</p>
+                <p>If a set is too small, it won’t span the whole
+                space—you’ll be left with points you can’t reach. If a
+                set is too large, it will be linearly dependent—you’ll
+                have redundant vectors cluttering your workspace. A
+                <strong>basis</strong> is a set that is “just right.” It
+                is large enough to build everything, but small enough
+                that every piece is essential.</p>
+                <p>Because a basis has no redundancy, it gives us
+                something incredible: a <strong>unique address
+                system</strong>. In an abstract vector space, it’s hard
+                to tell someone where a vector is. But once we pick a
+                basis, every vector can be described by a unique list of
+                numbers—its coordinates. A basis is the bridge that
+                allows us to turn abstract geometry into concrete
+                arithmetic.</p>
+                <h2 id="definition-and-standard-bases"><span
+                class="header-section-number">1.5.1. </span> Definition
+                and Standard Bases</h2>
+                <div id="def-basis" class="definition"
+                style="border-left-color: #c94c6c; background-color: #fdf2f4; "
+                data-number="1.5.1" data-env-type="definition">
+                <span
+                class="theorem-title theorem-title-resolved"><strong>Definition</strong><strong>
+                1.5.1</strong> (Basis)</span>
+                <p>A subset <span class="math inline">\(B\)</span> of a
+                vector space <span class="math inline">\(V\)</span> is
+                called a <strong>basis</strong> for <span
+                class="math inline">\(V\)</span> if:</p>
+                <ol type="1">
+                <li><span class="math inline">\(B\)</span> is linearly
+                independent;</li>
+                <li><span class="math inline">\(B\)</span> spans <span
+                class="math inline">\(V\)</span>.</li>
+                </ol>
+                </div>
+                <div id="exm-standard-bases" class="example"
+                style="border-left-color: #3a8a3a; background-color: #eef7ee; "
+                data-number="" data-env-type="example">
+                <span
+                class="theorem-title theorem-title-resolved"><strong>Example</strong>
+                (Standard Bases)</span>
+                <p>Commonly used standard bases for familiar vector
+                spaces are listed below:</p>
+                <ul>
+                <li>The <strong>standard basis</strong> for <span
+                class="math inline">\(F^n\)</span> is <span
+                class="math inline">\(\{ \e_1, \e_2, \dots, \e_n
+                \}\)</span>, where <span
+                class="math inline">\(\e_i\)</span> has a 1 in the <span
+                class="math inline">\(i\)</span>-th position and 0
+                elsewhere.</li>
+                <li>The standard basis for <span
+                class="math inline">\(F[x]_{\leq n}\)</span> is <span
+                class="math inline">\(\{ 1, x, x^2, \dots, x^n
+                \}\)</span>.</li>
+                <li>The standard basis for <span
+                class="math inline">\(M_{m \times n}(F)\)</span> is the
+                set of matrices <span
+                class="math inline">\(\E_{ij}\)</span> having a 1 at
+                entry <span class="math inline">\((i,j)\)</span> and 0
+                elsewhere.</li>
+                </ul>
+                </div>
+                <h2 id="unique-representation-and-coordinates"><span
+                class="header-section-number">1.5.2. </span> Unique
+                Representation and Coordinates</h2>
+                <p>The most important property of a basis is that every
+                vector in the space has a unique “address” relative to
+                it.</p>
+                <div id="thm-unique-representation" class="theorem"
+                style="border-left-color: #3b6eda; background-color: #f0f5ff; "
+                data-number="1.5.1" data-env-type="theorem">
+                <span
+                class="theorem-title theorem-title-resolved"><strong>Theorem</strong><strong>
+                1.5.1</strong> (Unique Representation)</span>
+                <p>Let <span class="math inline">\(B = \{ \v_1, \dots,
+                \v_n \}\)</span> be a basis for <span
+                class="math inline">\(V\)</span>. Then every vector
+                <span class="math inline">\(\v \in V\)</span> can be
+                written as a linear combination of elements in <span
+                class="math inline">\(B\)</span> in <strong>exactly one
+                way</strong>.</p>
+                </div>
+                <div class="proof small-env" data-env-type="proof">
+                <p><em>Proof</em><em>.</em> Since <span
+                class="math inline">\(B\)</span> spans <span
+                class="math inline">\(V\)</span>, there exist scalars
+                <span class="math inline">\(a_i\)</span> such that <span
+                class="math inline">\(\v = \sum a_i \v_i\)</span>.
+                Suppose there is another representation <span
+                class="math inline">\(\v = \sum b_i \v_i\)</span>. Then:
+                <span class="math display">\[
+                    \mathbf{0} = \v - \v = \sum a_i \v_i - \sum b_i \v_i
+                = \sum (a_i - b_i) \v_i.
+                \]</span> Since <span class="math inline">\(B\)</span>
+                is linearly independent, we must have <span
+                class="math inline">\(a_i - b_i = 0\)</span> for all
+                <span class="math inline">\(i\)</span>, meaning <span
+                class="math inline">\(a_i = b_i\)</span>.</p>
+                </div>
+                <div id="def-coordinates" class="definition"
+                style="border-left-color: #c94c6c; background-color: #fdf2f4; "
+                data-number="1.5.2" data-env-type="definition">
+                <span
+                class="theorem-title theorem-title-resolved"><strong>Definition</strong><strong>
+                1.5.2</strong> (Coordinates)</span>
+                <p>Let <span class="math inline">\(B = \{ \v_1, \dots,
+                \v_n \}\)</span> be an <strong>ordered</strong> basis
+                for <span class="math inline">\(V\)</span>. For any
+                <span class="math inline">\(\v \in V\)</span>, the
+                unique scalars <span class="math inline">\(c_1, \dots,
+                c_n\)</span> such that <span class="math inline">\(\v =
+                \sum c_i \v_i\)</span> are called the
+                <strong>coordinates</strong> of <span
+                class="math inline">\(\v\)</span> with respect to <span
+                class="math inline">\(B\)</span>. We write this as a
+                column vector: <span class="math display">\[
+                    [\v]_B = \begin{bmatrix} c_1 \\ c_2 \\ \vdots \\ c_n
+                \end{bmatrix}.
+                \]</span></p>
+                </div>
+                <div class="remark small-env" data-env-type="remark">
+                <p><em>Remark</em><em>.</em> Notice the subtle but
+                important distinction: a <strong>basis as a set</strong>
+                determines which vectors can be built (i.e., it
+                determines the space), but to define
+                <strong>coordinates</strong> we need an <strong>ordered
+                basis</strong>—a basis with a fixed ordering of its
+                elements. For example, if <span class="math inline">\(B
+                = \{ \v_1, \v_2 \}\)</span>, then the coordinate vector
+                <span class="math inline">\([\v]_B = \begin{bmatrix} 3
+                \\ 5 \end{bmatrix}\)</span> means <span
+                class="math inline">\(\v = 3\v_1 + 5\v_2\)</span>. If we
+                had listed the basis in the opposite order <span
+                class="math inline">\(B&#39; = \{ \v_2, \v_1
+                \}\)</span>, the same vector <span
+                class="math inline">\(\v\)</span> would have coordinates
+                <span class="math inline">\([\v]_{B&#39;} =
+                \begin{bmatrix} 5 \\ 3 \end{bmatrix}\)</span>. The
+                underlying space is the same, but the coordinate
+                representation depends on the ordering.</p>
+                </div>
+                <div class="remark small-env" data-env-type="remark">
+                <p><em>Remark</em><em>.</em> The map <span
+                class="math inline">\(\v \mapsto [\v]_B\)</span>
+                provides a way to treat any abstract <span
+                class="math inline">\(n\)</span>-dimensional vector
+                space as if it were simply <span
+                class="math inline">\(F^n\)</span>. This is the power of
+                a basis.</p>
+                </div>
+            </article>
+
+            <!-- Page Navigation -->
+            <nav class="page-navigation">
+                <div class="nav-page nav-page-previous">
+                                        <a href="04-independence.html" class="pagination-link" aria-label="Linear
+Independence">
+                        <i class="bi bi-arrow-left-short"></i>
+                        <span
+                            class="nav-page-text">1.4 Linear
+Independence</span>
+                    </a>
+                                    </div>
+                <div class="nav-page nav-page-next">
+                                        <a href="06-dimension.html" class="pagination-link" aria-label="Sifting
+and the Replacement Theorem">
+                        <span
+                            class="nav-page-text">1.6 Sifting and the
+Replacement Theorem</span>
+                        <i class="bi bi-arrow-right-short"></i>
+                    </a>
+                                    </div>
+            </nav>
+        </main>
+
+        <!-- Right Sidebar (TOC) -->
+        <aside id="quarto-margin-sidebar">
+            <nav class="toc">
+                <h2>Table of contents</h2>
+                            </nav>
+
+            <div class="other-formats">
+                <h3>Other Formats</h3>
+                <ul>
+                    <li><a href="../pdf/ch01-vector-spaces/05-basis.pdf" target="_blank">PDF</a></li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Tooltip Script -->
+    <script src="../main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0.7 Matrices – Linear Algebra</title>
+
+    <!-- Styles -->
+    <!-- Styles -->
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- MathJax Configuration with Custom Macros -->
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['\\(', '\\)']],
+                displayMath: [['\\[', '\\]']],
+                processEscapes: true,
+                processEnvironments: true,
+                tags: 'ams',
+                macros: {
+                    0: "\\mathbf{0}",
+                    1: "\\mathbf{1}",
+                    A: "\\mathbf{A}",
+                    B: "\\mathbf{B}",
+                    C: "\\mathbf{C}",
+                    Cor: "\\operatorname*{Cor}",
+                    Corr: "\\operatorname*{Corr}",
+                    Cov: "\\operatorname*{Cov}",
+                    D: "\\mathbf{D}",
+                    E: "\\mathbf{E}",
+                    Ev: "\\operatorname*{\\mathbb{E}}",
+                    F: "\\mathbf{F}",
+                    G: "\\mathbf{G}",
+                    H: "\\mathbf{H}",
+                    I: "\\mathbf{I}",
+                    J: "\\mathbf{J}",
+                    K: "\\mathbf{K}",
+                    L: "\\mathbf{L}",
+                    M: "\\mathbf{M}",
+                    N: "\\mathbf{N}",
+                    O: "\\mathbf{O}",
+                    P: "\\mathbf{P}",
+                    Pr: "\\operatorname{Pr}",
+                    Q: "\\mathbf{Q}",
+                    R: "\\mathbf{R}",
+                    S: "\\mathbf{S}",
+                    Span: "\\operatorname{span}",
+                    T: "\\mathbf{T}",
+                    U: "\\mathbf{U}",
+                    V: "\\mathbf{V}",
+                    Var: "\\operatorname*{Var}",
+                    W: "\\mathbf{W}",
+                    X: "\\mathbf{X}",
+                    Y: "\\mathbf{Y}",
+                    Z: "\\mathbf{Z}",
+                    a: "\\mathbf{a}",
+                    adj: "\\operatorname{adj}",
+                    b: "\\mathbf{b}",
+                    c: "\\mathbf{c}",
+                    cA: "\\mathcal{A}",
+                    cB: "\\mathcal{B}",
+                    cC: "\\mathcal{C}",
+                    cD: "\\mathcal{D}",
+                    cE: "\\mathcal{E}",
+                    cF: "\\mathcal{F}",
+                    cG: "\\mathcal{G}",
+                    cH: "\\mathcal{H}",
+                    cI: "\\mathcal{I}",
+                    cJ: "\\mathcal{J}",
+                    cK: "\\mathcal{K}",
+                    cL: "\\mathcal{L}",
+                    cM: "\\mathcal{M}",
+                    cN: "\\mathcal{N}",
+                    cO: "\\mathcal{O}",
+                    cP: "\\mathcal{P}",
+                    cQ: "\\mathcal{Q}",
+                    cR: "\\mathcal{R}",
+                    cS: "\\mathcal{S}",
+                    cT: "\\mathcal{T}",
+                    cU: "\\mathcal{U}",
+                    cV: "\\mathcal{V}",
+                    cW: "\\mathcal{W}",
+                    cX: "\\mathcal{X}",
+                    cY: "\\mathcal{Y}",
+                    cZ: "\\mathcal{Z}",
+                    col: "\\text{col}",
+                    coloneqq: "\\mathrel{:=}",
+                    d: "\\mathbf{d}",
+                    dd: "\\mathrm{d}",
+                    defeq: "\\stackrel{\\smash{\\textnormal{\\tiny def}}}{=}",
+                    diag: "\\operatorname{diag}",
+                    distBern: "\\operatorname{Ber}",
+                    distBeta: "\\operatorname{Beta}",
+                    distBin: "\\operatorname{Bin}",
+                    distCauchy: "\\operatorname{Cauchy}",
+                    distDir: "\\operatorname{Dir}",
+                    distExp: "\\operatorname{Exp}",
+                    distGamma: "\\operatorname{Gamma}",
+                    distGeom: "\\operatorname{Geo}",
+                    distHyp: "\\operatorname{Hyp}",
+                    distInvWishart: "\\operatorname{InvWishart}",
+                    distLognormal: "\\operatorname{Lognormal}",
+                    distMult: "\\operatorname{Mult}",
+                    distN: "\\operatorname{\\mathcal{N}}",
+                    distNB: "\\operatorname{NB}",
+                    distPareto: "\\operatorname{Pareto}",
+                    distPois: "\\operatorname{Poi}",
+                    distUnif: "\\operatorname{Unif}",
+                    distWeibull: "\\operatorname{Weibull}",
+                    distWishart: "\\operatorname{Wishart}",
+                    e: "\\mathbf{e}",
+                    eqqcolon: "\\mathrel{=:}",
+                    f: "\\mathbf{f}",
+                    g: "\\mathbf{g}",
+                    h: "\\mathbf{h}",
+                    i: "\\mathbf{i}",
+                    id: "\\operatorname{id}",
+                    im: "\\operatorname{im}",
+                    img: "\\operatorname{img}",
+                    j: "\\mathbf{j}",
+                    k: "\\mathbf{k}",
+                    ker: "\\operatorname{ker}",
+                    l: "\\mathbf{l}",
+                    m: "\\mathbf{m}",
+                    n: "\\mathbf{n}",
+                    nA: "\\mathbb{A}",
+                    nB: "\\mathbb{B}",
+                    nC: "\\mathbb{C}",
+                    nD: "\\mathbb{D}",
+                    nE: "\\mathbb{E}",
+                    nF: "\\mathbb{F}",
+                    nG: "\\mathbb{G}",
+                    nH: "\\mathbb{H}",
+                    nI: "\\mathbb{I}",
+                    nJ: "\\mathbb{J}",
+                    nK: "\\mathbb{K}",
+                    nL: "\\mathbb{L}",
+                    nM: "\\mathbb{M}",
+                    nN: "\\mathbb{N}",
+                    nO: "\\mathbb{O}",
+                    nP: "\\mathbb{P}",
+                    nQ: "\\mathbb{Q}",
+                    nR: "\\mathbb{R}",
+                    nS: "\\mathbb{S}",
+                    nT: "\\mathbb{T}",
+                    nU: "\\mathbb{U}",
+                    nV: "\\mathbb{V}",
+                    nW: "\\mathbb{W}",
+                    nX: "\\mathbb{X}",
+                    nY: "\\mathbb{Y}",
+                    nZ: "\\mathbb{Z}",
+                    nul: "\\text{nul}",
+                    nullity: "\\text{nullity}",
+                    o: "\\mathbf{o}",
+                    p: "\\mathbf{p}",
+                    q: "\\mathbf{q}",
+                    r: "\\mathbf{r}",
+                    rank: "\\text{rank}",
+                    row: "\\text{row}",
+                    s: "\\mathbf{s}",
+                    sA: "\\mathcal{A}",
+                    sB: "\\mathcal{B}",
+                    sC: "\\mathcal{C}",
+                    sD: "\\mathcal{D}",
+                    sE: "\\mathcal{E}",
+                    sF: "\\mathcal{F}",
+                    sG: "\\mathcal{G}",
+                    sH: "\\mathcal{H}",
+                    sI: "\\mathcal{I}",
+                    sJ: "\\mathcal{J}",
+                    sK: "\\mathcal{K}",
+                    sL: "\\mathcal{L}",
+                    sM: "\\mathcal{M}",
+                    sN: "\\mathcal{N}",
+                    sO: "\\mathcal{O}",
+                    sP: "\\mathcal{P}",
+                    sQ: "\\mathcal{Q}",
+                    sR: "\\mathcal{R}",
+                    sS: "\\mathcal{S}",
+                    sT: "\\mathcal{T}",
+                    sU: "\\mathcal{U}",
+                    sV: "\\mathcal{V}",
+                    sW: "\\mathcal{W}",
+                    sX: "\\mathcal{X}",
+                    sY: "\\mathcal{Y}",
+                    sZ: "\\mathcal{Z}",
+                    spn: "\\text{span}",
+                    t: "\\mathbf{t}",
+                    tr: "\\text{tr}",
+                    u: "\\mathbf{u}",
+                    v: "\\mathbf{v}",
+                    vDelta: "\\bm{\\Delta}",
+                    vGamma: "\\bm{\\Gamma}",
+                    vLambda: "\\bm{\\Lambda}",
+                    vOmega: "\\bm{\\Omega}",
+                    vPhi: "\\bm{\\Phi}",
+                    vPi: "\\bm{\\Pi}",
+                    vPsi: "\\bm{\\Psi}",
+                    vSigma: "\\bm{\\Sigma}",
+                    vTheta: "\\bm{\\Theta}",
+                    vUpsilon: "\\bm{\\Upsilon}",
+                    vXi: "\\bm{\\Xi}",
+                    valpha: "\\bm{\\upalpha}",
+                    vbeta: "\\bm{\\upbeta}",
+                    vchi: "\\bm{\\upchi}",
+                    vdelta: "\\bm{\\updelta}",
+                    vepsilon: "\\bm{\\upepsilon}",
+                    veta: "\\bm{\\upeta}",
+                    vgamma: "\\bm{\\upgamma}",
+                    viota: "\\bm{\\upiota}",
+                    vkappa: "\\bm{\\upkappa}",
+                    vlambda: "\\bm{\\uplambda}",
+                    vmu: "\\bm{\\upmu}",
+                    vnu: "\\bm{\\upnu}",
+                    vomega: "\\bm{\\upomega}",
+                    vphi: "\\bm{\\upphi}",
+                    vpi: "\\bm{\\uppi}",
+                    vpsi: "\\bm{\\uppsi}",
+                    vrho: "\\bm{\\uprho}",
+                    vsigma: "\\bm{\\upsigma}",
+                    vtau: "\\bm{\\uptau}",
+                    vtheta: "\\bm{\\uptheta}",
+                    vupsilon: "\\bm{\\upupsilon}",
+                    vvarepsilon: "\\bm{\\upvarepsilon}",
+                    vvarphi: "\\bm{\\upvarphi}",
+                    vvarpi: "\\bm{\\upvarpi}",
+                    vvarrho: "\\bm{\\upvarrho}",
+                    vvarsigma: "\\bm{\\upvarsigma}",
+                    vvartheta: "\\bm{\\upvartheta}",
+                    vxi: "\\bm{\\upxi}",
+                    vzeta: "\\bm{\\upzeta}",
+                    w: "\\mathbf{w}",
+                    x: "\\mathbf{x}",
+                    y: "\\mathbf{y}",
+                    z: "\\mathbf{z}"
+                },
+                // Define environments not in base amsmath
+                environments: {
+                    dcases: ["\\left\\{\\begin{array}{ll}", "\\end{array}\\right."]
+                }
+            },
+            options: {
+                skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"></script>
+
+    <!-- Tippy.js for tooltips -->
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
+    <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/shift-away.css">
+
+        
+        <script>
+        (function(){
+          if (typeof window.MathJax === 'undefined') window.MathJax = {};
+          if (typeof window.MathJax.tex === 'undefined') window.MathJax.tex = {};
+          if (typeof window.MathJax.tex.macros === 'undefined') window.MathJax.tex.macros = {};
+          Object.assign(window.MathJax.tex.macros, {
+                    "\limi": "\\lim_{#1 \\to \\infty}",
+                    "\abs": "\\left| #1 \\right|",
+                    "\limz": "\\lim_{#1 \\to 0}",
+                    "\tr": "\\text{tr}",
+                    "\tdd": "\\frac{d^2 #1}{d #2^2}",
+                    "\bb": "\\mathbb{#1}",
+                    "\pdd": "\\frac{\\partial^2 #1}{\\partial #2^2}",
+                    "\col": "\\text{col}",
+                    "\interior": "\\text{int}\\left( #1 \\right)",
+                    "\Exp": "\\mathbb{E}\\left[ #1 \\right]",
+                    "\card": "\\left| #1 \\right|",
+                    "\expect": "\\langle #1 \\rangle",
+                    "\row": "\\text{row}",
+                    "\Uniform": "\\text{Uniform}\\left( #1, #2 \\right)",
+                    "\td": "\\frac{d #1}{d #2}",
+                    "\closure": "\\overline{#1}",
+                    "\defeq": "\\stackrel{\\smash{\\textnormal{\\tiny def}}}{=}",
+                    "\Var": "\\text{Var}\\left( #1 \\right)",
+                    "\braket": "\\langle #1 | #2 \\rangle",
+                    "\ket": "| #1 \\rangle",
+                    "\rom": "\\mathrm{#1}",
+                    "\bm": "\\mathbf{#1}",
+                    "\cl": "\\mathcal{#1}",
+                    "\boundary": "\\partial #1",
+                    "\Cov": "\\text{Cov}\\left( #1, #2 \\right)",
+                    "\Prob": "\\mathbb{P}\\left( #1 \\right)",
+                    "\spn": "\\text{span}",
+                    "\norm": "\\left\\| #1 \\right\\|",
+                    "\nul": "\\text{nul}",
+                    "\rank": "\\text{rank}",
+                    "\pd": "\\frac{\\partial #1}{\\partial #2}",
+                    "\nullity": "\\text{nullity}",
+                    "\powerset": "\\mathcal{P}\\left( #1 \\right)",
+                    "\bra": "\\langle #1 |",
+                    "\Normal": "\\mathcal{N}\\left( #1, #2 \\right)",
+                    "\ketbra": "| #1 \\rangle\\langle #2 |"
+          });
+        })();
+        </script>
+    </head>
+
+<body>
+    <div id="quarto-container">
+        <!-- Left Sidebar Navigation -->
+        <nav id="quarto-sidebar">
+            <div class="sidebar-header">
+                <a href="../index.html" class="sidebar-title">
+                    Linear Algebra
+                </a>
+                <div class="sidebar-tools">
+                    <a href="../book/book.pdf" title="Full Book PDF" target="_blank">
+                        <i class="bi bi-file-pdf" style="font-size: 1.1rem"></i>
+                    </a>
+                    <a href="https://github.com/youruser/yourrepo" title="Source Code" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            viewBox="0 0 16 16">
+                            <path
+                                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="sidebar-search">
+                <i class="bi bi-search"></i>
+                <input type="text" class="search-input" id="search-input" placeholder="">
+            </div>
+
+            <nav class="sidebar-nav">
+                                <ul class="nav-list">
+                    <li><a href="../index.html">Preface</a></li>
+                </ul>
+                            </nav>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main id="quarto-content">
+
+
+            <article class="content">
+                <!-- Page title removed to avoid duplication with content H1 -->
+                <!-- Quarto-style Title Block -->
+                <header id="title-block-header" class="quarto-title-block default">
+                                        <nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block"
+                        aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="../ch00-foundations/index.html">Preliminary</a></li>
+                        <li class="breadcrumb-item"><a href="../ch00-foundations/07-matrices.html"><span class="chapter-number">0.7</span>&nbsp; <span class="chapter-title">Matrices</span></a></li>
+                        </ol>
+                    </nav>
+                                        <div class="quarto-title">
+                        <h1 class="title">
+                            <span class="chapter-number">0.7</span>&nbsp; 
+                            <span class="chapter-title">Matrices</span>
+                        </h1>
+                    </div>
+                </header>
+
+                <div id="matrices">
+
+                </div>
+                <div id="def-matrix" class="definition"
+                data-env-type="definition" data-number="0.7.1"
+                style="border-left-color: #c94c6c; background-color: #fdf2f4; ">
+                <span
+                class="theorem-title theorem-title-resolved"><strong>Definition</strong><strong>
+                0.7.1</strong> (Matrix)</span>
+                <p>An <span class="math inline">\(m \times n\)</span>
+                <strong>matrix</strong> over a field <span
+                class="math inline">\(F\)</span> is a rectangular array
+                of elements from <span class="math inline">\(F\)</span>
+                arranged in <span class="math inline">\(m\)</span> rows
+                and <span class="math inline">\(n\)</span> columns:
+                <span class="math display">\[
+                    \A = \begin{bmatrix}
+                        a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1n} \\
+                        a_{21} &amp; a_{22} &amp; \cdots &amp; a_{2n} \\
+                        \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+                        a_{m1} &amp; a_{m2} &amp; \cdots &amp; a_{mn}
+                    \end{bmatrix}.
+                \]</span></p>
+                </div>
+                <div class="remark small-env" data-env-type="remark">
+                <p><em>Remark</em><em>.</em> <span
+                class="math inline">\(M_{m \times n}(F)\)</span> is the
+                set of all matrices of size <span
+                class="math inline">\(m \times n\)</span> and have
+                entries in <span class="math inline">\(F\)</span>. In
+                the above definition, we can write <span
+                class="math inline">\(\A \in M_{m \times
+                n}(F)\)</span>.</p>
+                <p>Moreover, when <span class="math inline">\(m =
+                n\)</span>, we abbreviate <span
+                class="math inline">\(M_{m \times n}(F)\)</span> to
+                <span class="math inline">\(M_n(F)\)</span>.</p>
+                </div>
+                <div id="exm-matrices" class="example"
+                data-env-type="example" data-number=""
+                style="border-left-color: #3a8a3a; background-color: #eef7ee; ">
+                <span
+                class="theorem-title theorem-title-resolved"><strong>Example</strong>
+                (Matrices)</span>
+                <p>Here are some examples of matrices: <span
+                class="math display">\[
+                    \begin{bmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{bmatrix}
+                \in M_2(\nR), \quad
+                    \begin{bmatrix} 1 &amp; 0 &amp; -1 \\ 2 &amp; 5
+                &amp; 3 \end{bmatrix} \in M_{2 \times 3}(\nR), \quad
+                    \begin{bmatrix} i &amp; 1+i \\ 0 &amp; 2-i
+                \end{bmatrix} \in M_2(\nC).
+                \]</span></p>
+                </div>
+                <h2 id="special-matrices"><span
+                class="header-section-number">0.7.1. </span> Special
+                Matrices</h2>
+                <div id="def-zero-matrix" class="definition"
+                data-env-type="definition" data-number="0.7.2"
+                style="border-left-color: #c94c6c; background-color: #fdf2f4; ">
+                <span
+                class="theorem-title theorem-title-resolved"><strong>Definition</strong><strong>
+                0.7.2</strong> (Zero Matrix)</span>
+                <p>The <strong>zero matrix</strong> <span
+                class="math inline">\(\O \in M_{m \times n}(F)\)</span>
+                is the matrix with all entries equal to zero: <span
+                class="math display">\[
+                    \O = \begin{bmatrix}
+                        0 &amp; 0 &amp; \cdots &amp; 0 \\
+                        0 &amp; 0 &amp; \cdots &amp; 0 \\
+                        \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+                        0 &amp; 0 &amp; \cdots &amp; 0
+                    \end{bmatrix}.
+                \]</span></p>
+                </div>
+                <div id="def-identity-matrix" class="definition"
+                data-env-type="definition" data-number="0.7.3"
+                style="border-left-color: #c94c6c; background-color: #fdf2f4; ">
+                <span
+                class="theorem-title theorem-title-resolved"><strong>Definition</strong><strong>
+                0.7.3</strong> (Identity Matrix)</span>
+                <p>The <strong>identity matrix</strong> <span
+                class="math inline">\(\I_n \in M_n(F)\)</span> is the
+                <span class="math inline">\(n \times n\)</span> square
+                matrix with <span class="math inline">\(1\)</span>s on
+                the diagonal and <span class="math inline">\(0\)</span>s
+                elsewhere: <span class="math display">\[
+                    \I_n = \begin{bmatrix}
+                        1 &amp; 0 &amp; \cdots &amp; 0 \\
+                        0 &amp; 1 &amp; \cdots &amp; 0 \\
+                        \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+                        0 &amp; 0 &amp; \cdots &amp; 1
+                    \end{bmatrix}.
+                \]</span> When the size is clear from context, we simply
+                write <span class="math inline">\(\I\)</span>.</p>
+                </div>
+                <div id="def-transpose" class="definition"
+                data-env-type="definition" data-number="0.7.4"
+                style="border-left-color: #c94c6c; background-color: #fdf2f4; ">
+                <span
+                class="theorem-title theorem-title-resolved"><strong>Definition</strong><strong>
+                0.7.4</strong> (Transpose)</span>
+                <p>Let <span class="math inline">\(\A = (a_{ij}) \in
+                M_{m \times n}(F)\)</span>. The
+                <strong>transpose</strong> of <span
+                class="math inline">\(\A\)</span>, denoted <span
+                class="math inline">\(\A^\top\)</span>, is the <span
+                class="math inline">\(n \times m\)</span> matrix
+                obtained by swapping rows and columns: <span
+                class="math display">\[
+                    (\A^\top)_{ij} = a_{ji}.
+                \]</span> Visually, the rows of <span
+                class="math inline">\(\A\)</span> become the columns of
+                <span class="math inline">\(\A^\top\)</span>: <span
+                class="math display">\[
+                    \begin{bmatrix} a &amp; b &amp; c \\ d &amp; e &amp;
+                f \end{bmatrix}^\top = \begin{bmatrix} a &amp; d \\ b
+                &amp; e \\ c &amp; f \end{bmatrix}.
+                \]</span></p>
+                </div>
+                <div id="def-symmetric-matrix" class="definition"
+                data-env-type="definition" data-number="0.7.5"
+                style="border-left-color: #c94c6c; background-color: #fdf2f4; ">
+                <span
+                class="theorem-title theorem-title-resolved"><strong>Definition</strong><strong>
+                0.7.5</strong> (Symmetric Matrix)</span>
+                <p>A square matrix <span class="math inline">\(\A \in
+                M_n(F)\)</span> is <strong>symmetric</strong> if <span
+                class="math inline">\(\A = \A^\top\)</span>. This means
+                it is symmetric across its main diagonal: <span
+                class="math display">\[
+                    \A = \begin{bmatrix}
+                        a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1n} \\
+                        a_{12} &amp; a_{22} &amp; \cdots &amp; a_{2n} \\
+                        \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+                        a_{1n} &amp; a_{2n} &amp; \cdots &amp; a_{nn}
+                    \end{bmatrix}.
+                \]</span></p>
+                </div>
+                <div id="def-diagonal-matrix" class="definition"
+                data-env-type="definition" data-number="0.7.6"
+                style="border-left-color: #c94c6c; background-color: #fdf2f4; ">
+                <span
+                class="theorem-title theorem-title-resolved"><strong>Definition</strong><strong>
+                0.7.6</strong> (Diagonal Matrix)</span>
+                <p>A square matrix <span class="math inline">\(\A \in
+                M_n(F)\)</span> is <strong>diagonal</strong> if all
+                entries off the main diagonal are zero: <span
+                class="math display">\[
+                    \A = \begin{bmatrix}
+                        d_1 &amp; 0 &amp; \cdots &amp; 0 \\
+                        0 &amp; d_2 &amp; \cdots &amp; 0 \\
+                        \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+                        0 &amp; 0 &amp; \cdots &amp; d_n
+                    \end{bmatrix}.
+                \]</span> We often write <span class="math inline">\(\A
+                = \diag(d_1, d_2, \ldots, d_n)\)</span>.</p>
+                </div>
+                <div id="def-upper-triangular" class="definition"
+                data-env-type="definition" data-number="0.7.7"
+                style="border-left-color: #c94c6c; background-color: #fdf2f4; ">
+                <span
+                class="theorem-title theorem-title-resolved"><strong>Definition</strong><strong>
+                0.7.7</strong> (Upper Triangular Matrix)</span>
+                <p>A square matrix <span class="math inline">\(\A \in
+                M_n(F)\)</span> is <strong>upper triangular</strong> if
+                all entries below the main diagonal are zero: <span
+                class="math display">\[
+                    \A = \begin{bmatrix}
+                        a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1n} \\
+                        0 &amp; a_{22} &amp; \cdots &amp; a_{2n} \\
+                        \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+                        0 &amp; 0 &amp; \cdots &amp; a_{nn}
+                    \end{bmatrix}.
+                \]</span></p>
+                </div>
+                <div id="exm-zero-identity" class="example"
+                data-env-type="example" data-number=""
+                style="border-left-color: #3a8a3a; background-color: #eef7ee; ">
+                <span
+                class="theorem-title theorem-title-resolved"><strong>Example</strong>
+                (Zero and Identity Matrices)</span>
+                <p><span class="math display">\[
+                    \O_{2 \times 3} = \begin{bmatrix} 0 &amp; 0 &amp; 0
+                \\ 0 &amp; 0 &amp; 0 \end{bmatrix}, \quad
+                    \I_2 = \begin{bmatrix} 1 &amp; 0 \\ 0 &amp; 1
+                \end{bmatrix}, \quad
+                    \I_3 = \begin{bmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp;
+                1 &amp; 0 \\ 0 &amp; 0 &amp; 1 \end{bmatrix}.
+                \]</span></p>
+                </div>
+                <div id="exm-special-matrices" class="example"
+                data-env-type="example" data-number=""
+                style="border-left-color: #3a8a3a; background-color: #eef7ee; ">
+                <span
+                class="theorem-title theorem-title-resolved"><strong>Example</strong>
+                (Examples of Special Matrices)</span>
+                <p>Here are concrete examples illustrating the special
+                types of matrices defined above:</p>
+                <ul>
+                <li><strong>Transpose:</strong> <span
+                class="math inline">\(\begin{bmatrix} 1 &amp; 2 &amp; 3
+                \\ 4 &amp; 5 &amp; 6 \end{bmatrix}^\top =
+                \begin{bmatrix} 1 &amp; 4 \\ 2 &amp; 5 \\ 3 &amp; 6
+                \end{bmatrix}\)</span>.</li>
+                <li><strong>Symmetric:</strong> <span
+                class="math inline">\(\begin{bmatrix} 1 &amp; 2 &amp; 3
+                \\ 2 &amp; 4 &amp; 5 \\ 3 &amp; 5 &amp; 6
+                \end{bmatrix}\)</span> is symmetric since <span
+                class="math inline">\(a_{ij} = a_{ji}\)</span>.</li>
+                <li><strong>Diagonal:</strong> <span
+                class="math inline">\(\diag(3, -1, 0) = \begin{bmatrix}
+                3 &amp; 0 &amp; 0 \\ 0 &amp; -1 &amp; 0 \\ 0 &amp; 0
+                &amp; 0 \end{bmatrix}\)</span>.</li>
+                <li><strong>Upper Triangular:</strong> <span
+                class="math inline">\(\begin{bmatrix} 1 &amp; 2 &amp; 3
+                \\ 0 &amp; 4 &amp; 5 \\ 0 &amp; 0 &amp; 6
+                \end{bmatrix}\)</span>.</li>
+                </ul>
+                </div>
+                <h2 id="matrix-addition"><span
+                class="header-section-number">0.7.2. </span> Matrix
+                Addition</h2>
+                <div id="def-matrix-addition" class="definition"
+                data-env-type="definition" data-number="0.7.8"
+                style="border-left-color: #c94c6c; background-color: #fdf2f4; ">
+                <span
+                class="theorem-title theorem-title-resolved"><strong>Definition</strong><strong>
+                0.7.8</strong> (Matrix Addition)</span>
+                <p>Let <span class="math inline">\(\A =
+                (a_{ij})\)</span> and <span class="math inline">\(\B =
+                (b_{ij})\)</span> be matrices in <span
+                class="math inline">\(M_{m \times n}(F)\)</span>. Their
+                <strong>sum</strong> <span class="math inline">\(\A +
+                \B\)</span> is the matrix <span class="math inline">\(\C
+                = (c_{ij}) \in M_{m \times n}(F)\)</span> where: <span
+                class="math display">\[
+                    c_{ij} = a_{ij} + b_{ij}.
+                \]</span></p>
+                </div>
+                <div id="def-additive-inverse" class="definition"
+                data-env-type="definition" data-number="0.7.9"
+                style="border-left-color: #c94c6c; background-color: #fdf2f4; ">
+                <span
+                class="theorem-title theorem-title-resolved"><strong>Definition</strong><strong>
+                0.7.9</strong> (Additive Inverse)</span>
+                <p>The <strong>additive inverse</strong> (or
+                <strong>negation</strong>) of a matrix <span
+                class="math inline">\(\A = (a_{ij}) \in M_{m \times
+                n}(F)\)</span> is the matrix <span
+                class="math inline">\(-\A = (-a_{ij}) \in M_{m \times
+                n}(F)\)</span>.</p>
+                </div>
+                <div id="exm-matrix-addition" class="example"
+                data-env-type="example" data-number=""
+                style="border-left-color: #3a8a3a; background-color: #eef7ee; ">
+                <span
+                class="theorem-title theorem-title-resolved"><strong>Example</strong>
+                (Matrix Addition)</span>
+                <p>Let <span class="math inline">\(\A = \begin{bmatrix}
+                1 &amp; 2 \\ 3 &amp; 4 \end{bmatrix}\)</span> and <span
+                class="math inline">\(\B = \begin{bmatrix} 5 &amp; 6 \\
+                7 &amp; 8 \end{bmatrix}\)</span>. Then: <span
+                class="math display">\[
+                    \A + \B = \begin{bmatrix} 1 &amp; 2 \\ 3 &amp; 4
+                \end{bmatrix} + \begin{bmatrix} 5 &amp; 6 \\ 7 &amp; 8
+                \end{bmatrix}
+                    = \begin{bmatrix} 1+5 &amp; 2+6 \\ 3+7 &amp; 4+8
+                \end{bmatrix}
+                    = \begin{bmatrix} 6 &amp; 8 \\ 10 &amp; 12
+                \end{bmatrix}.
+                \]</span></p>
+                </div>
+                <div id="thm-matrix-addition-properties" class="theorem"
+                data-env-type="theorem" data-number="0.7.1"
+                style="border-left-color: #3b6eda; background-color: #f0f5ff; ">
+                <span
+                class="theorem-title theorem-title-resolved"><strong>Theorem</strong><strong>
+                0.7.1</strong> (Properties of Matrix Addition)</span>
+                <p>Let <span class="math inline">\(\A, \B, \C \in M_{m
+                \times n}(F)\)</span>. Then:</p>
+                <ol type="1">
+                <li><span class="math inline">\(\A + \B = \B +
+                \A\)</span> (Commutativity)</li>
+                <li><span class="math inline">\((\A + \B) + \C = \A +
+                (\B + \C)\)</span> (Associativity)</li>
+                <li><span class="math inline">\(\A + \O = \A\)</span>
+                (Additive identity)</li>
+                <li><span class="math inline">\(\A + (-\A) = \O\)</span>
+                (Additive inverse)</li>
+                </ol>
+                </div>
+                <div class="proof small-env" data-env-type="proof">
+                <p><em>Proof</em><em>.</em> We prove commutativity. Let
+                <span class="math inline">\(\A = (a_{ij})\)</span> and
+                <span class="math inline">\(\B = (b_{ij})\)</span>.
+                Then: <span class="math display">\[
+                    (\A + \B)_{ij} = a_{ij} + b_{ij} = b_{ij} + a_{ij} =
+                (\B + \A)_{ij}
+                \]</span> where the second equality uses commutativity
+                of addition in the underlying field. Since this holds
+                for all <span class="math inline">\(i, j\)</span>, we
+                have <span class="math inline">\(\A + \B = \B +
+                \A\)</span>.</p>
+                <p>The remaining properties follow similarly.</p>
+                </div>
+                <h2 id="matrix-multiplication"><span
+                class="header-section-number">0.7.3. </span> Matrix
+                Multiplication</h2>
+                <div id="def-matrix-multiplication" class="definition"
+                data-env-type="definition" data-number="0.7.10"
+                style="border-left-color: #c94c6c; background-color: #fdf2f4; ">
+                <span
+                class="theorem-title theorem-title-resolved"><strong>Definition</strong><strong>
+                0.7.10</strong> (Matrix Multiplication)</span>
+                <p>Let <span class="math inline">\(\A = (a_{ij}) \in
+                M_{m \times n}(F)\)</span> and <span
+                class="math inline">\(\B = (b_{jk}) \in M_{n \times
+                p}(F)\)</span>. Their <strong>product</strong> <span
+                class="math inline">\(\A\B\)</span> is the matrix <span
+                class="math inline">\(\C = (c_{ik}) \in M_{m \times
+                p}(F)\)</span> where: <span class="math display">\[
+                    c_{ik} = \sum_{j=1}^{n} a_{ij} b_{jk}
+                \]</span> In other words, the <span
+                class="math inline">\((i, k)\)</span>-entry of <span
+                class="math inline">\(\A\B\)</span> is the dot product
+                of the <span class="math inline">\(i\)</span>-th row of
+                <span class="math inline">\(\A\)</span> with the <span
+                class="math inline">\(k\)</span>-th column of <span
+                class="math inline">\(\B\)</span>.</p>
+                </div>
+                <div id="exm-matrix-multiplication" class="example"
+                data-env-type="example" data-number=""
+                style="border-left-color: #3a8a3a; background-color: #eef7ee; ">
+                <span
+                class="theorem-title theorem-title-resolved"><strong>Example</strong>
+                (Matrix Multiplication)</span>
+                <p>Let <span class="math inline">\(\A = \begin{bmatrix}
+                1 &amp; 2 \\ 3 &amp; 4 \end{bmatrix} \in
+                M_2(\nR)\)</span> and <span class="math inline">\(\B =
+                \begin{bmatrix} 5 &amp; 6 \\ 7 &amp; 8 \end{bmatrix} \in
+                M_2(\nR)\)</span>. We compute <span
+                class="math inline">\(\A\B\)</span> entry by entry:
+                <span class="math display">\[\begin{align*}
+                        (\A\B)_{11} &amp;= (1)(5) + (2)(7) = 5 + 14 = 19
+                \\
+                        (\A\B)_{12} &amp;= (1)(6) + (2)(8) = 6 + 16 = 22
+                \\
+                        (\A\B)_{21} &amp;= (3)(5) + (4)(7) = 15 + 28 =
+                43 \\
+                        (\A\B)_{22} &amp;= (3)(6) + (4)(8) = 18 + 32 =
+                50
+                \end{align*}\]</span> Therefore: <span
+                class="math display">\[
+                    \A\B = \begin{bmatrix} 1 &amp; 2 \\ 3 &amp; 4
+                \end{bmatrix} \begin{bmatrix} 5 &amp; 6 \\ 7 &amp; 8
+                \end{bmatrix} = \begin{bmatrix} 19 &amp; 22 \\ 43 &amp;
+                50 \end{bmatrix}
+                \]</span></p>
+                </div>
+                <div id="exm-matrix-multiplication-dimensions"
+                class="example" data-env-type="example" data-number=""
+                style="border-left-color: #3a8a3a; background-color: #eef7ee; ">
+                <span
+                class="theorem-title theorem-title-resolved"><strong>Example</strong>
+                (Matrix Multiplication with Different Dimensions)</span>
+                <p>Let <span class="math inline">\(\A = \begin{bmatrix}
+                1 &amp; 2 &amp; 3 \\ 4 &amp; 5 &amp; 6 \end{bmatrix} \in
+                M_{2 \times 3}(\nR)\)</span> and <span
+                class="math inline">\(\B = \begin{bmatrix} 1 \\ 0 \\ -1
+                \end{bmatrix} \in M_{3 \times 1}(\nR)\)</span>. The
+                product <span class="math inline">\(\A\B \in M_{2 \times
+                1}(\nR)\)</span>: <span class="math display">\[
+                    \A\B = \begin{bmatrix} 1 &amp; 2 &amp; 3 \\ 4 &amp;
+                5 &amp; 6 \end{bmatrix} \begin{bmatrix} 1 \\ 0 \\ -1
+                \end{bmatrix}
+                    = \begin{bmatrix} (1)(1) + (2)(0) + (3)(-1) \\
+                (4)(1) + (5)(0) + (6)(-1) \end{bmatrix}
+                    = \begin{bmatrix} 1 + 0 - 3 \\ 4 + 0 - 6
+                \end{bmatrix}
+                    = \begin{bmatrix} -2 \\ -2 \end{bmatrix}
+                \]</span> Note that <span
+                class="math inline">\(\B\A\)</span> is <strong>not
+                defined</strong> since the number of columns of <span
+                class="math inline">\(\B\)</span> (which is 1) does not
+                equal the number of rows of <span
+                class="math inline">\(\A\)</span> (which is 2).</p>
+                </div>
+                <div id="thm-matrix-multiplication-properties"
+                class="theorem" data-env-type="theorem"
+                data-number="0.7.2"
+                style="border-left-color: #3b6eda; background-color: #f0f5ff; ">
+                <span
+                class="theorem-title theorem-title-resolved"><strong>Theorem</strong><strong>
+                0.7.2</strong> (Properties of Matrix
+                Multiplication)</span>
+                <p>Let <span class="math inline">\(\A, \B, \C\)</span>
+                be matrices of compatible dimensions. Then:</p>
+                <ol type="1">
+                <li><span class="math inline">\((\A\B)\C =
+                \A(\B\C)\)</span> (Associativity)</li>
+                <li><span class="math inline">\(\A(\B + \C) = \A\B +
+                \A\C\)</span> (Left distributivity)</li>
+                <li><span class="math inline">\((\A + \B)\C = \A\C +
+                \B\C\)</span> (Right distributivity)</li>
+                <li><span class="math inline">\(\A\I = \I\A =
+                \A\)</span> (Multiplicative identity)</li>
+                </ol>
+                </div>
+                <div class="proof small-env" data-env-type="proof">
+                <p><em>Proof</em><em>.</em> We prove associativity. Let
+                <span class="math inline">\(\A\)</span> be <span
+                class="math inline">\(m \times n\)</span>, <span
+                class="math inline">\(\B\)</span> be <span
+                class="math inline">\(n \times p\)</span>, and <span
+                class="math inline">\(\C\)</span> be <span
+                class="math inline">\(p \times q\)</span>. For any entry
+                <span class="math inline">\((i, \ell)\)</span>: <span
+                class="math display">\[\begin{align*}
+                        ((\A\B)\C)_{i\ell} &amp;= \sum_{k=1}^{p}
+                (\A\B)_{ik} c_{k\ell} = \sum_{k=1}^{p} \left(
+                \sum_{j=1}^{n} a_{ij} b_{jk} \right) c_{k\ell} \\
+                        &amp;= \sum_{k=1}^{p} \sum_{j=1}^{n} a_{ij}
+                b_{jk} c_{k\ell} = \sum_{j=1}^{n} \sum_{k=1}^{p} a_{ij}
+                b_{jk} c_{k\ell} \\
+                        &amp;= \sum_{j=1}^{n} a_{ij} \left(
+                \sum_{k=1}^{p} b_{jk} c_{k\ell} \right) = \sum_{j=1}^{n}
+                a_{ij} (\B\C)_{j\ell} \\
+                        &amp;= (\A(\B\C))_{i\ell}
+                \end{align*}\]</span></p>
+                </div>
+                <div class="remark small-env" data-env-type="remark">
+                <p><em>Remark</em><em>.</em> Matrix multiplication is
+                <strong>not</strong> commutative in general. That is,
+                <span class="math inline">\(\A\B \neq \B\A\)</span> even
+                when both products are defined.</p>
+                </div>
+                <h2 id="scalar-multiplication"><span
+                class="header-section-number">0.7.4. </span> Scalar
+                Multiplication</h2>
+                <div id="def-scalar-multiplication" class="definition"
+                data-env-type="definition" data-number="0.7.11"
+                style="border-left-color: #c94c6c; background-color: #fdf2f4; ">
+                <span
+                class="theorem-title theorem-title-resolved"><strong>Definition</strong><strong>
+                0.7.11</strong> (Scalar Multiplication)</span>
+                <p>Let <span class="math inline">\(\A = (a_{ij}) \in
+                M_{m \times n}(F)\)</span> and <span
+                class="math inline">\(c \in F\)</span> be a scalar. The
+                <strong>scalar multiple</strong> <span
+                class="math inline">\(c\A\)</span> is the matrix in
+                <span class="math inline">\(M_{m \times n}(F)\)</span>
+                with entries <span
+                class="math inline">\((ca_{ij})\)</span>.</p>
+                </div>
+                <h2 id="trace-of-a-matrix"><span
+                class="header-section-number">0.7.5. </span> Trace of a
+                Matrix</h2>
+                <div id="def-trace" class="definition"
+                data-env-type="definition" data-number="0.7.12"
+                style="border-left-color: #c94c6c; background-color: #fdf2f4; ">
+                <span
+                class="theorem-title theorem-title-resolved"><strong>Definition</strong><strong>
+                0.7.12</strong> (Trace)</span>
+                <p>Let <span class="math inline">\(\A = (a_{ij}) \in
+                M_n(F)\)</span> be a square matrix. The
+                <strong>trace</strong> of <span
+                class="math inline">\(\A\)</span>, denoted <span
+                class="math inline">\(\tr(\A)\)</span>, is the sum of
+                the entries on its main diagonal: <span
+                class="math display">\[
+                    \tr(\A) = \sum_{i=1}^n a_{ii} = a_{11} + a_{22} +
+                \cdots + a_{nn}.
+                \]</span></p>
+                </div>
+                <div id="exm-trace" class="example"
+                data-env-type="example" data-number=""
+                style="border-left-color: #3a8a3a; background-color: #eef7ee; ">
+                <span
+                class="theorem-title theorem-title-resolved"><strong>Example</strong>
+                (Trace)</span>
+                <p>Let <span class="math inline">\(\A = \begin{bmatrix}
+                1 &amp; 2 &amp; 3 \\ 4 &amp; 5 &amp; 6 \\ 7 &amp; 8
+                &amp; 9 \end{bmatrix}\)</span>. Then <span
+                class="math inline">\(\tr(\A) = 1 + 5 + 9 =
+                15\)</span>.</p>
+                </div>
+                <h2 id="properties-of-transpose-and-trace"><span
+                class="header-section-number">0.7.6. </span> Properties
+                of Transpose and Trace</h2>
+                <div id="thm-transpose-properties" class="theorem"
+                data-env-type="theorem" data-number="0.7.3"
+                style="border-left-color: #3b6eda; background-color: #f0f5ff; ">
+                <span
+                class="theorem-title theorem-title-resolved"><strong>Theorem</strong><strong>
+                0.7.3</strong> (Properties of Transpose)</span>
+                <p>Let <span class="math inline">\(\A, \B\)</span> be
+                matrices of compatible sizes and <span
+                class="math inline">\(c \in F\)</span>. Then:</p>
+                <ol type="1">
+                <li><span class="math inline">\((\A^\top)^\top =
+                \A\)</span></li>
+                <li><span class="math inline">\((\A + \B)^\top = \A^\top
+                + \B^\top\)</span></li>
+                <li><span class="math inline">\((c\A)^\top =
+                c\A^\top\)</span></li>
+                <li><span class="math inline">\((\A\B)^\top =
+                \B^\top\A^\top\)</span> (Reversal rule)</li>
+                </ol>
+                </div>
+                <div class="proof small-env" data-env-type="proof">
+                <p><em>Proof</em><em>.</em> We prove the reversal rule
+                <span class="math inline">\((\A\B)^\top =
+                \B^\top\A^\top\)</span>. Let <span
+                class="math inline">\(\A \in M_{m \times n}(F)\)</span>
+                and <span class="math inline">\(\B \in M_{n \times
+                p}(F)\)</span>. <span class="math display">\[
+                    ((\A\B)^\top)_{ij} = (\A\B)_{ji} = \sum_{k=1}^n
+                a_{jk} b_{ki}
+                \]</span> Now consider <span
+                class="math inline">\(\B^\top\A^\top\)</span>. Its <span
+                class="math inline">\((i, j)\)</span>-entry is: <span
+                class="math display">\[
+                    (\B^\top\A^\top)_{ij} = \sum_{k=1}^n (\B^\top)_{ik}
+                (\A^\top)_{kj} = \sum_{k=1}^n b_{ki} a_{jk} =
+                \sum_{k=1}^n a_{jk} b_{ki}
+                \]</span> Since the entries are equal for all <span
+                class="math inline">\(i, j\)</span>, we have <span
+                class="math inline">\((\A\B)^\top =
+                \B^\top\A^\top\)</span>.</p>
+                </div>
+                <div id="thm-trace-properties" class="theorem"
+                data-env-type="theorem" data-number="0.7.4"
+                style="border-left-color: #3b6eda; background-color: #f0f5ff; ">
+                <span
+                class="theorem-title theorem-title-resolved"><strong>Theorem</strong><strong>
+                0.7.4</strong> (Properties of Trace)</span>
+                <p>Let <span class="math inline">\(\A, \B \in
+                M_n(F)\)</span> and <span class="math inline">\(c \in
+                F\)</span>. Then:</p>
+                <ol type="1">
+                <li><span class="math inline">\(\tr(\A + \B) = \tr(\A) +
+                \tr(\B)\)</span></li>
+                <li><span class="math inline">\(\tr(c\A) =
+                c\tr(\A)\)</span></li>
+                <li><span class="math inline">\(\tr(\A^\top) =
+                \tr(\A)\)</span></li>
+                <li><span class="math inline">\(\tr(\A\B) =
+                \tr(\B\A)\)</span> (Cyclic property)</li>
+                </ol>
+                </div>
+                <div class="proof small-env" data-env-type="proof">
+                <p><em>Proof</em><em>.</em> We prove <span
+                class="math inline">\(\tr(\A\B) = \tr(\B\A)\)</span>.
+                <span class="math display">\[
+                    \tr(\A\B) = \sum_{i=1}^n (\A\B)_{ii} = \sum_{i=1}^n
+                \left( \sum_{j=1}^n a_{ij} b_{ji} \right)
+                \]</span> Rearranging the summation: <span
+                class="math display">\[
+                    \tr(\A\B) = \sum_{j=1}^n \sum_{i=1}^n b_{ji} a_{ij}
+                = \sum_{j=1}^n (\B\A)_{jj} = \tr(\B\A).
+                \]</span></p>
+                </div>
+            </article>
+
+            <!-- Page Navigation -->
+            <nav class="page-navigation">
+                <div class="nav-page nav-page-previous">
+                                        <a href="06-fields.html" class="pagination-link" aria-label="Fields">
+                        <i class="bi bi-arrow-left-short"></i>
+                        <span
+                            class="nav-page-text">0.6 Fields</span>
+                    </a>
+                                    </div>
+                <div class="nav-page nav-page-next">
+                                        <a href="../ch01-vector-spaces/index.html" class="pagination-link" aria-label="Vector
+Spaces and Dimensions">
+                        <span
+                            class="nav-page-text">Vector Spaces and
+Dimensions</span>
+                        <i class="bi bi-arrow-right-short"></i>
+                    </a>
+                                    </div>
+            </nav>
+        </main>
+
+        <!-- Right Sidebar (TOC) -->
+        <aside id="quarto-margin-sidebar">
+            <nav class="toc">
+                <h2>Table of contents</h2>
+                            </nav>
+
+            <div class="other-formats">
+                <h3>Other Formats</h3>
+                <ul>
+                    <li><a href="../pdf/ch00-foundations/07-matrices.pdf" target="_blank">PDF</a></li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Tooltip Script -->
+    <script src="../main.js"></script>
+</body>
+
+</html>

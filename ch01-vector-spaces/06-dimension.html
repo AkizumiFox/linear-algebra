@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1.6 Sifting and the Replacement Theorem – Linear
+Algebra</title>
+
+    <!-- Styles -->
+    <!-- Styles -->
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- MathJax Configuration with Custom Macros -->
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['\\(', '\\)']],
+                displayMath: [['\\[', '\\]']],
+                processEscapes: true,
+                processEnvironments: true,
+                tags: 'ams',
+                macros: {
+                    0: "\\mathbf{0}",
+                    1: "\\mathbf{1}",
+                    A: "\\mathbf{A}",
+                    B: "\\mathbf{B}",
+                    C: "\\mathbf{C}",
+                    Cor: "\\operatorname*{Cor}",
+                    Corr: "\\operatorname*{Corr}",
+                    Cov: "\\operatorname*{Cov}",
+                    D: "\\mathbf{D}",
+                    E: "\\mathbf{E}",
+                    Ev: "\\operatorname*{\\mathbb{E}}",
+                    F: "\\mathbf{F}",
+                    G: "\\mathbf{G}",
+                    H: "\\mathbf{H}",
+                    I: "\\mathbf{I}",
+                    J: "\\mathbf{J}",
+                    K: "\\mathbf{K}",
+                    L: "\\mathbf{L}",
+                    M: "\\mathbf{M}",
+                    N: "\\mathbf{N}",
+                    O: "\\mathbf{O}",
+                    P: "\\mathbf{P}",
+                    Pr: "\\operatorname{Pr}",
+                    Q: "\\mathbf{Q}",
+                    R: "\\mathbf{R}",
+                    S: "\\mathbf{S}",
+                    Span: "\\operatorname{span}",
+                    T: "\\mathbf{T}",
+                    U: "\\mathbf{U}",
+                    V: "\\mathbf{V}",
+                    Var: "\\operatorname*{Var}",
+                    W: "\\mathbf{W}",
+                    X: "\\mathbf{X}",
+                    Y: "\\mathbf{Y}",
+                    Z: "\\mathbf{Z}",
+                    a: "\\mathbf{a}",
+                    adj: "\\operatorname{adj}",
+                    b: "\\mathbf{b}",
+                    c: "\\mathbf{c}",
+                    cA: "\\mathcal{A}",
+                    cB: "\\mathcal{B}",
+                    cC: "\\mathcal{C}",
+                    cD: "\\mathcal{D}",
+                    cE: "\\mathcal{E}",
+                    cF: "\\mathcal{F}",
+                    cG: "\\mathcal{G}",
+                    cH: "\\mathcal{H}",
+                    cI: "\\mathcal{I}",
+                    cJ: "\\mathcal{J}",
+                    cK: "\\mathcal{K}",
+                    cL: "\\mathcal{L}",
+                    cM: "\\mathcal{M}",
+                    cN: "\\mathcal{N}",
+                    cO: "\\mathcal{O}",
+                    cP: "\\mathcal{P}",
+                    cQ: "\\mathcal{Q}",
+                    cR: "\\mathcal{R}",
+                    cS: "\\mathcal{S}",
+                    cT: "\\mathcal{T}",
+                    cU: "\\mathcal{U}",
+                    cV: "\\mathcal{V}",
+                    cW: "\\mathcal{W}",
+                    cX: "\\mathcal{X}",
+                    cY: "\\mathcal{Y}",
+                    cZ: "\\mathcal{Z}",
+                    col: "\\text{col}",
+                    coloneqq: "\\mathrel{:=}",
+                    d: "\\mathbf{d}",
+                    dd: "\\mathrm{d}",
+                    defeq: "\\stackrel{\\smash{\\textnormal{\\tiny def}}}{=}",
+                    diag: "\\operatorname{diag}",
+                    distBern: "\\operatorname{Ber}",
+                    distBeta: "\\operatorname{Beta}",
+                    distBin: "\\operatorname{Bin}",
+                    distCauchy: "\\operatorname{Cauchy}",
+                    distDir: "\\operatorname{Dir}",
+                    distExp: "\\operatorname{Exp}",
+                    distGamma: "\\operatorname{Gamma}",
+                    distGeom: "\\operatorname{Geo}",
+                    distHyp: "\\operatorname{Hyp}",
+                    distInvWishart: "\\operatorname{InvWishart}",
+                    distLognormal: "\\operatorname{Lognormal}",
+                    distMult: "\\operatorname{Mult}",
+                    distN: "\\operatorname{\\mathcal{N}}",
+                    distNB: "\\operatorname{NB}",
+                    distPareto: "\\operatorname{Pareto}",
+                    distPois: "\\operatorname{Poi}",
+                    distUnif: "\\operatorname{Unif}",
+                    distWeibull: "\\operatorname{Weibull}",
+                    distWishart: "\\operatorname{Wishart}",
+                    e: "\\mathbf{e}",
+                    eqqcolon: "\\mathrel{=:}",
+                    f: "\\mathbf{f}",
+                    g: "\\mathbf{g}",
+                    h: "\\mathbf{h}",
+                    i: "\\mathbf{i}",
+                    id: "\\operatorname{id}",
+                    im: "\\operatorname{im}",
+                    img: "\\operatorname{img}",
+                    j: "\\mathbf{j}",
+                    k: "\\mathbf{k}",
+                    ker: "\\operatorname{ker}",
+                    l: "\\mathbf{l}",
+                    m: "\\mathbf{m}",
+                    n: "\\mathbf{n}",
+                    nA: "\\mathbb{A}",
+                    nB: "\\mathbb{B}",
+                    nC: "\\mathbb{C}",
+                    nD: "\\mathbb{D}",
+                    nE: "\\mathbb{E}",
+                    nF: "\\mathbb{F}",
+                    nG: "\\mathbb{G}",
+                    nH: "\\mathbb{H}",
+                    nI: "\\mathbb{I}",
+                    nJ: "\\mathbb{J}",
+                    nK: "\\mathbb{K}",
+                    nL: "\\mathbb{L}",
+                    nM: "\\mathbb{M}",
+                    nN: "\\mathbb{N}",
+                    nO: "\\mathbb{O}",
+                    nP: "\\mathbb{P}",
+                    nQ: "\\mathbb{Q}",
+                    nR: "\\mathbb{R}",
+                    nS: "\\mathbb{S}",
+                    nT: "\\mathbb{T}",
+                    nU: "\\mathbb{U}",
+                    nV: "\\mathbb{V}",
+                    nW: "\\mathbb{W}",
+                    nX: "\\mathbb{X}",
+                    nY: "\\mathbb{Y}",
+                    nZ: "\\mathbb{Z}",
+                    nul: "\\text{nul}",
+                    nullity: "\\text{nullity}",
+                    o: "\\mathbf{o}",
+                    p: "\\mathbf{p}",
+                    q: "\\mathbf{q}",
+                    r: "\\mathbf{r}",
+                    rank: "\\text{rank}",
+                    row: "\\text{row}",
+                    s: "\\mathbf{s}",
+                    sA: "\\mathcal{A}",
+                    sB: "\\mathcal{B}",
+                    sC: "\\mathcal{C}",
+                    sD: "\\mathcal{D}",
+                    sE: "\\mathcal{E}",
+                    sF: "\\mathcal{F}",
+                    sG: "\\mathcal{G}",
+                    sH: "\\mathcal{H}",
+                    sI: "\\mathcal{I}",
+                    sJ: "\\mathcal{J}",
+                    sK: "\\mathcal{K}",
+                    sL: "\\mathcal{L}",
+                    sM: "\\mathcal{M}",
+                    sN: "\\mathcal{N}",
+                    sO: "\\mathcal{O}",
+                    sP: "\\mathcal{P}",
+                    sQ: "\\mathcal{Q}",
+                    sR: "\\mathcal{R}",
+                    sS: "\\mathcal{S}",
+                    sT: "\\mathcal{T}",
+                    sU: "\\mathcal{U}",
+                    sV: "\\mathcal{V}",
+                    sW: "\\mathcal{W}",
+                    sX: "\\mathcal{X}",
+                    sY: "\\mathcal{Y}",
+                    sZ: "\\mathcal{Z}",
+                    spn: "\\text{span}",
+                    t: "\\mathbf{t}",
+                    tr: "\\text{tr}",
+                    u: "\\mathbf{u}",
+                    v: "\\mathbf{v}",
+                    vDelta: "\\bm{\\Delta}",
+                    vGamma: "\\bm{\\Gamma}",
+                    vLambda: "\\bm{\\Lambda}",
+                    vOmega: "\\bm{\\Omega}",
+                    vPhi: "\\bm{\\Phi}",
+                    vPi: "\\bm{\\Pi}",
+                    vPsi: "\\bm{\\Psi}",
+                    vSigma: "\\bm{\\Sigma}",
+                    vTheta: "\\bm{\\Theta}",
+                    vUpsilon: "\\bm{\\Upsilon}",
+                    vXi: "\\bm{\\Xi}",
+                    valpha: "\\bm{\\upalpha}",
+                    vbeta: "\\bm{\\upbeta}",
+                    vchi: "\\bm{\\upchi}",
+                    vdelta: "\\bm{\\updelta}",
+                    vepsilon: "\\bm{\\upepsilon}",
+                    veta: "\\bm{\\upeta}",
+                    vgamma: "\\bm{\\upgamma}",
+                    viota: "\\bm{\\upiota}",
+                    vkappa: "\\bm{\\upkappa}",
+                    vlambda: "\\bm{\\uplambda}",
+                    vmu: "\\bm{\\upmu}",
+                    vnu: "\\bm{\\upnu}",
+                    vomega: "\\bm{\\upomega}",
+                    vphi: "\\bm{\\upphi}",
+                    vpi: "\\bm{\\uppi}",
+                    vpsi: "\\bm{\\uppsi}",
+                    vrho: "\\bm{\\uprho}",
+                    vsigma: "\\bm{\\upsigma}",
+                    vtau: "\\bm{\\uptau}",
+                    vtheta: "\\bm{\\uptheta}",
+                    vupsilon: "\\bm{\\upupsilon}",
+                    vvarepsilon: "\\bm{\\upvarepsilon}",
+                    vvarphi: "\\bm{\\upvarphi}",
+                    vvarpi: "\\bm{\\upvarpi}",
+                    vvarrho: "\\bm{\\upvarrho}",
+                    vvarsigma: "\\bm{\\upvarsigma}",
+                    vvartheta: "\\bm{\\upvartheta}",
+                    vxi: "\\bm{\\upxi}",
+                    vzeta: "\\bm{\\upzeta}",
+                    w: "\\mathbf{w}",
+                    x: "\\mathbf{x}",
+                    y: "\\mathbf{y}",
+                    z: "\\mathbf{z}"
+                },
+                // Define environments not in base amsmath
+                environments: {
+                    dcases: ["\\left\\{\\begin{array}{ll}", "\\end{array}\\right."]
+                }
+            },
+            options: {
+                skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"></script>
+
+    <!-- Tippy.js for tooltips -->
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
+    <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/shift-away.css">
+
+        
+        <script>
+        (function(){
+          if (typeof window.MathJax === 'undefined') window.MathJax = {};
+          if (typeof window.MathJax.tex === 'undefined') window.MathJax.tex = {};
+          if (typeof window.MathJax.tex.macros === 'undefined') window.MathJax.tex.macros = {};
+          Object.assign(window.MathJax.tex.macros, {
+                    "\interior": "\\text{int}\\left( #1 \\right)",
+                    "\td": "\\frac{d #1}{d #2}",
+                    "\ketbra": "| #1 \\rangle\\langle #2 |",
+                    "\norm": "\\left\\| #1 \\right\\|",
+                    "\Var": "\\text{Var}\\left( #1 \\right)",
+                    "\tr": "\\text{tr}",
+                    "\powerset": "\\mathcal{P}\\left( #1 \\right)",
+                    "\nul": "\\text{nul}",
+                    "\expect": "\\langle #1 \\rangle",
+                    "\Exp": "\\mathbb{E}\\left[ #1 \\right]",
+                    "\nullity": "\\text{nullity}",
+                    "\row": "\\text{row}",
+                    "\rank": "\\text{rank}",
+                    "\Cov": "\\text{Cov}\\left( #1, #2 \\right)",
+                    "\cl": "\\mathcal{#1}",
+                    "\closure": "\\overline{#1}",
+                    "\Prob": "\\mathbb{P}\\left( #1 \\right)",
+                    "\bra": "\\langle #1 |",
+                    "\rom": "\\mathrm{#1}",
+                    "\Normal": "\\mathcal{N}\\left( #1, #2 \\right)",
+                    "\braket": "\\langle #1 | #2 \\rangle",
+                    "\spn": "\\text{span}",
+                    "\boundary": "\\partial #1",
+                    "\bb": "\\mathbb{#1}",
+                    "\limi": "\\lim_{#1 \\to \\infty}",
+                    "\ket": "| #1 \\rangle",
+                    "\pd": "\\frac{\\partial #1}{\\partial #2}",
+                    "\card": "\\left| #1 \\right|",
+                    "\pdd": "\\frac{\\partial^2 #1}{\\partial #2^2}",
+                    "\bm": "\\mathbf{#1}",
+                    "\limz": "\\lim_{#1 \\to 0}",
+                    "\col": "\\text{col}",
+                    "\abs": "\\left| #1 \\right|",
+                    "\tdd": "\\frac{d^2 #1}{d #2^2}",
+                    "\defeq": "\\stackrel{\\smash{\\textnormal{\\tiny def}}}{=}",
+                    "\Uniform": "\\text{Uniform}\\left( #1, #2 \\right)"
+          });
+        })();
+        </script>
+    </head>
+
+<body>
+    <div id="quarto-container">
+        <!-- Left Sidebar Navigation -->
+        <nav id="quarto-sidebar">
+            <div class="sidebar-header">
+                <a href="../index.html" class="sidebar-title">
+                    Linear Algebra
+                </a>
+                <div class="sidebar-tools">
+                    <a href="../book/book.pdf" title="Full Book PDF" target="_blank">
+                        <i class="bi bi-file-pdf" style="font-size: 1.1rem"></i>
+                    </a>
+                    <a href="https://github.com/youruser/yourrepo" title="Source Code" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            viewBox="0 0 16 16">
+                            <path
+                                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="sidebar-search">
+                <i class="bi bi-search"></i>
+                <input type="text" class="search-input" id="search-input" placeholder="">
+            </div>
+
+            <nav class="sidebar-nav">
+                                <ul class="nav-list">
+                    <li><a href="../index.html">Preface</a></li>
+                </ul>
+                            </nav>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main id="quarto-content">
+
+
+            <article class="content">
+                <!-- Page title removed to avoid duplication with content H1 -->
+                <!-- Quarto-style Title Block -->
+                <header id="title-block-header" class="quarto-title-block default">
+                                        <nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block"
+                        aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="../ch01-vector-spaces/index.html">Vector Spaces and Dimensions</a></li>
+                        <li class="breadcrumb-item"><a href="../ch01-vector-spaces/06-dimension.html"><span class="chapter-number">1.6</span>&nbsp; <span class="chapter-title">Sifting and the Replacement Theorem</span></a></li>
+                        </ol>
+                    </nav>
+                                        <div class="quarto-title">
+                        <h1 class="title">
+                            <span class="chapter-number">1.6</span>&nbsp; 
+                            <span class="chapter-title">Sifting and the
+Replacement Theorem</span>
+                        </h1>
+                    </div>
+                </header>
+
+                <div id="sifting-and-the-replacement-theorem">
+
+                </div>
+                <p>How “big” is a vector space? We intuitively know that
+                a plane is “bigger” than a line, and 3D space is
+                “bigger” than a plane. But in the abstract world of
+                vector spaces, we need a rigorous way to measure
+                this.</p>
+                <p>The answer lies in the number of vectors in a basis.
+                But there’s a potential problem: what if one person
+                finds a basis with 3 vectors, and another person finds a
+                basis for the same space with 4 vectors? If that were
+                possible, our entire concept of “size” would
+                collapse.</p>
+                <p>In this section, we prove the most important
+                technical result of the chapter: the <strong>Steinitz
+                Replacement Theorem</strong>. This theorem is the
+                “engine” that guarantees every basis of a space has the
+                exact same number of vectors. Once we have this, we can
+                finally define the <strong>Dimension</strong> of a
+                space—a single number that captures its fundamental
+                complexity.</p>
+                <h2 id="the-sifting-method"><span
+                class="header-section-number">1.6.1. </span> The Sifting
+                Method</h2>
+                <div id="thm-sift" class="theorem"
+                data-env-type="theorem"
+                style="border-left-color: #3b6eda; background-color: #f0f5ff; "
+                data-number="1.6.1">
+                <span
+                class="theorem-title theorem-title-resolved"><strong>Theorem</strong><strong>
+                1.6.1</strong> (Sifting Method)</span>
+                <p>Let <span class="math inline">\(S = \{ \v_1, \v_2,
+                \dots, \v_m \}\)</span> be a subset of <span
+                class="math inline">\(V\)</span>. Then there exists a
+                subset <span class="math inline">\(S&#39; \subseteq
+                S\)</span> such that:</p>
+                <ol type="1">
+                <li><span class="math inline">\(S&#39;\)</span> is
+                linearly independent, and</li>
+                <li><span class="math inline">\(\Span(S&#39;) =
+                \Span(S)\)</span>.</li>
+                </ol>
+                </div>
+                <div class="proof small-env" data-env-type="proof">
+                <p><em>Proof</em><em>.</em> For each <span
+                class="math inline">\(r = 1, 2, \dots, m\)</span>, we
+                check whether <span class="math inline">\(\v_r\)</span>
+                is a linear combination of the previous terms <span
+                class="math inline">\(\v_1, \v_2, \dots,
+                \v_{r-1}\)</span>. We:</p>
+                <ol type="1">
+                <li>Keep <span class="math inline">\(\v_r\)</span> in
+                <span class="math inline">\(S&#39;\)</span> if <span
+                class="math inline">\(\v_r\)</span> is not a linear
+                combination of <span class="math inline">\(\v_1, \v_2,
+                \dots, \v_{r-1}\)</span> (not redundant);</li>
+                <li>Remove <span class="math inline">\(\v_r\)</span>
+                from <span class="math inline">\(S&#39;\)</span> if
+                <span class="math inline">\(\v_r\)</span> is a linear
+                combination of <span class="math inline">\(\v_1, \v_2,
+                \dots, \v_{r-1}\)</span> (redundant).</li>
+                </ol>
+                <p>After this process, we obtain a subset <span
+                class="math inline">\(S&#39;\)</span> in which no
+                element is a linear combination of the preceding members
+                anymore. Therefore, by <a
+                href="ch01-vector-spaces/04-independence.html#thm-linear-dependence-lemma"
+                class="xref"
+                data-ref="thm-linear-dependence-lemma">Theorem
+                1.4.1</a>, <span class="math inline">\(S&#39;\)</span>
+                is linearly independent. Moreover, according to <a
+                href="ch01-vector-spaces/04-independence.html#thm-span-preservation"
+                class="xref" data-ref="thm-span-preservation">Theorem
+                1.4.2</a>, removing “redundant members” from <span
+                class="math inline">\(S\)</span> does not change its
+                linear span. Therefore, we have <span
+                class="math inline">\(\Span(S&#39;) =
+                \Span(S)\)</span>.</p>
+                </div>
+                <div class="remark small-env" data-env-type="remark">
+                <p><em>Remark</em><em>.</em> The sifting method is a
+                powerful algorithmic tool that allows us to “clean up”
+                any set of vectors. Given any collection of vectors, we
+                can systematically remove the redundant ones while
+                preserving the span. This gives us a “cleaned” version
+                that is linearly independent and spans the same
+                space.</p>
+                <p>This method becomes our “new weapon” in linear
+                algebra proofs. Whenever we encounter a set that might
+                have redundant vectors, we can apply the sifting method
+                to obtain a linearly independent subset with the same
+                span. This technique will be particularly useful in
+                proving results about dimension and in constructing
+                bases from spanning sets.</p>
+                </div>
+                <div id="exm-sifting" class="example"
+                data-env-type="example"
+                style="border-left-color: #3a8a3a; background-color: #eef7ee; "
+                data-number="">
+                <span
+                class="theorem-title theorem-title-resolved"><strong>Example</strong>
+                (Sifting Example)</span>
+                <p>Consider <span class="math inline">\(S = \{ \v_1,
+                \v_2, \v_3, \v_4, \v_5, \v_6 \}\)</span> in <span
+                class="math inline">\(\nR^3\)</span> where: <span
+                class="math display">\[\begin{align*}
+                \v_1 &amp;= (1, 1, 1), &amp; \v_2 &amp;= (2, 2, 2),
+                &amp; \v_3 &amp;= (1, 0, 0), \\
+                \v_4 &amp;= (3, 2, 2), &amp; \v_5 &amp;= (1, 1, 0),
+                &amp; \v_6 &amp;= (0, 0, 1).
+                \end{align*}\]</span></p>
+                <p>We apply the sifting method:</p>
+                <ul>
+                <li><span class="math inline">\(\v_1 \neq
+                \mathbf{0}\)</span>, so <span
+                class="math inline">\(\v_1\)</span> is kept.</li>
+                <li><span class="math inline">\(\v_2 = 2\v_1\)</span>,
+                so <span class="math inline">\(\v_2\)</span> is
+                removed.</li>
+                <li><span class="math inline">\(\v_3\)</span> is not a
+                linear combination of <span
+                class="math inline">\(\v_1\)</span>, so <span
+                class="math inline">\(\v_3\)</span> is kept.</li>
+                <li><span class="math inline">\(\v_4 = 2\v_1 +
+                1\v_3\)</span>, so <span
+                class="math inline">\(\v_4\)</span> is removed.</li>
+                <li>Suppose <span class="math inline">\(\v_5 = a\v_1 +
+                b\v_3\)</span>. Then <span class="math inline">\((1, 1,
+                0) = (a + b, a, a)\)</span>, which gives <span
+                class="math inline">\(a = 0\)</span> and <span
+                class="math inline">\(a + b = 1\)</span>, so <span
+                class="math inline">\(b = 1\)</span>. But then the
+                second coordinate gives <span class="math inline">\(1 =
+                a = 0\)</span>, which is a contradiction. So <span
+                class="math inline">\(\v_5\)</span> is not a linear
+                combination of <span class="math inline">\(\v_1,
+                \v_3\)</span>. Hence, <span
+                class="math inline">\(\v_5\)</span> is kept.</li>
+                <li>Since <span class="math inline">\(\dim(\nR^3) =
+                3\)</span>, any four vectors cannot be linearly
+                independent. Therefore, <span
+                class="math inline">\(\v_6\)</span> must be a linear
+                combination of <span class="math inline">\(\v_1, \v_3,
+                \v_5\)</span>. So <span
+                class="math inline">\(\v_6\)</span> is removed.</li>
+                </ul>
+                <p>The sifted set is <span class="math inline">\(S&#39;
+                = \{ \v_1, \v_3, \v_5 \} = \{ (1, 1, 1), (1, 0, 0), (1,
+                1, 0) \}\)</span>, which is linearly independent and
+                spans the same space as <span
+                class="math inline">\(S\)</span>.</p>
+                </div>
+                <h2 id="the-steinitz-replacement-theorem"><span
+                class="header-section-number">1.6.2. </span> The
+                Steinitz Replacement Theorem</h2>
+                <div id="thm-steinitz" class="theorem"
+                data-env-type="theorem"
+                style="border-left-color: #3b6eda; background-color: #f0f5ff; "
+                data-number="1.6.2">
+                <span
+                class="theorem-title theorem-title-resolved"><strong>Theorem</strong><strong>
+                1.6.2</strong> (Steinitz Exchange/Replacement
+                Theorem)</span>
+                <p>Let <span class="math inline">\(V\)</span> be a
+                vector space over <span
+                class="math inline">\(F\)</span>. Suppose:</p>
+                <ul>
+                <li><span class="math inline">\(G = \{ \v_1, \v_2,
+                \dots, \v_n \}\)</span> spans <span
+                class="math inline">\(V\)</span>;</li>
+                <li><span class="math inline">\(L = \{ \u_1, \u_2,
+                \dots, \u_m \}\)</span> is linearly independent.</li>
+                </ul>
+                <p>Then <span class="math inline">\(m \leq
+                n\)</span>.</p>
+                </div>
+                <div class="proof small-env" data-env-type="proof">
+                <p><em>Proof</em><em>.</em> The strategy is to insert
+                the vectors from <span class="math inline">\(L\)</span>
+                one-by-one into <span class="math inline">\(G\)</span>
+                and “sift” the resulting set to maintain the spanning
+                property. We rely on the fact that if we add a vector
+                <span class="math inline">\(\w\)</span> to a spanning
+                set <span class="math inline">\(S\)</span>, the set
+                <span class="math inline">\(\{ \w \} \cup S\)</span>
+                becomes linearly dependent, allowing us to remove a
+                redundant vector (by <a
+                href="ch01-vector-spaces/04-independence.html#thm-span-preservation"
+                class="xref" data-ref="thm-span-preservation">Theorem
+                1.4.2</a>).</p>
+                <p>Consider the first step. We form the set <span
+                class="math inline">\(B_1\)</span> by inserting <span
+                class="math inline">\(\u_1\)</span> into <span
+                class="math inline">\(G\)</span>: <span
+                class="math display">\[
+                    B_1 = \{ \u_1, \v_1, \dots, \v_n \}.
+                \]</span> Since <span class="math inline">\(G\)</span>
+                spans <span class="math inline">\(V\)</span>, <span
+                class="math inline">\(B_1\)</span> is linearly
+                dependent. By applying the sifting process (<a
+                href="#thm-sift" class="xref"
+                data-ref="thm-sift">Theorem 1.6.1</a>), we can remove a
+                vector to obtain a new spanning set <span
+                class="math inline">\(G_1\)</span>. Since <span
+                class="math inline">\(L\)</span> is linearly
+                independent, <span class="math inline">\(\u_1 \neq
+                \mathbf{0}\)</span>, so the removed vector must be some
+                <span class="math inline">\(\v_i\)</span>. Thus: <span
+                class="math display">\[
+                    G_1 = \{ \u_1 \} \cup S_1,
+                \]</span> where <span class="math inline">\(S_1\)</span>
+                is a subset of <span class="math inline">\(G\)</span>
+                with size <span class="math inline">\(n-1\)</span>.</p>
+                <p>Now, consider the general step. Suppose we have
+                successfully exchanged <span
+                class="math inline">\(k\)</span> vectors such that the
+                set <span class="math display">\[
+                    G_k = \{ \u_1, \dots, \u_k \} \cup S_k
+                \]</span> spans <span class="math inline">\(V\)</span>,
+                where <span class="math inline">\(S_k \subset G\)</span>
+                contains <span class="math inline">\(n-k\)</span>
+                vectors. We insert the next vector <span
+                class="math inline">\(\u_{k+1}\)</span> to form: <span
+                class="math display">\[
+                    B_{k+1} = \{ \u_{k+1} \} \cup G_k.
+                \]</span> Since <span class="math inline">\(G_k\)</span>
+                is a spanning set, <span
+                class="math inline">\(\u_{k+1}\)</span> depends on the
+                vectors in <span class="math inline">\(G_k\)</span>,
+                making <span class="math inline">\(B_{k+1}\)</span>
+                dependent. We must remove a vector to restore the
+                spanning property. We cannot remove any of the <span
+                class="math inline">\(\u_i\)</span>’s, as this would
+                imply a linear dependence relation exclusively among
+                elements of <span class="math inline">\(L\)</span>,
+                contradicting the hypothesis that <span
+                class="math inline">\(L\)</span> is linearly
+                independent. Therefore, we must remove some <span
+                class="math inline">\(\v_j\)</span> from <span
+                class="math inline">\(S_k\)</span>.</p>
+                <p>This process generates a sequence of subsets of
+                remaining <span class="math inline">\(\v\)</span>’s:
+                <span class="math display">\[
+                    n = |G| &gt; |S_1| &gt; |S_2| &gt; \dots &gt; |S_m|
+                \geq 0.
+                \]</span> Since we are able to perform this exchange
+                <span class="math inline">\(m\)</span> times (once for
+                each <span class="math inline">\(\u \in L\)</span>), we
+                must have started with enough <span
+                class="math inline">\(\v\)</span>’s to accommodate every
+                removal. Therefore, <span class="math inline">\(n \geq
+                m\)</span>.</p>
+                </div>
+                <h2 id="consequences-of-the-replacement-theorem"><span
+                class="header-section-number">1.6.3. </span>
+                Consequences of the Replacement Theorem</h2>
+                <p>Having proved the Steinitz Replacement Theorem, the
+                major conclusion we can draw from it is that any
+                (finite) basis of the same vector space will have the
+                same size.</p>
+                <div id="thm-basis-theorem" class="theorem"
+                data-env-type="theorem"
+                style="border-left-color: #3b6eda; background-color: #f0f5ff; "
+                data-number="1.6.3">
+                <span
+                class="theorem-title theorem-title-resolved"><strong>Theorem</strong><strong>
+                1.6.3</strong> (Basis Theorem)</span>
+                <p>If a vector space <span
+                class="math inline">\(V\)</span> over <span
+                class="math inline">\(F\)</span> has a finite basis,
+                then every basis of <span
+                class="math inline">\(V\)</span> has the same number of
+                vectors.</p>
+                </div>
+                <div class="proof small-env" data-env-type="proof">
+                <p><em>Proof</em><em>.</em> Let <span
+                class="math inline">\(B_1\)</span> and <span
+                class="math inline">\(B_2\)</span> be two bases with
+                <span class="math inline">\(n\)</span> and <span
+                class="math inline">\(m\)</span> vectors
+                respectively.</p>
+                <ul>
+                <li>Since <span class="math inline">\(B_1\)</span> is
+                linearly independent and <span
+                class="math inline">\(B_2\)</span> spans, by Replacement
+                Theorem, <span class="math inline">\(n \leq
+                m\)</span>.</li>
+                <li>Since <span class="math inline">\(B_2\)</span> is
+                linearly independent and <span
+                class="math inline">\(B_1\)</span> spans, by Replacement
+                Theorem, <span class="math inline">\(m \leq
+                n\)</span>.</li>
+                </ul>
+                <p>Thus <span class="math inline">\(n = m\)</span>.</p>
+                </div>
+                <div id="def-dimension" class="definition"
+                data-env-type="definition"
+                style="border-left-color: #c94c6c; background-color: #fdf2f4; "
+                data-number="1.6.1">
+                <span
+                class="theorem-title theorem-title-resolved"><strong>Definition</strong><strong>
+                1.6.1</strong> (Dimension)</span>
+                <p>A vector space <span class="math inline">\(V\)</span>
+                over <span class="math inline">\(F\)</span> is called
+                <strong>finite-dimensional</strong> if it has a finite
+                basis. The <strong>dimension</strong> of <span
+                class="math inline">\(V\)</span>, denoted <span
+                class="math inline">\(\dim_F (V)\)</span>, is the number
+                of vectors in any basis for <span
+                class="math inline">\(V\)</span>. By convention, <span
+                class="math inline">\(\dim_F (\{\mathbf{0}\}) =
+                0\)</span>.</p>
+                </div>
+                <div class="remark small-env" data-env-type="remark">
+                <p><em>Remark</em><em>.</em> The convention <span
+                class="math inline">\(\dim(\{\mathbf{0}\}) = 0\)</span>
+                is consistent with the fact that the <strong>only basis
+                for the zero space is the empty set</strong> <span
+                class="math inline">\(\varnothing\)</span>. Indeed,
+                <span class="math inline">\(\varnothing\)</span> is
+                vacuously linearly independent (there is no nontrivial
+                linear combination to consider), and <span
+                class="math inline">\(\Span(\varnothing) =
+                \{\mathbf{0}\}\)</span> by our earlier convention. Since
+                <span class="math inline">\(|\varnothing| = 0\)</span>,
+                we have <span class="math inline">\(\dim(\{\mathbf{0}\})
+                = 0\)</span>.</p>
+                </div>
+                <div class="remark small-env" data-env-type="remark">
+                <p><em>Remark</em><em>.</em> When the underlying field
+                is clear, we abuse the notation of <span
+                class="math inline">\(\dim_F\)</span> and write it as
+                <span class="math inline">\(\dim\)</span>.</p>
+                </div>
+                <div id="exm-dimensions" class="example"
+                data-env-type="example"
+                style="border-left-color: #3a8a3a; background-color: #eef7ee; "
+                data-number="">
+                <span
+                class="theorem-title theorem-title-resolved"><strong>Example</strong>
+                (Examples of Dimensions)</span>
+                <p><span class="math inline">\(\dim(F^n) = n\)</span>,
+                <span class="math inline">\(\dim(F[x]_{\leq n}) =
+                n+1\)</span>, and <span class="math inline">\(\dim(M_{m
+                \times n}(F)) = mn\)</span>.</p>
+                </div>
+                <div class="remark small-env" data-env-type="remark">
+                <p><em>Remark</em><em>.</em> The notation <span
+                class="math inline">\(\dim_F(V)\)</span> reminds us that
+                <strong>dimension depends on the choice of
+                field</strong>. For instance, recall from <a
+                href="ch01-vector-spaces/01-vector-spaces.html#exm-q-adjoin-sqrt2"
+                class="xref" data-ref="exm-q-adjoin-sqrt2">Example </a>
+                that <span class="math inline">\(\nQ(\sqrt{2}) = \{ a +
+                b\sqrt{2} : a, b \in \nQ \}\)</span> is a vector space
+                over <span class="math inline">\(\nQ\)</span> with basis
+                <span class="math inline">\(\{ 1, \sqrt{2} \}\)</span>,
+                so <span class="math inline">\(\dim_{\nQ}(\nQ(\sqrt{2}))
+                = 2\)</span>.</p>
+                <p>As a more striking example, consider the complex
+                numbers <span class="math inline">\(\nC\)</span>. As a
+                vector space over itself, <span
+                class="math inline">\(\nC\)</span> has basis <span
+                class="math inline">\(\{ 1 \}\)</span>, so <span
+                class="math inline">\(\dim_{\nC}(\nC) = 1\)</span>.
+                However, as a vector space over <span
+                class="math inline">\(\nR\)</span>, <span
+                class="math inline">\(\nC\)</span> has basis <span
+                class="math inline">\(\{ 1, i \}\)</span>, so <span
+                class="math inline">\(\dim_{\nR}(\nC) = 2\)</span>. The
+                same set can have different dimensions depending on
+                which field we use for scalar multiplication!</p>
+                </div>
+                <div id="thm-size-bounds" class="theorem"
+                data-env-type="theorem"
+                style="border-left-color: #3b6eda; background-color: #f0f5ff; "
+                data-number="1.6.4">
+                <span
+                class="theorem-title theorem-title-resolved"><strong>Theorem</strong><strong>
+                1.6.4</strong> (Size Bounds for Independent and Spanning
+                Sets)</span>
+                <p>Let <span class="math inline">\(V\)</span> be a
+                vector space of dimension <span
+                class="math inline">\(n\)</span> over <span
+                class="math inline">\(F\)</span>, and <span
+                class="math inline">\(S \subseteq V\)</span> be a
+                subset.</p>
+                <ol type="1">
+                <li>If <span class="math inline">\(|S| &gt; n\)</span>,
+                then <span class="math inline">\(S\)</span> cannot be
+                linearly independent.</li>
+                <li>If <span class="math inline">\(|S| &lt; n\)</span>,
+                then <span class="math inline">\(S\)</span> cannot span
+                <span class="math inline">\(V\)</span>.</li>
+                </ol>
+                </div>
+                <div class="proof small-env" data-env-type="proof">
+                <p><em>Proof</em><em>.</em> </p>
+                <ol type="1">
+                <li><p>Given <span class="math inline">\(|S| &gt;
+                n\)</span>, and suppose for the sake of contradiction
+                that <span class="math inline">\(S\)</span> is linearly
+                independent. Let <span class="math inline">\(B\)</span>
+                be a basis of <span class="math inline">\(V\)</span>,
+                then we have <span class="math inline">\(|B| =
+                n\)</span> and <span class="math inline">\(B\)</span> is
+                a spanning set of <span
+                class="math inline">\(V\)</span>. By Replacement
+                Theorem, we have <span class="math display">\[
+                \underbrace{|S|}_{\text{size of lin. indep. set}} \leq
+                \underbrace{|B|}_{\text{size of spanning set}} = n.
+                \]</span> Giving a contradiction, hence <span
+                class="math inline">\(S\)</span> cannot be linearly
+                independent.</p></li>
+                <li><p>Given <span class="math inline">\(|S| &lt;
+                n\)</span>, and suppose for the sake of contradiction
+                that <span class="math inline">\(S\)</span> spans <span
+                class="math inline">\(V\)</span>. Let <span
+                class="math inline">\(B\)</span> be a basis of <span
+                class="math inline">\(V\)</span>, then we have <span
+                class="math inline">\(|B| = n\)</span> and <span
+                class="math inline">\(B\)</span> is linearly
+                independent. By Replacement Theorem, we have <span
+                class="math display">\[
+                n = \underbrace{|B|}_{\text{size of lin. indep. set}}
+                \leq \underbrace{|S|}_{\text{size of spanning set}}.
+                \]</span> This implies <span class="math inline">\(n
+                \leq |S|\)</span>, which contradicts the assumption that
+                <span class="math inline">\(|S| &lt; n\)</span>. Hence
+                <span class="math inline">\(S\)</span> cannot span <span
+                class="math inline">\(V\)</span>.</p></li>
+                </ol>
+                </div>
+                <div class="remark small-env" data-env-type="remark">
+                <p><em>Remark</em><em>.</em> <span
+                class="math display">\[
+                    \text{Size of lin. indep. set } \leq \text{ Size of
+                basis } \leq \text{ Size of spanning set}.
+                \]</span></p>
+                </div>
+                <div id="thm-basis-extension" class="theorem"
+                data-env-type="theorem"
+                style="border-left-color: #3b6eda; background-color: #f0f5ff; "
+                data-number="1.6.5">
+                <span
+                class="theorem-title theorem-title-resolved"><strong>Theorem</strong><strong>
+                1.6.5</strong> (Basis Extension Theorem)</span>
+                <p>Let <span class="math inline">\(V\)</span> be a
+                finite-dimensional vector space and <span
+                class="math inline">\(S\)</span> be a linearly
+                independent subset of <span
+                class="math inline">\(V\)</span>. Then <span
+                class="math inline">\(S\)</span> can be extended into a
+                basis of <span class="math inline">\(V\)</span>.</p>
+                </div>
+                <div class="proof small-env" data-env-type="proof">
+                <p><em>Proof</em><em>.</em> Since <span
+                class="math inline">\(V\)</span> is finite-dimensional,
+                it has a finite basis <span class="math inline">\(B = \{
+                \v_1, \dots, \v_n \}\)</span>. Consider the set <span
+                class="math inline">\(S \cup B\)</span>. Since <span
+                class="math inline">\(B\)</span> spans <span
+                class="math inline">\(V\)</span>, <span
+                class="math inline">\(S \cup B\)</span> also spans <span
+                class="math inline">\(V\)</span>. We apply the Sifting
+                Method (<a href="#thm-sift" class="xref"
+                data-ref="thm-sift">Theorem 1.6.1</a>) to the ordered
+                set formed by listing the elements of <span
+                class="math inline">\(S\)</span> first, followed by the
+                elements of <span class="math inline">\(B\)</span>.</p>
+                <p>The Sifting Method will keep all elements of <span
+                class="math inline">\(S\)</span> because <span
+                class="math inline">\(S\)</span> is linearly
+                independent. It then proceeds to examine each element of
+                <span class="math inline">\(B\)</span>, keeping those
+                that are not in the span of the vectors already kept.
+                The resulting subset <span
+                class="math inline">\(S&#39;\)</span> spans <span
+                class="math inline">\(\Span(S \cup B) = V\)</span> and
+                is linearly independent by construction. Thus, <span
+                class="math inline">\(S&#39;\)</span> is a basis for
+                <span class="math inline">\(V\)</span> that contains
+                <span class="math inline">\(S\)</span>.</p>
+                </div>
+                <div id="cor-basis-existence" class="corollary"
+                data-env-type="corollary"
+                style="border-left-color: #17a2a2; background-color: #e8f6f5; "
+                data-number="1.6.6">
+                <span
+                class="theorem-title theorem-title-resolved"><strong>Corollary</strong><strong>
+                1.6.6</strong> (Existence of Basis)</span>
+                <p>Every finite spanning set of a vector space <span
+                class="math inline">\(V\)</span> contains a basis.</p>
+                </div>
+                <div class="proof small-env" data-env-type="proof">
+                <p><em>Proof</em><em>.</em> Apply the Sifting Method to
+                the spanning set. The resulting subset <span
+                class="math inline">\(S&#39;\)</span> is linearly
+                independent by construction and still spans <span
+                class="math inline">\(V\)</span>. Therefore, <span
+                class="math inline">\(S&#39;\)</span> is a basis for
+                <span class="math inline">\(V\)</span>.</p>
+                </div>
+                <div id="thm-dim-impl-eq" class="theorem"
+                data-env-type="theorem"
+                style="border-left-color: #3b6eda; background-color: #f0f5ff; "
+                data-number="1.6.7">
+                <span
+                class="theorem-title theorem-title-resolved"><strong>Theorem</strong><strong>
+                1.6.7</strong> (Dimension Implies Equality)</span>
+                <p>Let <span class="math inline">\(V\)</span> and <span
+                class="math inline">\(W\)</span> be finite-dimensional
+                vector spaces over <span
+                class="math inline">\(F\)</span>. If</p>
+                <ol type="1">
+                <li><span class="math inline">\(W \subseteq
+                V\)</span>;</li>
+                <li><span class="math inline">\(\dim_F (W) = \dim_F
+                (V)\)</span>,</li>
+                </ol>
+                <p>then <span class="math inline">\(W = V\)</span>.</p>
+                </div>
+                <div class="proof small-env" data-env-type="proof">
+                <p><em>Proof</em><em>.</em> If we show <span
+                class="math inline">\(V \subseteq W\)</span> then we are
+                done. Suppose for contradiction that <span
+                class="math inline">\(V \nsubseteq W\)</span>. That
+                means there exists some <span class="math inline">\(\v
+                \in V\)</span> that <span class="math inline">\(\v
+                \notin W\)</span>.</p>
+                <p>Let <span class="math inline">\(S = \{ \w_1, \dots,
+                \w_n \}\)</span> be a basis of <span
+                class="math inline">\(W\)</span>, (consequently, <span
+                class="math inline">\(\dim_F (W) = n\)</span>). Since
+                <span class="math inline">\(\v \notin W\)</span>, we
+                have <span class="math inline">\(\v \notin
+                \Span(S)\)</span>.</p>
+                <p>That would mean that <span
+                class="math inline">\(S&#39; = \{ \w_1, \dots, \w_n, \v
+                \}\)</span> is linearly independent in <span
+                class="math inline">\(V\)</span>. By Replacement
+                Theorem, we have <span class="math display">\[
+                    \underbrace{|S&#39;|}_{\text{size of lin. indep.
+                set}} \leq \dim_F (V),
+                \]</span> which implies <span class="math inline">\(n +
+                1 \leq n\)</span>, which is a contradiction, therefore
+                <span class="math inline">\(V \subseteq W\)</span>.</p>
+                </div>
+                <div class="remark small-env" data-env-type="remark">
+                <p><em>Remark</em><em>.</em> This theorem makes proving
+                <span class="math inline">\(W = V\)</span> somewhat
+                easier. As if we wanted to prove equivalence before, we
+                can only do it by proving <span class="math inline">\(W
+                \subseteq V\)</span> and <span class="math inline">\(V
+                \subseteq W\)</span>. Now we can just prove one side and
+                then state that their dimension is the same.</p>
+                </div>
+                <p>An immediate consequence of the above theorem is the
+                following:</p>
+                <div id="thm-maximal-indep" class="theorem"
+                data-env-type="theorem"
+                style="border-left-color: #3b6eda; background-color: #f0f5ff; "
+                data-number="1.6.8">
+                <span
+                class="theorem-title theorem-title-resolved"><strong>Theorem</strong><strong>
+                1.6.8</strong> (Maximal Independent Subset is a
+                Basis)</span>
+                <p>Let <span class="math inline">\(V\)</span> be a
+                vector space of dimension <span
+                class="math inline">\(n\)</span> over <span
+                class="math inline">\(F\)</span>. Then any <span
+                class="math inline">\(n\)</span> independent vectors
+                form a basis of <span class="math inline">\(V\)</span>.
+                (We say that “any maximal linearly independent subset
+                forms a basis”).</p>
+                </div>
+                <div class="proof small-env" data-env-type="proof">
+                <p><em>Proof</em><em>.</em> Let <span
+                class="math inline">\(S\)</span> be a linearly
+                independent set of size <span
+                class="math inline">\(n\)</span>. We want to show that
+                <span class="math inline">\(\Span(S) = V\)</span>.</p>
+                <p>Let <span class="math inline">\(W =
+                \Span(S)\)</span>, this implies that <span
+                class="math inline">\(W\)</span> is a subspace of <span
+                class="math inline">\(V\)</span>, which implies <span
+                class="math inline">\(W \subseteq V\)</span>.</p>
+                <p>Notice that <span class="math inline">\(S\)</span>
+                spans <span class="math inline">\(W\)</span> and <span
+                class="math inline">\(S\)</span> is linearly
+                independent, therefore <span
+                class="math inline">\(S\)</span> is a basis of <span
+                class="math inline">\(W\)</span>. So <span
+                class="math inline">\(\dim_F (W) = |S| = n = \dim_F
+                (V)\)</span>. By <a href="#thm-dim-impl-eq" class="xref"
+                data-ref="thm-dim-impl-eq">Theorem 1.6.7</a>, we have
+                <span class="math inline">\(W = V\)</span>, then <span
+                class="math inline">\(\Span(S) = V\)</span>.</p>
+                </div>
+            </article>
+
+            <!-- Page Navigation -->
+            <nav class="page-navigation">
+                <div class="nav-page nav-page-previous">
+                                        <a href="05-basis.html" class="pagination-link" aria-label="Bases">
+                        <i class="bi bi-arrow-left-short"></i>
+                        <span
+                            class="nav-page-text">1.5 Bases</span>
+                    </a>
+                                    </div>
+                <div class="nav-page nav-page-next">
+                                        <a href="07-sums-and-direct-sums.html" class="pagination-link" aria-label="Sums
+of Subspaces">
+                        <span
+                            class="nav-page-text">1.7 Sums of
+Subspaces</span>
+                        <i class="bi bi-arrow-right-short"></i>
+                    </a>
+                                    </div>
+            </nav>
+        </main>
+
+        <!-- Right Sidebar (TOC) -->
+        <aside id="quarto-margin-sidebar">
+            <nav class="toc">
+                <h2>Table of contents</h2>
+                            </nav>
+
+            <div class="other-formats">
+                <h3>Other Formats</h3>
+                <ul>
+                    <li><a href="../pdf/ch01-vector-spaces/06-dimension.pdf" target="_blank">PDF</a></li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Tooltip Script -->
+    <script src="../main.js"></script>
+</body>
+
+</html>
