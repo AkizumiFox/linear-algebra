@@ -261,42 +261,42 @@
           if (typeof window.MathJax.tex === 'undefined') window.MathJax.tex = {};
           if (typeof window.MathJax.tex.macros === 'undefined') window.MathJax.tex.macros = {};
           Object.assign(window.MathJax.tex.macros, {
-                    "\limi": "\\lim_{#1 \\to \\infty}",
-                    "\bra": "\\langle #1 |",
-                    "\limz": "\\lim_{#1 \\to 0}",
-                    "\Uniform": "\\text{Uniform}\\left( #1, #2 \\right)",
-                    "\Prob": "\\mathbb{P}\\left( #1 \\right)",
-                    "\abs": "\\left| #1 \\right|",
-                    "\rank": "\\text{rank}",
-                    "\closure": "\\overline{#1}",
-                    "\Cov": "\\text{Cov}\\left( #1, #2 \\right)",
-                    "\nul": "\\text{nul}",
-                    "\pdd": "\\frac{\\partial^2 #1}{\\partial #2^2}",
-                    "\tdd": "\\frac{d^2 #1}{d #2^2}",
-                    "\expect": "\\langle #1 \\rangle",
-                    "\ket": "| #1 \\rangle",
-                    "\ketbra": "| #1 \\rangle\\langle #2 |",
-                    "\spn": "\\text{span}",
-                    "\col": "\\text{col}",
-                    "\pd": "\\frac{\\partial #1}{\\partial #2}",
-                    "\interior": "\\text{int}\\left( #1 \\right)",
-                    "\td": "\\frac{d #1}{d #2}",
-                    "\rom": "\\mathrm{#1}",
-                    "\tr": "\\text{tr}",
-                    "\defeq": "\\stackrel{\\smash{\\textnormal{\\tiny def}}}{=}",
                     "\nullity": "\\text{nullity}",
-                    "\boundary": "\\partial #1",
-                    "\bb": "\\mathbb{#1}",
-                    "\Normal": "\\mathcal{N}\\left( #1, #2 \\right)",
+                    "\limz": "\\lim_{#1 \\to 0}",
+                    "\Prob": "\\mathbb{P}\\left( #1 \\right)",
+                    "\ketbra": "| #1 \\rangle\\langle #2 |",
+                    "\limi": "\\lim_{#1 \\to \\infty}",
                     "\Var": "\\text{Var}\\left( #1 \\right)",
-                    "\cl": "\\mathcal{#1}",
-                    "\norm": "\\left\\| #1 \\right\\|",
-                    "\bm": "\\mathbf{#1}",
+                    "\pd": "\\frac{\\partial #1}{\\partial #2}",
+                    "\td": "\\frac{d #1}{d #2}",
+                    "\spn": "\\text{span}",
                     "\Exp": "\\mathbb{E}\\left[ #1 \\right]",
-                    "\card": "\\left| #1 \\right|",
+                    "\ket": "| #1 \\rangle",
+                    "\tdd": "\\frac{d^2 #1}{d #2^2}",
+                    "\rank": "\\text{rank}",
+                    "\bb": "\\mathbb{#1}",
+                    "\Uniform": "\\text{Uniform}\\left( #1, #2 \\right)",
+                    "\tr": "\\text{tr}",
+                    "\closure": "\\overline{#1}",
+                    "\expect": "\\langle #1 \\rangle",
+                    "\row": "\\text{row}",
                     "\powerset": "\\mathcal{P}\\left( #1 \\right)",
+                    "\defeq": "\\stackrel{\\smash{\\textnormal{\\tiny def}}}{=}",
+                    "\abs": "\\left| #1 \\right|",
+                    "\norm": "\\left\\| #1 \\right\\|",
+                    "\pdd": "\\frac{\\partial^2 #1}{\\partial #2^2}",
+                    "\rom": "\\mathrm{#1}",
+                    "\bm": "\\mathbf{#1}",
+                    "\boundary": "\\partial #1",
+                    "\cl": "\\mathcal{#1}",
+                    "\card": "\\left| #1 \\right|",
                     "\braket": "\\langle #1 | #2 \\rangle",
-                    "\row": "\\text{row}"
+                    "\interior": "\\text{int}\\left( #1 \\right)",
+                    "\Normal": "\\mathcal{N}\\left( #1, #2 \\right)",
+                    "\nul": "\\text{nul}",
+                    "\Cov": "\\text{Cov}\\left( #1, #2 \\right)",
+                    "\col": "\\text{col}",
+                    "\bra": "\\langle #1 |"
           });
         })();
         </script>
@@ -381,8 +381,8 @@ Independence</span>
                 class="header-section-number">1.4.1. </span> Definition
                 and Examples</h2>
                 <div id="def-linear-independence" class="definition"
-                data-number="1.4.1" data-env-type="definition"
-                style="border-left-color: #c94c6c; background-color: #fdf2f4; ">
+                style="border-left-color: #c94c6c; background-color: #fdf2f4; "
+                data-env-type="definition" data-number="1.4.1">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Definition</strong><strong>
                 1.4.1</strong> (Linear Independence)</span>
@@ -411,8 +411,8 @@ Independence</span>
                 lie on the same plane through the origin.</p>
                 </div>
                 <div id="exm-linear-independence" class="example"
-                data-number="" data-env-type="example"
-                style="border-left-color: #3a8a3a; background-color: #eef7ee; ">
+                style="border-left-color: #3a8a3a; background-color: #eef7ee; "
+                data-env-type="example" data-number="">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Example</strong>
                 (Examples of Linear Independence)</span>
@@ -474,8 +474,8 @@ Independence</span>
                 </ol>
                 </div>
                 <div id="thm-linear-dependence-lemma" class="theorem"
-                data-number="1.4.1" data-env-type="theorem"
-                style="border-left-color: #3b6eda; background-color: #f0f5ff; ">
+                style="border-left-color: #3b6eda; background-color: #f0f5ff; "
+                data-env-type="theorem" data-number="1.4.1">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Theorem</strong><strong>
                 1.4.1</strong> (Linear Dependence Lemma)</span>
@@ -570,8 +570,8 @@ Independence</span>
                 that throwing away these “redundant members” will not
                 change the linear span.</p>
                 <div id="thm-span-preservation" class="theorem"
-                data-number="1.4.2" data-env-type="theorem"
-                style="border-left-color: #3b6eda; background-color: #f0f5ff; ">
+                style="border-left-color: #3b6eda; background-color: #f0f5ff; "
+                data-env-type="theorem" data-number="1.4.2">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Theorem</strong><strong>
                 1.4.2</strong> (Span Preservation)</span>

@@ -261,42 +261,42 @@
           if (typeof window.MathJax.tex === 'undefined') window.MathJax.tex = {};
           if (typeof window.MathJax.tex.macros === 'undefined') window.MathJax.tex.macros = {};
           Object.assign(window.MathJax.tex.macros, {
-                    "\limi": "\\lim_{#1 \\to \\infty}",
-                    "\abs": "\\left| #1 \\right|",
-                    "\limz": "\\lim_{#1 \\to 0}",
-                    "\tr": "\\text{tr}",
-                    "\tdd": "\\frac{d^2 #1}{d #2^2}",
-                    "\bb": "\\mathbb{#1}",
-                    "\pdd": "\\frac{\\partial^2 #1}{\\partial #2^2}",
-                    "\col": "\\text{col}",
-                    "\interior": "\\text{int}\\left( #1 \\right)",
-                    "\Exp": "\\mathbb{E}\\left[ #1 \\right]",
-                    "\card": "\\left| #1 \\right|",
-                    "\expect": "\\langle #1 \\rangle",
-                    "\row": "\\text{row}",
-                    "\Uniform": "\\text{Uniform}\\left( #1, #2 \\right)",
-                    "\td": "\\frac{d #1}{d #2}",
-                    "\closure": "\\overline{#1}",
                     "\defeq": "\\stackrel{\\smash{\\textnormal{\\tiny def}}}{=}",
-                    "\Var": "\\text{Var}\\left( #1 \\right)",
-                    "\braket": "\\langle #1 | #2 \\rangle",
-                    "\ket": "| #1 \\rangle",
-                    "\rom": "\\mathrm{#1}",
-                    "\bm": "\\mathbf{#1}",
-                    "\cl": "\\mathcal{#1}",
-                    "\boundary": "\\partial #1",
                     "\Cov": "\\text{Cov}\\left( #1, #2 \\right)",
-                    "\Prob": "\\mathbb{P}\\left( #1 \\right)",
-                    "\spn": "\\text{span}",
                     "\norm": "\\left\\| #1 \\right\\|",
-                    "\nul": "\\text{nul}",
+                    "\bm": "\\mathbf{#1}",
+                    "\ketbra": "| #1 \\rangle\\langle #2 |",
+                    "\ket": "| #1 \\rangle",
+                    "\limi": "\\lim_{#1 \\to \\infty}",
+                    "\bra": "\\langle #1 |",
+                    "\closure": "\\overline{#1}",
+                    "\Var": "\\text{Var}\\left( #1 \\right)",
+                    "\powerset": "\\mathcal{P}\\left( #1 \\right)",
+                    "\tdd": "\\frac{d^2 #1}{d #2^2}",
+                    "\tr": "\\text{tr}",
+                    "\limz": "\\lim_{#1 \\to 0}",
+                    "\col": "\\text{col}",
+                    "\boundary": "\\partial #1",
                     "\rank": "\\text{rank}",
                     "\pd": "\\frac{\\partial #1}{\\partial #2}",
-                    "\nullity": "\\text{nullity}",
-                    "\powerset": "\\mathcal{P}\\left( #1 \\right)",
-                    "\bra": "\\langle #1 |",
+                    "\Exp": "\\mathbb{E}\\left[ #1 \\right]",
+                    "\interior": "\\text{int}\\left( #1 \\right)",
+                    "\nul": "\\text{nul}",
                     "\Normal": "\\mathcal{N}\\left( #1, #2 \\right)",
-                    "\ketbra": "| #1 \\rangle\\langle #2 |"
+                    "\Uniform": "\\text{Uniform}\\left( #1, #2 \\right)",
+                    "\cl": "\\mathcal{#1}",
+                    "\rom": "\\mathrm{#1}",
+                    "\td": "\\frac{d #1}{d #2}",
+                    "\braket": "\\langle #1 | #2 \\rangle",
+                    "\pdd": "\\frac{\\partial^2 #1}{\\partial #2^2}",
+                    "\Prob": "\\mathbb{P}\\left( #1 \\right)",
+                    "\abs": "\\left| #1 \\right|",
+                    "\nullity": "\\text{nullity}",
+                    "\bb": "\\mathbb{#1}",
+                    "\expect": "\\langle #1 \\rangle",
+                    "\spn": "\\text{span}",
+                    "\card": "\\left| #1 \\right|",
+                    "\row": "\\text{row}"
           });
         })();
         </script>
@@ -363,7 +363,7 @@
 
                 </div>
                 <div id="def-matrix" class="definition"
-                data-env-type="definition" data-number="0.7.1"
+                data-number="0.7.1" data-env-type="definition"
                 style="border-left-color: #c94c6c; background-color: #fdf2f4; ">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Definition</strong><strong>
@@ -397,8 +397,8 @@
                 class="math inline">\(M_{m \times n}(F)\)</span> to
                 <span class="math inline">\(M_n(F)\)</span>.</p>
                 </div>
-                <div id="exm-matrices" class="example"
-                data-env-type="example" data-number=""
+                <div id="exm-matrices" class="example" data-number=""
+                data-env-type="example"
                 style="border-left-color: #3a8a3a; background-color: #eef7ee; ">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Example</strong>
@@ -417,7 +417,7 @@
                 class="header-section-number">0.7.1. </span> Special
                 Matrices</h2>
                 <div id="def-zero-matrix" class="definition"
-                data-env-type="definition" data-number="0.7.2"
+                data-number="0.7.2" data-env-type="definition"
                 style="border-left-color: #c94c6c; background-color: #fdf2f4; ">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Definition</strong><strong>
@@ -435,7 +435,7 @@
                 \]</span></p>
                 </div>
                 <div id="def-identity-matrix" class="definition"
-                data-env-type="definition" data-number="0.7.3"
+                data-number="0.7.3" data-env-type="definition"
                 style="border-left-color: #c94c6c; background-color: #fdf2f4; ">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Definition</strong><strong>
@@ -456,7 +456,7 @@
                 write <span class="math inline">\(\I\)</span>.</p>
                 </div>
                 <div id="def-transpose" class="definition"
-                data-env-type="definition" data-number="0.7.4"
+                data-number="0.7.4" data-env-type="definition"
                 style="border-left-color: #c94c6c; background-color: #fdf2f4; ">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Definition</strong><strong>
@@ -480,7 +480,7 @@
                 \]</span></p>
                 </div>
                 <div id="def-symmetric-matrix" class="definition"
-                data-env-type="definition" data-number="0.7.5"
+                data-number="0.7.5" data-env-type="definition"
                 style="border-left-color: #c94c6c; background-color: #fdf2f4; ">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Definition</strong><strong>
@@ -499,7 +499,7 @@
                 \]</span></p>
                 </div>
                 <div id="def-diagonal-matrix" class="definition"
-                data-env-type="definition" data-number="0.7.6"
+                data-number="0.7.6" data-env-type="definition"
                 style="border-left-color: #c94c6c; background-color: #fdf2f4; ">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Definition</strong><strong>
@@ -518,7 +518,7 @@
                 = \diag(d_1, d_2, \ldots, d_n)\)</span>.</p>
                 </div>
                 <div id="def-upper-triangular" class="definition"
-                data-env-type="definition" data-number="0.7.7"
+                data-number="0.7.7" data-env-type="definition"
                 style="border-left-color: #c94c6c; background-color: #fdf2f4; ">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Definition</strong><strong>
@@ -536,7 +536,7 @@
                 \]</span></p>
                 </div>
                 <div id="exm-zero-identity" class="example"
-                data-env-type="example" data-number=""
+                data-number="" data-env-type="example"
                 style="border-left-color: #3a8a3a; background-color: #eef7ee; ">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Example</strong>
@@ -551,7 +551,7 @@
                 \]</span></p>
                 </div>
                 <div id="exm-special-matrices" class="example"
-                data-env-type="example" data-number=""
+                data-number="" data-env-type="example"
                 style="border-left-color: #3a8a3a; background-color: #eef7ee; ">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Example</strong>
@@ -583,7 +583,7 @@
                 class="header-section-number">0.7.2. </span> Matrix
                 Addition</h2>
                 <div id="def-matrix-addition" class="definition"
-                data-env-type="definition" data-number="0.7.8"
+                data-number="0.7.8" data-env-type="definition"
                 style="border-left-color: #c94c6c; background-color: #fdf2f4; ">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Definition</strong><strong>
@@ -600,7 +600,7 @@
                 \]</span></p>
                 </div>
                 <div id="def-additive-inverse" class="definition"
-                data-env-type="definition" data-number="0.7.9"
+                data-number="0.7.9" data-env-type="definition"
                 style="border-left-color: #c94c6c; background-color: #fdf2f4; ">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Definition</strong><strong>
@@ -613,7 +613,7 @@
                 n}(F)\)</span>.</p>
                 </div>
                 <div id="exm-matrix-addition" class="example"
-                data-env-type="example" data-number=""
+                data-number="" data-env-type="example"
                 style="border-left-color: #3a8a3a; background-color: #eef7ee; ">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Example</strong>
@@ -633,7 +633,7 @@
                 \]</span></p>
                 </div>
                 <div id="thm-matrix-addition-properties" class="theorem"
-                data-env-type="theorem" data-number="0.7.1"
+                data-number="0.7.1" data-env-type="theorem"
                 style="border-left-color: #3b6eda; background-color: #f0f5ff; ">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Theorem</strong><strong>
@@ -669,7 +669,7 @@
                 class="header-section-number">0.7.3. </span> Matrix
                 Multiplication</h2>
                 <div id="def-matrix-multiplication" class="definition"
-                data-env-type="definition" data-number="0.7.10"
+                data-number="0.7.10" data-env-type="definition"
                 style="border-left-color: #c94c6c; background-color: #fdf2f4; ">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Definition</strong><strong>
@@ -691,7 +691,7 @@
                 class="math inline">\(\B\)</span>.</p>
                 </div>
                 <div id="exm-matrix-multiplication" class="example"
-                data-env-type="example" data-number=""
+                data-number="" data-env-type="example"
                 style="border-left-color: #3a8a3a; background-color: #eef7ee; ">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Example</strong>
@@ -720,7 +720,7 @@
                 \]</span></p>
                 </div>
                 <div id="exm-matrix-multiplication-dimensions"
-                class="example" data-env-type="example" data-number=""
+                class="example" data-number="" data-env-type="example"
                 style="border-left-color: #3a8a3a; background-color: #eef7ee; ">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Example</strong>
@@ -748,8 +748,8 @@
                 class="math inline">\(\A\)</span> (which is 2).</p>
                 </div>
                 <div id="thm-matrix-multiplication-properties"
-                class="theorem" data-env-type="theorem"
-                data-number="0.7.2"
+                class="theorem" data-number="0.7.2"
+                data-env-type="theorem"
                 style="border-left-color: #3b6eda; background-color: #f0f5ff; ">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Theorem</strong><strong>
@@ -800,7 +800,7 @@
                 class="header-section-number">0.7.4. </span> Scalar
                 Multiplication</h2>
                 <div id="def-scalar-multiplication" class="definition"
-                data-env-type="definition" data-number="0.7.11"
+                data-number="0.7.11" data-env-type="definition"
                 style="border-left-color: #c94c6c; background-color: #fdf2f4; ">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Definition</strong><strong>
@@ -818,7 +818,7 @@
                 class="header-section-number">0.7.5. </span> Trace of a
                 Matrix</h2>
                 <div id="def-trace" class="definition"
-                data-env-type="definition" data-number="0.7.12"
+                data-number="0.7.12" data-env-type="definition"
                 style="border-left-color: #c94c6c; background-color: #fdf2f4; ">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Definition</strong><strong>
@@ -834,8 +834,8 @@
                 \cdots + a_{nn}.
                 \]</span></p>
                 </div>
-                <div id="exm-trace" class="example"
-                data-env-type="example" data-number=""
+                <div id="exm-trace" class="example" data-number=""
+                data-env-type="example"
                 style="border-left-color: #3a8a3a; background-color: #eef7ee; ">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Example</strong>
@@ -850,7 +850,7 @@
                 class="header-section-number">0.7.6. </span> Properties
                 of Transpose and Trace</h2>
                 <div id="thm-transpose-properties" class="theorem"
-                data-env-type="theorem" data-number="0.7.3"
+                data-number="0.7.3" data-env-type="theorem"
                 style="border-left-color: #3b6eda; background-color: #f0f5ff; ">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Theorem</strong><strong>
@@ -891,7 +891,7 @@
                 \B^\top\A^\top\)</span>.</p>
                 </div>
                 <div id="thm-trace-properties" class="theorem"
-                data-env-type="theorem" data-number="0.7.4"
+                data-number="0.7.4" data-env-type="theorem"
                 style="border-left-color: #3b6eda; background-color: #f0f5ff; ">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Theorem</strong><strong>

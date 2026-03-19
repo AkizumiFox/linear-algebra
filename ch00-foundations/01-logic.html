@@ -261,42 +261,42 @@
           if (typeof window.MathJax.tex === 'undefined') window.MathJax.tex = {};
           if (typeof window.MathJax.tex.macros === 'undefined') window.MathJax.tex.macros = {};
           Object.assign(window.MathJax.tex.macros, {
-                    "\ketbra": "| #1 \\rangle\\langle #2 |",
-                    "\bm": "\\mathbf{#1}",
-                    "\Normal": "\\mathcal{N}\\left( #1, #2 \\right)",
-                    "\row": "\\text{row}",
-                    "\limi": "\\lim_{#1 \\to \\infty}",
-                    "\spn": "\\text{span}",
-                    "\Uniform": "\\text{Uniform}\\left( #1, #2 \\right)",
-                    "\cl": "\\mathcal{#1}",
-                    "\bb": "\\mathbb{#1}",
-                    "\limz": "\\lim_{#1 \\to 0}",
-                    "\card": "\\left| #1 \\right|",
-                    "\nul": "\\text{nul}",
-                    "\norm": "\\left\\| #1 \\right\\|",
-                    "\rank": "\\text{rank}",
-                    "\tdd": "\\frac{d^2 #1}{d #2^2}",
                     "\interior": "\\text{int}\\left( #1 \\right)",
-                    "\braket": "\\langle #1 | #2 \\rangle",
-                    "\Var": "\\text{Var}\\left( #1 \\right)",
-                    "\tr": "\\text{tr}",
-                    "\closure": "\\overline{#1}",
-                    "\boundary": "\\partial #1",
-                    "\defeq": "\\stackrel{\\smash{\\textnormal{\\tiny def}}}{=}",
-                    "\Prob": "\\mathbb{P}\\left( #1 \\right)",
-                    "\bra": "\\langle #1 |",
-                    "\rom": "\\mathrm{#1}",
-                    "\expect": "\\langle #1 \\rangle",
-                    "\ket": "| #1 \\rangle",
-                    "\Cov": "\\text{Cov}\\left( #1, #2 \\right)",
-                    "\pdd": "\\frac{\\partial^2 #1}{\\partial #2^2}",
-                    "\pd": "\\frac{\\partial #1}{\\partial #2}",
-                    "\nullity": "\\text{nullity}",
-                    "\col": "\\text{col}",
-                    "\abs": "\\left| #1 \\right|",
+                    "\card": "\\left| #1 \\right|",
                     "\td": "\\frac{d #1}{d #2}",
+                    "\ketbra": "| #1 \\rangle\\langle #2 |",
+                    "\norm": "\\left\\| #1 \\right\\|",
+                    "\pd": "\\frac{\\partial #1}{\\partial #2}",
+                    "\bra": "\\langle #1 |",
+                    "\limi": "\\lim_{#1 \\to \\infty}",
                     "\Exp": "\\mathbb{E}\\left[ #1 \\right]",
-                    "\powerset": "\\mathcal{P}\\left( #1 \\right)"
+                    "\Var": "\\text{Var}\\left( #1 \\right)",
+                    "\tdd": "\\frac{d^2 #1}{d #2^2}",
+                    "\closure": "\\overline{#1}",
+                    "\defeq": "\\stackrel{\\smash{\\textnormal{\\tiny def}}}{=}",
+                    "\nullity": "\\text{nullity}",
+                    "\nul": "\\text{nul}",
+                    "\limz": "\\lim_{#1 \\to 0}",
+                    "\bb": "\\mathbb{#1}",
+                    "\expect": "\\langle #1 \\rangle",
+                    "\rom": "\\mathrm{#1}",
+                    "\bm": "\\mathbf{#1}",
+                    "\row": "\\text{row}",
+                    "\Normal": "\\mathcal{N}\\left( #1, #2 \\right)",
+                    "\cl": "\\mathcal{#1}",
+                    "\ket": "| #1 \\rangle",
+                    "\braket": "\\langle #1 | #2 \\rangle",
+                    "\abs": "\\left| #1 \\right|",
+                    "\spn": "\\text{span}",
+                    "\Prob": "\\mathbb{P}\\left( #1 \\right)",
+                    "\boundary": "\\partial #1",
+                    "\col": "\\text{col}",
+                    "\pdd": "\\frac{\\partial^2 #1}{\\partial #2^2}",
+                    "\rank": "\\text{rank}",
+                    "\powerset": "\\mathcal{P}\\left( #1 \\right)",
+                    "\Uniform": "\\text{Uniform}\\left( #1, #2 \\right)",
+                    "\Cov": "\\text{Cov}\\left( #1, #2 \\right)",
+                    "\tr": "\\text{tr}"
           });
         })();
         </script>
@@ -378,9 +378,9 @@ Quantifiers</span>
                 class="header-section-number">0.1.1. </span>
                 Quantifiers</h2>
                 <div id="def-quantifiers" class="definition"
-                data-number="0.1.1"
+                data-env-type="definition"
                 style="border-left-color: #c94c6c; background-color: #fdf2f4; "
-                data-env-type="definition">
+                data-number="0.1.1">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Definition</strong><strong>
                 0.1.1</strong> (Quantifiers)</span>
@@ -424,9 +424,10 @@ Quantifiers</span>
                 class="math inline">\(S\)</span> such that <span
                 class="math inline">\(P(x)\)</span>.”</p>
                 </div>
-                <div id="exm-quantifiers" class="example" data-number=""
+                <div id="exm-quantifiers" class="example"
+                data-env-type="example"
                 style="border-left-color: #3a8a3a; background-color: #eef7ee; "
-                data-env-type="example">
+                data-number="">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Example</strong>
                 (Quantified Statements)</span>
@@ -458,9 +459,9 @@ Quantifiers</span>
                 statements may involve multiple quantifiers in sequence.
                 The <strong>order matters</strong>.</p>
                 <div id="exm-nested-quantifiers" class="example"
-                data-number=""
+                data-env-type="example"
                 style="border-left-color: #3a8a3a; background-color: #eef7ee; "
-                data-env-type="example">
+                data-number="">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Example</strong>
                 (Nested Quantifiers)</span>
@@ -494,9 +495,9 @@ Quantifiers</span>
                 universal quantifier becomes existential, and vice
                 versa, while the predicate gets negated.</p>
                 <div id="def-negation-of-quantifiers" class="definition"
-                data-number="0.1.2"
+                data-env-type="definition"
                 style="border-left-color: #c94c6c; background-color: #fdf2f4; "
-                data-env-type="definition">
+                data-number="0.1.2">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Definition</strong><strong>
                 0.1.2</strong> (Negation of Quantifiers)</span>
@@ -523,9 +524,9 @@ Quantifiers</span>
                 </ul>
                 </div>
                 <div id="exm-negation-basic" class="example"
-                data-number=""
+                data-env-type="example"
                 style="border-left-color: #3a8a3a; background-color: #eef7ee; "
-                data-env-type="example">
+                data-number="">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Example</strong>
                 (Basic Negation Examples)</span>
@@ -550,9 +551,9 @@ Quantifiers</span>
                 definitions that you will encounter repeatedly in linear
                 algebra.</p>
                 <div id="exm-negation-injectivity" class="example"
-                data-number=""
+                data-env-type="example"
                 style="border-left-color: #3a8a3a; background-color: #eef7ee; "
-                data-env-type="example">
+                data-number="">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Example</strong>
                 (Negating the Definition of Injectivity)</span>
@@ -577,9 +578,9 @@ Quantifiers</span>
                 value.</p>
                 </div>
                 <div id="exm-negation-surjectivity" class="example"
-                data-number=""
+                data-env-type="example"
                 style="border-left-color: #3a8a3a; background-color: #eef7ee; "
-                data-env-type="example">
+                data-number="">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Example</strong>
                 (Negating the Definition of Surjectivity)</span>

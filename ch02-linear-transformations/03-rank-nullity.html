@@ -262,41 +262,41 @@
           if (typeof window.MathJax.tex.macros === 'undefined') window.MathJax.tex.macros = {};
           Object.assign(window.MathJax.tex.macros, {
                     "\Exp": "\\mathbb{E}\\left[ #1 \\right]",
+                    "\col": "\\text{col}",
+                    "\expect": "\\langle #1 \\rangle",
+                    "\closure": "\\overline{#1}",
+                    "\tdd": "\\frac{d^2 #1}{d #2^2}",
+                    "\norm": "\\left\\| #1 \\right\\|",
+                    "\Var": "\\text{Var}\\left( #1 \\right)",
+                    "\pdd": "\\frac{\\partial^2 #1}{\\partial #2^2}",
+                    "\tr": "\\text{tr}",
+                    "\powerset": "\\mathcal{P}\\left( #1 \\right)",
+                    "\interior": "\\text{int}\\left( #1 \\right)",
+                    "\ket": "| #1 \\rangle",
                     "\row": "\\text{row}",
-                    "\pd": "\\frac{\\partial #1}{\\partial #2}",
-                    "\td": "\\frac{d #1}{d #2}",
+                    "\cl": "\\mathcal{#1}",
+                    "\ketbra": "| #1 \\rangle\\langle #2 |",
+                    "\rom": "\\mathrm{#1}",
+                    "\Cov": "\\text{Cov}\\left( #1, #2 \\right)",
+                    "\Normal": "\\mathcal{N}\\left( #1, #2 \\right)",
+                    "\spn": "\\text{span}",
+                    "\bm": "\\mathbf{#1}",
+                    "\bb": "\\mathbb{#1}",
+                    "\limi": "\\lim_{#1 \\to \\infty}",
+                    "\boundary": "\\partial #1",
+                    "\abs": "\\left| #1 \\right|",
+                    "\Uniform": "\\text{Uniform}\\left( #1, #2 \\right)",
                     "\limz": "\\lim_{#1 \\to 0}",
                     "\card": "\\left| #1 \\right|",
-                    "\tdd": "\\frac{d^2 #1}{d #2^2}",
-                    "\pdd": "\\frac{\\partial^2 #1}{\\partial #2^2}",
-                    "\ket": "| #1 \\rangle",
-                    "\rank": "\\text{rank}",
-                    "\rom": "\\mathrm{#1}",
-                    "\nul": "\\text{nul}",
-                    "\limi": "\\lim_{#1 \\to \\infty}",
-                    "\Normal": "\\mathcal{N}\\left( #1, #2 \\right)",
-                    "\expect": "\\langle #1 \\rangle",
                     "\nullity": "\\text{nullity}",
-                    "\interior": "\\text{int}\\left( #1 \\right)",
-                    "\closure": "\\overline{#1}",
-                    "\defeq": "\\stackrel{\\smash{\\textnormal{\\tiny def}}}{=}",
-                    "\spn": "\\text{span}",
-                    "\boundary": "\\partial #1",
-                    "\ketbra": "| #1 \\rangle\\langle #2 |",
-                    "\Var": "\\text{Var}\\left( #1 \\right)",
-                    "\braket": "\\langle #1 | #2 \\rangle",
-                    "\bm": "\\mathbf{#1}",
-                    "\Cov": "\\text{Cov}\\left( #1, #2 \\right)",
-                    "\Uniform": "\\text{Uniform}\\left( #1, #2 \\right)",
-                    "\norm": "\\left\\| #1 \\right\\|",
-                    "\col": "\\text{col}",
-                    "\bra": "\\langle #1 |",
                     "\Prob": "\\mathbb{P}\\left( #1 \\right)",
-                    "\bb": "\\mathbb{#1}",
-                    "\powerset": "\\mathcal{P}\\left( #1 \\right)",
-                    "\cl": "\\mathcal{#1}",
-                    "\abs": "\\left| #1 \\right|",
-                    "\tr": "\\text{tr}"
+                    "\nul": "\\text{nul}",
+                    "\td": "\\frac{d #1}{d #2}",
+                    "\defeq": "\\stackrel{\\smash{\\textnormal{\\tiny def}}}{=}",
+                    "\braket": "\\langle #1 | #2 \\rangle",
+                    "\bra": "\\langle #1 |",
+                    "\rank": "\\text{rank}",
+                    "\pd": "\\frac{\\partial #1}{\\partial #2}"
           });
         })();
         </script>
@@ -367,9 +367,8 @@ Theorem</span>
                 class="header-section-number">2.3.1. </span> Nullity and
                 Rank</h2>
                 <div id="def-nullity" class="definition"
-                data-env-type="definition"
                 style="border-left-color: #c94c6c; background-color: #fdf2f4; "
-                data-number="2.3.1">
+                data-env-type="definition" data-number="2.3.1">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Definition</strong><strong>
                 2.3.1</strong> (Nullity)</span>
@@ -381,9 +380,8 @@ Theorem</span>
                 \]</span></p>
                 </div>
                 <div id="def-rank" class="definition"
-                data-env-type="definition"
                 style="border-left-color: #c94c6c; background-color: #fdf2f4; "
-                data-number="2.3.2">
+                data-env-type="definition" data-number="2.3.2">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Definition</strong><strong>
                 2.3.2</strong> (Rank)</span>
@@ -395,9 +393,8 @@ Theorem</span>
                 \]</span></p>
                 </div>
                 <div id="exm-nullity-rank-diff" class="example"
-                data-env-type="example"
                 style="border-left-color: #3a8a3a; background-color: #eef7ee; "
-                data-number="">
+                data-env-type="example" data-number="">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Example</strong></span>
                 <p>Recall that for <span class="math inline">\(D :
@@ -427,9 +424,8 @@ Theorem</span>
                 class="header-section-number">2.3.2. </span> The
                 Theorem</h2>
                 <div id="thm-rank-nullity" class="theorem"
-                data-env-type="theorem"
                 style="border-left-color: #3b6eda; background-color: #f0f5ff; "
-                data-number="2.3.1">
+                data-env-type="theorem" data-number="2.3.1">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Theorem</strong><strong>
                 2.3.1</strong> (Rank-Nullity Theorem)</span>
@@ -509,213 +505,6 @@ Theorem</span>
                 \rank (f) = \dim (\im (f)) = k = (n + k) - n = \dim (V)
                 - \nullity (f).
                 \]</span></p>
-                </div>
-                <div class="solution small-env"
-                data-env-type="solution">
-                <p><em>Solution</em><em>.</em> <span
-                class="math inline">\(\nullity (D) \coloneqq \dim_{\nR}
-                (\ker (D)) = \dim_{\nR} (\nR) = 1\)</span>.</p>
-                <p><span class="math inline">\(\rank (D) \coloneqq
-                \dim_{\nR} (\im (D)) = \dim_{\nR} (\nR[x]_{\leq 2}) =
-                3\)</span>.</p>
-                </div>
-                <div class="solution small-env"
-                data-env-type="solution">
-                <p><em>Solution</em><em>.</em> <span
-                class="math inline">\(\nullity (D) \coloneqq \dim_{\nR}
-                (\ker (D)) = \dim_{\nR} (\nR) = 1\)</span>.</p>
-                <p><span class="math inline">\(\rank (D) \coloneqq
-                \dim_{\nR} (\im (D)) = \dim_{\nR} (\nR[x]_{\leq 2}) =
-                3\)</span>.</p>
-                </div>
-                <div class="solution small-env"
-                data-env-type="solution">
-                <p><em>Solution</em><em>.</em> <span
-                class="math inline">\(\nullity (D) \coloneqq \dim_{\nR}
-                (\ker (D)) = \dim_{\nR} (\nR) = 1\)</span>.</p>
-                <p><span class="math inline">\(\rank (D) \coloneqq
-                \dim_{\nR} (\im (D)) = \dim_{\nR} (\nR[x]_{\leq 2}) =
-                3\)</span>.</p>
-                </div>
-                <div class="solution small-env"
-                data-env-type="solution">
-                <p><em>Solution</em><em>.</em> <span
-                class="math inline">\(\nullity (D) \coloneqq \dim_{\nR}
-                (\ker (D)) = \dim_{\nR} (\nR) = 1\)</span>.</p>
-                <p><span class="math inline">\(\rank (D) \coloneqq
-                \dim_{\nR} (\im (D)) = \dim_{\nR} (\nR[x]_{\leq 2}) =
-                3\)</span>.</p>
-                </div>
-                <div class="solution small-env"
-                data-env-type="solution">
-                <p><em>Solution</em><em>.</em> <span
-                class="math inline">\(\nullity (D) \coloneqq \dim_{\nR}
-                (\ker (D)) = \dim_{\nR} (\nR) = 1\)</span>.</p>
-                <p><span class="math inline">\(\rank (D) \coloneqq
-                \dim_{\nR} (\im (D)) = \dim_{\nR} (\nR[x]_{\leq 2}) =
-                3\)</span>.</p>
-                </div>
-                <div class="solution small-env"
-                data-env-type="solution">
-                <p><em>Solution</em><em>.</em> <span
-                class="math inline">\(\nullity (D) \coloneqq \dim_{\nR}
-                (\ker (D)) = \dim_{\nR} (\nR) = 1\)</span>.</p>
-                <p><span class="math inline">\(\rank (D) \coloneqq
-                \dim_{\nR} (\im (D)) = \dim_{\nR} (\nR[x]_{\leq 2}) =
-                3\)</span>.</p>
-                </div>
-                <div class="solution small-env"
-                data-env-type="solution">
-                <p><em>Solution</em><em>.</em> <span
-                class="math inline">\(\nullity (D) \coloneqq \dim_{\nR}
-                (\ker (D)) = \dim_{\nR} (\nR) = 1\)</span>.</p>
-                <p><span class="math inline">\(\rank (D) \coloneqq
-                \dim_{\nR} (\im (D)) = \dim_{\nR} (\nR[x]_{\leq 2}) =
-                3\)</span>.</p>
-                </div>
-                <div class="solution small-env"
-                data-env-type="solution">
-                <p><em>Solution</em><em>.</em> <span
-                class="math inline">\(\nullity (D) \coloneqq \dim_{\nR}
-                (\ker (D)) = \dim_{\nR} (\nR) = 1\)</span>.</p>
-                <p><span class="math inline">\(\rank (D) \coloneqq
-                \dim_{\nR} (\im (D)) = \dim_{\nR} (\nR[x]_{\leq 2}) =
-                3\)</span>.</p>
-                </div>
-                <div class="solution small-env"
-                data-env-type="solution">
-                <p><em>Solution</em><em>.</em> <span
-                class="math inline">\(\nullity (D) \coloneqq \dim_{\nR}
-                (\ker (D)) = \dim_{\nR} (\nR) = 1\)</span>.</p>
-                <p><span class="math inline">\(\rank (D) \coloneqq
-                \dim_{\nR} (\im (D)) = \dim_{\nR} (\nR[x]_{\leq 2}) =
-                3\)</span>.</p>
-                </div>
-                <div class="solution small-env"
-                data-env-type="solution">
-                <p><em>Solution</em><em>.</em> <span
-                class="math inline">\(\nullity (D) \coloneqq \dim_{\nR}
-                (\ker (D)) = \dim_{\nR} (\nR) = 1\)</span>.</p>
-                <p><span class="math inline">\(\rank (D) \coloneqq
-                \dim_{\nR} (\im (D)) = \dim_{\nR} (\nR[x]_{\leq 2}) =
-                3\)</span>.</p>
-                </div>
-                <div class="solution small-env"
-                data-env-type="solution">
-                <p><em>Solution</em><em>.</em> <span
-                class="math inline">\(\nullity (D) \coloneqq \dim_{\nR}
-                (\ker (D)) = \dim_{\nR} (\nR) = 1\)</span>.</p>
-                <p><span class="math inline">\(\rank (D) \coloneqq
-                \dim_{\nR} (\im (D)) = \dim_{\nR} (\nR[x]_{\leq 2}) =
-                3\)</span>.</p>
-                </div>
-                <div class="solution small-env"
-                data-env-type="solution">
-                <p><em>Solution</em><em>.</em> <span
-                class="math inline">\(\nullity (D) \coloneqq \dim_{\nR}
-                (\ker (D)) = \dim_{\nR} (\nR) = 1\)</span>.</p>
-                <p><span class="math inline">\(\rank (D) \coloneqq
-                \dim_{\nR} (\im (D)) = \dim_{\nR} (\nR[x]_{\leq 2}) =
-                3\)</span>.</p>
-                </div>
-                <div class="solution small-env"
-                data-env-type="solution">
-                <p><em>Solution</em><em>.</em> <span
-                class="math inline">\(\nullity (D) \coloneqq \dim_{\nR}
-                (\ker (D)) = \dim_{\nR} (\nR) = 1\)</span>.</p>
-                <p><span class="math inline">\(\rank (D) \coloneqq
-                \dim_{\nR} (\im (D)) = \dim_{\nR} (\nR[x]_{\leq 2}) =
-                3\)</span>.</p>
-                </div>
-                <div class="solution small-env"
-                data-env-type="solution">
-                <p><em>Solution</em><em>.</em> <span
-                class="math inline">\(\nullity (D) \coloneqq \dim_{\nR}
-                (\ker (D)) = \dim_{\nR} (\nR) = 1\)</span>.</p>
-                <p><span class="math inline">\(\rank (D) \coloneqq
-                \dim_{\nR} (\im (D)) = \dim_{\nR} (\nR[x]_{\leq 2}) =
-                3\)</span>.</p>
-                </div>
-                <div class="solution small-env"
-                data-env-type="solution">
-                <p><em>Solution</em><em>.</em> <span
-                class="math inline">\(\nullity (D) \coloneqq \dim_{\nR}
-                (\ker (D)) = \dim_{\nR} (\nR) = 1\)</span>.</p>
-                <p><span class="math inline">\(\rank (D) \coloneqq
-                \dim_{\nR} (\im (D)) = \dim_{\nR} (\nR[x]_{\leq 2}) =
-                3\)</span>.</p>
-                </div>
-                <div class="solution small-env"
-                data-env-type="solution">
-                <p><em>Solution</em><em>.</em> <span
-                class="math inline">\(\nullity (D) \coloneqq \dim_{\nR}
-                (\ker (D)) = \dim_{\nR} (\nR) = 1\)</span>.</p>
-                <p><span class="math inline">\(\rank (D) \coloneqq
-                \dim_{\nR} (\im (D)) = \dim_{\nR} (\nR[x]_{\leq 2}) =
-                3\)</span>.</p>
-                </div>
-                <div class="solution small-env"
-                data-env-type="solution">
-                <p><em>Solution</em><em>.</em> <span
-                class="math inline">\(\nullity (D) \coloneqq \dim_{\nR}
-                (\ker (D)) = \dim_{\nR} (\nR) = 1\)</span>.</p>
-                <p><span class="math inline">\(\rank (D) \coloneqq
-                \dim_{\nR} (\im (D)) = \dim_{\nR} (\nR[x]_{\leq 2}) =
-                3\)</span>.</p>
-                </div>
-                <div class="solution small-env"
-                data-env-type="solution">
-                <p><em>Solution</em><em>.</em> <span
-                class="math inline">\(\nullity (D) \coloneqq \dim_{\nR}
-                (\ker (D)) = \dim_{\nR} (\nR) = 1\)</span>.</p>
-                <p><span class="math inline">\(\rank (D) \coloneqq
-                \dim_{\nR} (\im (D)) = \dim_{\nR} (\nR[x]_{\leq 2}) =
-                3\)</span>.</p>
-                </div>
-                <div class="solution small-env"
-                data-env-type="solution">
-                <p><em>Solution</em><em>.</em> <span
-                class="math inline">\(\nullity (D) \coloneqq \dim_{\nR}
-                (\ker (D)) = \dim_{\nR} (\nR) = 1\)</span>.</p>
-                <p><span class="math inline">\(\rank (D) \coloneqq
-                \dim_{\nR} (\im (D)) = \dim_{\nR} (\nR[x]_{\leq 2}) =
-                3\)</span>.</p>
-                </div>
-                <div class="solution small-env"
-                data-env-type="solution">
-                <p><em>Solution</em><em>.</em> <span
-                class="math inline">\(\nullity (D) \coloneqq \dim_{\nR}
-                (\ker (D)) = \dim_{\nR} (\nR) = 1\)</span>.</p>
-                <p><span class="math inline">\(\rank (D) \coloneqq
-                \dim_{\nR} (\im (D)) = \dim_{\nR} (\nR[x]_{\leq 2}) =
-                3\)</span>.</p>
-                </div>
-                <div class="solution small-env"
-                data-env-type="solution">
-                <p><em>Solution</em><em>.</em> <span
-                class="math inline">\(\nullity (D) \coloneqq \dim_{\nR}
-                (\ker (D)) = \dim_{\nR} (\nR) = 1\)</span>.</p>
-                <p><span class="math inline">\(\rank (D) \coloneqq
-                \dim_{\nR} (\im (D)) = \dim_{\nR} (\nR[x]_{\leq 2}) =
-                3\)</span>.</p>
-                </div>
-                <div class="solution small-env"
-                data-env-type="solution">
-                <p><em>Solution</em><em>.</em> <span
-                class="math inline">\(\nullity (D) \coloneqq \dim_{\nR}
-                (\ker (D)) = \dim_{\nR} (\nR) = 1\)</span>.</p>
-                <p><span class="math inline">\(\rank (D) \coloneqq
-                \dim_{\nR} (\im (D)) = \dim_{\nR} (\nR[x]_{\leq 2}) =
-                3\)</span>.</p>
-                </div>
-                <div class="solution small-env"
-                data-env-type="solution">
-                <p><em>Solution</em><em>.</em> <span
-                class="math inline">\(\nullity (D) \coloneqq \dim_{\nR}
-                (\ker (D)) = \dim_{\nR} (\nR) = 1\)</span>.</p>
-                <p><span class="math inline">\(\rank (D) \coloneqq
-                \dim_{\nR} (\im (D)) = \dim_{\nR} (\nR[x]_{\leq 2}) =
-                3\)</span>.</p>
                 </div>
             </article>
 

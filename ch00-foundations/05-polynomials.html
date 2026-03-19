@@ -261,42 +261,42 @@
           if (typeof window.MathJax.tex === 'undefined') window.MathJax.tex = {};
           if (typeof window.MathJax.tex.macros === 'undefined') window.MathJax.tex.macros = {};
           Object.assign(window.MathJax.tex.macros, {
-                    "\cl": "\\mathcal{#1}",
-                    "\closure": "\\overline{#1}",
-                    "\abs": "\\left| #1 \\right|",
-                    "\Prob": "\\mathbb{P}\\left( #1 \\right)",
-                    "\Normal": "\\mathcal{N}\\left( #1, #2 \\right)",
-                    "\limz": "\\lim_{#1 \\to 0}",
-                    "\ket": "| #1 \\rangle",
-                    "\bra": "\\langle #1 |",
-                    "\nullity": "\\text{nullity}",
-                    "\row": "\\text{row}",
-                    "\norm": "\\left\\| #1 \\right\\|",
-                    "\tdd": "\\frac{d^2 #1}{d #2^2}",
-                    "\powerset": "\\mathcal{P}\\left( #1 \\right)",
-                    "\braket": "\\langle #1 | #2 \\rangle",
-                    "\limi": "\\lim_{#1 \\to \\infty}",
-                    "\boundary": "\\partial #1",
-                    "\Var": "\\text{Var}\\left( #1 \\right)",
-                    "\tr": "\\text{tr}",
                     "\rom": "\\mathrm{#1}",
-                    "\col": "\\text{col}",
-                    "\bm": "\\mathbf{#1}",
-                    "\bb": "\\mathbb{#1}",
-                    "\nul": "\\text{nul}",
+                    "\tdd": "\\frac{d^2 #1}{d #2^2}",
+                    "\row": "\\text{row}",
                     "\pdd": "\\frac{\\partial^2 #1}{\\partial #2^2}",
-                    "\Cov": "\\text{Cov}\\left( #1, #2 \\right)",
-                    "\interior": "\\text{int}\\left( #1 \\right)",
-                    "\card": "\\left| #1 \\right|",
-                    "\defeq": "\\stackrel{\\smash{\\textnormal{\\tiny def}}}{=}",
+                    "\limi": "\\lim_{#1 \\to \\infty}",
+                    "\bm": "\\mathbf{#1}",
+                    "\limz": "\\lim_{#1 \\to 0}",
+                    "\Uniform": "\\text{Uniform}\\left( #1, #2 \\right)",
+                    "\boundary": "\\partial #1",
+                    "\Normal": "\\mathcal{N}\\left( #1, #2 \\right)",
+                    "\powerset": "\\mathcal{P}\\left( #1 \\right)",
+                    "\cl": "\\mathcal{#1}",
+                    "\td": "\\frac{d #1}{d #2}",
+                    "\braket": "\\langle #1 | #2 \\rangle",
                     "\pd": "\\frac{\\partial #1}{\\partial #2}",
                     "\rank": "\\text{rank}",
-                    "\Exp": "\\mathbb{E}\\left[ #1 \\right]",
-                    "\ketbra": "| #1 \\rangle\\langle #2 |",
+                    "\tr": "\\text{tr}",
                     "\spn": "\\text{span}",
-                    "\td": "\\frac{d #1}{d #2}",
+                    "\Var": "\\text{Var}\\left( #1 \\right)",
                     "\expect": "\\langle #1 \\rangle",
-                    "\Uniform": "\\text{Uniform}\\left( #1, #2 \\right)"
+                    "\card": "\\left| #1 \\right|",
+                    "\nullity": "\\text{nullity}",
+                    "\abs": "\\left| #1 \\right|",
+                    "\defeq": "\\stackrel{\\smash{\\textnormal{\\tiny def}}}{=}",
+                    "\Prob": "\\mathbb{P}\\left( #1 \\right)",
+                    "\ket": "| #1 \\rangle",
+                    "\bb": "\\mathbb{#1}",
+                    "\col": "\\text{col}",
+                    "\bra": "\\langle #1 |",
+                    "\ketbra": "| #1 \\rangle\\langle #2 |",
+                    "\nul": "\\text{nul}",
+                    "\closure": "\\overline{#1}",
+                    "\norm": "\\left\\| #1 \\right\\|",
+                    "\Exp": "\\mathbb{E}\\left[ #1 \\right]",
+                    "\Cov": "\\text{Cov}\\left( #1, #2 \\right)",
+                    "\interior": "\\text{int}\\left( #1 \\right)"
           });
         })();
         </script>
@@ -363,7 +363,7 @@
 
                 </div>
                 <div id="def-polynomial" class="definition"
-                data-env-type="definition" data-number="0.5.1"
+                data-number="0.5.1" data-env-type="definition"
                 style="border-left-color: #c94c6c; background-color: #fdf2f4; ">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Definition</strong><strong>
@@ -380,7 +380,7 @@
                 class="math inline">\(p(x)\)</span>.</p>
                 </div>
                 <div id="def-degree" class="definition"
-                data-env-type="definition" data-number="0.5.2"
+                data-number="0.5.2" data-env-type="definition"
                 style="border-left-color: #c94c6c; background-color: #fdf2f4; ">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Definition</strong><strong>
@@ -399,7 +399,7 @@
                 class="math inline">\(-\infty\)</span>.</p>
                 </div>
                 <div id="def-polynomial-ring" class="definition"
-                data-env-type="definition" data-number="0.5.3"
+                data-number="0.5.3" data-env-type="definition"
                 style="border-left-color: #c94c6c; background-color: #fdf2f4; ">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Definition</strong><strong>
@@ -415,7 +415,7 @@
                 what ring means here.)</p>
                 </div>
                 <div id="exm-elements-of-rx" class="example"
-                data-env-type="example" data-number=""
+                data-number="" data-env-type="example"
                 style="border-left-color: #3a8a3a; background-color: #eef7ee; ">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Example</strong>
@@ -432,8 +432,8 @@
                 <p>In linear algebra, we often work with polynomials of
                 bounded degree.</p>
                 <div id="def-polynomials-bounded-degree"
-                class="definition" data-env-type="definition"
-                data-number="0.5.4"
+                class="definition" data-number="0.5.4"
+                data-env-type="definition"
                 style="border-left-color: #c94c6c; background-color: #fdf2f4; ">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Definition</strong><strong>
@@ -453,7 +453,7 @@
                 \]</span></p>
                 </div>
                 <div id="exm-elements-of-rx-leq-2" class="example"
-                data-env-type="example" data-number=""
+                data-number="" data-env-type="example"
                 style="border-left-color: #3a8a3a; background-color: #eef7ee; ">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Example</strong>
@@ -470,8 +470,8 @@
                 class="math inline">\(-4\)</span>.</p>
                 </div>
                 <div id="def-polynomials-exact-degree"
-                class="definition" data-env-type="definition"
-                data-number="0.5.5"
+                class="definition" data-number="0.5.5"
+                data-env-type="definition"
                 style="border-left-color: #c94c6c; background-color: #fdf2f4; ">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Definition</strong><strong>
@@ -506,7 +506,7 @@
                 F[x]_{\leq n-1}\)</span>.</p>
                 </div>
                 <div id="exm-comparing-notations" class="example"
-                data-env-type="example" data-number=""
+                data-number="" data-env-type="example"
                 style="border-left-color: #3a8a3a; background-color: #eef7ee; ">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Example</strong>

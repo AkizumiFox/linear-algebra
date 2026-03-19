@@ -261,42 +261,42 @@
           if (typeof window.MathJax.tex === 'undefined') window.MathJax.tex = {};
           if (typeof window.MathJax.tex.macros === 'undefined') window.MathJax.tex.macros = {};
           Object.assign(window.MathJax.tex.macros, {
+                    "\Exp": "\\mathbb{E}\\left[ #1 \\right]",
+                    "\boundary": "\\partial #1",
+                    "\bra": "\\langle #1 |",
+                    "\powerset": "\\mathcal{P}\\left( #1 \\right)",
+                    "\Uniform": "\\text{Uniform}\\left( #1, #2 \\right)",
+                    "\interior": "\\text{int}\\left( #1 \\right)",
+                    "\defeq": "\\stackrel{\\smash{\\textnormal{\\tiny def}}}{=}",
+                    "\braket": "\\langle #1 | #2 \\rangle",
+                    "\norm": "\\left\\| #1 \\right\\|",
+                    "\pdd": "\\frac{\\partial^2 #1}{\\partial #2^2}",
+                    "\Prob": "\\mathbb{P}\\left( #1 \\right)",
+                    "\nul": "\\text{nul}",
+                    "\Var": "\\text{Var}\\left( #1 \\right)",
+                    "\card": "\\left| #1 \\right|",
+                    "\bm": "\\mathbf{#1}",
+                    "\col": "\\text{col}",
+                    "\spn": "\\text{span}",
                     "\pd": "\\frac{\\partial #1}{\\partial #2}",
                     "\Cov": "\\text{Cov}\\left( #1, #2 \\right)",
-                    "\card": "\\left| #1 \\right|",
-                    "\col": "\\text{col}",
-                    "\abs": "\\left| #1 \\right|",
-                    "\defeq": "\\stackrel{\\smash{\\textnormal{\\tiny def}}}{=}",
-                    "\interior": "\\text{int}\\left( #1 \\right)",
-                    "\nul": "\\text{nul}",
+                    "\td": "\\frac{d #1}{d #2}",
+                    "\ketbra": "| #1 \\rangle\\langle #2 |",
                     "\expect": "\\langle #1 \\rangle",
                     "\closure": "\\overline{#1}",
-                    "\rom": "\\mathrm{#1}",
-                    "\Exp": "\\mathbb{E}\\left[ #1 \\right]",
-                    "\powerset": "\\mathcal{P}\\left( #1 \\right)",
-                    "\row": "\\text{row}",
-                    "\Prob": "\\mathbb{P}\\left( #1 \\right)",
-                    "\ket": "| #1 \\rangle",
-                    "\rank": "\\text{rank}",
                     "\limi": "\\lim_{#1 \\to \\infty}",
-                    "\tdd": "\\frac{d^2 #1}{d #2^2}",
-                    "\pdd": "\\frac{\\partial^2 #1}{\\partial #2^2}",
-                    "\norm": "\\left\\| #1 \\right\\|",
-                    "\Var": "\\text{Var}\\left( #1 \\right)",
-                    "\spn": "\\text{span}",
+                    "\rom": "\\mathrm{#1}",
                     "\cl": "\\mathcal{#1}",
-                    "\nullity": "\\text{nullity}",
-                    "\Normal": "\\mathcal{N}\\left( #1, #2 \\right)",
                     "\limz": "\\lim_{#1 \\to 0}",
-                    "\ketbra": "| #1 \\rangle\\langle #2 |",
-                    "\bm": "\\mathbf{#1}",
                     "\bb": "\\mathbb{#1}",
-                    "\boundary": "\\partial #1",
-                    "\td": "\\frac{d #1}{d #2}",
-                    "\braket": "\\langle #1 | #2 \\rangle",
-                    "\bra": "\\langle #1 |",
+                    "\rank": "\\text{rank}",
+                    "\ket": "| #1 \\rangle",
                     "\tr": "\\text{tr}",
-                    "\Uniform": "\\text{Uniform}\\left( #1, #2 \\right)"
+                    "\nullity": "\\text{nullity}",
+                    "\row": "\\text{row}",
+                    "\abs": "\\left| #1 \\right|",
+                    "\Normal": "\\mathcal{N}\\left( #1, #2 \\right)",
+                    "\tdd": "\\frac{d^2 #1}{d #2^2}"
           });
         })();
         </script>
@@ -368,7 +368,7 @@ Image</span>
                 Definition</h2>
                 <div id="def-kernel" class="definition"
                 style="border-left-color: #c94c6c; background-color: #fdf2f4; "
-                data-env-type="definition" data-number="2.2.1">
+                data-number="2.2.1" data-env-type="definition">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Definition</strong><strong>
                 2.2.1</strong> (Kernel)</span>
@@ -386,7 +386,7 @@ Image</span>
                 </div>
                 <div id="def-image" class="definition"
                 style="border-left-color: #c94c6c; background-color: #fdf2f4; "
-                data-env-type="definition" data-number="2.2.2">
+                data-number="2.2.2" data-env-type="definition">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Definition</strong><strong>
                 2.2.2</strong> (Image)</span>
@@ -414,7 +414,7 @@ Image</span>
                 <div id="exm-differentiation-kernel-image"
                 class="example"
                 style="border-left-color: #3a8a3a; background-color: #eef7ee; "
-                data-env-type="example" data-number="">
+                data-number="" data-env-type="example">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Example</strong>
                 (Differentiation)</span>
@@ -456,7 +456,7 @@ Image</span>
                 </div>
                 <div id="exm-trace-kernel-image" class="example"
                 style="border-left-color: #3a8a3a; background-color: #eef7ee; "
-                data-env-type="example" data-number="">
+                data-number="" data-env-type="example">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Example</strong>
                 (Trace)</span>
@@ -510,7 +510,7 @@ Image</span>
                 Theorems</h2>
                 <div id="thm-prop-kernel" class="theorem"
                 style="border-left-color: #3b6eda; background-color: #f0f5ff; "
-                data-env-type="theorem" data-number="2.2.1">
+                data-number="2.2.1" data-env-type="theorem">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Theorem</strong><strong>
                 2.2.1</strong> (Properties of Kernel)</span>
@@ -590,7 +590,7 @@ Image</span>
                 </div>
                 <div id="thm-prop-image" class="theorem"
                 style="border-left-color: #3b6eda; background-color: #f0f5ff; "
-                data-env-type="theorem" data-number="2.2.2">
+                data-number="2.2.2" data-env-type="theorem">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Theorem</strong><strong>
                 2.2.2</strong> (Properties of Image)</span>
