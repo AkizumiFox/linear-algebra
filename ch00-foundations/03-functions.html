@@ -261,42 +261,42 @@
           if (typeof window.MathJax.tex === 'undefined') window.MathJax.tex = {};
           if (typeof window.MathJax.tex.macros === 'undefined') window.MathJax.tex.macros = {};
           Object.assign(window.MathJax.tex.macros, {
-                    "\defeq": "\\stackrel{\\smash{\\textnormal{\\tiny def}}}{=}",
-                    "\norm": "\\left\\| #1 \\right\\|",
-                    "\interior": "\\text{int}\\left( #1 \\right)",
-                    "\limi": "\\lim_{#1 \\to \\infty}",
-                    "\spn": "\\text{span}",
-                    "\rank": "\\text{rank}",
-                    "\pd": "\\frac{\\partial #1}{\\partial #2}",
-                    "\tdd": "\\frac{d^2 #1}{d #2^2}",
-                    "\col": "\\text{col}",
-                    "\card": "\\left| #1 \\right|",
-                    "\powerset": "\\mathcal{P}\\left( #1 \\right)",
-                    "\nul": "\\text{nul}",
-                    "\braket": "\\langle #1 | #2 \\rangle",
-                    "\ketbra": "| #1 \\rangle\\langle #2 |",
-                    "\row": "\\text{row}",
-                    "\abs": "\\left| #1 \\right|",
                     "\Uniform": "\\text{Uniform}\\left( #1, #2 \\right)",
-                    "\Cov": "\\text{Cov}\\left( #1, #2 \\right)",
-                    "\boundary": "\\partial #1",
-                    "\closure": "\\overline{#1}",
-                    "\rom": "\\mathrm{#1}",
-                    "\bm": "\\mathbf{#1}",
-                    "\Normal": "\\mathcal{N}\\left( #1, #2 \\right)",
-                    "\cl": "\\mathcal{#1}",
-                    "\nullity": "\\text{nullity}",
-                    "\bb": "\\mathbb{#1}",
-                    "\bra": "\\langle #1 |",
-                    "\Exp": "\\mathbb{E}\\left[ #1 \\right]",
-                    "\pdd": "\\frac{\\partial^2 #1}{\\partial #2^2}",
-                    "\ket": "| #1 \\rangle",
+                    "\spn": "\\text{span}",
                     "\expect": "\\langle #1 \\rangle",
-                    "\tr": "\\text{tr}",
-                    "\Prob": "\\mathbb{P}\\left( #1 \\right)",
+                    "\Exp": "\\mathbb{E}\\left[ #1 \\right]",
+                    "\pd": "\\frac{\\partial #1}{\\partial #2}",
+                    "\rom": "\\mathrm{#1}",
+                    "\card": "\\left| #1 \\right|",
                     "\td": "\\frac{d #1}{d #2}",
+                    "\rank": "\\text{rank}",
+                    "\nullity": "\\text{nullity}",
+                    "\Normal": "\\mathcal{N}\\left( #1, #2 \\right)",
+                    "\defeq": "\\stackrel{\\smash{\\textnormal{\\tiny def}}}{=}",
+                    "\bb": "\\mathbb{#1}",
+                    "\Cov": "\\text{Cov}\\left( #1, #2 \\right)",
+                    "\abs": "\\left| #1 \\right|",
+                    "\bra": "\\langle #1 |",
+                    "\bm": "\\mathbf{#1}",
+                    "\cl": "\\mathcal{#1}",
+                    "\Var": "\\text{Var}\\left( #1 \\right)",
+                    "\row": "\\text{row}",
+                    "\boundary": "\\partial #1",
+                    "\ket": "| #1 \\rangle",
+                    "\pdd": "\\frac{\\partial^2 #1}{\\partial #2^2}",
+                    "\ketbra": "| #1 \\rangle\\langle #2 |",
+                    "\col": "\\text{col}",
+                    "\norm": "\\left\\| #1 \\right\\|",
+                    "\powerset": "\\mathcal{P}\\left( #1 \\right)",
+                    "\tr": "\\text{tr}",
+                    "\closure": "\\overline{#1}",
+                    "\Prob": "\\mathbb{P}\\left( #1 \\right)",
+                    "\limi": "\\lim_{#1 \\to \\infty}",
                     "\limz": "\\lim_{#1 \\to 0}",
-                    "\Var": "\\text{Var}\\left( #1 \\right)"
+                    "\braket": "\\langle #1 | #2 \\rangle",
+                    "\tdd": "\\frac{d^2 #1}{d #2^2}",
+                    "\nul": "\\text{nul}",
+                    "\interior": "\\text{int}\\left( #1 \\right)"
           });
         })();
         </script>
@@ -383,8 +383,9 @@
                 class="header-section-number">0.3.1. </span> Definition
                 and Basic Properties</h2>
                 <div id="def-function" class="definition"
-                data-env-type="definition" data-number="0.3.1"
-                style="border-left-color: #c94c6c; background-color: #fdf2f4; ">
+                data-env-type="definition"
+                style="border-left-color: #c94c6c; background-color: #fdf2f4; "
+                data-number="0.3.1">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Definition</strong><strong>
                 0.3.1</strong> (Function)</span>
@@ -403,8 +404,8 @@
                 </div>
                 <div id="def-injective-surjective-bijective"
                 class="definition" data-env-type="definition"
-                data-number="0.3.2"
-                style="border-left-color: #c94c6c; background-color: #fdf2f4; ">
+                style="border-left-color: #c94c6c; background-color: #fdf2f4; "
+                data-number="0.3.2">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Definition</strong><strong>
                 0.3.2</strong> (Injective, Surjective, Bijective)</span>
@@ -426,8 +427,9 @@
                 </ul>
                 </div>
                 <div id="exm-injective-surjective-bijective"
-                class="example" data-env-type="example" data-number=""
-                style="border-left-color: #3a8a3a; background-color: #eef7ee; ">
+                class="example" data-env-type="example"
+                style="border-left-color: #3a8a3a; background-color: #eef7ee; "
+                data-number="">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Example</strong>
                 (Injective, Surjective, and Bijective Functions)</span>
@@ -491,8 +493,9 @@
                 fundamental: matrix multiplication is precisely the
                 composition of the corresponding linear maps.</p>
                 <div id="def-composition" class="definition"
-                data-env-type="definition" data-number="0.3.3"
-                style="border-left-color: #c94c6c; background-color: #fdf2f4; ">
+                data-env-type="definition"
+                style="border-left-color: #c94c6c; background-color: #fdf2f4; "
+                data-number="0.3.3">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Definition</strong><strong>
                 0.3.3</strong> (Function Composition)</span>
@@ -525,8 +528,9 @@
                 by <span class="math inline">\(\A\)</span>.</p>
                 </div>
                 <div id="exm-composition" class="example"
-                data-env-type="example" data-number=""
-                style="border-left-color: #3a8a3a; background-color: #eef7ee; ">
+                data-env-type="example"
+                style="border-left-color: #3a8a3a; background-color: #eef7ee; "
+                data-number="">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Example</strong>
                 (Function Composition)</span>
@@ -547,8 +551,9 @@
                 commutative</strong>.</p>
                 </div>
                 <div id="thm-composition-associative" class="theorem"
-                data-env-type="theorem" data-number="0.3.1"
-                style="border-left-color: #3b6eda; background-color: #f0f5ff; ">
+                data-env-type="theorem"
+                style="border-left-color: #3b6eda; background-color: #f0f5ff; "
+                data-number="0.3.1">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Theorem</strong><strong>
                 0.3.1</strong> (Associativity of Composition)</span>
@@ -575,8 +580,9 @@
                 are equal.</p>
                 </div>
                 <div id="thm-composition-preserves" class="theorem"
-                data-env-type="theorem" data-number="0.3.2"
-                style="border-left-color: #3b6eda; background-color: #f0f5ff; ">
+                data-env-type="theorem"
+                style="border-left-color: #3b6eda; background-color: #f0f5ff; "
+                data-number="0.3.2">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Theorem</strong><strong>
                 0.3.2</strong> (Composition Preserves Injectivity and
@@ -619,8 +625,9 @@
                 class="header-section-number">0.3.3. </span> Identity
                 Function</h2>
                 <div id="def-identity-function" class="definition"
-                data-env-type="definition" data-number="0.3.4"
-                style="border-left-color: #c94c6c; background-color: #fdf2f4; ">
+                data-env-type="definition"
+                style="border-left-color: #c94c6c; background-color: #fdf2f4; "
+                data-number="0.3.4">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Definition</strong><strong>
                 0.3.4</strong> (Identity Function)</span>
@@ -651,8 +658,9 @@
                 matrices</strong> are precisely those representing
                 bijective linear maps.</p>
                 <div id="def-inverse-function" class="definition"
-                data-env-type="definition" data-number="0.3.5"
-                style="border-left-color: #c94c6c; background-color: #fdf2f4; ">
+                data-env-type="definition"
+                style="border-left-color: #c94c6c; background-color: #fdf2f4; "
+                data-number="0.3.5">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Definition</strong><strong>
                 0.3.5</strong> (Inverse Function)</span>
@@ -670,8 +678,9 @@
                 class="math inline">\(g = f^{-1}\)</span>.</p>
                 </div>
                 <div id="thm-bijective-iff-invertible" class="theorem"
-                data-env-type="theorem" data-number="0.3.3"
-                style="border-left-color: #3b6eda; background-color: #f0f5ff; ">
+                data-env-type="theorem"
+                style="border-left-color: #3b6eda; background-color: #f0f5ff; "
+                data-number="0.3.3">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Theorem</strong><strong>
                 0.3.3</strong> (Bijective if and only if
@@ -732,8 +741,9 @@
                 \]</span></p>
                 </div>
                 <div id="exm-inverse-function" class="example"
-                data-env-type="example" data-number=""
-                style="border-left-color: #3a8a3a; background-color: #eef7ee; ">
+                data-env-type="example"
+                style="border-left-color: #3a8a3a; background-color: #eef7ee; "
+                data-number="">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Example</strong>
                 (Inverse Functions)</span>
@@ -768,8 +778,9 @@
                 </ol>
                 </div>
                 <div id="thm-inverse-of-composition" class="theorem"
-                data-env-type="theorem" data-number="0.3.4"
-                style="border-left-color: #3b6eda; background-color: #f0f5ff; ">
+                data-env-type="theorem"
+                style="border-left-color: #3b6eda; background-color: #f0f5ff; "
+                data-number="0.3.4">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Theorem</strong><strong>
                 0.3.4</strong> (Inverse of a Composition)</span>

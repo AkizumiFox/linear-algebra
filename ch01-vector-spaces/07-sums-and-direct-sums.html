@@ -261,42 +261,42 @@
           if (typeof window.MathJax.tex === 'undefined') window.MathJax.tex = {};
           if (typeof window.MathJax.tex.macros === 'undefined') window.MathJax.tex.macros = {};
           Object.assign(window.MathJax.tex.macros, {
-                    "\nul": "\\text{nul}",
-                    "\Uniform": "\\text{Uniform}\\left( #1, #2 \\right)",
-                    "\card": "\\left| #1 \\right|",
-                    "\closure": "\\overline{#1}",
-                    "\td": "\\frac{d #1}{d #2}",
-                    "\tr": "\\text{tr}",
-                    "\rank": "\\text{rank}",
-                    "\pd": "\\frac{\\partial #1}{\\partial #2}",
-                    "\Exp": "\\mathbb{E}\\left[ #1 \\right]",
-                    "\tdd": "\\frac{d^2 #1}{d #2^2}",
-                    "\col": "\\text{col}",
-                    "\ketbra": "| #1 \\rangle\\langle #2 |",
-                    "\nullity": "\\text{nullity}",
-                    "\abs": "\\left| #1 \\right|",
-                    "\pdd": "\\frac{\\partial^2 #1}{\\partial #2^2}",
-                    "\expect": "\\langle #1 \\rangle",
-                    "\limz": "\\lim_{#1 \\to 0}",
-                    "\interior": "\\text{int}\\left( #1 \\right)",
-                    "\Normal": "\\mathcal{N}\\left( #1, #2 \\right)",
-                    "\braket": "\\langle #1 | #2 \\rangle",
-                    "\spn": "\\text{span}",
                     "\limi": "\\lim_{#1 \\to \\infty}",
-                    "\bra": "\\langle #1 |",
-                    "\powerset": "\\mathcal{P}\\left( #1 \\right)",
-                    "\Prob": "\\mathbb{P}\\left( #1 \\right)",
-                    "\defeq": "\\stackrel{\\smash{\\textnormal{\\tiny def}}}{=}",
-                    "\cl": "\\mathcal{#1}",
-                    "\norm": "\\left\\| #1 \\right\\|",
-                    "\rom": "\\mathrm{#1}",
-                    "\bm": "\\mathbf{#1}",
                     "\bb": "\\mathbb{#1}",
-                    "\ket": "| #1 \\rangle",
-                    "\boundary": "\\partial #1",
-                    "\row": "\\text{row}",
+                    "\ketbra": "| #1 \\rangle\\langle #2 |",
+                    "\Exp": "\\mathbb{E}\\left[ #1 \\right]",
+                    "\nul": "\\text{nul}",
+                    "\rank": "\\text{rank}",
+                    "\limz": "\\lim_{#1 \\to 0}",
+                    "\Cov": "\\text{Cov}\\left( #1, #2 \\right)",
+                    "\nullity": "\\text{nullity}",
+                    "\expect": "\\langle #1 \\rangle",
+                    "\abs": "\\left| #1 \\right|",
                     "\Var": "\\text{Var}\\left( #1 \\right)",
-                    "\Cov": "\\text{Cov}\\left( #1, #2 \\right)"
+                    "\Prob": "\\mathbb{P}\\left( #1 \\right)",
+                    "\closure": "\\overline{#1}",
+                    "\defeq": "\\stackrel{\\smash{\\textnormal{\\tiny def}}}{=}",
+                    "\Uniform": "\\text{Uniform}\\left( #1, #2 \\right)",
+                    "\interior": "\\text{int}\\left( #1 \\right)",
+                    "\col": "\\text{col}",
+                    "\td": "\\frac{d #1}{d #2}",
+                    "\pd": "\\frac{\\partial #1}{\\partial #2}",
+                    "\braket": "\\langle #1 | #2 \\rangle",
+                    "\Normal": "\\mathcal{N}\\left( #1, #2 \\right)",
+                    "\pdd": "\\frac{\\partial^2 #1}{\\partial #2^2}",
+                    "\tdd": "\\frac{d^2 #1}{d #2^2}",
+                    "\rom": "\\mathrm{#1}",
+                    "\tr": "\\text{tr}",
+                    "\boundary": "\\partial #1",
+                    "\bm": "\\mathbf{#1}",
+                    "\norm": "\\left\\| #1 \\right\\|",
+                    "\cl": "\\mathcal{#1}",
+                    "\ket": "| #1 \\rangle",
+                    "\powerset": "\\mathcal{P}\\left( #1 \\right)",
+                    "\spn": "\\text{span}",
+                    "\row": "\\text{row}",
+                    "\bra": "\\langle #1 |",
+                    "\card": "\\left| #1 \\right|"
           });
         })();
         </script>
@@ -395,7 +395,7 @@ Subspaces</span>
                 class="header-section-number">1.7.1. </span> Definition
                 and Properties</h2>
                 <div id="def-sum-of-subspaces" class="definition"
-                data-env-type="definition" data-number="1.7.1"
+                data-number="1.7.1" data-env-type="definition"
                 style="border-left-color: #c94c6c; background-color: #fdf2f4; ">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Definition</strong><strong>
@@ -409,7 +409,7 @@ Subspaces</span>
                 \]</span></p>
                 </div>
                 <div id="thm-subapce-sum-theorem" class="theorem"
-                data-env-type="theorem" data-number="1.7.1"
+                data-number="1.7.1" data-env-type="theorem"
                 style="border-left-color: #3b6eda; background-color: #f0f5ff; ">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Theorem</strong><strong>
@@ -520,8 +520,8 @@ Subspaces</span>
                 class="header-section-number">1.7.2. </span> Dimension
                 of <span class="math inline">\(W_1 + W_2\)</span></h2>
                 <div id="thm-dimension-formula-subspace-dim"
-                class="theorem" data-env-type="theorem"
-                data-number="1.7.2"
+                class="theorem" data-number="1.7.2"
+                data-env-type="theorem"
                 style="border-left-color: #3b6eda; background-color: #f0f5ff; ">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Theorem</strong><strong>
@@ -714,7 +714,7 @@ Subspaces</span>
                 class="header-section-number">1.7.3. </span> Direct Sum
                 of Two Subspaces</h2>
                 <div id="def-direct-sum" class="definition"
-                data-env-type="definition" data-number="1.7.2"
+                data-number="1.7.2" data-env-type="definition"
                 style="border-left-color: #c94c6c; background-color: #fdf2f4; ">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Definition</strong><strong>
@@ -732,7 +732,7 @@ Subspaces</span>
                 class="math inline">\(W_2\)</span>.</p>
                 </div>
                 <div id="exm-direct-sum-of-matrix" class="example"
-                data-env-type="example" data-number=""
+                data-number="" data-env-type="example"
                 style="border-left-color: #3a8a3a; background-color: #eef7ee; ">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Example</strong></span>

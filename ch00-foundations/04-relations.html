@@ -261,42 +261,42 @@
           if (typeof window.MathJax.tex === 'undefined') window.MathJax.tex = {};
           if (typeof window.MathJax.tex.macros === 'undefined') window.MathJax.tex.macros = {};
           Object.assign(window.MathJax.tex.macros, {
-                    "\col": "\\text{col}",
-                    "\spn": "\\text{span}",
-                    "\Prob": "\\mathbb{P}\\left( #1 \\right)",
-                    "\nul": "\\text{nul}",
-                    "\defeq": "\\stackrel{\\smash{\\textnormal{\\tiny def}}}{=}",
-                    "\limi": "\\lim_{#1 \\to \\infty}",
-                    "\bra": "\\langle #1 |",
                     "\card": "\\left| #1 \\right|",
-                    "\limz": "\\lim_{#1 \\to 0}",
-                    "\rank": "\\text{rank}",
-                    "\expect": "\\langle #1 \\rangle",
-                    "\nullity": "\\text{nullity}",
-                    "\bb": "\\mathbb{#1}",
-                    "\ketbra": "| #1 \\rangle\\langle #2 |",
-                    "\boundary": "\\partial #1",
-                    "\rom": "\\mathrm{#1}",
-                    "\Var": "\\text{Var}\\left( #1 \\right)",
-                    "\braket": "\\langle #1 | #2 \\rangle",
-                    "\Cov": "\\text{Cov}\\left( #1, #2 \\right)",
-                    "\bm": "\\mathbf{#1}",
-                    "\closure": "\\overline{#1}",
-                    "\Uniform": "\\text{Uniform}\\left( #1, #2 \\right)",
-                    "\cl": "\\mathcal{#1}",
-                    "\tr": "\\text{tr}",
-                    "\Normal": "\\mathcal{N}\\left( #1, #2 \\right)",
+                    "\nul": "\\text{nul}",
                     "\row": "\\text{row}",
-                    "\norm": "\\left\\| #1 \\right\\|",
-                    "\powerset": "\\mathcal{P}\\left( #1 \\right)",
-                    "\pd": "\\frac{\\partial #1}{\\partial #2}",
-                    "\abs": "\\left| #1 \\right|",
-                    "\Exp": "\\mathbb{E}\\left[ #1 \\right]",
-                    "\ket": "| #1 \\rangle",
-                    "\pdd": "\\frac{\\partial^2 #1}{\\partial #2^2}",
+                    "\Normal": "\\mathcal{N}\\left( #1, #2 \\right)",
+                    "\Cov": "\\text{Cov}\\left( #1, #2 \\right)",
+                    "\expect": "\\langle #1 \\rangle",
+                    "\closure": "\\overline{#1}",
+                    "\Prob": "\\mathbb{P}\\left( #1 \\right)",
+                    "\ketbra": "| #1 \\rangle\\langle #2 |",
                     "\td": "\\frac{d #1}{d #2}",
+                    "\limi": "\\lim_{#1 \\to \\infty}",
+                    "\bm": "\\mathbf{#1}",
+                    "\powerset": "\\mathcal{P}\\left( #1 \\right)",
+                    "\boundary": "\\partial #1",
+                    "\nullity": "\\text{nullity}",
+                    "\norm": "\\left\\| #1 \\right\\|",
+                    "\rom": "\\mathrm{#1}",
                     "\interior": "\\text{int}\\left( #1 \\right)",
-                    "\tdd": "\\frac{d^2 #1}{d #2^2}"
+                    "\limz": "\\lim_{#1 \\to 0}",
+                    "\cl": "\\mathcal{#1}",
+                    "\Uniform": "\\text{Uniform}\\left( #1, #2 \\right)",
+                    "\Var": "\\text{Var}\\left( #1 \\right)",
+                    "\tdd": "\\frac{d^2 #1}{d #2^2}",
+                    "\rank": "\\text{rank}",
+                    "\bb": "\\mathbb{#1}",
+                    "\ket": "| #1 \\rangle",
+                    "\tr": "\\text{tr}",
+                    "\pdd": "\\frac{\\partial^2 #1}{\\partial #2^2}",
+                    "\pd": "\\frac{\\partial #1}{\\partial #2}",
+                    "\defeq": "\\stackrel{\\smash{\\textnormal{\\tiny def}}}{=}",
+                    "\braket": "\\langle #1 | #2 \\rangle",
+                    "\Exp": "\\mathbb{E}\\left[ #1 \\right]",
+                    "\col": "\\text{col}",
+                    "\abs": "\\left| #1 \\right|",
+                    "\bra": "\\langle #1 |",
+                    "\spn": "\\text{span}"
           });
         })();
         </script>
@@ -390,7 +390,7 @@ Relations</span>
                 class="header-section-number">0.4.1. </span>
                 Relations</h2>
                 <div id="def-relation" class="definition"
-                data-env-type="definition" data-number="0.4.1"
+                data-number="0.4.1" data-env-type="definition"
                 style="border-left-color: #c94c6c; background-color: #fdf2f4; ">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Definition</strong><strong>
@@ -404,8 +404,8 @@ Relations</span>
                 and say “<span class="math inline">\(a\)</span> is
                 related to <span class="math inline">\(b\)</span>.”</p>
                 </div>
-                <div id="exm-relations" class="example"
-                data-env-type="example" data-number=""
+                <div id="exm-relations" class="example" data-number=""
+                data-env-type="example"
                 style="border-left-color: #3a8a3a; background-color: #eef7ee; ">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Example</strong>
@@ -437,7 +437,7 @@ Relations</span>
                 satisfies three natural properties that any notion of
                 sameness should have.</p>
                 <div id="def-equivalence-relation" class="definition"
-                data-env-type="definition" data-number="0.4.2"
+                data-number="0.4.2" data-env-type="definition"
                 style="border-left-color: #c94c6c; background-color: #fdf2f4; ">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Definition</strong><strong>
@@ -470,7 +470,7 @@ Relations</span>
                 </ol>
                 </div>
                 <div id="exm-equivalence-relations" class="example"
-                data-env-type="example" data-number=""
+                data-number="" data-env-type="example"
                 style="border-left-color: #3a8a3a; background-color: #eef7ee; ">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Example</strong>
@@ -509,7 +509,7 @@ Relations</span>
                 </ol>
                 </div>
                 <div id="exm-non-equivalence" class="example"
-                data-env-type="example" data-number=""
+                data-number="" data-env-type="example"
                 style="border-left-color: #3a8a3a; background-color: #eef7ee; ">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Example</strong>
@@ -551,7 +551,7 @@ Relations</span>
                 group is called an <strong>equivalence
                 class</strong>.</p>
                 <div id="def-equivalence-class" class="definition"
-                data-env-type="definition" data-number="0.4.3"
+                data-number="0.4.3" data-env-type="definition"
                 style="border-left-color: #c94c6c; background-color: #fdf2f4; ">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Definition</strong><strong>
@@ -571,7 +571,7 @@ Relations</span>
                 class="math inline">\([a]\)</span>.</p>
                 </div>
                 <div id="exm-equivalence-classes" class="example"
-                data-env-type="example" data-number=""
+                data-number="" data-env-type="example"
                 style="border-left-color: #3a8a3a; background-color: #eef7ee; ">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Example</strong>
@@ -606,7 +606,7 @@ Relations</span>
                 </ol>
                 </div>
                 <div id="thm-partition" class="theorem"
-                data-env-type="theorem" data-number="0.4.1"
+                data-number="0.4.1" data-env-type="theorem"
                 style="border-left-color: #3b6eda; background-color: #f0f5ff; ">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Theorem</strong><strong>
@@ -662,7 +662,7 @@ Relations</span>
                 </ol>
                 </div>
                 <div id="def-quotient-set" class="definition"
-                data-env-type="definition" data-number="0.4.4"
+                data-number="0.4.4" data-env-type="definition"
                 style="border-left-color: #c94c6c; background-color: #fdf2f4; ">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Definition</strong><strong>
@@ -679,7 +679,7 @@ Relations</span>
                 \]</span></p>
                 </div>
                 <div id="exm-quotient-set" class="example"
-                data-env-type="example" data-number=""
+                data-number="" data-env-type="example"
                 style="border-left-color: #3a8a3a; background-color: #eef7ee; ">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Example</strong>
@@ -704,8 +704,8 @@ Relations</span>
                 Relations in Linear Algebra</h2>
                 <p>The following equivalence relations will appear
                 throughout your study of linear algebra:</p>
-                <div id="exm-similarity" class="example"
-                data-env-type="example" data-number=""
+                <div id="exm-similarity" class="example" data-number=""
+                data-env-type="example"
                 style="border-left-color: #3a8a3a; background-color: #eef7ee; ">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Example</strong>
@@ -737,7 +737,7 @@ Relations</span>
                 characteristic polynomial.</p>
                 </div>
                 <div id="exm-row-equivalence" class="example"
-                data-env-type="example" data-number=""
+                data-number="" data-env-type="example"
                 style="border-left-color: #3a8a3a; background-color: #eef7ee; ">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Example</strong>

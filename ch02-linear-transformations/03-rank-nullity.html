@@ -261,42 +261,42 @@
           if (typeof window.MathJax.tex === 'undefined') window.MathJax.tex = {};
           if (typeof window.MathJax.tex.macros === 'undefined') window.MathJax.tex.macros = {};
           Object.assign(window.MathJax.tex.macros, {
-                    "\Exp": "\\mathbb{E}\\left[ #1 \\right]",
-                    "\col": "\\text{col}",
-                    "\expect": "\\langle #1 \\rangle",
-                    "\closure": "\\overline{#1}",
-                    "\tdd": "\\frac{d^2 #1}{d #2^2}",
-                    "\norm": "\\left\\| #1 \\right\\|",
-                    "\Var": "\\text{Var}\\left( #1 \\right)",
-                    "\pdd": "\\frac{\\partial^2 #1}{\\partial #2^2}",
-                    "\tr": "\\text{tr}",
-                    "\powerset": "\\mathcal{P}\\left( #1 \\right)",
-                    "\interior": "\\text{int}\\left( #1 \\right)",
-                    "\ket": "| #1 \\rangle",
-                    "\row": "\\text{row}",
-                    "\cl": "\\mathcal{#1}",
+                    "\bra": "\\langle #1 |",
                     "\ketbra": "| #1 \\rangle\\langle #2 |",
+                    "\tdd": "\\frac{d^2 #1}{d #2^2}",
+                    "\ket": "| #1 \\rangle",
+                    "\closure": "\\overline{#1}",
+                    "\pd": "\\frac{\\partial #1}{\\partial #2}",
+                    "\powerset": "\\mathcal{P}\\left( #1 \\right)",
+                    "\row": "\\text{row}",
+                    "\norm": "\\left\\| #1 \\right\\|",
+                    "\pdd": "\\frac{\\partial^2 #1}{\\partial #2^2}",
+                    "\limi": "\\lim_{#1 \\to \\infty}",
+                    "\abs": "\\left| #1 \\right|",
+                    "\nul": "\\text{nul}",
+                    "\nullity": "\\text{nullity}",
+                    "\boundary": "\\partial #1",
+                    "\cl": "\\mathcal{#1}",
+                    "\expect": "\\langle #1 \\rangle",
                     "\rom": "\\mathrm{#1}",
-                    "\Cov": "\\text{Cov}\\left( #1, #2 \\right)",
-                    "\Normal": "\\mathcal{N}\\left( #1, #2 \\right)",
-                    "\spn": "\\text{span}",
                     "\bm": "\\mathbf{#1}",
                     "\bb": "\\mathbb{#1}",
-                    "\limi": "\\lim_{#1 \\to \\infty}",
-                    "\boundary": "\\partial #1",
-                    "\abs": "\\left| #1 \\right|",
-                    "\Uniform": "\\text{Uniform}\\left( #1, #2 \\right)",
+                    "\spn": "\\text{span}",
+                    "\tr": "\\text{tr}",
                     "\limz": "\\lim_{#1 \\to 0}",
-                    "\card": "\\left| #1 \\right|",
-                    "\nullity": "\\text{nullity}",
-                    "\Prob": "\\mathbb{P}\\left( #1 \\right)",
-                    "\nul": "\\text{nul}",
+                    "\Exp": "\\mathbb{E}\\left[ #1 \\right]",
                     "\td": "\\frac{d #1}{d #2}",
+                    "\col": "\\text{col}",
                     "\defeq": "\\stackrel{\\smash{\\textnormal{\\tiny def}}}{=}",
+                    "\Normal": "\\mathcal{N}\\left( #1, #2 \\right)",
                     "\braket": "\\langle #1 | #2 \\rangle",
-                    "\bra": "\\langle #1 |",
+                    "\Var": "\\text{Var}\\left( #1 \\right)",
                     "\rank": "\\text{rank}",
-                    "\pd": "\\frac{\\partial #1}{\\partial #2}"
+                    "\Cov": "\\text{Cov}\\left( #1, #2 \\right)",
+                    "\interior": "\\text{int}\\left( #1 \\right)",
+                    "\card": "\\left| #1 \\right|",
+                    "\Prob": "\\mathbb{P}\\left( #1 \\right)",
+                    "\Uniform": "\\text{Uniform}\\left( #1, #2 \\right)"
           });
         })();
         </script>
@@ -368,7 +368,7 @@ Theorem</span>
                 Rank</h2>
                 <div id="def-nullity" class="definition"
                 style="border-left-color: #c94c6c; background-color: #fdf2f4; "
-                data-env-type="definition" data-number="2.3.1">
+                data-number="2.3.1" data-env-type="definition">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Definition</strong><strong>
                 2.3.1</strong> (Nullity)</span>
@@ -381,7 +381,7 @@ Theorem</span>
                 </div>
                 <div id="def-rank" class="definition"
                 style="border-left-color: #c94c6c; background-color: #fdf2f4; "
-                data-env-type="definition" data-number="2.3.2">
+                data-number="2.3.2" data-env-type="definition">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Definition</strong><strong>
                 2.3.2</strong> (Rank)</span>
@@ -394,7 +394,7 @@ Theorem</span>
                 </div>
                 <div id="exm-nullity-rank-diff" class="example"
                 style="border-left-color: #3a8a3a; background-color: #eef7ee; "
-                data-env-type="example" data-number="">
+                data-number="" data-env-type="example">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Example</strong></span>
                 <p>Recall that for <span class="math inline">\(D :
@@ -425,7 +425,7 @@ Theorem</span>
                 Theorem</h2>
                 <div id="thm-rank-nullity" class="theorem"
                 style="border-left-color: #3b6eda; background-color: #f0f5ff; "
-                data-env-type="theorem" data-number="2.3.1">
+                data-number="2.3.1" data-env-type="theorem">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Theorem</strong><strong>
                 2.3.1</strong> (Rank-Nullity Theorem)</span>
