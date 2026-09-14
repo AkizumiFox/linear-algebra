@@ -261,42 +261,42 @@
           if (typeof window.MathJax.tex === 'undefined') window.MathJax.tex = {};
           if (typeof window.MathJax.tex.macros === 'undefined') window.MathJax.tex.macros = {};
           Object.assign(window.MathJax.tex.macros, {
+                    "\pdd": "\\frac{\\partial^2 #1}{\\partial #2^2}",
+                    "\nullity": "\\text{nullity}",
+                    "\Uniform": "\\text{Uniform}\\left( #1, #2 \\right)",
+                    "\boundary": "\\partial #1",
+                    "\col": "\\text{col}",
+                    "\limz": "\\lim_{#1 \\to 0}",
+                    "\closure": "\\overline{#1}",
+                    "\Normal": "\\mathcal{N}\\left( #1, #2 \\right)",
                     "\expect": "\\langle #1 \\rangle",
                     "\td": "\\frac{d #1}{d #2}",
-                    "\boundary": "\\partial #1",
-                    "\interior": "\\text{int}\\left( #1 \\right)",
-                    "\pd": "\\frac{\\partial #1}{\\partial #2}",
-                    "\col": "\\text{col}",
-                    "\bra": "\\langle #1 |",
-                    "\rom": "\\mathrm{#1}",
-                    "\Var": "\\text{Var}\\left( #1 \\right)",
-                    "\abs": "\\left| #1 \\right|",
-                    "\nul": "\\text{nul}",
-                    "\spn": "\\text{span}",
-                    "\bm": "\\mathbf{#1}",
-                    "\limi": "\\lim_{#1 \\to \\infty}",
-                    "\Uniform": "\\text{Uniform}\\left( #1, #2 \\right)",
-                    "\ket": "| #1 \\rangle",
-                    "\Exp": "\\mathbb{E}\\left[ #1 \\right]",
-                    "\tr": "\\text{tr}",
-                    "\tdd": "\\frac{d^2 #1}{d #2^2}",
-                    "\cl": "\\mathcal{#1}",
-                    "\pdd": "\\frac{\\partial^2 #1}{\\partial #2^2}",
                     "\braket": "\\langle #1 | #2 \\rangle",
-                    "\card": "\\left| #1 \\right|",
                     "\row": "\\text{row}",
-                    "\closure": "\\overline{#1}",
-                    "\bb": "\\mathbb{#1}",
-                    "\nullity": "\\text{nullity}",
-                    "\limz": "\\lim_{#1 \\to 0}",
+                    "\spn": "\\text{span}",
+                    "\ket": "| #1 \\rangle",
+                    "\interior": "\\text{int}\\left( #1 \\right)",
                     "\Cov": "\\text{Cov}\\left( #1, #2 \\right)",
+                    "\abs": "\\left| #1 \\right|",
+                    "\cl": "\\mathcal{#1}",
+                    "\rom": "\\mathrm{#1}",
                     "\rank": "\\text{rank}",
-                    "\ketbra": "| #1 \\rangle\\langle #2 |",
-                    "\Prob": "\\mathbb{P}\\left( #1 \\right)",
-                    "\norm": "\\left\\| #1 \\right\\|",
+                    "\bm": "\\mathbf{#1}",
                     "\powerset": "\\mathcal{P}\\left( #1 \\right)",
-                    "\Normal": "\\mathcal{N}\\left( #1, #2 \\right)",
-                    "\defeq": "\\stackrel{\\smash{\\textnormal{\\tiny def}}}{=}"
+                    "\bb": "\\mathbb{#1}",
+                    "\limi": "\\lim_{#1 \\to \\infty}",
+                    "\pd": "\\frac{\\partial #1}{\\partial #2}",
+                    "\nul": "\\text{nul}",
+                    "\ketbra": "| #1 \\rangle\\langle #2 |",
+                    "\tdd": "\\frac{d^2 #1}{d #2^2}",
+                    "\Prob": "\\mathbb{P}\\left( #1 \\right)",
+                    "\Exp": "\\mathbb{E}\\left[ #1 \\right]",
+                    "\bra": "\\langle #1 |",
+                    "\Var": "\\text{Var}\\left( #1 \\right)",
+                    "\tr": "\\text{tr}",
+                    "\defeq": "\\stackrel{\\smash{\\textnormal{\\tiny def}}}{=}",
+                    "\card": "\\left| #1 \\right|",
+                    "\norm": "\\left\\| #1 \\right\\|"
           });
         })();
         </script>
@@ -367,8 +367,8 @@ Image</span>
                 class="header-section-number">2.2.1. </span>
                 Definition</h2>
                 <div id="def-kernel" class="definition"
-                style="border-left-color: #c94c6c; background-color: #fdf2f4; "
-                data-env-type="definition" data-number="2.2.1">
+                data-number="2.2.1" data-env-type="definition"
+                style="border-left-color: #c94c6c; background-color: #fdf2f4; ">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Definition</strong><strong>
                 2.2.1</strong> (Kernel)</span>
@@ -385,8 +385,8 @@ Image</span>
                 class="math inline">\(f\)</span>.</p>
                 </div>
                 <div id="def-image" class="definition"
-                style="border-left-color: #c94c6c; background-color: #fdf2f4; "
-                data-env-type="definition" data-number="2.2.2">
+                data-number="2.2.2" data-env-type="definition"
+                style="border-left-color: #c94c6c; background-color: #fdf2f4; ">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Definition</strong><strong>
                 2.2.2</strong> (Image)</span>
@@ -412,9 +412,8 @@ Image</span>
                 class="header-section-number">2.2.2. </span>
                 Examples</h2>
                 <div id="exm-differentiation-kernel-image"
-                class="example"
-                style="border-left-color: #3a8a3a; background-color: #eef7ee; "
-                data-env-type="example" data-number="">
+                class="example" data-number="" data-env-type="example"
+                style="border-left-color: #3a8a3a; background-color: #eef7ee; ">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Example</strong>
                 (Differentiation)</span>
@@ -455,8 +454,8 @@ Image</span>
                 3})\)</span>.</p>
                 </div>
                 <div id="exm-trace-kernel-image" class="example"
-                style="border-left-color: #3a8a3a; background-color: #eef7ee; "
-                data-env-type="example" data-number="">
+                data-number="" data-env-type="example"
+                style="border-left-color: #3a8a3a; background-color: #eef7ee; ">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Example</strong>
                 (Trace)</span>
@@ -509,8 +508,8 @@ Image</span>
                 class="header-section-number">2.2.3. </span> Basic
                 Theorems</h2>
                 <div id="thm-prop-kernel" class="theorem"
-                style="border-left-color: #3b6eda; background-color: #f0f5ff; "
-                data-env-type="theorem" data-number="2.2.1">
+                data-number="2.2.1" data-env-type="theorem"
+                style="border-left-color: #3b6eda; background-color: #f0f5ff; ">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Theorem</strong><strong>
                 2.2.1</strong> (Properties of Kernel)</span>
@@ -589,8 +588,8 @@ Image</span>
                 </ol>
                 </div>
                 <div id="thm-prop-image" class="theorem"
-                style="border-left-color: #3b6eda; background-color: #f0f5ff; "
-                data-env-type="theorem" data-number="2.2.2">
+                data-number="2.2.2" data-env-type="theorem"
+                style="border-left-color: #3b6eda; background-color: #f0f5ff; ">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Theorem</strong><strong>
                 2.2.2</strong> (Properties of Image)</span>

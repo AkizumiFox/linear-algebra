@@ -261,42 +261,42 @@
           if (typeof window.MathJax.tex === 'undefined') window.MathJax.tex = {};
           if (typeof window.MathJax.tex.macros === 'undefined') window.MathJax.tex.macros = {};
           Object.assign(window.MathJax.tex.macros, {
-                    "\pd": "\\frac{\\partial #1}{\\partial #2}",
-                    "\bra": "\\langle #1 |",
-                    "\spn": "\\text{span}",
-                    "\row": "\\text{row}",
-                    "\rom": "\\mathrm{#1}",
-                    "\td": "\\frac{d #1}{d #2}",
-                    "\bb": "\\mathbb{#1}",
-                    "\Normal": "\\mathcal{N}\\left( #1, #2 \\right)",
-                    "\Prob": "\\mathbb{P}\\left( #1 \\right)",
-                    "\Cov": "\\text{Cov}\\left( #1, #2 \\right)",
-                    "\ketbra": "| #1 \\rangle\\langle #2 |",
-                    "\boundary": "\\partial #1",
-                    "\ket": "| #1 \\rangle",
-                    "\Uniform": "\\text{Uniform}\\left( #1, #2 \\right)",
-                    "\Var": "\\text{Var}\\left( #1 \\right)",
-                    "\powerset": "\\mathcal{P}\\left( #1 \\right)",
-                    "\closure": "\\overline{#1}",
                     "\limi": "\\lim_{#1 \\to \\infty}",
-                    "\col": "\\text{col}",
-                    "\bm": "\\mathbf{#1}",
-                    "\nullity": "\\text{nullity}",
-                    "\tdd": "\\frac{d^2 #1}{d #2^2}",
-                    "\tr": "\\text{tr}",
-                    "\expect": "\\langle #1 \\rangle",
-                    "\rank": "\\text{rank}",
-                    "\limz": "\\lim_{#1 \\to 0}",
                     "\Exp": "\\mathbb{E}\\left[ #1 \\right]",
                     "\braket": "\\langle #1 | #2 \\rangle",
-                    "\defeq": "\\stackrel{\\smash{\\textnormal{\\tiny def}}}{=}",
-                    "\abs": "\\left| #1 \\right|",
-                    "\norm": "\\left\\| #1 \\right\\|",
+                    "\ketbra": "| #1 \\rangle\\langle #2 |",
+                    "\boundary": "\\partial #1",
+                    "\spn": "\\text{span}",
+                    "\rom": "\\mathrm{#1}",
+                    "\bm": "\\mathbf{#1}",
+                    "\nul": "\\text{nul}",
+                    "\limz": "\\lim_{#1 \\to 0}",
+                    "\row": "\\text{row}",
+                    "\col": "\\text{col}",
+                    "\Uniform": "\\text{Uniform}\\left( #1, #2 \\right)",
+                    "\Prob": "\\mathbb{P}\\left( #1 \\right)",
+                    "\ket": "| #1 \\rangle",
+                    "\rank": "\\text{rank}",
+                    "\Cov": "\\text{Cov}\\left( #1, #2 \\right)",
                     "\cl": "\\mathcal{#1}",
                     "\pdd": "\\frac{\\partial^2 #1}{\\partial #2^2}",
-                    "\nul": "\\text{nul}",
                     "\interior": "\\text{int}\\left( #1 \\right)",
-                    "\card": "\\left| #1 \\right|"
+                    "\tr": "\\text{tr}",
+                    "\tdd": "\\frac{d^2 #1}{d #2^2}",
+                    "\expect": "\\langle #1 \\rangle",
+                    "\closure": "\\overline{#1}",
+                    "\nullity": "\\text{nullity}",
+                    "\Normal": "\\mathcal{N}\\left( #1, #2 \\right)",
+                    "\bra": "\\langle #1 |",
+                    "\defeq": "\\stackrel{\\smash{\\textnormal{\\tiny def}}}{=}",
+                    "\norm": "\\left\\| #1 \\right\\|",
+                    "\bb": "\\mathbb{#1}",
+                    "\abs": "\\left| #1 \\right|",
+                    "\td": "\\frac{d #1}{d #2}",
+                    "\Var": "\\text{Var}\\left( #1 \\right)",
+                    "\card": "\\left| #1 \\right|",
+                    "\pd": "\\frac{\\partial #1}{\\partial #2}",
+                    "\powerset": "\\mathcal{P}\\left( #1 \\right)"
           });
         })();
         </script>
@@ -363,9 +363,8 @@
 
                 </div>
                 <div id="def-field" class="definition"
-                data-number="0.6.1"
                 style="border-left-color: #c94c6c; background-color: #fdf2f4; "
-                data-env-type="definition">
+                data-env-type="definition" data-number="0.6.1">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Definition</strong><strong>
                 0.6.1</strong> (Field)</span>
@@ -421,9 +420,9 @@
                 say “<span class="math inline">\(F\)</span> is a field”,
                 which we will do most of the time in this book.</p>
                 </div>
-                <div id="exm-fields" class="example" data-number=""
+                <div id="exm-fields" class="example"
                 style="border-left-color: #3a8a3a; background-color: #eef7ee; "
-                data-env-type="example">
+                data-env-type="example" data-number="">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Example</strong>
                 (Examples of Fields)</span>
@@ -435,8 +434,8 @@
                 <li><p><span class="math inline">\(\nC\)</span> is a
                 field.</p></li>
                 <li><p><span class="math inline">\(\nQ = \left\{
-                \frac{p}{q} : p, q \in \nZ,\; \gcd(p, q) = 1
-                \right\}\)</span> is a field.</p></li>
+                \frac{p}{q} : p, q \in \nZ,\; q \neq 0 \right\}\)</span>
+                is a field.</p></li>
                 <li><p><span class="math inline">\(\nZ\)</span> is
                 <strong>not</strong> a field since <strong>(F8)</strong>
                 fails.</p></li>
@@ -446,9 +445,8 @@
                 </ol>
                 </div>
                 <div id="exm-finite-fields" class="example"
-                data-number=""
                 style="border-left-color: #3a8a3a; background-color: #eef7ee; "
-                data-env-type="example">
+                data-env-type="example" data-number="">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Example</strong>
                 (Finite Fields)</span>

@@ -261,42 +261,42 @@
           if (typeof window.MathJax.tex === 'undefined') window.MathJax.tex = {};
           if (typeof window.MathJax.tex.macros === 'undefined') window.MathJax.tex.macros = {};
           Object.assign(window.MathJax.tex.macros, {
-                    "\card": "\\left| #1 \\right|",
-                    "\tr": "\\text{tr}",
                     "\bra": "\\langle #1 |",
-                    "\defeq": "\\stackrel{\\smash{\\textnormal{\\tiny def}}}{=}",
-                    "\braket": "\\langle #1 | #2 \\rangle",
-                    "\limi": "\\lim_{#1 \\to \\infty}",
-                    "\limz": "\\lim_{#1 \\to 0}",
+                    "\spn": "\\text{span}",
+                    "\tdd": "\\frac{d^2 #1}{d #2^2}",
                     "\norm": "\\left\\| #1 \\right\\|",
-                    "\Var": "\\text{Var}\\left( #1 \\right)",
-                    "\ket": "| #1 \\rangle",
-                    "\nul": "\\text{nul}",
-                    "\rom": "\\mathrm{#1}",
                     "\expect": "\\langle #1 \\rangle",
-                    "\Cov": "\\text{Cov}\\left( #1, #2 \\right)",
                     "\ketbra": "| #1 \\rangle\\langle #2 |",
-                    "\Uniform": "\\text{Uniform}\\left( #1, #2 \\right)",
-                    "\boundary": "\\partial #1",
-                    "\abs": "\\left| #1 \\right|",
+                    "\powerset": "\\mathcal{P}\\left( #1 \\right)",
+                    "\defeq": "\\stackrel{\\smash{\\textnormal{\\tiny def}}}{=}",
+                    "\pdd": "\\frac{\\partial^2 #1}{\\partial #2^2}",
                     "\closure": "\\overline{#1}",
                     "\bb": "\\mathbb{#1}",
-                    "\powerset": "\\mathcal{P}\\left( #1 \\right)",
-                    "\nullity": "\\text{nullity}",
-                    "\Exp": "\\mathbb{E}\\left[ #1 \\right]",
+                    "\limz": "\\lim_{#1 \\to 0}",
                     "\Normal": "\\mathcal{N}\\left( #1, #2 \\right)",
                     "\bm": "\\mathbf{#1}",
-                    "\cl": "\\mathcal{#1}",
-                    "\td": "\\frac{d #1}{d #2}",
-                    "\rank": "\\text{rank}",
-                    "\interior": "\\text{int}\\left( #1 \\right)",
-                    "\tdd": "\\frac{d^2 #1}{d #2^2}",
-                    "\pd": "\\frac{\\partial #1}{\\partial #2}",
+                    "\braket": "\\langle #1 | #2 \\rangle",
                     "\col": "\\text{col}",
-                    "\pdd": "\\frac{\\partial^2 #1}{\\partial #2^2}",
+                    "\boundary": "\\partial #1",
+                    "\Var": "\\text{Var}\\left( #1 \\right)",
+                    "\limi": "\\lim_{#1 \\to \\infty}",
                     "\Prob": "\\mathbb{P}\\left( #1 \\right)",
+                    "\tr": "\\text{tr}",
+                    "\nul": "\\text{nul}",
+                    "\nullity": "\\text{nullity}",
+                    "\Cov": "\\text{Cov}\\left( #1, #2 \\right)",
+                    "\ket": "| #1 \\rangle",
+                    "\card": "\\left| #1 \\right|",
+                    "\pd": "\\frac{\\partial #1}{\\partial #2}",
                     "\row": "\\text{row}",
-                    "\spn": "\\text{span}"
+                    "\interior": "\\text{int}\\left( #1 \\right)",
+                    "\rom": "\\mathrm{#1}",
+                    "\cl": "\\mathcal{#1}",
+                    "\abs": "\\left| #1 \\right|",
+                    "\Exp": "\\mathbb{E}\\left[ #1 \\right]",
+                    "\td": "\\frac{d #1}{d #2}",
+                    "\Uniform": "\\text{Uniform}\\left( #1, #2 \\right)",
+                    "\rank": "\\text{rank}"
           });
         })();
         </script>
@@ -363,12 +363,25 @@ Transformations {.unnumbered}</span>
                 <div id="linear-transformations" class="unnumbered">
 
                 </div>
-                <p>This part covers Linear Transformations.</p>
+                <p>Vector spaces are only half of the story; the other
+                half is the maps between them that respect addition and
+                scalar multiplication. This chapter studies these
+                <em>linear transformations</em>.</p>
                 <h2 id="overview">Overview</h2>
                 <p>In this part, we will explore:</p>
                 <ul>
-                <li><strong>Topic 1</strong>: Description</li>
-                <li><strong>Topic 2</strong>: Description</li>
+                <li><strong>Linear transformations</strong>: the
+                definition and basic properties, examples and
+                non-examples, and the fact that a linear transformation
+                is determined by its values on a basis.</li>
+                <li><strong>Kernel and image</strong>: the two subspaces
+                attached to every linear transformation, with examples
+                and their basic theorems.</li>
+                <li><strong>The rank–nullity theorem</strong>: nullity
+                and rank, and the identity <span
+                class="math inline">\(\nullity(f) + \rank(f) =
+                \dim(V)\)</span> for a finite-dimensional <span
+                class="math inline">\(V\)</span>.</li>
                 </ul>
             </article>
 

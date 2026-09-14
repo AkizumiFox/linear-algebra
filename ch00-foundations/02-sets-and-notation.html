@@ -261,42 +261,42 @@
           if (typeof window.MathJax.tex === 'undefined') window.MathJax.tex = {};
           if (typeof window.MathJax.tex.macros === 'undefined') window.MathJax.tex.macros = {};
           Object.assign(window.MathJax.tex.macros, {
-                    "\bm": "\\mathbf{#1}",
-                    "\boundary": "\\partial #1",
-                    "\braket": "\\langle #1 | #2 \\rangle",
-                    "\nullity": "\\text{nullity}",
-                    "\nul": "\\text{nul}",
-                    "\Exp": "\\mathbb{E}\\left[ #1 \\right]",
-                    "\row": "\\text{row}",
-                    "\expect": "\\langle #1 \\rangle",
-                    "\powerset": "\\mathcal{P}\\left( #1 \\right)",
-                    "\closure": "\\overline{#1}",
-                    "\Uniform": "\\text{Uniform}\\left( #1, #2 \\right)",
-                    "\Prob": "\\mathbb{P}\\left( #1 \\right)",
-                    "\interior": "\\text{int}\\left( #1 \\right)",
-                    "\card": "\\left| #1 \\right|",
-                    "\Var": "\\text{Var}\\left( #1 \\right)",
-                    "\ket": "| #1 \\rangle",
-                    "\tdd": "\\frac{d^2 #1}{d #2^2}",
-                    "\Cov": "\\text{Cov}\\left( #1, #2 \\right)",
-                    "\pdd": "\\frac{\\partial^2 #1}{\\partial #2^2}",
-                    "\defeq": "\\stackrel{\\smash{\\textnormal{\\tiny def}}}{=}",
-                    "\pd": "\\frac{\\partial #1}{\\partial #2}",
-                    "\spn": "\\text{span}",
-                    "\col": "\\text{col}",
-                    "\Normal": "\\mathcal{N}\\left( #1, #2 \\right)",
-                    "\cl": "\\mathcal{#1}",
-                    "\rom": "\\mathrm{#1}",
-                    "\bb": "\\mathbb{#1}",
-                    "\norm": "\\left\\| #1 \\right\\|",
-                    "\rank": "\\text{rank}",
                     "\ketbra": "| #1 \\rangle\\langle #2 |",
-                    "\bra": "\\langle #1 |",
-                    "\limi": "\\lim_{#1 \\to \\infty}",
-                    "\td": "\\frac{d #1}{d #2}",
+                    "\expect": "\\langle #1 \\rangle",
                     "\abs": "\\left| #1 \\right|",
+                    "\bra": "\\langle #1 |",
+                    "\rank": "\\text{rank}",
+                    "\card": "\\left| #1 \\right|",
+                    "\bb": "\\mathbb{#1}",
+                    "\braket": "\\langle #1 | #2 \\rangle",
+                    "\defeq": "\\stackrel{\\smash{\\textnormal{\\tiny def}}}{=}",
+                    "\powerset": "\\mathcal{P}\\left( #1 \\right)",
+                    "\Cov": "\\text{Cov}\\left( #1, #2 \\right)",
+                    "\Var": "\\text{Var}\\left( #1 \\right)",
+                    "\nullity": "\\text{nullity}",
+                    "\rom": "\\mathrm{#1}",
+                    "\tdd": "\\frac{d^2 #1}{d #2^2}",
+                    "\spn": "\\text{span}",
+                    "\norm": "\\left\\| #1 \\right\\|",
+                    "\boundary": "\\partial #1",
+                    "\Uniform": "\\text{Uniform}\\left( #1, #2 \\right)",
+                    "\Normal": "\\mathcal{N}\\left( #1, #2 \\right)",
+                    "\Exp": "\\mathbb{E}\\left[ #1 \\right]",
+                    "\interior": "\\text{int}\\left( #1 \\right)",
+                    "\ket": "| #1 \\rangle",
+                    "\bm": "\\mathbf{#1}",
                     "\tr": "\\text{tr}",
-                    "\limz": "\\lim_{#1 \\to 0}"
+                    "\limz": "\\lim_{#1 \\to 0}",
+                    "\td": "\\frac{d #1}{d #2}",
+                    "\cl": "\\mathcal{#1}",
+                    "\row": "\\text{row}",
+                    "\pdd": "\\frac{\\partial^2 #1}{\\partial #2^2}",
+                    "\nul": "\\text{nul}",
+                    "\col": "\\text{col}",
+                    "\Prob": "\\mathbb{P}\\left( #1 \\right)",
+                    "\closure": "\\overline{#1}",
+                    "\limi": "\\lim_{#1 \\to \\infty}",
+                    "\pd": "\\frac{\\partial #1}{\\partial #2}"
           });
         })();
         </script>
@@ -376,8 +376,8 @@ Notation</span>
                 <p>We begin by defining the standard sets of numbers
                 used throughout this book.</p>
                 <div id="def-common-number-sets" class="definition"
-                style="border-left-color: #c94c6c; background-color: #fdf2f4; "
-                data-env-type="definition" data-number="0.2.1">
+                data-number="0.2.1" data-env-type="definition"
+                style="border-left-color: #c94c6c; background-color: #fdf2f4; ">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Definition</strong><strong>
                 0.2.1</strong> (Common Number Sets)</span>
@@ -399,8 +399,8 @@ Notation</span>
                 </ul>
                 </div>
                 <div id="def-cartesian-product" class="definition"
-                style="border-left-color: #c94c6c; background-color: #fdf2f4; "
-                data-env-type="definition" data-number="0.2.2">
+                data-number="0.2.2" data-env-type="definition"
+                style="border-left-color: #c94c6c; background-color: #fdf2f4; ">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Definition</strong><strong>
                 0.2.2</strong> (Cartesian Product)</span>
@@ -421,8 +421,8 @@ Notation</span>
                 \]</span></p>
                 </div>
                 <div id="def-n-tuple" class="definition"
-                style="border-left-color: #c94c6c; background-color: #fdf2f4; "
-                data-env-type="definition" data-number="0.2.3">
+                data-number="0.2.3" data-env-type="definition"
+                style="border-left-color: #c94c6c; background-color: #fdf2f4; ">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Definition</strong><strong>
                 0.2.3</strong> (<span
@@ -440,9 +440,9 @@ Notation</span>
                 \in A \text{ for } i = 1, 2, \ldots, n\}
                 \]</span></p>
                 </div>
-                <div id="exm-n-tuples" class="example"
-                style="border-left-color: #3a8a3a; background-color: #eef7ee; "
-                data-env-type="example" data-number="">
+                <div id="exm-n-tuples" class="example" data-number=""
+                data-env-type="example"
+                style="border-left-color: #3a8a3a; background-color: #eef7ee; ">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Example</strong>
                 (<span class="math inline">\(n\)</span>-Tuples)</span>
@@ -494,8 +494,8 @@ Notation</span>
                 specifying a property that their elements must
                 satisfy.</p>
                 <div id="def-set-builder" class="definition"
-                style="border-left-color: #c94c6c; background-color: #fdf2f4; "
-                data-env-type="definition" data-number="0.2.4">
+                data-number="0.2.4" data-env-type="definition"
+                style="border-left-color: #c94c6c; background-color: #fdf2f4; ">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Definition</strong><strong>
                 0.2.4</strong> (Set-Builder Notation)</span>
@@ -512,9 +512,9 @@ Notation</span>
                 \}\)</span> and <span class="math inline">\(\{ x \in S
                 \,;\, P(x) \}\)</span>.</p>
                 </div>
-                <div id="exm-set-builder" class="example"
-                style="border-left-color: #3a8a3a; background-color: #eef7ee; "
-                data-env-type="example" data-number="">
+                <div id="exm-set-builder" class="example" data-number=""
+                data-env-type="example"
+                style="border-left-color: #3a8a3a; background-color: #eef7ee; ">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Example</strong>
                 (Set-Builder Examples)</span>
@@ -535,8 +535,8 @@ Notation</span>
                 </ol>
                 </div>
                 <div id="def-empty-set" class="definition"
-                style="border-left-color: #c94c6c; background-color: #fdf2f4; "
-                data-env-type="definition" data-number="0.2.5">
+                data-number="0.2.5" data-env-type="definition"
+                style="border-left-color: #c94c6c; background-color: #fdf2f4; ">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Definition</strong><strong>
                 0.2.5</strong> (Empty Set)</span>
@@ -564,8 +564,8 @@ Notation</span>
                 algebra. When we define a subspace, we first verify it
                 is a subset of the ambient space.</p>
                 <div id="def-subset" class="definition"
-                style="border-left-color: #c94c6c; background-color: #fdf2f4; "
-                data-env-type="definition" data-number="0.2.6">
+                data-number="0.2.6" data-env-type="definition"
+                style="border-left-color: #c94c6c; background-color: #fdf2f4; ">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Definition</strong><strong>
                 0.2.6</strong> (Subset)</span>
@@ -590,9 +590,9 @@ Notation</span>
                 class="math inline">\(A \subsetneq B\)</span> or <span
                 class="math inline">\(A \subset B\)</span>.</p>
                 </div>
-                <div id="exm-subsets" class="example"
-                style="border-left-color: #3a8a3a; background-color: #eef7ee; "
-                data-env-type="example" data-number="">
+                <div id="exm-subsets" class="example" data-number=""
+                data-env-type="example"
+                style="border-left-color: #3a8a3a; background-color: #eef7ee; ">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Example</strong>
                 (Subset Examples)</span>
@@ -615,8 +615,8 @@ Notation</span>
                 </ol>
                 </div>
                 <div id="def-set-equality" class="definition"
-                style="border-left-color: #c94c6c; background-color: #fdf2f4; "
-                data-env-type="definition" data-number="0.2.7">
+                data-number="0.2.7" data-env-type="definition"
+                style="border-left-color: #c94c6c; background-color: #fdf2f4; ">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Definition</strong><strong>
                 0.2.7</strong> (Set Equality)</span>
@@ -645,8 +645,8 @@ Notation</span>
                 difference. These operations appear when discussing sums
                 of subspaces and their intersections.</p>
                 <div id="def-union" class="definition"
-                style="border-left-color: #c94c6c; background-color: #fdf2f4; "
-                data-env-type="definition" data-number="0.2.8">
+                data-number="0.2.8" data-env-type="definition"
+                style="border-left-color: #c94c6c; background-color: #fdf2f4; ">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Definition</strong><strong>
                 0.2.8</strong> (Union)</span>
@@ -660,8 +660,8 @@ Notation</span>
                 \]</span></p>
                 </div>
                 <div id="def-intersection" class="definition"
-                style="border-left-color: #c94c6c; background-color: #fdf2f4; "
-                data-env-type="definition" data-number="0.2.9">
+                data-number="0.2.9" data-env-type="definition"
+                style="border-left-color: #c94c6c; background-color: #fdf2f4; ">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Definition</strong><strong>
                 0.2.9</strong> (Intersection)</span>
@@ -679,8 +679,8 @@ Notation</span>
                 \varnothing\)</span>.</p>
                 </div>
                 <div id="def-set-difference" class="definition"
-                style="border-left-color: #c94c6c; background-color: #fdf2f4; "
-                data-env-type="definition" data-number="0.2.10">
+                data-number="0.2.10" data-env-type="definition"
+                style="border-left-color: #c94c6c; background-color: #fdf2f4; ">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Definition</strong><strong>
                 0.2.10</strong> (Set Difference)</span>
@@ -700,8 +700,8 @@ Notation</span>
                 class="math inline">\(B^c = U \setminus B\)</span>.</p>
                 </div>
                 <div id="exm-set-operations" class="example"
-                style="border-left-color: #3a8a3a; background-color: #eef7ee; "
-                data-env-type="example" data-number="">
+                data-number="" data-env-type="example"
+                style="border-left-color: #3a8a3a; background-color: #eef7ee; ">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Example</strong>
                 (Set Operations)</span>
@@ -720,8 +720,8 @@ Notation</span>
                 </ul>
                 </div>
                 <div id="exm-set-operations-intervals" class="example"
-                style="border-left-color: #3a8a3a; background-color: #eef7ee; "
-                data-env-type="example" data-number="">
+                data-number="" data-env-type="example"
+                style="border-left-color: #3a8a3a; background-color: #eef7ee; ">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Example</strong>
                 (Set Operations with Intervals)</span>

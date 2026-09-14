@@ -261,42 +261,42 @@
           if (typeof window.MathJax.tex === 'undefined') window.MathJax.tex = {};
           if (typeof window.MathJax.tex.macros === 'undefined') window.MathJax.tex.macros = {};
           Object.assign(window.MathJax.tex.macros, {
-                    "\Normal": "\\mathcal{N}\\left( #1, #2 \\right)",
-                    "\td": "\\frac{d #1}{d #2}",
-                    "\pd": "\\frac{\\partial #1}{\\partial #2}",
-                    "\closure": "\\overline{#1}",
-                    "\tr": "\\text{tr}",
-                    "\interior": "\\text{int}\\left( #1 \\right)",
-                    "\boundary": "\\partial #1",
-                    "\nullity": "\\text{nullity}",
-                    "\bb": "\\mathbb{#1}",
-                    "\limi": "\\lim_{#1 \\to \\infty}",
-                    "\limz": "\\lim_{#1 \\to 0}",
-                    "\bra": "\\langle #1 |",
-                    "\rom": "\\mathrm{#1}",
-                    "\pdd": "\\frac{\\partial^2 #1}{\\partial #2^2}",
-                    "\defeq": "\\stackrel{\\smash{\\textnormal{\\tiny def}}}{=}",
-                    "\braket": "\\langle #1 | #2 \\rangle",
-                    "\ketbra": "| #1 \\rangle\\langle #2 |",
-                    "\nul": "\\text{nul}",
-                    "\rank": "\\text{rank}",
+                    "\Cov": "\\text{Cov}\\left( #1, #2 \\right)",
+                    "\Uniform": "\\text{Uniform}\\left( #1, #2 \\right)",
+                    "\spn": "\\text{span}",
                     "\card": "\\left| #1 \\right|",
+                    "\abs": "\\left| #1 \\right|",
+                    "\Exp": "\\mathbb{E}\\left[ #1 \\right]",
+                    "\rank": "\\text{rank}",
+                    "\braket": "\\langle #1 | #2 \\rangle",
+                    "\Prob": "\\mathbb{P}\\left( #1 \\right)",
+                    "\Var": "\\text{Var}\\left( #1 \\right)",
+                    "\td": "\\frac{d #1}{d #2}",
+                    "\tdd": "\\frac{d^2 #1}{d #2^2}",
+                    "\pd": "\\frac{\\partial #1}{\\partial #2}",
+                    "\pdd": "\\frac{\\partial^2 #1}{\\partial #2^2}",
+                    "\col": "\\text{col}",
+                    "\nul": "\\text{nul}",
+                    "\nullity": "\\text{nullity}",
+                    "\cl": "\\mathcal{#1}",
+                    "\rom": "\\mathrm{#1}",
+                    "\bm": "\\mathbf{#1}",
+                    "\limz": "\\lim_{#1 \\to 0}",
+                    "\row": "\\text{row}",
                     "\powerset": "\\mathcal{P}\\left( #1 \\right)",
                     "\norm": "\\left\\| #1 \\right\\|",
-                    "\bm": "\\mathbf{#1}",
-                    "\Cov": "\\text{Cov}\\left( #1, #2 \\right)",
-                    "\Exp": "\\mathbb{E}\\left[ #1 \\right]",
-                    "\row": "\\text{row}",
-                    "\cl": "\\mathcal{#1}",
-                    "\Uniform": "\\text{Uniform}\\left( #1, #2 \\right)",
-                    "\Var": "\\text{Var}\\left( #1 \\right)",
                     "\expect": "\\langle #1 \\rangle",
-                    "\tdd": "\\frac{d^2 #1}{d #2^2}",
-                    "\abs": "\\left| #1 \\right|",
-                    "\col": "\\text{col}",
-                    "\Prob": "\\mathbb{P}\\left( #1 \\right)",
+                    "\bb": "\\mathbb{#1}",
+                    "\boundary": "\\partial #1",
+                    "\interior": "\\text{int}\\left( #1 \\right)",
+                    "\closure": "\\overline{#1}",
+                    "\defeq": "\\stackrel{\\smash{\\textnormal{\\tiny def}}}{=}",
                     "\ket": "| #1 \\rangle",
-                    "\spn": "\\text{span}"
+                    "\ketbra": "| #1 \\rangle\\langle #2 |",
+                    "\bra": "\\langle #1 |",
+                    "\Normal": "\\mathcal{N}\\left( #1, #2 \\right)",
+                    "\tr": "\\text{tr}",
+                    "\limi": "\\lim_{#1 \\to \\infty}"
           });
         })();
         </script>
@@ -390,8 +390,9 @@ Spaces</span>
                 class="header-section-number">1.1.1. </span> Vector
                 Spaces and Vectors</h2>
                 <div id="def-vector-space" class="definition"
+                data-env-type="definition"
                 style="border-left-color: #c94c6c; background-color: #fdf2f4; "
-                data-env-type="definition" data-number="1.1.1">
+                data-number="1.1.1">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Definition</strong><strong>
                 1.1.1</strong> (Vector Space)</span>
@@ -456,8 +457,9 @@ Spaces</span>
                 class="math inline">\(F\)</span>.</p>
                 </div>
                 <div id="exm-vector-spaces" class="example"
+                data-env-type="example"
                 style="border-left-color: #3a8a3a; background-color: #eef7ee; "
-                data-env-type="example" data-number="">
+                data-number="">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Example</strong>
                 (Examples of Vector Spaces)</span>
@@ -484,7 +486,7 @@ Spaces</span>
                 class="math inline">\(C(\sD)\)</span> is a vector space
                 over <span class="math inline">\(\nR\)</span>. The zero
                 vector of this vector space is given by the zero
-                polynomial <span class="math inline">\((x \mapsto
+                function <span class="math inline">\((x \mapsto
                 0)\)</span>.</p></li>
                 <li><p>Let <span class="math inline">\(F\)</span> be any
                 field and fix <span class="math inline">\(n \in
@@ -510,8 +512,9 @@ Spaces</span>
                 make sense and follow all axioms of vector spaces.</p>
                 </div>
                 <div id="exm-q-adjoin-sqrt2" class="example"
+                data-env-type="example"
                 style="border-left-color: #3a8a3a; background-color: #eef7ee; "
-                data-env-type="example" data-number="">
+                data-number="">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Example</strong>
                 (<span class="math inline">\(\nQ\)</span> Adjoin <span
@@ -595,8 +598,9 @@ Spaces</span>
                 space over <span class="math inline">\(\nQ\)</span>.</p>
                 </div>
                 <div id="def-vectors-scalars" class="definition"
+                data-env-type="definition"
                 style="border-left-color: #c94c6c; background-color: #fdf2f4; "
-                data-env-type="definition" data-number="1.1.2">
+                data-number="1.1.2">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Definition</strong><strong>
                 1.1.2</strong> (Vectors and Scalars)</span>
@@ -619,8 +623,9 @@ Spaces</span>
                 class="header-section-number">1.1.2. </span> Vector
                 Space Theorems</h2>
                 <div id="thm-left-cancellation" class="theorem"
+                data-env-type="theorem"
                 style="border-left-color: #3b6eda; background-color: #f0f5ff; "
-                data-env-type="theorem" data-number="1.1.1">
+                data-number="1.1.1">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Theorem</strong><strong>
                 1.1.1</strong> (Left Cancellation Law)</span>
@@ -648,8 +653,9 @@ Spaces</span>
                 \end{align*}\]</span></p>
                 </div>
                 <div id="thm-right-cancellation" class="theorem"
+                data-env-type="theorem"
                 style="border-left-color: #3b6eda; background-color: #f0f5ff; "
-                data-env-type="theorem" data-number="1.1.2">
+                data-number="1.1.2">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Theorem</strong><strong>
                 1.1.2</strong> (Right Cancellation Law)</span>
@@ -669,8 +675,9 @@ Spaces</span>
                 \u \implies \v_1 = \v_2\)</span>.</p>
                 </div>
                 <div id="thm-zero-unique" class="theorem"
+                data-env-type="theorem"
                 style="border-left-color: #3b6eda; background-color: #f0f5ff; "
-                data-env-type="theorem" data-number="1.1.3">
+                data-number="1.1.3">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Theorem</strong><strong>
                 1.1.3</strong> (Zero Vector is Unique)</span>
@@ -691,8 +698,9 @@ Spaces</span>
                 \end{align*}\]</span></p>
                 </div>
                 <div id="thm-inverse-unique" class="theorem"
+                data-env-type="theorem"
                 style="border-left-color: #3b6eda; background-color: #f0f5ff; "
-                data-env-type="theorem" data-number="1.1.4">
+                data-number="1.1.4">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Theorem</strong><strong>
                 1.1.4</strong> (Additive Inverse is Unique)</span>
@@ -720,9 +728,9 @@ Spaces</span>
                 \end{align*}\]</span></p>
                 </div>
                 <div id="def-additive-inverse-notation"
-                class="definition"
+                class="definition" data-env-type="definition"
                 style="border-left-color: #c94c6c; background-color: #fdf2f4; "
-                data-env-type="definition" data-number="1.1.3">
+                data-number="1.1.3">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Definition</strong><strong>
                 1.1.3</strong> (Notation of Additive Inverse)</span>
@@ -733,8 +741,9 @@ Spaces</span>
                 <span class="math inline">\(-\v\)</span>.</p>
                 </div>
                 <div id="thm-zero-scalar-mult" class="theorem"
+                data-env-type="theorem"
                 style="border-left-color: #3b6eda; background-color: #f0f5ff; "
-                data-env-type="theorem" data-number="1.1.5">
+                data-number="1.1.5">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Theorem</strong><strong>
                 1.1.5</strong> (Zero Scalar Annihilates)</span>
@@ -765,8 +774,9 @@ Spaces</span>
                 \end{align*}\]</span></p>
                 </div>
                 <div id="thm-negation-scalar" class="theorem"
+                data-env-type="theorem"
                 style="border-left-color: #3b6eda; background-color: #f0f5ff; "
-                data-env-type="theorem" data-number="1.1.6">
+                data-number="1.1.6">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Theorem</strong><strong>
                 1.1.6</strong> (Negation as Scalar
@@ -799,8 +809,9 @@ Spaces</span>
                 \v\)</span>.</p>
                 </div>
                 <div id="thm-negative-scalar-dist" class="theorem"
+                data-env-type="theorem"
                 style="border-left-color: #3b6eda; background-color: #f0f5ff; "
-                data-env-type="theorem" data-number="1.1.7">
+                data-number="1.1.7">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Theorem</strong><strong>
                 1.1.7</strong> (Negative Scalar Distribution)</span>
@@ -834,8 +845,9 @@ Spaces</span>
                 -(\alpha\v)\)</span>.</p>
                 </div>
                 <div id="thm-scalar-zero-vector" class="theorem"
+                data-env-type="theorem"
                 style="border-left-color: #3b6eda; background-color: #f0f5ff; "
-                data-env-type="theorem" data-number="1.1.8">
+                data-number="1.1.8">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Theorem</strong><strong>
                 1.1.8</strong> (Scalar Multiplication by Zero
@@ -869,8 +881,9 @@ Spaces</span>
                 \end{align*}\]</span></p>
                 </div>
                 <div id="thm-zero-product" class="theorem"
+                data-env-type="theorem"
                 style="border-left-color: #3b6eda; background-color: #f0f5ff; "
-                data-env-type="theorem" data-number="1.1.9">
+                data-number="1.1.9">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Theorem</strong><strong>
                 1.1.9</strong> (Zero Product Law)</span>

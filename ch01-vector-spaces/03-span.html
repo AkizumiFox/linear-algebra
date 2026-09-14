@@ -261,42 +261,42 @@
           if (typeof window.MathJax.tex === 'undefined') window.MathJax.tex = {};
           if (typeof window.MathJax.tex.macros === 'undefined') window.MathJax.tex.macros = {};
           Object.assign(window.MathJax.tex.macros, {
-                    "\limz": "\\lim_{#1 \\to 0}",
-                    "\braket": "\\langle #1 | #2 \\rangle",
-                    "\defeq": "\\stackrel{\\smash{\\textnormal{\\tiny def}}}{=}",
-                    "\tr": "\\text{tr}",
-                    "\abs": "\\left| #1 \\right|",
-                    "\norm": "\\left\\| #1 \\right\\|",
                     "\Var": "\\text{Var}\\left( #1 \\right)",
-                    "\card": "\\left| #1 \\right|",
+                    "\col": "\\text{col}",
                     "\bra": "\\langle #1 |",
-                    "\Normal": "\\mathcal{N}\\left( #1, #2 \\right)",
-                    "\ket": "| #1 \\rangle",
-                    "\pdd": "\\frac{\\partial^2 #1}{\\partial #2^2}",
-                    "\closure": "\\overline{#1}",
-                    "\Cov": "\\text{Cov}\\left( #1, #2 \\right)",
+                    "\limi": "\\lim_{#1 \\to \\infty}",
+                    "\tr": "\\text{tr}",
+                    "\tdd": "\\frac{d^2 #1}{d #2^2}",
                     "\Exp": "\\mathbb{E}\\left[ #1 \\right]",
+                    "\bb": "\\mathbb{#1}",
+                    "\pdd": "\\frac{\\partial^2 #1}{\\partial #2^2}",
                     "\interior": "\\text{int}\\left( #1 \\right)",
-                    "\ketbra": "| #1 \\rangle\\langle #2 |",
+                    "\td": "\\frac{d #1}{d #2}",
+                    "\pd": "\\frac{\\partial #1}{\\partial #2}",
+                    "\abs": "\\left| #1 \\right|",
+                    "\boundary": "\\partial #1",
+                    "\row": "\\text{row}",
+                    "\spn": "\\text{span}",
+                    "\limz": "\\lim_{#1 \\to 0}",
+                    "\Uniform": "\\text{Uniform}\\left( #1, #2 \\right)",
                     "\rom": "\\mathrm{#1}",
+                    "\Prob": "\\mathbb{P}\\left( #1 \\right)",
                     "\cl": "\\mathcal{#1}",
                     "\bm": "\\mathbf{#1}",
-                    "\nul": "\\text{nul}",
-                    "\pd": "\\frac{\\partial #1}{\\partial #2}",
-                    "\limi": "\\lim_{#1 \\to \\infty}",
-                    "\nullity": "\\text{nullity}",
-                    "\Uniform": "\\text{Uniform}\\left( #1, #2 \\right)",
-                    "\rank": "\\text{rank}",
-                    "\boundary": "\\partial #1",
                     "\expect": "\\langle #1 \\rangle",
-                    "\spn": "\\text{span}",
-                    "\td": "\\frac{d #1}{d #2}",
-                    "\bb": "\\mathbb{#1}",
-                    "\row": "\\text{row}",
-                    "\col": "\\text{col}",
+                    "\closure": "\\overline{#1}",
+                    "\braket": "\\langle #1 | #2 \\rangle",
+                    "\ket": "| #1 \\rangle",
+                    "\Cov": "\\text{Cov}\\left( #1, #2 \\right)",
                     "\powerset": "\\mathcal{P}\\left( #1 \\right)",
-                    "\Prob": "\\mathbb{P}\\left( #1 \\right)",
-                    "\tdd": "\\frac{d^2 #1}{d #2^2}"
+                    "\norm": "\\left\\| #1 \\right\\|",
+                    "\ketbra": "| #1 \\rangle\\langle #2 |",
+                    "\defeq": "\\stackrel{\\smash{\\textnormal{\\tiny def}}}{=}",
+                    "\nul": "\\text{nul}",
+                    "\nullity": "\\text{nullity}",
+                    "\rank": "\\text{rank}",
+                    "\Normal": "\\mathcal{N}\\left( #1, #2 \\right)",
+                    "\card": "\\left| #1 \\right|"
           });
         })();
         </script>
@@ -372,9 +372,9 @@ Combinations and Span</span>
                 class="header-section-number">1.3.1. </span> Linear
                 Combinations</h2>
                 <div id="def-linear-combination" class="definition"
-                data-number="1.3.1"
+                data-env-type="definition"
                 style="border-left-color: #c94c6c; background-color: #fdf2f4; "
-                data-env-type="definition">
+                data-number="1.3.1">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Definition</strong><strong>
                 1.3.1</strong> (Linear Combination)</span>
@@ -394,9 +394,9 @@ Combinations and Span</span>
                 combination.</p>
                 </div>
                 <div id="exm-linear-combinations" class="example"
-                data-number=""
+                data-env-type="example"
                 style="border-left-color: #3a8a3a; background-color: #eef7ee; "
-                data-env-type="example">
+                data-number="">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Example</strong>
                 (Examples of Linear Combinations)</span>
@@ -426,9 +426,9 @@ Combinations and Span</span>
                 class="header-section-number">1.3.2. </span> Span and
                 Spanning Sets</h2>
                 <div id="def-span" class="definition"
-                data-number="1.3.2"
+                data-env-type="definition"
                 style="border-left-color: #c94c6c; background-color: #fdf2f4; "
-                data-env-type="definition">
+                data-number="1.3.2">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Definition</strong><strong>
                 1.3.2</strong> (Span)</span>
@@ -456,9 +456,9 @@ Combinations and Span</span>
                 <span class="math inline">\(\Span\)</span>.</p>
                 </div>
                 <div id="thm-span-subspace" class="theorem"
-                data-number="1.3.1"
+                data-env-type="theorem"
                 style="border-left-color: #3b6eda; background-color: #f0f5ff; "
-                data-env-type="theorem">
+                data-number="1.3.1">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Theorem</strong><strong>
                 1.3.1</strong> (Spanning Set as Subspace)</span>
@@ -502,9 +502,9 @@ Combinations and Span</span>
                 class="math inline">\(S\)</span>.</p>
                 </div>
                 <div id="def-spanning-set" class="definition"
-                data-number="1.3.3"
+                data-env-type="definition"
                 style="border-left-color: #c94c6c; background-color: #fdf2f4; "
-                data-env-type="definition">
+                data-number="1.3.3">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Definition</strong><strong>
                 1.3.3</strong> (Spanning Set)</span>
@@ -517,9 +517,9 @@ Combinations and Span</span>
                 class="math inline">\(V\)</span>.</p>
                 </div>
                 <div id="exm-spanning-set" class="example"
-                data-number=""
+                data-env-type="example"
                 style="border-left-color: #3a8a3a; background-color: #eef7ee; "
-                data-env-type="example">
+                data-number="">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Example</strong>
                 (Spanning Set for Polynomials)</span>

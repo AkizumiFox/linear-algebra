@@ -261,42 +261,42 @@
           if (typeof window.MathJax.tex === 'undefined') window.MathJax.tex = {};
           if (typeof window.MathJax.tex.macros === 'undefined') window.MathJax.tex.macros = {};
           Object.assign(window.MathJax.tex.macros, {
-                    "\bra": "\\langle #1 |",
-                    "\ketbra": "| #1 \\rangle\\langle #2 |",
-                    "\tdd": "\\frac{d^2 #1}{d #2^2}",
-                    "\ket": "| #1 \\rangle",
-                    "\closure": "\\overline{#1}",
-                    "\pd": "\\frac{\\partial #1}{\\partial #2}",
-                    "\powerset": "\\mathcal{P}\\left( #1 \\right)",
-                    "\row": "\\text{row}",
-                    "\norm": "\\left\\| #1 \\right\\|",
-                    "\pdd": "\\frac{\\partial^2 #1}{\\partial #2^2}",
-                    "\limi": "\\lim_{#1 \\to \\infty}",
+                    "\rank": "\\text{rank}",
                     "\abs": "\\left| #1 \\right|",
-                    "\nul": "\\text{nul}",
-                    "\nullity": "\\text{nullity}",
-                    "\boundary": "\\partial #1",
-                    "\cl": "\\mathcal{#1}",
-                    "\expect": "\\langle #1 \\rangle",
-                    "\rom": "\\mathrm{#1}",
-                    "\bm": "\\mathbf{#1}",
-                    "\bb": "\\mathbb{#1}",
-                    "\spn": "\\text{span}",
-                    "\tr": "\\text{tr}",
-                    "\limz": "\\lim_{#1 \\to 0}",
-                    "\Exp": "\\mathbb{E}\\left[ #1 \\right]",
-                    "\td": "\\frac{d #1}{d #2}",
-                    "\col": "\\text{col}",
-                    "\defeq": "\\stackrel{\\smash{\\textnormal{\\tiny def}}}{=}",
                     "\Normal": "\\mathcal{N}\\left( #1, #2 \\right)",
                     "\braket": "\\langle #1 | #2 \\rangle",
-                    "\Var": "\\text{Var}\\left( #1 \\right)",
-                    "\rank": "\\text{rank}",
-                    "\Cov": "\\text{Cov}\\left( #1, #2 \\right)",
-                    "\interior": "\\text{int}\\left( #1 \\right)",
-                    "\card": "\\left| #1 \\right|",
+                    "\col": "\\text{col}",
+                    "\bb": "\\mathbb{#1}",
+                    "\powerset": "\\mathcal{P}\\left( #1 \\right)",
                     "\Prob": "\\mathbb{P}\\left( #1 \\right)",
-                    "\Uniform": "\\text{Uniform}\\left( #1, #2 \\right)"
+                    "\interior": "\\text{int}\\left( #1 \\right)",
+                    "\tdd": "\\frac{d^2 #1}{d #2^2}",
+                    "\spn": "\\text{span}",
+                    "\pdd": "\\frac{\\partial^2 #1}{\\partial #2^2}",
+                    "\row": "\\text{row}",
+                    "\Uniform": "\\text{Uniform}\\left( #1, #2 \\right)",
+                    "\nul": "\\text{nul}",
+                    "\limi": "\\lim_{#1 \\to \\infty}",
+                    "\boundary": "\\partial #1",
+                    "\pd": "\\frac{\\partial #1}{\\partial #2}",
+                    "\Cov": "\\text{Cov}\\left( #1, #2 \\right)",
+                    "\td": "\\frac{d #1}{d #2}",
+                    "\closure": "\\overline{#1}",
+                    "\rom": "\\mathrm{#1}",
+                    "\expect": "\\langle #1 \\rangle",
+                    "\bm": "\\mathbf{#1}",
+                    "\norm": "\\left\\| #1 \\right\\|",
+                    "\cl": "\\mathcal{#1}",
+                    "\tr": "\\text{tr}",
+                    "\Exp": "\\mathbb{E}\\left[ #1 \\right]",
+                    "\Var": "\\text{Var}\\left( #1 \\right)",
+                    "\card": "\\left| #1 \\right|",
+                    "\ketbra": "| #1 \\rangle\\langle #2 |",
+                    "\limz": "\\lim_{#1 \\to 0}",
+                    "\nullity": "\\text{nullity}",
+                    "\ket": "| #1 \\rangle",
+                    "\defeq": "\\stackrel{\\smash{\\textnormal{\\tiny def}}}{=}",
+                    "\bra": "\\langle #1 |"
           });
         })();
         </script>
@@ -367,8 +367,8 @@ Theorem</span>
                 class="header-section-number">2.3.1. </span> Nullity and
                 Rank</h2>
                 <div id="def-nullity" class="definition"
-                style="border-left-color: #c94c6c; background-color: #fdf2f4; "
-                data-number="2.3.1" data-env-type="definition">
+                data-number="2.3.1" data-env-type="definition"
+                style="border-left-color: #c94c6c; background-color: #fdf2f4; ">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Definition</strong><strong>
                 2.3.1</strong> (Nullity)</span>
@@ -380,8 +380,8 @@ Theorem</span>
                 \]</span></p>
                 </div>
                 <div id="def-rank" class="definition"
-                style="border-left-color: #c94c6c; background-color: #fdf2f4; "
-                data-number="2.3.2" data-env-type="definition">
+                data-number="2.3.2" data-env-type="definition"
+                style="border-left-color: #c94c6c; background-color: #fdf2f4; ">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Definition</strong><strong>
                 2.3.2</strong> (Rank)</span>
@@ -393,8 +393,8 @@ Theorem</span>
                 \]</span></p>
                 </div>
                 <div id="exm-nullity-rank-diff" class="example"
-                style="border-left-color: #3a8a3a; background-color: #eef7ee; "
-                data-number="" data-env-type="example">
+                data-number="" data-env-type="example"
+                style="border-left-color: #3a8a3a; background-color: #eef7ee; ">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Example</strong></span>
                 <p>Recall that for <span class="math inline">\(D :
@@ -424,8 +424,8 @@ Theorem</span>
                 class="header-section-number">2.3.2. </span> The
                 Theorem</h2>
                 <div id="thm-rank-nullity" class="theorem"
-                style="border-left-color: #3b6eda; background-color: #f0f5ff; "
-                data-number="2.3.1" data-env-type="theorem">
+                data-number="2.3.1" data-env-type="theorem"
+                style="border-left-color: #3b6eda; background-color: #f0f5ff; ">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Theorem</strong><strong>
                 2.3.1</strong> (Rank-Nullity Theorem)</span>

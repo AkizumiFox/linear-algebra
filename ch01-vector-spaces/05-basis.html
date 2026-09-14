@@ -261,42 +261,42 @@
           if (typeof window.MathJax.tex === 'undefined') window.MathJax.tex = {};
           if (typeof window.MathJax.tex.macros === 'undefined') window.MathJax.tex.macros = {};
           Object.assign(window.MathJax.tex.macros, {
-                    "\limi": "\\lim_{#1 \\to \\infty}",
-                    "\Cov": "\\text{Cov}\\left( #1, #2 \\right)",
-                    "\bm": "\\mathbf{#1}",
-                    "\expect": "\\langle #1 \\rangle",
                     "\bb": "\\mathbb{#1}",
-                    "\td": "\\frac{d #1}{d #2}",
-                    "\interior": "\\text{int}\\left( #1 \\right)",
-                    "\nul": "\\text{nul}",
-                    "\card": "\\left| #1 \\right|",
-                    "\rank": "\\text{rank}",
-                    "\pd": "\\frac{\\partial #1}{\\partial #2}",
-                    "\nullity": "\\text{nullity}",
-                    "\Normal": "\\mathcal{N}\\left( #1, #2 \\right)",
-                    "\tdd": "\\frac{d^2 #1}{d #2^2}",
-                    "\spn": "\\text{span}",
-                    "\pdd": "\\frac{\\partial^2 #1}{\\partial #2^2}",
-                    "\abs": "\\left| #1 \\right|",
-                    "\limz": "\\lim_{#1 \\to 0}",
-                    "\row": "\\text{row}",
                     "\tr": "\\text{tr}",
-                    "\powerset": "\\mathcal{P}\\left( #1 \\right)",
-                    "\ketbra": "| #1 \\rangle\\langle #2 |",
+                    "\Prob": "\\mathbb{P}\\left( #1 \\right)",
                     "\cl": "\\mathcal{#1}",
+                    "\ketbra": "| #1 \\rangle\\langle #2 |",
+                    "\spn": "\\text{span}",
+                    "\rank": "\\text{rank}",
+                    "\abs": "\\left| #1 \\right|",
+                    "\interior": "\\text{int}\\left( #1 \\right)",
                     "\closure": "\\overline{#1}",
-                    "\defeq": "\\stackrel{\\smash{\\textnormal{\\tiny def}}}{=}",
+                    "\limz": "\\lim_{#1 \\to 0}",
+                    "\tdd": "\\frac{d^2 #1}{d #2^2}",
+                    "\limi": "\\lim_{#1 \\to \\infty}",
+                    "\expect": "\\langle #1 \\rangle",
                     "\rom": "\\mathrm{#1}",
+                    "\bm": "\\mathbf{#1}",
+                    "\pd": "\\frac{\\partial #1}{\\partial #2}",
                     "\col": "\\text{col}",
+                    "\pdd": "\\frac{\\partial^2 #1}{\\partial #2^2}",
+                    "\Normal": "\\mathcal{N}\\left( #1, #2 \\right)",
+                    "\row": "\\text{row}",
+                    "\nul": "\\text{nul}",
+                    "\boundary": "\\partial #1",
+                    "\Exp": "\\mathbb{E}\\left[ #1 \\right]",
+                    "\td": "\\frac{d #1}{d #2}",
                     "\Var": "\\text{Var}\\left( #1 \\right)",
+                    "\card": "\\left| #1 \\right|",
+                    "\ket": "| #1 \\rangle",
+                    "\nullity": "\\text{nullity}",
                     "\bra": "\\langle #1 |",
                     "\norm": "\\left\\| #1 \\right\\|",
-                    "\Exp": "\\mathbb{E}\\left[ #1 \\right]",
-                    "\Prob": "\\mathbb{P}\\left( #1 \\right)",
-                    "\ket": "| #1 \\rangle",
-                    "\braket": "\\langle #1 | #2 \\rangle",
+                    "\defeq": "\\stackrel{\\smash{\\textnormal{\\tiny def}}}{=}",
+                    "\powerset": "\\mathcal{P}\\left( #1 \\right)",
                     "\Uniform": "\\text{Uniform}\\left( #1, #2 \\right)",
-                    "\boundary": "\\partial #1"
+                    "\braket": "\\langle #1 | #2 \\rangle",
+                    "\Cov": "\\text{Cov}\\left( #1, #2 \\right)"
           });
         })();
         </script>
@@ -383,7 +383,7 @@
                 class="header-section-number">1.5.1. </span> Definition
                 and Standard Bases</h2>
                 <div id="def-basis" class="definition"
-                data-env-type="definition" data-number="1.5.1"
+                data-number="1.5.1" data-env-type="definition"
                 style="border-left-color: #c94c6c; background-color: #fdf2f4; ">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Definition</strong><strong>
@@ -400,7 +400,7 @@
                 </ol>
                 </div>
                 <div id="exm-standard-bases" class="example"
-                data-env-type="example" data-number=""
+                data-number="" data-env-type="example"
                 style="border-left-color: #3a8a3a; background-color: #eef7ee; ">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Example</strong>
@@ -434,7 +434,7 @@
                 vector in the space has a unique “address” relative to
                 it.</p>
                 <div id="thm-unique-representation" class="theorem"
-                data-env-type="theorem" data-number="1.5.1"
+                data-number="1.5.1" data-env-type="theorem"
                 style="border-left-color: #3b6eda; background-color: #f0f5ff; ">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Theorem</strong><strong>
@@ -465,7 +465,7 @@
                 class="math inline">\(a_i = b_i\)</span>.</p>
                 </div>
                 <div id="def-coordinates" class="definition"
-                data-env-type="definition" data-number="1.5.2"
+                data-number="1.5.2" data-env-type="definition"
                 style="border-left-color: #c94c6c; background-color: #fdf2f4; ">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Definition</strong><strong>

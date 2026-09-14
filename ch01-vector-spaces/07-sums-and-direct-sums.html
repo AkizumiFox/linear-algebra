@@ -261,42 +261,42 @@
           if (typeof window.MathJax.tex === 'undefined') window.MathJax.tex = {};
           if (typeof window.MathJax.tex.macros === 'undefined') window.MathJax.tex.macros = {};
           Object.assign(window.MathJax.tex.macros, {
-                    "\limi": "\\lim_{#1 \\to \\infty}",
-                    "\bb": "\\mathbb{#1}",
-                    "\ketbra": "| #1 \\rangle\\langle #2 |",
-                    "\Exp": "\\mathbb{E}\\left[ #1 \\right]",
-                    "\nul": "\\text{nul}",
-                    "\rank": "\\text{rank}",
+                    "\abs": "\\left| #1 \\right|",
                     "\limz": "\\lim_{#1 \\to 0}",
+                    "\row": "\\text{row}",
                     "\Cov": "\\text{Cov}\\left( #1, #2 \\right)",
+                    "\ketbra": "| #1 \\rangle\\langle #2 |",
+                    "\cl": "\\mathcal{#1}",
+                    "\col": "\\text{col}",
+                    "\tdd": "\\frac{d^2 #1}{d #2^2}",
                     "\nullity": "\\text{nullity}",
                     "\expect": "\\langle #1 \\rangle",
-                    "\abs": "\\left| #1 \\right|",
-                    "\Var": "\\text{Var}\\left( #1 \\right)",
-                    "\Prob": "\\mathbb{P}\\left( #1 \\right)",
-                    "\closure": "\\overline{#1}",
-                    "\defeq": "\\stackrel{\\smash{\\textnormal{\\tiny def}}}{=}",
-                    "\Uniform": "\\text{Uniform}\\left( #1, #2 \\right)",
-                    "\interior": "\\text{int}\\left( #1 \\right)",
-                    "\col": "\\text{col}",
-                    "\td": "\\frac{d #1}{d #2}",
-                    "\pd": "\\frac{\\partial #1}{\\partial #2}",
-                    "\braket": "\\langle #1 | #2 \\rangle",
+                    "\spn": "\\text{span}",
+                    "\bm": "\\mathbf{#1}",
                     "\Normal": "\\mathcal{N}\\left( #1, #2 \\right)",
-                    "\pdd": "\\frac{\\partial^2 #1}{\\partial #2^2}",
-                    "\tdd": "\\frac{d^2 #1}{d #2^2}",
-                    "\rom": "\\mathrm{#1}",
+                    "\bb": "\\mathbb{#1}",
+                    "\card": "\\left| #1 \\right|",
                     "\tr": "\\text{tr}",
                     "\boundary": "\\partial #1",
-                    "\bm": "\\mathbf{#1}",
-                    "\norm": "\\left\\| #1 \\right\\|",
-                    "\cl": "\\mathcal{#1}",
-                    "\ket": "| #1 \\rangle",
-                    "\powerset": "\\mathcal{P}\\left( #1 \\right)",
-                    "\spn": "\\text{span}",
-                    "\row": "\\text{row}",
+                    "\braket": "\\langle #1 | #2 \\rangle",
                     "\bra": "\\langle #1 |",
-                    "\card": "\\left| #1 \\right|"
+                    "\interior": "\\text{int}\\left( #1 \\right)",
+                    "\norm": "\\left\\| #1 \\right\\|",
+                    "\pdd": "\\frac{\\partial^2 #1}{\\partial #2^2}",
+                    "\Exp": "\\mathbb{E}\\left[ #1 \\right]",
+                    "\rank": "\\text{rank}",
+                    "\pd": "\\frac{\\partial #1}{\\partial #2}",
+                    "\td": "\\frac{d #1}{d #2}",
+                    "\defeq": "\\stackrel{\\smash{\\textnormal{\\tiny def}}}{=}",
+                    "\ket": "| #1 \\rangle",
+                    "\rom": "\\mathrm{#1}",
+                    "\Prob": "\\mathbb{P}\\left( #1 \\right)",
+                    "\Var": "\\text{Var}\\left( #1 \\right)",
+                    "\nul": "\\text{nul}",
+                    "\limi": "\\lim_{#1 \\to \\infty}",
+                    "\Uniform": "\\text{Uniform}\\left( #1, #2 \\right)",
+                    "\powerset": "\\mathcal{P}\\left( #1 \\right)",
+                    "\closure": "\\overline{#1}"
           });
         })();
         </script>
@@ -395,8 +395,9 @@ Subspaces</span>
                 class="header-section-number">1.7.1. </span> Definition
                 and Properties</h2>
                 <div id="def-sum-of-subspaces" class="definition"
-                data-number="1.7.1" data-env-type="definition"
-                style="border-left-color: #c94c6c; background-color: #fdf2f4; ">
+                data-env-type="definition"
+                style="border-left-color: #c94c6c; background-color: #fdf2f4; "
+                data-number="1.7.1">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Definition</strong><strong>
                 1.7.1</strong> (Sum of Subspaces)</span>
@@ -409,8 +410,9 @@ Subspaces</span>
                 \]</span></p>
                 </div>
                 <div id="thm-subapce-sum-theorem" class="theorem"
-                data-number="1.7.1" data-env-type="theorem"
-                style="border-left-color: #3b6eda; background-color: #f0f5ff; ">
+                data-env-type="theorem"
+                style="border-left-color: #3b6eda; background-color: #f0f5ff; "
+                data-number="1.7.1">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Theorem</strong><strong>
                 1.7.1</strong> (Sum of Subspaces Theorem)</span>
@@ -520,9 +522,9 @@ Subspaces</span>
                 class="header-section-number">1.7.2. </span> Dimension
                 of <span class="math inline">\(W_1 + W_2\)</span></h2>
                 <div id="thm-dimension-formula-subspace-dim"
-                class="theorem" data-number="1.7.2"
-                data-env-type="theorem"
-                style="border-left-color: #3b6eda; background-color: #f0f5ff; ">
+                class="theorem" data-env-type="theorem"
+                style="border-left-color: #3b6eda; background-color: #f0f5ff; "
+                data-number="1.7.2">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Theorem</strong><strong>
                 1.7.2</strong> (Dimension Formula of Subspace
@@ -714,8 +716,9 @@ Subspaces</span>
                 class="header-section-number">1.7.3. </span> Direct Sum
                 of Two Subspaces</h2>
                 <div id="def-direct-sum" class="definition"
-                data-number="1.7.2" data-env-type="definition"
-                style="border-left-color: #c94c6c; background-color: #fdf2f4; ">
+                data-env-type="definition"
+                style="border-left-color: #c94c6c; background-color: #fdf2f4; "
+                data-number="1.7.2">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Definition</strong><strong>
                 1.7.2</strong> (Direct Sum of Two Subspaces)</span>
@@ -732,8 +735,9 @@ Subspaces</span>
                 class="math inline">\(W_2\)</span>.</p>
                 </div>
                 <div id="exm-direct-sum-of-matrix" class="example"
-                data-number="" data-env-type="example"
-                style="border-left-color: #3a8a3a; background-color: #eef7ee; ">
+                data-env-type="example"
+                style="border-left-color: #3a8a3a; background-color: #eef7ee; "
+                data-number="">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Example</strong></span>
                 <p>Consider the vector space <span
