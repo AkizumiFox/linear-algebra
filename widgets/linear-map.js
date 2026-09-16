@@ -8,8 +8,11 @@
  *     :::
  *
  * Shows the unit square and its image under the matrix [[a, b], [c, d]] (given row by
- * row). Drag the images of e1 and e2 to change the matrix; the determinant is the signed
- * area of the image.
+ * row). Drag the images of e1 and e2 to change the matrix. Options:
+ *   matrix="a,b,c,d"       initial matrix (default: identity)
+ *   extent="3"             half-width of the visible square
+ *   determinant="false"    hide the determinant (the signed area of the image), e.g. in
+ *                          chapters before determinants are introduced
  */
 
 function parseMatrix(text) {
@@ -55,10 +58,12 @@ export default async function mount(element, options, { loadJSXGraph, ensureId, 
         highlight: false, hasInnerPoints: false,
     });
 
+    const showDeterminant = options.determinant !== 'false';
     const update = () => {
         const [m11, m21, m12, m22] = [e1.X(), e1.Y(), e2.X(), e2.Y()].map(round);
-        const det = round(m11 * m22 - m12 * m21);
-        readout.textContent = `A = [[${m11}, ${m12}], [${m21}, ${m22}]]   det A = ${det}`;
+        let text = `A = [[${m11}, ${m12}], [${m21}, ${m22}]]`;
+        if (showDeterminant) text += `   det A = ${round(m11 * m22 - m12 * m21)}`;
+        readout.textContent = text;
     };
     board.on('update', update);
     update();

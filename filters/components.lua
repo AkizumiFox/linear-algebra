@@ -235,9 +235,10 @@ local function code_cell(block)
     if is_latex then
         local blocks = {pandoc.RawBlock("latex", "\\begin{lstlisting}[language=Python]\n" .. block.text .. "\n\\end{lstlisting}")}
         if settings.page_url then
+            -- Link text rather than the URL itself, which would run past the margin
             table.insert(blocks, pandoc.Para({
-                pandoc.Emph({pandoc.Str("Run this code online:")}), pandoc.Space(),
-                pandoc.Link({pandoc.Code(settings.page_url .. "#" .. id)}, settings.page_url .. "#" .. id),
+                pandoc.Emph({pandoc.Link({pandoc.Str("Run"), pandoc.Space(), pandoc.Str("this"), pandoc.Space(),
+                    pandoc.Str("code"), pandoc.Space(), pandoc.Str("online")}, settings.page_url .. "#" .. id)}),
             }))
         end
         return blocks

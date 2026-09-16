@@ -72,3 +72,19 @@ Hence, we have
 \rank (f) = \dim (\im (f)) = k = (n + k) - n = \dim (V) - \nullity (f).
 \]
 :::
+
+For the map \( f_\A : \nR^4 \to \nR^3 \), \( f_\A(\v) = \A\v \), the rank and nullity can be computed exactly with SymPy. In the online version the code can be edited and run; for any matrix, the sum is the number of columns, \( \dim (\nR^4) = 4 \).
+
+```{.python .run #cell-rank-nullity}
+from sympy import Matrix
+
+A = Matrix([
+    [1, 2, 3, 4],
+    [2, 4, 6, 8],
+    [1, 0, 1, 0],
+])
+rank = A.rank()                  # dim(im f_A)
+nullity = len(A.nullspace())     # dim(ker f_A): size of a basis of the kernel
+print("rank =", rank, " nullity =", nullity, " columns =", A.cols)
+rank + nullity == A.cols
+```

@@ -101,6 +101,30 @@ For \( \v, \w \in F^n \) and \( \lambda \in F \):
 These follow from the distributive and scalar properties of matrix multiplication.
 :::
 
+For \( F = \nR \) and \( m = n = 2 \), the map \( f_\A \) sends the unit square to the parallelogram spanned by \( \A\e_1 \) and \( \A\e_2 \), the columns of \( \A \).
+
+::: {.widget src="widgets/linear-map.js" matrix="2,1,0,1" determinant="false"}
+::: {.print}
+\begin{center}
+\begin{tikzpicture}[scale=1.1]
+    \draw[->] (-0.5,0) -- (3.5,0) node[right] {$x$};
+    \draw[->] (0,-0.5) -- (0,1.8) node[above] {$y$};
+    \draw[dashed, gray] (0,0) rectangle (1,1);
+    \fill[green!50!black, opacity=0.15] (0,0) -- (2,0) -- (3,1) -- (1,1) -- cycle;
+    \draw[green!50!black] (0,0) -- (2,0) -- (3,1) -- (1,1) -- cycle;
+    \draw[thick, blue, ->] (0,0) -- (2,0) node[below] {$\A\e_1$};
+    \draw[thick, red, ->] (0,0) -- (1,1) node[above left] {$\A\e_2$};
+\end{tikzpicture}
+\end{center}
+
+The unit square (dashed) and its image under \( \A = \begin{bmatrix} 2 & 1 \\ 0 & 1 \end{bmatrix} \).
+:::
+:::
+
+::: {.content-visible when-format="html"}
+Drag the tips of the two arrows to change \( \A \).
+:::
+
 ::: {#exm-coordinate-transformation}
 [A Specific Matrix Transformation]
 
