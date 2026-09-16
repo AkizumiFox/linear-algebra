@@ -1,0 +1,533 @@
+{
+  "cor-basis-existence": {
+    "type": "corollary",
+    "type_name": "Corollary",
+    "number": "1.6.6",
+    "title": "Existence of Basis",
+    "title_html": "Existence of Basis",
+    "html": "<p>Every finite spanning set of a vector space <span\nclass=\"math inline\">\\(V\\)</span> contains a basis.</p>",
+    "file": "ch01-vector-spaces/06-dimension.html"
+  },
+  "def-additive-inverse-notation": {
+    "type": "definition",
+    "type_name": "Definition",
+    "number": "1.1.3",
+    "title": "Notation of Additive Inverse",
+    "title_html": "Notation of Additive Inverse",
+    "html": "<p>The unique inverse of a vector <span class=\"math inline\">\\(\\v \\in\nV\\)</span>, for a vector space <span class=\"math inline\">\\(V\\)</span>\nover <span class=\"math inline\">\\(F\\)</span>, will be denoted as <span\nclass=\"math inline\">\\(-\\v\\)</span>.</p>",
+    "file": "ch01-vector-spaces/01-vector-spaces.html"
+  },
+  "def-basis": {
+    "type": "definition",
+    "type_name": "Definition",
+    "number": "1.5.1",
+    "title": "Basis",
+    "title_html": "Basis",
+    "html": "<p>A subset <span class=\"math inline\">\\(B\\)</span> of a vector space\n<span class=\"math inline\">\\(V\\)</span> is called a\n<strong>basis</strong> for <span class=\"math inline\">\\(V\\)</span>\nif:</p>\n<ol type=\"1\">\n<li><span class=\"math inline\">\\(B\\)</span> is linearly independent;</li>\n<li><span class=\"math inline\">\\(B\\)</span> spans <span\nclass=\"math inline\">\\(V\\)</span>.</li>\n</ol>",
+    "file": "ch01-vector-spaces/05-basis.html"
+  },
+  "def-coordinates": {
+    "type": "definition",
+    "type_name": "Definition",
+    "number": "1.5.2",
+    "title": "Coordinates",
+    "title_html": "Coordinates",
+    "html": "<p>Let <span class=\"math inline\">\\(B = \\{ \\v_1, \\dots, \\v_n \\}\\)</span>\nbe an <strong>ordered</strong> basis for <span\nclass=\"math inline\">\\(V\\)</span>. For any <span class=\"math inline\">\\(\\v\n\\in V\\)</span>, the unique scalars <span class=\"math inline\">\\(c_1,\n\\dots, c_n\\)</span> such that <span class=\"math inline\">\\(\\v = \\sum c_i\n\\v_i\\)</span> are called the <strong>coordinates</strong> of <span\nclass=\"math inline\">\\(\\v\\)</span> with respect to <span\nclass=\"math inline\">\\(B\\)</span>. We write this as a column vector:\n<span class=\"math display\">\\[\n    [\\v]_B = \\begin{bmatrix} c_1 \\\\ c_2 \\\\ \\vdots \\\\ c_n \\end{bmatrix}.\n\\]</span></p>",
+    "file": "ch01-vector-spaces/05-basis.html"
+  },
+  "def-dimension": {
+    "type": "definition",
+    "type_name": "Definition",
+    "number": "1.6.1",
+    "title": "Dimension",
+    "title_html": "Dimension",
+    "html": "<p>A vector space <span class=\"math inline\">\\(V\\)</span> over <span\nclass=\"math inline\">\\(F\\)</span> is called\n<strong>finite-dimensional</strong> if it has a finite basis. The\n<strong>dimension</strong> of <span class=\"math inline\">\\(V\\)</span>,\ndenoted <span class=\"math inline\">\\(\\dim_F (V)\\)</span>, is the number\nof vectors in any basis for <span class=\"math inline\">\\(V\\)</span>. By\nconvention, <span class=\"math inline\">\\(\\dim_F (\\{\\mathbf{0}\\}) =\n0\\)</span>.</p>",
+    "file": "ch01-vector-spaces/06-dimension.html"
+  },
+  "def-direct-sum": {
+    "type": "definition",
+    "type_name": "Definition",
+    "number": "1.7.2",
+    "title": "Direct Sum of Two Subspaces",
+    "title_html": "Direct Sum of Two Subspaces",
+    "html": "<p>Let <span class=\"math inline\">\\(W_1\\)</span>, <span\nclass=\"math inline\">\\(W_2\\)</span> be subspaces of a vector space <span\nclass=\"math inline\">\\(V\\)</span>. If <span class=\"math inline\">\\(W_1\n\\cap W_2 = \\{ \\mathbf{0} \\}\\)</span>, then we write <span\nclass=\"math inline\">\\(W_1 + W2\\)</span> as <span class=\"math display\">\\[\n    W_1 \\oplus W_2\n\\]</span> and call it the <strong>direct sum</strong> of <span\nclass=\"math inline\">\\(W_1\\)</span> and <span\nclass=\"math inline\">\\(W_2\\)</span>.</p>",
+    "file": "ch01-vector-spaces/07-sums-and-direct-sums.html"
+  },
+  "def-linear-combination": {
+    "type": "definition",
+    "type_name": "Definition",
+    "number": "1.3.1",
+    "title": "Linear Combination",
+    "title_html": "Linear Combination",
+    "html": "<p>Let <span class=\"math inline\">\\(V\\)</span> be a vector space over\n<span class=\"math inline\">\\(F\\)</span>, <span class=\"math inline\">\\(S =\n\\{ \\v_1, \\v_2, \\dots, \\v_m \\}\\)</span> be a subset of <span\nclass=\"math inline\">\\(V\\)</span>. Then the expression <span\nclass=\"math display\">\\[\n    a_1 \\v_1 + a_2 \\v_2 + \\cdots + a_m \\v_m\n\\]</span> is called a <strong>linear combination</strong> of <span\nclass=\"math inline\">\\(S\\)</span>. The scalars <span\nclass=\"math inline\">\\(a_i\\)</span> are called the\n<strong>coefficients</strong> of the linear combination.</p>",
+    "file": "ch01-vector-spaces/03-span.html"
+  },
+  "def-linear-independence": {
+    "type": "definition",
+    "type_name": "Definition",
+    "number": "1.4.1",
+    "title": "Linear Independence",
+    "title_html": "Linear Independence",
+    "html": "<p>A subset <span class=\"math inline\">\\(S\\)</span> of a vector space\n<span class=\"math inline\">\\(V\\)</span> is said to be <strong>linearly\nindependent</strong> if for any distinct vectors <span\nclass=\"math inline\">\\(\\v_1, \\v_2, \\dots, \\v_n \\in S\\)</span>, the only\nsolution to the equation: <span class=\"math display\">\\[\n    a_1 \\v_1 + a_2 \\v_2 + \\dots + a_n \\v_n = \\mathbf{0}\n\\]</span> is the trivial solution <span class=\"math inline\">\\(a_1 = a_2\n= \\dots = a_n = 0\\)</span>.</p>\n<p>If there exists a non-trivial solution (where at least one <span\nclass=\"math inline\">\\(a_i \\neq 0\\)</span>), then <span\nclass=\"math inline\">\\(S\\)</span> is said to be <strong>linearly\ndependent</strong>.</p>",
+    "file": "ch01-vector-spaces/04-independence.html"
+  },
+  "def-span": {
+    "type": "definition",
+    "type_name": "Definition",
+    "number": "1.3.2",
+    "title": "Span",
+    "title_html": "Span",
+    "html": "<p>Let <span class=\"math inline\">\\(S\\)</span> be a subset of a vector\nspace <span class=\"math inline\">\\(V\\)</span> over <span\nclass=\"math inline\">\\(F\\)</span>. The <strong>span</strong> of <span\nclass=\"math inline\">\\(S\\)</span>, denoted by <span\nclass=\"math inline\">\\(\\Span_F(S)\\)</span>, is the set of all linear\ncombinations of finite subsets of elements of <span\nclass=\"math inline\">\\(S\\)</span>.</p>\n<p>If <span class=\"math inline\">\\(S = \\{ \\v_1, \\v_2, \\dots, \\v_n\n\\}\\)</span>, then <span class=\"math inline\">\\(\\Span_F(S) = \\{ a_1 \\v_1 +\na_2 \\v_2 + \\dots + a_n \\v_n : a_i \\in F \\}\\)</span>. By convention,\n<span class=\"math inline\">\\(\\Span_F(\\varnothing) = \\{ \\mathbf{0}\n\\}\\)</span>.</p>",
+    "file": "ch01-vector-spaces/03-span.html"
+  },
+  "def-spanning-set": {
+    "type": "definition",
+    "type_name": "Definition",
+    "number": "1.3.3",
+    "title": "Spanning Set",
+    "title_html": "Spanning Set",
+    "html": "<p>If <span class=\"math inline\">\\(\\Span(S) = V\\)</span>, we say that\n<span class=\"math inline\">\\(S\\)</span> <strong>spans</strong> <span\nclass=\"math inline\">\\(V\\)</span>, or that <span\nclass=\"math inline\">\\(S\\)</span> is a <strong>spanning set</strong> for\n<span class=\"math inline\">\\(V\\)</span>.</p>",
+    "file": "ch01-vector-spaces/03-span.html"
+  },
+  "def-subspace": {
+    "type": "definition",
+    "type_name": "Definition",
+    "number": "1.2.1",
+    "title": "Subspace",
+    "title_html": "Subspace",
+    "html": "<p>Let <span class=\"math inline\">\\(V\\)</span> be a vector space over\n<span class=\"math inline\">\\(F\\)</span>. A subset <span\nclass=\"math inline\">\\(W\\)</span> of <span\nclass=\"math inline\">\\(V\\)</span> is called a <strong>subspace</strong>\nof <span class=\"math inline\">\\(V\\)</span>, if <span\nclass=\"math inline\">\\(W\\)</span> is also a vector space over <span\nclass=\"math inline\">\\(F\\)</span> with addition and scalar multiplication\ninherited from <span class=\"math inline\">\\(V\\)</span>.</p>",
+    "file": "ch01-vector-spaces/02-subspaces.html"
+  },
+  "def-sum-of-subspaces": {
+    "type": "definition",
+    "type_name": "Definition",
+    "number": "1.7.1",
+    "title": "Sum of Subspaces",
+    "title_html": "Sum of Subspaces",
+    "html": "<p>Let <span class=\"math inline\">\\(W_1\\)</span>, <span\nclass=\"math inline\">\\(W_2\\)</span> be subspaces of a vector space <span\nclass=\"math inline\">\\(V\\)</span>. Then we define <span\nclass=\"math display\">\\[\n    W_1 + W_2 \\coloneqq \\left\\{ \\w_1 + \\w_2 : \\w_1 \\in W_1 \\text{ and }\n\\w_2 \\in W_2 \\right\\}.\n\\]</span></p>",
+    "file": "ch01-vector-spaces/07-sums-and-direct-sums.html"
+  },
+  "def-vector-space": {
+    "type": "definition",
+    "type_name": "Definition",
+    "number": "1.1.1",
+    "title": "Vector Space",
+    "title_html": "Vector Space",
+    "html": "<p>A set <span class=\"math inline\">\\(V\\)</span> over a field <span\nclass=\"math inline\">\\(F\\)</span> with two operations: addition <span\nclass=\"math inline\">\\(+\\)</span> and scalar multiplication <span\nclass=\"math inline\">\\(\\cdot\\)</span> <span class=\"math display\">\\[\n    + : V \\times V \\to V, \\quad  \\cdot : F \\times V \\to V\n\\]</span> such that satisfy the following axioms for all <span\nclass=\"math inline\">\\(\\v_1, \\v_2, \\v_3 \\in V\\)</span> and <span\nclass=\"math inline\">\\(\\alpha, \\beta \\in F\\)</span>:</p>\n<div class=\"enumerate\" data-options=\"label=(VS\\arabic*)\">\n<ol type=\"1\">\n<li><span class=\"math inline\">\\(\\v_1 + \\v_2 = \\v_2 + \\v_1\\)</span></li>\n<li><span class=\"math inline\">\\((\\v_1 + \\v_2) + \\v_3 = \\v_1 + (\\v_2 +\n\\v_3)\\)</span></li>\n<li>There exists <span class=\"math inline\">\\(\\mathbf{0} \\in V\\)</span>\nsuch that <span class=\"math inline\">\\(\\v_1 + \\mathbf{0} =\n\\v_1\\)</span></li>\n<li>There exists <span class=\"math inline\">\\(\\v_1&#39; \\in V\\)</span>\nsuch that <span class=\"math inline\">\\(\\v_1 + \\v_1&#39; =\n\\mathbf{0}\\)</span></li>\n<li><span class=\"math inline\">\\(\\alpha(\\v_1 + \\v_2) = \\alpha\\v_1 +\n\\alpha\\v_2\\)</span></li>\n<li><span class=\"math inline\">\\((\\alpha+\\beta)\\v_1 = \\alpha\\v_1 +\n\\beta\\v_1\\)</span></li>\n<li><span class=\"math inline\">\\(\\alpha(\\beta\\v_1) =\n(\\alpha\\beta)\\v_1\\)</span></li>\n<li><span class=\"math inline\">\\(1\\v_1 = \\v_1\\)</span></li>\n</ol>\n</div>",
+    "file": "ch01-vector-spaces/01-vector-spaces.html"
+  },
+  "def-vectors-scalars": {
+    "type": "definition",
+    "type_name": "Definition",
+    "number": "1.1.2",
+    "title": "Vectors and Scalars",
+    "title_html": "Vectors and Scalars",
+    "html": "<p>Let <span class=\"math inline\">\\(V\\)</span> be a vector space over\n<span class=\"math inline\">\\(F\\)</span>. Then the elements of <span\nclass=\"math inline\">\\(V\\)</span> are called <strong>vectors</strong>,\nand the elements of <span class=\"math inline\">\\(F\\)</span> are called\n<strong>scalars</strong>.</p>\n<p>Additionally, <span class=\"math inline\">\\(\\mathbf{0} \\in V\\)</span>\nis called the <strong>zero vector</strong>, and <span\nclass=\"math inline\">\\((\\v_1&#39;)\\)</span> in <strong>(VS4)</strong> is\ncalled the <strong>inverse element</strong> of <span\nclass=\"math inline\">\\(\\v_1\\)</span>.</p>",
+    "file": "ch01-vector-spaces/01-vector-spaces.html"
+  },
+  "eq-linear-combo": {
+    "type": "equation",
+    "type_name": "Eq.",
+    "number": "1.7.1",
+    "title": "",
+    "title_html": "",
+    "html": "<p><span class=\"math display\">\\[\n      \\sum_{i=1}^n \\alpha_i \\b_i + \\sum_{j=1}^p \\beta_j \\s_j +\n\\sum_{k=1}^q \\gamma_k \\t_k = \\mathbf{0}\n  \\]</span></p>",
+    "file": "ch01-vector-spaces/07-sums-and-direct-sums.html"
+  },
+  "exm-differentiable-functions": {
+    "type": "example",
+    "type_name": "Example",
+    "number": "",
+    "title": "Differentiable Functions",
+    "title_html": "Differentiable Functions",
+    "html": "<p>Let <span class=\"math inline\">\\(C(\\nR) = \\{f : \\nR \\to \\nR \\mid f\n\\text{ is continuous}\\}\\)</span> be the set of all continuous functions\non <span class=\"math inline\">\\(\\nR\\)</span>. We consider the set of\ndifferentiable functions: <span class=\"math display\">\\[\n    D(\\nR) = \\{ f : \\nR \\to \\nR \\mid f \\text{ is differentiable} \\}\n\\]</span> To verify that <span class=\"math inline\">\\(D(\\nR)\\)</span> is\na subspace of <span class=\"math inline\">\\(C(\\nR)\\)</span>:</p>\n<ul>\n<li><strong>Subset:</strong> Since differentiability implies continuity,\nwe have <span class=\"math inline\">\\(D(\\nR) \\subseteq\nC(\\nR)\\)</span>.</li>\n<li><strong>Zero vector:</strong> The zero function <span\nclass=\"math inline\">\\(f(x) = 0\\)</span> is differentiable, so <span\nclass=\"math inline\">\\(\\mathbf{0} \\in D(\\nR)\\)</span>.</li>\n<li><strong>Closure under addition:</strong> If <span\nclass=\"math inline\">\\(f, g \\in D(\\nR)\\)</span>, then <span\nclass=\"math inline\">\\(f+g\\)</span> is differentiable with <span\nclass=\"math inline\">\\((f+g)&#39; = f&#39; + g&#39;\\)</span>, so <span\nclass=\"math inline\">\\(f+g \\in D(\\nR)\\)</span>.</li>\n<li><strong>Closure under scalar multiplication:</strong> If <span\nclass=\"math inline\">\\(f \\in D(\\nR)\\)</span> and <span\nclass=\"math inline\">\\(c \\in \\nR\\)</span>, then <span\nclass=\"math inline\">\\(cf\\)</span> is differentiable with <span\nclass=\"math inline\">\\((cf)&#39; = c f&#39;\\)</span>, so <span\nclass=\"math inline\">\\(cf \\in D(\\nR)\\)</span>.</li>\n</ul>\n<p>Thus, <span class=\"math inline\">\\(D(\\nR)\\)</span> is a subspace of\n<span class=\"math inline\">\\(C(\\nR)\\)</span>.</p>",
+    "file": "ch01-vector-spaces/02-subspaces.html"
+  },
+  "exm-dimensions": {
+    "type": "example",
+    "type_name": "Example",
+    "number": "",
+    "title": "Examples of Dimensions",
+    "title_html": "Examples of Dimensions",
+    "html": "<p><span class=\"math inline\">\\(\\dim(F^n) = n\\)</span>, <span\nclass=\"math inline\">\\(\\dim(F[x]_{\\leq n}) = n+1\\)</span>, and <span\nclass=\"math inline\">\\(\\dim(M_{m \\times n}(F)) = mn\\)</span>.</p>",
+    "file": "ch01-vector-spaces/06-dimension.html"
+  },
+  "exm-direct-sum-of-matrix": {
+    "type": "example",
+    "type_name": "Example",
+    "number": "",
+    "title": "",
+    "title_html": "",
+    "html": "<p>Consider the vector space <span class=\"math inline\">\\(V = M_n\n(\\nC)\\)</span>, and two of its subspaces:</p>\n<ul>\n<li><p><span class=\"math inline\">\\(W_1 = \\{ \\A \\in M_n (\\nC) : \\A^{\\top}\n= \\A \\}\\)</span> (the subspace of symmetric matrices);</p></li>\n<li><p><span class=\"math inline\">\\(W_2 = \\{ \\A \\in M_n (\\nC) : \\A^{\\top}\n= - \\A \\}\\)</span> (the subspace of skew-symmetric matrices).</p></li>\n</ul>\n<p>We can derive that <span class=\"math inline\">\\(V = W_1 \\oplus\nW_2\\)</span>.</p>\n<p><em>Proof.</em> We first show that <span class=\"math inline\">\\(V =\nW_1 + W_2\\)</span>. That is, any square matrix is a sum of a symmetric\nmatrix and a skew-symmetric matrix. Let <span class=\"math inline\">\\(\\A\n\\in M_n (\\nC)\\)</span>, notice that we have the identity: <span\nclass=\"math display\">\\[\n    \\A = \\frac{1}{2} (\\A + \\A^{\\top}) + \\frac{1}{2} (\\A - \\A^{\\top})\n\\]</span> where the first term is symmetric and the second term is\nskew-symmetric. Therefore, any square matrix is a sum of a symmetric\nmatrix and a skew-symmetric matrix.</p>\n<p>To establish that <span class=\"math inline\">\\(W_1 \\cap W_2 = \\{ \\O\n\\}\\)</span>, let <span class=\"math inline\">\\(\\A \\in W_1 \\cap\nW_2\\)</span>. By definition, this implies <span class=\"math inline\">\\(\\A\n\\in W_1\\)</span> and <span class=\"math inline\">\\(\\A \\in W_2\\)</span>.\nConsequently, the identities <span class=\"math inline\">\\(\\A =\n\\A^{\\top}\\)</span> and <span class=\"math inline\">\\(\\A = -\n\\A^{\\top}\\)</span> must hold simultaneously. Substituting the former\ninto the latter yields <span class=\"math inline\">\\(\\A = - \\A\\)</span>.\nThis implies <span class=\"math inline\">\\(2\\A = \\O\\)</span>, and thus\n<span class=\"math inline\">\\(\\A = \\O\\)</span>.</p>",
+    "file": "ch01-vector-spaces/07-sums-and-direct-sums.html"
+  },
+  "exm-line-not-subspace": {
+    "type": "example",
+    "type_name": "Example",
+    "number": "",
+    "title": "Translated Line is Not a Subspace",
+    "title_html": "Translated Line is Not a Subspace",
+    "html": "<p><span class=\"math inline\">\\(W = \\left\\{ (x, y) \\in \\nR^2 : x + 2y = 3\n\\right\\}\\)</span> is <strong>not</strong> a subspace of <span\nclass=\"math inline\">\\(\\nR^2\\)</span>. This is because it does not\ncontain the zero vector: <span class=\"math inline\">\\(0 + 2(0) = 0 \\neq\n3\\)</span>, so <span class=\"math inline\">\\((0, 0) \\notin W\\)</span>.</p>",
+    "file": "ch01-vector-spaces/02-subspaces.html"
+  },
+  "exm-line-subspace": {
+    "type": "example",
+    "type_name": "Example",
+    "number": "",
+    "title": "Line as Subspace",
+    "title_html": "Line as Subspace",
+    "html": "<p><span class=\"math inline\">\\(W = \\left\\{ (x, y) \\in \\nR^2 : x + 2y = 0\n\\right\\}\\)</span> is a subspace of <span\nclass=\"math inline\">\\(\\nR^2\\)</span>. Indeed:</p>\n<ul>\n<li><strong>Zero vector:</strong> <span class=\"math inline\">\\((0, 0) \\in\nW\\)</span> since <span class=\"math inline\">\\(0 + 2(0) = 0\\)</span>.</li>\n<li><strong>Addition:</strong> If <span class=\"math inline\">\\((x_1,\ny_1), (x_2, y_2) \\in W\\)</span>, then <span\nclass=\"math inline\">\\((x_1+x_2) + 2(y_1+y_2) = (x_1+2y_1) + (x_2+2y_2) =\n0 + 0 = 0\\)</span>, so their sum is in <span\nclass=\"math inline\">\\(W\\)</span>.</li>\n<li><strong>Scalar multiplication:</strong> If <span\nclass=\"math inline\">\\((x, y) \\in W\\)</span> and <span\nclass=\"math inline\">\\(c \\in \\nR\\)</span>, then <span\nclass=\"math inline\">\\((cx) + 2(cy) = c(x+2y) = c(0) = 0\\)</span>, so\n<span class=\"math inline\">\\(c(x, y) \\in W\\)</span>.</li>\n</ul>",
+    "file": "ch01-vector-spaces/02-subspaces.html"
+  },
+  "exm-linear-combinations": {
+    "type": "example",
+    "type_name": "Example",
+    "number": "",
+    "title": "Examples of Linear Combinations",
+    "title_html": "Examples of Linear Combinations",
+    "html": "<p>Below are some examples of linear combinations in different vector\nspaces:</p>\n<ol type=\"1\">\n<li><p>The vector <span class=\"math inline\">\\((2, 1, 0)\\)</span> in\n<span class=\"math inline\">\\(\\nR^3\\)</span> is a linear combination of\n<span class=\"math inline\">\\(S = \\{(1, 2, 3), (4, 5, 6)\\}\\)</span>\nbecause <span class=\"math display\">\\[\n(2, 1, 0) = -2 \\cdot (1, 2, 3) + 1 \\cdot (4, 5, 6).\n\\]</span></p></li>\n<li><p>The polynomial <span class=\"math inline\">\\(f(x) = x^3 + 2x +\n1\\)</span> in <span class=\"math inline\">\\(\\mathbb{R}[x]\\)</span> is a\nlinear combination of <span class=\"math inline\">\\(S = \\{1, x, x^2,\nx^3\\}\\)</span> because <span class=\"math display\">\\[\nf(x) = 1 \\cdot 1 + 2 \\cdot x + 0 \\cdot x^2 + 1 \\cdot x^3.\n\\]</span></p></li>\n</ol>",
+    "file": "ch01-vector-spaces/03-span.html"
+  },
+  "exm-linear-independence": {
+    "type": "example",
+    "type_name": "Example",
+    "number": "",
+    "title": "Examples of Linear Independence",
+    "title_html": "Examples of Linear Independence",
+    "html": "<p>The following examples illustrate how to check for linear\nindependence in various settings:</p>\n<ol type=\"1\">\n<li><p>Let <span class=\"math inline\">\\(S_1 = \\{(1, 2, 3), (4, 5, 6)\\}\n\\subseteq \\nR^3\\)</span>. To check linear independence, suppose <span\nclass=\"math display\">\\[\na(1, 2, 3) + b(4, 5, 6) = (0, 0, 0) \\implies \\begin{cases} a + 4b = 0 \\\\\n2a + 5b = 0 \\\\ 3a + 6b = 0 \\end{cases}\n\\]</span> The first two equations give <span class=\"math inline\">\\(a =\n-4b\\)</span> and <span class=\"math inline\">\\(2(-4b) + 5b = 0 \\implies\n-3b = 0\\)</span>. Thus <span class=\"math inline\">\\(a = b = 0\\)</span>,\nso <span class=\"math inline\">\\(S_1\\)</span> is <strong>linearly\nindependent</strong>.</p></li>\n<li><p>Let <span class=\"math inline\">\\(S_2 = \\{(1, 2, 3), (4, 5, 6), (7,\n8, 9)\\} \\subseteq \\nR^3\\)</span>. Note that <span\nclass=\"math display\">\\[\n(1, 2, 3) - 2(4, 5, 6) + (7, 8, 9) = (1-8+7, 2-10+8, 3-12+9) = (0, 0,\n0).\n\\]</span> Since there exists a non-trivial solution, <span\nclass=\"math inline\">\\(S_2\\)</span> is <strong>linearly\ndependent</strong>.</p></li>\n<li><p>Consider <span class=\"math inline\">\\(\\{2x + 1, x^2 + 3\\}\\)</span>\nin <span class=\"math inline\">\\(\\nR[x]_{\\leq 2}\\)</span>. Suppose <span\nclass=\"math display\">\\[\na(2x + 1) + b(x^2 + 3) = 0 \\implies bx^2 + 2ax + (a + 3b) = 0.\n\\]</span> Comparing coefficients of <span class=\"math inline\">\\(x^2, x,\n1\\)</span>, we have <span class=\"math inline\">\\(b = 0\\)</span>, <span\nclass=\"math inline\">\\(2a = 0\\)</span>, and <span class=\"math inline\">\\(a\n+ 3b = 0\\)</span>. This implies <span class=\"math inline\">\\(a = b =\n0\\)</span>, so the set is <strong>linearly\nindependent</strong>.</p></li>\n<li><p>Consider <span class=\"math inline\">\\(\\{ \\sin x, \\cos x, e^x\n\\}\\)</span> in <span class=\"math inline\">\\(D(\\nR)\\)</span>. Suppose for\nall <span class=\"math inline\">\\(x \\in \\nR\\)</span>: <span\nclass=\"math display\">\\[\na \\sin x + b \\cos x + c e^x = 0.\n\\]</span> Setting <span class=\"math inline\">\\(x = 0\\)</span> gives <span\nclass=\"math inline\">\\(b + c = 0\\)</span>. Setting <span\nclass=\"math inline\">\\(x = \\pi\\)</span> gives <span\nclass=\"math inline\">\\(-b + c e^\\pi = 0\\)</span>. Adding these gives\n<span class=\"math inline\">\\(c(1 + e^\\pi) = 0\\)</span>, so <span\nclass=\"math inline\">\\(c = 0\\)</span> and hence <span\nclass=\"math inline\">\\(b = 0\\)</span>. Finally, setting <span\nclass=\"math inline\">\\(x = \\pi/2\\)</span> gives <span\nclass=\"math inline\">\\(a + c e^{\\pi/2} = 0 \\implies a = 0\\)</span>. Thus,\nthe set is <strong>linearly independent</strong>.</p></li>\n</ol>",
+    "file": "ch01-vector-spaces/04-independence.html"
+  },
+  "exm-poly-degree-bound": {
+    "type": "example",
+    "type_name": "Example",
+    "number": "",
+    "title": "Polynomials of Bounded Degree",
+    "title_html": "Polynomials of Bounded Degree",
+    "html": "<p>Let <span class=\"math inline\">\\(F[x]\\)</span> be the vector space of\nall polynomials over a field <span class=\"math inline\">\\(F\\)</span>. For\na fixed <span class=\"math inline\">\\(n \\in \\nN\\)</span>, the set <span\nclass=\"math inline\">\\(F[x]_{\\leq n}\\)</span> of polynomials of degree at\nmost <span class=\"math inline\">\\(n\\)</span> is a subspace of <span\nclass=\"math inline\">\\(F[x]\\)</span>.</p>\n<ul>\n<li><strong>Zero vector:</strong> The zero polynomial has degree <span\nclass=\"math inline\">\\(-\\infty\\)</span>, so <span class=\"math inline\">\\(0\n\\in F[x]_{\\leq n}\\)</span>.</li>\n<li><strong>Addition:</strong> If <span class=\"math inline\">\\(\\deg p\n\\leq n\\)</span> and <span class=\"math inline\">\\(\\deg q \\leq n\\)</span>,\nthen <span class=\"math inline\">\\(\\deg(p+q) \\leq \\max(\\deg p, \\deg q)\n\\leq n\\)</span>.</li>\n<li><strong>Scalar multiplication:</strong> If <span\nclass=\"math inline\">\\(\\deg p \\leq n\\)</span> and <span\nclass=\"math inline\">\\(c \\in F\\)</span>, then <span\nclass=\"math inline\">\\(\\deg(cp) \\leq \\deg p \\leq n\\)</span>.</li>\n</ul>",
+    "file": "ch01-vector-spaces/02-subspaces.html"
+  },
+  "exm-poly-exact-degree": {
+    "type": "example",
+    "type_name": "Example",
+    "number": "",
+    "title": "Polynomials of Exact Degree",
+    "title_html": "Polynomials of Exact Degree",
+    "html": "<p>The set <span class=\"math inline\">\\(F[x]_{=n}\\)</span> of polynomials\nof degree <strong>exactly</strong> <span\nclass=\"math inline\">\\(n\\)</span> is <strong>not</strong> a subspace of\n<span class=\"math inline\">\\(F[x]\\)</span>.</p>\n<ul>\n<li>It does not contain the zero vector (since <span\nclass=\"math inline\">\\(\\deg 0 = -\\infty \\neq n\\)</span>).</li>\n<li>It is not closed under addition. For example, if <span\nclass=\"math inline\">\\(p(x) = x^n + x\\)</span> and <span\nclass=\"math inline\">\\(q(x) = -x^n\\)</span>, both have degree <span\nclass=\"math inline\">\\(n\\)</span>, but <span class=\"math inline\">\\(p(x) +\nq(x) = x\\)</span>, which has degree <span class=\"math inline\">\\(1 \\neq\nn\\)</span> (assuming <span class=\"math inline\">\\(n &gt;\n1\\)</span>).</li>\n</ul>",
+    "file": "ch01-vector-spaces/02-subspaces.html"
+  },
+  "exm-q-adjoin-sqrt2": {
+    "type": "example",
+    "type_name": "Example",
+    "number": "",
+    "title": "\\nQ Adjoin \\sqrt{2}",
+    "title_html": "<span class=\"math inline\">\\(\\nQ\\)</span> Adjoin <span\nclass=\"math inline\">\\(\\sqrt{2}\\)</span>",
+    "html": "<p>Show that <span class=\"math inline\">\\(\\nQ(\\sqrt{2}) \\coloneqq \\left\\{\na + b \\sqrt{2} : a, b \\in \\nQ \\right\\}\\)</span> is a vector space over\n<span class=\"math inline\">\\(\\nQ\\)</span> by checking all eight\naxioms.</p>",
+    "file": "ch01-vector-spaces/01-vector-spaces.html"
+  },
+  "exm-sifting": {
+    "type": "example",
+    "type_name": "Example",
+    "number": "",
+    "title": "Sifting Example",
+    "title_html": "Sifting Example",
+    "html": "<p>Consider <span class=\"math inline\">\\(S = \\{ \\v_1, \\v_2, \\v_3, \\v_4,\n\\v_5, \\v_6 \\}\\)</span> in <span class=\"math inline\">\\(\\nR^3\\)</span>\nwhere: <span class=\"math display\">\\[\\begin{align*}\n\\v_1 &amp;= (1, 1, 1), &amp; \\v_2 &amp;= (2, 2, 2), &amp; \\v_3 &amp;=\n(1, 0, 0), \\\\\n\\v_4 &amp;= (3, 2, 2), &amp; \\v_5 &amp;= (1, 1, 0), &amp; \\v_6 &amp;=\n(0, 0, 1).\n\\end{align*}\\]</span></p>\n<p>We apply the sifting method:</p>\n<ul>\n<li><span class=\"math inline\">\\(\\v_1 \\neq \\mathbf{0}\\)</span>, so <span\nclass=\"math inline\">\\(\\v_1\\)</span> is kept.</li>\n<li><span class=\"math inline\">\\(\\v_2 = 2\\v_1\\)</span>, so <span\nclass=\"math inline\">\\(\\v_2\\)</span> is removed.</li>\n<li><span class=\"math inline\">\\(\\v_3\\)</span> is not a linear\ncombination of <span class=\"math inline\">\\(\\v_1\\)</span>, so <span\nclass=\"math inline\">\\(\\v_3\\)</span> is kept.</li>\n<li><span class=\"math inline\">\\(\\v_4 = 2\\v_1 + 1\\v_3\\)</span>, so <span\nclass=\"math inline\">\\(\\v_4\\)</span> is removed.</li>\n<li>Suppose <span class=\"math inline\">\\(\\v_5 = a\\v_1 + b\\v_3\\)</span>.\nThen <span class=\"math inline\">\\((1, 1, 0) = (a + b, a, a)\\)</span>,\nwhich gives <span class=\"math inline\">\\(a = 0\\)</span> and <span\nclass=\"math inline\">\\(a + b = 1\\)</span>, so <span\nclass=\"math inline\">\\(b = 1\\)</span>. But then the second coordinate\ngives <span class=\"math inline\">\\(1 = a = 0\\)</span>, which is a\ncontradiction. So <span class=\"math inline\">\\(\\v_5\\)</span> is not a\nlinear combination of <span class=\"math inline\">\\(\\v_1, \\v_3\\)</span>.\nHence, <span class=\"math inline\">\\(\\v_5\\)</span> is kept.</li>\n<li><span class=\"math inline\">\\(\\v_6 = (0, 0, 1) = (1, 1, 1) - (1, 1, 0)\n= \\v_1 - \\v_5\\)</span>, so <span class=\"math inline\">\\(\\v_6\\)</span> is\nremoved.</li>\n</ul>\n<p>The sifted set is <span class=\"math inline\">\\(S&#39; = \\{ \\v_1, \\v_3,\n\\v_5 \\} = \\{ (1, 1, 1), (1, 0, 0), (1, 1, 0) \\}\\)</span>, which is\nlinearly independent and spans the same space as <span\nclass=\"math inline\">\\(S\\)</span>.</p>",
+    "file": "ch01-vector-spaces/06-dimension.html"
+  },
+  "exm-sifting-r2": {
+    "type": "example",
+    "type_name": "Example",
+    "number": "",
+    "title": "Sifting in \\nR^2",
+    "title_html": "Sifting in <span class=\"math inline\">\\(\\nR^2\\)</span>",
+    "html": "<p>Consider <span class=\"math inline\">\\(S = \\{ (1, 0), (0, 1), (1, 1)\n\\}\\)</span> in <span class=\"math inline\">\\(\\nR^2\\)</span>.</p>\n<ul>\n<li><span class=\"math inline\">\\((1, 0) \\neq \\mathbf{0}\\)</span>, so\n<span class=\"math inline\">\\((1, 0)\\)</span> is kept.</li>\n<li><span class=\"math inline\">\\((0, 1) \\notin \\Span\\{ (1, 0)\n\\}\\)</span>, so <span class=\"math inline\">\\((0, 1)\\)</span> is\nkept.</li>\n<li><span class=\"math inline\">\\((1, 1) = (1, 0) + (0, 1) \\in \\Span\\{ (1,\n0), (0, 1) \\}\\)</span>, so <span class=\"math inline\">\\((1, 1)\\)</span>\nis removed.</li>\n</ul>\n<p>The sifted set <span class=\"math inline\">\\(\\{ (1, 0), (0, 1)\n\\}\\)</span> is linearly independent and still spans <span\nclass=\"math inline\">\\(\\nR^2\\)</span>.</p>",
+    "file": "ch01-vector-spaces/06-dimension.html"
+  },
+  "exm-spanning-set": {
+    "type": "example",
+    "type_name": "Example",
+    "number": "",
+    "title": "Spanning Set for Polynomials",
+    "title_html": "Spanning Set for Polynomials",
+    "html": "<p>The set <span class=\"math inline\">\\(\\{ 1, x, x^2 \\}\\)</span> spans\n<span class=\"math inline\">\\(\\nR[x]_{\\leq 2}\\)</span>, the space of\npolynomials of degree at most 2.</p>",
+    "file": "ch01-vector-spaces/03-span.html"
+  },
+  "exm-standard-bases": {
+    "type": "example",
+    "type_name": "Example",
+    "number": "",
+    "title": "Standard Bases",
+    "title_html": "Standard Bases",
+    "html": "<p>Commonly used standard bases for familiar vector spaces are listed\nbelow:</p>\n<ul>\n<li>The <strong>standard basis</strong> for <span\nclass=\"math inline\">\\(F^n\\)</span> is <span class=\"math inline\">\\(\\{\n\\e_1, \\e_2, \\dots, \\e_n \\}\\)</span>, where <span\nclass=\"math inline\">\\(\\e_i\\)</span> has a 1 in the <span\nclass=\"math inline\">\\(i\\)</span>-th position and 0 elsewhere.</li>\n<li>The standard basis for <span class=\"math inline\">\\(F[x]_{\\leq\nn}\\)</span> is <span class=\"math inline\">\\(\\{ 1, x, x^2, \\dots, x^n\n\\}\\)</span>.</li>\n<li>The standard basis for <span class=\"math inline\">\\(M_{m \\times\nn}(F)\\)</span> is the set of matrices <span\nclass=\"math inline\">\\(\\E_{ij}\\)</span> having a 1 at entry <span\nclass=\"math inline\">\\((i,j)\\)</span> and 0 elsewhere.</li>\n</ul>",
+    "file": "ch01-vector-spaces/05-basis.html"
+  },
+  "exm-symmetric-matrices": {
+    "type": "example",
+    "type_name": "Example",
+    "number": "",
+    "title": "Symmetric Matrices",
+    "title_html": "Symmetric Matrices",
+    "html": "<p>The set of all symmetric matrices in <span\nclass=\"math inline\">\\(M_n(F)\\)</span>, denoted by <span\nclass=\"math inline\">\\(S_n(F) = \\{ \\A \\in M_n(F) : \\A = \\A^{\\top}\n\\}\\)</span>, is a subspace of <span\nclass=\"math inline\">\\(M_n(F)\\)</span>.</p>\n<ul>\n<li><strong>Zero vector:</strong> The zero matrix <span\nclass=\"math inline\">\\(\\O\\)</span> is symmetric since <span\nclass=\"math inline\">\\(\\O^{\\top} = \\O\\)</span>, so <span\nclass=\"math inline\">\\(\\O \\in S_n(F)\\)</span>.</li>\n<li><strong>Addition:</strong> If <span class=\"math inline\">\\(\\A, \\B \\in\nS_n(F)\\)</span>, then <span class=\"math inline\">\\((\\A+\\B)^{\\top} =\n\\A^{\\top} + \\B^{\\top} = \\A + \\B\\)</span>, so <span\nclass=\"math inline\">\\(\\A+\\B \\in S_n(F)\\)</span>.</li>\n<li><strong>Scalar multiplication:</strong> If <span\nclass=\"math inline\">\\(\\A \\in S_n(F)\\)</span> and <span\nclass=\"math inline\">\\(c \\in F\\)</span>, then <span\nclass=\"math inline\">\\((c\\A)^{\\top} = c\\A^{\\top} = c\\A\\)</span>, so <span\nclass=\"math inline\">\\(c\\A \\in S_n(F)\\)</span>.</li>\n</ul>",
+    "file": "ch01-vector-spaces/02-subspaces.html"
+  },
+  "exm-trace-free-matrices": {
+    "type": "example",
+    "type_name": "Example",
+    "number": "",
+    "title": "Trace-free Matrices",
+    "title_html": "Trace-free Matrices",
+    "html": "<p>The set of all trace-free matrices in <span\nclass=\"math inline\">\\(M_n(F)\\)</span>, denoted by <span\nclass=\"math inline\">\\(W = \\{ \\A \\in M_n(F) : \\tr(\\A) = 0 \\}\\)</span>, is\na subspace of <span class=\"math inline\">\\(M_n(F)\\)</span>.</p>\n<ul>\n<li><strong>Zero vector:</strong> <span class=\"math inline\">\\(\\tr(\\O) =\n0 + 0 + \\cdots + 0 = 0\\)</span>, so <span class=\"math inline\">\\(\\O \\in\nW\\)</span>.</li>\n<li><strong>Addition:</strong> If <span class=\"math inline\">\\(\\A, \\B \\in\nW\\)</span>, then <span class=\"math inline\">\\(\\tr(\\A+\\B) = \\tr(\\A) +\n\\tr(\\B) = 0 + 0 = 0\\)</span>, so <span class=\"math inline\">\\(\\A+\\B \\in\nW\\)</span>.</li>\n<li><strong>Scalar multiplication:</strong> If <span\nclass=\"math inline\">\\(\\A \\in W\\)</span> and <span\nclass=\"math inline\">\\(c \\in F\\)</span>, then <span\nclass=\"math inline\">\\(\\tr(c\\A) = c \\tr(\\A) = c(0) = 0\\)</span>, so <span\nclass=\"math inline\">\\(c\\A \\in W\\)</span>.</li>\n</ul>",
+    "file": "ch01-vector-spaces/02-subspaces.html"
+  },
+  "exm-trivial-subspaces": {
+    "type": "example",
+    "type_name": "Example",
+    "number": "",
+    "title": "Trivial Subspaces",
+    "title_html": "Trivial Subspaces",
+    "html": "<p>Given a vector space <span class=\"math inline\">\\(V\\)</span>, then</p>\n<ul>\n<li><span class=\"math inline\">\\(V\\)</span> is a subspace of <span\nclass=\"math inline\">\\(V\\)</span> itself;</li>\n<li><span class=\"math inline\">\\(\\left\\{ \\mathbf{0} \\right\\}\\)</span> is\na subspace of <span class=\"math inline\">\\(V\\)</span> (also known as the\n\u201czero subspace\u201d);</li>\n<li><span class=\"math inline\">\\(\\varnothing\\)</span> is\n<strong>not</strong> a subspace of <span\nclass=\"math inline\">\\(V\\)</span>.</li>\n</ul>",
+    "file": "ch01-vector-spaces/02-subspaces.html"
+  },
+  "exm-union-axes": {
+    "type": "example",
+    "type_name": "Example",
+    "number": "",
+    "title": "Union of Axes",
+    "title_html": "Union of Axes",
+    "html": "<p>Consider the vector space <span class=\"math inline\">\\(V =\n\\nR^2\\)</span>. Let <span class=\"math inline\">\\(W_1\\)</span> be the\n<span class=\"math inline\">\\(x\\)</span>-axis and <span\nclass=\"math inline\">\\(W_2\\)</span> be the <span\nclass=\"math inline\">\\(y\\)</span>-axis: <span class=\"math display\">\\[\n    W_1 = \\{ (x, 0) : x \\in \\nR \\}, \\quad W_2 = \\{ (0, y) : y \\in \\nR\n\\}.\n\\]</span> Both <span class=\"math inline\">\\(W_1\\)</span> and <span\nclass=\"math inline\">\\(W_2\\)</span> are subspaces of <span\nclass=\"math inline\">\\(\\nR^2\\)</span>. However, their union <span\nclass=\"math inline\">\\(W_1 \\cup W_2\\)</span> is <strong>not</strong> a\nsubspace because it is not closed under addition.</p>\n<p>Indeed, <span class=\"math inline\">\\((1, 0) \\in W_1 \\subseteq W_1 \\cup\nW_2\\)</span> and <span class=\"math inline\">\\((0, 1) \\in W_2 \\subseteq\nW_1 \\cup W_2\\)</span>, but their sum: <span class=\"math display\">\\[\n    (1, 0) + (0, 1) = (1, 1)\n\\]</span> is not in <span class=\"math inline\">\\(W_1 \\cup W_2\\)</span>\nsince <span class=\"math inline\">\\((1, 1)\\)</span> is neither on the\n<span class=\"math inline\">\\(x\\)</span>-axis nor the <span\nclass=\"math inline\">\\(y\\)</span>-axis.</p>",
+    "file": "ch01-vector-spaces/02-subspaces.html"
+  },
+  "exm-vector-spaces": {
+    "type": "example",
+    "type_name": "Example",
+    "number": "",
+    "title": "Examples of Vector Spaces",
+    "title_html": "Examples of Vector Spaces",
+    "html": "<p>The following are classic examples of vector spaces:</p>\n<ol type=\"1\">\n<li><p>Most defaultly, <span class=\"math inline\">\\(F^n\\)</span> with the\nusual operations of <span class=\"math inline\">\\(+\\)</span> and <span\nclass=\"math inline\">\\(\\cdot\\)</span> is a vector space over <span\nclass=\"math inline\">\\(F\\)</span>.</p></li>\n<li><p>Working with polynomials is common too: <span\nclass=\"math inline\">\\(F[x]\\)</span> with the usual operations of <span\nclass=\"math inline\">\\(+\\)</span> and <span\nclass=\"math inline\">\\(\\cdot\\)</span> is a vector space over <span\nclass=\"math inline\">\\(F\\)</span>.</p></li>\n<li><p>Let <span class=\"math inline\">\\(\\sD\\)</span> be any open\ninterval. Let <span class=\"math display\">\\[\nC(\\sD) \\coloneqq \\left\\{ f: \\sD \\to \\nR: f \\text{ is continuous}\n\\right\\}.\n\\]</span> Then <span class=\"math inline\">\\(C(\\sD)\\)</span> is a vector\nspace over <span class=\"math inline\">\\(\\nR\\)</span>. The zero vector of\nthis vector space is given by the zero function <span\nclass=\"math inline\">\\((x \\mapsto 0)\\)</span>.</p></li>\n<li><p>Let <span class=\"math inline\">\\(F\\)</span> be any field and fix\n<span class=\"math inline\">\\(n \\in \\nN\\)</span>. Then <span\nclass=\"math inline\">\\(M_n(F)\\)</span> is a vector space over <span\nclass=\"math inline\">\\(F\\)</span>.</p></li>\n<li><p>The set <span class=\"math inline\">\\(V =\n\\mathbb{R}_{&gt;0}\\)</span> of positive real numbers forms a vector\nspace over <span class=\"math inline\">\\(F = \\mathbb{R}\\)</span> under the\nfollowing operations: for <span class=\"math inline\">\\(x, y \\in\nV\\)</span> and <span class=\"math inline\">\\(\\alpha \\in F\\)</span>, define\n<span class=\"math display\">\\[\n     x \\oplus y \\coloneqq xy, \\quad \\alpha \\odot x \\coloneqq x^\\alpha =\ne^{\\alpha \\log x}.\n     \\]</span> Under these operations, the zero vector is <span\nclass=\"math inline\">\\(\\mathbf{0} = 1\\)</span>, and the additive inverse\nof <span class=\"math inline\">\\(x\\)</span> is <span\nclass=\"math inline\">\\(x^{-1}\\)</span>.</p></li>\n</ol>\n<p>You can check if addition and scalar multiplication make sense and\nfollow all axioms of vector spaces.</p>",
+    "file": "ch01-vector-spaces/01-vector-spaces.html"
+  },
+  "prp-union-subspaces": {
+    "type": "proposition",
+    "type_name": "Proposition",
+    "number": "1.2.3",
+    "title": "Union of Subspaces",
+    "title_html": "Union of Subspaces",
+    "html": "<p>Let <span class=\"math inline\">\\(W_1, W_2\\)</span> be subspaces of\n<span class=\"math inline\">\\(V\\)</span>. Then <span\nclass=\"math inline\">\\(W_1 \\cup W_2\\)</span> is a subspace of <span\nclass=\"math inline\">\\(V\\)</span> if and only if <span\nclass=\"math inline\">\\(W_1 \\subseteq W_2\\)</span> or <span\nclass=\"math inline\">\\(W_2 \\subseteq W_1\\)</span>.</p>",
+    "file": "ch01-vector-spaces/02-subspaces.html"
+  },
+  "thm-basis-extension": {
+    "type": "theorem",
+    "type_name": "Theorem",
+    "number": "1.6.5",
+    "title": "Basis Extension Theorem",
+    "title_html": "Basis Extension Theorem",
+    "html": "<p>Let <span class=\"math inline\">\\(V\\)</span> be a finite-dimensional\nvector space and <span class=\"math inline\">\\(S\\)</span> be a linearly\nindependent subset of <span class=\"math inline\">\\(V\\)</span>. Then <span\nclass=\"math inline\">\\(S\\)</span> can be extended into a basis of <span\nclass=\"math inline\">\\(V\\)</span>.</p>",
+    "file": "ch01-vector-spaces/06-dimension.html"
+  },
+  "thm-basis-theorem": {
+    "type": "theorem",
+    "type_name": "Theorem",
+    "number": "1.6.3",
+    "title": "Basis Theorem",
+    "title_html": "Basis Theorem",
+    "html": "<p>If a vector space <span class=\"math inline\">\\(V\\)</span> over <span\nclass=\"math inline\">\\(F\\)</span> has a finite basis, then every basis of\n<span class=\"math inline\">\\(V\\)</span> has the same number of\nvectors.</p>",
+    "file": "ch01-vector-spaces/06-dimension.html"
+  },
+  "thm-dim-impl-eq": {
+    "type": "theorem",
+    "type_name": "Theorem",
+    "number": "1.6.7",
+    "title": "Dimension Implies Equality",
+    "title_html": "Dimension Implies Equality",
+    "html": "<p>Let <span class=\"math inline\">\\(V\\)</span> and <span\nclass=\"math inline\">\\(W\\)</span> be finite-dimensional vector spaces\nover <span class=\"math inline\">\\(F\\)</span>. If</p>\n<ol type=\"1\">\n<li><span class=\"math inline\">\\(W \\subseteq V\\)</span>;</li>\n<li><span class=\"math inline\">\\(\\dim_F (W) = \\dim_F (V)\\)</span>,</li>\n</ol>\n<p>then <span class=\"math inline\">\\(W = V\\)</span>.</p>",
+    "file": "ch01-vector-spaces/06-dimension.html"
+  },
+  "thm-dimension-formula-subspace-dim": {
+    "type": "theorem",
+    "type_name": "Theorem",
+    "number": "1.7.2",
+    "title": "Dimension Formula of Subspace Sum",
+    "title_html": "Dimension Formula of Subspace Sum",
+    "html": "<p>Let <span class=\"math inline\">\\(V\\)</span> be a finite-dimensional\nvector space, and let <span class=\"math inline\">\\(W_1\\)</span>, <span\nclass=\"math inline\">\\(W_2\\)</span> subspaces of <span\nclass=\"math inline\">\\(V\\)</span>. Then <span class=\"math display\">\\[\n    \\dim(W_1 + W_2) = \\dim (W_1) + \\dim (W_2) - \\dim(W_1 \\cap W_2).\n\\]</span></p>",
+    "file": "ch01-vector-spaces/07-sums-and-direct-sums.html"
+  },
+  "thm-intersection-subspaces": {
+    "type": "theorem",
+    "type_name": "Theorem",
+    "number": "1.2.2",
+    "title": "Intersection of Subspaces",
+    "title_html": "Intersection of Subspaces",
+    "html": "<p>Let <span class=\"math inline\">\\(W_1\\)</span> and <span\nclass=\"math inline\">\\(W_2\\)</span> be subspaces of a vector space <span\nclass=\"math inline\">\\(V\\)</span>. Then the intersection <span\nclass=\"math inline\">\\(W_1 \\cap W_2\\)</span> is also a subspace of <span\nclass=\"math inline\">\\(V\\)</span>.</p>",
+    "file": "ch01-vector-spaces/02-subspaces.html"
+  },
+  "thm-inverse-unique": {
+    "type": "theorem",
+    "type_name": "Theorem",
+    "number": "1.1.4",
+    "title": "Additive Inverse is Unique",
+    "title_html": "Additive Inverse is Unique",
+    "html": "<p>Let <span class=\"math inline\">\\(V\\)</span> be a vector space over\n<span class=\"math inline\">\\(F\\)</span>. Then for every <span\nclass=\"math inline\">\\(\\v \\in V\\)</span>, its additive inverse described\nin <strong>(VS4)</strong>, which is <span\nclass=\"math inline\">\\(\\v&#39;\\)</span>, is unique.</p>",
+    "file": "ch01-vector-spaces/01-vector-spaces.html"
+  },
+  "thm-left-cancellation": {
+    "type": "theorem",
+    "type_name": "Theorem",
+    "number": "1.1.1",
+    "title": "Left Cancellation Law",
+    "title_html": "Left Cancellation Law",
+    "html": "<p>Let <span class=\"math inline\">\\(V\\)</span> be a vector space over\n<span class=\"math inline\">\\(F\\)</span>, let <span\nclass=\"math inline\">\\(\\u, \\v_1, \\v_2 \\in V\\)</span>. If <span\nclass=\"math inline\">\\(\\u + \\v_1 = \\u + \\v_2\\)</span>, then <span\nclass=\"math inline\">\\(\\v_1 = \\v_2\\)</span>.</p>",
+    "file": "ch01-vector-spaces/01-vector-spaces.html"
+  },
+  "thm-linear-dependence-lemma": {
+    "type": "theorem",
+    "type_name": "Theorem",
+    "number": "1.4.1",
+    "title": "Linear Dependence Lemma",
+    "title_html": "Linear Dependence Lemma",
+    "html": "<p><span class=\"math inline\">\\(\\left\\{ \\v_1, \\v_2, \\dots, \\v_m\n\\right\\}\\)</span> is linearly dependent if and only if either <span\nclass=\"math inline\">\\(\\v_1 = \\mathbf{0}\\)</span> or for some <span\nclass=\"math inline\">\\(r\\)</span>, <span\nclass=\"math inline\">\\(\\v_r\\)</span> is a linear combination of <span\nclass=\"math inline\">\\(\\left\\{ \\v_1, \\v_2, \\dots, \\v_{r - 1}\n\\right\\}\\)</span>.</p>",
+    "file": "ch01-vector-spaces/04-independence.html"
+  },
+  "thm-maximal-indep": {
+    "type": "theorem",
+    "type_name": "Theorem",
+    "number": "1.6.8",
+    "title": "Maximal Independent Subset is a Basis",
+    "title_html": "Maximal Independent Subset is a Basis",
+    "html": "<p>Let <span class=\"math inline\">\\(V\\)</span> be a vector space of\ndimension <span class=\"math inline\">\\(n\\)</span> over <span\nclass=\"math inline\">\\(F\\)</span>. Then any <span\nclass=\"math inline\">\\(n\\)</span> independent vectors form a basis of\n<span class=\"math inline\">\\(V\\)</span>. (We say that \u201cany maximal\nlinearly independent subset forms a basis\u201d).</p>",
+    "file": "ch01-vector-spaces/06-dimension.html"
+  },
+  "thm-negation-scalar": {
+    "type": "theorem",
+    "type_name": "Theorem",
+    "number": "1.1.6",
+    "title": "Negation as Scalar Multiplication",
+    "title_html": "Negation as Scalar Multiplication",
+    "html": "<p>Let <span class=\"math inline\">\\(V\\)</span> be a vector space over\n<span class=\"math inline\">\\(F\\)</span> and <span\nclass=\"math inline\">\\(\\v \\in V\\)</span> be any vector. Then <span\nclass=\"math inline\">\\(-\\v = (-1) \\cdot \\v\\)</span>.</p>",
+    "file": "ch01-vector-spaces/01-vector-spaces.html"
+  },
+  "thm-negative-scalar-dist": {
+    "type": "theorem",
+    "type_name": "Theorem",
+    "number": "1.1.7",
+    "title": "Negative Scalar Distribution",
+    "title_html": "Negative Scalar Distribution",
+    "html": "<p>Let <span class=\"math inline\">\\(V\\)</span> be a vector space over\n<span class=\"math inline\">\\(F\\)</span>. For any <span\nclass=\"math inline\">\\(\\alpha \\in F\\)</span> and <span\nclass=\"math inline\">\\(\\v \\in V\\)</span>, we have <span\nclass=\"math inline\">\\((-\\alpha)\\v = -(\\alpha\\v)\\)</span>.</p>",
+    "file": "ch01-vector-spaces/01-vector-spaces.html"
+  },
+  "thm-right-cancellation": {
+    "type": "theorem",
+    "type_name": "Theorem",
+    "number": "1.1.2",
+    "title": "Right Cancellation Law",
+    "title_html": "Right Cancellation Law",
+    "html": "<p>Let <span class=\"math inline\">\\(V\\)</span> be a vector space over\n<span class=\"math inline\">\\(F\\)</span>, let <span\nclass=\"math inline\">\\(\\u, \\v_1, \\v_2 \\in V\\)</span>. If <span\nclass=\"math inline\">\\(\\v_1 + \\u = \\v_2 + \\u\\)</span>, then <span\nclass=\"math inline\">\\(\\v_1 = \\v_2\\)</span>.</p>",
+    "file": "ch01-vector-spaces/01-vector-spaces.html"
+  },
+  "thm-scalar-zero-vector": {
+    "type": "theorem",
+    "type_name": "Theorem",
+    "number": "1.1.8",
+    "title": "Scalar Multiplication by Zero Vector",
+    "title_html": "Scalar Multiplication by Zero Vector",
+    "html": "<p>Let <span class=\"math inline\">\\(V\\)</span> be a vector space over\n<span class=\"math inline\">\\(F\\)</span>. For any scalar <span\nclass=\"math inline\">\\(\\alpha \\in F\\)</span>, we have <span\nclass=\"math inline\">\\(\\alpha\\mathbf{0} = \\mathbf{0}\\)</span>.</p>",
+    "file": "ch01-vector-spaces/01-vector-spaces.html"
+  },
+  "thm-sift": {
+    "type": "theorem",
+    "type_name": "Theorem",
+    "number": "1.6.1",
+    "title": "Sifting Method",
+    "title_html": "Sifting Method",
+    "html": "<p>Let <span class=\"math inline\">\\(S = \\{ \\v_1, \\v_2, \\dots, \\v_m\n\\}\\)</span> be a subset of <span class=\"math inline\">\\(V\\)</span>. Then\nthere exists a subset <span class=\"math inline\">\\(S&#39; \\subseteq\nS\\)</span> such that:</p>\n<ol type=\"1\">\n<li><span class=\"math inline\">\\(S&#39;\\)</span> is linearly independent,\nand</li>\n<li><span class=\"math inline\">\\(\\Span(S&#39;) = \\Span(S)\\)</span>.</li>\n</ol>",
+    "file": "ch01-vector-spaces/06-dimension.html"
+  },
+  "thm-size-bounds": {
+    "type": "theorem",
+    "type_name": "Theorem",
+    "number": "1.6.4",
+    "title": "Size Bounds for Independent and Spanning Sets",
+    "title_html": "Size Bounds for Independent and Spanning Sets",
+    "html": "<p>Let <span class=\"math inline\">\\(V\\)</span> be a vector space of\ndimension <span class=\"math inline\">\\(n\\)</span> over <span\nclass=\"math inline\">\\(F\\)</span>, and <span class=\"math inline\">\\(S\n\\subseteq V\\)</span> be a subset.</p>\n<ol type=\"1\">\n<li>If <span class=\"math inline\">\\(|S| &gt; n\\)</span>, then <span\nclass=\"math inline\">\\(S\\)</span> cannot be linearly independent.</li>\n<li>If <span class=\"math inline\">\\(|S| &lt; n\\)</span>, then <span\nclass=\"math inline\">\\(S\\)</span> cannot span <span\nclass=\"math inline\">\\(V\\)</span>.</li>\n</ol>",
+    "file": "ch01-vector-spaces/06-dimension.html"
+  },
+  "thm-span-preservation": {
+    "type": "theorem",
+    "type_name": "Theorem",
+    "number": "1.4.2",
+    "title": "Span Preservation",
+    "title_html": "Span Preservation",
+    "html": "<p>Let <span class=\"math inline\">\\(S = \\{ \\v_1, \\dots, \\v_m, \\w \\}\n\\subseteq V\\)</span>. If <span class=\"math inline\">\\(\\w \\in \\Span \\{\n\\v_1, \\dots, \\v_m \\}\\)</span>, then <span class=\"math display\">\\[\n    \\Span(S) = \\Span \\{ \\v_1, \\dots, \\v_m \\}.\n\\]</span></p>",
+    "file": "ch01-vector-spaces/04-independence.html"
+  },
+  "thm-span-subspace": {
+    "type": "theorem",
+    "type_name": "Theorem",
+    "number": "1.3.1",
+    "title": "Spanning Set as Subspace",
+    "title_html": "Spanning Set as Subspace",
+    "html": "<p>The span of any subset <span class=\"math inline\">\\(S \\subseteq\nV\\)</span> is a subspace of <span class=\"math inline\">\\(V\\)</span>.\nMoreover, it is the smallest subspace of <span\nclass=\"math inline\">\\(V\\)</span> containing <span\nclass=\"math inline\">\\(S\\)</span>.</p>",
+    "file": "ch01-vector-spaces/03-span.html"
+  },
+  "thm-steinitz": {
+    "type": "theorem",
+    "type_name": "Theorem",
+    "number": "1.6.2",
+    "title": "Steinitz Exchange/Replacement Theorem",
+    "title_html": "Steinitz Exchange/Replacement Theorem",
+    "html": "<p>Let <span class=\"math inline\">\\(V\\)</span> be a vector space over\n<span class=\"math inline\">\\(F\\)</span>. Suppose:</p>\n<ul>\n<li><span class=\"math inline\">\\(G = \\{ \\v_1, \\v_2, \\dots, \\v_n\n\\}\\)</span> spans <span class=\"math inline\">\\(V\\)</span>;</li>\n<li><span class=\"math inline\">\\(L = \\{ \\u_1, \\u_2, \\dots, \\u_m\n\\}\\)</span> is linearly independent.</li>\n</ul>\n<p>Then <span class=\"math inline\">\\(m \\leq n\\)</span>.</p>",
+    "file": "ch01-vector-spaces/06-dimension.html"
+  },
+  "thm-subapce-sum-theorem": {
+    "type": "theorem",
+    "type_name": "Theorem",
+    "number": "1.7.1",
+    "title": "Sum of Subspaces Theorem",
+    "title_html": "Sum of Subspaces Theorem",
+    "html": "<p><span class=\"math inline\">\\(W_1 + W_2\\)</span> is a subspace of <span\nclass=\"math inline\">\\(V\\)</span>. Furthermore, this is the smallest\nsubspace containing both <span class=\"math inline\">\\(W_1\\)</span> and\n<span class=\"math inline\">\\(W_2\\)</span>.</p>",
+    "file": "ch01-vector-spaces/07-sums-and-direct-sums.html"
+  },
+  "thm-subspace-test": {
+    "type": "theorem",
+    "type_name": "Theorem",
+    "number": "1.2.1",
+    "title": "Subspace Test",
+    "title_html": "Subspace Test",
+    "html": "<p>Let <span class=\"math inline\">\\(V\\)</span> be a vector space over\n<span class=\"math inline\">\\(F\\)</span> and <span class=\"math inline\">\\(W\n\\subseteq V\\)</span>. Then <span class=\"math inline\">\\(W\\)</span> is a\nsubspace of <span class=\"math inline\">\\(V\\)</span> if and only if the\nfollowing are satisfied:</p>\n<ul>\n<li><span class=\"math inline\">\\(W\\)</span> is non-empty;</li>\n<li><span class=\"math inline\">\\(W\\)</span> is closed under addition:\n<span class=\"math inline\">\\(\\w_1 + \\w_2 \\in W\\)</span> for all <span\nclass=\"math inline\">\\(\\w_1, \\w_2 \\in W\\)</span>;</li>\n<li><span class=\"math inline\">\\(W\\)</span> is closed under scalar\nmultiplication: <span class=\"math inline\">\\(\\alpha \\w \\in W\\)</span> for\nall <span class=\"math inline\">\\(\\alpha \\in F\\)</span> and <span\nclass=\"math inline\">\\(\\w \\in W\\)</span>.</li>\n</ul>",
+    "file": "ch01-vector-spaces/02-subspaces.html"
+  },
+  "thm-unique-representation": {
+    "type": "theorem",
+    "type_name": "Theorem",
+    "number": "1.5.1",
+    "title": "Unique Representation",
+    "title_html": "Unique Representation",
+    "html": "<p>Let <span class=\"math inline\">\\(B = \\{ \\v_1, \\dots, \\v_n \\}\\)</span>\nbe a basis for <span class=\"math inline\">\\(V\\)</span>. Then every vector\n<span class=\"math inline\">\\(\\v \\in V\\)</span> can be written as a linear\ncombination of elements in <span class=\"math inline\">\\(B\\)</span> in\n<strong>exactly one way</strong>.</p>",
+    "file": "ch01-vector-spaces/05-basis.html"
+  },
+  "thm-zero-product": {
+    "type": "theorem",
+    "type_name": "Theorem",
+    "number": "1.1.9",
+    "title": "Zero Product Law",
+    "title_html": "Zero Product Law",
+    "html": "<p>Let <span class=\"math inline\">\\(V\\)</span> be a vector space over\n<span class=\"math inline\">\\(F\\)</span>, <span class=\"math inline\">\\(\\v\n\\in V\\)</span>, and <span class=\"math inline\">\\(\\alpha \\in F\\)</span>.\nIf <span class=\"math inline\">\\(\\alpha\\v = \\mathbf{0}\\)</span>, then\neither <span class=\"math inline\">\\(\\alpha = 0\\)</span> or <span\nclass=\"math inline\">\\(\\v = \\mathbf{0}\\)</span>.</p>",
+    "file": "ch01-vector-spaces/01-vector-spaces.html"
+  },
+  "thm-zero-scalar-mult": {
+    "type": "theorem",
+    "type_name": "Theorem",
+    "number": "1.1.5",
+    "title": "Zero Scalar Annihilates",
+    "title_html": "Zero Scalar Annihilates",
+    "html": "<p>Let <span class=\"math inline\">\\(\\v \\in V\\)</span> for a vector space\n<span class=\"math inline\">\\(V\\)</span> over <span\nclass=\"math inline\">\\(F\\)</span>. Then <span class=\"math inline\">\\(0\n\\cdot \\v = \\mathbf{0}\\)</span>.</p>",
+    "file": "ch01-vector-spaces/01-vector-spaces.html"
+  },
+  "thm-zero-unique": {
+    "type": "theorem",
+    "type_name": "Theorem",
+    "number": "1.1.3",
+    "title": "Zero Vector is Unique",
+    "title_html": "Zero Vector is Unique",
+    "html": "<p>Let <span class=\"math inline\">\\(V\\)</span> be a vector space over\n<span class=\"math inline\">\\(F\\)</span>. The zero vector <span\nclass=\"math inline\">\\(\\mathbf{0} \\in V\\)</span> is unique.</p>",
+    "file": "ch01-vector-spaces/01-vector-spaces.html"
+  }
+}

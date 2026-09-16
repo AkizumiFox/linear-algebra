@@ -7,13 +7,13 @@
     <title>0.2 Sets and Notation – Linear Algebra</title>
 
     <meta name="asset-prefix" content="../">
-    <meta name="build-version" content="48c3bfb075">
 
     <!-- Styles -->
-    <link rel="stylesheet" href="../styles.css?v=48c3bfb075">
+    <link rel="stylesheet" href="../styles.css?v=ad126642ac">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
     <!-- MathJax Configuration with Custom Macros -->
+    <script src="../mathjax-macros.js?v=ad126642ac"></script>
     <script>
         window.MathJax = {
             tex: {
@@ -22,223 +22,8 @@
                 processEscapes: true,
                 processEnvironments: true,
                 tags: 'ams',
-                macros: {
-                    0: "\\mathbf{0}",
-                    1: "\\mathbf{1}",
-                    A: "\\mathbf{A}",
-                    B: "\\mathbf{B}",
-                    C: "\\mathbf{C}",
-                    Cor: "\\operatorname*{Cor}",
-                    Corr: "\\operatorname*{Corr}",
-                    Cov: "\\operatorname*{Cov}",
-                    D: "\\mathbf{D}",
-                    E: "\\mathbf{E}",
-                    Ev: "\\operatorname*{\\mathbb{E}}",
-                    F: "\\mathbf{F}",
-                    G: "\\mathbf{G}",
-                    H: "\\mathbf{H}",
-                    I: "\\mathbf{I}",
-                    J: "\\mathbf{J}",
-                    K: "\\mathbf{K}",
-                    L: "\\mathbf{L}",
-                    M: "\\mathbf{M}",
-                    N: "\\mathbf{N}",
-                    O: "\\mathbf{O}",
-                    P: "\\mathbf{P}",
-                    Pr: "\\operatorname{Pr}",
-                    Q: "\\mathbf{Q}",
-                    R: "\\mathbf{R}",
-                    S: "\\mathbf{S}",
-                    Span: "\\operatorname{span}",
-                    T: "\\mathbf{T}",
-                    U: "\\mathbf{U}",
-                    V: "\\mathbf{V}",
-                    Var: "\\operatorname*{Var}",
-                    W: "\\mathbf{W}",
-                    X: "\\mathbf{X}",
-                    Y: "\\mathbf{Y}",
-                    Z: "\\mathbf{Z}",
-                    a: "\\mathbf{a}",
-                    adj: "\\operatorname{adj}",
-                    b: "\\mathbf{b}",
-                    c: "\\mathbf{c}",
-                    cA: "\\mathcal{A}",
-                    cB: "\\mathcal{B}",
-                    cC: "\\mathcal{C}",
-                    cD: "\\mathcal{D}",
-                    cE: "\\mathcal{E}",
-                    cF: "\\mathcal{F}",
-                    cG: "\\mathcal{G}",
-                    cH: "\\mathcal{H}",
-                    cI: "\\mathcal{I}",
-                    cJ: "\\mathcal{J}",
-                    cK: "\\mathcal{K}",
-                    cL: "\\mathcal{L}",
-                    cM: "\\mathcal{M}",
-                    cN: "\\mathcal{N}",
-                    cO: "\\mathcal{O}",
-                    cP: "\\mathcal{P}",
-                    cQ: "\\mathcal{Q}",
-                    cR: "\\mathcal{R}",
-                    cS: "\\mathcal{S}",
-                    cT: "\\mathcal{T}",
-                    cU: "\\mathcal{U}",
-                    cV: "\\mathcal{V}",
-                    cW: "\\mathcal{W}",
-                    cX: "\\mathcal{X}",
-                    cY: "\\mathcal{Y}",
-                    cZ: "\\mathcal{Z}",
-                    col: "\\text{col}",
-                    coloneqq: "\\mathrel{:=}",
-                    d: "\\mathbf{d}",
-                    dd: "\\mathrm{d}",
-                    defeq: "\\stackrel{\\smash{\\textnormal{\\tiny def}}}{=}",
-                    diag: "\\operatorname{diag}",
-                    distBern: "\\operatorname{Ber}",
-                    distBeta: "\\operatorname{Beta}",
-                    distBin: "\\operatorname{Bin}",
-                    distCauchy: "\\operatorname{Cauchy}",
-                    distDir: "\\operatorname{Dir}",
-                    distExp: "\\operatorname{Exp}",
-                    distGamma: "\\operatorname{Gamma}",
-                    distGeom: "\\operatorname{Geo}",
-                    distHyp: "\\operatorname{Hyp}",
-                    distInvWishart: "\\operatorname{InvWishart}",
-                    distLognormal: "\\operatorname{Lognormal}",
-                    distMult: "\\operatorname{Mult}",
-                    distN: "\\operatorname{\\mathcal{N}}",
-                    distNB: "\\operatorname{NB}",
-                    distPareto: "\\operatorname{Pareto}",
-                    distPois: "\\operatorname{Poi}",
-                    distUnif: "\\operatorname{Unif}",
-                    distWeibull: "\\operatorname{Weibull}",
-                    distWishart: "\\operatorname{Wishart}",
-                    e: "\\mathbf{e}",
-                    eqqcolon: "\\mathrel{=:}",
-                    f: "\\mathbf{f}",
-                    g: "\\mathbf{g}",
-                    h: "\\mathbf{h}",
-                    i: "\\mathbf{i}",
-                    id: "\\operatorname{id}",
-                    im: "\\operatorname{im}",
-                    img: "\\operatorname{img}",
-                    j: "\\mathbf{j}",
-                    k: "\\mathbf{k}",
-                    ker: "\\operatorname{ker}",
-                    l: "\\mathbf{l}",
-                    m: "\\mathbf{m}",
-                    n: "\\mathbf{n}",
-                    nA: "\\mathbb{A}",
-                    nB: "\\mathbb{B}",
-                    nC: "\\mathbb{C}",
-                    nD: "\\mathbb{D}",
-                    nE: "\\mathbb{E}",
-                    nF: "\\mathbb{F}",
-                    nG: "\\mathbb{G}",
-                    nH: "\\mathbb{H}",
-                    nI: "\\mathbb{I}",
-                    nJ: "\\mathbb{J}",
-                    nK: "\\mathbb{K}",
-                    nL: "\\mathbb{L}",
-                    nM: "\\mathbb{M}",
-                    nN: "\\mathbb{N}",
-                    nO: "\\mathbb{O}",
-                    nP: "\\mathbb{P}",
-                    nQ: "\\mathbb{Q}",
-                    nR: "\\mathbb{R}",
-                    nS: "\\mathbb{S}",
-                    nT: "\\mathbb{T}",
-                    nU: "\\mathbb{U}",
-                    nV: "\\mathbb{V}",
-                    nW: "\\mathbb{W}",
-                    nX: "\\mathbb{X}",
-                    nY: "\\mathbb{Y}",
-                    nZ: "\\mathbb{Z}",
-                    nul: "\\text{nul}",
-                    nullity: "\\text{nullity}",
-                    o: "\\mathbf{o}",
-                    p: "\\mathbf{p}",
-                    q: "\\mathbf{q}",
-                    r: "\\mathbf{r}",
-                    rank: "\\text{rank}",
-                    row: "\\text{row}",
-                    s: "\\mathbf{s}",
-                    sA: "\\mathcal{A}",
-                    sB: "\\mathcal{B}",
-                    sC: "\\mathcal{C}",
-                    sD: "\\mathcal{D}",
-                    sE: "\\mathcal{E}",
-                    sF: "\\mathcal{F}",
-                    sG: "\\mathcal{G}",
-                    sH: "\\mathcal{H}",
-                    sI: "\\mathcal{I}",
-                    sJ: "\\mathcal{J}",
-                    sK: "\\mathcal{K}",
-                    sL: "\\mathcal{L}",
-                    sM: "\\mathcal{M}",
-                    sN: "\\mathcal{N}",
-                    sO: "\\mathcal{O}",
-                    sP: "\\mathcal{P}",
-                    sQ: "\\mathcal{Q}",
-                    sR: "\\mathcal{R}",
-                    sS: "\\mathcal{S}",
-                    sT: "\\mathcal{T}",
-                    sU: "\\mathcal{U}",
-                    sV: "\\mathcal{V}",
-                    sW: "\\mathcal{W}",
-                    sX: "\\mathcal{X}",
-                    sY: "\\mathcal{Y}",
-                    sZ: "\\mathcal{Z}",
-                    spn: "\\text{span}",
-                    t: "\\mathbf{t}",
-                    tr: "\\text{tr}",
-                    u: "\\mathbf{u}",
-                    v: "\\mathbf{v}",
-                    vDelta: "\\bm{\\Delta}",
-                    vGamma: "\\bm{\\Gamma}",
-                    vLambda: "\\bm{\\Lambda}",
-                    vOmega: "\\bm{\\Omega}",
-                    vPhi: "\\bm{\\Phi}",
-                    vPi: "\\bm{\\Pi}",
-                    vPsi: "\\bm{\\Psi}",
-                    vSigma: "\\bm{\\Sigma}",
-                    vTheta: "\\bm{\\Theta}",
-                    vUpsilon: "\\bm{\\Upsilon}",
-                    vXi: "\\bm{\\Xi}",
-                    valpha: "\\bm{\\upalpha}",
-                    vbeta: "\\bm{\\upbeta}",
-                    vchi: "\\bm{\\upchi}",
-                    vdelta: "\\bm{\\updelta}",
-                    vepsilon: "\\bm{\\upepsilon}",
-                    veta: "\\bm{\\upeta}",
-                    vgamma: "\\bm{\\upgamma}",
-                    viota: "\\bm{\\upiota}",
-                    vkappa: "\\bm{\\upkappa}",
-                    vlambda: "\\bm{\\uplambda}",
-                    vmu: "\\bm{\\upmu}",
-                    vnu: "\\bm{\\upnu}",
-                    vomega: "\\bm{\\upomega}",
-                    vphi: "\\bm{\\upphi}",
-                    vpi: "\\bm{\\uppi}",
-                    vpsi: "\\bm{\\uppsi}",
-                    vrho: "\\bm{\\uprho}",
-                    vsigma: "\\bm{\\upsigma}",
-                    vtau: "\\bm{\\uptau}",
-                    vtheta: "\\bm{\\uptheta}",
-                    vupsilon: "\\bm{\\upupsilon}",
-                    vvarepsilon: "\\bm{\\upvarepsilon}",
-                    vvarphi: "\\bm{\\upvarphi}",
-                    vvarpi: "\\bm{\\upvarpi}",
-                    vvarrho: "\\bm{\\upvarrho}",
-                    vvarsigma: "\\bm{\\upvarsigma}",
-                    vvartheta: "\\bm{\\upvartheta}",
-                    vxi: "\\bm{\\upxi}",
-                    vzeta: "\\bm{\\upzeta}",
-                    w: "\\mathbf{w}",
-                    x: "\\mathbf{x}",
-                    y: "\\mathbf{y}",
-                    z: "\\mathbf{z}"
-                },
+                // Generated from the book's LaTeX macro file (build/macros.py)
+                macros: window.BOOK_MACROS || {},
                 // Define environments not in base amsmath
                 environments: {
                     dcases: ["\\left\\{\\begin{array}{ll}", "\\end{array}\\right."]
@@ -256,52 +41,6 @@
     <script src="https://cdn.jsdelivr.net/npm/tippy.js@6.3.7/dist/tippy-bundle.umd.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tippy.js@6.3.7/animations/shift-away.css">
 
-        
-        <script>
-        (function(){
-          if (typeof window.MathJax === 'undefined') window.MathJax = {};
-          if (typeof window.MathJax.tex === 'undefined') window.MathJax.tex = {};
-          if (typeof window.MathJax.tex.macros === 'undefined') window.MathJax.tex.macros = {};
-          Object.assign(window.MathJax.tex.macros, {
-                    "\Cov": "\\text{Cov}\\left( #1, #2 \\right)",
-                    "\Exp": "\\mathbb{E}\\left[ #1 \\right]",
-                    "\Normal": "\\mathcal{N}\\left( #1, #2 \\right)",
-                    "\Prob": "\\mathbb{P}\\left( #1 \\right)",
-                    "\Uniform": "\\text{Uniform}\\left( #1, #2 \\right)",
-                    "\Var": "\\text{Var}\\left( #1 \\right)",
-                    "\abs": "\\left| #1 \\right|",
-                    "\bb": "\\mathbb{#1}",
-                    "\bm": "\\mathbf{#1}",
-                    "\boundary": "\\partial #1",
-                    "\bra": "\\langle #1 |",
-                    "\braket": "\\langle #1 | #2 \\rangle",
-                    "\card": "\\left| #1 \\right|",
-                    "\cl": "\\mathcal{#1}",
-                    "\closure": "\\overline{#1}",
-                    "\col": "\\text{col}",
-                    "\defeq": "\\stackrel{\\smash{\\textnormal{\\tiny def}}}{=}",
-                    "\expect": "\\langle #1 \\rangle",
-                    "\interior": "\\text{int}\\left( #1 \\right)",
-                    "\ket": "| #1 \\rangle",
-                    "\ketbra": "| #1 \\rangle\\langle #2 |",
-                    "\limi": "\\lim_{#1 \\to \\infty}",
-                    "\limz": "\\lim_{#1 \\to 0}",
-                    "\norm": "\\left\\| #1 \\right\\|",
-                    "\nul": "\\text{nul}",
-                    "\nullity": "\\text{nullity}",
-                    "\pd": "\\frac{\\partial #1}{\\partial #2}",
-                    "\pdd": "\\frac{\\partial^2 #1}{\\partial #2^2}",
-                    "\powerset": "\\mathcal{P}\\left( #1 \\right)",
-                    "\rank": "\\text{rank}",
-                    "\rom": "\\mathrm{#1}",
-                    "\row": "\\text{row}",
-                    "\spn": "\\text{span}",
-                    "\td": "\\frac{d #1}{d #2}",
-                    "\tdd": "\\frac{d^2 #1}{d #2^2}",
-                    "\tr": "\\text{tr}"
-          });
-        })();
-        </script>
     </head>
 
 <body>
@@ -316,14 +55,7 @@
                     <a href="../book/book.pdf" title="Full Book PDF" target="_blank">
                         <i class="bi bi-file-pdf" style="font-size: 1.1rem"></i>
                     </a>
-                    <a href="https://github.com/youruser/yourrepo" title="Source Code" target="_blank">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                            viewBox="0 0 16 16">
-                            <path
-                                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
-                        </svg>
-                    </a>
-                </div>
+                                    </div>
             </div>
 
             <div class="sidebar-search">
@@ -756,7 +488,7 @@ Notation</span>
             <!-- Page Navigation -->
             <nav class="page-navigation">
                 <div class="nav-page nav-page-previous">
-                                        <a href="01-logic.html" class="pagination-link" aria-label="Logic
+                                        <a href="../ch00-foundations/01-logic.html" class="pagination-link" aria-label="Logic
 and Quantifiers">
                         <i class="bi bi-arrow-left-short"></i>
                         <span
@@ -765,7 +497,7 @@ Quantifiers</span>
                     </a>
                                     </div>
                 <div class="nav-page nav-page-next">
-                                        <a href="03-functions.html" class="pagination-link" aria-label="Functions">
+                                        <a href="../ch00-foundations/03-functions.html" class="pagination-link" aria-label="Functions">
                         <span
                             class="nav-page-text">0.3 Functions</span>
                         <i class="bi bi-arrow-right-short"></i>
@@ -790,7 +522,7 @@ Quantifiers</span>
     </div>
 
     <!-- Tooltip Script -->
-    <script src="../main.js?v=48c3bfb075"></script>
-</body>
+    <script src="../main.js?v=ad126642ac"></script>
+    </body>
 
 </html>

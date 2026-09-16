@@ -38,13 +38,11 @@
     }
 
     /**
-     * URL of a site-wide data file. The build version changes when the book is rebuilt
-     * from different inputs, so browsers can cache these files between deployments.
+     * Fetch a site-wide data file. 'no-cache' revalidates with the server (a cheap 304
+     * when unchanged), so edits show up without cache-busting every page on each build.
      */
-    function dataUrl(name) {
-        const meta = document.querySelector('meta[name="build-version"]');
-        const version = meta && meta.content ? '?v=' + meta.content : '';
-        return getBasePath() + name + version;
+    function fetchData(name) {
+        return fetch(getBasePath() + name, { cache: 'no-cache' });
     }
 
     /**
@@ -52,7 +50,7 @@
      */
     async function loadNavigation() {
         try {
-            const response = await fetch(dataUrl('navigation.json'));
+            const response = await fetchData('navigation.json');
             if (response.ok) {
                 navigationData = await response.json();
                 console.log(`Loaded navigation: ${navigationData.chapters.length} chapters`);
@@ -89,8 +87,9 @@
         let html = '<ul class="nav-list">';
 
         // Add Preface link
+        const home = navigationData.home || { title: 'Preface', path: 'index.html' };
         html += `<li class="nav-item nav-home">
-            <a href="${basePath}index.html">Preface</a>
+            <a href="${basePath}${home.path}">${home.title}</a>
         </li>`;
 
         navigationData.chapters.forEach((chapter, chapterIdx) => {
@@ -278,30 +277,26 @@
     // Theorem Manifest & Tooltips
     // ==========================================================================
 
-    let theoremManifest = {};
-    let manifestLoaded = false;
+    // Tooltip data is split into one shard per chapter (theorems/<chapter>.json), fetched
+    // the first time a reference into that chapter is hovered.
+    const theoremShards = new Map();  // shard name -> Promise of { labelId: info }
 
-    /**
-     * Load the theorem manifest JSON file
-     */
-    async function loadManifest() {
-        try {
-            const response = await fetch(dataUrl('theorems.json'));
-            if (response.ok) {
-                theoremManifest = await response.json();
-                manifestLoaded = true;
-                console.log(`Loaded ${Object.keys(theoremManifest).length} theorem definitions`);
-            }
-        } catch (error) {
-            console.warn('Could not load theorem manifest:', error);
+    function loadShard(shard) {
+        if (!theoremShards.has(shard)) {
+            theoremShards.set(shard, fetchData(`theorems/${shard}.json`)
+                .then(response => response.ok ? response.json() : {})
+                .catch(error => {
+                    console.warn(`Could not load theorem data for ${shard}:`, error);
+                    return {};
+                }));
         }
+        return theoremShards.get(shard);
     }
 
     /**
      * Generate tooltip HTML content for a theorem reference
      */
-    function generateTooltipContent(refId) {
-        const info = theoremManifest[refId];
+    function generateTooltipContent(refId, info) {
 
         if (!info) {
             return `<div class="tooltip-error">Reference not found: ${refId}</div>`;
@@ -349,29 +344,22 @@
 
         xrefLinks.forEach(link => {
             const refId = link.dataset.ref;
+            const shard = link.dataset.shard;
 
             tippy(link, {
                 ...TOOLTIP_CONFIG,
                 content: createLoadingContent(),
                 onShow(instance) {
-                    // Update content when tooltip is shown
-                    if (manifestLoaded) {
-                        instance.setContent(generateTooltipContent(refId));
-                        // Trigger MathJax to process the tooltip content
-                        if (window.MathJax && window.MathJax.typesetPromise) {
-                            const tooltipEl = instance.popper.querySelector('.tippy-content');
-                            if (tooltipEl) {
-                                MathJax.typesetPromise([tooltipEl]).catch(err => {
-                                    console.warn('MathJax typeset error:', err);
-                                });
-                            }
+                    loadShard(shard).then(entries => {
+                        instance.setContent(generateTooltipContent(refId, entries[refId]));
+                        // Typeset math in the tooltip
+                        const tooltipEl = instance.popper.querySelector('.tippy-content');
+                        if (tooltipEl && window.MathJax && window.MathJax.typesetPromise) {
+                            MathJax.typesetPromise([tooltipEl]).catch(err => {
+                                console.warn('MathJax typeset error:', err);
+                            });
                         }
-                    } else {
-                        // Manifest not loaded yet, try to load
-                        loadManifest().then(() => {
-                            instance.setContent(generateTooltipContent(refId));
-                        });
-                    }
+                    });
                 }
             });
         });
@@ -437,7 +425,7 @@
         if (searchIndex) return true;
         
         try {
-            const response = await fetch(dataUrl('search.json'));
+            const response = await fetchData('search.json');
             if (response.ok) {
                 searchIndex = await response.json();
                 console.log(`Loaded search index: ${searchIndex.length} entries`);
@@ -566,9 +554,6 @@
 
         // Build table of contents
         buildTableOfContents();
-
-        // Load theorem manifest
-        await loadManifest();
 
         // Attach tooltips
         attachTooltips();

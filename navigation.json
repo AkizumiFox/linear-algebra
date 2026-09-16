@@ -1,11 +1,16 @@
 {
   "title": "Linear Algebra",
   "author": "Akizumi",
+  "home": {
+    "title": "Preface",
+    "path": "index.html"
+  },
   "chapters": [
     {
       "title": "Preliminary",
       "number": 0,
       "collapsed": false,
+      "path": "ch00-foundations/index.html",
       "sections": [
         {
           "title": "Logic and Quantifiers",
@@ -49,13 +54,13 @@
           "path": "ch00-foundations/07-matrices.html",
           "filename": "07-matrices.md"
         }
-      ],
-      "path": "ch00-foundations/index.html"
+      ]
     },
     {
       "title": "Vector Spaces and Dimensions",
       "number": 1,
       "collapsed": false,
+      "path": "ch01-vector-spaces/index.html",
       "sections": [
         {
           "title": "Vector Spaces",
@@ -99,13 +104,13 @@
           "path": "ch01-vector-spaces/07-sums-and-direct-sums.html",
           "filename": "07-sums-and-direct-sums.md"
         }
-      ],
-      "path": "ch01-vector-spaces/index.html"
+      ]
     },
     {
       "title": "Linear Transformations",
       "number": 2,
       "collapsed": false,
+      "path": "ch02-linear-transformations/index.html",
       "sections": [
         {
           "title": "Linear Transformations",
@@ -125,8 +130,7 @@
           "path": "ch02-linear-transformations/03-rank-nullity.html",
           "filename": "03-rank-nullity.md"
         }
-      ],
-      "path": "ch02-linear-transformations/index.html"
+      ]
     }
   ]
 }

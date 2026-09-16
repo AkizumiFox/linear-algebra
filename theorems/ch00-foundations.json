@@ -1,0 +1,722 @@
+{
+  "def-additive-inverse": {
+    "type": "definition",
+    "type_name": "Definition",
+    "number": "0.7.9",
+    "title": "Additive Inverse",
+    "title_html": "Additive Inverse",
+    "html": "<p>The <strong>additive inverse</strong> (or <strong>negation</strong>)\nof a matrix <span class=\"math inline\">\\(\\A = (a_{ij}) \\in M_{m \\times\nn}(F)\\)</span> is the matrix <span class=\"math inline\">\\(-\\A = (-a_{ij})\n\\in M_{m \\times n}(F)\\)</span>.</p>",
+    "file": "ch00-foundations/07-matrices.html"
+  },
+  "def-cartesian-product": {
+    "type": "definition",
+    "type_name": "Definition",
+    "number": "0.2.2",
+    "title": "Cartesian Product",
+    "title_html": "Cartesian Product",
+    "html": "<p>Let <span class=\"math inline\">\\(A\\)</span> and <span\nclass=\"math inline\">\\(B\\)</span> be sets. The <strong>Cartesian\nproduct</strong> of <span class=\"math inline\">\\(A\\)</span> and <span\nclass=\"math inline\">\\(B\\)</span>, denoted <span class=\"math inline\">\\(A\n\\times B\\)</span>, is the set of all ordered pairs: <span\nclass=\"math display\">\\[\n    A \\times B = \\{(a, b) : a \\in A, b \\in B\\}\n\\]</span> More generally, for sets <span class=\"math inline\">\\(A_1, A_2,\n\\ldots, A_n\\)</span>, the Cartesian product is: <span\nclass=\"math display\">\\[\n    A_1 \\times A_2 \\times \\cdots \\times A_n = \\{(a_1, a_2, \\ldots, a_n)\n: a_i \\in A_i \\text{ for } i = 1, 2, \\ldots, n\\}\n\\]</span></p>",
+    "file": "ch00-foundations/02-sets-and-notation.html"
+  },
+  "def-common-number-sets": {
+    "type": "definition",
+    "type_name": "Definition",
+    "number": "0.2.1",
+    "title": "Common Number Sets",
+    "title_html": "Common Number Sets",
+    "html": "<p>We use the following notation for common sets of numbers:</p>\n<ul>\n<li><span class=\"math inline\">\\(\\nN\\)</span>: The set of natural numbers\n<span class=\"math inline\">\\(\\{1, 2, 3, \\ldots\\}\\)</span>.</li>\n<li><span class=\"math inline\">\\(\\nZ\\)</span>: The set of integers <span\nclass=\"math inline\">\\(\\{\\ldots, -2, -1, 0, 1, 2, \\ldots\\}\\)</span>.</li>\n<li><span class=\"math inline\">\\(\\nQ\\)</span>: The set of rational\nnumbers.</li>\n<li><span class=\"math inline\">\\(\\nR\\)</span>: The set of real\nnumbers.</li>\n<li><span class=\"math inline\">\\(\\nC\\)</span>: The set of complex\nnumbers.</li>\n</ul>",
+    "file": "ch00-foundations/02-sets-and-notation.html"
+  },
+  "def-composition": {
+    "type": "definition",
+    "type_name": "Definition",
+    "number": "0.3.3",
+    "title": "Function Composition",
+    "title_html": "Function Composition",
+    "html": "<p>Let <span class=\"math inline\">\\(f: A \\to B\\)</span> and <span\nclass=\"math inline\">\\(g: B \\to C\\)</span> be functions. The\n<strong>composition</strong> of <span class=\"math inline\">\\(g\\)</span>\nwith <span class=\"math inline\">\\(f\\)</span>, denoted <span\nclass=\"math inline\">\\(g \\circ f\\)</span>, is the function <span\nclass=\"math inline\">\\(g \\circ f : A \\to C\\)</span> defined by: <span\nclass=\"math display\">\\[\n        (g \\circ f)(a) = g(f(a)) \\quad \\text{for all } a \\in A\n\\]</span> We read <span class=\"math inline\">\\(g \\circ f\\)</span> as\n\u201c<span class=\"math inline\">\\(g\\)</span> composed with <span\nclass=\"math inline\">\\(f\\)</span>\u201d or \u201c<span\nclass=\"math inline\">\\(g\\)</span> after <span\nclass=\"math inline\">\\(f\\)</span>.\u201d</p>",
+    "file": "ch00-foundations/03-functions.html"
+  },
+  "def-degree": {
+    "type": "definition",
+    "type_name": "Definition",
+    "number": "0.5.2",
+    "title": "Degree",
+    "title_html": "Degree",
+    "html": "<p>Let <span class=\"math inline\">\\(p(x) = a_n x^n + a_{n-1} x^{n-1} +\n\\cdots + a_1 x + a_0\\)</span> be a nonzero polynomial with <span\nclass=\"math inline\">\\(a_n \\neq 0\\)</span>. The <strong>degree</strong>\nof <span class=\"math inline\">\\(p(x)\\)</span>, denoted <span\nclass=\"math inline\">\\(\\deg p(x)\\)</span>, is <span\nclass=\"math inline\">\\(n\\)</span>. The coefficient <span\nclass=\"math inline\">\\(a_n\\)</span> is called the <strong>leading\ncoefficient</strong>.</p>\n<p>By convention, the zero polynomial <span class=\"math inline\">\\(p(x) =\n0\\)</span> has degree <span class=\"math inline\">\\(-\\infty\\)</span>.</p>",
+    "file": "ch00-foundations/05-polynomials.html"
+  },
+  "def-diagonal-matrix": {
+    "type": "definition",
+    "type_name": "Definition",
+    "number": "0.7.6",
+    "title": "Diagonal Matrix",
+    "title_html": "Diagonal Matrix",
+    "html": "<p>A square matrix <span class=\"math inline\">\\(\\A \\in M_n(F)\\)</span> is\n<strong>diagonal</strong> if all entries off the main diagonal are zero:\n<span class=\"math display\">\\[\n    \\A = \\begin{bmatrix}\n        d_1 &amp; 0 &amp; \\cdots &amp; 0 \\\\\n        0 &amp; d_2 &amp; \\cdots &amp; 0 \\\\\n        \\vdots &amp; \\vdots &amp; \\ddots &amp; \\vdots \\\\\n        0 &amp; 0 &amp; \\cdots &amp; d_n\n    \\end{bmatrix}.\n\\]</span> We often write <span class=\"math inline\">\\(\\A = \\diag(d_1,\nd_2, \\ldots, d_n)\\)</span>.</p>",
+    "file": "ch00-foundations/07-matrices.html"
+  },
+  "def-empty-set": {
+    "type": "definition",
+    "type_name": "Definition",
+    "number": "0.2.5",
+    "title": "Empty Set",
+    "title_html": "Empty Set",
+    "html": "<p>The <strong>empty set</strong>, denoted <span\nclass=\"math inline\">\\(\\varnothing\\)</span> or <span\nclass=\"math inline\">\\(\\{\\}\\)</span>, is the set containing no elements:\n<span class=\"math display\">\\[\n        \\varnothing = \\{ x : x \\neq x \\}\n\\]</span> For any element <span class=\"math inline\">\\(a\\)</span>, we\nhave <span class=\"math inline\">\\(a \\notin \\varnothing\\)</span>.</p>",
+    "file": "ch00-foundations/02-sets-and-notation.html"
+  },
+  "def-equivalence-class": {
+    "type": "definition",
+    "type_name": "Definition",
+    "number": "0.4.3",
+    "title": "Equivalence Class",
+    "title_html": "Equivalence Class",
+    "html": "<p>Let <span class=\"math inline\">\\(\\sim\\)</span> be an equivalence\nrelation on <span class=\"math inline\">\\(A\\)</span>. The\n<strong>equivalence class</strong> of an element <span\nclass=\"math inline\">\\(a \\in A\\)</span> is the set of all elements\nequivalent to <span class=\"math inline\">\\(a\\)</span>: <span\nclass=\"math display\">\\[\n        [a] = \\{ b \\in A : b \\sim a \\}\n\\]</span> The element <span class=\"math inline\">\\(a\\)</span> is called a\n<strong>representative</strong> of the class <span\nclass=\"math inline\">\\([a]\\)</span>.</p>",
+    "file": "ch00-foundations/04-relations.html"
+  },
+  "def-equivalence-relation": {
+    "type": "definition",
+    "type_name": "Definition",
+    "number": "0.4.2",
+    "title": "Equivalence Relation",
+    "title_html": "Equivalence Relation",
+    "html": "<p>A relation <span class=\"math inline\">\\(\\sim\\)</span> on a set <span\nclass=\"math inline\">\\(A\\)</span> is an <strong>equivalence\nrelation</strong> if it satisfies:</p>\n<ol type=\"1\">\n<li><p><strong>Reflexivity:</strong> <span class=\"math inline\">\\(\\forall\na \\in A : a \\sim a\\)</span>.</p>\n<p>(Every element is related to itself.)</p></li>\n<li><p><strong>Symmetry:</strong> <span class=\"math inline\">\\(\\forall a,\nb \\in A : a \\sim b \\Rightarrow b \\sim a\\)</span>.</p>\n<p>(If <span class=\"math inline\">\\(a\\)</span> is related to <span\nclass=\"math inline\">\\(b\\)</span>, then <span\nclass=\"math inline\">\\(b\\)</span> is related to <span\nclass=\"math inline\">\\(a\\)</span>.)</p></li>\n<li><p><strong>Transitivity:</strong> <span\nclass=\"math inline\">\\(\\forall a, b, c \\in A : (a \\sim b \\land b \\sim c)\n\\Rightarrow a \\sim c\\)</span>.</p>\n<p>(If <span class=\"math inline\">\\(a\\)</span> is related to <span\nclass=\"math inline\">\\(b\\)</span> and <span\nclass=\"math inline\">\\(b\\)</span> is related to <span\nclass=\"math inline\">\\(c\\)</span>, then <span\nclass=\"math inline\">\\(a\\)</span> is related to <span\nclass=\"math inline\">\\(c\\)</span>.)</p></li>\n</ol>",
+    "file": "ch00-foundations/04-relations.html"
+  },
+  "def-field": {
+    "type": "definition",
+    "type_name": "Definition",
+    "number": "0.6.1",
+    "title": "Field",
+    "title_html": "Field",
+    "html": "<p>A set <span class=\"math inline\">\\(F\\)</span> is called a\n<strong>field</strong> if we can define two binary operations addition\n<span class=\"math inline\">\\(+\\)</span>, and multiplication <span\nclass=\"math inline\">\\(\\cdot\\)</span> <span class=\"math display\">\\[\n    + : F \\times F \\to F, \\quad  \\cdot : F \\times F \\to F\n\\]</span> such that:</p>\n<div class=\"enumerate\" data-options=\"label=(F\\arabic*)\">\n<ol type=\"1\">\n<li><span class=\"math inline\">\\(a + b = b + a\\)</span></li>\n<li><span class=\"math inline\">\\((a + b) + c = a + (b + c)\\)</span></li>\n<li>There exists <span class=\"math inline\">\\(0 \\in F\\)</span> such that\n<span class=\"math inline\">\\(a + 0 = a\\)</span>.</li>\n<li>For every <span class=\"math inline\">\\(a \\in F\\)</span>, there exists\n<span class=\"math inline\">\\(-a \\in F\\)</span> such that <span\nclass=\"math inline\">\\(a + (-a) = 0\\)</span>.</li>\n<li><span class=\"math inline\">\\((a \\cdot b) \\cdot c = a \\cdot (b \\cdot\nc)\\)</span></li>\n<li><span class=\"math inline\">\\(a \\cdot b = b \\cdot a\\)</span></li>\n<li>There exists <span class=\"math inline\">\\(1 \\in F\\)</span> such that\n<span class=\"math inline\">\\(1 \\neq 0\\)</span> and <span\nclass=\"math inline\">\\(a \\cdot 1 = a\\)</span>.</li>\n<li>For every <span class=\"math inline\">\\(a \\in F \\setminus\n\\{0\\}\\)</span>, there exists <span class=\"math inline\">\\(a^{-1} \\in\nF\\)</span> such that <span class=\"math inline\">\\(a \\cdot a^{-1} =\n1\\)</span>.</li>\n<li><span class=\"math inline\">\\(a \\cdot (b + c) = (a \\cdot b) + (a \\cdot\nc)\\)</span></li>\n</ol>\n</div>",
+    "file": "ch00-foundations/06-fields.html"
+  },
+  "def-function": {
+    "type": "definition",
+    "type_name": "Definition",
+    "number": "0.3.1",
+    "title": "Function",
+    "title_html": "Function",
+    "html": "<p>A <strong>function</strong> <span class=\"math inline\">\\(f\\)</span>\nfrom a set <span class=\"math inline\">\\(A\\)</span> to a set <span\nclass=\"math inline\">\\(B\\)</span>, denoted <span class=\"math inline\">\\(f:\nA \\to B\\)</span>, is a rule that assigns to each element <span\nclass=\"math inline\">\\(a \\in A\\)</span> exactly one element <span\nclass=\"math inline\">\\(f(a) \\in B\\)</span>. The set <span\nclass=\"math inline\">\\(A\\)</span> is called the <strong>domain</strong>\nand <span class=\"math inline\">\\(B\\)</span> is called the\n<strong>codomain</strong>.</p>",
+    "file": "ch00-foundations/03-functions.html"
+  },
+  "def-identity-function": {
+    "type": "definition",
+    "type_name": "Definition",
+    "number": "0.3.4",
+    "title": "Identity Function",
+    "title_html": "Identity Function",
+    "html": "<p>For any set <span class=\"math inline\">\\(A\\)</span>, the\n<strong>identity function</strong> <span class=\"math inline\">\\(\\id_A : A\n\\to A\\)</span> is defined by: <span class=\"math display\">\\[\n        \\id_A(a) = a \\quad \\text{for all } a \\in A\n\\]</span></p>",
+    "file": "ch00-foundations/03-functions.html"
+  },
+  "def-identity-matrix": {
+    "type": "definition",
+    "type_name": "Definition",
+    "number": "0.7.3",
+    "title": "Identity Matrix",
+    "title_html": "Identity Matrix",
+    "html": "<p>The <strong>identity matrix</strong> <span class=\"math inline\">\\(\\I_n\n\\in M_n(F)\\)</span> is the <span class=\"math inline\">\\(n \\times\nn\\)</span> square matrix with <span class=\"math inline\">\\(1\\)</span>s on\nthe diagonal and <span class=\"math inline\">\\(0\\)</span>s elsewhere:\n<span class=\"math display\">\\[\n    \\I_n = \\begin{bmatrix}\n        1 &amp; 0 &amp; \\cdots &amp; 0 \\\\\n        0 &amp; 1 &amp; \\cdots &amp; 0 \\\\\n        \\vdots &amp; \\vdots &amp; \\ddots &amp; \\vdots \\\\\n        0 &amp; 0 &amp; \\cdots &amp; 1\n    \\end{bmatrix}.\n\\]</span> When the size is clear from context, we simply write <span\nclass=\"math inline\">\\(\\I\\)</span>.</p>",
+    "file": "ch00-foundations/07-matrices.html"
+  },
+  "def-injective-surjective-bijective": {
+    "type": "definition",
+    "type_name": "Definition",
+    "number": "0.3.2",
+    "title": "Injective, Surjective, Bijective",
+    "title_html": "Injective, Surjective, Bijective",
+    "html": "<p>Let <span class=\"math inline\">\\(f: A \\to B\\)</span> be a\nfunction.</p>\n<ul>\n<li><span class=\"math inline\">\\(f\\)</span> is <strong>injective</strong>\n(one-to-one) if <span class=\"math inline\">\\(f(a_1) = f(a_2)\\)</span>\nimplies <span class=\"math inline\">\\(a_1 = a_2\\)</span>.</li>\n<li><span class=\"math inline\">\\(f\\)</span> is\n<strong>surjective</strong> (onto) if for every <span\nclass=\"math inline\">\\(b \\in B\\)</span>, there exists <span\nclass=\"math inline\">\\(a \\in A\\)</span> such that <span\nclass=\"math inline\">\\(f(a) = b\\)</span>.</li>\n<li><span class=\"math inline\">\\(f\\)</span> is <strong>bijective</strong>\nif it is both injective and surjective</li>\n</ul>",
+    "file": "ch00-foundations/03-functions.html"
+  },
+  "def-intersection": {
+    "type": "definition",
+    "type_name": "Definition",
+    "number": "0.2.9",
+    "title": "Intersection",
+    "title_html": "Intersection",
+    "html": "<p>The <strong>intersection</strong> of sets <span\nclass=\"math inline\">\\(A\\)</span> and <span\nclass=\"math inline\">\\(B\\)</span> is the set of elements in both <span\nclass=\"math inline\">\\(A\\)</span> and <span\nclass=\"math inline\">\\(B\\)</span>: <span class=\"math display\">\\[\n        A \\cap B = \\{ x : x \\in A \\text{ and } x \\in B \\}\n\\]</span></p>\n<p>Two sets are <strong>disjoint</strong> if <span\nclass=\"math inline\">\\(A \\cap B = \\varnothing\\)</span>.</p>",
+    "file": "ch00-foundations/02-sets-and-notation.html"
+  },
+  "def-inverse-function": {
+    "type": "definition",
+    "type_name": "Definition",
+    "number": "0.3.5",
+    "title": "Inverse Function",
+    "title_html": "Inverse Function",
+    "html": "<p>Let <span class=\"math inline\">\\(f: A \\to B\\)</span> be a function. A\nfunction <span class=\"math inline\">\\(g: B \\to A\\)</span> is called an\n<strong>inverse</strong> of <span class=\"math inline\">\\(f\\)</span> if:\n<span class=\"math display\">\\[\n        g \\circ f = \\id_A \\quad \\text{and} \\quad f \\circ g = \\id_B\n\\]</span> If such a <span class=\"math inline\">\\(g\\)</span> exists, we\nsay <span class=\"math inline\">\\(f\\)</span> is\n<strong>invertible</strong> and write <span class=\"math inline\">\\(g =\nf^{-1}\\)</span>.</p>",
+    "file": "ch00-foundations/03-functions.html"
+  },
+  "def-matrix": {
+    "type": "definition",
+    "type_name": "Definition",
+    "number": "0.7.1",
+    "title": "Matrix",
+    "title_html": "Matrix",
+    "html": "<p>An <span class=\"math inline\">\\(m \\times n\\)</span>\n<strong>matrix</strong> over a field <span\nclass=\"math inline\">\\(F\\)</span> is a rectangular array of elements from\n<span class=\"math inline\">\\(F\\)</span> arranged in <span\nclass=\"math inline\">\\(m\\)</span> rows and <span\nclass=\"math inline\">\\(n\\)</span> columns: <span class=\"math display\">\\[\n    \\A = \\begin{bmatrix}\n        a_{11} &amp; a_{12} &amp; \\cdots &amp; a_{1n} \\\\\n        a_{21} &amp; a_{22} &amp; \\cdots &amp; a_{2n} \\\\\n        \\vdots &amp; \\vdots &amp; \\ddots &amp; \\vdots \\\\\n        a_{m1} &amp; a_{m2} &amp; \\cdots &amp; a_{mn}\n    \\end{bmatrix}.\n\\]</span></p>",
+    "file": "ch00-foundations/07-matrices.html"
+  },
+  "def-matrix-addition": {
+    "type": "definition",
+    "type_name": "Definition",
+    "number": "0.7.8",
+    "title": "Matrix Addition",
+    "title_html": "Matrix Addition",
+    "html": "<p>Let <span class=\"math inline\">\\(\\A = (a_{ij})\\)</span> and <span\nclass=\"math inline\">\\(\\B = (b_{ij})\\)</span> be matrices in <span\nclass=\"math inline\">\\(M_{m \\times n}(F)\\)</span>. Their\n<strong>sum</strong> <span class=\"math inline\">\\(\\A + \\B\\)</span> is the\nmatrix <span class=\"math inline\">\\(\\C = (c_{ij}) \\in M_{m \\times\nn}(F)\\)</span> where: <span class=\"math display\">\\[\n    c_{ij} = a_{ij} + b_{ij}.\n\\]</span></p>",
+    "file": "ch00-foundations/07-matrices.html"
+  },
+  "def-matrix-multiplication": {
+    "type": "definition",
+    "type_name": "Definition",
+    "number": "0.7.10",
+    "title": "Matrix Multiplication",
+    "title_html": "Matrix Multiplication",
+    "html": "<p>Let <span class=\"math inline\">\\(\\A = (a_{ij}) \\in M_{m \\times\nn}(F)\\)</span> and <span class=\"math inline\">\\(\\B = (b_{jk}) \\in M_{n\n\\times p}(F)\\)</span>. Their <strong>product</strong> <span\nclass=\"math inline\">\\(\\A\\B\\)</span> is the matrix <span\nclass=\"math inline\">\\(\\C = (c_{ik}) \\in M_{m \\times p}(F)\\)</span>\nwhere: <span class=\"math display\">\\[\n    c_{ik} = \\sum_{j=1}^{n} a_{ij} b_{jk}\n\\]</span> In other words, the <span class=\"math inline\">\\((i,\nk)\\)</span>-entry of <span class=\"math inline\">\\(\\A\\B\\)</span> is the\ndot product of the <span class=\"math inline\">\\(i\\)</span>-th row of\n<span class=\"math inline\">\\(\\A\\)</span> with the <span\nclass=\"math inline\">\\(k\\)</span>-th column of <span\nclass=\"math inline\">\\(\\B\\)</span>.</p>",
+    "file": "ch00-foundations/07-matrices.html"
+  },
+  "def-n-tuple": {
+    "type": "definition",
+    "type_name": "Definition",
+    "number": "0.2.3",
+    "title": "n-Tuple",
+    "title_html": "<span class=\"math inline\">\\(n\\)</span>-Tuple",
+    "html": "<p>An <strong><span class=\"math inline\">\\(n\\)</span>-tuple</strong> is\nan ordered list of <span class=\"math inline\">\\(n\\)</span> elements. For\na set <span class=\"math inline\">\\(A\\)</span>, the set of all <span\nclass=\"math inline\">\\(n\\)</span>-tuples with entries from <span\nclass=\"math inline\">\\(A\\)</span> is denoted: <span\nclass=\"math display\">\\[\n    A^n = \\underbrace{A \\times A \\times \\cdots \\times A}_{n \\text{\ntimes}} = \\{(a_1, a_2, \\ldots, a_n) : a_i \\in A \\text{ for } i = 1, 2,\n\\ldots, n\\}\n\\]</span></p>",
+    "file": "ch00-foundations/02-sets-and-notation.html"
+  },
+  "def-negation-of-quantifiers": {
+    "type": "definition",
+    "type_name": "Definition",
+    "number": "0.1.2",
+    "title": "Negation of Quantifiers",
+    "title_html": "Negation of Quantifiers",
+    "html": "<p>The negation of a quantified statement follows these rules: <span\nclass=\"math display\">\\[\n        \\neg(\\forall x \\in S : P(x)) \\equiv \\exists x \\in S : \\neg P(x)\n\\]</span> <span class=\"math display\">\\[\n        \\neg(\\exists x \\in S : P(x)) \\equiv \\forall x \\in S : \\neg P(x)\n\\]</span></p>\n<p>In words:</p>\n<ul>\n<li>\u201cNot all <span class=\"math inline\">\\(x\\)</span> satisfy <span\nclass=\"math inline\">\\(P\\)</span>\u201d is equivalent to \u201cthere exists an\n<span class=\"math inline\">\\(x\\)</span> that does not satisfy <span\nclass=\"math inline\">\\(P\\)</span>.\u201d</li>\n<li>\u201cThere does not exist an <span class=\"math inline\">\\(x\\)</span>\nsatisfying <span class=\"math inline\">\\(P\\)</span>\u201d is equivalent to \u201call\n<span class=\"math inline\">\\(x\\)</span> fail to satisfy <span\nclass=\"math inline\">\\(P\\)</span>.\u201d</li>\n</ul>",
+    "file": "ch00-foundations/01-logic.html"
+  },
+  "def-polynomial": {
+    "type": "definition",
+    "type_name": "Definition",
+    "number": "0.5.1",
+    "title": "Polynomial",
+    "title_html": "Polynomial",
+    "html": "<p>A <strong>polynomial</strong> over a field <span\nclass=\"math inline\">\\(F\\)</span> in the indeterminate <span\nclass=\"math inline\">\\(x\\)</span> is an expression of the form: <span\nclass=\"math display\">\\[\n    p(x) = a_n x^n + a_{n-1} x^{n-1} + \\cdots + a_1 x + a_0 =\n\\sum_{k=0}^{n} a_k x^k\n\\]</span> where <span class=\"math inline\">\\(a_0, a_1, \\ldots, a_n \\in\nF\\)</span> are called the <strong>coefficients</strong> of <span\nclass=\"math inline\">\\(p(x)\\)</span>.</p>",
+    "file": "ch00-foundations/05-polynomials.html"
+  },
+  "def-polynomial-ring": {
+    "type": "definition",
+    "type_name": "Definition",
+    "number": "0.5.3",
+    "title": "Polynomial Ring",
+    "title_html": "Polynomial Ring",
+    "html": "<p>The set of all polynomials over a field <span\nclass=\"math inline\">\\(F\\)</span> is denoted <span\nclass=\"math inline\">\\(F[x]\\)</span>: <span class=\"math display\">\\[\n    F[x] = \\left\\{ \\sum_{k=0}^{n} a_k x^k : n \\in \\nN, \\, a_k \\in F\n\\right\\}\n\\]</span> This set forms a <strong>ring</strong> under polynomial\naddition and multiplication. (You can omit what ring means here.)</p>",
+    "file": "ch00-foundations/05-polynomials.html"
+  },
+  "def-polynomials-bounded-degree": {
+    "type": "definition",
+    "type_name": "Definition",
+    "number": "0.5.4",
+    "title": "Polynomials of Degree at Most n",
+    "title_html": "Polynomials of Degree at Most <span class=\"math inline\">\\(n\\)</span>",
+    "html": "<p>Let <span class=\"math inline\">\\(F\\)</span> be a field and <span\nclass=\"math inline\">\\(n \\in \\nN\\)</span>. The set of all polynomials\nover <span class=\"math inline\">\\(F\\)</span> of degree at most <span\nclass=\"math inline\">\\(n\\)</span> is denoted: <span\nclass=\"math display\">\\[\n    F[x]_{\\leq n} = \\left\\{ p(x) \\in F[x] : \\deg p(x) \\leq n \\right\\}\n\\]</span> Equivalently: <span class=\"math display\">\\[\n    F[x]_{\\leq n} = \\left\\{ a_n x^n + a_{n-1} x^{n-1} + \\cdots + a_1 x +\na_0 : a_k \\in F \\right\\}\n\\]</span></p>",
+    "file": "ch00-foundations/05-polynomials.html"
+  },
+  "def-polynomials-exact-degree": {
+    "type": "definition",
+    "type_name": "Definition",
+    "number": "0.5.5",
+    "title": "Polynomials of Degree Exactly n",
+    "title_html": "Polynomials of Degree Exactly <span class=\"math inline\">\\(n\\)</span>",
+    "html": "<p>We use <span class=\"math inline\">\\(F[x]_{=n}\\)</span> to denote\npolynomials of degree <strong>exactly</strong> <span\nclass=\"math inline\">\\(n\\)</span>: <span class=\"math display\">\\[\n    F[x]_{=n} = \\left\\{ p(x) \\in F[x] : \\deg p(x) = n \\right\\}\n\\]</span> Equivalently: <span class=\"math display\">\\[\n    F[x]_{=n} = \\left\\{ a_n x^n + a_{n-1} x^{n-1} + \\cdots + a_1 x + a_0\n: a_n \\neq 0, \\, a_k \\in F \\right\\}\n\\]</span></p>",
+    "file": "ch00-foundations/05-polynomials.html"
+  },
+  "def-quantifiers": {
+    "type": "definition",
+    "type_name": "Definition",
+    "number": "0.1.1",
+    "title": "Quantifiers",
+    "title_html": "Quantifiers",
+    "html": "<p>Let <span class=\"math inline\">\\(P(x)\\)</span> be a statement\n(predicate) that depends on a variable <span\nclass=\"math inline\">\\(x\\)</span> ranging over some set <span\nclass=\"math inline\">\\(S\\)</span>.</p>\n<ul>\n<li><p>The <strong>universal quantifier</strong> <span\nclass=\"math inline\">\\(\\forall\\)</span> means \u201cfor all\u201d or \u201cfor every.\u201d\nThe statement <span class=\"math display\">\\[\n          \\forall x \\in S : P(x)\n  \\]</span> asserts that <span class=\"math inline\">\\(P(x)\\)</span> is\ntrue for <em>every</em> element <span class=\"math inline\">\\(x\\)</span>\nin <span class=\"math inline\">\\(S\\)</span>.</p></li>\n<li><p>The <strong>existential quantifier</strong> <span\nclass=\"math inline\">\\(\\exists\\)</span> means \u201cthere exists\u201d or \u201cfor\nsome.\u201d The statement <span class=\"math display\">\\[\n          \\exists x \\in S : P(x)\n  \\]</span> asserts that <span class=\"math inline\">\\(P(x)\\)</span> is\ntrue for <em>at least one</em> element <span\nclass=\"math inline\">\\(x\\)</span> in <span\nclass=\"math inline\">\\(S\\)</span>.</p></li>\n</ul>",
+    "file": "ch00-foundations/01-logic.html"
+  },
+  "def-quotient-set": {
+    "type": "definition",
+    "type_name": "Definition",
+    "number": "0.4.4",
+    "title": "Quotient Set",
+    "title_html": "Quotient Set",
+    "html": "<p>Let <span class=\"math inline\">\\(\\sim\\)</span> be an equivalence\nrelation on <span class=\"math inline\">\\(A\\)</span>. The <strong>quotient\nset</strong> (or <strong>quotient of <span\nclass=\"math inline\">\\(A\\)</span> by <span\nclass=\"math inline\">\\(\\sim\\)</span></strong>) is the set of all\nequivalence classes: <span class=\"math display\">\\[\n        A / {\\sim} = \\{ [a] : a \\in A \\}\n\\]</span></p>",
+    "file": "ch00-foundations/04-relations.html"
+  },
+  "def-relation": {
+    "type": "definition",
+    "type_name": "Definition",
+    "number": "0.4.1",
+    "title": "Relation",
+    "title_html": "Relation",
+    "html": "<p>A <strong>(binary) relation</strong> on a set <span\nclass=\"math inline\">\\(A\\)</span> is a subset <span\nclass=\"math inline\">\\(R \\subseteq A \\times A\\)</span>. If <span\nclass=\"math inline\">\\((a, b) \\in R\\)</span>, we write <span\nclass=\"math inline\">\\(a \\sim b\\)</span> (or <span\nclass=\"math inline\">\\(a \\mathrel{R} b\\)</span>) and say \u201c<span\nclass=\"math inline\">\\(a\\)</span> is related to <span\nclass=\"math inline\">\\(b\\)</span>.\u201d</p>",
+    "file": "ch00-foundations/04-relations.html"
+  },
+  "def-scalar-multiplication": {
+    "type": "definition",
+    "type_name": "Definition",
+    "number": "0.7.11",
+    "title": "Scalar Multiplication",
+    "title_html": "Scalar Multiplication",
+    "html": "<p>Let <span class=\"math inline\">\\(\\A = (a_{ij}) \\in M_{m \\times\nn}(F)\\)</span> and <span class=\"math inline\">\\(c \\in F\\)</span> be a\nscalar. The <strong>scalar multiple</strong> <span\nclass=\"math inline\">\\(c\\A\\)</span> is the matrix in <span\nclass=\"math inline\">\\(M_{m \\times n}(F)\\)</span> with entries <span\nclass=\"math inline\">\\((ca_{ij})\\)</span>.</p>",
+    "file": "ch00-foundations/07-matrices.html"
+  },
+  "def-set-builder": {
+    "type": "definition",
+    "type_name": "Definition",
+    "number": "0.2.4",
+    "title": "Set-Builder Notation",
+    "title_html": "Set-Builder Notation",
+    "html": "<p>Let <span class=\"math inline\">\\(S\\)</span> be a set and <span\nclass=\"math inline\">\\(P(x)\\)</span> a predicate. The <strong>set-builder\nnotation</strong> <span class=\"math display\">\\[\n        \\{ x \\in S : P(x) \\}\n\\]</span> denotes the set of all elements <span\nclass=\"math inline\">\\(x\\)</span> in <span\nclass=\"math inline\">\\(S\\)</span> for which <span\nclass=\"math inline\">\\(P(x)\\)</span> is true. Variants include <span\nclass=\"math inline\">\\(\\{ x \\in S \\mid P(x) \\}\\)</span> and <span\nclass=\"math inline\">\\(\\{ x \\in S \\,;\\, P(x) \\}\\)</span>.</p>",
+    "file": "ch00-foundations/02-sets-and-notation.html"
+  },
+  "def-set-difference": {
+    "type": "definition",
+    "type_name": "Definition",
+    "number": "0.2.10",
+    "title": "Set Difference",
+    "title_html": "Set Difference",
+    "html": "<p>The <strong>set difference</strong> (or <strong>relative\ncomplement</strong>) of <span class=\"math inline\">\\(B\\)</span> in <span\nclass=\"math inline\">\\(A\\)</span> is: <span class=\"math display\">\\[\n        A \\setminus B = \\{ x \\in A : x \\notin B \\}\n\\]</span></p>\n<p>When <span class=\"math inline\">\\(B \\subseteq U\\)</span> for some\nuniversal set <span class=\"math inline\">\\(U\\)</span>, the\n<strong>complement</strong> of <span class=\"math inline\">\\(B\\)</span> in\n<span class=\"math inline\">\\(U\\)</span> is <span\nclass=\"math inline\">\\(B^c = U \\setminus B\\)</span>.</p>",
+    "file": "ch00-foundations/02-sets-and-notation.html"
+  },
+  "def-set-equality": {
+    "type": "definition",
+    "type_name": "Definition",
+    "number": "0.2.7",
+    "title": "Set Equality",
+    "title_html": "Set Equality",
+    "html": "<p>Two sets <span class=\"math inline\">\\(A\\)</span> and <span\nclass=\"math inline\">\\(B\\)</span> are <strong>equal</strong>, written\n<span class=\"math inline\">\\(A = B\\)</span>, if they contain exactly the\nsame elements: <span class=\"math display\">\\[\n        A = B \\iff (A \\subseteq B \\text{ and } B \\subseteq A)\n\\]</span></p>",
+    "file": "ch00-foundations/02-sets-and-notation.html"
+  },
+  "def-subset": {
+    "type": "definition",
+    "type_name": "Definition",
+    "number": "0.2.6",
+    "title": "Subset",
+    "title_html": "Subset",
+    "html": "<p>Let <span class=\"math inline\">\\(A\\)</span> and <span\nclass=\"math inline\">\\(B\\)</span> be sets. We say <span\nclass=\"math inline\">\\(A\\)</span> is a <strong>subset</strong> of <span\nclass=\"math inline\">\\(B\\)</span>, written <span class=\"math inline\">\\(A\n\\subseteq B\\)</span>, if every element of <span\nclass=\"math inline\">\\(A\\)</span> is also an element of <span\nclass=\"math inline\">\\(B\\)</span>: <span class=\"math display\">\\[\n        A \\subseteq B \\iff \\forall x : (x \\in A \\Rightarrow x \\in B)\n\\]</span></p>\n<p>If <span class=\"math inline\">\\(A \\subseteq B\\)</span> and <span\nclass=\"math inline\">\\(A \\neq B\\)</span>, we say <span\nclass=\"math inline\">\\(A\\)</span> is a <strong>proper subset</strong> of\n<span class=\"math inline\">\\(B\\)</span>, written <span\nclass=\"math inline\">\\(A \\subsetneq B\\)</span> or <span\nclass=\"math inline\">\\(A \\subset B\\)</span>.</p>",
+    "file": "ch00-foundations/02-sets-and-notation.html"
+  },
+  "def-symmetric-matrix": {
+    "type": "definition",
+    "type_name": "Definition",
+    "number": "0.7.5",
+    "title": "Symmetric Matrix",
+    "title_html": "Symmetric Matrix",
+    "html": "<p>A square matrix <span class=\"math inline\">\\(\\A \\in M_n(F)\\)</span> is\n<strong>symmetric</strong> if <span class=\"math inline\">\\(\\A =\n\\A^\\top\\)</span>. This means it is symmetric across its main diagonal:\n<span class=\"math display\">\\[\n    \\A = \\begin{bmatrix}\n        a_{11} &amp; a_{12} &amp; \\cdots &amp; a_{1n} \\\\\n        a_{12} &amp; a_{22} &amp; \\cdots &amp; a_{2n} \\\\\n        \\vdots &amp; \\vdots &amp; \\ddots &amp; \\vdots \\\\\n        a_{1n} &amp; a_{2n} &amp; \\cdots &amp; a_{nn}\n    \\end{bmatrix}.\n\\]</span></p>",
+    "file": "ch00-foundations/07-matrices.html"
+  },
+  "def-trace": {
+    "type": "definition",
+    "type_name": "Definition",
+    "number": "0.7.12",
+    "title": "Trace",
+    "title_html": "Trace",
+    "html": "<p>Let <span class=\"math inline\">\\(\\A = (a_{ij}) \\in M_n(F)\\)</span> be\na square matrix. The <strong>trace</strong> of <span\nclass=\"math inline\">\\(\\A\\)</span>, denoted <span\nclass=\"math inline\">\\(\\tr(\\A)\\)</span>, is the sum of the entries on its\nmain diagonal: <span class=\"math display\">\\[\n    \\tr(\\A) = \\sum_{i=1}^n a_{ii} = a_{11} + a_{22} + \\cdots + a_{nn}.\n\\]</span></p>",
+    "file": "ch00-foundations/07-matrices.html"
+  },
+  "def-transpose": {
+    "type": "definition",
+    "type_name": "Definition",
+    "number": "0.7.4",
+    "title": "Transpose",
+    "title_html": "Transpose",
+    "html": "<p>Let <span class=\"math inline\">\\(\\A = (a_{ij}) \\in M_{m \\times\nn}(F)\\)</span>. The <strong>transpose</strong> of <span\nclass=\"math inline\">\\(\\A\\)</span>, denoted <span\nclass=\"math inline\">\\(\\A^\\top\\)</span>, is the <span\nclass=\"math inline\">\\(n \\times m\\)</span> matrix obtained by swapping\nrows and columns: <span class=\"math display\">\\[\n    (\\A^\\top)_{ij} = a_{ji}.\n\\]</span> Visually, the rows of <span class=\"math inline\">\\(\\A\\)</span>\nbecome the columns of <span class=\"math inline\">\\(\\A^\\top\\)</span>:\n<span class=\"math display\">\\[\n    \\begin{bmatrix} a &amp; b &amp; c \\\\ d &amp; e &amp; f\n\\end{bmatrix}^\\top = \\begin{bmatrix} a &amp; d \\\\ b &amp; e \\\\ c &amp; f\n\\end{bmatrix}.\n\\]</span></p>",
+    "file": "ch00-foundations/07-matrices.html"
+  },
+  "def-union": {
+    "type": "definition",
+    "type_name": "Definition",
+    "number": "0.2.8",
+    "title": "Union",
+    "title_html": "Union",
+    "html": "<p>The <strong>union</strong> of sets <span\nclass=\"math inline\">\\(A\\)</span> and <span\nclass=\"math inline\">\\(B\\)</span> is the set of elements in <span\nclass=\"math inline\">\\(A\\)</span> or <span\nclass=\"math inline\">\\(B\\)</span> (or both): <span\nclass=\"math display\">\\[\n        A \\cup B = \\{ x : x \\in A \\text{ or } x \\in B \\}\n\\]</span></p>",
+    "file": "ch00-foundations/02-sets-and-notation.html"
+  },
+  "def-upper-triangular": {
+    "type": "definition",
+    "type_name": "Definition",
+    "number": "0.7.7",
+    "title": "Upper Triangular Matrix",
+    "title_html": "Upper Triangular Matrix",
+    "html": "<p>A square matrix <span class=\"math inline\">\\(\\A \\in M_n(F)\\)</span> is\n<strong>upper triangular</strong> if all entries below the main diagonal\nare zero: <span class=\"math display\">\\[\n    \\A = \\begin{bmatrix}\n        a_{11} &amp; a_{12} &amp; \\cdots &amp; a_{1n} \\\\\n        0 &amp; a_{22} &amp; \\cdots &amp; a_{2n} \\\\\n        \\vdots &amp; \\vdots &amp; \\ddots &amp; \\vdots \\\\\n        0 &amp; 0 &amp; \\cdots &amp; a_{nn}\n    \\end{bmatrix}.\n\\]</span></p>",
+    "file": "ch00-foundations/07-matrices.html"
+  },
+  "def-zero-matrix": {
+    "type": "definition",
+    "type_name": "Definition",
+    "number": "0.7.2",
+    "title": "Zero Matrix",
+    "title_html": "Zero Matrix",
+    "html": "<p>The <strong>zero matrix</strong> <span class=\"math inline\">\\(\\O \\in\nM_{m \\times n}(F)\\)</span> is the matrix with all entries equal to zero:\n<span class=\"math display\">\\[\n    \\O = \\begin{bmatrix}\n        0 &amp; 0 &amp; \\cdots &amp; 0 \\\\\n        0 &amp; 0 &amp; \\cdots &amp; 0 \\\\\n        \\vdots &amp; \\vdots &amp; \\ddots &amp; \\vdots \\\\\n        0 &amp; 0 &amp; \\cdots &amp; 0\n    \\end{bmatrix}.\n\\]</span></p>",
+    "file": "ch00-foundations/07-matrices.html"
+  },
+  "exm-comparing-notations": {
+    "type": "example",
+    "type_name": "Example",
+    "number": "",
+    "title": "Comparing Notations",
+    "title_html": "Comparing Notations",
+    "html": "<p>The following examples highlight the difference between the notations\nintroduced above:</p>\n<ul>\n<li><span class=\"math inline\">\\(\\nR[x]_{\\leq 2} = \\{ ax^2 + bx + c : a,\nb, c \\in \\nR \\}\\)</span> includes <span class=\"math inline\">\\(x^2 +\n1\\)</span>, <span class=\"math inline\">\\(3x - 2\\)</span>, and <span\nclass=\"math inline\">\\(5\\)</span></li>\n<li><span class=\"math inline\">\\(\\nR[x]_{=2} = \\{ ax^2 + bx + c : a \\neq\n0, \\, a, b, c \\in \\nR \\}\\)</span> includes <span\nclass=\"math inline\">\\(x^2 + 1\\)</span> but <strong>not</strong> <span\nclass=\"math inline\">\\(3x - 2\\)</span> or <span\nclass=\"math inline\">\\(5\\)</span></li>\n</ul>",
+    "file": "ch00-foundations/05-polynomials.html"
+  },
+  "exm-composition": {
+    "type": "example",
+    "type_name": "Example",
+    "number": "",
+    "title": "Function Composition",
+    "title_html": "Function Composition",
+    "html": "<p>Let <span class=\"math inline\">\\(f: \\nR \\to \\nR\\)</span> be defined by\n<span class=\"math inline\">\\(f(x) = x^2\\)</span> and <span\nclass=\"math inline\">\\(g: \\nR \\to \\nR\\)</span> by <span\nclass=\"math inline\">\\(g(x) = x + 1\\)</span>. We compute both\ncompositions:</p>\n<ul>\n<li><span class=\"math inline\">\\((g \\circ f)(x) = g(f(x)) = g(x^2) = x^2\n+ 1\\)</span></li>\n<li><span class=\"math inline\">\\((f \\circ g)(x) = f(g(x)) = f(x + 1) = (x\n+ 1)^2\\)</span></li>\n</ul>\n<p>Note that <span class=\"math inline\">\\(g \\circ f \\neq f \\circ\ng\\)</span> in general\u2014composition is <strong>not\ncommutative</strong>.</p>",
+    "file": "ch00-foundations/03-functions.html"
+  },
+  "exm-elements-of-rx": {
+    "type": "example",
+    "type_name": "Example",
+    "number": "",
+    "title": "Elements of the Polynomial Ring",
+    "title_html": "Elements of the Polynomial Ring",
+    "html": "<p>The following are elements of <span\nclass=\"math inline\">\\(\\nR[x]\\)</span>: <span class=\"math display\">\\[\n    3x^2 - 2x + 1, \\quad x^5 + \\pi x^3 - \\sqrt{2}, \\quad 7, \\quad 0\n\\]</span> Note that constant polynomials (including <span\nclass=\"math inline\">\\(0\\)</span>) are also polynomials.</p>",
+    "file": "ch00-foundations/05-polynomials.html"
+  },
+  "exm-elements-of-rx-leq-2": {
+    "type": "example",
+    "type_name": "Example",
+    "number": "",
+    "title": "Polynomials of Degree at Most 2",
+    "title_html": "Polynomials of Degree at Most 2",
+    "html": "<p>The set <span class=\"math inline\">\\(\\nR[x]_{\\leq 2}\\)</span> consists\nof all polynomials of degree at most <span\nclass=\"math inline\">\\(2\\)</span>: <span class=\"math display\">\\[\n    \\nR[x]_{\\leq 2} = \\{ ax^2 + bx + c : a, b, c \\in \\nR \\}\n\\]</span> Examples include <span class=\"math inline\">\\(3x^2 - 2x +\n1\\)</span>, <span class=\"math inline\">\\(5x + 7\\)</span>, and <span\nclass=\"math inline\">\\(-4\\)</span>.</p>",
+    "file": "ch00-foundations/05-polynomials.html"
+  },
+  "exm-equivalence-classes": {
+    "type": "example",
+    "type_name": "Example",
+    "number": "",
+    "title": "Examples of Equivalence Classes",
+    "title_html": "Examples of Equivalence Classes",
+    "html": "<p>We illustrate equivalence classes with two examples:</p>\n<ol type=\"1\">\n<li><p><strong>Congruence modulo 3:</strong> The equivalence classes of\n<span class=\"math inline\">\\(\\nZ\\)</span> under <span\nclass=\"math inline\">\\(\\equiv \\pmod{3}\\)</span> are: <span\nclass=\"math display\">\\[\\begin{align*}\n          [0] &amp;= \\{ \\ldots, -6, -3, 0, 3, 6, 9, \\ldots \\} \\\\\n          [1] &amp;= \\{ \\ldots, -5, -2, 1, 4, 7, 10, \\ldots \\} \\\\\n          [2] &amp;= \\{ \\ldots, -4, -1, 2, 5, 8, 11, \\ldots \\}\n  \\end{align*}\\]</span> Note that <span class=\"math inline\">\\([0] = [3]\n= [6] = \\cdots\\)</span> and <span class=\"math inline\">\\([1] = [4] = [7]\n= \\cdots\\)</span>. Different representatives can name the same\nclass.</p></li>\n<li><p><strong>Same absolute value on <span\nclass=\"math inline\">\\(\\nR\\)</span>:</strong> The equivalence class of\n<span class=\"math inline\">\\(2\\)</span> is <span\nclass=\"math inline\">\\([2] = \\{ -2, 2 \\}\\)</span>. The equivalence class\nof <span class=\"math inline\">\\(0\\)</span> is <span\nclass=\"math inline\">\\([0] = \\{ 0 \\}\\)</span>.</p></li>\n</ol>",
+    "file": "ch00-foundations/04-relations.html"
+  },
+  "exm-equivalence-relations": {
+    "type": "example",
+    "type_name": "Example",
+    "number": "",
+    "title": "Examples of Equivalence Relations",
+    "title_html": "Examples of Equivalence Relations",
+    "html": "<p>The following are all equivalence relations:</p>\n<ol type=\"1\">\n<li><p><strong>Equality:</strong> On any set <span\nclass=\"math inline\">\\(A\\)</span>, the relation <span\nclass=\"math inline\">\\(a \\sim b \\iff a = b\\)</span> is an equivalence\nrelation (the finest one possible).</p></li>\n<li><p><strong>Congruence modulo <span\nclass=\"math inline\">\\(n\\)</span>:</strong> On <span\nclass=\"math inline\">\\(\\nZ\\)</span>, define <span class=\"math inline\">\\(a\n\\equiv b \\pmod{n}\\)</span> if <span class=\"math inline\">\\(n \\mid (a -\nb)\\)</span>.</p>\n<ul>\n<li>Reflexive: <span class=\"math inline\">\\(n \\mid 0\\)</span>, so <span\nclass=\"math inline\">\\(a \\equiv a\\)</span>.</li>\n<li>Symmetric: If <span class=\"math inline\">\\(n \\mid (a - b)\\)</span>,\nthen <span class=\"math inline\">\\(n \\mid (b - a)\\)</span>.</li>\n<li>Transitive: If <span class=\"math inline\">\\(n \\mid (a - b)\\)</span>\nand <span class=\"math inline\">\\(n \\mid (b - c)\\)</span>, then <span\nclass=\"math inline\">\\(n \\mid ((a - b) + (b - c)) = (a -\nc)\\)</span>.</li>\n</ul></li>\n<li><p><strong>Same birthday:</strong> On the set of people, \u201c<span\nclass=\"math inline\">\\(a\\)</span> has the same birthday as <span\nclass=\"math inline\">\\(b\\)</span>\u201d is an equivalence relation.</p></li>\n<li><p><strong>Same absolute value:</strong> On <span\nclass=\"math inline\">\\(\\nR\\)</span>, define <span class=\"math inline\">\\(a\n\\sim b \\iff |a| = |b|\\)</span>. This is an equivalence\nrelation.</p></li>\n</ol>",
+    "file": "ch00-foundations/04-relations.html"
+  },
+  "exm-fields": {
+    "type": "example",
+    "type_name": "Example",
+    "number": "",
+    "title": "Examples of Fields",
+    "title_html": "Examples of Fields",
+    "html": "<p>The following sets are examples (and non-examples) of fields:</p>\n<ol type=\"1\">\n<li><p><span class=\"math inline\">\\(\\nR\\)</span> is a field.</p></li>\n<li><p><span class=\"math inline\">\\(\\nC\\)</span> is a field.</p></li>\n<li><p><span class=\"math inline\">\\(\\nQ = \\left\\{ \\frac{p}{q} : p, q \\in\n\\nZ,\\; q \\neq 0 \\right\\}\\)</span> is a field.</p></li>\n<li><p><span class=\"math inline\">\\(\\nZ\\)</span> is <strong>not</strong>\na field since <strong>(F8)</strong> fails.</p></li>\n<li><p><span class=\"math inline\">\\(M_n(\\nR)\\)</span> is\n<strong>not</strong> a field since <strong>(F6)</strong> fails.</p></li>\n</ol>",
+    "file": "ch00-foundations/06-fields.html"
+  },
+  "exm-finite-fields": {
+    "type": "example",
+    "type_name": "Example",
+    "number": "",
+    "title": "Finite Fields",
+    "title_html": "Finite Fields",
+    "html": "<p>Let <span class=\"math inline\">\\(\\nF_n\\)</span> be the finite field\nwith <span class=\"math inline\">\\(n\\)</span> elements. Then <span\nclass=\"math inline\">\\((\\nF_2, +, \\cdot)\\)</span> is defined to be: <span\nclass=\"math display\">\\[\n    F_2 = \\left\\{ 0, 1 \\right\\}, \\quad \\begin{array}{c|cc}\n        + &amp; 0 &amp; 1 \\\\\n        \\hline\n        0 &amp; 0 &amp; 1 \\\\\n        1 &amp; 1 &amp; 0\n    \\end{array}, \\quad \\begin{array}{c|cc}\n    \\cdot &amp; 0 &amp; 1 \\\\\n    \\hline\n    0 &amp; 0 &amp; 0 \\\\\n    1 &amp; 0 &amp; 1\n    \\end{array}.\n\\]</span></p>\n<p>Then one can verify that <span class=\"math inline\">\\((\\nF_2, +,\n\\cdot)\\)</span> is a field.</p>",
+    "file": "ch00-foundations/06-fields.html"
+  },
+  "exm-injective-surjective-bijective": {
+    "type": "example",
+    "type_name": "Example",
+    "number": "",
+    "title": "Injective, Surjective, and Bijective Functions",
+    "title_html": "Injective, Surjective, and Bijective Functions",
+    "html": "<p>Consider the following functions:</p>\n<ol type=\"1\">\n<li><p><span class=\"math inline\">\\(f: \\nR \\to \\nR\\)</span>, <span\nclass=\"math inline\">\\(f(x) = 2x + 1\\)</span> is\n<strong>bijective</strong>.</p>\n<ul>\n<li>Injective: If <span class=\"math inline\">\\(2x_1 + 1 = 2x_2 +\n1\\)</span>, then <span class=\"math inline\">\\(x_1 = x_2\\)</span>.</li>\n<li>Surjective: For any <span class=\"math inline\">\\(y \\in \\nR\\)</span>,\nwe have <span class=\"math inline\">\\(f\\left(\\frac{y-1}{2}\\right) =\ny\\)</span>.</li>\n</ul></li>\n<li><p><span class=\"math inline\">\\(g: \\nR \\to \\nR\\)</span>, <span\nclass=\"math inline\">\\(g(x) = x^2\\)</span> is <strong>neither injective\nnor surjective</strong>.</p>\n<ul>\n<li>Not injective: <span class=\"math inline\">\\(g(1) = g(-1) =\n1\\)</span>, but <span class=\"math inline\">\\(1 \\neq -1\\)</span>.</li>\n<li>Not surjective: There is no <span class=\"math inline\">\\(x \\in\n\\nR\\)</span> such that <span class=\"math inline\">\\(g(x) =\n-1\\)</span>.</li>\n</ul></li>\n<li><p><span class=\"math inline\">\\(h: \\nR \\to [0, \\infty)\\)</span>,\n<span class=\"math inline\">\\(h(x) = x^2\\)</span> is <strong>surjective\nbut not injective</strong>.</p>\n<ul>\n<li>Not injective: <span class=\"math inline\">\\(h(1) = h(-1) =\n1\\)</span>.</li>\n<li>Surjective: For any <span class=\"math inline\">\\(y \\geq 0\\)</span>,\nwe have <span class=\"math inline\">\\(h(\\sqrt{y}) = y\\)</span>.</li>\n</ul></li>\n<li><p><span class=\"math inline\">\\(k: [0, \\infty) \\to \\nR\\)</span>,\n<span class=\"math inline\">\\(k(x) = x^2\\)</span> is <strong>injective but\nnot surjective</strong>.</p>\n<ul>\n<li>Injective: If <span class=\"math inline\">\\(x_1^2 = x_2^2\\)</span>\nwith <span class=\"math inline\">\\(x_1, x_2 \\geq 0\\)</span>, then <span\nclass=\"math inline\">\\(x_1 = x_2\\)</span>.</li>\n<li>Not surjective: There is no <span class=\"math inline\">\\(x \\geq\n0\\)</span> such that <span class=\"math inline\">\\(k(x) =\n-1\\)</span>.</li>\n</ul></li>\n</ol>",
+    "file": "ch00-foundations/03-functions.html"
+  },
+  "exm-inverse-function": {
+    "type": "example",
+    "type_name": "Example",
+    "number": "",
+    "title": "Inverse Functions",
+    "title_html": "Inverse Functions",
+    "html": "<p>The following examples illustrate inverse functions and when they do\nor do not exist:</p>\n<ol type=\"1\">\n<li><p>Let <span class=\"math inline\">\\(f: \\nR \\to \\nR\\)</span> be\ndefined by <span class=\"math inline\">\\(f(x) = 2x + 3\\)</span>. This is\nbijective, and its inverse is <span class=\"math inline\">\\(f^{-1}(y) =\n\\frac{y - 3}{2}\\)</span>.</p>\n<p>Verification: <span class=\"math inline\">\\(f(f^{-1}(y)) = 2 \\cdot\n\\frac{y-3}{2} + 3 = y\\)</span> and <span\nclass=\"math inline\">\\(f^{-1}(f(x)) = \\frac{(2x+3) - 3}{2} =\nx\\)</span>.</p></li>\n<li><p>Let <span class=\"math inline\">\\(g: \\nR \\to \\nR\\)</span> be\ndefined by <span class=\"math inline\">\\(g(x) = x^2\\)</span>. This is not\nbijective (not injective), so <span\nclass=\"math inline\">\\(g^{-1}\\)</span> does not exist as a function <span\nclass=\"math inline\">\\(\\nR \\to \\nR\\)</span>.</p></li>\n<li><p>Let <span class=\"math inline\">\\(h: [0, \\infty) \\to [0,\n\\infty)\\)</span> be defined by <span class=\"math inline\">\\(h(x) =\nx^2\\)</span>. With restricted domain and codomain, <span\nclass=\"math inline\">\\(h\\)</span> is bijective, and <span\nclass=\"math inline\">\\(h^{-1}(y) = \\sqrt{y}\\)</span>.</p></li>\n</ol>",
+    "file": "ch00-foundations/03-functions.html"
+  },
+  "exm-matrices": {
+    "type": "example",
+    "type_name": "Example",
+    "number": "",
+    "title": "Matrices",
+    "title_html": "Matrices",
+    "html": "<p>Here are some examples of matrices: <span class=\"math display\">\\[\n    \\begin{bmatrix} 1 &amp; 2 \\\\ 3 &amp; 4 \\end{bmatrix} \\in M_2(\\nR),\n\\quad\n    \\begin{bmatrix} 1 &amp; 0 &amp; -1 \\\\ 2 &amp; 5 &amp; 3\n\\end{bmatrix} \\in M_{2 \\times 3}(\\nR), \\quad\n    \\begin{bmatrix} i &amp; 1+i \\\\ 0 &amp; 2-i \\end{bmatrix} \\in\nM_2(\\nC).\n\\]</span></p>",
+    "file": "ch00-foundations/07-matrices.html"
+  },
+  "exm-matrix-addition": {
+    "type": "example",
+    "type_name": "Example",
+    "number": "",
+    "title": "Matrix Addition",
+    "title_html": "Matrix Addition",
+    "html": "<p>Let <span class=\"math inline\">\\(\\A = \\begin{bmatrix} 1 &amp; 2 \\\\ 3\n&amp; 4 \\end{bmatrix}\\)</span> and <span class=\"math inline\">\\(\\B =\n\\begin{bmatrix} 5 &amp; 6 \\\\ 7 &amp; 8 \\end{bmatrix}\\)</span>. Then:\n<span class=\"math display\">\\[\n    \\A + \\B = \\begin{bmatrix} 1 &amp; 2 \\\\ 3 &amp; 4 \\end{bmatrix} +\n\\begin{bmatrix} 5 &amp; 6 \\\\ 7 &amp; 8 \\end{bmatrix}\n    = \\begin{bmatrix} 1+5 &amp; 2+6 \\\\ 3+7 &amp; 4+8 \\end{bmatrix}\n    = \\begin{bmatrix} 6 &amp; 8 \\\\ 10 &amp; 12 \\end{bmatrix}.\n\\]</span></p>",
+    "file": "ch00-foundations/07-matrices.html"
+  },
+  "exm-matrix-multiplication": {
+    "type": "example",
+    "type_name": "Example",
+    "number": "",
+    "title": "Matrix Multiplication",
+    "title_html": "Matrix Multiplication",
+    "html": "<p>Let <span class=\"math inline\">\\(\\A = \\begin{bmatrix} 1 &amp; 2 \\\\ 3\n&amp; 4 \\end{bmatrix} \\in M_2(\\nR)\\)</span> and <span\nclass=\"math inline\">\\(\\B = \\begin{bmatrix} 5 &amp; 6 \\\\ 7 &amp; 8\n\\end{bmatrix} \\in M_2(\\nR)\\)</span>. We compute <span\nclass=\"math inline\">\\(\\A\\B\\)</span> entry by entry: <span\nclass=\"math display\">\\[\\begin{align*}\n        (\\A\\B)_{11} &amp;= (1)(5) + (2)(7) = 5 + 14 = 19 \\\\\n        (\\A\\B)_{12} &amp;= (1)(6) + (2)(8) = 6 + 16 = 22 \\\\\n        (\\A\\B)_{21} &amp;= (3)(5) + (4)(7) = 15 + 28 = 43 \\\\\n        (\\A\\B)_{22} &amp;= (3)(6) + (4)(8) = 18 + 32 = 50\n\\end{align*}\\]</span> Therefore: <span class=\"math display\">\\[\n    \\A\\B = \\begin{bmatrix} 1 &amp; 2 \\\\ 3 &amp; 4 \\end{bmatrix}\n\\begin{bmatrix} 5 &amp; 6 \\\\ 7 &amp; 8 \\end{bmatrix} = \\begin{bmatrix}\n19 &amp; 22 \\\\ 43 &amp; 50 \\end{bmatrix}\n\\]</span></p>",
+    "file": "ch00-foundations/07-matrices.html"
+  },
+  "exm-matrix-multiplication-dimensions": {
+    "type": "example",
+    "type_name": "Example",
+    "number": "",
+    "title": "Matrix Multiplication with Different Dimensions",
+    "title_html": "Matrix Multiplication with Different Dimensions",
+    "html": "<p>Let <span class=\"math inline\">\\(\\A = \\begin{bmatrix} 1 &amp; 2 &amp;\n3 \\\\ 4 &amp; 5 &amp; 6 \\end{bmatrix} \\in M_{2 \\times 3}(\\nR)\\)</span>\nand <span class=\"math inline\">\\(\\B = \\begin{bmatrix} 1 \\\\ 0 \\\\ -1\n\\end{bmatrix} \\in M_{3 \\times 1}(\\nR)\\)</span>. The product <span\nclass=\"math inline\">\\(\\A\\B \\in M_{2 \\times 1}(\\nR)\\)</span>: <span\nclass=\"math display\">\\[\n    \\A\\B = \\begin{bmatrix} 1 &amp; 2 &amp; 3 \\\\ 4 &amp; 5 &amp; 6\n\\end{bmatrix} \\begin{bmatrix} 1 \\\\ 0 \\\\ -1 \\end{bmatrix}\n    = \\begin{bmatrix} (1)(1) + (2)(0) + (3)(-1) \\\\ (4)(1) + (5)(0) +\n(6)(-1) \\end{bmatrix}\n    = \\begin{bmatrix} 1 + 0 - 3 \\\\ 4 + 0 - 6 \\end{bmatrix}\n    = \\begin{bmatrix} -2 \\\\ -2 \\end{bmatrix}\n\\]</span> Note that <span class=\"math inline\">\\(\\B\\A\\)</span> is\n<strong>not defined</strong> since the number of columns of <span\nclass=\"math inline\">\\(\\B\\)</span> (which is 1) does not equal the number\nof rows of <span class=\"math inline\">\\(\\A\\)</span> (which is 2).</p>",
+    "file": "ch00-foundations/07-matrices.html"
+  },
+  "exm-n-tuples": {
+    "type": "example",
+    "type_name": "Example",
+    "number": "",
+    "title": "n-Tuples",
+    "title_html": "<span class=\"math inline\">\\(n\\)</span>-Tuples",
+    "html": "<p>Here are examples of <span class=\"math inline\">\\(n\\)</span>-tuples\nfrom various sets:</p>\n<ol type=\"1\">\n<li><p><span class=\"math inline\">\\(\\nR^2\\)</span>: The Cartesian plane.\nElements include <span class=\"math inline\">\\((0, 0)\\)</span>, <span\nclass=\"math inline\">\\((1, 2)\\)</span>, <span class=\"math inline\">\\((-3,\n\\pi)\\)</span>, <span class=\"math inline\">\\((\\sqrt{2},\n-5.7)\\)</span>.</p></li>\n<li><p><span class=\"math inline\">\\(\\nR^3\\)</span>: 3-dimensional space.\nElements include <span class=\"math inline\">\\((1, 0, 0)\\)</span>, <span\nclass=\"math inline\">\\((1, 2, 3)\\)</span>, <span\nclass=\"math inline\">\\((-1, \\pi, e)\\)</span>.</p></li>\n<li><p><span class=\"math inline\">\\(\\nZ^2\\)</span>: Pairs of integers.\nElements include <span class=\"math inline\">\\((0, 0)\\)</span>, <span\nclass=\"math inline\">\\((1, -2)\\)</span>, <span class=\"math inline\">\\((5,\n7)\\)</span>. Note that <span class=\"math inline\">\\((\\frac{1}{2}, 3)\n\\notin \\nZ^2\\)</span>.</p></li>\n<li><p><span class=\"math inline\">\\(\\nC^2\\)</span>: Pairs of complex\nnumbers. Elements include <span class=\"math inline\">\\((1+i,\n2-3i)\\)</span>, <span class=\"math inline\">\\((i, 0)\\)</span>, <span\nclass=\"math inline\">\\((3, 4)\\)</span>.</p></li>\n<li><p><span class=\"math inline\">\\(\\{0, 1\\}^3\\)</span>: Binary 3-tuples.\nThis set has exactly 8 elements: <span class=\"math display\">\\[\n\\{0,1\\}^3 = \\{(0,0,0), (0,0,1), (0,1,0), (0,1,1), (1,0,0), (1,0,1),\n(1,1,0), (1,1,1)\\}\n\\]</span></p></li>\n</ol>\n<p>In general, if <span class=\"math inline\">\\(A\\)</span> is a finite set\nwith <span class=\"math inline\">\\(|A| = k\\)</span> elements, then <span\nclass=\"math inline\">\\(A^n\\)</span> has <span\nclass=\"math inline\">\\(k^n\\)</span> elements.</p>",
+    "file": "ch00-foundations/02-sets-and-notation.html"
+  },
+  "exm-negation-basic": {
+    "type": "example",
+    "type_name": "Example",
+    "number": "",
+    "title": "Basic Negation Examples",
+    "title_html": "Basic Negation Examples",
+    "html": "<p>Here are two simple examples of negating quantified statements:</p>\n<ol type=\"1\">\n<li><p>The negation of \u201c<span class=\"math inline\">\\(\\forall x \\in \\nR :\nx^2 \\geq 0\\)</span>\u201d is \u201c<span class=\"math inline\">\\(\\exists x \\in \\nR :\nx^2 &lt; 0\\)</span>.\u201d</p>\n<p>The original is true; the negation is false.</p></li>\n<li><p>The negation of \u201c<span class=\"math inline\">\\(\\exists n \\in \\nN :\nn\\)</span> is even\u201d is \u201c<span class=\"math inline\">\\(\\forall n \\in \\nN :\nn\\)</span> is odd.\u201d</p>\n<p>The original is true (take <span class=\"math inline\">\\(n =\n2\\)</span>); the negation is false.</p></li>\n</ol>",
+    "file": "ch00-foundations/01-logic.html"
+  },
+  "exm-negation-injectivity": {
+    "type": "example",
+    "type_name": "Example",
+    "number": "",
+    "title": "Negating the Definition of Injectivity",
+    "title_html": "Negating the Definition of Injectivity",
+    "html": "<p>Recall that a function <span class=\"math inline\">\\(f: A \\to\nB\\)</span> is <strong>injective</strong> if: <span\nclass=\"math display\">\\[\n        \\forall a_1, a_2 \\in A : f(a_1) = f(a_2) \\Rightarrow a_1 = a_2\n\\]</span></p>\n<p>To prove <span class=\"math inline\">\\(f\\)</span> is\n<strong>not</strong> injective, we negate this statement. Since <span\nclass=\"math inline\">\\(P \\Rightarrow Q\\)</span> is equivalent to <span\nclass=\"math inline\">\\(\\neg P \\lor Q\\)</span>, its negation is <span\nclass=\"math inline\">\\(P \\land \\neg Q\\)</span>. Thus: <span\nclass=\"math display\">\\[\n        \\exists a_1, a_2 \\in A : f(a_1) = f(a_2) \\land a_1 \\neq a_2\n\\]</span></p>\n<p>To show a function is not injective, find two\n<strong>distinct</strong> elements that map to the same value.</p>",
+    "file": "ch00-foundations/01-logic.html"
+  },
+  "exm-negation-surjectivity": {
+    "type": "example",
+    "type_name": "Example",
+    "number": "",
+    "title": "Negating the Definition of Surjectivity",
+    "title_html": "Negating the Definition of Surjectivity",
+    "html": "<p>A function <span class=\"math inline\">\\(f: A \\to B\\)</span> is\n<strong>surjective</strong> if: <span class=\"math display\">\\[\n        \\forall b \\in B, \\exists a \\in A : f(a) = b\n\\]</span></p>\n<p>The negation is: <span class=\"math display\">\\[\n        \\exists b \\in B, \\forall a \\in A : f(a) \\neq b\n\\]</span></p>\n<p>To prove <span class=\"math inline\">\\(f\\)</span> is\n<strong>not</strong> surjective, find a single element in the codomain\nthat no element of the domain maps to.</p>",
+    "file": "ch00-foundations/01-logic.html"
+  },
+  "exm-nested-quantifiers": {
+    "type": "example",
+    "type_name": "Example",
+    "number": "",
+    "title": "Nested Quantifiers",
+    "title_html": "Nested Quantifiers",
+    "html": "<p>Consider these two statements about real numbers:</p>\n<ol type=\"1\">\n<li><p><span class=\"math inline\">\\(\\forall x \\in \\nR, \\exists y \\in \\nR\n: y &gt; x\\)</span>.</p>\n<p>\u201cFor every real number <span class=\"math inline\">\\(x\\)</span>, there\nexists a real number <span class=\"math inline\">\\(y\\)</span> greater than\n<span class=\"math inline\">\\(x\\)</span>.\u201d This is\n<strong>true</strong>\u2014given any <span class=\"math inline\">\\(x\\)</span>,\nwe can take <span class=\"math inline\">\\(y = x + 1\\)</span>.</p></li>\n<li><p><span class=\"math inline\">\\(\\exists y \\in \\nR, \\forall x \\in \\nR\n: y &gt; x\\)</span>.</p>\n<p>\u201cThere exists a real number <span class=\"math inline\">\\(y\\)</span>\nthat is greater than all real numbers.\u201d This is\n<strong>false</strong>\u2014no such largest real number exists.</p></li>\n</ol>\n<p>The order of quantifiers changes the meaning entirely.</p>",
+    "file": "ch00-foundations/01-logic.html"
+  },
+  "exm-non-equivalence": {
+    "type": "example",
+    "type_name": "Example",
+    "number": "",
+    "title": "Non-Examples",
+    "title_html": "Non-Examples",
+    "html": "<p>The following relations fail to be equivalence relations:</p>\n<ol type=\"1\">\n<li><p>On <span class=\"math inline\">\\(\\nZ\\)</span>, the relation <span\nclass=\"math inline\">\\(a \\leq b\\)</span> is <strong>not</strong> an\nequivalence relation:</p>\n<ul>\n<li>Reflexive: Yes, <span class=\"math inline\">\\(a \\leq a\\)</span>.</li>\n<li>Symmetric: <strong>No.</strong> <span class=\"math inline\">\\(1 \\leq\n2\\)</span> but <span class=\"math inline\">\\(2 \\not\\leq 1\\)</span>.</li>\n</ul></li>\n<li><p>On <span class=\"math inline\">\\(\\nR\\)</span>, the relation <span\nclass=\"math inline\">\\(|a - b| &lt; 1\\)</span> is <strong>not</strong> an\nequivalence relation:</p>\n<ul>\n<li>Reflexive: Yes, <span class=\"math inline\">\\(|a - a| = 0 &lt;\n1\\)</span>.</li>\n<li>Symmetric: Yes.</li>\n<li>Transitive: <strong>No.</strong> We have <span\nclass=\"math inline\">\\(|0 - 0.6| &lt; 1\\)</span> and <span\nclass=\"math inline\">\\(|0.6 - 1.2| &lt; 1\\)</span>, but <span\nclass=\"math inline\">\\(|0 - 1.2| = 1.2 \\not&lt; 1\\)</span>.</li>\n</ul></li>\n</ol>",
+    "file": "ch00-foundations/04-relations.html"
+  },
+  "exm-quantifiers": {
+    "type": "example",
+    "type_name": "Example",
+    "number": "",
+    "title": "Quantified Statements",
+    "title_html": "Quantified Statements",
+    "html": "<p>Consider the following statements:</p>\n<ol type=\"1\">\n<li><p><span class=\"math inline\">\\(\\forall x \\in \\nR : x^2 \\geq\n0\\)</span>.</p>\n<p>This says \u201cevery real number squared is nonnegative.\u201d This is\n<strong>true</strong>.</p></li>\n<li><p><span class=\"math inline\">\\(\\exists x \\in \\nR : x^2 =\n-1\\)</span>.</p>\n<p>This says \u201cthere exists a real number whose square is <span\nclass=\"math inline\">\\(-1\\)</span>.\u201d This is <strong>false</strong> in\n<span class=\"math inline\">\\(\\nR\\)</span>, but becomes true if we replace\n<span class=\"math inline\">\\(\\nR\\)</span> with <span\nclass=\"math inline\">\\(\\nC\\)</span>.</p></li>\n<li><p><span class=\"math inline\">\\(\\forall x \\in \\nR : x &lt; x +\n1\\)</span>.</p>\n<p>This is <strong>true</strong> for all real numbers.</p></li>\n<li><p><span class=\"math inline\">\\(\\exists n \\in \\nZ : n^2 =\n2\\)</span>.</p>\n<p>This is <strong>false</strong>\u2014there is no integer whose square is\n2.</p></li>\n</ol>",
+    "file": "ch00-foundations/01-logic.html"
+  },
+  "exm-quotient-set": {
+    "type": "example",
+    "type_name": "Example",
+    "number": "",
+    "title": "Quotient Sets",
+    "title_html": "Quotient Sets",
+    "html": "<p>The following are examples of quotient sets:</p>\n<ol type=\"1\">\n<li><p><span class=\"math inline\">\\(\\nZ / {\\equiv_3} = \\{ [0], [1], [2]\n\\}\\)</span> has three elements. This is often written <span\nclass=\"math inline\">\\(\\nZ / 3\\nZ\\)</span> or <span\nclass=\"math inline\">\\(\\nZ_3\\)</span>.</p></li>\n<li><p>The quotient of <span class=\"math inline\">\\(\\nR\\)</span> by \u201csame\nabsolute value\u201d is in bijection with <span class=\"math inline\">\\([0,\n\\infty)\\)</span>\u2014each equivalence class is determined by its absolute\nvalue.</p></li>\n</ol>",
+    "file": "ch00-foundations/04-relations.html"
+  },
+  "exm-relations": {
+    "type": "example",
+    "type_name": "Example",
+    "number": "",
+    "title": "Examples of Relations",
+    "title_html": "Examples of Relations",
+    "html": "<p>Here are some common examples of relations:</p>\n<ol type=\"1\">\n<li><p>On <span class=\"math inline\">\\(\\nZ\\)</span>, define <span\nclass=\"math inline\">\\(a \\sim b\\)</span> if <span class=\"math inline\">\\(a\n\\leq b\\)</span>. This is the \u201cless than or equal to\u201d relation.</p></li>\n<li><p>On <span class=\"math inline\">\\(\\nR\\)</span>, define <span\nclass=\"math inline\">\\(a \\sim b\\)</span> if <span\nclass=\"math inline\">\\(|a - b| &lt; 1\\)</span>. This says <span\nclass=\"math inline\">\\(a\\)</span> and <span\nclass=\"math inline\">\\(b\\)</span> are \u201cclose.\u201d</p></li>\n<li><p>On the set of all people, define <span class=\"math inline\">\\(a\n\\sim b\\)</span> if <span class=\"math inline\">\\(a\\)</span> and <span\nclass=\"math inline\">\\(b\\)</span> have the same birthday.</p></li>\n</ol>",
+    "file": "ch00-foundations/04-relations.html"
+  },
+  "exm-row-equivalence": {
+    "type": "example",
+    "type_name": "Example",
+    "number": "",
+    "title": "Row Equivalence",
+    "title_html": "Row Equivalence",
+    "html": "<p>Two matrices are <strong>row equivalent</strong> if one can be\nobtained from the other by a sequence of elementary row operations. This\nis an equivalence relation on <span class=\"math inline\">\\(M_{m \\times\nn}(F)\\)</span>.</p>",
+    "file": "ch00-foundations/04-relations.html"
+  },
+  "exm-set-builder": {
+    "type": "example",
+    "type_name": "Example",
+    "number": "",
+    "title": "Set-Builder Examples",
+    "title_html": "Set-Builder Examples",
+    "html": "<p>The following sets are defined using set-builder notation:</p>\n<ol type=\"1\">\n<li><p><span class=\"math inline\">\\(\\{ x \\in \\nR : x^2 &lt; 4 \\} = (-2,\n2)\\)</span>, the open interval from <span\nclass=\"math inline\">\\(-2\\)</span> to <span\nclass=\"math inline\">\\(2\\)</span>.</p></li>\n<li><p><span class=\"math inline\">\\(\\{ n \\in \\nZ : n \\text{ is even} \\} =\n\\{ \\ldots, -4, -2, 0, 2, 4, \\ldots \\}\\)</span>.</p></li>\n<li><p><span class=\"math inline\">\\(\\{ (x, y) \\in \\nR^2 : x + y = 1\n\\}\\)</span> is the line through <span class=\"math inline\">\\((1,\n0)\\)</span> and <span class=\"math inline\">\\((0, 1)\\)</span>.</p></li>\n</ol>",
+    "file": "ch00-foundations/02-sets-and-notation.html"
+  },
+  "exm-set-operations": {
+    "type": "example",
+    "type_name": "Example",
+    "number": "",
+    "title": "Set Operations",
+    "title_html": "Set Operations",
+    "html": "<p>Let <span class=\"math inline\">\\(A = \\{ 1, 2, 3, 4 \\}\\)</span> and\n<span class=\"math inline\">\\(B = \\{ 3, 4, 5, 6 \\}\\)</span>. Then:</p>\n<ul>\n<li><span class=\"math inline\">\\(A \\cup B = \\{ 1, 2, 3, 4, 5, 6\n\\}\\)</span></li>\n<li><span class=\"math inline\">\\(A \\cap B = \\{ 3, 4 \\}\\)</span></li>\n<li><span class=\"math inline\">\\(A \\setminus B = \\{ 1, 2 \\}\\)</span></li>\n<li><span class=\"math inline\">\\(B \\setminus A = \\{ 5, 6 \\}\\)</span></li>\n</ul>",
+    "file": "ch00-foundations/02-sets-and-notation.html"
+  },
+  "exm-set-operations-intervals": {
+    "type": "example",
+    "type_name": "Example",
+    "number": "",
+    "title": "Set Operations with Intervals",
+    "title_html": "Set Operations with Intervals",
+    "html": "<p>Let <span class=\"math inline\">\\(A = [0, 2]\\)</span> and <span\nclass=\"math inline\">\\(B = [1, 3]\\)</span> be intervals in <span\nclass=\"math inline\">\\(\\nR\\)</span>. Then:</p>\n<ul>\n<li><span class=\"math inline\">\\(A \\cup B = [0, 3]\\)</span></li>\n<li><span class=\"math inline\">\\(A \\cap B = [1, 2]\\)</span></li>\n<li><span class=\"math inline\">\\(A \\setminus B = [0, 1)\\)</span></li>\n</ul>",
+    "file": "ch00-foundations/02-sets-and-notation.html"
+  },
+  "exm-similarity": {
+    "type": "example",
+    "type_name": "Example",
+    "number": "",
+    "title": "Matrix Similarity",
+    "title_html": "Matrix Similarity",
+    "html": "<p>On <span class=\"math inline\">\\(M_n(F)\\)</span>, define <span\nclass=\"math inline\">\\(\\A \\sim \\B\\)</span> if there exists an invertible\nmatrix <span class=\"math inline\">\\(\\P \\in M_n(F)\\)</span> such that\n<span class=\"math inline\">\\(\\B = \\P^{-1}\\A\\P\\)</span>. This is called\n<strong>similarity</strong>.</p>\n<ul>\n<li>Reflexive: <span class=\"math inline\">\\(\\A = \\I^{-1}\\A\\I\\)</span>, so\n<span class=\"math inline\">\\(\\A \\sim \\A\\)</span>.</li>\n<li>Symmetric: If <span class=\"math inline\">\\(\\B = \\P^{-1}\\A\\P\\)</span>,\nthen <span class=\"math inline\">\\(\\A = \\P\\B\\P^{-1} =\n(\\P^{-1})^{-1}\\B(\\P^{-1})\\)</span>, so <span class=\"math inline\">\\(\\B\n\\sim \\A\\)</span>.</li>\n<li>Transitive: If <span class=\"math inline\">\\(\\B = \\P^{-1}\\A\\P\\)</span>\nand <span class=\"math inline\">\\(\\C = \\Q^{-1}\\B\\Q\\)</span>, then <span\nclass=\"math inline\">\\(\\C = \\Q^{-1}\\P^{-1}\\A\\P\\Q =\n(\\P\\Q)^{-1}\\A(\\P\\Q)\\)</span>.</li>\n</ul>\n<p>Similar matrices represent the same linear transformation in\ndifferent bases. They share many properties: determinant, trace,\neigenvalues, and characteristic polynomial.</p>",
+    "file": "ch00-foundations/04-relations.html"
+  },
+  "exm-special-matrices": {
+    "type": "example",
+    "type_name": "Example",
+    "number": "",
+    "title": "Examples of Special Matrices",
+    "title_html": "Examples of Special Matrices",
+    "html": "<p>Here are concrete examples illustrating the special types of matrices\ndefined above:</p>\n<ul>\n<li><strong>Transpose:</strong> <span\nclass=\"math inline\">\\(\\begin{bmatrix} 1 &amp; 2 &amp; 3 \\\\ 4 &amp; 5\n&amp; 6 \\end{bmatrix}^\\top = \\begin{bmatrix} 1 &amp; 4 \\\\ 2 &amp; 5 \\\\ 3\n&amp; 6 \\end{bmatrix}\\)</span>.</li>\n<li><strong>Symmetric:</strong> <span\nclass=\"math inline\">\\(\\begin{bmatrix} 1 &amp; 2 &amp; 3 \\\\ 2 &amp; 4\n&amp; 5 \\\\ 3 &amp; 5 &amp; 6 \\end{bmatrix}\\)</span> is symmetric since\n<span class=\"math inline\">\\(a_{ij} = a_{ji}\\)</span>.</li>\n<li><strong>Diagonal:</strong> <span class=\"math inline\">\\(\\diag(3, -1,\n0) = \\begin{bmatrix} 3 &amp; 0 &amp; 0 \\\\ 0 &amp; -1 &amp; 0 \\\\ 0 &amp;\n0 &amp; 0 \\end{bmatrix}\\)</span>.</li>\n<li><strong>Upper Triangular:</strong> <span\nclass=\"math inline\">\\(\\begin{bmatrix} 1 &amp; 2 &amp; 3 \\\\ 0 &amp; 4\n&amp; 5 \\\\ 0 &amp; 0 &amp; 6 \\end{bmatrix}\\)</span>.</li>\n</ul>",
+    "file": "ch00-foundations/07-matrices.html"
+  },
+  "exm-subsets": {
+    "type": "example",
+    "type_name": "Example",
+    "number": "",
+    "title": "Subset Examples",
+    "title_html": "Subset Examples",
+    "html": "<p>The following illustrate subset relationships:</p>\n<ol type=\"1\">\n<li><p><span class=\"math inline\">\\(\\nN \\subsetneq \\nZ \\subsetneq \\nQ\n\\subsetneq \\nR \\subsetneq \\nC\\)</span>.</p></li>\n<li><p><span class=\"math inline\">\\(\\{ 1, 2 \\} \\subseteq \\{ 1, 2, 3\n\\}\\)</span>, and <span class=\"math inline\">\\(\\{ 1, 2 \\} \\subsetneq \\{ 1,\n2, 3 \\}\\)</span>.</p></li>\n<li><p>For any set <span class=\"math inline\">\\(A\\)</span>: <span\nclass=\"math inline\">\\(\\varnothing \\subseteq A\\)</span> and <span\nclass=\"math inline\">\\(A \\subseteq A\\)</span>.</p></li>\n<li><p><span class=\"math inline\">\\(\\{ x \\in \\nR : x^2 = 1 \\} = \\{ -1, 1\n\\} \\subseteq \\nZ\\)</span>.</p></li>\n</ol>",
+    "file": "ch00-foundations/02-sets-and-notation.html"
+  },
+  "exm-trace": {
+    "type": "example",
+    "type_name": "Example",
+    "number": "",
+    "title": "Trace",
+    "title_html": "Trace",
+    "html": "<p>Let <span class=\"math inline\">\\(\\A = \\begin{bmatrix} 1 &amp; 2 &amp;\n3 \\\\ 4 &amp; 5 &amp; 6 \\\\ 7 &amp; 8 &amp; 9 \\end{bmatrix}\\)</span>. Then\n<span class=\"math inline\">\\(\\tr(\\A) = 1 + 5 + 9 = 15\\)</span>.</p>",
+    "file": "ch00-foundations/07-matrices.html"
+  },
+  "exm-zero-identity": {
+    "type": "example",
+    "type_name": "Example",
+    "number": "",
+    "title": "Zero and Identity Matrices",
+    "title_html": "Zero and Identity Matrices",
+    "html": "<p><span class=\"math display\">\\[\n    \\O_{2 \\times 3} = \\begin{bmatrix} 0 &amp; 0 &amp; 0 \\\\ 0 &amp; 0\n&amp; 0 \\end{bmatrix}, \\quad\n    \\I_2 = \\begin{bmatrix} 1 &amp; 0 \\\\ 0 &amp; 1 \\end{bmatrix}, \\quad\n    \\I_3 = \\begin{bmatrix} 1 &amp; 0 &amp; 0 \\\\ 0 &amp; 1 &amp; 0 \\\\ 0\n&amp; 0 &amp; 1 \\end{bmatrix}.\n\\]</span></p>",
+    "file": "ch00-foundations/07-matrices.html"
+  },
+  "thm-bijective-iff-invertible": {
+    "type": "theorem",
+    "type_name": "Theorem",
+    "number": "0.3.3",
+    "title": "Bijective if and only if Invertible",
+    "title_html": "Bijective if and only if Invertible",
+    "html": "<p>A function <span class=\"math inline\">\\(f: A \\to B\\)</span> is\nbijective if and only if it has an inverse <span\nclass=\"math inline\">\\(f^{-1}: B \\to A\\)</span>.</p>\n<p>Moreover, if the inverse exists, it is unique.</p>",
+    "file": "ch00-foundations/03-functions.html"
+  },
+  "thm-composition-associative": {
+    "type": "theorem",
+    "type_name": "Theorem",
+    "number": "0.3.1",
+    "title": "Associativity of Composition",
+    "title_html": "Associativity of Composition",
+    "html": "<p>Let <span class=\"math inline\">\\(f: A \\to B\\)</span>, <span\nclass=\"math inline\">\\(g: B \\to C\\)</span>, and <span\nclass=\"math inline\">\\(h: C \\to D\\)</span> be functions. Then: <span\nclass=\"math display\">\\[\n        (h \\circ g) \\circ f = h \\circ (g \\circ f)\n\\]</span> That is, function composition is\n<strong>associative</strong>.</p>",
+    "file": "ch00-foundations/03-functions.html"
+  },
+  "thm-composition-preserves": {
+    "type": "theorem",
+    "type_name": "Theorem",
+    "number": "0.3.2",
+    "title": "Composition Preserves Injectivity and Surjectivity",
+    "title_html": "Composition Preserves Injectivity and Surjectivity",
+    "html": "<p>Let <span class=\"math inline\">\\(f: A \\to B\\)</span> and <span\nclass=\"math inline\">\\(g: B \\to C\\)</span> be functions.</p>\n<ol type=\"1\">\n<li>If <span class=\"math inline\">\\(f\\)</span> and <span\nclass=\"math inline\">\\(g\\)</span> are both injective, then <span\nclass=\"math inline\">\\(g \\circ f\\)</span> is injective.</li>\n<li>If <span class=\"math inline\">\\(f\\)</span> and <span\nclass=\"math inline\">\\(g\\)</span> are both surjective, then <span\nclass=\"math inline\">\\(g \\circ f\\)</span> is surjective.</li>\n<li>If <span class=\"math inline\">\\(f\\)</span> and <span\nclass=\"math inline\">\\(g\\)</span> are both bijective, then <span\nclass=\"math inline\">\\(g \\circ f\\)</span> is bijective.</li>\n</ol>",
+    "file": "ch00-foundations/03-functions.html"
+  },
+  "thm-inverse-of-composition": {
+    "type": "theorem",
+    "type_name": "Theorem",
+    "number": "0.3.4",
+    "title": "Inverse of a Composition",
+    "title_html": "Inverse of a Composition",
+    "html": "<p>If <span class=\"math inline\">\\(f: A \\to B\\)</span> and <span\nclass=\"math inline\">\\(g: B \\to C\\)</span> are both bijective, then <span\nclass=\"math inline\">\\(g \\circ f\\)</span> is bijective and: <span\nclass=\"math display\">\\[\n        (g \\circ f)^{-1} = f^{-1} \\circ g^{-1}\n\\]</span></p>",
+    "file": "ch00-foundations/03-functions.html"
+  },
+  "thm-matrix-addition-properties": {
+    "type": "theorem",
+    "type_name": "Theorem",
+    "number": "0.7.1",
+    "title": "Properties of Matrix Addition",
+    "title_html": "Properties of Matrix Addition",
+    "html": "<p>Let <span class=\"math inline\">\\(\\A, \\B, \\C \\in M_{m \\times\nn}(F)\\)</span>. Then:</p>\n<ol type=\"1\">\n<li><span class=\"math inline\">\\(\\A + \\B = \\B + \\A\\)</span>\n(Commutativity)</li>\n<li><span class=\"math inline\">\\((\\A + \\B) + \\C = \\A + (\\B + \\C)\\)</span>\n(Associativity)</li>\n<li><span class=\"math inline\">\\(\\A + \\O = \\A\\)</span> (Additive\nidentity)</li>\n<li><span class=\"math inline\">\\(\\A + (-\\A) = \\O\\)</span> (Additive\ninverse)</li>\n</ol>",
+    "file": "ch00-foundations/07-matrices.html"
+  },
+  "thm-matrix-multiplication-properties": {
+    "type": "theorem",
+    "type_name": "Theorem",
+    "number": "0.7.2",
+    "title": "Properties of Matrix Multiplication",
+    "title_html": "Properties of Matrix Multiplication",
+    "html": "<p>Let <span class=\"math inline\">\\(\\A, \\B, \\C\\)</span> be matrices of\ncompatible dimensions. Then:</p>\n<ol type=\"1\">\n<li><span class=\"math inline\">\\((\\A\\B)\\C = \\A(\\B\\C)\\)</span>\n(Associativity)</li>\n<li><span class=\"math inline\">\\(\\A(\\B + \\C) = \\A\\B + \\A\\C\\)</span> (Left\ndistributivity)</li>\n<li><span class=\"math inline\">\\((\\A + \\B)\\C = \\A\\C + \\B\\C\\)</span>\n(Right distributivity)</li>\n<li><span class=\"math inline\">\\(\\A\\I = \\I\\A = \\A\\)</span>\n(Multiplicative identity)</li>\n</ol>",
+    "file": "ch00-foundations/07-matrices.html"
+  },
+  "thm-partition": {
+    "type": "theorem",
+    "type_name": "Theorem",
+    "number": "0.4.1",
+    "title": "Equivalence Classes Partition the Set",
+    "title_html": "Equivalence Classes Partition the Set",
+    "html": "<p>Let <span class=\"math inline\">\\(\\sim\\)</span> be an equivalence\nrelation on <span class=\"math inline\">\\(A\\)</span>. Then:</p>\n<ol type=\"1\">\n<li>Every element belongs to some equivalence class: <span\nclass=\"math inline\">\\(a \\in [a]\\)</span>.</li>\n<li>Two equivalence classes are either equal or disjoint: <span\nclass=\"math inline\">\\([a] = [b]\\)</span> or <span\nclass=\"math inline\">\\([a] \\cap [b] = \\varnothing\\)</span>.</li>\n<li>The union of all equivalence classes is <span\nclass=\"math inline\">\\(A\\)</span>.</li>\n</ol>\n<p>In other words, the equivalence classes form a\n<strong>partition</strong> of <span\nclass=\"math inline\">\\(A\\)</span>.</p>",
+    "file": "ch00-foundations/04-relations.html"
+  },
+  "thm-trace-properties": {
+    "type": "theorem",
+    "type_name": "Theorem",
+    "number": "0.7.4",
+    "title": "Properties of Trace",
+    "title_html": "Properties of Trace",
+    "html": "<p>Let <span class=\"math inline\">\\(\\A, \\B \\in M_n(F)\\)</span> and <span\nclass=\"math inline\">\\(c \\in F\\)</span>. Then:</p>\n<ol type=\"1\">\n<li><span class=\"math inline\">\\(\\tr(\\A + \\B) = \\tr(\\A) +\n\\tr(\\B)\\)</span></li>\n<li><span class=\"math inline\">\\(\\tr(c\\A) = c\\tr(\\A)\\)</span></li>\n<li><span class=\"math inline\">\\(\\tr(\\A^\\top) = \\tr(\\A)\\)</span></li>\n<li><span class=\"math inline\">\\(\\tr(\\A\\B) = \\tr(\\B\\A)\\)</span> (Cyclic\nproperty)</li>\n</ol>",
+    "file": "ch00-foundations/07-matrices.html"
+  },
+  "thm-transpose-properties": {
+    "type": "theorem",
+    "type_name": "Theorem",
+    "number": "0.7.3",
+    "title": "Properties of Transpose",
+    "title_html": "Properties of Transpose",
+    "html": "<p>Let <span class=\"math inline\">\\(\\A, \\B\\)</span> be matrices of\ncompatible sizes and <span class=\"math inline\">\\(c \\in F\\)</span>.\nThen:</p>\n<ol type=\"1\">\n<li><span class=\"math inline\">\\((\\A^\\top)^\\top = \\A\\)</span></li>\n<li><span class=\"math inline\">\\((\\A + \\B)^\\top = \\A^\\top +\n\\B^\\top\\)</span></li>\n<li><span class=\"math inline\">\\((c\\A)^\\top = c\\A^\\top\\)</span></li>\n<li><span class=\"math inline\">\\((\\A\\B)^\\top = \\B^\\top\\A^\\top\\)</span>\n(Reversal rule)</li>\n</ol>",
+    "file": "ch00-foundations/07-matrices.html"
+  }
+}
