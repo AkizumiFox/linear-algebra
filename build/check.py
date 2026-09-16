@@ -149,6 +149,11 @@ def check(book: Book, quiet: bool = False) -> bool:
             if ref not in labels and re.match(r"^[A-Za-z]+-", ref):
                 errors.append(f"unresolved reference @{ref} in {entry['source']}")
 
+    # Component problems found by filters/components.lua (bad plot expressions, widgets
+    # without print content, ...)
+    for entry in scan["files"].values():
+        errors.extend(entry.get("errors", []))
+
     # Cross-reference links in the built site must point at an existing page and anchor
     if book.html_dir.exists():
         errors.extend(check_xref_links(book.html_dir))

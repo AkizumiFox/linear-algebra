@@ -64,7 +64,22 @@ class FixtureBookCase(unittest.TestCase):
         return json.loads(self.book.labels_file.read_text())["crossref_labels"]
 
 
+BROKEN_COMPONENTS = """# Broken Components
+
+::: {.plot fn="sin(2x)"}
+:::
+
+::: {.widget src="widgets/missing.js"}
+No print block.
+:::
+"""
+
+
 class TestHtmlBuild(FixtureBookCase):
+
+    @classmethod
+    def prepare(cls, book_dir: Path):
+        (book_dir / "src" / "ch02-more" / "03-broken.md").write_text(BROKEN_COMPONENTS)
 
     def test_numbering_shared_and_independent_counters(self):
         numbers = {k: v["number"] for k, v in self.labels().items()}
@@ -139,6 +154,36 @@ class TestHtmlBuild(FixtureBookCase):
         self.assertEqual(result.returncode, 1)
         self.assertIn("unresolved reference @thm-missing in src/ch02-more/01-refs.md", result.stdout)
 
+    def test_check_reports_broken_components(self):
+        result = run_build(self.book_dir, "check")
+        self.assertIn('plot fn="sin(2x)" in src/ch02-more/03-broken.md: missing \'*\' before \'x\'', result.stdout)
+        self.assertIn("widget file not found: widgets/missing.js", result.stdout)
+        self.assertIn("has no ::: {.print} content", result.stdout)
+
+    # -- Interactive components ------------------------------------------------
+
+    def test_code_cells(self):
+        page = self.page("ch02-more/02-interactive.html")
+        self.assertRegex(page, r'<div id="cell-matrix" class="code-cell"\s+data-lang="python"')
+        self.assertEqual(page.count('class="code-cell-run"'), 2)
+        self.assertIn('class="sourceCode python"', page)          # the plain listing is not a cell
+        self.assertIn("<style>", page)                             # highlighting CSS is included
+
+    def test_components_script_only_where_used(self):
+        self.assertIn("components.js?v=", self.page("ch02-more/02-interactive.html"))
+        self.assertNotIn("components.js", self.page("ch02-more/01-refs.html"))
+        for name in ("cell.js", "pyodide-worker.js", "plot.js", "expression.js", "widget.js", "jsxgraph.js"):
+            self.assertTrue((self.html / "components" / name).exists(), name)
+        self.assertTrue((self.html / "widgets" / "linear-map.js").exists())
+
+    def test_plot_and_widget_html(self):
+        page = self.page("ch02-more/02-interactive.html")
+        self.assertIn('data-fn="sin(a*x); a*cos(x)/2"', page)
+        self.assertIn('data-params="a=1:0..3"', page)
+        self.assertIn('class="plot-caption"', page)
+        self.assertIn('data-src="../widgets/linear-map.js"', page)
+        self.assertIn('class="widget-fallback"', page)
+
 
 class TestFullBuild(FixtureBookCase):
     """Without the broken reference, the whole book builds and check passes, which
@@ -160,6 +205,14 @@ class TestFullBuild(FixtureBookCase):
         self.assertTrue(self.book.book_pdf.exists())
         self.assertTrue((self.book.pdf_dir / "ch01-basics" / "01-first.pdf").exists())
         self.assertTrue((self.html / "book" / "book.pdf").exists())
+
+    def test_pdf_components(self):
+        tex = (self.book.build_dir / "tmp" / "pdf-single" / "ch02-more" / "02-interactive.tex").read_text()
+        self.assertEqual(tex.count(r"\begin{lstlisting}[language=Python]"), 2)
+        self.assertIn(r"\addplot[thick, blue] {sin(((1)*x))};", tex)       # parameter at its default
+        self.assertIn(r"\addplot[thick, blue] {((x^3)-(3*x))};", tex)
+        self.assertIn("parallelogram spanned by the columns", tex)          # widget print content
+        self.assertNotIn("widget-mount", tex)
 
     def test_pdf_reference_text(self):
         tex = (self.book.build_dir / "tmp" / "latex-book" / "book.tex").read_text()

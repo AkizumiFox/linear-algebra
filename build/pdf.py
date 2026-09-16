@@ -155,6 +155,9 @@ def build_book(book: Book) -> bool:
         "is-preface": True,
         "environment_settings": book.environment_settings,
         "crossref-labels-file": str(book.labels_file),
+        "book-root": str(book.root),
+        "engine-root": str(book.filters_dir.parent),
+        "source-path": "book",
     }), encoding="utf-8")
 
     filters = book.filters_dir
@@ -172,6 +175,7 @@ def build_book(book: Book) -> bool:
         "--resource-path", ":".join([str(book.src_dir)] + [str(c.directory) for c in book.chapters]),
         "--template", str(book.latex_template),
         "--lua-filter", str(filters / "format-visibility.lua"),
+        "--lua-filter", str(filters / "components.lua"),
         "--lua-filter", str(filters / "enumerate.lua"),
         "--lua-filter", str(filters / "theorems.lua"),
         "--include-in-header", str(book.engine_file("latex/preamble-book.tex")),

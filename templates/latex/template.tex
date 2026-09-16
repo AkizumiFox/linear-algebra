@@ -17,6 +17,11 @@ $endfor$
 \author{$if(author)$$author$$else$Anonymous$endif$}
 \date{$if(date)$$date$$else$\today$endif$}
 
+% Syntax highlighting for fenced code blocks (defines Shaded/Highlighting)
+$if(highlighting-macros)$
+$highlighting-macros$
+$endif$
+
 % Hyperref setup (skipped in latex-template, so load here)
 \usepackage[colorlinks=true,linkcolor=blue,urlcolor=blue]{hyperref}
 

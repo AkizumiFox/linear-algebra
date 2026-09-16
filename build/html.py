@@ -34,12 +34,20 @@ def copy_html_assets(book: Book) -> str:
     assets = {
         "styles.css": book.html_styles.read_bytes(),
         "main.js": book.engine_file("templates/html/main.js").read_bytes(),
+        "components.js": book.engine_file("templates/html/components.js").read_bytes(),
         "mathjax-macros.js": mathjax_macros_js(book.macros_file).encode("utf-8"),
     }
+    # Component modules, and widgets from the engine and the book (the book's win)
+    for directory, prefix in ((ENGINE_ROOT / "templates" / "html" / "components", "components"),
+                              (ENGINE_ROOT / "widgets", "widgets"), (book.root / "widgets", "widgets")):
+        if directory.is_dir():
+            for path in sorted(directory.glob("*.js")):
+                assets[f"{prefix}/{path.name}"] = path.read_bytes()
     digest = hashlib.sha1()
     for name, content in assets.items():
         digest.update(content)
         target = out / name
+        target.parent.mkdir(parents=True, exist_ok=True)
         if not target.exists() or target.read_bytes() != content:
             target.write_bytes(content)
     return digest.hexdigest()[:10]

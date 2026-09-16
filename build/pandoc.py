@@ -10,7 +10,7 @@ import subprocess
 from pathlib import Path
 from typing import Optional
 
-from .book import Book, Page
+from .book import Book, Page, ENGINE_ROOT
 from .utils import print_error, print_warning, run_with_crash_retry
 
 MARKDOWN_FORMAT = "markdown+tex_math_single_backslash"
@@ -34,7 +34,12 @@ def page_metadata(book: Book, page: Page, output_format: str, extra: Optional[di
         "pagetitle": f"{page.number} {page.title}" if page.number else page.title,
         "tikz-cache-dir": str(book.tikz_cache_dir),
         "page-shard": page.shard,
+        "book-root": str(book.root),
+        "engine-root": str(ENGINE_ROOT),
+        "source-path": str(page.source.relative_to(book.root)),
     }
+    if book.config.get("deploy-domain"):
+        metadata["page-url"] = f"https://{book.config['deploy-domain'].strip()}/{page.html_path}"
     if book.labels_file.exists():
         metadata["crossref-labels-file"] = str(book.labels_file)
 
@@ -86,6 +91,7 @@ def build_pandoc_command(book: Book, page: Page, output_file: Path, output_forma
         "--standalone",
         "-f", MARKDOWN_FORMAT,
         "--lua-filter", str(filters / "format-visibility.lua"),
+        "--lua-filter", str(filters / "components.lua"),
         "--lua-filter", str(filters / "tikz.lua"),
         "--lua-filter", str(filters / "enumerate.lua"),
         "--lua-filter", str(filters / "theorems.lua"),

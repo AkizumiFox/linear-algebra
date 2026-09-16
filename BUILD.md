@@ -49,6 +49,61 @@ after `./build.py all`, since the numbering comparison reads the LaTeX `.aux` fi
 - Macros: add them to `latex/macros.tex` (`\def`, `\newcommand`, `\providecommand`,
   `\DeclareMathOperator`). The website's MathJax macros are generated from this file.
 
+## Interactive components
+
+Each component has a web form and a print form, so the PDF never has gaps. Pages without
+components load no extra JavaScript. `./build.py check` reports bad plot expressions,
+widgets without print content and missing widget files.
+
+**Runnable Python cell**
+
+````
+```{.python .run #cell-eigen packages="numpy"}
+import numpy as np
+np.linalg.eigvals(np.array([[2, 1], [1, 3]]))
+```
+````
+
+- Web: an editable cell with a Run button (Shift+Enter in the editor). Python runs in the
+  reader's browser via Pyodide, downloaded on the first Run. Cells on a page share one
+  namespace, and running a cell first runs earlier cells that have not run. Imports of
+  bundled packages (numpy, scipy, sympy, pandas, matplotlib, networkx, statsmodels,
+  scikit-learn, ...) load automatically; `packages` is only needed for packages that are
+  not imported by name. matplotlib figures are shown as images. Stop ends a long run.
+- PDF: a code listing, followed by a link to the cell online when `deploy-domain` is set.
+
+**Function plot**
+
+```
+::: {.plot fn="sin(a*x); cos(x)" x="-6.28,6.28" y="-2,2" params="a=1:0..3"}
+Optional caption.
+:::
+```
+
+- `fn`: one or more expressions separated by `;`. Allowed: numbers, `x`, parameters, `pi`,
+  `e`, `+ - * / ^`, parentheses, `sin cos tan asin acos atan sinh cosh tanh exp log sqrt abs`
+  (`log` is natural, angles in radians). Multiplication must be written (`2*x`).
+- `x`: range (default `-5,5`). `y`: range (default: chosen from the curves).
+- `params`: `name=default:min..max`, comma-separated; each gets a slider.
+- Web: JSXGraph. PDF: pgfplots with each parameter at its default.
+
+**Widget** (custom JavaScript)
+
+```
+::: {.widget src="widgets/linear-map.js" matrix="2,1,0,1"}
+::: {.print}
+What the PDF shows instead (text, or a TikZ figure).
+:::
+:::
+```
+
+- `src` is a JavaScript module in the book's `widgets/` directory, or one of the engine's
+  (`widgets/linear-map.js`: the image of the unit square under a 2×2 matrix whose column
+  vectors can be dragged). Its default export is called as
+  `mount(element, options, { loadJSXGraph, ensureId, COLORS })`, where `options` holds the
+  div's other attributes. The print content is shown until the widget has mounted.
+- PDF: only the `::: {.print}` content.
+
 ## Another book
 
 The engine (`build/`, `filters/`, `templates/`, `latex/*.sty`) can build any book directory:

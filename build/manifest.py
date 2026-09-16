@@ -28,6 +28,7 @@ def _scan_meta_file(book: Book):
 def _scan_key(book: Book, page: Page) -> str:
     digest = hashlib.sha1()
     digest.update((book.filters_dir / "theorems.lua").read_bytes())
+    digest.update((book.filters_dir / "components.lua").read_bytes())
     digest.update(json.dumps(book.environment_settings, sort_keys=True).encode())
     digest.update(f"{page.chapter_number}:{page.section}:{page.html_path}".encode())
     digest.update(page.source.read_bytes())
@@ -43,9 +44,13 @@ def _scan_page(book: Book, page: Page, meta_file) -> dict | None:
         "pandoc", str(page.source),
         "--from", "markdown+tex_math_single_backslash",
         "--to", "json",
+        "--lua-filter", str(book.filters_dir / "components.lua"),
         "--lua-filter", str(book.filters_dir / "theorems.lua"),
         "--metadata-file", str(meta_file),
         "--metadata", "scan_mode=true",
+        "--metadata", f"book-root={book.root}",
+        "--metadata", f"engine-root={book.filters_dir.parent}",
+        "--metadata", f"source-path={page.source.relative_to(book.root)}",
         "--metadata", f"chapter-num={page.chapter_number}",
         "--metadata", f"section-num={page.section}",
     ]
@@ -61,10 +66,13 @@ def _scan_page(book: Book, page: Page, meta_file) -> dict | None:
         for line in result.stderr.strip().splitlines():
             print(f"    {line}")
 
+    errors = [json.loads(line[len("COMPONENT_ERROR:"):])["message"]
+              for line in result.stdout.splitlines() if line.startswith("COMPONENT_ERROR:")]
     for line in result.stdout.splitlines():
         if line.startswith("SCAN_RESULT:"):
             data = json.loads(line[len("SCAN_RESULT:"):])
-            data = {"labels": data.get("labels") or {}, "refs": data.get("refs") or [], "text": data.get("text") or ""}
+            data = {"labels": data.get("labels") or {}, "refs": data.get("refs") or [], "text": data.get("text") or "",
+                    "errors": errors}
             cache_file.parent.mkdir(parents=True, exist_ok=True)
             cache_file.write_text(json.dumps(data), encoding="utf-8")
             return data
@@ -96,6 +104,7 @@ def scan_labels(book: Book) -> dict:
             "labels": sorted(data["labels"]),
             "refs": data["refs"],
             "text": data["text"],
+            "errors": data.get("errors", []),
         }
 
     book.build_dir.mkdir(parents=True, exist_ok=True)

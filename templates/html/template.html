@@ -41,6 +41,11 @@
     <script src="https://cdn.jsdelivr.net/npm/tippy.js@6.3.7/dist/tippy-bundle.umd.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tippy.js@6.3.7/animations/shift-away.css">
 
+    $if(highlighting-css)$
+    <style>
+$highlighting-css$
+    </style>
+    $endif$
     $for(header-includes)$
     $header-includes$
     $endfor$
@@ -154,6 +159,9 @@
 
     <!-- Tooltip Script -->
     <script src="$if(asset-prefix)$$asset-prefix$$endif$main.js?v=$asset-version$"></script>
+    $if(has-components)$
+    <script type="module" src="$if(asset-prefix)$$asset-prefix$$endif$components.js?v=$asset-version$"></script>
+    $endif$
     $if(dev-reload)$
     <script>new EventSource('/__reload').onmessage = () => location.reload();</script>
     $endif$

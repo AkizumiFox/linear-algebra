@@ -24,3 +24,12 @@
 \newenvironment{corollary*}{\begin{cBox}\begin{corollaryT*}}{\end{corollaryT*}\end{cBox}}
 \newenvironment{lemma*}{\begin{lBox}\begin{lemmaT*}}{\end{lemmaT*}\end{lBox}}
 \newenvironment{proposition*}{\begin{pBox}\begin{propositionT*}}{\end{propositionT*}\end{pBox}}
+
+% Code listings (runnable cells) and function plots (components.lua)
+\usepackage{listings}
+\lstset{basicstyle=\ttfamily\small, columns=fullflexible, keepspaces=true, breaklines=true,
+  frame=single, rulecolor=\color{black!25}, framesep=6pt, xleftmargin=6pt, xrightmargin=6pt,
+  keywordstyle=\color{blue!60!black}\bfseries, commentstyle=\color{black!55}\itshape,
+  stringstyle=\color{red!60!black}, showstringspaces=false, upquote=true}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
