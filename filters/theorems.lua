@@ -65,6 +65,10 @@ local labels = {}
 -- Document meta (set in Pandoc handler, used in render)
 local doc_meta = nil
 
+local function is_book_mode()
+    return doc_meta and doc_meta["book-mode"] and pandoc.utils.stringify(doc_meta["book-mode"]) == "true"
+end
+
 -- Processed environments registry (to pass data between filter passes)
 local processed_envs = {}
 
@@ -206,6 +210,40 @@ local function get_next_number(env_type)
         counters.independent[env_type] = (counters.independent[env_type] or 0) + 1
         return format_counter(counters.independent[env_type])
     end
+end
+
+-- Stable per-document key for an environment div, stored as an attribute so it survives
+-- between filter passes. (tostring(div) collided for identical unlabeled environments.)
+local next_env_key = 0
+local function get_div_key(div)
+    local key = div.attributes["data-env-key"]
+    if not key then
+        next_env_key = next_env_key + 1
+        key = tostring(next_env_key)
+        div.attributes["data-env-key"] = key
+    end
+    return key
+end
+
+-- Render inlines to a string in the given format (for cross-reference text)
+local function inlines_to(format, inlines)
+    if not inlines or #inlines == 0 then return "" end
+    local ok, out = pcall(pandoc.write, pandoc.Pandoc({pandoc.Plain(inlines)}), format,
+        {html_math_method = "mathjax"})
+    if not ok then return pandoc.utils.stringify(pandoc.Inlines(inlines)) end
+    return (out:gsub("^%s+", ""):gsub("%s+$", ""))
+end
+
+-- Label metadata shared by scan mode and the in-document registry
+local function label_record(env_type, number, title_inlines)
+    return {
+        type = env_type,
+        type_name = ENVIRONMENT_NAMES[env_type] or env_type,
+        number = number or "",
+        title = title_inlines and pandoc.utils.stringify(pandoc.Inlines(title_inlines)) or "",
+        title_html = inlines_to("html", title_inlines),
+        title_latex = inlines_to("latex", title_inlines),
+    }
 end
 
 -- =============================================================================
@@ -412,12 +450,7 @@ local function process_para_math(para, mode)
                  math = found_math
              }
              
-             labels[found_id] = {
-                 type = "equation",
-                 type_name = "Eq.",
-                 number = number,
-                 title = "",
-             }
+             labels[found_id] = label_record("equation", number, nil)
              return nil
              
         elseif mode == "render" then
@@ -458,7 +491,11 @@ local function process_para_math(para, mode)
                  return outer_div
                  
              elseif FORMAT:match("latex") then
-                 local tex = string.format("\\begin{equation}\\label{%s}\n%s\n\\end{equation}", found_id, math_content)
+                 -- \label must follow the body: directly after \begin{equation} it picks up
+                 -- the section number instead of the equation number.
+                 -- Blank lines inside the body would be paragraph breaks in math mode.
+                 local body = math_content:gsub("^%s+", ""):gsub("%s+$", ""):gsub("\n%s*\n", "\n")
+                 local tex = string.format("\\begin{equation}\n%s\n\\label{%s}\n\\end{equation}", body, found_id)
                  return pandoc.RawBlock("latex", tex)
              else
                  -- For other formats, try to do something reasonable or leave as is
@@ -561,9 +598,10 @@ local function render_env_html(env_type, number, title_inlines, label_id, conten
             pandoc.Attr("", {"theorem-title", "theorem-title-resolved"})
         )
         
+        -- A list of pairs (not a table keyed by name) keeps attribute order stable between builds
         local attributes = {
-            ["data-env-type"] = env_type,
-            ["data-number"] = number or "",
+            {"data-env-type", env_type},
+            {"data-number", number or ""},
         }
         
         -- Apply dynamic colors if defined
@@ -577,7 +615,7 @@ local function render_env_html(env_type, number, title_inlines, label_id, conten
                 style_str = style_str .. "background-color: " .. colors.background .. "; "
             end
             if style_str ~= "" then
-                attributes["style"] = style_str
+                table.insert(attributes, {"style", style_str})
             end
         end
         
@@ -715,27 +753,24 @@ end
 -- Global registry loaded from metadata (for cross-chapter links)
 local global_labels = {}
 
--- Load global labels from metadata
+-- Load global labels. Read the JSON file directly: passing it through --metadata-file
+-- would parse every string (including rendered HTML/LaTeX titles) as Markdown.
 local function load_global_labels(meta)
-    if meta.crossref_labels then
-        -- meta.crossref_labels is expected to be a Map
-        for k, v in pairs(meta.crossref_labels) do
-            local label_info = {
-                type = pandoc.utils.stringify(v.type),
-                type_name = pandoc.utils.stringify(v.type_name),
-                number = pandoc.utils.stringify(v.number),
-                title = pandoc.utils.stringify(v.title),
-                file = pandoc.utils.stringify(v.file),
-                id = pandoc.utils.stringify(v.id)
-            }
-            global_labels[k] = label_info
-        end
+    local path = meta["crossref-labels-file"]
+    if not path then return end
+    local f = io.open(pandoc.utils.stringify(path), "r")
+    if not f then return end
+    local data = pandoc.json.decode(f:read("*all"), false)
+    f:close()
+    for k, v in pairs(data.crossref_labels or {}) do
+        global_labels[k] = v
     end
 end
 
--- Scan mode: collect labels and write to a JSON file
+-- Scan mode: collect labels and the references this file uses, print as JSON
 local function scan_and_dump_labels(doc)
     local collected = {}
+    local refs = {}
     
     -- Walk the document to find all theorem environments and equations
     doc:walk {
@@ -745,7 +780,6 @@ local function scan_and_dump_labels(doc)
                 local label_id = get_label_id(div)
                 local number = get_next_number(env_type)
                 local title_inlines = extract_title(div) -- Destructive, but okay for scan
-                local title_str = title_inlines and pandoc.utils.stringify(pandoc.Inlines(title_inlines)) or ""
                 
                 if label_id and label_id ~= "" then
                     -- Render the content to HTML
@@ -759,14 +793,10 @@ local function scan_and_dump_labels(doc)
                         html_content = "Error rendering content: " .. tostring(html_content)
                     end
                     
-                    collected[label_id] = {
-                        type = env_type,
-                        type_name = ENVIRONMENT_NAMES[env_type] or env_type,
-                        number = number or "",
-                        title = title_str,
-                        html_content = html_content,
-                        id = label_id
-                    }
+                    local record = label_record(env_type, number, title_inlines)
+                    record.html_content = html_content
+                    record.id = label_id
+                    collected[label_id] = record
                 end
             end
         end,
@@ -774,20 +804,22 @@ local function scan_and_dump_labels(doc)
         Para = function(para)
             local res = process_para_math(para, "scan")
             if res then
-                collected[res.id] = {
-                    type = res.type,
-                    type_name = res.type_name,
-                    number = res.number,
-                    title = res.title,
-                    html_content = res.html_content,
-                    id = res.id
-                }
+                local record = label_record(res.type, res.number, nil)
+                record.html_content = res.html_content
+                record.id = res.id
+                collected[res.id] = record
+            end
+        end,
+        
+        Cite = function(cite)
+            for _, citation in ipairs(cite.citations) do
+                table.insert(refs, citation.id)
             end
         end
     }
     
     if doc.meta.scan_mode then
-        local json_str = pandoc.json.encode(collected)
+        local json_str = pandoc.json.encode({labels = collected, refs = refs})
         print("SCAN_RESULT:" .. json_str)
         return pandoc.Pandoc({}, doc.meta)
     end
@@ -798,15 +830,6 @@ end
 -- =============================================================================
 -- Main Filter Logic
 -- =============================================================================
-
--- Generate unique key for a div
-local function get_div_key(div)
-    if div.identifier and div.identifier ~= "" then
-        return div.identifier
-    else
-        return tostring(div)
-    end
-end
 
 -- Recursively mark theorem divs nested inside another small env (avoids mdframed nesting in LaTeX)
 local function mark_nested_blocks(blocks, inside_small_env)
@@ -848,22 +871,26 @@ local function collect_labels(div)
         current_file_is_preface = is_preface
         counters.chapter = new_c
         counters.section = new_s
-        if FORMAT:match("latex") and doc_meta and doc_meta["book-mode"] and pandoc.utils.stringify(doc_meta["book-mode"]) == "true" then
+        if FORMAT:match("latex") and is_book_mode() then
+            -- Each file's H1 is a LaTeX \chapter, numbered part.chapter (e.g. 1.6). Set the
+            -- counter explicitly so it matches the web numbering from the file position,
+            -- instead of counting chapter index pages as chapters.
+            local tex = ""
             if is_preface then
                 last_book_part = -1
-                return {pandoc.RawBlock("latex", "\\prefacebanner{Preface}\\setcounter{part}{-1}\\setcounter{chapter}{0}\\setcounter{section}{0}")}
-            elseif new_c == 0 and last_book_part ~= 0 then
-                last_book_part = 0
-                local ch0_title = (chap_title ~= "") and chap_title or "Chapter 0"
-                return {pandoc.RawBlock("latex", "\\part{" .. ch0_title .. "}\\setcounter{chapter}{0}\\setcounter{section}{0}")}
-            elseif new_c > 0 and last_book_part ~= new_c then
+                tex = "\\prefacebanner{Preface}\\setcounter{part}{-1}"
+            elseif last_book_part ~= new_c then
                 last_book_part = new_c
-                if chap_title ~= "" then
-                    return {pandoc.RawBlock("latex", "\\part{Chapter " .. new_c .. ": " .. chap_title .. "}\\setcounter{chapter}{0}\\setcounter{section}{0}")}
+                if new_c == 0 then
+                    tex = "\\part{" .. ((chap_title ~= "") and chap_title or "Chapter 0") .. "}"
+                elseif chap_title ~= "" then
+                    tex = "\\part{Chapter " .. new_c .. ": " .. chap_title .. "}"
                 else
-                    return {pandoc.RawBlock("latex", "\\part{Chapter " .. new_c .. "}\\setcounter{chapter}{0}\\setcounter{section}{0}")}
+                    tex = "\\part{Chapter " .. new_c .. "}"
                 end
             end
+            tex = tex .. string.format("\\setcounter{chapter}{%d}\\setcounter{section}{0}", math.max(new_s - 1, 0))
+            return {pandoc.RawBlock("latex", tex)}
         end
         return {}  -- Remove marker from output
     end
@@ -882,12 +909,7 @@ local function collect_labels(div)
     }
     
     if label_id and label_id ~= "" then
-        labels[label_id] = {
-            type = env_type,
-            type_name = ENVIRONMENT_NAMES[env_type] or env_type,
-            number = number or "",
-            title = title_inlines and pandoc.utils.stringify(pandoc.Inlines(title_inlines)) or "",
-        }
+        labels[label_id] = label_record(env_type, number, title_inlines)
     end
     
     return div
@@ -916,6 +938,8 @@ local function render_environment(div)
 end
 
 -- Cross-Reference Resolution
+-- Numbered targets read "Theorem 1.2.3"; unnumbered ones (examples) read "Example (Title)".
+-- HTML and LaTeX produce the same text.
 local function process_citations(cite)
     local refs = {}
     for _, citation in ipairs(cite.citations) do
@@ -923,32 +947,45 @@ local function process_citations(cite)
         local label_info = labels[id] or global_labels[id]
         
         if label_info then
-            local display_text = label_info.type_name .. " " .. label_info.number
+            local numbered = label_info.number and label_info.number ~= ""
+            local name = label_info.type_name
             
             if FORMAT:match("html") then
-                local target_url = ""
-                -- Handle file links if known
+                local text = name
+                if numbered then
+                    text = name .. " " .. label_info.number
+                elseif label_info.title_html and label_info.title_html ~= "" then
+                    text = name .. " (" .. label_info.title_html .. ")"
+                end
+                local target_url = "#" .. id
                 if label_info.file and label_info.file ~= "" then
                    target_url = label_info.file .. "#" .. id
-                else
-                   target_url = "#" .. id
                 end
-                
-                local link = pandoc.Link(
-                    pandoc.Str(display_text),
+                table.insert(refs, pandoc.Link(
+                    {pandoc.RawInline("html", text)},
                     target_url,
                     "",
                     pandoc.Attr("", {"xref"}, {["data-ref"] = id})
-                )
-                table.insert(refs, link)
+                ))
             elseif FORMAT:match("latex") then
-                local raw = pandoc.RawInline("latex", string.format("\\ref{%s}", id))
-                table.insert(refs, raw)
+                local text
+                if numbered then
+                    text = string.format("%s~\\ref*{%s}", name, id)
+                elseif label_info.title_latex and label_info.title_latex ~= "" then
+                    text = name .. " (" .. label_info.title_latex .. ")"
+                else
+                    text = name
+                end
+                table.insert(refs, pandoc.RawInline("latex", string.format("\\hyperref[%s]{%s}", id, text)))
             else
-                table.insert(refs, pandoc.Str(display_text))
+                table.insert(refs, pandoc.Str(numbered and (name .. " " .. label_info.number) or name))
             end
         else
-            table.insert(refs, pandoc.Str("@" .. id))
+            -- Leave the text alone: @name may be a real citation or an email-like string
+            if id:match("^%a+%-") then
+                io.stderr:write("Warning: unresolved reference @" .. id .. "\n")
+            end
+            return nil
         end
     end
     
@@ -966,6 +1003,31 @@ local function process_citations(cite)
     end
 end
 
+-- In LaTeX, chapter index pages (section 0) have unnumbered titles, matching the web,
+-- so they don't take a chapter number from the sections that follow.
+local function unnumber_index_titles(doc)
+    if not FORMAT:match("latex") then return end
+    local function mark(header)
+        if header.level == 1 and not header.classes:includes("unnumbered") then
+            header.classes:insert("unnumbered")
+        end
+    end
+    if is_book_mode() then
+        local in_index = false
+        for _, block in ipairs(doc.blocks) do
+            if block.t == "Div" and block.attributes["data-section"] then
+                in_index = block.attributes["data-section"] == "0" and not block.attributes["data-preface"]
+            elseif block.t == "Header" and in_index then
+                mark(block)
+            end
+        end
+    elseif counters.section == 0 and pandoc.utils.stringify(doc.meta["is-preface"] or "") ~= "true" then
+        for _, block in ipairs(doc.blocks) do
+            if block.t == "Header" then mark(block) end
+        end
+    end
+end
+
 return {
     -- First pass: initialize and scanning
     {
@@ -979,6 +1041,7 @@ return {
             current_file_is_preface = false
             last_book_part = -2
             mark_nested_blocks(doc.blocks, false)
+            unnumber_index_titles(doc)
             
             if doc.meta.scan_mode then
                 return scan_and_dump_labels(doc)

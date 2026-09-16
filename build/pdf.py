@@ -11,7 +11,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 from typing import Optional
 
-from .config import PROJECT_ROOT
+from .config import PROJECT_ROOT, CROSSREF_LABELS_FILE
 from .discovery import discover_markdown_files, get_relative_output_path
 from .pandoc import build_pandoc_command, run_pandoc
 from .utils import print_step, print_file_action, print_success, print_error
@@ -183,6 +183,8 @@ def build_book(config: dict):
         "--metadata", f"title={config.get('title', 'Untitled')}",
         "--metadata", f"author={config.get('author', 'Anonymous')}",
     ]
+    if CROSSREF_LABELS_FILE.exists():
+        cmd.extend(["--metadata", f"crossref-labels-file={CROSSREF_LABELS_FILE}"])
     
     # Resource path so images from all chapter dirs are findable
     resource_paths = [str(PROJECT_ROOT / "src")] + [

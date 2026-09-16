@@ -16,6 +16,7 @@ from .html import build_html
 from .pdf import build_pdf, build_book
 from .manifest import scan_labels, generate_theorem_manifest, generate_navigation_manifest
 from .deploy import deploy
+from .check import check, doctor
 from .utils import print_info, print_header, print_error
 
 
@@ -94,12 +95,14 @@ Examples:
     python build.py clean               Remove _build directory
     python build.py manifest            Generate theorems.json only
     python build.py deploy              Build and copy to site/ (add --push to push)
+    python build.py check               Validate references and web/PDF numbering
+    python build.py doctor              Check that required tools are installed
         """
     )
     
     parser.add_argument(
         "command",
-        choices=["html", "pdf", "book", "all", "clean", "manifest", "scan", "deploy"],
+        choices=["html", "pdf", "book", "all", "clean", "manifest", "scan", "deploy", "check", "doctor"],
         help="Build command to run"
     )
     parser.add_argument(
@@ -120,6 +123,9 @@ Examples:
     
     args = parser.parse_args()
     
+    if args.command == "doctor":
+        sys.exit(0 if doctor() else 1)
+
     if args.command == "clean":
         config = load_config()
         clean(config)
@@ -127,7 +133,9 @@ Examples:
     
     config = load_config()
     
-    if args.command == "scan":
+    if args.command == "check":
+        sys.exit(0 if check(config) else 1)
+    elif args.command == "scan":
         scan_labels(config)
     elif args.command == "manifest":
         generate_theorem_manifest(config)

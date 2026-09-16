@@ -12,7 +12,7 @@ from pathlib import Path
 from typing import Optional
 
 from .config import PROJECT_ROOT, CROSSREF_LABELS_FILE
-from .utils import print_error, print_info, print_warning
+from .utils import print_error, print_info, print_warning, run_with_crash_retry
 
 
 # =============================================================================
@@ -143,6 +143,10 @@ def build_pandoc_command(
 
     cmd.extend(["--metadata-file", str(meta_file)])
 
+    # Global label registry for cross-file references (read directly by theorems.lua)
+    if CROSSREF_LABELS_FILE.exists():
+        cmd.extend(["--metadata", f"crossref-labels-file={CROSSREF_LABELS_FILE}"])
+
     if output_format == "html":
         template_path = PROJECT_ROOT / config["templates"]["html"]
         if template_path.exists():
@@ -153,9 +157,6 @@ def build_pandoc_command(
         
         cmd.append("--mathjax")
         
-        if CROSSREF_LABELS_FILE.exists():
-            cmd.extend(["--metadata-file", str(CROSSREF_LABELS_FILE)])
-            
     elif output_format == "pdf":
         template_path = PROJECT_ROOT / config["templates"]["latex"]
         if template_path.exists():
@@ -205,7 +206,10 @@ def run_pandoc(
         run_kwargs["env"] = run_env
     
     try:
-        result = subprocess.run(cmd, **run_kwargs)
+        run_kwargs.pop("check")
+        run_kwargs.pop("capture_output")
+        run_kwargs.pop("text")
+        result = run_with_crash_retry(cmd, **run_kwargs)
         # Log warnings (stderr) even on success
         if result.stderr and result.stderr.strip():
             print_warning(f"Pandoc stderr for {cmd[2] if len(cmd) > 2 else 'output'}:")

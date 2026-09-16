@@ -38,3 +38,20 @@ def print_file_action(action, src, dst=None):
         print(f"  {Colors.CYAN}{action}{Colors.ENDC} {src} {Colors.BOLD}→{Colors.ENDC} {dst}")
     else:
         print(f"  {Colors.CYAN}{action}{Colors.ENDC} {src}")
+
+
+def run_with_crash_retry(cmd, attempts: int = 3, **kwargs):
+    """
+    Run a command with check=True, retrying if it is killed by a signal.
+    Pandoc 3.1.x occasionally segfaults in Lua filters; a rerun succeeds.
+    """
+    import subprocess
+    kwargs = {"capture_output": True, "text": True, **kwargs}
+    for attempt in range(attempts):
+        result = subprocess.run(cmd, **kwargs)
+        if result.returncode >= 0 or attempt == attempts - 1:
+            break
+        print_warning(f"{cmd[0]} crashed (signal {-result.returncode}); retrying")
+    if result.returncode != 0:
+        raise subprocess.CalledProcessError(result.returncode, cmd, result.stdout, result.stderr)
+    return result

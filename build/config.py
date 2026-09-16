@@ -17,6 +17,7 @@ BUILD_DIR = PROJECT_ROOT / "_build"
 COUNTER_STATE_FILE = BUILD_DIR / ".counter_state.json"
 THEOREM_MANIFEST_FILE = BUILD_DIR / "theorems.json"
 CROSSREF_LABELS_FILE = BUILD_DIR / "crossref_labels.json"
+SCAN_FILE = BUILD_DIR / "scan.json"  # per-file labels and references, used by `check`
 
 
 # =============================================================================

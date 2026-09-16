@@ -14,10 +14,11 @@ from .config import (
     PROJECT_ROOT, 
     BUILD_DIR,
     CROSSREF_LABELS_FILE, 
+    SCAN_FILE,
     THEOREM_MANIFEST_FILE
 )
 from .discovery import discover_markdown_files
-from .utils import print_step, print_success, print_warning, print_error
+from .utils import print_step, print_success, print_warning, print_error, run_with_crash_retry
 
 
 # =============================================================================
@@ -33,6 +34,7 @@ def scan_labels(config: dict):
     
     files = discover_markdown_files(config)
     global_labels = {}
+    scan_files = {}
     
     # Create a temporary metadata file for environment settings
     scan_meta_file = BUILD_DIR / "scan_meta.yaml"
@@ -63,7 +65,7 @@ def scan_labels(config: dict):
         ]
         
         try:
-            result = subprocess.run(cmd, capture_output=True, text=True, check=True)
+            result = run_with_crash_retry(cmd)
             if result.stderr and result.stderr.strip():
                 print_warning(f"Scan warning for {source_file.name}:")
                 for line in result.stderr.strip().splitlines():
@@ -72,12 +74,17 @@ def scan_labels(config: dict):
             
             for line in output.splitlines():
                 if line.startswith("SCAN_RESULT:"):
-                    json_str = line[len("SCAN_RESULT:"):]
-                    file_labels = json.loads(json_str)
+                    result_data = json.loads(line[len("SCAN_RESULT:"):])
+                    file_labels = result_data.get("labels") or {}
                     
                     for label_id, info in file_labels.items():
                         info["file"] = relative_path
-                        global_labels[label_id] = info
+                        global_labels.setdefault(label_id, info)
+                    scan_files[relative_path] = {
+                        "source": str(source_file.relative_to(PROJECT_ROOT)),
+                        "labels": sorted(file_labels),
+                        "refs": result_data.get("refs") or [],
+                    }
                     break
                     
         except subprocess.CalledProcessError as e:
@@ -90,6 +97,8 @@ def scan_labels(config: dict):
     CROSSREF_LABELS_FILE.parent.mkdir(parents=True, exist_ok=True)
     with open(CROSSREF_LABELS_FILE, "w") as f:
         json.dump({"crossref_labels": global_labels}, f, indent=2)
+    with open(SCAN_FILE, "w") as f:
+        json.dump({"files": scan_files}, f, indent=2)
         
     print_success(f"Scanned {len(global_labels)} labels.")
     return global_labels

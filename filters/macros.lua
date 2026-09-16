@@ -103,7 +103,12 @@ end
 local function generate_mathjax_macros(macros)
     local parts = {}
     
-    for cmd, replacement in pairs(macros) do
+    -- Sorted so the generated page is identical between builds
+    local names = {}
+    for cmd in pairs(macros) do table.insert(names, cmd) end
+    table.sort(names)
+    for _, cmd in ipairs(names) do
+        local replacement = macros[cmd]
         -- MathJax doesn't support \mathbbmss (bbm); use \mathbb as fallback
         replacement = replacement:gsub("\\mathbbmss", "\\mathbb")
         -- Escape backslashes for JavaScript
