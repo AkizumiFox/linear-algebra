@@ -12,12 +12,34 @@ from pathlib import Path
 from typing import Optional
 
 from .config import PROJECT_ROOT, CROSSREF_LABELS_FILE
+from .tikz import TIKZ_CACHE_DIR
 from .utils import print_error, print_info, print_warning, run_with_crash_retry
 
 
 # =============================================================================
 # Pandoc Command Building
 # =============================================================================
+
+_build_version = None
+
+
+def build_version(config: dict) -> str:
+    """
+    Short hash of everything that shapes the site (sources, filters, templates, config).
+    Used as a cache-busting query string, so unchanged rebuilds produce identical pages.
+    """
+    global _build_version
+    if _build_version is None:
+        digest = hashlib.sha1()
+        roots = [PROJECT_ROOT / "src", PROJECT_ROOT / "filters", PROJECT_ROOT / "templates" / "html",
+                 PROJECT_ROOT / "config", PROJECT_ROOT / "latex"]
+        for root in roots:
+            for path in sorted(p for p in root.rglob("*") if p.is_file()):
+                digest.update(str(path.relative_to(PROJECT_ROOT)).encode())
+                digest.update(path.read_bytes())
+        _build_version = digest.hexdigest()[:10]
+    return _build_version
+
 
 def build_pandoc_command(
     source_file: Path,
@@ -44,6 +66,8 @@ def build_pandoc_command(
     filters_dir = PROJECT_ROOT / "filters"
     if (filters_dir / "format-visibility.lua").exists():
         cmd.extend(["--lua-filter", str(filters_dir / "format-visibility.lua")])
+    cmd.extend(["--lua-filter", str(filters_dir / "tikz.lua")])
+    cmd.extend(["--lua-filter", str(filters_dir / "enumerate.lua")])
     if (filters_dir / "theorems.lua").exists():
         cmd.extend(["--lua-filter", str(filters_dir / "theorems.lua")])
     if (filters_dir / "macros.lua").exists() and output_format == "html":
@@ -80,6 +104,8 @@ def build_pandoc_command(
         "project-root": str(PROJECT_ROOT),
         "asset-prefix": asset_prefix,
         "title": config.get("title", ""),  # Book title
+        "tikz-cache-dir": str(TIKZ_CACHE_DIR),
+        "build-version": build_version(config),
     }
     
     if title:
@@ -115,6 +141,8 @@ def build_pandoc_command(
         pdf_rel = html_output.relative_to(output_dir).with_suffix(".pdf")
         metadata["pdf-url"] = f"{asset_prefix}pdf/{pdf_rel}"
         metadata["book-pdf-url"] = f"{asset_prefix}book/book.pdf"
+
+    TIKZ_CACHE_DIR.mkdir(parents=True, exist_ok=True)
 
     # Write metadata to temp file
     file_hash = hashlib.md5(str(source_file).encode()).hexdigest()

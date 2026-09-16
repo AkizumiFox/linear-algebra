@@ -14,6 +14,7 @@ from .config import PROJECT_ROOT, CROSSREF_LABELS_FILE
 from .discovery import discover_markdown_files, get_relative_output_path
 from .pandoc import build_pandoc_command, run_pandoc
 from .search import generate_search_index
+from .tikz import build_tikz_figures
 from .utils import print_step, print_file_action, print_success, print_warning, print_error
 
 
@@ -122,6 +123,7 @@ def build_html(
                 pass
 
     print_success(f"HTML build complete: {success_count}/{len(files)} files")
+    build_tikz_figures(config, output_dir)
     
     # Generate manifests
     if generate_theorem_manifest_func:

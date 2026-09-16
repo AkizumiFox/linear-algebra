@@ -957,9 +957,11 @@ local function process_citations(cite)
                 elseif label_info.title_html and label_info.title_html ~= "" then
                     text = name .. " (" .. label_info.title_html .. ")"
                 end
+                -- Same-document labels have no file; others are relative to the site root
                 local target_url = "#" .. id
                 if label_info.file and label_info.file ~= "" then
-                   target_url = label_info.file .. "#" .. id
+                   local prefix = doc_meta and doc_meta["asset-prefix"] and pandoc.utils.stringify(doc_meta["asset-prefix"]) or ""
+                   target_url = prefix .. label_info.file .. "#" .. id
                 end
                 table.insert(refs, pandoc.Link(
                     {pandoc.RawInline("html", text)},

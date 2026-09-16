@@ -123,7 +123,9 @@ def generate_theorem_manifest(config: dict):
         manifest[label_id] = {
             "type": info.get("type", "unknown"),
             "number": info.get("number", "?"),
+            "type_name": info.get("type_name", ""),
             "title": info.get("title", ""),
+            "title_html": info.get("title_html", ""),
             "html": info.get("html_content", f"<p><strong>{info.get('type_name')} {info.get('number')}</strong> ({info.get('title')})</p>"),
             "file": info.get("file", "")
         }

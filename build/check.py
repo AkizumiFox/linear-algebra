@@ -10,6 +10,7 @@ import re
 import shutil
 import subprocess
 from collections import defaultdict
+from html.parser import HTMLParser
 from pathlib import Path
 
 from .config import PROJECT_ROOT, BUILD_DIR, CROSSREF_LABELS_FILE, SCAN_FILE
@@ -84,6 +85,43 @@ def _compare_numbers(labels: dict, aux_file: Path, only: set[str] | None = None)
     return problems
 
 
+class _LinkCollector(HTMLParser):
+    """Collects element ids and the hrefs of a.xref links in one page."""
+
+    def __init__(self):
+        super().__init__()
+        self.ids: set[str] = set()
+        self.xrefs: list[str] = []
+
+    def handle_starttag(self, tag, attrs):
+        attrs = dict(attrs)
+        if "id" in attrs:
+            self.ids.add(attrs["id"])
+        if tag == "a" and "xref" in (attrs.get("class") or "").split() and attrs.get("href"):
+            self.xrefs.append(attrs["href"])
+
+
+def check_xref_links(html_dir: Path) -> list[str]:
+    """Verify every a.xref link in the built HTML resolves to a page containing the anchor."""
+    pages: dict[Path, _LinkCollector] = {}
+    for page in sorted(html_dir.rglob("*.html")):
+        collector = _LinkCollector()
+        collector.feed(page.read_text(encoding="utf-8"))
+        pages[page.resolve()] = collector
+
+    problems = []
+    for page, collector in pages.items():
+        where = page.relative_to(html_dir.resolve())
+        for href in collector.xrefs:
+            path, _, anchor = href.partition("#")
+            target = (page.parent / path).resolve() if path else page
+            if target not in pages:
+                problems.append(f"broken link {href} in {where}: page not found")
+            elif anchor and anchor not in pages[target].ids:
+                problems.append(f"broken link {href} in {where}: no #{anchor}")
+    return problems
+
+
 def _newest_source_mtime(scan: dict) -> float:
     sources = [PROJECT_ROOT / entry["source"] for entry in scan["files"].values()]
     return max(p.stat().st_mtime for p in sources if p.exists())
@@ -117,6 +155,11 @@ def check(config: dict) -> bool:
         for ref in sorted(set(entry["refs"])):
             if ref not in labels and re.match(r"^[A-Za-z]+-", ref):
                 errors.append(f"unresolved reference @{ref} in {entry['source']}")
+
+    # Cross-reference links in the built site must point at an existing page and anchor
+    html_dir = PROJECT_ROOT / config["output"]["html"]
+    if html_dir.exists():
+        errors.extend(check_xref_links(html_dir))
 
     # Web vs PDF numbering
     newest_source = _newest_source_mtime(scan)

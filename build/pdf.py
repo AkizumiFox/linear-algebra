@@ -201,6 +201,7 @@ def build_book(config: dict):
     filters_dir = PROJECT_ROOT / "filters"
     if (filters_dir / "format-visibility.lua").exists():
         cmd.extend(["--lua-filter", str(filters_dir / "format-visibility.lua")])
+    cmd.extend(["--lua-filter", str(filters_dir / "enumerate.lua")])
     if (filters_dir / "theorems.lua").exists():
         cmd.extend(["--lua-filter", str(filters_dir / "theorems.lua")])
     if (filters_dir / "macros.lua").exists():
