@@ -1,0 +1,76 @@
+
+
+# Linear Combinations and Span
+
+In the previous section, we studied subspaces. A natural question arises: given a set of vectors, how can we describe the "smallest" subspace that contains them? This leads us to the concept of linear combinations and the span.
+
+## Linear Combinations
+
+::: {#def-linear-combination}
+[Linear Combination]
+
+Let \( V \) be a vector space over \( F \), \( S = \{ \v_1, \v_2, \dots, \v_m \} \) be a subset of \( V \). Then the expression
+\[
+	a_1 \v_1 + a_2 \v_2 + \cdots + a_m \v_m
+\]
+is called a **linear combination** of \( S \).
+The scalars \( a_i \) are called the **coefficients** of the linear combination.
+:::
+
+::: {#exm-linear-combinations}
+[Examples of Linear Combinations]
+
+Below are some examples of linear combinations in different vector spaces:
+
+1. The vector \( (2, 1, 0) \) in \( \nR^3 \) is a linear combination of \( S = \{(1, 2, 3), (4, 5, 6)\} \) because
+     \[
+	(2, 1, 0) = -2 \cdot (1, 2, 3) + 1 \cdot (4, 5, 6).
+\]
+
+2. The polynomial \( f(x) = x^3 + 2x + 1 \) in \( \mathbb{R}[x] \) is a linear combination of \( S = \{1, x, x^2, x^3\} \) because
+     \[
+	f(x) = 1 \cdot 1 + 2 \cdot x + 0 \cdot x^2 + 1 \cdot x^3.
+\]
+:::
+
+## Span and Spanning Sets
+
+::: {#def-span}
+[Span]
+
+Let \( S \) be a subset of a vector space \( V \) over \( F \). The **span** of \( S \), denoted by \( \Span_F(S) \), is the set of all linear combinations of finite subsets of elements of \( S \).
+
+If \( S = \{ \v_1, \v_2, \dots, \v_n \} \), then \( \Span_F(S) = \{ a_1 \v_1 + a_2 \v_2 + \dots + a_n \v_n : a_i \in F \} \). By convention, \( \Span_F(\varnothing) = \{ \mathbf{0} \} \).
+:::
+
+::: {.remark}
+When the underlying field is clear, we abuse the notation of \( \Span_F \) and write it as \( \Span \).
+:::
+
+::: {#thm-span-subspace}
+[Spanning Set as Subspace]
+
+The span of any subset \( S \subseteq V \) is a subspace of \( V \). Moreover, it is the smallest subspace of \( V \) containing \( S \).
+:::
+
+::: {.proof}
+Let \( W = \Span(S) \).
+
+- **Zero vector:** Since \( \Span(\varnothing) = \{ \mathbf{0} \} \), and for non-empty \( S \), taking all coefficients as zero gives \( \mathbf{0} \), we have \( \mathbf{0} \in W \).
+- **Addition:** Let \( \x, \y \in W \). Then \( \x = \sum a_i \v_i \) and \( \y = \sum b_i \v_i \). Their sum \( \x + \y = \sum (a_i + b_i) \v_i \) is also a linear combination of elements in \( S \), so \( \x + \y \in W \).
+- **Scalar multiplication:** For any \( c \in F \), \( c\x = \sum (ca_i) \v_i \in W \).
+
+To see it is the smallest subspace, note that any subspace containing \( S \) must be closed under addition and scalar multiplication, and thus must contain all linear combinations of elements in \( S \).
+:::
+
+::: {#def-spanning-set}
+[Spanning Set]
+
+If \( \Span(S) = V \), we say that \( S \) **spans** \( V \), or that \( S \) is a **spanning set** for \( V \).
+:::
+
+::: {#exm-spanning-set}
+[Spanning Set for Polynomials]
+
+The set \( \{ 1, x, x^2 \} \) spans \( \nR[x]_{\leq 2} \), the space of polynomials of degree at most 2.
+:::

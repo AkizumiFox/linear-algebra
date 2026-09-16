@@ -1,0 +1,99 @@
+{
+    "title": "Linear Algebra",
+    "author": "Akizumi",
+    "output": {
+        "html": "_build/html",
+        "pdf": "_build/pdf",
+        "book": "_build/pdf/book.pdf"
+    },
+    "environment_settings": {
+        "big_envs": [
+            {
+                "prefix": "thm",
+                "name": "Theorem",
+                "numbered": true,
+                "counter_group": "main",
+                "color": "#3b6eda",
+                "background": "#f0f5ff"
+            },
+            {
+                "prefix": "lem",
+                "name": "Lemma",
+                "numbered": true,
+                "counter_group": "main",
+                "color": "#d4a017",
+                "background": "#fef9e7"
+            },
+            {
+                "prefix": "cor",
+                "name": "Corollary",
+                "numbered": true,
+                "counter_group": "main",
+                "color": "#17a2a2",
+                "background": "#e8f6f5"
+            },
+            {
+                "prefix": "prp",
+                "name": "Proposition",
+                "numbered": true,
+                "counter_group": "main",
+                "color": "#5c5cb8",
+                "background": "#ededfa"
+            },
+            {
+                "prefix": "cnj",
+                "name": "Conjecture",
+                "numbered": false,
+                "color": "#8e44ad",
+                "background": "#f5eefa"
+            },
+            {
+                "prefix": "def",
+                "name": "Definition",
+                "numbered": true,
+                "counter_group": "definition",
+                "color": "#c94c6c",
+                "background": "#fdf2f4"
+            },
+            {
+                "prefix": "exm",
+                "name": "Example",
+                "numbered": false,
+                "color": "#3a8a3a",
+                "background": "#eef7ee"
+            },
+            {
+                "prefix": "exr",
+                "name": "Exercise",
+                "numbered": false,
+                "color": "#d97706",
+                "background": "#fef5ea"
+            }
+        ],
+        "small_envs": [
+            "remark",
+            "proof",
+            "solution",
+            "claim",
+            "proofofclaim",
+            "algorithm"
+        ]
+    },
+    "chapters": [
+        "src/ch00-foundations",
+        "src/ch01-vector-spaces",
+        "src/ch02-linear-transformations"
+    ],
+    "macros": "latex/macros.tex",
+    "templates": {
+        "html": "templates/html/template.html",
+        "latex": "templates/latex/template.tex"
+    },
+    "styles": {
+        "html": "templates/html/styles.css",
+        "latex": "latex/latex-template.sty"
+    },
+    "deploy-dir": "site",
+    "deploy-repo": "https://github.com/AkizumiFox/linear-algebra.git",
+    "deploy-domain": "linear-algebra.akizumifox.com"
+}

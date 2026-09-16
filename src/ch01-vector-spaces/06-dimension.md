@@ -1,0 +1,251 @@
+
+
+# Sifting and the Replacement Theorem
+
+How "big" is a vector space? We intuitively know that a plane is "bigger" than a line, and 3D space is "bigger" than a plane. But in the abstract world of vector spaces, we need a rigorous way to measure this.
+
+The answer lies in the number of vectors in a basis. But there's a potential problem: what if one person finds a basis with 3 vectors, and another person finds a basis for the same space with 4 vectors? If that were possible, our entire concept of "size" would collapse.
+
+In this section, we prove the most important technical result of the chapter: the **Steinitz Replacement Theorem**. This theorem is the "engine" that guarantees every basis of a space has the exact same number of vectors. Once we have this, we can finally define the **Dimension** of a space—a single number that captures its fundamental complexity.
+
+## The Sifting Method
+
+::: {#thm-sift}
+[Sifting Method]
+
+Let \( S = \{ \v_1, \v_2, \dots, \v_m \} \) be a subset of \( V \). Then there exists a subset \( S' \subseteq S \) such that:
+
+1. \( S' \) is linearly independent, and
+2. \( \Span(S') = \Span(S) \).
+:::
+
+::: {.proof}
+For each \( r = 1, 2, \dots, m \), we check whether \( \v_r \) is a linear combination of the previous terms \( \v_1, \v_2, \dots, \v_{r-1} \). We:
+
+1. Keep \( \v_r \) in \( S' \) if \( \v_r \) is not a linear combination of \( \v_1, \v_2, \dots, \v_{r-1} \) (not redundant);
+2. Remove \( \v_r \) from \( S' \) if \( \v_r \) is a linear combination of \( \v_1, \v_2, \dots, \v_{r-1} \) (redundant).
+
+After this process, we obtain a subset \( S' \) in which no element is a linear combination of the preceding members anymore. Therefore, by @thm-linear-dependence-lemma, \( S' \) is linearly independent. Moreover, according to @thm-span-preservation, removing "redundant members" from \( S \) does not change its linear span. Therefore, we have \( \Span(S') = \Span(S) \).
+:::
+
+::: {.remark}
+The sifting method is a powerful algorithmic tool that allows us to "clean up" any set of vectors. Given any collection of vectors, we can systematically remove the redundant ones while preserving the span. This gives us a "cleaned" version that is linearly independent and spans the same space.
+
+This method becomes our "new weapon" in linear algebra proofs. Whenever we encounter a set that might have redundant vectors, we can apply the sifting method to obtain a linearly independent subset with the same span. This technique will be particularly useful in proving results about dimension and in constructing bases from spanning sets.
+:::
+
+::: {#exm-sifting}
+[Sifting Example]
+
+Consider \( S = \{ \v_1, \v_2, \v_3, \v_4, \v_5, \v_6 \} \) in \( \nR^3 \) where:
+\begin{align*}
+\v_1 &= (1, 1, 1), & \v_2 &= (2, 2, 2), & \v_3 &= (1, 0, 0), \\
+\v_4 &= (3, 2, 2), & \v_5 &= (1, 1, 0), & \v_6 &= (0, 0, 1).
+\end{align*}
+
+We apply the sifting method:
+
+- \( \v_1 \neq \mathbf{0} \), so \( \v_1 \) is kept.
+- \( \v_2 = 2\v_1 \), so \( \v_2 \) is removed.
+- \( \v_3 \) is not a linear combination of \( \v_1 \), so \( \v_3 \) is kept.
+- \( \v_4 = 2\v_1 + 1\v_3 \), so \( \v_4 \) is removed.
+- Suppose \( \v_5 = a\v_1 + b\v_3 \). Then \( (1, 1, 0) = (a + b, a, a) \), which gives \( a = 0 \) and \( a + b = 1 \), so \( b = 1 \). But then the second coordinate gives \( 1 = a = 0 \), which is a contradiction. So \( \v_5 \) is not a linear combination of \( \v_1, \v_3 \). Hence, \( \v_5 \) is kept.
+- \( \v_6 = (0, 0, 1) = (1, 1, 1) - (1, 1, 0) = \v_1 - \v_5 \), so \( \v_6 \) is removed.
+
+The sifted set is \( S' = \{ \v_1, \v_3, \v_5 \} = \{ (1, 1, 1), (1, 0, 0), (1, 1, 0) \} \), which is linearly independent and spans the same space as \( S \).
+:::
+
+::: {#exm-sifting-r2}
+[Sifting in \( \nR^2 \)]
+
+Consider \( S = \{ (1, 0), (0, 1), (1, 1) \} \) in \( \nR^2 \).
+
+- \( (1, 0) \neq \mathbf{0} \), so \( (1, 0) \) is kept.
+- \( (0, 1) \notin \Span\{ (1, 0) \} \), so \( (0, 1) \) is kept.
+- \( (1, 1) = (1, 0) + (0, 1) \in \Span\{ (1, 0), (0, 1) \} \), so \( (1, 1) \) is removed.
+
+The sifted set \( \{ (1, 0), (0, 1) \} \) is linearly independent and still spans \( \nR^2 \).
+:::
+
+## The Steinitz Replacement Theorem
+
+::: {#thm-steinitz}
+[Steinitz Exchange/Replacement Theorem]
+
+Let \( V \) be a vector space over \( F \). Suppose:
+
+- \( G = \{ \v_1, \v_2, \dots, \v_n \} \) spans \( V \);
+- \( L = \{ \u_1, \u_2, \dots, \u_m \} \) is linearly independent.
+
+Then \( m \leq n \).
+:::
+
+::: {.proof}
+The strategy is to insert the vectors from \( L \) one-by-one into \( G \) and "sift" the resulting set to maintain the spanning property. We rely on the fact that if we add a vector \( \w \) to a spanning set \( S \), the set \( \{ \w \} \cup S \) becomes linearly dependent, allowing us to remove a redundant vector (by @thm-span-preservation).
+
+Consider the first step. We form the set \( B_1 \) by inserting \( \u_1 \) into \( G \):
+\[
+	B_1 = \{ \u_1, \v_1, \dots, \v_n \}.
+\]
+Since \( G \) spans \( V \), \( B_1 \) is linearly dependent. By applying the sifting process (@thm-sift), we can remove a vector to obtain a new spanning set \( G_1 \). Since \( L \) is linearly independent, \( \u_1 \neq \mathbf{0} \), so the removed vector must be some \( \v_i \). Thus:
+\[
+	G_1 = \{ \u_1 \} \cup S_1,
+\]
+where \( S_1 \) is a subset of \( G \) with size \( n-1 \).
+
+Now, consider the general step. Suppose we have successfully exchanged \( k \) vectors such that the set
+\[
+	G_k = \{ \u_1, \dots, \u_k \} \cup S_k
+\]
+spans \( V \), where \( S_k \subset G \) contains \( n-k \) vectors. We insert the next vector \( \u_{k+1} \) to form:
+\[
+	B_{k+1} = \{ \u_{k+1} \} \cup G_k.
+\]
+Since \( G_k \) is a spanning set, \( \u_{k+1} \) depends on the vectors in \( G_k \), making \( B_{k+1} \) dependent. We must remove a vector to restore the spanning property. We cannot remove any of the \( \u_i \)'s, as this would imply a linear dependence relation exclusively among elements of \( L \), contradicting the hypothesis that \( L \) is linearly independent. Therefore, we must remove some \( \v_j \) from \( S_k \).
+
+This process generates a sequence of subsets of remaining \( \v \)'s:
+\[
+	n = |G| > |S_1| > |S_2| > \dots > |S_m| \geq 0.
+\]
+Since we are able to perform this exchange \( m \) times (once for each \( \u \in L \)), we must have started with enough \( \v \)'s to accommodate every removal. Therefore, \( n \geq m \).
+:::
+
+## Consequences of the Replacement Theorem
+
+Having proved the Steinitz Replacement Theorem, the major conclusion we can draw from it is that any (finite) basis of the same vector space will have the same size.
+
+::: {#thm-basis-theorem}
+[Basis Theorem]
+
+If a vector space \( V \) over \( F \) has a finite basis, then every basis of \( V \) has the same number of vectors.
+:::
+
+::: {.proof}
+Let \( B_1 \) and \( B_2 \) be two bases with \( n \) and \( m \) vectors respectively.
+
+- Since \( B_1 \) is linearly independent and \( B_2 \) spans, by Replacement Theorem, \( n \leq m \).
+- Since \( B_2 \) is linearly independent and \( B_1 \) spans, by Replacement Theorem, \( m \leq n \).
+
+Thus \( n = m \).
+:::
+
+::: {#def-dimension}
+[Dimension]
+
+A vector space \( V \) over \( F \) is called **finite-dimensional** if it has a finite basis. The **dimension** of \( V \), denoted \( \dim_F (V) \), is the number of vectors in any basis for \( V \). By convention, \( \dim_F (\{\mathbf{0}\}) = 0 \).
+:::
+
+::: {.remark}
+The convention \( \dim(\{\mathbf{0}\}) = 0 \) is consistent with the fact that the **only basis for the zero space is the empty set** \( \varnothing \). Indeed, \( \varnothing \) is vacuously linearly independent (there is no nontrivial linear combination to consider), and \( \Span(\varnothing) = \{\mathbf{0}\} \) by our earlier convention. Since \( |\varnothing| = 0 \), we have \( \dim(\{\mathbf{0}\}) = 0 \).
+:::
+
+::: {.remark}
+When the underlying field is clear, we abuse the notation of \( \dim_F \) and write it as \( \dim \).
+:::
+
+::: {#exm-dimensions}
+[Examples of Dimensions]
+
+\( \dim(F^n) = n \), \( \dim(F[x]_{\leq n}) = n+1 \), and \( \dim(M_{m \times n}(F)) = mn \).
+:::
+
+::: {.remark}
+The notation \( \dim_F(V) \) reminds us that **dimension depends on the choice of field**. For instance, recall from @exm-q-adjoin-sqrt2 that \( \nQ(\sqrt{2}) = \{ a + b\sqrt{2} : a, b \in \nQ \} \) is a vector space over \( \nQ \) with basis \( \{ 1, \sqrt{2} \} \), so \( \dim_{\nQ}(\nQ(\sqrt{2})) = 2 \).
+
+As a more striking example, consider the complex numbers \( \nC \). As a vector space over itself, \( \nC \) has basis \( \{ 1 \} \), so \( \dim_{\nC}(\nC) = 1 \). However, as a vector space over \( \nR \), \( \nC \) has basis \( \{ 1, i \} \), so \( \dim_{\nR}(\nC) = 2 \). The same set can have different dimensions depending on which field we use for scalar multiplication!
+:::
+
+::: {#thm-size-bounds}
+[Size Bounds for Independent and Spanning Sets]
+
+Let \( V \) be a vector space of dimension \( n \) over \( F \), and \( S \subseteq V \) be a subset.
+
+1. If \( |S| > n \), then \( S \) cannot be linearly independent.
+2. If \( |S| < n \), then \( S \) cannot span \( V \).
+:::
+
+::: {.proof}
+1. Given \( |S| > n \), and suppose for the sake of contradiction that \( S \) is linearly independent. Let \( B \) be a basis of \( V \), then we have \( |B| = n \) and \( B \) is a spanning set of \( V \). By Replacement Theorem, we have
+\[
+	\underbrace{|S|}_{\text{size of lin. indep. set}} \leq \underbrace{|B|}_{\text{size of spanning set}} = n.
+\]
+     Giving a contradiction, hence \( S \) cannot be linearly independent.
+
+2. Given \( |S| < n \), and suppose for the sake of contradiction that \( S \) spans \( V \). Let \( B \) be a basis of \( V \), then we have \( |B| = n \) and \( B \) is linearly independent. By Replacement Theorem, we have
+\[
+	n = \underbrace{|B|}_{\text{size of lin. indep. set}} \leq \underbrace{|S|}_{\text{size of spanning set}}.
+\]
+     This implies \( n \leq |S| \), which contradicts the assumption that \( |S| < n \). Hence \( S \) cannot span \( V \).
+:::
+
+::: {.remark}
+\[
+	\text{Size of lin. indep. set } \leq \text{ Size of basis } \leq \text{ Size of spanning set}.
+\]
+:::
+
+::: {#thm-basis-extension}
+[Basis Extension Theorem]
+
+Let \( V \) be a finite-dimensional vector space and \( S \) be a linearly independent subset of \( V \). Then \( S \) can be extended into a basis of \( V \).
+:::
+
+::: {.proof}
+Since \( V \) is finite-dimensional, it has a finite basis \( B = \{ \v_1, \dots, \v_n \} \). Consider the set \( S \cup B \). Since \( B \) spans \( V \), \( S \cup B \) also spans \( V \). We apply the Sifting Method (@thm-sift) to the ordered set formed by listing the elements of \( S \) first, followed by the elements of \( B \).
+
+The Sifting Method will keep all elements of \( S \) because \( S \) is linearly independent. It then proceeds to examine each element of \( B \), keeping those that are not in the span of the vectors already kept. The resulting subset \( S' \) spans \( \Span(S \cup B) = V \) and is linearly independent by construction. Thus, \( S' \) is a basis for \( V \) that contains \( S \).
+:::
+
+::: {#cor-basis-existence}
+[Existence of Basis]
+
+Every finite spanning set of a vector space \( V \) contains a basis.
+:::
+
+::: {.proof}
+Apply the Sifting Method to the spanning set. The resulting subset \( S' \) is linearly independent by construction and still spans \( V \). Therefore, \( S' \) is a basis for \( V \).
+:::
+
+::: {#thm-dim-impl-eq}
+[Dimension Implies Equality]
+
+Let \( V \) and \( W \) be finite-dimensional vector spaces over \( F \). If
+
+1. \( W \subseteq V \);
+2. \( \dim_F (W) = \dim_F (V) \),
+
+then \( W = V \).
+:::
+
+::: {.proof}
+If we show \( V \subseteq W \) then we are done. Suppose for contradiction that \( V \nsubseteq W \). That means there exists some \( \v \in V \) that \( \v \notin W \).
+
+Let \( S = \{ \w_1, \dots, \w_n \} \) be a basis of \( W \), (consequently, \( \dim_F (W) = n \)). Since \( \v \notin W \), we have \( \v \notin \Span(S) \).
+
+Consider \( S' = \{ \w_1, \dots, \w_n, \v \} \). Since \( S \) is linearly independent, no \( \w_i \) is a linear combination of \( \w_1, \dots, \w_{i-1} \); and \( \v \) is not a linear combination of \( \w_1, \dots, \w_n \) because \( \v \notin \Span(S) \). By @thm-linear-dependence-lemma, \( S' \) is linearly independent in \( V \). By Replacement Theorem, we have
+\[
+	\underbrace{|S'|}_{\text{size of lin. indep. set}} \leq \dim_F (V),
+\]
+which implies \( n + 1 \leq n \), which is a contradiction, therefore \( V \subseteq W \).
+:::
+
+::: {.remark}
+This theorem makes proving \( W = V \) somewhat easier. As if we wanted to prove equivalence before, we can only do it by proving \( W \subseteq V \) and \( V \subseteq W \). Now we can just prove one side and then state that their dimension is the same.
+:::
+
+An immediate consequence of the above theorem is the following:
+
+::: {#thm-maximal-indep}
+[Maximal Independent Subset is a Basis]
+
+Let \( V \) be a vector space of dimension \( n \) over \( F \). Then any \( n \) independent vectors form a basis of \( V \).
+(We say that "any maximal linearly independent subset forms a basis").
+:::
+
+::: {.proof}
+Let \( S \) be a linearly independent set of size \( n \). We want to show that \( \Span(S) = V \).
+
+Let \( W = \Span(S) \), this implies that \( W \) is a subspace of \( V \), which implies \( W \subseteq V \).
+
+Notice that \( S \) spans \( W \) and \( S \) is linearly independent, therefore \( S \) is a basis of \( W \). So \( \dim_F (W) = |S| = n = \dim_F (V) \). By @thm-dim-impl-eq, we have \( W = V \), then \( \Span(S) = V \).
+:::

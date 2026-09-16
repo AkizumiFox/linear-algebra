@@ -1,0 +1,65 @@
+
+
+# Bases
+
+We have reached what many consider the "Goldilocks Zone" of Linear Algebra.
+
+If a set is too small, it won't span the whole space—you'll be left with points you can't reach. If a set is too large, it will be linearly dependent—you'll have redundant vectors cluttering your workspace. A **basis** is a set that is "just right." It is large enough to build everything, but small enough that every piece is essential.
+
+Because a basis has no redundancy, it gives us something incredible: a **unique address system**. In an abstract vector space, it's hard to tell someone where a vector is. But once we pick a basis, every vector can be described by a unique list of numbers—its coordinates. A basis is the bridge that allows us to turn abstract geometry into concrete arithmetic.
+
+## Definition and Standard Bases
+
+::: {#def-basis}
+[Basis]
+
+A subset \( B \) of a vector space \( V \) is called a **basis** for \( V \) if:
+
+1. \( B \) is linearly independent;
+2. \( B \) spans \( V \).
+:::
+
+::: {#exm-standard-bases}
+[Standard Bases]
+
+Commonly used standard bases for familiar vector spaces are listed below:
+
+- The **standard basis** for \( F^n \) is \( \{ \e_1, \e_2, \dots, \e_n \} \), where \( \e_i \) has a 1 in the \( i \)-th position and 0 elsewhere.
+- The standard basis for \( F[x]_{\leq n} \) is \( \{ 1, x, x^2, \dots, x^n \} \).
+- The standard basis for \( M_{m \times n}(F) \) is the set of matrices \( \E_{ij} \) having a 1 at entry \( (i,j) \) and 0 elsewhere.
+:::
+
+## Unique Representation and Coordinates
+
+The most important property of a basis is that every vector in the space has a unique "address" relative to it.
+
+::: {#thm-unique-representation}
+[Unique Representation]
+
+Let \( B = \{ \v_1, \dots, \v_n \} \) be a basis for \( V \). Then every vector \( \v \in V \) can be written as a linear combination of elements in \( B \) in **exactly one way**.
+:::
+
+::: {.proof}
+Since \( B \) spans \( V \), there exist scalars \( a_i \) such that \( \v = \sum a_i \v_i \). Suppose there is another representation \( \v = \sum b_i \v_i \). Then:
+\[
+	\mathbf{0} = \v - \v = \sum a_i \v_i - \sum b_i \v_i = \sum (a_i - b_i) \v_i.
+\]
+Since \( B \) is linearly independent, we must have \( a_i - b_i = 0 \) for all \( i \), meaning \( a_i = b_i \).
+:::
+
+::: {#def-coordinates}
+[Coordinates]
+
+Let \( B = \{ \v_1, \dots, \v_n \} \) be an **ordered** basis for \( V \). For any \( \v \in V \), the unique scalars \( c_1, \dots, c_n \) such that \( \v = \sum c_i \v_i \) are called the **coordinates** of \( \v \) with respect to \( B \). We write this as a column vector:
+\[
+	[\v]_B = \begin{bmatrix} c_1 \\ c_2 \\ \vdots \\ c_n \end{bmatrix}.
+\]
+:::
+
+::: {.remark}
+Notice the subtle but important distinction: a **basis as a set** determines which vectors can be built (i.e., it determines the space), but to define **coordinates** we need an **ordered basis**—a basis with a fixed ordering of its elements. For example, if \( B = \{ \v_1, \v_2 \} \), then the coordinate vector \( [\v]_B = \begin{bmatrix} 3 \\ 5 \end{bmatrix} \) means \( \v = 3\v_1 + 5\v_2 \). If we had listed the basis in the opposite order \( B' = \{ \v_2, \v_1 \} \), the same vector \( \v \) would have coordinates \( [\v]_{B'} = \begin{bmatrix} 5 \\ 3 \end{bmatrix} \). The underlying space is the same, but the coordinate representation depends on the ordering.
+:::
+
+::: {.remark}
+The map \( \v \mapsto [\v]_B \) provides a way to treat any abstract \( n \)-dimensional vector space as if it were simply \( F^n \). This is the power of a basis.
+:::

@@ -1,0 +1,18 @@
+
+# Preliminary
+
+This chapter covers the essential background needed for the study of linear algebra. Feel free to skip sections that you are already familiar with. This chapter serves only as a quick recap of the necessary mathematical background, so it might not be the best place to start if you are fresh to these topics. If you require a more detailed construction of these topics, I recommend checking out the first chapter of *Topology* by James Raymond Munkres (2nd ed.).
+
+ In addition to the following knowledge presented in this chapter, basic knowledge of logic and proof techniques is recommended, including:
+
+- Direct proof
+- Proof by contradiction
+- Proof by induction
+- Proof by contrapositive
+- Proof by cases (exhaustion)
+- Constructive proof (constructive existence)
+- Non-constructive existence proof
+- Uniqueness proof
+- Proof of equivalence (iff proof)
+- Disproof by counterexample
+- Pigeonhole principle

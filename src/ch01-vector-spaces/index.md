@@ -1,0 +1,4 @@
+
+# Vector Spaces and Dimensions
+
+In this chapter, we introduce the fundamental concept of a vector space and discuss its properties, including basis and dimension.

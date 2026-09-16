@@ -1,0 +1,31 @@
+% Preamble for Book PDF
+% Same as preamble.tex: full LaTeX setup with bookmode for correct heading styles
+\usepackage{bbm}
+% Text block margins: 2.5cm sides, 2.5cm top/bottom (narrower than default book)
+\usepackage[margin=2.5cm]{geometry}
+\usepackage[skipgeometry,skiphyperref,skiptitlesec]{latex/latex-template}
+\let\maketitle\relax
+
+% List spacing (1.2x)
+\usepackage{enumitem}
+\setlist{itemsep=1.2em, parsep=0pt}
+
+% Custom enumeration with prefix
+\newlist{customenum}{enumerate}{1}
+\setlist[customenum,1]{label=\customenumprefix\arabic*, itemsep=1.2em}
+\newcommand{\customenumprefix}{}
+
+% Chapter styling (bookmode: two-level no box, three-level black box, correct font sizes)
+\usepackage[bookmode]{latex/chapter-style}
+
+% Unnumbered theorem variants for preface (when is-preface, filter uses definition* etc.)
+\newtheorem*{definitionT*}{Definition}
+\newtheorem*{theoremT*}{Theorem}
+\newtheorem*{corollaryT*}{Corollary}
+\newtheorem*{lemmaT*}{Lemma}
+\newtheorem*{propositionT*}{Proposition}
+\newenvironment{definition*}{\begin{dBox}\begin{definitionT*}}{\end{definitionT*}\end{dBox}}
+\newenvironment{theorem*}{\begin{tBox}\begin{theoremT*}}{\end{theoremT*}\end{tBox}}
+\newenvironment{corollary*}{\begin{cBox}\begin{corollaryT*}}{\end{corollaryT*}\end{cBox}}
+\newenvironment{lemma*}{\begin{lBox}\begin{lemmaT*}}{\end{lemmaT*}\end{lBox}}
+\newenvironment{proposition*}{\begin{pBox}\begin{propositionT*}}{\end{propositionT*}\end{pBox}}
