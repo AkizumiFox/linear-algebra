@@ -1,8 +1,8 @@
 <!--
 Draft carried over from the retired LaTeX edition (chapters/chapter03-determinants, removed 2026-09-14).
-Not built: the build only reads src/. To publish, move this file into src/ch03-determinants/,
-add "src/ch03-determinants" to "chapters" in config/config.json, and add the chapter name in
-build/manifest.py (chapter_names).
+Not built: the build only reads chapters listed in config/config.json. To publish, move this
+file into src/ch03-determinants/ (as index.md plus section files), and add "src/ch03-determinants"
+to "chapters" in config/config.json. The chapter title comes from index.md's "# " heading.
 -->
 
 # Determinants

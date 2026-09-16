@@ -1,8 +1,8 @@
 <!--
 Draft carried over from the retired LaTeX edition (chapters/chapter04-diagonalization, removed 2026-09-14).
-Not built: the build only reads src/. To publish, move this file into src/ch04-diagonalization/,
-add "src/ch04-diagonalization" to "chapters" in config/config.json, and add the chapter name in
-build/manifest.py (chapter_names).
+Not built: the build only reads chapters listed in config/config.json. To publish, move this
+file into src/ch04-diagonalization/ (as index.md plus section files), and add "src/ch04-diagonalization"
+to "chapters" in config/config.json. The chapter title comes from index.md's "# " heading.
 -->
 
 # Diagonalization

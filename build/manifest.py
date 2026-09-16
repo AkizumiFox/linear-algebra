@@ -1,23 +1,16 @@
 """
 Build System Manifest Module
 ============================
-Handles theorem manifests and navigation generation.
+Scans every page for labels, references and search text (cached per page), and writes
+the data files the website loads: tooltip shards, navigation and the search index.
 """
 
+import hashlib
 import json
-import re
-import shutil
 import subprocess
-from pathlib import Path
+from concurrent.futures import ThreadPoolExecutor
 
-from .config import (
-    PROJECT_ROOT, 
-    BUILD_DIR,
-    CROSSREF_LABELS_FILE, 
-    SCAN_FILE,
-    THEOREM_MANIFEST_FILE
-)
-from .discovery import discover_markdown_files
+from .book import Book, Page
 from .utils import print_step, print_success, print_warning, print_error, run_with_crash_retry
 
 
@@ -25,204 +18,172 @@ from .utils import print_step, print_success, print_warning, print_error, run_wi
 # Label Scanning
 # =============================================================================
 
-def scan_labels(config: dict):
+def _scan_meta_file(book: Book):
+    path = book.build_dir / "tmp" / "scan_meta.json"
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps({"environment_settings": book.environment_settings}), encoding="utf-8")
+    return path
+
+
+def _scan_key(book: Book, page: Page) -> str:
+    digest = hashlib.sha1()
+    digest.update((book.filters_dir / "theorems.lua").read_bytes())
+    digest.update(json.dumps(book.environment_settings, sort_keys=True).encode())
+    digest.update(f"{page.chapter_number}:{page.section}:{page.html_path}".encode())
+    digest.update(page.source.read_bytes())
+    return digest.hexdigest()
+
+
+def _scan_page(book: Book, page: Page, meta_file) -> dict | None:
+    cache_file = book.cache_dir / "scan" / f"{_scan_key(book, page)}.json"
+    if cache_file.exists():
+        return json.loads(cache_file.read_text(encoding="utf-8"))
+
+    cmd = [
+        "pandoc", str(page.source),
+        "--from", "markdown+tex_math_single_backslash",
+        "--to", "json",
+        "--lua-filter", str(book.filters_dir / "theorems.lua"),
+        "--metadata-file", str(meta_file),
+        "--metadata", "scan_mode=true",
+        "--metadata", f"chapter-num={page.chapter_number}",
+        "--metadata", f"section-num={page.section}",
+    ]
+    try:
+        result = run_with_crash_retry(cmd)
+    except subprocess.CalledProcessError as e:
+        print_error(f"Error scanning {page.source.name}")
+        for line in (e.stderr or "").strip().splitlines():
+            print(f"    {line}")
+        return None
+    if result.stderr and result.stderr.strip():
+        print_warning(f"Scan warning for {page.source.name}:")
+        for line in result.stderr.strip().splitlines():
+            print(f"    {line}")
+
+    for line in result.stdout.splitlines():
+        if line.startswith("SCAN_RESULT:"):
+            data = json.loads(line[len("SCAN_RESULT:"):])
+            data = {"labels": data.get("labels") or {}, "refs": data.get("refs") or [], "text": data.get("text") or ""}
+            cache_file.parent.mkdir(parents=True, exist_ok=True)
+            cache_file.write_text(json.dumps(data), encoding="utf-8")
+            return data
+    print_error(f"No scan result for {page.source.name}")
+    return None
+
+
+def scan_labels(book: Book) -> dict:
     """
-    Scan all markdown files to collect theorem labels.
-    Generates crossref_labels.json.
+    Scan all pages. Writes crossref_labels.json (label registry used by the filters) and
+    scan.json (per-page labels, references and text). Returns the scan data.
     """
     print_step("Scanning labels...")
-    
-    files = discover_markdown_files(config)
+    meta_file = _scan_meta_file(book)
+    pages = book.pages
+    with ThreadPoolExecutor(max_workers=min(8, len(pages) or 1)) as executor:
+        results = list(executor.map(lambda p: _scan_page(book, p, meta_file), pages))
+
     global_labels = {}
     scan_files = {}
-    
-    # Create a temporary metadata file for environment settings
-    scan_meta_file = BUILD_DIR / "scan_meta.yaml"
-    BUILD_DIR.mkdir(parents=True, exist_ok=True)
-    
-    with open(scan_meta_file, "w") as f:
-        f.write("environment_settings:\n")
-        settings = config.get("environment_settings", {})
-        json_str = json.dumps(settings, indent=2)
-        for line in json_str.splitlines():
-            f.write(f"  {line}\n")
-    
-    for chapter_num, section_num, source_file in files:
-        dir_name = source_file.parent.name
-        html_filename = source_file.stem + ".html"
-        relative_path = f"{dir_name}/{html_filename}"
-        
-        cmd = [
-            "pandoc",
-            str(source_file),
-            "--from", "markdown+tex_math_single_backslash",
-            "--to", "json",
-            "--lua-filter", str(PROJECT_ROOT / "filters" / "theorems.lua"),
-            "--metadata-file", str(scan_meta_file),
-            "--metadata", "scan_mode=true",
-            "--metadata", f"chapter-num={chapter_num}",
-            "--metadata", f"section-num={section_num}",
-        ]
-        
-        try:
-            result = run_with_crash_retry(cmd)
-            if result.stderr and result.stderr.strip():
-                print_warning(f"Scan warning for {source_file.name}:")
-                for line in result.stderr.strip().splitlines():
-                    print(f"    {line}")
-            output = result.stdout
-            
-            for line in output.splitlines():
-                if line.startswith("SCAN_RESULT:"):
-                    result_data = json.loads(line[len("SCAN_RESULT:"):])
-                    file_labels = result_data.get("labels") or {}
-                    
-                    for label_id, info in file_labels.items():
-                        info["file"] = relative_path
-                        global_labels.setdefault(label_id, info)
-                    scan_files[relative_path] = {
-                        "source": str(source_file.relative_to(PROJECT_ROOT)),
-                        "labels": sorted(file_labels),
-                        "refs": result_data.get("refs") or [],
-                    }
-                    break
-                    
-        except subprocess.CalledProcessError as e:
-            print_error(f"Error scanning {source_file.name}: {e}")
-            if e.stderr and e.stderr.strip():
-                for line in e.stderr.strip().splitlines():
-                    print(f"    {line}")
+    for page, data in zip(pages, results):
+        if data is None:
             continue
-            
-    CROSSREF_LABELS_FILE.parent.mkdir(parents=True, exist_ok=True)
-    with open(CROSSREF_LABELS_FILE, "w") as f:
-        json.dump({"crossref_labels": global_labels}, f, indent=2)
-    with open(SCAN_FILE, "w") as f:
-        json.dump({"files": scan_files}, f, indent=2)
-        
+        for label_id, info in data["labels"].items():
+            info = dict(info, file=page.html_path, shard=page.shard)
+            global_labels.setdefault(label_id, info)
+        scan_files[page.html_path] = {
+            "source": str(page.source.relative_to(book.root)),
+            "labels": sorted(data["labels"]),
+            "refs": data["refs"],
+            "text": data["text"],
+        }
+
+    book.build_dir.mkdir(parents=True, exist_ok=True)
+    book.labels_file.write_text(json.dumps({"crossref_labels": global_labels}, indent=2), encoding="utf-8")
+    scan = {"files": scan_files}
+    book.scan_file.write_text(json.dumps(scan, indent=2), encoding="utf-8")
     print_success(f"Scanned {len(global_labels)} labels.")
-    return global_labels
+    return scan
+
+
+def load_scan(book: Book) -> tuple[dict, dict]:
+    """(scan data, label registry) from the last scan."""
+    scan = json.loads(book.scan_file.read_text(encoding="utf-8"))
+    labels = json.loads(book.labels_file.read_text(encoding="utf-8"))["crossref_labels"]
+    return scan, labels
 
 
 # =============================================================================
-# Theorem Manifest
+# Website Data Files
 # =============================================================================
 
-def generate_theorem_manifest(config: dict):
-    """Generate theorems.json for tooltip previews from the global label registry."""
-    if not CROSSREF_LABELS_FILE.exists():
-        print_warning("crossref_labels.json not found. Tooltips may be empty.")
-        return
-
-    with open(CROSSREF_LABELS_FILE) as f:
-        data = json.load(f)
-        labels = data.get("crossref_labels", {})
-    
-    manifest = {}
+def generate_theorem_manifest(book: Book):
+    """Write tooltip data as one shard per chapter: theorems/<chapter-slug>.json."""
+    _, labels = load_scan(book)
+    shards: dict[str, dict] = {}
     for label_id, info in labels.items():
-        manifest[label_id] = {
+        shards.setdefault(info["shard"], {})[label_id] = {
             "type": info.get("type", "unknown"),
-            "number": info.get("number", "?"),
             "type_name": info.get("type_name", ""),
+            "number": info.get("number", ""),
             "title": info.get("title", ""),
             "title_html": info.get("title_html", ""),
-            "html": info.get("html_content", f"<p><strong>{info.get('type_name')} {info.get('number')}</strong> ({info.get('title')})</p>"),
-            "file": info.get("file", "")
+            "html": info.get("html_content", ""),
+            "file": info.get("file", ""),
         }
-    
-    THEOREM_MANIFEST_FILE.parent.mkdir(parents=True, exist_ok=True)
-    with open(THEOREM_MANIFEST_FILE, "w") as f:
-        json.dump(manifest, f, indent=2)
-    
-    html_output = PROJECT_ROOT / config["output"]["html"]
-    if html_output.exists():
-        shutil.copy(THEOREM_MANIFEST_FILE, html_output / "theorems.json")
-    
-    print_success(f"Theorem manifest: {len(manifest)} entries")
+
+    out_dir = book.html_dir / "theorems"
+    out_dir.mkdir(parents=True, exist_ok=True)
+    for stale in out_dir.glob("*.json"):
+        if stale.stem not in shards:
+            stale.unlink()
+    for shard, entries in shards.items():
+        _write_if_changed(out_dir / f"{shard}.json", json.dumps(dict(sorted(entries.items())), indent=2))
+    print_success(f"Theorem manifest: {len(labels)} entries in {len(shards)} shards")
 
 
-# =============================================================================
-# Navigation Manifest
-# =============================================================================
-
-def generate_navigation_manifest(config: dict, output_dir: Path, extract_title_func=None):
-    """Generate navigation.json for the sidebar."""
+def generate_navigation_manifest(book: Book):
+    """Write navigation.json for the sidebar."""
+    pages = book.pages
+    preface = next((p for p in pages if p.is_preface), None)
     navigation = {
-        "title": config.get("title", "Book"),
-        "author": config.get("author", ""),
-        "chapters": []
+        "title": book.title,
+        "author": book.author,
+        "home": {"title": preface.title, "path": preface.html_path} if preface else None,
+        "chapters": [],
     }
-    
-    chapter_names = {
-        "ch00-foundations": "Preliminary",
-        "ch01-vector-spaces": "Vector Spaces and Dimensions",  
-        "ch02-linear-transformations": "Linear Transformations",
-    }
-    
-    for chapter_idx, chapter_dir in enumerate(config["chapters"]):
-        chapter_path = PROJECT_ROOT / chapter_dir
-        if not chapter_path.exists():
-            continue
-        
-        dir_basename = chapter_path.name
-        chapter_title = chapter_names.get(dir_basename, _get_chapter_display_name(chapter_dir, extract_title_func))
-        
-        chapter_entry = {
-            "title": chapter_title,
-            "number": chapter_idx,
+    for chapter in book.chapters:
+        chapter_pages = [p for p in pages if p.chapter is chapter]
+        index = next((p for p in chapter_pages if p.section == 0), None)
+        navigation["chapters"].append({
+            "title": chapter.title,
+            "number": chapter.number,
             "collapsed": False,
-            "sections": [],
-            "path": None
-        }
-        
-        if (chapter_path / "index.md").exists():
-            chapter_entry["path"] = f"{dir_basename}/index.html"
-        
-        md_files = sorted([f for f in chapter_path.glob("*.md")])
-        
-        section_counter = 1
-        for md_file in md_files:
-            if md_file.name == "index.md":
-                continue
-                
-            title = extract_title_func(md_file) if extract_title_func else md_file.stem
-            section_num = f"{chapter_idx}.{section_counter}" if chapter_idx > 0 else f"0.{section_counter}"
-            section_counter += 1
-            
-            relative_html_path = f"{dir_basename}/{md_file.stem}.html"
-            
-            chapter_entry["sections"].append({
-                "title": title,
-                "number": section_num,
-                "path": relative_html_path,
-                "filename": md_file.name
-            })
-        
-        navigation["chapters"].append(chapter_entry)
-    
-    nav_file = output_dir / "navigation.json"
-    with open(nav_file, "w", encoding="utf-8") as f:
-        json.dump(navigation, f, indent=2, ensure_ascii=False)
-    
+            "path": index.html_path if index else None,
+            "sections": [
+                {"title": p.title, "number": p.number, "path": p.html_path, "filename": p.source.name}
+                for p in chapter_pages if p.section > 0
+            ],
+        })
+    _write_if_changed(book.html_dir / "navigation.json", json.dumps(navigation, indent=2, ensure_ascii=False))
     print_success(f"Navigation manifest: {sum(len(c['sections']) for c in navigation['chapters'])} sections")
-    
-    return navigation
 
 
-def _get_chapter_display_name(chapter_dir: str, extract_title_func=None) -> str:
-    """Get display name for a chapter from its directory name or index.md."""
-    chapter_path = PROJECT_ROOT / chapter_dir
-    
-    index_file = chapter_path / "index.md"
-    if index_file.exists() and extract_title_func:
-        title = extract_title_func(index_file)
-        if title:
-            return title
-    
-    dir_name = chapter_path.name
-    match = re.match(r'^ch(\d+)-(.+)$', dir_name)
-    if match:
-        name_part = match.group(2).replace('-', ' ').title()
-        return name_part
-    
-    return dir_name.replace('-', ' ').title()
+def generate_search_index(book: Book):
+    """Write search.json from the text collected during the scan."""
+    scan, _ = load_scan(book)
+    index = []
+    for page in book.pages:
+        entry = scan["files"].get(page.html_path)
+        if entry:
+            index.append({"title": page.title, "url": page.html_path, "content": entry["text"].strip()})
+    _write_if_changed(book.html_dir / "search.json", json.dumps(index, indent=2, ensure_ascii=False))
+    print_success(f"Search index generated with {len(index)} entries")
+
+
+def _write_if_changed(path, text: str):
+    """Keep the file's timestamp when nothing changed (the dev server watches outputs)."""
+    path.parent.mkdir(parents=True, exist_ok=True)
+    if path.exists() and path.read_text(encoding="utf-8") == text:
+        return
+    path.write_text(text, encoding="utf-8")

@@ -1,86 +1,22 @@
 """
 Build System Package
 ====================
-Modular build system for compiling Markdown to HTML and PDF using Pandoc.
+Builds a Markdown textbook into a website and PDFs with Pandoc.
+
+    from build import Book, build_html
+    book = Book("path/to/book")
+    build_html(book)
 """
 
-from .config import (
-    PROJECT_ROOT,
-    CONFIG_FILE,
-    BUILD_DIR,
-    COUNTER_STATE_FILE,
-    THEOREM_MANIFEST_FILE,
-    CROSSREF_LABELS_FILE,
-    load_config,
-    load_counter_state,
-    save_counter_state,
-    reset_counter_state,
-)
-
-from .discovery import (
-    discover_markdown_files,
-    get_relative_output_path,
-)
-
-from .pandoc import (
-    build_pandoc_command,
-    run_pandoc,
-)
-
-from .html import (
-    build_html,
-    copy_html_assets,
-)
-
-from .pdf import (
-    build_pdf,
-    build_book,
-)
-
-from .manifest import (
-    scan_labels,
-    generate_theorem_manifest,
-    generate_navigation_manifest,
-)
-
-from .cli import (
-    main,
-    extract_title_from_markdown,
-    get_chapter_display_name,
-    clean,
-)
+from .book import Book, Chapter, Page, ENGINE_ROOT
+from .check import check, doctor
+from .cli import main, build_all, clean
+from .html import build_html
+from .manifest import scan_labels
+from .pdf import build_pdf, build_book
 
 __all__ = [
-    # Config
-    "PROJECT_ROOT",
-    "CONFIG_FILE",
-    "BUILD_DIR",
-    "COUNTER_STATE_FILE",
-    "THEOREM_MANIFEST_FILE",
-    "CROSSREF_LABELS_FILE",
-    "load_config",
-    "load_counter_state",
-    "save_counter_state",
-    "reset_counter_state",
-    # Discovery
-    "discover_markdown_files",
-    "get_relative_output_path",
-    # Pandoc
-    "build_pandoc_command",
-    "run_pandoc",
-    # HTML
-    "build_html",
-    "copy_html_assets",
-    # PDF
-    "build_pdf",
-    "build_book",
-    # Manifest
-    "scan_labels",
-    "generate_theorem_manifest",
-    "generate_navigation_manifest",
-    # CLI
-    "main",
-    "extract_title_from_markdown",
-    "get_chapter_display_name",
-    "clean",
+    "Book", "Chapter", "Page", "ENGINE_ROOT",
+    "build_html", "build_pdf", "build_book", "build_all", "scan_labels",
+    "check", "doctor", "clean", "main",
 ]

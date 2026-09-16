@@ -65,6 +65,11 @@ local labels = {}
 -- Document meta (set in Pandoc handler, used in render)
 local doc_meta = nil
 
+-- Tooltip data shard for labels defined in the current document
+local function page_shard()
+    return doc_meta and doc_meta["page-shard"] and pandoc.utils.stringify(doc_meta["page-shard"]) or ""
+end
+
 local function is_book_mode()
     return doc_meta and doc_meta["book-mode"] and pandoc.utils.stringify(doc_meta["book-mode"]) == "true"
 end
@@ -771,6 +776,10 @@ end
 local function scan_and_dump_labels(doc)
     local collected = {}
     local refs = {}
+    -- Plain text for the search index, taken before the walk below edits the document
+    -- (math kept as its TeX source; the plain writer would warn about every formula)
+    local text_doc = doc:walk { Math = function(m) return pandoc.Str(m.text) end }
+    local text = pandoc.write(text_doc, "plain", {wrap_text = "none"})
     
     -- Walk the document to find all theorem environments and equations
     doc:walk {
@@ -819,7 +828,7 @@ local function scan_and_dump_labels(doc)
     }
     
     if doc.meta.scan_mode then
-        local json_str = pandoc.json.encode({labels = collected, refs = refs})
+        local json_str = pandoc.json.encode({labels = collected, refs = refs, text = text})
         print("SCAN_RESULT:" .. json_str)
         return pandoc.Pandoc({}, doc.meta)
     end
@@ -881,12 +890,14 @@ local function collect_labels(div)
                 tex = "\\prefacebanner{Preface}\\setcounter{part}{-1}"
             elseif last_book_part ~= new_c then
                 last_book_part = new_c
+                -- \part increments the counter; set it so the part number is the chapter number
+                tex = string.format("\\setcounter{part}{%d}", new_c - 1)
                 if new_c == 0 then
-                    tex = "\\part{" .. ((chap_title ~= "") and chap_title or "Chapter 0") .. "}"
+                    tex = tex .. "\\part{" .. ((chap_title ~= "") and chap_title or "Chapter 0") .. "}"
                 elseif chap_title ~= "" then
-                    tex = "\\part{Chapter " .. new_c .. ": " .. chap_title .. "}"
+                    tex = tex .. "\\part{Chapter " .. new_c .. ": " .. chap_title .. "}"
                 else
-                    tex = "\\part{Chapter " .. new_c .. "}"
+                    tex = tex .. "\\part{Chapter " .. new_c .. "}"
                 end
             end
             tex = tex .. string.format("\\setcounter{chapter}{%d}\\setcounter{section}{0}", math.max(new_s - 1, 0))
@@ -967,7 +978,7 @@ local function process_citations(cite)
                     {pandoc.RawInline("html", text)},
                     target_url,
                     "",
-                    pandoc.Attr("", {"xref"}, {["data-ref"] = id})
+                    pandoc.Attr("", {"xref"}, {{"data-ref", id}, {"data-shard", label_info.shard or page_shard()}})
                 ))
             elseif FORMAT:match("latex") then
                 local text

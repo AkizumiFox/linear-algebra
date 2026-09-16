@@ -95,5 +95,6 @@
     },
     "deploy-dir": "site",
     "deploy-repo": "https://github.com/AkizumiFox/linear-algebra.git",
-    "deploy-domain": "linear-algebra.akizumifox.com"
+    "deploy-domain": "linear-algebra.akizumifox.com",
+    "deploy-push-url": "git@github.com:AkizumiFox/linear-algebra.git"
 }

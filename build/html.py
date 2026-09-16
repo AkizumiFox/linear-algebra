@@ -1,177 +1,165 @@
 """
 Build System HTML Module
 ========================
-Handles HTML output building.
+Builds the website. Pages whose inputs have not changed since the last build are
+skipped (see page_fingerprint).
 """
 
-import os
+import hashlib
+import json
 import shutil
-from concurrent.futures import ThreadPoolExecutor, as_completed
+from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 from typing import Optional
 
-from .config import PROJECT_ROOT, CROSSREF_LABELS_FILE
-from .discovery import discover_markdown_files, get_relative_output_path
-from .pandoc import build_pandoc_command, run_pandoc
-from .search import generate_search_index
+from .book import Book, Page, ENGINE_ROOT
+from .macros import mathjax_macros_js
+from .manifest import (scan_labels, load_scan, generate_theorem_manifest,
+                       generate_navigation_manifest, generate_search_index)
+from .pandoc import build_pandoc_command, page_metadata, run_pandoc
 from .tikz import build_tikz_figures
-from .utils import print_step, print_file_action, print_success, print_warning, print_error
+from .utils import print_step, print_file_action, print_success, print_error
+
+ASSET_EXTENSIONS = ("*.png", "*.jpg", "*.jpeg", "*.gif", "*.svg")
+
+
+# =============================================================================
+# Assets
+# =============================================================================
+
+def copy_html_assets(book: Book) -> str:
+    """Write styles, scripts and MathJax macros. Returns a version hash of these assets."""
+    out = book.html_dir
+    out.mkdir(parents=True, exist_ok=True)
+    assets = {
+        "styles.css": book.html_styles.read_bytes(),
+        "main.js": book.engine_file("templates/html/main.js").read_bytes(),
+        "mathjax-macros.js": mathjax_macros_js(book.macros_file).encode("utf-8"),
+    }
+    digest = hashlib.sha1()
+    for name, content in assets.items():
+        digest.update(content)
+        target = out / name
+        if not target.exists() or target.read_bytes() != content:
+            target.write_bytes(content)
+    return digest.hexdigest()[:10]
+
+
+def copy_chapter_assets(book: Book):
+    """Copy images from chapter directories to the output."""
+    count = 0
+    for chapter in book.chapters:
+        if not chapter.directory.is_dir():
+            continue
+        destination = book.html_dir / chapter.slug
+        destination.mkdir(parents=True, exist_ok=True)
+        for pattern in ASSET_EXTENSIONS:
+            for source in chapter.directory.glob(pattern):
+                target = destination / source.name
+                if not target.exists() or source.stat().st_mtime > target.stat().st_mtime:
+                    shutil.copy2(source, target)
+                    print_file_action("Copying asset", source.name, target.name)
+                    count += 1
+    if count:
+        print_success(f"Copied {count} chapter assets")
+
+
+# =============================================================================
+# Incremental Builds
+# =============================================================================
+
+def page_fingerprint(book: Book, page: Page, metadata: dict, engine: str, scan: dict, labels: dict) -> str:
+    """Hash of everything a page's output depends on."""
+    refs = scan["files"].get(page.html_path, {}).get("refs", [])
+    referenced = {
+        ref: {k: labels[ref].get(k) for k in ("type_name", "number", "title_html", "file", "shard")}
+        for ref in sorted(set(refs)) if ref in labels
+    }
+    digest = hashlib.sha1()
+    digest.update(engine.encode())
+    digest.update(page.source.read_bytes())
+    digest.update(json.dumps(metadata, sort_keys=True).encode())
+    digest.update(json.dumps(referenced, sort_keys=True).encode())
+    digest.update(json.dumps(sorted(set(refs) - set(labels))).encode())  # unresolved refs
+    return digest.hexdigest()
+
+
+class FingerprintStore:
+    """Fingerprints of the last successful build of each output, persisted as JSON."""
+
+    def __init__(self, path: Path):
+        self.path = path
+        try:
+            self.data = json.loads(path.read_text(encoding="utf-8"))
+        except (OSError, ValueError):
+            self.data = {}
+
+    def unchanged(self, key: str, fingerprint: str, output: Path) -> bool:
+        return output.exists() and self.data.get(key) == fingerprint
+
+    def record(self, key: str, fingerprint: str):
+        self.data[key] = fingerprint
+
+    def save(self):
+        self.path.parent.mkdir(parents=True, exist_ok=True)
+        self.path.write_text(json.dumps(self.data, indent=2, sort_keys=True), encoding="utf-8")
 
 
 # =============================================================================
 # HTML Building
 # =============================================================================
 
-def build_html(
-    config: dict, 
-    specific_file: Optional[Path] = None,
-    extract_title_func=None,
-    get_chapter_display_name_func=None,
-    scan_labels_func=None,
-    generate_theorem_manifest_func=None,
-    generate_navigation_manifest_func=None,
-):
-    """Build HTML output."""
+def build_html(book: Book, specific_file: Optional[Path] = None, dev_reload: bool = False) -> bool:
+    """Build the website (or one page). Returns True if every page built."""
     print_step("Building HTML...")
-    
-    # Always scan labels first for accurate cross-refs
-    if not specific_file and not CROSSREF_LABELS_FILE.exists():
-        if scan_labels_func:
-            scan_labels_func(config)
-    elif specific_file and not CROSSREF_LABELS_FILE.exists():
-        print_warning("Building single file without full label scan. Cross-refs may be broken.")
-    
-    output_dir = PROJECT_ROOT / config["output"]["html"]
-    output_dir.mkdir(parents=True, exist_ok=True)
-    
-    # Remove any LaTeX/PDF artifacts (PDFs and LaTeX intermediates live in _build/pdf only)
-    for f in ("book.tex", "book.aux", "book.log", "book.out", "book.toc", "book.pdf"):
-        (output_dir / f).unlink(missing_ok=True)
-    for pdf in output_dir.rglob("*.pdf"):
-        pdf.unlink(missing_ok=True)
-    
-    # Copy assets
-    copy_html_assets(config, output_dir)
-    copy_chapter_assets(config, output_dir)
-    
-    files = discover_markdown_files(config)
+    scan = scan_labels(book)
+    _, labels = load_scan(book)
+
+    asset_version = copy_html_assets(book)
+    copy_chapter_assets(book)
+
+    pages = book.pages
     if specific_file:
-        specific_file = Path(specific_file).resolve()
-        files = [(c, s, f) for c, s, f in files if f == specific_file]
-        if not files:
+        page = book.page_for(specific_file)
+        if not page:
             print_error(f"File not found in chapters: {specific_file}")
-            return
-    
-    # Precompute commands with prev/next metadata for all files
-    def build_task(i: int, chapter_num: int, section_num: int, source_file: Path):
-        output_file = get_relative_output_path(source_file, output_dir, ".html")
-        cmd = build_pandoc_command(
-            source_file, output_file, "html", config, chapter_num, section_num,
-            extract_title_func, get_chapter_display_name_func, get_relative_output_path
-        )
-        if i > 0:
-            p_chap, p_sec, prev_src = flat_files[i - 1]
-            prev_out = get_relative_output_path(prev_src, output_dir, ".html")
-            try:
-                rel_prev = os.path.relpath(prev_out, output_file.parent)
-                prev_title = extract_title_func(prev_src) if extract_title_func else ""
-                prev_num = "" if (p_chap == 0 and p_sec == 0) or p_sec == 0 else (
-                    f"{p_chap}.{p_sec} " if p_chap > 0 else f"0.{p_sec} "
-                )
-                cmd.extend([
-                    "--metadata", f"prev-page-url={rel_prev}",
-                    "--metadata", f"prev-page-title={prev_title}",
-                    "--metadata", f"prev-page-number={prev_num}"
-                ])
-            except ValueError:
-                pass
-        if i < len(flat_files) - 1:
-            n_chap, n_sec, next_src = flat_files[i + 1]
-            next_out = get_relative_output_path(next_src, output_dir, ".html")
-            try:
-                rel_next = os.path.relpath(next_out, output_file.parent)
-                next_title = extract_title_func(next_src) if extract_title_func else ""
-                next_num = "" if (n_chap == 0 and n_sec == 0) or n_sec == 0 else (
-                    f"{n_chap}.{n_sec} " if n_chap > 0 else f"0.{n_sec} "
-                )
-                cmd.extend([
-                    "--metadata", f"next-page-url={rel_next}",
-                    "--metadata", f"next-page-title={next_title}",
-                    "--metadata", f"next-page-number={next_num}"
-                ])
-            except ValueError:
-                pass
-        return (source_file.name, output_file.name, cmd)
+            return False
+        pages = [page]
 
-    flat_files = files
-    tasks = [build_task(i, c, s, f) for i, (c, s, f) in enumerate(files)]
-    max_workers = min(8, len(tasks))
-    success_count = 0
+    book.tikz_cache_dir.mkdir(parents=True, exist_ok=True)
+    engine = book.engine_fingerprint()
+    store = FingerprintStore(book.cache_dir / "html-fingerprints.json")
+    extra = {"asset-version": asset_version}
+    if dev_reload:
+        extra["dev-reload"] = True
 
-    def run_one(task):
-        return run_pandoc(task[2], verbose=False)
-
-    with ThreadPoolExecutor(max_workers=max_workers) as executor:
-        futures = {executor.submit(run_one, task): task for task in tasks}
-        for future in as_completed(futures):
-            task = futures[future]
-            try:
-                if future.result():
-                    success_count += 1
-                print_file_action("Built", task[0], task[1])
-            except Exception:
-                pass
-
-    print_success(f"HTML build complete: {success_count}/{len(files)} files")
-    build_tikz_figures(config, output_dir)
-    
-    # Generate manifests
-    if generate_theorem_manifest_func:
-        generate_theorem_manifest_func(config)
-    if generate_navigation_manifest_func:
-        generate_navigation_manifest_func(config, output_dir)
-        
-    # Generate search index
-    if not specific_file:
-        generate_search_index(config)
-
-
-def copy_html_assets(config: dict, output_dir: Path):
-    """Copy CSS, JS, and other assets to HTML output directory."""
-    styles_src = PROJECT_ROOT / config["styles"]["html"]
-    if styles_src.exists():
-        styles_dst = output_dir / "styles.css"
-        shutil.copy(styles_src, styles_dst)
-    
-    js_src = PROJECT_ROOT / "templates" / "html" / "main.js"
-    if js_src.exists():
-        js_dst = output_dir / "main.js"
-        shutil.copy(js_src, js_dst)
-
-
-def copy_chapter_assets(config: dict, output_dir: Path):
-    """Copy images and other assets from chapter directories to output."""
-    count = 0
-    for chapter_dir in config["chapters"]:
-        src_dir = PROJECT_ROOT / chapter_dir
-        if not src_dir.exists():
+    tasks = []
+    for page in pages:
+        output_file = book.html_dir / page.html_path
+        metadata = page_metadata(book, page, "html", extra)
+        fingerprint = page_fingerprint(book, page, metadata, engine, scan, labels)
+        if store.unchanged(page.html_path, fingerprint, output_file):
             continue
-            
-        dst_dir = output_dir / src_dir.name
-        dst_dir.mkdir(parents=True, exist_ok=True)
-        
-        # Extensions to copy
-        extensions = ['*.png', '*.jpg', '*.jpeg', '*.gif', '*.svg']
-        
-        for ext in extensions:
-            for src_file in src_dir.glob(ext):
-                dst_file = dst_dir / src_file.name
-                
-                # Copy if destination doesn't exist or source is newer
-                if not dst_file.exists() or src_file.stat().st_mtime > dst_file.stat().st_mtime:
-                    shutil.copy2(src_file, dst_file)
-                    print_file_action("Copying asset", src_file.name, dst_file.name)
-                    count += 1
-    
-    if count > 0:
-        print_success(f"Copied {count} chapter assets")
+        output_file.parent.mkdir(parents=True, exist_ok=True)
+        cmd = build_pandoc_command(book, page, output_file, "html", metadata)
+        tasks.append((page, fingerprint, cmd))
+
+    failures = 0
+    if tasks:
+        with ThreadPoolExecutor(max_workers=min(8, len(tasks))) as executor:
+            for (page, fingerprint, _), ok in zip(tasks, executor.map(lambda t: run_pandoc(t[2]), tasks)):
+                if ok:
+                    store.record(page.html_path, fingerprint)
+                    print_file_action("Built", page.source.name, Path(page.html_path).name)
+                else:
+                    failures += 1
+        store.save()
+    skipped = len(pages) - len(tasks)
+    print_success(f"HTML build complete: {len(tasks) - failures}/{len(tasks)} built"
+                  + (f", {skipped} unchanged" if skipped else ""))
+
+    build_tikz_figures(book)
+    generate_theorem_manifest(book)
+    generate_navigation_manifest(book)
+    generate_search_index(book)
+    return failures == 0

@@ -13,13 +13,9 @@ from collections import defaultdict
 from html.parser import HTMLParser
 from pathlib import Path
 
-from .config import PROJECT_ROOT, BUILD_DIR, CROSSREF_LABELS_FILE, SCAN_FILE
-from .manifest import scan_labels
+from .book import Book
+from .manifest import scan_labels, load_scan
 from .utils import print_step, print_success, print_warning, print_error, print_info
-
-
-BOOK_AUX = BUILD_DIR / "tmp" / "latex-book" / "book.aux"
-SECTION_AUX_DIR = BUILD_DIR / "tmp" / "pdf-single"
 
 MIN_PANDOC = (3, 1)
 
@@ -68,7 +64,7 @@ def read_aux_labels(aux_file: Path) -> dict[str, str]:
     return {m.group(1): m.group(2) for m in re.finditer(r"\\newlabel\{([^}]+)\}\{\{([^}]*)\}", text)}
 
 
-def _compare_numbers(labels: dict, aux_file: Path, only: set[str] | None = None) -> list[str]:
+def _compare_numbers(book: Book, labels: dict, aux_file: Path, only: set[str] | None = None) -> list[str]:
     problems = []
     aux = read_aux_labels(aux_file)
     for label_id, info in sorted(labels.items()):
@@ -79,9 +75,9 @@ def _compare_numbers(labels: dict, aux_file: Path, only: set[str] | None = None)
             continue  # unnumbered environments are referenced by name, not number
         pdf = aux.get(label_id)
         if pdf is None:
-            problems.append(f"{label_id}: missing from {aux_file.relative_to(PROJECT_ROOT)}")
+            problems.append(f"{label_id}: missing from {aux_file.relative_to(book.root)}")
         elif pdf != web:
-            problems.append(f"{label_id}: web {web}, PDF {pdf} ({aux_file.relative_to(PROJECT_ROOT)})")
+            problems.append(f"{label_id}: web {web}, PDF {pdf} ({aux_file.relative_to(book.root)})")
     return problems
 
 
@@ -122,28 +118,25 @@ def check_xref_links(html_dir: Path) -> list[str]:
     return problems
 
 
-def _newest_source_mtime(scan: dict) -> float:
-    sources = [PROJECT_ROOT / entry["source"] for entry in scan["files"].values()]
-    return max(p.stat().st_mtime for p in sources if p.exists())
+def _newest_source_mtime(book: Book) -> float:
+    return max((p.source.stat().st_mtime for p in book.pages), default=0)
 
 
-def check(config: dict) -> bool:
+def check(book: Book, quiet: bool = False) -> bool:
     """Validate labels and references; compare PDF numbering if PDFs have been built."""
-    scan_labels(config)
-    scan = json.loads(SCAN_FILE.read_text())
-    labels = json.loads(CROSSREF_LABELS_FILE.read_text())["crossref_labels"]
+    scan_labels(book)
+    scan, labels = load_scan(book)
 
     errors = []
     warnings = []
 
     # Chapters listed in the config must exist
-    for chapter_dir in config["chapters"]:
-        if not (PROJECT_ROOT / chapter_dir).is_dir():
-            errors.append(f"chapter directory not found: {chapter_dir}")
+    for chapter_dir in book.missing_chapter_dirs():
+        errors.append(f"chapter directory not found: {chapter_dir}")
 
     # Duplicate labels
     defined_in = defaultdict(list)
-    for page, entry in scan["files"].items():
+    for entry in scan["files"].values():
         for label_id in entry["labels"]:
             defined_in[label_id].append(entry["source"])
     for label_id, sources in sorted(defined_in.items()):
@@ -151,32 +144,30 @@ def check(config: dict) -> bool:
             errors.append(f"duplicate label {label_id}: {', '.join(sources)}")
 
     # Unresolved references (only ids shaped like labels, e.g. thm-foo)
-    for page, entry in sorted(scan["files"].items()):
+    for entry in sorted(scan["files"].values(), key=lambda e: e["source"]):
         for ref in sorted(set(entry["refs"])):
             if ref not in labels and re.match(r"^[A-Za-z]+-", ref):
                 errors.append(f"unresolved reference @{ref} in {entry['source']}")
 
     # Cross-reference links in the built site must point at an existing page and anchor
-    html_dir = PROJECT_ROOT / config["output"]["html"]
-    if html_dir.exists():
-        errors.extend(check_xref_links(html_dir))
+    if book.html_dir.exists():
+        errors.extend(check_xref_links(book.html_dir))
 
     # Web vs PDF numbering
-    newest_source = _newest_source_mtime(scan)
-    if BOOK_AUX.exists():
-        if BOOK_AUX.stat().st_mtime < newest_source:
+    book_aux = book.build_dir / "tmp" / "latex-book" / "book.aux"
+    newest_source = _newest_source_mtime(book)
+    if book_aux.exists():
+        if book_aux.stat().st_mtime < newest_source:
             warnings.append("book PDF is older than the sources; run `./build.py book` for an accurate numbering check")
-        errors.extend(_compare_numbers(labels, BOOK_AUX))
-    else:
+        errors.extend(_compare_numbers(book, labels, book_aux))
+    elif not quiet:
         print_info("No book build found; skipping book numbering check (run `./build.py book`)")
 
-    section_aux = sorted(SECTION_AUX_DIR.rglob("*.aux")) if SECTION_AUX_DIR.exists() else []
-    for aux_file in section_aux:
-        page = f"{aux_file.parent.name}/{aux_file.stem}.html"
-        entry = scan["files"].get(page)
-        if not entry:
-            continue
-        errors.extend(_compare_numbers(labels, aux_file, only=set(entry["labels"])))
+    section_aux_dir = book.build_dir / "tmp" / "pdf-single"
+    for aux_file in sorted(section_aux_dir.rglob("*.aux")) if section_aux_dir.exists() else []:
+        entry = scan["files"].get(f"{aux_file.parent.name}/{aux_file.stem}.html")
+        if entry:
+            errors.extend(_compare_numbers(book, labels, aux_file, only=set(entry["labels"])))
 
     for warning in warnings:
         print_warning(warning)

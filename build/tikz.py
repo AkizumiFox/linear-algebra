@@ -5,16 +5,15 @@ Compiles the TikZ pictures collected by filters/tikz.lua into SVG for the websit
 Each picture is compiled once as a standalone document and cached by content hash.
 """
 
+import os
 import shutil
 import subprocess
 import tempfile
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
-from .config import PROJECT_ROOT, BUILD_DIR
+from .book import Book
 from .utils import print_step, print_success, print_error, print_warning
-
-TIKZ_CACHE_DIR = BUILD_DIR / "cache" / "tikz"
 
 STANDALONE_TEMPLATE = r"""\documentclass[tikz,border=2pt]{standalone}
 \usepackage{amsmath,amssymb,amsthm,mathtools,bbm}
@@ -29,7 +28,7 @@ STANDALONE_TEMPLATE = r"""\documentclass[tikz,border=2pt]{standalone}
 """
 
 
-def _compile_one(tex_source: Path, macros_file: Path) -> tuple[Path, str | None]:
+def _compile_one(tex_source: Path, macros_file: Path, tex_inputs: str) -> tuple[Path, str | None]:
     """Compile one picture to SVG next to its source. Returns (source, error or None)."""
     svg = tex_source.with_suffix(".svg")
     with tempfile.TemporaryDirectory(prefix="tikz-") as tmp:
@@ -42,6 +41,7 @@ def _compile_one(tex_source: Path, macros_file: Path) -> tuple[Path, str | None]
         result = subprocess.run(
             ["pdflatex", "-interaction=nonstopmode", "-halt-on-error", doc.name],
             cwd=tmp_dir, capture_output=True, text=True, errors="replace",
+            env={**os.environ, "TEXINPUTS": tex_inputs},
         )
         pdf = tmp_dir / "picture.pdf"
         if result.returncode != 0 or not pdf.exists():
@@ -53,15 +53,16 @@ def _compile_one(tex_source: Path, macros_file: Path) -> tuple[Path, str | None]
     return tex_source, None
 
 
-def build_tikz_figures(config: dict, output_dir: Path):
+def build_tikz_figures(book: Book):
     """Compile pending TikZ sources and copy every SVG into the HTML output."""
-    if not TIKZ_CACHE_DIR.exists():
+    cache_dir = book.tikz_cache_dir
+    if not cache_dir.exists():
         return
-    sources = sorted(TIKZ_CACHE_DIR.glob("*.tex"))
+    sources = sorted(cache_dir.glob("*.tex"))
     if not sources:
         return
 
-    macros_file = PROJECT_ROOT / config["macros"]
+    macros_file = book.macros_file
     macros_mtime = macros_file.stat().st_mtime if macros_file.exists() else 0
     pending = [
         src for src in sources
@@ -74,14 +75,16 @@ def build_tikz_figures(config: dict, output_dir: Path):
         else:
             print_step(f"Compiling {len(pending)} TikZ figure(s)...")
             with ThreadPoolExecutor(max_workers=min(4, len(pending))) as executor:
-                for src, error in executor.map(lambda s: _compile_one(s, macros_file), pending):
+                for src, error in executor.map(lambda s: _compile_one(s, macros_file, book.tex_inputs), pending):
                     if error:
                         print_error(f"TikZ figure {src.stem[:12]} failed: {error}")
 
-    dest = output_dir / "tikz"
+    dest = book.html_dir / "tikz"
     dest.mkdir(parents=True, exist_ok=True)
     count = 0
-    for svg in TIKZ_CACHE_DIR.glob("*.svg"):
-        shutil.copy2(svg, dest / svg.name)
+    for svg in cache_dir.glob("*.svg"):
+        target = dest / svg.name
+        if not target.exists() or target.stat().st_mtime < svg.stat().st_mtime:
+            shutil.copy2(svg, target)
         count += 1
     print_success(f"TikZ figures: {count}")

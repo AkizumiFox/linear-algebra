@@ -5,81 +5,51 @@ Command-line interface and main entry point.
 """
 
 import argparse
-import re
 import shutil
 import sys
 from pathlib import Path
 
-from .config import PROJECT_ROOT, load_config, reset_counter_state
-from .discovery import discover_markdown_files
-from .html import build_html
-from .pdf import build_pdf, build_book
-from .manifest import scan_labels, generate_theorem_manifest, generate_navigation_manifest
-from .deploy import deploy
+from .book import Book, ENGINE_ROOT
 from .check import check, doctor
-from .utils import print_info, print_header, print_error
+from .deploy import deploy
+from .html import build_html
+from .manifest import scan_labels, generate_theorem_manifest
+from .pdf import build_pdf, build_book
+from .utils import print_header, print_info, print_error
 
 
-# =============================================================================
-# Utility Functions
-# =============================================================================
-
-def extract_title_from_markdown(filepath: Path) -> str:
-    """Extract the first H1 title from a markdown file."""
-    try:
-        with open(filepath, 'r', encoding='utf-8') as f:
-            for line in f:
-                line = line.strip()
-                if line == '---':
-                    for line in f:
-                        if line.strip() == '---':
-                            break
-                    continue
-                if line.startswith('# '):
-                    return line[2:].strip()
-    except Exception:
-        pass
-    return filepath.stem.replace('-', ' ').replace('_', ' ').title()
+def build_all(book: Book) -> bool:
+    """HTML, section PDFs and the book PDF. Returns True if everything built."""
+    ok = build_html(book)
+    ok = build_pdf(book) and ok
+    ok = build_book(book) and ok
+    return ok
 
 
-def get_chapter_display_name(chapter_dir: str) -> str:
-    """Get display name for a chapter from its directory name or index.md."""
-    chapter_path = PROJECT_ROOT / chapter_dir
-    
-    index_file = chapter_path / "index.md"
-    if index_file.exists():
-        title = extract_title_from_markdown(index_file)
-        if title:
-            return title
-    
-    dir_name = chapter_path.name
-    match = re.match(r'^ch(\d+)-(.+)$', dir_name)
-    if match:
-        name_part = match.group(2).replace('-', ' ').title()
-        return name_part
-    
-    return dir_name.replace('-', ' ').title()
-
-
-def clean(config: dict):
-    """Remove build directory."""
-    build_dir = PROJECT_ROOT / "_build"
-    if not build_dir.exists():
+def clean(book: Book):
+    """Remove the build directory."""
+    if not book.build_dir.exists():
         print_info("Nothing to clean")
         return
     try:
-        shutil.rmtree(build_dir)
-        print_info(f"Removed: {build_dir}")
+        shutil.rmtree(book.build_dir)
+        print_info(f"Removed: {book.build_dir}")
     except OSError as e:
-        print_error(f"Failed to remove {build_dir}: {e}")
+        print_error(f"Failed to remove {book.build_dir}: {e}")
         print_error("Close any open PDFs or files from _build/ and try again.")
 
 
-# =============================================================================
-# Main Entry Point
-# =============================================================================
+def _book_root(value: str) -> Path:
+    """Accept a book directory, or its book.json / config/config.json."""
+    path = Path(value).resolve()
+    if path.is_file():
+        return path.parent.parent if path.parent.name == "config" else path.parent
+    return path
+
 
 def main():
+    # Line-buffered output, so progress shows up promptly when piped or logged
+    sys.stdout.reconfigure(line_buffering=True)
     print_header("Pandoc Book Build System")
 
     parser = argparse.ArgumentParser(
@@ -87,110 +57,63 @@ def main():
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
-    python build.py html                Build all HTML files
-    python build.py html src/ch01/01.md Build specific HTML file
-    python build.py pdf                 Build all PDF files
-    python build.py book                Build combined book PDF
-    python build.py all                 Build everything
-    python build.py clean               Remove _build directory
-    python build.py manifest            Generate theorems.json only
-    python build.py deploy              Build and copy to site/ (add --push to push)
-    python build.py check               Validate references and web/PDF numbering
-    python build.py doctor              Check that required tools are installed
-        """
+    ./build.py html                Build the website (unchanged pages are skipped)
+    ./build.py html src/ch01/01.md Build one page
+    ./build.py pdf                 Build per-section PDFs
+    ./build.py book                Build the combined book PDF
+    ./build.py all                 Build everything
+    ./build.py serve               Build, serve on localhost and rebuild on changes
+    ./build.py check               Validate references, links and web/PDF numbering
+    ./build.py doctor              Check that required tools are installed
+    ./build.py deploy --push       Build, check, copy to site/ and push
+    ./build.py clean               Remove _build
+    ./build.py html --book ../other-book   Build a different book with this engine
+        """,
     )
-    
-    parser.add_argument(
-        "command",
-        choices=["html", "pdf", "book", "all", "clean", "manifest", "scan", "deploy", "check", "doctor"],
-        help="Build command to run"
-    )
-    parser.add_argument(
-        "file",
-        nargs="?",
-        help="Optional: specific file to build"
-    )
-    parser.add_argument(
-        "--no-build",
-        action="store_true",
-        help="Deploy only: skip build, just copy existing _build/html to deploy-dir"
-    )
-    parser.add_argument(
-        "--push",
-        action="store_true",
-        help="Deploy: after copying, run git add, commit, push from deploy-dir"
-    )
-    
+    parser.add_argument("command", choices=["html", "pdf", "book", "all", "serve", "check", "doctor",
+                                            "scan", "manifest", "deploy", "clean"])
+    parser.add_argument("file", nargs="?", help="html/pdf: build only this source file")
+    parser.add_argument("--book", default=str(ENGINE_ROOT),
+                        help="book directory (containing book.json or config/config.json)")
+    parser.add_argument("--no-build", action="store_true", help="deploy: copy existing output without building")
+    parser.add_argument("--push", action="store_true", help="deploy: commit and push from the deploy directory")
+    parser.add_argument("--port", type=int, default=8000, help="serve: port (default 8000)")
     args = parser.parse_args()
-    
+
     if args.command == "doctor":
         sys.exit(0 if doctor() else 1)
 
+    try:
+        book = Book(_book_root(args.book))
+    except FileNotFoundError as e:
+        print_error(str(e))
+        sys.exit(2)
+
+    specific_file = Path(args.file).resolve() if args.file else None
+    ok = True
     if args.command == "clean":
-        config = load_config()
-        clean(config)
-        return
-    
-    config = load_config()
-    
-    if args.command == "check":
-        sys.exit(0 if check(config) else 1)
+        clean(book)
     elif args.command == "scan":
-        scan_labels(config)
+        scan_labels(book)
     elif args.command == "manifest":
-        generate_theorem_manifest(config)
+        scan_labels(book)
+        generate_theorem_manifest(book)
     elif args.command == "html":
-        specific_file = Path(args.file).resolve() if args.file else None
-        if not specific_file:
-            scan_labels(config)
-        
-        def nav_manifest_wrapper(cfg, output_dir):
-            generate_navigation_manifest(cfg, output_dir, extract_title_from_markdown)
-        
-        build_html(
-            config, 
-            specific_file,
-            extract_title_func=extract_title_from_markdown,
-            get_chapter_display_name_func=get_chapter_display_name,
-            scan_labels_func=scan_labels,
-            generate_theorem_manifest_func=generate_theorem_manifest,
-            generate_navigation_manifest_func=nav_manifest_wrapper,
-        )
+        ok = build_html(book, specific_file)
     elif args.command == "pdf":
-        specific_file = Path(args.file).resolve() if args.file else None
-        build_pdf(
-            config, 
-            specific_file,
-            extract_title_func=extract_title_from_markdown,
-            get_chapter_display_name_func=get_chapter_display_name,
-        )
+        ok = build_pdf(book, specific_file)
     elif args.command == "book":
-        build_book(config)
-    elif args.command == "deploy":
-        deploy(config, run_build=not args.no_build, push=args.push)
+        ok = build_book(book)
     elif args.command == "all":
-        reset_counter_state()
-        scan_labels(config)
-        
-        def nav_manifest_wrapper(cfg, output_dir):
-            generate_navigation_manifest(cfg, output_dir, extract_title_from_markdown)
-        
-        build_html(
-            config, 
-            None,
-            extract_title_func=extract_title_from_markdown,
-            get_chapter_display_name_func=get_chapter_display_name,
-            scan_labels_func=scan_labels,
-            generate_theorem_manifest_func=generate_theorem_manifest,
-            generate_navigation_manifest_func=nav_manifest_wrapper,
-        )
-        build_pdf(
-            config, 
-            None,
-            extract_title_func=extract_title_from_markdown,
-            get_chapter_display_name_func=get_chapter_display_name,
-        )
-        build_book(config)
+        ok = build_all(book)
+    elif args.command == "check":
+        ok = check(book)
+    elif args.command == "deploy":
+        ok = deploy(book, run_build=not args.no_build, push=args.push)
+    elif args.command == "serve":
+        from .serve import serve
+        serve(book, port=args.port)
+    sys.exit(0 if ok else 1)
 
 
 if __name__ == "__main__":

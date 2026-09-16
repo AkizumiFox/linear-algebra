@@ -1,212 +1,113 @@
 """
 Build System Pandoc Module
 ==========================
-Handles Pandoc command building and execution.
+Builds Pandoc commands for a page and runs them.
 """
 
 import hashlib
 import json
-import os
 import subprocess
 from pathlib import Path
 from typing import Optional
 
-from .config import PROJECT_ROOT, CROSSREF_LABELS_FILE
-from .tikz import TIKZ_CACHE_DIR
-from .utils import print_error, print_info, print_warning, run_with_crash_retry
+from .book import Book, Page
+from .utils import print_error, print_warning, run_with_crash_retry
+
+MARKDOWN_FORMAT = "markdown+tex_math_single_backslash"
+
+
+# =============================================================================
+# Metadata
+# =============================================================================
+
+def page_metadata(book: Book, page: Page, output_format: str, extra: Optional[dict] = None) -> dict:
+    """Metadata passed to the filters and templates for one page."""
+    metadata = {
+        "chapter-num": page.chapter_number,
+        "section-num": page.section,
+        "is-preface": page.is_preface,
+        "environment_settings": book.environment_settings,
+        "section-number": page.number,
+        "asset-prefix": page.asset_prefix if output_format == "html" else "./",
+        "title": book.title,
+        "title-text": page.title,
+        "pagetitle": f"{page.number} {page.title}" if page.number else page.title,
+        "tikz-cache-dir": str(book.tikz_cache_dir),
+        "page-shard": page.shard,
+    }
+    if book.labels_file.exists():
+        metadata["crossref-labels-file"] = str(book.labels_file)
+
+    if output_format == "html":
+        prefix = page.asset_prefix
+        if page.chapter:
+            metadata["breadcrumb-chapter-title"] = page.chapter.title
+            metadata["breadcrumb-chapter-url"] = f"{prefix}{page.chapter.slug}/index.html"
+        else:
+            metadata["breadcrumb-chapter-title"] = page.title
+            metadata["breadcrumb-chapter-url"] = f"{prefix}index.html"
+        metadata["breadcrumb-page-title"] = page.title
+        metadata["breadcrumb-page-url"] = f"{prefix}{page.html_path}"
+        metadata["pdf-url"] = f"{prefix}pdf/{Path(page.html_path).with_suffix('.pdf').as_posix()}"
+        metadata["book-pdf-url"] = f"{prefix}book/book.pdf"
+        if book.config.get("repo-url"):
+            metadata["repo-url"] = book.config["repo-url"]
+        for direction in ("prev", "next"):
+            neighbour = page.neighbours.get(direction)
+            if neighbour:
+                metadata[f"{direction}-page-url"] = f"{prefix}{neighbour.html_path}"
+                metadata[f"{direction}-page-title"] = neighbour.title
+                metadata[f"{direction}-page-number"] = neighbour.number
+
+    metadata.update(extra or {})
+    return metadata
+
+
+def write_metadata_file(book: Book, page: Page, output_format: str, metadata: dict) -> Path:
+    key = hashlib.md5(f"{page.source}:{output_format}".encode()).hexdigest()
+    meta_file = book.build_dir / "tmp" / "meta" / f"{key}.json"
+    meta_file.parent.mkdir(parents=True, exist_ok=True)
+    # Top-level numbers as strings, the form the filters and LaTeX template expect
+    metadata = {k: str(v) if isinstance(v, int) and not isinstance(v, bool) else v for k, v in metadata.items()}
+    meta_file.write_text(json.dumps(metadata, indent=2), encoding="utf-8")
+    return meta_file
 
 
 # =============================================================================
 # Pandoc Command Building
 # =============================================================================
 
-_build_version = None
-
-
-def build_version(config: dict) -> str:
-    """
-    Short hash of everything that shapes the site (sources, filters, templates, config).
-    Used as a cache-busting query string, so unchanged rebuilds produce identical pages.
-    """
-    global _build_version
-    if _build_version is None:
-        digest = hashlib.sha1()
-        roots = [PROJECT_ROOT / "src", PROJECT_ROOT / "filters", PROJECT_ROOT / "templates" / "html",
-                 PROJECT_ROOT / "config", PROJECT_ROOT / "latex"]
-        for root in roots:
-            for path in sorted(p for p in root.rglob("*") if p.is_file()):
-                digest.update(str(path.relative_to(PROJECT_ROOT)).encode())
-                digest.update(path.read_bytes())
-        _build_version = digest.hexdigest()[:10]
-    return _build_version
-
-
-def build_pandoc_command(
-    source_file: Path,
-    output_file: Path,
-    output_format: str,
-    config: dict,
-    chapter_num: int,
-    section_num: int,
-    extract_title_func,  # Passed in to avoid circular import
-    get_chapter_display_name_func,  # Passed in
-    get_relative_output_path_func,  # Passed in
-) -> list[str]:
-    """Build the pandoc command with appropriate filters and options."""
-    
+def build_pandoc_command(book: Book, page: Page, output_file: Path, output_format: str, metadata: dict) -> list[str]:
+    """Pandoc command converting one page to HTML or LaTeX (output_format "html" or "pdf")."""
+    filters = book.filters_dir
     cmd = [
-        "pandoc",
-        str(source_file),
+        "pandoc", str(page.source),
         "-o", str(output_file),
         "--standalone",
-        "-f", "markdown+tex_math_single_backslash",
+        "-f", MARKDOWN_FORMAT,
+        "--lua-filter", str(filters / "format-visibility.lua"),
+        "--lua-filter", str(filters / "tikz.lua"),
+        "--lua-filter", str(filters / "enumerate.lua"),
+        "--lua-filter", str(filters / "theorems.lua"),
+        "--metadata-file", str(write_metadata_file(book, page, output_format, metadata)),
     ]
-    
-    # Add Lua filters
-    filters_dir = PROJECT_ROOT / "filters"
-    if (filters_dir / "format-visibility.lua").exists():
-        cmd.extend(["--lua-filter", str(filters_dir / "format-visibility.lua")])
-    cmd.extend(["--lua-filter", str(filters_dir / "tikz.lua")])
-    cmd.extend(["--lua-filter", str(filters_dir / "enumerate.lua")])
-    if (filters_dir / "theorems.lua").exists():
-        cmd.extend(["--lua-filter", str(filters_dir / "theorems.lua")])
-    if (filters_dir / "macros.lua").exists() and output_format == "html":
-        cmd.extend(["--lua-filter", str(filters_dir / "macros.lua")])
-    
-    # Calculate relative depth for asset prefix
-    if output_format == "html":
-        output_dir = PROJECT_ROOT / config["output"]["html"]
-        html_output = get_relative_output_path_func(source_file, output_dir, ".html")
-        relative_depth = len(html_output.relative_to(output_dir).parts) - 1
-        asset_prefix = "../" * relative_depth if relative_depth > 0 else "./"
-    else:
-        asset_prefix = "./"
-
-    # Extract title
-    title = extract_title_func(source_file)
-    
-    # Format section number
-    if (chapter_num == 0 and section_num == 0) or (section_num == 0):
-        formatted_number = ""
-    elif chapter_num > 0:
-        formatted_number = f"{chapter_num}.{section_num}"
-    else:
-        formatted_number = f"0.{section_num}"
-
-    # Prepare metadata
-    is_preface = chapter_num == 0 and section_num == 0
-    metadata = {
-        "chapter-num": chapter_num,
-        "section-num": section_num,
-        "is-preface": is_preface,
-        "environment_settings": config.get("environment_settings", {}),
-        "section-number": formatted_number,
-        "project-root": str(PROJECT_ROOT),
-        "asset-prefix": asset_prefix,
-        "title": config.get("title", ""),  # Book title
-        "tikz-cache-dir": str(TIKZ_CACHE_DIR),
-        "build-version": build_version(config),
-    }
-    
-    if title:
-        # Format pagetitle with number
-        if formatted_number:
-            metadata["pagetitle"] = f"{formatted_number} {title}"
-        else:
-            metadata["pagetitle"] = title
-            
-        metadata["title-text"] = title
 
     if output_format == "html":
-        chapter_dir = source_file.parent.name
-        chapter_names = {
-            "ch00-foundations": "Preliminary",
-            "ch01-vector-spaces": "Vector Spaces and Dimensions",  
-            "ch02-linear-transformations": "Linear Transformations",
-        }
-        chapter_title = chapter_names.get(
-            chapter_dir, 
-            get_chapter_display_name_func(str(source_file.parent.relative_to(PROJECT_ROOT)))
-        )
-        
-        chapter_url = f"{asset_prefix}{chapter_dir}/index.html"
-        page_url = f"{asset_prefix}{chapter_dir}/{output_file.name}"
-        
-        metadata["breadcrumb-chapter-title"] = chapter_title
-        metadata["breadcrumb-chapter-url"] = chapter_url
-        metadata["breadcrumb-page-title"] = title
-        metadata["breadcrumb-page-url"] = page_url
-
-        # PDF links: per-section PDF in html/pdf/, full book in html/book/
-        pdf_rel = html_output.relative_to(output_dir).with_suffix(".pdf")
-        metadata["pdf-url"] = f"{asset_prefix}pdf/{pdf_rel}"
-        metadata["book-pdf-url"] = f"{asset_prefix}book/book.pdf"
-
-    TIKZ_CACHE_DIR.mkdir(parents=True, exist_ok=True)
-
-    # Write metadata to temp file
-    file_hash = hashlib.md5(str(source_file).encode()).hexdigest()
-    meta_dir = PROJECT_ROOT / "_build" / "tmp" / "meta"
-    meta_dir.mkdir(parents=True, exist_ok=True)
-    meta_file = meta_dir / f"{file_hash}.yaml"
-    
-    with open(meta_file, "w") as f:
-        f.write("---\n")
-        for k, v in metadata.items():
-            if k == "breadcrumbs":
-                f.write(f"{k}: |\n")
-                for line in v.splitlines():
-                    f.write(f"  {line}\n")
-            elif k == "environment_settings":
-                f.write(f"{k}:\n")
-                json_str = json.dumps(v, indent=2)
-                for line in json_str.splitlines():
-                    f.write(f"  {line}\n")
-            elif isinstance(v, bool):
-                f.write(f"{k}: {str(v).lower()}\n")
-            else:
-                safe_v = str(v).replace('"', '\\"')
-                f.write(f'{k}: "{safe_v}"\n')
-        f.write("---\n")
-
-    cmd.extend(["--metadata-file", str(meta_file)])
-
-    # Global label registry for cross-file references (read directly by theorems.lua)
-    if CROSSREF_LABELS_FILE.exists():
-        cmd.extend(["--metadata", f"crossref-labels-file={CROSSREF_LABELS_FILE}"])
-
-    if output_format == "html":
-        template_path = PROJECT_ROOT / config["templates"]["html"]
-        if template_path.exists():
-            cmd.extend(["--template", str(template_path)])
-        
-        if (filters_dir / "numbering.lua").exists():
-            cmd.extend(["--lua-filter", str(filters_dir / "numbering.lua")])
-        
-        cmd.append("--mathjax")
-        
+        cmd += [
+            "--template", str(book.html_template),
+            "--lua-filter", str(filters / "numbering.lua"),
+            "--mathjax",
+        ]
     elif output_format == "pdf":
-        template_path = PROJECT_ROOT / config["templates"]["latex"]
-        if template_path.exists():
-            cmd.extend(["--template", str(template_path)])
-
         # # -> chapter (0.4), ## -> section (0.4.1), ### -> subsection (0.4.1.1)
-        cmd.extend(["--top-level-division", "chapter"])
-
-        # Resource path so images in source dir (e.g. fig-subspace-1.png) are findable
-        resource_paths = [str(source_file.parent.resolve()), str(PROJECT_ROOT / "src")]
-        cmd.extend(["--resource-path", ":".join(resource_paths)])
-        
-        cmd.extend(["--pdf-engine", "pdflatex"])
-        
-        preamble_file = PROJECT_ROOT / "latex" / "preamble.tex"
-        if preamble_file.exists():
-            cmd.extend(["--include-in-header", str(preamble_file)])
-        
-        macros_file = PROJECT_ROOT / config["macros"]
-        if macros_file.exists():
-            cmd.extend(["--include-in-header", str(macros_file)])
-    
+        cmd += [
+            "--template", str(book.latex_template),
+            "--top-level-division", "chapter",
+            "--resource-path", ":".join([str(page.source.parent), str(book.src_dir)]),
+            "--include-in-header", str(book.engine_file("latex/preamble.tex")),
+        ]
+        if book.macros_file.exists():
+            cmd += ["--include-in-header", str(book.macros_file)]
     return cmd
 
 
@@ -214,40 +115,19 @@ def build_pandoc_command(
 # Pandoc Execution
 # =============================================================================
 
-def run_pandoc(
-    cmd: list[str],
-    verbose: bool = True,
-    *,
-    cwd: Optional[Path] = None,
-    env: Optional[dict] = None,
-) -> bool:
-    """Run pandoc command and return success status. Logs errors and warnings."""
-    if verbose:
-        print_info(f"Running: {' '.join(cmd[:4])}...")
-    
-    run_kwargs = {"capture_output": True, "text": True, "check": True}
-    if cwd is not None:
-        run_kwargs["cwd"] = str(cwd)
-    if env is not None:
-        run_env = os.environ.copy()
-        run_env.update(env)
-        run_kwargs["env"] = run_env
-    
+def run_pandoc(cmd: list[str], *, cwd: Optional[Path] = None, env: Optional[dict] = None) -> bool:
+    """Run a pandoc command and return success. Logs errors and warnings."""
     try:
-        run_kwargs.pop("check")
-        run_kwargs.pop("capture_output")
-        run_kwargs.pop("text")
-        result = run_with_crash_retry(cmd, **run_kwargs)
-        # Log warnings (stderr) even on success
-        if result.stderr and result.stderr.strip():
-            print_warning(f"Pandoc stderr for {cmd[2] if len(cmd) > 2 else 'output'}:")
-            for line in result.stderr.strip().splitlines():
-                print(f"  {line}")
-        return True
+        result = run_with_crash_retry(cmd, cwd=cwd, env=env)
     except subprocess.CalledProcessError as e:
-        print_error("Pandoc failed")
+        print_error(f"Pandoc failed for {cmd[1]}")
         if e.stdout and e.stdout.strip():
             print(f"  stdout:\n{e.stdout.strip()}")
         if e.stderr and e.stderr.strip():
             print_error(f"  stderr:\n{e.stderr.strip()}")
         return False
+    if result.stderr and result.stderr.strip():
+        print_warning(f"Pandoc stderr for {Path(cmd[1]).name}:")
+        for line in result.stderr.strip().splitlines():
+            print(f"  {line}")
+    return True

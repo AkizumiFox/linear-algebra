@@ -30,6 +30,10 @@ This setup deploys only the built site (HTML, section PDFs, full book) to a **si
 python build.py deploy --push
 ```
 
+`deploy` builds everything and runs `./build.py check` first; it copies nothing if either fails.
+To push somewhere other than the clone's `origin` (for example over SSH when the HTTPS remote
+has no stored credentials), set `"deploy-push-url"` in `config/config.json`.
+
 Or split into steps:
 ```bash
 python build.py deploy          # Build and copy to site/
