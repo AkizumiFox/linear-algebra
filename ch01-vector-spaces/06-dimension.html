@@ -7,9 +7,11 @@
     <title>1.6 Sifting and the Replacement Theorem – Linear
 Algebra</title>
 
+    <meta name="asset-prefix" content="../">
+    <meta name="build-version" content="48c3bfb075">
+
     <!-- Styles -->
-    <!-- Styles -->
-    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../styles.css?v=48c3bfb075">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
     <!-- MathJax Configuration with Custom Macros -->
@@ -248,12 +250,12 @@ Algebra</title>
             }
         };
     </script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml-full.js"></script>
 
     <!-- Tippy.js for tooltips -->
-    <script src="https://unpkg.com/@popperjs/core@2"></script>
-    <script src="https://unpkg.com/tippy.js@6"></script>
-    <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/shift-away.css">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tippy.js@6.3.7/dist/tippy-bundle.umd.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tippy.js@6.3.7/animations/shift-away.css">
 
         
         <script>
@@ -262,42 +264,42 @@ Algebra</title>
           if (typeof window.MathJax.tex === 'undefined') window.MathJax.tex = {};
           if (typeof window.MathJax.tex.macros === 'undefined') window.MathJax.tex.macros = {};
           Object.assign(window.MathJax.tex.macros, {
-                    "\bm": "\\mathbf{#1}",
-                    "\tdd": "\\frac{d^2 #1}{d #2^2}",
-                    "\limz": "\\lim_{#1 \\to 0}",
-                    "\ketbra": "| #1 \\rangle\\langle #2 |",
-                    "\Var": "\\text{Var}\\left( #1 \\right)",
-                    "\pdd": "\\frac{\\partial^2 #1}{\\partial #2^2}",
-                    "\td": "\\frac{d #1}{d #2}",
-                    "\tr": "\\text{tr}",
-                    "\bra": "\\langle #1 |",
-                    "\nul": "\\text{nul}",
-                    "\interior": "\\text{int}\\left( #1 \\right)",
-                    "\Prob": "\\mathbb{P}\\left( #1 \\right)",
-                    "\boundary": "\\partial #1",
-                    "\bb": "\\mathbb{#1}",
-                    "\norm": "\\left\\| #1 \\right\\|",
-                    "\expect": "\\langle #1 \\rangle",
-                    "\rank": "\\text{rank}",
-                    "\spn": "\\text{span}",
-                    "\card": "\\left| #1 \\right|",
                     "\Cov": "\\text{Cov}\\left( #1, #2 \\right)",
-                    "\nullity": "\\text{nullity}",
                     "\Exp": "\\mathbb{E}\\left[ #1 \\right]",
-                    "\limi": "\\lim_{#1 \\to \\infty}",
-                    "\closure": "\\overline{#1}",
-                    "\abs": "\\left| #1 \\right|",
-                    "\powerset": "\\mathcal{P}\\left( #1 \\right)",
-                    "\Uniform": "\\text{Uniform}\\left( #1, #2 \\right)",
-                    "\pd": "\\frac{\\partial #1}{\\partial #2}",
-                    "\defeq": "\\stackrel{\\smash{\\textnormal{\\tiny def}}}{=}",
-                    "\cl": "\\mathcal{#1}",
-                    "\col": "\\text{col}",
-                    "\row": "\\text{row}",
                     "\Normal": "\\mathcal{N}\\left( #1, #2 \\right)",
+                    "\Prob": "\\mathbb{P}\\left( #1 \\right)",
+                    "\Uniform": "\\text{Uniform}\\left( #1, #2 \\right)",
+                    "\Var": "\\text{Var}\\left( #1 \\right)",
+                    "\abs": "\\left| #1 \\right|",
+                    "\bb": "\\mathbb{#1}",
+                    "\bm": "\\mathbf{#1}",
+                    "\boundary": "\\partial #1",
+                    "\bra": "\\langle #1 |",
+                    "\braket": "\\langle #1 | #2 \\rangle",
+                    "\card": "\\left| #1 \\right|",
+                    "\cl": "\\mathcal{#1}",
+                    "\closure": "\\overline{#1}",
+                    "\col": "\\text{col}",
+                    "\defeq": "\\stackrel{\\smash{\\textnormal{\\tiny def}}}{=}",
+                    "\expect": "\\langle #1 \\rangle",
+                    "\interior": "\\text{int}\\left( #1 \\right)",
                     "\ket": "| #1 \\rangle",
+                    "\ketbra": "| #1 \\rangle\\langle #2 |",
+                    "\limi": "\\lim_{#1 \\to \\infty}",
+                    "\limz": "\\lim_{#1 \\to 0}",
+                    "\norm": "\\left\\| #1 \\right\\|",
+                    "\nul": "\\text{nul}",
+                    "\nullity": "\\text{nullity}",
+                    "\pd": "\\frac{\\partial #1}{\\partial #2}",
+                    "\pdd": "\\frac{\\partial^2 #1}{\\partial #2^2}",
+                    "\powerset": "\\mathcal{P}\\left( #1 \\right)",
+                    "\rank": "\\text{rank}",
                     "\rom": "\\mathrm{#1}",
-                    "\braket": "\\langle #1 | #2 \\rangle"
+                    "\row": "\\text{row}",
+                    "\spn": "\\text{span}",
+                    "\td": "\\frac{d #1}{d #2}",
+                    "\tdd": "\\frac{d^2 #1}{d #2^2}",
+                    "\tr": "\\text{tr}"
           });
         })();
         </script>
@@ -387,8 +389,8 @@ Replacement Theorem</span>
                 class="header-section-number">1.6.1. </span> The Sifting
                 Method</h2>
                 <div id="thm-sift" class="theorem"
-                style="border-left-color: #3b6eda; background-color: #f0f5ff; "
-                data-env-type="theorem" data-number="1.6.1">
+                data-env-type="theorem" data-number="1.6.1"
+                style="border-left-color: #3b6eda; background-color: #f0f5ff; ">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Theorem</strong><strong>
                 1.6.1</strong> (Sifting Method)</span>
@@ -427,14 +429,15 @@ Replacement Theorem</span>
                 class="math inline">\(S&#39;\)</span> in which no
                 element is a linear combination of the preceding members
                 anymore. Therefore, by <a
-                href="ch01-vector-spaces/04-independence.html#thm-linear-dependence-lemma"
+                href="../ch01-vector-spaces/04-independence.html#thm-linear-dependence-lemma"
                 class="xref"
-                data-ref="thm-linear-dependence-lemma">Theorem
-                1.4.1</a>, <span class="math inline">\(S&#39;\)</span>
-                is linearly independent. Moreover, according to <a
-                href="ch01-vector-spaces/04-independence.html#thm-span-preservation"
-                class="xref" data-ref="thm-span-preservation">Theorem
-                1.4.2</a>, removing “redundant members” from <span
+                data-ref="thm-linear-dependence-lemma">Theorem 1.4.1</a>,
+                <span class="math inline">\(S&#39;\)</span> is linearly
+                independent. Moreover, according to <a
+                href="../ch01-vector-spaces/04-independence.html#thm-span-preservation"
+                class="xref"
+                data-ref="thm-span-preservation">Theorem 1.4.2</a>,
+                removing “redundant members” from <span
                 class="math inline">\(S\)</span> does not change its
                 linear span. Therefore, we have <span
                 class="math inline">\(\Span(S&#39;) =
@@ -457,8 +460,8 @@ Replacement Theorem</span>
                 bases from spanning sets.</p>
                 </div>
                 <div id="exm-sifting" class="example"
-                style="border-left-color: #3a8a3a; background-color: #eef7ee; "
-                data-env-type="example" data-number="">
+                data-env-type="example" data-number=""
+                style="border-left-color: #3a8a3a; background-color: #eef7ee; ">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Example</strong>
                 (Sifting Example)</span>
@@ -509,8 +512,8 @@ Replacement Theorem</span>
                 class="math inline">\(S\)</span>.</p>
                 </div>
                 <div id="exm-sifting-r2" class="example"
-                style="border-left-color: #3a8a3a; background-color: #eef7ee; "
-                data-env-type="example" data-number="">
+                data-env-type="example" data-number=""
+                style="border-left-color: #3a8a3a; background-color: #eef7ee; ">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Example</strong>
                 (Sifting in <span
@@ -537,8 +540,8 @@ Replacement Theorem</span>
                 class="header-section-number">1.6.2. </span> The
                 Steinitz Replacement Theorem</h2>
                 <div id="thm-steinitz" class="theorem"
-                style="border-left-color: #3b6eda; background-color: #f0f5ff; "
-                data-env-type="theorem" data-number="1.6.2">
+                data-env-type="theorem" data-number="1.6.2"
+                style="border-left-color: #3b6eda; background-color: #f0f5ff; ">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Theorem</strong><strong>
                 1.6.2</strong> (Steinitz Exchange/Replacement
@@ -567,9 +570,9 @@ Replacement Theorem</span>
                 <span class="math inline">\(\{ \w \} \cup S\)</span>
                 becomes linearly dependent, allowing us to remove a
                 redundant vector (by <a
-                href="ch01-vector-spaces/04-independence.html#thm-span-preservation"
-                class="xref" data-ref="thm-span-preservation">Theorem
-                1.4.2</a>).</p>
+                href="../ch01-vector-spaces/04-independence.html#thm-span-preservation"
+                class="xref"
+                data-ref="thm-span-preservation">Theorem 1.4.2</a>).</p>
                 <p>Consider the first step. We form the set <span
                 class="math inline">\(B_1\)</span> by inserting <span
                 class="math inline">\(\u_1\)</span> into <span
@@ -641,8 +644,8 @@ Replacement Theorem</span>
                 (finite) basis of the same vector space will have the
                 same size.</p>
                 <div id="thm-basis-theorem" class="theorem"
-                style="border-left-color: #3b6eda; background-color: #f0f5ff; "
-                data-env-type="theorem" data-number="1.6.3">
+                data-env-type="theorem" data-number="1.6.3"
+                style="border-left-color: #3b6eda; background-color: #f0f5ff; ">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Theorem</strong><strong>
                 1.6.3</strong> (Basis Theorem)</span>
@@ -675,8 +678,8 @@ Replacement Theorem</span>
                 <p>Thus <span class="math inline">\(n = m\)</span>.</p>
                 </div>
                 <div id="def-dimension" class="definition"
-                style="border-left-color: #c94c6c; background-color: #fdf2f4; "
-                data-env-type="definition" data-number="1.6.1">
+                data-env-type="definition" data-number="1.6.1"
+                style="border-left-color: #c94c6c; background-color: #fdf2f4; ">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Definition</strong><strong>
                 1.6.1</strong> (Dimension)</span>
@@ -713,8 +716,8 @@ Replacement Theorem</span>
                 <span class="math inline">\(\dim\)</span>.</p>
                 </div>
                 <div id="exm-dimensions" class="example"
-                style="border-left-color: #3a8a3a; background-color: #eef7ee; "
-                data-env-type="example" data-number="">
+                data-env-type="example" data-number=""
+                style="border-left-color: #3a8a3a; background-color: #eef7ee; ">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Example</strong>
                 (Examples of Dimensions)</span>
@@ -728,14 +731,16 @@ Replacement Theorem</span>
                 class="math inline">\(\dim_F(V)\)</span> reminds us that
                 <strong>dimension depends on the choice of
                 field</strong>. For instance, recall from <a
-                href="ch01-vector-spaces/01-vector-spaces.html#exm-q-adjoin-sqrt2"
-                class="xref" data-ref="exm-q-adjoin-sqrt2">Example </a>
-                that <span class="math inline">\(\nQ(\sqrt{2}) = \{ a +
-                b\sqrt{2} : a, b \in \nQ \}\)</span> is a vector space
-                over <span class="math inline">\(\nQ\)</span> with basis
-                <span class="math inline">\(\{ 1, \sqrt{2} \}\)</span>,
-                so <span class="math inline">\(\dim_{\nQ}(\nQ(\sqrt{2}))
-                = 2\)</span>.</p>
+                href="../ch01-vector-spaces/01-vector-spaces.html#exm-q-adjoin-sqrt2"
+                class="xref"
+                data-ref="exm-q-adjoin-sqrt2">Example (<span class="math inline">\(\nQ\)</span> Adjoin <span
+                class="math inline">\(\sqrt{2}\)</span>)</a> that <span
+                class="math inline">\(\nQ(\sqrt{2}) = \{ a + b\sqrt{2} :
+                a, b \in \nQ \}\)</span> is a vector space over <span
+                class="math inline">\(\nQ\)</span> with basis <span
+                class="math inline">\(\{ 1, \sqrt{2} \}\)</span>, so
+                <span class="math inline">\(\dim_{\nQ}(\nQ(\sqrt{2})) =
+                2\)</span>.</p>
                 <p>As a more striking example, consider the complex
                 numbers <span class="math inline">\(\nC\)</span>. As a
                 vector space over itself, <span
@@ -751,8 +756,8 @@ Replacement Theorem</span>
                 which field we use for scalar multiplication!</p>
                 </div>
                 <div id="thm-size-bounds" class="theorem"
-                style="border-left-color: #3b6eda; background-color: #f0f5ff; "
-                data-env-type="theorem" data-number="1.6.4">
+                data-env-type="theorem" data-number="1.6.4"
+                style="border-left-color: #3b6eda; background-color: #f0f5ff; ">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Theorem</strong><strong>
                 1.6.4</strong> (Size Bounds for Independent and Spanning
@@ -817,8 +822,8 @@ Replacement Theorem</span>
                 \]</span></p>
                 </div>
                 <div id="thm-basis-extension" class="theorem"
-                style="border-left-color: #3b6eda; background-color: #f0f5ff; "
-                data-env-type="theorem" data-number="1.6.5">
+                data-env-type="theorem" data-number="1.6.5"
+                style="border-left-color: #3b6eda; background-color: #f0f5ff; ">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Theorem</strong><strong>
                 1.6.5</strong> (Basis Extension Theorem)</span>
@@ -860,8 +865,8 @@ Replacement Theorem</span>
                 <span class="math inline">\(S\)</span>.</p>
                 </div>
                 <div id="cor-basis-existence" class="corollary"
-                style="border-left-color: #17a2a2; background-color: #e8f6f5; "
-                data-env-type="corollary" data-number="1.6.6">
+                data-env-type="corollary" data-number="1.6.6"
+                style="border-left-color: #17a2a2; background-color: #e8f6f5; ">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Corollary</strong><strong>
                 1.6.6</strong> (Existence of Basis)</span>
@@ -878,8 +883,8 @@ Replacement Theorem</span>
                 <span class="math inline">\(V\)</span>.</p>
                 </div>
                 <div id="thm-dim-impl-eq" class="theorem"
-                style="border-left-color: #3b6eda; background-color: #f0f5ff; "
-                data-env-type="theorem" data-number="1.6.7">
+                data-env-type="theorem" data-number="1.6.7"
+                style="border-left-color: #3b6eda; background-color: #f0f5ff; ">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Theorem</strong><strong>
                 1.6.7</strong> (Dimension Implies Equality)</span>
@@ -921,13 +926,13 @@ Replacement Theorem</span>
                 combination of <span class="math inline">\(\w_1, \dots,
                 \w_n\)</span> because <span class="math inline">\(\v
                 \notin \Span(S)\)</span>. By <a
-                href="ch01-vector-spaces/04-independence.html#thm-linear-dependence-lemma"
+                href="../ch01-vector-spaces/04-independence.html#thm-linear-dependence-lemma"
                 class="xref"
-                data-ref="thm-linear-dependence-lemma">Theorem
-                1.4.1</a>, <span class="math inline">\(S&#39;\)</span>
-                is linearly independent in <span
-                class="math inline">\(V\)</span>. By Replacement
-                Theorem, we have <span class="math display">\[
+                data-ref="thm-linear-dependence-lemma">Theorem 1.4.1</a>,
+                <span class="math inline">\(S&#39;\)</span> is linearly
+                independent in <span class="math inline">\(V\)</span>.
+                By Replacement Theorem, we have <span
+                class="math display">\[
                     \underbrace{|S&#39;|}_{\text{size of lin. indep.
                 set}} \leq \dim_F (V),
                 \]</span> which implies <span class="math inline">\(n +
@@ -946,8 +951,8 @@ Replacement Theorem</span>
                 <p>An immediate consequence of the above theorem is the
                 following:</p>
                 <div id="thm-maximal-indep" class="theorem"
-                style="border-left-color: #3b6eda; background-color: #f0f5ff; "
-                data-env-type="theorem" data-number="1.6.8">
+                data-env-type="theorem" data-number="1.6.8"
+                style="border-left-color: #3b6eda; background-color: #f0f5ff; ">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Theorem</strong><strong>
                 1.6.8</strong> (Maximal Independent Subset is a
@@ -1023,7 +1028,7 @@ Subspaces</span>
     </div>
 
     <!-- Tooltip Script -->
-    <script src="../main.js"></script>
+    <script src="../main.js?v=48c3bfb075"></script>
 </body>
 
 </html>

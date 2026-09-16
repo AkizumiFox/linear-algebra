@@ -6,9 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>1.4 Linear Independence – Linear Algebra</title>
 
+    <meta name="asset-prefix" content="../">
+    <meta name="build-version" content="48c3bfb075">
+
     <!-- Styles -->
-    <!-- Styles -->
-    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../styles.css?v=48c3bfb075">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
     <!-- MathJax Configuration with Custom Macros -->
@@ -247,12 +249,12 @@
             }
         };
     </script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml-full.js"></script>
 
     <!-- Tippy.js for tooltips -->
-    <script src="https://unpkg.com/@popperjs/core@2"></script>
-    <script src="https://unpkg.com/tippy.js@6"></script>
-    <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/shift-away.css">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tippy.js@6.3.7/dist/tippy-bundle.umd.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tippy.js@6.3.7/animations/shift-away.css">
 
         
         <script>
@@ -261,42 +263,42 @@
           if (typeof window.MathJax.tex === 'undefined') window.MathJax.tex = {};
           if (typeof window.MathJax.tex.macros === 'undefined') window.MathJax.tex.macros = {};
           Object.assign(window.MathJax.tex.macros, {
+                    "\Cov": "\\text{Cov}\\left( #1, #2 \\right)",
+                    "\Exp": "\\mathbb{E}\\left[ #1 \\right]",
                     "\Normal": "\\mathcal{N}\\left( #1, #2 \\right)",
-                    "\rank": "\\text{rank}",
-                    "\defeq": "\\stackrel{\\smash{\\textnormal{\\tiny def}}}{=}",
-                    "\limz": "\\lim_{#1 \\to 0}",
-                    "\card": "\\left| #1 \\right|",
-                    "\boundary": "\\partial #1",
-                    "\nullity": "\\text{nullity}",
-                    "\interior": "\\text{int}\\left( #1 \\right)",
-                    "\nul": "\\text{nul}",
-                    "\norm": "\\left\\| #1 \\right\\|",
+                    "\Prob": "\\mathbb{P}\\left( #1 \\right)",
                     "\Uniform": "\\text{Uniform}\\left( #1, #2 \\right)",
-                    "\rom": "\\mathrm{#1}",
+                    "\Var": "\\text{Var}\\left( #1 \\right)",
+                    "\abs": "\\left| #1 \\right|",
+                    "\bb": "\\mathbb{#1}",
+                    "\bm": "\\mathbf{#1}",
+                    "\boundary": "\\partial #1",
                     "\bra": "\\langle #1 |",
                     "\braket": "\\langle #1 | #2 \\rangle",
-                    "\spn": "\\text{span}",
-                    "\tr": "\\text{tr}",
-                    "\limi": "\\lim_{#1 \\to \\infty}",
-                    "\bm": "\\mathbf{#1}",
-                    "\col": "\\text{col}",
-                    "\bb": "\\mathbb{#1}",
-                    "\pdd": "\\frac{\\partial^2 #1}{\\partial #2^2}",
+                    "\card": "\\left| #1 \\right|",
+                    "\cl": "\\mathcal{#1}",
                     "\closure": "\\overline{#1}",
-                    "\Cov": "\\text{Cov}\\left( #1, #2 \\right)",
+                    "\col": "\\text{col}",
+                    "\defeq": "\\stackrel{\\smash{\\textnormal{\\tiny def}}}{=}",
+                    "\expect": "\\langle #1 \\rangle",
+                    "\interior": "\\text{int}\\left( #1 \\right)",
+                    "\ket": "| #1 \\rangle",
+                    "\ketbra": "| #1 \\rangle\\langle #2 |",
+                    "\limi": "\\lim_{#1 \\to \\infty}",
+                    "\limz": "\\lim_{#1 \\to 0}",
+                    "\norm": "\\left\\| #1 \\right\\|",
+                    "\nul": "\\text{nul}",
+                    "\nullity": "\\text{nullity}",
+                    "\pd": "\\frac{\\partial #1}{\\partial #2}",
+                    "\pdd": "\\frac{\\partial^2 #1}{\\partial #2^2}",
+                    "\powerset": "\\mathcal{P}\\left( #1 \\right)",
+                    "\rank": "\\text{rank}",
+                    "\rom": "\\mathrm{#1}",
+                    "\row": "\\text{row}",
+                    "\spn": "\\text{span}",
                     "\td": "\\frac{d #1}{d #2}",
                     "\tdd": "\\frac{d^2 #1}{d #2^2}",
-                    "\ketbra": "| #1 \\rangle\\langle #2 |",
-                    "\ket": "| #1 \\rangle",
-                    "\cl": "\\mathcal{#1}",
-                    "\expect": "\\langle #1 \\rangle",
-                    "\pd": "\\frac{\\partial #1}{\\partial #2}",
-                    "\abs": "\\left| #1 \\right|",
-                    "\Prob": "\\mathbb{P}\\left( #1 \\right)",
-                    "\row": "\\text{row}",
-                    "\powerset": "\\mathcal{P}\\left( #1 \\right)",
-                    "\Var": "\\text{Var}\\left( #1 \\right)",
-                    "\Exp": "\\mathbb{E}\\left[ #1 \\right]"
+                    "\tr": "\\text{tr}"
           });
         })();
         </script>
@@ -381,9 +383,8 @@ Independence</span>
                 class="header-section-number">1.4.1. </span> Definition
                 and Examples</h2>
                 <div id="def-linear-independence" class="definition"
-                data-env-type="definition"
-                style="border-left-color: #c94c6c; background-color: #fdf2f4; "
-                data-number="1.4.1">
+                data-env-type="definition" data-number="1.4.1"
+                style="border-left-color: #c94c6c; background-color: #fdf2f4; ">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Definition</strong><strong>
                 1.4.1</strong> (Linear Independence)</span>
@@ -412,9 +413,8 @@ Independence</span>
                 lie on the same plane through the origin.</p>
                 </div>
                 <div id="exm-linear-independence" class="example"
-                data-env-type="example"
-                style="border-left-color: #3a8a3a; background-color: #eef7ee; "
-                data-number="">
+                data-env-type="example" data-number=""
+                style="border-left-color: #3a8a3a; background-color: #eef7ee; ">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Example</strong>
                 (Examples of Linear Independence)</span>
@@ -476,9 +476,8 @@ Independence</span>
                 </ol>
                 </div>
                 <div id="thm-linear-dependence-lemma" class="theorem"
-                data-env-type="theorem"
-                style="border-left-color: #3b6eda; background-color: #f0f5ff; "
-                data-number="1.4.1">
+                data-env-type="theorem" data-number="1.4.1"
+                style="border-left-color: #3b6eda; background-color: #f0f5ff; ">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Theorem</strong><strong>
                 1.4.1</strong> (Linear Dependence Lemma)</span>
@@ -573,9 +572,8 @@ Independence</span>
                 that throwing away these “redundant members” will not
                 change the linear span.</p>
                 <div id="thm-span-preservation" class="theorem"
-                data-env-type="theorem"
-                style="border-left-color: #3b6eda; background-color: #f0f5ff; "
-                data-number="1.4.2">
+                data-env-type="theorem" data-number="1.4.2"
+                style="border-left-color: #3b6eda; background-color: #f0f5ff; ">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Theorem</strong><strong>
                 1.4.2</strong> (Span Preservation)</span>
@@ -660,7 +658,7 @@ Combinations and Span</span>
     </div>
 
     <!-- Tooltip Script -->
-    <script src="../main.js"></script>
+    <script src="../main.js?v=48c3bfb075"></script>
 </body>
 
 </html>

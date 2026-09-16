@@ -30,18 +30,21 @@
     let navigationData = null;
 
     /**
-     * Get the base path to the root of the HTML output directory
+     * Get the base path to the root of the HTML output directory (set by the build)
      */
     function getBasePath() {
-        // Count directory depth from current page to root
-        const path = window.location.pathname;
-        const segments = path.split('/').filter(s => s && !s.endsWith('.html'));
+        const meta = document.querySelector('meta[name="asset-prefix"]');
+        return meta ? meta.content : './';
+    }
 
-        // If we're in a subdirectory (like ch01-vector-spaces/), go up one level
-        if (segments.length > 0) {
-            return '../';
-        }
-        return './';
+    /**
+     * URL of a site-wide data file. The build version changes when the book is rebuilt
+     * from different inputs, so browsers can cache these files between deployments.
+     */
+    function dataUrl(name) {
+        const meta = document.querySelector('meta[name="build-version"]');
+        const version = meta && meta.content ? '?v=' + meta.content : '';
+        return getBasePath() + name + version;
     }
 
     /**
@@ -49,8 +52,7 @@
      */
     async function loadNavigation() {
         try {
-            const basePath = getBasePath();
-            const response = await fetch(basePath + 'navigation.json?t=' + new Date().getTime());
+            const response = await fetch(dataUrl('navigation.json'));
             if (response.ok) {
                 navigationData = await response.json();
                 console.log(`Loaded navigation: ${navigationData.chapters.length} chapters`);
@@ -284,8 +286,7 @@
      */
     async function loadManifest() {
         try {
-            const basePath = getBasePath();
-            const response = await fetch(basePath + 'theorems.json?t=' + new Date().getTime());
+            const response = await fetch(dataUrl('theorems.json'));
             if (response.ok) {
                 theoremManifest = await response.json();
                 manifestLoaded = true;
@@ -306,13 +307,13 @@
             return `<div class="tooltip-error">Reference not found: ${refId}</div>`;
         }
 
-        // Build title
-        let title = info.type.charAt(0).toUpperCase() + info.type.slice(1);
+        // Build title (title_html keeps math in titles typesettable)
+        let title = info.type_name || (info.type.charAt(0).toUpperCase() + info.type.slice(1));
         if (info.number) {
             title += ` ${info.number}`;
         }
-        if (info.title) {
-            title += ` (${info.title})`;
+        if (info.title_html || info.title) {
+            title += ` (${info.title_html || info.title})`;
         }
 
         return `
@@ -436,8 +437,7 @@
         if (searchIndex) return true;
         
         try {
-            const basePath = getBasePath();
-            const response = await fetch(basePath + 'search.json?t=' + new Date().getTime());
+            const response = await fetch(dataUrl('search.json'));
             if (response.ok) {
                 searchIndex = await response.json();
                 console.log(`Loaded search index: ${searchIndex.length} entries`);
