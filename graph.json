@@ -2873,10 +2873,10 @@
    "type": "definition",
    "group": "definitions",
    "name": "Definition 1.1.3",
-   "title": "Notation of Additive Inverse",
+   "title": "Notation for the Additive Inverse",
    "url": "ch01-vector-spaces/01-vector-spaces.html#def-additive-inverse-notation",
    "shard": "ch01-vector-spaces",
-   "chapter": "Vector Spaces and Dimensions",
+   "chapter": "Vector Spaces",
    "chapterNumber": 1,
    "color": "#b0414f"
   },
@@ -2888,7 +2888,7 @@
    "title": "Vector Space",
    "url": "ch01-vector-spaces/01-vector-spaces.html#def-vector-space",
    "shard": "ch01-vector-spaces",
-   "chapter": "Vector Spaces and Dimensions",
+   "chapter": "Vector Spaces",
    "chapterNumber": 1,
    "color": "#b0414f"
   },
@@ -2900,19 +2900,43 @@
    "title": "Vectors and Scalars",
    "url": "ch01-vector-spaces/01-vector-spaces.html#def-vectors-scalars",
    "shard": "ch01-vector-spaces",
-   "chapter": "Vector Spaces and Dimensions",
+   "chapter": "Vector Spaces",
    "chapterNumber": 1,
    "color": "#b0414f"
+  },
+  {
+   "id": "exm-positive-reals",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "Positive Reals with Exotic Operations",
+   "url": "ch01-vector-spaces/01-vector-spaces.html#exm-positive-reals",
+   "shard": "ch01-vector-spaces",
+   "chapter": "Vector Spaces",
+   "chapterNumber": 1,
+   "color": "#3b7a4c"
   },
   {
    "id": "exm-q-adjoin-sqrt2",
    "type": "example",
    "group": "examples",
    "name": "Example",
-   "title": "\u211a Adjoin \u221a2",
+   "title": "\u211a(\u221a2) over \u211a",
    "url": "ch01-vector-spaces/01-vector-spaces.html#exm-q-adjoin-sqrt2",
    "shard": "ch01-vector-spaces",
-   "chapter": "Vector Spaces and Dimensions",
+   "chapter": "Vector Spaces",
+   "chapterNumber": 1,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-same-set-different-field",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "The Same Set over Different Fields",
+   "url": "ch01-vector-spaces/01-vector-spaces.html#exm-same-set-different-field",
+   "shard": "ch01-vector-spaces",
+   "chapter": "Vector Spaces",
    "chapterNumber": 1,
    "color": "#3b7a4c"
   },
@@ -2921,22 +2945,106 @@
    "type": "example",
    "group": "examples",
    "name": "Example",
-   "title": "Examples of Vector Spaces",
+   "title": "The Standard Vector Spaces",
    "url": "ch01-vector-spaces/01-vector-spaces.html#exm-vector-spaces",
    "shard": "ch01-vector-spaces",
-   "chapter": "Vector Spaces and Dimensions",
+   "chapter": "Vector Spaces",
    "chapterNumber": 1,
    "color": "#3b7a4c"
+  },
+  {
+   "id": "exr-vector-spaces-a1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "A1",
+   "url": "ch01-vector-spaces/01-vector-spaces.html#exr-vector-spaces-a1",
+   "shard": "ch01-vector-spaces",
+   "chapter": "Vector Spaces",
+   "chapterNumber": 1,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-vector-spaces-b1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B1: Which Are Vector Spaces?",
+   "url": "ch01-vector-spaces/01-vector-spaces.html#exr-vector-spaces-b1",
+   "shard": "ch01-vector-spaces",
+   "chapter": "Vector Spaces",
+   "chapterNumber": 1,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-vector-spaces-b2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B2: More Rules for Signs",
+   "url": "ch01-vector-spaces/01-vector-spaces.html#exr-vector-spaces-b2",
+   "shard": "ch01-vector-spaces",
+   "chapter": "Vector Spaces",
+   "chapterNumber": 1,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-vector-spaces-b3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B3: Finishing the Positive Reals",
+   "url": "ch01-vector-spaces/01-vector-spaces.html#exr-vector-spaces-b3",
+   "shard": "ch01-vector-spaces",
+   "chapter": "Vector Spaces",
+   "chapterNumber": 1,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-vector-spaces-c1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C1: Commutativity Comes for Free",
+   "url": "ch01-vector-spaces/01-vector-spaces.html#exr-vector-spaces-c1",
+   "shard": "ch01-vector-spaces",
+   "chapter": "Vector Spaces",
+   "chapterNumber": 1,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-vector-spaces-c2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C2: How Big Is a Vector Space?",
+   "url": "ch01-vector-spaces/01-vector-spaces.html#exr-vector-spaces-c2",
+   "shard": "ch01-vector-spaces",
+   "chapter": "Vector Spaces",
+   "chapterNumber": 1,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-vector-spaces-c3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C3: Shrinking the Field",
+   "url": "ch01-vector-spaces/01-vector-spaces.html#exr-vector-spaces-c3",
+   "shard": "ch01-vector-spaces",
+   "chapter": "Vector Spaces",
+   "chapterNumber": 1,
+   "color": "#a8670c"
   },
   {
    "id": "thm-inverse-unique",
    "type": "theorem",
    "group": "statements",
    "name": "Theorem 1.1.4",
-   "title": "Additive Inverse is Unique",
+   "title": "Additive Inverse Is Unique",
    "url": "ch01-vector-spaces/01-vector-spaces.html#thm-inverse-unique",
    "shard": "ch01-vector-spaces",
-   "chapter": "Vector Spaces and Dimensions",
+   "chapter": "Vector Spaces",
    "chapterNumber": 1,
    "color": "#2f62b5"
   },
@@ -2948,7 +3056,7 @@
    "title": "Left Cancellation Law",
    "url": "ch01-vector-spaces/01-vector-spaces.html#thm-left-cancellation",
    "shard": "ch01-vector-spaces",
-   "chapter": "Vector Spaces and Dimensions",
+   "chapter": "Vector Spaces",
    "chapterNumber": 1,
    "color": "#2f62b5"
   },
@@ -2956,11 +3064,11 @@
    "id": "thm-negation-scalar",
    "type": "theorem",
    "group": "statements",
-   "name": "Theorem 1.1.6",
+   "name": "Theorem 1.1.7",
    "title": "Negation as Scalar Multiplication",
    "url": "ch01-vector-spaces/01-vector-spaces.html#thm-negation-scalar",
    "shard": "ch01-vector-spaces",
-   "chapter": "Vector Spaces and Dimensions",
+   "chapter": "Vector Spaces",
    "chapterNumber": 1,
    "color": "#2f62b5"
   },
@@ -2968,11 +3076,11 @@
    "id": "thm-negative-scalar-dist",
    "type": "theorem",
    "group": "statements",
-   "name": "Theorem 1.1.7",
-   "title": "Negative Scalar Distribution",
+   "name": "Theorem 1.1.8",
+   "title": "Negative Scalars",
    "url": "ch01-vector-spaces/01-vector-spaces.html#thm-negative-scalar-dist",
    "shard": "ch01-vector-spaces",
-   "chapter": "Vector Spaces and Dimensions",
+   "chapter": "Vector Spaces",
    "chapterNumber": 1,
    "color": "#2f62b5"
   },
@@ -2984,7 +3092,7 @@
    "title": "Right Cancellation Law",
    "url": "ch01-vector-spaces/01-vector-spaces.html#thm-right-cancellation",
    "shard": "ch01-vector-spaces",
-   "chapter": "Vector Spaces and Dimensions",
+   "chapter": "Vector Spaces",
    "chapterNumber": 1,
    "color": "#2f62b5"
   },
@@ -2992,11 +3100,11 @@
    "id": "thm-scalar-zero-vector",
    "type": "theorem",
    "group": "statements",
-   "name": "Theorem 1.1.8",
-   "title": "Scalar Multiplication by Zero Vector",
+   "name": "Theorem 1.1.6",
+   "title": "Scalar Multiple of the Zero Vector",
    "url": "ch01-vector-spaces/01-vector-spaces.html#thm-scalar-zero-vector",
    "shard": "ch01-vector-spaces",
-   "chapter": "Vector Spaces and Dimensions",
+   "chapter": "Vector Spaces",
    "chapterNumber": 1,
    "color": "#2f62b5"
   },
@@ -3008,7 +3116,7 @@
    "title": "Zero Product Law",
    "url": "ch01-vector-spaces/01-vector-spaces.html#thm-zero-product",
    "shard": "ch01-vector-spaces",
-   "chapter": "Vector Spaces and Dimensions",
+   "chapter": "Vector Spaces",
    "chapterNumber": 1,
    "color": "#2f62b5"
   },
@@ -3017,10 +3125,10 @@
    "type": "theorem",
    "group": "statements",
    "name": "Theorem 1.1.5",
-   "title": "Zero Scalar Annihilates",
+   "title": "Zero Scalar Gives the Zero Vector",
    "url": "ch01-vector-spaces/01-vector-spaces.html#thm-zero-scalar-mult",
    "shard": "ch01-vector-spaces",
-   "chapter": "Vector Spaces and Dimensions",
+   "chapter": "Vector Spaces",
    "chapterNumber": 1,
    "color": "#2f62b5"
   },
@@ -3029,10 +3137,10 @@
    "type": "theorem",
    "group": "statements",
    "name": "Theorem 1.1.3",
-   "title": "Zero Vector is Unique",
+   "title": "Zero Vector Is Unique",
    "url": "ch01-vector-spaces/01-vector-spaces.html#thm-zero-unique",
    "shard": "ch01-vector-spaces",
-   "chapter": "Vector Spaces and Dimensions",
+   "chapter": "Vector Spaces",
    "chapterNumber": 1,
    "color": "#2f62b5"
   },
@@ -3044,7 +3152,7 @@
    "title": "Subspace",
    "url": "ch01-vector-spaces/02-subspaces.html#def-subspace",
    "shard": "ch01-vector-spaces",
-   "chapter": "Vector Spaces and Dimensions",
+   "chapter": "Vector Spaces",
    "chapterNumber": 1,
    "color": "#b0414f"
   },
@@ -3056,7 +3164,7 @@
    "title": "Differentiable Functions",
    "url": "ch01-vector-spaces/02-subspaces.html#exm-differentiable-functions",
    "shard": "ch01-vector-spaces",
-   "chapter": "Vector Spaces and Dimensions",
+   "chapter": "Vector Spaces",
    "chapterNumber": 1,
    "color": "#3b7a4c"
   },
@@ -3065,10 +3173,10 @@
    "type": "example",
    "group": "examples",
    "name": "Example",
-   "title": "Translated Line is Not a Subspace",
+   "title": "A Line Missing the Origin",
    "url": "ch01-vector-spaces/02-subspaces.html#exm-line-not-subspace",
    "shard": "ch01-vector-spaces",
-   "chapter": "Vector Spaces and Dimensions",
+   "chapter": "Vector Spaces",
    "chapterNumber": 1,
    "color": "#3b7a4c"
   },
@@ -3077,10 +3185,22 @@
    "type": "example",
    "group": "examples",
    "name": "Example",
-   "title": "Line as Subspace",
+   "title": "A Line through the Origin",
    "url": "ch01-vector-spaces/02-subspaces.html#exm-line-subspace",
    "shard": "ch01-vector-spaces",
-   "chapter": "Vector Spaces and Dimensions",
+   "chapter": "Vector Spaces",
+   "chapterNumber": 1,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-null-space-subspace",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "Solutions of a Homogeneous System",
+   "url": "ch01-vector-spaces/02-subspaces.html#exm-null-space-subspace",
+   "shard": "ch01-vector-spaces",
+   "chapter": "Vector Spaces",
    "chapterNumber": 1,
    "color": "#3b7a4c"
   },
@@ -3092,7 +3212,7 @@
    "title": "Polynomials of Bounded Degree",
    "url": "ch01-vector-spaces/02-subspaces.html#exm-poly-degree-bound",
    "shard": "ch01-vector-spaces",
-   "chapter": "Vector Spaces and Dimensions",
+   "chapter": "Vector Spaces",
    "chapterNumber": 1,
    "color": "#3b7a4c"
   },
@@ -3104,7 +3224,7 @@
    "title": "Polynomials of Exact Degree",
    "url": "ch01-vector-spaces/02-subspaces.html#exm-poly-exact-degree",
    "shard": "ch01-vector-spaces",
-   "chapter": "Vector Spaces and Dimensions",
+   "chapter": "Vector Spaces",
    "chapterNumber": 1,
    "color": "#3b7a4c"
   },
@@ -3116,7 +3236,7 @@
    "title": "Symmetric Matrices",
    "url": "ch01-vector-spaces/02-subspaces.html#exm-symmetric-matrices",
    "shard": "ch01-vector-spaces",
-   "chapter": "Vector Spaces and Dimensions",
+   "chapter": "Vector Spaces",
    "chapterNumber": 1,
    "color": "#3b7a4c"
   },
@@ -3125,10 +3245,10 @@
    "type": "example",
    "group": "examples",
    "name": "Example",
-   "title": "Trace-free Matrices",
+   "title": "Trace-Free Matrices",
    "url": "ch01-vector-spaces/02-subspaces.html#exm-trace-free-matrices",
    "shard": "ch01-vector-spaces",
-   "chapter": "Vector Spaces and Dimensions",
+   "chapter": "Vector Spaces",
    "chapterNumber": 1,
    "color": "#3b7a4c"
   },
@@ -3140,7 +3260,7 @@
    "title": "Trivial Subspaces",
    "url": "ch01-vector-spaces/02-subspaces.html#exm-trivial-subspaces",
    "shard": "ch01-vector-spaces",
-   "chapter": "Vector Spaces and Dimensions",
+   "chapter": "Vector Spaces",
    "chapterNumber": 1,
    "color": "#3b7a4c"
   },
@@ -3149,22 +3269,106 @@
    "type": "example",
    "group": "examples",
    "name": "Example",
-   "title": "Union of Axes",
+   "title": "The Union of the Two Axes",
    "url": "ch01-vector-spaces/02-subspaces.html#exm-union-axes",
    "shard": "ch01-vector-spaces",
-   "chapter": "Vector Spaces and Dimensions",
+   "chapter": "Vector Spaces",
    "chapterNumber": 1,
    "color": "#3b7a4c"
+  },
+  {
+   "id": "exr-subspaces-a1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "A1",
+   "url": "ch01-vector-spaces/02-subspaces.html#exr-subspaces-a1",
+   "shard": "ch01-vector-spaces",
+   "chapter": "Vector Spaces",
+   "chapterNumber": 1,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-subspaces-b1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B1: Which Are Subspaces?",
+   "url": "ch01-vector-spaces/02-subspaces.html#exr-subspaces-b1",
+   "shard": "ch01-vector-spaces",
+   "chapter": "Vector Spaces",
+   "chapterNumber": 1,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-subspaces-b2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B2: Matrices Commuting with a Given Matrix",
+   "url": "ch01-vector-spaces/02-subspaces.html#exr-subspaces-b2",
+   "shard": "ch01-vector-spaces",
+   "chapter": "Vector Spaces",
+   "chapterNumber": 1,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-subspaces-b3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B3: Intersection and Union of Two Planes",
+   "url": "ch01-vector-spaces/02-subspaces.html#exr-subspaces-b3",
+   "shard": "ch01-vector-spaces",
+   "chapter": "Vector Spaces",
+   "chapterNumber": 1,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-subspaces-c1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C1: Covering a Space by Subspaces",
+   "url": "ch01-vector-spaces/02-subspaces.html#exr-subspaces-c1",
+   "shard": "ch01-vector-spaces",
+   "chapter": "Vector Spaces",
+   "chapterNumber": 1,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-subspaces-c2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C2: The Sum of Two Subspaces",
+   "url": "ch01-vector-spaces/02-subspaces.html#exr-subspaces-c2",
+   "shard": "ch01-vector-spaces",
+   "chapter": "Vector Spaces",
+   "chapterNumber": 1,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-subspaces-c3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C3: A One-Line Test, and a Test over nF_2",
+   "url": "ch01-vector-spaces/02-subspaces.html#exr-subspaces-c3",
+   "shard": "ch01-vector-spaces",
+   "chapter": "Vector Spaces",
+   "chapterNumber": 1,
+   "color": "#a8670c"
   },
   {
    "id": "prp-union-subspaces",
    "type": "proposition",
    "group": "statements",
    "name": "Proposition 1.2.3",
-   "title": "Union of Subspaces",
+   "title": "Union of Two Subspaces",
    "url": "ch01-vector-spaces/02-subspaces.html#prp-union-subspaces",
    "shard": "ch01-vector-spaces",
-   "chapter": "Vector Spaces and Dimensions",
+   "chapter": "Vector Spaces",
    "chapterNumber": 1,
    "color": "#2f62b5"
   },
@@ -3176,7 +3380,7 @@
    "title": "Intersection of Subspaces",
    "url": "ch01-vector-spaces/02-subspaces.html#thm-intersection-subspaces",
    "shard": "ch01-vector-spaces",
-   "chapter": "Vector Spaces and Dimensions",
+   "chapter": "Vector Spaces",
    "chapterNumber": 1,
    "color": "#2f62b5"
   },
@@ -3188,9 +3392,33 @@
    "title": "Subspace Test",
    "url": "ch01-vector-spaces/02-subspaces.html#thm-subspace-test",
    "shard": "ch01-vector-spaces",
-   "chapter": "Vector Spaces and Dimensions",
+   "chapter": "Vector Spaces",
    "chapterNumber": 1,
    "color": "#2f62b5"
+  },
+  {
+   "id": "cor-span-intersection",
+   "type": "corollary",
+   "group": "statements",
+   "name": "Corollary 1.3.2",
+   "title": "Span as an Intersection",
+   "url": "ch01-vector-spaces/03-span.html#cor-span-intersection",
+   "shard": "ch01-vector-spaces",
+   "chapter": "Vector Spaces",
+   "chapterNumber": 1,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "def-finite-dimensional",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 1.3.4",
+   "title": "Finite-Dimensional",
+   "url": "ch01-vector-spaces/03-span.html#def-finite-dimensional",
+   "shard": "ch01-vector-spaces",
+   "chapter": "Vector Spaces",
+   "chapterNumber": 1,
+   "color": "#b0414f"
   },
   {
    "id": "def-linear-combination",
@@ -3200,7 +3428,7 @@
    "title": "Linear Combination",
    "url": "ch01-vector-spaces/03-span.html#def-linear-combination",
    "shard": "ch01-vector-spaces",
-   "chapter": "Vector Spaces and Dimensions",
+   "chapter": "Vector Spaces",
    "chapterNumber": 1,
    "color": "#b0414f"
   },
@@ -3212,7 +3440,7 @@
    "title": "Span",
    "url": "ch01-vector-spaces/03-span.html#def-span",
    "shard": "ch01-vector-spaces",
-   "chapter": "Vector Spaces and Dimensions",
+   "chapter": "Vector Spaces",
    "chapterNumber": 1,
    "color": "#b0414f"
   },
@@ -3221,10 +3449,10 @@
    "type": "definition",
    "group": "definitions",
    "name": "Definition 1.3.3",
-   "title": "Spanning Set",
+   "title": "Spanning List, Spanning Set",
    "url": "ch01-vector-spaces/03-span.html#def-spanning-set",
    "shard": "ch01-vector-spaces",
-   "chapter": "Vector Spaces and Dimensions",
+   "chapter": "Vector Spaces",
    "chapterNumber": 1,
    "color": "#b0414f"
   },
@@ -3233,10 +3461,22 @@
    "type": "example",
    "group": "examples",
    "name": "Example",
-   "title": "Examples of Linear Combinations",
+   "title": "Linear Combinations in Four Families",
    "url": "ch01-vector-spaces/03-span.html#exm-linear-combinations",
    "shard": "ch01-vector-spaces",
-   "chapter": "Vector Spaces and Dimensions",
+   "chapter": "Vector Spaces",
+   "chapterNumber": 1,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-same-span",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "Two Lists with the Same Span",
+   "url": "ch01-vector-spaces/03-span.html#exm-same-span",
+   "shard": "ch01-vector-spaces",
+   "chapter": "Vector Spaces",
    "chapterNumber": 1,
    "color": "#3b7a4c"
   },
@@ -3245,22 +3485,142 @@
    "type": "example",
    "group": "examples",
    "name": "Example",
-   "title": "Spanning Set for Polynomials",
+   "title": "Spanning Lists",
    "url": "ch01-vector-spaces/03-span.html#exm-spanning-set",
    "shard": "ch01-vector-spaces",
-   "chapter": "Vector Spaces and Dimensions",
+   "chapter": "Vector Spaces",
    "chapterNumber": 1,
    "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-spans",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "Computing Spans",
+   "url": "ch01-vector-spaces/03-span.html#exm-spans",
+   "shard": "ch01-vector-spaces",
+   "chapter": "Vector Spaces",
+   "chapterNumber": 1,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exr-span-a1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "A1",
+   "url": "ch01-vector-spaces/03-span.html#exr-span-a1",
+   "shard": "ch01-vector-spaces",
+   "chapter": "Vector Spaces",
+   "chapterNumber": 1,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-span-b1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B1: Membership in a Span",
+   "url": "ch01-vector-spaces/03-span.html#exr-span-b1",
+   "shard": "ch01-vector-spaces",
+   "chapter": "Vector Spaces",
+   "chapterNumber": 1,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-span-b2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B2: Two Lists with the Same Span",
+   "url": "ch01-vector-spaces/03-span.html#exr-span-b2",
+   "shard": "ch01-vector-spaces",
+   "chapter": "Vector Spaces",
+   "chapterNumber": 1,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-span-b3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B3: Spans in \u211d^3, Geometrically",
+   "url": "ch01-vector-spaces/03-span.html#exr-span-b3",
+   "shard": "ch01-vector-spaces",
+   "chapter": "Vector Spaces",
+   "chapterNumber": 1,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-span-c1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C1: Spans of Intersections and Unions",
+   "url": "ch01-vector-spaces/03-span.html#exr-span-c1",
+   "shard": "ch01-vector-spaces",
+   "chapter": "Vector Spaces",
+   "chapterNumber": 1,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-span-c2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C2: The Span Depends on the Field",
+   "url": "ch01-vector-spaces/03-span.html#exr-span-c2",
+   "shard": "ch01-vector-spaces",
+   "chapter": "Vector Spaces",
+   "chapterNumber": 1,
+   "color": "#a8670c"
+  },
+  {
+   "id": "prp-span-basic-properties",
+   "type": "proposition",
+   "group": "statements",
+   "name": "Proposition 1.3.4",
+   "title": "Basic Properties of Span",
+   "url": "ch01-vector-spaces/03-span.html#prp-span-basic-properties",
+   "shard": "ch01-vector-spaces",
+   "chapter": "Vector Spaces",
+   "chapterNumber": 1,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-polynomials-infinite-dimensional",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 1.3.3",
+   "title": "Flbrack xrbrack Is Infinite-Dimensional",
+   "url": "ch01-vector-spaces/03-span.html#thm-polynomials-infinite-dimensional",
+   "shard": "ch01-vector-spaces",
+   "chapter": "Vector Spaces",
+   "chapterNumber": 1,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-span-absorb",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 1.3.5",
+   "title": "Absorbing a Vector into a Span",
+   "url": "ch01-vector-spaces/03-span.html#thm-span-absorb",
+   "shard": "ch01-vector-spaces",
+   "chapter": "Vector Spaces",
+   "chapterNumber": 1,
+   "color": "#2f62b5"
   },
   {
    "id": "thm-span-subspace",
    "type": "theorem",
    "group": "statements",
    "name": "Theorem 1.3.1",
-   "title": "Spanning Set as Subspace",
+   "title": "Span Is the Smallest Subspace",
    "url": "ch01-vector-spaces/03-span.html#thm-span-subspace",
    "shard": "ch01-vector-spaces",
-   "chapter": "Vector Spaces and Dimensions",
+   "chapter": "Vector Spaces",
    "chapterNumber": 1,
    "color": "#2f62b5"
   },
@@ -3272,21 +3632,165 @@
    "title": "Linear Independence",
    "url": "ch01-vector-spaces/04-independence.html#def-linear-independence",
    "shard": "ch01-vector-spaces",
-   "chapter": "Vector Spaces and Dimensions",
+   "chapter": "Vector Spaces",
    "chapterNumber": 1,
    "color": "#b0414f"
+  },
+  {
+   "id": "exm-dependence-lemma",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "The Lemma on a Concrete List",
+   "url": "ch01-vector-spaces/04-independence.html#exm-dependence-lemma",
+   "shard": "ch01-vector-spaces",
+   "chapter": "Vector Spaces",
+   "chapterNumber": 1,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-independence-degenerate",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "Degenerate Lists",
+   "url": "ch01-vector-spaces/04-independence.html#exm-independence-degenerate",
+   "shard": "ch01-vector-spaces",
+   "chapter": "Vector Spaces",
+   "chapterNumber": 1,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-independence-parameter-and-matrices",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "A Parameter and a List of Matrices",
+   "url": "ch01-vector-spaces/04-independence.html#exm-independence-parameter-and-matrices",
+   "shard": "ch01-vector-spaces",
+   "chapter": "Vector Spaces",
+   "chapterNumber": 1,
+   "color": "#3b7a4c"
   },
   {
    "id": "exm-linear-independence",
    "type": "example",
    "group": "examples",
    "name": "Example",
-   "title": "Examples of Linear Independence",
+   "title": "Independent Lists in Four Families",
    "url": "ch01-vector-spaces/04-independence.html#exm-linear-independence",
    "shard": "ch01-vector-spaces",
-   "chapter": "Vector Spaces and Dimensions",
+   "chapter": "Vector Spaces",
    "chapterNumber": 1,
    "color": "#3b7a4c"
+  },
+  {
+   "id": "exr-independence-a1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "A1",
+   "url": "ch01-vector-spaces/04-independence.html#exr-independence-a1",
+   "shard": "ch01-vector-spaces",
+   "chapter": "Vector Spaces",
+   "chapterNumber": 1,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-independence-b1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B1: Independent or Not?",
+   "url": "ch01-vector-spaces/04-independence.html#exr-independence-b1",
+   "shard": "ch01-vector-spaces",
+   "chapter": "Vector Spaces",
+   "chapterNumber": 1,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-independence-b2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B2: A Parameter",
+   "url": "ch01-vector-spaces/04-independence.html#exr-independence-b2",
+   "shard": "ch01-vector-spaces",
+   "chapter": "Vector Spaces",
+   "chapterNumber": 1,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-independence-b3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B3: Sub-Lists",
+   "url": "ch01-vector-spaces/04-independence.html#exr-independence-b3",
+   "shard": "ch01-vector-spaces",
+   "chapter": "Vector Spaces",
+   "chapterNumber": 1,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-independence-c1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C1: Sums of Pairs, and the Field nF_2",
+   "url": "ch01-vector-spaces/04-independence.html#exr-independence-c1",
+   "shard": "ch01-vector-spaces",
+   "chapter": "Vector Spaces",
+   "chapterNumber": 1,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-independence-c2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C2: Adding a Vector outside the Span",
+   "url": "ch01-vector-spaces/04-independence.html#exr-independence-c2",
+   "shard": "ch01-vector-spaces",
+   "chapter": "Vector Spaces",
+   "chapterNumber": 1,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-independence-c3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C3: 1, \u221a 2, \u221a 3 over \u211a",
+   "url": "ch01-vector-spaces/04-independence.html#exr-independence-c3",
+   "shard": "ch01-vector-spaces",
+   "chapter": "Vector Spaces",
+   "chapterNumber": 1,
+   "color": "#a8670c"
+  },
+  {
+   "id": "thm-distinct-degrees-independent",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 1.4.4",
+   "title": "Polynomials of Distinct Degrees Are Independent",
+   "url": "ch01-vector-spaces/04-independence.html#thm-distinct-degrees-independent",
+   "shard": "ch01-vector-spaces",
+   "chapter": "Vector Spaces",
+   "chapterNumber": 1,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-independence-unique-combination",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 1.4.3",
+   "title": "Independence and Uniqueness of Coefficients",
+   "url": "ch01-vector-spaces/04-independence.html#thm-independence-unique-combination",
+   "shard": "ch01-vector-spaces",
+   "chapter": "Vector Spaces",
+   "chapterNumber": 1,
+   "color": "#2f62b5"
   },
   {
    "id": "thm-linear-dependence-lemma",
@@ -3296,7 +3800,7 @@
    "title": "Linear Dependence Lemma",
    "url": "ch01-vector-spaces/04-independence.html#thm-linear-dependence-lemma",
    "shard": "ch01-vector-spaces",
-   "chapter": "Vector Spaces and Dimensions",
+   "chapter": "Vector Spaces",
    "chapterNumber": 1,
    "color": "#2f62b5"
   },
@@ -3308,7 +3812,19 @@
    "title": "Span Preservation",
    "url": "ch01-vector-spaces/04-independence.html#thm-span-preservation",
    "shard": "ch01-vector-spaces",
-   "chapter": "Vector Spaces and Dimensions",
+   "chapter": "Vector Spaces",
+   "chapterNumber": 1,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "cor-basis-existence",
+   "type": "corollary",
+   "group": "statements",
+   "name": "Corollary 1.5.5",
+   "title": "Existence of Bases",
+   "url": "ch01-vector-spaces/05-basis.html#cor-basis-existence",
+   "shard": "ch01-vector-spaces",
+   "chapter": "Vector Spaces",
    "chapterNumber": 1,
    "color": "#2f62b5"
   },
@@ -3320,7 +3836,7 @@
    "title": "Basis",
    "url": "ch01-vector-spaces/05-basis.html#def-basis",
    "shard": "ch01-vector-spaces",
-   "chapter": "Vector Spaces and Dimensions",
+   "chapter": "Vector Spaces",
    "chapterNumber": 1,
    "color": "#b0414f"
   },
@@ -3332,9 +3848,57 @@
    "title": "Coordinates",
    "url": "ch01-vector-spaces/05-basis.html#def-coordinates",
    "shard": "ch01-vector-spaces",
-   "chapter": "Vector Spaces and Dimensions",
+   "chapter": "Vector Spaces",
    "chapterNumber": 1,
    "color": "#b0414f"
+  },
+  {
+   "id": "exm-more-bases",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "Three More Bases",
+   "url": "ch01-vector-spaces/05-basis.html#exm-more-bases",
+   "shard": "ch01-vector-spaces",
+   "chapter": "Vector Spaces",
+   "chapterNumber": 1,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-polynomial-coordinates",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "Coordinates of a Polynomial",
+   "url": "ch01-vector-spaces/05-basis.html#exm-polynomial-coordinates",
+   "shard": "ch01-vector-spaces",
+   "chapter": "Vector Spaces",
+   "chapterNumber": 1,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-sifting",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "Sifting a List in \u211d^3",
+   "url": "ch01-vector-spaces/05-basis.html#exm-sifting",
+   "shard": "ch01-vector-spaces",
+   "chapter": "Vector Spaces",
+   "chapterNumber": 1,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-sifting-r2",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "The Order Matters",
+   "url": "ch01-vector-spaces/05-basis.html#exm-sifting-r2",
+   "shard": "ch01-vector-spaces",
+   "chapter": "Vector Spaces",
+   "chapterNumber": 1,
+   "color": "#3b7a4c"
   },
   {
    "id": "exm-standard-bases",
@@ -3344,9 +3908,129 @@
    "title": "Standard Bases",
    "url": "ch01-vector-spaces/05-basis.html#exm-standard-bases",
    "shard": "ch01-vector-spaces",
-   "chapter": "Vector Spaces and Dimensions",
+   "chapter": "Vector Spaces",
    "chapterNumber": 1,
    "color": "#3b7a4c"
+  },
+  {
+   "id": "exr-basis-a1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "A1",
+   "url": "ch01-vector-spaces/05-basis.html#exr-basis-a1",
+   "shard": "ch01-vector-spaces",
+   "chapter": "Vector Spaces",
+   "chapterNumber": 1,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-basis-b1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B1: A Basis of \u211d^3 and Coordinates",
+   "url": "ch01-vector-spaces/05-basis.html#exr-basis-b1",
+   "shard": "ch01-vector-spaces",
+   "chapter": "Vector Spaces",
+   "chapterNumber": 1,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-basis-b2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B2: Sifting Polynomials",
+   "url": "ch01-vector-spaces/05-basis.html#exr-basis-b2",
+   "shard": "ch01-vector-spaces",
+   "chapter": "Vector Spaces",
+   "chapterNumber": 1,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-basis-b3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B3: Symmetric Matrices",
+   "url": "ch01-vector-spaces/05-basis.html#exr-basis-b3",
+   "shard": "ch01-vector-spaces",
+   "chapter": "Vector Spaces",
+   "chapterNumber": 1,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-basis-c1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C1: Polynomials Vanishing at 1",
+   "url": "ch01-vector-spaces/05-basis.html#exr-basis-c1",
+   "shard": "ch01-vector-spaces",
+   "chapter": "Vector Spaces",
+   "chapterNumber": 1,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-basis-c2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C2: The Same List over a Different Field",
+   "url": "ch01-vector-spaces/05-basis.html#exr-basis-c2",
+   "shard": "ch01-vector-spaces",
+   "chapter": "Vector Spaces",
+   "chapterNumber": 1,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-basis-c3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C3: Rescaling a Basis",
+   "url": "ch01-vector-spaces/05-basis.html#exr-basis-c3",
+   "shard": "ch01-vector-spaces",
+   "chapter": "Vector Spaces",
+   "chapterNumber": 1,
+   "color": "#a8670c"
+  },
+  {
+   "id": "lem-append-independent",
+   "type": "lemma",
+   "group": "statements",
+   "name": "Lemma 1.5.3",
+   "title": "Appending a Vector to an Independent List",
+   "url": "ch01-vector-spaces/05-basis.html#lem-append-independent",
+   "shard": "ch01-vector-spaces",
+   "chapter": "Vector Spaces",
+   "chapterNumber": 1,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-coordinates-linear",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 1.5.2",
+   "title": "Coordinates Respect the Operations",
+   "url": "ch01-vector-spaces/05-basis.html#thm-coordinates-linear",
+   "shard": "ch01-vector-spaces",
+   "chapter": "Vector Spaces",
+   "chapterNumber": 1,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-sift",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 1.5.4",
+   "title": "Sifting Theorem",
+   "url": "ch01-vector-spaces/05-basis.html#thm-sift",
+   "shard": "ch01-vector-spaces",
+   "chapter": "Vector Spaces",
+   "chapterNumber": 1,
+   "color": "#2f62b5"
   },
   {
    "id": "thm-unique-representation",
@@ -3356,19 +4040,7 @@
    "title": "Unique Representation",
    "url": "ch01-vector-spaces/05-basis.html#thm-unique-representation",
    "shard": "ch01-vector-spaces",
-   "chapter": "Vector Spaces and Dimensions",
-   "chapterNumber": 1,
-   "color": "#2f62b5"
-  },
-  {
-   "id": "cor-basis-existence",
-   "type": "corollary",
-   "group": "statements",
-   "name": "Corollary 1.6.6",
-   "title": "Existence of Basis",
-   "url": "ch01-vector-spaces/06-dimension.html#cor-basis-existence",
-   "shard": "ch01-vector-spaces",
-   "chapter": "Vector Spaces and Dimensions",
+   "chapter": "Vector Spaces",
    "chapterNumber": 1,
    "color": "#2f62b5"
   },
@@ -3380,45 +4052,129 @@
    "title": "Dimension",
    "url": "ch01-vector-spaces/06-dimension.html#def-dimension",
    "shard": "ch01-vector-spaces",
-   "chapter": "Vector Spaces and Dimensions",
+   "chapter": "Vector Spaces",
    "chapterNumber": 1,
    "color": "#b0414f"
+  },
+  {
+   "id": "exm-count-instead-of-check",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "A Basis by Counting",
+   "url": "ch01-vector-spaces/06-dimension.html#exm-count-instead-of-check",
+   "shard": "ch01-vector-spaces",
+   "chapter": "Vector Spaces",
+   "chapterNumber": 1,
+   "color": "#3b7a4c"
   },
   {
    "id": "exm-dimensions",
    "type": "example",
    "group": "examples",
    "name": "Example",
-   "title": "Examples of Dimensions",
+   "title": "Dimensions of the Running Examples",
    "url": "ch01-vector-spaces/06-dimension.html#exm-dimensions",
    "shard": "ch01-vector-spaces",
-   "chapter": "Vector Spaces and Dimensions",
+   "chapter": "Vector Spaces",
    "chapterNumber": 1,
    "color": "#3b7a4c"
   },
   {
-   "id": "exm-sifting",
+   "id": "exm-extend-to-basis",
    "type": "example",
    "group": "examples",
    "name": "Example",
-   "title": "Sifting Example",
-   "url": "ch01-vector-spaces/06-dimension.html#exm-sifting",
+   "title": "Extending an Independent List",
+   "url": "ch01-vector-spaces/06-dimension.html#exm-extend-to-basis",
    "shard": "ch01-vector-spaces",
-   "chapter": "Vector Spaces and Dimensions",
+   "chapter": "Vector Spaces",
    "chapterNumber": 1,
    "color": "#3b7a4c"
   },
   {
-   "id": "exm-sifting-r2",
-   "type": "example",
-   "group": "examples",
-   "name": "Example",
-   "title": "Sifting in \u211d^2",
-   "url": "ch01-vector-spaces/06-dimension.html#exm-sifting-r2",
+   "id": "exr-dimension-a1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "A1",
+   "url": "ch01-vector-spaces/06-dimension.html#exr-dimension-a1",
    "shard": "ch01-vector-spaces",
-   "chapter": "Vector Spaces and Dimensions",
+   "chapter": "Vector Spaces",
    "chapterNumber": 1,
-   "color": "#3b7a4c"
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-dimension-b1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B1: Dimension and a Basis of a Subspace",
+   "url": "ch01-vector-spaces/06-dimension.html#exr-dimension-b1",
+   "shard": "ch01-vector-spaces",
+   "chapter": "Vector Spaces",
+   "chapterNumber": 1,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-dimension-b2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B2: Extending to a Basis of \u211d^4",
+   "url": "ch01-vector-spaces/06-dimension.html#exr-dimension-b2",
+   "shard": "ch01-vector-spaces",
+   "chapter": "Vector Spaces",
+   "chapterNumber": 1,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-dimension-b3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B3: Count Instead of Check",
+   "url": "ch01-vector-spaces/06-dimension.html#exr-dimension-b3",
+   "shard": "ch01-vector-spaces",
+   "chapter": "Vector Spaces",
+   "chapterNumber": 1,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-dimension-c1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C1: Symmetric and Skew-Symmetric Matrices",
+   "url": "ch01-vector-spaces/06-dimension.html#exr-dimension-c1",
+   "shard": "ch01-vector-spaces",
+   "chapter": "Vector Spaces",
+   "chapterNumber": 1,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-dimension-c2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C2: A complex space viewed over the reals",
+   "url": "ch01-vector-spaces/06-dimension.html#exr-dimension-c2",
+   "shard": "ch01-vector-spaces",
+   "chapter": "Vector Spaces",
+   "chapterNumber": 1,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-dimension-c3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C3: Counting Elements over a Finite Field",
+   "url": "ch01-vector-spaces/06-dimension.html#exr-dimension-c3",
+   "shard": "ch01-vector-spaces",
+   "chapter": "Vector Spaces",
+   "chapterNumber": 1,
+   "color": "#a8670c"
   },
   {
    "id": "thm-basis-extension",
@@ -3428,7 +4184,7 @@
    "title": "Basis Extension Theorem",
    "url": "ch01-vector-spaces/06-dimension.html#thm-basis-extension",
    "shard": "ch01-vector-spaces",
-   "chapter": "Vector Spaces and Dimensions",
+   "chapter": "Vector Spaces",
    "chapterNumber": 1,
    "color": "#2f62b5"
   },
@@ -3436,11 +4192,11 @@
    "id": "thm-basis-theorem",
    "type": "theorem",
    "group": "statements",
-   "name": "Theorem 1.6.3",
+   "name": "Theorem 1.6.2",
    "title": "Basis Theorem",
    "url": "ch01-vector-spaces/06-dimension.html#thm-basis-theorem",
    "shard": "ch01-vector-spaces",
-   "chapter": "Vector Spaces and Dimensions",
+   "chapter": "Vector Spaces",
    "chapterNumber": 1,
    "color": "#2f62b5"
   },
@@ -3448,11 +4204,11 @@
    "id": "thm-dim-impl-eq",
    "type": "theorem",
    "group": "statements",
-   "name": "Theorem 1.6.7",
-   "title": "Dimension Implies Equality",
+   "name": "Theorem 1.6.8",
+   "title": "Equal Dimension Forces Equality",
    "url": "ch01-vector-spaces/06-dimension.html#thm-dim-impl-eq",
    "shard": "ch01-vector-spaces",
-   "chapter": "Vector Spaces and Dimensions",
+   "chapter": "Vector Spaces",
    "chapterNumber": 1,
    "color": "#2f62b5"
   },
@@ -3460,23 +4216,23 @@
    "id": "thm-maximal-indep",
    "type": "theorem",
    "group": "statements",
-   "name": "Theorem 1.6.8",
-   "title": "Maximal Independent Subset is a Basis",
+   "name": "Theorem 1.6.6",
+   "title": "Maximal Independent and Minimal Spanning Lists",
    "url": "ch01-vector-spaces/06-dimension.html#thm-maximal-indep",
    "shard": "ch01-vector-spaces",
-   "chapter": "Vector Spaces and Dimensions",
+   "chapter": "Vector Spaces",
    "chapterNumber": 1,
    "color": "#2f62b5"
   },
   {
-   "id": "thm-sift",
+   "id": "thm-right-size-basis",
    "type": "theorem",
    "group": "statements",
-   "name": "Theorem 1.6.1",
-   "title": "Sifting Method",
-   "url": "ch01-vector-spaces/06-dimension.html#thm-sift",
+   "name": "Theorem 1.6.4",
+   "title": "Count Instead of Check",
+   "url": "ch01-vector-spaces/06-dimension.html#thm-right-size-basis",
    "shard": "ch01-vector-spaces",
-   "chapter": "Vector Spaces and Dimensions",
+   "chapter": "Vector Spaces",
    "chapterNumber": 1,
    "color": "#2f62b5"
   },
@@ -3484,11 +4240,11 @@
    "id": "thm-size-bounds",
    "type": "theorem",
    "group": "statements",
-   "name": "Theorem 1.6.4",
-   "title": "Size Bounds for Independent and Spanning Sets",
+   "name": "Theorem 1.6.3",
+   "title": "Size Bounds",
    "url": "ch01-vector-spaces/06-dimension.html#thm-size-bounds",
    "shard": "ch01-vector-spaces",
-   "chapter": "Vector Spaces and Dimensions",
+   "chapter": "Vector Spaces",
    "chapterNumber": 1,
    "color": "#2f62b5"
   },
@@ -3496,11 +4252,23 @@
    "id": "thm-steinitz",
    "type": "theorem",
    "group": "statements",
-   "name": "Theorem 1.6.2",
-   "title": "Steinitz Exchange/Replacement Theorem",
+   "name": "Theorem 1.6.1",
+   "title": "Steinitz Exchange Theorem",
    "url": "ch01-vector-spaces/06-dimension.html#thm-steinitz",
    "shard": "ch01-vector-spaces",
-   "chapter": "Vector Spaces and Dimensions",
+   "chapter": "Vector Spaces",
+   "chapterNumber": 1,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-subspace-dimension",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 1.6.7",
+   "title": "Dimension of a Subspace",
+   "url": "ch01-vector-spaces/06-dimension.html#thm-subspace-dimension",
+   "shard": "ch01-vector-spaces",
+   "chapter": "Vector Spaces",
    "chapterNumber": 1,
    "color": "#2f62b5"
   },
@@ -3509,10 +4277,10 @@
    "type": "definition",
    "group": "definitions",
    "name": "Definition 1.7.2",
-   "title": "Direct Sum of Two Subspaces",
+   "title": "Direct Sum",
    "url": "ch01-vector-spaces/07-sums-and-direct-sums.html#def-direct-sum",
    "shard": "ch01-vector-spaces",
-   "chapter": "Vector Spaces and Dimensions",
+   "chapter": "Vector Spaces",
    "chapterNumber": 1,
    "color": "#b0414f"
   },
@@ -3524,7 +4292,7 @@
    "title": "Sum of Subspaces",
    "url": "ch01-vector-spaces/07-sums-and-direct-sums.html#def-sum-of-subspaces",
    "shard": "ch01-vector-spaces",
-   "chapter": "Vector Spaces and Dimensions",
+   "chapter": "Vector Spaces",
    "chapterNumber": 1,
    "color": "#b0414f"
   },
@@ -3533,34 +4301,586 @@
    "type": "example",
    "group": "examples",
    "name": "Example",
-   "title": "",
+   "title": "Symmetric and skew-symmetric matrices",
    "url": "ch01-vector-spaces/07-sums-and-direct-sums.html#exm-direct-sum-of-matrix",
    "shard": "ch01-vector-spaces",
-   "chapter": "Vector Spaces and Dimensions",
+   "chapter": "Vector Spaces",
    "chapterNumber": 1,
    "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-even-odd-functions",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "Even and odd functions",
+   "url": "ch01-vector-spaces/07-sums-and-direct-sums.html#exm-even-odd-functions",
+   "shard": "ch01-vector-spaces",
+   "chapter": "Vector Spaces",
+   "chapterNumber": 1,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-plane-line-direct-sum",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "A plane and a line in \u211d^3",
+   "url": "ch01-vector-spaces/07-sums-and-direct-sums.html#exm-plane-line-direct-sum",
+   "shard": "ch01-vector-spaces",
+   "chapter": "Vector Spaces",
+   "chapterNumber": 1,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-two-planes-r3",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "Two planes in \u211d^3",
+   "url": "ch01-vector-spaces/07-sums-and-direct-sums.html#exm-two-planes-r3",
+   "shard": "ch01-vector-spaces",
+   "chapter": "Vector Spaces",
+   "chapterNumber": 1,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-two-planes-r4",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "Two planes in \u211d^4 from spanning lists",
+   "url": "ch01-vector-spaces/07-sums-and-direct-sums.html#exm-two-planes-r4",
+   "shard": "ch01-vector-spaces",
+   "chapter": "Vector Spaces",
+   "chapterNumber": 1,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exr-sums-and-direct-sums-a1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "A1",
+   "url": "ch01-vector-spaces/07-sums-and-direct-sums.html#exr-sums-and-direct-sums-a1",
+   "shard": "ch01-vector-spaces",
+   "chapter": "Vector Spaces",
+   "chapterNumber": 1,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-sums-and-direct-sums-b1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B1: Two Planes in \u211d^4",
+   "url": "ch01-vector-spaces/07-sums-and-direct-sums.html#exr-sums-and-direct-sums-b1",
+   "shard": "ch01-vector-spaces",
+   "chapter": "Vector Spaces",
+   "chapterNumber": 1,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-sums-and-direct-sums-b2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B2: A Plane and a Line",
+   "url": "ch01-vector-spaces/07-sums-and-direct-sums.html#exr-sums-and-direct-sums-b2",
+   "shard": "ch01-vector-spaces",
+   "chapter": "Vector Spaces",
+   "chapterNumber": 1,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-sums-and-direct-sums-b3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B3: Direct or Not?",
+   "url": "ch01-vector-spaces/07-sums-and-direct-sums.html#exr-sums-and-direct-sums-b3",
+   "shard": "ch01-vector-spaces",
+   "chapter": "Vector Spaces",
+   "chapterNumber": 1,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-sums-and-direct-sums-c1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C1: Symmetric Plus Skew over nF_2",
+   "url": "ch01-vector-spaces/07-sums-and-direct-sums.html#exr-sums-and-direct-sums-c1",
+   "shard": "ch01-vector-spaces",
+   "chapter": "Vector Spaces",
+   "chapterNumber": 1,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-sums-and-direct-sums-c2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C2: Subspaces That Must Meet",
+   "url": "ch01-vector-spaces/07-sums-and-direct-sums.html#exr-sums-and-direct-sums-c2",
+   "shard": "ch01-vector-spaces",
+   "chapter": "Vector Spaces",
+   "chapterNumber": 1,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-sums-and-direct-sums-c3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C3: Three Subspaces",
+   "url": "ch01-vector-spaces/07-sums-and-direct-sums.html#exr-sums-and-direct-sums-c3",
+   "shard": "ch01-vector-spaces",
+   "chapter": "Vector Spaces",
+   "chapterNumber": 1,
+   "color": "#a8670c"
+  },
+  {
+   "id": "prp-sum-of-spans",
+   "type": "proposition",
+   "group": "statements",
+   "name": "Proposition 1.7.2",
+   "title": "Sum of Spans",
+   "url": "ch01-vector-spaces/07-sums-and-direct-sums.html#prp-sum-of-spans",
+   "shard": "ch01-vector-spaces",
+   "chapter": "Vector Spaces",
+   "chapterNumber": 1,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-complement-exists",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 1.7.6",
+   "title": "Existence of Complements",
+   "url": "ch01-vector-spaces/07-sums-and-direct-sums.html#thm-complement-exists",
+   "shard": "ch01-vector-spaces",
+   "chapter": "Vector Spaces",
+   "chapterNumber": 1,
+   "color": "#2f62b5"
   },
   {
    "id": "thm-dimension-formula-subspace-dim",
    "type": "theorem",
    "group": "statements",
-   "name": "Theorem 1.7.2",
-   "title": "Dimension Formula of Subspace Sum",
+   "name": "Theorem 1.7.3",
+   "title": "Dimension Formula for Sums",
    "url": "ch01-vector-spaces/07-sums-and-direct-sums.html#thm-dimension-formula-subspace-dim",
    "shard": "ch01-vector-spaces",
-   "chapter": "Vector Spaces and Dimensions",
+   "chapter": "Vector Spaces",
    "chapterNumber": 1,
    "color": "#2f62b5"
   },
   {
-   "id": "thm-subapce-sum-theorem",
+   "id": "thm-direct-sum-criteria",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 1.7.4",
+   "title": "Direct Sum Criteria for Two Subspaces",
+   "url": "ch01-vector-spaces/07-sums-and-direct-sums.html#thm-direct-sum-criteria",
+   "shard": "ch01-vector-spaces",
+   "chapter": "Vector Spaces",
+   "chapterNumber": 1,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-direct-sum-k-criteria",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 1.7.5",
+   "title": "Direct Sum Criteria for Several Subspaces",
+   "url": "ch01-vector-spaces/07-sums-and-direct-sums.html#thm-direct-sum-k-criteria",
+   "shard": "ch01-vector-spaces",
+   "chapter": "Vector Spaces",
+   "chapterNumber": 1,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-subspace-sum",
    "type": "theorem",
    "group": "statements",
    "name": "Theorem 1.7.1",
    "title": "Sum of Subspaces Theorem",
-   "url": "ch01-vector-spaces/07-sums-and-direct-sums.html#thm-subapce-sum-theorem",
+   "url": "ch01-vector-spaces/07-sums-and-direct-sums.html#thm-subspace-sum",
    "shard": "ch01-vector-spaces",
-   "chapter": "Vector Spaces and Dimensions",
+   "chapter": "Vector Spaces",
+   "chapterNumber": 1,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "def-countable",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 1.8.2",
+   "title": "Countable Set",
+   "url": "ch01-vector-spaces/08-infinite-dimensional.html#def-countable",
+   "shard": "ch01-vector-spaces",
+   "chapter": "Vector Spaces",
+   "chapterNumber": 1,
+   "color": "#b0414f"
+  },
+  {
+   "id": "def-partial-order",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 1.8.1",
+   "title": "Partial Order, Chain, Upper Bound, Maximal Element",
+   "url": "ch01-vector-spaces/08-infinite-dimensional.html#def-partial-order",
+   "shard": "ch01-vector-spaces",
+   "chapter": "Vector Spaces",
+   "chapterNumber": 1,
+   "color": "#b0414f"
+  },
+  {
+   "id": "exm-basis-of-polynomials",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "A Basis of F[x]",
+   "url": "ch01-vector-spaces/08-infinite-dimensional.html#exm-basis-of-polynomials",
+   "shard": "ch01-vector-spaces",
+   "chapter": "Vector Spaces",
+   "chapterNumber": 1,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-partial-orders",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "Inclusion as a Partial Order",
+   "url": "ch01-vector-spaces/08-infinite-dimensional.html#exm-partial-orders",
+   "shard": "ch01-vector-spaces",
+   "chapter": "Vector Spaces",
+   "chapterNumber": 1,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-sequence-standard-vectors",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "The Vectors e_i Do Not Span F^\u2115",
+   "url": "ch01-vector-spaces/08-infinite-dimensional.html#exm-sequence-standard-vectors",
+   "shard": "ch01-vector-spaces",
+   "chapter": "Vector Spaces",
+   "chapterNumber": 1,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exr-infinite-dimensional-a1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "A1",
+   "url": "ch01-vector-spaces/08-infinite-dimensional.html#exr-infinite-dimensional-a1",
+   "shard": "ch01-vector-spaces",
+   "chapter": "Vector Spaces",
+   "chapterNumber": 1,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-infinite-dimensional-b1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B1: Finitely Supported Sequences",
+   "url": "ch01-vector-spaces/08-infinite-dimensional.html#exr-infinite-dimensional-b1",
+   "shard": "ch01-vector-spaces",
+   "chapter": "Vector Spaces",
+   "chapterNumber": 1,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-infinite-dimensional-b2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B2: Exponentials Are Independent",
+   "url": "ch01-vector-spaces/08-infinite-dimensional.html#exr-infinite-dimensional-b2",
+   "shard": "ch01-vector-spaces",
+   "chapter": "Vector Spaces",
+   "chapterNumber": 1,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-infinite-dimensional-b3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B3: Continuous Functions",
+   "url": "ch01-vector-spaces/08-infinite-dimensional.html#exr-infinite-dimensional-b3",
+   "shard": "ch01-vector-spaces",
+   "chapter": "Vector Spaces",
+   "chapterNumber": 1,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-infinite-dimensional-c1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C1: Complements in Any Dimension",
+   "url": "ch01-vector-spaces/08-infinite-dimensional.html#exr-infinite-dimensional-c1",
+   "shard": "ch01-vector-spaces",
+   "chapter": "Vector Spaces",
+   "chapterNumber": 1,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-infinite-dimensional-c2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C2: Bases of \u211d over \u211a Are Uncountable",
+   "url": "ch01-vector-spaces/08-infinite-dimensional.html#exr-infinite-dimensional-c2",
+   "shard": "ch01-vector-spaces",
+   "chapter": "Vector Spaces",
+   "chapterNumber": 1,
+   "color": "#a8670c"
+  },
+  {
+   "id": "lem-countable-sets",
+   "type": "lemma",
+   "group": "statements",
+   "name": "Lemma 1.8.4",
+   "title": "Countable Sets",
+   "url": "ch01-vector-spaces/08-infinite-dimensional.html#lem-countable-sets",
+   "shard": "ch01-vector-spaces",
+   "chapter": "Vector Spaces",
+   "chapterNumber": 1,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "lem-reals-uncountable",
+   "type": "lemma",
+   "group": "statements",
+   "name": "Lemma 1.8.5",
+   "title": "\u211d Is Uncountable",
+   "url": "ch01-vector-spaces/08-infinite-dimensional.html#lem-reals-uncountable",
+   "shard": "ch01-vector-spaces",
+   "chapter": "Vector Spaces",
+   "chapterNumber": 1,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-basis-extension-general",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 1.8.2",
+   "title": "Basis Extension, General Form",
+   "url": "ch01-vector-spaces/08-infinite-dimensional.html#thm-basis-extension-general",
+   "shard": "ch01-vector-spaces",
+   "chapter": "Vector Spaces",
+   "chapterNumber": 1,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-every-space-has-basis",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 1.8.3",
+   "title": "Every Vector Space Has a Basis",
+   "url": "ch01-vector-spaces/08-infinite-dimensional.html#thm-every-space-has-basis",
+   "shard": "ch01-vector-spaces",
+   "chapter": "Vector Spaces",
+   "chapterNumber": 1,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-reals-infinite-dimensional-over-rationals",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 1.8.6",
+   "title": "\u211d Is Infinite-Dimensional over \u211a",
+   "url": "ch01-vector-spaces/08-infinite-dimensional.html#thm-reals-infinite-dimensional-over-rationals",
+   "shard": "ch01-vector-spaces",
+   "chapter": "Vector Spaces",
+   "chapterNumber": 1,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-zorn",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 1.8.1",
+   "title": "Zorn\u2019s Lemma",
+   "url": "ch01-vector-spaces/08-infinite-dimensional.html#thm-zorn",
+   "shard": "ch01-vector-spaces",
+   "chapter": "Vector Spaces",
+   "chapterNumber": 1,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "def-complexification",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 1.9.2",
+   "title": "Complexification",
+   "url": "ch01-vector-spaces/09-changing-the-field.html#def-complexification",
+   "shard": "ch01-vector-spaces",
+   "chapter": "Vector Spaces",
+   "chapterNumber": 1,
+   "color": "#b0414f"
+  },
+  {
+   "id": "def-restriction-of-scalars",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 1.9.1",
+   "title": "Subfield, Restriction of Scalars, Degree",
+   "url": "ch01-vector-spaces/09-changing-the-field.html#def-restriction-of-scalars",
+   "shard": "ch01-vector-spaces",
+   "chapter": "Vector Spaces",
+   "chapterNumber": 1,
+   "color": "#b0414f"
+  },
+  {
+   "id": "exm-c2-over-r",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "\u2102^2 as a Real Vector Space",
+   "url": "ch01-vector-spaces/09-changing-the-field.html#exm-c2-over-r",
+   "shard": "ch01-vector-spaces",
+   "chapter": "Vector Spaces",
+   "chapterNumber": 1,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-complexification-rn",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "The Complexification of \u211d^n Is \u2102^n",
+   "url": "ch01-vector-spaces/09-changing-the-field.html#exm-complexification-rn",
+   "shard": "ch01-vector-spaces",
+   "chapter": "Vector Spaces",
+   "chapterNumber": 1,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-field-degrees",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "Degrees of Some Fields",
+   "url": "ch01-vector-spaces/09-changing-the-field.html#exm-field-degrees",
+   "shard": "ch01-vector-spaces",
+   "chapter": "Vector Spaces",
+   "chapterNumber": 1,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exr-changing-the-field-a1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "A1",
+   "url": "ch01-vector-spaces/09-changing-the-field.html#exr-changing-the-field-a1",
+   "shard": "ch01-vector-spaces",
+   "chapter": "Vector Spaces",
+   "chapterNumber": 1,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-changing-the-field-b1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B1: A Tower over \u211a",
+   "url": "ch01-vector-spaces/09-changing-the-field.html#exr-changing-the-field-b1",
+   "shard": "ch01-vector-spaces",
+   "chapter": "Vector Spaces",
+   "chapterNumber": 1,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-changing-the-field-b2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B2: Complex Matrices over \u211d",
+   "url": "ch01-vector-spaces/09-changing-the-field.html#exr-changing-the-field-b2",
+   "shard": "ch01-vector-spaces",
+   "chapter": "Vector Spaces",
+   "chapterNumber": 1,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-changing-the-field-b3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B3: Working in a Complexification",
+   "url": "ch01-vector-spaces/09-changing-the-field.html#exr-changing-the-field-b3",
+   "shard": "ch01-vector-spaces",
+   "chapter": "Vector Spaces",
+   "chapterNumber": 1,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-changing-the-field-c1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C1: When Is a Real Subspace Complex?",
+   "url": "ch01-vector-spaces/09-changing-the-field.html#exr-changing-the-field-c1",
+   "shard": "ch01-vector-spaces",
+   "chapter": "Vector Spaces",
+   "chapterNumber": 1,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-changing-the-field-c2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C2: A Tower of Degree Four",
+   "url": "ch01-vector-spaces/09-changing-the-field.html#exr-changing-the-field-c2",
+   "shard": "ch01-vector-spaces",
+   "chapter": "Vector Spaces",
+   "chapterNumber": 1,
+   "color": "#a8670c"
+  },
+  {
+   "id": "thm-complexification-basis",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 1.9.3",
+   "title": "A Real Basis Is a Complex Basis of the Complexification",
+   "url": "ch01-vector-spaces/09-changing-the-field.html#thm-complexification-basis",
+   "shard": "ch01-vector-spaces",
+   "chapter": "Vector Spaces",
+   "chapterNumber": 1,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-restriction-of-scalars-dimension",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 1.9.2",
+   "title": "Complex Spaces as Real Spaces",
+   "url": "ch01-vector-spaces/09-changing-the-field.html#thm-restriction-of-scalars-dimension",
+   "shard": "ch01-vector-spaces",
+   "chapter": "Vector Spaces",
+   "chapterNumber": 1,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-tower-law",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 1.9.1",
+   "title": "Tower Law",
+   "url": "ch01-vector-spaces/09-changing-the-field.html#thm-tower-law",
+   "shard": "ch01-vector-spaces",
+   "chapter": "Vector Spaces",
    "chapterNumber": 1,
    "color": "#2f62b5"
   },
@@ -3568,12 +4888,12 @@
    "id": "def-linear-transformation",
    "type": "definition",
    "group": "definitions",
-   "name": "Definition 2.1.1",
+   "name": "Definition 3.1.1",
    "title": "Linear Transformation",
-   "url": "ch02-linear-transformations/01-linear-transformations.html#def-linear-transformation",
-   "shard": "ch02-linear-transformations",
+   "url": "ch03-linear-maps/01-linear-transformations.html#def-linear-transformation",
+   "shard": "ch03-linear-maps",
    "chapter": "Linear Transformations",
-   "chapterNumber": 2,
+   "chapterNumber": 3,
    "color": "#b0414f"
   },
   {
@@ -3582,10 +4902,10 @@
    "group": "examples",
    "name": "Example",
    "title": "Complex Conjugation",
-   "url": "ch02-linear-transformations/01-linear-transformations.html#exm-complex-conjugation",
-   "shard": "ch02-linear-transformations",
+   "url": "ch03-linear-maps/01-linear-transformations.html#exm-complex-conjugation",
+   "shard": "ch03-linear-maps",
    "chapter": "Linear Transformations",
-   "chapterNumber": 2,
+   "chapterNumber": 3,
    "color": "#3b7a4c"
   },
   {
@@ -3594,10 +4914,10 @@
    "group": "examples",
    "name": "Example",
    "title": "Constant Function",
-   "url": "ch02-linear-transformations/01-linear-transformations.html#exm-constant-function",
-   "shard": "ch02-linear-transformations",
+   "url": "ch03-linear-maps/01-linear-transformations.html#exm-constant-function",
+   "shard": "ch03-linear-maps",
    "chapter": "Linear Transformations",
-   "chapterNumber": 2,
+   "chapterNumber": 3,
    "color": "#3b7a4c"
   },
   {
@@ -3606,10 +4926,10 @@
    "group": "examples",
    "name": "Example",
    "title": "A Specific Matrix Transformation",
-   "url": "ch02-linear-transformations/01-linear-transformations.html#exm-coordinate-transformation",
-   "shard": "ch02-linear-transformations",
+   "url": "ch03-linear-maps/01-linear-transformations.html#exm-coordinate-transformation",
+   "shard": "ch03-linear-maps",
    "chapter": "Linear Transformations",
-   "chapterNumber": 2,
+   "chapterNumber": 3,
    "color": "#3b7a4c"
   },
   {
@@ -3618,10 +4938,10 @@
    "group": "examples",
    "name": "Example",
    "title": "",
-   "url": "ch02-linear-transformations/01-linear-transformations.html#exm-deter",
-   "shard": "ch02-linear-transformations",
+   "url": "ch03-linear-maps/01-linear-transformations.html#exm-deter",
+   "shard": "ch03-linear-maps",
    "chapter": "Linear Transformations",
-   "chapterNumber": 2,
+   "chapterNumber": 3,
    "color": "#3b7a4c"
   },
   {
@@ -3630,10 +4950,10 @@
    "group": "examples",
    "name": "Example",
    "title": "",
-   "url": "ch02-linear-transformations/01-linear-transformations.html#exm-deter-two",
-   "shard": "ch02-linear-transformations",
+   "url": "ch03-linear-maps/01-linear-transformations.html#exm-deter-two",
+   "shard": "ch03-linear-maps",
    "chapter": "Linear Transformations",
-   "chapterNumber": 2,
+   "chapterNumber": 3,
    "color": "#3b7a4c"
   },
   {
@@ -3642,10 +4962,10 @@
    "group": "examples",
    "name": "Example",
    "title": "Differentiation",
-   "url": "ch02-linear-transformations/01-linear-transformations.html#exm-differentiation",
-   "shard": "ch02-linear-transformations",
+   "url": "ch03-linear-maps/01-linear-transformations.html#exm-differentiation",
+   "shard": "ch03-linear-maps",
    "chapter": "Linear Transformations",
-   "chapterNumber": 2,
+   "chapterNumber": 3,
    "color": "#3b7a4c"
   },
   {
@@ -3654,10 +4974,10 @@
    "group": "examples",
    "name": "Example",
    "title": "Identity Map",
-   "url": "ch02-linear-transformations/01-linear-transformations.html#exm-identity",
-   "shard": "ch02-linear-transformations",
+   "url": "ch03-linear-maps/01-linear-transformations.html#exm-identity",
+   "shard": "ch03-linear-maps",
    "chapter": "Linear Transformations",
-   "chapterNumber": 2,
+   "chapterNumber": 3,
    "color": "#3b7a4c"
   },
   {
@@ -3666,10 +4986,10 @@
    "group": "examples",
    "name": "Example",
    "title": "Inclusion Map",
-   "url": "ch02-linear-transformations/01-linear-transformations.html#exm-inclusion",
-   "shard": "ch02-linear-transformations",
+   "url": "ch03-linear-maps/01-linear-transformations.html#exm-inclusion",
+   "shard": "ch03-linear-maps",
    "chapter": "Linear Transformations",
-   "chapterNumber": 2,
+   "chapterNumber": 3,
    "color": "#3b7a4c"
   },
   {
@@ -3678,10 +4998,10 @@
    "group": "examples",
    "name": "Example",
    "title": "Integration",
-   "url": "ch02-linear-transformations/01-linear-transformations.html#exm-integration",
-   "shard": "ch02-linear-transformations",
+   "url": "ch03-linear-maps/01-linear-transformations.html#exm-integration",
+   "shard": "ch03-linear-maps",
    "chapter": "Linear Transformations",
-   "chapterNumber": 2,
+   "chapterNumber": 3,
    "color": "#3b7a4c"
   },
   {
@@ -3690,10 +5010,10 @@
    "group": "examples",
    "name": "Example",
    "title": "Composition Operator",
-   "url": "ch02-linear-transformations/01-linear-transformations.html#exm-matrix-composition",
-   "shard": "ch02-linear-transformations",
+   "url": "ch03-linear-maps/01-linear-transformations.html#exm-matrix-composition",
+   "shard": "ch03-linear-maps",
    "chapter": "Linear Transformations",
-   "chapterNumber": 2,
+   "chapterNumber": 3,
    "color": "#3b7a4c"
   },
   {
@@ -3702,10 +5022,10 @@
    "group": "examples",
    "name": "Example",
    "title": "Left Multiplication by a Matrix",
-   "url": "ch02-linear-transformations/01-linear-transformations.html#exm-matrix-transformation",
-   "shard": "ch02-linear-transformations",
+   "url": "ch03-linear-maps/01-linear-transformations.html#exm-matrix-transformation",
+   "shard": "ch03-linear-maps",
    "chapter": "Linear Transformations",
-   "chapterNumber": 2,
+   "chapterNumber": 3,
    "color": "#3b7a4c"
   },
   {
@@ -3714,10 +5034,10 @@
    "group": "examples",
    "name": "Example",
    "title": "Multiplication by x",
-   "url": "ch02-linear-transformations/01-linear-transformations.html#exm-multiplication-by-x",
-   "shard": "ch02-linear-transformations",
+   "url": "ch03-linear-maps/01-linear-transformations.html#exm-multiplication-by-x",
+   "shard": "ch03-linear-maps",
    "chapter": "Linear Transformations",
-   "chapterNumber": 2,
+   "chapterNumber": 3,
    "color": "#3b7a4c"
   },
   {
@@ -3726,10 +5046,10 @@
    "group": "examples",
    "name": "Example",
    "title": "Norm",
-   "url": "ch02-linear-transformations/01-linear-transformations.html#exm-norm",
-   "shard": "ch02-linear-transformations",
+   "url": "ch03-linear-maps/01-linear-transformations.html#exm-norm",
+   "shard": "ch03-linear-maps",
    "chapter": "Linear Transformations",
-   "chapterNumber": 2,
+   "chapterNumber": 3,
    "color": "#3b7a4c"
   },
   {
@@ -3738,10 +5058,10 @@
    "group": "examples",
    "name": "Example",
    "title": "Projection onto a Coordinate Axis",
-   "url": "ch02-linear-transformations/01-linear-transformations.html#exm-projection",
-   "shard": "ch02-linear-transformations",
+   "url": "ch03-linear-maps/01-linear-transformations.html#exm-projection",
+   "shard": "ch03-linear-maps",
    "chapter": "Linear Transformations",
-   "chapterNumber": 2,
+   "chapterNumber": 3,
    "color": "#3b7a4c"
   },
   {
@@ -3750,10 +5070,10 @@
    "group": "examples",
    "name": "Example",
    "title": "Rotation in the Plane",
-   "url": "ch02-linear-transformations/01-linear-transformations.html#exm-rotation",
-   "shard": "ch02-linear-transformations",
+   "url": "ch03-linear-maps/01-linear-transformations.html#exm-rotation",
+   "shard": "ch03-linear-maps",
    "chapter": "Linear Transformations",
-   "chapterNumber": 2,
+   "chapterNumber": 3,
    "color": "#3b7a4c"
   },
   {
@@ -3762,10 +5082,10 @@
    "group": "examples",
    "name": "Example",
    "title": "Shift Operator",
-   "url": "ch02-linear-transformations/01-linear-transformations.html#exm-shift",
-   "shard": "ch02-linear-transformations",
+   "url": "ch03-linear-maps/01-linear-transformations.html#exm-shift",
+   "shard": "ch03-linear-maps",
    "chapter": "Linear Transformations",
-   "chapterNumber": 2,
+   "chapterNumber": 3,
    "color": "#3b7a4c"
   },
   {
@@ -3774,10 +5094,10 @@
    "group": "examples",
    "name": "Example",
    "title": "Squaring",
-   "url": "ch02-linear-transformations/01-linear-transformations.html#exm-squaring",
-   "shard": "ch02-linear-transformations",
+   "url": "ch03-linear-maps/01-linear-transformations.html#exm-squaring",
+   "shard": "ch03-linear-maps",
    "chapter": "Linear Transformations",
-   "chapterNumber": 2,
+   "chapterNumber": 3,
    "color": "#3b7a4c"
   },
   {
@@ -3786,10 +5106,10 @@
    "group": "examples",
    "name": "Example",
    "title": "Trace",
-   "url": "ch02-linear-transformations/01-linear-transformations.html#exm-trace-matrices",
-   "shard": "ch02-linear-transformations",
+   "url": "ch03-linear-maps/01-linear-transformations.html#exm-trace-matrices",
+   "shard": "ch03-linear-maps",
    "chapter": "Linear Transformations",
-   "chapterNumber": 2,
+   "chapterNumber": 3,
    "color": "#3b7a4c"
   },
   {
@@ -3798,10 +5118,10 @@
    "group": "examples",
    "name": "Example",
    "title": "Translation",
-   "url": "ch02-linear-transformations/01-linear-transformations.html#exm-translation",
-   "shard": "ch02-linear-transformations",
+   "url": "ch03-linear-maps/01-linear-transformations.html#exm-translation",
+   "shard": "ch03-linear-maps",
    "chapter": "Linear Transformations",
-   "chapterNumber": 2,
+   "chapterNumber": 3,
    "color": "#3b7a4c"
   },
   {
@@ -3810,94 +5130,94 @@
    "group": "examples",
    "name": "Example",
    "title": "Zero Map",
-   "url": "ch02-linear-transformations/01-linear-transformations.html#exm-zero-map",
-   "shard": "ch02-linear-transformations",
+   "url": "ch03-linear-maps/01-linear-transformations.html#exm-zero-map",
+   "shard": "ch03-linear-maps",
    "chapter": "Linear Transformations",
-   "chapterNumber": 2,
+   "chapterNumber": 3,
    "color": "#3b7a4c"
   },
   {
    "id": "thm-equivalent-condition",
    "type": "theorem",
    "group": "statements",
-   "name": "Theorem 2.1.3",
+   "name": "Theorem 3.1.3",
    "title": "Equivalent Characterization of Linearity",
-   "url": "ch02-linear-transformations/01-linear-transformations.html#thm-equivalent-condition",
-   "shard": "ch02-linear-transformations",
+   "url": "ch03-linear-maps/01-linear-transformations.html#thm-equivalent-condition",
+   "shard": "ch03-linear-maps",
    "chapter": "Linear Transformations",
-   "chapterNumber": 2,
+   "chapterNumber": 3,
    "color": "#2f62b5"
   },
   {
    "id": "thm-linear-combination",
    "type": "theorem",
    "group": "statements",
-   "name": "Theorem 2.1.4",
+   "name": "Theorem 3.1.4",
    "title": "Linear Maps Preserve Linear Combinations",
-   "url": "ch02-linear-transformations/01-linear-transformations.html#thm-linear-combination",
-   "shard": "ch02-linear-transformations",
+   "url": "ch03-linear-maps/01-linear-transformations.html#thm-linear-combination",
+   "shard": "ch03-linear-maps",
    "chapter": "Linear Transformations",
-   "chapterNumber": 2,
+   "chapterNumber": 3,
    "color": "#2f62b5"
   },
   {
    "id": "thm-linear-transform-basis",
    "type": "theorem",
    "group": "statements",
-   "name": "Theorem 2.1.5",
+   "name": "Theorem 3.1.5",
    "title": "Linear Transformations are Determined by Their Action on a Basis",
-   "url": "ch02-linear-transformations/01-linear-transformations.html#thm-linear-transform-basis",
-   "shard": "ch02-linear-transformations",
+   "url": "ch03-linear-maps/01-linear-transformations.html#thm-linear-transform-basis",
+   "shard": "ch03-linear-maps",
    "chapter": "Linear Transformations",
-   "chapterNumber": 2,
+   "chapterNumber": 3,
    "color": "#2f62b5"
   },
   {
    "id": "thm-preserves-negation",
    "type": "theorem",
    "group": "statements",
-   "name": "Theorem 2.1.2",
+   "name": "Theorem 3.1.2",
    "title": "Linear Maps Preserve Negation",
-   "url": "ch02-linear-transformations/01-linear-transformations.html#thm-preserves-negation",
-   "shard": "ch02-linear-transformations",
+   "url": "ch03-linear-maps/01-linear-transformations.html#thm-preserves-negation",
+   "shard": "ch03-linear-maps",
    "chapter": "Linear Transformations",
-   "chapterNumber": 2,
+   "chapterNumber": 3,
    "color": "#2f62b5"
   },
   {
    "id": "thm-zero-maps-to-zero",
    "type": "theorem",
    "group": "statements",
-   "name": "Theorem 2.1.1",
+   "name": "Theorem 3.1.1",
    "title": "Zero Maps to Zero",
-   "url": "ch02-linear-transformations/01-linear-transformations.html#thm-zero-maps-to-zero",
-   "shard": "ch02-linear-transformations",
+   "url": "ch03-linear-maps/01-linear-transformations.html#thm-zero-maps-to-zero",
+   "shard": "ch03-linear-maps",
    "chapter": "Linear Transformations",
-   "chapterNumber": 2,
+   "chapterNumber": 3,
    "color": "#2f62b5"
   },
   {
    "id": "def-image",
    "type": "definition",
    "group": "definitions",
-   "name": "Definition 2.2.2",
+   "name": "Definition 3.2.2",
    "title": "Image",
-   "url": "ch02-linear-transformations/02-kernel-image.html#def-image",
-   "shard": "ch02-linear-transformations",
+   "url": "ch03-linear-maps/02-kernel-image.html#def-image",
+   "shard": "ch03-linear-maps",
    "chapter": "Linear Transformations",
-   "chapterNumber": 2,
+   "chapterNumber": 3,
    "color": "#b0414f"
   },
   {
    "id": "def-kernel",
    "type": "definition",
    "group": "definitions",
-   "name": "Definition 2.2.1",
+   "name": "Definition 3.2.1",
    "title": "Kernel",
-   "url": "ch02-linear-transformations/02-kernel-image.html#def-kernel",
-   "shard": "ch02-linear-transformations",
+   "url": "ch03-linear-maps/02-kernel-image.html#def-kernel",
+   "shard": "ch03-linear-maps",
    "chapter": "Linear Transformations",
-   "chapterNumber": 2,
+   "chapterNumber": 3,
    "color": "#b0414f"
   },
   {
@@ -3906,10 +5226,10 @@
    "group": "examples",
    "name": "Example",
    "title": "Differentiation",
-   "url": "ch02-linear-transformations/02-kernel-image.html#exm-differentiation-kernel-image",
-   "shard": "ch02-linear-transformations",
+   "url": "ch03-linear-maps/02-kernel-image.html#exm-differentiation-kernel-image",
+   "shard": "ch03-linear-maps",
    "chapter": "Linear Transformations",
-   "chapterNumber": 2,
+   "chapterNumber": 3,
    "color": "#3b7a4c"
   },
   {
@@ -3918,58 +5238,58 @@
    "group": "examples",
    "name": "Example",
    "title": "Trace",
-   "url": "ch02-linear-transformations/02-kernel-image.html#exm-trace-kernel-image",
-   "shard": "ch02-linear-transformations",
+   "url": "ch03-linear-maps/02-kernel-image.html#exm-trace-kernel-image",
+   "shard": "ch03-linear-maps",
    "chapter": "Linear Transformations",
-   "chapterNumber": 2,
+   "chapterNumber": 3,
    "color": "#3b7a4c"
   },
   {
    "id": "thm-prop-image",
    "type": "theorem",
    "group": "statements",
-   "name": "Theorem 2.2.2",
+   "name": "Theorem 3.2.2",
    "title": "Properties of Image",
-   "url": "ch02-linear-transformations/02-kernel-image.html#thm-prop-image",
-   "shard": "ch02-linear-transformations",
+   "url": "ch03-linear-maps/02-kernel-image.html#thm-prop-image",
+   "shard": "ch03-linear-maps",
    "chapter": "Linear Transformations",
-   "chapterNumber": 2,
+   "chapterNumber": 3,
    "color": "#2f62b5"
   },
   {
    "id": "thm-prop-kernel",
    "type": "theorem",
    "group": "statements",
-   "name": "Theorem 2.2.1",
+   "name": "Theorem 3.2.1",
    "title": "Properties of Kernel",
-   "url": "ch02-linear-transformations/02-kernel-image.html#thm-prop-kernel",
-   "shard": "ch02-linear-transformations",
+   "url": "ch03-linear-maps/02-kernel-image.html#thm-prop-kernel",
+   "shard": "ch03-linear-maps",
    "chapter": "Linear Transformations",
-   "chapterNumber": 2,
+   "chapterNumber": 3,
    "color": "#2f62b5"
   },
   {
    "id": "def-nullity",
    "type": "definition",
    "group": "definitions",
-   "name": "Definition 2.3.1",
+   "name": "Definition 3.3.1",
    "title": "Nullity",
-   "url": "ch02-linear-transformations/03-rank-nullity.html#def-nullity",
-   "shard": "ch02-linear-transformations",
+   "url": "ch03-linear-maps/03-rank-nullity.html#def-nullity",
+   "shard": "ch03-linear-maps",
    "chapter": "Linear Transformations",
-   "chapterNumber": 2,
+   "chapterNumber": 3,
    "color": "#b0414f"
   },
   {
    "id": "def-rank",
    "type": "definition",
    "group": "definitions",
-   "name": "Definition 2.3.2",
+   "name": "Definition 3.3.2",
    "title": "Rank",
-   "url": "ch02-linear-transformations/03-rank-nullity.html#def-rank",
-   "shard": "ch02-linear-transformations",
+   "url": "ch03-linear-maps/03-rank-nullity.html#def-rank",
+   "shard": "ch03-linear-maps",
    "chapter": "Linear Transformations",
-   "chapterNumber": 2,
+   "chapterNumber": 3,
    "color": "#b0414f"
   },
   {
@@ -3978,22 +5298,22 @@
    "group": "examples",
    "name": "Example",
    "title": "",
-   "url": "ch02-linear-transformations/03-rank-nullity.html#exm-nullity-rank-diff",
-   "shard": "ch02-linear-transformations",
+   "url": "ch03-linear-maps/03-rank-nullity.html#exm-nullity-rank-diff",
+   "shard": "ch03-linear-maps",
    "chapter": "Linear Transformations",
-   "chapterNumber": 2,
+   "chapterNumber": 3,
    "color": "#3b7a4c"
   },
   {
    "id": "thm-rank-nullity",
    "type": "theorem",
    "group": "statements",
-   "name": "Theorem 2.3.1",
+   "name": "Theorem 3.3.1",
    "title": "Rank-Nullity Theorem",
-   "url": "ch02-linear-transformations/03-rank-nullity.html#thm-rank-nullity",
-   "shard": "ch02-linear-transformations",
+   "url": "ch03-linear-maps/03-rank-nullity.html#thm-rank-nullity",
+   "shard": "ch03-linear-maps",
    "chapter": "Linear Transformations",
-   "chapterNumber": 2,
+   "chapterNumber": 3,
    "color": "#2f62b5"
   }
  ],
@@ -5549,8 +6869,188 @@
    "kind": "reference"
   },
   {
+   "source": "def-group",
+   "target": "def-additive-inverse-notation",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-group-basic-properties",
+   "target": "def-additive-inverse-notation",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-vector-spaces",
+   "target": "exm-positive-reals",
+   "kind": "reference"
+  },
+  {
+   "source": "exr-vector-spaces-b3",
+   "target": "exm-positive-reals",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-field-basic-properties",
+   "target": "exm-positive-reals",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-transpose-properties",
+   "target": "exm-positive-reals",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-vector-spaces",
+   "target": "exm-same-set-different-field",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-complex-arithmetic-laws",
+   "target": "exm-same-set-different-field",
+   "kind": "reference"
+  },
+  {
+   "source": "def-function",
+   "target": "exm-vector-spaces",
+   "kind": "reference"
+  },
+  {
+   "source": "def-matrix-addition",
+   "target": "exm-vector-spaces",
+   "kind": "reference"
+  },
+  {
+   "source": "def-polynomial",
+   "target": "exm-vector-spaces",
+   "kind": "reference"
+  },
+  {
+   "source": "def-polynomial-ring",
+   "target": "exm-vector-spaces",
+   "kind": "reference"
+  },
+  {
+   "source": "def-scalar-multiplication",
+   "target": "exm-vector-spaces",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-addition-properties",
+   "target": "exm-vector-spaces",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-polynomial-ring-laws",
+   "target": "exm-vector-spaces",
+   "kind": "reference"
+  },
+  {
+   "source": "def-vector-space",
+   "target": "exr-vector-spaces-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-positive-reals",
+   "target": "exr-vector-spaces-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-vector-spaces",
+   "target": "exr-vector-spaces-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-negative-scalar-dist",
+   "target": "exr-vector-spaces-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-zero-product",
+   "target": "exr-vector-spaces-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "def-polynomial-ring",
+   "target": "exr-vector-spaces-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-vector-spaces",
+   "target": "exr-vector-spaces-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-evaluation-respects-operations",
+   "target": "exr-vector-spaces-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "def-additive-inverse-notation",
+   "target": "exr-vector-spaces-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-inverse-unique",
+   "target": "exr-vector-spaces-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-negative-scalar-dist",
+   "target": "exr-vector-spaces-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-scalar-zero-vector",
+   "target": "exr-vector-spaces-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-positive-reals",
+   "target": "exr-vector-spaces-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-negative-scalar-dist",
+   "target": "exr-vector-spaces-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-left-cancellation",
+   "target": "exr-vector-spaces-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "exr-vector-spaces-b2",
+   "target": "exr-vector-spaces-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-zero-product",
+   "target": "exr-vector-spaces-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-vector-spaces",
+   "target": "exr-vector-spaces-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-left-cancellation",
+   "target": "thm-inverse-unique",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-inverse-unique",
+   "target": "thm-negation-scalar",
+   "kind": "reference"
+  },
+  {
    "source": "thm-zero-scalar-mult",
    "target": "thm-negation-scalar",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-inverse-unique",
+   "target": "thm-negative-scalar-dist",
    "kind": "reference"
   },
   {
@@ -5559,8 +7059,598 @@
    "kind": "reference"
   },
   {
+   "source": "thm-left-cancellation",
+   "target": "thm-right-cancellation",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-left-cancellation",
+   "target": "thm-scalar-zero-vector",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-scalar-zero-vector",
+   "target": "thm-zero-product",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-zero-scalar-mult",
+   "target": "thm-zero-product",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-left-cancellation",
+   "target": "thm-zero-scalar-mult",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-vector-spaces",
+   "target": "exm-differentiable-functions",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-subspace-test",
+   "target": "exm-differentiable-functions",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-subspace-test",
+   "target": "exm-line-not-subspace",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-subspace-test",
+   "target": "exm-line-subspace",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-multiplication-properties",
+   "target": "exm-null-space-subspace",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-scalar-zero-vector",
+   "target": "exm-null-space-subspace",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-subspace-test",
+   "target": "exm-null-space-subspace",
+   "kind": "reference"
+  },
+  {
+   "source": "def-degree",
+   "target": "exm-poly-degree-bound",
+   "kind": "reference"
+  },
+  {
+   "source": "def-polynomials-bounded-degree",
+   "target": "exm-poly-degree-bound",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-degree-of-sum",
+   "target": "exm-poly-degree-bound",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-subspace-test",
+   "target": "exm-poly-degree-bound",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-subspace-test",
+   "target": "exm-poly-exact-degree",
+   "kind": "reference"
+  },
+  {
+   "source": "def-symmetric-matrix",
+   "target": "exm-symmetric-matrices",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-subspace-test",
+   "target": "exm-symmetric-matrices",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-transpose-properties",
+   "target": "exm-symmetric-matrices",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-subspace-test",
+   "target": "exm-trace-free-matrices",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-trace-properties",
+   "target": "exm-trace-free-matrices",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-scalar-zero-vector",
+   "target": "exm-trivial-subspaces",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-null-space-subspace",
+   "target": "exm-union-axes",
+   "kind": "reference"
+  },
+  {
+   "source": "def-subspace",
+   "target": "exr-subspaces-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-trivial-subspaces",
+   "target": "exr-subspaces-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-union-subspaces",
+   "target": "exr-subspaces-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-subspace-test",
+   "target": "exr-subspaces-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-null-space-subspace",
+   "target": "exr-subspaces-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-evaluation-respects-operations",
+   "target": "exr-subspaces-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-subspace-test",
+   "target": "exr-subspaces-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-multiplication-properties",
+   "target": "exr-subspaces-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-subspace-test",
+   "target": "exr-subspaces-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-null-space-subspace",
+   "target": "exr-subspaces-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-intersection-subspaces",
+   "target": "exr-subspaces-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-union-subspaces",
+   "target": "exr-subspaces-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-zero-scalar-mult",
+   "target": "exr-subspaces-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-union-axes",
+   "target": "exr-subspaces-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-negation-scalar",
+   "target": "exr-subspaces-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-subspace-test",
+   "target": "exr-subspaces-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-zero-scalar-mult",
+   "target": "exr-subspaces-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-negation-scalar",
+   "target": "prp-union-subspaces",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-subspace-test",
+   "target": "prp-union-subspaces",
+   "kind": "reference"
+  },
+  {
    "source": "thm-subspace-test",
    "target": "thm-intersection-subspaces",
+   "kind": "reference"
+  },
+  {
+   "source": "def-subspace",
+   "target": "thm-subspace-test",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-left-cancellation",
+   "target": "thm-subspace-test",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-negation-scalar",
+   "target": "thm-subspace-test",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-zero-scalar-mult",
+   "target": "thm-subspace-test",
+   "kind": "reference"
+  },
+  {
+   "source": "def-indexed-family",
+   "target": "cor-span-intersection",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-double-inclusion",
+   "target": "cor-span-intersection",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-span-subspace",
+   "target": "cor-span-intersection",
+   "kind": "reference"
+  },
+  {
+   "source": "def-function",
+   "target": "exm-linear-combinations",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-zero-scalar-mult",
+   "target": "exm-linear-combinations",
+   "kind": "reference"
+  },
+  {
+   "source": "def-polynomial",
+   "target": "exm-same-span",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-span-basic-properties",
+   "target": "exm-same-span",
+   "kind": "reference"
+  },
+  {
+   "source": "def-polynomials-bounded-degree",
+   "target": "exm-spanning-set",
+   "kind": "reference"
+  },
+  {
+   "source": "def-span",
+   "target": "exm-spanning-set",
+   "kind": "reference"
+  },
+  {
+   "source": "def-polynomial",
+   "target": "exm-spans",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-scalar-zero-vector",
+   "target": "exm-spans",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-linear-combinations",
+   "target": "exr-span-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-spanning-set",
+   "target": "exr-span-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-polynomials-infinite-dimensional",
+   "target": "exr-span-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-span-subspace",
+   "target": "exr-span-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "def-polynomial",
+   "target": "exr-span-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-span-basic-properties",
+   "target": "exr-span-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-spans",
+   "target": "exr-span-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-span-absorb",
+   "target": "exr-span-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-spanning-set",
+   "target": "exr-span-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "exr-subspaces-c2",
+   "target": "exr-span-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-span-basic-properties",
+   "target": "exr-span-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-double-inclusion",
+   "target": "exr-span-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-span-subspace",
+   "target": "exr-span-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "def-complex-numbers",
+   "target": "exr-span-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "def-finite-dimensional",
+   "target": "exr-span-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "exr-vector-spaces-c3",
+   "target": "exr-span-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-span-subspace",
+   "target": "prp-span-basic-properties",
+   "kind": "reference"
+  },
+  {
+   "source": "def-degree",
+   "target": "thm-polynomials-infinite-dimensional",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-spans",
+   "target": "thm-polynomials-infinite-dimensional",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-vector-spaces",
+   "target": "thm-polynomials-infinite-dimensional",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-degree-of-sum",
+   "target": "thm-polynomials-infinite-dimensional",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-field-basic-properties",
+   "target": "thm-polynomials-infinite-dimensional",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-span-basic-properties",
+   "target": "thm-span-absorb",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-span-subspace",
+   "target": "thm-span-absorb",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-induction",
+   "target": "thm-span-subspace",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-subspace-test",
+   "target": "thm-span-subspace",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-spanning-set",
+   "target": "exm-dependence-lemma",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-linear-dependence-lemma",
+   "target": "exm-dependence-lemma",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-negation-scalar",
+   "target": "exm-independence-degenerate",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-scalar-zero-vector",
+   "target": "exm-independence-degenerate",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-zero-product",
+   "target": "exm-independence-degenerate",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-zero-scalar-mult",
+   "target": "exm-independence-degenerate",
+   "kind": "reference"
+  },
+  {
+   "source": "def-matrix",
+   "target": "exm-independence-parameter-and-matrices",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-field-basic-properties",
+   "target": "exm-independence-parameter-and-matrices",
+   "kind": "reference"
+  },
+  {
+   "source": "def-function",
+   "target": "exm-linear-independence",
+   "kind": "reference"
+  },
+  {
+   "source": "def-polynomial",
+   "target": "exm-linear-independence",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-independence-degenerate",
+   "target": "exr-independence-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-linear-dependence-lemma",
+   "target": "exr-independence-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "def-polynomial",
+   "target": "exr-independence-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-field-basic-properties",
+   "target": "exr-independence-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-zero-scalar-mult",
+   "target": "exr-independence-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "def-vector-space",
+   "target": "exr-independence-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-linear-independence",
+   "target": "exr-independence-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-zero-scalar-mult",
+   "target": "exr-independence-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-linear-dependence-lemma",
+   "target": "exr-independence-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-sqrt2-irrational",
+   "target": "exr-independence-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-poly-degree-bound",
+   "target": "thm-distinct-degrees-independent",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-linear-dependence-lemma",
+   "target": "thm-distinct-degrees-independent",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-span-subspace",
+   "target": "thm-distinct-degrees-independent",
+   "kind": "reference"
+  },
+  {
+   "source": "def-vector-space",
+   "target": "thm-independence-unique-combination",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-negative-scalar-dist",
+   "target": "thm-independence-unique-combination",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-zero-scalar-mult",
+   "target": "thm-independence-unique-combination",
+   "kind": "reference"
+  },
+  {
+   "source": "def-field",
+   "target": "thm-linear-dependence-lemma",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-span-basic-properties",
+   "target": "thm-linear-dependence-lemma",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-negation-scalar",
+   "target": "thm-linear-dependence-lemma",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-span-absorb",
+   "target": "thm-linear-dependence-lemma",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-zero-scalar-mult",
+   "target": "thm-linear-dependence-lemma",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-linear-dependence-lemma",
+   "target": "thm-span-preservation",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-span-subspace",
+   "target": "thm-span-preservation",
+   "kind": "reference"
+  },
+  {
+   "source": "def-finite-dimensional",
+   "target": "cor-basis-existence",
    "kind": "reference"
   },
   {
@@ -5569,8 +7659,13 @@
    "kind": "reference"
   },
   {
-   "source": "exm-q-adjoin-sqrt2",
-   "target": "exm-dimensions",
+   "source": "def-complex-numbers",
+   "target": "exm-more-bases",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-unique-representation",
+   "target": "exm-polynomial-coordinates",
    "kind": "reference"
   },
   {
@@ -5579,38 +7674,533 @@
    "kind": "reference"
   },
   {
-   "source": "thm-sift",
-   "target": "thm-basis-extension",
+   "source": "def-polynomial",
+   "target": "exm-standard-bases",
    "kind": "reference"
   },
   {
-   "source": "thm-linear-dependence-lemma",
-   "target": "thm-dim-impl-eq",
+   "source": "def-polynomials-bounded-degree",
+   "target": "exm-standard-bases",
+   "kind": "reference"
+  },
+  {
+   "source": "def-basis",
+   "target": "exr-basis-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "def-coordinates",
+   "target": "exr-basis-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-more-bases",
+   "target": "exr-basis-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-unique-representation",
+   "target": "exr-basis-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-standard-bases",
+   "target": "exr-basis-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-sift",
+   "target": "exr-basis-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-unique-representation",
+   "target": "exr-basis-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-unique-representation",
+   "target": "exr-basis-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "def-coordinates",
+   "target": "thm-coordinates-linear",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-unique-representation",
+   "target": "thm-coordinates-linear",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-append-independent",
+   "target": "thm-sift",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-span-absorb",
+   "target": "thm-sift",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-span-subspace",
+   "target": "thm-sift",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-dimensions",
+   "target": "exm-count-instead-of-check",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-right-size-basis",
+   "target": "exm-count-instead-of-check",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-more-bases",
+   "target": "exm-dimensions",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-q-adjoin-sqrt2",
+   "target": "exm-dimensions",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-standard-bases",
+   "target": "exm-dimensions",
+   "kind": "reference"
+  },
+  {
+   "source": "exr-basis-b3",
+   "target": "exm-dimensions",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-sqrt2-irrational",
+   "target": "exm-dimensions",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-basis-extension",
+   "target": "exm-extend-to-basis",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-right-size-basis",
+   "target": "exm-extend-to-basis",
    "kind": "reference"
   },
   {
    "source": "thm-dim-impl-eq",
-   "target": "thm-maximal-indep",
+   "target": "exr-dimension-a1",
    "kind": "reference"
   },
   {
-   "source": "thm-linear-dependence-lemma",
-   "target": "thm-sift",
+   "source": "thm-right-size-basis",
+   "target": "exr-dimension-a1",
    "kind": "reference"
   },
   {
-   "source": "thm-span-preservation",
-   "target": "thm-sift",
+   "source": "thm-size-bounds",
+   "target": "exr-dimension-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-steinitz",
+   "target": "exr-dimension-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-basis-extension",
+   "target": "exr-dimension-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-right-size-basis",
+   "target": "exr-dimension-b2",
    "kind": "reference"
   },
   {
    "source": "thm-sift",
+   "target": "exr-dimension-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-right-size-basis",
+   "target": "exr-dimension-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "def-symmetric-matrix",
+   "target": "exr-dimension-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-coordinates-linear",
+   "target": "exr-dimension-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-right-size-basis",
+   "target": "thm-basis-extension",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-steinitz",
+   "target": "thm-basis-extension",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-basis-existence",
+   "target": "thm-basis-theorem",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-steinitz",
+   "target": "thm-basis-theorem",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-basis-existence",
+   "target": "thm-dim-impl-eq",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-count-instead-of-check",
+   "target": "thm-dim-impl-eq",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-right-size-basis",
+   "target": "thm-dim-impl-eq",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-size-bounds",
+   "target": "thm-dim-impl-eq",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-span-subspace",
+   "target": "thm-dim-impl-eq",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-subspace-dimension",
+   "target": "thm-dim-impl-eq",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-append-independent",
+   "target": "thm-maximal-indep",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-sift",
+   "target": "thm-maximal-indep",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-span-subspace",
+   "target": "thm-maximal-indep",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-basis-theorem",
+   "target": "thm-right-size-basis",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-sift",
+   "target": "thm-right-size-basis",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-steinitz",
+   "target": "thm-right-size-basis",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-steinitz",
+   "target": "thm-size-bounds",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-span-absorb",
    "target": "thm-steinitz",
    "kind": "reference"
   },
   {
-   "source": "thm-span-preservation",
+   "source": "thm-span-subspace",
    "target": "thm-steinitz",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-basis-existence",
+   "target": "thm-subspace-dimension",
+   "kind": "reference"
+  },
+  {
+   "source": "def-finite-dimensional",
+   "target": "thm-subspace-dimension",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-append-independent",
+   "target": "thm-subspace-dimension",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-size-bounds",
+   "target": "thm-subspace-dimension",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-span-subspace",
+   "target": "thm-subspace-dimension",
+   "kind": "reference"
+  },
+  {
+   "source": "def-characteristic",
+   "target": "exm-direct-sum-of-matrix",
+   "kind": "reference"
+  },
+  {
+   "source": "def-symmetric-matrix",
+   "target": "exm-direct-sum-of-matrix",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-direct-sum-criteria",
+   "target": "exm-direct-sum-of-matrix",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-subspace-dimension",
+   "target": "exm-direct-sum-of-matrix",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-transpose-properties",
+   "target": "exm-direct-sum-of-matrix",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-direct-sum-criteria",
+   "target": "exm-even-odd-functions",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-subspace-test",
+   "target": "exm-even-odd-functions",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-two-planes-r3",
+   "target": "exm-plane-line-direct-sum",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dim-impl-eq",
+   "target": "exm-plane-line-direct-sum",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-direct-sum-criteria",
+   "target": "exm-plane-line-direct-sum",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-append-independent",
+   "target": "exm-two-planes-r3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dim-impl-eq",
+   "target": "exm-two-planes-r3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-right-size-basis",
+   "target": "exm-two-planes-r3",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-append-independent",
+   "target": "exm-two-planes-r4",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-right-size-basis",
+   "target": "exm-two-planes-r4",
+   "kind": "reference"
+  },
+  {
+   "source": "def-direct-sum",
+   "target": "exr-sums-and-direct-sums-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "def-sum-of-subspaces",
+   "target": "exr-sums-and-direct-sums-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dimension-formula-subspace-dim",
+   "target": "exr-sums-and-direct-sums-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-direct-sum-criteria",
+   "target": "exr-sums-and-direct-sums-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-direct-sum-k-criteria",
+   "target": "exr-sums-and-direct-sums-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-append-independent",
+   "target": "exr-sums-and-direct-sums-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dimension-formula-subspace-dim",
+   "target": "exr-sums-and-direct-sums-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-right-size-basis",
+   "target": "exr-sums-and-direct-sums-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dim-impl-eq",
+   "target": "exr-sums-and-direct-sums-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-direct-sum-criteria",
+   "target": "exr-sums-and-direct-sums-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-sum-of-spans",
+   "target": "exr-sums-and-direct-sums-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-direct-sum-criteria",
+   "target": "exr-sums-and-direct-sums-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-direct-sum-k-criteria",
+   "target": "exr-sums-and-direct-sums-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-direct-sum-of-matrix",
+   "target": "exr-sums-and-direct-sums-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-direct-sum-criteria",
+   "target": "exr-sums-and-direct-sums-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dimension-formula-subspace-dim",
+   "target": "exr-sums-and-direct-sums-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-subspace-dimension",
+   "target": "exr-sums-and-direct-sums-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dimension-formula-subspace-dim",
+   "target": "exr-sums-and-direct-sums-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-subspace-sum",
+   "target": "exr-sums-and-direct-sums-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-span-subspace",
+   "target": "prp-sum-of-spans",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-subspace-sum",
+   "target": "prp-sum-of-spans",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-basis-existence",
+   "target": "thm-complement-exists",
+   "kind": "reference"
+  },
+  {
+   "source": "def-direct-sum",
+   "target": "thm-complement-exists",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-sum-of-spans",
+   "target": "thm-complement-exists",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-basis-extension",
+   "target": "thm-complement-exists",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-direct-sum-criteria",
+   "target": "thm-complement-exists",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-direct-sum-k-criteria",
+   "target": "thm-complement-exists",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-span-subspace",
+   "target": "thm-complement-exists",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-subspace-dimension",
+   "target": "thm-complement-exists",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-basis-existence",
+   "target": "thm-dimension-formula-subspace-dim",
+   "kind": "reference"
+  },
+  {
+   "source": "def-dimension",
+   "target": "thm-dimension-formula-subspace-dim",
+   "kind": "reference"
+  },
+  {
+   "source": "def-linear-independence",
+   "target": "thm-dimension-formula-subspace-dim",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-sum-of-spans",
+   "target": "thm-dimension-formula-subspace-dim",
    "kind": "reference"
   },
   {
@@ -5619,8 +8209,358 @@
    "kind": "reference"
   },
   {
+   "source": "thm-intersection-subspaces",
+   "target": "thm-dimension-formula-subspace-dim",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-span-absorb",
+   "target": "thm-dimension-formula-subspace-dim",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-subspace-dimension",
+   "target": "thm-dimension-formula-subspace-dim",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dimension-formula-subspace-dim",
+   "target": "thm-direct-sum-criteria",
+   "kind": "reference"
+  },
+  {
+   "source": "def-dimension",
+   "target": "thm-direct-sum-k-criteria",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-sum-of-spans",
+   "target": "thm-direct-sum-k-criteria",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-right-size-basis",
+   "target": "thm-direct-sum-k-criteria",
+   "kind": "reference"
+  },
+  {
    "source": "thm-subspace-test",
-   "target": "thm-subapce-sum-theorem",
+   "target": "thm-subspace-sum",
+   "kind": "reference"
+  },
+  {
+   "source": "def-relation",
+   "target": "def-partial-order",
+   "kind": "reference"
+  },
+  {
+   "source": "def-polynomial",
+   "target": "exm-basis-of-polynomials",
+   "kind": "reference"
+  },
+  {
+   "source": "def-power-set",
+   "target": "exm-partial-orders",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-double-inclusion",
+   "target": "exm-partial-orders",
+   "kind": "reference"
+  },
+  {
+   "source": "def-partial-order",
+   "target": "exr-infinite-dimensional-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-partial-orders",
+   "target": "exr-infinite-dimensional-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-sequence-standard-vectors",
+   "target": "exr-infinite-dimensional-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-zorn",
+   "target": "exr-infinite-dimensional-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-sequence-standard-vectors",
+   "target": "exr-infinite-dimensional-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-subspace-test",
+   "target": "exr-infinite-dimensional-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-steinitz",
+   "target": "exr-infinite-dimensional-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "exr-infinite-dimensional-b2",
+   "target": "exr-infinite-dimensional-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-steinitz",
+   "target": "exr-infinite-dimensional-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-basis-extension-general",
+   "target": "exr-infinite-dimensional-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-every-space-has-basis",
+   "target": "exr-infinite-dimensional-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-span-subspace",
+   "target": "exr-infinite-dimensional-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-countable-sets",
+   "target": "exr-infinite-dimensional-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-reals-uncountable",
+   "target": "exr-infinite-dimensional-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-every-space-has-basis",
+   "target": "exr-infinite-dimensional-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-composition-preserves",
+   "target": "lem-countable-sets",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-partial-orders",
+   "target": "thm-basis-extension-general",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-zorn",
+   "target": "thm-basis-extension-general",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-basis-extension-general",
+   "target": "thm-every-space-has-basis",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-countable-sets",
+   "target": "thm-reals-infinite-dimensional-over-rationals",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-reals-uncountable",
+   "target": "thm-reals-infinite-dimensional-over-rationals",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-partial-orders",
+   "target": "thm-zorn",
+   "kind": "reference"
+  },
+  {
+   "source": "def-complex-numbers",
+   "target": "exm-c2-over-r",
+   "kind": "reference"
+  },
+  {
+   "source": "def-complex-numbers",
+   "target": "exm-complexification-rn",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-complexification-basis",
+   "target": "exm-complexification-rn",
+   "kind": "reference"
+  },
+  {
+   "source": "def-complex-numbers",
+   "target": "exm-field-degrees",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-q-sqrt2-field",
+   "target": "exm-field-degrees",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-reals-infinite-dimensional-over-rationals",
+   "target": "exm-field-degrees",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-sqrt2-irrational",
+   "target": "exm-field-degrees",
+   "kind": "reference"
+  },
+  {
+   "source": "def-restriction-of-scalars",
+   "target": "exr-changing-the-field-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-dimensions",
+   "target": "exr-changing-the-field-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-complexification-basis",
+   "target": "exr-changing-the-field-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-restriction-of-scalars-dimension",
+   "target": "exr-changing-the-field-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-tower-law",
+   "target": "exr-changing-the-field-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-dimensions",
+   "target": "exr-changing-the-field-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-field-degrees",
+   "target": "exr-changing-the-field-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-q-sqrt2-field",
+   "target": "exr-changing-the-field-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-tower-law",
+   "target": "exr-changing-the-field-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-standard-bases",
+   "target": "exr-changing-the-field-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-restriction-of-scalars-dimension",
+   "target": "exr-changing-the-field-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "def-complexification",
+   "target": "exr-changing-the-field-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-negative-scalar-dist",
+   "target": "exr-changing-the-field-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-basis-existence",
+   "target": "exr-changing-the-field-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-restriction-of-scalars-dimension",
+   "target": "exr-changing-the-field-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-span-subspace",
+   "target": "exr-changing-the-field-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-subspace-dimension",
+   "target": "exr-changing-the-field-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-subspace-test",
+   "target": "exr-changing-the-field-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-field-degrees",
+   "target": "exr-changing-the-field-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-q-sqrt2-field",
+   "target": "exr-changing-the-field-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-sqrt2-irrational",
+   "target": "exr-changing-the-field-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-subspace-test",
+   "target": "exr-changing-the-field-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-tower-law",
+   "target": "exr-changing-the-field-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "def-complexification",
+   "target": "thm-complexification-basis",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-scalar-zero-vector",
+   "target": "thm-complexification-basis",
+   "kind": "reference"
+  },
+  {
+   "source": "def-vector-space",
+   "target": "thm-restriction-of-scalars-dimension",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-dimensions",
+   "target": "thm-restriction-of-scalars-dimension",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-field-degrees",
+   "target": "thm-restriction-of-scalars-dimension",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-tower-law",
+   "target": "thm-restriction-of-scalars-dimension",
+   "kind": "reference"
+  },
+  {
+   "source": "def-vector-space",
+   "target": "thm-tower-law",
    "kind": "reference"
   },
   {
@@ -5632,6 +8572,11 @@
    "source": "thm-matrix-multiplication-properties",
    "target": "exm-matrix-transformation",
    "kind": "reference"
+  },
+  {
+   "source": "thm-negative-scalar-dist",
+   "target": "exm-norm",
+   "kind": "mention"
   },
   {
    "source": "thm-zero-maps-to-zero",

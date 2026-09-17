@@ -21,7 +21,7 @@
     {
       "title": "Preliminaries",
       "number": 0,
-      "part": "",
+      "part": "Part I · Spaces and Maps",
       "collapsed": false,
       "path": "ch00-foundations/index.html",
       "sections": [
@@ -88,7 +88,7 @@
       ]
     },
     {
-      "title": "Vector Spaces and Dimensions",
+      "title": "Vector Spaces",
       "number": 1,
       "part": "",
       "collapsed": false,
@@ -119,48 +119,68 @@
           "filename": "04-independence.md"
         },
         {
-          "title": "Bases",
+          "title": "Bases and Coordinates",
           "number": "1.5",
           "path": "ch01-vector-spaces/05-basis.html",
           "filename": "05-basis.md"
         },
         {
-          "title": "Sifting and the Replacement Theorem",
+          "title": "The Exchange Theorem and Dimension",
           "number": "1.6",
           "path": "ch01-vector-spaces/06-dimension.html",
           "filename": "06-dimension.md"
         },
         {
-          "title": "Sums of Subspaces",
+          "title": "Sums and Direct Sums",
           "number": "1.7",
           "path": "ch01-vector-spaces/07-sums-and-direct-sums.html",
           "filename": "07-sums-and-direct-sums.md"
+        },
+        {
+          "title": "Infinite-Dimensional Spaces",
+          "number": "1.8",
+          "path": "ch01-vector-spaces/08-infinite-dimensional.html",
+          "filename": "08-infinite-dimensional.md"
+        },
+        {
+          "title": "Changing the Field",
+          "number": "1.9",
+          "path": "ch01-vector-spaces/09-changing-the-field.html",
+          "filename": "09-changing-the-field.md"
         }
       ]
     },
     {
-      "title": "Linear Transformations",
+      "title": "Linear Systems",
       "number": 2,
       "part": "",
       "collapsed": false,
-      "path": "ch02-linear-transformations/index.html",
+      "path": null,
+      "sections": []
+    },
+    {
+      "title": "Linear Transformations",
+      "number": 3,
+      "part": "",
+      "collapsed": false,
+      "path": "ch03-linear-maps/index.html",
       "sections": [
         {
           "title": "Linear Transformations",
-          "number": "2.1",
-          "path": "ch02-linear-transformations/01-linear-transformations.html",
+          "number": "3.1",
+          "path": "ch03-linear-maps/01-linear-transformations.html",
           "filename": "01-linear-transformations.md"
         },
         {
           "title": "Kernel and Image",
-          "number": "2.2",
-          "path": "ch02-linear-transformations/02-kernel-image.html",
+          "number": "3.2",
+          "path": "ch03-linear-maps/02-kernel-image.html",
           "filename": "02-kernel-image.md"
         },
         {
           "title": "Rank-Nullity Theorem",
-          "number": "2.3",
-          "path": "ch02-linear-transformations/03-rank-nullity.html",
+          "number": "3.3",
+          "path": "ch03-linear-maps/03-rank-nullity.html",
           "filename": "03-rank-nullity.md"
         }
       ]
