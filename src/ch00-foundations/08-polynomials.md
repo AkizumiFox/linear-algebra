@@ -348,7 +348,7 @@ Similarly \( x^2 \neq x \) as polynomials, but \( 0^2 = 0 \) and \( 1^2 = 1 \), 
 **A polynomial is not a function.** Two different polynomials can define the same polynomial function, as \( x^2 + x \) and \( 0 \) do over \( \nF_2 \). So "\( p(c) = 0 \) for every \( c \in F \)" does **not** imply \( p = 0 \) in general, and we may never read off coefficients or a degree from the values alone. This happens over every finite field: if \( F = \{c_1, \dots, c_q\} \), then \( (x - c_1)(x - c_2) \cdots (x - c_q) \) has degree \( q \) by @thm-degree-of-product, yet vanishes at every \( c_i \) by @thm-evaluation-respects-operations. Over \( \nF_p \), @exr-polynomials-c2 below gives the shorter example \( x^p - x \).
 :::
 
-Over an infinite field such as \( \nQ \), \( \nR \) or \( \nC \), the problem disappears: a polynomial whose function is zero is the zero polynomial, so polynomials and polynomial functions can be identified. We prove this in Chapter 5, once we can count roots. Until then, whenever we say two polynomials are equal we mean their coefficients agree.
+Over an infinite field such as \( \nQ \), \( \nR \) or \( \nC \), the problem disappears: a polynomial whose function is zero is the zero polynomial, so polynomials and polynomial functions can be identified. We prove this in Chapter 2 (in the section on applications of linear systems), once we can count roots. Until then, whenever we say two polynomials are equal we mean their coefficients agree.
 
 ## Looking ahead
 

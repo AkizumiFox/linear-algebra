@@ -197,7 +197,7 @@ Each section ends with `## Exercises` and three groups.
 - **Names.** Name results by content ("the Rank–Nullity Theorem"), with `@label`. Titles of named theorems match exactly so the dependency graph picks up mentions.
 - **Promises.** Every forward promise ("we will see in @sec…" or "in Chapter 8") must be paid off. When writing, add each promise to `authoring/STATUS.md`.
 - **Spelling.** American spelling: "normalize", "color", "behavior", "center". Mathematical names keep their accents (Gershgorin, Schur, Cauchy–Schwarz with an en dash).
-- **Math delimiters.** `\( … \)` inline and `\[ … \]` display, never `$`. Numbered equations take `{#eq-slug}` right after `\]`.
+- **Math delimiters.** `\( … \)` inline and `\[ … \]` display, never `$` (except inside TikZ and inside `\tag{$\ast$}`). Numbered equations take `{#eq-slug}` right after `\]`.
 - **Macros** are in `latex/macros.tex`; use those listed in `NOTATION.md`. Define nothing ad hoc. If a new macro is needed, add it to `macros.tex` and `NOTATION.md`.
 
 ## 8. Authoring syntax reference

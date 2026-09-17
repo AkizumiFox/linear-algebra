@@ -43,6 +43,8 @@ This list is fixed. A chapter that needs a new symbol adds it here, and a new ma
 | `ST` | composition of linear maps: first T, then S |
 | `\cL(V, W)`, `\cL(V)` | all linear maps V → W; operators on V |
 | `\ker T`, `\im T` | kernel, image |
+| `\col(A)`, `\row(A)`, `\nul(A)` | column space (in F^m), row space (in M_{1×n}(F)), null space (in F^n) |
+| `P_{ij}`, `D_i(c)`, `I + cE_{ij}` | elementary matrices: swap, scale, add; `E_{ij}` is the matrix unit |
 | `\rank T`, `\nullity T` | dim im T, dim ker T |
 | `I`, `I_n`, `\id_V` | identity matrix; identity operator |
 | `A, B, C` | matrices, plain capitals. Entries `a_{ij}`, or `(A)_{ij}` |

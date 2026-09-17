@@ -17,9 +17,10 @@ The plan is at `~/.claude/plans/cached-gathering-sedgewick.md`. The outline of a
 Add a line when a section promises something later ("proved in Chapter 5"); tick it when it is paid off.
 
 - [ ] Ch 0 → Ch 5: Fundamental Theorem of Algebra proved
-- [ ] Ch 0 → Ch 5: division algorithm; a polynomial over an infinite field is determined by its values
-- [ ] Ch 0 → Ch 2 (`thm-one-sided-inverse`): for square matrices AB = I implies BA = I (Ch 0 text may say Chapter 3: fix to Chapter 2)
-- [ ] Ch 0 → Ch 2: A invertible ⇔ Ax = 0 only trivial solution
+- [x] Ch 0 → Ch 2 §07 (`lem-root-bound`): a polynomial over an infinite field is determined by its values
+- [ ] Ch 0 → Ch 5: division algorithm in general
+- [x] Ch 0 → Ch 2 (`thm-one-sided-inverse`): for square matrices AB = I implies BA = I (Ch 0 text may say Chapter 3: fix to Chapter 2)
+- [x] Ch 0 → Ch 2: A invertible ⇔ Ax = 0 only trivial solution
 - [ ] Ch 0 → Ch 1: independence/"not all zero"; {0} subspace, ∅ not; intersection vs union of subspaces; span as intersection; Fⁿ as a vector space
 - [ ] Ch 0 → Ch 3: kernel test for injectivity; quotient vector spaces; similarity
 - [ ] Ch 0 → Ch 5: unique prime factorization in F[x] (Ch 0 mentions uniqueness for integers without proof)
@@ -38,3 +39,15 @@ Add a line when a section promises something later ("proved in Chapter 5"); tick
 - [ ] Ch 1 → Ch 8: eigenspaces of a diagonalizable operator give a direct sum
 - [ ] Ch 1 → Ch 3: coordinate map is an isomorphism; shift map injective not surjective; (ℝⁿ)_ℂ ≅ ℂⁿ
 - [ ] Ch 1 → Ch 8/11: complexification gives real matrices complex eigenvalues; used in real spectral theory
+- [ ] Ch 2 → Ch 3, 6, 8, 12: invertible-matrix TFAE grows (kernel/image; det; eigenvalues; singular values)
+- [ ] Ch 2 → Ch 3: Rank–Nullity for linear maps
+- [ ] Ch 2 → Ch 12: Cholesky
+- [ ] Ch 2 → Ch 23: partial pivoting, rounding; graph Laplacian
+- [ ] Ch 2 → Ch 5: Lagrange interpolation formula
+- [ ] Ch 2 → Ch 10: least squares
+
+## Deferred to the whole-book pass (M7)
+
+- Long sections to consider splitting or trimming: Ch 0 §04 functions, §05 relations, §09 matrices; Ch 1 §01–§04; Ch 2 §02 Gaussian elimination (~11.7k raw words), §05 rank.
+- Ch 2 §03: "pivot columns of A" is defined inside `cor-pivot-columns-well-defined`; consider a separate def block.
+- Ch 2 §05 symbol reuse (r, **r**ᵢ, **b**) — tidy in M7.
