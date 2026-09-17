@@ -91,6 +91,12 @@
         html += `<li class="nav-item nav-home">
             <a href="${basePath}${home.path}">${home.title}</a>
         </li>`;
+        for (const extra of navigationData.extras || []) {
+            const active = currentPagePath() === extra.path ? ' active' : '';
+            html += `<li class="nav-item nav-extra${active}">
+                <a href="${basePath}${extra.path}"><i class="bi ${extra.icon}" aria-hidden="true"></i> ${extra.title}</a>
+            </li>`;
+        }
 
         navigationData.chapters.forEach((chapter, chapterIdx) => {
             const isChapterActive = chapter.sections.some(s => s.path === currentPath);
@@ -306,7 +312,7 @@
     /**
      * Generate tooltip HTML content for a theorem reference
      */
-    function generateTooltipContent(refId, info) {
+    function generateTooltipContent(refId, info, goTo) {
 
         if (!info) {
             return `<div class="tooltip-error">Reference not found: ${refId}</div>`;
@@ -321,10 +327,14 @@
             title += ` (${info.title_html || info.title})`;
         }
 
+        const footer = goTo
+            ? `<a class="tooltip-go" href="${goTo.href}">Go to ${goTo.label} <i class="bi bi-arrow-right-short" aria-hidden="true"></i></a>`
+            : '';
         return `
             <div class="tooltip-theorem ${info.type}">
                 <div class="tooltip-title">${title}</div>
                 <div class="tooltip-content">${info.html || 'Content not available'}</div>
+                ${footer}
             </div>
         `;
     }
@@ -351,17 +361,23 @@
         }
 
         const xrefLinks = document.querySelectorAll('a.xref[data-ref]');
+        // Without hover (phones, tablets) the first tap opens the preview, which has a
+        // "Go to" link; with a mouse, hovering previews and clicking follows the link.
+        const touch = window.matchMedia('(hover: none)').matches;
 
         xrefLinks.forEach(link => {
             const refId = link.dataset.ref;
             const shard = link.dataset.shard;
+            const goTo = touch ? { href: link.getAttribute('href'), label: link.textContent.trim() } : null;
+            if (touch) link.addEventListener('click', event => event.preventDefault());
 
             tippy(link, {
                 ...TOOLTIP_CONFIG,
+                ...(touch ? { trigger: 'click', hideOnClick: true, placement: 'bottom', maxWidth: 'calc(100vw - 24px)' } : {}),
                 content: createLoadingContent(),
                 onShow(instance) {
                     loadShard(shard).then(entries => {
-                        instance.setContent(generateTooltipContent(refId, entries[refId]));
+                        instance.setContent(generateTooltipContent(refId, entries[refId], goTo));
                         // Typeset math in the tooltip
                         const tooltipEl = instance.popper.querySelector('.tippy-content');
                         if (tooltipEl && window.MathJax && window.MathJax.typesetPromise) {
@@ -401,6 +417,209 @@
     }
 
     // ==========================================================================
+    // List of Results: filters
+    // ==========================================================================
+
+    function setupResultsFilters() {
+        const filters = document.querySelector('.results-filters');
+        if (!filters) return;
+        const checkboxes = [...filters.querySelectorAll('input[type="checkbox"]')];
+        const search = filters.querySelector('.results-search');
+        const empty = document.querySelector('.results-empty');
+
+        const apply = () => {
+            const groups = new Set(checkboxes.filter(c => c.checked).map(c => c.value));
+            const words = search.value.toLowerCase().split(/\s+/).filter(Boolean);
+            let shown = 0;
+            document.querySelectorAll('.result').forEach(item => {
+                const visible = groups.has(item.dataset.group)
+                    && words.every(w => item.dataset.search.includes(w));
+                item.hidden = !visible;
+                if (visible) shown++;
+            });
+            document.querySelectorAll('.results-section, .results-chapter').forEach(block => {
+                block.hidden = !block.querySelector('.result:not([hidden])');
+            });
+            empty.hidden = shown > 0;
+        };
+        checkboxes.forEach(c => c.addEventListener('change', apply));
+        search.addEventListener('input', apply);
+    }
+
+    // ==========================================================================
+    // Foldable Proofs and Solutions
+    // ==========================================================================
+
+    /**
+     * Proofs can be hidden and solutions start hidden, so readers can try an example first.
+     * Only outermost blocks fold (a claim's proof inside a proof stays with its proof).
+     */
+    function setupFolding() {
+        const blocks = document.querySelectorAll('.content .proof.small-env, .content .solution.small-env');
+        blocks.forEach(block => {
+            if (block.parentElement.closest('.proof, .solution')) return;
+            const kind = block.classList.contains('solution') ? 'solution' : 'proof';
+            const button = document.createElement('button');
+            button.type = 'button';
+            button.className = 'fold-toggle';
+            block.classList.add('foldable');
+            block.dataset.foldLabel = kind === 'solution' ? 'Solution.' : 'Proof.';
+            block.prepend(button);
+
+            const set = folded => {
+                block.classList.toggle('is-folded', folded);
+                button.setAttribute('aria-expanded', String(!folded));
+                button.innerHTML = `<i class="bi bi-chevron-${folded ? 'down' : 'up'}" aria-hidden="true"></i> ${folded ? 'Show' : 'Hide'} ${kind}`;
+            };
+            button.addEventListener('click', () => set(!block.classList.contains('is-folded')));
+            block.addEventListener('unfold', () => set(false));
+            set(kind === 'solution');
+        });
+    }
+
+    /** Open any folded block containing the element. */
+    function unfoldAround(element) {
+        for (let block = element?.closest('.is-folded'); block; block = block.parentElement?.closest('.is-folded')) {
+            block.dispatchEvent(new Event('unfold'));
+        }
+    }
+
+    // ==========================================================================
+    // Reading Progress and Keyboard Navigation
+    // ==========================================================================
+
+    function readJson(key, fallback) {
+        try { return JSON.parse(localStorage.getItem(key)) ?? fallback; } catch (e) { return fallback; }
+    }
+
+    function currentPagePath() {
+        return document.querySelector('meta[name="page-path"]')?.content || '';
+    }
+
+    /** Remember visited pages and the last reading position. */
+    function trackReading() {
+        const path = currentPagePath();
+        if (!path) return;
+        const visited = new Set(readJson('book-visited', []));
+        visited.add(path);
+        saveSetting('book-visited', JSON.stringify([...visited]));
+
+        if (path === 'index.html') return;  // the start page is not a reading position
+        const title = document.querySelector('.quarto-title h1.title')?.textContent.replace(/\s+/g, ' ').trim() || document.title;
+        const headings = [...document.querySelectorAll('.content h2[id], .content h3[id]')];
+        let timer;
+        const save = () => {
+            let heading = null;
+            for (const h of headings) {
+                if (h.getBoundingClientRect().top < 120) heading = h;
+            }
+            saveSetting('book-last', JSON.stringify({
+                path, title,
+                heading: heading ? { id: heading.id, text: heading.textContent.replace(/[#\s]+$/, '').replace(/\s+/g, ' ').trim() } : null,
+                time: Date.now(),
+            }));
+        };
+        window.addEventListener('scroll', () => { clearTimeout(timer); timer = setTimeout(save, 400); }, { passive: true });
+        // Also when leaving or hiding the page, so a quick scroll-then-close is not lost
+        window.addEventListener('pagehide', save);
+        document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'hidden') save(); });
+        save();
+    }
+
+    /** Check marks next to visited sections in the sidebar. */
+    function markVisitedSections() {
+        const visited = new Set(readJson('book-visited', []));
+        document.querySelectorAll('.sidebar-nav .nav-section-item').forEach(item => {
+            const link = item.querySelector('a');
+            const path = link && new URL(link.href).pathname.match(/([^/]+\/[^/]+\.html)$/)?.[1];
+            if (path && visited.has(path)) {
+                item.classList.add('visited');
+                link.setAttribute('title', `${link.getAttribute('title') || ''} (read)`.trim());
+            }
+        });
+    }
+
+    /** On the start page, offer to continue where the reader left off. */
+    function showContinueReading() {
+        if (currentPagePath() !== 'index.html') return;
+        const last = readJson('book-last', null);
+        if (!last || !last.path) return;
+        const header = document.querySelector('.quarto-title-block');
+        if (!header) return;
+        const href = getBasePath() + last.path + (last.heading ? `#${last.heading.id}` : '');
+        const card = document.createElement('aside');
+        card.className = 'continue-reading';
+        card.innerHTML = `
+            <a class="continue-reading-link" href="${href}">
+                <span class="continue-reading-label">Continue reading</span>
+                <span class="continue-reading-title"></span>
+                <span class="continue-reading-heading"></span>
+            </a>
+            <button type="button" class="continue-reading-dismiss" aria-label="Dismiss">
+                <i class="bi bi-x-lg" aria-hidden="true"></i>
+            </button>`;
+        card.querySelector('.continue-reading-title').textContent = last.title;
+        card.querySelector('.continue-reading-heading').textContent = last.heading ? last.heading.text : '';
+        card.querySelector('.continue-reading-dismiss').addEventListener('click', () => {
+            saveSetting('book-last', null);
+            card.remove();
+        });
+        header.after(card);
+    }
+
+    /** Left and right arrow keys go to the previous and next page. */
+    function setupArrowKeys() {
+        document.addEventListener('keydown', event => {
+            if (event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) return;
+            if (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight') return;
+            const target = event.target;
+            if (target.closest('input, textarea, select, [contenteditable="true"], .code-cell, .plot, .widget')) return;
+            if (document.body.classList.contains('drawer-open')) return;
+            // Leave horizontal scrolling of a focused wide equation alone
+            if (target !== document.body && target.scrollWidth > target.clientWidth) return;
+            const link = document.querySelector(event.key === 'ArrowLeft'
+                ? '.nav-page-previous .pagination-link' : '.nav-page-next .pagination-link');
+            if (link) {
+                event.preventDefault();
+                window.location.href = link.href;
+            }
+        });
+    }
+
+    // ==========================================================================
+    // MathJax on Demand
+    // ==========================================================================
+
+    /**
+     * On pages whose math was rendered at build time, MathJax is loaded only when text that
+     * was not rendered needs it (search snippets). Resolves to MathJax, or null.
+     */
+    let mathjaxLoading = null;
+    function ensureMathJax() {
+        if (window.MathJax?.typesetPromise) return Promise.resolve(window.MathJax);
+        if (mathjaxLoading) return mathjaxLoading;
+        const load = src => new Promise((resolve, reject) => {
+            const script = document.createElement('script');
+            script.src = src;
+            script.onload = resolve;
+            script.onerror = reject;
+            document.head.append(script);
+        });
+        mathjaxLoading = load(getBasePath() + 'mathjax-macros.js').then(() => {
+            window.MathJax = {
+                tex: {
+                    inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']],
+                    processEscapes: true, processEnvironments: true, macros: window.BOOK_MACROS || {},
+                },
+                options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'] },
+                startup: { typeset: false },
+            };
+            return load('https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml-full.js');
+        }).then(() => window.MathJax.startup.promise).then(() => window.MathJax).catch(() => null);
+        return mathjaxLoading;
+    }
+
+    // ==========================================================================
     // Wide Inline Formulas
     // ==========================================================================
 
@@ -409,7 +628,8 @@
      * overflows the column and is clipped; mark those so they scroll sideways instead.
      */
     function setupWideInlineMath() {
-        if (!window.MathJax) return;
+        const prerendered = document.querySelector('meta[name="math-prerendered"]');
+        if (!prerendered && !window.MathJax) return;
         const update = () => {
             document.querySelectorAll('.content mjx-container:not([display="true"])').forEach(math => {
                 math.classList.remove('wide-inline');
@@ -419,9 +639,14 @@
                 }
             });
         };
-        const whenReady = () => MathJax.startup?.promise?.then(update);
-        if (MathJax.startup?.promise) whenReady();
-        else window.addEventListener('load', whenReady);
+        if (prerendered) {
+            // Formulas are already in the page; measure once fonts have loaded
+            document.fonts.ready.then(update);
+        } else {
+            const whenReady = () => MathJax.startup?.promise?.then(update);
+            if (MathJax.startup?.promise) whenReady();
+            else window.addEventListener('load', whenReady);
+        }
         let timer;
         window.addEventListener('resize', () => { clearTimeout(timer); timer = setTimeout(update, 200); });
     }
@@ -434,6 +659,7 @@
     function markTarget(element) {
         document.querySelectorAll('.is-target').forEach(el => el.classList.remove('is-target'));
         if (!element) return;
+        unfoldAround(element);
         void element.offsetWidth;  // restart the animation when the same target is chosen again
         element.classList.add('is-target');
     }
@@ -783,9 +1009,12 @@
                     resultsContainer.innerHTML = `<div class="search-no-results">No results for “${escapeHtml(query)}”</div>`;
                 }
                 resultsContainer.classList.add('active');
-                if (results.length && window.MathJax && MathJax.typesetPromise) {
-                    MathJax.typesetClear?.([resultsContainer]);
-                    MathJax.typesetPromise([resultsContainer]).catch(() => {});
+                if (results.length && /\\\(|\\\[/.test(resultsContainer.textContent)) {
+                    ensureMathJax().then(mj => {
+                        if (!mj) return;
+                        mj.typesetClear?.([resultsContainer]);
+                        mj.typesetPromise([resultsContainer]).catch(() => {});
+                    });
                 }
             }, 150);
         });
@@ -810,12 +1039,22 @@
         if (navLoaded) {
             buildSidebarNav();
             updateSidebarHeader();
+            markVisitedSections();
         }
+
+        // Reading position, "continue reading" on the start page, arrow-key paging
+        trackReading();
+        showContinueReading();
+        setupArrowKeys();
 
         // Build table of contents
         buildTableOfContents();
 
         setupWideInlineMath();
+
+        // Fold solutions (and let readers fold proofs), before anchors are resolved
+        setupFolding();
+        setupResultsFilters();
 
         // Link anchors on headings and theorems; highlight the linked element
         setupAnchorLinks();

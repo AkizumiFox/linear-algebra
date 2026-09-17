@@ -5,6 +5,18 @@
     "title": "Preface",
     "path": "index.html"
   },
+  "extras": [
+    {
+      "title": "List of results",
+      "path": "results.html",
+      "icon": "bi-list-ol"
+    },
+    {
+      "title": "Dependency graph",
+      "path": "graph.html",
+      "icon": "bi-diagram-3"
+    }
+  ],
   "chapters": [
     {
       "title": "Preliminary",

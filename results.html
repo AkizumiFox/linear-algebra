@@ -1,0 +1,420 @@
+<!DOCTYPE html><html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List of results – Linear Algebra</title>
+
+    <meta name="asset-prefix" content="./">
+    <meta name="page-path" content="results.html">
+
+    <meta name="color-scheme" content="light dark">
+    <!-- Theme and pane state before first paint (saved choice, else the system setting) -->
+    <script>
+        (function () {
+            var root = document.documentElement, stored = {};
+            try {
+                stored.theme = localStorage.getItem('book-theme');
+                stored.sidebar = localStorage.getItem('book-sidebar');
+                stored.toc = localStorage.getItem('book-toc');
+            } catch (e) {}
+            root.dataset.theme = stored.theme === 'light' || stored.theme === 'dark' ? stored.theme
+                : (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            if (stored.sidebar === 'collapsed') root.dataset.sidebar = 'collapsed';
+            if (stored.toc === 'collapsed') root.dataset.toc = 'collapsed';
+        })();
+    </script>
+            <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Linear Algebra">
+    <meta property="og:title" content="List of results">
+        <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+
+    <!-- Fonts: STIX Two Text (matches MathJax's math font), served with the site -->
+    <link rel="preload" href="./fonts/stix-two-text-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin="">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="./styles.css?v=97c29d15ed">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+        <!-- Math is rendered at build time (build/math.py); this is its stylesheet. MathJax itself
+         loads only when needed (search snippets), see main.js -->
+    <link rel="stylesheet" href="./mathjax.css?v=3.2.2">
+    <meta name="math-prerendered" content="true">
+    
+    <!-- Tippy.js for tooltips -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tippy.js@6.3.7/dist/tippy-bundle.umd.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tippy.js@6.3.7/animations/shift-away.css">
+
+        </head>
+
+<body>
+    <a class="skip-link" href="#quarto-content">Skip to content</a>
+
+    <div id="quarto-container">
+        <!-- Left Sidebar Navigation -->
+        <nav id="quarto-sidebar" aria-label="Book contents">
+            <div class="sidebar-header">
+                <a href="./index.html" class="sidebar-title">
+                    Linear Algebra
+                </a>
+                <div class="sidebar-tools">
+                    <a href="./book/book.pdf" title="Full book (PDF)" target="_blank">
+                        <i class="bi bi-file-earmark-pdf" aria-hidden="true"></i>
+                        <span class="visually-hidden">Full book (PDF)</span>
+                    </a>
+                                    </div>
+            </div>
+
+            <div class="sidebar-search">
+                <i class="bi bi-search" aria-hidden="true"></i>
+                <input type="search" class="search-input" id="search-input" placeholder="Search" aria-label="Search the book" autocomplete="off">
+                <kbd class="search-shortcut" aria-hidden="true">/</kbd>
+            </div>
+
+            <nav class="sidebar-nav">
+                                <ul class="nav-list">
+                    <li><a href="./index.html">Preface</a></li>
+                </ul>
+                            </nav>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main id="quarto-content">
+            <!-- Toolbar: book contents (drawer on phones, collapsible pane on wider screens),
+                 light/dark theme, and the "On this page" pane -->
+            <div class="topbar" role="toolbar" aria-label="Page layout">
+                <button type="button" class="icon-button sidebar-toggle" aria-controls="quarto-sidebar" aria-expanded="true" aria-label="Hide book contents" data-tooltip="Hide contents">
+                    <i class="bi bi-layout-sidebar sidebar-icon-pane" aria-hidden="true"></i>
+                    <i class="bi bi-list sidebar-icon-menu" aria-hidden="true"></i>
+                </button>
+                <a href="./index.html" class="topbar-title">Linear
+Algebra</a>
+                <div class="topbar-actions">
+                    <button type="button" class="icon-button theme-toggle" aria-pressed="false" aria-label="Dark mode" data-tooltip="Dark mode">
+                        <i class="bi bi-moon-stars theme-icon-moon" aria-hidden="true"></i>
+                        <i class="bi bi-sun theme-icon-sun" aria-hidden="true"></i>
+                    </button>
+                    <button type="button" class="icon-button toc-toggle" aria-controls="quarto-margin-sidebar" aria-expanded="true" aria-label="Hide on this page" data-tooltip="Hide “On this page”">
+                        <i class="bi bi-layout-sidebar-reverse" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+
+
+            <article class="content">
+                <!-- Page title removed to avoid duplication with content H1 -->
+                <!-- Quarto-style Title Block -->
+                <header id="title-block-header" class="quarto-title-block default">
+                                        <nav class="quarto-title-breadcrumbs" aria-label="Breadcrumb">
+                        <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="./index.html">Linear Algebra</a></li>
+                        <li class="breadcrumb-item"><a href="./results.html"><span class="chapter-title">List of results</span></a></li>
+                        </ol>
+                    </nav>
+                                        <div class="quarto-title">
+                        <h1 class="title">
+                            
+                            <span class="chapter-title">List of
+results</span>
+                        </h1>
+                    </div>
+                </header>
+
+                <div id="page-title">
+
+                </div>
+                <div class="results-filters" role="group" aria-label="Filter results">
+                <label class="results-filter"><input type="checkbox" value="statements" checked=""> Theorems and lemmas <span class="results-count">43</span></label>
+                <label class="results-filter"><input type="checkbox" value="definitions" checked=""> Definitions <span class="results-count">57</span></label>
+                <label class="results-filter"><input type="checkbox" value="examples" checked=""> Examples <span class="results-count">74</span></label>
+                <input type="search" class="results-search" placeholder="Filter by name or number" aria-label="Filter results by name or number">
+                </div>
+                <section class="results-chapter">
+                <h2 id="chapter-ch00-foundations">Preliminary</h2>
+                <div class="results-section">
+                <h3><a href="ch00-foundations/01-logic.html">0.1 Logic and Quantifiers</a></h3>
+                <ul class="results-list">
+                <li class="result" data-group="definitions" data-search="definition 0.1.1 quantifiers" style="--env-color: #b0414f"><a class="xref result-name" href="ch00-foundations/01-logic.html#def-quantifiers" data-ref="def-quantifiers" data-shard="ch00-foundations">Definition 0.1.1</a> <span class="result-title">Quantifiers</span></li>
+                <li class="result" data-group="examples" data-search="example quantified statements" style="--env-color: #3b7a4c"><a class="xref result-name" href="ch00-foundations/01-logic.html#exm-quantifiers" data-ref="exm-quantifiers" data-shard="ch00-foundations">Example</a> <span class="result-title">Quantified Statements</span></li>
+                <li class="result" data-group="examples" data-search="example nested quantifiers" style="--env-color: #3b7a4c"><a class="xref result-name" href="ch00-foundations/01-logic.html#exm-nested-quantifiers" data-ref="exm-nested-quantifiers" data-shard="ch00-foundations">Example</a> <span class="result-title">Nested Quantifiers</span></li>
+                <li class="result" data-group="definitions" data-search="definition 0.1.2 negation of quantifiers" style="--env-color: #b0414f"><a class="xref result-name" href="ch00-foundations/01-logic.html#def-negation-of-quantifiers" data-ref="def-negation-of-quantifiers" data-shard="ch00-foundations">Definition 0.1.2</a> <span class="result-title">Negation of Quantifiers</span></li>
+                <li class="result" data-group="examples" data-search="example basic negation examples" style="--env-color: #3b7a4c"><a class="xref result-name" href="ch00-foundations/01-logic.html#exm-negation-basic" data-ref="exm-negation-basic" data-shard="ch00-foundations">Example</a> <span class="result-title">Basic Negation Examples</span></li>
+                <li class="result" data-group="examples" data-search="example negating the definition of injectivity" style="--env-color: #3b7a4c"><a class="xref result-name" href="ch00-foundations/01-logic.html#exm-negation-injectivity" data-ref="exm-negation-injectivity" data-shard="ch00-foundations">Example</a> <span class="result-title">Negating the Definition of Injectivity</span></li>
+                <li class="result" data-group="examples" data-search="example negating the definition of surjectivity" style="--env-color: #3b7a4c"><a class="xref result-name" href="ch00-foundations/01-logic.html#exm-negation-surjectivity" data-ref="exm-negation-surjectivity" data-shard="ch00-foundations">Example</a> <span class="result-title">Negating the Definition of Surjectivity</span></li>
+                </ul></div>
+                <div class="results-section">
+                <h3><a href="ch00-foundations/02-sets-and-notation.html">0.2 Sets and Notation</a></h3>
+                <ul class="results-list">
+                <li class="result" data-group="definitions" data-search="definition 0.2.1 common number sets" style="--env-color: #b0414f"><a class="xref result-name" href="ch00-foundations/02-sets-and-notation.html#def-common-number-sets" data-ref="def-common-number-sets" data-shard="ch00-foundations">Definition 0.2.1</a> <span class="result-title">Common Number Sets</span></li>
+                <li class="result" data-group="definitions" data-search="definition 0.2.2 cartesian product" style="--env-color: #b0414f"><a class="xref result-name" href="ch00-foundations/02-sets-and-notation.html#def-cartesian-product" data-ref="def-cartesian-product" data-shard="ch00-foundations">Definition 0.2.2</a> <span class="result-title">Cartesian Product</span></li>
+                <li class="result" data-group="definitions" data-search="definition 0.2.3 n-tuple" style="--env-color: #b0414f"><a class="xref result-name" href="ch00-foundations/02-sets-and-notation.html#def-n-tuple" data-ref="def-n-tuple" data-shard="ch00-foundations">Definition 0.2.3</a> <span class="result-title"><span class="math inline"><mjx-container class="MathJax" jax="CHTML" style="font-size: 113.1%; position: relative;"><mjx-math class=" MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>n</mi></math></mjx-assistive-mml></mjx-container></span>-Tuple</span></li>
+                <li class="result" data-group="examples" data-search="example n-tuples" style="--env-color: #3b7a4c"><a class="xref result-name" href="ch00-foundations/02-sets-and-notation.html#exm-n-tuples" data-ref="exm-n-tuples" data-shard="ch00-foundations">Example</a> <span class="result-title"><span class="math inline"><mjx-container class="MathJax" jax="CHTML" style="font-size: 113.1%; position: relative;"><mjx-math class=" MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>n</mi></math></mjx-assistive-mml></mjx-container></span>-Tuples</span></li>
+                <li class="result" data-group="definitions" data-search="definition 0.2.4 set-builder notation" style="--env-color: #b0414f"><a class="xref result-name" href="ch00-foundations/02-sets-and-notation.html#def-set-builder" data-ref="def-set-builder" data-shard="ch00-foundations">Definition 0.2.4</a> <span class="result-title">Set-Builder Notation</span></li>
+                <li class="result" data-group="examples" data-search="example set-builder examples" style="--env-color: #3b7a4c"><a class="xref result-name" href="ch00-foundations/02-sets-and-notation.html#exm-set-builder" data-ref="exm-set-builder" data-shard="ch00-foundations">Example</a> <span class="result-title">Set-Builder Examples</span></li>
+                <li class="result" data-group="definitions" data-search="definition 0.2.5 empty set" style="--env-color: #b0414f"><a class="xref result-name" href="ch00-foundations/02-sets-and-notation.html#def-empty-set" data-ref="def-empty-set" data-shard="ch00-foundations">Definition 0.2.5</a> <span class="result-title">Empty Set</span></li>
+                <li class="result" data-group="definitions" data-search="definition 0.2.6 subset" style="--env-color: #b0414f"><a class="xref result-name" href="ch00-foundations/02-sets-and-notation.html#def-subset" data-ref="def-subset" data-shard="ch00-foundations">Definition 0.2.6</a> <span class="result-title">Subset</span></li>
+                <li class="result" data-group="examples" data-search="example subset examples" style="--env-color: #3b7a4c"><a class="xref result-name" href="ch00-foundations/02-sets-and-notation.html#exm-subsets" data-ref="exm-subsets" data-shard="ch00-foundations">Example</a> <span class="result-title">Subset Examples</span></li>
+                <li class="result" data-group="definitions" data-search="definition 0.2.7 set equality" style="--env-color: #b0414f"><a class="xref result-name" href="ch00-foundations/02-sets-and-notation.html#def-set-equality" data-ref="def-set-equality" data-shard="ch00-foundations">Definition 0.2.7</a> <span class="result-title">Set Equality</span></li>
+                <li class="result" data-group="definitions" data-search="definition 0.2.8 union" style="--env-color: #b0414f"><a class="xref result-name" href="ch00-foundations/02-sets-and-notation.html#def-union" data-ref="def-union" data-shard="ch00-foundations">Definition 0.2.8</a> <span class="result-title">Union</span></li>
+                <li class="result" data-group="definitions" data-search="definition 0.2.9 intersection" style="--env-color: #b0414f"><a class="xref result-name" href="ch00-foundations/02-sets-and-notation.html#def-intersection" data-ref="def-intersection" data-shard="ch00-foundations">Definition 0.2.9</a> <span class="result-title">Intersection</span></li>
+                <li class="result" data-group="definitions" data-search="definition 0.2.10 set difference" style="--env-color: #b0414f"><a class="xref result-name" href="ch00-foundations/02-sets-and-notation.html#def-set-difference" data-ref="def-set-difference" data-shard="ch00-foundations">Definition 0.2.10</a> <span class="result-title">Set Difference</span></li>
+                <li class="result" data-group="examples" data-search="example set operations" style="--env-color: #3b7a4c"><a class="xref result-name" href="ch00-foundations/02-sets-and-notation.html#exm-set-operations" data-ref="exm-set-operations" data-shard="ch00-foundations">Example</a> <span class="result-title">Set Operations</span></li>
+                <li class="result" data-group="examples" data-search="example set operations with intervals" style="--env-color: #3b7a4c"><a class="xref result-name" href="ch00-foundations/02-sets-and-notation.html#exm-set-operations-intervals" data-ref="exm-set-operations-intervals" data-shard="ch00-foundations">Example</a> <span class="result-title">Set Operations with Intervals</span></li>
+                </ul></div>
+                <div class="results-section">
+                <h3><a href="ch00-foundations/03-functions.html">0.3 Functions</a></h3>
+                <ul class="results-list">
+                <li class="result" data-group="definitions" data-search="definition 0.3.1 function" style="--env-color: #b0414f"><a class="xref result-name" href="ch00-foundations/03-functions.html#def-function" data-ref="def-function" data-shard="ch00-foundations">Definition 0.3.1</a> <span class="result-title">Function</span></li>
+                <li class="result" data-group="definitions" data-search="definition 0.3.2 injective, surjective, bijective" style="--env-color: #b0414f"><a class="xref result-name" href="ch00-foundations/03-functions.html#def-injective-surjective-bijective" data-ref="def-injective-surjective-bijective" data-shard="ch00-foundations">Definition 0.3.2</a> <span class="result-title">Injective, Surjective, Bijective</span></li>
+                <li class="result" data-group="examples" data-search="example injective, surjective, and bijective functions" style="--env-color: #3b7a4c"><a class="xref result-name" href="ch00-foundations/03-functions.html#exm-injective-surjective-bijective" data-ref="exm-injective-surjective-bijective" data-shard="ch00-foundations">Example</a> <span class="result-title">Injective, Surjective, and Bijective Functions</span></li>
+                <li class="result" data-group="definitions" data-search="definition 0.3.3 function composition" style="--env-color: #b0414f"><a class="xref result-name" href="ch00-foundations/03-functions.html#def-composition" data-ref="def-composition" data-shard="ch00-foundations">Definition 0.3.3</a> <span class="result-title">Function Composition</span></li>
+                <li class="result" data-group="examples" data-search="example function composition" style="--env-color: #3b7a4c"><a class="xref result-name" href="ch00-foundations/03-functions.html#exm-composition" data-ref="exm-composition" data-shard="ch00-foundations">Example</a> <span class="result-title">Function Composition</span></li>
+                <li class="result" data-group="statements" data-search="theorem 0.3.1 associativity of composition" style="--env-color: #2f62b5"><a class="xref result-name" href="ch00-foundations/03-functions.html#thm-composition-associative" data-ref="thm-composition-associative" data-shard="ch00-foundations">Theorem 0.3.1</a> <span class="result-title">Associativity of Composition</span></li>
+                <li class="result" data-group="statements" data-search="theorem 0.3.2 composition preserves injectivity and surjectivity" style="--env-color: #2f62b5"><a class="xref result-name" href="ch00-foundations/03-functions.html#thm-composition-preserves" data-ref="thm-composition-preserves" data-shard="ch00-foundations">Theorem 0.3.2</a> <span class="result-title">Composition Preserves Injectivity and Surjectivity</span></li>
+                <li class="result" data-group="definitions" data-search="definition 0.3.4 identity function" style="--env-color: #b0414f"><a class="xref result-name" href="ch00-foundations/03-functions.html#def-identity-function" data-ref="def-identity-function" data-shard="ch00-foundations">Definition 0.3.4</a> <span class="result-title">Identity Function</span></li>
+                <li class="result" data-group="definitions" data-search="definition 0.3.5 inverse function" style="--env-color: #b0414f"><a class="xref result-name" href="ch00-foundations/03-functions.html#def-inverse-function" data-ref="def-inverse-function" data-shard="ch00-foundations">Definition 0.3.5</a> <span class="result-title">Inverse Function</span></li>
+                <li class="result" data-group="statements" data-search="theorem 0.3.3 bijective if and only if invertible" style="--env-color: #2f62b5"><a class="xref result-name" href="ch00-foundations/03-functions.html#thm-bijective-iff-invertible" data-ref="thm-bijective-iff-invertible" data-shard="ch00-foundations">Theorem 0.3.3</a> <span class="result-title">Bijective if and only if Invertible</span></li>
+                <li class="result" data-group="examples" data-search="example inverse functions" style="--env-color: #3b7a4c"><a class="xref result-name" href="ch00-foundations/03-functions.html#exm-inverse-function" data-ref="exm-inverse-function" data-shard="ch00-foundations">Example</a> <span class="result-title">Inverse Functions</span></li>
+                <li class="result" data-group="statements" data-search="theorem 0.3.4 inverse of a composition" style="--env-color: #2f62b5"><a class="xref result-name" href="ch00-foundations/03-functions.html#thm-inverse-of-composition" data-ref="thm-inverse-of-composition" data-shard="ch00-foundations">Theorem 0.3.4</a> <span class="result-title">Inverse of a Composition</span></li>
+                </ul></div>
+                <div class="results-section">
+                <h3><a href="ch00-foundations/04-relations.html">0.4 Equivalence Relations</a></h3>
+                <ul class="results-list">
+                <li class="result" data-group="definitions" data-search="definition 0.4.1 relation" style="--env-color: #b0414f"><a class="xref result-name" href="ch00-foundations/04-relations.html#def-relation" data-ref="def-relation" data-shard="ch00-foundations">Definition 0.4.1</a> <span class="result-title">Relation</span></li>
+                <li class="result" data-group="examples" data-search="example examples of relations" style="--env-color: #3b7a4c"><a class="xref result-name" href="ch00-foundations/04-relations.html#exm-relations" data-ref="exm-relations" data-shard="ch00-foundations">Example</a> <span class="result-title">Examples of Relations</span></li>
+                <li class="result" data-group="definitions" data-search="definition 0.4.2 equivalence relation" style="--env-color: #b0414f"><a class="xref result-name" href="ch00-foundations/04-relations.html#def-equivalence-relation" data-ref="def-equivalence-relation" data-shard="ch00-foundations">Definition 0.4.2</a> <span class="result-title">Equivalence Relation</span></li>
+                <li class="result" data-group="examples" data-search="example examples of equivalence relations" style="--env-color: #3b7a4c"><a class="xref result-name" href="ch00-foundations/04-relations.html#exm-equivalence-relations" data-ref="exm-equivalence-relations" data-shard="ch00-foundations">Example</a> <span class="result-title">Examples of Equivalence Relations</span></li>
+                <li class="result" data-group="examples" data-search="example non-examples" style="--env-color: #3b7a4c"><a class="xref result-name" href="ch00-foundations/04-relations.html#exm-non-equivalence" data-ref="exm-non-equivalence" data-shard="ch00-foundations">Example</a> <span class="result-title">Non-Examples</span></li>
+                <li class="result" data-group="definitions" data-search="definition 0.4.3 equivalence class" style="--env-color: #b0414f"><a class="xref result-name" href="ch00-foundations/04-relations.html#def-equivalence-class" data-ref="def-equivalence-class" data-shard="ch00-foundations">Definition 0.4.3</a> <span class="result-title">Equivalence Class</span></li>
+                <li class="result" data-group="examples" data-search="example examples of equivalence classes" style="--env-color: #3b7a4c"><a class="xref result-name" href="ch00-foundations/04-relations.html#exm-equivalence-classes" data-ref="exm-equivalence-classes" data-shard="ch00-foundations">Example</a> <span class="result-title">Examples of Equivalence Classes</span></li>
+                <li class="result" data-group="statements" data-search="theorem 0.4.1 equivalence classes partition the set" style="--env-color: #2f62b5"><a class="xref result-name" href="ch00-foundations/04-relations.html#thm-partition" data-ref="thm-partition" data-shard="ch00-foundations">Theorem 0.4.1</a> <span class="result-title">Equivalence Classes Partition the Set</span></li>
+                <li class="result" data-group="definitions" data-search="definition 0.4.4 quotient set" style="--env-color: #b0414f"><a class="xref result-name" href="ch00-foundations/04-relations.html#def-quotient-set" data-ref="def-quotient-set" data-shard="ch00-foundations">Definition 0.4.4</a> <span class="result-title">Quotient Set</span></li>
+                <li class="result" data-group="examples" data-search="example quotient sets" style="--env-color: #3b7a4c"><a class="xref result-name" href="ch00-foundations/04-relations.html#exm-quotient-set" data-ref="exm-quotient-set" data-shard="ch00-foundations">Example</a> <span class="result-title">Quotient Sets</span></li>
+                <li class="result" data-group="examples" data-search="example matrix similarity" style="--env-color: #3b7a4c"><a class="xref result-name" href="ch00-foundations/04-relations.html#exm-similarity" data-ref="exm-similarity" data-shard="ch00-foundations">Example</a> <span class="result-title">Matrix Similarity</span></li>
+                <li class="result" data-group="examples" data-search="example row equivalence" style="--env-color: #3b7a4c"><a class="xref result-name" href="ch00-foundations/04-relations.html#exm-row-equivalence" data-ref="exm-row-equivalence" data-shard="ch00-foundations">Example</a> <span class="result-title">Row Equivalence</span></li>
+                </ul></div>
+                <div class="results-section">
+                <h3><a href="ch00-foundations/05-polynomials.html">0.5 Polynomials</a></h3>
+                <ul class="results-list">
+                <li class="result" data-group="definitions" data-search="definition 0.5.1 polynomial" style="--env-color: #b0414f"><a class="xref result-name" href="ch00-foundations/05-polynomials.html#def-polynomial" data-ref="def-polynomial" data-shard="ch00-foundations">Definition 0.5.1</a> <span class="result-title">Polynomial</span></li>
+                <li class="result" data-group="definitions" data-search="definition 0.5.2 degree" style="--env-color: #b0414f"><a class="xref result-name" href="ch00-foundations/05-polynomials.html#def-degree" data-ref="def-degree" data-shard="ch00-foundations">Definition 0.5.2</a> <span class="result-title">Degree</span></li>
+                <li class="result" data-group="definitions" data-search="definition 0.5.3 polynomial ring" style="--env-color: #b0414f"><a class="xref result-name" href="ch00-foundations/05-polynomials.html#def-polynomial-ring" data-ref="def-polynomial-ring" data-shard="ch00-foundations">Definition 0.5.3</a> <span class="result-title">Polynomial Ring</span></li>
+                <li class="result" data-group="examples" data-search="example elements of the polynomial ring" style="--env-color: #3b7a4c"><a class="xref result-name" href="ch00-foundations/05-polynomials.html#exm-elements-of-rx" data-ref="exm-elements-of-rx" data-shard="ch00-foundations">Example</a> <span class="result-title">Elements of the Polynomial Ring</span></li>
+                <li class="result" data-group="definitions" data-search="definition 0.5.4 polynomials of degree at most n" style="--env-color: #b0414f"><a class="xref result-name" href="ch00-foundations/05-polynomials.html#def-polynomials-bounded-degree" data-ref="def-polynomials-bounded-degree" data-shard="ch00-foundations">Definition 0.5.4</a> <span class="result-title">Polynomials of Degree at Most <span class="math inline"><mjx-container class="MathJax" jax="CHTML" style="font-size: 113.1%; position: relative;"><mjx-math class=" MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>n</mi></math></mjx-assistive-mml></mjx-container></span></span></li>
+                <li class="result" data-group="examples" data-search="example polynomials of degree at most 2" style="--env-color: #3b7a4c"><a class="xref result-name" href="ch00-foundations/05-polynomials.html#exm-elements-of-rx-leq-2" data-ref="exm-elements-of-rx-leq-2" data-shard="ch00-foundations">Example</a> <span class="result-title">Polynomials of Degree at Most 2</span></li>
+                <li class="result" data-group="definitions" data-search="definition 0.5.5 polynomials of degree exactly n" style="--env-color: #b0414f"><a class="xref result-name" href="ch00-foundations/05-polynomials.html#def-polynomials-exact-degree" data-ref="def-polynomials-exact-degree" data-shard="ch00-foundations">Definition 0.5.5</a> <span class="result-title">Polynomials of Degree Exactly <span class="math inline"><mjx-container class="MathJax" jax="CHTML" style="font-size: 113.1%; position: relative;"><mjx-math class=" MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>n</mi></math></mjx-assistive-mml></mjx-container></span></span></li>
+                <li class="result" data-group="examples" data-search="example comparing notations" style="--env-color: #3b7a4c"><a class="xref result-name" href="ch00-foundations/05-polynomials.html#exm-comparing-notations" data-ref="exm-comparing-notations" data-shard="ch00-foundations">Example</a> <span class="result-title">Comparing Notations</span></li>
+                </ul></div>
+                <div class="results-section">
+                <h3><a href="ch00-foundations/06-fields.html">0.6 Fields</a></h3>
+                <ul class="results-list">
+                <li class="result" data-group="definitions" data-search="definition 0.6.1 field" style="--env-color: #b0414f"><a class="xref result-name" href="ch00-foundations/06-fields.html#def-field" data-ref="def-field" data-shard="ch00-foundations">Definition 0.6.1</a> <span class="result-title">Field</span></li>
+                <li class="result" data-group="examples" data-search="example examples of fields" style="--env-color: #3b7a4c"><a class="xref result-name" href="ch00-foundations/06-fields.html#exm-fields" data-ref="exm-fields" data-shard="ch00-foundations">Example</a> <span class="result-title">Examples of Fields</span></li>
+                <li class="result" data-group="examples" data-search="example finite fields" style="--env-color: #3b7a4c"><a class="xref result-name" href="ch00-foundations/06-fields.html#exm-finite-fields" data-ref="exm-finite-fields" data-shard="ch00-foundations">Example</a> <span class="result-title">Finite Fields</span></li>
+                </ul></div>
+                <div class="results-section">
+                <h3><a href="ch00-foundations/07-matrices.html">0.7 Matrices</a></h3>
+                <ul class="results-list">
+                <li class="result" data-group="definitions" data-search="definition 0.7.1 matrix" style="--env-color: #b0414f"><a class="xref result-name" href="ch00-foundations/07-matrices.html#def-matrix" data-ref="def-matrix" data-shard="ch00-foundations">Definition 0.7.1</a> <span class="result-title">Matrix</span></li>
+                <li class="result" data-group="examples" data-search="example matrices" style="--env-color: #3b7a4c"><a class="xref result-name" href="ch00-foundations/07-matrices.html#exm-matrices" data-ref="exm-matrices" data-shard="ch00-foundations">Example</a> <span class="result-title">Matrices</span></li>
+                <li class="result" data-group="definitions" data-search="definition 0.7.2 zero matrix" style="--env-color: #b0414f"><a class="xref result-name" href="ch00-foundations/07-matrices.html#def-zero-matrix" data-ref="def-zero-matrix" data-shard="ch00-foundations">Definition 0.7.2</a> <span class="result-title">Zero Matrix</span></li>
+                <li class="result" data-group="definitions" data-search="definition 0.7.3 identity matrix" style="--env-color: #b0414f"><a class="xref result-name" href="ch00-foundations/07-matrices.html#def-identity-matrix" data-ref="def-identity-matrix" data-shard="ch00-foundations">Definition 0.7.3</a> <span class="result-title">Identity Matrix</span></li>
+                <li class="result" data-group="definitions" data-search="definition 0.7.4 transpose" style="--env-color: #b0414f"><a class="xref result-name" href="ch00-foundations/07-matrices.html#def-transpose" data-ref="def-transpose" data-shard="ch00-foundations">Definition 0.7.4</a> <span class="result-title">Transpose</span></li>
+                <li class="result" data-group="definitions" data-search="definition 0.7.5 symmetric matrix" style="--env-color: #b0414f"><a class="xref result-name" href="ch00-foundations/07-matrices.html#def-symmetric-matrix" data-ref="def-symmetric-matrix" data-shard="ch00-foundations">Definition 0.7.5</a> <span class="result-title">Symmetric Matrix</span></li>
+                <li class="result" data-group="definitions" data-search="definition 0.7.6 diagonal matrix" style="--env-color: #b0414f"><a class="xref result-name" href="ch00-foundations/07-matrices.html#def-diagonal-matrix" data-ref="def-diagonal-matrix" data-shard="ch00-foundations">Definition 0.7.6</a> <span class="result-title">Diagonal Matrix</span></li>
+                <li class="result" data-group="definitions" data-search="definition 0.7.7 upper triangular matrix" style="--env-color: #b0414f"><a class="xref result-name" href="ch00-foundations/07-matrices.html#def-upper-triangular" data-ref="def-upper-triangular" data-shard="ch00-foundations">Definition 0.7.7</a> <span class="result-title">Upper Triangular Matrix</span></li>
+                <li class="result" data-group="examples" data-search="example zero and identity matrices" style="--env-color: #3b7a4c"><a class="xref result-name" href="ch00-foundations/07-matrices.html#exm-zero-identity" data-ref="exm-zero-identity" data-shard="ch00-foundations">Example</a> <span class="result-title">Zero and Identity Matrices</span></li>
+                <li class="result" data-group="examples" data-search="example examples of special matrices" style="--env-color: #3b7a4c"><a class="xref result-name" href="ch00-foundations/07-matrices.html#exm-special-matrices" data-ref="exm-special-matrices" data-shard="ch00-foundations">Example</a> <span class="result-title">Examples of Special Matrices</span></li>
+                <li class="result" data-group="definitions" data-search="definition 0.7.8 matrix addition" style="--env-color: #b0414f"><a class="xref result-name" href="ch00-foundations/07-matrices.html#def-matrix-addition" data-ref="def-matrix-addition" data-shard="ch00-foundations">Definition 0.7.8</a> <span class="result-title">Matrix Addition</span></li>
+                <li class="result" data-group="definitions" data-search="definition 0.7.9 additive inverse" style="--env-color: #b0414f"><a class="xref result-name" href="ch00-foundations/07-matrices.html#def-additive-inverse" data-ref="def-additive-inverse" data-shard="ch00-foundations">Definition 0.7.9</a> <span class="result-title">Additive Inverse</span></li>
+                <li class="result" data-group="examples" data-search="example matrix addition" style="--env-color: #3b7a4c"><a class="xref result-name" href="ch00-foundations/07-matrices.html#exm-matrix-addition" data-ref="exm-matrix-addition" data-shard="ch00-foundations">Example</a> <span class="result-title">Matrix Addition</span></li>
+                <li class="result" data-group="statements" data-search="theorem 0.7.1 properties of matrix addition" style="--env-color: #2f62b5"><a class="xref result-name" href="ch00-foundations/07-matrices.html#thm-matrix-addition-properties" data-ref="thm-matrix-addition-properties" data-shard="ch00-foundations">Theorem 0.7.1</a> <span class="result-title">Properties of Matrix Addition</span></li>
+                <li class="result" data-group="definitions" data-search="definition 0.7.10 matrix multiplication" style="--env-color: #b0414f"><a class="xref result-name" href="ch00-foundations/07-matrices.html#def-matrix-multiplication" data-ref="def-matrix-multiplication" data-shard="ch00-foundations">Definition 0.7.10</a> <span class="result-title">Matrix Multiplication</span></li>
+                <li class="result" data-group="examples" data-search="example matrix multiplication" style="--env-color: #3b7a4c"><a class="xref result-name" href="ch00-foundations/07-matrices.html#exm-matrix-multiplication" data-ref="exm-matrix-multiplication" data-shard="ch00-foundations">Example</a> <span class="result-title">Matrix Multiplication</span></li>
+                <li class="result" data-group="examples" data-search="example matrix multiplication with different dimensions" style="--env-color: #3b7a4c"><a class="xref result-name" href="ch00-foundations/07-matrices.html#exm-matrix-multiplication-dimensions" data-ref="exm-matrix-multiplication-dimensions" data-shard="ch00-foundations">Example</a> <span class="result-title">Matrix Multiplication with Different Dimensions</span></li>
+                <li class="result" data-group="statements" data-search="theorem 0.7.2 properties of matrix multiplication" style="--env-color: #2f62b5"><a class="xref result-name" href="ch00-foundations/07-matrices.html#thm-matrix-multiplication-properties" data-ref="thm-matrix-multiplication-properties" data-shard="ch00-foundations">Theorem 0.7.2</a> <span class="result-title">Properties of Matrix Multiplication</span></li>
+                <li class="result" data-group="definitions" data-search="definition 0.7.11 scalar multiplication" style="--env-color: #b0414f"><a class="xref result-name" href="ch00-foundations/07-matrices.html#def-scalar-multiplication" data-ref="def-scalar-multiplication" data-shard="ch00-foundations">Definition 0.7.11</a> <span class="result-title">Scalar Multiplication</span></li>
+                <li class="result" data-group="definitions" data-search="definition 0.7.12 trace" style="--env-color: #b0414f"><a class="xref result-name" href="ch00-foundations/07-matrices.html#def-trace" data-ref="def-trace" data-shard="ch00-foundations">Definition 0.7.12</a> <span class="result-title">Trace</span></li>
+                <li class="result" data-group="examples" data-search="example trace" style="--env-color: #3b7a4c"><a class="xref result-name" href="ch00-foundations/07-matrices.html#exm-trace" data-ref="exm-trace" data-shard="ch00-foundations">Example</a> <span class="result-title">Trace</span></li>
+                <li class="result" data-group="statements" data-search="theorem 0.7.3 properties of transpose" style="--env-color: #2f62b5"><a class="xref result-name" href="ch00-foundations/07-matrices.html#thm-transpose-properties" data-ref="thm-transpose-properties" data-shard="ch00-foundations">Theorem 0.7.3</a> <span class="result-title">Properties of Transpose</span></li>
+                <li class="result" data-group="statements" data-search="theorem 0.7.4 properties of trace" style="--env-color: #2f62b5"><a class="xref result-name" href="ch00-foundations/07-matrices.html#thm-trace-properties" data-ref="thm-trace-properties" data-shard="ch00-foundations">Theorem 0.7.4</a> <span class="result-title">Properties of Trace</span></li>
+                </ul></div>
+                </section>
+                <section class="results-chapter">
+                <h2 id="chapter-ch01-vector-spaces">Vector Spaces and Dimensions</h2>
+                <div class="results-section">
+                <h3><a href="ch01-vector-spaces/01-vector-spaces.html">1.1 Vector Spaces</a></h3>
+                <ul class="results-list">
+                <li class="result" data-group="definitions" data-search="definition 1.1.1 vector space" style="--env-color: #b0414f"><a class="xref result-name" href="ch01-vector-spaces/01-vector-spaces.html#def-vector-space" data-ref="def-vector-space" data-shard="ch01-vector-spaces">Definition 1.1.1</a> <span class="result-title">Vector Space</span></li>
+                <li class="result" data-group="examples" data-search="example examples of vector spaces" style="--env-color: #3b7a4c"><a class="xref result-name" href="ch01-vector-spaces/01-vector-spaces.html#exm-vector-spaces" data-ref="exm-vector-spaces" data-shard="ch01-vector-spaces">Example</a> <span class="result-title">Examples of Vector Spaces</span></li>
+                <li class="result" data-group="examples" data-search="example \nq adjoin \sqrt{2}" style="--env-color: #3b7a4c"><a class="xref result-name" href="ch01-vector-spaces/01-vector-spaces.html#exm-q-adjoin-sqrt2" data-ref="exm-q-adjoin-sqrt2" data-shard="ch01-vector-spaces">Example</a> <span class="result-title"><span class="math inline"><mjx-container class="MathJax" jax="CHTML" style="font-size: 113.1%; position: relative;"><mjx-math class=" MJX-TEX" aria-hidden="true"><mjx-TeXAtom texclass="ORD"><mjx-mi class="mjx-ds mjx-b"><mjx-c class="mjx-c211A TEX-A"></mjx-c></mjx-mi></mjx-TeXAtom></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow data-mjx-texclass="ORD"><mi mathvariant="double-struck">Q</mi></mrow></math></mjx-assistive-mml></mjx-container></span> Adjoin <span class="math inline"><mjx-container class="MathJax" jax="CHTML" style="font-size: 113.1%; position: relative;"><mjx-math class=" MJX-TEX" aria-hidden="true"><mjx-msqrt><mjx-sqrt><mjx-surd><mjx-mo class="mjx-n"><mjx-c class="mjx-c221A"></mjx-c></mjx-mo></mjx-surd><mjx-box style="padding-top: 0.174em;"><mjx-mn class="mjx-n"><mjx-c class="mjx-c32"></mjx-c></mjx-mn></mjx-box></mjx-sqrt></mjx-msqrt></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><msqrt><mn>2</mn></msqrt></math></mjx-assistive-mml></mjx-container></span></span></li>
+                <li class="result" data-group="definitions" data-search="definition 1.1.2 vectors and scalars" style="--env-color: #b0414f"><a class="xref result-name" href="ch01-vector-spaces/01-vector-spaces.html#def-vectors-scalars" data-ref="def-vectors-scalars" data-shard="ch01-vector-spaces">Definition 1.1.2</a> <span class="result-title">Vectors and Scalars</span></li>
+                <li class="result" data-group="statements" data-search="theorem 1.1.1 left cancellation law" style="--env-color: #2f62b5"><a class="xref result-name" href="ch01-vector-spaces/01-vector-spaces.html#thm-left-cancellation" data-ref="thm-left-cancellation" data-shard="ch01-vector-spaces">Theorem 1.1.1</a> <span class="result-title">Left Cancellation Law</span></li>
+                <li class="result" data-group="statements" data-search="theorem 1.1.2 right cancellation law" style="--env-color: #2f62b5"><a class="xref result-name" href="ch01-vector-spaces/01-vector-spaces.html#thm-right-cancellation" data-ref="thm-right-cancellation" data-shard="ch01-vector-spaces">Theorem 1.1.2</a> <span class="result-title">Right Cancellation Law</span></li>
+                <li class="result" data-group="statements" data-search="theorem 1.1.3 zero vector is unique" style="--env-color: #2f62b5"><a class="xref result-name" href="ch01-vector-spaces/01-vector-spaces.html#thm-zero-unique" data-ref="thm-zero-unique" data-shard="ch01-vector-spaces">Theorem 1.1.3</a> <span class="result-title">Zero Vector is Unique</span></li>
+                <li class="result" data-group="statements" data-search="theorem 1.1.4 additive inverse is unique" style="--env-color: #2f62b5"><a class="xref result-name" href="ch01-vector-spaces/01-vector-spaces.html#thm-inverse-unique" data-ref="thm-inverse-unique" data-shard="ch01-vector-spaces">Theorem 1.1.4</a> <span class="result-title">Additive Inverse is Unique</span></li>
+                <li class="result" data-group="definitions" data-search="definition 1.1.3 notation of additive inverse" style="--env-color: #b0414f"><a class="xref result-name" href="ch01-vector-spaces/01-vector-spaces.html#def-additive-inverse-notation" data-ref="def-additive-inverse-notation" data-shard="ch01-vector-spaces">Definition 1.1.3</a> <span class="result-title">Notation of Additive Inverse</span></li>
+                <li class="result" data-group="statements" data-search="theorem 1.1.5 zero scalar annihilates" style="--env-color: #2f62b5"><a class="xref result-name" href="ch01-vector-spaces/01-vector-spaces.html#thm-zero-scalar-mult" data-ref="thm-zero-scalar-mult" data-shard="ch01-vector-spaces">Theorem 1.1.5</a> <span class="result-title">Zero Scalar Annihilates</span></li>
+                <li class="result" data-group="statements" data-search="theorem 1.1.6 negation as scalar multiplication" style="--env-color: #2f62b5"><a class="xref result-name" href="ch01-vector-spaces/01-vector-spaces.html#thm-negation-scalar" data-ref="thm-negation-scalar" data-shard="ch01-vector-spaces">Theorem 1.1.6</a> <span class="result-title">Negation as Scalar Multiplication</span></li>
+                <li class="result" data-group="statements" data-search="theorem 1.1.7 negative scalar distribution" style="--env-color: #2f62b5"><a class="xref result-name" href="ch01-vector-spaces/01-vector-spaces.html#thm-negative-scalar-dist" data-ref="thm-negative-scalar-dist" data-shard="ch01-vector-spaces">Theorem 1.1.7</a> <span class="result-title">Negative Scalar Distribution</span></li>
+                <li class="result" data-group="statements" data-search="theorem 1.1.8 scalar multiplication by zero vector" style="--env-color: #2f62b5"><a class="xref result-name" href="ch01-vector-spaces/01-vector-spaces.html#thm-scalar-zero-vector" data-ref="thm-scalar-zero-vector" data-shard="ch01-vector-spaces">Theorem 1.1.8</a> <span class="result-title">Scalar Multiplication by Zero Vector</span></li>
+                <li class="result" data-group="statements" data-search="theorem 1.1.9 zero product law" style="--env-color: #2f62b5"><a class="xref result-name" href="ch01-vector-spaces/01-vector-spaces.html#thm-zero-product" data-ref="thm-zero-product" data-shard="ch01-vector-spaces">Theorem 1.1.9</a> <span class="result-title">Zero Product Law</span></li>
+                </ul></div>
+                <div class="results-section">
+                <h3><a href="ch01-vector-spaces/02-subspaces.html">1.2 Subspaces</a></h3>
+                <ul class="results-list">
+                <li class="result" data-group="definitions" data-search="definition 1.2.1 subspace" style="--env-color: #b0414f"><a class="xref result-name" href="ch01-vector-spaces/02-subspaces.html#def-subspace" data-ref="def-subspace" data-shard="ch01-vector-spaces">Definition 1.2.1</a> <span class="result-title">Subspace</span></li>
+                <li class="result" data-group="examples" data-search="example trivial subspaces" style="--env-color: #3b7a4c"><a class="xref result-name" href="ch01-vector-spaces/02-subspaces.html#exm-trivial-subspaces" data-ref="exm-trivial-subspaces" data-shard="ch01-vector-spaces">Example</a> <span class="result-title">Trivial Subspaces</span></li>
+                <li class="result" data-group="statements" data-search="theorem 1.2.1 subspace test" style="--env-color: #2f62b5"><a class="xref result-name" href="ch01-vector-spaces/02-subspaces.html#thm-subspace-test" data-ref="thm-subspace-test" data-shard="ch01-vector-spaces">Theorem 1.2.1</a> <span class="result-title">Subspace Test</span></li>
+                <li class="result" data-group="examples" data-search="example line as subspace" style="--env-color: #3b7a4c"><a class="xref result-name" href="ch01-vector-spaces/02-subspaces.html#exm-line-subspace" data-ref="exm-line-subspace" data-shard="ch01-vector-spaces">Example</a> <span class="result-title">Line as Subspace</span></li>
+                <li class="result" data-group="examples" data-search="example translated line is not a subspace" style="--env-color: #3b7a4c"><a class="xref result-name" href="ch01-vector-spaces/02-subspaces.html#exm-line-not-subspace" data-ref="exm-line-not-subspace" data-shard="ch01-vector-spaces">Example</a> <span class="result-title">Translated Line is Not a Subspace</span></li>
+                <li class="result" data-group="examples" data-search="example polynomials of bounded degree" style="--env-color: #3b7a4c"><a class="xref result-name" href="ch01-vector-spaces/02-subspaces.html#exm-poly-degree-bound" data-ref="exm-poly-degree-bound" data-shard="ch01-vector-spaces">Example</a> <span class="result-title">Polynomials of Bounded Degree</span></li>
+                <li class="result" data-group="examples" data-search="example polynomials of exact degree" style="--env-color: #3b7a4c"><a class="xref result-name" href="ch01-vector-spaces/02-subspaces.html#exm-poly-exact-degree" data-ref="exm-poly-exact-degree" data-shard="ch01-vector-spaces">Example</a> <span class="result-title">Polynomials of Exact Degree</span></li>
+                <li class="result" data-group="examples" data-search="example differentiable functions" style="--env-color: #3b7a4c"><a class="xref result-name" href="ch01-vector-spaces/02-subspaces.html#exm-differentiable-functions" data-ref="exm-differentiable-functions" data-shard="ch01-vector-spaces">Example</a> <span class="result-title">Differentiable Functions</span></li>
+                <li class="result" data-group="examples" data-search="example symmetric matrices" style="--env-color: #3b7a4c"><a class="xref result-name" href="ch01-vector-spaces/02-subspaces.html#exm-symmetric-matrices" data-ref="exm-symmetric-matrices" data-shard="ch01-vector-spaces">Example</a> <span class="result-title">Symmetric Matrices</span></li>
+                <li class="result" data-group="examples" data-search="example trace-free matrices" style="--env-color: #3b7a4c"><a class="xref result-name" href="ch01-vector-spaces/02-subspaces.html#exm-trace-free-matrices" data-ref="exm-trace-free-matrices" data-shard="ch01-vector-spaces">Example</a> <span class="result-title">Trace-free Matrices</span></li>
+                <li class="result" data-group="statements" data-search="theorem 1.2.2 intersection of subspaces" style="--env-color: #2f62b5"><a class="xref result-name" href="ch01-vector-spaces/02-subspaces.html#thm-intersection-subspaces" data-ref="thm-intersection-subspaces" data-shard="ch01-vector-spaces">Theorem 1.2.2</a> <span class="result-title">Intersection of Subspaces</span></li>
+                <li class="result" data-group="examples" data-search="example union of axes" style="--env-color: #3b7a4c"><a class="xref result-name" href="ch01-vector-spaces/02-subspaces.html#exm-union-axes" data-ref="exm-union-axes" data-shard="ch01-vector-spaces">Example</a> <span class="result-title">Union of Axes</span></li>
+                <li class="result" data-group="statements" data-search="proposition 1.2.3 union of subspaces" style="--env-color: #2f62b5"><a class="xref result-name" href="ch01-vector-spaces/02-subspaces.html#prp-union-subspaces" data-ref="prp-union-subspaces" data-shard="ch01-vector-spaces">Proposition 1.2.3</a> <span class="result-title">Union of Subspaces</span></li>
+                </ul></div>
+                <div class="results-section">
+                <h3><a href="ch01-vector-spaces/03-span.html">1.3 Linear Combinations and Span</a></h3>
+                <ul class="results-list">
+                <li class="result" data-group="definitions" data-search="definition 1.3.1 linear combination" style="--env-color: #b0414f"><a class="xref result-name" href="ch01-vector-spaces/03-span.html#def-linear-combination" data-ref="def-linear-combination" data-shard="ch01-vector-spaces">Definition 1.3.1</a> <span class="result-title">Linear Combination</span></li>
+                <li class="result" data-group="examples" data-search="example examples of linear combinations" style="--env-color: #3b7a4c"><a class="xref result-name" href="ch01-vector-spaces/03-span.html#exm-linear-combinations" data-ref="exm-linear-combinations" data-shard="ch01-vector-spaces">Example</a> <span class="result-title">Examples of Linear Combinations</span></li>
+                <li class="result" data-group="definitions" data-search="definition 1.3.2 span" style="--env-color: #b0414f"><a class="xref result-name" href="ch01-vector-spaces/03-span.html#def-span" data-ref="def-span" data-shard="ch01-vector-spaces">Definition 1.3.2</a> <span class="result-title">Span</span></li>
+                <li class="result" data-group="statements" data-search="theorem 1.3.1 spanning set as subspace" style="--env-color: #2f62b5"><a class="xref result-name" href="ch01-vector-spaces/03-span.html#thm-span-subspace" data-ref="thm-span-subspace" data-shard="ch01-vector-spaces">Theorem 1.3.1</a> <span class="result-title">Spanning Set as Subspace</span></li>
+                <li class="result" data-group="definitions" data-search="definition 1.3.3 spanning set" style="--env-color: #b0414f"><a class="xref result-name" href="ch01-vector-spaces/03-span.html#def-spanning-set" data-ref="def-spanning-set" data-shard="ch01-vector-spaces">Definition 1.3.3</a> <span class="result-title">Spanning Set</span></li>
+                <li class="result" data-group="examples" data-search="example spanning set for polynomials" style="--env-color: #3b7a4c"><a class="xref result-name" href="ch01-vector-spaces/03-span.html#exm-spanning-set" data-ref="exm-spanning-set" data-shard="ch01-vector-spaces">Example</a> <span class="result-title">Spanning Set for Polynomials</span></li>
+                </ul></div>
+                <div class="results-section">
+                <h3><a href="ch01-vector-spaces/04-independence.html">1.4 Linear Independence</a></h3>
+                <ul class="results-list">
+                <li class="result" data-group="definitions" data-search="definition 1.4.1 linear independence" style="--env-color: #b0414f"><a class="xref result-name" href="ch01-vector-spaces/04-independence.html#def-linear-independence" data-ref="def-linear-independence" data-shard="ch01-vector-spaces">Definition 1.4.1</a> <span class="result-title">Linear Independence</span></li>
+                <li class="result" data-group="examples" data-search="example examples of linear independence" style="--env-color: #3b7a4c"><a class="xref result-name" href="ch01-vector-spaces/04-independence.html#exm-linear-independence" data-ref="exm-linear-independence" data-shard="ch01-vector-spaces">Example</a> <span class="result-title">Examples of Linear Independence</span></li>
+                <li class="result" data-group="statements" data-search="theorem 1.4.1 linear dependence lemma" style="--env-color: #2f62b5"><a class="xref result-name" href="ch01-vector-spaces/04-independence.html#thm-linear-dependence-lemma" data-ref="thm-linear-dependence-lemma" data-shard="ch01-vector-spaces">Theorem 1.4.1</a> <span class="result-title">Linear Dependence Lemma</span></li>
+                <li class="result" data-group="statements" data-search="theorem 1.4.2 span preservation" style="--env-color: #2f62b5"><a class="xref result-name" href="ch01-vector-spaces/04-independence.html#thm-span-preservation" data-ref="thm-span-preservation" data-shard="ch01-vector-spaces">Theorem 1.4.2</a> <span class="result-title">Span Preservation</span></li>
+                </ul></div>
+                <div class="results-section">
+                <h3><a href="ch01-vector-spaces/05-basis.html">1.5 Bases</a></h3>
+                <ul class="results-list">
+                <li class="result" data-group="definitions" data-search="definition 1.5.1 basis" style="--env-color: #b0414f"><a class="xref result-name" href="ch01-vector-spaces/05-basis.html#def-basis" data-ref="def-basis" data-shard="ch01-vector-spaces">Definition 1.5.1</a> <span class="result-title">Basis</span></li>
+                <li class="result" data-group="examples" data-search="example standard bases" style="--env-color: #3b7a4c"><a class="xref result-name" href="ch01-vector-spaces/05-basis.html#exm-standard-bases" data-ref="exm-standard-bases" data-shard="ch01-vector-spaces">Example</a> <span class="result-title">Standard Bases</span></li>
+                <li class="result" data-group="statements" data-search="theorem 1.5.1 unique representation" style="--env-color: #2f62b5"><a class="xref result-name" href="ch01-vector-spaces/05-basis.html#thm-unique-representation" data-ref="thm-unique-representation" data-shard="ch01-vector-spaces">Theorem 1.5.1</a> <span class="result-title">Unique Representation</span></li>
+                <li class="result" data-group="definitions" data-search="definition 1.5.2 coordinates" style="--env-color: #b0414f"><a class="xref result-name" href="ch01-vector-spaces/05-basis.html#def-coordinates" data-ref="def-coordinates" data-shard="ch01-vector-spaces">Definition 1.5.2</a> <span class="result-title">Coordinates</span></li>
+                </ul></div>
+                <div class="results-section">
+                <h3><a href="ch01-vector-spaces/06-dimension.html">1.6 Sifting and the Replacement Theorem</a></h3>
+                <ul class="results-list">
+                <li class="result" data-group="statements" data-search="theorem 1.6.1 sifting method" style="--env-color: #2f62b5"><a class="xref result-name" href="ch01-vector-spaces/06-dimension.html#thm-sift" data-ref="thm-sift" data-shard="ch01-vector-spaces">Theorem 1.6.1</a> <span class="result-title">Sifting Method</span></li>
+                <li class="result" data-group="examples" data-search="example sifting example" style="--env-color: #3b7a4c"><a class="xref result-name" href="ch01-vector-spaces/06-dimension.html#exm-sifting" data-ref="exm-sifting" data-shard="ch01-vector-spaces">Example</a> <span class="result-title">Sifting Example</span></li>
+                <li class="result" data-group="examples" data-search="example sifting in \nr^2" style="--env-color: #3b7a4c"><a class="xref result-name" href="ch01-vector-spaces/06-dimension.html#exm-sifting-r2" data-ref="exm-sifting-r2" data-shard="ch01-vector-spaces">Example</a> <span class="result-title">Sifting in <span class="math inline"><mjx-container class="MathJax" jax="CHTML" style="font-size: 113.1%; position: relative;"><mjx-math class=" MJX-TEX" aria-hidden="true"><mjx-msup><mjx-TeXAtom texclass="ORD"><mjx-mi class="mjx-ds mjx-b"><mjx-c class="mjx-c211D TEX-A"></mjx-c></mjx-mi></mjx-TeXAtom><mjx-script style="vertical-align: 0.363em;"><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c32"></mjx-c></mjx-mn></mjx-script></mjx-msup></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mrow data-mjx-texclass="ORD"><mi mathvariant="double-struck">R</mi></mrow><mn>2</mn></msup></math></mjx-assistive-mml></mjx-container></span></span></li>
+                <li class="result" data-group="statements" data-search="theorem 1.6.2 steinitz exchange/replacement theorem" style="--env-color: #2f62b5"><a class="xref result-name" href="ch01-vector-spaces/06-dimension.html#thm-steinitz" data-ref="thm-steinitz" data-shard="ch01-vector-spaces">Theorem 1.6.2</a> <span class="result-title">Steinitz Exchange/Replacement Theorem</span></li>
+                <li class="result" data-group="statements" data-search="theorem 1.6.3 basis theorem" style="--env-color: #2f62b5"><a class="xref result-name" href="ch01-vector-spaces/06-dimension.html#thm-basis-theorem" data-ref="thm-basis-theorem" data-shard="ch01-vector-spaces">Theorem 1.6.3</a> <span class="result-title">Basis Theorem</span></li>
+                <li class="result" data-group="definitions" data-search="definition 1.6.1 dimension" style="--env-color: #b0414f"><a class="xref result-name" href="ch01-vector-spaces/06-dimension.html#def-dimension" data-ref="def-dimension" data-shard="ch01-vector-spaces">Definition 1.6.1</a> <span class="result-title">Dimension</span></li>
+                <li class="result" data-group="examples" data-search="example examples of dimensions" style="--env-color: #3b7a4c"><a class="xref result-name" href="ch01-vector-spaces/06-dimension.html#exm-dimensions" data-ref="exm-dimensions" data-shard="ch01-vector-spaces">Example</a> <span class="result-title">Examples of Dimensions</span></li>
+                <li class="result" data-group="statements" data-search="theorem 1.6.4 size bounds for independent and spanning sets" style="--env-color: #2f62b5"><a class="xref result-name" href="ch01-vector-spaces/06-dimension.html#thm-size-bounds" data-ref="thm-size-bounds" data-shard="ch01-vector-spaces">Theorem 1.6.4</a> <span class="result-title">Size Bounds for Independent and Spanning Sets</span></li>
+                <li class="result" data-group="statements" data-search="theorem 1.6.5 basis extension theorem" style="--env-color: #2f62b5"><a class="xref result-name" href="ch01-vector-spaces/06-dimension.html#thm-basis-extension" data-ref="thm-basis-extension" data-shard="ch01-vector-spaces">Theorem 1.6.5</a> <span class="result-title">Basis Extension Theorem</span></li>
+                <li class="result" data-group="statements" data-search="corollary 1.6.6 existence of basis" style="--env-color: #2f62b5"><a class="xref result-name" href="ch01-vector-spaces/06-dimension.html#cor-basis-existence" data-ref="cor-basis-existence" data-shard="ch01-vector-spaces">Corollary 1.6.6</a> <span class="result-title">Existence of Basis</span></li>
+                <li class="result" data-group="statements" data-search="theorem 1.6.7 dimension implies equality" style="--env-color: #2f62b5"><a class="xref result-name" href="ch01-vector-spaces/06-dimension.html#thm-dim-impl-eq" data-ref="thm-dim-impl-eq" data-shard="ch01-vector-spaces">Theorem 1.6.7</a> <span class="result-title">Dimension Implies Equality</span></li>
+                <li class="result" data-group="statements" data-search="theorem 1.6.8 maximal independent subset is a basis" style="--env-color: #2f62b5"><a class="xref result-name" href="ch01-vector-spaces/06-dimension.html#thm-maximal-indep" data-ref="thm-maximal-indep" data-shard="ch01-vector-spaces">Theorem 1.6.8</a> <span class="result-title">Maximal Independent Subset is a Basis</span></li>
+                </ul></div>
+                <div class="results-section">
+                <h3><a href="ch01-vector-spaces/07-sums-and-direct-sums.html">1.7 Sums of Subspaces</a></h3>
+                <ul class="results-list">
+                <li class="result" data-group="definitions" data-search="definition 1.7.1 sum of subspaces" style="--env-color: #b0414f"><a class="xref result-name" href="ch01-vector-spaces/07-sums-and-direct-sums.html#def-sum-of-subspaces" data-ref="def-sum-of-subspaces" data-shard="ch01-vector-spaces">Definition 1.7.1</a> <span class="result-title">Sum of Subspaces</span></li>
+                <li class="result" data-group="statements" data-search="theorem 1.7.1 sum of subspaces theorem" style="--env-color: #2f62b5"><a class="xref result-name" href="ch01-vector-spaces/07-sums-and-direct-sums.html#thm-subapce-sum-theorem" data-ref="thm-subapce-sum-theorem" data-shard="ch01-vector-spaces">Theorem 1.7.1</a> <span class="result-title">Sum of Subspaces Theorem</span></li>
+                <li class="result" data-group="statements" data-search="theorem 1.7.2 dimension formula of subspace sum" style="--env-color: #2f62b5"><a class="xref result-name" href="ch01-vector-spaces/07-sums-and-direct-sums.html#thm-dimension-formula-subspace-dim" data-ref="thm-dimension-formula-subspace-dim" data-shard="ch01-vector-spaces">Theorem 1.7.2</a> <span class="result-title">Dimension Formula of Subspace Sum</span></li>
+                <li class="result" data-group="definitions" data-search="definition 1.7.2 direct sum of two subspaces" style="--env-color: #b0414f"><a class="xref result-name" href="ch01-vector-spaces/07-sums-and-direct-sums.html#def-direct-sum" data-ref="def-direct-sum" data-shard="ch01-vector-spaces">Definition 1.7.2</a> <span class="result-title">Direct Sum of Two Subspaces</span></li>
+                <li class="result" data-group="examples" data-search="example " style="--env-color: #3b7a4c"><a class="xref result-name" href="ch01-vector-spaces/07-sums-and-direct-sums.html#exm-direct-sum-of-matrix" data-ref="exm-direct-sum-of-matrix" data-shard="ch01-vector-spaces">Example</a></li>
+                </ul></div>
+                </section>
+                <section class="results-chapter">
+                <h2 id="chapter-ch02-linear-transformations">Linear Transformations</h2>
+                <div class="results-section">
+                <h3><a href="ch02-linear-transformations/01-linear-transformations.html">2.1 Linear Transformations</a></h3>
+                <ul class="results-list">
+                <li class="result" data-group="definitions" data-search="definition 2.1.1 linear transformation" style="--env-color: #b0414f"><a class="xref result-name" href="ch02-linear-transformations/01-linear-transformations.html#def-linear-transformation" data-ref="def-linear-transformation" data-shard="ch02-linear-transformations">Definition 2.1.1</a> <span class="result-title">Linear Transformation</span></li>
+                <li class="result" data-group="examples" data-search="example projection onto a coordinate axis" style="--env-color: #3b7a4c"><a class="xref result-name" href="ch02-linear-transformations/01-linear-transformations.html#exm-projection" data-ref="exm-projection" data-shard="ch02-linear-transformations">Example</a> <span class="result-title">Projection onto a Coordinate Axis</span></li>
+                <li class="result" data-group="examples" data-search="example rotation in the plane" style="--env-color: #3b7a4c"><a class="xref result-name" href="ch02-linear-transformations/01-linear-transformations.html#exm-rotation" data-ref="exm-rotation" data-shard="ch02-linear-transformations">Example</a> <span class="result-title">Rotation in the Plane</span></li>
+                <li class="result" data-group="examples" data-search="example left multiplication by a matrix" style="--env-color: #3b7a4c"><a class="xref result-name" href="ch02-linear-transformations/01-linear-transformations.html#exm-matrix-transformation" data-ref="exm-matrix-transformation" data-shard="ch02-linear-transformations">Example</a> <span class="result-title">Left Multiplication by a Matrix</span></li>
+                <li class="result" data-group="examples" data-search="example a specific matrix transformation" style="--env-color: #3b7a4c"><a class="xref result-name" href="ch02-linear-transformations/01-linear-transformations.html#exm-coordinate-transformation" data-ref="exm-coordinate-transformation" data-shard="ch02-linear-transformations">Example</a> <span class="result-title">A Specific Matrix Transformation</span></li>
+                <li class="result" data-group="examples" data-search="example trace" style="--env-color: #3b7a4c"><a class="xref result-name" href="ch02-linear-transformations/01-linear-transformations.html#exm-trace-matrices" data-ref="exm-trace-matrices" data-shard="ch02-linear-transformations">Example</a> <span class="result-title">Trace</span></li>
+                <li class="result" data-group="examples" data-search="example multiplication by x" style="--env-color: #3b7a4c"><a class="xref result-name" href="ch02-linear-transformations/01-linear-transformations.html#exm-multiplication-by-x" data-ref="exm-multiplication-by-x" data-shard="ch02-linear-transformations">Example</a> <span class="result-title">Multiplication by <span class="math inline"><mjx-container class="MathJax" jax="CHTML" style="font-size: 113.1%; position: relative;"><mjx-math class=" MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi></math></mjx-assistive-mml></mjx-container></span></span></li>
+                <li class="result" data-group="examples" data-search="example differentiation" style="--env-color: #3b7a4c"><a class="xref result-name" href="ch02-linear-transformations/01-linear-transformations.html#exm-differentiation" data-ref="exm-differentiation" data-shard="ch02-linear-transformations">Example</a> <span class="result-title">Differentiation</span></li>
+                <li class="result" data-group="examples" data-search="example integration" style="--env-color: #3b7a4c"><a class="xref result-name" href="ch02-linear-transformations/01-linear-transformations.html#exm-integration" data-ref="exm-integration" data-shard="ch02-linear-transformations">Example</a> <span class="result-title">Integration</span></li>
+                <li class="result" data-group="examples" data-search="example shift operator" style="--env-color: #3b7a4c"><a class="xref result-name" href="ch02-linear-transformations/01-linear-transformations.html#exm-shift" data-ref="exm-shift" data-shard="ch02-linear-transformations">Example</a> <span class="result-title">Shift Operator</span></li>
+                <li class="result" data-group="examples" data-search="example composition operator" style="--env-color: #3b7a4c"><a class="xref result-name" href="ch02-linear-transformations/01-linear-transformations.html#exm-matrix-composition" data-ref="exm-matrix-composition" data-shard="ch02-linear-transformations">Example</a> <span class="result-title">Composition Operator</span></li>
+                <li class="result" data-group="examples" data-search="example identity map" style="--env-color: #3b7a4c"><a class="xref result-name" href="ch02-linear-transformations/01-linear-transformations.html#exm-identity" data-ref="exm-identity" data-shard="ch02-linear-transformations">Example</a> <span class="result-title">Identity Map</span></li>
+                <li class="result" data-group="examples" data-search="example inclusion map" style="--env-color: #3b7a4c"><a class="xref result-name" href="ch02-linear-transformations/01-linear-transformations.html#exm-inclusion" data-ref="exm-inclusion" data-shard="ch02-linear-transformations">Example</a> <span class="result-title">Inclusion Map</span></li>
+                <li class="result" data-group="examples" data-search="example zero map" style="--env-color: #3b7a4c"><a class="xref result-name" href="ch02-linear-transformations/01-linear-transformations.html#exm-zero-map" data-ref="exm-zero-map" data-shard="ch02-linear-transformations">Example</a> <span class="result-title">Zero Map</span></li>
+                <li class="result" data-group="examples" data-search="example complex conjugation" style="--env-color: #3b7a4c"><a class="xref result-name" href="ch02-linear-transformations/01-linear-transformations.html#exm-complex-conjugation" data-ref="exm-complex-conjugation" data-shard="ch02-linear-transformations">Example</a> <span class="result-title">Complex Conjugation</span></li>
+                <li class="result" data-group="examples" data-search="example squaring" style="--env-color: #3b7a4c"><a class="xref result-name" href="ch02-linear-transformations/01-linear-transformations.html#exm-squaring" data-ref="exm-squaring" data-shard="ch02-linear-transformations">Example</a> <span class="result-title">Squaring</span></li>
+                <li class="result" data-group="examples" data-search="example norm" style="--env-color: #3b7a4c"><a class="xref result-name" href="ch02-linear-transformations/01-linear-transformations.html#exm-norm" data-ref="exm-norm" data-shard="ch02-linear-transformations">Example</a> <span class="result-title">Norm</span></li>
+                <li class="result" data-group="statements" data-search="theorem 2.1.1 zero maps to zero" style="--env-color: #2f62b5"><a class="xref result-name" href="ch02-linear-transformations/01-linear-transformations.html#thm-zero-maps-to-zero" data-ref="thm-zero-maps-to-zero" data-shard="ch02-linear-transformations">Theorem 2.1.1</a> <span class="result-title">Zero Maps to Zero</span></li>
+                <li class="result" data-group="examples" data-search="example constant function" style="--env-color: #3b7a4c"><a class="xref result-name" href="ch02-linear-transformations/01-linear-transformations.html#exm-constant-function" data-ref="exm-constant-function" data-shard="ch02-linear-transformations">Example</a> <span class="result-title">Constant Function</span></li>
+                <li class="result" data-group="examples" data-search="example translation" style="--env-color: #3b7a4c"><a class="xref result-name" href="ch02-linear-transformations/01-linear-transformations.html#exm-translation" data-ref="exm-translation" data-shard="ch02-linear-transformations">Example</a> <span class="result-title">Translation</span></li>
+                <li class="result" data-group="statements" data-search="theorem 2.1.2 linear maps preserve negation" style="--env-color: #2f62b5"><a class="xref result-name" href="ch02-linear-transformations/01-linear-transformations.html#thm-preserves-negation" data-ref="thm-preserves-negation" data-shard="ch02-linear-transformations">Theorem 2.1.2</a> <span class="result-title">Linear Maps Preserve Negation</span></li>
+                <li class="result" data-group="statements" data-search="theorem 2.1.3 equivalent characterization of linearity" style="--env-color: #2f62b5"><a class="xref result-name" href="ch02-linear-transformations/01-linear-transformations.html#thm-equivalent-condition" data-ref="thm-equivalent-condition" data-shard="ch02-linear-transformations">Theorem 2.1.3</a> <span class="result-title">Equivalent Characterization of Linearity</span></li>
+                <li class="result" data-group="statements" data-search="theorem 2.1.4 linear maps preserve linear combinations" style="--env-color: #2f62b5"><a class="xref result-name" href="ch02-linear-transformations/01-linear-transformations.html#thm-linear-combination" data-ref="thm-linear-combination" data-shard="ch02-linear-transformations">Theorem 2.1.4</a> <span class="result-title">Linear Maps Preserve Linear Combinations</span></li>
+                <li class="result" data-group="statements" data-search="theorem 2.1.5 linear transformations are determined by their action on a basis" style="--env-color: #2f62b5"><a class="xref result-name" href="ch02-linear-transformations/01-linear-transformations.html#thm-linear-transform-basis" data-ref="thm-linear-transform-basis" data-shard="ch02-linear-transformations">Theorem 2.1.5</a> <span class="result-title">Linear Transformations are Determined by Their Action on a Basis</span></li>
+                <li class="result" data-group="examples" data-search="example " style="--env-color: #3b7a4c"><a class="xref result-name" href="ch02-linear-transformations/01-linear-transformations.html#exm-deter" data-ref="exm-deter" data-shard="ch02-linear-transformations">Example</a></li>
+                <li class="result" data-group="examples" data-search="example " style="--env-color: #3b7a4c"><a class="xref result-name" href="ch02-linear-transformations/01-linear-transformations.html#exm-deter-two" data-ref="exm-deter-two" data-shard="ch02-linear-transformations">Example</a></li>
+                </ul></div>
+                <div class="results-section">
+                <h3><a href="ch02-linear-transformations/02-kernel-image.html">2.2 Kernel and Image</a></h3>
+                <ul class="results-list">
+                <li class="result" data-group="definitions" data-search="definition 2.2.1 kernel" style="--env-color: #b0414f"><a class="xref result-name" href="ch02-linear-transformations/02-kernel-image.html#def-kernel" data-ref="def-kernel" data-shard="ch02-linear-transformations">Definition 2.2.1</a> <span class="result-title">Kernel</span></li>
+                <li class="result" data-group="definitions" data-search="definition 2.2.2 image" style="--env-color: #b0414f"><a class="xref result-name" href="ch02-linear-transformations/02-kernel-image.html#def-image" data-ref="def-image" data-shard="ch02-linear-transformations">Definition 2.2.2</a> <span class="result-title">Image</span></li>
+                <li class="result" data-group="examples" data-search="example differentiation" style="--env-color: #3b7a4c"><a class="xref result-name" href="ch02-linear-transformations/02-kernel-image.html#exm-differentiation-kernel-image" data-ref="exm-differentiation-kernel-image" data-shard="ch02-linear-transformations">Example</a> <span class="result-title">Differentiation</span></li>
+                <li class="result" data-group="examples" data-search="example trace" style="--env-color: #3b7a4c"><a class="xref result-name" href="ch02-linear-transformations/02-kernel-image.html#exm-trace-kernel-image" data-ref="exm-trace-kernel-image" data-shard="ch02-linear-transformations">Example</a> <span class="result-title">Trace</span></li>
+                <li class="result" data-group="statements" data-search="theorem 2.2.1 properties of kernel" style="--env-color: #2f62b5"><a class="xref result-name" href="ch02-linear-transformations/02-kernel-image.html#thm-prop-kernel" data-ref="thm-prop-kernel" data-shard="ch02-linear-transformations">Theorem 2.2.1</a> <span class="result-title">Properties of Kernel</span></li>
+                <li class="result" data-group="statements" data-search="theorem 2.2.2 properties of image" style="--env-color: #2f62b5"><a class="xref result-name" href="ch02-linear-transformations/02-kernel-image.html#thm-prop-image" data-ref="thm-prop-image" data-shard="ch02-linear-transformations">Theorem 2.2.2</a> <span class="result-title">Properties of Image</span></li>
+                </ul></div>
+                <div class="results-section">
+                <h3><a href="ch02-linear-transformations/03-rank-nullity.html">2.3 Rank-Nullity Theorem</a></h3>
+                <ul class="results-list">
+                <li class="result" data-group="definitions" data-search="definition 2.3.1 nullity" style="--env-color: #b0414f"><a class="xref result-name" href="ch02-linear-transformations/03-rank-nullity.html#def-nullity" data-ref="def-nullity" data-shard="ch02-linear-transformations">Definition 2.3.1</a> <span class="result-title">Nullity</span></li>
+                <li class="result" data-group="definitions" data-search="definition 2.3.2 rank" style="--env-color: #b0414f"><a class="xref result-name" href="ch02-linear-transformations/03-rank-nullity.html#def-rank" data-ref="def-rank" data-shard="ch02-linear-transformations">Definition 2.3.2</a> <span class="result-title">Rank</span></li>
+                <li class="result" data-group="examples" data-search="example " style="--env-color: #3b7a4c"><a class="xref result-name" href="ch02-linear-transformations/03-rank-nullity.html#exm-nullity-rank-diff" data-ref="exm-nullity-rank-diff" data-shard="ch02-linear-transformations">Example</a></li>
+                <li class="result" data-group="statements" data-search="theorem 2.3.1 rank-nullity theorem" style="--env-color: #2f62b5"><a class="xref result-name" href="ch02-linear-transformations/03-rank-nullity.html#thm-rank-nullity" data-ref="thm-rank-nullity" data-shard="ch02-linear-transformations">Theorem 2.3.1</a> <span class="result-title">Rank-Nullity Theorem</span></li>
+                </ul></div>
+                </section>
+                <p class="results-empty" hidden="">No results match the filter.</p>
+            </article>
+
+            <!-- Page Navigation -->
+            <nav class="page-navigation">
+                <div class="nav-page nav-page-previous">
+                                    </div>
+                <div class="nav-page nav-page-next">
+                                    </div>
+            </nav>
+                        <p class="page-feedback">
+                Found a typo or a mistake?
+                <a href="https://github.com/AkizumiFox/linear-algebra/issues/new?title=Typo%20or%20mistake%20in%20List%20of%20results&amp;body=Page%3A%20https%3A%2F%2Flinear-algebra.akizumifox.com%2Fresults.html%0A%0AWhat%20is%20wrong%20%28quote%20the%20sentence%20or%20formula%29%3A%0A%0A%0AWhat%20it%20should%20say%3A%0A" target="_blank" rel="noopener">Report it</a>
+            </p>
+                    </main>
+
+        <!-- Right Sidebar (TOC) -->
+        <aside id="quarto-margin-sidebar">
+            <nav class="toc" aria-label="On this page">
+                <h2>On this page</h2>
+                            </nav>
+
+            <div class="other-formats">
+                <h3>Download</h3>
+                <ul>
+                    <li><a href="./pdf/results.pdf" target="_blank">This section (PDF)</a></li>
+                    <li><a href="./book/book.pdf" target="_blank">Full book (PDF)</a></li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Tooltip Script -->
+    <script src="./main.js?v=97c29d15ed"></script>
+            </body>
+
+</html>
