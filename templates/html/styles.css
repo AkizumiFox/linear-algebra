@@ -24,6 +24,9 @@
   --accent-soft: #e8effa;
   --danger: #b42318;
   --shadow: 0 6px 24px rgba(20, 24, 32, 0.12);
+  --hover-wash: #eaf1fb;          /* backgrounds of hovered rows and buttons */
+  --hover-border: #9db8e3;
+  --hover-shadow: rgba(31, 91, 184, 0.16);
   --env-tint: 6%;      /* share of an environment's color in its background */
   --env-rule-mix: 0%;  /* share of paper mixed into its rule (lightens it in dark mode) */
 
@@ -55,6 +58,9 @@
   --accent-soft: #1f2a3b;
   --danger: #f08c82;
   --shadow: 0 6px 24px rgba(0, 0, 0, 0.5);
+  --hover-wash: #202b3c;
+  --hover-border: #4d6a94;
+  --hover-shadow: rgba(0, 0, 0, 0.5);
   --env-tint: 13%;
   --env-rule-mix: 35%;
 }
@@ -409,8 +415,10 @@ div.equation mjx-container[display="true"] {
   --env-mix: var(--env-tint);
   margin: 1.5em 0;
   padding: 0.85em 1.15em 0.85em;
+  border-left: 3px solid var(--env-color);
   border-left: 3px solid color-mix(in srgb, var(--env-color), var(--paper) var(--env-rule-mix));
   border-radius: 0 4px 4px 0;
+  background-color: var(--subtle);
   background-color: color-mix(in srgb, var(--env-color) var(--env-mix), var(--paper));
 }
 
@@ -1067,6 +1075,7 @@ th {
   gap: 0.5rem;
   margin: -2.5rem -3rem 1.25rem;
   padding: 0.5rem 1.5rem;
+  background: var(--paper);
   background: color-mix(in srgb, var(--paper) 88%, transparent);
   -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
@@ -1182,7 +1191,7 @@ th {
 }
 
 /* Tooltips from data-tooltip, for mouse and keyboard users */
-@media (hover: hover) {
+@media (any-hover: hover) {
   .icon-button[data-tooltip]::after {
     content: attr(data-tooltip);
     position: absolute;
@@ -1588,25 +1597,25 @@ a.xref {
   transition: transform 0.25s var(--ease-out), opacity 0.2s ease, color 0.18s var(--ease-out);
 }
 
-@media (hover: hover) and (pointer: fine) {
+/* any-hover: on whenever a mouse or trackpad is present (some setups report the primary
+   pointer differently). Colors are plain tokens, so older browsers show them too. */
+@media (any-hover: hover) {
   /* References: underline drawn from the left over a faint highlight */
   a.xref:hover {
     background-size: 100% 1.5px;
-    background-color: color-mix(in srgb, var(--accent) 8%, transparent);
+    background-color: var(--hover-wash);
     border-radius: 2px;
   }
 
   /* The block under the pointer: stronger tint, a soft shadow, a thicker edge */
   .env:hover {
     --env-mix: calc(var(--env-tint) + 5%);
-    box-shadow:
-      inset 2px 0 0 color-mix(in srgb, var(--env-color), var(--paper) var(--env-rule-mix)),
-      0 6px 22px -8px color-mix(in srgb, var(--env-color) 35%, transparent);
+    box-shadow: inset 2px 0 0 var(--env-color), 0 8px 22px -10px var(--hover-shadow);
   }
 
   .code-cell:hover {
-    border-color: color-mix(in srgb, var(--accent) 45%, var(--rule-strong));
-    box-shadow: 0 6px 22px -10px color-mix(in srgb, var(--accent) 40%, transparent);
+    border-color: var(--hover-border);
+    box-shadow: 0 8px 22px -12px var(--hover-shadow);
   }
 
   .code-cell:focus-within {
@@ -1614,9 +1623,9 @@ a.xref {
     box-shadow: 0 0 0 3px var(--accent-soft);
   }
 
-  /* Sidebar: a light accent wash, and the title slides toward the text */
+  /* Sidebar: an accent wash, and the title slides toward the text */
   .sidebar-nav a:hover {
-    background: color-mix(in srgb, var(--accent) 9%, var(--paper));
+    background: var(--hover-wash);
     color: var(--accent);
   }
 
@@ -1639,7 +1648,7 @@ a.xref {
   }
 
   .toc a:hover:not(.active) {
-    border-left-color: color-mix(in srgb, var(--accent) 45%, var(--rule));
+    border-left-color: var(--hover-border);
   }
 
   .other-formats a:hover,
@@ -1651,8 +1660,8 @@ a.xref {
   .pagination-link:hover {
     border-color: var(--accent);
     color: var(--accent);
-    background: color-mix(in srgb, var(--accent) 4%, var(--paper));
-    box-shadow: 0 8px 22px -10px color-mix(in srgb, var(--accent) 45%, transparent);
+    background: var(--hover-wash);
+    box-shadow: 0 8px 22px -10px var(--hover-shadow);
     transform: translateY(-2px);
   }
 
@@ -1672,8 +1681,8 @@ a.xref {
 
   /* Toolbar and search results */
   .icon-button:hover {
-    background: color-mix(in srgb, var(--accent) 10%, var(--paper));
-    border-color: color-mix(in srgb, var(--accent) 25%, transparent);
+    background: var(--hover-wash);
+    border-color: var(--hover-border);
     color: var(--accent);
   }
 
@@ -1691,7 +1700,7 @@ a.xref {
   }
 
   .search-result-item:hover {
-    background: color-mix(in srgb, var(--accent) 7%, var(--paper));
+    background: var(--hover-wash);
   }
 
   .sidebar-tools a {
