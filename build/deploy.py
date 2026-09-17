@@ -5,6 +5,7 @@ Deploys built output to a directory for GitHub Pages. The deploy-dir (e.g. site/
 is a git clone of the public repo; it contains only built HTML, PDFs, and book.
 """
 
+import re
 import shutil
 import subprocess
 
@@ -97,7 +98,10 @@ def deploy(book: Book, run_build: bool = True, push: bool = False) -> bool:
         else:
             item.unlink()
 
+    chapter_slugs = {c.slug for c in book.chapters}
     for item in html_dir.iterdir():
+        if item.is_dir() and re.match(r"ch\d+-", item.name) and item.name not in chapter_slugs:
+            continue  # output of a chapter that was renamed or removed (stale build files)
         if item.is_dir():
             shutil.copytree(item, deploy_dir / item.name)
         else:
