@@ -39,7 +39,9 @@ after `./build.py all`, since the numbering comparison reads the LaTeX `.aux` fi
 ## Writing
 
 - Environments: `::: {#thm-name}` … `:::` (prefixes and counters in `environment_settings` in
-  the config), small environments `::: {.proof}`. Environments nest.
+  the config), small environments `::: {.proof}`. Environments nest. Each numbered
+  environment has one `color`; the website derives the box's rule and background tint from
+  it, for both light and dark mode.
 - References: `@thm-name`, `@eq-name`. Numbered targets read "Theorem 1.2.3"; unnumbered
   ones (examples) read "Example (Title)".
 - Equations: `\[ … \]{#eq-name}`.

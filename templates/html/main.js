@@ -190,7 +190,7 @@
         const headings = content.querySelectorAll('h2, h3');
         if (headings.length === 0) return;
 
-        let html = '<h2>Table of contents</h2><ul class="toc-list">';
+        let html = '<h2>On this page</h2><ul class="toc-list">';
 
         headings.forEach(heading => {
             const level = heading.tagName.toLowerCase();
@@ -395,20 +395,41 @@
     // Mobile Menu Toggle
     // ==========================================================================
 
+    /**
+     * On narrow screens the sidebar is a drawer opened from the top bar's menu button.
+     */
     function setupMobileMenu() {
-        // Add mobile menu button if it doesn't exist
         const sidebar = document.getElementById('quarto-sidebar');
-        if (!sidebar) return;
+        const button = document.querySelector('.menu-button');
+        if (!sidebar || !button) return;
 
-        // Create overlay
         const overlay = document.createElement('div');
         overlay.className = 'sidebar-overlay';
         document.body.appendChild(overlay);
 
-        // Toggle on overlay click
-        overlay.addEventListener('click', () => {
-            sidebar.classList.remove('show');
-            overlay.classList.remove('show');
+        const setOpen = open => {
+            sidebar.classList.toggle('show', open);
+            overlay.classList.toggle('show', open);
+            document.body.classList.toggle('drawer-open', open);
+            button.setAttribute('aria-expanded', String(open));
+            if (open) {
+                const current = sidebar.querySelector('.nav-section-item.active a') || sidebar.querySelector('a');
+                current?.focus({ preventScroll: true });
+                current?.scrollIntoView({ block: 'center' });
+            }
+        };
+
+        button.addEventListener('click', () => setOpen(!sidebar.classList.contains('show')));
+        overlay.addEventListener('click', () => setOpen(false));
+        document.addEventListener('keydown', event => {
+            if (event.key === 'Escape' && sidebar.classList.contains('show')) {
+                setOpen(false);
+                button.focus();
+            }
+        });
+        // Following a link (including same-page anchors) closes the drawer
+        sidebar.addEventListener('click', event => {
+            if (event.target.closest('a')) setOpen(false);
         });
     }
 
@@ -498,6 +519,18 @@
         // Load index on focus
         searchInput.addEventListener('focus', () => {
             loadSearchIndex();
+        });
+
+        // "/" focuses search (unless the reader is typing somewhere else)
+        document.addEventListener('keydown', event => {
+            if (event.key !== '/' || event.ctrlKey || event.metaKey || event.altKey) return;
+            const target = event.target;
+            if (target.closest('input, textarea, select, [contenteditable="true"]')) return;
+            event.preventDefault();
+            if (window.matchMedia('(max-width: 900px)').matches) {
+                document.querySelector('.menu-button')?.click();
+            }
+            searchInput.focus();
         });
         
         searchInput.addEventListener('input', (e) => {

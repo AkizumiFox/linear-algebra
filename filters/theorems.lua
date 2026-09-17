@@ -37,7 +37,7 @@ local NUMBERED_ENVS = {
 -- Map of "env_name" -> "big" or "small"
 local ENV_STYLES = {}
 
--- Map of "env_name" -> {border = "#...", background = "#..."}
+-- Map of "env_name" -> {border = "#..."} (the stylesheet derives tints from it)
 local ENV_COLORS = {}
 
 -- ID prefix to environment type mapping (Quarto-style)
@@ -99,7 +99,6 @@ local function init_environments(meta)
             local name = pandoc.utils.stringify(env.name)
             local shared = env.counter_group and pandoc.utils.stringify(env.counter_group)
             local color = env.color and pandoc.utils.stringify(env.color)
-            local background = env.background and pandoc.utils.stringify(env.background)
             
             -- Handle boolean numbered
             local numbered = true
@@ -120,10 +119,7 @@ local function init_environments(meta)
             
             -- Register colors if present
             if color ~= "nil" and color ~= "" then
-                ENV_COLORS[key] = {
-                    border = color,
-                    background = background ~= "nil" and background or nil
-                }
+                ENV_COLORS[key] = { border = color }
             end
             
             -- Register shared counter
@@ -609,24 +605,16 @@ local function render_env_html(env_type, number, title_inlines, label_id, conten
             {"data-number", number or ""},
         }
         
-        -- Apply dynamic colors if defined
+        -- The environment's color from the config; the stylesheet derives the rule and
+        -- the background tint from it (for light and dark mode)
         local colors = ENV_COLORS[env_type]
-        if colors then
-            local style_str = ""
-            if colors.border then
-                style_str = style_str .. "border-left-color: " .. colors.border .. "; "
-            end
-            if colors.background then
-                style_str = style_str .. "background-color: " .. colors.background .. "; "
-            end
-            if style_str ~= "" then
-                table.insert(attributes, {"style", style_str})
-            end
+        if colors and colors.border then
+            table.insert(attributes, {"style", "--env-color: " .. colors.border})
         end
         
         local attrs = pandoc.Attr(
             label_id or "",
-            {env_type},
+            {env_type, "env"},
             attributes
         )
         
