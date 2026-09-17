@@ -24,3 +24,4 @@ docs/
 *.toc
 *.synctex.gz
 templates/latex/*.pdf
+linear-algebra-textbook/

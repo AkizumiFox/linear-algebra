@@ -604,6 +604,52 @@ div.equation mjx-container[display="true"] {
   color: var(--ink-strong);
 }
 
+/* Idea before a proof: a quieter voice */
+.idea.small-env {
+  color: var(--muted);
+  font-style: normal;
+}
+
+/* Warning: a known misconception, named before the reader makes it */
+.warning.small-env {
+  border-left: 2px solid var(--danger);
+}
+
+.warning.small-env > p:first-child > em:first-child {
+  color: var(--danger);
+}
+
+/* Quick check: a question with its answer folded inside */
+.check.small-env {
+  border-left: 2px solid var(--accent);
+  background: var(--subtle);
+  padding: 0.6em 1em 0.6em 1.15em;
+  border-radius: 0 6px 6px 0;
+}
+
+.check.small-env > p:first-child > em:first-child {
+  color: var(--accent);
+}
+
+.check.small-env .solution.small-env {
+  margin: 0.8em 0 0;
+}
+
+/* Part headings in the sidebar */
+.nav-part {
+  margin: 1.4rem 0 0.2rem;
+  color: var(--faint);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  list-style: none;
+}
+
+.nav-part:first-of-type {
+  margin-top: 0.9rem;
+}
+
 /* --- Foldable proofs and solutions (main.js) --- */
 .foldable {
   position: relative;

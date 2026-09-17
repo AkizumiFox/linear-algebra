@@ -68,7 +68,10 @@
             "solution",
             "claim",
             "proofofclaim",
-            "algorithm"
+            "algorithm",
+            "idea",
+            "warning",
+            "check"
         ]
     },
     "chapters": [

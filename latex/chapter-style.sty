@@ -67,6 +67,16 @@
 \def\@endpart{}
 \fi
 
+% Part divider (a group of chapters): its own page, listed in the table of contents
+\providecommand{\bookpartdivider}[1]{%
+  \@ifundefined{realclearpage}{\clearpage}{\realclearpage}%
+  \thispagestyle{empty}%
+  \vspace*{0.3\textheight}%
+  {\centering\Huge\bfseries #1\par}%
+  \addcontentsline{toc}{part}{#1}%
+  \@ifundefined{realclearpage}{\clearpage}{\realclearpage}%
+}
+
 % ======================================================================================
 % NUMBERING FORMAT
 % ======================================================================================

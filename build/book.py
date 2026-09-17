@@ -27,6 +27,7 @@ class Chapter:
     slug: str          # directory name, e.g. "ch01-vector-spaces"
     directory: Path
     title: str
+    part: str = ""     # set on the first chapter of a part: the part's heading
 
 
 @dataclass
@@ -196,7 +197,8 @@ class Book:
                 index = directory / "index.md"
                 title = extract_title(index) if index.exists() else re.sub(
                     r"^ch\d+-", "", directory.name).replace("-", " ").title()
-            chapters.append(Chapter(number=number, slug=directory.name, directory=directory, title=title))
+            chapters.append(Chapter(number=number, slug=directory.name, directory=directory, title=title,
+                                    part=entry.get("part", "")))
         return chapters
 
     @cached_property

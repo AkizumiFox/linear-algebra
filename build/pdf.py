@@ -145,6 +145,8 @@ def build_book(book: Book) -> bool:
         attrs = f'data-chapter="{page.chapter_number}" data-section="{page.section}"'
         if page.is_preface:
             attrs += ' data-preface="true"'
+        if page.section == 0 and page.chapter and page.chapter.part:
+            attrs += f' data-part-title="{page.chapter.part}"'
         if page.section >= 1:
             attrs += f' data-chapter-title="{page.chapter.title}"'
         marker = f"\n\n::: {{.file-boundary {attrs}}}\n:::\n\n"

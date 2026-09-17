@@ -6,7 +6,8 @@
         "src/ch01-basics",
         {
             "dir": "src/ch02-more",
-            "title": "More Topics"
+            "title": "More Topics",
+            "part": "Part Two"
         }
     ],
     "environment_settings": {
@@ -42,7 +43,11 @@
         "small_envs": [
             "remark",
             "proof",
-            "claim"
+            "claim",
+            "solution",
+            "idea",
+            "warning",
+            "check"
         ]
     }
 }

@@ -124,7 +124,14 @@ class TestHtmlBuild(FixtureBookCase):
         self.assertEqual([c["title"] for c in navigation["chapters"]], ["Basics", "More Topics"])
         self.assertEqual(navigation["home"], {"title": "Preface", "path": "index.html"})
         self.assertEqual(navigation["chapters"][0]["sections"][1]["number"], "1.2")
+        self.assertEqual([c["part"] for c in navigation["chapters"]], ["", "Part Two"])
         self.assertNotIn("{.unnumbered}", self.page("ch02-more/index.html"))
+
+    def test_teaching_blocks(self):
+        page = (self.html / "ch02-more" / "01-refs.html").read_text()
+        self.assertIn('class="warning small-env"', page)
+        self.assertIn('class="check small-env"', page)
+        self.assertIn("Quick check", page)
 
     def test_tooltip_shards(self):
         shard = json.loads((self.html / "theorems" / "ch01-basics.json").read_text())

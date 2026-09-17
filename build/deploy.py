@@ -16,6 +16,41 @@ def _git(deploy_dir, *args) -> subprocess.CompletedProcess:
     return subprocess.run(["git", *args], cwd=str(deploy_dir), capture_output=True, text=True)
 
 
+REDIRECT_PAGE = """<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><title>Moved</title>
+<link rel="canonical" href="{target}"><meta http-equiv="refresh" content="0; url={target}">
+</head><body><p>This page has moved to <a href="{target}">{target}</a>.</p></body></html>
+"""
+
+
+def write_redirects(book: Book, deploy_dir) -> int:
+    """Stub pages for moved paths: config "redirects" maps an old path to a new one
+    (both relative to the site root). An old path ending in "/" redirects every page
+    under it to the same file name under the new directory."""
+    count = 0
+    for old, new in book.config.get("redirects", {}).items():
+        if old.endswith("/"):
+            targets = {name: new.rstrip("/") + "/" + name
+                       for name in [p.name for p in (book.html_dir / new.rstrip("/")).glob("*.html")]}
+            # old file names that no longer exist fall back to the new chapter index
+            for name in book.config.get("redirect-files", {}).get(old, []):
+                targets.setdefault(name, new.rstrip("/") + "/index.html")
+            items = [(old + name, target) for name, target in targets.items()]
+        else:
+            items = [(old, new)]
+        for old_path, target in items:
+            stub = deploy_dir / old_path
+            if stub.exists():
+                continue  # a real page lives here
+            depth = old_path.count("/")
+            stub.parent.mkdir(parents=True, exist_ok=True)
+            stub.write_text(REDIRECT_PAGE.format(target="../" * depth + target), encoding="utf-8")
+            count += 1
+    if count:
+        print_success(f"Redirect stubs: {count}")
+    return count
+
+
 def deploy(book: Book, run_build: bool = True, push: bool = False) -> bool:
     """
     Build and check the book (if run_build), then replace the contents of deploy-dir with
@@ -67,6 +102,8 @@ def deploy(book: Book, run_build: bool = True, push: bool = False) -> bool:
             shutil.copytree(item, deploy_dir / item.name)
         else:
             shutil.copy2(item, deploy_dir / item.name)
+
+    write_redirects(book, deploy_dir)
 
     deploy_domain = book.config.get("deploy-domain", "")
     if deploy_domain:

@@ -139,6 +139,7 @@ local function init_environments(meta)
         -- Display name overrides for multi-word environments
         local display_overrides = {
             proofofclaim = "Proof of Claim",
+            check = "Quick check",
         }
         
         for _, env_name in ipairs(settings.small_envs) do
@@ -636,6 +637,9 @@ local SMALL_ENV_INLINE = {
     claim = "claiminline",
     proof = "proofinline",
     proofofclaim = "proofinline",
+    idea = "ideainline",
+    warning = "warninginline",
+    check = "checkinline",
 }
 -- Nested variants (no mdframed box) for claim/proof inside another small env
 local SMALL_ENV_NESTED = {
@@ -946,6 +950,10 @@ local function collect_labels(div)
                 tex = "\\prefacebanner{Preface}\\setcounter{part}{-1}"
             elseif last_book_part ~= new_c then
                 last_book_part = new_c
+                local part_title = attrs["data-part-title"] and pandoc.utils.stringify(attrs["data-part-title"]) or ""
+                if part_title ~= "" then
+                    tex = tex .. "\\bookpartdivider{" .. part_title .. "}"
+                end
                 -- \part increments the counter; set it so the part number is the chapter number
                 tex = string.format("\\setcounter{part}{%d}", new_c - 1)
                 if new_c == 0 then

@@ -204,7 +204,8 @@ def generate_navigation_manifest(book: Book):
         navigation["chapters"].append({
             "title": chapter.title,
             "number": chapter.number,
-            "collapsed": False,
+            "part": chapter.part,
+            "collapsed": len(book.chapters) > 6,
             "path": index.html_path if index else None,
             "sections": [
                 {"title": p.title, "number": p.number, "path": p.html_path, "filename": p.source.name}

@@ -674,6 +674,18 @@
     \endproblembox%
 }
 
+% Exercise environment: same box as problem, with an optional title ("A1", "B2: Name")
+\AtBeginDocument{%
+    \@ifundefined{exercise}{\newenvironment{exercise}[1][]{}{}}{}%
+    \renewenvironment{exercise}[1][]{%
+        \problembox%
+        \parindent=0pt%
+        \noindent\textbf{Exercise}\if\relax\detokenize{#1}\relax.\else\ \textbf{#1.}\fi\space%
+    }{%
+        \endproblembox%
+    }%
+}
+
 % Solution environment (thin grey left line, no background)
 \newmdenv[skipabove=4pt,
     skipbelow=2pt,
@@ -713,6 +725,31 @@
     }
 \fi
 \fi
+
+% Idea (before a proof), warning, and quick check: grey bar like remark, title in content
+\definecolor{warningcolor}{RGB}{176,65,79}
+\newmdenv[skipabove=4pt,
+    skipbelow=2pt,
+    rightline=false,
+    leftline=true,
+    topline=false,
+    bottomline=false,
+    linecolor=warningcolor,
+    innerleftmargin=15pt,
+    innerrightmargin=20pt,
+    innertopmargin=2pt,
+    leftmargin=0cm,
+    rightmargin=0cm,
+    linewidth=2pt,
+    innerbottommargin=10pt,
+    splittopskip=\topskip,
+    splitbottomskip=0.3\topskip,
+    firstextra={},
+    middleextra={},
+    secondextra={}]{warningbox}
+\newenvironment{ideainline}{\remarkbox\parindent=0pt}{\endremarkbox}
+\newenvironment{checkinline}{\remarkbox\parindent=0pt}{\endremarkbox}
+\newenvironment{warninginline}{\warningbox\parindent=0pt}{\endwarningbox}
 
 % Algorithm environment (grey background, colored left line)
 \newmdenv[skipabove=10pt,

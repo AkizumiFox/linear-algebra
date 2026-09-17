@@ -9,3 +9,16 @@ A broken reference: @thm-missing.
 
 An unnumbered example.
 :::
+
+
+::: {.warning}
+A warning block.
+:::
+
+::: {.check}
+A quick check.
+
+::: {.solution}
+Its answer.
+:::
+:::
