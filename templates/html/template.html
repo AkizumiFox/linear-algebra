@@ -182,7 +182,7 @@ $highlighting-css$
             <nav class="page-navigation">
                 <div class="nav-page nav-page-previous">
                     $if(prev-page-url)$
-                    <a href="$prev-page-url$" class="pagination-link" aria-label="$prev-page-title$">
+                    <a href="$prev-page-url$" class="pagination-link" aria-label="$prev-page-label$">
                         <i class="bi bi-arrow-left-short" aria-hidden="true"></i>
                         <span class="nav-page-body">
                             <span class="nav-page-label">Previous</span>
@@ -193,7 +193,7 @@ $highlighting-css$
                 </div>
                 <div class="nav-page nav-page-next">
                     $if(next-page-url)$
-                    <a href="$next-page-url$" class="pagination-link" aria-label="$next-page-title$">
+                    <a href="$next-page-url$" class="pagination-link" aria-label="$next-page-label$">
                         <span class="nav-page-body">
                             <span class="nav-page-label">Next</span>
                             <span class="nav-page-text">$if(next-page-number)$$next-page-number$ $endif$$next-page-title$</span>

@@ -73,10 +73,18 @@ def page_metadata(book: Book, page: Page, output_format: str, extra: Optional[di
             if neighbour:
                 metadata[f"{direction}-page-url"] = f"{prefix}{neighbour.html_path}"
                 metadata[f"{direction}-page-title"] = neighbour.title
+                # For the aria-label attribute: rendered math markup would break the HTML there
+                metadata[f"{direction}-page-label"] = plain_label(neighbour.title)
                 metadata[f"{direction}-page-number"] = neighbour.number
 
     metadata.update(extra or {})
     return metadata
+
+
+def plain_label(title: str) -> str:
+    """A title as plain text for attributes: TeX math reduced to readable symbols."""
+    from .extras import plain_title  # local import: extras imports this module
+    return plain_title(title)
 
 
 def write_metadata_file(book: Book, page: Page, output_format: str, metadata: dict) -> Path:
