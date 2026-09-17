@@ -11,16 +11,16 @@ The plan is at `~/.claude/plans/cached-gathering-sedgewick.md`. The outline of a
 | 2 | ch02-linear-systems | Linear systems | deployed |
 | 3 | ch03-linear-maps | Linear maps | deployed |
 | 4 | ch04-duality | Duality | deployed |
-| 5 | ch05-polynomials | Polynomials | drafting |
+| 5 | ch05-polynomials | Polynomials | deployed |
 | 6–23 | | see plan | not started |
 
 ## Open forward promises
 
 Add a line when a section promises something later ("proved in Chapter 5"); tick it when it is paid off.
 
-- [ ] Ch 0 → Ch 5: Fundamental Theorem of Algebra proved
+- [x] Ch 0 → Ch 5: Fundamental Theorem of Algebra proved
 - [x] Ch 0 → Ch 2 §07 (`lem-root-bound`): a polynomial over an infinite field is determined by its values
-- [ ] Ch 0 → Ch 5: division algorithm in general
+- [x] Ch 0 → Ch 5: division algorithm in general
 - [x] Ch 0 → Ch 2 (`thm-one-sided-inverse`): for square matrices AB = I implies BA = I (Ch 0 text may say Chapter 3: fix to Chapter 2)
 - [x] Ch 0 → Ch 2: A invertible ⇔ Ax = 0 only trivial solution
 - [ ] Ch 0 → Ch 1: independence/"not all zero"; {0} subspace, ∅ not; intersection vs union of subspaces; span as intersection; Fⁿ as a vector space
@@ -45,7 +45,7 @@ Add a line when a section promises something later ("proved in Chapter 5"); tick
 - [ ] Ch 2 → Ch 3: Rank–Nullity for linear maps
 - [ ] Ch 2 → Ch 12: Cholesky
 - [ ] Ch 2 → Ch 23: partial pivoting, rounding; graph Laplacian
-- [ ] Ch 2 → Ch 5: Lagrange interpolation formula
+- [x] Ch 2 → Ch 5: Lagrange interpolation formula
 - [ ] Ch 2 → Ch 10: least squares
 
 ## Deferred to the whole-book pass (M7)
@@ -56,7 +56,7 @@ Add a line when a section promises something later ("proved in Chapter 5"); tick
 - Ch 3 §01 and §04 both define "operator" and the shorthand Tv; §04 should defer to §01 (check at Ch 3 referee).
 - Ch 3: 'every linear map Fⁿ → Fᵐ is T_A' proved twice (§04 C1(b), §06 inline) — consolidate into one result in M7. §06 long; rank/invertibility subsection could move to §08.
 - Ch 3 §09 long (~11k raw): consider splitting products/cosets from isomorphism theorems. §08 Sylvester proof duplicates exr-rank-nullity-c1.
-- [ ] Ch 4 → Ch 5: Lagrange interpolation formula; evaluation functionals dual to Lagrange basis
+- [x] Ch 4 → Ch 5: Lagrange interpolation formula; evaluation functionals dual to Lagrange basis
 - [ ] Ch 4 → Ch 10: orthogonal complement vs annihilator; inner product gives chosen V ≅ V*; adjoint T*
 - Ch 4: ε_{ij} vs ε_c overload; zero functional notation — tidy in M7.
 - Ch 4: restriction map V* → U* named R (§02), ρ (§05), ι′ (§04) — unify to ρ in M7. §06 extra early Quick check.

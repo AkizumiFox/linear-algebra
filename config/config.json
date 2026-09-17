@@ -86,7 +86,8 @@
         {
             "dir": "src/ch05-polynomials",
             "part": "Part II · Determinants and the Structure of Operators"
-        }
+        },
+        "src/ch06-determinants"
     ],
     "macros": "latex/macros.tex",
     "templates": {
