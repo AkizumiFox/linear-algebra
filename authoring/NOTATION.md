@@ -15,6 +15,7 @@ This list is fixed. A chapter that needs a new symbol adds it here, and a new ma
 | `f \colon X \to Y`, `x \mapsto f(x)` | functions. Composition is `g \circ f` for general functions |
 | `\id_X` | identity function |
 | `S_n`, `\sgn(\sigma)` | symmetric group, sign of a permutation |
+| `\operatorname{inv}(\sigma)` | number of inversions of σ |
 
 ## Vectors and spaces
 
@@ -55,6 +56,7 @@ This list is fixed. A chapter that needs a new symbol adds it here, and a new ma
 | `\mtx{\id}{\sB}{\sC}` | change-of-coordinates matrix from 𝓑 to 𝓒 |
 | `\tr A`, `\det A` | trace, determinant |
 | `\adj A` | adjugate |
+| `M_{ij}`, `C_{ij} = (-1)^{i+j}M_{ij}` | minor (det of A with row i and column j deleted) and cofactor |
 | `\diag(d_1, \dots, d_n)` | diagonal matrix |
 | `A \sim B` | similar |
 | `T'` | dual map (transpose of T) W* → V*. The star is reserved for adjoints |
@@ -113,6 +115,7 @@ This list is fixed. A chapter that needs a new symbol adds it here, and a new ma
 | `\norm{A}` | operator norm induced by the named vector norm |
 | `\kappa(A)` | condition number |
 | `\conv(S)` | convex hull |
+| `\vol` | volume of a parallelepiped, \|det\| (Ch 6) |
 | `x \prec y`, `x \prec_w y` | majorization, weak majorization |
 | `x^{\downarrow}` | decreasing rearrangement |
 

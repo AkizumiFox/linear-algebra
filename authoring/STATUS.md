@@ -12,7 +12,8 @@ The plan is at `~/.claude/plans/cached-gathering-sedgewick.md`. The outline of a
 | 3 | ch03-linear-maps | Linear maps | deployed |
 | 4 | ch04-duality | Duality | deployed |
 | 5 | ch05-polynomials | Polynomials | deployed |
-| 6–23 | | see plan | not started |
+| 6 | ch06-determinants | Determinants | deployed |
+| 7–23 | | see plan | not started |
 
 ## Open forward promises
 
@@ -26,7 +27,7 @@ Add a line when a section promises something later ("proved in Chapter 5"); tick
 - [ ] Ch 0 → Ch 1: independence/"not all zero"; {0} subspace, ∅ not; intersection vs union of subspaces; span as intersection; Fⁿ as a vector space
 - [ ] Ch 0 → Ch 3: kernel test for injectivity; quotient vector spaces; similarity
 - [ ] Ch 0 → Ch 5: unique prime factorization in F[x] (Ch 0 mentions uniqueness for integers without proof)
-- [ ] Ch 0 → Ch 6: sign of a permutation
+- [x] Ch 0 → Ch 6: sign of a permutation
 - [ ] Ch 0 → Ch 13: char ≠ 2 in forms
 - [ ] Ch 0 (09-matrices) → Ch 2: every elementary row operation is left multiplication by an invertible matrix; row equivalence = reachable by row operations
 - [ ] Ch 0 (09-matrices) → Ch 3: similar matrices represent the same linear map in different bases; matrix of a composition is the product
@@ -63,3 +64,11 @@ Add a line when a section promises something later ("proved in Chapter 5"); tick
 - [ ] Ch 5 → Ch 8: minimal polynomial = monic generator of I_T (`thm-annihilator-ideal`); invariant subspaces defined; Cayley–Hamilton; primary decomposition via `thm-kernel-splitting` and `exr-polynomials-of-operators-c2`
 - [ ] Ch 5 → Ch 9: canonical forms from primary decomposition
 - [ ] Ch 5 → Ch 8: diagonalizable ⇔ minimal polynomial splits with distinct roots; every complex operator has an eigenvalue (FTA)
+- Ch 6 §03: disjoint cycle decomposition only asserted (Ch 0 shows by example) — consider a short proof in M7.
+- [ ] Ch 6 → Ch 8: (xI − A)·adj(xI − A) = det(xI − A)·I reappears (Cayley–Hamilton route)
+- [ ] Ch 6 → Ch 7: Schur complements cite `thm-det-block-triangular`
+- [ ] Ch 6 → Ch 8: eigenvalues from `thm-charpoly-root-iff-singular`; Cayley–Hamilton; p_AB = p_BA in general
+- [ ] Ch 6 → Ch 9: complete similarity invariants
+- [ ] Ch 6 → Ch 10/12: Gram matrices, √det(AᵀA) area via inner products
+- [ ] Ch 6 → Ch 11: circulants of every size
+- [ ] Ch 6 → Ch 23: matrix-tree theorem
