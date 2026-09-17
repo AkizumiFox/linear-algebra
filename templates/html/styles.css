@@ -1536,7 +1536,7 @@ a.xref {
   background-size: 0 1px;
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
-  transition: background-size 0.25s var(--ease-out), color 0.18s var(--ease-out);
+  transition: background-size 0.25s var(--ease-out), background-color 0.2s var(--ease-out), color 0.18s var(--ease-out);
 }
 
 .env,
@@ -1553,7 +1553,7 @@ a.xref {
 }
 
 .env {
-  transition: --env-mix 0.25s var(--ease-out);
+  transition: --env-mix 0.25s var(--ease-out), box-shadow 0.25s var(--ease-out);
 }
 
 .code-cell {
@@ -1579,7 +1579,7 @@ a.xref {
 }
 
 .pagination-link {
-  transition: border-color 0.2s var(--ease-out), color 0.2s var(--ease-out),
+  transition: border-color 0.2s var(--ease-out), color 0.2s var(--ease-out), background-color 0.2s var(--ease-out),
     box-shadow 0.25s var(--ease-out), transform 0.25s var(--ease-out);
 }
 
@@ -1589,17 +1589,24 @@ a.xref {
 }
 
 @media (hover: hover) and (pointer: fine) {
+  /* References: underline drawn from the left over a faint highlight */
   a.xref:hover {
-    background-size: 100% 1px;
+    background-size: 100% 1.5px;
+    background-color: color-mix(in srgb, var(--accent) 8%, transparent);
+    border-radius: 2px;
   }
 
-  /* The block under the pointer is a shade stronger */
+  /* The block under the pointer: stronger tint, a soft shadow, a thicker edge */
   .env:hover {
-    --env-mix: calc(var(--env-tint) + 3%);
+    --env-mix: calc(var(--env-tint) + 5%);
+    box-shadow:
+      inset 2px 0 0 color-mix(in srgb, var(--env-color), var(--paper) var(--env-rule-mix)),
+      0 6px 22px -8px color-mix(in srgb, var(--env-color) 35%, transparent);
   }
 
   .code-cell:hover {
-    border-color: color-mix(in srgb, var(--accent) 35%, var(--rule-strong));
+    border-color: color-mix(in srgb, var(--accent) 45%, var(--rule-strong));
+    box-shadow: 0 6px 22px -10px color-mix(in srgb, var(--accent) 40%, transparent);
   }
 
   .code-cell:focus-within {
@@ -1607,29 +1614,55 @@ a.xref {
     box-shadow: 0 0 0 3px var(--accent-soft);
   }
 
-  /* Sidebar: the title slides a hair toward the text */
+  /* Sidebar: a light accent wash, and the title slides toward the text */
+  .sidebar-nav a:hover {
+    background: color-mix(in srgb, var(--accent) 9%, var(--paper));
+    color: var(--accent);
+  }
+
+  .sidebar-nav a:hover .nav-section-number {
+    color: inherit;
+  }
+
   .sidebar-nav a:hover .nav-section-title,
   .nav-chapter-title-link:hover .nav-chapter-title {
-    transform: translateX(2px);
+    transform: translateX(3px);
+  }
+
+  .nav-chapter-header .nav-chapter-title-link:hover {
+    background: transparent;
+  }
+
+  /* On this page: the rail lights up beside the link */
+  .toc a:hover {
+    color: var(--accent);
   }
 
   .toc a:hover:not(.active) {
-    border-left-color: var(--rule-strong);
+    border-left-color: color-mix(in srgb, var(--accent) 45%, var(--rule));
+  }
+
+  .other-formats a:hover,
+  .breadcrumb-item a:hover {
+    color: var(--accent);
   }
 
   /* Previous / next: the card lifts and its arrow points onward */
   .pagination-link:hover {
-    box-shadow: 0 4px 14px color-mix(in srgb, var(--ink) 10%, transparent);
-    transform: translateY(-1px);
+    border-color: var(--accent);
+    color: var(--accent);
+    background: color-mix(in srgb, var(--accent) 4%, var(--paper));
+    box-shadow: 0 8px 22px -10px color-mix(in srgb, var(--accent) 45%, transparent);
+    transform: translateY(-2px);
   }
 
   .nav-page-previous .pagination-link:hover .bi {
-    transform: translateX(-3px);
+    transform: translateX(-4px);
     color: var(--accent);
   }
 
   .nav-page-next .pagination-link:hover .bi {
-    transform: translateX(3px);
+    transform: translateX(4px);
     color: var(--accent);
   }
 
@@ -1637,18 +1670,28 @@ a.xref {
     transform: translateY(0) scale(0.98);
   }
 
-  /* Toolbar icons respond, and the theme icon hints at the change */
+  /* Toolbar and search results */
+  .icon-button:hover {
+    background: color-mix(in srgb, var(--accent) 10%, var(--paper));
+    border-color: color-mix(in srgb, var(--accent) 25%, transparent);
+    color: var(--accent);
+  }
+
   .sidebar-toggle:hover i,
   .toc-toggle:hover i {
-    transform: scale(1.08);
+    transform: scale(1.1);
   }
 
   [data-theme="light"] .theme-toggle:hover .theme-icon-moon {
-    transform: rotate(-18deg) scale(1.05);
+    transform: rotate(-20deg) scale(1.08);
   }
 
   [data-theme="dark"] .theme-toggle:hover .theme-icon-sun {
-    transform: rotate(45deg) scale(1.05);
+    transform: rotate(60deg) scale(1.08);
+  }
+
+  .search-result-item:hover {
+    background: color-mix(in srgb, var(--accent) 7%, var(--paper));
   }
 
   .sidebar-tools a {
