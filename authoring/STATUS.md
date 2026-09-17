@@ -10,7 +10,9 @@ The plan is at `~/.claude/plans/cached-gathering-sedgewick.md`. The outline of a
 | 1 | ch01-vector-spaces | Vector spaces | deployed |
 | 2 | ch02-linear-systems | Linear systems | deployed |
 | 3 | ch03-linear-maps | Linear maps | deployed |
-| 4–23 | | see plan | not started |
+| 4 | ch04-duality | Duality | deployed |
+| 5 | ch05-polynomials | Polynomials | drafting |
+| 6–23 | | see plan | not started |
 
 ## Open forward promises
 
@@ -54,3 +56,7 @@ Add a line when a section promises something later ("proved in Chapter 5"); tick
 - Ch 3 §01 and §04 both define "operator" and the shorthand Tv; §04 should defer to §01 (check at Ch 3 referee).
 - Ch 3: 'every linear map Fⁿ → Fᵐ is T_A' proved twice (§04 C1(b), §06 inline) — consolidate into one result in M7. §06 long; rank/invertibility subsection could move to §08.
 - Ch 3 §09 long (~11k raw): consider splitting products/cosets from isomorphism theorems. §08 Sylvester proof duplicates exr-rank-nullity-c1.
+- [ ] Ch 4 → Ch 5: Lagrange interpolation formula; evaluation functionals dual to Lagrange basis
+- [ ] Ch 4 → Ch 10: orthogonal complement vs annihilator; inner product gives chosen V ≅ V*; adjoint T*
+- Ch 4: ε_{ij} vs ε_c overload; zero functional notation — tidy in M7.
+- Ch 4: restriction map V* → U* named R (§02), ρ (§05), ι′ (§04) — unify to ρ in M7. §06 extra early Quick check.

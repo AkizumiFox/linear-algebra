@@ -82,7 +82,11 @@
         "src/ch01-vector-spaces",
         "src/ch02-linear-systems",
         "src/ch03-linear-maps",
-        "src/ch04-duality"
+        "src/ch04-duality",
+        {
+            "dir": "src/ch05-polynomials",
+            "part": "Part II · Determinants and the Structure of Operators"
+        }
     ],
     "macros": "latex/macros.tex",
     "templates": {

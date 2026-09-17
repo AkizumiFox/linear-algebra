@@ -60,6 +60,7 @@ This list is fixed. A chapter that needs a new symbol adds it here, and a new ma
 | `T'` | dual map (transpose of T) W* → V*. The star is reserved for adjoints |
 | `V^{*}`, `\v^{*}` / `\varphi` | dual space; functionals are Greek letters φ, ψ |
 | `U^{0}` | annihilator of U in V* |
+| `\codim U` | codimension, dim V/U |
 | `V^{**}`, `\ev_{\v}`, `\ev_V` | double dual; evaluation at v, φ ↦ φ(v), an element of V**; the evaluation map V → V**, v ↦ ev_v |
 | `\GL_n(F)`, `\SL_n(F)` | general and special linear groups |
 

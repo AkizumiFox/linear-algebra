@@ -119,3 +119,17 @@ decompositions
 functionals
 invariance
 monomial
+codimension
+hyperplane
+hyperplanes
+dualizing
+isomorphically
+inhomogeneous
+parametrically
+adjoints
+subobjects
+adjoint
+duals
+Fredholm
+naturality
+Naturality

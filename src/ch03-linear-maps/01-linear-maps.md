@@ -431,7 +431,17 @@ S(\v) = a_1S(\v_1) + \dots + a_nS(\v_n) = a_1\w_1 + \dots + a_n\w_n = T(\v).
 Since \( S(\v) = T(\v) \) for every \( \v \in V \), the functions are equal: \( S = T \). This proves the theorem.
 :::
 
-The theorem has two halves, and they are used differently. Uniqueness says that **to check two linear maps are equal, check them on a basis**. Existence says that **to build a linear map, choose the images of a basis freely**. The same statement and proof hold for the infinite bases of Chapter 1, §8, because every vector is still a unique **finite** combination of basis vectors. Later in this chapter this theorem turns into the matrix of a linear map: once bases are fixed, the \( n \) vectors \( T(\v_i) \), written in coordinates, are the columns.
+The theorem has two halves, and they are used differently. Uniqueness says that **to check two linear maps are equal, check them on a basis**. Existence says that **to build a linear map, choose the images of a basis freely**. The same holds for the infinite bases of Chapter 1, §8, because every vector is still a unique **finite** combination of basis vectors; we record this as @thm-linear-map-from-any-basis below. Later in this chapter this theorem turns into the matrix of a linear map: once bases are fixed, the \( n \) vectors \( T(\v_i) \), written in coordinates, are the columns.
+
+::: {#thm-linear-map-from-any-basis}
+[Linear Maps on an Arbitrary Basis]
+
+Let \( V \) and \( W \) be vector spaces over \( F \), let \( B \) be a basis of \( V \) (possibly infinite, in the sense of @thm-basis-extension-general), and for each \( \b \in B \) let \( \w_{\b} \in W \) be any vector. Then there is exactly one linear map \( T \colon V \to W \) with \( T\b = \w_{\b} \) for every \( \b \in B \).
+:::
+
+::: {.proof}
+Let \( \v \in V \). Since \( B \) spans \( V \) and is independent, \( \v \) is a finite combination \( \v = \sum_{\b \in B} a_{\b}\b \) in which only finitely many \( a_{\b} \) are non-zero, and these coefficients are unique: two such expressions differ by a finite combination of distinct elements of \( B \) equal to \( \0 \), whose coefficients all vanish by independence. Define \( T\v = \sum_{\b \in B} a_{\b}\w_{\b} \), a finite sum. The coefficients of \( \v + \u \) and of \( c\v \) are \( a_{\b} + a'_{\b} \) and \( ca_{\b} \) by uniqueness, so \( T \) is linear, and \( T\b = \w_{\b} \) because the coefficients of \( \b \) are \( 1 \) at \( \b \) and \( 0 \) elsewhere. If \( S \) is another linear map with \( S\b = \w_{\b} \) for all \( \b \), then \( S\v = \sum a_{\b} S\b = T\v \) by @thm-linear-combination. This proves the theorem.
+:::
 
 ::: {#exm-map-from-basis-values}
 [Finding a Formula from Values on a Basis]
