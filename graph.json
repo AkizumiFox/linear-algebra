@@ -11519,6 +11519,1626 @@
    "chapter": "Polynomials",
    "chapterNumber": 5,
    "color": "#2f62b5"
+  },
+  {
+   "id": "exm-two-by-two-from-rules",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "ad - bc from the Rules",
+   "url": "ch06-determinants/01-area-and-volume.html#exm-two-by-two-from-rules",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exr-area-and-volume-a1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "A1",
+   "url": "ch06-determinants/01-area-and-volume.html#exr-area-and-volume-a1",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-area-and-volume-b1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B1: Signed Areas from the Rules",
+   "url": "ch06-determinants/01-area-and-volume.html#exr-area-and-volume-b1",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-area-and-volume-b2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B2: Equal Sides Force the Swap Rule",
+   "url": "ch06-determinants/01-area-and-volume.html#exr-area-and-volume-b2",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-area-and-volume-c1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C1: Area of a Triangle",
+   "url": "ch06-determinants/01-area-and-volume.html#exr-area-and-volume-c1",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-area-and-volume-c2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C2: The 1 \u00d7 1 Case",
+   "url": "ch06-determinants/01-area-and-volume.html#exr-area-and-volume-c2",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#a8670c"
+  },
+  {
+   "id": "def-alternating-form",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 6.2.2",
+   "title": "Alternating Form",
+   "url": "ch06-determinants/02-multilinear-alternating-forms.html#def-alternating-form",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#b0414f"
+  },
+  {
+   "id": "def-multilinear-form",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 6.2.1",
+   "title": "Multilinear Form",
+   "url": "ch06-determinants/02-multilinear-alternating-forms.html#def-multilinear-form",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#b0414f"
+  },
+  {
+   "id": "def-skew-symmetric-form",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 6.2.3",
+   "title": "Skew-Symmetric Form",
+   "url": "ch06-determinants/02-multilinear-alternating-forms.html#def-skew-symmetric-form",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#b0414f"
+  },
+  {
+   "id": "exm-alternating-forms",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "Alternating Forms",
+   "url": "ch06-determinants/02-multilinear-alternating-forms.html#exm-alternating-forms",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exr-multilinear-alternating-forms-a1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "A1",
+   "url": "ch06-determinants/02-multilinear-alternating-forms.html#exr-multilinear-alternating-forms-a1",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-multilinear-alternating-forms-b1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B1: Multilinear or Alternating?",
+   "url": "ch06-determinants/02-multilinear-alternating-forms.html#exr-multilinear-alternating-forms-b1",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-multilinear-alternating-forms-b2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B2: Alternating Bilinear Forms on F^2",
+   "url": "ch06-determinants/02-multilinear-alternating-forms.html#exr-multilinear-alternating-forms-b2",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-multilinear-alternating-forms-b3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B3: The Triple Product",
+   "url": "ch06-determinants/02-multilinear-alternating-forms.html#exr-multilinear-alternating-forms-b3",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-multilinear-alternating-forms-c1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C1: Too Many Arguments",
+   "url": "ch06-determinants/02-multilinear-alternating-forms.html#exr-multilinear-alternating-forms-c1",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-multilinear-alternating-forms-c2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C2: Bilinear Forms over nF_2",
+   "url": "ch06-determinants/02-multilinear-alternating-forms.html#exr-multilinear-alternating-forms-c2",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#a8670c"
+  },
+  {
+   "id": "thm-alternating-forms-space",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 6.2.3",
+   "title": "Alternating Forms Form a Vector Space",
+   "url": "ch06-determinants/02-multilinear-alternating-forms.html#thm-alternating-forms-space",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-alternating-properties",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 6.2.1",
+   "title": "Properties of Alternating Forms",
+   "url": "ch06-determinants/02-multilinear-alternating-forms.html#thm-alternating-properties",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-skew-symmetric-alternating",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 6.2.2",
+   "title": "Skew-Symmetric and Alternating Forms",
+   "url": "ch06-determinants/02-multilinear-alternating-forms.html#thm-skew-symmetric-alternating",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "cor-parity-well-defined",
+   "type": "corollary",
+   "group": "statements",
+   "name": "Corollary 6.3.3",
+   "title": "Parity Is Well Defined",
+   "url": "ch06-determinants/03-permutations-and-sign.html#cor-parity-well-defined",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "cor-sign-transposition",
+   "type": "corollary",
+   "group": "statements",
+   "name": "Corollary 6.3.2",
+   "title": "Sign of a Transposition",
+   "url": "ch06-determinants/03-permutations-and-sign.html#cor-sign-transposition",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "def-alternating-group",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 6.3.3",
+   "title": "Alternating Group",
+   "url": "ch06-determinants/03-permutations-and-sign.html#def-alternating-group",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#b0414f"
+  },
+  {
+   "id": "def-inversion",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 6.3.1",
+   "title": "Inversion",
+   "url": "ch06-determinants/03-permutations-and-sign.html#def-inversion",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#b0414f"
+  },
+  {
+   "id": "def-sign-permutation",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 6.3.2",
+   "title": "Sign of a Permutation",
+   "url": "ch06-determinants/03-permutations-and-sign.html#def-sign-permutation",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#b0414f"
+  },
+  {
+   "id": "exm-sign-two-ways",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "A Sign Computed Two Ways",
+   "url": "ch06-determinants/03-permutations-and-sign.html#exm-sign-two-ways",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exr-permutations-and-sign-a1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "A1",
+   "url": "ch06-determinants/03-permutations-and-sign.html#exr-permutations-and-sign-a1",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-permutations-and-sign-b1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B1: Computing Signs",
+   "url": "ch06-determinants/03-permutations-and-sign.html#exr-permutations-and-sign-b1",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-permutations-and-sign-b2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B2: Sign of the Inverse",
+   "url": "ch06-determinants/03-permutations-and-sign.html#exr-permutations-and-sign-b2",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-permutations-and-sign-b3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B3: The Reversal Permutation",
+   "url": "ch06-determinants/03-permutations-and-sign.html#exr-permutations-and-sign-b3",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-permutations-and-sign-c1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C1: Half the Permutations Are Even",
+   "url": "ch06-determinants/03-permutations-and-sign.html#exr-permutations-and-sign-c1",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-permutations-and-sign-c2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C2: Sign from the Number of Cycles",
+   "url": "ch06-determinants/03-permutations-and-sign.html#exr-permutations-and-sign-c2",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#a8670c"
+  },
+  {
+   "id": "prp-sign-of-cycle",
+   "type": "proposition",
+   "group": "statements",
+   "name": "Proposition 6.3.4",
+   "title": "Sign of a Cycle",
+   "url": "ch06-determinants/03-permutations-and-sign.html#prp-sign-of-cycle",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-sign-multiplicative",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 6.3.1",
+   "title": "The Sign Is Multiplicative",
+   "url": "ch06-determinants/03-permutations-and-sign.html#thm-sign-multiplicative",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "cor-alternating-forms-one-dimensional",
+   "type": "corollary",
+   "group": "statements",
+   "name": "Corollary 6.4.4",
+   "title": "Alternating n-Forms on F^n Form a Line",
+   "url": "ch06-determinants/04-existence-and-uniqueness.html#cor-alternating-forms-one-dimensional",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "def-determinant",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 6.4.1",
+   "title": "Determinant",
+   "url": "ch06-determinants/04-existence-and-uniqueness.html#def-determinant",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#b0414f"
+  },
+  {
+   "id": "exr-existence-and-uniqueness-a1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "A1",
+   "url": "ch06-determinants/04-existence-and-uniqueness.html#exr-existence-and-uniqueness-a1",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-existence-and-uniqueness-b1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B1: Six-term determinants",
+   "url": "ch06-determinants/04-existence-and-uniqueness.html#exr-existence-and-uniqueness-b1",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-existence-and-uniqueness-b2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B2: The determinant of P_sigma",
+   "url": "ch06-determinants/04-existence-and-uniqueness.html#exr-existence-and-uniqueness-b2",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-existence-and-uniqueness-b3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B3: A zero row",
+   "url": "ch06-determinants/04-existence-and-uniqueness.html#exr-existence-and-uniqueness-b3",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-existence-and-uniqueness-c1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C1: Too many zeros",
+   "url": "ch06-determinants/04-existence-and-uniqueness.html#exr-existence-and-uniqueness-c1",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-existence-and-uniqueness-c2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C2: Counting the cost",
+   "url": "ch06-determinants/04-existence-and-uniqueness.html#exr-existence-and-uniqueness-c2",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-existence-and-uniqueness-c3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C3: The permanent, and a change of field",
+   "url": "ch06-determinants/04-existence-and-uniqueness.html#exr-existence-and-uniqueness-c3",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#a8670c"
+  },
+  {
+   "id": "lem-alternating-permute-arguments",
+   "type": "lemma",
+   "group": "statements",
+   "name": "Lemma 6.4.1",
+   "title": "Permuting the arguments of an alternating form",
+   "url": "ch06-determinants/04-existence-and-uniqueness.html#lem-alternating-permute-arguments",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-alternating-form-uniqueness",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 6.4.2",
+   "title": "Uniqueness of Alternating Forms",
+   "url": "ch06-determinants/04-existence-and-uniqueness.html#thm-alternating-form-uniqueness",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-det-transpose",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 6.4.5",
+   "title": "Determinant of the Transpose",
+   "url": "ch06-determinants/04-existence-and-uniqueness.html#thm-det-transpose",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-det-triangular",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 6.4.6",
+   "title": "Determinant of a Triangular Matrix",
+   "url": "ch06-determinants/04-existence-and-uniqueness.html#thm-det-triangular",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-leibniz-formula-alternating",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 6.4.3",
+   "title": "Existence: the Leibniz Formula",
+   "url": "ch06-determinants/04-existence-and-uniqueness.html#thm-leibniz-formula-alternating",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "cor-det-inverse",
+   "type": "corollary",
+   "group": "statements",
+   "name": "Corollary 6.5.6",
+   "title": "Determinant of the Inverse",
+   "url": "ch06-determinants/05-properties.html#cor-det-inverse",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "cor-det-similarity-invariant",
+   "type": "corollary",
+   "group": "statements",
+   "name": "Corollary 6.5.7",
+   "title": "Determinant Is a Similarity Invariant",
+   "url": "ch06-determinants/05-properties.html#cor-det-similarity-invariant",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "def-det-operator",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 6.5.1",
+   "title": "Determinant of an operator",
+   "url": "ch06-determinants/05-properties.html#def-det-operator",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#b0414f"
+  },
+  {
+   "id": "exm-det-by-elimination",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "A 4 \u00d7 4 Determinant by Elimination",
+   "url": "ch06-determinants/05-properties.html#exm-det-by-elimination",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exr-properties-a1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "A1",
+   "url": "ch06-determinants/05-properties.html#exr-properties-a1",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-properties-b1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B1: Determinants by elimination",
+   "url": "ch06-determinants/05-properties.html#exr-properties-b1",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-properties-b2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B2: A parameter",
+   "url": "ch06-determinants/05-properties.html#exr-properties-b2",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-properties-b3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B3: The shift operator",
+   "url": "ch06-determinants/05-properties.html#exr-properties-b3",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-properties-c1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C1: Orthogonal-type matrices",
+   "url": "ch06-determinants/05-properties.html#exr-properties-c1",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-properties-c2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C2: Left multiplication on matrices",
+   "url": "ch06-determinants/05-properties.html#exr-properties-c2",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-properties-c3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C3: Non-square factors",
+   "url": "ch06-determinants/05-properties.html#exr-properties-c3",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#a8670c"
+  },
+  {
+   "id": "thm-det-homomorphism",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 6.5.9",
+   "title": "The Determinant Is a Group Homomorphism",
+   "url": "ch06-determinants/05-properties.html#thm-det-homomorphism",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-det-multiplicative",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 6.5.4",
+   "title": "Multiplicativity of the Determinant",
+   "url": "ch06-determinants/05-properties.html#thm-det-multiplicative",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-det-nonzero-iff-invertible",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 6.5.2",
+   "title": "Invertible if and only if Non-Zero Determinant",
+   "url": "ch06-determinants/05-properties.html#thm-det-nonzero-iff-invertible",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-det-operator-properties",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 6.5.8",
+   "title": "Properties of the Determinant of an Operator",
+   "url": "ch06-determinants/05-properties.html#thm-det-operator-properties",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-det-properties",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 6.5.5",
+   "title": "Properties of Determinants",
+   "url": "ch06-determinants/05-properties.html#thm-det-properties",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-det-row-operations",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 6.5.1",
+   "title": "Row Operations and the Determinant",
+   "url": "ch06-determinants/05-properties.html#thm-det-row-operations",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-invertible-tfae-det",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 6.5.3",
+   "title": "Invertible Matrix Theorem, with Determinants",
+   "url": "ch06-determinants/05-properties.html#thm-invertible-tfae-det",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "cor-integer-inverse",
+   "type": "corollary",
+   "group": "statements",
+   "name": "Corollary 6.6.5",
+   "title": "Integer Matrices with Integer Inverses",
+   "url": "ch06-determinants/06-cofactor-expansion.html#cor-integer-inverse",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "cor-inverse-formula",
+   "type": "corollary",
+   "group": "statements",
+   "name": "Corollary 6.6.3",
+   "title": "Inverse via the Adjugate",
+   "url": "ch06-determinants/06-cofactor-expansion.html#cor-inverse-formula",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "def-adjugate",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 6.6.2",
+   "title": "Adjugate",
+   "url": "ch06-determinants/06-cofactor-expansion.html#def-adjugate",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#b0414f"
+  },
+  {
+   "id": "def-minor-cofactor",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 6.6.1",
+   "title": "Minor and cofactor",
+   "url": "ch06-determinants/06-cofactor-expansion.html#def-minor-cofactor",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#b0414f"
+  },
+  {
+   "id": "exm-laplace-4x4",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "A 4 \u00d7 4 Expansion",
+   "url": "ch06-determinants/06-cofactor-expansion.html#exm-laplace-4x4",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exr-cofactor-expansion-a1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "A1",
+   "url": "ch06-determinants/06-cofactor-expansion.html#exr-cofactor-expansion-a1",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-cofactor-expansion-b1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B1: Adjugate and inverse",
+   "url": "ch06-determinants/06-cofactor-expansion.html#exr-cofactor-expansion-b1",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-cofactor-expansion-b2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B2: Cramer\u2019s rule",
+   "url": "ch06-determinants/06-cofactor-expansion.html#exr-cofactor-expansion-b2",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-cofactor-expansion-b3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B3: Choosing the best line",
+   "url": "ch06-determinants/06-cofactor-expansion.html#exr-cofactor-expansion-b3",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-cofactor-expansion-c1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C1: The determinant of the adjugate",
+   "url": "ch06-determinants/06-cofactor-expansion.html#exr-cofactor-expansion-c1",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-cofactor-expansion-c2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C2: The rank of the adjugate",
+   "url": "ch06-determinants/06-cofactor-expansion.html#exr-cofactor-expansion-c2",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-cofactor-expansion-c3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C3: An adjugate over F[x]",
+   "url": "ch06-determinants/06-cofactor-expansion.html#exr-cofactor-expansion-c3",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#a8670c"
+  },
+  {
+   "id": "thm-adjugate-identity",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 6.6.2",
+   "title": "The Adjugate Identity",
+   "url": "ch06-determinants/06-cofactor-expansion.html#thm-adjugate-identity",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-cramers-rule",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 6.6.4",
+   "title": "Cramer\u2019s Rule",
+   "url": "ch06-determinants/06-cofactor-expansion.html#thm-cramers-rule",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-laplace-expansion",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 6.6.1",
+   "title": "Laplace Expansion",
+   "url": "ch06-determinants/06-cofactor-expansion.html#thm-laplace-expansion",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "cor-gram-determinant-nonnegative",
+   "type": "corollary",
+   "group": "statements",
+   "name": "Corollary 6.7.3",
+   "title": "Gram Determinants Are Non-negative",
+   "url": "ch06-determinants/07-minors-and-rank.html#cor-gram-determinant-nonnegative",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "def-submatrix-minor",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 6.7.1",
+   "title": "Submatrix and Minor",
+   "url": "ch06-determinants/07-minors-and-rank.html#def-submatrix-minor",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#b0414f"
+  },
+  {
+   "id": "exm-cauchy-binet",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "Cauchy\u2013Binet for a 2 \u00d7 3 times 3 \u00d7 2 Product",
+   "url": "ch06-determinants/07-minors-and-rank.html#exm-cauchy-binet",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-rank-by-minors",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "Rank of a Family of Matrices",
+   "url": "ch06-determinants/07-minors-and-rank.html#exm-rank-by-minors",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exr-minors-and-rank-a1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "A1",
+   "url": "ch06-determinants/07-minors-and-rank.html#exr-minors-and-rank-a1",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-minors-and-rank-b1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B1: Rank with a parameter",
+   "url": "ch06-determinants/07-minors-and-rank.html#exr-minors-and-rank-b1",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-minors-and-rank-b2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B2: Checking Cauchy\u2013Binet",
+   "url": "ch06-determinants/07-minors-and-rank.html#exr-minors-and-rank-b2",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-minors-and-rank-b3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B3: The Lagrange identity",
+   "url": "ch06-determinants/07-minors-and-rank.html#exr-minors-and-rank-b3",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-minors-and-rank-c1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C1: Counting spanning trees",
+   "url": "ch06-determinants/07-minors-and-rank.html#exr-minors-and-rank-c1",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-minors-and-rank-c2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C2: Rank does not depend on the field",
+   "url": "ch06-determinants/07-minors-and-rank.html#exr-minors-and-rank-c2",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#a8670c"
+  },
+  {
+   "id": "thm-cauchy-binet",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 6.7.2",
+   "title": "Cauchy\u2013Binet Formula",
+   "url": "ch06-determinants/07-minors-and-rank.html#thm-cauchy-binet",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-rank-via-minors",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 6.7.1",
+   "title": "Rank via Minors",
+   "url": "ch06-determinants/07-minors-and-rank.html#thm-rank-via-minors",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "cor-vandermonde-nonzero",
+   "type": "corollary",
+   "group": "statements",
+   "name": "Corollary 6.8.2",
+   "title": "Distinct Nodes Give an Invertible Vandermonde Matrix",
+   "url": "ch06-determinants/08-special-determinants.html#cor-vandermonde-nonzero",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "exm-all-ones-perturbed",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "a on the Diagonal, 1 Elsewhere",
+   "url": "ch06-determinants/08-special-determinants.html#exm-all-ones-perturbed",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-tridiagonal-fibonacci",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "Fibonacci Numbers as Determinants",
+   "url": "ch06-determinants/08-special-determinants.html#exm-tridiagonal-fibonacci",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-vandermonde-three",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "A 3 \u00d7 3 Vandermonde Determinant",
+   "url": "ch06-determinants/08-special-determinants.html#exm-vandermonde-three",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exr-special-determinants-a1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "A1",
+   "url": "ch06-determinants/08-special-determinants.html#exr-special-determinants-a1",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-special-determinants-b1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B1: A 4 \u00d7 4 Vandermonde determinant",
+   "url": "ch06-determinants/08-special-determinants.html#exr-special-determinants-b1",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-special-determinants-b2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B2: The second-difference matrix",
+   "url": "ch06-determinants/08-special-determinants.html#exr-special-determinants-b2",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-special-determinants-b3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B3: A rank-one update",
+   "url": "ch06-determinants/08-special-determinants.html#exr-special-determinants-b3",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-special-determinants-c1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C1: The Cauchy determinant",
+   "url": "ch06-determinants/08-special-determinants.html#exr-special-determinants-c1",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-special-determinants-c2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C2: A circulant determinant over \u2102",
+   "url": "ch06-determinants/08-special-determinants.html#exr-special-determinants-c2",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-special-determinants-c3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C3: Rank-one updates of an invertible matrix",
+   "url": "ch06-determinants/08-special-determinants.html#exr-special-determinants-c3",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#a8670c"
+  },
+  {
+   "id": "thm-det-block-triangular",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 6.8.4",
+   "title": "Block Triangular Determinant",
+   "url": "ch06-determinants/08-special-determinants.html#thm-det-block-triangular",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-matrix-determinant-lemma",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 6.8.5",
+   "title": "Matrix Determinant Lemma",
+   "url": "ch06-determinants/08-special-determinants.html#thm-matrix-determinant-lemma",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-tridiagonal-recurrence",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 6.8.3",
+   "title": "Tridiagonal Recurrence",
+   "url": "ch06-determinants/08-special-determinants.html#thm-tridiagonal-recurrence",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-vandermonde-determinant",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 6.8.1",
+   "title": "Vandermonde Determinant",
+   "url": "ch06-determinants/08-special-determinants.html#thm-vandermonde-determinant",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "def-orientation",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 6.9.2",
+   "title": "Orientation",
+   "url": "ch06-determinants/09-orientation-and-volume.html#def-orientation",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#b0414f"
+  },
+  {
+   "id": "def-parallelepiped-volume",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 6.9.1",
+   "title": "Volume of a Parallelepiped",
+   "url": "ch06-determinants/09-orientation-and-volume.html#def-parallelepiped-volume",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#b0414f"
+  },
+  {
+   "id": "exm-volume-scaling",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "Area of an Image",
+   "url": "ch06-determinants/09-orientation-and-volume.html#exm-volume-scaling",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exr-orientation-and-volume-a1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "A1",
+   "url": "ch06-determinants/09-orientation-and-volume.html#exr-orientation-and-volume-a1",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-orientation-and-volume-b1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B1: Volume of a parallelepiped",
+   "url": "ch06-determinants/09-orientation-and-volume.html#exr-orientation-and-volume-b1",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-orientation-and-volume-b2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B2: Comparing orientations",
+   "url": "ch06-determinants/09-orientation-and-volume.html#exr-orientation-and-volume-b2",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-orientation-and-volume-b3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B3: Areas of images",
+   "url": "ch06-determinants/09-orientation-and-volume.html#exr-orientation-and-volume-b3",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-orientation-and-volume-c1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C1: Area of a triangle in space",
+   "url": "ch06-determinants/09-orientation-and-volume.html#exr-orientation-and-volume-c1",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-orientation-and-volume-c2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C2: Rotations and reflections",
+   "url": "ch06-determinants/09-orientation-and-volume.html#exr-orientation-and-volume-c2",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#a8670c"
+  },
+  {
+   "id": "prp-orientation-preserving",
+   "type": "proposition",
+   "group": "statements",
+   "name": "Proposition 6.9.4",
+   "title": "Determinant Sign and Orientation",
+   "url": "ch06-determinants/09-orientation-and-volume.html#prp-orientation-preserving",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-det-volume-scaling",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 6.9.2",
+   "title": "Linear Maps Scale Volume by lvert det rvert",
+   "url": "ch06-determinants/09-orientation-and-volume.html#thm-det-volume-scaling",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-two-orientations",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 6.9.3",
+   "title": "There Are Exactly Two Orientations",
+   "url": "ch06-determinants/09-orientation-and-volume.html#thm-two-orientations",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-volume-characterization",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 6.9.1",
+   "title": "Volume Is Determined by Its Rules",
+   "url": "ch06-determinants/09-orientation-and-volume.html#thm-volume-characterization",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "def-characteristic-polynomial",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 6.10.1",
+   "title": "Characteristic Polynomial",
+   "url": "ch06-determinants/10-characteristic-polynomial.html#def-characteristic-polynomial",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#b0414f"
+  },
+  {
+   "id": "def-charpoly-operator",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 6.10.2",
+   "title": "Characteristic Polynomial of an Operator",
+   "url": "ch06-determinants/10-characteristic-polynomial.html#def-charpoly-operator",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#b0414f"
+  },
+  {
+   "id": "exm-charpoly-operators",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "Characteristic Polynomials of Two Operators",
+   "url": "ch06-determinants/10-characteristic-polynomial.html#exm-charpoly-operators",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-charpoly-small",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "A 3 \u00d7 3 Characteristic Polynomial",
+   "url": "ch06-determinants/10-characteristic-polynomial.html#exm-charpoly-small",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exr-characteristic-polynomial-a1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "A1",
+   "url": "ch06-determinants/10-characteristic-polynomial.html#exr-characteristic-polynomial-a1",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-characteristic-polynomial-b1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B1: Computing characteristic polynomials",
+   "url": "ch06-determinants/10-characteristic-polynomial.html#exr-characteristic-polynomial-b1",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-characteristic-polynomial-b2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B2: Transpose",
+   "url": "ch06-determinants/10-characteristic-polynomial.html#exr-characteristic-polynomial-b2",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-characteristic-polynomial-b3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B3: AB and BA",
+   "url": "ch06-determinants/10-characteristic-polynomial.html#exr-characteristic-polynomial-b3",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-characteristic-polynomial-c1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C1: Companion matrices",
+   "url": "ch06-determinants/10-characteristic-polynomial.html#exr-characteristic-polynomial-c1",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-characteristic-polynomial-c2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C2: Nilpotent 2 \u00d7 2 matrices",
+   "url": "ch06-determinants/10-characteristic-polynomial.html#exr-characteristic-polynomial-c2",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-characteristic-polynomial-c3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C3: Odd size over the reals",
+   "url": "ch06-determinants/10-characteristic-polynomial.html#exr-characteristic-polynomial-c3",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#a8670c"
+  },
+  {
+   "id": "lem-charpoly-evaluation",
+   "type": "lemma",
+   "group": "statements",
+   "name": "Lemma 6.10.1",
+   "title": "Evaluating the Characteristic Polynomial",
+   "url": "ch06-determinants/10-characteristic-polynomial.html#lem-charpoly-evaluation",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-charpoly-coefficients",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 6.10.2",
+   "title": "Coefficients of the Characteristic Polynomial",
+   "url": "ch06-determinants/10-characteristic-polynomial.html#thm-charpoly-coefficients",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-charpoly-root-iff-singular",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 6.10.4",
+   "title": "Roots of the Characteristic Polynomial",
+   "url": "ch06-determinants/10-characteristic-polynomial.html#thm-charpoly-root-iff-singular",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-charpoly-similarity-invariant",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 6.10.3",
+   "title": "Similar Matrices Have the Same Characteristic Polynomial",
+   "url": "ch06-determinants/10-characteristic-polynomial.html#thm-charpoly-similarity-invariant",
+   "shard": "ch06-determinants",
+   "chapter": "Determinants",
+   "chapterNumber": 6,
+   "color": "#2f62b5"
   }
  ],
  "edges": [
@@ -23715,6 +25335,1961 @@
   {
    "source": "thm-projection-direct-sum",
    "target": "thm-kernel-splitting",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-two-by-two-inverse",
+   "target": "exr-area-and-volume-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-two-by-two-from-rules",
+   "target": "exr-area-and-volume-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-vacuous-truth",
+   "target": "exr-area-and-volume-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-vacuous-truth",
+   "target": "exm-alternating-forms",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-evaluation-respects-operations",
+   "target": "exm-alternating-forms",
+   "kind": "reference"
+  },
+  {
+   "source": "def-alternating-form",
+   "target": "exr-multilinear-alternating-forms-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "def-multilinear-form",
+   "target": "exr-multilinear-alternating-forms-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-alternating-properties",
+   "target": "exr-multilinear-alternating-forms-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-skew-symmetric-alternating",
+   "target": "exr-multilinear-alternating-forms-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-alternating-forms",
+   "target": "exr-multilinear-alternating-forms-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-differentiation",
+   "target": "exr-multilinear-alternating-forms-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-alternating-forms-space",
+   "target": "exr-multilinear-alternating-forms-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-evaluation-respects-operations",
+   "target": "exr-multilinear-alternating-forms-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-trace-properties",
+   "target": "exr-multilinear-alternating-forms-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-alternating-forms",
+   "target": "exr-multilinear-alternating-forms-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-alternating-forms-space",
+   "target": "exr-multilinear-alternating-forms-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-alternating-properties",
+   "target": "exr-multilinear-alternating-forms-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-alternating-forms",
+   "target": "exr-multilinear-alternating-forms-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-alternating-forms",
+   "target": "exr-multilinear-alternating-forms-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-alternating-properties",
+   "target": "exr-multilinear-alternating-forms-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-size-bounds",
+   "target": "exr-multilinear-alternating-forms-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-skew-symmetric-alternating",
+   "target": "exr-multilinear-alternating-forms-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-vector-spaces",
+   "target": "thm-alternating-forms-space",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-subspace-test",
+   "target": "thm-alternating-forms-space",
+   "kind": "reference"
+  },
+  {
+   "source": "def-skew-symmetric-form",
+   "target": "thm-alternating-properties",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-linear-dependence-lemma",
+   "target": "thm-alternating-properties",
+   "kind": "reference"
+  },
+  {
+   "source": "def-characteristic",
+   "target": "thm-skew-symmetric-alternating",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-alternating-properties",
+   "target": "thm-skew-symmetric-alternating",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-sign-transposition",
+   "target": "cor-parity-well-defined",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-sign-multiplicative",
+   "target": "cor-parity-well-defined",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-cycle-notation",
+   "target": "exm-sign-two-ways",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-sign-of-cycle",
+   "target": "exm-sign-two-ways",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-sign-multiplicative",
+   "target": "exm-sign-two-ways",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-parity-well-defined",
+   "target": "exr-permutations-and-sign-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "def-alternating-group",
+   "target": "exr-permutations-and-sign-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "def-inversion",
+   "target": "exr-permutations-and-sign-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "def-sign-permutation",
+   "target": "exr-permutations-and-sign-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-sign-of-cycle",
+   "target": "exr-permutations-and-sign-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-alternating-properties",
+   "target": "exr-permutations-and-sign-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-sign-multiplicative",
+   "target": "exr-permutations-and-sign-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-sign-of-cycle",
+   "target": "exr-permutations-and-sign-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-sign-multiplicative",
+   "target": "exr-permutations-and-sign-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-sign-multiplicative",
+   "target": "exr-permutations-and-sign-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-sign-transposition",
+   "target": "exr-permutations-and-sign-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-bijective-iff-invertible",
+   "target": "exr-permutations-and-sign-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-sign-multiplicative",
+   "target": "exr-permutations-and-sign-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-cycle-notation",
+   "target": "exr-permutations-and-sign-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-sign-two-ways",
+   "target": "exr-permutations-and-sign-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-sign-of-cycle",
+   "target": "exr-permutations-and-sign-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-sign-multiplicative",
+   "target": "exr-permutations-and-sign-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-parity-well-defined",
+   "target": "prp-sign-of-cycle",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-sign-multiplicative",
+   "target": "prp-sign-of-cycle",
+   "kind": "reference"
+  },
+  {
+   "source": "def-sign-permutation",
+   "target": "thm-sign-multiplicative",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-bijective-iff-invertible",
+   "target": "thm-sign-multiplicative",
+   "kind": "reference"
+  },
+  {
+   "source": "def-determinant",
+   "target": "cor-alternating-forms-one-dimensional",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-alternating-form-uniqueness",
+   "target": "cor-alternating-forms-one-dimensional",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-leibniz-formula-alternating",
+   "target": "cor-alternating-forms-one-dimensional",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-alternating-form-uniqueness",
+   "target": "exr-existence-and-uniqueness-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-leibniz-formula-alternating",
+   "target": "exr-existence-and-uniqueness-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "def-determinant",
+   "target": "exr-existence-and-uniqueness-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-transpose",
+   "target": "exr-existence-and-uniqueness-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-sign-transposition",
+   "target": "exr-existence-and-uniqueness-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "def-permutation-matrix",
+   "target": "exr-existence-and-uniqueness-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-cycle-notation",
+   "target": "exr-existence-and-uniqueness-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-alternating-permute-arguments",
+   "target": "exr-existence-and-uniqueness-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-leibniz-formula-alternating",
+   "target": "exr-existence-and-uniqueness-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-sign-multiplicative",
+   "target": "exr-existence-and-uniqueness-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "def-determinant",
+   "target": "exr-existence-and-uniqueness-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-transpose",
+   "target": "exr-existence-and-uniqueness-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-alternating-form-uniqueness",
+   "target": "exr-existence-and-uniqueness-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-leibniz-formula-alternating",
+   "target": "exr-existence-and-uniqueness-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-sign-transposition",
+   "target": "lem-alternating-permute-arguments",
+   "kind": "reference"
+  },
+  {
+   "source": "def-sign-permutation",
+   "target": "lem-alternating-permute-arguments",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-alternating-properties",
+   "target": "lem-alternating-permute-arguments",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-sign-multiplicative",
+   "target": "lem-alternating-permute-arguments",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-transpositions-generate",
+   "target": "lem-alternating-permute-arguments",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-alternating-permute-arguments",
+   "target": "thm-alternating-form-uniqueness",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-finite-injective-iff-surjective",
+   "target": "thm-alternating-form-uniqueness",
+   "kind": "reference"
+  },
+  {
+   "source": "def-determinant",
+   "target": "thm-det-transpose",
+   "kind": "reference"
+  },
+  {
+   "source": "def-transpose",
+   "target": "thm-det-transpose",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-leibniz-formula-alternating",
+   "target": "thm-det-transpose",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-sign-multiplicative",
+   "target": "thm-det-transpose",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-transpose-properties",
+   "target": "thm-det-transpose",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-transpose",
+   "target": "thm-det-triangular",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-sign-transposition",
+   "target": "thm-leibniz-formula-alternating",
+   "kind": "reference"
+  },
+  {
+   "source": "def-alternating-group",
+   "target": "thm-leibniz-formula-alternating",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-sign-multiplicative",
+   "target": "thm-leibniz-formula-alternating",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-multiplicative",
+   "target": "cor-det-inverse",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-properties",
+   "target": "cor-det-inverse",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-det-inverse",
+   "target": "cor-det-similarity-invariant",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-multiplicative",
+   "target": "cor-det-similarity-invariant",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-row-operations",
+   "target": "exm-det-by-elimination",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-triangular",
+   "target": "exm-det-by-elimination",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-det-similarity-invariant",
+   "target": "exr-properties-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-change-of-basis-maps",
+   "target": "exr-properties-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-homomorphism",
+   "target": "exr-properties-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-multiplicative",
+   "target": "exr-properties-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-row-operations",
+   "target": "exr-properties-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-row-operations",
+   "target": "exr-properties-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-triangular",
+   "target": "exr-properties-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-nonzero-iff-invertible",
+   "target": "exr-properties-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-triangular",
+   "target": "exr-properties-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "def-det-operator",
+   "target": "exr-properties-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-operator-properties",
+   "target": "exr-properties-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-triangular",
+   "target": "exr-properties-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-properties",
+   "target": "exr-properties-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-triangular",
+   "target": "exr-properties-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-sign-transposition",
+   "target": "exr-properties-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "def-permutation-matrix",
+   "target": "exr-properties-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "exr-existence-and-uniqueness-b2",
+   "target": "exr-properties-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-multiplicative",
+   "target": "exr-properties-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-nonzero-iff-invertible",
+   "target": "exr-properties-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-operator-properties",
+   "target": "exr-properties-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-row-operations",
+   "target": "exr-properties-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-triangular",
+   "target": "exr-properties-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-invertible-tfae",
+   "target": "exr-properties-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-sign-multiplicative",
+   "target": "exr-properties-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-three-views-of-product",
+   "target": "exr-properties-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-multiplicative",
+   "target": "exr-properties-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-nonzero-iff-invertible",
+   "target": "exr-properties-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-invertible-tfae-det",
+   "target": "exr-properties-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rank-product-inequality",
+   "target": "exr-properties-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "def-group-homomorphism",
+   "target": "thm-det-homomorphism",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-multiplicative",
+   "target": "thm-det-homomorphism",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-nonzero-iff-invertible",
+   "target": "thm-det-homomorphism",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-triangular",
+   "target": "thm-det-homomorphism",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-homomorphism-basic-properties",
+   "target": "thm-det-homomorphism",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-alternating-forms-one-dimensional",
+   "target": "thm-det-multiplicative",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-alternating-form-uniqueness",
+   "target": "thm-det-multiplicative",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-leibniz-formula-alternating",
+   "target": "thm-det-multiplicative",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-multiplication-properties",
+   "target": "thm-det-multiplicative",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-times-vector-columns",
+   "target": "thm-det-multiplicative",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-three-views-of-product",
+   "target": "thm-det-multiplicative",
+   "kind": "reference"
+  },
+  {
+   "source": "def-row-equivalent",
+   "target": "thm-det-nonzero-iff-invertible",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-square-rref-identity-or-zero-row",
+   "target": "thm-det-nonzero-iff-invertible",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-row-operations",
+   "target": "thm-det-nonzero-iff-invertible",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-field-basic-properties",
+   "target": "thm-det-nonzero-iff-invertible",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-invertible-tfae",
+   "target": "thm-det-nonzero-iff-invertible",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-row-op-is-left-multiplication",
+   "target": "thm-det-nonzero-iff-invertible",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rref-exists",
+   "target": "thm-det-nonzero-iff-invertible",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rref-unique",
+   "target": "thm-det-nonzero-iff-invertible",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-multiplicative",
+   "target": "thm-det-operator-properties",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-nonzero-iff-invertible",
+   "target": "thm-det-operator-properties",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-of-composition",
+   "target": "thm-det-operator-properties",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rank-map-equals-rank-matrix",
+   "target": "thm-det-operator-properties",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-multiplicative",
+   "target": "thm-det-properties",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-transpose",
+   "target": "thm-det-properties",
+   "kind": "reference"
+  },
+  {
+   "source": "def-elementary-matrix",
+   "target": "thm-det-row-operations",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-alternating-properties",
+   "target": "thm-det-row-operations",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-transpose",
+   "target": "thm-det-row-operations",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-leibniz-formula-alternating",
+   "target": "thm-det-row-operations",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-row-op-is-left-multiplication",
+   "target": "thm-det-row-operations",
+   "kind": "reference"
+  },
+  {
+   "source": "def-rank-matrix",
+   "target": "thm-invertible-tfae-det",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-nonzero-iff-invertible",
+   "target": "thm-invertible-tfae-det",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-transpose",
+   "target": "thm-invertible-tfae-det",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dim-impl-eq",
+   "target": "thm-invertible-tfae-det",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-invertible-operator-tfae",
+   "target": "thm-invertible-tfae-det",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-invertible-tfae",
+   "target": "thm-invertible-tfae-det",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-times-vector-columns",
+   "target": "thm-invertible-tfae-det",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-transpose-properties",
+   "target": "thm-invertible-tfae-det",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-inverse-formula",
+   "target": "cor-integer-inverse",
+   "kind": "reference"
+  },
+  {
+   "source": "def-determinant",
+   "target": "cor-integer-inverse",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-multiplicative",
+   "target": "cor-integer-inverse",
+   "kind": "reference"
+  },
+  {
+   "source": "def-adjugate",
+   "target": "cor-inverse-formula",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-adjugate-identity",
+   "target": "cor-inverse-formula",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-multiplication-properties",
+   "target": "cor-inverse-formula",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-one-sided-inverse",
+   "target": "cor-inverse-formula",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-laplace-expansion",
+   "target": "exm-laplace-4x4",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-integer-inverse",
+   "target": "exr-cofactor-expansion-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "def-adjugate",
+   "target": "exr-cofactor-expansion-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "def-minor-cofactor",
+   "target": "exr-cofactor-expansion-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-adjugate-identity",
+   "target": "exr-cofactor-expansion-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-cramers-rule",
+   "target": "exr-cofactor-expansion-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-inverse-formula",
+   "target": "exr-cofactor-expansion-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "def-adjugate",
+   "target": "exr-cofactor-expansion-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-laplace-expansion",
+   "target": "exr-cofactor-expansion-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "exr-cofactor-expansion-b1",
+   "target": "exr-cofactor-expansion-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-cramers-rule",
+   "target": "exr-cofactor-expansion-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-laplace-expansion",
+   "target": "exr-cofactor-expansion-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-adjugate-identity",
+   "target": "exr-cofactor-expansion-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-multiplicative",
+   "target": "exr-cofactor-expansion-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-nonzero-iff-invertible",
+   "target": "exr-cofactor-expansion-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-triangular",
+   "target": "exr-cofactor-expansion-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-inverse-formula",
+   "target": "exr-cofactor-expansion-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-adjugate-identity",
+   "target": "exr-cofactor-expansion-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-basis-column-space",
+   "target": "exr-cofactor-expansion-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-nonzero-iff-invertible",
+   "target": "exr-cofactor-expansion-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-inverse-matrix-properties",
+   "target": "exr-cofactor-expansion-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-invertible-tfae",
+   "target": "exr-cofactor-expansion-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-invertible-tfae-det",
+   "target": "exr-cofactor-expansion-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rank-nullity-matrix",
+   "target": "exr-cofactor-expansion-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-row-rank-equals-column-rank",
+   "target": "exr-cofactor-expansion-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-sift",
+   "target": "exr-cofactor-expansion-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-size-bounds",
+   "target": "exr-cofactor-expansion-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-three-views-of-product",
+   "target": "exr-cofactor-expansion-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "def-adjugate",
+   "target": "exr-cofactor-expansion-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-adjugate-identity",
+   "target": "exr-cofactor-expansion-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-laplace-expansion",
+   "target": "exr-cofactor-expansion-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-two-by-two-inverse",
+   "target": "exr-cofactor-expansion-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "def-adjugate",
+   "target": "thm-adjugate-identity",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-transpose",
+   "target": "thm-adjugate-identity",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-laplace-expansion",
+   "target": "thm-adjugate-identity",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-leibniz-formula-alternating",
+   "target": "thm-adjugate-identity",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-three-views-of-product",
+   "target": "thm-adjugate-identity",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-nonzero-iff-invertible",
+   "target": "thm-cramers-rule",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-inverse-matrix-properties",
+   "target": "thm-cramers-rule",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-leibniz-formula-alternating",
+   "target": "thm-cramers-rule",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-times-vector-columns",
+   "target": "thm-cramers-rule",
+   "kind": "reference"
+  },
+  {
+   "source": "def-inversion",
+   "target": "thm-laplace-expansion",
+   "kind": "reference"
+  },
+  {
+   "source": "def-sign-permutation",
+   "target": "thm-laplace-expansion",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-row-operations",
+   "target": "thm-laplace-expansion",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-transpose",
+   "target": "thm-laplace-expansion",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-leibniz-formula-alternating",
+   "target": "thm-laplace-expansion",
+   "kind": "reference"
+  },
+  {
+   "source": "def-transpose",
+   "target": "cor-gram-determinant-nonnegative",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-cauchy-binet",
+   "target": "cor-gram-determinant-nonnegative",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-transpose",
+   "target": "cor-gram-determinant-nonnegative",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rank-via-minors",
+   "target": "cor-gram-determinant-nonnegative",
+   "kind": "reference"
+  },
+  {
+   "source": "def-submatrix-minor",
+   "target": "exm-cauchy-binet",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-cauchy-binet",
+   "target": "exm-cauchy-binet",
+   "kind": "reference"
+  },
+  {
+   "source": "exr-minors-and-rank-c2",
+   "target": "exm-rank-by-minors",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-transpose",
+   "target": "exm-rank-by-minors",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-laplace-expansion",
+   "target": "exm-rank-by-minors",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rank-via-minors",
+   "target": "exm-rank-by-minors",
+   "kind": "reference"
+  },
+  {
+   "source": "def-submatrix-minor",
+   "target": "exr-minors-and-rank-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-cauchy-binet",
+   "target": "exr-minors-and-rank-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rank-via-minors",
+   "target": "exr-minors-and-rank-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-laplace-expansion",
+   "target": "exr-minors-and-rank-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rank-via-minors",
+   "target": "exr-minors-and-rank-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-cauchy-binet",
+   "target": "exr-minors-and-rank-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-gram-determinant-nonnegative",
+   "target": "exr-minors-and-rank-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-three-views-of-product",
+   "target": "exr-minors-and-rank-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-gram-determinant-nonnegative",
+   "target": "exr-minors-and-rank-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "def-incidence-matrix",
+   "target": "exr-minors-and-rank-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-alternating-properties",
+   "target": "exr-minors-and-rank-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-triangular",
+   "target": "exr-minors-and-rank-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-three-views-of-product",
+   "target": "exr-minors-and-rank-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "def-determinant",
+   "target": "exr-minors-and-rank-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "def-restriction-of-scalars",
+   "target": "exr-minors-and-rank-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rank-nullity-matrix",
+   "target": "exr-minors-and-rank-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rank-via-minors",
+   "target": "exr-minors-and-rank-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "def-alternating-form",
+   "target": "thm-cauchy-binet",
+   "kind": "reference"
+  },
+  {
+   "source": "def-determinant",
+   "target": "thm-cauchy-binet",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-alternating-permute-arguments",
+   "target": "thm-cauchy-binet",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-leibniz-formula-alternating",
+   "target": "thm-cauchy-binet",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-three-views-of-product",
+   "target": "thm-cauchy-binet",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-basis-column-space",
+   "target": "thm-rank-via-minors",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-nonzero-iff-invertible",
+   "target": "thm-rank-via-minors",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-transpose",
+   "target": "thm-rank-via-minors",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-independence-spanning-by-rank",
+   "target": "thm-rank-via-minors",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-invertible-tfae",
+   "target": "thm-rank-via-minors",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-laplace-expansion",
+   "target": "thm-rank-via-minors",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-row-rank-equals-column-rank",
+   "target": "thm-rank-via-minors",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-sift",
+   "target": "thm-rank-via-minors",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-size-bounds",
+   "target": "thm-rank-via-minors",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-nonzero-iff-invertible",
+   "target": "cor-vandermonde-nonzero",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-field-basic-properties",
+   "target": "cor-vandermonde-nonzero",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-vandermonde-determinant",
+   "target": "cor-vandermonde-nonzero",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-root-bound",
+   "target": "cor-vandermonde-nonzero",
+   "kind": "mention"
+  },
+  {
+   "source": "thm-matrix-determinant-lemma",
+   "target": "exm-all-ones-perturbed",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-tridiagonal-recurrence",
+   "target": "exm-tridiagonal-fibonacci",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-vandermonde-determinant",
+   "target": "exm-vandermonde-three",
+   "kind": "mention"
+  },
+  {
+   "source": "cor-vandermonde-nonzero",
+   "target": "exr-special-determinants-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-block-triangular",
+   "target": "exr-special-determinants-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-determinant-lemma",
+   "target": "exr-special-determinants-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-tridiagonal-recurrence",
+   "target": "exr-special-determinants-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-vandermonde-determinant",
+   "target": "exr-special-determinants-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-vandermonde-determinant",
+   "target": "exr-special-determinants-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-nonzero-iff-invertible",
+   "target": "exr-special-determinants-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-strong-induction",
+   "target": "exr-special-determinants-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-tridiagonal-recurrence",
+   "target": "exr-special-determinants-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-nonzero-iff-invertible",
+   "target": "exr-special-determinants-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-row-operations",
+   "target": "exr-special-determinants-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-determinant-lemma",
+   "target": "exr-special-determinants-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-row-operations",
+   "target": "exr-special-determinants-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-laplace-expansion",
+   "target": "exr-special-determinants-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-vandermonde-nonzero",
+   "target": "exr-special-determinants-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-roots-of-unity",
+   "target": "exr-special-determinants-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-multiplicative",
+   "target": "exr-special-determinants-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-transpose",
+   "target": "exr-special-determinants-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-triangular",
+   "target": "exr-special-determinants-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-three-views-of-product",
+   "target": "exr-special-determinants-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-multiplicative",
+   "target": "exr-special-determinants-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-nonzero-iff-invertible",
+   "target": "exr-special-determinants-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-determinant-lemma",
+   "target": "exr-special-determinants-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-multiplication-properties",
+   "target": "exr-special-determinants-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "def-determinant",
+   "target": "thm-det-block-triangular",
+   "kind": "reference"
+  },
+  {
+   "source": "def-inversion",
+   "target": "thm-det-block-triangular",
+   "kind": "reference"
+  },
+  {
+   "source": "def-sign-permutation",
+   "target": "thm-det-block-triangular",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-alternating-properties",
+   "target": "thm-det-block-triangular",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-transpose",
+   "target": "thm-det-block-triangular",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-block-triangular",
+   "target": "thm-matrix-determinant-lemma",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-multiplicative",
+   "target": "thm-matrix-determinant-lemma",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-three-views-of-product",
+   "target": "thm-matrix-determinant-lemma",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-laplace-expansion",
+   "target": "thm-tridiagonal-recurrence",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-root-bound-general",
+   "target": "thm-vandermonde-determinant",
+   "kind": "reference"
+  },
+  {
+   "source": "def-alternating-form",
+   "target": "thm-vandermonde-determinant",
+   "kind": "reference"
+  },
+  {
+   "source": "def-minor-cofactor",
+   "target": "thm-vandermonde-determinant",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-degree-of-product",
+   "target": "thm-vandermonde-determinant",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-transpose",
+   "target": "thm-vandermonde-determinant",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-evaluation-respects-operations",
+   "target": "thm-vandermonde-determinant",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-induction",
+   "target": "thm-vandermonde-determinant",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-laplace-expansion",
+   "target": "thm-vandermonde-determinant",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-volume-scaling",
+   "target": "exm-volume-scaling",
+   "kind": "reference"
+  },
+  {
+   "source": "def-orientation",
+   "target": "exr-orientation-and-volume-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "def-parallelepiped-volume",
+   "target": "exr-orientation-and-volume-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-orientation-preserving",
+   "target": "exr-orientation-and-volume-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-alternating-properties",
+   "target": "exr-orientation-and-volume-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-volume-scaling",
+   "target": "exr-orientation-and-volume-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-volume-characterization",
+   "target": "exr-orientation-and-volume-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-triangular",
+   "target": "exr-orientation-and-volume-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-volume-scaling",
+   "target": "exr-orientation-and-volume-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "def-orientation",
+   "target": "exr-orientation-and-volume-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-alternating-properties",
+   "target": "exr-orientation-and-volume-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-orientation-preserving",
+   "target": "exr-orientation-and-volume-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-volume-scaling",
+   "target": "exr-orientation-and-volume-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-gram-determinant-nonnegative",
+   "target": "exr-orientation-and-volume-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "def-parallelepiped-volume",
+   "target": "exr-orientation-and-volume-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-orientation-preserving",
+   "target": "exr-orientation-and-volume-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-multiplicative",
+   "target": "exr-orientation-and-volume-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-volume-scaling",
+   "target": "exr-orientation-and-volume-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "def-change-of-coordinates-matrix",
+   "target": "prp-orientation-preserving",
+   "kind": "reference"
+  },
+  {
+   "source": "def-det-operator",
+   "target": "prp-orientation-preserving",
+   "kind": "reference"
+  },
+  {
+   "source": "def-matrix-of-linear-map",
+   "target": "prp-orientation-preserving",
+   "kind": "reference"
+  },
+  {
+   "source": "def-orientation",
+   "target": "prp-orientation-preserving",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-isomorphism-preserves-bases",
+   "target": "prp-orientation-preserving",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-two-orientations",
+   "target": "prp-orientation-preserving",
+   "kind": "reference"
+  },
+  {
+   "source": "def-det-operator",
+   "target": "thm-det-volume-scaling",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-multiplicative",
+   "target": "thm-det-volume-scaling",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-of-map-coordinates",
+   "target": "thm-det-volume-scaling",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-three-views-of-product",
+   "target": "thm-det-volume-scaling",
+   "kind": "reference"
+  },
+  {
+   "source": "def-equivalence-relation",
+   "target": "thm-two-orientations",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-change-of-coordinates",
+   "target": "thm-two-orientations",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-multiplicative",
+   "target": "thm-two-orientations",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-triangular",
+   "target": "thm-two-orientations",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-alternating-properties",
+   "target": "thm-volume-characterization",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-multiplicative",
+   "target": "thm-volume-characterization",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-row-operations",
+   "target": "thm-volume-characterization",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-invertible-tfae",
+   "target": "thm-volume-characterization",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-leibniz-formula-alternating",
+   "target": "thm-volume-characterization",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-linear-dependence-lemma",
+   "target": "thm-volume-characterization",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-row-op-is-left-multiplication",
+   "target": "thm-volume-characterization",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-transpose-properties",
+   "target": "thm-volume-characterization",
+   "kind": "reference"
+  },
+  {
+   "source": "def-determinant",
+   "target": "def-characteristic-polynomial",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-charpoly-similarity-invariant",
+   "target": "exm-charpoly-operators",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-degree-of-product",
+   "target": "exm-charpoly-small",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-nonzero-iff-invertible",
+   "target": "exm-charpoly-small",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-laplace-expansion",
+   "target": "exm-charpoly-small",
+   "kind": "reference"
+  },
+  {
+   "source": "def-characteristic-polynomial",
+   "target": "exr-characteristic-polynomial-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-charpoly-evaluation",
+   "target": "exr-characteristic-polynomial-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-charpoly-coefficients",
+   "target": "exr-characteristic-polynomial-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-charpoly-root-iff-singular",
+   "target": "exr-characteristic-polynomial-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-charpoly-coefficients",
+   "target": "exr-characteristic-polynomial-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-charpoly-root-iff-singular",
+   "target": "exr-characteristic-polynomial-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-block-triangular",
+   "target": "exr-characteristic-polynomial-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-laplace-expansion",
+   "target": "exr-characteristic-polynomial-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-charpoly-root-iff-singular",
+   "target": "exr-characteristic-polynomial-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-transpose",
+   "target": "exr-characteristic-polynomial-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-transpose-properties",
+   "target": "exr-characteristic-polynomial-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "def-similar-matrices",
+   "target": "exr-characteristic-polynomial-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-charpoly-coefficients",
+   "target": "exr-characteristic-polynomial-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-charpoly-similarity-invariant",
+   "target": "exr-characteristic-polynomial-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "exr-polynomials-of-operators-b2",
+   "target": "exr-characteristic-polynomial-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-charpoly-coefficients",
+   "target": "exr-characteristic-polynomial-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-block-triangular",
+   "target": "exr-characteristic-polynomial-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-triangular",
+   "target": "exr-characteristic-polynomial-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-laplace-expansion",
+   "target": "exr-characteristic-polynomial-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-charpoly-coefficients",
+   "target": "exr-characteristic-polynomial-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-multiplicative",
+   "target": "exr-characteristic-polynomial-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-field-basic-properties",
+   "target": "exr-characteristic-polynomial-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-odd-degree-real-root",
+   "target": "exr-characteristic-polynomial-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-charpoly-coefficients",
+   "target": "exr-characteristic-polynomial-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-charpoly-root-iff-singular",
+   "target": "exr-characteristic-polynomial-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-fundamental-theorem-of-algebra",
+   "target": "exr-characteristic-polynomial-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "def-characteristic-polynomial",
+   "target": "lem-charpoly-evaluation",
+   "kind": "reference"
+  },
+  {
+   "source": "def-determinant",
+   "target": "lem-charpoly-evaluation",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-evaluation-respects-operations",
+   "target": "lem-charpoly-evaluation",
+   "kind": "reference"
+  },
+  {
+   "source": "def-characteristic-polynomial",
+   "target": "thm-charpoly-coefficients",
+   "kind": "reference"
+  },
+  {
+   "source": "def-polynomial-evaluation",
+   "target": "thm-charpoly-coefficients",
+   "kind": "reference"
+  },
+  {
+   "source": "def-trace",
+   "target": "thm-charpoly-coefficients",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-charpoly-evaluation",
+   "target": "thm-charpoly-coefficients",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-degree-of-product",
+   "target": "thm-charpoly-coefficients",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-degree-of-sum",
+   "target": "thm-charpoly-coefficients",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-row-operations",
+   "target": "thm-charpoly-coefficients",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-root-bound-general",
+   "target": "thm-charpoly-root-iff-singular",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-charpoly-evaluation",
+   "target": "thm-charpoly-root-iff-singular",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-charpoly-coefficients",
+   "target": "thm-charpoly-root-iff-singular",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-nonzero-iff-invertible",
+   "target": "thm-charpoly-root-iff-singular",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-invertible-tfae",
+   "target": "thm-charpoly-root-iff-singular",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-multiplication-properties",
+   "target": "thm-charpoly-root-iff-singular",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-multiplicative",
+   "target": "thm-charpoly-similarity-invariant",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-multiplication-properties",
+   "target": "thm-charpoly-similarity-invariant",
    "kind": "reference"
   }
  ]

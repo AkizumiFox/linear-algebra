@@ -371,8 +371,69 @@
       "number": 6,
       "part": "",
       "collapsed": true,
-      "path": null,
-      "sections": []
+      "path": "ch06-determinants/index.html",
+      "sections": [
+        {
+          "title": "Signed Area and Volume",
+          "number": "6.1",
+          "path": "ch06-determinants/01-area-and-volume.html",
+          "filename": "01-area-and-volume.md"
+        },
+        {
+          "title": "Multilinear Alternating Forms",
+          "number": "6.2",
+          "path": "ch06-determinants/02-multilinear-alternating-forms.html",
+          "filename": "02-multilinear-alternating-forms.md"
+        },
+        {
+          "title": "Permutations and Sign",
+          "number": "6.3",
+          "path": "ch06-determinants/03-permutations-and-sign.html",
+          "filename": "03-permutations-and-sign.md"
+        },
+        {
+          "title": "Existence and Uniqueness of the Determinant",
+          "number": "6.4",
+          "path": "ch06-determinants/04-existence-and-uniqueness.html",
+          "filename": "04-existence-and-uniqueness.md"
+        },
+        {
+          "title": "Row Operations and Multiplicativity",
+          "number": "6.5",
+          "path": "ch06-determinants/05-properties.html",
+          "filename": "05-properties.md"
+        },
+        {
+          "title": "Cofactor Expansion, the Adjugate and Cramer's Rule",
+          "number": "6.6",
+          "path": "ch06-determinants/06-cofactor-expansion.html",
+          "filename": "06-cofactor-expansion.md"
+        },
+        {
+          "title": "Minors, Rank and Cauchy–Binet",
+          "number": "6.7",
+          "path": "ch06-determinants/07-minors-and-rank.html",
+          "filename": "07-minors-and-rank.md"
+        },
+        {
+          "title": "Special Determinants",
+          "number": "6.8",
+          "path": "ch06-determinants/08-special-determinants.html",
+          "filename": "08-special-determinants.md"
+        },
+        {
+          "title": "Orientation and Volume",
+          "number": "6.9",
+          "path": "ch06-determinants/09-orientation-and-volume.html",
+          "filename": "09-orientation-and-volume.md"
+        },
+        {
+          "title": "The Characteristic Polynomial",
+          "number": "6.10",
+          "path": "ch06-determinants/10-characteristic-polynomial.html",
+          "filename": "10-characteristic-polynomial.md"
+        }
+      ]
     }
   ]
 }
