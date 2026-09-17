@@ -9959,6 +9959,1566 @@
    "chapter": "Duality",
    "chapterNumber": 4,
    "color": "#2f62b5"
+  },
+  {
+   "id": "cor-root-bound-general",
+   "type": "corollary",
+   "group": "statements",
+   "name": "Corollary 5.1.4",
+   "title": "Distinct Roots Give a Product of Linear Factors",
+   "url": "ch05-polynomials/01-division.html#cor-root-bound-general",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "def-divisibility-polynomials",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 5.1.1",
+   "title": "Divisibility, Associates",
+   "url": "ch05-polynomials/01-division.html#def-divisibility-polynomials",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#b0414f"
+  },
+  {
+   "id": "exm-long-division",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "Long Division with a Non-Monic Divisor",
+   "url": "ch05-polynomials/01-division.html#exm-long-division",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-remainder-theorem",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "Remainders Without Dividing",
+   "url": "ch05-polynomials/01-division.html#exm-remainder-theorem",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exr-division-a1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "A1",
+   "url": "ch05-polynomials/01-division.html#exr-division-a1",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-division-b1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B1: Dividing Over Two Fields",
+   "url": "ch05-polynomials/01-division.html#exr-division-b1",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-division-b2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B2: A Factor of x^n - c^n",
+   "url": "ch05-polynomials/01-division.html#exr-division-b2",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-division-b3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B3: A Remainder Without Long Division",
+   "url": "ch05-polynomials/01-division.html#exr-division-b3",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-division-c1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C1: Division by a Monic Polynomial Over \u2124",
+   "url": "ch05-polynomials/01-division.html#exr-division-c1",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-division-c2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C2: Remainders on Division by a Quadratic",
+   "url": "ch05-polynomials/01-division.html#exr-division-c2",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-division-c3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C3: Equal Functions Over nF_p",
+   "url": "ch05-polynomials/01-division.html#exr-division-c3",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#a8670c"
+  },
+  {
+   "id": "prp-divisibility-properties",
+   "type": "proposition",
+   "group": "statements",
+   "name": "Proposition 5.1.2",
+   "title": "Rules for Divisibility",
+   "url": "ch05-polynomials/01-division.html#prp-divisibility-properties",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-polynomial-division",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 5.1.1",
+   "title": "Polynomial Division with Remainder",
+   "url": "ch05-polynomials/01-division.html#thm-polynomial-division",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-polynomial-function-determines-polynomial",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 5.1.5",
+   "title": "Values Determine a Polynomial",
+   "url": "ch05-polynomials/01-division.html#thm-polynomial-function-determines-polynomial",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-remainder-theorem",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 5.1.3",
+   "title": "Remainder Theorem and Factor Theorem",
+   "url": "ch05-polynomials/01-division.html#thm-remainder-theorem",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "cor-bezout-polynomials",
+   "type": "corollary",
+   "group": "statements",
+   "name": "Corollary 5.2.4",
+   "title": "B\u00e9zout\u2019s Identity for Polynomials",
+   "url": "ch05-polynomials/02-ideals-and-gcd.html#cor-bezout-polynomials",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "def-coprime",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 5.2.3",
+   "title": "Coprime Polynomials",
+   "url": "ch05-polynomials/02-ideals-and-gcd.html#def-coprime",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#b0414f"
+  },
+  {
+   "id": "def-gcd-polynomials",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 5.2.2",
+   "title": "Greatest Common Divisor",
+   "url": "ch05-polynomials/02-ideals-and-gcd.html#def-gcd-polynomials",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#b0414f"
+  },
+  {
+   "id": "def-ideal-polynomials",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 5.2.1",
+   "title": "Ideal of Flbrack xrbrack",
+   "url": "ch05-polynomials/02-ideals-and-gcd.html#def-ideal-polynomials",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#b0414f"
+  },
+  {
+   "id": "def-lcm-polynomials",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 5.2.4",
+   "title": "Least Common Multiple",
+   "url": "ch05-polynomials/02-ideals-and-gcd.html#def-lcm-polynomials",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#b0414f"
+  },
+  {
+   "id": "exm-euclid-polynomials",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "The Euclidean Algorithm with Back-Substitution",
+   "url": "ch05-polynomials/02-ideals-and-gcd.html#exm-euclid-polynomials",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-gcd-first",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "First Greatest Common Divisors",
+   "url": "ch05-polynomials/02-ideals-and-gcd.html#exm-gcd-first",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-ideals-polynomials",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "First Ideals",
+   "url": "ch05-polynomials/02-ideals-and-gcd.html#exm-ideals-polynomials",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exr-ideals-and-gcd-a1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "A1",
+   "url": "ch05-polynomials/02-ideals-and-gcd.html#exr-ideals-and-gcd-a1",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-ideals-and-gcd-b1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B1: gcd and B\u00e9zout Coefficients of Two Cubics",
+   "url": "ch05-polynomials/02-ideals-and-gcd.html#exr-ideals-and-gcd-b1",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-ideals-and-gcd-b2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B2: Ideal or Not?",
+   "url": "ch05-polynomials/02-ideals-and-gcd.html#exr-ideals-and-gcd-b2",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-ideals-and-gcd-b3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B3: The gcd of x^m - 1 and x^n - 1",
+   "url": "ch05-polynomials/02-ideals-and-gcd.html#exr-ideals-and-gcd-b3",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-ideals-and-gcd-c1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C1: Polynomials Vanishing on a Set",
+   "url": "ch05-polynomials/02-ideals-and-gcd.html#exr-ideals-and-gcd-c1",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-ideals-and-gcd-c2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C2: A Non-Principal Ideal in Two Variables",
+   "url": "ch05-polynomials/02-ideals-and-gcd.html#exr-ideals-and-gcd-c2",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-ideals-and-gcd-c3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C3: gcd Times lcm",
+   "url": "ch05-polynomials/02-ideals-and-gcd.html#exr-ideals-and-gcd-c3",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#a8670c"
+  },
+  {
+   "id": "lem-euclid-step",
+   "type": "lemma",
+   "group": "statements",
+   "name": "Lemma 5.2.5",
+   "title": "Dividing Does Not Change the Ideal",
+   "url": "ch05-polynomials/02-ideals-and-gcd.html#lem-euclid-step",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "prp-coprime-criterion",
+   "type": "proposition",
+   "group": "statements",
+   "name": "Proposition 5.2.7",
+   "title": "Coprime Means 1 Is a Combination",
+   "url": "ch05-polynomials/02-ideals-and-gcd.html#prp-coprime-criterion",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "prp-gcd-independent-of-field",
+   "type": "proposition",
+   "group": "statements",
+   "name": "Proposition 5.2.9",
+   "title": "The gcd Is the Same Over a Larger Field",
+   "url": "ch05-polynomials/02-ideals-and-gcd.html#prp-gcd-independent-of-field",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "prp-ideal-generated",
+   "type": "proposition",
+   "group": "statements",
+   "name": "Proposition 5.2.1",
+   "title": "The Ideal Generated by Finitely Many Polynomials",
+   "url": "ch05-polynomials/02-ideals-and-gcd.html#prp-ideal-generated",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-coprime-divides-product",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 5.2.8",
+   "title": "A Coprime Factor Can Be Canceled",
+   "url": "ch05-polynomials/02-ideals-and-gcd.html#thm-coprime-divides-product",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-euclidean-algorithm",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 5.2.6",
+   "title": "Euclidean Algorithm",
+   "url": "ch05-polynomials/02-ideals-and-gcd.html#thm-euclidean-algorithm",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-gcd-properties",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 5.2.3",
+   "title": "Characterization of the gcd",
+   "url": "ch05-polynomials/02-ideals-and-gcd.html#thm-gcd-properties",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-ideals-principal",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 5.2.2",
+   "title": "Every Ideal of Flbrack xrbrack Is Principal",
+   "url": "ch05-polynomials/02-ideals-and-gcd.html#thm-ideals-principal",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "cor-euclid-lemma-products",
+   "type": "corollary",
+   "group": "statements",
+   "name": "Corollary 5.3.4",
+   "title": "Euclid\u2019s Lemma for Several Factors",
+   "url": "ch05-polynomials/03-unique-factorization.html#cor-euclid-lemma-products",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "def-irreducible-polynomial",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 5.3.1",
+   "title": "Irreducible Polynomial",
+   "url": "ch05-polynomials/03-unique-factorization.html#def-irreducible-polynomial",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#b0414f"
+  },
+  {
+   "id": "exm-cubic-irreducible-over-q",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "A Cubic That Is Irreducible Over \u211a",
+   "url": "ch05-polynomials/03-unique-factorization.html#exm-cubic-irreducible-over-q",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-eisenstein",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "Irreducible Polynomials of Every Degree Over \u211a",
+   "url": "ch05-polynomials/03-unique-factorization.html#exm-eisenstein",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-factor-x4-minus-1",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "Factoring x^4 - 1 Over Six Fields",
+   "url": "ch05-polynomials/03-unique-factorization.html#exm-factor-x4-minus-1",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-irreducible-polynomials",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "First Irreducible and Reducible Polynomials",
+   "url": "ch05-polynomials/03-unique-factorization.html#exm-irreducible-polynomials",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exr-unique-factorization-a1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "A1",
+   "url": "ch05-polynomials/03-unique-factorization.html#exr-unique-factorization-a1",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-unique-factorization-b1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B1: Irreducible or Not?",
+   "url": "ch05-polynomials/03-unique-factorization.html#exr-unique-factorization-b1",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-unique-factorization-b2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B2: Factoring x^6 - 1 Over \u211a",
+   "url": "ch05-polynomials/03-unique-factorization.html#exr-unique-factorization-b2",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-unique-factorization-b3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B3: Small Irreducibles Over nF_2",
+   "url": "ch05-polynomials/03-unique-factorization.html#exr-unique-factorization-b3",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-unique-factorization-c1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C1: Infinitely Many Irreducibles",
+   "url": "ch05-polynomials/03-unique-factorization.html#exr-unique-factorization-c1",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-unique-factorization-c2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C2: Gauss\u2019s Lemma and Eisenstein\u2019s Criterion",
+   "url": "ch05-polynomials/03-unique-factorization.html#exr-unique-factorization-c2",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#a8670c"
+  },
+  {
+   "id": "lem-irreducible-gcd",
+   "type": "lemma",
+   "group": "statements",
+   "name": "Lemma 5.3.2",
+   "title": "The gcd with an Irreducible Polynomial",
+   "url": "ch05-polynomials/03-unique-factorization.html#lem-irreducible-gcd",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-eisenstein-criterion",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 5.3.7",
+   "title": "Eisenstein\u2019s Criterion",
+   "url": "ch05-polynomials/03-unique-factorization.html#thm-eisenstein-criterion",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-euclid-lemma-polynomials",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 5.3.3",
+   "title": "Euclid\u2019s Lemma for Polynomials",
+   "url": "ch05-polynomials/03-unique-factorization.html#thm-euclid-lemma-polynomials",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-irreducible-deg-2-3",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 5.3.1",
+   "title": "Irreducibility in Degree 2 and 3",
+   "url": "ch05-polynomials/03-unique-factorization.html#thm-irreducible-deg-2-3",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-rational-root",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 5.3.6",
+   "title": "Rational Root Theorem",
+   "url": "ch05-polynomials/03-unique-factorization.html#thm-rational-root",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-unique-factorization-polynomials",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 5.3.5",
+   "title": "Unique Factorization in Flbrack xrbrack",
+   "url": "ch05-polynomials/03-unique-factorization.html#thm-unique-factorization-polynomials",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "cor-squarefree-gcd-derivative",
+   "type": "corollary",
+   "group": "statements",
+   "name": "Corollary 5.4.6",
+   "title": "Repeated Factors and gcd(f, f')",
+   "url": "ch05-polynomials/04-roots-and-multiplicity.html#cor-squarefree-gcd-derivative",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "def-formal-derivative",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 5.4.3",
+   "title": "Formal Derivative",
+   "url": "ch05-polynomials/04-roots-and-multiplicity.html#def-formal-derivative",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#b0414f"
+  },
+  {
+   "id": "def-polynomial-splits",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 5.4.2",
+   "title": "Splitting into Linear Factors",
+   "url": "ch05-polynomials/04-roots-and-multiplicity.html#def-polynomial-splits",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#b0414f"
+  },
+  {
+   "id": "def-root-multiplicity",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 5.4.1",
+   "title": "Multiplicity of a Root",
+   "url": "ch05-polynomials/04-roots-and-multiplicity.html#def-root-multiplicity",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#b0414f"
+  },
+  {
+   "id": "exm-gcd-with-derivative",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "Detecting a Repeated Root with a gcd",
+   "url": "ch05-polynomials/04-roots-and-multiplicity.html#exm-gcd-with-derivative",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-multiplicity-by-division",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "Finding a Multiplicity by Repeated Division",
+   "url": "ch05-polynomials/04-roots-and-multiplicity.html#exm-multiplicity-by-division",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-taylor-expansion",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "Re-centering a Cubic",
+   "url": "ch05-polynomials/04-roots-and-multiplicity.html#exm-taylor-expansion",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exr-roots-and-multiplicity-a1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "A1",
+   "url": "ch05-polynomials/04-roots-and-multiplicity.html#exr-roots-and-multiplicity-a1",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-roots-and-multiplicity-b1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B1: Multiplicities over different fields",
+   "url": "ch05-polynomials/04-roots-and-multiplicity.html#exr-roots-and-multiplicity-b1",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-roots-and-multiplicity-b2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B2: A gcd test",
+   "url": "ch05-polynomials/04-roots-and-multiplicity.html#exr-roots-and-multiplicity-b2",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-roots-and-multiplicity-b3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B3: The multiplicity of 1",
+   "url": "ch05-polynomials/04-roots-and-multiplicity.html#exr-roots-and-multiplicity-b3",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-roots-and-multiplicity-c1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C1: Real roots of the derivative",
+   "url": "ch05-polynomials/04-roots-and-multiplicity.html#exr-roots-and-multiplicity-c1",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-roots-and-multiplicity-c2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C2: x^p - x over nF_p",
+   "url": "ch05-polynomials/04-roots-and-multiplicity.html#exr-roots-and-multiplicity-c2",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-roots-and-multiplicity-c3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C3: Removing repeated factors",
+   "url": "ch05-polynomials/04-roots-and-multiplicity.html#exr-roots-and-multiplicity-c3",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#a8670c"
+  },
+  {
+   "id": "lem-multiplicity-cofactor",
+   "type": "lemma",
+   "group": "statements",
+   "name": "Lemma 5.4.1",
+   "title": "Multiplicity via the Cofactor",
+   "url": "ch05-polynomials/04-roots-and-multiplicity.html#lem-multiplicity-cofactor",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-formal-derivative-rules",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 5.4.4",
+   "title": "Rules for the Formal Derivative",
+   "url": "ch05-polynomials/04-roots-and-multiplicity.html#thm-formal-derivative-rules",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-multiplicity-of-product",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 5.4.2",
+   "title": "Multiplicity of a Product",
+   "url": "ch05-polynomials/04-roots-and-multiplicity.html#thm-multiplicity-of-product",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-polynomial-taylor",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 5.4.7",
+   "title": "Taylor Expansion of a Polynomial",
+   "url": "ch05-polynomials/04-roots-and-multiplicity.html#thm-polynomial-taylor",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-repeated-root-derivative",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 5.4.5",
+   "title": "Repeated Root Test",
+   "url": "ch05-polynomials/04-roots-and-multiplicity.html#thm-repeated-root-derivative",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-roots-with-multiplicity",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 5.4.3",
+   "title": "Roots Counted with Multiplicity",
+   "url": "ch05-polynomials/04-roots-and-multiplicity.html#thm-roots-with-multiplicity",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "cor-complex-polynomial-splits",
+   "type": "corollary",
+   "group": "statements",
+   "name": "Corollary 5.5.5",
+   "title": "Complex Polynomials Split",
+   "url": "ch05-polynomials/05-fundamental-theorem-of-algebra.html#cor-complex-polynomial-splits",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "cor-odd-degree-real-root",
+   "type": "corollary",
+   "group": "statements",
+   "name": "Corollary 5.5.9",
+   "title": "Odd Degree Forces a Real Root",
+   "url": "ch05-polynomials/05-fundamental-theorem-of-algebra.html#cor-odd-degree-real-root",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "cor-real-factorization",
+   "type": "corollary",
+   "group": "statements",
+   "name": "Corollary 5.5.8",
+   "title": "Factorization over \u211d",
+   "url": "ch05-polynomials/05-fundamental-theorem-of-algebra.html#cor-real-factorization",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "cor-real-irreducibles",
+   "type": "corollary",
+   "group": "statements",
+   "name": "Corollary 5.5.7",
+   "title": "Irreducible Real Polynomials",
+   "url": "ch05-polynomials/05-fundamental-theorem-of-algebra.html#cor-real-irreducibles",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "exm-dalembert-step",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "One Step Downhill",
+   "url": "ch05-polynomials/05-fundamental-theorem-of-algebra.html#exm-dalembert-step",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-factor-x4-plus-1",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "Factoring x^4 + 1 over \u2102 and over \u211d",
+   "url": "ch05-polynomials/05-fundamental-theorem-of-algebra.html#exm-factor-x4-plus-1",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exr-fundamental-theorem-of-algebra-a1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "A1",
+   "url": "ch05-polynomials/05-fundamental-theorem-of-algebra.html#exr-fundamental-theorem-of-algebra-a1",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-fundamental-theorem-of-algebra-b1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B1: x^4 + 4",
+   "url": "ch05-polynomials/05-fundamental-theorem-of-algebra.html#exr-fundamental-theorem-of-algebra-b1",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-fundamental-theorem-of-algebra-b2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B2: x^6 + 1",
+   "url": "ch05-polynomials/05-fundamental-theorem-of-algebra.html#exr-fundamental-theorem-of-algebra-b2",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-fundamental-theorem-of-algebra-b3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B3: Real cubics",
+   "url": "ch05-polynomials/05-fundamental-theorem-of-algebra.html#exr-fundamental-theorem-of-algebra-b3",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-fundamental-theorem-of-algebra-b4",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B4: Running the proof on an example",
+   "url": "ch05-polynomials/05-fundamental-theorem-of-algebra.html#exr-fundamental-theorem-of-algebra-b4",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-fundamental-theorem-of-algebra-c1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C1: Fields where the theorem fails",
+   "url": "ch05-polynomials/05-fundamental-theorem-of-algebra.html#exr-fundamental-theorem-of-algebra-c1",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-fundamental-theorem-of-algebra-c2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C2: Sums of two squares",
+   "url": "ch05-polynomials/05-fundamental-theorem-of-algebra.html#exr-fundamental-theorem-of-algebra-c2",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#a8670c"
+  },
+  {
+   "id": "lem-dalembert",
+   "type": "lemma",
+   "group": "statements",
+   "name": "Lemma 5.5.4",
+   "title": "d\u2019Alembert\u2019s Lemma",
+   "url": "ch05-polynomials/05-fundamental-theorem-of-algebra.html#lem-dalembert",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "lem-minimum-modulus-attained",
+   "type": "lemma",
+   "group": "statements",
+   "name": "Lemma 5.5.3",
+   "title": "The Minimum of lvert p rvert Is Attained",
+   "url": "ch05-polynomials/05-fundamental-theorem-of-algebra.html#lem-minimum-modulus-attained",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "lem-polynomial-growth",
+   "type": "lemma",
+   "group": "statements",
+   "name": "Lemma 5.5.2",
+   "title": "Growth of a Polynomial",
+   "url": "ch05-polynomials/05-fundamental-theorem-of-algebra.html#lem-polynomial-growth",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-fundamental-theorem-of-algebra",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 5.5.1",
+   "title": "Fundamental Theorem of Algebra",
+   "url": "ch05-polynomials/05-fundamental-theorem-of-algebra.html#thm-fundamental-theorem-of-algebra",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-real-roots-conjugate-pairs",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 5.5.6",
+   "title": "Conjugate Roots Have Equal Multiplicity",
+   "url": "ch05-polynomials/05-fundamental-theorem-of-algebra.html#thm-real-roots-conjugate-pairs",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "cor-evaluations-dual-to-lagrange",
+   "type": "corollary",
+   "group": "statements",
+   "name": "Corollary 5.6.2",
+   "title": "Evaluations Are Dual to the Lagrange Basis",
+   "url": "ch05-polynomials/06-interpolation-and-crt.html#cor-evaluations-dual-to-lagrange",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "def-congruence-polynomials",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 5.6.2",
+   "title": "Congruence Modulo a Polynomial",
+   "url": "ch05-polynomials/06-interpolation-and-crt.html#def-congruence-polynomials",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#b0414f"
+  },
+  {
+   "id": "def-lagrange-basis",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 5.6.1",
+   "title": "Lagrange Basis",
+   "url": "ch05-polynomials/06-interpolation-and-crt.html#def-lagrange-basis",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#b0414f"
+  },
+  {
+   "id": "exm-crt-polynomials",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "A Linear and a Quadratic Modulus",
+   "url": "ch05-polynomials/06-interpolation-and-crt.html#exm-crt-polynomials",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-hermite-via-crt",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "Values and Slopes by CRT",
+   "url": "ch05-polynomials/06-interpolation-and-crt.html#exm-hermite-via-crt",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-lagrange-cubic",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "The Chapter 2 Cubic by Lagrange\u2019s Formula",
+   "url": "ch05-polynomials/06-interpolation-and-crt.html#exm-lagrange-cubic",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-quadrature-weights",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "Integrals and Slopes from Values",
+   "url": "ch05-polynomials/06-interpolation-and-crt.html#exm-quadrature-weights",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exr-interpolation-and-crt-a1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "A1",
+   "url": "ch05-polynomials/06-interpolation-and-crt.html#exr-interpolation-and-crt-a1",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-interpolation-and-crt-b1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B1: A Lagrange interpolant",
+   "url": "ch05-polynomials/06-interpolation-and-crt.html#exr-interpolation-and-crt-b1",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-interpolation-and-crt-b2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B2: A CRT system",
+   "url": "ch05-polynomials/06-interpolation-and-crt.html#exr-interpolation-and-crt-b2",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-interpolation-and-crt-b3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B3: The Lagrange basis sums to one",
+   "url": "ch05-polynomials/06-interpolation-and-crt.html#exr-interpolation-and-crt-b3",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-interpolation-and-crt-c1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C1: Interpolation over a finite field",
+   "url": "ch05-polynomials/06-interpolation-and-crt.html#exr-interpolation-and-crt-c1",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-interpolation-and-crt-c2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C2: Newton\u2019s form of the interpolant",
+   "url": "ch05-polynomials/06-interpolation-and-crt.html#exr-interpolation-and-crt-c2",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#a8670c"
+  },
+  {
+   "id": "lem-coprime-product",
+   "type": "lemma",
+   "group": "statements",
+   "name": "Lemma 5.6.3",
+   "title": "Coprime to Each, Coprime to the Product",
+   "url": "ch05-polynomials/06-interpolation-and-crt.html#lem-coprime-product",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-crt-isomorphism",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 5.6.6",
+   "title": "CRT as an Isomorphism",
+   "url": "ch05-polynomials/06-interpolation-and-crt.html#thm-crt-isomorphism",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-crt-polynomials",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 5.6.4",
+   "title": "Chinese Remainder Theorem for Polynomials",
+   "url": "ch05-polynomials/06-interpolation-and-crt.html#thm-crt-polynomials",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-dimension-polynomial-quotient",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 5.6.5",
+   "title": "Dimension of F[x]/langle m rangle",
+   "url": "ch05-polynomials/06-interpolation-and-crt.html#thm-dimension-polynomial-quotient",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-lagrange-interpolation",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 5.6.1",
+   "title": "Lagrange Interpolation",
+   "url": "ch05-polynomials/06-interpolation-and-crt.html#thm-lagrange-interpolation",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "def-annihilating-polynomial",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 5.7.1",
+   "title": "Annihilating Polynomial",
+   "url": "ch05-polynomials/07-polynomials-of-operators.html#def-annihilating-polynomial",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#b0414f"
+  },
+  {
+   "id": "exm-annihilating-polynomial-3x3",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "Finding an Annihilating Polynomial",
+   "url": "ch05-polynomials/07-polynomials-of-operators.html#exm-annihilating-polynomial-3x3",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-polynomial-of-2x2",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "Two Ways to Evaluate",
+   "url": "ch05-polynomials/07-polynomials-of-operators.html#exm-polynomial-of-2x2",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-splitting-3x3",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "A Splitting with a Repeated Factor",
+   "url": "ch05-polynomials/07-polynomials-of-operators.html#exm-splitting-3x3",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-splitting-involution",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "Recovering the Involution Decomposition",
+   "url": "ch05-polynomials/07-polynomials-of-operators.html#exm-splitting-involution",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-splitting-projection",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "Recovering Projections and Direct Sums",
+   "url": "ch05-polynomials/07-polynomials-of-operators.html#exm-splitting-projection",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exr-polynomials-of-operators-a1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "A1",
+   "url": "ch05-polynomials/07-polynomials-of-operators.html#exr-polynomials-of-operators-a1",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-polynomials-of-operators-b1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B1: A polynomial of a 2 \u00d7 2 matrix",
+   "url": "ch05-polynomials/07-polynomials-of-operators.html#exr-polynomials-of-operators-b1",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-polynomials-of-operators-b2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B2: An annihilating polynomial by elimination",
+   "url": "ch05-polynomials/07-polynomials-of-operators.html#exr-polynomials-of-operators-b2",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-polynomials-of-operators-b3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B3: Operators with T^3 = T",
+   "url": "ch05-polynomials/07-polynomials-of-operators.html#exr-polynomials-of-operators-b3",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-polynomials-of-operators-c1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C1: Inverses are polynomials",
+   "url": "ch05-polynomials/07-polynomials-of-operators.html#exr-polynomials-of-operators-c1",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-polynomials-of-operators-c2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C2: Splitting with k coprime factors",
+   "url": "ch05-polynomials/07-polynomials-of-operators.html#exr-polynomials-of-operators-c2",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-polynomials-of-operators-c3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C3: The same rotation over \u211d and over \u2102",
+   "url": "ch05-polynomials/07-polynomials-of-operators.html#exr-polynomials-of-operators-c3",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#a8670c"
+  },
+  {
+   "id": "thm-annihilating-polynomial-exists",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 5.7.2",
+   "title": "Every Operator Satisfies a Polynomial",
+   "url": "ch05-polynomials/07-polynomials-of-operators.html#thm-annihilating-polynomial-exists",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-annihilator-ideal",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 5.7.3",
+   "title": "The Annihilating Polynomials Form an Ideal",
+   "url": "ch05-polynomials/07-polynomials-of-operators.html#thm-annihilator-ideal",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-evaluation-homomorphism",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 5.7.1",
+   "title": "Evaluation at an Operator",
+   "url": "ch05-polynomials/07-polynomials-of-operators.html#thm-evaluation-homomorphism",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-kernel-image-of-polynomial-invariant",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 5.7.4",
+   "title": "T Preserves Kernels and Images of Polynomials in T",
+   "url": "ch05-polynomials/07-polynomials-of-operators.html#thm-kernel-image-of-polynomial-invariant",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-kernel-splitting",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 5.7.5",
+   "title": "Kernel Splitting Lemma",
+   "url": "ch05-polynomials/07-polynomials-of-operators.html#thm-kernel-splitting",
+   "shard": "ch05-polynomials",
+   "chapter": "Polynomials",
+   "chapterNumber": 5,
+   "color": "#2f62b5"
   }
  ],
  "edges": [
@@ -10718,6 +12278,11 @@
    "kind": "reference"
   },
   {
+   "source": "thm-fundamental-theorem-of-algebra",
+   "target": "exr-complex-numbers-a1",
+   "kind": "mention"
+  },
+  {
    "source": "prp-complex-inverse",
    "target": "exr-complex-numbers-b1",
    "kind": "reference"
@@ -10806,6 +12371,11 @@
    "source": "thm-polar-multiplication",
    "target": "thm-de-moivre",
    "kind": "reference"
+  },
+  {
+   "source": "thm-fundamental-theorem-of-algebra",
+   "target": "thm-fta-statement",
+   "kind": "mention"
   },
   {
    "source": "prp-complex-arithmetic-laws",
@@ -18013,6 +19583,11 @@
    "kind": "reference"
   },
   {
+   "source": "thm-lagrange-interpolation",
+   "target": "exm-dual-basis-polynomials",
+   "kind": "mention"
+  },
+  {
    "source": "def-linear-functional",
    "target": "exm-linear-functionals",
    "kind": "reference"
@@ -20045,6 +21620,2101 @@
   {
    "source": "thm-size-bounds",
    "target": "thm-subspace-is-solution-set",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-degree-of-product",
+   "target": "cor-root-bound-general",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-evaluation-respects-operations",
+   "target": "cor-root-bound-general",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-field-basic-properties",
+   "target": "cor-root-bound-general",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-remainder-theorem",
+   "target": "cor-root-bound-general",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-polynomial-division",
+   "target": "exm-long-division",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-evaluation-respects-operations",
+   "target": "exm-remainder-theorem",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-polynomial-division",
+   "target": "exm-remainder-theorem",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-remainder-theorem",
+   "target": "exm-remainder-theorem",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-polynomial-vs-function-f2",
+   "target": "exr-division-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-divisibility-properties",
+   "target": "exr-division-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-polynomial-division",
+   "target": "exr-division-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-polynomial-function-determines-polynomial",
+   "target": "exr-division-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-remainder-theorem",
+   "target": "exr-division-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-divisibility-properties",
+   "target": "exr-division-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-polynomial-division",
+   "target": "exr-division-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-remainder-theorem",
+   "target": "exr-division-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-remainder-theorem",
+   "target": "exr-division-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-evaluation-respects-operations",
+   "target": "exr-division-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-polynomial-division",
+   "target": "exr-division-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-polynomial-division",
+   "target": "exr-division-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-strong-induction",
+   "target": "exr-division-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-evaluation-respects-operations",
+   "target": "exr-division-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-polynomial-division",
+   "target": "exr-division-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-polynomial-function-determines-polynomial",
+   "target": "exr-division-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-remainder-theorem",
+   "target": "exr-division-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-root-bound-general",
+   "target": "exr-division-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "exr-polynomials-c2",
+   "target": "exr-division-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-degree-of-product",
+   "target": "exr-division-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-evaluation-respects-operations",
+   "target": "exr-division-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-polynomial-division",
+   "target": "exr-division-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-polynomial-no-zero-divisors",
+   "target": "prp-divisibility-properties",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-degree-of-product",
+   "target": "prp-divisibility-properties",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-polynomial-division",
+   "target": "prp-divisibility-properties",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-polynomial-ring-laws",
+   "target": "prp-divisibility-properties",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-degree-of-product",
+   "target": "thm-polynomial-division",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-degree-of-sum",
+   "target": "thm-polynomial-division",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-strong-induction",
+   "target": "thm-polynomial-division",
+   "kind": "reference"
+  },
+  {
+   "source": "exr-polynomials-c2",
+   "target": "thm-polynomial-function-determines-polynomial",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-root-bound",
+   "target": "thm-polynomial-function-determines-polynomial",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-degree-of-sum",
+   "target": "thm-polynomial-function-determines-polynomial",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-evaluation-respects-operations",
+   "target": "thm-polynomial-function-determines-polynomial",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-factor-theorem-linear",
+   "target": "thm-remainder-theorem",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-divisibility-properties",
+   "target": "thm-remainder-theorem",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-polynomial-division",
+   "target": "thm-remainder-theorem",
+   "kind": "reference"
+  },
+  {
+   "source": "def-gcd-polynomials",
+   "target": "cor-bezout-polynomials",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-euclidean-algorithm",
+   "target": "exm-euclid-polynomials",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-remainder-theorem",
+   "target": "exm-euclid-polynomials",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-ideals-polynomials",
+   "target": "exm-gcd-first",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-ideal-generated",
+   "target": "exm-gcd-first",
+   "kind": "reference"
+  },
+  {
+   "source": "def-ideal-polynomials",
+   "target": "exm-ideals-polynomials",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-ideal-generated",
+   "target": "exm-ideals-polynomials",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-evaluation-respects-operations",
+   "target": "exm-ideals-polynomials",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-polynomial-of-matrix-properties",
+   "target": "exm-ideals-polynomials",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-polynomial-of-operator-properties",
+   "target": "exm-ideals-polynomials",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-remainder-theorem",
+   "target": "exm-ideals-polynomials",
+   "kind": "reference"
+  },
+  {
+   "source": "def-ideal-polynomials",
+   "target": "exr-ideals-and-gcd-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-coprime-criterion",
+   "target": "exr-ideals-and-gcd-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-divisibility-properties",
+   "target": "exr-ideals-and-gcd-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-euclidean-algorithm",
+   "target": "exr-ideals-and-gcd-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-gcd-properties",
+   "target": "exr-ideals-and-gcd-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-ideals-principal",
+   "target": "exr-ideals-and-gcd-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-polynomial-division",
+   "target": "exr-ideals-and-gcd-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-euclidean-algorithm",
+   "target": "exr-ideals-and-gcd-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-evaluation-respects-operations",
+   "target": "exr-ideals-and-gcd-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-gcd-properties",
+   "target": "exr-ideals-and-gcd-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-root-bound-general",
+   "target": "exr-ideals-and-gcd-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-ideals-polynomials",
+   "target": "exr-ideals-and-gcd-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-evaluation-respects-operations",
+   "target": "exr-ideals-and-gcd-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-ideals-principal",
+   "target": "exr-ideals-and-gcd-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-gcd-first",
+   "target": "exr-ideals-and-gcd-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-euclid-step",
+   "target": "exr-ideals-and-gcd-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-euclidean-algorithm",
+   "target": "exr-ideals-and-gcd-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-strong-induction",
+   "target": "exr-ideals-and-gcd-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-root-bound-general",
+   "target": "exr-ideals-and-gcd-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "exr-division-c3",
+   "target": "exr-ideals-and-gcd-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-evaluation-respects-operations",
+   "target": "exr-ideals-and-gcd-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-polynomial-no-zero-divisors",
+   "target": "exr-ideals-and-gcd-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "def-ideal-polynomials",
+   "target": "exr-ideals-and-gcd-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-ideal-generated",
+   "target": "exr-ideals-and-gcd-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-ideals-principal",
+   "target": "exr-ideals-and-gcd-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-polynomial-division",
+   "target": "exr-ideals-and-gcd-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-polynomial-ring-laws",
+   "target": "exr-ideals-and-gcd-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-bezout-polynomials",
+   "target": "exr-ideals-and-gcd-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-polynomial-no-zero-divisors",
+   "target": "exr-ideals-and-gcd-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "def-lcm-polynomials",
+   "target": "exr-ideals-and-gcd-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-coprime-criterion",
+   "target": "exr-ideals-and-gcd-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-coprime-divides-product",
+   "target": "exr-ideals-and-gcd-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-gcd-properties",
+   "target": "exr-ideals-and-gcd-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-ideals-principal",
+   "target": "exr-ideals-and-gcd-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "def-gcd-polynomials",
+   "target": "lem-euclid-step",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-ideal-generated",
+   "target": "lem-euclid-step",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-bezout-polynomials",
+   "target": "prp-coprime-criterion",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-ideals-polynomials",
+   "target": "prp-coprime-criterion",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-gcd-first",
+   "target": "prp-gcd-independent-of-field",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-euclidean-algorithm",
+   "target": "prp-gcd-independent-of-field",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-polynomial-division",
+   "target": "prp-gcd-independent-of-field",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-remainder-theorem",
+   "target": "prp-gcd-independent-of-field",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-sqrt2-irrational",
+   "target": "prp-gcd-independent-of-field",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-polynomial-ring-laws",
+   "target": "prp-ideal-generated",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-coprime-criterion",
+   "target": "thm-coprime-divides-product",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-divisibility-properties",
+   "target": "thm-coprime-divides-product",
+   "kind": "reference"
+  },
+  {
+   "source": "def-gcd-polynomials",
+   "target": "thm-euclidean-algorithm",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-euclid-step",
+   "target": "thm-euclidean-algorithm",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-polynomial-division",
+   "target": "thm-euclidean-algorithm",
+   "kind": "reference"
+  },
+  {
+   "source": "def-gcd-polynomials",
+   "target": "thm-gcd-properties",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-divisibility-properties",
+   "target": "thm-gcd-properties",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-divisibility-properties",
+   "target": "thm-ideals-principal",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-degree-of-product",
+   "target": "thm-ideals-principal",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-polynomial-division",
+   "target": "thm-ideals-principal",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-well-ordering",
+   "target": "thm-ideals-principal",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-euclid-lemma-polynomials",
+   "target": "cor-euclid-lemma-products",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-irreducible-deg-2-3",
+   "target": "exm-cubic-irreducible-over-q",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rational-root",
+   "target": "exm-cubic-irreducible-over-q",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-eisenstein-criterion",
+   "target": "exm-eisenstein",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-irreducible-polynomials",
+   "target": "exm-factor-x4-minus-1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-irreducible-deg-2-3",
+   "target": "exm-factor-x4-minus-1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-unique-factorization-polynomials",
+   "target": "exm-factor-x4-minus-1",
+   "kind": "reference"
+  },
+  {
+   "source": "def-irreducible-polynomial",
+   "target": "exr-unique-factorization-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-irreducible-polynomials",
+   "target": "exr-unique-factorization-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-irreducible-deg-2-3",
+   "target": "exr-unique-factorization-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rational-root",
+   "target": "exr-unique-factorization-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-unique-factorization-polynomials",
+   "target": "exr-unique-factorization-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-eisenstein-criterion",
+   "target": "exr-unique-factorization-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-irreducible-deg-2-3",
+   "target": "exr-unique-factorization-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rational-root",
+   "target": "exr-unique-factorization-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-factor-x4-minus-1",
+   "target": "exr-unique-factorization-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "exr-division-b2",
+   "target": "exr-unique-factorization-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-irreducible-deg-2-3",
+   "target": "exr-unique-factorization-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-unique-factorization-polynomials",
+   "target": "exr-unique-factorization-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-irreducible-polynomials",
+   "target": "exr-unique-factorization-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-irreducible-deg-2-3",
+   "target": "exr-unique-factorization-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-irreducible-polynomials",
+   "target": "exr-unique-factorization-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "exr-unique-factorization-b3",
+   "target": "exr-unique-factorization-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-divisibility-properties",
+   "target": "exr-unique-factorization-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-degree-of-product",
+   "target": "exr-unique-factorization-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-degree-of-sum",
+   "target": "exr-unique-factorization-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-infinitely-many-primes",
+   "target": "exr-unique-factorization-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-unique-factorization-polynomials",
+   "target": "exr-unique-factorization-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-polynomial-no-zero-divisors",
+   "target": "exr-unique-factorization-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "def-polynomial-ring",
+   "target": "exr-unique-factorization-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-finite-fields",
+   "target": "exr-unique-factorization-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-prime-factor",
+   "target": "exr-unique-factorization-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-degree-of-product",
+   "target": "exr-unique-factorization-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-eisenstein-criterion",
+   "target": "exr-unique-factorization-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rational-root",
+   "target": "exr-unique-factorization-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-well-ordering",
+   "target": "exr-unique-factorization-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-zp-field-iff-prime",
+   "target": "exr-unique-factorization-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-divisibility-properties",
+   "target": "lem-irreducible-gcd",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-gcd-properties",
+   "target": "lem-irreducible-gcd",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-irreducible-gcd",
+   "target": "thm-euclid-lemma-polynomials",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-coprime-divides-product",
+   "target": "thm-euclid-lemma-polynomials",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-q-sqrt2-field",
+   "target": "thm-irreducible-deg-2-3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-evaluation-respects-operations",
+   "target": "thm-irreducible-deg-2-3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-remainder-theorem",
+   "target": "thm-irreducible-deg-2-3",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-bezout-integers",
+   "target": "thm-rational-root",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-euclid-lemma-products",
+   "target": "thm-unique-factorization-polynomials",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-polynomial-no-zero-divisors",
+   "target": "thm-unique-factorization-polynomials",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-degree-of-product",
+   "target": "thm-unique-factorization-polynomials",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-field-basic-properties",
+   "target": "thm-unique-factorization-polynomials",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-strong-induction",
+   "target": "thm-unique-factorization-polynomials",
+   "kind": "reference"
+  },
+  {
+   "source": "def-formal-derivative",
+   "target": "cor-squarefree-gcd-derivative",
+   "kind": "reference"
+  },
+  {
+   "source": "def-irreducible-polynomial",
+   "target": "cor-squarefree-gcd-derivative",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-degree-of-product",
+   "target": "cor-squarefree-gcd-derivative",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-euclid-lemma-polynomials",
+   "target": "cor-squarefree-gcd-derivative",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-formal-derivative-rules",
+   "target": "cor-squarefree-gcd-derivative",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-gcd-properties",
+   "target": "cor-squarefree-gcd-derivative",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-unique-factorization-polynomials",
+   "target": "cor-squarefree-gcd-derivative",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-squarefree-gcd-derivative",
+   "target": "exm-gcd-with-derivative",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-multiplicity-by-division",
+   "target": "exm-gcd-with-derivative",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-euclidean-algorithm",
+   "target": "exm-gcd-with-derivative",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-polynomial-division",
+   "target": "exm-gcd-with-derivative",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-repeated-root-derivative",
+   "target": "exm-gcd-with-derivative",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-multiplicity-cofactor",
+   "target": "exm-multiplicity-by-division",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-polynomial-taylor",
+   "target": "exm-taylor-expansion",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-squarefree-gcd-derivative",
+   "target": "exr-roots-and-multiplicity-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "def-root-multiplicity",
+   "target": "exr-roots-and-multiplicity-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dual-basis",
+   "target": "exr-roots-and-multiplicity-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-polynomial-taylor",
+   "target": "exr-roots-and-multiplicity-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-repeated-root-derivative",
+   "target": "exr-roots-and-multiplicity-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-roots-with-multiplicity",
+   "target": "exr-roots-and-multiplicity-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-multiplicity-cofactor",
+   "target": "exr-roots-and-multiplicity-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-roots-with-multiplicity",
+   "target": "exr-roots-and-multiplicity-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-multiplicity-cofactor",
+   "target": "exr-roots-and-multiplicity-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-euclidean-algorithm",
+   "target": "exr-roots-and-multiplicity-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-repeated-root-derivative",
+   "target": "exr-roots-and-multiplicity-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-repeated-root-derivative",
+   "target": "exr-roots-and-multiplicity-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-repeated-root-derivative",
+   "target": "exr-roots-and-multiplicity-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-roots-with-multiplicity",
+   "target": "exr-roots-and-multiplicity-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-squarefree-gcd-derivative",
+   "target": "exr-roots-and-multiplicity-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "def-characteristic",
+   "target": "exr-roots-and-multiplicity-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "def-formal-derivative",
+   "target": "exr-roots-and-multiplicity-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "exr-polynomials-c2",
+   "target": "exr-roots-and-multiplicity-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-integer-multiples",
+   "target": "exr-roots-and-multiplicity-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-multiplicity-cofactor",
+   "target": "exr-roots-and-multiplicity-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-degree-of-product",
+   "target": "exr-roots-and-multiplicity-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-field-basic-properties",
+   "target": "exr-roots-and-multiplicity-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-polynomial-ring-laws",
+   "target": "exr-roots-and-multiplicity-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-repeated-root-derivative",
+   "target": "exr-roots-and-multiplicity-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-roots-with-multiplicity",
+   "target": "exr-roots-and-multiplicity-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-polynomial-no-zero-divisors",
+   "target": "exr-roots-and-multiplicity-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-euclid-lemma-polynomials",
+   "target": "exr-roots-and-multiplicity-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-formal-derivative-rules",
+   "target": "exr-roots-and-multiplicity-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-gcd-properties",
+   "target": "exr-roots-and-multiplicity-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-unique-factorization-polynomials",
+   "target": "exr-roots-and-multiplicity-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-polynomial-no-zero-divisors",
+   "target": "lem-multiplicity-cofactor",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-factor-theorem-linear",
+   "target": "lem-multiplicity-cofactor",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-evaluation-respects-operations",
+   "target": "lem-multiplicity-cofactor",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-differentiation",
+   "target": "thm-formal-derivative-rules",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-integer-multiples",
+   "target": "thm-formal-derivative-rules",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-polynomial-ring-laws",
+   "target": "thm-formal-derivative-rules",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-multiplicity-cofactor",
+   "target": "thm-multiplicity-of-product",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-evaluation-respects-operations",
+   "target": "thm-multiplicity-of-product",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-field-basic-properties",
+   "target": "thm-multiplicity-of-product",
+   "kind": "reference"
+  },
+  {
+   "source": "def-characteristic",
+   "target": "thm-polynomial-taylor",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-differentiation",
+   "target": "thm-polynomial-taylor",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-standard-bases",
+   "target": "thm-polynomial-taylor",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-integer-multiples",
+   "target": "thm-polynomial-taylor",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-degree-of-product",
+   "target": "thm-polynomial-taylor",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-degree-of-sum",
+   "target": "thm-polynomial-taylor",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dual-basis",
+   "target": "thm-polynomial-taylor",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-evaluation-respects-operations",
+   "target": "thm-polynomial-taylor",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-field-basic-properties",
+   "target": "thm-polynomial-taylor",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-right-size-basis",
+   "target": "thm-polynomial-taylor",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-polynomial-no-zero-divisors",
+   "target": "thm-repeated-root-derivative",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-factor-theorem-linear",
+   "target": "thm-repeated-root-derivative",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-multiplicity-cofactor",
+   "target": "thm-repeated-root-derivative",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-formal-derivative-rules",
+   "target": "thm-repeated-root-derivative",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-root-bound-general",
+   "target": "thm-roots-with-multiplicity",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-multiplicity-cofactor",
+   "target": "thm-roots-with-multiplicity",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-degree-of-product",
+   "target": "thm-roots-with-multiplicity",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-multiplicity-of-product",
+   "target": "thm-roots-with-multiplicity",
+   "kind": "reference"
+  },
+  {
+   "source": "def-irreducible-polynomial",
+   "target": "cor-complex-polynomial-splits",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-degree-of-product",
+   "target": "cor-complex-polynomial-splits",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-fundamental-theorem-of-algebra",
+   "target": "cor-complex-polynomial-splits",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-roots-with-multiplicity",
+   "target": "cor-complex-polynomial-splits",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-real-factorization",
+   "target": "cor-odd-degree-real-root",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-real-irreducibles",
+   "target": "cor-odd-degree-real-root",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-factor-x4-plus-1",
+   "target": "cor-odd-degree-real-root",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-irreducible-deg-2-3",
+   "target": "cor-odd-degree-real-root",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-real-irreducibles",
+   "target": "cor-real-factorization",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-degree-of-product",
+   "target": "cor-real-factorization",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-multiplicity-of-product",
+   "target": "cor-real-factorization",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-unique-factorization-polynomials",
+   "target": "cor-real-factorization",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-root-bound-general",
+   "target": "cor-real-irreducibles",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-factor-theorem-linear",
+   "target": "cor-real-irreducibles",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-degree-of-product",
+   "target": "cor-real-irreducibles",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-fundamental-theorem-of-algebra",
+   "target": "cor-real-irreducibles",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-irreducible-deg-2-3",
+   "target": "cor-real-irreducibles",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-polynomial-division",
+   "target": "cor-real-irreducibles",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-real-roots-conjugate-pairs",
+   "target": "cor-real-irreducibles",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-dalembert",
+   "target": "exm-dalembert-step",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-complex-polynomial-splits",
+   "target": "exm-factor-x4-plus-1",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-roots-of-unity",
+   "target": "exm-factor-x4-plus-1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-conjugate-properties",
+   "target": "exm-factor-x4-plus-1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-de-moivre",
+   "target": "exm-factor-x4-plus-1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-irreducible-deg-2-3",
+   "target": "exm-factor-x4-plus-1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-roots-with-multiplicity",
+   "target": "exm-factor-x4-plus-1",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-odd-degree-real-root",
+   "target": "exr-fundamental-theorem-of-algebra-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-real-irreducibles",
+   "target": "exr-fundamental-theorem-of-algebra-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-dalembert",
+   "target": "exr-fundamental-theorem-of-algebra-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-de-moivre",
+   "target": "exr-fundamental-theorem-of-algebra-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-fundamental-theorem-of-algebra",
+   "target": "exr-fundamental-theorem-of-algebra-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-irreducible-deg-2-3",
+   "target": "exr-fundamental-theorem-of-algebra-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-real-roots-conjugate-pairs",
+   "target": "exr-fundamental-theorem-of-algebra-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-roots-with-multiplicity",
+   "target": "exr-fundamental-theorem-of-algebra-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-real-irreducibles",
+   "target": "exr-fundamental-theorem-of-algebra-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-de-moivre",
+   "target": "exr-fundamental-theorem-of-algebra-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-roots-with-multiplicity",
+   "target": "exr-fundamental-theorem-of-algebra-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-real-factorization",
+   "target": "exr-fundamental-theorem-of-algebra-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-real-irreducibles",
+   "target": "exr-fundamental-theorem-of-algebra-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-factor-x4-plus-1",
+   "target": "exr-fundamental-theorem-of-algebra-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-roots-with-multiplicity",
+   "target": "exr-fundamental-theorem-of-algebra-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-real-factorization",
+   "target": "exr-fundamental-theorem-of-algebra-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-fundamental-theorem-of-algebra",
+   "target": "exr-fundamental-theorem-of-algebra-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-multiplicity-of-product",
+   "target": "exr-fundamental-theorem-of-algebra-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-real-roots-conjugate-pairs",
+   "target": "exr-fundamental-theorem-of-algebra-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-roots-with-multiplicity",
+   "target": "exr-fundamental-theorem-of-algebra-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-dalembert-step",
+   "target": "exr-fundamental-theorem-of-algebra-b4",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-dalembert",
+   "target": "exr-fundamental-theorem-of-algebra-b4",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-polynomial-growth",
+   "target": "exr-fundamental-theorem-of-algebra-b4",
+   "kind": "reference"
+  },
+  {
+   "source": "exr-polynomials-c2",
+   "target": "exr-fundamental-theorem-of-algebra-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-dalembert",
+   "target": "exr-fundamental-theorem-of-algebra-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-minimum-modulus-attained",
+   "target": "exr-fundamental-theorem-of-algebra-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-degree-of-product",
+   "target": "exr-fundamental-theorem-of-algebra-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-evaluation-respects-operations",
+   "target": "exr-fundamental-theorem-of-algebra-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-fundamental-theorem-of-algebra",
+   "target": "exr-fundamental-theorem-of-algebra-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-sqrt2-irrational",
+   "target": "exr-fundamental-theorem-of-algebra-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-real-factorization",
+   "target": "exr-fundamental-theorem-of-algebra-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-real-irreducibles",
+   "target": "exr-fundamental-theorem-of-algebra-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-factor-x4-plus-1",
+   "target": "exr-fundamental-theorem-of-algebra-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "exr-fundamental-theorem-of-algebra-b3",
+   "target": "exr-fundamental-theorem-of-algebra-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-evaluation-respects-operations",
+   "target": "exr-fundamental-theorem-of-algebra-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-fundamental-theorem-of-algebra",
+   "target": "exr-fundamental-theorem-of-algebra-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-polynomial-ring-laws",
+   "target": "exr-fundamental-theorem-of-algebra-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-real-roots-conjugate-pairs",
+   "target": "exr-fundamental-theorem-of-algebra-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-complex-triangle-inequality",
+   "target": "lem-dalembert",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-conjugate-properties",
+   "target": "lem-dalembert",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-de-moivre",
+   "target": "lem-dalembert",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-evaluation-respects-operations",
+   "target": "lem-dalembert",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-polynomial-taylor",
+   "target": "lem-dalembert",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-polynomial-growth",
+   "target": "lem-minimum-modulus-attained",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-complex-triangle-inequality",
+   "target": "lem-polynomial-growth",
+   "kind": "reference"
+  },
+  {
+   "source": "def-complex-numbers",
+   "target": "thm-fundamental-theorem-of-algebra",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-de-moivre",
+   "target": "thm-fundamental-theorem-of-algebra",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-multiplicity-cofactor",
+   "target": "thm-real-roots-conjugate-pairs",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-conjugate-properties",
+   "target": "thm-real-roots-conjugate-pairs",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-linear-functionals",
+   "target": "cor-evaluations-dual-to-lagrange",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dual-basis",
+   "target": "cor-evaluations-dual-to-lagrange",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-lagrange-interpolation",
+   "target": "cor-evaluations-dual-to-lagrange",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-crt-polynomials",
+   "target": "exm-crt-polynomials",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-hermite-existence",
+   "target": "exm-hermite-via-crt",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-crt-polynomials",
+   "target": "exm-hermite-via-crt",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-distinct-degrees-independent",
+   "target": "exm-hermite-via-crt",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-formal-derivative-rules",
+   "target": "exm-hermite-via-crt",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-polynomial-division",
+   "target": "exm-hermite-via-crt",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-right-size-basis",
+   "target": "exm-hermite-via-crt",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-interpolation-cubic",
+   "target": "exm-lagrange-cubic",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-lagrange-interpolation",
+   "target": "exm-lagrange-cubic",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-evaluations-dual-to-lagrange",
+   "target": "exm-quadrature-weights",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-linear-functionals",
+   "target": "exm-quadrature-weights",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-evaluations-dual-to-lagrange",
+   "target": "exr-interpolation-and-crt-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "def-lagrange-basis",
+   "target": "exr-interpolation-and-crt-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-crt-polynomials",
+   "target": "exr-interpolation-and-crt-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dimension-polynomial-quotient",
+   "target": "exr-interpolation-and-crt-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dual-basis",
+   "target": "exr-interpolation-and-crt-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-interpolation-unique",
+   "target": "exr-interpolation-and-crt-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-lagrange-interpolation",
+   "target": "exr-interpolation-and-crt-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-lagrange-interpolation",
+   "target": "exr-interpolation-and-crt-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-crt-polynomials",
+   "target": "exr-interpolation-and-crt-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "def-polynomial-evaluation",
+   "target": "exr-interpolation-and-crt-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-lagrange-interpolation",
+   "target": "exr-interpolation-and-crt-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-rank-nullity-consequences",
+   "target": "exr-interpolation-and-crt-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-root-bound-general",
+   "target": "exr-interpolation-and-crt-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-evaluation-respects-operations",
+   "target": "exr-interpolation-and-crt-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-lagrange-interpolation",
+   "target": "exr-interpolation-and-crt-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "exr-interpolation-and-crt-b1",
+   "target": "exr-interpolation-and-crt-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-degree-of-product",
+   "target": "exr-interpolation-and-crt-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-distinct-degrees-independent",
+   "target": "exr-interpolation-and-crt-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-interpolation-unique",
+   "target": "exr-interpolation-and-crt-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-right-size-basis",
+   "target": "exr-interpolation-and-crt-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-bezout-polynomials",
+   "target": "lem-coprime-product",
+   "kind": "reference"
+  },
+  {
+   "source": "def-coprime",
+   "target": "lem-coprime-product",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-coprime-divides-product",
+   "target": "lem-coprime-product",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-degree-of-product",
+   "target": "lem-coprime-product",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-gcd-properties",
+   "target": "lem-coprime-product",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-rank-nullity-consequences",
+   "target": "thm-crt-isomorphism",
+   "kind": "reference"
+  },
+  {
+   "source": "def-isomorphism",
+   "target": "thm-crt-isomorphism",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-coprime-product",
+   "target": "thm-crt-isomorphism",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-coset-equality",
+   "target": "thm-crt-isomorphism",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-degree-of-product",
+   "target": "thm-crt-isomorphism",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dimension-of-product",
+   "target": "thm-crt-isomorphism",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dimension-polynomial-quotient",
+   "target": "thm-crt-isomorphism",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-first-isomorphism",
+   "target": "thm-crt-isomorphism",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-quotient-space-operations-well-defined",
+   "target": "thm-crt-isomorphism",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-coprime-product",
+   "target": "thm-crt-polynomials",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-degree-of-product",
+   "target": "thm-crt-polynomials",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-polynomial-division",
+   "target": "thm-crt-polynomials",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-standard-bases",
+   "target": "thm-dimension-polynomial-quotient",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-degree-of-sum",
+   "target": "thm-dimension-polynomial-quotient",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-first-isomorphism",
+   "target": "thm-dimension-polynomial-quotient",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-isomorphism-preserves-bases",
+   "target": "thm-dimension-polynomial-quotient",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-polynomial-division",
+   "target": "thm-dimension-polynomial-quotient",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-root-bound-general",
+   "target": "thm-lagrange-interpolation",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-standard-bases",
+   "target": "thm-lagrange-interpolation",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-evaluation-respects-operations",
+   "target": "thm-lagrange-interpolation",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-interpolation-unique",
+   "target": "thm-lagrange-interpolation",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-right-size-basis",
+   "target": "thm-lagrange-interpolation",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-annihilating-polynomial-exists",
+   "target": "exm-annihilating-polynomial-3x3",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-polynomial-no-zero-divisors",
+   "target": "exm-polynomial-of-2x2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-evaluation-homomorphism",
+   "target": "exm-polynomial-of-2x2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-kernel-splitting",
+   "target": "exm-splitting-3x3",
+   "kind": "reference"
+  },
+  {
+   "source": "def-characteristic",
+   "target": "exm-splitting-involution",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-involution-decomposition",
+   "target": "exm-splitting-involution",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-kernel-splitting",
+   "target": "exm-splitting-involution",
+   "kind": "reference"
+  },
+  {
+   "source": "exr-projections-and-trace-b2",
+   "target": "exm-splitting-projection",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-kernel-splitting",
+   "target": "exm-splitting-projection",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-projection-direct-sum",
+   "target": "exm-splitting-projection",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-annihilating-polynomial-exists",
+   "target": "exr-polynomials-of-operators-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-annihilator-ideal",
+   "target": "exr-polynomials-of-operators-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-evaluation-homomorphism",
+   "target": "exr-polynomials-of-operators-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-kernel-image-of-polynomial-invariant",
+   "target": "exr-polynomials-of-operators-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-kernel-splitting",
+   "target": "exr-polynomials-of-operators-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-evaluation-homomorphism",
+   "target": "exr-polynomials-of-operators-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-annihilator-ideal",
+   "target": "exr-polynomials-of-operators-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-evaluation-homomorphism",
+   "target": "exr-polynomials-of-operators-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-splitting-involution",
+   "target": "exr-polynomials-of-operators-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-direct-sum-k-criteria",
+   "target": "exr-polynomials-of-operators-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-kernel-splitting",
+   "target": "exr-polynomials-of-operators-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-annihilating-polynomial-exists",
+   "target": "exr-polynomials-of-operators-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-annihilator-ideal",
+   "target": "exr-polynomials-of-operators-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-degree-of-product",
+   "target": "exr-polynomials-of-operators-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-evaluation-homomorphism",
+   "target": "exr-polynomials-of-operators-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-coprime-product",
+   "target": "exr-polynomials-of-operators-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-crt-polynomials",
+   "target": "exr-polynomials-of-operators-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-direct-sum-k-criteria",
+   "target": "exr-polynomials-of-operators-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-evaluation-homomorphism",
+   "target": "exr-polynomials-of-operators-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-kernel-splitting",
+   "target": "exr-polynomials-of-operators-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-kernel-splitting",
+   "target": "exr-polynomials-of-operators-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-subspace-dimension",
+   "target": "exr-polynomials-of-operators-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "def-polynomial-of-operator",
+   "target": "thm-annihilating-polynomial-exists",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-dimensions",
+   "target": "thm-annihilating-polynomial-exists",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-linear-maps-isomorphic-to-matrices",
+   "target": "thm-annihilating-polynomial-exists",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-size-bounds",
+   "target": "thm-annihilating-polynomial-exists",
+   "kind": "reference"
+  },
+  {
+   "source": "def-ideal-polynomials",
+   "target": "thm-annihilator-ideal",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-annihilating-polynomial-exists",
+   "target": "thm-annihilator-ideal",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-evaluation-homomorphism",
+   "target": "thm-annihilator-ideal",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-ideals-principal",
+   "target": "thm-annihilator-ideal",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-prop-kernel",
+   "target": "thm-annihilator-ideal",
+   "kind": "reference"
+  },
+  {
+   "source": "def-polynomial-of-operator",
+   "target": "thm-evaluation-homomorphism",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-composition-linear",
+   "target": "thm-evaluation-homomorphism",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-linear-maps-vector-space",
+   "target": "thm-evaluation-homomorphism",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-polynomial-of-operator-properties",
+   "target": "thm-evaluation-homomorphism",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-prop-image",
+   "target": "thm-evaluation-homomorphism",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-evaluation-homomorphism",
+   "target": "thm-kernel-image-of-polynomial-invariant",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-bezout-polynomials",
+   "target": "thm-kernel-splitting",
+   "kind": "reference"
+  },
+  {
+   "source": "def-direct-sum",
+   "target": "thm-kernel-splitting",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-direct-sum-criteria",
+   "target": "thm-kernel-splitting",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-evaluation-homomorphism",
+   "target": "thm-kernel-splitting",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-projection-direct-sum",
+   "target": "thm-kernel-splitting",
    "kind": "reference"
   }
  ]

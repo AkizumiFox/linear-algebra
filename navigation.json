@@ -22,7 +22,7 @@
       "title": "Preliminaries",
       "number": 0,
       "part": "Part I · Spaces and Maps",
-      "collapsed": false,
+      "collapsed": true,
       "path": "ch00-foundations/index.html",
       "sections": [
         {
@@ -91,7 +91,7 @@
       "title": "Vector Spaces",
       "number": 1,
       "part": "",
-      "collapsed": false,
+      "collapsed": true,
       "path": "ch01-vector-spaces/index.html",
       "sections": [
         {
@@ -154,7 +154,7 @@
       "title": "Linear Systems and Matrices",
       "number": 2,
       "part": "",
-      "collapsed": false,
+      "collapsed": true,
       "path": "ch02-linear-systems/index.html",
       "sections": [
         {
@@ -205,7 +205,7 @@
       "title": "Linear Maps",
       "number": 3,
       "part": "",
-      "collapsed": false,
+      "collapsed": true,
       "path": "ch03-linear-maps/index.html",
       "sections": [
         {
@@ -274,7 +274,7 @@
       "title": "Duality",
       "number": 4,
       "part": "",
-      "collapsed": false,
+      "collapsed": true,
       "path": "ch04-duality/index.html",
       "sections": [
         {
@@ -319,7 +319,58 @@
       "title": "Polynomials",
       "number": 5,
       "part": "Part II · Determinants and the Structure of Operators",
-      "collapsed": false,
+      "collapsed": true,
+      "path": "ch05-polynomials/index.html",
+      "sections": [
+        {
+          "title": "Division with Remainder",
+          "number": "5.1",
+          "path": "ch05-polynomials/01-division.html",
+          "filename": "01-division.md"
+        },
+        {
+          "title": "Ideals and Greatest Common Divisors",
+          "number": "5.2",
+          "path": "ch05-polynomials/02-ideals-and-gcd.html",
+          "filename": "02-ideals-and-gcd.md"
+        },
+        {
+          "title": "Irreducible Polynomials and Unique Factorization",
+          "number": "5.3",
+          "path": "ch05-polynomials/03-unique-factorization.html",
+          "filename": "03-unique-factorization.md"
+        },
+        {
+          "title": "Roots, Multiplicity and Derivatives",
+          "number": "5.4",
+          "path": "ch05-polynomials/04-roots-and-multiplicity.html",
+          "filename": "04-roots-and-multiplicity.md"
+        },
+        {
+          "title": "The Fundamental Theorem of Algebra",
+          "number": "5.5",
+          "path": "ch05-polynomials/05-fundamental-theorem-of-algebra.html",
+          "filename": "05-fundamental-theorem-of-algebra.md"
+        },
+        {
+          "title": "Interpolation and the Chinese Remainder Theorem",
+          "number": "5.6",
+          "path": "ch05-polynomials/06-interpolation-and-crt.html",
+          "filename": "06-interpolation-and-crt.md"
+        },
+        {
+          "title": "Polynomials of an Operator",
+          "number": "5.7",
+          "path": "ch05-polynomials/07-polynomials-of-operators.html",
+          "filename": "07-polynomials-of-operators.md"
+        }
+      ]
+    },
+    {
+      "title": "Determinants",
+      "number": 6,
+      "part": "",
+      "collapsed": true,
       "path": null,
       "sections": []
     }
