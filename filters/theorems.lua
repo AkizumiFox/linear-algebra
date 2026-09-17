@@ -768,6 +768,16 @@ local function scan_and_dump_labels(doc)
     -- (math kept as its TeX source; the plain writer would warn about every formula)
     local text_doc = doc:walk { Math = function(m) return pandoc.Str(m.text) end }
     local text = pandoc.write(text_doc, "plain", {wrap_text = "none"})
+    -- Prose for the spell check: no mathematics, code or raw LaTeX
+    local prose_doc = doc:walk {
+        Math = function() return pandoc.Space() end,
+        Code = function() return pandoc.Space() end,
+        CodeBlock = function() return {} end,
+        RawBlock = function() return {} end,
+        RawInline = function() return pandoc.Space() end,
+        Cite = function() return pandoc.Space() end,
+    }
+    local prose = pandoc.write(prose_doc, "plain", {wrap_text = "none"})
     -- Page description: leading top-level paragraphs without mathematics
     local description = {}
     for _, block in ipairs(doc.blocks) do
@@ -833,7 +843,7 @@ local function scan_and_dump_labels(doc)
     
     if doc.meta.scan_mode then
         local json_str = pandoc.json.encode({labels = collected, refs = refs, text = text,
-            description = table.concat(description, " ")})
+            description = table.concat(description, " "), prose = prose})
         print("SCAN_RESULT:" .. json_str)
         return pandoc.Pandoc({}, doc.meta)
     end

@@ -1,0 +1,29 @@
+# Words the spell check (./build.py check) accepts, one per line.
+# Mathematical vocabulary
+additivity
+bijection
+bijective
+codomain
+contrapositive
+differentiability
+distributivity
+homomorphisms
+iff
+injective
+injectivity
+invariants
+invertible
+minimality
+morphisms
+nonnegative
+nullspace
+subspaces
+surjective
+surjectivity
+LHS
+RHS
+# Names
+Munkres
+Steinitz
+Strang
+SymPy

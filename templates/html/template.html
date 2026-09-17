@@ -202,6 +202,12 @@ $highlighting-css$
                     $endif$
                 </div>
             </nav>
+            $if(report-url)$
+            <p class="page-feedback">
+                Found a typo or a mistake?
+                <a href="$report-url$" target="_blank" rel="noopener">Report it</a>
+            </p>
+            $endif$
         </main>
 
         <!-- Right Sidebar (TOC) -->

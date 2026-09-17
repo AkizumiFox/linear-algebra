@@ -118,6 +118,37 @@ def check_xref_links(html_dir: Path) -> list[str]:
     return problems
 
 
+def spelling_problems(book: Book, scan: dict) -> dict[str, list[str]]:
+    """
+    Words aspell does not know, per source file (prose only: formulas, code and raw LaTeX
+    are left out by the scan). Words listed in <book>/spelling.txt (one per line, # for
+    comments) are accepted. Returns {} when aspell is not installed.
+    """
+    if not shutil.which("aspell"):
+        return {}
+    allowed = set()
+    allow_file = book.root / "spelling.txt"
+    if allow_file.exists():
+        for line in allow_file.read_text(encoding="utf-8").splitlines():
+            word = line.split("#", 1)[0].strip()
+            if word:
+                allowed.add(word.lower())
+
+    problems = {}
+    for entry in scan["files"].values():
+        prose = entry.get("prose", "")
+        if not prose:
+            continue
+        result = subprocess.run(["aspell", "list", "--lang=en_US", "--ignore-case", "--mode=none"],
+                                input=prose, capture_output=True, text=True)
+        base = lambda w: w.lower().removesuffix("’s").removesuffix("'s")  # possessives
+        unknown = sorted({w for w in result.stdout.split() if base(w) not in allowed and len(w) > 2
+                          and not any(c.isdigit() for c in w)})
+        if unknown:
+            problems[entry["source"]] = unknown
+    return problems
+
+
 def _newest_source_mtime(book: Book) -> float:
     return max((p.source.stat().st_mtime for p in book.pages), default=0)
 
@@ -173,6 +204,10 @@ def check(book: Book, quiet: bool = False) -> bool:
         entry = scan["files"].get(f"{aux_file.parent.name}/{aux_file.stem}.html")
         if entry:
             errors.extend(_compare_numbers(book, labels, aux_file, only=set(entry["labels"])))
+
+    # Spelling: warnings only, since new terms are often correct
+    for source, words in sorted(spelling_problems(book, scan).items()):
+        warnings.append(f"spelling in {source}: {', '.join(words)}")
 
     for warning in warnings:
         print_warning(warning)

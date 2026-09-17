@@ -9,6 +9,7 @@ import json
 import subprocess
 from pathlib import Path
 from typing import Optional
+from urllib.parse import quote, urlencode
 
 from .book import Book, Page, ENGINE_ROOT
 from .utils import print_error, print_warning, run_with_crash_retry
@@ -58,6 +59,15 @@ def page_metadata(book: Book, page: Page, output_format: str, extra: Optional[di
         metadata["book-pdf-url"] = f"{prefix}book/book.pdf"
         if book.config.get("repo-url"):
             metadata["repo-url"] = book.config["repo-url"]
+        if book.config.get("issues-url"):
+            # A new issue prefilled with the section and its address
+            label = f"{page.number} {page.title}" if page.number else page.title
+            address = metadata.get("page-url") or page.html_path
+            query = urlencode({
+                "title": f"Typo or mistake in {label}",
+                "body": f"Page: {address}\n\nWhat is wrong (quote the sentence or formula):\n\n\nWhat it should say:\n",
+            }, quote_via=quote)
+            metadata["report-url"] = f"{book.config['issues-url']}?{query}"
         for direction in ("prev", "next"):
             neighbour = page.neighbours.get(direction)
             if neighbour:

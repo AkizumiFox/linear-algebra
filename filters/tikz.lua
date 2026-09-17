@@ -56,7 +56,35 @@ local function write_source(hash, picture)
     f:close()
 end
 
-local function RawBlock(block)
+-- Text of the node labels in a picture ("node[right] {$x$}" -> "x"), for alt text
+local function node_labels(picture)
+    local labels = {}
+    for label in picture:gmatch("node%s*%b[]%s*(%b{})") do table.insert(labels, label) end
+    for label in picture:gmatch("node%s*(%b{})") do table.insert(labels, label) end
+    local cleaned = {}
+    for _, label in ipairs(labels) do
+        -- TeX commands keep their names (\theta -> theta, \A -> A); braces and $ go
+        local text = label:sub(2, -2):gsub("%$", ""):gsub("\\(%a+)%s*", "%1"):gsub("[{}]", "")
+        text = text:gsub("^%s+", ""):gsub("%s+$", "")
+        if text ~= "" then table.insert(cleaned, text) end
+    end
+    return cleaned
+end
+
+-- Alt text: the enclosing environment's title (if any) and the figure's labels
+local function alt_text(picture, context_title)
+    local alt = "Diagram"
+    if context_title and context_title ~= "" then
+        alt = alt .. ": " .. context_title
+    end
+    local labels = node_labels(picture)
+    if #labels > 0 then
+        alt = alt .. ". Labels: " .. table.concat(labels, ", ")
+    end
+    return alt
+end
+
+local function RawBlock(block, context_title)
     if block.format ~= "tex" and block.format ~= "latex" then return nil end
     local picture = extract_picture(block.text)
     if not picture then return nil end
@@ -64,9 +92,18 @@ local function RawBlock(block)
     local hash = pandoc.utils.sha1(picture)
     write_source(hash, picture)
 
-    local image = pandoc.Image({}, asset_prefix .. "tikz/" .. hash .. ".svg", "",
-        pandoc.Attr("", {"tikz"}, {}))
+    -- The image description becomes its alt text (in a Plain block, not a captioned figure)
+    local image = pandoc.Image({pandoc.Str(alt_text(picture, context_title))},
+        asset_prefix .. "tikz/" .. hash .. ".svg", "", pandoc.Attr("", {"tikz"}, {}))
     return pandoc.Div({pandoc.Plain({image})}, pandoc.Attr("", {"tikz-figure"}, {}))
+end
+
+-- The "[Title]" line that starts a theorem-like environment
+local function div_title(div)
+    local first = div.content[1]
+    if not first or (first.t ~= "Para" and first.t ~= "Plain") then return nil end
+    local text = pandoc.utils.stringify(first)
+    return text:match("^%[(.-)%]$") or text:match("^%[(.-)%]")
 end
 
 local function Meta(meta)
@@ -80,6 +117,14 @@ end
 
 return {
     { Meta = Meta },
+    -- Innermost titled environments first (filters run bottom-up), then pictures outside any
+    { Div = function(div)
+        if not cache_dir then return nil end
+        local title = div_title(div)
+        if not title then return nil end
+        div.content = div.content:walk { RawBlock = function(block) return RawBlock(block, title) end }
+        return div
+    end },
     { RawBlock = function(block)
         if not cache_dir then return nil end
         return RawBlock(block)

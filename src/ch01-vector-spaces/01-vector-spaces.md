@@ -44,7 +44,7 @@ We sometimes will abuse the name and refer to \( \mathbf{0} = \mathbf{0}_V \in V
 
 The following are classic examples of vector spaces:
 
-1. Most defaultly, \( F^n \) with the usual operations of \( + \) and \( \cdot \) is a vector space over \( F \).
+1. The standard example: \( F^n \) with the usual operations of \( + \) and \( \cdot \) is a vector space over \( F \).
 
 2. Working with polynomials is common too: \( F[x] \) with the usual operations of \( + \) and \( \cdot \) is a vector space over \( F \).
 

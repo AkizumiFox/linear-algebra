@@ -74,7 +74,8 @@ def _scan_page(book: Book, page: Page, meta_file) -> dict | None:
         if line.startswith("SCAN_RESULT:"):
             data = json.loads(line[len("SCAN_RESULT:"):])
             data = {"labels": data.get("labels") or {}, "refs": data.get("refs") or [], "text": data.get("text") or "",
-                    "description": data.get("description") or "", "errors": errors}
+                    "description": data.get("description") or "", "prose": data.get("prose") or "",
+                    "errors": errors}
             cache_file.parent.mkdir(parents=True, exist_ok=True)
             cache_file.write_text(json.dumps(data), encoding="utf-8")
             return data
@@ -107,6 +108,7 @@ def scan_labels(book: Book) -> dict:
             "refs": data["refs"],
             "text": data["text"],
             "description": data.get("description", ""),
+            "prose": data.get("prose", ""),
             "errors": data.get("errors", []),
         }
 
