@@ -28,7 +28,7 @@ The reader is a motivated student working **alone**. They have no lecture to fil
 - **Let the reader check themselves.** Put a Quick check with a folded answer in every section.
 - **Show every move.** Where a move is not visible ("why this basis?"), give one clause of reason. The written proof stays minimal and forward; the Idea block carries the discovery.
 - **Stay calm.** No hype and no "clearly" or "obviously" hiding a step. "Trivially" is allowed only for something that really is one line and is then written out.
-- **One new notion at a time.** Use at most two new definitions per section. If the blueprint needs more, it splits the section.
+- **One new notion at a time.** Use at most two new **major** notions per section. Minor definitions (notation, auxiliary terms) may exceed this when they are introduced just before their first use; if a section carries more than two major notions, the blueprint splits it.
 
 ## 2. Page skeleton
 

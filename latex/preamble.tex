@@ -33,3 +33,25 @@
   stringstyle=\color{red!60!black}, showstringspaces=false, upquote=true}
 \usepackage{pgfplots}
 \pgfplotsset{compat=1.18}
+
+% Unicode symbols typed directly in prose (e.g. the proof tags (⇒), (⊆))
+\usepackage{newunicodechar}
+\newunicodechar{⇒}{\ensuremath{\Rightarrow}}
+\newunicodechar{⇐}{\ensuremath{\Leftarrow}}
+\newunicodechar{⇔}{\ensuremath{\Leftrightarrow}}
+\newunicodechar{→}{\ensuremath{\to}}
+\newunicodechar{⊆}{\ensuremath{\subseteq}}
+\newunicodechar{⊇}{\ensuremath{\supseteq}}
+\newunicodechar{∈}{\ensuremath{\in}}
+\newunicodechar{≤}{\ensuremath{\le}}
+\newunicodechar{≥}{\ensuremath{\ge}}
+\newunicodechar{≠}{\ensuremath{\ne}}
+\newunicodechar{×}{\ensuremath{\times}}
+\newunicodechar{①}{\textcircled{\scriptsize 1}}
+\newunicodechar{②}{\textcircled{\scriptsize 2}}
+\newunicodechar{③}{\textcircled{\scriptsize 3}}
+\newunicodechar{④}{\textcircled{\scriptsize 4}}
+
+% Tables written by Pandoc (column widths use \real from calc)
+\usepackage{longtable,booktabs,array,calc}
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
