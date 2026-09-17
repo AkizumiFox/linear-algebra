@@ -38,11 +38,15 @@ def copy_html_assets(book: Book) -> str:
         "favicon.svg": book.engine_file("templates/html/favicon.svg").read_bytes(),
         "mathjax-macros.js": mathjax_macros_js(book.macros_file).encode("utf-8"),
     }
-    # Component modules, and widgets from the engine and the book (the book's win)
-    for directory, prefix in ((ENGINE_ROOT / "templates" / "html" / "components", "components"),
-                              (ENGINE_ROOT / "widgets", "widgets"), (book.root / "widgets", "widgets")):
+    # Component modules, widgets (engine, then the book's), and fonts
+    for directory, prefix, pattern in (
+        (ENGINE_ROOT / "templates" / "html" / "components", "components", "*.js"),
+        (ENGINE_ROOT / "widgets", "widgets", "*.js"),
+        (book.root / "widgets", "widgets", "*.js"),
+        (ENGINE_ROOT / "templates" / "html" / "fonts", "fonts", "*"),
+    ):
         if directory.is_dir():
-            for path in sorted(directory.glob("*.js")):
+            for path in sorted(p for p in directory.glob(pattern) if p.is_file()):
                 assets[f"{prefix}/{path.name}"] = path.read_bytes()
     digest = hashlib.sha1()
     for name, content in assets.items():

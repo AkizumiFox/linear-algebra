@@ -260,7 +260,6 @@ def generate_site_files(book: Book):
     </script>
     <title>Page not found – {title}</title>
     <link rel="icon" href="{root}favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400;0,600;0,700;1,400&display=swap">
     <link rel="stylesheet" href="{root}styles.css">
 </head>
 <body>
