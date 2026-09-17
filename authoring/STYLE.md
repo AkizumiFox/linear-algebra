@@ -14,7 +14,7 @@ The method comes from the kwok-proof skill (`/home/akizumi/coding/kw/skill/kwok-
 - **Nobody is named.** The book never names, quotes or alludes to the lecturer the skill was distilled from. It uses his method silently. Never write "as X would say", course weeks or theorem numbers from his notes.
 - **No copying.** The reference PDFs in `linear-algebra-textbook/` are copyrighted. You may use them to check which topics exist and whether a statement is true. Do not paraphrase their prose or copy their examples or exercises. Standard theorems are common property, but the explanation, the examples and the exercises must be our own.
 - **No forward references in proofs.** A proof may cite only results that appear **earlier** in the book: an earlier section, or earlier in the same section. The blueprint lists what each section may use. A forward pointer in the prose ("we will prove in Chapter 9 that …") is fine. It must never be a step in an argument.
-- **Every claim is true.** Check every computation, and state every hypothesis (field, finite dimension, char ≠ 2, …). If you are unsure, compute it (sympy) or leave a `TODO(verify)` comment. Never guess.
+- **Every claim is true.** Check every computation (with sympy, privately: the book text never mentions software, "sympy confirms" or how a result was verified; write a by-hand check the reader can follow instead), and state every hypothesis (field, finite dimension, char ≠ 2, …). If you are unsure, compute it (sympy) or leave a `TODO(verify)` comment. Never guess.
 
 ---
 

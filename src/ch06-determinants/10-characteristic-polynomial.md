@@ -60,7 +60,7 @@ Column \( 2 \) has a single non-zero entry, \( x - 3 \) in position \( (2, 2) \)
 \[
 p_A(x) = (x - 3)\,(-1)^{2+2}\det\begin{pmatrix} x - 2 & -1 \\ -1 & x - 2 \end{pmatrix} = (x - 3)\big((x - 2)^2 - 1\big) = (x - 1)(x - 3)^2 .
 \]
-Multiplied out, \( p_A(x) = x^3 - 7x^2 + 15x - 9 \). Compare with \( \tr A = 2 + 3 + 2 = 7 \) and \( \det A = 9 \) (expand \( A \) along column \( 2 \): \( 3(4 - 1) = 9 \)). Sympy confirms the result.
+Multiplied out, \( p_A(x) = x^3 - 7x^2 + 15x - 9 \). Compare with \( \tr A = 2 + 3 + 2 = 7 \) and \( \det A = 9 \) (expand \( A \) along column \( 2 \): \( 3(4 - 1) = 9 \)).
 :::
 
 **A companion-type example.** Let \( A = \begin{pmatrix} 0 & 0 & 6 \\ 1 & 0 & -11 \\ 0 & 1 & 6 \end{pmatrix} \), with ones just below the diagonal, a last column \( (6, -11, 6) \), and zeros elsewhere. Expanding \( xI - A = \begin{pmatrix} x & 0 & -6 \\ -1 & x & 11 \\ 0 & -1 & x - 6 \end{pmatrix} \) along the first row (@thm-laplace-expansion over \( F[x] \)),
@@ -368,7 +368,7 @@ p_{C(p)} = \det M = \sum_{i=1}^{n-1} a_{i-1}\,x^{i-1} + (x + a_{n-1})\,x^{n-1} =
 \[
 C(p) = \begin{pmatrix} 0 & 0 & 0 & -3 \\ 1 & 0 & 0 & 2 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 1 & -1 \end{pmatrix}.
 \]
-Its trace is \( -1 \), so @thm-charpoly-coefficients predicts the coefficient \( 1 = a_3 \) at \( x^3 \), as in \( p \). Its determinant, expanding along the first row, whose only non-zero entry is \( -3 \) in position \( (1, 4) \), is \( (-3)(-1)^{1+4}\det I_3 = 3 \), since deleting row \( 1 \) and column \( 4 \) leaves \( I_3 \). So the predicted constant term is \( (-1)^4 \cdot 3 = 3 = a_0 \). Sympy computes \( \det(xI - C(p)) = x^4 + x^3 - 2x + 3 \) in full.
+Its trace is \( -1 \), so @thm-charpoly-coefficients predicts the coefficient \( 1 = a_3 \) at \( x^3 \), as in \( p \). Its determinant, expanding along the first row, whose only non-zero entry is \( -3 \) in position \( (1, 4) \), is \( (-3)(-1)^{1+4}\det I_3 = 3 \), since deleting row \( 1 \) and column \( 4 \) leaves \( I_3 \). So the predicted constant term is \( (-1)^4 \cdot 3 = 3 = a_0 \).
 
 (d) For \( n \ge 2 \), take \( C(p) \) and use (b). For \( n = 1 \), \( p = x + a_0 \) is \( p_{(-a_0)} \).
 :::

@@ -138,7 +138,6 @@ the Fibonacci numbers: \( D_n = F_{n+1} \), where \( F_1 = F_2 = 1 \) and \( F_{
 \[
 D_3 = \det\begin{pmatrix} 1 & 1 & 0 \\ -1 & 1 & 1 \\ 0 & -1 & 1 \end{pmatrix} = 1\cdot(1 + 1) - 1\cdot(-1 - 0) + 0 = 3 .
 \]
-(Sympy confirms \( D_1, \dots, D_8 \).)
 :::
 
 Only the products \( b_{k-1}c_{k-1} \) enter the recurrence, never \( b_{k-1} \) and \( c_{k-1} \) separately. For example, for a real number \( t \), putting \( 2t \) on the diagonal and \( 1 \) on both neighboring lines gives \( D_k = 2t\,D_{k-1} - D_{k-2} \), so \( D_1 = 2t \), \( D_2 = 4t^2 - 1 \), \( D_3 = 8t^3 - 4t \). These are the Chebyshev polynomials of the second kind.
@@ -245,7 +244,7 @@ since \( \mathbf{1}\tp\u = \frac{n}{a-1} \).
 
 *Case \( a = 1 \).* For \( n \ge 2 \), all columns are equal, so \( \det A_n = 0 \), which the formula also gives. For \( n = 1 \), \( \det A_1 = 1 \), and the formula gives \( (a - 1)^0 \cdot 1 = 1 \).
 
-So \( \det A_n = (a - 1)^{n-1}(a + n - 1) \) for every \( a \). For \( n = 3 \) this is \( (a - 1)^2(a + 2) \); with \( a = 3 \) it gives \( 4 \cdot 5 = 20 \), and sympy confirms the formula for \( n \le 5 \).
+So \( \det A_n = (a - 1)^{n-1}(a + n - 1) \) for every \( a \). For \( n = 3 \) this is \( (a - 1)^2(a + 2) \); with \( a = 3 \) it gives \( 4 \cdot 5 = 20 \).
 :::
 
 ::: {.warning}
@@ -360,7 +359,7 @@ Let \( x_1, \dots, x_n, y_1, \dots, y_n \in F \) with \( x_i + y_j \ne 0 \) for 
 \]
 The numerator supplies exactly the factors of \( \prod_{i<j}(x_j - x_i)(y_j - y_i) \) with \( j = n \), and the denominator supplies exactly the factors \( x_i + y_j \) with \( \max(i, j) = n \), each once. By the induction hypothesis, \( \det Q_{n-1} \) supplies all the remaining factors. This proves the formula.
 
-(d) With \( x_i = i \) and \( y_j = j - 1 \), \( x_i + y_j = i + j - 1 \ge 1 \), so \( H_n \) is a Cauchy matrix over \( \nQ \). For \( n = 3 \), the numerator is \( \big((2-1)(3-1)(3-2)\big)^2 = 4 \), since \( y_j - y_i = j - i = x_j - x_i \). The denominator is the product of all \( i + j - 1 \): the rows give \( 1 \cdot 2 \cdot 3 = 6 \), \( 2 \cdot 3 \cdot 4 = 24 \), \( 3 \cdot 4 \cdot 5 = 60 \), in total \( 8640 \). Hence \( \det H_3 = \frac{4}{8640} = \frac{1}{2160} \), which sympy confirms. (In general \( \det H_n = c_n^4 / c_{2n} \) with \( c_n = \prod_{k=1}^{n-1} k! \); we state this without proof. These determinants shrink extremely fast, which is why Hilbert matrices are a standard test of numerical methods.)
+(d) With \( x_i = i \) and \( y_j = j - 1 \), \( x_i + y_j = i + j - 1 \ge 1 \), so \( H_n \) is a Cauchy matrix over \( \nQ \). For \( n = 3 \), the numerator is \( \big((2-1)(3-1)(3-2)\big)^2 = 4 \), since \( y_j - y_i = j - i = x_j - x_i \). The denominator is the product of all \( i + j - 1 \): the rows give \( 1 \cdot 2 \cdot 3 = 6 \), \( 2 \cdot 3 \cdot 4 = 24 \), \( 3 \cdot 4 \cdot 5 = 60 \), in total \( 8640 \). Hence \( \det H_3 = \frac{4}{8640} = \frac{1}{2160} \). (In general \( \det H_n = c_n^4 / c_{2n} \) with \( c_n = \prod_{k=1}^{n-1} k! \); we state this without proof. These determinants shrink extremely fast, which is why Hilbert matrices are a standard test of numerical methods.)
 :::
 
 :::: {#exr-special-determinants-c2}

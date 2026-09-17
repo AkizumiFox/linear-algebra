@@ -112,7 +112,7 @@ This has degree \( 1 < 2 = \deg g \), so we stop. Hence
 \[
 2x^4 - 3x^3 + x^2 + 4x - 1 = \bigl(x^2 - x - \tfrac32\bigr)(2x^2 - x + 3) + \tfrac{11}{2}x + \tfrac72 ,
 \]
-with quotient \( q = x^2 - x - \tfrac32 \) and remainder \( r = \tfrac{11}{2}x + \tfrac72 \). By the uniqueness in @thm-polynomial-division, any other correct method must produce the same \( q \) and \( r \). (We checked the identity by expanding the right-hand side with SymPy.)
+with quotient \( q = x^2 - x - \tfrac32 \) and remainder \( r = \tfrac{11}{2}x + \tfrac72 \). By the uniqueness in @thm-polynomial-division, any other correct method must produce the same \( q \) and \( r \).
 
 Notice that the quotient has a non-integer coefficient although \( f \) and \( g \) have integer coefficients. This is the warning above in action: over \( \nZ \) this division would be impossible.
 :::

@@ -16,7 +16,7 @@ You are drafting sections of a comprehensive, reader-caring linear algebra textb
 - Math: `\( \)` and `\[ \]` only. Unicode proof tags (⇒), (⊆) are fine in prose. Pandoc fenced divs must be closed, blank lines around them.
 - Labels globally unique: grep `src/` before creating one. Keep every "keep label" exactly.
 - `@label` refs only to earlier material (earlier chapters, earlier sections of this chapter per the blueprint, or earlier in your file). Forward pointers in prose say "in Chapter N" without @ref.
-- Verify every non-trivial computation with sympy (`python3 -c 'import sympy'` works with the default python3).
+- Verify every non-trivial computation with sympy (`python3 -c 'import sympy'` works with the default python3). Never mention sympy, Python or "verified by computer" in the book text itself (runnable `{.python .run}` cells are the only exception).
 - American spelling. Add genuine new words to `spelling.txt` (append only).
 - Do not delete or rename files other than those assigned; do not edit other sections, config, or `authoring/STATUS.md` (report forward promises instead).
 

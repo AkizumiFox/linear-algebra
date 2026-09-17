@@ -326,7 +326,7 @@ x + 1 = (-x)\, f + (x^2 - x - 1)\, g .
 \]
 In the notation of the algorithm, \( (a_1, b_1) = (1, 1 - x) \) and \( (a_2, b_2) = (x, 1 + x - x^2) \).
 
-*Checks.* Expanding, \( -x(x^4 - x^3 - 3x^2 + x + 2) = -x^5 + x^4 + 3x^3 - x^2 - 2x \) and \( (x^2 - x - 1)(x^3 - 2x - 1) = x^5 - x^4 - 3x^3 + x^2 + 3x + 1 \), which sum to \( x + 1 \). As an independent check that \( x + 1 \) divides both, \( f(-1) = 1 + 1 - 3 - 1 + 2 = 0 \) and \( g(-1) = -1 + 2 - 1 = 0 \), so @thm-remainder-theorem applies. SymPy's `gcdex` returns the same \( a \), \( b \) and gcd.
+*Checks.* Expanding, \( -x(x^4 - x^3 - 3x^2 + x + 2) = -x^5 + x^4 + 3x^3 - x^2 - 2x \) and \( (x^2 - x - 1)(x^3 - 2x - 1) = x^5 - x^4 - 3x^3 + x^2 + 3x + 1 \), which sum to \( x + 1 \). As an independent check that \( x + 1 \) divides both, \( f(-1) = 1 + 1 - 3 - 1 + 2 = 0 \) and \( g(-1) = -1 + 2 - 1 = 0 \), so @thm-remainder-theorem applies.
 :::
 
 ## Coprime polynomials

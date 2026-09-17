@@ -215,7 +215,7 @@ Over every field, \( x^4 - 1 = (x^2 - 1)(x^2 + 1) = (x - 1)(x + 1)(x^2 + 1) \), 
 | \( \nF_3 \) | \( (x + 1)(x + 2)(x^2 + 1) \) |
 | \( \nF_5 \) | \( (x + 1)(x + 2)(x + 3)(x + 4) \) |
 
-By @thm-unique-factorization-polynomials, each row is **the** factorization over that field, up to order. SymPy's `factor_list`, with `extension=I` over \( \nC \) and `modulus=p` over \( \nF_p \), returns the same rows. Notice that the numbers of irreducible factors are \( 3, 3, 4, 4, 3, 4 \), and that over \( \nF_2 \) a repeated factor appears although \( x^4 - 1 \) has no repeated factor over the other fields.
+By @thm-unique-factorization-polynomials, each row is **the** factorization over that field, up to order. Notice that the numbers of irreducible factors are \( 3, 3, 4, 4, 3, 4 \), and that over \( \nF_2 \) a repeated factor appears although \( x^4 - 1 \) has no repeated factor over the other fields.
 :::
 
 ## Tools over \( \nQ \): rational roots and Eisenstein's criterion
@@ -259,7 +259,7 @@ By @thm-rational-root, a rational root \( u/v \) in lowest terms has \( u \mid -
 \[
 f(1) = 2, \qquad f(-1) = -10, \qquad f\bigl(\tfrac12\bigr) = \tfrac14 - \tfrac34 + 2 - 1 = \tfrac12, \qquad f\bigl(-\tfrac12\bigr) = -\tfrac14 - \tfrac34 - 2 - 1 = -4 .
 \]
-None is \( 0 \), so \( f \) has no rational root. Since \( \deg f = 3 \), @thm-irreducible-deg-2-3 shows that \( f \) is irreducible over \( \nQ \). (SymPy's `factor_list` over \( \nQ \) agrees.)
+None is \( 0 \), so \( f \) has no rational root. Since \( \deg f = 3 \), @thm-irreducible-deg-2-3 shows that \( f \) is irreducible over \( \nQ \).
 :::
 
 Beyond degree \( 3 \), roots are not enough, as the warning after @thm-irreducible-deg-2-3 showed. One classical criterion handles many polynomials of any degree at once. It looks at divisibility of the coefficients by a prime.

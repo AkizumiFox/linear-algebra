@@ -13,7 +13,9 @@ The plan is at `~/.claude/plans/cached-gathering-sedgewick.md`. The outline of a
 | 4 | ch04-duality | Duality | deployed |
 | 5 | ch05-polynomials | Polynomials | deployed |
 | 6 | ch06-determinants | Determinants | deployed |
-| 7–23 | | see plan | not started |
+| 7 | ch07-block-matrices | Block matrices | deployed |
+| 8 | ch08-eigenvalues | Eigenvalues | drafting |
+| 9–23 | | see plan | not started |
 
 ## Open forward promises
 
@@ -72,3 +74,9 @@ Add a line when a section promises something later ("proved in Chapter 5"); tick
 - [ ] Ch 6 → Ch 10/12: Gram matrices, √det(AᵀA) area via inner products
 - [ ] Ch 6 → Ch 11: circulants of every size
 - [ ] Ch 6 → Ch 23: matrix-tree theorem
+- [ ] Ch 7 → Ch 11: AX − XB = C uniquely solvable ⇔ no common eigenvalue (over ℂ); Ch 19 quantitative form
+- [ ] Ch 7 → Ch 14: tensor product of maps has matrix A ⊗ B
+- [ ] Ch 7 → Ch 8: tr C^k = 0 for all k ⇒ nilpotent, via eigenvalues
+- [ ] Ch 7 → Ch 8: p_T = p_{T|U} · p_{T̄} for T mapping U into U
+- [ ] Ch 7 → Ch 12: positive definiteness via Schur complements
+- [ ] Ch 7 → Ch 23: Gaussian elimination as repeated Schur complements

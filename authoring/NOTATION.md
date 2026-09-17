@@ -58,6 +58,8 @@ This list is fixed. A chapter that needs a new symbol adds it here, and a new ma
 | `\adj A` | adjugate |
 | `M_{ij}`, `C_{ij} = (-1)^{i+j}M_{ij}` | minor (det of A with row i and column j deleted) and cofactor |
 | `\diag(d_1, \dots, d_n)` | diagonal matrix |
+| `A \oplus B`, `A_1 \oplus \dots \oplus A_r` | direct sum of **square** matrices: the block diagonal matrix with diagonal blocks A, B (Ch 7). A matrix, not a subspace; order matters. It is the matrix of an operator on U ⊕ W that maps U into U and W into W, in an adapted basis |
+| `M/A`, `M/D` | Schur complement of an invertible block of the block matrix M with blocks A, B (top) and C, D (bottom): M/A = D − CA⁻¹B, M/D = A − BD⁻¹C (Ch 7). Not a quotient space V/U |
 | `A \sim B` | similar |
 | `T'` | dual map (transpose of T) W* → V*. The star is reserved for adjoints |
 | `V^{*}`, `\v^{*}` / `\varphi` | dual space; functionals are Greek letters φ, ψ |
@@ -110,7 +112,9 @@ This list is fixed. A chapter that needs a new symbol adds it here, and a new ma
 | `\Lambda^{k} V`, `\v_1 \wedge \dots \wedge \v_k` | exterior power |
 | `\Sym^{k} V` | symmetric power |
 | `A \otimes B` | Kronecker product of matrices |
+| `\vecop X` | vectorization of a matrix: its columns stacked into one column, rendered vec X (Ch 7) |
 | `A \circ B` | Hadamard (entrywise) product |
+| `[A, B] = AB - BA` | commutator |
 | `\norm{\x}_p` | p-norm. `\norm{A}_F` Frobenius, `\norm{A}_2` spectral/operator 2-norm |
 | `\norm{A}` | operator norm induced by the named vector norm |
 | `\kappa(A)` | condition number |
