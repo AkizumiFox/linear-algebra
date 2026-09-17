@@ -249,6 +249,7 @@
 
             for (let i = headingArray.length - 1; i >= 0; i--) {
                 const heading = headingArray[i];
+                if (heading.closest('.tab-panel[hidden]')) continue;
                 const rect = heading.getBoundingClientRect();
                 const headingTop = rect.top + scrollY;
 
@@ -259,8 +260,8 @@
             }
 
             // If no heading is above viewport, use the first one
-            if (!currentHeading && headingArray.length > 0) {
-                currentHeading = headingArray[0];
+            if (!currentHeading) {
+                currentHeading = headingArray.find(h => !h.closest('.tab-panel[hidden]')) || null;
             }
 
             // Update TOC active state
@@ -408,6 +409,7 @@
 
                 if (target) {
                     e.preventDefault();
+                    revealTabFor(target);
                     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
                     target.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'start' });
 
@@ -602,7 +604,7 @@
             if (event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) return;
             if (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight') return;
             const target = event.target;
-            if (target.closest('input, textarea, select, [contenteditable="true"], .code-cell, .plot, .widget')) return;
+            if (target.closest('input, textarea, select, [contenteditable="true"], .code-cell, .plot, .widget, [role="tab"]')) return;
             if (document.body.classList.contains('drawer-open')) return;
             // Leave horizontal scrolling of a focused wide equation alone
             if (target !== document.body && target.scrollWidth > target.clientWidth) return;
@@ -695,8 +697,130 @@
 
     function markTargetFromHash() {
         if (location.hash.length > 1) {
-            markTarget(document.getElementById(decodeURIComponent(location.hash.slice(1))));
+            const target = document.getElementById(decodeURIComponent(location.hash.slice(1)));
+            if (target && revealTabFor(target)) target.scrollIntoView({ block: 'start' });
+            markTarget(target);
         }
+    }
+
+    // ==========================================================================
+    // Reading / Exercises tabs
+    // ==========================================================================
+
+    let selectSectionTab = null;
+
+    /** Show the tab that contains the element. Returns true if the tab had to change. */
+    function revealTabFor(element) {
+        const panel = element?.closest('.tab-panel');
+        if (!panel || !panel.hidden || !selectSectionTab) return false;
+        selectSectionTab(panel.dataset.tab);
+        return true;
+    }
+
+    /**
+     * A section page whose last part is "Exercises" gets two tabs under its title: the text
+     * and the exercises. Without JavaScript, and in print, both stay on one page.
+     */
+    function setupSectionTabs() {
+        const content = document.querySelector('.content');
+        const heading = content?.querySelector(':scope > h2#exercises');
+        if (!heading) return;
+
+        const makePanel = (name, label) => {
+            const panel = document.createElement('div');
+            panel.className = 'tab-panel';
+            panel.dataset.tab = name;
+            panel.id = `tab-panel-${name}`;
+            panel.setAttribute('role', 'tabpanel');
+            panel.setAttribute('aria-labelledby', `tab-${name}`);
+            return panel;
+        };
+        const reading = makePanel('reading');
+        const exercises = makePanel('exercises');
+
+        const header = content.querySelector(':scope > header');
+        let node = header ? header.nextSibling : content.firstChild;
+        while (node && node !== heading) {
+            const next = node.nextSibling;
+            reading.append(node);
+            node = next;
+        }
+        while (node) {
+            const next = node.nextSibling;
+            exercises.append(node);
+            node = next;
+        }
+
+        const count = exercises.querySelectorAll('.exercise.env').length;
+        const bar = document.createElement('div');
+        bar.className = 'section-tabs';
+        bar.setAttribute('role', 'tablist');
+        bar.setAttribute('aria-label', 'Section parts');
+        const makeTab = (name, text, badge) => {
+            const tab = document.createElement('button');
+            tab.type = 'button';
+            tab.className = 'section-tab';
+            tab.id = `tab-${name}`;
+            tab.dataset.tab = name;
+            tab.setAttribute('role', 'tab');
+            tab.setAttribute('aria-controls', `tab-panel-${name}`);
+            tab.innerHTML = `<i class="bi ${name === 'reading' ? 'bi-book' : 'bi-pencil-square'}" aria-hidden="true"></i><span>${text}</span>`
+                + (badge ? `<span class="tab-count">${badge}</span>` : '');
+            return tab;
+        };
+        const tabs = [makeTab('reading', 'Reading'), makeTab('exercises', 'Exercises', count || '')];
+        bar.append(...tabs);
+
+        // At the end of the text, an invitation to the exercises
+        const next = document.createElement('button');
+        next.type = 'button';
+        next.className = 'tab-continue';
+        next.innerHTML = `<span>Continue to the exercises</span><i class="bi bi-arrow-right" aria-hidden="true"></i>`;
+        reading.append(next);
+
+        if (header) header.after(bar, reading, exercises);
+        else content.prepend(bar, reading, exercises);
+
+        const tocLinks = () => document.querySelectorAll('.toc a[href^="#"]');
+        const select = (name, { scroll = false, updateHash = false } = {}) => {
+            for (const tab of tabs) {
+                const on = tab.dataset.tab === name;
+                tab.setAttribute('aria-selected', String(on));
+                tab.tabIndex = on ? 0 : -1;
+            }
+            reading.hidden = name !== 'reading';
+            exercises.hidden = name !== 'exercises';
+            // Dim the "On this page" entries that belong to the other tab
+            tocLinks().forEach(link => {
+                const target = document.getElementById(decodeURIComponent(link.getAttribute('href').slice(1)));
+                link.closest('li')?.classList.toggle('toc-other-tab', !!target?.closest('.tab-panel[hidden]'));
+            });
+            if (updateHash) {
+                history.replaceState(null, '', name === 'exercises' ? '#exercises' : location.pathname + location.search);
+            }
+            if (scroll && bar.getBoundingClientRect().top < 0) {
+                bar.scrollIntoView({ block: 'start' });
+            }
+            window.dispatchEvent(new Event('scroll'));  // refresh the table-of-contents highlight
+        };
+        selectSectionTab = name => select(name);
+
+        tabs.forEach((tab, index) => {
+            tab.addEventListener('click', () => select(tab.dataset.tab, { scroll: true, updateHash: true }));
+            tab.addEventListener('keydown', event => {
+                if (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight') return;
+                event.preventDefault();
+                const other = tabs[(index + 1) % tabs.length];
+                other.focus();
+                select(other.dataset.tab, { updateHash: true });
+            });
+        });
+        next.addEventListener('click', () => {
+            select('exercises', { updateHash: true });
+            bar.scrollIntoView({ block: 'start', behavior: 'smooth' });
+        });
+
+        select('reading');
     }
 
     /**
@@ -1076,8 +1200,14 @@
         showContinueReading();
         setupArrowKeys();
 
+        // Reading / Exercises tabs (before the table of contents, which reflects them)
+        setupSectionTabs();
+
         // Build table of contents
         buildTableOfContents();
+        if (selectSectionTab) {
+            selectSectionTab(document.querySelector('.section-tab[aria-selected="true"]')?.dataset.tab || 'reading');
+        }
 
         setupWideInlineMath();
 

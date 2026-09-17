@@ -175,7 +175,7 @@
   --font-body: 'STIX Two Text', 'STIX Two', 'Times New Roman', serif;
   --font-mono: ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace;
   --text-size: 20px;
-  --line-height: 1.6;
+  --line-height: 1.7;
 
   /* Layout */
   --content-width: 39rem;   /* about 72-75 characters per line at 20px */
@@ -231,6 +231,17 @@ body {
   font-kerning: normal;
   font-variant-numeric: lining-nums proportional-nums;
   text-rendering: optimizeLegibility;
+}
+
+/* A little air between letters and words in the text column; formulas keep their own spacing */
+.content {
+  letter-spacing: 0.012em;
+  word-spacing: 0.05em;
+}
+
+.content mjx-container {
+  letter-spacing: normal;
+  word-spacing: normal;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -645,6 +656,124 @@ div.equation mjx-container[display="true"] {
 
 .nav-part:first-of-type {
   margin-top: 0.9rem;
+}
+
+/* --- Reading / Exercises tabs on section pages (main.js) --- */
+.section-tabs {
+  display: flex;
+  gap: 1.4rem;
+  margin: 0.2rem 0 1.6rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.section-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin: 0 0 -1px;
+  padding: 0.5rem 0.1rem 0.6rem;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  background: none;
+  color: var(--muted);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  line-height: 1.3;
+  cursor: pointer;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.section-tab .bi {
+  font-size: 0.9em;
+  opacity: 0.8;
+}
+
+.section-tab:hover {
+  color: var(--ink-strong);
+  border-bottom-color: var(--rule-strong);
+}
+
+.section-tab[aria-selected="true"] {
+  color: var(--ink-strong);
+  border-bottom-color: var(--accent);
+}
+
+.section-tab:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.tab-count {
+  min-width: 1.4em;
+  padding: 0.05em 0.45em;
+  border-radius: 999px;
+  background: var(--subtle);
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-variant-numeric: lining-nums tabular-nums;
+  text-align: center;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.section-tab[aria-selected="true"] .tab-count {
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+.tab-panel[hidden] {
+  display: none;
+}
+
+/* The invitation at the end of the text */
+.tab-continue {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin: 2.5rem 0 0.5rem;
+  padding: 0.9rem 1.1rem;
+  border: 1px solid var(--rule);
+  border-radius: 10px;
+  background: var(--paper);
+  color: var(--ink-strong);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: border-color 0.15s ease, background-color 0.15s ease, color 0.15s ease;
+}
+
+.tab-continue .bi {
+  color: var(--faint);
+  transition: transform 0.2s ease, color 0.15s ease;
+}
+
+.tab-continue:hover,
+.tab-continue:focus-visible {
+  border-color: var(--hover-border);
+  background: var(--hover-wash);
+  color: var(--accent);
+}
+
+.tab-continue:hover .bi,
+.tab-continue:focus-visible .bi {
+  color: var(--accent);
+  transform: translateX(3px);
+}
+
+.toc-item.toc-other-tab a {
+  color: var(--faint);
+}
+
+@media print {
+  .section-tabs,
+  .tab-continue {
+    display: none !important;
+  }
+
+  .tab-panel[hidden] {
+    display: block !important;
+  }
 }
 
 /* --- Foldable proofs and solutions (main.js) ---
