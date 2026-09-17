@@ -259,9 +259,7 @@ a.xref {
   text-decoration: none;
 }
 
-a.xref:hover {
-  text-decoration: underline;
-}
+
 
 ul,
 ol {
@@ -382,7 +380,7 @@ mjx-container.wide-inline {
 }
 
 .env mjx-container[display="true"] {
-  --surface: color-mix(in srgb, var(--env-color) var(--env-tint), var(--paper));
+  --surface: color-mix(in srgb, var(--env-color) var(--env-mix), var(--paper));
 }
 
 /* Numbered equations (theorems.lua): equation centered, number at the right */
@@ -399,13 +397,21 @@ div.equation mjx-container[display="true"] {
    Each box gets --env-color from the config; rule and tint are derived.
    ========================================================================== */
 
+/* Registered so the tint can transition on hover (and equations inside follow it) */
+@property --env-mix {
+  syntax: "<percentage>";
+  inherits: true;
+  initial-value: 6%;
+}
+
 .env {
   --env-color: var(--muted);
+  --env-mix: var(--env-tint);
   margin: 1.5em 0;
   padding: 0.85em 1.15em 0.85em;
   border-left: 3px solid color-mix(in srgb, var(--env-color), var(--paper) var(--env-rule-mix));
   border-radius: 0 4px 4px 0;
-  background: color-mix(in srgb, var(--env-color) var(--env-tint), var(--paper));
+  background-color: color-mix(in srgb, var(--env-color) var(--env-mix), var(--paper));
 }
 
 .env > :last-child,
@@ -1506,6 +1512,148 @@ th {
 .tooltip-error {
   color: var(--danger);
   font-style: italic;
+}
+
+/* ==========================================================================
+   Hover effects
+   Quiet and quick: one easing curve, 180-250ms, only on devices with a pointer that
+   hovers. (Reduced-motion preferences switch transitions off; see Base.)
+   ========================================================================== */
+
+:root {
+  --ease-out: cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+a {
+  transition: color 0.18s var(--ease-out), text-decoration-color 0.18s var(--ease-out);
+}
+
+/* Cross-references: an underline drawn from the left (per line when a link wraps) */
+a.xref {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  background-size: 0 1px;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  transition: background-size 0.25s var(--ease-out), color 0.18s var(--ease-out);
+}
+
+.env,
+.code-cell,
+.sidebar-nav a,
+.toc a,
+.search-result-item,
+.pagination-link,
+.icon-button i,
+.pagination-link .bi,
+.nav-section-title,
+.nav-chapter-title {
+  transition-timing-function: var(--ease-out);
+}
+
+.env {
+  transition: --env-mix 0.25s var(--ease-out);
+}
+
+.code-cell {
+  transition: border-color 0.2s var(--ease-out), box-shadow 0.2s var(--ease-out);
+}
+
+.sidebar-nav a {
+  transition: background-color 0.18s var(--ease-out), color 0.18s var(--ease-out);
+}
+
+.nav-section-title,
+.nav-chapter-title {
+  display: inline-block;
+  transition: transform 0.2s var(--ease-out);
+}
+
+.toc a {
+  transition: border-color 0.2s var(--ease-out), color 0.18s var(--ease-out);
+}
+
+.search-result-item {
+  transition: background-color 0.15s var(--ease-out), box-shadow 0.15s var(--ease-out);
+}
+
+.pagination-link {
+  transition: border-color 0.2s var(--ease-out), color 0.2s var(--ease-out),
+    box-shadow 0.25s var(--ease-out), transform 0.25s var(--ease-out);
+}
+
+.pagination-link .bi,
+.icon-button i {
+  transition: transform 0.25s var(--ease-out), opacity 0.2s ease, color 0.18s var(--ease-out);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  a.xref:hover {
+    background-size: 100% 1px;
+  }
+
+  /* The block under the pointer is a shade stronger */
+  .env:hover {
+    --env-mix: calc(var(--env-tint) + 3%);
+  }
+
+  .code-cell:hover {
+    border-color: color-mix(in srgb, var(--accent) 35%, var(--rule-strong));
+  }
+
+  .code-cell:focus-within {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px var(--accent-soft);
+  }
+
+  /* Sidebar: the title slides a hair toward the text */
+  .sidebar-nav a:hover .nav-section-title,
+  .nav-chapter-title-link:hover .nav-chapter-title {
+    transform: translateX(2px);
+  }
+
+  .toc a:hover:not(.active) {
+    border-left-color: var(--rule-strong);
+  }
+
+  /* Previous / next: the card lifts and its arrow points onward */
+  .pagination-link:hover {
+    box-shadow: 0 4px 14px color-mix(in srgb, var(--ink) 10%, transparent);
+    transform: translateY(-1px);
+  }
+
+  .nav-page-previous .pagination-link:hover .bi {
+    transform: translateX(-3px);
+    color: var(--accent);
+  }
+
+  .nav-page-next .pagination-link:hover .bi {
+    transform: translateX(3px);
+    color: var(--accent);
+  }
+
+  .pagination-link:active {
+    transform: translateY(0) scale(0.98);
+  }
+
+  /* Toolbar icons respond, and the theme icon hints at the change */
+  .sidebar-toggle:hover i,
+  .toc-toggle:hover i {
+    transform: scale(1.08);
+  }
+
+  [data-theme="light"] .theme-toggle:hover .theme-icon-moon {
+    transform: rotate(-18deg) scale(1.05);
+  }
+
+  [data-theme="dark"] .theme-toggle:hover .theme-icon-sun {
+    transform: rotate(45deg) scale(1.05);
+  }
+
+  .sidebar-tools a {
+    transition: color 0.18s var(--ease-out);
+  }
 }
 
 /* ==========================================================================
