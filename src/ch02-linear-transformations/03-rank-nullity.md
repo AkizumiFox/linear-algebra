@@ -49,7 +49,7 @@ Let \( V \) be a finite dimensional vector space and \( f : V \to W \) be a line
 :::
 
 ::: {.proof}
-Let \( S = \left\{ \v_1, \v_2, \dots, \v_n \right\} \) be a basis of \( \ker (f) \), having \( \nullity(f) = \dim (\ker f) = n \). Since \( \ker (f) \subseteq V \), by Basis Extension Theorem, we can extend \( S \) to \( S' = \left\{ \v_1, \dots, \v_n, \s_1, \dots, \s_k \right\} \), a basis of \( V \), having \( \dim (V) = n + k \).
+Let \( S = \left\{ \v_1, \v_2, \dots, \v_n \right\} \) be a basis of \( \ker (f) \), having \( \nullity(f) = \dim (\ker f) = n \). Since \( \ker (f) \subseteq V \), by the Basis Extension Theorem (@thm-basis-extension), we can extend \( S \) to \( S' = \left\{ \v_1, \dots, \v_n, \s_1, \dots, \s_k \right\} \), a basis of \( V \), having \( \dim (V) = n + k \).
 
 ::: {.claim}
 \( S'' = \left\{ f(\s_1), f(\s_2), \dots, f(\s_k) \right\} \) is a basis of \( \im (f) \).

@@ -139,7 +139,7 @@ Let \( W_1 \) and \( W_2 \) be subspaces of a vector space \( V \). Then the int
 :::
 
 ::: {.proof}
-We use the Subspace Test on \( W = W_1 \cap W_2 \):
+We use the Subspace Test (@thm-subspace-test) on \( W = W_1 \cap W_2 \):
 
 - **Zero vector:** Since \( W_1 \) and \( W_2 \) are subspaces, \( \mathbf{0} \in W_1 \) and \( \mathbf{0} \in W_2 \). Thus \( \mathbf{0} \in W_1 \cap W_2 \).
 - **Closure under addition:** Let \( \w, \z \in W_1 \cap W_2 \). Then \( \w, \z \in W_1 \) and \( \w, \z \in W_2 \). Since \( W_1 \) and \( W_2 \) are subspaces, they are closed under addition, so \( \w + \z \in W_1 \) and \( \w + \z \in W_2 \). Hence \( \w + \z \in W_1 \cap W_2 \).

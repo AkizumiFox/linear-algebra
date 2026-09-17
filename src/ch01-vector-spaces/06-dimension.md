@@ -43,7 +43,7 @@ Consider \( S = \{ \v_1, \v_2, \v_3, \v_4, \v_5, \v_6 \} \) in \( \nR^3 \) where
 \v_4 &= (3, 2, 2), & \v_5 &= (1, 1, 0), & \v_6 &= (0, 0, 1).
 \end{align*}
 
-We apply the sifting method:
+We apply the sifting method (@thm-sift):
 
 - \( \v_1 \neq \mathbf{0} \), so \( \v_1 \) is kept.
 - \( \v_2 = 2\v_1 \), so \( \v_2 \) is removed.
@@ -203,7 +203,7 @@ Every finite spanning set of a vector space \( V \) contains a basis.
 :::
 
 ::: {.proof}
-Apply the Sifting Method to the spanning set. The resulting subset \( S' \) is linearly independent by construction and still spans \( V \). Therefore, \( S' \) is a basis for \( V \).
+Apply the Sifting Method (@thm-sift) to the spanning set. The resulting subset \( S' \) is linearly independent by construction and still spans \( V \). Therefore, \( S' \) is a basis for \( V \).
 :::
 
 ::: {#thm-dim-impl-eq}

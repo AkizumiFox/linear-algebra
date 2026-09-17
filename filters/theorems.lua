@@ -1037,15 +1037,24 @@ local function process_citations(cite)
                     pandoc.Attr("", {"xref"}, {{"data-ref", id}, {"data-shard", label_info.shard or page_shard()}})
                 ))
             elseif FORMAT:match("latex") then
+                -- A label defined in another section's file cannot be \\ref'd from this
+                -- section's PDF; print its number instead (the book PDF has all labels)
+                local in_document = labels[id] ~= nil or is_book_mode()
                 local text
-                if numbered then
+                if numbered and in_document then
                     text = string.format("%s~\\ref*{%s}", name, id)
+                elseif numbered then
+                    text = name .. "~" .. label_info.number
                 elseif label_info.title_latex and label_info.title_latex ~= "" then
                     text = name .. " (" .. label_info.title_latex .. ")"
                 else
                     text = name
                 end
-                table.insert(refs, pandoc.RawInline("latex", string.format("\\hyperref[%s]{%s}", id, text)))
+                if in_document then
+                    table.insert(refs, pandoc.RawInline("latex", string.format("\\hyperref[%s]{%s}", id, text)))
+                else
+                    table.insert(refs, pandoc.RawInline("latex", text))
+                end
             else
                 table.insert(refs, pandoc.Str(numbered and (name .. " " .. label_info.number) or name))
             end

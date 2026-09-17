@@ -59,14 +59,20 @@ end
 -- Text of the node labels in a picture ("node[right] {$x$}" -> "x"), for alt text
 local function node_labels(picture)
     local labels = {}
+    -- node[opts] {text}, node {text}, and \node[opts] (name) at (x, y) {text};
     for label in picture:gmatch("node%s*%b[]%s*(%b{})") do table.insert(labels, label) end
     for label in picture:gmatch("node%s*(%b{})") do table.insert(labels, label) end
-    local cleaned = {}
+    for label in picture:gmatch("\\node[^;{]-(%b{})%s*;") do table.insert(labels, label) end
+    local cleaned, seen = {}, {}
     for _, label in ipairs(labels) do
         -- TeX commands keep their names (\theta -> theta, \A -> A); braces and $ go
-        local text = label:sub(2, -2):gsub("%$", ""):gsub("\\(%a+)%s*", "%1"):gsub("[{}]", "")
-        text = text:gsub("^%s+", ""):gsub("%s+$", "")
-        if text ~= "" then table.insert(cleaned, text) end
+        local text = label:sub(2, -2):gsub("%$", ""):gsub("\\(%a+)%s*", "%1 "):gsub("[{}]", "")
+        text = text:gsub("%s+", " "):gsub("^%s+", ""):gsub("%s+$", ""):gsub(" ([_^])", "%1")
+        -- a lone symbol name (subseteq, to) says little; skip repeats
+        if text ~= "" and not seen[text] and not text:match("^%a%a%a+$") then
+            seen[text] = true
+            table.insert(cleaned, text)
+        end
     end
     return cleaned
 end

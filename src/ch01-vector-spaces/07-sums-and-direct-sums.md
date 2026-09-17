@@ -31,7 +31,7 @@ Let \( W_1 \), \( W_2 \) be subspaces of a vector space \( V \). Then we define
 
 ::: {.proof}
 
-To prove that \( W_1 + W_2 \) is a subspace \( V \). We prove that three conditions of the subspace test:
+To prove that \( W_1 + W_2 \) is a subspace of \( V \), we verify the three conditions of the Subspace Test (@thm-subspace-test):
 
 - Non-emptiness: As \( W_1 \), \( W_2 \) are subspaces, they both contains \( \mathbf{0} \). And since \( \mathbf{0} = \mathbf{0}_{W_1} + \mathbf{0}_{W_2} \), therefore \( W_1 + W_2 \) is non-empty.
 
@@ -75,9 +75,20 @@ Let \( V \) be a finite-dimensional vector space, and let \( W_1 \), \( W_2 \) s
 
 ::: {.proof}
 
-::: {.content-visible when-format="html"}
-![Inclusion diagram for subspaces $W_1$ and $W_2$](fig-subspace-1.png){width="70%"}
-:::
+\begin{center}
+\begin{tikzpicture}[
+    space/.style={draw=red!75!black, fill=red!4, thick, inner sep=6pt, minimum height=2.1em}]
+    \node[space] (cap) at (0, 0) {$W_1 \cap W_2$};
+    \node[space] (w1) at (3.2, 1.1) {$W_1$};
+    \node[space] (w2) at (3.2, -1.1) {$W_2$};
+    \node[space] (sum) at (6.4, 0) {$W_1 + W_2$};
+    \path (cap) -- node[sloped] {$\subseteq$} (w1);
+    \path (cap) -- node[sloped] {$\subseteq$} (w2);
+    \path (w1) -- node[sloped] {$\subseteq$} (sum);
+    \path (w2) -- node[sloped] {$\subseteq$} (sum);
+    \node[font=\small] at (3.2, -2.25) {Inclusion diagram for subspaces $W_1$ and $W_2$};
+\end{tikzpicture}
+\end{center}
 
 We use the above diagram to build intuition for the proof.
 

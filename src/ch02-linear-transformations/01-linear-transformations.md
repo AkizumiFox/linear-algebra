@@ -98,7 +98,7 @@ For \( \v, \w \in F^n \) and \( \lambda \in F \):
 - **Additivity:** \( f_\A(\v + \w) = \A(\v + \w) = \A\v + \A\w = f_\A(\v) + f_\A(\w) \).
 - **Homogeneity:** \( f_\A(\lambda\v) = \A(\lambda\v) = \lambda(\A\v) = \lambda f_\A(\v) \).
 
-These follow from the distributive and scalar properties of matrix multiplication.
+These follow from the distributive and scalar properties of matrix multiplication (@thm-matrix-multiplication-properties).
 :::
 
 For \( F = \nR \) and \( m = n = 2 \), the map \( f_\A \) sends the unit square to the parallelogram spanned by \( \A\e_1 \) and \( \A\e_2 \), the columns of \( \A \).

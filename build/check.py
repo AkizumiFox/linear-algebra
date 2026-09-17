@@ -201,6 +201,11 @@ def check(book: Book, quiet: bool = False) -> bool:
     elif not quiet:
         print_info("No book build found; skipping book numbering check (run `./build.py book`)")
 
+    # References LaTeX could not resolve print as "??" in a PDF
+    for log in sorted((book.build_dir / "tmp").glob("**/*.log")):
+        for match in re.finditer(r"Reference `([^']+)' on page \d+ undefined", log.read_text(encoding="latin-1")):
+            errors.append(f"undefined reference {match.group(1)} in {log.relative_to(book.root).with_suffix('.pdf')}")
+
     section_aux_dir = book.build_dir / "tmp" / "pdf-single"
     for aux_file in sorted(section_aux_dir.rglob("*.aux")) if section_aux_dir.exists() else []:
         entry = scan["files"].get(f"{aux_file.parent.name}/{aux_file.stem}.html")

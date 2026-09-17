@@ -69,6 +69,9 @@ def build_pdf(book: Book, specific_file: Optional[Path] = None) -> bool:
         if not run_pandoc(cmd, cwd=book.root):
             return False
         result = _pdflatex(book, tex_file)
+        # References to labels in the same file resolve on a second pass
+        if "Rerun to get" in result.stdout or "undefined references" in result.stdout:
+            result = _pdflatex(book, tex_file)
         out_pdf = tex_file.with_suffix(".pdf")
         if not out_pdf.exists():
             print_error(f"pdflatex failed for {page.source.name}: {_latex_errors(result)}")
