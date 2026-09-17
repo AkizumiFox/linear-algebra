@@ -16,7 +16,9 @@ One source, Pandoc Markdown in `src/`, built by `build.py` into both the website
 A toolbar at the top of each page folds the book contents (left) and "On this page" (right)
 away, which widens the text, and switches between light and dark themes (following the
 system setting until chosen). These choices are remembered in the browser. On phones the
-same toolbar opens the contents as a drawer. Press `/` to search.
+same toolbar opens the contents as a drawer. Press `/` to search, ← and → to turn pages.
+Solutions start folded; the start page offers "Continue reading". The sidebar links to a
+list of all results and a dependency graph.
 
 ## Layout
 
@@ -24,6 +26,7 @@ same toolbar opens the contents as a drawer. Press `/` to search.
 - `drafts/`: chapters that are not built yet, ch03 determinants and ch04 diagonalization. To publish one, see the note at the top of the file.
 - `config/config.json`: this book's settings (chapters, environments and counters, deploy target). `latex/macros.tex`: the macros, used by both the PDF and the website.
 - `build/`, `filters/`, `templates/`, `latex/*.sty`: the engine, shared by any book built with it (see "Another book" in `BUILD.md`).
+- `spelling.txt`: words the spell check accepts. `.github/workflows/`: build and deploy on push (see `BUILD.md`).
 - `widgets/`: interactive widgets available to `::: {.widget}` (see "Interactive components" in `BUILD.md`).
 - `tests/`: engine tests and the small fixture book they build (`python3 -m unittest discover -s tests`).
 - `site/`: a gitignored clone of the public deploy repo AkizumiFox/linear-algebra. `_build/` and `docs/` are gitignored build output.

@@ -32,9 +32,17 @@ pages reload by themselves. Pages built by `serve` contain the reload script; th
 | Run the engine tests | `python3 -m unittest discover -s tests` |
 
 `check` fails on unresolved `@refs`, duplicate labels, cross-reference links in `_build/html`
-that point nowhere, and any label whose number in the PDFs differs from the website. Run it
-after `./build.py all`, since the numbering comparison reads the LaTeX `.aux` files.
-`deploy` runs `all` and `check` first and stops if either fails.
+that point nowhere, component problems, and any label whose number in the PDFs differs from
+the website. Run it after `./build.py all`, since the numbering comparison reads the LaTeX
+`.aux` files. `deploy` runs `all` and `check` first and stops if either fails.
+
+`check` also warns (without failing) about:
+
+- **Spelling** (needs `aspell`): words in the prose, not in formulas or code. Add correct
+  terms to `spelling.txt` in the book directory, one per line.
+- **Named results without a reference**: a proof that says "by the Basis Extension Theorem"
+  instead of `@thm-basis-extension`. A reference gives readers a link and a preview and makes
+  the dependency graph exact.
 
 ## Writing
 
@@ -50,6 +58,32 @@ after `./build.py all`, since the numbering comparison reads the LaTeX `.aux` fi
   the website gets an SVG compiled once and cached in `_build/cache/tikz/`.
 - Macros: add them to `latex/macros.tex` (`\def`, `\newcommand`, `\providecommand`,
   `\DeclareMathOperator`). The website's MathJax macros are generated from this file.
+
+## Math rendering
+
+Formulas are rendered when the site is built (MathJax 3.2.2 under Node, `build/math.py`), so
+pages show finished math immediately and load no math script. Tooltip previews and the list
+of results are rendered too; search snippets load MathJax only when needed. MathJax is
+downloaded once into `~/.cache/book-engine`. Without `node`, or without network access for
+that download, the site falls back to rendering math in the browser; set
+`"prerender-math": false` in the config to always do that. Unknown macros are reported as
+build warnings.
+
+## Generated pages
+
+- `results.html`: every definition, theorem and example, grouped by chapter and section,
+  with filters and previews.
+- `graph.html`: dependency graph of the results. An arrow means "is used by": solid for an
+  `@reference` in a result's statement or in the proof, solution or remark after it, dashed
+  where such a text names a theorem, lemma, corollary or proposition by its title.
+
+## Reader features (no configuration)
+
+Solutions start folded and proofs can be folded; visited sections get a check mark and the
+start page offers "Continue reading"; ← and → go to the previous and next page; `/` opens
+search; the toolbar folds the side panes and switches light/dark; on touch screens a tap on
+a reference opens its preview. With `issues-url` set, each page links to a prefilled
+"Report a typo" issue.
 
 ## Interactive components
 
@@ -123,8 +157,15 @@ engine's copy. `tests/fixture-book/` is a minimal example.
 Config keys: `title`, `author`, `chapters` (directory strings, or `{"dir": …, "title": …}`;
 the title defaults to the chapter's `index.md` heading), `src` (default `src`), `preface`
 (default `src/index.md`), `macros`, `environment_settings`, `output`, `templates`, `styles`,
-`repo-url` (optional source link in the sidebar), `deploy-dir`, `deploy-repo`,
-`deploy-domain`, `deploy-push-url`.
+`repo-url` (optional source link in the sidebar), `issues-url` (optional, e.g.
+`https://github.com/USER/REPO/issues/new`, for the "Report it" link), `prerender-math`
+(default true), `deploy-dir`, `deploy-repo`, `deploy-domain`, `deploy-push-url`.
+
+## Automatic deploys
+
+`.github/workflows/build-and-deploy.yml` builds, tests and checks the book on every push, and
+on `main` publishes `_build/html` to the site repository. It needs this source in a GitHub
+repository and a deploy key; the setup steps are at the top of the file.
 
 ## Other
 
