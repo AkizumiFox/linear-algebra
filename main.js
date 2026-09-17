@@ -475,41 +475,120 @@
     // ==========================================================================
 
     /**
-     * On narrow screens the sidebar is a drawer opened from the top bar's menu button.
+     * Toolbar buttons.
+     * - Contents: on phones and small tablets the book sidebar is a drawer; on wider screens
+     *   the button folds the sidebar away so the text column can widen.
+     * - Theme: light / dark. Follows the system until the reader chooses; the choice is saved.
+     * - On this page: folds the right-hand pane away.
+     * Choices are saved in localStorage and applied before first paint (see template.html).
      */
-    function setupMobileMenu() {
+    const DRAWER_QUERY = window.matchMedia('(max-width: 900px)');
+
+    function saveSetting(key, value) {
+        try {
+            if (value === null) localStorage.removeItem(key);
+            else localStorage.setItem(key, value);
+        } catch (e) { /* private mode: the setting lasts for this page only */ }
+    }
+
+    function setButtonLabel(button, label) {
+        button.setAttribute('aria-label', label);
+        button.dataset.tooltip = label;
+    }
+
+    function setupLayoutControls() {
+        const root = document.documentElement;
         const sidebar = document.getElementById('quarto-sidebar');
-        const button = document.querySelector('.menu-button');
-        if (!sidebar || !button) return;
+        const sidebarButton = document.querySelector('.sidebar-toggle');
+        const tocButton = document.querySelector('.toc-toggle');
+        const themeButton = document.querySelector('.theme-toggle');
 
-        const overlay = document.createElement('div');
-        overlay.className = 'sidebar-overlay';
-        document.body.appendChild(overlay);
+        // --- Book contents: drawer (narrow) or collapsible pane (wide) ---
+        if (sidebar && sidebarButton) {
+            const overlay = document.createElement('div');
+            overlay.className = 'sidebar-overlay';
+            document.body.appendChild(overlay);
 
-        const setOpen = open => {
-            sidebar.classList.toggle('show', open);
-            overlay.classList.toggle('show', open);
-            document.body.classList.toggle('drawer-open', open);
-            button.setAttribute('aria-expanded', String(open));
-            if (open) {
-                const current = sidebar.querySelector('.nav-section-item.active a') || sidebar.querySelector('a');
-                current?.focus({ preventScroll: true });
-                current?.scrollIntoView({ block: 'center' });
-            }
-        };
+            const setDrawer = open => {
+                sidebar.classList.toggle('show', open);
+                overlay.classList.toggle('show', open);
+                document.body.classList.toggle('drawer-open', open);
+                sidebarButton.setAttribute('aria-expanded', String(open));
+                setButtonLabel(sidebarButton, open ? 'Close book contents' : 'Open book contents');
+                if (open) {
+                    const current = sidebar.querySelector('.nav-section-item.active a') || sidebar.querySelector('a');
+                    current?.focus({ preventScroll: true });
+                    current?.scrollIntoView({ block: 'center' });
+                }
+            };
+            const setCollapsed = collapsed => {
+                if (collapsed) root.dataset.sidebar = 'collapsed';
+                else delete root.dataset.sidebar;
+                sidebarButton.setAttribute('aria-expanded', String(!collapsed));
+                setButtonLabel(sidebarButton, collapsed ? 'Show book contents' : 'Hide book contents');
+                saveSetting('book-sidebar', collapsed ? 'collapsed' : null);
+            };
+            const syncMode = () => {
+                if (DRAWER_QUERY.matches) setDrawer(false);
+                else {
+                    setDrawer(false);
+                    setCollapsed(root.dataset.sidebar === 'collapsed');
+                }
+            };
 
-        button.addEventListener('click', () => setOpen(!sidebar.classList.contains('show')));
-        overlay.addEventListener('click', () => setOpen(false));
-        document.addEventListener('keydown', event => {
-            if (event.key === 'Escape' && sidebar.classList.contains('show')) {
-                setOpen(false);
-                button.focus();
-            }
-        });
-        // Following a link (including same-page anchors) closes the drawer
-        sidebar.addEventListener('click', event => {
-            if (event.target.closest('a')) setOpen(false);
-        });
+            sidebarButton.addEventListener('click', () => {
+                if (DRAWER_QUERY.matches) setDrawer(!sidebar.classList.contains('show'));
+                else setCollapsed(root.dataset.sidebar !== 'collapsed');
+            });
+            overlay.addEventListener('click', () => setDrawer(false));
+            document.addEventListener('keydown', event => {
+                if (event.key === 'Escape' && sidebar.classList.contains('show')) {
+                    setDrawer(false);
+                    sidebarButton.focus();
+                }
+            });
+            sidebar.addEventListener('click', event => {
+                if (DRAWER_QUERY.matches && event.target.closest('a')) setDrawer(false);
+            });
+            DRAWER_QUERY.addEventListener('change', syncMode);
+            syncMode();
+        }
+
+        // --- On this page ---
+        if (tocButton) {
+            const setToc = collapsed => {
+                if (collapsed) root.dataset.toc = 'collapsed';
+                else delete root.dataset.toc;
+                tocButton.setAttribute('aria-expanded', String(!collapsed));
+                setButtonLabel(tocButton, collapsed ? 'Show “On this page”' : 'Hide “On this page”');
+                saveSetting('book-toc', collapsed ? 'collapsed' : null);
+            };
+            tocButton.addEventListener('click', () => setToc(root.dataset.toc !== 'collapsed'));
+            setToc(root.dataset.toc === 'collapsed');
+        }
+
+        // --- Theme ---
+        if (themeButton) {
+            const systemDark = window.matchMedia('(prefers-color-scheme: dark)');
+            const applyTheme = theme => {
+                root.dataset.theme = theme;
+                const dark = theme === 'dark';
+                themeButton.setAttribute('aria-pressed', String(dark));
+                setButtonLabel(themeButton, dark ? 'Switch to light mode' : 'Switch to dark mode');
+            };
+            themeButton.addEventListener('click', () => {
+                const next = root.dataset.theme === 'dark' ? 'light' : 'dark';
+                // Back to "follow the system" when the choice matches the system anyway
+                saveSetting('book-theme', next === (systemDark.matches ? 'dark' : 'light') ? null : next);
+                applyTheme(next);
+            });
+            systemDark.addEventListener('change', event => {
+                let stored = null;
+                try { stored = localStorage.getItem('book-theme'); } catch (e) {}
+                if (!stored) applyTheme(event.matches ? 'dark' : 'light');
+            });
+            applyTheme(root.dataset.theme === 'dark' ? 'dark' : 'light');
+        }
     }
 
     // ==========================================================================
@@ -653,8 +732,11 @@
             const target = event.target;
             if (target.closest('input, textarea, select, [contenteditable="true"]')) return;
             event.preventDefault();
-            if (window.matchMedia('(max-width: 900px)').matches) {
-                document.querySelector('.menu-button')?.click();
+            const sidebar = document.getElementById('quarto-sidebar');
+            if (DRAWER_QUERY.matches && !sidebar?.classList.contains('show')) {
+                document.querySelector('.sidebar-toggle')?.click();
+            } else if (!DRAWER_QUERY.matches && document.documentElement.dataset.sidebar === 'collapsed') {
+                document.querySelector('.sidebar-toggle')?.click();
             }
             searchInput.focus();
         });
@@ -720,6 +802,9 @@
     async function init() {
         console.log('Initializing book navigation...');
 
+        // Toolbar first, so its buttons work while the navigation data loads
+        setupLayoutControls();
+
         // Load navigation and build sidebar
         const navLoaded = await loadNavigation();
         if (navLoaded) {
@@ -743,8 +828,6 @@
         // Setup smooth scrolling
         setupSmoothScrolling();
 
-        // Setup mobile menu
-        setupMobileMenu();
 
         // Setup search
         setupSearch();

@@ -9,6 +9,21 @@
     <meta name="asset-prefix" content="../">
 
     <meta name="color-scheme" content="light dark">
+    <!-- Theme and pane state before first paint (saved choice, else the system setting) -->
+    <script>
+        (function () {
+            var root = document.documentElement, stored = {};
+            try {
+                stored.theme = localStorage.getItem('book-theme');
+                stored.sidebar = localStorage.getItem('book-sidebar');
+                stored.toc = localStorage.getItem('book-toc');
+            } catch (e) {}
+            root.dataset.theme = stored.theme === 'light' || stored.theme === 'dark' ? stored.theme
+                : (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            if (stored.sidebar === 'collapsed') root.dataset.sidebar = 'collapsed';
+            if (stored.toc === 'collapsed') root.dataset.toc = 'collapsed';
+        })();
+    </script>
         <meta name="description" content="In the previous section, we
 studied subspaces.">
             <link rel="canonical" href="https://linear-algebra.akizumifox.com/ch01-vector-spaces/03-span.html">
@@ -27,11 +42,11 @@ section, we studied subspaces.">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400;0,600;0,700;1,400;1,700&display=swap">
 
     <!-- Styles -->
-    <link rel="stylesheet" href="../styles.css?v=da5562a8f3">
+    <link rel="stylesheet" href="../styles.css?v=c2519c5093">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
     <!-- MathJax Configuration with Custom Macros -->
-    <script src="../mathjax-macros.js?v=da5562a8f3"></script>
+    <script src="../mathjax-macros.js?v=c2519c5093"></script>
     <script>
         window.MathJax = {
             tex: {
@@ -64,15 +79,6 @@ section, we studied subspaces.">
 <body>
     <a class="skip-link" href="#quarto-content">Skip to content</a>
 
-    <!-- Top bar on narrow screens: the sidebar opens as a drawer -->
-    <header class="mobile-header">
-        <button type="button" class="menu-button" aria-controls="quarto-sidebar" aria-expanded="false">
-            <i class="bi bi-list" aria-hidden="true"></i>
-            <span class="visually-hidden">Contents</span>
-        </button>
-        <a href="../index.html" class="mobile-title">Linear Algebra</a>
-    </header>
-
     <div id="quarto-container">
         <!-- Left Sidebar Navigation -->
         <nav id="quarto-sidebar" aria-label="Book contents">
@@ -103,6 +109,28 @@ section, we studied subspaces.">
 
         <!-- Main Content Area -->
         <main id="quarto-content">
+            <!-- Toolbar: book contents (drawer on phones, collapsible pane on wider screens),
+                 light/dark theme, and the "On this page" pane -->
+            <div class="topbar" role="toolbar" aria-label="Page layout">
+                <button type="button" class="icon-button sidebar-toggle" aria-controls="quarto-sidebar"
+                    aria-expanded="true" aria-label="Hide book contents" data-tooltip="Hide contents">
+                    <i class="bi bi-layout-sidebar sidebar-icon-pane" aria-hidden="true"></i>
+                    <i class="bi bi-list sidebar-icon-menu" aria-hidden="true"></i>
+                </button>
+                <a href="../index.html" class="topbar-title">Linear
+Algebra</a>
+                <div class="topbar-actions">
+                    <button type="button" class="icon-button theme-toggle" aria-pressed="false"
+                        aria-label="Dark mode" data-tooltip="Dark mode">
+                        <i class="bi bi-moon-stars theme-icon-moon" aria-hidden="true"></i>
+                        <i class="bi bi-sun theme-icon-sun" aria-hidden="true"></i>
+                    </button>
+                    <button type="button" class="icon-button toc-toggle" aria-controls="quarto-margin-sidebar"
+                        aria-expanded="true" aria-label="Hide on this page" data-tooltip="Hide “On this page”">
+                        <i class="bi bi-layout-sidebar-reverse" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
 
 
             <article class="content">
@@ -330,7 +358,7 @@ Independence</span>
     </div>
 
     <!-- Tooltip Script -->
-    <script src="../main.js?v=da5562a8f3"></script>
+    <script src="../main.js?v=c2519c5093"></script>
         </body>
 
 </html>
