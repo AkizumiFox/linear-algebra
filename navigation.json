@@ -473,6 +473,81 @@
           "filename": "05-commutators-and-shoda.md"
         }
       ]
+    },
+    {
+      "title": "Eigenvalues and Diagonalization",
+      "number": 8,
+      "part": "",
+      "collapsed": true,
+      "path": "ch08-eigenvalues/index.html",
+      "sections": [
+        {
+          "title": "Invariant Subspaces",
+          "number": "8.1",
+          "path": "ch08-eigenvalues/01-invariant-subspaces.html",
+          "filename": "01-invariant-subspaces.md"
+        },
+        {
+          "title": "Eigenvalues and Eigenvectors",
+          "number": "8.2",
+          "path": "ch08-eigenvalues/02-eigenvalues-and-eigenvectors.html",
+          "filename": "02-eigenvalues-and-eigenvectors.md"
+        },
+        {
+          "title": "Algebraic and Geometric Multiplicity",
+          "number": "8.3",
+          "path": "ch08-eigenvalues/03-multiplicities.html",
+          "filename": "03-multiplicities.md"
+        },
+        {
+          "title": "Diagonalization",
+          "number": "8.4",
+          "path": "ch08-eigenvalues/04-diagonalization.html",
+          "filename": "04-diagonalization.md"
+        },
+        {
+          "title": "The Minimal Polynomial",
+          "number": "8.5",
+          "path": "ch08-eigenvalues/05-minimal-polynomial.html",
+          "filename": "05-minimal-polynomial.md"
+        },
+        {
+          "title": "The Cayley–Hamilton Theorem",
+          "number": "8.6",
+          "path": "ch08-eigenvalues/06-cayley-hamilton.html",
+          "filename": "06-cayley-hamilton.md"
+        },
+        {
+          "title": "Triangularization",
+          "number": "8.7",
+          "path": "ch08-eigenvalues/07-triangularization.html",
+          "filename": "07-triangularization.md"
+        },
+        {
+          "title": "Primary Decomposition",
+          "number": "8.8",
+          "path": "ch08-eigenvalues/08-primary-decomposition.html",
+          "filename": "08-primary-decomposition.md"
+        },
+        {
+          "title": "Commuting Operators",
+          "number": "8.9",
+          "path": "ch08-eigenvalues/09-commuting-operators.html",
+          "filename": "09-commuting-operators.md"
+        },
+        {
+          "title": "Spectral Mapping, Products in Both Orders, Left Eigenvectors",
+          "number": "8.10",
+          "path": "ch08-eigenvalues/10-spectral-mapping.html",
+          "filename": "10-spectral-mapping.md"
+        },
+        {
+          "title": "Powers, Recurrences and Markov Chains",
+          "number": "8.11",
+          "path": "ch08-eigenvalues/11-powers-recurrences-markov.html",
+          "filename": "11-powers-recurrences-markov.md"
+        }
+      ]
     }
   ]
 }

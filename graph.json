@@ -13979,6 +13979,1866 @@
    "chapter": "Block Matrices",
    "chapterNumber": 7,
    "color": "#2f62b5"
+  },
+  {
+   "id": "def-invariant-subspace",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 8.1.1",
+   "title": "Invariant Subspace",
+   "url": "ch08-eigenvalues/01-invariant-subspaces.html#def-invariant-subspace",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#b0414f"
+  },
+  {
+   "id": "def-restriction-operator",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 8.1.2",
+   "title": "Restriction and Induced Operator",
+   "url": "ch08-eigenvalues/01-invariant-subspaces.html#def-restriction-operator",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#b0414f"
+  },
+  {
+   "id": "exm-rotation-invariant-subspaces",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "A Rotation Has No Invariant Lines",
+   "url": "ch08-eigenvalues/01-invariant-subspaces.html#exm-rotation-invariant-subspaces",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exr-invariant-subspaces-a1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "A1",
+   "url": "ch08-eigenvalues/01-invariant-subspaces.html#exr-invariant-subspaces-a1",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-invariant-subspaces-b1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B1: All invariant subspaces of a diagonal matrix",
+   "url": "ch08-eigenvalues/01-invariant-subspaces.html#exr-invariant-subspaces-b1",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-invariant-subspaces-b2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B2: Kernels of T - c\\,id",
+   "url": "ch08-eigenvalues/01-invariant-subspaces.html#exr-invariant-subspaces-b2",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-invariant-subspaces-b3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B3: Invariance under differentiation",
+   "url": "ch08-eigenvalues/01-invariant-subspaces.html#exr-invariant-subspaces-b3",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-invariant-subspaces-c1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C1: A chain of invariant subspaces",
+   "url": "ch08-eigenvalues/01-invariant-subspaces.html#exr-invariant-subspaces-c1",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-invariant-subspaces-c2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C2: Invariance under the inverse",
+   "url": "ch08-eigenvalues/01-invariant-subspaces.html#exr-invariant-subspaces-c2",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#a8670c"
+  },
+  {
+   "id": "lem-invariance-on-spanning-list",
+   "type": "lemma",
+   "group": "statements",
+   "name": "Lemma 8.1.1",
+   "title": "Invariance Can Be Checked on a Spanning List",
+   "url": "ch08-eigenvalues/01-invariant-subspaces.html#lem-invariance-on-spanning-list",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "prp-invariant-sum-intersection",
+   "type": "proposition",
+   "group": "statements",
+   "name": "Proposition 8.1.4",
+   "title": "Sums and Intersections of Invariant Subspaces",
+   "url": "ch08-eigenvalues/01-invariant-subspaces.html#prp-invariant-sum-intersection",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "prp-one-dimensional-invariant",
+   "type": "proposition",
+   "group": "statements",
+   "name": "Proposition 8.1.2",
+   "title": "Invariant Lines",
+   "url": "ch08-eigenvalues/01-invariant-subspaces.html#prp-one-dimensional-invariant",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-direct-sum-invariant-block-diagonal",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 8.1.5",
+   "title": "Invariant Direct Sums and Block Diagonal Matrices",
+   "url": "ch08-eigenvalues/01-invariant-subspaces.html#thm-direct-sum-invariant-block-diagonal",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-invariant-subspace-matrix",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 8.1.3",
+   "title": "Invariant Subspaces and Block Triangular Matrices",
+   "url": "ch08-eigenvalues/01-invariant-subspaces.html#thm-invariant-subspace-matrix",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "cor-eigenspaces-direct-sum",
+   "type": "corollary",
+   "group": "statements",
+   "name": "Corollary 8.2.3",
+   "title": "Eigenspaces Form a Direct Sum",
+   "url": "ch08-eigenvalues/02-eigenvalues-and-eigenvectors.html#cor-eigenspaces-direct-sum",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "def-eigenspace",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 8.2.2",
+   "title": "Eigenspace",
+   "url": "ch08-eigenvalues/02-eigenvalues-and-eigenvectors.html#def-eigenspace",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#b0414f"
+  },
+  {
+   "id": "def-eigenvalue",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 8.2.1",
+   "title": "Eigenvalue and Eigenvector",
+   "url": "ch08-eigenvalues/02-eigenvalues-and-eigenvectors.html#def-eigenvalue",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#b0414f"
+  },
+  {
+   "id": "def-spectrum",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 8.2.3",
+   "title": "Spectrum",
+   "url": "ch08-eigenvalues/02-eigenvalues-and-eigenvectors.html#def-spectrum",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#b0414f"
+  },
+  {
+   "id": "exm-complex-eigenvalues-real-matrix",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "A Real Matrix with Non-Real Eigenvalues",
+   "url": "ch08-eigenvalues/02-eigenvalues-and-eigenvectors.html#exm-complex-eigenvalues-real-matrix",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-eigenvalues-2x2",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "Eigenvalues and Eigenspaces of a 2 \u00d7 2 Matrix",
+   "url": "ch08-eigenvalues/02-eigenvalues-and-eigenvectors.html#exm-eigenvalues-2x2",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exr-eigenvalues-and-eigenvectors-a1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "A1",
+   "url": "ch08-eigenvalues/02-eigenvalues-and-eigenvectors.html#exr-eigenvalues-and-eigenvectors-a1",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-eigenvalues-and-eigenvectors-b1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B1: Computing eigenvalues and eigenspaces",
+   "url": "ch08-eigenvalues/02-eigenvalues-and-eigenvectors.html#exr-eigenvalues-and-eigenvectors-b1",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-eigenvalues-and-eigenvectors-b2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B2: The transpose map",
+   "url": "ch08-eigenvalues/02-eigenvalues-and-eigenvectors.html#exr-eigenvalues-and-eigenvectors-b2",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-eigenvalues-and-eigenvectors-b3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B3: Eigenvalues of powers and inverses",
+   "url": "ch08-eigenvalues/02-eigenvalues-and-eigenvectors.html#exr-eigenvalues-and-eigenvectors-b3",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-eigenvalues-and-eigenvectors-c1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C1: Every vector an eigenvector",
+   "url": "ch08-eigenvalues/02-eigenvalues-and-eigenvectors.html#exr-eigenvalues-and-eigenvectors-c1",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-eigenvalues-and-eigenvectors-c2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C2: Nilpotent operators",
+   "url": "ch08-eigenvalues/02-eigenvalues-and-eigenvectors.html#exr-eigenvalues-and-eigenvectors-c2",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-eigenvalues-and-eigenvectors-c3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C3: Real matrices of odd size",
+   "url": "ch08-eigenvalues/02-eigenvalues-and-eigenvectors.html#exr-eigenvalues-and-eigenvectors-c3",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#a8670c"
+  },
+  {
+   "id": "thm-complex-operator-has-eigenvalue",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 8.2.4",
+   "title": "Complex Operators Have Eigenvalues",
+   "url": "ch08-eigenvalues/02-eigenvalues-and-eigenvectors.html#thm-complex-operator-has-eigenvalue",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-distinct-eigenvalues-independent",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 8.2.2",
+   "title": "Distinct Eigenvalues Give Independent Eigenvectors",
+   "url": "ch08-eigenvalues/02-eigenvalues-and-eigenvectors.html#thm-distinct-eigenvalues-independent",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-eigenvalue-characterizations",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 8.2.1",
+   "title": "Characterizations of Eigenvalues",
+   "url": "ch08-eigenvalues/02-eigenvalues-and-eigenvectors.html#thm-eigenvalue-characterizations",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-invertible-tfae-eigen",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 8.2.6",
+   "title": "Invertible Matrix Theorem, with Eigenvalues",
+   "url": "ch08-eigenvalues/02-eigenvalues-and-eigenvectors.html#thm-invertible-tfae-eigen",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-real-matrix-complex-eigenvalues",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 8.2.5",
+   "title": "Complex Eigenvalues of Real Matrices Come in Conjugate Pairs",
+   "url": "ch08-eigenvalues/02-eigenvalues-and-eigenvectors.html#thm-real-matrix-complex-eigenvalues",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "def-algebraic-multiplicity",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 8.3.1",
+   "title": "Algebraic Multiplicity",
+   "url": "ch08-eigenvalues/03-multiplicities.html#def-algebraic-multiplicity",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#b0414f"
+  },
+  {
+   "id": "def-geometric-multiplicity",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 8.3.2",
+   "title": "Geometric Multiplicity",
+   "url": "ch08-eigenvalues/03-multiplicities.html#def-geometric-multiplicity",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#b0414f"
+  },
+  {
+   "id": "exr-multiplicities-a1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "A1",
+   "url": "ch08-eigenvalues/03-multiplicities.html#exr-multiplicities-a1",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-multiplicities-b1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B1: Computing multiplicities",
+   "url": "ch08-eigenvalues/03-multiplicities.html#exr-multiplicities-b1",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-multiplicities-b2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B2: A parameter that merges eigenvalues",
+   "url": "ch08-eigenvalues/03-multiplicities.html#exr-multiplicities-b2",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-multiplicities-b3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B3: Eigenvalues from trace and determinant",
+   "url": "ch08-eigenvalues/03-multiplicities.html#exr-multiplicities-b3",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-multiplicities-c1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C1: Nilpotent matrices",
+   "url": "ch08-eigenvalues/03-multiplicities.html#exr-multiplicities-c1",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-multiplicities-c2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C2: Multiplicities do not determine similarity",
+   "url": "ch08-eigenvalues/03-multiplicities.html#exr-multiplicities-c2",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#a8670c"
+  },
+  {
+   "id": "prp-multiplicities-similarity-invariant",
+   "type": "proposition",
+   "group": "statements",
+   "name": "Proposition 8.3.2",
+   "title": "Similar Matrices Have the Same Multiplicities",
+   "url": "ch08-eigenvalues/03-multiplicities.html#prp-multiplicities-similarity-invariant",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-geometric-le-algebraic",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 8.3.1",
+   "title": "Geometric Multiplicity Is at Most Algebraic Multiplicity",
+   "url": "ch08-eigenvalues/03-multiplicities.html#thm-geometric-le-algebraic",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-trace-det-eigenvalues",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 8.3.3",
+   "title": "Trace and Determinant from Eigenvalues",
+   "url": "ch08-eigenvalues/03-multiplicities.html#thm-trace-det-eigenvalues",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "cor-distinct-eigenvalues-diagonalizable",
+   "type": "corollary",
+   "group": "statements",
+   "name": "Corollary 8.4.2",
+   "title": "Distinct Eigenvalues Imply Diagonalizable",
+   "url": "ch08-eigenvalues/04-diagonalization.html#cor-distinct-eigenvalues-diagonalizable",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "def-diagonalizable",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 8.4.1",
+   "title": "Diagonalizable",
+   "url": "ch08-eigenvalues/04-diagonalization.html#def-diagonalizable",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#b0414f"
+  },
+  {
+   "id": "exm-diagonalizable-parameter",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "Diagonalizability with a Parameter",
+   "url": "ch08-eigenvalues/04-diagonalization.html#exm-diagonalizable-parameter",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-diagonalize-3x3",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "Diagonalizing a 3 \u00d7 3 Matrix with a Repeated Eigenvalue",
+   "url": "ch08-eigenvalues/04-diagonalization.html#exm-diagonalize-3x3",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-fibonacci-binet",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "A Closed Formula for the Fibonacci Numbers",
+   "url": "ch08-eigenvalues/04-diagonalization.html#exm-fibonacci-binet",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exr-diagonalization-a1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "A1",
+   "url": "ch08-eigenvalues/04-diagonalization.html#exr-diagonalization-a1",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-diagonalization-b1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B1: Diagonalize or show impossible",
+   "url": "ch08-eigenvalues/04-diagonalization.html#exr-diagonalization-b1",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-diagonalization-b2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B2: A tenth power",
+   "url": "ch08-eigenvalues/04-diagonalization.html#exr-diagonalization-b2",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-diagonalization-b3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B3: A matrix with a parameter",
+   "url": "ch08-eigenvalues/04-diagonalization.html#exr-diagonalization-b3",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-diagonalization-c1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C1: Matrices with A^k = I",
+   "url": "ch08-eigenvalues/04-diagonalization.html#exr-diagonalization-c1",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-diagonalization-c2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C2: Polynomials of diagonalizable matrices",
+   "url": "ch08-eigenvalues/04-diagonalization.html#exr-diagonalization-c2",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-diagonalization-c3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C3: The transpose map on M_n(F)",
+   "url": "ch08-eigenvalues/04-diagonalization.html#exr-diagonalization-c3",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#a8670c"
+  },
+  {
+   "id": "thm-diagonalization",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 8.4.1",
+   "title": "Diagonalization Theorem",
+   "url": "ch08-eigenvalues/04-diagonalization.html#thm-diagonalization",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-powers-diagonalizable",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 8.4.3",
+   "title": "Powers and Polynomials of a Diagonalizable Matrix",
+   "url": "ch08-eigenvalues/04-diagonalization.html#thm-powers-diagonalizable",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "def-minimal-polynomial",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 8.5.1",
+   "title": "Minimal Polynomial",
+   "url": "ch08-eigenvalues/05-minimal-polynomial.html#def-minimal-polynomial",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#b0414f"
+  },
+  {
+   "id": "exm-minimal-polynomial-by-dependence",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "The Minimal Polynomial from the First Dependence",
+   "url": "ch08-eigenvalues/05-minimal-polynomial.html#exm-minimal-polynomial-by-dependence",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-minimal-polynomial-by-eigenvalues",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "The Minimal Polynomial from the Eigenvalues",
+   "url": "ch08-eigenvalues/05-minimal-polynomial.html#exm-minimal-polynomial-by-eigenvalues",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exr-minimal-polynomial-a1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "A1",
+   "url": "ch08-eigenvalues/05-minimal-polynomial.html#exr-minimal-polynomial-a1",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-minimal-polynomial-b1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B1: Computing minimal polynomials",
+   "url": "ch08-eigenvalues/05-minimal-polynomial.html#exr-minimal-polynomial-b1",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-minimal-polynomial-b2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B2: Operators with T^2 = T",
+   "url": "ch08-eigenvalues/05-minimal-polynomial.html#exr-minimal-polynomial-b2",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-minimal-polynomial-b3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B3: Companion matrices",
+   "url": "ch08-eigenvalues/05-minimal-polynomial.html#exr-minimal-polynomial-b3",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-minimal-polynomial-c1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C1: Cyclic vectors",
+   "url": "ch08-eigenvalues/05-minimal-polynomial.html#exr-minimal-polynomial-c1",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-minimal-polynomial-c2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C2: Minimal polynomials of the pieces",
+   "url": "ch08-eigenvalues/05-minimal-polynomial.html#exr-minimal-polynomial-c2",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#a8670c"
+  },
+  {
+   "id": "lem-monic-divisors",
+   "type": "lemma",
+   "group": "statements",
+   "name": "Lemma 8.5.2",
+   "title": "Monic Divisors of a Factored Polynomial",
+   "url": "ch08-eigenvalues/05-minimal-polynomial.html#lem-monic-divisors",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "prp-minimal-polynomial-block-diagonal",
+   "type": "proposition",
+   "group": "statements",
+   "name": "Proposition 8.5.6",
+   "title": "Minimal Polynomial of a Block Diagonal Matrix",
+   "url": "ch08-eigenvalues/05-minimal-polynomial.html#prp-minimal-polynomial-block-diagonal",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "prp-minimal-polynomial-first-dependence",
+   "type": "proposition",
+   "group": "statements",
+   "name": "Proposition 8.5.4",
+   "title": "The First Dependence Among the Powers",
+   "url": "ch08-eigenvalues/05-minimal-polynomial.html#prp-minimal-polynomial-first-dependence",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-minimal-polynomial-divides",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 8.5.1",
+   "title": "Annihilating Polynomials Are Multiples of the Minimal Polynomial",
+   "url": "ch08-eigenvalues/05-minimal-polynomial.html#thm-minimal-polynomial-divides",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-minimal-polynomial-roots",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 8.5.3",
+   "title": "Roots of the Minimal Polynomial",
+   "url": "ch08-eigenvalues/05-minimal-polynomial.html#thm-minimal-polynomial-roots",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-minimal-polynomial-similarity",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 8.5.5",
+   "title": "Similar Matrices Have the Same Minimal Polynomial",
+   "url": "ch08-eigenvalues/05-minimal-polynomial.html#thm-minimal-polynomial-similarity",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "cor-inverse-polynomial",
+   "type": "corollary",
+   "group": "statements",
+   "name": "Corollary 8.6.3",
+   "title": "The Inverse Is a Polynomial in the Matrix",
+   "url": "ch08-eigenvalues/06-cayley-hamilton.html#cor-inverse-polynomial",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "cor-minimal-divides-characteristic",
+   "type": "corollary",
+   "group": "statements",
+   "name": "Corollary 8.6.2",
+   "title": "The Minimal Polynomial Divides the Characteristic Polynomial",
+   "url": "ch08-eigenvalues/06-cayley-hamilton.html#cor-minimal-divides-characteristic",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "exm-cayley-hamilton-3x3",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "Cayley\u2013Hamilton for a 3 \u00d7 3 Matrix",
+   "url": "ch08-eigenvalues/06-cayley-hamilton.html#exm-cayley-hamilton-3x3",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exr-cayley-hamilton-a1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "A1",
+   "url": "ch08-eigenvalues/06-cayley-hamilton.html#exr-cayley-hamilton-a1",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-cayley-hamilton-b1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B1: Inverse and a hundredth power",
+   "url": "ch08-eigenvalues/06-cayley-hamilton.html#exr-cayley-hamilton-b1",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-cayley-hamilton-b2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B2: Trace zero in size two",
+   "url": "ch08-eigenvalues/06-cayley-hamilton.html#exr-cayley-hamilton-b2",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-cayley-hamilton-b3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B3: Minimal polynomial from one product",
+   "url": "ch08-eigenvalues/06-cayley-hamilton.html#exr-cayley-hamilton-b3",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-cayley-hamilton-c1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C1: Cayley\u2013Hamilton over a commutative ring",
+   "url": "ch08-eigenvalues/06-cayley-hamilton.html#exr-cayley-hamilton-c1",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-cayley-hamilton-c2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C2: The adjugate is a polynomial in the matrix",
+   "url": "ch08-eigenvalues/06-cayley-hamilton.html#exr-cayley-hamilton-c2",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-cayley-hamilton-c3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C3: Nilpotent matrices of size n",
+   "url": "ch08-eigenvalues/06-cayley-hamilton.html#exr-cayley-hamilton-c3",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#a8670c"
+  },
+  {
+   "id": "thm-cayley-hamilton",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 8.6.1",
+   "title": "Cayley\u2013Hamilton Theorem",
+   "url": "ch08-eigenvalues/06-cayley-hamilton.html#thm-cayley-hamilton",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "cor-complex-triangularizable",
+   "type": "corollary",
+   "group": "statements",
+   "name": "Corollary 8.7.3",
+   "title": "Complex Operators Are Triangularizable",
+   "url": "ch08-eigenvalues/07-triangularization.html#cor-complex-triangularizable",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "def-triangularizable",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 8.7.1",
+   "title": "Triangularizable",
+   "url": "ch08-eigenvalues/07-triangularization.html#def-triangularizable",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#b0414f"
+  },
+  {
+   "id": "exm-triangularize-3x3",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "Triangularizing a Matrix with a Single Eigenvector Line",
+   "url": "ch08-eigenvalues/07-triangularization.html#exm-triangularize-3x3",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exr-triangularization-a1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "A1",
+   "url": "ch08-eigenvalues/07-triangularization.html#exr-triangularization-a1",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-triangularization-b1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B1: Triangularizing matrices",
+   "url": "ch08-eigenvalues/07-triangularization.html#exr-triangularization-b1",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-triangularization-b2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B2: Nilpotent matrices are strictly triangular",
+   "url": "ch08-eigenvalues/07-triangularization.html#exr-triangularization-b2",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-triangularization-b3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B3: Eigenvalues of powers from a triangular form",
+   "url": "ch08-eigenvalues/07-triangularization.html#exr-triangularization-b3",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-triangularization-c1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C1: A second proof of Cayley\u2013Hamilton",
+   "url": "ch08-eigenvalues/07-triangularization.html#exr-triangularization-c1",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-triangularization-c2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C2: Real operators have small invariant subspaces",
+   "url": "ch08-eigenvalues/07-triangularization.html#exr-triangularization-c2",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-triangularization-c3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C3: Traces of powers detect nilpotency",
+   "url": "ch08-eigenvalues/07-triangularization.html#exr-triangularization-c3",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#a8670c"
+  },
+  {
+   "id": "thm-diagonal-of-triangular-form",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 8.7.4",
+   "title": "The Diagonal of a Triangular Form",
+   "url": "ch08-eigenvalues/07-triangularization.html#thm-diagonal-of-triangular-form",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-triangular-iff-flag",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 8.7.1",
+   "title": "Triangular Matrices and Chains of Invariant Subspaces",
+   "url": "ch08-eigenvalues/07-triangularization.html#thm-triangular-iff-flag",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-triangularization",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 8.7.2",
+   "title": "Triangularization Theorem",
+   "url": "ch08-eigenvalues/07-triangularization.html#thm-triangularization",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "cor-primary-components-dimension",
+   "type": "corollary",
+   "group": "statements",
+   "name": "Corollary 8.8.4",
+   "title": "Dimensions of the Primary Components",
+   "url": "ch08-eigenvalues/08-primary-decomposition.html#cor-primary-components-dimension",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "cor-restriction-diagonalizable",
+   "type": "corollary",
+   "group": "statements",
+   "name": "Corollary 8.8.3",
+   "title": "Restrictions of Diagonalizable Operators",
+   "url": "ch08-eigenvalues/08-primary-decomposition.html#cor-restriction-diagonalizable",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "exm-finite-order-diagonalizable",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "Complex Matrices of Finite Order Are Diagonalizable",
+   "url": "ch08-eigenvalues/08-primary-decomposition.html#exm-finite-order-diagonalizable",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-primary-decomposition",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "A Primary Decomposition with an Irreducible Quadratic",
+   "url": "ch08-eigenvalues/08-primary-decomposition.html#exm-primary-decomposition",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exr-primary-decomposition-a1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "A1",
+   "url": "ch08-eigenvalues/08-primary-decomposition.html#exr-primary-decomposition-a1",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-primary-decomposition-b1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B1: Diagonalizable or not?",
+   "url": "ch08-eigenvalues/08-primary-decomposition.html#exr-primary-decomposition-b1",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-primary-decomposition-b2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B2: Decomposing \u211d^3",
+   "url": "ch08-eigenvalues/08-primary-decomposition.html#exr-primary-decomposition-b2",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-primary-decomposition-b3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B3: Matrices with A^3 = A",
+   "url": "ch08-eigenvalues/08-primary-decomposition.html#exr-primary-decomposition-b3",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-primary-decomposition-c1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C1: A^p = A over nF_p",
+   "url": "ch08-eigenvalues/08-primary-decomposition.html#exr-primary-decomposition-c1",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-primary-decomposition-c2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C2: Irreducible minimal polynomials",
+   "url": "ch08-eigenvalues/08-primary-decomposition.html#exr-primary-decomposition-c2",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#a8670c"
+  },
+  {
+   "id": "thm-diagonalizable-iff-minimal-distinct-linear",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 8.8.2",
+   "title": "Diagonalizability via the Minimal Polynomial",
+   "url": "ch08-eigenvalues/08-primary-decomposition.html#thm-diagonalizable-iff-minimal-distinct-linear",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-primary-decomposition",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 8.8.1",
+   "title": "Primary Decomposition Theorem",
+   "url": "ch08-eigenvalues/08-primary-decomposition.html#thm-primary-decomposition",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "def-simultaneously-diagonalizable",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 8.9.1",
+   "title": "Simultaneously Diagonalizable",
+   "url": "ch08-eigenvalues/09-commuting-operators.html#def-simultaneously-diagonalizable",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#b0414f"
+  },
+  {
+   "id": "exm-simultaneous-diagonalization",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "Diagonalizing Two Commuting Matrices Together",
+   "url": "ch08-eigenvalues/09-commuting-operators.html#exm-simultaneous-diagonalization",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exr-commuting-operators-a1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "A1",
+   "url": "ch08-eigenvalues/09-commuting-operators.html#exr-commuting-operators-a1",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-commuting-operators-b1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B1: Common eigenvectors",
+   "url": "ch08-eigenvalues/09-commuting-operators.html#exr-commuting-operators-b1",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-commuting-operators-b2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B2: Decide simultaneous diagonalizability",
+   "url": "ch08-eigenvalues/09-commuting-operators.html#exr-commuting-operators-b2",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-commuting-operators-b3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B3: Matrices commuting with a diagonal matrix",
+   "url": "ch08-eigenvalues/09-commuting-operators.html#exr-commuting-operators-b3",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-commuting-operators-c1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C1: The commutant of a matrix with distinct eigenvalues",
+   "url": "ch08-eigenvalues/09-commuting-operators.html#exr-commuting-operators-c1",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-commuting-operators-c2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C2: Commuting nilpotent matrices",
+   "url": "ch08-eigenvalues/09-commuting-operators.html#exr-commuting-operators-c2",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#a8670c"
+  },
+  {
+   "id": "lem-invariant-charpoly-splits",
+   "type": "lemma",
+   "group": "statements",
+   "name": "Lemma 8.9.2",
+   "title": "Restrictions and Quotients Inherit Splitting",
+   "url": "ch08-eigenvalues/09-commuting-operators.html#lem-invariant-charpoly-splits",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-commuting-common-eigenvector",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 8.9.3",
+   "title": "Commuting Operators Have a Common Eigenvector",
+   "url": "ch08-eigenvalues/09-commuting-operators.html#thm-commuting-common-eigenvector",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-commuting-preserves-eigenspaces",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 8.9.1",
+   "title": "Commuting Operators Preserve Eigenspaces",
+   "url": "ch08-eigenvalues/09-commuting-operators.html#thm-commuting-preserves-eigenspaces",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-simultaneous-diagonalization",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 8.9.5",
+   "title": "Simultaneous Diagonalization",
+   "url": "ch08-eigenvalues/09-commuting-operators.html#thm-simultaneous-diagonalization",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-simultaneous-diagonalization-family",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 8.9.6",
+   "title": "Simultaneous Diagonalization of a Commuting Family",
+   "url": "ch08-eigenvalues/09-commuting-operators.html#thm-simultaneous-diagonalization-family",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-simultaneous-triangularization",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 8.9.4",
+   "title": "Simultaneous Triangularization",
+   "url": "ch08-eigenvalues/09-commuting-operators.html#thm-simultaneous-triangularization",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "cor-trace-det-of-polynomial",
+   "type": "corollary",
+   "group": "statements",
+   "name": "Corollary 8.10.2",
+   "title": "Trace and Determinant of a Polynomial in T",
+   "url": "ch08-eigenvalues/10-spectral-mapping.html#cor-trace-det-of-polynomial",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "def-left-eigenvector",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 8.10.1",
+   "title": "Left Eigenvector",
+   "url": "ch08-eigenvalues/10-spectral-mapping.html#def-left-eigenvector",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#b0414f"
+  },
+  {
+   "id": "exm-spectral-mapping-3x3",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "A Polynomial in a Non-Diagonalizable Matrix",
+   "url": "ch08-eigenvalues/10-spectral-mapping.html#exm-spectral-mapping-3x3",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exr-spectral-mapping-a1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "A1",
+   "url": "ch08-eigenvalues/10-spectral-mapping.html#exr-spectral-mapping-a1",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-spectral-mapping-b1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B1: Eigenvalues of a polynomial in A",
+   "url": "ch08-eigenvalues/10-spectral-mapping.html#exr-spectral-mapping-b1",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-spectral-mapping-b2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B2: AB and BA for a 2 \u00d7 3 example",
+   "url": "ch08-eigenvalues/10-spectral-mapping.html#exr-spectral-mapping-b2",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-spectral-mapping-b3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B3: Left eigenvectors of a 2 \u00d7 2 matrix",
+   "url": "ch08-eigenvalues/10-spectral-mapping.html#exr-spectral-mapping-b3",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-spectral-mapping-c1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C1: Traces of powers of AB and BA",
+   "url": "ch08-eigenvalues/10-spectral-mapping.html#exr-spectral-mapping-c1",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-spectral-mapping-c2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C2: Adding a commuting nilpotent matrix",
+   "url": "ch08-eigenvalues/10-spectral-mapping.html#exr-spectral-mapping-c2",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-spectral-mapping-c3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C3: How many traces, and which field?",
+   "url": "ch08-eigenvalues/10-spectral-mapping.html#exr-spectral-mapping-c3",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#a8670c"
+  },
+  {
+   "id": "prp-left-eigenvectors-transpose",
+   "type": "proposition",
+   "group": "statements",
+   "name": "Proposition 8.10.5",
+   "title": "Left Eigenvectors Are Eigenvectors of the Transpose",
+   "url": "ch08-eigenvalues/10-spectral-mapping.html#prp-left-eigenvectors-transpose",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "prp-left-right-eigen-expansion",
+   "type": "proposition",
+   "group": "statements",
+   "name": "Proposition 8.10.7",
+   "title": "Expansion in Left and Right Eigenvectors",
+   "url": "ch08-eigenvalues/10-spectral-mapping.html#prp-left-right-eigen-expansion",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-ab-ba-eigenvalues",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 8.10.4",
+   "title": "AB and BA Have the Same Non-zero Eigenvalues",
+   "url": "ch08-eigenvalues/10-spectral-mapping.html#thm-ab-ba-eigenvalues",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-left-right-biorthogonal",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 8.10.6",
+   "title": "Left and Right Eigenvectors Are Biorthogonal",
+   "url": "ch08-eigenvalues/10-spectral-mapping.html#thm-left-right-biorthogonal",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-nilpotent-trace-powers",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 8.10.3",
+   "title": "Nilpotent Matrices via Eigenvalues and Traces",
+   "url": "ch08-eigenvalues/10-spectral-mapping.html#thm-nilpotent-trace-powers",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-spectral-mapping",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 8.10.1",
+   "title": "Spectral Mapping Theorem",
+   "url": "ch08-eigenvalues/10-spectral-mapping.html#thm-spectral-mapping",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "def-markov-chain",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 8.11.2",
+   "title": "Markov Chain, Steady State",
+   "url": "ch08-eigenvalues/11-powers-recurrences-markov.html#def-markov-chain",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#b0414f"
+  },
+  {
+   "id": "def-stochastic-matrix",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 8.11.1",
+   "title": "Stochastic Matrix, Probability Vector",
+   "url": "ch08-eigenvalues/11-powers-recurrences-markov.html#def-stochastic-matrix",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#b0414f"
+  },
+  {
+   "id": "exm-leslie-population",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "Three Age Classes",
+   "url": "ch08-eigenvalues/11-powers-recurrences-markov.html#exm-leslie-population",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-repeated-root-recurrence",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "A Repeated Root",
+   "url": "ch08-eigenvalues/11-powers-recurrences-markov.html#exm-repeated-root-recurrence",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-third-order-recurrence",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "A Third-Order Recurrence",
+   "url": "ch08-eigenvalues/11-powers-recurrences-markov.html#exm-third-order-recurrence",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-three-state-markov",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "Bicycles at Three Stations",
+   "url": "ch08-eigenvalues/11-powers-recurrences-markov.html#exm-three-state-markov",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-two-state-markov",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "A Two-State Chain",
+   "url": "ch08-eigenvalues/11-powers-recurrences-markov.html#exm-two-state-markov",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exr-powers-recurrences-markov-a1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "A1",
+   "url": "ch08-eigenvalues/11-powers-recurrences-markov.html#exr-powers-recurrences-markov-a1",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-powers-recurrences-markov-b1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B1: Two recurrences",
+   "url": "ch08-eigenvalues/11-powers-recurrences-markov.html#exr-powers-recurrences-markov-b1",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-powers-recurrences-markov-b2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B2: A three-state chain",
+   "url": "ch08-eigenvalues/11-powers-recurrences-markov.html#exr-powers-recurrences-markov-b2",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-powers-recurrences-markov-b3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B3: The limit of a matrix power",
+   "url": "ch08-eigenvalues/11-powers-recurrences-markov.html#exr-powers-recurrences-markov-b3",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-powers-recurrences-markov-c1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C1: Eigenvalues of a stochastic matrix",
+   "url": "ch08-eigenvalues/11-powers-recurrences-markov.html#exr-powers-recurrences-markov-c1",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-powers-recurrences-markov-c2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C2: Two-state chains",
+   "url": "ch08-eigenvalues/11-powers-recurrences-markov.html#exr-powers-recurrences-markov-c2",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#a8670c"
+  },
+  {
+   "id": "prp-stochastic-properties",
+   "type": "proposition",
+   "group": "statements",
+   "name": "Proposition 8.11.3",
+   "title": "Basic Properties of Stochastic Matrices",
+   "url": "ch08-eigenvalues/11-powers-recurrences-markov.html#prp-stochastic-properties",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-linear-recurrence-solution",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 8.11.1",
+   "title": "Solving a Diagonalizable Recurrence",
+   "url": "ch08-eigenvalues/11-powers-recurrences-markov.html#thm-linear-recurrence-solution",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-markov-limit-diagonalizable",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 8.11.4",
+   "title": "Long-Run Behavior of a Diagonalizable Markov Chain",
+   "url": "ch08-eigenvalues/11-powers-recurrences-markov.html#thm-markov-limit-diagonalizable",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-scalar-recurrence-distinct-roots",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 8.11.2",
+   "title": "Scalar Recurrences with Distinct Roots",
+   "url": "ch08-eigenvalues/11-powers-recurrences-markov.html#thm-scalar-recurrence-distinct-roots",
+   "shard": "ch08-eigenvalues",
+   "chapter": "Eigenvalues and Diagonalization",
+   "chapterNumber": 8,
+   "color": "#2f62b5"
   }
  ],
  "edges": [
@@ -29505,6 +31365,3006 @@
   {
    "source": "thm-span-subspace",
    "target": "thm-span-of-commutators",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-invariance-on-spanning-list",
+   "target": "exm-rotation-invariant-subspaces",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-one-dimensional-invariant",
+   "target": "exm-rotation-invariant-subspaces",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dim-impl-eq",
+   "target": "exm-rotation-invariant-subspaces",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-subspace-dimension",
+   "target": "exm-rotation-invariant-subspaces",
+   "kind": "reference"
+  },
+  {
+   "source": "def-invariant-subspace",
+   "target": "exr-invariant-subspaces-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-one-dimensional-invariant",
+   "target": "exr-invariant-subspaces-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-invariant-subspace-matrix",
+   "target": "exr-invariant-subspaces-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-rotation-invariant-subspaces",
+   "target": "exr-invariant-subspaces-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-one-dimensional-invariant",
+   "target": "exr-invariant-subspaces-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-prop-kernel",
+   "target": "exr-invariant-subspaces-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-invariance-on-spanning-list",
+   "target": "exr-invariant-subspaces-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-distinct-degrees-independent",
+   "target": "exr-invariant-subspaces-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "exr-invariant-subspaces-b1",
+   "target": "exr-invariant-subspaces-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-invariance-on-spanning-list",
+   "target": "exr-invariant-subspaces-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-one-dimensional-invariant",
+   "target": "exr-invariant-subspaces-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-vector-spaces",
+   "target": "exr-invariant-subspaces-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-injective-iff-trivial-kernel",
+   "target": "exr-invariant-subspaces-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-invertible-operator-tfae",
+   "target": "exr-invariant-subspaces-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-subspace-dimension",
+   "target": "exr-invariant-subspaces-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-linear-combination",
+   "target": "lem-invariance-on-spanning-list",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-subspace-test",
+   "target": "lem-invariance-on-spanning-list",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-intersection-subspaces",
+   "target": "prp-invariant-sum-intersection",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-subspace-sum",
+   "target": "prp-invariant-sum-intersection",
+   "kind": "reference"
+  },
+  {
+   "source": "def-span",
+   "target": "prp-one-dimensional-invariant",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-invariance-on-spanning-list",
+   "target": "prp-one-dimensional-invariant",
+   "kind": "reference"
+  },
+  {
+   "source": "def-charpoly-operator",
+   "target": "thm-direct-sum-invariant-block-diagonal",
+   "kind": "reference"
+  },
+  {
+   "source": "def-matrix-of-linear-map",
+   "target": "thm-direct-sum-invariant-block-diagonal",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-invariance-on-spanning-list",
+   "target": "thm-direct-sum-invariant-block-diagonal",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-invariant-sum-intersection",
+   "target": "thm-direct-sum-invariant-block-diagonal",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-union-subspaces",
+   "target": "thm-direct-sum-invariant-block-diagonal",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-block-triangular",
+   "target": "thm-direct-sum-invariant-block-diagonal",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-direct-sum-k-criteria",
+   "target": "thm-direct-sum-invariant-block-diagonal",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-unique-representation",
+   "target": "thm-direct-sum-invariant-block-diagonal",
+   "kind": "reference"
+  },
+  {
+   "source": "def-charpoly-operator",
+   "target": "thm-invariant-subspace-matrix",
+   "kind": "reference"
+  },
+  {
+   "source": "def-det-operator",
+   "target": "thm-invariant-subspace-matrix",
+   "kind": "reference"
+  },
+  {
+   "source": "def-invariant-subspace",
+   "target": "thm-invariant-subspace-matrix",
+   "kind": "reference"
+  },
+  {
+   "source": "def-restriction-operator",
+   "target": "thm-invariant-subspace-matrix",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-block-triangular",
+   "target": "thm-invariant-subspace-matrix",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dimension-quotient",
+   "target": "thm-invariant-subspace-matrix",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-invariant-subspace-block-triangular",
+   "target": "thm-invariant-subspace-matrix",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-direct-sum-k-criteria",
+   "target": "cor-eigenspaces-direct-sum",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-distinct-eigenvalues-independent",
+   "target": "cor-eigenspaces-direct-sum",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-subspace-dimension",
+   "target": "cor-eigenspaces-direct-sum",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-shift-kernel-image",
+   "target": "def-spectrum",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-eigenvalue-characterizations",
+   "target": "def-spectrum",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-real-matrix-complex-eigenvalues",
+   "target": "exm-complex-eigenvalues-real-matrix",
+   "kind": "reference"
+  },
+  {
+   "source": "def-characteristic-polynomial",
+   "target": "exm-eigenvalues-2x2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-eigenvalue-characterizations",
+   "target": "exm-eigenvalues-2x2",
+   "kind": "reference"
+  },
+  {
+   "source": "def-eigenspace",
+   "target": "exr-eigenvalues-and-eigenvectors-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "def-eigenvalue",
+   "target": "exr-eigenvalues-and-eigenvectors-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-eigenvalue-characterizations",
+   "target": "exr-eigenvalues-and-eigenvectors-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-invertible-tfae-eigen",
+   "target": "exr-eigenvalues-and-eigenvectors-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-distinct-eigenvalues-independent",
+   "target": "exr-eigenvalues-and-eigenvectors-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-eigenvalue-characterizations",
+   "target": "exr-eigenvalues-and-eigenvectors-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-right-size-basis",
+   "target": "exr-eigenvalues-and-eigenvectors-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-involution-decomposition",
+   "target": "exr-eigenvalues-and-eigenvectors-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-transpose-properties",
+   "target": "exr-eigenvalues-and-eigenvectors-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-zero-product",
+   "target": "exr-eigenvalues-and-eigenvectors-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "def-polynomial-of-operator",
+   "target": "exr-eigenvalues-and-eigenvectors-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-rotation-invariant-subspaces",
+   "target": "exr-eigenvalues-and-eigenvectors-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-zero-product",
+   "target": "exr-eigenvalues-and-eigenvectors-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "def-eigenvalue",
+   "target": "exr-eigenvalues-and-eigenvectors-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-complex-polynomial-splits",
+   "target": "exr-eigenvalues-and-eigenvectors-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "exr-eigenvalues-and-eigenvectors-b3",
+   "target": "exr-eigenvalues-and-eigenvectors-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-charpoly-coefficients",
+   "target": "exr-eigenvalues-and-eigenvectors-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-composition-preserves",
+   "target": "exr-eigenvalues-and-eigenvectors-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-eigenvalue-characterizations",
+   "target": "exr-eigenvalues-and-eigenvectors-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-field-basic-properties",
+   "target": "exr-eigenvalues-and-eigenvectors-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-invertible-tfae-eigen",
+   "target": "exr-eigenvalues-and-eigenvectors-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-zero-product",
+   "target": "exr-eigenvalues-and-eigenvectors-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-odd-degree-real-root",
+   "target": "exr-eigenvalues-and-eigenvectors-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "def-charpoly-operator",
+   "target": "exr-eigenvalues-and-eigenvectors-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-one-dimensional-invariant",
+   "target": "exr-eigenvalues-and-eigenvectors-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-charpoly-coefficients",
+   "target": "exr-eigenvalues-and-eigenvectors-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-block-triangular",
+   "target": "exr-eigenvalues-and-eigenvectors-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-eigenvalue-characterizations",
+   "target": "exr-eigenvalues-and-eigenvectors-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "def-charpoly-operator",
+   "target": "thm-complex-operator-has-eigenvalue",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-rotation-invariant-subspaces",
+   "target": "thm-complex-operator-has-eigenvalue",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-one-dimensional-invariant",
+   "target": "thm-complex-operator-has-eigenvalue",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-charpoly-coefficients",
+   "target": "thm-complex-operator-has-eigenvalue",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-eigenvalue-characterizations",
+   "target": "thm-complex-operator-has-eigenvalue",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-fundamental-theorem-of-algebra",
+   "target": "thm-complex-operator-has-eigenvalue",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-linear-dependence-lemma",
+   "target": "thm-distinct-eigenvalues-independent",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-matrix-of-polynomial-of-operator",
+   "target": "thm-eigenvalue-characterizations",
+   "kind": "reference"
+  },
+  {
+   "source": "def-charpoly-operator",
+   "target": "thm-eigenvalue-characterizations",
+   "kind": "reference"
+  },
+  {
+   "source": "def-eigenspace",
+   "target": "thm-eigenvalue-characterizations",
+   "kind": "reference"
+  },
+  {
+   "source": "def-eigenvalue",
+   "target": "thm-eigenvalue-characterizations",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-charpoly-root-iff-singular",
+   "target": "thm-eigenvalue-characterizations",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-operator-properties",
+   "target": "thm-eigenvalue-characterizations",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-injective-iff-trivial-kernel",
+   "target": "thm-eigenvalue-characterizations",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-invertible-operator-tfae",
+   "target": "thm-eigenvalue-characterizations",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rank-map-equals-rank-matrix",
+   "target": "thm-eigenvalue-characterizations",
+   "kind": "reference"
+  },
+  {
+   "source": "def-eigenspace",
+   "target": "thm-invertible-tfae-eigen",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-injective-iff-trivial-kernel",
+   "target": "thm-invertible-tfae-eigen",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-invertible-operator-tfae",
+   "target": "thm-invertible-tfae-eigen",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-invertible-tfae",
+   "target": "thm-invertible-tfae-eigen",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-invertible-tfae-det",
+   "target": "thm-invertible-tfae-eigen",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-row-ops-preserve-solutions",
+   "target": "thm-invertible-tfae-eigen",
+   "kind": "reference"
+  },
+  {
+   "source": "def-characteristic-polynomial",
+   "target": "thm-real-matrix-complex-eigenvalues",
+   "kind": "reference"
+  },
+  {
+   "source": "def-matrix-multiplication",
+   "target": "thm-real-matrix-complex-eigenvalues",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-conjugate-properties",
+   "target": "thm-real-matrix-complex-eigenvalues",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-distinct-eigenvalues-independent",
+   "target": "thm-real-matrix-complex-eigenvalues",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-real-roots-conjugate-pairs",
+   "target": "thm-real-matrix-complex-eigenvalues",
+   "kind": "reference"
+  },
+  {
+   "source": "def-root-multiplicity",
+   "target": "def-algebraic-multiplicity",
+   "kind": "reference"
+  },
+  {
+   "source": "def-algebraic-multiplicity",
+   "target": "exr-multiplicities-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "def-geometric-multiplicity",
+   "target": "exr-multiplicities-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-block-triangular",
+   "target": "exr-multiplicities-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-geometric-le-algebraic",
+   "target": "exr-multiplicities-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-trace-det-eigenvalues",
+   "target": "exr-multiplicities-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-charpoly-operators",
+   "target": "exr-multiplicities-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-multiplicities-similarity-invariant",
+   "target": "exr-multiplicities-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-geometric-le-algebraic",
+   "target": "exr-multiplicities-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-geometric-le-algebraic",
+   "target": "exr-multiplicities-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-complex-polynomial-splits",
+   "target": "exr-multiplicities-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "exr-multiplicities-b1",
+   "target": "exr-multiplicities-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-charpoly-coefficients",
+   "target": "exr-multiplicities-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-real-matrix-complex-eigenvalues",
+   "target": "exr-multiplicities-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-trace-det-eigenvalues",
+   "target": "exr-multiplicities-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "def-geometric-multiplicity",
+   "target": "exr-multiplicities-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "exr-eigenvalues-and-eigenvectors-c2",
+   "target": "exr-multiplicities-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-similarity-invariants",
+   "target": "exr-multiplicities-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-geometric-le-algebraic",
+   "target": "exr-multiplicities-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "exr-multiplicities-c2",
+   "target": "prp-multiplicities-similarity-invariant",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-similarity-invariants",
+   "target": "prp-multiplicities-similarity-invariant",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-charpoly-similarity-invariant",
+   "target": "prp-multiplicities-similarity-invariant",
+   "kind": "reference"
+  },
+  {
+   "source": "def-characteristic-polynomial",
+   "target": "thm-geometric-le-algebraic",
+   "kind": "reference"
+  },
+  {
+   "source": "def-charpoly-operator",
+   "target": "thm-geometric-le-algebraic",
+   "kind": "reference"
+  },
+  {
+   "source": "def-matrix-of-linear-map",
+   "target": "thm-geometric-le-algebraic",
+   "kind": "reference"
+  },
+  {
+   "source": "def-root-multiplicity",
+   "target": "thm-geometric-le-algebraic",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-basis-extension",
+   "target": "thm-geometric-le-algebraic",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-block-triangular",
+   "target": "thm-geometric-le-algebraic",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-complex-polynomial-splits",
+   "target": "thm-trace-det-eigenvalues",
+   "kind": "reference"
+  },
+  {
+   "source": "def-characteristic-polynomial",
+   "target": "thm-trace-det-eigenvalues",
+   "kind": "reference"
+  },
+  {
+   "source": "def-polynomial-splits",
+   "target": "thm-trace-det-eigenvalues",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-charpoly-coefficients",
+   "target": "thm-trace-det-eigenvalues",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-triangular",
+   "target": "thm-trace-det-eigenvalues",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-eigenvalue-characterizations",
+   "target": "thm-trace-det-eigenvalues",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-multiplicity-of-product",
+   "target": "thm-trace-det-eigenvalues",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-remainder-theorem",
+   "target": "thm-trace-det-eigenvalues",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-eigenspaces-direct-sum",
+   "target": "cor-distinct-eigenvalues-diagonalizable",
+   "kind": "reference"
+  },
+  {
+   "source": "def-eigenspace",
+   "target": "cor-distinct-eigenvalues-diagonalizable",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-diagonalize-3x3",
+   "target": "cor-distinct-eigenvalues-diagonalizable",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-diagonalization",
+   "target": "cor-distinct-eigenvalues-diagonalizable",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-triangular",
+   "target": "exm-diagonalizable-parameter",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-diagonalization",
+   "target": "exm-diagonalizable-parameter",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-geometric-le-algebraic",
+   "target": "exm-diagonalizable-parameter",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rank-nullity-matrix",
+   "target": "exm-diagonalizable-parameter",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-basis-null-space",
+   "target": "exm-diagonalize-3x3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-diagonalization",
+   "target": "exm-diagonalize-3x3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-geometric-le-algebraic",
+   "target": "exm-diagonalize-3x3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-laplace-expansion",
+   "target": "exm-diagonalize-3x3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-trace-det-eigenvalues",
+   "target": "exm-diagonalize-3x3",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-distinct-eigenvalues-diagonalizable",
+   "target": "exm-fibonacci-binet",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-powers-diagonalizable",
+   "target": "exm-fibonacci-binet",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-two-by-two-inverse",
+   "target": "exm-fibonacci-binet",
+   "kind": "reference"
+  },
+  {
+   "source": "def-diagonalizable",
+   "target": "exr-diagonalization-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-diagonalization",
+   "target": "exr-diagonalization-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-distinct-eigenvalues-diagonalizable",
+   "target": "exr-diagonalization-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-diagonalization",
+   "target": "exr-diagonalization-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-powers-diagonalizable",
+   "target": "exr-diagonalization-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-two-by-two-inverse",
+   "target": "exr-diagonalization-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-distinct-eigenvalues-diagonalizable",
+   "target": "exr-diagonalization-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "def-diagonalizable",
+   "target": "exr-diagonalization-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "exr-eigenvalues-and-eigenvectors-b3",
+   "target": "exr-diagonalization-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-charpoly-similarity-invariant",
+   "target": "exr-diagonalization-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-powers-diagonalizable",
+   "target": "exr-diagonalization-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-zero-product",
+   "target": "exr-diagonalization-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "exr-diagonalization-c1",
+   "target": "exr-diagonalization-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-charpoly-similarity-invariant",
+   "target": "exr-diagonalization-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-diagonalization",
+   "target": "exr-diagonalization-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-eigenvalue-characterizations",
+   "target": "exr-diagonalization-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-powers-diagonalizable",
+   "target": "exr-diagonalization-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "exr-eigenvalues-and-eigenvectors-b2",
+   "target": "exr-diagonalization-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-diagonalization",
+   "target": "exr-diagonalization-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-involution-decomposition",
+   "target": "exr-diagonalization-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-transpose-properties",
+   "target": "exr-diagonalization-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-eigenspaces-direct-sum",
+   "target": "thm-diagonalization",
+   "kind": "reference"
+  },
+  {
+   "source": "def-characteristic-polynomial",
+   "target": "thm-diagonalization",
+   "kind": "reference"
+  },
+  {
+   "source": "def-matrix-of-linear-map",
+   "target": "thm-diagonalization",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-multiplicity-cofactor",
+   "target": "thm-diagonalization",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-charpoly-coefficients",
+   "target": "thm-diagonalization",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dim-impl-eq",
+   "target": "thm-diagonalization",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-direct-sum-k-criteria",
+   "target": "thm-diagonalization",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-eigenvalue-characterizations",
+   "target": "thm-diagonalization",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-geometric-le-algebraic",
+   "target": "thm-diagonalization",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-roots-with-multiplicity",
+   "target": "thm-diagonalization",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-subspace-sum",
+   "target": "thm-diagonalization",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-similarity-invariants",
+   "target": "thm-powers-diagonalizable",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-block-diagonal-arithmetic",
+   "target": "thm-powers-diagonalizable",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-one-sided-inverse",
+   "target": "thm-powers-diagonalizable",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-diagonalize-3x3",
+   "target": "exm-minimal-polynomial-by-dependence",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-minimal-polynomial-first-dependence",
+   "target": "exm-minimal-polynomial-by-dependence",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-minimal-polynomial-roots",
+   "target": "exm-minimal-polynomial-by-dependence",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-charpoly-small",
+   "target": "exm-minimal-polynomial-by-eigenvalues",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-monic-divisors",
+   "target": "exm-minimal-polynomial-by-eigenvalues",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-evaluation-homomorphism",
+   "target": "exm-minimal-polynomial-by-eigenvalues",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-minimal-polynomial-roots",
+   "target": "exm-minimal-polynomial-by-eigenvalues",
+   "kind": "reference"
+  },
+  {
+   "source": "def-minimal-polynomial",
+   "target": "exr-minimal-polynomial-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-monic-divisors",
+   "target": "exr-minimal-polynomial-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-minimal-polynomial-divides",
+   "target": "exr-minimal-polynomial-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-minimal-polynomial-roots",
+   "target": "exr-minimal-polynomial-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "exr-multiplicities-b1",
+   "target": "exr-minimal-polynomial-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-monic-divisors",
+   "target": "exr-minimal-polynomial-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-minimal-polynomial-first-dependence",
+   "target": "exr-minimal-polynomial-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-minimal-polynomial-roots",
+   "target": "exr-minimal-polynomial-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-minimal-polynomial-similarity",
+   "target": "exr-minimal-polynomial-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-monic-divisors",
+   "target": "exr-minimal-polynomial-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-minimal-polynomial-divides",
+   "target": "exr-minimal-polynomial-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "exr-characteristic-polynomial-c1",
+   "target": "exr-minimal-polynomial-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-divisibility-properties",
+   "target": "exr-minimal-polynomial-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-evaluation-homomorphism",
+   "target": "exr-minimal-polynomial-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "def-charpoly-operator",
+   "target": "exr-minimal-polynomial-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "exr-characteristic-polynomial-c1",
+   "target": "exr-minimal-polynomial-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "exr-minimal-polynomial-b3",
+   "target": "exr-minimal-polynomial-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-minimal-polynomial-divides",
+   "target": "exr-minimal-polynomial-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-minimal-polynomial-similarity",
+   "target": "exr-minimal-polynomial-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "def-restriction-operator",
+   "target": "exr-minimal-polynomial-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-minimal-polynomial-block-diagonal",
+   "target": "exr-minimal-polynomial-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-evaluation-homomorphism",
+   "target": "exr-minimal-polynomial-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-minimal-polynomial-divides",
+   "target": "exr-minimal-polynomial-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-quotient-space-operations-well-defined",
+   "target": "exr-minimal-polynomial-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-unique-factorization-polynomials",
+   "target": "lem-monic-divisors",
+   "kind": "reference"
+  },
+  {
+   "source": "def-lcm-polynomials",
+   "target": "prp-minimal-polynomial-block-diagonal",
+   "kind": "reference"
+  },
+  {
+   "source": "def-minimal-polynomial",
+   "target": "prp-minimal-polynomial-block-diagonal",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-similarity-invariants",
+   "target": "prp-minimal-polynomial-block-diagonal",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-block-diagonal-arithmetic",
+   "target": "prp-minimal-polynomial-block-diagonal",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-charpoly-similarity-invariant",
+   "target": "prp-minimal-polynomial-block-diagonal",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-ideals-principal",
+   "target": "prp-minimal-polynomial-block-diagonal",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-minimal-polynomial-divides",
+   "target": "prp-minimal-polynomial-block-diagonal",
+   "kind": "reference"
+  },
+  {
+   "source": "def-minimal-polynomial",
+   "target": "prp-minimal-polynomial-first-dependence",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-append-independent",
+   "target": "prp-minimal-polynomial-first-dependence",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-independence-unique-combination",
+   "target": "prp-minimal-polynomial-first-dependence",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-linear-maps-isomorphic-to-matrices",
+   "target": "prp-minimal-polynomial-first-dependence",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-size-bounds",
+   "target": "prp-minimal-polynomial-first-dependence",
+   "kind": "reference"
+  },
+  {
+   "source": "def-minimal-polynomial",
+   "target": "thm-minimal-polynomial-divides",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-divisibility-properties",
+   "target": "thm-minimal-polynomial-divides",
+   "kind": "reference"
+  },
+  {
+   "source": "exr-eigenvalues-and-eigenvectors-b3",
+   "target": "thm-minimal-polynomial-roots",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-degree-of-product",
+   "target": "thm-minimal-polynomial-roots",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-eigenvalue-characterizations",
+   "target": "thm-minimal-polynomial-roots",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-evaluation-homomorphism",
+   "target": "thm-minimal-polynomial-roots",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-minimal-polynomial-divides",
+   "target": "thm-minimal-polynomial-roots",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-remainder-theorem",
+   "target": "thm-minimal-polynomial-roots",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-zero-product",
+   "target": "thm-minimal-polynomial-roots",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-matrix-of-polynomial-of-operator",
+   "target": "thm-minimal-polynomial-similarity",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-similarity-invariants",
+   "target": "thm-minimal-polynomial-similarity",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-linear-maps-isomorphic-to-matrices",
+   "target": "thm-minimal-polynomial-similarity",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-matrix-of-polynomial-of-operator",
+   "target": "cor-inverse-polynomial",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-cayley-hamilton",
+   "target": "cor-inverse-polynomial",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-charpoly-coefficients",
+   "target": "cor-inverse-polynomial",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-invertible-tfae-det",
+   "target": "cor-inverse-polynomial",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-one-sided-inverse",
+   "target": "cor-inverse-polynomial",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-complex-polynomial-splits",
+   "target": "cor-minimal-divides-characteristic",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-monic-divisors",
+   "target": "cor-minimal-divides-characteristic",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-multiplicity-cofactor",
+   "target": "cor-minimal-divides-characteristic",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-divisibility-properties",
+   "target": "cor-minimal-divides-characteristic",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-cayley-hamilton",
+   "target": "cor-minimal-divides-characteristic",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-charpoly-coefficients",
+   "target": "cor-minimal-divides-characteristic",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-degree-of-product",
+   "target": "cor-minimal-divides-characteristic",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-eigenvalue-characterizations",
+   "target": "cor-minimal-divides-characteristic",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-minimal-polynomial-divides",
+   "target": "cor-minimal-divides-characteristic",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-minimal-polynomial-roots",
+   "target": "cor-minimal-divides-characteristic",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-integer-inverse",
+   "target": "exm-cayley-hamilton-3x3",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-inverse-polynomial",
+   "target": "exm-cayley-hamilton-3x3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-cayley-hamilton",
+   "target": "exm-cayley-hamilton-3x3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-laplace-expansion",
+   "target": "exm-cayley-hamilton-3x3",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-inverse-polynomial",
+   "target": "exr-cayley-hamilton-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-minimal-divides-characteristic",
+   "target": "exr-cayley-hamilton-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-minimal-polynomial-block-diagonal",
+   "target": "exr-cayley-hamilton-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-cayley-hamilton",
+   "target": "exr-cayley-hamilton-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-inverse-polynomial",
+   "target": "exr-cayley-hamilton-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-cayley-hamilton",
+   "target": "exr-cayley-hamilton-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-polynomial-division",
+   "target": "exr-cayley-hamilton-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-cayley-hamilton",
+   "target": "exr-cayley-hamilton-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-trace-operator-properties",
+   "target": "exr-cayley-hamilton-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-minimal-divides-characteristic",
+   "target": "exr-cayley-hamilton-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-minimal-polynomial-similarity",
+   "target": "exr-cayley-hamilton-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-integer-inverse",
+   "target": "exr-cayley-hamilton-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-adjugate-identity",
+   "target": "exr-cayley-hamilton-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-cayley-hamilton",
+   "target": "exr-cayley-hamilton-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-charpoly-coefficients",
+   "target": "exr-cayley-hamilton-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-one-sided-inverse",
+   "target": "exr-cayley-hamilton-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-degree-of-product",
+   "target": "exr-cayley-hamilton-c1",
+   "kind": "mention"
+  },
+  {
+   "source": "cor-inverse-formula",
+   "target": "exr-cayley-hamilton-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-evaluate-polynomial-matrix",
+   "target": "exr-cayley-hamilton-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-cayley-hamilton",
+   "target": "exr-cayley-hamilton-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-row-operations",
+   "target": "exr-cayley-hamilton-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-minimal-divides-characteristic",
+   "target": "exr-cayley-hamilton-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "exr-eigenvalues-and-eigenvectors-c2",
+   "target": "exr-cayley-hamilton-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-monic-divisors",
+   "target": "exr-cayley-hamilton-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-minimal-polynomial-divides",
+   "target": "exr-cayley-hamilton-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-complex-polynomial-splits",
+   "target": "cor-complex-triangularizable",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-charpoly-coefficients",
+   "target": "cor-complex-triangularizable",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-triangularization",
+   "target": "cor-complex-triangularizable",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-diagonal-of-triangular-form",
+   "target": "exm-triangularize-3x3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-diagonalization",
+   "target": "exm-triangularize-3x3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-laplace-expansion",
+   "target": "exm-triangularize-3x3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-triangularization",
+   "target": "exm-triangularize-3x3",
+   "kind": "reference"
+  },
+  {
+   "source": "def-triangularizable",
+   "target": "exr-triangularization-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-diagonal-of-triangular-form",
+   "target": "exr-triangularization-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-triangular-iff-flag",
+   "target": "exr-triangularization-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-triangularization",
+   "target": "exr-triangularization-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-charpoly-small",
+   "target": "exr-triangularization-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-complex-triangularizable",
+   "target": "exr-triangularization-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "exr-eigenvalues-and-eigenvectors-c2",
+   "target": "exr-triangularization-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-diagonal-of-triangular-form",
+   "target": "exr-triangularization-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-diagonal-of-triangular-form",
+   "target": "exr-triangularization-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-complex-triangularizable",
+   "target": "exr-triangularization-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-matrix-of-polynomial-of-operator",
+   "target": "exr-triangularization-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-cayley-hamilton",
+   "target": "exr-triangularization-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-diagonal-of-triangular-form",
+   "target": "exr-triangularization-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-evaluation-homomorphism",
+   "target": "exr-triangularization-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-triangular-iff-flag",
+   "target": "exr-triangularization-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-triangularization",
+   "target": "exr-triangularization-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-coordinate-isomorphism",
+   "target": "exr-triangularization-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-invariance-on-spanning-list",
+   "target": "exr-triangularization-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-complex-operator-has-eigenvalue",
+   "target": "exr-triangularization-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-of-map-coordinates",
+   "target": "exr-triangularization-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-complex-triangularizable",
+   "target": "exr-triangularization-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-vandermonde-nonzero",
+   "target": "exr-triangularization-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "exr-commutators-and-shoda-c2",
+   "target": "exr-triangularization-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "exr-triangularization-b3",
+   "target": "exr-triangularization-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-cayley-hamilton",
+   "target": "exr-triangularization-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-transpose",
+   "target": "exr-triangularization-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-diagonal-of-triangular-form",
+   "target": "exr-triangularization-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "def-det-operator",
+   "target": "thm-diagonal-of-triangular-form",
+   "kind": "reference"
+  },
+  {
+   "source": "def-trace-operator",
+   "target": "thm-diagonal-of-triangular-form",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-triangular",
+   "target": "thm-diagonal-of-triangular-form",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-eigenvalue-characterizations",
+   "target": "thm-diagonal-of-triangular-form",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-field-basic-properties",
+   "target": "thm-diagonal-of-triangular-form",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-multiplicity-of-product",
+   "target": "thm-diagonal-of-triangular-form",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-remainder-theorem",
+   "target": "thm-diagonal-of-triangular-form",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-triangularization",
+   "target": "thm-diagonal-of-triangular-form",
+   "kind": "reference"
+  },
+  {
+   "source": "def-matrix-of-linear-map",
+   "target": "thm-triangular-iff-flag",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-invariance-on-spanning-list",
+   "target": "thm-triangular-iff-flag",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-unique-representation",
+   "target": "thm-triangular-iff-flag",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-polynomial-no-zero-divisors",
+   "target": "thm-triangularization",
+   "kind": "reference"
+  },
+  {
+   "source": "def-charpoly-operator",
+   "target": "thm-triangularization",
+   "kind": "reference"
+  },
+  {
+   "source": "def-polynomial-splits",
+   "target": "thm-triangularization",
+   "kind": "reference"
+  },
+  {
+   "source": "def-restriction-operator",
+   "target": "thm-triangularization",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-one-dimensional-invariant",
+   "target": "thm-triangularization",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-charpoly-coefficients",
+   "target": "thm-triangularization",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-triangular",
+   "target": "thm-triangularization",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dimension-quotient",
+   "target": "thm-triangularization",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-eigenvalue-characterizations",
+   "target": "thm-triangularization",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-invariant-subspace-matrix",
+   "target": "thm-triangularization",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-quotient-space-operations-well-defined",
+   "target": "thm-triangularization",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-right-size-basis",
+   "target": "thm-triangularization",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-similar-iff-same-operator",
+   "target": "thm-triangularization",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-zero-product",
+   "target": "thm-triangularization",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-triangularize-3x3",
+   "target": "cor-primary-components-dimension",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-monic-divisors",
+   "target": "cor-primary-components-dimension",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-multiplicity-cofactor",
+   "target": "cor-primary-components-dimension",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-minimal-polynomial-block-diagonal",
+   "target": "cor-primary-components-dimension",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-charpoly-coefficients",
+   "target": "cor-primary-components-dimension",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-direct-sum-invariant-block-diagonal",
+   "target": "cor-primary-components-dimension",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-eigenvalue-characterizations",
+   "target": "cor-primary-components-dimension",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-minimal-polynomial-roots",
+   "target": "cor-primary-components-dimension",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-minimal-polynomial-similarity",
+   "target": "cor-primary-components-dimension",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-primary-decomposition",
+   "target": "cor-primary-components-dimension",
+   "kind": "reference"
+  },
+  {
+   "source": "exr-minimal-polynomial-c2",
+   "target": "cor-restriction-diagonalizable",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-diagonalizable-iff-minimal-distinct-linear",
+   "target": "cor-restriction-diagonalizable",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-diagonalization",
+   "target": "cor-restriction-diagonalizable",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-complex-polynomial-splits",
+   "target": "exm-finite-order-diagonalizable",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-diagonalizable-iff-minimal-distinct-linear",
+   "target": "exm-finite-order-diagonalizable",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-repeated-root-derivative",
+   "target": "exm-finite-order-diagonalizable",
+   "kind": "reference"
+  },
+  {
+   "source": "exr-polynomials-of-operators-b2",
+   "target": "exm-primary-decomposition",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-monic-divisors",
+   "target": "exm-primary-decomposition",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-irreducible-deg-2-3",
+   "target": "exm-primary-decomposition",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-kernel-splitting",
+   "target": "exm-primary-decomposition",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-restriction-diagonalizable",
+   "target": "exr-primary-decomposition-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-finite-order-diagonalizable",
+   "target": "exr-primary-decomposition-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-diagonalizable-iff-minimal-distinct-linear",
+   "target": "exr-primary-decomposition-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-primary-decomposition",
+   "target": "exr-primary-decomposition-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "exr-cayley-hamilton-b3",
+   "target": "exr-primary-decomposition-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "exr-minimal-polynomial-b1",
+   "target": "exr-primary-decomposition-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-diagonalizable-iff-minimal-distinct-linear",
+   "target": "exr-primary-decomposition-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-irreducible-deg-2-3",
+   "target": "exr-primary-decomposition-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-primary-components-dimension",
+   "target": "exr-primary-decomposition-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "exr-minimal-polynomial-b1",
+   "target": "exr-primary-decomposition-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-direct-sum-invariant-block-diagonal",
+   "target": "exr-primary-decomposition-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-kernel-splitting",
+   "target": "exr-primary-decomposition-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-primary-decomposition",
+   "target": "exr-primary-decomposition-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-similarity-invariants",
+   "target": "exr-primary-decomposition-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-diagonalizable-iff-minimal-distinct-linear",
+   "target": "exr-primary-decomposition-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-powers-diagonalizable",
+   "target": "exr-primary-decomposition-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-trace-similarity-invariant",
+   "target": "exr-primary-decomposition-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-finite-order-diagonalizable",
+   "target": "exr-primary-decomposition-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-diagonalizable-iff-minimal-distinct-linear",
+   "target": "exr-primary-decomposition-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-field-basic-properties",
+   "target": "exr-primary-decomposition-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-finite-injective-iff-surjective",
+   "target": "exr-primary-decomposition-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-repeated-root-derivative",
+   "target": "exr-primary-decomposition-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-roots-with-multiplicity",
+   "target": "exr-primary-decomposition-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-bezout-polynomials",
+   "target": "exr-primary-decomposition-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "def-irreducible-polynomial",
+   "target": "exr-primary-decomposition-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-rotation-invariant-subspaces",
+   "target": "exr-primary-decomposition-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-divisibility-properties",
+   "target": "exr-primary-decomposition-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-invariant-sum-intersection",
+   "target": "exr-primary-decomposition-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-minimal-polynomial-block-diagonal",
+   "target": "exr-primary-decomposition-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dim-impl-eq",
+   "target": "exr-primary-decomposition-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-direct-sum-k-criteria",
+   "target": "exr-primary-decomposition-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-evaluation-homomorphism",
+   "target": "exr-primary-decomposition-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-polynomial-division",
+   "target": "exr-primary-decomposition-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-prop-image",
+   "target": "exr-primary-decomposition-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "exr-eigenvalues-and-eigenvectors-b3",
+   "target": "thm-diagonalizable-iff-minimal-distinct-linear",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-monic-divisors",
+   "target": "thm-diagonalizable-iff-minimal-distinct-linear",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-degree-of-product",
+   "target": "thm-diagonalizable-iff-minimal-distinct-linear",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-diagonalization",
+   "target": "thm-diagonalizable-iff-minimal-distinct-linear",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-linear-transform-basis",
+   "target": "thm-diagonalizable-iff-minimal-distinct-linear",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-minimal-polynomial-divides",
+   "target": "thm-diagonalizable-iff-minimal-distinct-linear",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-minimal-polynomial-roots",
+   "target": "thm-diagonalizable-iff-minimal-distinct-linear",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-primary-decomposition",
+   "target": "thm-diagonalizable-iff-minimal-distinct-linear",
+   "kind": "reference"
+  },
+  {
+   "source": "exr-minimal-polynomial-c2",
+   "target": "thm-primary-decomposition",
+   "kind": "reference"
+  },
+  {
+   "source": "exr-polynomials-of-operators-c2",
+   "target": "thm-primary-decomposition",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-monic-divisors",
+   "target": "thm-primary-decomposition",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-divisibility-properties",
+   "target": "thm-primary-decomposition",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-degree-of-product",
+   "target": "thm-primary-decomposition",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-evaluation-homomorphism",
+   "target": "thm-primary-decomposition",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-kernel-image-of-polynomial-invariant",
+   "target": "thm-primary-decomposition",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-minimal-polynomial-divides",
+   "target": "thm-primary-decomposition",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-unique-factorization-polynomials",
+   "target": "thm-primary-decomposition",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-commuting-preserves-eigenspaces",
+   "target": "exm-simultaneous-diagonalization",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-simultaneous-triangularization",
+   "target": "exm-simultaneous-diagonalization",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-restriction-diagonalizable",
+   "target": "exr-commuting-operators-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-commuting-preserves-eigenspaces",
+   "target": "exr-commuting-operators-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-simultaneous-diagonalization",
+   "target": "exr-commuting-operators-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-commuting-preserves-eigenspaces",
+   "target": "exr-commuting-operators-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-simultaneous-diagonalization",
+   "target": "exr-commuting-operators-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-distinct-eigenvalues-diagonalizable",
+   "target": "exr-commuting-operators-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "def-diagonalizable",
+   "target": "exr-commuting-operators-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-simultaneous-diagonalization",
+   "target": "exr-commuting-operators-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-block-diagonal-arithmetic",
+   "target": "exr-commuting-operators-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-commuting-preserves-eigenspaces",
+   "target": "exr-commuting-operators-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-direct-sum-invariant-block-diagonal",
+   "target": "exr-commuting-operators-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-distinct-eigenvalues-diagonalizable",
+   "target": "exr-commuting-operators-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-eigenspaces-direct-sum",
+   "target": "exr-commuting-operators-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-root-bound-general",
+   "target": "exr-commuting-operators-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-commuting-preserves-eigenspaces",
+   "target": "exr-commuting-operators-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-diagonal-of-triangular-form",
+   "target": "exr-commuting-operators-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-lagrange-interpolation",
+   "target": "exr-commuting-operators-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-powers-diagonalizable",
+   "target": "exr-commuting-operators-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "exr-eigenvalues-and-eigenvectors-c2",
+   "target": "exr-commuting-operators-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-diagonal-of-triangular-form",
+   "target": "exr-commuting-operators-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-simultaneous-triangularization",
+   "target": "exr-commuting-operators-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-charpoly-coefficients",
+   "target": "lem-invariant-charpoly-splits",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-evaluation-respects-operations",
+   "target": "lem-invariant-charpoly-splits",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-invariant-subspace-matrix",
+   "target": "lem-invariant-charpoly-splits",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-multiplicity-of-product",
+   "target": "lem-invariant-charpoly-splits",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-roots-with-multiplicity",
+   "target": "lem-invariant-charpoly-splits",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-complex-polynomial-splits",
+   "target": "thm-commuting-common-eigenvector",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-invariant-charpoly-splits",
+   "target": "thm-commuting-common-eigenvector",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-invariant-sum-intersection",
+   "target": "thm-commuting-common-eigenvector",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-commuting-preserves-eigenspaces",
+   "target": "thm-commuting-common-eigenvector",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dim-impl-eq",
+   "target": "thm-commuting-common-eigenvector",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-eigenvalue-characterizations",
+   "target": "thm-commuting-common-eigenvector",
+   "kind": "reference"
+  },
+  {
+   "source": "def-eigenspace",
+   "target": "thm-commuting-preserves-eigenspaces",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-matrix-of-polynomial-of-operator",
+   "target": "thm-simultaneous-diagonalization",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-restriction-diagonalizable",
+   "target": "thm-simultaneous-diagonalization",
+   "kind": "reference"
+  },
+  {
+   "source": "def-diagonalizable",
+   "target": "thm-simultaneous-diagonalization",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-commuting-preserves-eigenspaces",
+   "target": "thm-simultaneous-diagonalization",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-diagonalization",
+   "target": "thm-simultaneous-diagonalization",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-direct-sum-k-criteria",
+   "target": "thm-simultaneous-diagonalization",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-linear-maps-isomorphic-to-matrices",
+   "target": "thm-simultaneous-diagonalization",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-matrix-of-polynomial-of-operator",
+   "target": "thm-simultaneous-diagonalization-family",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-restriction-diagonalizable",
+   "target": "thm-simultaneous-diagonalization-family",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-append-independent",
+   "target": "thm-simultaneous-diagonalization-family",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-basis-extension",
+   "target": "thm-simultaneous-diagonalization-family",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-commuting-preserves-eigenspaces",
+   "target": "thm-simultaneous-diagonalization-family",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-diagonalization",
+   "target": "thm-simultaneous-diagonalization-family",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-direct-sum-k-criteria",
+   "target": "thm-simultaneous-diagonalization-family",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-linear-maps-isomorphic-to-matrices",
+   "target": "thm-simultaneous-diagonalization-family",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-simultaneous-diagonalization",
+   "target": "thm-simultaneous-diagonalization-family",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-complex-polynomial-splits",
+   "target": "thm-simultaneous-triangularization",
+   "kind": "reference"
+  },
+  {
+   "source": "def-restriction-operator",
+   "target": "thm-simultaneous-triangularization",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-invariant-charpoly-splits",
+   "target": "thm-simultaneous-triangularization",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-one-dimensional-invariant",
+   "target": "thm-simultaneous-triangularization",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-change-of-basis-maps",
+   "target": "thm-simultaneous-triangularization",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-commuting-common-eigenvector",
+   "target": "thm-simultaneous-triangularization",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dimension-quotient",
+   "target": "thm-simultaneous-triangularization",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-invariant-subspace-matrix",
+   "target": "thm-simultaneous-triangularization",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-right-size-basis",
+   "target": "thm-simultaneous-triangularization",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-multiplicity-cofactor",
+   "target": "cor-trace-det-of-polynomial",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-spectral-mapping",
+   "target": "cor-trace-det-of-polynomial",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-trace-det-eigenvalues",
+   "target": "cor-trace-det-of-polynomial",
+   "kind": "reference"
+  },
+  {
+   "source": "def-eigenvalue",
+   "target": "def-left-eigenvector",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-trace-det-of-polynomial",
+   "target": "exm-spectral-mapping-3x3",
+   "kind": "reference"
+  },
+  {
+   "source": "exr-diagonalization-b1",
+   "target": "exm-spectral-mapping-3x3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-multiplicative",
+   "target": "exm-spectral-mapping-3x3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-diagonalizable-iff-minimal-distinct-linear",
+   "target": "exm-spectral-mapping-3x3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-minimal-polynomial-divides",
+   "target": "exm-spectral-mapping-3x3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-spectral-mapping",
+   "target": "exm-spectral-mapping-3x3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-trace-det-eigenvalues",
+   "target": "exm-spectral-mapping-3x3",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-left-eigenvectors-transpose",
+   "target": "exr-spectral-mapping-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-ab-ba-eigenvalues",
+   "target": "exr-spectral-mapping-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-nilpotent-trace-powers",
+   "target": "exr-spectral-mapping-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-spectral-mapping",
+   "target": "exr-spectral-mapping-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-det-inverse",
+   "target": "exr-spectral-mapping-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-trace-det-of-polynomial",
+   "target": "exr-spectral-mapping-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-invertible-tfae-det",
+   "target": "exr-spectral-mapping-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-nilpotent-trace-powers",
+   "target": "exr-spectral-mapping-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-spectral-mapping",
+   "target": "exr-spectral-mapping-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-trace-det-eigenvalues",
+   "target": "exr-spectral-mapping-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-ab-ba-eigenvalues",
+   "target": "exr-spectral-mapping-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "exr-diagonalization-b1",
+   "target": "exr-spectral-mapping-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-left-eigenvectors-transpose",
+   "target": "exr-spectral-mapping-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-left-right-eigen-expansion",
+   "target": "exr-spectral-mapping-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-left-right-biorthogonal",
+   "target": "exr-spectral-mapping-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-trace-det-of-polynomial",
+   "target": "exr-spectral-mapping-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-ab-ba-eigenvalues",
+   "target": "exr-spectral-mapping-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-trace-properties",
+   "target": "exr-spectral-mapping-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "def-characteristic-polynomial",
+   "target": "exr-spectral-mapping-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "exr-eigenvalues-and-eigenvectors-c2",
+   "target": "exr-spectral-mapping-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-charpoly-coefficients",
+   "target": "exr-spectral-mapping-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-charpoly-similarity-invariant",
+   "target": "exr-spectral-mapping-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-diagonal-of-triangular-form",
+   "target": "exr-spectral-mapping-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-eigenvalue-characterizations",
+   "target": "exr-spectral-mapping-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-invertible-tfae-det",
+   "target": "exr-spectral-mapping-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-simultaneous-triangularization",
+   "target": "exr-spectral-mapping-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "exr-commutators-and-shoda-c2",
+   "target": "exr-spectral-mapping-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-nilpotent-trace-powers",
+   "target": "exr-spectral-mapping-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "exr-characteristic-polynomial-b2",
+   "target": "prp-left-eigenvectors-transpose",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-eigenvalue-characterizations",
+   "target": "prp-left-eigenvectors-transpose",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-of-dual-map",
+   "target": "prp-left-eigenvectors-transpose",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rank-nullity-matrix",
+   "target": "prp-left-eigenvectors-transpose",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-row-rank-equals-column-rank",
+   "target": "prp-left-eigenvectors-transpose",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-transpose-properties",
+   "target": "prp-left-eigenvectors-transpose",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-outer-product-expansion",
+   "target": "prp-left-right-eigen-expansion",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-powers-diagonalizable",
+   "target": "prp-left-right-eigen-expansion",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-three-views-of-product",
+   "target": "prp-left-right-eigen-expansion",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-polynomial-no-zero-divisors",
+   "target": "thm-ab-ba-eigenvalues",
+   "kind": "reference"
+  },
+  {
+   "source": "def-root-multiplicity",
+   "target": "thm-ab-ba-eigenvalues",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-charpoly-small",
+   "target": "thm-ab-ba-eigenvalues",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-block-multiplication",
+   "target": "thm-ab-ba-eigenvalues",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-charpoly-coefficients",
+   "target": "thm-ab-ba-eigenvalues",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-charpoly-similarity-invariant",
+   "target": "thm-ab-ba-eigenvalues",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-block-triangular",
+   "target": "thm-ab-ba-eigenvalues",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-triangular",
+   "target": "thm-ab-ba-eigenvalues",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-eigenvalue-characterizations",
+   "target": "thm-ab-ba-eigenvalues",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-multiplication-properties",
+   "target": "thm-ab-ba-eigenvalues",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-multiplicity-of-product",
+   "target": "thm-ab-ba-eigenvalues",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-one-sided-inverse",
+   "target": "thm-ab-ba-eigenvalues",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-field-basic-properties",
+   "target": "thm-left-right-biorthogonal",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-multiplication-properties",
+   "target": "thm-left-right-biorthogonal",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-complex-polynomial-splits",
+   "target": "thm-nilpotent-trace-powers",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-complex-triangularizable",
+   "target": "thm-nilpotent-trace-powers",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-trace-det-of-polynomial",
+   "target": "thm-nilpotent-trace-powers",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-vandermonde-nonzero",
+   "target": "thm-nilpotent-trace-powers",
+   "kind": "reference"
+  },
+  {
+   "source": "exr-eigenvalues-and-eigenvectors-c2",
+   "target": "thm-nilpotent-trace-powers",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-similarity-invariants",
+   "target": "thm-nilpotent-trace-powers",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-diagonal-of-triangular-form",
+   "target": "thm-nilpotent-trace-powers",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-eigenvalue-characterizations",
+   "target": "thm-nilpotent-trace-powers",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-transpose-properties",
+   "target": "thm-nilpotent-trace-powers",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-vandermonde-determinant",
+   "target": "thm-nilpotent-trace-powers",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-complex-polynomial-splits",
+   "target": "thm-spectral-mapping",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-matrix-of-polynomial-of-operator",
+   "target": "thm-spectral-mapping",
+   "kind": "reference"
+  },
+  {
+   "source": "def-characteristic-polynomial",
+   "target": "thm-spectral-mapping",
+   "kind": "reference"
+  },
+  {
+   "source": "def-charpoly-operator",
+   "target": "thm-spectral-mapping",
+   "kind": "reference"
+  },
+  {
+   "source": "def-matrix-multiplication",
+   "target": "thm-spectral-mapping",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-diagonal-of-triangular-form",
+   "target": "thm-spectral-mapping",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-eigenvalue-characterizations",
+   "target": "thm-spectral-mapping",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-triangularization",
+   "target": "thm-spectral-mapping",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-linear-recurrence-solution",
+   "target": "exm-leslie-population",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-scalar-recurrence-distinct-roots",
+   "target": "exm-third-order-recurrence",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-distinct-eigenvalues-diagonalizable",
+   "target": "exm-three-state-markov",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-eigenspaces-direct-sum",
+   "target": "exm-three-state-markov",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-left-right-eigen-expansion",
+   "target": "exm-three-state-markov",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-markov-limit-diagonalizable",
+   "target": "exm-three-state-markov",
+   "kind": "reference"
+  },
+  {
+   "source": "def-characteristic-polynomial",
+   "target": "exm-two-state-markov",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-stochastic-properties",
+   "target": "exm-two-state-markov",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-powers-diagonalizable",
+   "target": "exm-two-state-markov",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-two-by-two-inverse",
+   "target": "exm-two-state-markov",
+   "kind": "reference"
+  },
+  {
+   "source": "def-stochastic-matrix",
+   "target": "exr-powers-recurrences-markov-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-stochastic-properties",
+   "target": "exr-powers-recurrences-markov-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-linear-recurrence-solution",
+   "target": "exr-powers-recurrences-markov-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-scalar-recurrence-distinct-roots",
+   "target": "exr-powers-recurrences-markov-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-repeated-root-recurrence",
+   "target": "exr-powers-recurrences-markov-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-scalar-recurrence-distinct-roots",
+   "target": "exr-powers-recurrences-markov-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-distinct-eigenvalues-diagonalizable",
+   "target": "exr-powers-recurrences-markov-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-markov-limit-diagonalizable",
+   "target": "exr-powers-recurrences-markov-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-powers-diagonalizable",
+   "target": "exr-powers-recurrences-markov-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-two-by-two-inverse",
+   "target": "exr-powers-recurrences-markov-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-left-eigenvectors-transpose",
+   "target": "exr-powers-recurrences-markov-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-complex-triangle-inequality",
+   "target": "exr-powers-recurrences-markov-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-conjugate-properties",
+   "target": "exr-powers-recurrences-markov-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-distinct-eigenvalues-diagonalizable",
+   "target": "exr-powers-recurrences-markov-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-markov-limit-diagonalizable",
+   "target": "exr-powers-recurrences-markov-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-powers-diagonalizable",
+   "target": "exr-powers-recurrences-markov-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "def-left-eigenvector",
+   "target": "prp-stochastic-properties",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-left-eigenvectors-transpose",
+   "target": "prp-stochastic-properties",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-three-views-of-product",
+   "target": "prp-stochastic-properties",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-times-vector-columns",
+   "target": "thm-linear-recurrence-solution",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-powers-diagonalizable",
+   "target": "thm-linear-recurrence-solution",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-left-eigenvectors-transpose",
+   "target": "thm-markov-limit-diagonalizable",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-left-right-eigen-expansion",
+   "target": "thm-markov-limit-diagonalizable",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-stochastic-properties",
+   "target": "thm-markov-limit-diagonalizable",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-diagonal-of-triangular-form",
+   "target": "thm-markov-limit-diagonalizable",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-geometric-le-algebraic",
+   "target": "thm-markov-limit-diagonalizable",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-nonzero-iff-invertible",
+   "target": "thm-scalar-recurrence-distinct-roots",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-transpose",
+   "target": "thm-scalar-recurrence-distinct-roots",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-linear-recurrence-solution",
+   "target": "thm-scalar-recurrence-distinct-roots",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-vandermonde-determinant",
+   "target": "thm-scalar-recurrence-distinct-roots",
    "kind": "reference"
   }
  ]
