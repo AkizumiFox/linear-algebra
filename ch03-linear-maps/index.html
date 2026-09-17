@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Linear Transformations – Linear Algebra</title>
+    <title>Linear Maps – Linear Algebra</title>
 
     <meta name="asset-prefix" content="../">
     <meta name="page-path" content="ch03-linear-maps/index.html">
@@ -24,17 +24,15 @@
             if (stored.toc === 'collapsed') root.dataset.toc = 'collapsed';
         })();
     </script>
-        <meta name="description" content="Vector spaces are only half of
-the story; the other half is the maps between them that respect addition
-and scalar multiplication.">
+        <meta name="description" content="Chapter 1 studied vector
+spaces one at a time.">
             <link rel="canonical" href="https://linear-algebra.akizumifox.com/ch03-linear-maps/index.html">
     <meta property="og:url" content="https://linear-algebra.akizumifox.com/ch03-linear-maps/index.html">
         <meta property="og:type" content="article">
     <meta property="og:site_name" content="Linear Algebra">
-    <meta property="og:title" content="Linear Transformations">
-        <meta property="og:description" content="Vector spaces are only
-half of the story; the other half is the maps between them that respect
-addition and scalar multiplication.">
+    <meta property="og:title" content="Linear Maps">
+        <meta property="og:description" content="Chapter 1 studied
+vector spaces one at a time.">
         <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 
     <!-- Fonts: STIX Two Text (matches MathJax's math font), served with the site -->
@@ -116,38 +114,103 @@ Algebra</a>
                 <header id="title-block-header" class="quarto-title-block default">
                                         <nav class="quarto-title-breadcrumbs" aria-label="Breadcrumb">
                         <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="../ch03-linear-maps/index.html">Linear Transformations</a></li>
-                        <li class="breadcrumb-item"><a href="../ch03-linear-maps/index.html"><span class="chapter-title">Linear Transformations</span></a></li>
+                        <li class="breadcrumb-item"><a href="../ch03-linear-maps/index.html">Linear Maps</a></li>
+                        <li class="breadcrumb-item"><a href="../ch03-linear-maps/index.html"><span class="chapter-title">Linear Maps</span></a></li>
                         </ol>
                     </nav>
                                         <div class="quarto-title">
                         <h1 class="title">
                             
                             <span class="chapter-title">Linear
-Transformations</span>
+Maps</span>
                         </h1>
                     </div>
                 </header>
 
-                <div id="linear-transformations" class="unnumbered">
+                <div id="linear-maps">
 
                 </div>
-                <p>Vector spaces are only half of the story; the other
-                half is the maps between them that respect addition and
-                scalar multiplication. This chapter studies these
-                <em>linear transformations</em>.</p>
-                <h2 id="overview">Overview</h2>
-                <p>In this part, we will explore:</p>
+                <p>Chapter 1 studied vector spaces one at a time. This
+                chapter studies the functions between them that respect
+                the structure: <strong>linear maps</strong>, the
+                functions that send sums to sums and scalar multiples to
+                scalar multiples. Differentiation of polynomials, the
+                trace of a matrix, a rotation of the plane and
+                multiplication by a matrix are all linear maps, and one
+                theory covers them all.</p>
+                <p>Two subspaces measure how far a linear map is from
+                being injective and surjective: its kernel and its
+                image. The Rank–Nullity Theorem ties their dimensions
+                together, and turns many questions about maps into
+                counting. Then we choose bases and write every linear
+                map as a matrix. This explains why matrix multiplication
+                is defined the way it is, and it raises the central
+                question of the rest of the book: how does the matrix
+                change when the bases change, and how simple can we make
+                it?</p>
+                <p><strong>What you need.</strong> From Chapter 1, bases
+                and dimension (<a href="../ch01-vector-spaces/05-basis.html#def-basis" class="xref" data-ref="def-basis" data-shard="ch01-vector-spaces">Definition 1.5.1</a>, <a href="../ch01-vector-spaces/06-dimension.html#def-dimension" class="xref" data-ref="def-dimension" data-shard="ch01-vector-spaces">Definition 1.6.1</a>),
+                basis extension (<a href="../ch01-vector-spaces/06-dimension.html#thm-basis-extension" class="xref" data-ref="thm-basis-extension" data-shard="ch01-vector-spaces">Theorem 1.6.5</a>) and
+                counting instead of checking (<a href="../ch01-vector-spaces/06-dimension.html#thm-right-size-basis" class="xref" data-ref="thm-right-size-basis" data-shard="ch01-vector-spaces">Theorem 1.6.4</a>). From
+                Chapter 2, the null space and column space of a matrix
+                (<a href="../ch02-linear-systems/05-rank.html#def-null-space" class="xref" data-ref="def-null-space" data-shard="ch02-linear-systems">Definition 2.5.3</a>,
+                <a href="../ch02-linear-systems/05-rank.html#def-column-space" class="xref" data-ref="def-column-space" data-shard="ch02-linear-systems">Definition 2.5.1</a>),
+                its rank (<a href="../ch02-linear-systems/05-rank.html#def-rank-matrix" class="xref" data-ref="def-rank-matrix" data-shard="ch02-linear-systems">Definition 2.5.4</a>,
+                <a href="../ch02-linear-systems/05-rank.html#thm-rank-nullity-matrix" class="xref" data-ref="thm-rank-nullity-matrix" data-shard="ch02-linear-systems">Theorem 2.5.7</a>) and
+                the invertible matrix theorem (<a href="../ch02-linear-systems/04-elementary-matrices-and-inverses.html#thm-invertible-tfae" class="xref" data-ref="thm-invertible-tfae" data-shard="ch02-linear-systems">Theorem 2.4.4</a>).
+                From Chapter 0, quotient sets and well-defined functions
+                on them (<a href="../ch00-foundations/05-relations.html#thm-well-defined-on-quotient" class="xref" data-ref="thm-well-defined-on-quotient" data-shard="ch00-foundations">Theorem 0.5.3</a>), for
+                the section on quotient spaces.</p>
+                <h2 id="roadmap">Roadmap</h2>
                 <ul>
-                <li><strong>Linear transformations</strong>: the
-                definition and basic properties, examples and
-                non-examples, and the fact that a linear transformation
-                is determined by its values on a basis.</li>
-                <li><strong>Kernel and image</strong>: the two subspaces
-                attached to every linear transformation, with examples
-                and their basic theorems.</li>
-                <li><strong>The rank–nullity theorem</strong>: nullity
-                and rank, and the identity <span class="math inline"><mjx-container class="MathJax" jax="CHTML" style="font-size: 113.1%; position: relative;"><mjx-math class=" MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-n"><mjx-c class="mjx-c6E"></mjx-c><mjx-c class="mjx-c75"></mjx-c><mjx-c class="mjx-c6C"></mjx-c><mjx-c class="mjx-c6C"></mjx-c><mjx-c class="mjx-c69"></mjx-c><mjx-c class="mjx-c74"></mjx-c><mjx-c class="mjx-c79"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D453 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2B"></mjx-c></mjx-mo><mjx-mi class="mjx-n" space="3"><mjx-c class="mjx-c72"></mjx-c><mjx-c class="mjx-c61"></mjx-c><mjx-c class="mjx-c6E"></mjx-c><mjx-c class="mjx-c6B"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D453 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mi class="mjx-n" space="4"><mjx-c class="mjx-c64"></mjx-c><mjx-c class="mjx-c69"></mjx-c><mjx-c class="mjx-c6D"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2061"></mjx-c></mjx-mo><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D449 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>nullity</mi><mo stretchy="false">(</mo><mi>f</mi><mo stretchy="false">)</mo><mo>+</mo><mi>rank</mi><mo stretchy="false">(</mo><mi>f</mi><mo stretchy="false">)</mo><mo>=</mo><mi>dim</mi><mo data-mjx-texclass="NONE">⁡</mo><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></math></mjx-assistive-mml></mjx-container></span> for a finite-dimensional <span class="math inline"><mjx-container class="MathJax" jax="CHTML" style="font-size: 113.1%; position: relative;"><mjx-math class=" MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D449 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>V</mi></math></mjx-assistive-mml></mjx-container></span>.</li>
+                <li><strong>Linear maps.</strong> The definition, a
+                gallery of examples and non-examples, and the fact that
+                a linear map is determined by its values on a
+                basis.</li>
+                <li><strong>Kernel and image.</strong> The two subspaces
+                attached to every linear map, and the kernel test for
+                injectivity.</li>
+                <li><strong>The Rank–Nullity Theorem.</strong> <span class="math inline"><mjx-container class="MathJax" jax="CHTML" style="font-size: 113.1%; position: relative;"><mjx-math class=" MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-n"><mjx-c class="mjx-c64"></mjx-c><mjx-c class="mjx-c69"></mjx-c><mjx-c class="mjx-c6D"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2061"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="2"><mjx-c class="mjx-c1D449 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mi class="mjx-n" space="4"><mjx-c class="mjx-c6E"></mjx-c><mjx-c class="mjx-c75"></mjx-c><mjx-c class="mjx-c6C"></mjx-c><mjx-c class="mjx-c6C"></mjx-c><mjx-c class="mjx-c69"></mjx-c><mjx-c class="mjx-c74"></mjx-c><mjx-c class="mjx-c79"></mjx-c></mjx-mi><mjx-mi class="mjx-i" space="2"><mjx-c class="mjx-c1D447 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2B"></mjx-c></mjx-mo><mjx-mi class="mjx-n" space="3"><mjx-c class="mjx-c72"></mjx-c><mjx-c class="mjx-c61"></mjx-c><mjx-c class="mjx-c6E"></mjx-c><mjx-c class="mjx-c6B"></mjx-c></mjx-mi><mjx-mi class="mjx-i" space="2"><mjx-c class="mjx-c1D447 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>dim</mi><mo data-mjx-texclass="NONE">⁡</mo><mi>V</mi><mo>=</mo><mi>nullity</mi><mi>T</mi><mo>+</mo><mi>rank</mi><mi>T</mi></math></mjx-assistive-mml></mjx-container></span>, and what counting can decide.</li>
+                <li><strong>The algebra of linear maps.</strong> Adding,
+                scaling and composing maps; polynomials in an
+                operator.</li>
+                <li><strong>Isomorphisms.</strong> When two spaces are
+                “the same”, and why dimension alone decides it.</li>
+                <li><strong>The matrix of a linear map.</strong>
+                Coordinates turn maps into matrices and composition into
+                matrix multiplication.</li>
+                <li><strong>Change of basis and similarity.</strong> How
+                the matrix of a map depends on the chosen bases.</li>
+                <li><strong>Rank, equivalence and
+                factorizations.</strong> With free choice of bases on
+                both sides, every matrix becomes <span class="math inline"><mjx-container class="MathJax" jax="CHTML" style="font-size: 113.1%; position: relative;"><mjx-math class=" MJX-TEX" aria-hidden="true"><mjx-mrow><mjx-mo class="mjx-s3"><mjx-c class="mjx-c28 TEX-S3"></mjx-c></mjx-mo><mjx-mtable style="min-width: 2.342em;"><mjx-table><mjx-itable><mjx-mtr><mjx-mtd style="padding-right: 0.5em; padding-bottom: 0.2em;"><mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D43C TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em; margin-left: -0.064em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D45F TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msub><mjx-tstrut></mjx-tstrut></mjx-mtd><mjx-mtd style="padding-left: 0.5em; padding-bottom: 0.2em;"><mjx-mn class="mjx-n"><mjx-c class="mjx-c30"></mjx-c></mjx-mn><mjx-tstrut></mjx-tstrut></mjx-mtd></mjx-mtr><mjx-mtr><mjx-mtd style="padding-right: 0.5em; padding-top: 0.2em;"><mjx-mn class="mjx-n"><mjx-c class="mjx-c30"></mjx-c></mjx-mn><mjx-tstrut></mjx-tstrut></mjx-mtd><mjx-mtd style="padding-left: 0.5em; padding-top: 0.2em;"><mjx-mn class="mjx-n"><mjx-c class="mjx-c30"></mjx-c></mjx-mn><mjx-tstrut></mjx-tstrut></mjx-mtd></mjx-mtr></mjx-itable></mjx-table></mjx-mtable><mjx-mo class="mjx-s3"><mjx-c class="mjx-c29 TEX-S3"></mjx-c></mjx-mo></mjx-mrow></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow data-mjx-texclass="INNER"><mo data-mjx-texclass="OPEN">(</mo><mtable columnspacing="1em" rowspacing="4pt"><mtr><mtd><msub><mi>I</mi><mi>r</mi></msub></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtr></mtable><mo data-mjx-texclass="CLOSE">)</mo></mrow></math></mjx-assistive-mml></mjx-container></span>.</li>
+                <li><strong>Products and quotient spaces.</strong>
+                Building new spaces from old ones, and the isomorphism
+                theorems.</li>
+                <li><strong>Projections and the trace.</strong> Direct
+                sums seen through operators, and a basis-free
+                trace.</li>
+                </ul>
+                <h2 id="named-moves">Named moves</h2>
+                <ul>
+                <li><strong>Injective via the kernel.</strong> To show
+                <span class="math inline"><mjx-container class="MathJax" jax="CHTML" style="font-size: 113.1%; position: relative;"><mjx-math class=" MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D447 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>T</mi></math></mjx-assistive-mml></mjx-container></span> is injective,
+                show <span class="math inline"><mjx-container class="MathJax" jax="CHTML" style="font-size: 113.1%; position: relative;"><mjx-math class=" MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D447 TEX-I"></mjx-c></mjx-mi><mjx-TeXAtom texclass="ORD"><mjx-mi class="mjx-b"><mjx-c class="mjx-c1D42F TEX-B"></mjx-c></mjx-mi></mjx-TeXAtom><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-TeXAtom space="4" texclass="ORD"><mjx-mn class="mjx-b"><mjx-c class="mjx-c1D7CE TEX-B"></mjx-c></mjx-mn></mjx-TeXAtom></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>T</mi><mrow data-mjx-texclass="ORD"><mi mathvariant="bold">v</mi></mrow><mo>=</mo><mrow data-mjx-texclass="ORD"><mn mathvariant="bold">0</mn></mrow></math></mjx-assistive-mml></mjx-container></span>
+                forces <span class="math inline"><mjx-container class="MathJax" jax="CHTML" style="font-size: 113.1%; position: relative;"><mjx-math class=" MJX-TEX" aria-hidden="true"><mjx-TeXAtom texclass="ORD"><mjx-mi class="mjx-b"><mjx-c class="mjx-c1D42F TEX-B"></mjx-c></mjx-mi></mjx-TeXAtom><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-TeXAtom space="4" texclass="ORD"><mjx-mn class="mjx-b"><mjx-c class="mjx-c1D7CE TEX-B"></mjx-c></mjx-mn></mjx-TeXAtom></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow data-mjx-texclass="ORD"><mi mathvariant="bold">v</mi></mrow><mo>=</mo><mrow data-mjx-texclass="ORD"><mn mathvariant="bold">0</mn></mrow></math></mjx-assistive-mml></mjx-container></span>.</li>
+                <li><strong>Count with Rank–Nullity.</strong> When <span class="math inline"><mjx-container class="MathJax" jax="CHTML" style="font-size: 113.1%; position: relative;"><mjx-math class=" MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-n"><mjx-c class="mjx-c64"></mjx-c><mjx-c class="mjx-c69"></mjx-c><mjx-c class="mjx-c6D"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2061"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="2"><mjx-c class="mjx-c1D449 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mi class="mjx-n" space="4"><mjx-c class="mjx-c64"></mjx-c><mjx-c class="mjx-c69"></mjx-c><mjx-c class="mjx-c6D"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2061"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="2"><mjx-c class="mjx-c1D44A TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>dim</mi><mo data-mjx-texclass="NONE">⁡</mo><mi>V</mi><mo>=</mo><mi>dim</mi><mo data-mjx-texclass="NONE">⁡</mo><mi>W</mi></math></mjx-assistive-mml></mjx-container></span>,
+                injective, surjective and bijective are the same; check
+                the easiest one.</li>
+                <li><strong>Basis of the kernel, then extend.</strong>
+                The proof pattern behind Rank–Nullity, the same one that
+                proved the dimension formula for sums.</li>
+                <li><strong>Abstract space → write down a
+                matrix.</strong> Choose a basis that makes the map
+                simple, then compute with its matrix.</li>
+                <li><strong>The change-of-basis square.</strong> Go
+                around the square instead of across it: <span class="math inline"><mjx-container class="MathJax" jax="CHTML" style="font-size: 113.1%; position: relative;"><mjx-math class=" MJX-TEX" aria-hidden="true"><mjx-mo class="mjx-n"><mjx-c class="mjx-c5B"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D447 TEX-I"></mjx-c></mjx-mi><mjx-msub><mjx-mo class="mjx-n"><mjx-c class="mjx-c5D"></mjx-c></mjx-mo><mjx-script style="vertical-align: -0.15em;"><mjx-TeXAtom size="s" texclass="ORD"><mjx-msup><mjx-TeXAtom texclass="ORD"><mjx-mi class="mjx-cal mjx-i"><mjx-c class="mjx-c42 TEX-C"></mjx-c></mjx-mi></mjx-TeXAtom><mjx-script style="vertical-align: 0.289em;"><mjx-mo class="mjx-var" size="s"><mjx-c class="mjx-c2032"></mjx-c></mjx-mo></mjx-script></mjx-msup></mjx-TeXAtom></mjx-script></mjx-msub><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-msup space="4"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.363em; margin-left: 0.055em;"><mjx-TeXAtom size="s" texclass="ORD"><mjx-mo class="mjx-n"><mjx-c class="mjx-c2212"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-TeXAtom></mjx-script></mjx-msup><mjx-mo class="mjx-n"><mjx-c class="mjx-c5B"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D447 TEX-I"></mjx-c></mjx-mi><mjx-msub><mjx-mo class="mjx-n"><mjx-c class="mjx-c5D"></mjx-c></mjx-mo><mjx-script style="vertical-align: -0.15em;"><mjx-TeXAtom size="s" texclass="ORD"><mjx-TeXAtom texclass="ORD"><mjx-mi class="mjx-cal mjx-i"><mjx-c class="mjx-c42 TEX-C"></mjx-c></mjx-mi></mjx-TeXAtom></mjx-TeXAtom></mjx-script></mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false">[</mo><mi>T</mi><msub><mo stretchy="false">]</mo><mrow data-mjx-texclass="ORD"><msup><mrow data-mjx-texclass="ORD"><mi data-mjx-variant="-tex-calligraphic" mathvariant="script">B</mi></mrow><mo data-mjx-alternate="1">′</mo></msup></mrow></msub><mo>=</mo><msup><mi>P</mi><mrow data-mjx-texclass="ORD"><mo>−</mo><mn>1</mn></mrow></msup><mo stretchy="false">[</mo><mi>T</mi><msub><mo stretchy="false">]</mo><mrow data-mjx-texclass="ORD"><mrow data-mjx-texclass="ORD"><mi data-mjx-variant="-tex-calligraphic" mathvariant="script">B</mi></mrow></mrow></msub><mi>P</mi></math></mjx-assistive-mml></mjx-container></span>.</li>
+                <li><strong>Check well-definedness on cosets.</strong>
+                Every operation on a quotient space, and every map out
+                of one, starts with this check.</li>
                 </ul>
             </article>
 
@@ -165,12 +228,12 @@ of Linear Systems</span>
                     </a>
                                     </div>
                 <div class="nav-page nav-page-next">
-                                        <a href="../ch03-linear-maps/01-linear-transformations.html" class="pagination-link" aria-label="Linear
-Transformations">
+                                        <a href="../ch03-linear-maps/01-linear-maps.html" class="pagination-link" aria-label="Linear
+Maps">
                         <span class="nav-page-body">
                             <span class="nav-page-label">Next</span>
                             <span class="nav-page-text">3.1 Linear
-Transformations</span>
+Maps</span>
                         </span>
                         <i class="bi bi-arrow-right-short" aria-hidden="true"></i>
                     </a>
@@ -178,7 +241,7 @@ Transformations</span>
             </nav>
                         <p class="page-feedback">
                 Found a typo or a mistake?
-                <a href="https://github.com/AkizumiFox/linear-algebra/issues/new?title=Typo%20or%20mistake%20in%20Linear%20Transformations&amp;body=Page%3A%20https%3A%2F%2Flinear-algebra.akizumifox.com%2Fch03-linear-maps%2Findex.html%0A%0AWhat%20is%20wrong%20%28quote%20the%20sentence%20or%20formula%29%3A%0A%0A%0AWhat%20it%20should%20say%3A%0A" target="_blank" rel="noopener">Report it</a>
+                <a href="https://github.com/AkizumiFox/linear-algebra/issues/new?title=Typo%20or%20mistake%20in%20Linear%20Maps&amp;body=Page%3A%20https%3A%2F%2Flinear-algebra.akizumifox.com%2Fch03-linear-maps%2Findex.html%0A%0AWhat%20is%20wrong%20%28quote%20the%20sentence%20or%20formula%29%3A%0A%0A%0AWhat%20it%20should%20say%3A%0A" target="_blank" rel="noopener">Report it</a>
             </p>
                     </main>
 

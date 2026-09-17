@@ -202,17 +202,17 @@
       ]
     },
     {
-      "title": "Linear Transformations",
+      "title": "Linear Maps",
       "number": 3,
       "part": "",
       "collapsed": false,
       "path": "ch03-linear-maps/index.html",
       "sections": [
         {
-          "title": "Linear Transformations",
+          "title": "Linear Maps",
           "number": "3.1",
-          "path": "ch03-linear-maps/01-linear-transformations.html",
-          "filename": "01-linear-transformations.md"
+          "path": "ch03-linear-maps/01-linear-maps.html",
+          "filename": "01-linear-maps.md"
         },
         {
           "title": "Kernel and Image",
@@ -221,12 +221,62 @@
           "filename": "02-kernel-image.md"
         },
         {
-          "title": "Rank-Nullity Theorem",
+          "title": "The Rank–Nullity Theorem",
           "number": "3.3",
           "path": "ch03-linear-maps/03-rank-nullity.html",
           "filename": "03-rank-nullity.md"
+        },
+        {
+          "title": "The Algebra of Linear Maps",
+          "number": "3.4",
+          "path": "ch03-linear-maps/04-algebra-of-linear-maps.html",
+          "filename": "04-algebra-of-linear-maps.md"
+        },
+        {
+          "title": "Invertible Maps and Isomorphisms",
+          "number": "3.5",
+          "path": "ch03-linear-maps/05-isomorphisms.html",
+          "filename": "05-isomorphisms.md"
+        },
+        {
+          "title": "The Matrix of a Linear Map",
+          "number": "3.6",
+          "path": "ch03-linear-maps/06-matrix-of-a-map.html",
+          "filename": "06-matrix-of-a-map.md"
+        },
+        {
+          "title": "Change of Basis and Similarity",
+          "number": "3.7",
+          "path": "ch03-linear-maps/07-change-of-basis.html",
+          "filename": "07-change-of-basis.md"
+        },
+        {
+          "title": "Rank, Equivalence and Factorizations",
+          "number": "3.8",
+          "path": "ch03-linear-maps/08-rank-factorization.html",
+          "filename": "08-rank-factorization.md"
+        },
+        {
+          "title": "Products and Quotient Spaces",
+          "number": "3.9",
+          "path": "ch03-linear-maps/09-products-and-quotients.html",
+          "filename": "09-products-and-quotients.md"
+        },
+        {
+          "title": "Projections and the Trace of an Operator",
+          "number": "3.10",
+          "path": "ch03-linear-maps/10-projections-and-trace.html",
+          "filename": "10-projections-and-trace.md"
         }
       ]
+    },
+    {
+      "title": "Duality",
+      "number": 4,
+      "part": "",
+      "collapsed": false,
+      "path": null,
+      "sections": []
     }
   ]
 }

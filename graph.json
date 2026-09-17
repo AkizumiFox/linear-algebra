@@ -6533,10 +6533,10 @@
    "type": "definition",
    "group": "definitions",
    "name": "Definition 3.1.1",
-   "title": "Linear Transformation",
-   "url": "ch03-linear-maps/01-linear-transformations.html#def-linear-transformation",
+   "title": "Linear Map",
+   "url": "ch03-linear-maps/01-linear-maps.html#def-linear-transformation",
    "shard": "ch03-linear-maps",
-   "chapter": "Linear Transformations",
+   "chapter": "Linear Maps",
    "chapterNumber": 3,
    "color": "#b0414f"
   },
@@ -6545,10 +6545,10 @@
    "type": "example",
    "group": "examples",
    "name": "Example",
-   "title": "Complex Conjugation",
-   "url": "ch03-linear-maps/01-linear-transformations.html#exm-complex-conjugation",
+   "title": "Complex Conjugation: the Field Matters",
+   "url": "ch03-linear-maps/01-linear-maps.html#exm-complex-conjugation",
    "shard": "ch03-linear-maps",
-   "chapter": "Linear Transformations",
+   "chapter": "Linear Maps",
    "chapterNumber": 3,
    "color": "#3b7a4c"
   },
@@ -6557,10 +6557,10 @@
    "type": "example",
    "group": "examples",
    "name": "Example",
-   "title": "Constant Function",
-   "url": "ch03-linear-maps/01-linear-transformations.html#exm-constant-function",
+   "title": "A Constant Function",
+   "url": "ch03-linear-maps/01-linear-maps.html#exm-constant-function",
    "shard": "ch03-linear-maps",
-   "chapter": "Linear Transformations",
+   "chapter": "Linear Maps",
    "chapterNumber": 3,
    "color": "#3b7a4c"
   },
@@ -6569,10 +6569,10 @@
    "type": "example",
    "group": "examples",
    "name": "Example",
-   "title": "A Specific Matrix Transformation",
-   "url": "ch03-linear-maps/01-linear-transformations.html#exm-coordinate-transformation",
+   "title": "Maps Given by Formulas in Coordinates",
+   "url": "ch03-linear-maps/01-linear-maps.html#exm-coordinate-transformation",
    "shard": "ch03-linear-maps",
-   "chapter": "Linear Transformations",
+   "chapter": "Linear Maps",
    "chapterNumber": 3,
    "color": "#3b7a4c"
   },
@@ -6581,10 +6581,10 @@
    "type": "example",
    "group": "examples",
    "name": "Example",
-   "title": "",
-   "url": "ch03-linear-maps/01-linear-transformations.html#exm-deter",
+   "title": "Too Many Conditions",
+   "url": "ch03-linear-maps/01-linear-maps.html#exm-deter",
    "shard": "ch03-linear-maps",
-   "chapter": "Linear Transformations",
+   "chapter": "Linear Maps",
    "chapterNumber": 3,
    "color": "#3b7a4c"
   },
@@ -6593,10 +6593,10 @@
    "type": "example",
    "group": "examples",
    "name": "Example",
-   "title": "",
-   "url": "ch03-linear-maps/01-linear-transformations.html#exm-deter-two",
+   "title": "Recognizing Differentiation",
+   "url": "ch03-linear-maps/01-linear-maps.html#exm-deter-two",
    "shard": "ch03-linear-maps",
-   "chapter": "Linear Transformations",
+   "chapter": "Linear Maps",
    "chapterNumber": 3,
    "color": "#3b7a4c"
   },
@@ -6606,9 +6606,9 @@
    "group": "examples",
    "name": "Example",
    "title": "Differentiation",
-   "url": "ch03-linear-maps/01-linear-transformations.html#exm-differentiation",
+   "url": "ch03-linear-maps/01-linear-maps.html#exm-differentiation",
    "shard": "ch03-linear-maps",
-   "chapter": "Linear Transformations",
+   "chapter": "Linear Maps",
    "chapterNumber": 3,
    "color": "#3b7a4c"
   },
@@ -6618,9 +6618,9 @@
    "group": "examples",
    "name": "Example",
    "title": "Identity Map",
-   "url": "ch03-linear-maps/01-linear-transformations.html#exm-identity",
+   "url": "ch03-linear-maps/01-linear-maps.html#exm-identity",
    "shard": "ch03-linear-maps",
-   "chapter": "Linear Transformations",
+   "chapter": "Linear Maps",
    "chapterNumber": 3,
    "color": "#3b7a4c"
   },
@@ -6630,9 +6630,9 @@
    "group": "examples",
    "name": "Example",
    "title": "Inclusion Map",
-   "url": "ch03-linear-maps/01-linear-transformations.html#exm-inclusion",
+   "url": "ch03-linear-maps/01-linear-maps.html#exm-inclusion",
    "shard": "ch03-linear-maps",
-   "chapter": "Linear Transformations",
+   "chapter": "Linear Maps",
    "chapterNumber": 3,
    "color": "#3b7a4c"
   },
@@ -6642,9 +6642,21 @@
    "group": "examples",
    "name": "Example",
    "title": "Integration",
-   "url": "ch03-linear-maps/01-linear-transformations.html#exm-integration",
+   "url": "ch03-linear-maps/01-linear-maps.html#exm-integration",
    "shard": "ch03-linear-maps",
-   "chapter": "Linear Transformations",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-map-from-basis-values",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "Finding a Formula from Values on a Basis",
+   "url": "ch03-linear-maps/01-linear-maps.html#exm-map-from-basis-values",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
    "chapterNumber": 3,
    "color": "#3b7a4c"
   },
@@ -6653,10 +6665,10 @@
    "type": "example",
    "group": "examples",
    "name": "Example",
-   "title": "Composition Operator",
-   "url": "ch03-linear-maps/01-linear-transformations.html#exm-matrix-composition",
+   "title": "Composition with a Fixed Function",
+   "url": "ch03-linear-maps/01-linear-maps.html#exm-matrix-composition",
    "shard": "ch03-linear-maps",
-   "chapter": "Linear Transformations",
+   "chapter": "Linear Maps",
    "chapterNumber": 3,
    "color": "#3b7a4c"
   },
@@ -6665,10 +6677,10 @@
    "type": "example",
    "group": "examples",
    "name": "Example",
-   "title": "Left Multiplication by a Matrix",
-   "url": "ch03-linear-maps/01-linear-transformations.html#exm-matrix-transformation",
+   "title": "Multiplication by a Matrix",
+   "url": "ch03-linear-maps/01-linear-maps.html#exm-matrix-transformation",
    "shard": "ch03-linear-maps",
-   "chapter": "Linear Transformations",
+   "chapter": "Linear Maps",
    "chapterNumber": 3,
    "color": "#3b7a4c"
   },
@@ -6678,9 +6690,9 @@
    "group": "examples",
    "name": "Example",
    "title": "Multiplication by x",
-   "url": "ch03-linear-maps/01-linear-transformations.html#exm-multiplication-by-x",
+   "url": "ch03-linear-maps/01-linear-maps.html#exm-multiplication-by-x",
    "shard": "ch03-linear-maps",
-   "chapter": "Linear Transformations",
+   "chapter": "Linear Maps",
    "chapterNumber": 3,
    "color": "#3b7a4c"
   },
@@ -6689,10 +6701,10 @@
    "type": "example",
    "group": "examples",
    "name": "Example",
-   "title": "Norm",
-   "url": "ch03-linear-maps/01-linear-transformations.html#exm-norm",
+   "title": "Length",
+   "url": "ch03-linear-maps/01-linear-maps.html#exm-norm",
    "shard": "ch03-linear-maps",
-   "chapter": "Linear Transformations",
+   "chapter": "Linear Maps",
    "chapterNumber": 3,
    "color": "#3b7a4c"
   },
@@ -6701,10 +6713,10 @@
    "type": "example",
    "group": "examples",
    "name": "Example",
-   "title": "Projection onto a Coordinate Axis",
-   "url": "ch03-linear-maps/01-linear-transformations.html#exm-projection",
+   "title": "Projection onto an Axis",
+   "url": "ch03-linear-maps/01-linear-maps.html#exm-projection",
    "shard": "ch03-linear-maps",
-   "chapter": "Linear Transformations",
+   "chapter": "Linear Maps",
    "chapterNumber": 3,
    "color": "#3b7a4c"
   },
@@ -6713,10 +6725,10 @@
    "type": "example",
    "group": "examples",
    "name": "Example",
-   "title": "Rotation in the Plane",
-   "url": "ch03-linear-maps/01-linear-transformations.html#exm-rotation",
+   "title": "Rotation of the Plane",
+   "url": "ch03-linear-maps/01-linear-maps.html#exm-rotation",
    "shard": "ch03-linear-maps",
-   "chapter": "Linear Transformations",
+   "chapter": "Linear Maps",
    "chapterNumber": 3,
    "color": "#3b7a4c"
   },
@@ -6725,10 +6737,10 @@
    "type": "example",
    "group": "examples",
    "name": "Example",
-   "title": "Shift Operator",
-   "url": "ch03-linear-maps/01-linear-transformations.html#exm-shift",
+   "title": "The Shift Maps on Sequences",
+   "url": "ch03-linear-maps/01-linear-maps.html#exm-shift",
    "shard": "ch03-linear-maps",
-   "chapter": "Linear Transformations",
+   "chapter": "Linear Maps",
    "chapterNumber": 3,
    "color": "#3b7a4c"
   },
@@ -6738,9 +6750,9 @@
    "group": "examples",
    "name": "Example",
    "title": "Squaring",
-   "url": "ch03-linear-maps/01-linear-transformations.html#exm-squaring",
+   "url": "ch03-linear-maps/01-linear-maps.html#exm-squaring",
    "shard": "ch03-linear-maps",
-   "chapter": "Linear Transformations",
+   "chapter": "Linear Maps",
    "chapterNumber": 3,
    "color": "#3b7a4c"
   },
@@ -6749,10 +6761,10 @@
    "type": "example",
    "group": "examples",
    "name": "Example",
-   "title": "Trace",
-   "url": "ch03-linear-maps/01-linear-transformations.html#exm-trace-matrices",
+   "title": "Trace and Transpose",
+   "url": "ch03-linear-maps/01-linear-maps.html#exm-trace-matrices",
    "shard": "ch03-linear-maps",
-   "chapter": "Linear Transformations",
+   "chapter": "Linear Maps",
    "chapterNumber": 3,
    "color": "#3b7a4c"
   },
@@ -6762,9 +6774,9 @@
    "group": "examples",
    "name": "Example",
    "title": "Translation",
-   "url": "ch03-linear-maps/01-linear-transformations.html#exm-translation",
+   "url": "ch03-linear-maps/01-linear-maps.html#exm-translation",
    "shard": "ch03-linear-maps",
-   "chapter": "Linear Transformations",
+   "chapter": "Linear Maps",
    "chapterNumber": 3,
    "color": "#3b7a4c"
   },
@@ -6774,21 +6786,93 @@
    "group": "examples",
    "name": "Example",
    "title": "Zero Map",
-   "url": "ch03-linear-maps/01-linear-transformations.html#exm-zero-map",
+   "url": "ch03-linear-maps/01-linear-maps.html#exm-zero-map",
    "shard": "ch03-linear-maps",
-   "chapter": "Linear Transformations",
+   "chapter": "Linear Maps",
    "chapterNumber": 3,
    "color": "#3b7a4c"
+  },
+  {
+   "id": "exr-linear-maps-a1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "A1",
+   "url": "ch03-linear-maps/01-linear-maps.html#exr-linear-maps-a1",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-linear-maps-b1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B1: Which Maps Are Linear?",
+   "url": "ch03-linear-maps/01-linear-maps.html#exr-linear-maps-b1",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-linear-maps-b2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B2: A Formula from Values on a Basis",
+   "url": "ch03-linear-maps/01-linear-maps.html#exr-linear-maps-b2",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-linear-maps-b3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B3: Evaluation and Integration",
+   "url": "ch03-linear-maps/01-linear-maps.html#exr-linear-maps-b3",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-linear-maps-c1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C1: Over \u211a, Additivity Is Enough",
+   "url": "ch03-linear-maps/01-linear-maps.html#exr-linear-maps-c1",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-linear-maps-c2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C2: Over \u2102, Additivity Is Not Enough",
+   "url": "ch03-linear-maps/01-linear-maps.html#exr-linear-maps-c2",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#a8670c"
   },
   {
    "id": "thm-equivalent-condition",
    "type": "theorem",
    "group": "statements",
    "name": "Theorem 3.1.3",
-   "title": "Equivalent Characterization of Linearity",
-   "url": "ch03-linear-maps/01-linear-transformations.html#thm-equivalent-condition",
+   "title": "One-Line Test for Linearity",
+   "url": "ch03-linear-maps/01-linear-maps.html#thm-equivalent-condition",
    "shard": "ch03-linear-maps",
-   "chapter": "Linear Transformations",
+   "chapter": "Linear Maps",
    "chapterNumber": 3,
    "color": "#2f62b5"
   },
@@ -6798,9 +6882,9 @@
    "group": "statements",
    "name": "Theorem 3.1.4",
    "title": "Linear Maps Preserve Linear Combinations",
-   "url": "ch03-linear-maps/01-linear-transformations.html#thm-linear-combination",
+   "url": "ch03-linear-maps/01-linear-maps.html#thm-linear-combination",
    "shard": "ch03-linear-maps",
-   "chapter": "Linear Transformations",
+   "chapter": "Linear Maps",
    "chapterNumber": 3,
    "color": "#2f62b5"
   },
@@ -6809,10 +6893,10 @@
    "type": "theorem",
    "group": "statements",
    "name": "Theorem 3.1.5",
-   "title": "Linear Transformations are Determined by Their Action on a Basis",
-   "url": "ch03-linear-maps/01-linear-transformations.html#thm-linear-transform-basis",
+   "title": "Linear Maps Are Determined by a Basis",
+   "url": "ch03-linear-maps/01-linear-maps.html#thm-linear-transform-basis",
    "shard": "ch03-linear-maps",
-   "chapter": "Linear Transformations",
+   "chapter": "Linear Maps",
    "chapterNumber": 3,
    "color": "#2f62b5"
   },
@@ -6821,10 +6905,10 @@
    "type": "theorem",
    "group": "statements",
    "name": "Theorem 3.1.2",
-   "title": "Linear Maps Preserve Negation",
-   "url": "ch03-linear-maps/01-linear-transformations.html#thm-preserves-negation",
+   "title": "Linear Maps Preserve Negatives",
+   "url": "ch03-linear-maps/01-linear-maps.html#thm-preserves-negation",
    "shard": "ch03-linear-maps",
-   "chapter": "Linear Transformations",
+   "chapter": "Linear Maps",
    "chapterNumber": 3,
    "color": "#2f62b5"
   },
@@ -6833,10 +6917,10 @@
    "type": "theorem",
    "group": "statements",
    "name": "Theorem 3.1.1",
-   "title": "Zero Maps to Zero",
-   "url": "ch03-linear-maps/01-linear-transformations.html#thm-zero-maps-to-zero",
+   "title": "Linear Maps Send Zero to Zero",
+   "url": "ch03-linear-maps/01-linear-maps.html#thm-zero-maps-to-zero",
    "shard": "ch03-linear-maps",
-   "chapter": "Linear Transformations",
+   "chapter": "Linear Maps",
    "chapterNumber": 3,
    "color": "#2f62b5"
   },
@@ -6848,7 +6932,7 @@
    "title": "Image",
    "url": "ch03-linear-maps/02-kernel-image.html#def-image",
    "shard": "ch03-linear-maps",
-   "chapter": "Linear Transformations",
+   "chapter": "Linear Maps",
    "chapterNumber": 3,
    "color": "#b0414f"
   },
@@ -6860,7 +6944,7 @@
    "title": "Kernel",
    "url": "ch03-linear-maps/02-kernel-image.html#def-kernel",
    "shard": "ch03-linear-maps",
-   "chapter": "Linear Transformations",
+   "chapter": "Linear Maps",
    "chapterNumber": 3,
    "color": "#b0414f"
   },
@@ -6872,7 +6956,67 @@
    "title": "Differentiation",
    "url": "ch03-linear-maps/02-kernel-image.html#exm-differentiation-kernel-image",
    "shard": "ch03-linear-maps",
-   "chapter": "Linear Transformations",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-integration-kernel-image",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "Integration",
+   "url": "ch03-linear-maps/02-kernel-image.html#exm-integration-kernel-image",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-kernel-image-degenerate",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "The Zero Map and the Identity",
+   "url": "ch03-linear-maps/02-kernel-image.html#exm-kernel-image-degenerate",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-kernel-image-matrix-map",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "A Matrix Map",
+   "url": "ch03-linear-maps/02-kernel-image.html#exm-kernel-image-matrix-map",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-projection-kernel-image",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "Projection onto an Axis",
+   "url": "ch03-linear-maps/02-kernel-image.html#exm-projection-kernel-image",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-shift-kernel-image",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "The Shifts: Injective but Not Surjective, and Conversely",
+   "url": "ch03-linear-maps/02-kernel-image.html#exm-shift-kernel-image",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
    "chapterNumber": 3,
    "color": "#3b7a4c"
   },
@@ -6884,19 +7028,127 @@
    "title": "Trace",
    "url": "ch03-linear-maps/02-kernel-image.html#exm-trace-kernel-image",
    "shard": "ch03-linear-maps",
-   "chapter": "Linear Transformations",
+   "chapter": "Linear Maps",
    "chapterNumber": 3,
    "color": "#3b7a4c"
+  },
+  {
+   "id": "exr-kernel-image-a1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "A1",
+   "url": "ch03-linear-maps/02-kernel-image.html#exr-kernel-image-a1",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-kernel-image-b1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B1: Kernel and Image of a Matrix Map",
+   "url": "ch03-linear-maps/02-kernel-image.html#exr-kernel-image-b1",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-kernel-image-b2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B2: Kernels and Images Beyond F^n",
+   "url": "ch03-linear-maps/02-kernel-image.html#exr-kernel-image-b2",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-kernel-image-c1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C1: Kernels and Images of a Composite",
+   "url": "ch03-linear-maps/02-kernel-image.html#exr-kernel-image-c1",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-kernel-image-c2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C2: When Is a Composite Injective?",
+   "url": "ch03-linear-maps/02-kernel-image.html#exr-kernel-image-c2",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-kernel-image-c3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C3: Differentiation over nF_2",
+   "url": "ch03-linear-maps/02-kernel-image.html#exr-kernel-image-c3",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#a8670c"
+  },
+  {
+   "id": "thm-image-spanned-by-basis-images",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 3.2.4",
+   "title": "The Image Is Spanned by the Images of a Spanning List",
+   "url": "ch03-linear-maps/02-kernel-image.html#thm-image-spanned-by-basis-images",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-injective-iff-trivial-kernel",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 3.2.3",
+   "title": "Kernel Test for Injectivity",
+   "url": "ch03-linear-maps/02-kernel-image.html#thm-injective-iff-trivial-kernel",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-injective-preserves-independence",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 3.2.5",
+   "title": "Injective Maps Preserve Independence, Surjective Maps Preserve Spanning",
+   "url": "ch03-linear-maps/02-kernel-image.html#thm-injective-preserves-independence",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#2f62b5"
   },
   {
    "id": "thm-prop-image",
    "type": "theorem",
    "group": "statements",
    "name": "Theorem 3.2.2",
-   "title": "Properties of Image",
+   "title": "The Image Is a Subspace",
    "url": "ch03-linear-maps/02-kernel-image.html#thm-prop-image",
    "shard": "ch03-linear-maps",
-   "chapter": "Linear Transformations",
+   "chapter": "Linear Maps",
    "chapterNumber": 3,
    "color": "#2f62b5"
   },
@@ -6905,10 +7157,22 @@
    "type": "theorem",
    "group": "statements",
    "name": "Theorem 3.2.1",
-   "title": "Properties of Kernel",
+   "title": "The Kernel Is a Subspace",
    "url": "ch03-linear-maps/02-kernel-image.html#thm-prop-kernel",
    "shard": "ch03-linear-maps",
-   "chapter": "Linear Transformations",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "cor-rank-nullity-consequences",
+   "type": "corollary",
+   "group": "statements",
+   "name": "Corollary 3.3.2",
+   "title": "Consequences of Rank\u2013Nullity",
+   "url": "ch03-linear-maps/03-rank-nullity.html#cor-rank-nullity-consequences",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
    "chapterNumber": 3,
    "color": "#2f62b5"
   },
@@ -6920,7 +7184,7 @@
    "title": "Nullity",
    "url": "ch03-linear-maps/03-rank-nullity.html#def-nullity",
    "shard": "ch03-linear-maps",
-   "chapter": "Linear Transformations",
+   "chapter": "Linear Maps",
    "chapterNumber": 3,
    "color": "#b0414f"
   },
@@ -6932,31 +7196,1615 @@
    "title": "Rank",
    "url": "ch03-linear-maps/03-rank-nullity.html#def-rank",
    "shard": "ch03-linear-maps",
-   "chapter": "Linear Transformations",
+   "chapter": "Linear Maps",
    "chapterNumber": 3,
    "color": "#b0414f"
+  },
+  {
+   "id": "exm-dimension-by-surjective-map",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "Dimension of a Kernel from a Surjective Map",
+   "url": "ch03-linear-maps/03-rank-nullity.html#exm-dimension-by-surjective-map",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-hermite-existence",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "Prescribing Values and Slopes",
+   "url": "ch03-linear-maps/03-rank-nullity.html#exm-hermite-existence",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-interpolation-by-counting",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "Interpolation as a Count",
+   "url": "ch03-linear-maps/03-rank-nullity.html#exm-interpolation-by-counting",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#3b7a4c"
   },
   {
    "id": "exm-nullity-rank-diff",
    "type": "example",
    "group": "examples",
    "name": "Example",
-   "title": "",
+   "title": "Rank and Nullity in Examples",
    "url": "ch03-linear-maps/03-rank-nullity.html#exm-nullity-rank-diff",
    "shard": "ch03-linear-maps",
-   "chapter": "Linear Transformations",
+   "chapter": "Linear Maps",
    "chapterNumber": 3,
    "color": "#3b7a4c"
+  },
+  {
+   "id": "exr-rank-nullity-a1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "A1",
+   "url": "ch03-linear-maps/03-rank-nullity.html#exr-rank-nullity-a1",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-rank-nullity-b1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B1: Verifying Rank\u2013Nullity",
+   "url": "ch03-linear-maps/03-rank-nullity.html#exr-rank-nullity-b1",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-rank-nullity-b2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B2: Bijective by the Kernel Alone",
+   "url": "ch03-linear-maps/03-rank-nullity.html#exr-rank-nullity-b2",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-rank-nullity-b3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B3: A Dimension via a Surjective Map",
+   "url": "ch03-linear-maps/03-rank-nullity.html#exr-rank-nullity-b3",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-rank-nullity-c1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C1: A Lower Bound for the Rank of a Composite",
+   "url": "ch03-linear-maps/03-rank-nullity.html#exr-rank-nullity-c1",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-rank-nullity-c2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C2: When the Kernel Equals the Image",
+   "url": "ch03-linear-maps/03-rank-nullity.html#exr-rank-nullity-c2",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#a8670c"
   },
   {
    "id": "thm-rank-nullity",
    "type": "theorem",
    "group": "statements",
    "name": "Theorem 3.3.1",
-   "title": "Rank-Nullity Theorem",
+   "title": "Rank\u2013Nullity Theorem",
    "url": "ch03-linear-maps/03-rank-nullity.html#thm-rank-nullity",
    "shard": "ch03-linear-maps",
-   "chapter": "Linear Transformations",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "def-polynomial-of-operator",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 3.4.2",
+   "title": "Powers and Polynomials of an Operator",
+   "url": "ch03-linear-maps/04-algebra-of-linear-maps.html#def-polynomial-of-operator",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#b0414f"
+  },
+  {
+   "id": "def-space-of-linear-maps",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 3.4.1",
+   "title": "The space of linear maps",
+   "url": "ch03-linear-maps/04-algebra-of-linear-maps.html#def-space-of-linear-maps",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#b0414f"
+  },
+  {
+   "id": "exm-differentiation-nilpotent",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "Differentiation Is Nilpotent",
+   "url": "ch03-linear-maps/04-algebra-of-linear-maps.html#exm-differentiation-nilpotent",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-operator-polynomial-relations",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "Operators That Satisfy a Polynomial",
+   "url": "ch03-linear-maps/04-algebra-of-linear-maps.html#exm-operator-polynomial-relations",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-rotation-projection-dont-commute",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "Rotate, Then Project",
+   "url": "ch03-linear-maps/04-algebra-of-linear-maps.html#exm-rotation-projection-dont-commute",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-sum-of-matrix-maps",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "Sums of Matrix Maps and Other First Examples",
+   "url": "ch03-linear-maps/04-algebra-of-linear-maps.html#exm-sum-of-matrix-maps",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exr-algebra-of-linear-maps-a1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "A1",
+   "url": "ch03-linear-maps/04-algebra-of-linear-maps.html#exr-algebra-of-linear-maps-a1",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-algebra-of-linear-maps-b1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B1: Computing compositions",
+   "url": "ch03-linear-maps/04-algebra-of-linear-maps.html#exr-algebra-of-linear-maps-b1",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-algebra-of-linear-maps-b2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B2: Operators that preserve a subspace",
+   "url": "ch03-linear-maps/04-algebra-of-linear-maps.html#exr-algebra-of-linear-maps-b2",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-algebra-of-linear-maps-b3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B3: A polynomial that kills D",
+   "url": "ch03-linear-maps/04-algebra-of-linear-maps.html#exr-algebra-of-linear-maps-b3",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-algebra-of-linear-maps-c1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C1: The Heisenberg relation",
+   "url": "ch03-linear-maps/04-algebra-of-linear-maps.html#exr-algebra-of-linear-maps-c1",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-algebra-of-linear-maps-c2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C2: Commuting nilpotent operators",
+   "url": "ch03-linear-maps/04-algebra-of-linear-maps.html#exr-algebra-of-linear-maps-c2",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#a8670c"
+  },
+  {
+   "id": "thm-composition-linear",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 3.4.2",
+   "title": "Composition of Linear Maps",
+   "url": "ch03-linear-maps/04-algebra-of-linear-maps.html#thm-composition-linear",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-linear-maps-vector-space",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 3.4.1",
+   "title": "cL(V, W) Is a Vector Space",
+   "url": "ch03-linear-maps/04-algebra-of-linear-maps.html#thm-linear-maps-vector-space",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-polynomial-of-operator-properties",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 3.4.3",
+   "title": "Polynomials in One Operator",
+   "url": "ch03-linear-maps/04-algebra-of-linear-maps.html#thm-polynomial-of-operator-properties",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "cor-coordinate-isomorphism",
+   "type": "corollary",
+   "group": "statements",
+   "name": "Corollary 3.5.5",
+   "title": "The Coordinate Isomorphism",
+   "url": "ch03-linear-maps/05-isomorphisms.html#cor-coordinate-isomorphism",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "def-invertible-linear-map",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 3.5.1",
+   "title": "Invertible Linear Map",
+   "url": "ch03-linear-maps/05-isomorphisms.html#def-invertible-linear-map",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#b0414f"
+  },
+  {
+   "id": "def-isomorphic",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 3.5.3",
+   "title": "Isomorphic Spaces",
+   "url": "ch03-linear-maps/05-isomorphisms.html#def-isomorphic",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#b0414f"
+  },
+  {
+   "id": "def-isomorphism",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 3.5.2",
+   "title": "Isomorphism",
+   "url": "ch03-linear-maps/05-isomorphisms.html#def-isomorphism",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#b0414f"
+  },
+  {
+   "id": "exm-classify-by-dimension",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "Sorting Spaces by Dimension",
+   "url": "ch03-linear-maps/05-isomorphisms.html#exm-classify-by-dimension",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-differentiation-integration-one-sided",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "One Equation Is Not Enough",
+   "url": "ch03-linear-maps/05-isomorphisms.html#exm-differentiation-integration-one-sided",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-invertible-operator-by-kernel",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "Invertibility Without Solving Equations",
+   "url": "ch03-linear-maps/05-isomorphisms.html#exm-invertible-operator-by-kernel",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-standard-isomorphisms",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "The Standard Isomorphisms",
+   "url": "ch03-linear-maps/05-isomorphisms.html#exm-standard-isomorphisms",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exr-isomorphisms-a1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "A1",
+   "url": "ch03-linear-maps/05-isomorphisms.html#exr-isomorphisms-a1",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-isomorphisms-b1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B1: An explicit isomorphism",
+   "url": "ch03-linear-maps/05-isomorphisms.html#exr-isomorphisms-b1",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-isomorphisms-b2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B2: Inverting id + D",
+   "url": "ch03-linear-maps/05-isomorphisms.html#exr-isomorphisms-b2",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-isomorphisms-b3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B3: Deciding isomorphism",
+   "url": "ch03-linear-maps/05-isomorphisms.html#exr-isomorphisms-b3",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-isomorphisms-c1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C1: Invertible products",
+   "url": "ch03-linear-maps/05-isomorphisms.html#exr-isomorphisms-c1",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-isomorphisms-c2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C2: A space isomorphic to a proper subspace",
+   "url": "ch03-linear-maps/05-isomorphisms.html#exr-isomorphisms-c2",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#a8670c"
+  },
+  {
+   "id": "thm-inverse-is-linear",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 3.5.1",
+   "title": "The Inverse of a Linear Bijection Is Linear",
+   "url": "ch03-linear-maps/05-isomorphisms.html#thm-inverse-is-linear",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-invertible-operator-tfae",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 3.5.7",
+   "title": "Invertible Operator Theorem",
+   "url": "ch03-linear-maps/05-isomorphisms.html#thm-invertible-operator-tfae",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-isomorphic-equivalence-relation",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 3.5.3",
+   "title": "Isomorphism Is an Equivalence Relation",
+   "url": "ch03-linear-maps/05-isomorphisms.html#thm-isomorphic-equivalence-relation",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-isomorphic-iff-same-dimension",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 3.5.4",
+   "title": "Classification of Finite-Dimensional Spaces",
+   "url": "ch03-linear-maps/05-isomorphisms.html#thm-isomorphic-iff-same-dimension",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-isomorphism-preserves-bases",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 3.5.2",
+   "title": "Isomorphisms Carry Bases to Bases",
+   "url": "ch03-linear-maps/05-isomorphisms.html#thm-isomorphism-preserves-bases",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-one-sided-inverse-maps",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 3.5.6",
+   "title": "One-Sided Inverses of Linear Maps",
+   "url": "ch03-linear-maps/05-isomorphisms.html#thm-one-sided-inverse-maps",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "cor-matrix-of-polynomial-of-operator",
+   "type": "corollary",
+   "group": "statements",
+   "name": "Corollary 3.6.3",
+   "title": "Matrices of Powers and Polynomials",
+   "url": "ch03-linear-maps/06-matrix-of-a-map.html#cor-matrix-of-polynomial-of-operator",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "def-matrix-of-linear-map",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 3.6.1",
+   "title": "Matrix of a Linear Map",
+   "url": "ch03-linear-maps/06-matrix-of-a-map.html#def-matrix-of-linear-map",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#b0414f"
+  },
+  {
+   "id": "exm-kernel-via-matrix",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "Kernel and Image Through a Matrix",
+   "url": "ch03-linear-maps/06-matrix-of-a-map.html#exm-kernel-via-matrix",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-matrix-of-composition",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "Multiply by x, Then Differentiate",
+   "url": "ch03-linear-maps/06-matrix-of-a-map.html#exm-matrix-of-composition",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-matrix-of-differentiation",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "Differentiation on Cubic Polynomials",
+   "url": "ch03-linear-maps/06-matrix-of-a-map.html#exm-matrix-of-differentiation",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-matrix-of-matrix-map",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "Matrix Maps and the Identity",
+   "url": "ch03-linear-maps/06-matrix-of-a-map.html#exm-matrix-of-matrix-map",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-matrix-of-reflection",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "A Reflection in Two Bases",
+   "url": "ch03-linear-maps/06-matrix-of-a-map.html#exm-matrix-of-reflection",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-matrix-of-transpose",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "The Transpose Map",
+   "url": "ch03-linear-maps/06-matrix-of-a-map.html#exm-matrix-of-transpose",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-rank-from-matrix",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "Rank of X mapsto X + Xtp",
+   "url": "ch03-linear-maps/06-matrix-of-a-map.html#exm-rank-from-matrix",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exr-matrix-of-a-map-a1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "A1",
+   "url": "ch03-linear-maps/06-matrix-of-a-map.html#exr-matrix-of-a-map-a1",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-matrix-of-a-map-b1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B1: Matrices in given bases",
+   "url": "ch03-linear-maps/06-matrix-of-a-map.html#exr-matrix-of-a-map-b1",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-matrix-of-a-map-b2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B2: Recovering a map from its matrix",
+   "url": "ch03-linear-maps/06-matrix-of-a-map.html#exr-matrix-of-a-map-b2",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-matrix-of-a-map-b3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B3: A composition computed two ways",
+   "url": "ch03-linear-maps/06-matrix-of-a-map.html#exr-matrix-of-a-map-b3",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-matrix-of-a-map-c1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C1: Upper triangular matrices and invariant subspaces",
+   "url": "ch03-linear-maps/06-matrix-of-a-map.html#exr-matrix-of-a-map-c1",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-matrix-of-a-map-c2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C2: Integrating with a matrix",
+   "url": "ch03-linear-maps/06-matrix-of-a-map.html#exr-matrix-of-a-map-c2",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#a8670c"
+  },
+  {
+   "id": "thm-linear-maps-isomorphic-to-matrices",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 3.6.4",
+   "title": "cL(V, W) cong M_m \u00d7 n(F)",
+   "url": "ch03-linear-maps/06-matrix-of-a-map.html#thm-linear-maps-isomorphic-to-matrices",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-matrix-of-composition",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 3.6.2",
+   "title": "Matrix of a Composition",
+   "url": "ch03-linear-maps/06-matrix-of-a-map.html#thm-matrix-of-composition",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-matrix-of-map-coordinates",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 3.6.1",
+   "title": "Coordinates of an Image",
+   "url": "ch03-linear-maps/06-matrix-of-a-map.html#thm-matrix-of-map-coordinates",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-rank-map-equals-rank-matrix",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 3.6.5",
+   "title": "Rank and Invertibility from the Matrix",
+   "url": "ch03-linear-maps/06-matrix-of-a-map.html#thm-rank-map-equals-rank-matrix",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "def-change-of-coordinates-matrix",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 3.7.1",
+   "title": "Change-of-coordinates matrix",
+   "url": "ch03-linear-maps/07-change-of-basis.html#def-change-of-coordinates-matrix",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#b0414f"
+  },
+  {
+   "id": "def-similar-matrices",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 3.7.2",
+   "title": "Similar matrices",
+   "url": "ch03-linear-maps/07-change-of-basis.html#def-similar-matrices",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#b0414f"
+  },
+  {
+   "id": "exm-change-of-coordinates-polynomials",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "Coordinates around the point 1",
+   "url": "ch03-linear-maps/07-change-of-basis.html#exm-change-of-coordinates-polynomials",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-differentiation-rescaled-basis",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "Differentiation with a rescaled basis",
+   "url": "ch03-linear-maps/07-change-of-basis.html#exm-differentiation-rescaled-basis",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-projection-adapted-basis",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "Making a matrix diagonal with a well-chosen basis",
+   "url": "ch03-linear-maps/07-change-of-basis.html#exm-projection-adapted-basis",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-reflection-diagonal-basis",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "The reflection in a mirror-adapted basis",
+   "url": "ch03-linear-maps/07-change-of-basis.html#exm-reflection-diagonal-basis",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exr-change-of-basis-a1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "A1",
+   "url": "ch03-linear-maps/07-change-of-basis.html#exr-change-of-basis-a1",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-change-of-basis-b1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B1: Change-of-coordinates matrices",
+   "url": "ch03-linear-maps/07-change-of-basis.html#exr-change-of-basis-b1",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-change-of-basis-b2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B2: A matrix in a new basis, two ways",
+   "url": "ch03-linear-maps/07-change-of-basis.html#exr-change-of-basis-b2",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-change-of-basis-b3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B3: Similar or not?",
+   "url": "ch03-linear-maps/07-change-of-basis.html#exr-change-of-basis-b3",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-change-of-basis-c1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C1: Matrices similar only to themselves",
+   "url": "ch03-linear-maps/07-change-of-basis.html#exr-change-of-basis-c1",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-change-of-basis-c2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C2: AB and BA",
+   "url": "ch03-linear-maps/07-change-of-basis.html#exr-change-of-basis-c2",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-change-of-basis-c3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C3: Every non-zero 2 \u00d7 2 matrix with square zero",
+   "url": "ch03-linear-maps/07-change-of-basis.html#exr-change-of-basis-c3",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#a8670c"
+  },
+  {
+   "id": "prp-invertible-matrix-change-of-basis",
+   "type": "proposition",
+   "group": "statements",
+   "name": "Proposition 3.7.2",
+   "title": "Invertible matrices are changes of basis",
+   "url": "ch03-linear-maps/07-change-of-basis.html#prp-invertible-matrix-change-of-basis",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "prp-similarity-invariants",
+   "type": "proposition",
+   "group": "statements",
+   "name": "Proposition 3.7.6",
+   "title": "More similarity invariants",
+   "url": "ch03-linear-maps/07-change-of-basis.html#prp-similarity-invariants",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-change-of-basis-maps",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 3.7.3",
+   "title": "Change of Basis for Linear Maps",
+   "url": "ch03-linear-maps/07-change-of-basis.html#thm-change-of-basis-maps",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-change-of-coordinates",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 3.7.1",
+   "title": "Change of Coordinates",
+   "url": "ch03-linear-maps/07-change-of-basis.html#thm-change-of-coordinates",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-similar-iff-same-operator",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 3.7.4",
+   "title": "Similar Matrices Represent the Same Operator",
+   "url": "ch03-linear-maps/07-change-of-basis.html#thm-similar-iff-same-operator",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-trace-similarity-invariant",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 3.7.5",
+   "title": "Trace Is a Similarity Invariant",
+   "url": "ch03-linear-maps/07-change-of-basis.html#thm-trace-similarity-invariant",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "def-equivalent-matrices",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 3.8.1",
+   "title": "Equivalent matrices",
+   "url": "ch03-linear-maps/08-rank-factorization.html#def-equivalent-matrices",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#b0414f"
+  },
+  {
+   "id": "exm-column-row-factorization",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "A column\u2013row factorization",
+   "url": "ch03-linear-maps/08-rank-factorization.html#exm-column-row-factorization",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-rank-normal-form",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "Bringing a 2 \u00d7 3 matrix to normal form",
+   "url": "ch03-linear-maps/08-rank-factorization.html#exm-rank-normal-form",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exr-rank-factorization-a1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "A1",
+   "url": "ch03-linear-maps/08-rank-factorization.html#exr-rank-factorization-a1",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-rank-factorization-b1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B1: A column\u2013row factorization",
+   "url": "ch03-linear-maps/08-rank-factorization.html#exr-rank-factorization-b1",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-rank-factorization-b2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B2: Normal form of a rank-one matrix",
+   "url": "ch03-linear-maps/08-rank-factorization.html#exr-rank-factorization-b2",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-rank-factorization-b3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B3: Rank-one pieces",
+   "url": "ch03-linear-maps/08-rank-factorization.html#exr-rank-factorization-b3",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-rank-factorization-c1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C1: Frobenius\u2019s rank inequality",
+   "url": "ch03-linear-maps/08-rank-factorization.html#exr-rank-factorization-c1",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-rank-factorization-c2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C2: Counting over nF_2",
+   "url": "ch03-linear-maps/08-rank-factorization.html#exr-rank-factorization-c2",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#a8670c"
+  },
+  {
+   "id": "prp-rank-minimal-factorization",
+   "type": "proposition",
+   "group": "statements",
+   "name": "Proposition 3.8.2",
+   "title": "Rank as the size of the thinnest factorization",
+   "url": "ch03-linear-maps/08-rank-factorization.html#prp-rank-minimal-factorization",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-column-row-factorization",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 3.8.1",
+   "title": "Column\u2013Row Factorization",
+   "url": "ch03-linear-maps/08-rank-factorization.html#thm-column-row-factorization",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-rank-normal-form",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 3.8.3",
+   "title": "Rank Normal Form",
+   "url": "ch03-linear-maps/08-rank-factorization.html#thm-rank-normal-form",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-rank-of-composition",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 3.8.4",
+   "title": "Rank of a Composition",
+   "url": "ch03-linear-maps/08-rank-factorization.html#thm-rank-of-composition",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-sylvester-rank-inequality",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 3.8.5",
+   "title": "Sylvester\u2019s Rank Inequality",
+   "url": "ch03-linear-maps/08-rank-factorization.html#thm-sylvester-rank-inequality",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "def-coset",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 3.9.2",
+   "title": "Coset",
+   "url": "ch03-linear-maps/09-products-and-quotients.html#def-coset",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#b0414f"
+  },
+  {
+   "id": "def-product-of-spaces",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 3.9.1",
+   "title": "Product of vector spaces",
+   "url": "ch03-linear-maps/09-products-and-quotients.html#def-product-of-spaces",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#b0414f"
+  },
+  {
+   "id": "def-quotient-space",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 3.9.3",
+   "title": "Quotient space",
+   "url": "ch03-linear-maps/09-products-and-quotients.html#def-quotient-space",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#b0414f"
+  },
+  {
+   "id": "exm-first-isomorphism",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "Identifying quotients",
+   "url": "ch03-linear-maps/09-products-and-quotients.html#exm-first-isomorphism",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-quotient-basis",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "A basis of a quotient of \u211d^3",
+   "url": "ch03-linear-maps/09-products-and-quotients.html#exm-quotient-basis",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exr-products-and-quotients-a1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "A1",
+   "url": "ch03-linear-maps/09-products-and-quotients.html#exr-products-and-quotients-a1",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-products-and-quotients-b1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B1: A basis of a quotient of \u211d^4",
+   "url": "ch03-linear-maps/09-products-and-quotients.html#exr-products-and-quotients-b1",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-products-and-quotients-b2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B2: A map that factors through a quotient",
+   "url": "ch03-linear-maps/09-products-and-quotients.html#exr-products-and-quotients-b2",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-products-and-quotients-b3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B3: Matrices modulo scalars",
+   "url": "ch03-linear-maps/09-products-and-quotients.html#exr-products-and-quotients-b3",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-products-and-quotients-c1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C1: The dimension formula from isomorphisms",
+   "url": "ch03-linear-maps/09-products-and-quotients.html#exr-products-and-quotients-c1",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-products-and-quotients-c2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C2: The operator induced on a quotient",
+   "url": "ch03-linear-maps/09-products-and-quotients.html#exr-products-and-quotients-c2",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-products-and-quotients-c3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C3: Counting cosets over a finite field",
+   "url": "ch03-linear-maps/09-products-and-quotients.html#exr-products-and-quotients-c3",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#a8670c"
+  },
+  {
+   "id": "lem-coset-equality",
+   "type": "lemma",
+   "group": "statements",
+   "name": "Lemma 3.9.3",
+   "title": "When two cosets are equal",
+   "url": "ch03-linear-maps/09-products-and-quotients.html#lem-coset-equality",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "prp-complement-isomorphic-to-quotient",
+   "type": "proposition",
+   "group": "statements",
+   "name": "Proposition 3.9.6",
+   "title": "A complement is a model of the quotient",
+   "url": "ch03-linear-maps/09-products-and-quotients.html#prp-complement-isomorphic-to-quotient",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-dimension-of-product",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 3.9.1",
+   "title": "Dimension of a Product",
+   "url": "ch03-linear-maps/09-products-and-quotients.html#thm-dimension-of-product",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-dimension-quotient",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 3.9.5",
+   "title": "Dimension of a Quotient",
+   "url": "ch03-linear-maps/09-products-and-quotients.html#thm-dimension-quotient",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-first-isomorphism",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 3.9.7",
+   "title": "First Isomorphism Theorem",
+   "url": "ch03-linear-maps/09-products-and-quotients.html#thm-first-isomorphism",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-internal-external-direct-sum",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 3.9.2",
+   "title": "Internal and External Direct Sums",
+   "url": "ch03-linear-maps/09-products-and-quotients.html#thm-internal-external-direct-sum",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-quotient-space-operations-well-defined",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 3.9.4",
+   "title": "The Quotient Space Is a Vector Space",
+   "url": "ch03-linear-maps/09-products-and-quotients.html#thm-quotient-space-operations-well-defined",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-quotient-universal-property",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 3.9.10",
+   "title": "Universal Property of the Quotient",
+   "url": "ch03-linear-maps/09-products-and-quotients.html#thm-quotient-universal-property",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-second-isomorphism",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 3.9.8",
+   "title": "Second Isomorphism Theorem",
+   "url": "ch03-linear-maps/09-products-and-quotients.html#thm-second-isomorphism",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-third-isomorphism",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 3.9.9",
+   "title": "Third Isomorphism Theorem",
+   "url": "ch03-linear-maps/09-products-and-quotients.html#thm-third-isomorphism",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "cor-projection-matrix",
+   "type": "corollary",
+   "group": "statements",
+   "name": "Corollary 3.10.2",
+   "title": "The matrix of a projection",
+   "url": "ch03-linear-maps/10-projections-and-trace.html#cor-projection-matrix",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "def-projection-operator",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 3.10.1",
+   "title": "Projection",
+   "url": "ch03-linear-maps/10-projections-and-trace.html#def-projection-operator",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#b0414f"
+  },
+  {
+   "id": "def-trace-operator",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 3.10.2",
+   "title": "Trace of an operator",
+   "url": "ch03-linear-maps/10-projections-and-trace.html#def-trace-operator",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#b0414f"
+  },
+  {
+   "id": "exm-projection-plane-along-line",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "Projecting onto a plane along a line",
+   "url": "ch03-linear-maps/10-projections-and-trace.html#exm-projection-plane-along-line",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exr-projections-and-trace-a1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "A1",
+   "url": "ch03-linear-maps/10-projections-and-trace.html#exr-projections-and-trace-a1",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-projections-and-trace-b1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B1: A projection in \u211d^3",
+   "url": "ch03-linear-maps/10-projections-and-trace.html#exr-projections-and-trace-b1",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-projections-and-trace-b2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B2: The complementary projection",
+   "url": "ch03-linear-maps/10-projections-and-trace.html#exr-projections-and-trace-b2",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-projections-and-trace-b3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B3: Traces of operators on matrices",
+   "url": "ch03-linear-maps/10-projections-and-trace.html#exr-projections-and-trace-b3",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-projections-and-trace-c1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C1: When is a sum of projections a projection?",
+   "url": "ch03-linear-maps/10-projections-and-trace.html#exr-projections-and-trace-c1",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-projections-and-trace-c2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C2: The trace is the only trace-like functional",
+   "url": "ch03-linear-maps/10-projections-and-trace.html#exr-projections-and-trace-c2",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#a8670c"
+  },
+  {
+   "id": "thm-involution-decomposition",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 3.10.5",
+   "title": "Involutions Split the Space",
+   "url": "ch03-linear-maps/10-projections-and-trace.html#thm-involution-decomposition",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-projection-direct-sum",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 3.10.1",
+   "title": "Projections and Direct Sums",
+   "url": "ch03-linear-maps/10-projections-and-trace.html#thm-projection-direct-sum",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-rank-equals-trace-projection",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 3.10.4",
+   "title": "Trace of a Projection",
+   "url": "ch03-linear-maps/10-projections-and-trace.html#thm-rank-equals-trace-projection",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-trace-operator-properties",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 3.10.3",
+   "title": "Properties of the Trace of an Operator",
+   "url": "ch03-linear-maps/10-projections-and-trace.html#thm-trace-operator-properties",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
    "chapterNumber": 3,
    "color": "#2f62b5"
   }
@@ -11103,6 +12951,11 @@
    "kind": "reference"
   },
   {
+   "source": "thm-rank-nullity",
+   "target": "exr-rank-a1",
+   "kind": "mention"
+  },
+  {
    "source": "thm-basis-column-space",
    "target": "exr-rank-b1",
    "kind": "reference"
@@ -11938,8 +13791,93 @@
    "kind": "reference"
   },
   {
+   "source": "exm-squaring",
+   "target": "exm-complex-conjugation",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-conjugate-properties",
+   "target": "exm-complex-conjugation",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-zero-maps-to-zero",
+   "target": "exm-complex-conjugation",
+   "kind": "reference"
+  },
+  {
    "source": "thm-zero-maps-to-zero",
    "target": "exm-constant-function",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-matrix-transformation",
+   "target": "exm-coordinate-transformation",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-coordinates-linear",
+   "target": "exm-coordinate-transformation",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-map-from-basis-values",
+   "target": "exm-deter",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-linear-combination",
+   "target": "exm-deter",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-linear-transform-basis",
+   "target": "exm-deter",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-differentiation",
+   "target": "exm-deter-two",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-standard-bases",
+   "target": "exm-deter-two",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-linear-transform-basis",
+   "target": "exm-deter-two",
+   "kind": "reference"
+  },
+  {
+   "source": "def-polynomial",
+   "target": "exm-differentiation",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-invertible-tfae",
+   "target": "exm-map-from-basis-values",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-linear-transform-basis",
+   "target": "exm-map-from-basis-values",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-two-by-two-inverse",
+   "target": "exm-map-from-basis-values",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-vector-spaces",
+   "target": "exm-matrix-composition",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-root-bound",
+   "target": "exm-matrix-composition",
    "kind": "reference"
   },
   {
@@ -11948,9 +13886,34 @@
    "kind": "reference"
   },
   {
-   "source": "thm-negative-scalar-dist",
-   "target": "exm-norm",
-   "kind": "mention"
+   "source": "thm-polynomial-ring-laws",
+   "target": "exm-multiplication-by-x",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-matrix-transformation",
+   "target": "exm-rotation",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-vector-spaces",
+   "target": "exm-shift",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-projection",
+   "target": "exm-squaring",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-trace-properties",
+   "target": "exm-trace-matrices",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-identity",
+   "target": "exm-translation",
+   "kind": "reference"
   },
   {
    "source": "thm-zero-maps-to-zero",
@@ -11958,8 +13921,2858 @@
    "kind": "reference"
   },
   {
+   "source": "thm-scalar-zero-vector",
+   "target": "exm-zero-map",
+   "kind": "reference"
+  },
+  {
+   "source": "def-linear-transformation",
+   "target": "exr-linear-maps-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-complex-conjugation",
+   "target": "exr-linear-maps-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-squaring",
+   "target": "exr-linear-maps-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-linear-transform-basis",
+   "target": "exr-linear-maps-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-differentiation",
+   "target": "exr-linear-maps-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-matrix-transformation",
+   "target": "exr-linear-maps-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-equivalent-condition",
+   "target": "exr-linear-maps-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-zero-maps-to-zero",
+   "target": "exr-linear-maps-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-distinct-degrees-independent",
+   "target": "exr-linear-maps-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-invertible-tfae",
+   "target": "exr-linear-maps-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-linear-combination",
+   "target": "exr-linear-maps-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-linear-transform-basis",
+   "target": "exr-linear-maps-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-preserves-negation",
+   "target": "exr-linear-maps-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-right-size-basis",
+   "target": "exr-linear-maps-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-two-by-two-inverse",
+   "target": "exr-linear-maps-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-equivalent-condition",
+   "target": "exr-linear-maps-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-evaluation-respects-operations",
+   "target": "exr-linear-maps-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-linear-combination",
+   "target": "exr-linear-maps-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-zero-maps-to-zero",
+   "target": "exr-linear-maps-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-complex-conjugation",
+   "target": "exr-linear-maps-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "exr-linear-maps-c1",
+   "target": "exr-linear-maps-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-zero-maps-to-zero",
+   "target": "thm-linear-combination",
+   "kind": "reference"
+  },
+  {
+   "source": "def-coordinates",
+   "target": "thm-linear-transform-basis",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-coordinates-linear",
+   "target": "thm-linear-transform-basis",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-equivalent-condition",
+   "target": "thm-linear-transform-basis",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-linear-combination",
+   "target": "thm-linear-transform-basis",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-unique-representation",
+   "target": "thm-linear-transform-basis",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-negation-scalar",
+   "target": "thm-preserves-negation",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-image-spanned-by-basis-images",
+   "target": "exm-differentiation-kernel-image",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-integration",
+   "target": "exm-integration-kernel-image",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-injective-iff-trivial-kernel",
+   "target": "exm-integration-kernel-image",
+   "kind": "reference"
+  },
+  {
+   "source": "def-column-space",
+   "target": "exm-kernel-image-matrix-map",
+   "kind": "reference"
+  },
+  {
+   "source": "def-null-space",
+   "target": "exm-kernel-image-matrix-map",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-basis-column-space",
+   "target": "exm-kernel-image-matrix-map",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-basis-null-space",
+   "target": "exm-kernel-image-matrix-map",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-injective-iff-trivial-kernel",
+   "target": "exm-kernel-image-matrix-map",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-prop-image",
+   "target": "exm-kernel-image-matrix-map",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-projection",
+   "target": "exm-projection-kernel-image",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-map-from-basis-values",
+   "target": "exm-shift-kernel-image",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-shift",
+   "target": "exm-shift-kernel-image",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-image-spanned-by-basis-images",
+   "target": "exm-shift-kernel-image",
+   "kind": "reference"
+  },
+  {
+   "source": "def-image",
+   "target": "exr-kernel-image-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "def-kernel",
+   "target": "exr-kernel-image-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-projection-kernel-image",
+   "target": "exr-kernel-image-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-injective-iff-trivial-kernel",
+   "target": "exr-kernel-image-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-preserves-negation",
+   "target": "exr-kernel-image-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-prop-image",
+   "target": "exr-kernel-image-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-prop-kernel",
+   "target": "exr-kernel-image-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-kernel-image-matrix-map",
+   "target": "exr-kernel-image-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-basis-column-space",
+   "target": "exr-kernel-image-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-basis-null-space",
+   "target": "exr-kernel-image-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-injective-iff-trivial-kernel",
+   "target": "exr-kernel-image-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-prop-image",
+   "target": "exr-kernel-image-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-differentiation",
+   "target": "exr-kernel-image-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-trace-matrices",
+   "target": "exr-kernel-image-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-equivalent-condition",
+   "target": "exr-kernel-image-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-image-spanned-by-basis-images",
+   "target": "exr-kernel-image-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-projection-kernel-image",
+   "target": "exr-kernel-image-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-injective-iff-trivial-kernel",
+   "target": "exr-kernel-image-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-prop-image",
+   "target": "exr-kernel-image-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-zero-maps-to-zero",
+   "target": "exr-kernel-image-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-injective-iff-trivial-kernel",
+   "target": "exr-kernel-image-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-differentiation",
+   "target": "exr-kernel-image-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-differentiation-kernel-image",
+   "target": "exr-kernel-image-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-distinct-degrees-independent",
+   "target": "exr-kernel-image-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-image-spanned-by-basis-images",
+   "target": "exr-kernel-image-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "def-finite-dimensional",
+   "target": "thm-image-spanned-by-basis-images",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-linear-combination",
+   "target": "thm-image-spanned-by-basis-images",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-prop-image",
+   "target": "thm-image-spanned-by-basis-images",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-span-subspace",
+   "target": "thm-image-spanned-by-basis-images",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-preserves-negation",
+   "target": "thm-injective-iff-trivial-kernel",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-prop-kernel",
+   "target": "thm-injective-iff-trivial-kernel",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-zero-maps-to-zero",
+   "target": "thm-injective-iff-trivial-kernel",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-image-spanned-by-basis-images",
+   "target": "thm-injective-preserves-independence",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-injective-iff-trivial-kernel",
+   "target": "thm-injective-preserves-independence",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-linear-combination",
+   "target": "thm-injective-preserves-independence",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-prop-image",
+   "target": "thm-injective-preserves-independence",
+   "kind": "reference"
+  },
+  {
+   "source": "def-injective-surjective-bijective",
+   "target": "thm-prop-image",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-subspace-test",
+   "target": "thm-prop-image",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-zero-maps-to-zero",
+   "target": "thm-prop-image",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-scalar-zero-vector",
+   "target": "thm-prop-kernel",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-subspace-test",
+   "target": "thm-prop-kernel",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-zero-maps-to-zero",
+   "target": "thm-prop-kernel",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-shift-kernel-image",
+   "target": "cor-rank-nullity-consequences",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dim-impl-eq",
+   "target": "cor-rank-nullity-consequences",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-injective-iff-trivial-kernel",
+   "target": "cor-rank-nullity-consequences",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-prop-image",
+   "target": "cor-rank-nullity-consequences",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rank-nullity",
+   "target": "cor-rank-nullity-consequences",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-subspace-dimension",
+   "target": "cor-rank-nullity-consequences",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-standard-bases",
+   "target": "exm-dimension-by-surjective-map",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-trace-free-matrices",
+   "target": "exm-dimension-by-surjective-map",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-trace-matrices",
+   "target": "exm-dimension-by-surjective-map",
+   "kind": "reference"
+  },
+  {
+   "source": "exr-linear-maps-b3",
+   "target": "exm-dimension-by-surjective-map",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rank-nullity",
+   "target": "exm-dimension-by-surjective-map",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-prop-image",
+   "target": "exm-dimension-by-surjective-map",
+   "kind": "mention"
+  },
+  {
+   "source": "cor-rank-nullity-consequences",
+   "target": "exm-hermite-existence",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-differentiation",
+   "target": "exm-hermite-existence",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-equivalent-condition",
+   "target": "exm-hermite-existence",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-evaluation-respects-operations",
+   "target": "exm-hermite-existence",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-rank-nullity-consequences",
+   "target": "exm-interpolation-by-counting",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-standard-bases",
+   "target": "exm-interpolation-by-counting",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-root-bound",
+   "target": "exm-interpolation-by-counting",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-equivalent-condition",
+   "target": "exm-interpolation-by-counting",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-evaluation-respects-operations",
+   "target": "exm-interpolation-by-counting",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-injective-iff-trivial-kernel",
+   "target": "exm-interpolation-by-counting",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-interpolation-unique",
+   "target": "exm-interpolation-by-counting",
+   "kind": "reference"
+  },
+  {
+   "source": "def-nullity-matrix",
+   "target": "exm-nullity-rank-diff",
+   "kind": "reference"
+  },
+  {
+   "source": "def-rank-matrix",
+   "target": "exm-nullity-rank-diff",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-differentiation-kernel-image",
+   "target": "exm-nullity-rank-diff",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-kernel-image-degenerate",
+   "target": "exm-nullity-rank-diff",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-kernel-image-matrix-map",
+   "target": "exm-nullity-rank-diff",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-rank-nullity-consequences",
+   "target": "exr-rank-nullity-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "def-nullity",
+   "target": "exr-rank-nullity-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "def-rank",
+   "target": "exr-rank-nullity-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-shift-kernel-image",
+   "target": "exr-rank-nullity-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rank-nullity",
+   "target": "exr-rank-nullity-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-trace-matrices",
+   "target": "exr-rank-nullity-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "exr-kernel-image-b2",
+   "target": "exr-rank-nullity-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-basis-column-space",
+   "target": "exr-rank-nullity-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-basis-null-space",
+   "target": "exr-rank-nullity-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dim-impl-eq",
+   "target": "exr-rank-nullity-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-distinct-degrees-independent",
+   "target": "exr-rank-nullity-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-evaluation-respects-operations",
+   "target": "exr-rank-nullity-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-rank-nullity-consequences",
+   "target": "exr-rank-nullity-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-differentiation",
+   "target": "exr-rank-nullity-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-injective-iff-trivial-kernel",
+   "target": "exr-rank-nullity-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dim-impl-eq",
+   "target": "exr-rank-nullity-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-distinct-degrees-independent",
+   "target": "exr-rank-nullity-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-evaluation-respects-operations",
+   "target": "exr-rank-nullity-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rank-nullity",
+   "target": "exr-rank-nullity-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-right-size-basis",
+   "target": "exr-rank-nullity-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-nullity-rank-diff",
+   "target": "exr-rank-nullity-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "exr-kernel-image-c1",
+   "target": "exr-rank-nullity-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-image-spanned-by-basis-images",
+   "target": "exr-rank-nullity-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-multiplication-properties",
+   "target": "exr-rank-nullity-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-prop-image",
+   "target": "exr-rank-nullity-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rank-nullity",
+   "target": "exr-rank-nullity-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-subspace-dimension",
+   "target": "exr-rank-nullity-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rank-nullity",
+   "target": "exr-rank-nullity-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-basis-existence",
+   "target": "thm-rank-nullity",
+   "kind": "reference"
+  },
+  {
+   "source": "def-dimension",
+   "target": "thm-rank-nullity",
+   "kind": "reference"
+  },
+  {
    "source": "thm-basis-extension",
    "target": "thm-rank-nullity",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dimension-formula-subspace-dim",
+   "target": "thm-rank-nullity",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-image-spanned-by-basis-images",
+   "target": "thm-rank-nullity",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-linear-combination",
+   "target": "thm-rank-nullity",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-prop-kernel",
+   "target": "thm-rank-nullity",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-span-absorb",
+   "target": "thm-rank-nullity",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-subspace-dimension",
+   "target": "thm-rank-nullity",
+   "kind": "reference"
+  },
+  {
+   "source": "def-linear-transformation",
+   "target": "def-space-of-linear-maps",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-differentiation",
+   "target": "exm-differentiation-nilpotent",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-linear-combination",
+   "target": "exm-differentiation-nilpotent",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-polynomial-of-operator-properties",
+   "target": "exm-differentiation-nilpotent",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-rotation-projection-dont-commute",
+   "target": "exm-operator-polynomial-relations",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-polynomial-of-operator-properties",
+   "target": "exm-operator-polynomial-relations",
+   "kind": "reference"
+  },
+  {
+   "source": "def-space-of-linear-maps",
+   "target": "exm-sum-of-matrix-maps",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-matrix-transformation",
+   "target": "exm-sum-of-matrix-maps",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-linear-maps-vector-space",
+   "target": "exm-sum-of-matrix-maps",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-multiplication-properties",
+   "target": "exm-sum-of-matrix-maps",
+   "kind": "reference"
+  },
+  {
+   "source": "def-polynomial-of-operator",
+   "target": "exr-algebra-of-linear-maps-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "def-space-of-linear-maps",
+   "target": "exr-algebra-of-linear-maps-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-rotation-projection-dont-commute",
+   "target": "exr-algebra-of-linear-maps-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-composition-linear",
+   "target": "exr-algebra-of-linear-maps-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "def-polynomial-of-operator",
+   "target": "exr-algebra-of-linear-maps-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "def-space-of-linear-maps",
+   "target": "exr-algebra-of-linear-maps-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-polynomial-of-operator-properties",
+   "target": "exr-algebra-of-linear-maps-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-linear-maps-vector-space",
+   "target": "exr-algebra-of-linear-maps-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-subspace-test",
+   "target": "exr-algebra-of-linear-maps-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-differentiation-nilpotent",
+   "target": "exr-algebra-of-linear-maps-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-polynomial-of-operator-properties",
+   "target": "exr-algebra-of-linear-maps-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "def-characteristic",
+   "target": "exr-algebra-of-linear-maps-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-differentiation",
+   "target": "exr-algebra-of-linear-maps-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-multiplication-by-x",
+   "target": "exr-algebra-of-linear-maps-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-sum-of-matrix-maps",
+   "target": "exr-algebra-of-linear-maps-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "exr-matrices-c1",
+   "target": "exr-algebra-of-linear-maps-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-composition-linear",
+   "target": "exr-algebra-of-linear-maps-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-linear-combination",
+   "target": "exr-algebra-of-linear-maps-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-linear-maps-vector-space",
+   "target": "exr-algebra-of-linear-maps-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-times-vector-columns",
+   "target": "exr-algebra-of-linear-maps-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-trace-properties",
+   "target": "exr-algebra-of-linear-maps-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-composition-linear",
+   "target": "exr-algebra-of-linear-maps-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-polynomial-of-operator-properties",
+   "target": "exr-algebra-of-linear-maps-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "def-identity-function",
+   "target": "thm-composition-linear",
+   "kind": "reference"
+  },
+  {
+   "source": "def-space-of-linear-maps",
+   "target": "thm-composition-linear",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-composition-associative",
+   "target": "thm-composition-linear",
+   "kind": "reference"
+  },
+  {
+   "source": "def-function",
+   "target": "thm-linear-maps-vector-space",
+   "kind": "reference"
+  },
+  {
+   "source": "def-space-of-linear-maps",
+   "target": "thm-linear-maps-vector-space",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-vector-spaces",
+   "target": "thm-linear-maps-vector-space",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-negation-scalar",
+   "target": "thm-linear-maps-vector-space",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-scalar-zero-vector",
+   "target": "thm-linear-maps-vector-space",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-subspace-test",
+   "target": "thm-linear-maps-vector-space",
+   "kind": "reference"
+  },
+  {
+   "source": "def-polynomial-of-operator",
+   "target": "thm-polynomial-of-operator-properties",
+   "kind": "reference"
+  },
+  {
+   "source": "def-polynomial-ring",
+   "target": "thm-polynomial-of-operator-properties",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-composition-linear",
+   "target": "thm-polynomial-of-operator-properties",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-induction",
+   "target": "thm-polynomial-of-operator-properties",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-linear-maps-vector-space",
+   "target": "thm-polynomial-of-operator-properties",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-polynomial-of-matrix-properties",
+   "target": "thm-polynomial-of-operator-properties",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-polynomial-ring-laws",
+   "target": "thm-polynomial-of-operator-properties",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-coordinates-linear",
+   "target": "cor-coordinate-isomorphism",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-inverse-is-linear",
+   "target": "cor-coordinate-isomorphism",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-inverse-is-linear",
+   "target": "def-isomorphism",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-dimensions",
+   "target": "exm-classify-by-dimension",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-isomorphic-iff-same-dimension",
+   "target": "exm-classify-by-dimension",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rank-nullity",
+   "target": "exm-classify-by-dimension",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-restriction-of-scalars-dimension",
+   "target": "exm-classify-by-dimension",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-unique-representation",
+   "target": "exm-classify-by-dimension",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-differentiation",
+   "target": "exm-differentiation-integration-one-sided",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-integration",
+   "target": "exm-differentiation-integration-one-sided",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-polynomial-coordinates",
+   "target": "exm-differentiation-integration-one-sided",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-shift",
+   "target": "exm-differentiation-integration-one-sided",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-standard-isomorphisms",
+   "target": "exm-differentiation-integration-one-sided",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-inverse-is-linear",
+   "target": "exm-differentiation-integration-one-sided",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-linear-combination",
+   "target": "exm-differentiation-integration-one-sided",
+   "kind": "reference"
+  },
+  {
+   "source": "def-invertible-linear-map",
+   "target": "exm-invertible-operator-by-kernel",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-composition-linear",
+   "target": "exm-invertible-operator-by-kernel",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-invertible-operator-tfae",
+   "target": "exm-invertible-operator-by-kernel",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-one-sided-inverse-maps",
+   "target": "exm-invertible-operator-by-kernel",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-polynomial-of-operator-properties",
+   "target": "exm-invertible-operator-by-kernel",
+   "kind": "reference"
+  },
+  {
+   "source": "def-complex-numbers",
+   "target": "exm-standard-isomorphisms",
+   "kind": "reference"
+  },
+  {
+   "source": "def-polynomial",
+   "target": "exm-standard-isomorphisms",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-complexification-rn",
+   "target": "exm-standard-isomorphisms",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-matrix-transformation",
+   "target": "exm-standard-isomorphisms",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-inverse-is-linear",
+   "target": "exm-standard-isomorphisms",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-multiplication-properties",
+   "target": "exm-standard-isomorphisms",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-rank-nullity-consequences",
+   "target": "exr-isomorphisms-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-differentiation-integration-one-sided",
+   "target": "exr-isomorphisms-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-inverse-is-linear",
+   "target": "exr-isomorphisms-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-invertible-operator-tfae",
+   "target": "exr-isomorphisms-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-isomorphic-iff-same-dimension",
+   "target": "exr-isomorphisms-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-one-sided-inverse-maps",
+   "target": "exr-isomorphisms-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-dimensions",
+   "target": "exr-isomorphisms-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-inverse-is-linear",
+   "target": "exr-isomorphisms-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-one-sided-inverse-maps",
+   "target": "exr-isomorphisms-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-differentiation-nilpotent",
+   "target": "exr-isomorphisms-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-invertible-operator-tfae",
+   "target": "exr-isomorphisms-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-one-sided-inverse-maps",
+   "target": "exr-isomorphisms-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-polynomial-of-operator-properties",
+   "target": "exr-isomorphisms-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-dimensions",
+   "target": "exr-isomorphisms-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-isomorphic-iff-same-dimension",
+   "target": "exr-isomorphisms-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rank-nullity",
+   "target": "exr-isomorphisms-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-restriction-of-scalars-dimension",
+   "target": "exr-isomorphisms-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-unique-representation",
+   "target": "exr-isomorphisms-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-differentiation-integration-one-sided",
+   "target": "exr-isomorphisms-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-composition-linear",
+   "target": "exr-isomorphisms-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-inverse-is-linear",
+   "target": "exr-isomorphisms-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-invertible-operator-tfae",
+   "target": "exr-isomorphisms-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-isomorphic-equivalence-relation",
+   "target": "exr-isomorphisms-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-polynomial-no-zero-divisors",
+   "target": "exr-isomorphisms-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dim-impl-eq",
+   "target": "exr-isomorphisms-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-inverse-is-linear",
+   "target": "exr-isomorphisms-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-isomorphic-iff-same-dimension",
+   "target": "exr-isomorphisms-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-polynomial-ring-laws",
+   "target": "exr-isomorphisms-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-subspace-dimension",
+   "target": "exr-isomorphisms-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "def-inverse-function",
+   "target": "thm-inverse-is-linear",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-bijective-iff-invertible",
+   "target": "thm-inverse-is-linear",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-basis-existence",
+   "target": "thm-invertible-operator-tfae",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-rank-nullity-consequences",
+   "target": "thm-invertible-operator-tfae",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dim-impl-eq",
+   "target": "thm-invertible-operator-tfae",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-injective-iff-trivial-kernel",
+   "target": "thm-invertible-operator-tfae",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-inverse-is-linear",
+   "target": "thm-invertible-operator-tfae",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-isomorphism-preserves-bases",
+   "target": "thm-invertible-operator-tfae",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-one-sided-inverse-maps",
+   "target": "thm-invertible-operator-tfae",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-span-subspace",
+   "target": "thm-invertible-operator-tfae",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-standard-isomorphisms",
+   "target": "thm-isomorphic-equivalence-relation",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-composition-linear",
+   "target": "thm-isomorphic-equivalence-relation",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-composition-preserves",
+   "target": "thm-isomorphic-equivalence-relation",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-inverse-is-linear",
+   "target": "thm-isomorphic-equivalence-relation",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-inverse-of-composition",
+   "target": "thm-isomorphic-equivalence-relation",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-basis-existence",
+   "target": "thm-isomorphic-iff-same-dimension",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-composition-linear",
+   "target": "thm-isomorphic-iff-same-dimension",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-isomorphism-preserves-bases",
+   "target": "thm-isomorphic-iff-same-dimension",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-linear-transform-basis",
+   "target": "thm-isomorphic-iff-same-dimension",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-image-spanned-by-basis-images",
+   "target": "thm-isomorphism-preserves-bases",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-injective-preserves-independence",
+   "target": "thm-isomorphism-preserves-bases",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-rank-nullity-consequences",
+   "target": "thm-one-sided-inverse-maps",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-composition-linear",
+   "target": "thm-one-sided-inverse-maps",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-injective-iff-trivial-kernel",
+   "target": "thm-one-sided-inverse-maps",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-inverse-is-linear",
+   "target": "thm-one-sided-inverse-maps",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-isomorphic-equivalence-relation",
+   "target": "thm-one-sided-inverse-maps",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-one-sided-inverse",
+   "target": "thm-one-sided-inverse-maps",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-invertible-tfae",
+   "target": "thm-one-sided-inverse-maps",
+   "kind": "mention"
+  },
+  {
+   "source": "thm-rank-nullity",
+   "target": "thm-one-sided-inverse-maps",
+   "kind": "mention"
+  },
+  {
+   "source": "def-polynomial-of-matrix",
+   "target": "cor-matrix-of-polynomial-of-operator",
+   "kind": "reference"
+  },
+  {
+   "source": "def-polynomial-of-operator",
+   "target": "cor-matrix-of-polynomial-of-operator",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-matrix-of-matrix-map",
+   "target": "cor-matrix-of-polynomial-of-operator",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-coordinates-linear",
+   "target": "cor-matrix-of-polynomial-of-operator",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-of-composition",
+   "target": "cor-matrix-of-polynomial-of-operator",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dim-impl-eq",
+   "target": "exm-kernel-via-matrix",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-of-map-coordinates",
+   "target": "exm-kernel-via-matrix",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rank-nullity",
+   "target": "exm-kernel-via-matrix",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-matrix-of-differentiation",
+   "target": "exm-matrix-of-composition",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-of-composition",
+   "target": "exm-matrix-of-composition",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-times-vector-columns",
+   "target": "exm-matrix-of-matrix-map",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-right-size-basis",
+   "target": "exm-matrix-of-reflection",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-transpose-properties",
+   "target": "exm-matrix-of-transpose",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-matrix-of-transpose",
+   "target": "exm-rank-from-matrix",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-basis-column-space",
+   "target": "exm-rank-from-matrix",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-invertible-tfae",
+   "target": "exm-rank-from-matrix",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rank-map-equals-rank-matrix",
+   "target": "exm-rank-from-matrix",
+   "kind": "reference"
+  },
+  {
+   "source": "def-matrix-of-linear-map",
+   "target": "exr-matrix-of-a-map-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-matrix-of-differentiation",
+   "target": "exr-matrix-of-a-map-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-matrix-of-matrix-map",
+   "target": "exr-matrix-of-a-map-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-linear-maps-isomorphic-to-matrices",
+   "target": "exr-matrix-of-a-map-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-of-composition",
+   "target": "exr-matrix-of-a-map-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-of-map-coordinates",
+   "target": "exr-matrix-of-a-map-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-of-map-coordinates",
+   "target": "exr-matrix-of-a-map-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-unique-representation",
+   "target": "exr-matrix-of-a-map-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-of-composition",
+   "target": "exr-matrix-of-a-map-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "def-matrix-of-linear-map",
+   "target": "exr-matrix-of-a-map-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "def-upper-triangular",
+   "target": "exr-matrix-of-a-map-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-linear-combination",
+   "target": "exr-matrix-of-a-map-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-span-subspace",
+   "target": "exr-matrix-of-a-map-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-vector-spaces",
+   "target": "exr-matrix-of-a-map-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-root-bound",
+   "target": "exr-matrix-of-a-map-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-linear-combination",
+   "target": "exr-matrix-of-a-map-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-of-map-coordinates",
+   "target": "exr-matrix-of-a-map-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-one-sided-inverse",
+   "target": "exr-matrix-of-a-map-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rank-map-equals-rank-matrix",
+   "target": "exr-matrix-of-a-map-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "def-matrix-of-linear-map",
+   "target": "thm-linear-maps-isomorphic-to-matrices",
+   "kind": "reference"
+  },
+  {
+   "source": "def-space-of-linear-maps",
+   "target": "thm-linear-maps-isomorphic-to-matrices",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-dimensions",
+   "target": "thm-linear-maps-isomorphic-to-matrices",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-coordinates-linear",
+   "target": "thm-linear-maps-isomorphic-to-matrices",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-injective-iff-trivial-kernel",
+   "target": "thm-linear-maps-isomorphic-to-matrices",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-inverse-is-linear",
+   "target": "thm-linear-maps-isomorphic-to-matrices",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-isomorphic-equivalence-relation",
+   "target": "thm-linear-maps-isomorphic-to-matrices",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-isomorphic-iff-same-dimension",
+   "target": "thm-linear-maps-isomorphic-to-matrices",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-isomorphism-preserves-bases",
+   "target": "thm-linear-maps-isomorphic-to-matrices",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-linear-transform-basis",
+   "target": "thm-linear-maps-isomorphic-to-matrices",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-composition-linear",
+   "target": "thm-matrix-of-composition",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-multiplication-properties",
+   "target": "thm-matrix-of-composition",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-of-map-coordinates",
+   "target": "thm-matrix-of-composition",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-coordinates-linear",
+   "target": "thm-matrix-of-map-coordinates",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-linear-combination",
+   "target": "thm-matrix-of-map-coordinates",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-times-vector-columns",
+   "target": "thm-matrix-of-map-coordinates",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-coordinate-isomorphism",
+   "target": "thm-rank-map-equals-rank-matrix",
+   "kind": "reference"
+  },
+  {
+   "source": "def-column-space",
+   "target": "thm-rank-map-equals-rank-matrix",
+   "kind": "reference"
+  },
+  {
+   "source": "def-invertible-matrix",
+   "target": "thm-rank-map-equals-rank-matrix",
+   "kind": "reference"
+  },
+  {
+   "source": "def-nullity",
+   "target": "thm-rank-map-equals-rank-matrix",
+   "kind": "reference"
+  },
+  {
+   "source": "def-nullity-matrix",
+   "target": "thm-rank-map-equals-rank-matrix",
+   "kind": "reference"
+  },
+  {
+   "source": "def-rank",
+   "target": "thm-rank-map-equals-rank-matrix",
+   "kind": "reference"
+  },
+  {
+   "source": "def-rank-matrix",
+   "target": "thm-rank-map-equals-rank-matrix",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-matrix-of-matrix-map",
+   "target": "thm-rank-map-equals-rank-matrix",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-inverse-is-linear",
+   "target": "thm-rank-map-equals-rank-matrix",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-isomorphic-iff-same-dimension",
+   "target": "thm-rank-map-equals-rank-matrix",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-linear-maps-isomorphic-to-matrices",
+   "target": "thm-rank-map-equals-rank-matrix",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-of-composition",
+   "target": "thm-rank-map-equals-rank-matrix",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-of-map-coordinates",
+   "target": "thm-rank-map-equals-rank-matrix",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-one-sided-inverse-maps",
+   "target": "thm-rank-map-equals-rank-matrix",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-subspace-dimension",
+   "target": "thm-rank-map-equals-rank-matrix",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-change-of-coordinates",
+   "target": "exm-change-of-coordinates-polynomials",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-change-of-basis-maps",
+   "target": "exm-differentiation-rescaled-basis",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-similarity-invariants",
+   "target": "exm-projection-adapted-basis",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-change-of-basis-maps",
+   "target": "exm-projection-adapted-basis",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-right-size-basis",
+   "target": "exm-projection-adapted-basis",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-trace-similarity-invariant",
+   "target": "exm-projection-adapted-basis",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-two-by-two-inverse",
+   "target": "exm-projection-adapted-basis",
+   "kind": "reference"
+  },
+  {
+   "source": "def-change-of-coordinates-matrix",
+   "target": "exm-reflection-diagonal-basis",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-change-of-basis-maps",
+   "target": "exm-reflection-diagonal-basis",
+   "kind": "reference"
+  },
+  {
+   "source": "def-change-of-coordinates-matrix",
+   "target": "exr-change-of-basis-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-similarity-invariants",
+   "target": "exr-change-of-basis-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-change-of-basis-maps",
+   "target": "exr-change-of-basis-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-change-of-coordinates",
+   "target": "exr-change-of-basis-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-trace-similarity-invariant",
+   "target": "exr-change-of-basis-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-change-of-coordinates",
+   "target": "exr-change-of-basis-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "def-matrix-of-linear-map",
+   "target": "exr-change-of-basis-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-change-of-basis-maps",
+   "target": "exr-change-of-basis-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-two-by-two-inverse",
+   "target": "exr-change-of-basis-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-similarity-invariants",
+   "target": "exr-change-of-basis-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-trace-similarity-invariant",
+   "target": "exr-change-of-basis-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "def-matrix-multiplication",
+   "target": "exr-change-of-basis-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-similar-iff-same-operator",
+   "target": "exr-change-of-basis-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-similarity-invariants",
+   "target": "exr-change-of-basis-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-trace-properties",
+   "target": "exr-change-of-basis-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-change-of-basis-maps",
+   "target": "exr-change-of-basis-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-times-vector-columns",
+   "target": "exr-change-of-basis-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-right-size-basis",
+   "target": "exr-change-of-basis-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-similar-iff-same-operator",
+   "target": "exr-change-of-basis-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-two-by-two-inverse",
+   "target": "exr-change-of-basis-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-zero-product",
+   "target": "exr-change-of-basis-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "def-coordinates",
+   "target": "prp-invertible-matrix-change-of-basis",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-coordinates-linear",
+   "target": "prp-invertible-matrix-change-of-basis",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-invertible-tfae",
+   "target": "prp-invertible-matrix-change-of-basis",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-times-vector-columns",
+   "target": "prp-invertible-matrix-change-of-basis",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-right-size-basis",
+   "target": "prp-invertible-matrix-change-of-basis",
+   "kind": "reference"
+  },
+  {
+   "source": "def-polynomial-of-matrix",
+   "target": "prp-similarity-invariants",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-inverse-matrix-properties",
+   "target": "prp-similarity-invariants",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-multiplication-properties",
+   "target": "prp-similarity-invariants",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rank-product-inequality",
+   "target": "prp-similarity-invariants",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-change-of-coordinates",
+   "target": "thm-change-of-basis-maps",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-of-composition",
+   "target": "thm-change-of-basis-maps",
+   "kind": "reference"
+  },
+  {
+   "source": "def-invertible-matrix",
+   "target": "thm-change-of-coordinates",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-of-composition",
+   "target": "thm-change-of-coordinates",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-of-map-coordinates",
+   "target": "thm-change-of-coordinates",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-invertible-matrix-change-of-basis",
+   "target": "thm-similar-iff-same-operator",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-change-of-basis-maps",
+   "target": "thm-similar-iff-same-operator",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-change-of-coordinates",
+   "target": "thm-similar-iff-same-operator",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-linear-transform-basis",
+   "target": "thm-similar-iff-same-operator",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-times-vector-columns",
+   "target": "thm-similar-iff-same-operator",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-trace-properties",
+   "target": "thm-trace-similarity-invariant",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-column-row-factorization",
+   "target": "exm-column-row-factorization",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-change-of-coordinates",
+   "target": "exm-rank-normal-form",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rank-normal-form",
+   "target": "exm-rank-normal-form",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-two-by-two-inverse",
+   "target": "exm-rank-normal-form",
+   "kind": "reference"
+  },
+  {
+   "source": "def-equivalent-matrices",
+   "target": "exr-rank-factorization-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rank-normal-form",
+   "target": "exr-rank-factorization-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-column-row-factorization",
+   "target": "exr-rank-factorization-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-change-of-coordinates",
+   "target": "exr-rank-factorization-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rank-normal-form",
+   "target": "exr-rank-factorization-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-column-row-factorization",
+   "target": "exr-rank-factorization-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "exr-rank-c1",
+   "target": "exr-rank-factorization-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "exr-rank-c2",
+   "target": "exr-rank-factorization-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-column-row-factorization",
+   "target": "exr-rank-factorization-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-three-views-of-product",
+   "target": "exr-rank-factorization-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rank-nullity",
+   "target": "exr-rank-factorization-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-subspace-dimension",
+   "target": "exr-rank-factorization-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-sylvester-rank-inequality",
+   "target": "exr-rank-factorization-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-three-views-of-product",
+   "target": "exr-rank-factorization-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rank-normal-form",
+   "target": "exr-rank-factorization-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-right-size-basis",
+   "target": "exr-rank-factorization-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-column-row-factorization",
+   "target": "prp-rank-minimal-factorization",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rank-product-inequality",
+   "target": "prp-rank-minimal-factorization",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-size-bounds",
+   "target": "prp-rank-minimal-factorization",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-rref-columns",
+   "target": "thm-column-row-factorization",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-basis-column-space",
+   "target": "thm-column-row-factorization",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-basis-row-space",
+   "target": "thm-column-row-factorization",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-times-vector-columns",
+   "target": "thm-column-row-factorization",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-row-rank-equals-column-rank",
+   "target": "thm-column-row-factorization",
+   "kind": "reference"
+  },
+  {
+   "source": "def-matrix-of-linear-map",
+   "target": "thm-rank-normal-form",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-basis-extension",
+   "target": "thm-rank-normal-form",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-change-of-basis-maps",
+   "target": "thm-rank-normal-form",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-change-of-coordinates",
+   "target": "thm-rank-normal-form",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-image-spanned-by-basis-images",
+   "target": "thm-rank-normal-form",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-times-vector-columns",
+   "target": "thm-rank-normal-form",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-prop-kernel",
+   "target": "thm-rank-normal-form",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rank-map-equals-rank-matrix",
+   "target": "thm-rank-normal-form",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rank-nullity",
+   "target": "thm-rank-normal-form",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rank-product-inequality",
+   "target": "thm-rank-normal-form",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-right-size-basis",
+   "target": "thm-rank-normal-form",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rank-nullity",
+   "target": "thm-rank-of-composition",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-subspace-dimension",
+   "target": "thm-rank-of-composition",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-of-composition",
+   "target": "thm-sylvester-rank-inequality",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rank-map-equals-rank-matrix",
+   "target": "thm-sylvester-rank-inequality",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rank-of-composition",
+   "target": "thm-sylvester-rank-inequality",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rank-product-inequality",
+   "target": "thm-sylvester-rank-inequality",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-subspace-dimension",
+   "target": "thm-sylvester-rank-inequality",
+   "kind": "reference"
+  },
+  {
+   "source": "def-cartesian-product",
+   "target": "def-product-of-spaces",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-quotient-basis",
+   "target": "exm-first-isomorphism",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dimension-quotient",
+   "target": "exm-first-isomorphism",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-evaluation-respects-operations",
+   "target": "exm-first-isomorphism",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-first-isomorphism",
+   "target": "exm-first-isomorphism",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-isomorphic-iff-same-dimension",
+   "target": "exm-first-isomorphism",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dimension-quotient",
+   "target": "exm-quotient-basis",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-right-size-basis",
+   "target": "exm-quotient-basis",
+   "kind": "reference"
+  },
+  {
+   "source": "def-quotient-space",
+   "target": "exr-products-and-quotients-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-coset-equality",
+   "target": "exr-products-and-quotients-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dimension-of-product",
+   "target": "exr-products-and-quotients-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dimension-quotient",
+   "target": "exr-products-and-quotients-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-first-isomorphism",
+   "target": "exr-products-and-quotients-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-coset-equality",
+   "target": "exr-products-and-quotients-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dimension-quotient",
+   "target": "exr-products-and-quotients-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-right-size-basis",
+   "target": "exr-products-and-quotients-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dim-impl-eq",
+   "target": "exr-products-and-quotients-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-quotient-universal-property",
+   "target": "exr-products-and-quotients-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rank-nullity",
+   "target": "exr-products-and-quotients-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-coset-equality",
+   "target": "exr-products-and-quotients-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dimension-quotient",
+   "target": "exr-products-and-quotients-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-right-size-basis",
+   "target": "exr-products-and-quotients-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-span-subspace",
+   "target": "exr-products-and-quotients-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-sum-of-spans",
+   "target": "exr-products-and-quotients-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dimension-of-product",
+   "target": "exr-products-and-quotients-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dimension-quotient",
+   "target": "exr-products-and-quotients-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-internal-external-direct-sum",
+   "target": "exr-products-and-quotients-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-isomorphic-iff-same-dimension",
+   "target": "exr-products-and-quotients-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rank-nullity",
+   "target": "exr-products-and-quotients-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-second-isomorphism",
+   "target": "exr-products-and-quotients-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-subspace-dimension",
+   "target": "exr-products-and-quotients-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-composition-linear",
+   "target": "exr-products-and-quotients-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dimension-quotient",
+   "target": "exr-products-and-quotients-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-quotient-universal-property",
+   "target": "exr-products-and-quotients-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "def-coset",
+   "target": "exr-products-and-quotients-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-coset-equality",
+   "target": "exr-products-and-quotients-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dimension-quotient",
+   "target": "exr-products-and-quotients-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-unique-representation",
+   "target": "exr-products-and-quotients-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "def-equivalence-class",
+   "target": "lem-coset-equality",
+   "kind": "reference"
+  },
+  {
+   "source": "def-equivalence-relation",
+   "target": "lem-coset-equality",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-classes-equal-or-disjoint",
+   "target": "lem-coset-equality",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-negation-scalar",
+   "target": "lem-coset-equality",
+   "kind": "reference"
+  },
+  {
+   "source": "def-isomorphism",
+   "target": "prp-complement-isomorphic-to-quotient",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-coset-equality",
+   "target": "prp-complement-isomorphic-to-quotient",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dimension-quotient",
+   "target": "prp-complement-isomorphic-to-quotient",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-direct-sum-criteria",
+   "target": "prp-complement-isomorphic-to-quotient",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-injective-iff-trivial-kernel",
+   "target": "prp-complement-isomorphic-to-quotient",
+   "kind": "reference"
+  },
+  {
+   "source": "def-dimension",
+   "target": "thm-dimension-of-product",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-linear-combination",
+   "target": "thm-dimension-of-product",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-linear-combination",
+   "target": "thm-dimension-quotient",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-quotient-space-operations-well-defined",
+   "target": "thm-dimension-quotient",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rank-nullity",
+   "target": "thm-dimension-quotient",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-right-size-basis",
+   "target": "thm-dimension-quotient",
+   "kind": "reference"
+  },
+  {
+   "source": "def-isomorphism",
+   "target": "thm-first-isomorphism",
+   "kind": "reference"
+  },
+  {
+   "source": "def-quotient-space",
+   "target": "thm-first-isomorphism",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-coset-equality",
+   "target": "thm-first-isomorphism",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-injective-iff-trivial-kernel",
+   "target": "thm-first-isomorphism",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-prop-kernel",
+   "target": "thm-first-isomorphism",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-well-defined-on-quotient",
+   "target": "thm-first-isomorphism",
+   "kind": "reference"
+  },
+  {
+   "source": "def-isomorphism",
+   "target": "thm-internal-external-direct-sum",
+   "kind": "reference"
+  },
+  {
+   "source": "def-sum-of-subspaces",
+   "target": "thm-internal-external-direct-sum",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dimension-of-product",
+   "target": "thm-internal-external-direct-sum",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-direct-sum-criteria",
+   "target": "thm-internal-external-direct-sum",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-direct-sum-k-criteria",
+   "target": "thm-internal-external-direct-sum",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-injective-iff-trivial-kernel",
+   "target": "thm-internal-external-direct-sum",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-prop-image",
+   "target": "thm-internal-external-direct-sum",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rank-nullity",
+   "target": "thm-internal-external-direct-sum",
+   "kind": "reference"
+  },
+  {
+   "source": "def-quotient-space",
+   "target": "thm-quotient-space-operations-well-defined",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-coset-equality",
+   "target": "thm-quotient-space-operations-well-defined",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-well-defined-on-quotient",
+   "target": "thm-quotient-space-operations-well-defined",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-first-isomorphism",
+   "target": "thm-quotient-universal-property",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-injective-iff-trivial-kernel",
+   "target": "thm-quotient-universal-property",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-well-defined-on-quotient",
+   "target": "thm-quotient-universal-property",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-zero-maps-to-zero",
+   "target": "thm-quotient-universal-property",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-coset-equality",
+   "target": "thm-second-isomorphism",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-first-isomorphism",
+   "target": "thm-second-isomorphism",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-intersection-subspaces",
+   "target": "thm-second-isomorphism",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-quotient-space-operations-well-defined",
+   "target": "thm-second-isomorphism",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-subspace-sum",
+   "target": "thm-second-isomorphism",
+   "kind": "reference"
+  },
+  {
+   "source": "def-quotient-space",
+   "target": "thm-third-isomorphism",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-coset-equality",
+   "target": "thm-third-isomorphism",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-first-isomorphism",
+   "target": "thm-third-isomorphism",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-prop-kernel",
+   "target": "thm-third-isomorphism",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-well-defined-on-quotient",
+   "target": "thm-third-isomorphism",
+   "kind": "reference"
+  },
+  {
+   "source": "def-matrix-of-linear-map",
+   "target": "cor-projection-matrix",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-direct-sum-k-criteria",
+   "target": "cor-projection-matrix",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-projection-direct-sum",
+   "target": "cor-projection-matrix",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-projection-matrix",
+   "target": "exm-projection-plane-along-line",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-plane-line-direct-sum",
+   "target": "exm-projection-plane-along-line",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-change-of-basis-maps",
+   "target": "exm-projection-plane-along-line",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-projection-direct-sum",
+   "target": "exm-projection-plane-along-line",
+   "kind": "reference"
+  },
+  {
+   "source": "def-projection-operator",
+   "target": "exr-projections-and-trace-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-change-of-basis-maps",
+   "target": "exr-projections-and-trace-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-involution-decomposition",
+   "target": "exr-projections-and-trace-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-projection-direct-sum",
+   "target": "exr-projections-and-trace-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rank-equals-trace-projection",
+   "target": "exr-projections-and-trace-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-trace-similarity-invariant",
+   "target": "exr-projections-and-trace-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dim-impl-eq",
+   "target": "exr-projections-and-trace-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-direct-sum-criteria",
+   "target": "exr-projections-and-trace-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-projection-direct-sum",
+   "target": "exr-projections-and-trace-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rank-equals-trace-projection",
+   "target": "exr-projections-and-trace-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rank-nullity",
+   "target": "exr-projections-and-trace-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "def-projection-operator",
+   "target": "exr-projections-and-trace-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-composition-linear",
+   "target": "exr-projections-and-trace-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-projection-direct-sum",
+   "target": "exr-projections-and-trace-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "def-trace-operator",
+   "target": "exr-projections-and-trace-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-involution-decomposition",
+   "target": "exr-projections-and-trace-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-composition-linear",
+   "target": "exr-projections-and-trace-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rank-equals-trace-projection",
+   "target": "exr-projections-and-trace-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-trace-operator-properties",
+   "target": "exr-projections-and-trace-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "def-matrix-multiplication",
+   "target": "exr-projections-and-trace-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-trace-properties",
+   "target": "exr-projections-and-trace-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "def-characteristic",
+   "target": "thm-involution-decomposition",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-direct-sum-criteria",
+   "target": "thm-involution-decomposition",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-linear-maps-vector-space",
+   "target": "thm-involution-decomposition",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-projection-direct-sum",
+   "target": "thm-involution-decomposition",
+   "kind": "reference"
+  },
+  {
+   "source": "def-direct-sum",
+   "target": "thm-projection-direct-sum",
+   "kind": "reference"
+  },
+  {
+   "source": "def-projection-operator",
+   "target": "thm-projection-direct-sum",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-direct-sum-criteria",
+   "target": "thm-projection-direct-sum",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-projection-matrix",
+   "target": "thm-rank-equals-trace-projection",
+   "kind": "reference"
+  },
+  {
+   "source": "def-characteristic",
+   "target": "thm-rank-equals-trace-projection",
+   "kind": "reference"
+  },
+  {
+   "source": "def-trace-operator",
+   "target": "thm-rank-equals-trace-projection",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-integer-multiples",
+   "target": "thm-rank-equals-trace-projection",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-linear-maps-isomorphic-to-matrices",
+   "target": "thm-trace-operator-properties",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-of-composition",
+   "target": "thm-trace-operator-properties",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-trace-properties",
+   "target": "thm-trace-operator-properties",
    "kind": "reference"
   }
  ]
