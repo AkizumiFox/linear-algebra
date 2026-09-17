@@ -275,6 +275,51 @@
       "number": 4,
       "part": "",
       "collapsed": false,
+      "path": "ch04-duality/index.html",
+      "sections": [
+        {
+          "title": "Linear Functionals and the Dual Space",
+          "number": "4.1",
+          "path": "ch04-duality/01-linear-functionals.html",
+          "filename": "01-linear-functionals.md"
+        },
+        {
+          "title": "Annihilators",
+          "number": "4.2",
+          "path": "ch04-duality/02-annihilators.html",
+          "filename": "02-annihilators.md"
+        },
+        {
+          "title": "The Double Dual",
+          "number": "4.3",
+          "path": "ch04-duality/03-double-dual.html",
+          "filename": "03-double-dual.md"
+        },
+        {
+          "title": "The Dual Map and the Transpose",
+          "number": "4.4",
+          "path": "ch04-duality/04-dual-map.html",
+          "filename": "04-dual-map.md"
+        },
+        {
+          "title": "Duality for Subspaces and Quotients",
+          "number": "4.5",
+          "path": "ch04-duality/05-duality-subspaces-quotients.html",
+          "filename": "05-duality-subspaces-quotients.md"
+        },
+        {
+          "title": "Hyperplanes and Linear Systems Revisited",
+          "number": "4.6",
+          "path": "ch04-duality/06-hyperplanes-and-systems.html",
+          "filename": "06-hyperplanes-and-systems.md"
+        }
+      ]
+    },
+    {
+      "title": "Polynomials",
+      "number": 5,
+      "part": "Part II · Determinants and the Structure of Operators",
+      "collapsed": false,
       "path": null,
       "sections": []
     }

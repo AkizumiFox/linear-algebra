@@ -167,6 +167,7 @@ window.BOOK_MACROS = {
  "distWishart": "\\operatorname{Wishart}",
  "e": "\\mathbf{e}",
  "eqqcolon": "\\mathrel{=:}",
+ "ev": "\\operatorname{ev}",
  "expect": [
   "\\langle #1 \\rangle",
   1

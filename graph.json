@@ -6889,6 +6889,18 @@
    "color": "#2f62b5"
   },
   {
+   "id": "thm-linear-map-from-any-basis",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 3.1.6",
+   "title": "Linear Maps on an Arbitrary Basis",
+   "url": "ch03-linear-maps/01-linear-maps.html#thm-linear-map-from-any-basis",
+   "shard": "ch03-linear-maps",
+   "chapter": "Linear Maps",
+   "chapterNumber": 3,
+   "color": "#2f62b5"
+  },
+  {
    "id": "thm-linear-transform-basis",
    "type": "theorem",
    "group": "statements",
@@ -8806,6 +8818,1146 @@
    "shard": "ch03-linear-maps",
    "chapter": "Linear Maps",
    "chapterNumber": 3,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "cor-dimension-dual-space",
+   "type": "corollary",
+   "group": "statements",
+   "name": "Corollary 4.1.4",
+   "title": "Dimension of the Dual Space",
+   "url": "ch04-duality/01-linear-functionals.html#cor-dimension-dual-space",
+   "shard": "ch04-duality",
+   "chapter": "Duality",
+   "chapterNumber": 4,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "def-dual-basis",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 4.1.3",
+   "title": "Dual Basis",
+   "url": "ch04-duality/01-linear-functionals.html#def-dual-basis",
+   "shard": "ch04-duality",
+   "chapter": "Duality",
+   "chapterNumber": 4,
+   "color": "#b0414f"
+  },
+  {
+   "id": "def-dual-space",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 4.1.2",
+   "title": "Dual Space",
+   "url": "ch04-duality/01-linear-functionals.html#def-dual-space",
+   "shard": "ch04-duality",
+   "chapter": "Duality",
+   "chapterNumber": 4,
+   "color": "#b0414f"
+  },
+  {
+   "id": "def-linear-functional",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 4.1.1",
+   "title": "Linear Functional",
+   "url": "ch04-duality/01-linear-functionals.html#def-linear-functional",
+   "shard": "ch04-duality",
+   "chapter": "Duality",
+   "chapterNumber": 4,
+   "color": "#b0414f"
+  },
+  {
+   "id": "exm-dual-basis-inverse-rows",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "The Dual Basis Is Read Off the Inverse Matrix",
+   "url": "ch04-duality/01-linear-functionals.html#exm-dual-basis-inverse-rows",
+   "shard": "ch04-duality",
+   "chapter": "Duality",
+   "chapterNumber": 4,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-dual-basis-polynomials",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "Dual Bases in \u211d[x]_le 2",
+   "url": "ch04-duality/01-linear-functionals.html#exm-dual-basis-polynomials",
+   "shard": "ch04-duality",
+   "chapter": "Duality",
+   "chapterNumber": 4,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-linear-functionals",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "Four Families of Functionals",
+   "url": "ch04-duality/01-linear-functionals.html#exm-linear-functionals",
+   "shard": "ch04-duality",
+   "chapter": "Duality",
+   "chapterNumber": 4,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-trace-test-zero-matrix",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "A Matrix Killed by Every Trace",
+   "url": "ch04-duality/01-linear-functionals.html#exm-trace-test-zero-matrix",
+   "shard": "ch04-duality",
+   "chapter": "Duality",
+   "chapterNumber": 4,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exr-linear-functionals-a1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "A1",
+   "url": "ch04-duality/01-linear-functionals.html#exr-linear-functionals-a1",
+   "shard": "ch04-duality",
+   "chapter": "Duality",
+   "chapterNumber": 4,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-linear-functionals-b1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B1: Finding dual bases",
+   "url": "ch04-duality/01-linear-functionals.html#exr-linear-functionals-b1",
+   "shard": "ch04-duality",
+   "chapter": "Duality",
+   "chapterNumber": 4,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-linear-functionals-b2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B2: Which maps are functionals?",
+   "url": "ch04-duality/01-linear-functionals.html#exr-linear-functionals-b2",
+   "shard": "ch04-duality",
+   "chapter": "Duality",
+   "chapterNumber": 4,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-linear-functionals-b3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B3: Coordinates of a functional",
+   "url": "ch04-duality/01-linear-functionals.html#exr-linear-functionals-b3",
+   "shard": "ch04-duality",
+   "chapter": "Duality",
+   "chapterNumber": 4,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-linear-functionals-c1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C1: Functionals with the same kernel",
+   "url": "ch04-duality/01-linear-functionals.html#exr-linear-functionals-c1",
+   "shard": "ch04-duality",
+   "chapter": "Duality",
+   "chapterNumber": 4,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-linear-functionals-c2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C2: Functionals vanishing where others vanish",
+   "url": "ch04-duality/01-linear-functionals.html#exr-linear-functionals-c2",
+   "shard": "ch04-duality",
+   "chapter": "Duality",
+   "chapterNumber": 4,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-linear-functionals-c3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C3: Evaluations as a dual basis",
+   "url": "ch04-duality/01-linear-functionals.html#exr-linear-functionals-c3",
+   "shard": "ch04-duality",
+   "chapter": "Duality",
+   "chapterNumber": 4,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-linear-functionals-c4",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C4: How large is Flbrack xrbrack^*?",
+   "url": "ch04-duality/01-linear-functionals.html#exr-linear-functionals-c4",
+   "shard": "ch04-duality",
+   "chapter": "Duality",
+   "chapterNumber": 4,
+   "color": "#a8670c"
+  },
+  {
+   "id": "prp-coordinate-functionals-do-not-span",
+   "type": "proposition",
+   "group": "statements",
+   "name": "Proposition 4.1.6",
+   "title": "The Coordinate Functionals Do Not Span F[x]^*",
+   "url": "ch04-duality/01-linear-functionals.html#prp-coordinate-functionals-do-not-span",
+   "shard": "ch04-duality",
+   "chapter": "Duality",
+   "chapterNumber": 4,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "prp-nonzero-functional-surjective",
+   "type": "proposition",
+   "group": "statements",
+   "name": "Proposition 4.1.2",
+   "title": "A Non-Zero Functional Is Surjective",
+   "url": "ch04-duality/01-linear-functionals.html#prp-nonzero-functional-surjective",
+   "shard": "ch04-duality",
+   "chapter": "Duality",
+   "chapterNumber": 4,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-dual-basis",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 4.1.3",
+   "title": "The Dual Basis",
+   "url": "ch04-duality/01-linear-functionals.html#thm-dual-basis",
+   "shard": "ch04-duality",
+   "chapter": "Duality",
+   "chapterNumber": 4,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-functionals-on-fn",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 4.1.1",
+   "title": "Functionals on F^n Are Row Vectors",
+   "url": "ch04-duality/01-linear-functionals.html#thm-functionals-on-fn",
+   "shard": "ch04-duality",
+   "chapter": "Duality",
+   "chapterNumber": 4,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-functionals-separate-points",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 4.1.5",
+   "title": "Functionals Separate Vectors",
+   "url": "ch04-duality/01-linear-functionals.html#thm-functionals-separate-points",
+   "shard": "ch04-duality",
+   "chapter": "Duality",
+   "chapterNumber": 4,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "def-annihilator",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 4.2.1",
+   "title": "Annihilator",
+   "url": "ch04-duality/02-annihilators.html#def-annihilator",
+   "shard": "ch04-duality",
+   "chapter": "Duality",
+   "chapterNumber": 4,
+   "color": "#b0414f"
+  },
+  {
+   "id": "exm-annihilator-of-evaluation-kernel",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "The Equations of a Root Condition",
+   "url": "ch04-duality/02-annihilators.html#exm-annihilator-of-evaluation-kernel",
+   "shard": "ch04-duality",
+   "chapter": "Duality",
+   "chapterNumber": 4,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-annihilator-via-null-space",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "An Annihilator as a Null Space",
+   "url": "ch04-duality/02-annihilators.html#exm-annihilator-via-null-space",
+   "shard": "ch04-duality",
+   "chapter": "Duality",
+   "chapterNumber": 4,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-annihilators",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "First Annihilators",
+   "url": "ch04-duality/02-annihilators.html#exm-annihilators",
+   "shard": "ch04-duality",
+   "chapter": "Duality",
+   "chapterNumber": 4,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exr-annihilators-a1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "A1",
+   "url": "ch04-duality/02-annihilators.html#exr-annihilators-a1",
+   "shard": "ch04-duality",
+   "chapter": "Duality",
+   "chapterNumber": 4,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-annihilators-b1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B1: Computing annihilators",
+   "url": "ch04-duality/02-annihilators.html#exr-annihilators-b1",
+   "shard": "ch04-duality",
+   "chapter": "Duality",
+   "chapterNumber": 4,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-annihilators-b2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B2: Equations of the symmetric matrices",
+   "url": "ch04-duality/02-annihilators.html#exr-annihilators-b2",
+   "shard": "ch04-duality",
+   "chapter": "Duality",
+   "chapterNumber": 4,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-annihilators-b3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B3: The equations of a hyperplane",
+   "url": "ch04-duality/02-annihilators.html#exr-annihilators-b3",
+   "shard": "ch04-duality",
+   "chapter": "Duality",
+   "chapterNumber": 4,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-annihilators-c1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C1: The intersection formula without counting",
+   "url": "ch04-duality/02-annihilators.html#exr-annihilators-c1",
+   "shard": "ch04-duality",
+   "chapter": "Duality",
+   "chapterNumber": 4,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-annihilators-c2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C2: Equations of a double root",
+   "url": "ch04-duality/02-annihilators.html#exr-annihilators-c2",
+   "shard": "ch04-duality",
+   "chapter": "Duality",
+   "chapterNumber": 4,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-annihilators-c3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C3: Dual of a direct sum decomposition",
+   "url": "ch04-duality/02-annihilators.html#exr-annihilators-c3",
+   "shard": "ch04-duality",
+   "chapter": "Duality",
+   "chapterNumber": 4,
+   "color": "#a8670c"
+  },
+  {
+   "id": "prp-annihilator-subspace",
+   "type": "proposition",
+   "group": "statements",
+   "name": "Proposition 4.2.1",
+   "title": "The Annihilator Is a Subspace",
+   "url": "ch04-duality/02-annihilators.html#prp-annihilator-subspace",
+   "shard": "ch04-duality",
+   "chapter": "Duality",
+   "chapterNumber": 4,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-annihilator-properties",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 4.2.3",
+   "title": "Properties of Annihilators",
+   "url": "ch04-duality/02-annihilators.html#thm-annihilator-properties",
+   "shard": "ch04-duality",
+   "chapter": "Duality",
+   "chapterNumber": 4,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-dimension-annihilator",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 4.2.2",
+   "title": "Dimension of the Annihilator",
+   "url": "ch04-duality/02-annihilators.html#thm-dimension-annihilator",
+   "shard": "ch04-duality",
+   "chapter": "Duality",
+   "chapterNumber": 4,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "cor-annihilator-of-annihilator",
+   "type": "corollary",
+   "group": "statements",
+   "name": "Corollary 4.3.4",
+   "title": "The Annihilator of the Annihilator",
+   "url": "ch04-duality/03-double-dual.html#cor-annihilator-of-annihilator",
+   "shard": "ch04-duality",
+   "chapter": "Duality",
+   "chapterNumber": 4,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "cor-every-basis-of-dual-is-dual",
+   "type": "corollary",
+   "group": "statements",
+   "name": "Corollary 4.3.3",
+   "title": "Every Basis of the Dual Is a Dual Basis",
+   "url": "ch04-duality/03-double-dual.html#cor-every-basis-of-dual-is-dual",
+   "shard": "ch04-duality",
+   "chapter": "Duality",
+   "chapterNumber": 4,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "cor-subspaces-determined-by-annihilator",
+   "type": "corollary",
+   "group": "statements",
+   "name": "Corollary 4.3.5",
+   "title": "Subspaces Are Determined by Their Annihilators",
+   "url": "ch04-duality/03-double-dual.html#cor-subspaces-determined-by-annihilator",
+   "shard": "ch04-duality",
+   "chapter": "Duality",
+   "chapterNumber": 4,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "def-evaluation-map",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 4.3.1",
+   "title": "Double Dual and Evaluation Map",
+   "url": "ch04-duality/03-double-dual.html#def-evaluation-map",
+   "shard": "ch04-duality",
+   "chapter": "Duality",
+   "chapterNumber": 4,
+   "color": "#b0414f"
+  },
+  {
+   "id": "exm-basis-from-dual-basis",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "A Basis With Prescribed Dual Basis",
+   "url": "ch04-duality/03-double-dual.html#exm-basis-from-dual-basis",
+   "shard": "ch04-duality",
+   "chapter": "Duality",
+   "chapterNumber": 4,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-evaluation-map",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "Evaluation in Three Spaces",
+   "url": "ch04-duality/03-double-dual.html#exm-evaluation-map",
+   "shard": "ch04-duality",
+   "chapter": "Duality",
+   "chapterNumber": 4,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-evaluation-not-surjective",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "A Functional on Flbrack xrbrack^* That Is Not an Evaluation",
+   "url": "ch04-duality/03-double-dual.html#exm-evaluation-not-surjective",
+   "shard": "ch04-duality",
+   "chapter": "Duality",
+   "chapterNumber": 4,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exr-double-dual-a1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "A1",
+   "url": "ch04-duality/03-double-dual.html#exr-double-dual-a1",
+   "shard": "ch04-duality",
+   "chapter": "Duality",
+   "chapterNumber": 4,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-double-dual-b1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B1: A basis with a given dual basis",
+   "url": "ch04-duality/03-double-dual.html#exr-double-dual-b1",
+   "shard": "ch04-duality",
+   "chapter": "Duality",
+   "chapterNumber": 4,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-double-dual-b2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B2: U^00 = U for a line",
+   "url": "ch04-duality/03-double-dual.html#exr-double-dual-b2",
+   "shard": "ch04-duality",
+   "chapter": "Duality",
+   "chapterNumber": 4,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-double-dual-b3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B3: Recognizing an evaluation",
+   "url": "ch04-duality/03-double-dual.html#exr-double-dual-b3",
+   "shard": "ch04-duality",
+   "chapter": "Duality",
+   "chapterNumber": 4,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-double-dual-c1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C1: Subspaces of V and of V^*",
+   "url": "ch04-duality/03-double-dual.html#exr-double-dual-c1",
+   "shard": "ch04-duality",
+   "chapter": "Duality",
+   "chapterNumber": 4,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-double-dual-c2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C2: Spans cut out by equations",
+   "url": "ch04-duality/03-double-dual.html#exr-double-dual-c2",
+   "shard": "ch04-duality",
+   "chapter": "Duality",
+   "chapterNumber": 4,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-double-dual-c3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C3: Where finite dimension is needed",
+   "url": "ch04-duality/03-double-dual.html#exr-double-dual-c3",
+   "shard": "ch04-duality",
+   "chapter": "Duality",
+   "chapterNumber": 4,
+   "color": "#a8670c"
+  },
+  {
+   "id": "thm-double-dual-isomorphism",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 4.3.2",
+   "title": "The Double Dual Isomorphism",
+   "url": "ch04-duality/03-double-dual.html#thm-double-dual-isomorphism",
+   "shard": "ch04-duality",
+   "chapter": "Duality",
+   "chapterNumber": 4,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-evaluation-map-linear-injective",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 4.3.1",
+   "title": "The Evaluation Map Is Linear and Injective",
+   "url": "ch04-duality/03-double-dual.html#thm-evaluation-map-linear-injective",
+   "shard": "ch04-duality",
+   "chapter": "Duality",
+   "chapterNumber": 4,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "cor-injective-iff-dual-surjective",
+   "type": "corollary",
+   "group": "statements",
+   "name": "Corollary 4.4.5",
+   "title": "Injective and Surjective Swap Under Duality",
+   "url": "ch04-duality/04-dual-map.html#cor-injective-iff-dual-surjective",
+   "shard": "ch04-duality",
+   "chapter": "Duality",
+   "chapterNumber": 4,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "cor-rank-dual-map",
+   "type": "corollary",
+   "group": "statements",
+   "name": "Corollary 4.4.4",
+   "title": "Rank of the Dual Map",
+   "url": "ch04-duality/04-dual-map.html#cor-rank-dual-map",
+   "shard": "ch04-duality",
+   "chapter": "Duality",
+   "chapterNumber": 4,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "def-dual-map",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 4.4.1",
+   "title": "Dual Map",
+   "url": "ch04-duality/04-dual-map.html#def-dual-map",
+   "shard": "ch04-duality",
+   "chapter": "Duality",
+   "chapterNumber": 4,
+   "color": "#b0414f"
+  },
+  {
+   "id": "exm-dual-map-examples",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "Dual Maps in Four Settings",
+   "url": "ch04-duality/04-dual-map.html#exm-dual-map-examples",
+   "shard": "ch04-duality",
+   "chapter": "Duality",
+   "chapterNumber": 4,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-kernel-image-dual-map",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "Kernel and Image of a Dual Map",
+   "url": "ch04-duality/04-dual-map.html#exm-kernel-image-dual-map",
+   "shard": "ch04-duality",
+   "chapter": "Duality",
+   "chapterNumber": 4,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-matrix-of-dual-map",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "A 2 \u00d7 3 Example",
+   "url": "ch04-duality/04-dual-map.html#exm-matrix-of-dual-map",
+   "shard": "ch04-duality",
+   "chapter": "Duality",
+   "chapterNumber": 4,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exr-dual-map-a1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "A1",
+   "url": "ch04-duality/04-dual-map.html#exr-dual-map-a1",
+   "shard": "ch04-duality",
+   "chapter": "Duality",
+   "chapterNumber": 4,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-dual-map-b1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B1: Differentiation in dual bases",
+   "url": "ch04-duality/04-dual-map.html#exr-dual-map-b1",
+   "shard": "ch04-duality",
+   "chapter": "Duality",
+   "chapterNumber": 4,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-dual-map-b2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B2: Kernel and image of a dual map",
+   "url": "ch04-duality/04-dual-map.html#exr-dual-map-b2",
+   "shard": "ch04-duality",
+   "chapter": "Duality",
+   "chapterNumber": 4,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-dual-map-b3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B3: The transpose of a product, again",
+   "url": "ch04-duality/04-dual-map.html#exr-dual-map-b3",
+   "shard": "ch04-duality",
+   "chapter": "Duality",
+   "chapterNumber": 4,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-dual-map-c1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C1: The Fredholm alternative",
+   "url": "ch04-duality/04-dual-map.html#exr-dual-map-c1",
+   "shard": "ch04-duality",
+   "chapter": "Duality",
+   "chapterNumber": 4,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-dual-map-c2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C2: Invariant subspaces and annihilators",
+   "url": "ch04-duality/04-dual-map.html#exr-dual-map-c2",
+   "shard": "ch04-duality",
+   "chapter": "Duality",
+   "chapterNumber": 4,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-dual-map-c3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C3: Duality without finite dimension",
+   "url": "ch04-duality/04-dual-map.html#exr-dual-map-c3",
+   "shard": "ch04-duality",
+   "chapter": "Duality",
+   "chapterNumber": 4,
+   "color": "#a8670c"
+  },
+  {
+   "id": "thm-dual-map-properties",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 4.4.1",
+   "title": "Properties of the Dual Map",
+   "url": "ch04-duality/04-dual-map.html#thm-dual-map-properties",
+   "shard": "ch04-duality",
+   "chapter": "Duality",
+   "chapterNumber": 4,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-evaluation-natural",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 4.4.6",
+   "title": "The Evaluation Map Is Natural",
+   "url": "ch04-duality/04-dual-map.html#thm-evaluation-natural",
+   "shard": "ch04-duality",
+   "chapter": "Duality",
+   "chapterNumber": 4,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-kernel-image-dual-map",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 4.4.3",
+   "title": "Kernel and Image of the Dual Map",
+   "url": "ch04-duality/04-dual-map.html#thm-kernel-image-dual-map",
+   "shard": "ch04-duality",
+   "chapter": "Duality",
+   "chapterNumber": 4,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-matrix-of-dual-map",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 4.4.2",
+   "title": "The Matrix of the Dual Map Is the Transpose",
+   "url": "ch04-duality/04-dual-map.html#thm-matrix-of-dual-map",
+   "shard": "ch04-duality",
+   "chapter": "Duality",
+   "chapterNumber": 4,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "def-codimension",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 4.5.1",
+   "title": "Codimension",
+   "url": "ch04-duality/05-duality-subspaces-quotients.html#def-codimension",
+   "shard": "ch04-duality",
+   "chapter": "Duality",
+   "chapterNumber": 4,
+   "color": "#b0414f"
+  },
+  {
+   "id": "def-hyperplane",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 4.5.2",
+   "title": "Hyperplane",
+   "url": "ch04-duality/05-duality-subspaces-quotients.html#def-hyperplane",
+   "shard": "ch04-duality",
+   "chapter": "Duality",
+   "chapterNumber": 4,
+   "color": "#b0414f"
+  },
+  {
+   "id": "exm-dual-of-line-quotient",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "Both isomorphisms for a line",
+   "url": "ch04-duality/05-duality-subspaces-quotients.html#exm-dual-of-line-quotient",
+   "shard": "ch04-duality",
+   "chapter": "Duality",
+   "chapterNumber": 4,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exr-duality-subspaces-quotients-a1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "A1",
+   "url": "ch04-duality/05-duality-subspaces-quotients.html#exr-duality-subspaces-quotients-a1",
+   "shard": "ch04-duality",
+   "chapter": "Duality",
+   "chapterNumber": 4,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-duality-subspaces-quotients-b1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B1: The dual of a quotient of \u211d^4",
+   "url": "ch04-duality/05-duality-subspaces-quotients.html#exr-duality-subspaces-quotients-b1",
+   "shard": "ch04-duality",
+   "chapter": "Duality",
+   "chapterNumber": 4,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-duality-subspaces-quotients-b2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B2: Functionals with the same kernel",
+   "url": "ch04-duality/05-duality-subspaces-quotients.html#exr-duality-subspaces-quotients-b2",
+   "shard": "ch04-duality",
+   "chapter": "Duality",
+   "chapterNumber": 4,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-duality-subspaces-quotients-b3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B3: Dimension computations",
+   "url": "ch04-duality/05-duality-subspaces-quotients.html#exr-duality-subspaces-quotients-b3",
+   "shard": "ch04-duality",
+   "chapter": "Duality",
+   "chapterNumber": 4,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-duality-subspaces-quotients-c1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C1: Subspaces of finite codimension are intersections of hyperplanes",
+   "url": "ch04-duality/05-duality-subspaces-quotients.html#exr-duality-subspaces-quotients-c1",
+   "shard": "ch04-duality",
+   "chapter": "Duality",
+   "chapterNumber": 4,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-duality-subspaces-quotients-c2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C2: Complements and a choice of copy of U^*",
+   "url": "ch04-duality/05-duality-subspaces-quotients.html#exr-duality-subspaces-quotients-c2",
+   "shard": "ch04-duality",
+   "chapter": "Duality",
+   "chapterNumber": 4,
+   "color": "#a8670c"
+  },
+  {
+   "id": "thm-dual-of-quotient",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 4.5.2",
+   "title": "Dual of a Quotient",
+   "url": "ch04-duality/05-duality-subspaces-quotients.html#thm-dual-of-quotient",
+   "shard": "ch04-duality",
+   "chapter": "Duality",
+   "chapterNumber": 4,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-dual-of-subspace",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 4.5.1",
+   "title": "Dual of a Subspace",
+   "url": "ch04-duality/05-duality-subspaces-quotients.html#thm-dual-of-subspace",
+   "shard": "ch04-duality",
+   "chapter": "Duality",
+   "chapterNumber": 4,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-hyperplane-kernel-functional",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 4.5.3",
+   "title": "Hyperplanes Are Kernels of Functionals",
+   "url": "ch04-duality/05-duality-subspaces-quotients.html#thm-hyperplane-kernel-functional",
+   "shard": "ch04-duality",
+   "chapter": "Duality",
+   "chapterNumber": 4,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "cor-same-null-space-iff-same-row-space",
+   "type": "corollary",
+   "group": "statements",
+   "name": "Corollary 4.6.6",
+   "title": "Same solutions, same row space",
+   "url": "ch04-duality/06-hyperplanes-and-systems.html#cor-same-null-space-iff-same-row-space",
+   "shard": "ch04-duality",
+   "chapter": "Duality",
+   "chapterNumber": 4,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "exm-implicit-equations",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "Equations for a plane in \u211d^4",
+   "url": "ch04-duality/06-hyperplanes-and-systems.html#exm-implicit-equations",
+   "shard": "ch04-duality",
+   "chapter": "Duality",
+   "chapterNumber": 4,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-intersection-via-equations",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "An intersection computed from equations",
+   "url": "ch04-duality/06-hyperplanes-and-systems.html#exm-intersection-via-equations",
+   "shard": "ch04-duality",
+   "chapter": "Duality",
+   "chapterNumber": 4,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exr-hyperplanes-and-systems-a1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "A1",
+   "url": "ch04-duality/06-hyperplanes-and-systems.html#exr-hyperplanes-and-systems-a1",
+   "shard": "ch04-duality",
+   "chapter": "Duality",
+   "chapterNumber": 4,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-hyperplanes-and-systems-b1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B1: Equations for a span",
+   "url": "ch04-duality/06-hyperplanes-and-systems.html#exr-hyperplanes-and-systems-b1",
+   "shard": "ch04-duality",
+   "chapter": "Duality",
+   "chapterNumber": 4,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-hyperplanes-and-systems-b2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B2: A spanning list for a system",
+   "url": "ch04-duality/06-hyperplanes-and-systems.html#exr-hyperplanes-and-systems-b2",
+   "shard": "ch04-duality",
+   "chapter": "Duality",
+   "chapterNumber": 4,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-hyperplanes-and-systems-b3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B3: Two planes in \u211d^4",
+   "url": "ch04-duality/06-hyperplanes-and-systems.html#exr-hyperplanes-and-systems-b3",
+   "shard": "ch04-duality",
+   "chapter": "Duality",
+   "chapterNumber": 4,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-hyperplanes-and-systems-c1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C1: Avoiding finitely many subspaces",
+   "url": "ch04-duality/06-hyperplanes-and-systems.html#exr-hyperplanes-and-systems-c1",
+   "shard": "ch04-duality",
+   "chapter": "Duality",
+   "chapterNumber": 4,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-hyperplanes-and-systems-c2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C2: The least number of equations for a system",
+   "url": "ch04-duality/06-hyperplanes-and-systems.html#exr-hyperplanes-and-systems-c2",
+   "shard": "ch04-duality",
+   "chapter": "Duality",
+   "chapterNumber": 4,
+   "color": "#a8670c"
+  },
+  {
+   "id": "lem-subspace-cut-out-by-annihilator",
+   "type": "lemma",
+   "group": "statements",
+   "name": "Lemma 4.6.1",
+   "title": "A subspace is cut out by its annihilator",
+   "url": "ch04-duality/06-hyperplanes-and-systems.html#lem-subspace-cut-out-by-annihilator",
+   "shard": "ch04-duality",
+   "chapter": "Duality",
+   "chapterNumber": 4,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "prp-affine-subspace-intersection",
+   "type": "proposition",
+   "group": "statements",
+   "name": "Proposition 4.6.4",
+   "title": "Cosets as intersections of affine hyperplanes",
+   "url": "ch04-duality/06-hyperplanes-and-systems.html#prp-affine-subspace-intersection",
+   "shard": "ch04-duality",
+   "chapter": "Duality",
+   "chapterNumber": 4,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-independent-functionals-surjective",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 4.6.7",
+   "title": "Independent Functionals",
+   "url": "ch04-duality/06-hyperplanes-and-systems.html#thm-independent-functionals-surjective",
+   "shard": "ch04-duality",
+   "chapter": "Duality",
+   "chapterNumber": 4,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-parametric-to-implicit",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 4.6.3",
+   "title": "Correctness of the Conversion",
+   "url": "ch04-duality/06-hyperplanes-and-systems.html#thm-parametric-to-implicit",
+   "shard": "ch04-duality",
+   "chapter": "Duality",
+   "chapterNumber": 4,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-row-space-annihilates-null-space",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 4.6.5",
+   "title": "The Row Space Is the Annihilator of the Null Space",
+   "url": "ch04-duality/06-hyperplanes-and-systems.html#thm-row-space-annihilates-null-space",
+   "shard": "ch04-duality",
+   "chapter": "Duality",
+   "chapterNumber": 4,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-subspace-is-solution-set",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 4.6.2",
+   "title": "Every Subspace Is a Solution Set",
+   "url": "ch04-duality/06-hyperplanes-and-systems.html#thm-subspace-is-solution-set",
+   "shard": "ch04-duality",
+   "chapter": "Duality",
+   "chapterNumber": 4,
    "color": "#2f62b5"
   }
  ],
@@ -14036,6 +15188,16 @@
    "kind": "reference"
   },
   {
+   "source": "thm-basis-extension-general",
+   "target": "thm-linear-map-from-any-basis",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-linear-combination",
+   "target": "thm-linear-map-from-any-basis",
+   "kind": "reference"
+  },
+  {
    "source": "def-coordinates",
    "target": "thm-linear-transform-basis",
    "kind": "reference"
@@ -16773,6 +17935,2116 @@
   {
    "source": "thm-trace-properties",
    "target": "thm-trace-operator-properties",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-basis-existence",
+   "target": "cor-dimension-dual-space",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dual-basis",
+   "target": "cor-dimension-dual-space",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-isomorphic-iff-same-dimension",
+   "target": "cor-dimension-dual-space",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dual-basis",
+   "target": "def-dual-basis",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-change-of-coordinates",
+   "target": "exm-dual-basis-inverse-rows",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dual-basis",
+   "target": "exm-dual-basis-inverse-rows",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-functionals-on-fn",
+   "target": "exm-dual-basis-inverse-rows",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-invertible-tfae",
+   "target": "exm-dual-basis-inverse-rows",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-three-views-of-product",
+   "target": "exm-dual-basis-inverse-rows",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-two-by-two-inverse",
+   "target": "exm-dual-basis-inverse-rows",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-dimension-dual-space",
+   "target": "exm-dual-basis-polynomials",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-differentiation",
+   "target": "exm-dual-basis-polynomials",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-linear-functionals",
+   "target": "exm-dual-basis-polynomials",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dual-basis",
+   "target": "exm-dual-basis-polynomials",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-right-size-basis",
+   "target": "exm-dual-basis-polynomials",
+   "kind": "reference"
+  },
+  {
+   "source": "def-linear-functional",
+   "target": "exm-linear-functionals",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-evaluation-respects-operations",
+   "target": "exm-linear-functionals",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-trace-properties",
+   "target": "exm-linear-functionals",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-zero-maps-to-zero",
+   "target": "exm-linear-functionals",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-dimension-dual-space",
+   "target": "exm-trace-test-zero-matrix",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-rank-nullity-consequences",
+   "target": "exm-trace-test-zero-matrix",
+   "kind": "reference"
+  },
+  {
+   "source": "def-matrix-multiplication",
+   "target": "exm-trace-test-zero-matrix",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-standard-bases",
+   "target": "exm-trace-test-zero-matrix",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dual-basis",
+   "target": "exm-trace-test-zero-matrix",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-functionals-on-fn",
+   "target": "exm-trace-test-zero-matrix",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-functionals-separate-points",
+   "target": "exm-trace-test-zero-matrix",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-injective-iff-trivial-kernel",
+   "target": "exm-trace-test-zero-matrix",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-multiplication-properties",
+   "target": "exm-trace-test-zero-matrix",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-trace-properties",
+   "target": "exm-trace-test-zero-matrix",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-dimension-dual-space",
+   "target": "exr-linear-functionals-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "def-dual-space",
+   "target": "exr-linear-functionals-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "def-linear-functional",
+   "target": "exr-linear-functionals-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-dual-basis-inverse-rows",
+   "target": "exr-linear-functionals-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dual-basis",
+   "target": "exr-linear-functionals-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-functionals-separate-points",
+   "target": "exr-linear-functionals-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-dual-basis-inverse-rows",
+   "target": "exr-linear-functionals-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-distinct-degrees-independent",
+   "target": "exr-linear-functionals-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dual-basis",
+   "target": "exr-linear-functionals-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-inverse-by-row-reduction",
+   "target": "exr-linear-functionals-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-right-size-basis",
+   "target": "exr-linear-functionals-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "def-dual-space",
+   "target": "exr-linear-functionals-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-functionals-on-fn",
+   "target": "exr-linear-functionals-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-zero-maps-to-zero",
+   "target": "exr-linear-functionals-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-dual-basis-inverse-rows",
+   "target": "exr-linear-functionals-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-dual-basis-polynomials",
+   "target": "exr-linear-functionals-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dual-basis",
+   "target": "exr-linear-functionals-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-nonzero-functional-surjective",
+   "target": "exr-linear-functionals-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-basis-existence",
+   "target": "exr-linear-functionals-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-basis-extension",
+   "target": "exr-linear-functionals-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-functionals-on-fn",
+   "target": "exr-linear-functionals-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-functionals-separate-points",
+   "target": "exr-linear-functionals-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-linear-transform-basis",
+   "target": "exr-linear-functionals-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-subspace-dimension",
+   "target": "exr-linear-functionals-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-dimension-dual-space",
+   "target": "exr-linear-functionals-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-linear-functionals",
+   "target": "exr-linear-functionals-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dual-basis",
+   "target": "exr-linear-functionals-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-interpolation-unique",
+   "target": "exr-linear-functionals-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-right-size-basis",
+   "target": "exr-linear-functionals-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-size-bounds",
+   "target": "exr-linear-functionals-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "def-dual-space",
+   "target": "exr-linear-functionals-c4",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-basis-of-polynomials",
+   "target": "exr-linear-functionals-c4",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-sequence-standard-vectors",
+   "target": "exr-linear-functionals-c4",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-coordinate-functionals-do-not-span",
+   "target": "exr-linear-functionals-c4",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-injective-iff-trivial-kernel",
+   "target": "exr-linear-functionals-c4",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-inverse-is-linear",
+   "target": "exr-linear-functionals-c4",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-linear-combination",
+   "target": "exr-linear-functionals-c4",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-linear-map-from-any-basis",
+   "target": "exr-linear-functionals-c4",
+   "kind": "reference"
+  },
+  {
+   "source": "def-polynomial",
+   "target": "prp-coordinate-functionals-do-not-span",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-linear-functionals",
+   "target": "prp-coordinate-functionals-do-not-span",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-standard-bases",
+   "target": "prp-nonzero-functional-surjective",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-composition-linear",
+   "target": "prp-nonzero-functional-surjective",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-coordinates-linear",
+   "target": "prp-nonzero-functional-surjective",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-linear-maps-vector-space",
+   "target": "prp-nonzero-functional-surjective",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rank-nullity",
+   "target": "prp-nonzero-functional-surjective",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-zero-maps-to-zero",
+   "target": "prp-nonzero-functional-surjective",
+   "kind": "reference"
+  },
+  {
+   "source": "def-coordinates",
+   "target": "thm-dual-basis",
+   "kind": "reference"
+  },
+  {
+   "source": "def-dual-space",
+   "target": "thm-dual-basis",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-linear-combination",
+   "target": "thm-dual-basis",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-linear-transform-basis",
+   "target": "thm-dual-basis",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-matrix-transformation",
+   "target": "thm-functionals-on-fn",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-inverse-is-linear",
+   "target": "thm-functionals-on-fn",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-linear-transform-basis",
+   "target": "thm-functionals-on-fn",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-basis-extension",
+   "target": "thm-functionals-separate-points",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-basis-extension-general",
+   "target": "thm-functionals-separate-points",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dual-basis",
+   "target": "thm-functionals-separate-points",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-zero-product",
+   "target": "thm-functionals-separate-points",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-zorn",
+   "target": "thm-functionals-separate-points",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-linear-functionals",
+   "target": "exm-annihilator-of-evaluation-kernel",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-annihilator-subspace",
+   "target": "exm-annihilator-of-evaluation-kernel",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-nonzero-functional-surjective",
+   "target": "exm-annihilator-of-evaluation-kernel",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dim-impl-eq",
+   "target": "exm-annihilator-of-evaluation-kernel",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dimension-annihilator",
+   "target": "exm-annihilator-of-evaluation-kernel",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-right-size-basis",
+   "target": "exm-annihilator-of-evaluation-kernel",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-nonzero-functional-surjective",
+   "target": "exm-annihilator-via-null-space",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-basis-null-space",
+   "target": "exm-annihilator-via-null-space",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dim-impl-eq",
+   "target": "exm-annihilator-via-null-space",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dimension-annihilator",
+   "target": "exm-annihilator-via-null-space",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-functionals-on-fn",
+   "target": "exm-annihilator-via-null-space",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-linear-combination",
+   "target": "exm-annihilator-via-null-space",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dual-basis",
+   "target": "exm-annihilators",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-zero-maps-to-zero",
+   "target": "exm-annihilators",
+   "kind": "reference"
+  },
+  {
+   "source": "def-annihilator",
+   "target": "exr-annihilators-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-annihilator-via-null-space",
+   "target": "exr-annihilators-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-annihilators",
+   "target": "exr-annihilators-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-annihilator-subspace",
+   "target": "exr-annihilators-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-annihilator-properties",
+   "target": "exr-annihilators-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dim-impl-eq",
+   "target": "exr-annihilators-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dimension-annihilator",
+   "target": "exr-annihilators-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-functionals-on-fn",
+   "target": "exr-annihilators-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-annihilator-via-null-space",
+   "target": "exr-annihilators-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-basis-null-space",
+   "target": "exr-annihilators-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dim-impl-eq",
+   "target": "exr-annihilators-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dimension-annihilator",
+   "target": "exr-annihilators-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rank-nullity",
+   "target": "exr-annihilators-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-row-rank-equals-column-rank",
+   "target": "exr-annihilators-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-annihilator-properties",
+   "target": "exr-annihilators-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dual-basis",
+   "target": "exr-annihilators-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-annihilator-subspace",
+   "target": "exr-annihilators-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-nonzero-functional-surjective",
+   "target": "exr-annihilators-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dim-impl-eq",
+   "target": "exr-annihilators-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dimension-annihilator",
+   "target": "exr-annihilators-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-annihilator-properties",
+   "target": "exr-annihilators-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-basis-extension",
+   "target": "exr-annihilators-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-basis-extension-general",
+   "target": "exr-annihilators-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-every-space-has-basis",
+   "target": "exr-annihilators-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-intersection-subspaces",
+   "target": "exr-annihilators-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-linear-transform-basis",
+   "target": "exr-annihilators-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-subspace-dimension",
+   "target": "exr-annihilators-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dim-impl-eq",
+   "target": "exr-annihilators-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dimension-annihilator",
+   "target": "exr-annihilators-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rank-nullity",
+   "target": "exr-annihilators-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-annihilators",
+   "target": "exr-annihilators-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-annihilator-properties",
+   "target": "exr-annihilators-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-direct-sum-criteria",
+   "target": "exr-annihilators-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "def-dual-space",
+   "target": "prp-annihilator-subspace",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-subspace-test",
+   "target": "prp-annihilator-subspace",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-dimension-dual-space",
+   "target": "thm-annihilator-properties",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dim-impl-eq",
+   "target": "thm-annihilator-properties",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dimension-annihilator",
+   "target": "thm-annihilator-properties",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dimension-formula-subspace-dim",
+   "target": "thm-annihilator-properties",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-intersection-subspaces",
+   "target": "thm-annihilator-properties",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-linear-combination",
+   "target": "thm-annihilator-properties",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-span-subspace",
+   "target": "thm-annihilator-properties",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-subspace-dimension",
+   "target": "thm-annihilator-properties",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-subspace-sum",
+   "target": "thm-annihilator-properties",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-basis-existence",
+   "target": "thm-dimension-annihilator",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-annihilator-subspace",
+   "target": "thm-dimension-annihilator",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-basis-extension",
+   "target": "thm-dimension-annihilator",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dual-basis",
+   "target": "thm-dimension-annihilator",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-linear-combination",
+   "target": "thm-dimension-annihilator",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-span-subspace",
+   "target": "thm-dimension-annihilator",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-subspace-dimension",
+   "target": "thm-dimension-annihilator",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-dimension-dual-space",
+   "target": "cor-annihilator-of-annihilator",
+   "kind": "reference"
+  },
+  {
+   "source": "def-annihilator",
+   "target": "cor-annihilator-of-annihilator",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dim-impl-eq",
+   "target": "cor-annihilator-of-annihilator",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dimension-annihilator",
+   "target": "cor-annihilator-of-annihilator",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-evaluation-map-linear-injective",
+   "target": "cor-annihilator-of-annihilator",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-isomorphic-iff-same-dimension",
+   "target": "cor-annihilator-of-annihilator",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-dimension-dual-space",
+   "target": "cor-every-basis-of-dual-is-dual",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-double-dual-isomorphism",
+   "target": "cor-every-basis-of-dual-is-dual",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dual-basis",
+   "target": "cor-every-basis-of-dual-is-dual",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-functionals-separate-points",
+   "target": "cor-every-basis-of-dual-is-dual",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-isomorphic-equivalence-relation",
+   "target": "cor-every-basis-of-dual-is-dual",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-isomorphism-preserves-bases",
+   "target": "cor-every-basis-of-dual-is-dual",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-annihilator-of-annihilator",
+   "target": "cor-subspaces-determined-by-annihilator",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-annihilator-properties",
+   "target": "cor-subspaces-determined-by-annihilator",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-coordinate-isomorphism",
+   "target": "exm-basis-from-dual-basis",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dual-basis",
+   "target": "exm-basis-from-dual-basis",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-inverse-by-row-reduction",
+   "target": "exm-basis-from-dual-basis",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-one-sided-inverse",
+   "target": "exm-basis-from-dual-basis",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-three-views-of-product",
+   "target": "exm-basis-from-dual-basis",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-dual-basis-polynomials",
+   "target": "exm-evaluation-map",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dual-basis",
+   "target": "exm-evaluation-map",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-functionals-on-fn",
+   "target": "exm-evaluation-map",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-linear-transform-basis",
+   "target": "exm-evaluation-map",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-zero-maps-to-zero",
+   "target": "exm-evaluation-map",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-append-independent",
+   "target": "exm-evaluation-not-surjective",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-coordinate-functionals-do-not-span",
+   "target": "exm-evaluation-not-surjective",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-basis-extension-general",
+   "target": "exm-evaluation-not-surjective",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-linear-map-from-any-basis",
+   "target": "exm-evaluation-not-surjective",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-annihilator-of-annihilator",
+   "target": "exr-double-dual-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-subspaces-determined-by-annihilator",
+   "target": "exr-double-dual-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "def-evaluation-map",
+   "target": "exr-double-dual-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-evaluation-not-surjective",
+   "target": "exr-double-dual-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dim-impl-eq",
+   "target": "exr-double-dual-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-double-dual-isomorphism",
+   "target": "exr-double-dual-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-evaluation-map-linear-injective",
+   "target": "exr-double-dual-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-basis-from-dual-basis",
+   "target": "exr-double-dual-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dual-basis",
+   "target": "exr-double-dual-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-two-by-two-inverse",
+   "target": "exr-double-dual-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "def-annihilator",
+   "target": "exr-double-dual-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-annihilator-properties",
+   "target": "exr-double-dual-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dimension-annihilator",
+   "target": "exr-double-dual-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-double-dual-isomorphism",
+   "target": "exr-double-dual-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-functionals-on-fn",
+   "target": "exr-double-dual-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-evaluation-map",
+   "target": "exr-double-dual-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-double-dual-isomorphism",
+   "target": "exr-double-dual-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-evaluation-map-linear-injective",
+   "target": "exr-double-dual-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-linear-transform-basis",
+   "target": "exr-double-dual-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dual-basis",
+   "target": "exr-double-dual-b3",
+   "kind": "mention"
+  },
+  {
+   "source": "cor-annihilator-of-annihilator",
+   "target": "exr-double-dual-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-dimension-dual-space",
+   "target": "exr-double-dual-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-subspaces-determined-by-annihilator",
+   "target": "exr-double-dual-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-annihilator-subspace",
+   "target": "exr-double-dual-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-annihilator-properties",
+   "target": "exr-double-dual-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dim-impl-eq",
+   "target": "exr-double-dual-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dimension-annihilator",
+   "target": "exr-double-dual-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-double-dual-isomorphism",
+   "target": "exr-double-dual-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-annihilator-of-annihilator",
+   "target": "exr-double-dual-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-annihilator-properties",
+   "target": "exr-double-dual-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-span-subspace",
+   "target": "exr-double-dual-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-evaluation-not-surjective",
+   "target": "exr-double-dual-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "exr-double-dual-c1",
+   "target": "exr-double-dual-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-coordinate-functionals-do-not-span",
+   "target": "exr-double-dual-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-dimension-dual-space",
+   "target": "thm-double-dual-isomorphism",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-rank-nullity-consequences",
+   "target": "thm-double-dual-isomorphism",
+   "kind": "reference"
+  },
+  {
+   "source": "def-dual-basis",
+   "target": "thm-double-dual-isomorphism",
+   "kind": "reference"
+  },
+  {
+   "source": "def-isomorphism",
+   "target": "thm-double-dual-isomorphism",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dual-basis",
+   "target": "thm-double-dual-isomorphism",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-evaluation-map-linear-injective",
+   "target": "thm-double-dual-isomorphism",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-right-size-basis",
+   "target": "thm-double-dual-isomorphism",
+   "kind": "mention"
+  },
+  {
+   "source": "def-space-of-linear-maps",
+   "target": "thm-evaluation-map-linear-injective",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-basis-extension-general",
+   "target": "thm-evaluation-map-linear-injective",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-functionals-separate-points",
+   "target": "thm-evaluation-map-linear-injective",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-injective-iff-trivial-kernel",
+   "target": "thm-evaluation-map-linear-injective",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-linear-map-from-any-basis",
+   "target": "thm-evaluation-map-linear-injective",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-basis-extension",
+   "target": "thm-evaluation-map-linear-injective",
+   "kind": "mention"
+  },
+  {
+   "source": "cor-rank-dual-map",
+   "target": "cor-injective-iff-dual-surjective",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-rank-nullity-consequences",
+   "target": "cor-injective-iff-dual-surjective",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dim-impl-eq",
+   "target": "cor-injective-iff-dual-surjective",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dimension-annihilator",
+   "target": "cor-injective-iff-dual-surjective",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-injective-iff-trivial-kernel",
+   "target": "cor-injective-iff-dual-surjective",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-kernel-image-dual-map",
+   "target": "cor-injective-iff-dual-surjective",
+   "kind": "reference"
+  },
+  {
+   "source": "def-rank-matrix",
+   "target": "cor-rank-dual-map",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-matrix-of-matrix-map",
+   "target": "cor-rank-dual-map",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-isomorphic-iff-same-dimension",
+   "target": "cor-rank-dual-map",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-kernel-image-dual-map",
+   "target": "cor-rank-dual-map",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-linear-combination",
+   "target": "cor-rank-dual-map",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-of-dual-map",
+   "target": "cor-rank-dual-map",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rank-map-equals-rank-matrix",
+   "target": "cor-rank-dual-map",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-transpose-properties",
+   "target": "cor-rank-dual-map",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-row-rank-equals-column-rank",
+   "target": "cor-rank-dual-map",
+   "kind": "mention"
+  },
+  {
+   "source": "cor-dimension-dual-space",
+   "target": "exm-dual-map-examples",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-zero-maps-to-zero",
+   "target": "exm-dual-map-examples",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-dual-map-examples",
+   "target": "exm-kernel-image-dual-map",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-matrix-of-matrix-map",
+   "target": "exm-kernel-image-dual-map",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-basis-column-space",
+   "target": "exm-kernel-image-dual-map",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dimension-annihilator",
+   "target": "exm-kernel-image-dual-map",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-kernel-image-dual-map",
+   "target": "exm-kernel-image-dual-map",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-of-dual-map",
+   "target": "exm-kernel-image-dual-map",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-dual-basis-polynomials",
+   "target": "exm-matrix-of-dual-map",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-of-dual-map",
+   "target": "exm-matrix-of-dual-map",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-of-map-coordinates",
+   "target": "exm-matrix-of-dual-map",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-injective-iff-dual-surjective",
+   "target": "exr-dual-map-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-rank-nullity-consequences",
+   "target": "exr-dual-map-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "def-dual-map",
+   "target": "exr-dual-map-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dual-map-properties",
+   "target": "exr-dual-map-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-of-dual-map",
+   "target": "exr-dual-map-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rank-nullity",
+   "target": "exr-dual-map-a1",
+   "kind": "mention"
+  },
+  {
+   "source": "thm-kernel-image-dual-map",
+   "target": "exr-dual-map-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-of-dual-map",
+   "target": "exr-dual-map-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-dual-map-examples",
+   "target": "exr-dual-map-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-kernel-image-dual-map",
+   "target": "exr-dual-map-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-matrix-of-matrix-map",
+   "target": "exr-dual-map-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dual-map-properties",
+   "target": "exr-dual-map-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-of-composition",
+   "target": "exr-dual-map-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-of-dual-map",
+   "target": "exr-dual-map-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-annihilator-of-annihilator",
+   "target": "exr-dual-map-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-dual-map-examples",
+   "target": "exr-dual-map-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-functionals-on-fn",
+   "target": "exr-dual-map-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-kernel-image-dual-map",
+   "target": "exr-dual-map-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-annihilator-of-annihilator",
+   "target": "exr-dual-map-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-dual-map-examples",
+   "target": "exr-dual-map-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-basis-extension-general",
+   "target": "exr-dual-map-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-every-space-has-basis",
+   "target": "exr-dual-map-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-injective-iff-trivial-kernel",
+   "target": "exr-dual-map-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-kernel-image-dual-map",
+   "target": "exr-dual-map-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-linear-map-from-any-basis",
+   "target": "exr-dual-map-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "def-dual-map",
+   "target": "thm-dual-map-properties",
+   "kind": "reference"
+  },
+  {
+   "source": "def-invertible-linear-map",
+   "target": "thm-dual-map-properties",
+   "kind": "reference"
+  },
+  {
+   "source": "def-space-of-linear-maps",
+   "target": "thm-dual-map-properties",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-dual-map-examples",
+   "target": "thm-dual-map-properties",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-composition-linear",
+   "target": "thm-dual-map-properties",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-composition-associative",
+   "target": "thm-dual-map-properties",
+   "kind": "mention"
+  },
+  {
+   "source": "def-dual-map",
+   "target": "thm-evaluation-natural",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-double-dual-isomorphism",
+   "target": "thm-evaluation-natural",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dual-map-properties",
+   "target": "thm-evaluation-natural",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-dimension-dual-space",
+   "target": "thm-kernel-image-dual-map",
+   "kind": "reference"
+  },
+  {
+   "source": "def-annihilator",
+   "target": "thm-kernel-image-dual-map",
+   "kind": "reference"
+  },
+  {
+   "source": "def-image",
+   "target": "thm-kernel-image-dual-map",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dim-impl-eq",
+   "target": "thm-kernel-image-dual-map",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dimension-annihilator",
+   "target": "thm-kernel-image-dual-map",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rank-nullity",
+   "target": "thm-kernel-image-dual-map",
+   "kind": "reference"
+  },
+  {
+   "source": "def-matrix-of-linear-map",
+   "target": "thm-matrix-of-dual-map",
+   "kind": "reference"
+  },
+  {
+   "source": "def-transpose",
+   "target": "thm-matrix-of-dual-map",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dual-basis",
+   "target": "thm-matrix-of-dual-map",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-unique-representation",
+   "target": "thm-matrix-of-dual-map",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-annihilator-properties",
+   "target": "exm-dual-of-line-quotient",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dimension-annihilator",
+   "target": "exm-dual-of-line-quotient",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dimension-quotient",
+   "target": "exm-dual-of-line-quotient",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dual-basis",
+   "target": "exm-dual-of-line-quotient",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dual-of-quotient",
+   "target": "exm-dual-of-line-quotient",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dual-of-subspace",
+   "target": "exm-dual-of-line-quotient",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-right-size-basis",
+   "target": "exm-dual-of-line-quotient",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-dimension-dual-space",
+   "target": "exr-duality-subspaces-quotients-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-nonzero-functional-surjective",
+   "target": "exr-duality-subspaces-quotients-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dimension-quotient",
+   "target": "exr-duality-subspaces-quotients-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dual-of-quotient",
+   "target": "exr-duality-subspaces-quotients-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dual-of-subspace",
+   "target": "exr-duality-subspaces-quotients-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-annihilator-properties",
+   "target": "exr-duality-subspaces-quotients-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dimension-annihilator",
+   "target": "exr-duality-subspaces-quotients-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dual-basis",
+   "target": "exr-duality-subspaces-quotients-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dual-of-quotient",
+   "target": "exr-duality-subspaces-quotients-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-right-size-basis",
+   "target": "exr-duality-subspaces-quotients-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "exr-linear-functionals-c1",
+   "target": "exr-duality-subspaces-quotients-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-hyperplane-kernel-functional",
+   "target": "exr-duality-subspaces-quotients-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-dimension-dual-space",
+   "target": "exr-duality-subspaces-quotients-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dimension-annihilator",
+   "target": "exr-duality-subspaces-quotients-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dimension-quotient",
+   "target": "exr-duality-subspaces-quotients-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dual-of-quotient",
+   "target": "exr-duality-subspaces-quotients-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dual-of-subspace",
+   "target": "exr-duality-subspaces-quotients-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-evaluation-respects-operations",
+   "target": "exr-duality-subspaces-quotients-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-first-isomorphism",
+   "target": "exr-duality-subspaces-quotients-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-hyperplane-kernel-functional",
+   "target": "exr-duality-subspaces-quotients-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-right-size-basis",
+   "target": "exr-duality-subspaces-quotients-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-coset-equality",
+   "target": "exr-duality-subspaces-quotients-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dual-basis",
+   "target": "exr-duality-subspaces-quotients-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dual-of-quotient",
+   "target": "exr-duality-subspaces-quotients-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-first-isomorphism",
+   "target": "exr-duality-subspaces-quotients-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-hyperplane-kernel-functional",
+   "target": "exr-duality-subspaces-quotients-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-subspace-dimension",
+   "target": "exr-duality-subspaces-quotients-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-rank-nullity-consequences",
+   "target": "exr-duality-subspaces-quotients-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "exr-annihilators-c3",
+   "target": "exr-duality-subspaces-quotients-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-annihilator-properties",
+   "target": "exr-duality-subspaces-quotients-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dim-impl-eq",
+   "target": "exr-duality-subspaces-quotients-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dimension-annihilator",
+   "target": "exr-duality-subspaces-quotients-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dimension-formula-subspace-dim",
+   "target": "exr-duality-subspaces-quotients-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-direct-sum-criteria",
+   "target": "exr-duality-subspaces-quotients-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dual-of-subspace",
+   "target": "exr-duality-subspaces-quotients-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-dimension-dual-space",
+   "target": "thm-dual-of-quotient",
+   "kind": "reference"
+  },
+  {
+   "source": "def-dual-map",
+   "target": "thm-dual-of-quotient",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dimension-annihilator",
+   "target": "thm-dual-of-quotient",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dimension-quotient",
+   "target": "thm-dual-of-quotient",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-injective-iff-trivial-kernel",
+   "target": "thm-dual-of-quotient",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-quotient-space-operations-well-defined",
+   "target": "thm-dual-of-quotient",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-quotient-universal-property",
+   "target": "thm-dual-of-quotient",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-basis-existence",
+   "target": "thm-dual-of-subspace",
+   "kind": "reference"
+  },
+  {
+   "source": "def-annihilator",
+   "target": "thm-dual-of-subspace",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-basis-extension",
+   "target": "thm-dual-of-subspace",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-basis-extension-general",
+   "target": "thm-dual-of-subspace",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-every-space-has-basis",
+   "target": "thm-dual-of-subspace",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-first-isomorphism",
+   "target": "thm-dual-of-subspace",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-linear-map-from-any-basis",
+   "target": "thm-dual-of-subspace",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-linear-transform-basis",
+   "target": "thm-dual-of-subspace",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-coset-equality",
+   "target": "thm-hyperplane-kernel-functional",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-composition-linear",
+   "target": "thm-hyperplane-kernel-functional",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dim-impl-eq",
+   "target": "thm-hyperplane-kernel-functional",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-evaluation-respects-operations",
+   "target": "thm-hyperplane-kernel-functional",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-first-isomorphism",
+   "target": "thm-hyperplane-kernel-functional",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-isomorphic-iff-same-dimension",
+   "target": "thm-hyperplane-kernel-functional",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-prop-image",
+   "target": "thm-hyperplane-kernel-functional",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-subspaces-determined-by-annihilator",
+   "target": "cor-same-null-space-iff-same-row-space",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-row-space-annihilates-null-space",
+   "target": "cor-same-null-space-iff-same-row-space",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-annihilator-properties",
+   "target": "exm-implicit-equations",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-basis-null-space",
+   "target": "exm-implicit-equations",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dim-impl-eq",
+   "target": "exm-implicit-equations",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-subspace-is-solution-set",
+   "target": "exm-implicit-equations",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-intersection-by-elimination",
+   "target": "exm-intersection-via-equations",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-same-null-space-iff-same-row-space",
+   "target": "exr-hyperplanes-and-systems-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-functionals-on-fn",
+   "target": "exr-hyperplanes-and-systems-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-linear-transform-basis",
+   "target": "exr-hyperplanes-and-systems-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-multiplication-properties",
+   "target": "exr-hyperplanes-and-systems-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-row-space-annihilates-null-space",
+   "target": "exr-hyperplanes-and-systems-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-subspace-is-solution-set",
+   "target": "exr-hyperplanes-and-systems-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-affine-subspace-intersection",
+   "target": "exr-hyperplanes-and-systems-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-parametric-to-implicit",
+   "target": "exr-hyperplanes-and-systems-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-span-absorb",
+   "target": "exr-hyperplanes-and-systems-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-subspace-is-solution-set",
+   "target": "exr-hyperplanes-and-systems-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-same-null-space-iff-same-row-space",
+   "target": "exr-hyperplanes-and-systems-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-basis-null-space",
+   "target": "exr-hyperplanes-and-systems-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dim-impl-eq",
+   "target": "exr-hyperplanes-and-systems-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-row-ops-row-space",
+   "target": "exr-hyperplanes-and-systems-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-subspace-cut-out-by-annihilator",
+   "target": "exr-hyperplanes-and-systems-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-annihilator-properties",
+   "target": "exr-hyperplanes-and-systems-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dimension-annihilator",
+   "target": "exr-hyperplanes-and-systems-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dimension-formula-subspace-dim",
+   "target": "exr-hyperplanes-and-systems-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-subspace-is-solution-set",
+   "target": "exr-hyperplanes-and-systems-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "exr-subspaces-c1",
+   "target": "exr-hyperplanes-and-systems-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-root-bound",
+   "target": "exr-hyperplanes-and-systems-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-subspace-cut-out-by-annihilator",
+   "target": "exr-hyperplanes-and-systems-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-linear-transform-basis",
+   "target": "exr-hyperplanes-and-systems-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-affine-subspace-intersection",
+   "target": "exr-hyperplanes-and-systems-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-general-solution-structure",
+   "target": "exr-hyperplanes-and-systems-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rank-nullity-matrix",
+   "target": "exr-hyperplanes-and-systems-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-subspace-is-solution-set",
+   "target": "exr-hyperplanes-and-systems-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "def-annihilator",
+   "target": "lem-subspace-cut-out-by-annihilator",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-coset-equality",
+   "target": "lem-subspace-cut-out-by-annihilator",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dimension-quotient",
+   "target": "lem-subspace-cut-out-by-annihilator",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dual-of-quotient",
+   "target": "lem-subspace-cut-out-by-annihilator",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-functionals-separate-points",
+   "target": "lem-subspace-cut-out-by-annihilator",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-general-solution-structure",
+   "target": "prp-affine-subspace-intersection",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-hyperplane-kernel-functional",
+   "target": "prp-affine-subspace-intersection",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-subspace-is-solution-set",
+   "target": "prp-affine-subspace-intersection",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dim-impl-eq",
+   "target": "thm-independent-functionals-surjective",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dimension-annihilator",
+   "target": "thm-independent-functionals-surjective",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-first-isomorphism",
+   "target": "thm-independent-functionals-surjective",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-implicit-equations",
+   "target": "thm-parametric-to-implicit",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-annihilator-properties",
+   "target": "thm-parametric-to-implicit",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dimension-annihilator",
+   "target": "thm-parametric-to-implicit",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-isomorphism-preserves-bases",
+   "target": "thm-parametric-to-implicit",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-subspace-is-solution-set",
+   "target": "thm-parametric-to-implicit",
+   "kind": "reference"
+  },
+  {
+   "source": "def-dual-map",
+   "target": "thm-row-space-annihilates-null-space",
+   "kind": "reference"
+  },
+  {
+   "source": "def-row-space",
+   "target": "thm-row-space-annihilates-null-space",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dimension-annihilator",
+   "target": "thm-row-space-annihilates-null-space",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-kernel-image-dual-map",
+   "target": "thm-row-space-annihilates-null-space",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-times-vector-columns",
+   "target": "thm-row-space-annihilates-null-space",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-transpose-properties",
+   "target": "thm-row-space-annihilates-null-space",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-subspace-cut-out-by-annihilator",
+   "target": "thm-subspace-is-solution-set",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dimension-annihilator",
+   "target": "thm-subspace-is-solution-set",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rank-nullity-matrix",
+   "target": "thm-subspace-is-solution-set",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-row-rank-equals-column-rank",
+   "target": "thm-subspace-is-solution-set",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-size-bounds",
+   "target": "thm-subspace-is-solution-set",
    "kind": "reference"
   }
  ]
