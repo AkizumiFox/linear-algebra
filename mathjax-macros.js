@@ -330,6 +330,7 @@ window.BOOK_MACROS = {
  "vbeta": "\\bm{\\upbeta}",
  "vchi": "\\bm{\\upchi}",
  "vdelta": "\\bm{\\updelta}",
+ "vecop": "\\operatorname{vec}",
  "vepsilon": "\\bm{\\upepsilon}",
  "veta": "\\bm{\\upeta}",
  "vgamma": "\\bm{\\upgamma}",
