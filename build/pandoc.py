@@ -34,6 +34,7 @@ def page_metadata(book: Book, page: Page, output_format: str, extra: Optional[di
         "pagetitle": f"{page.number} {page.title}" if page.number else page.title,
         "tikz-cache-dir": str(book.tikz_cache_dir),
         "page-shard": page.shard,
+        "page-path": page.html_path,
         "book-root": str(book.root),
         "engine-root": str(ENGINE_ROOT),
         "source-path": str(page.source.relative_to(book.root)),

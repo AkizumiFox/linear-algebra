@@ -463,6 +463,104 @@ div.equation mjx-container[display="true"] {
   color: var(--ink-strong);
 }
 
+/* --- Foldable proofs and solutions (main.js) --- */
+.foldable {
+  position: relative;
+}
+
+.fold-toggle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.15rem 0.5rem;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  background: var(--paper);
+  color: var(--faint);
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  line-height: 1.4;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.2s ease, color 0.15s ease, border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.foldable:hover > .fold-toggle,
+.fold-toggle:focus-visible {
+  opacity: 1;
+}
+
+@media (hover: none) {
+  .fold-toggle {
+    opacity: 1;
+  }
+}
+
+.fold-toggle:hover {
+  border-color: var(--rule-strong);
+  color: var(--accent);
+}
+
+.fold-toggle .bi {
+  font-size: 0.8em;
+}
+
+/* Folded: only "Solution." / "Proof." and the button remain */
+.foldable.is-folded {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding-top: 0.25em;
+  padding-bottom: 0.25em;
+}
+
+.foldable.is-folded::before {
+  content: attr(data-fold-label);
+  color: var(--ink-strong);
+  font-style: italic;
+}
+
+.foldable.is-folded > :not(.fold-toggle) {
+  display: none;
+}
+
+.foldable.is-folded > .fold-toggle {
+  position: static;
+  border-color: var(--rule-strong);
+  color: var(--muted);
+  opacity: 1;
+}
+
+.foldable.is-folded > .fold-toggle:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.proof.is-folded::after {
+  display: none;
+}
+
+@media print {
+  .fold-toggle {
+    display: none !important;
+  }
+
+  .foldable.is-folded {
+    display: block;
+  }
+
+  .foldable.is-folded::before {
+    content: none;
+  }
+
+  .foldable.is-folded > :not(.fold-toggle) {
+    display: revert;
+  }
+}
+
 /* End of proof */
 .proof::after {
   content: "■";
@@ -472,6 +570,80 @@ div.equation mjx-container[display="true"] {
   line-height: 1;
   margin-top: 0.1em;
   color: var(--muted);
+}
+
+/* --- "Continue reading" card on the start page (main.js) --- */
+.continue-reading {
+  position: relative;
+  margin: -1rem 0 2rem;
+}
+
+.continue-reading-link {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  padding: 0.8rem 3rem 0.8rem 1rem;
+  border: 1px solid var(--rule);
+  border-left: 3px solid var(--accent);
+  border-radius: 0 8px 8px 0;
+  color: var(--ink);
+  text-decoration: none;
+  transition: border-color 0.2s ease;
+}
+
+.continue-reading-label {
+  color: var(--muted);
+  font-size: 0.75rem;
+}
+
+.continue-reading-title {
+  color: var(--ink-strong);
+  font-size: 1rem;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.continue-reading-heading {
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.continue-reading-heading:empty {
+  display: none;
+}
+
+@media (any-hover: hover) {
+  .continue-reading-link:hover {
+    border-color: var(--rule-strong);
+    border-left-color: var(--accent);
+  }
+
+  .continue-reading-link:hover .continue-reading-title {
+    color: var(--accent);
+  }
+}
+
+.continue-reading-dismiss {
+  position: absolute;
+  top: 50%;
+  right: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  padding: 0;
+  border: none;
+  border-radius: 6px;
+  background: none;
+  color: var(--faint);
+  cursor: pointer;
+  transform: translateY(-50%);
+}
+
+.continue-reading-dismiss:hover {
+  background: var(--subtle);
+  color: var(--ink-strong);
 }
 
 /* ==========================================================================
@@ -921,6 +1093,15 @@ th {
   min-width: 1.7em;
   color: var(--faint);
   font-variant-numeric: lining-nums tabular-nums;
+}
+
+/* Sections the reader has visited (main.js) */
+.nav-section-item.visited a::after {
+  content: "✓";
+  margin-left: auto;
+  padding-left: 0.4rem;
+  color: var(--faint);
+  font-size: 0.75em;
 }
 
 .nav-section-item.active a {
@@ -1496,6 +1677,14 @@ th {
   color: var(--ink-strong);
   font-weight: 700;
   font-variant-numeric: lining-nums;
+}
+
+.tooltip-go {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 0.6rem;
+  font-weight: 600;
+  text-decoration: none;
 }
 
 .tooltip-content p {
