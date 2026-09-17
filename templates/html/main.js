@@ -401,6 +401,32 @@
     }
 
     // ==========================================================================
+    // Wide Inline Formulas
+    // ==========================================================================
+
+    /**
+     * MathJax cannot break inline formulas across lines. On narrow screens a long one
+     * overflows the column and is clipped; mark those so they scroll sideways instead.
+     */
+    function setupWideInlineMath() {
+        if (!window.MathJax) return;
+        const update = () => {
+            document.querySelectorAll('.content mjx-container:not([display="true"])').forEach(math => {
+                math.classList.remove('wide-inline');
+                const column = math.closest('li, p, .env, .small-env, .content');
+                if (column && math.getBoundingClientRect().width > column.clientWidth) {
+                    math.classList.add('wide-inline');
+                }
+            });
+        };
+        const whenReady = () => MathJax.startup?.promise?.then(update);
+        if (MathJax.startup?.promise) whenReady();
+        else window.addEventListener('load', whenReady);
+        let timer;
+        window.addEventListener('resize', () => { clearTimeout(timer); timer = setTimeout(update, 200); });
+    }
+
+    // ==========================================================================
     // Link Anchors and Targets
     // ==========================================================================
 
@@ -703,6 +729,8 @@
 
         // Build table of contents
         buildTableOfContents();
+
+        setupWideInlineMath();
 
         // Link anchors on headings and theorems; highlight the linked element
         setupAnchorLinks();

@@ -372,6 +372,16 @@ mjx-container[display="true"] {
     radial-gradient(farthest-side at 100% 50%, color-mix(in srgb, var(--ink) 22%, transparent), transparent) right / 0.8rem 100% no-repeat scroll;
 }
 
+/* Inline formulas wider than the column (marked by main.js) scroll sideways */
+mjx-container.wide-inline {
+  display: inline-block;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  vertical-align: bottom;
+  scrollbar-width: thin;
+}
+
 .env mjx-container[display="true"] {
   --surface: color-mix(in srgb, var(--env-color) var(--env-tint), var(--paper));
 }
