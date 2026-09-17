@@ -18,6 +18,7 @@ from .manifest import (scan_labels, load_scan, generate_theorem_manifest, genera
                        generate_search_index, generate_site_files, page_description)
 from .pandoc import build_pandoc_command, page_metadata, run_pandoc
 from .extras import generate_extra_pages
+from .math import MATHJAX_VERSION, ensure_mathjax, render_math
 from .tikz import build_tikz_figures
 from .utils import print_step, print_file_action, print_success, print_error
 
@@ -147,6 +148,10 @@ def build_html(book: Book, specific_file: Optional[Path] = None, dev_reload: boo
     extra = {"asset-version": asset_version}
     if dev_reload:
         extra["dev-reload"] = True
+    mathjax = ensure_mathjax(book)
+    if mathjax:
+        extra["math-prerendered"] = True
+        extra["mathjax-version"] = MATHJAX_VERSION
 
     domain = (book.config.get("deploy-domain") or "").strip()
     tasks = []
@@ -167,15 +172,15 @@ def build_html(book: Book, specific_file: Optional[Path] = None, dev_reload: boo
         tasks.append((page, fingerprint, cmd))
 
     failures = 0
+    built = []  # (page, fingerprint) of pages written this run
     if tasks:
         with ThreadPoolExecutor(max_workers=min(8, len(tasks))) as executor:
             for (page, fingerprint, _), ok in zip(tasks, executor.map(lambda t: run_pandoc(t[2]), tasks)):
                 if ok:
-                    store.record(page.html_path, fingerprint)
+                    built.append((page, fingerprint))
                     print_file_action("Built", page.source.name, Path(page.html_path).name)
                 else:
                     failures += 1
-        store.save()
     skipped = len(pages) - len(tasks)
     print_success(f"HTML build complete: {len(tasks) - failures}/{len(tasks)} built"
                   + (f", {skipped} unchanged" if skipped else ""))
@@ -185,6 +190,21 @@ def build_html(book: Book, specific_file: Optional[Path] = None, dev_reload: boo
     generate_navigation_manifest(book)
     generate_search_index(book)
     generate_site_files(book)
-    if not generate_extra_pages(book, extra):
+    extras_ok = generate_extra_pages(book, extra)
+    if not extras_ok:
         failures += 1
+
+    # Math: rendered into the pages written this run, the generated pages and tooltip data.
+    # A page's fingerprint is recorded only once it is complete.
+    if mathjax:
+        targets = [book.html_dir / page.html_path for page, _ in built]
+        if extras_ok:
+            targets += [book.html_dir / name for name in ("results.html", "graph.html")]
+        shards = sorted((book.html_dir / "theorems").glob("*.json"))
+        if not render_math(book, mathjax, targets, shards):
+            failures += 1
+            built = []
+    for page, fingerprint in built:
+        store.record(page.html_path, fingerprint)
+    store.save()
     return failures == 0

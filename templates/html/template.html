@@ -47,7 +47,13 @@
     <link rel="stylesheet" href="$if(asset-prefix)$$asset-prefix$$endif$styles.css?v=$asset-version$">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-    <!-- MathJax Configuration with Custom Macros -->
+    $if(math-prerendered)$
+    <!-- Math is rendered at build time (build/math.py); this is its stylesheet. MathJax itself
+         loads only when needed (search snippets), see main.js -->
+    <link rel="stylesheet" href="$if(asset-prefix)$$asset-prefix$$endif$mathjax.css?v=$mathjax-version$">
+    <meta name="math-prerendered" content="true">
+    $else$
+    <!-- Math is rendered in the browser -->
     <script src="$if(asset-prefix)$$asset-prefix$$endif$mathjax-macros.js?v=$asset-version$"></script>
     <script>
         window.MathJax = {
@@ -58,11 +64,7 @@
                 processEnvironments: true,
                 tags: 'ams',
                 // Generated from the book's LaTeX macro file (build/macros.py)
-                macros: window.BOOK_MACROS || {},
-                // Define environments not in base amsmath
-                environments: {
-                    dcases: ["\\left\\{\\begin{array}{ll}", "\\end{array}\\right."]
-                }
+                macros: window.BOOK_MACROS || {}
             },
             options: {
                 skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
@@ -70,6 +72,7 @@
         };
     </script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml-full.js"></script>
+    $endif$
 
     <!-- Tippy.js for tooltips -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>

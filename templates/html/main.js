@@ -587,6 +587,39 @@
     }
 
     // ==========================================================================
+    // MathJax on Demand
+    // ==========================================================================
+
+    /**
+     * On pages whose math was rendered at build time, MathJax is loaded only when text that
+     * was not rendered needs it (search snippets). Resolves to MathJax, or null.
+     */
+    let mathjaxLoading = null;
+    function ensureMathJax() {
+        if (window.MathJax?.typesetPromise) return Promise.resolve(window.MathJax);
+        if (mathjaxLoading) return mathjaxLoading;
+        const load = src => new Promise((resolve, reject) => {
+            const script = document.createElement('script');
+            script.src = src;
+            script.onload = resolve;
+            script.onerror = reject;
+            document.head.append(script);
+        });
+        mathjaxLoading = load(getBasePath() + 'mathjax-macros.js').then(() => {
+            window.MathJax = {
+                tex: {
+                    inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']],
+                    processEscapes: true, processEnvironments: true, macros: window.BOOK_MACROS || {},
+                },
+                options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'] },
+                startup: { typeset: false },
+            };
+            return load('https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml-full.js');
+        }).then(() => window.MathJax.startup.promise).then(() => window.MathJax).catch(() => null);
+        return mathjaxLoading;
+    }
+
+    // ==========================================================================
     // Wide Inline Formulas
     // ==========================================================================
 
@@ -595,7 +628,8 @@
      * overflows the column and is clipped; mark those so they scroll sideways instead.
      */
     function setupWideInlineMath() {
-        if (!window.MathJax) return;
+        const prerendered = document.querySelector('meta[name="math-prerendered"]');
+        if (!prerendered && !window.MathJax) return;
         const update = () => {
             document.querySelectorAll('.content mjx-container:not([display="true"])').forEach(math => {
                 math.classList.remove('wide-inline');
@@ -605,9 +639,14 @@
                 }
             });
         };
-        const whenReady = () => MathJax.startup?.promise?.then(update);
-        if (MathJax.startup?.promise) whenReady();
-        else window.addEventListener('load', whenReady);
+        if (prerendered) {
+            // Formulas are already in the page; measure once fonts have loaded
+            document.fonts.ready.then(update);
+        } else {
+            const whenReady = () => MathJax.startup?.promise?.then(update);
+            if (MathJax.startup?.promise) whenReady();
+            else window.addEventListener('load', whenReady);
+        }
         let timer;
         window.addEventListener('resize', () => { clearTimeout(timer); timer = setTimeout(update, 200); });
     }
@@ -970,9 +1009,12 @@
                     resultsContainer.innerHTML = `<div class="search-no-results">No results for “${escapeHtml(query)}”</div>`;
                 }
                 resultsContainer.classList.add('active');
-                if (results.length && window.MathJax && MathJax.typesetPromise) {
-                    MathJax.typesetClear?.([resultsContainer]);
-                    MathJax.typesetPromise([resultsContainer]).catch(() => {});
+                if (results.length && /\\\(|\\\[/.test(resultsContainer.textContent)) {
+                    ensureMathJax().then(mj => {
+                        if (!mj) return;
+                        mj.typesetClear?.([resultsContainer]);
+                        mj.typesetPromise([resultsContainer]).catch(() => {});
+                    });
                 }
             }, 150);
         });

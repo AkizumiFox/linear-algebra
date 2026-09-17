@@ -190,6 +190,19 @@ class TestHtmlBuild(FixtureBookCase):
         page = self.page("ch01-basics/01-first.html")
         self.assertRegex(page, r'class="tikz"\s+alt="Diagram\. Labels: x"')
 
+    def test_math_rendered_at_build_time(self):
+        if not shutil.which("node"):
+            self.skipTest("node not installed")
+        page = self.page("ch01-basics/01-first.html")
+        self.assertIn("<mjx-container", page)
+        self.assertNotIn("tex-chtml-full.js", page)                  # no MathJax script
+        self.assertIn('href="../mathjax.css?v=', page)
+        self.assertNotIn('data-mjx-error', page)
+        self.assertTrue((self.html / "mathjax.css").exists())
+        self.assertTrue(any((self.html / "mathjax-fonts").glob("*.woff")))
+        shard = (self.html / "theorems" / "ch01-basics.json").read_text()
+        self.assertIn("mjx-container", shard)                         # tooltip previews too
+
     def test_unchanged_rebuild_skips_pages(self):
         result = run_build(self.book_dir, "html")
         self.assertEqual(result.returncode, 0, result.stdout)

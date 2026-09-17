@@ -24,6 +24,8 @@ TOOLS = [
     ("pandoc", "--version", "all builds"),
     ("pdflatex", "--version", "PDF builds and TikZ figures"),
     ("pdftocairo", "-v", "TikZ figures on the web"),
+    ("node", "--version", "rendering math at build time (optional: without it math renders in the browser)"),
+    ("aspell", "--version", "the spelling check (optional)"),
 ]
 
 
