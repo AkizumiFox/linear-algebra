@@ -88,7 +88,8 @@
             "part": "Part II · Determinants and the Structure of Operators"
         },
         "src/ch06-determinants",
-        "src/ch07-block-matrices"
+        "src/ch07-block-matrices",
+        "src/ch08-eigenvalues"
     ],
     "macros": "latex/macros.tex",
     "templates": {

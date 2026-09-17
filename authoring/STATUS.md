@@ -14,7 +14,8 @@ The plan is at `~/.claude/plans/cached-gathering-sedgewick.md`. The outline of a
 | 5 | ch05-polynomials | Polynomials | deployed |
 | 6 | ch06-determinants | Determinants | deployed |
 | 7 | ch07-block-matrices | Block matrices | deployed |
-| 8 | ch08-eigenvalues | Eigenvalues | drafting |
+| 8 | ch08-eigenvalues | Eigenvalues and diagonalization | deployed |
+| 9 | ch09-canonical-forms | Canonical forms | drafting |
 | 9–23 | | see plan | not started |
 
 ## Open forward promises
@@ -41,10 +42,10 @@ Add a line when a section promises something later ("proved in Chapter 5"); tick
 (none yet)
 - [ ] Ch 1 → Ch 3: Rank–Nullity by the same "basis, extend, Big Claim, count" move
 - [ ] Ch 1 → Ch 3: external direct sums; projection onto U along W (different complements, different projections)
-- [ ] Ch 1 → Ch 8: eigenspaces of a diagonalizable operator give a direct sum
+- [x] Ch 1 → Ch 8: eigenspaces of a diagonalizable operator give a direct sum
 - [ ] Ch 1 → Ch 3: coordinate map is an isomorphism; shift map injective not surjective; (ℝⁿ)_ℂ ≅ ℂⁿ
-- [ ] Ch 1 → Ch 8/11: complexification gives real matrices complex eigenvalues; used in real spectral theory
-- [ ] Ch 2 → Ch 3, 6, 8, 12: invertible-matrix TFAE grows (kernel/image; det; eigenvalues; singular values)
+- [~] Ch 1 → Ch 8/11: complexification gives real matrices complex eigenvalues (Ch 8 half paid); used in real spectral theory (Ch 11)
+- [x] Ch 2 → Ch 3, 6, 8, 12: invertible-matrix TFAE grows (kernel/image; det; eigenvalues; singular values)
 - [ ] Ch 2 → Ch 3: Rank–Nullity for linear maps
 - [ ] Ch 2 → Ch 12: Cholesky
 - [ ] Ch 2 → Ch 23: partial pivoting, rounding; graph Laplacian
@@ -63,20 +64,23 @@ Add a line when a section promises something later ("proved in Chapter 5"); tick
 - [ ] Ch 4 → Ch 10: orthogonal complement vs annihilator; inner product gives chosen V ≅ V*; adjoint T*
 - Ch 4: ε_{ij} vs ε_c overload; zero functional notation — tidy in M7.
 - Ch 4: restriction map V* → U* named R (§02), ρ (§05), ι′ (§04) — unify to ρ in M7. §06 extra early Quick check.
-- [ ] Ch 5 → Ch 8: minimal polynomial = monic generator of I_T (`thm-annihilator-ideal`); invariant subspaces defined; Cayley–Hamilton; primary decomposition via `thm-kernel-splitting` and `exr-polynomials-of-operators-c2`
+- [x] Ch 5 → Ch 8: minimal polynomial = monic generator of I_T (`thm-annihilator-ideal`); invariant subspaces defined; Cayley–Hamilton; primary decomposition via `thm-kernel-splitting` and `exr-polynomials-of-operators-c2`
 - [ ] Ch 5 → Ch 9: canonical forms from primary decomposition
 - [ ] Ch 5 → Ch 8: diagonalizable ⇔ minimal polynomial splits with distinct roots; every complex operator has an eigenvalue (FTA)
 - Ch 6 §03: disjoint cycle decomposition only asserted (Ch 0 shows by example) — consider a short proof in M7.
 - [ ] Ch 6 → Ch 8: (xI − A)·adj(xI − A) = det(xI − A)·I reappears (Cayley–Hamilton route)
 - [ ] Ch 6 → Ch 7: Schur complements cite `thm-det-block-triangular`
-- [ ] Ch 6 → Ch 8: eigenvalues from `thm-charpoly-root-iff-singular`; Cayley–Hamilton; p_AB = p_BA in general
+- [x] Ch 6 → Ch 8: eigenvalues from `thm-charpoly-root-iff-singular`; Cayley–Hamilton; p_AB = p_BA in general
 - [ ] Ch 6 → Ch 9: complete similarity invariants
 - [ ] Ch 6 → Ch 10/12: Gram matrices, √det(AᵀA) area via inner products
 - [ ] Ch 6 → Ch 11: circulants of every size
 - [ ] Ch 6 → Ch 23: matrix-tree theorem
 - [ ] Ch 7 → Ch 11: AX − XB = C uniquely solvable ⇔ no common eigenvalue (over ℂ); Ch 19 quantitative form
 - [ ] Ch 7 → Ch 14: tensor product of maps has matrix A ⊗ B
-- [ ] Ch 7 → Ch 8: tr C^k = 0 for all k ⇒ nilpotent, via eigenvalues
-- [ ] Ch 7 → Ch 8: p_T = p_{T|U} · p_{T̄} for T mapping U into U
+- [x] Ch 7 → Ch 8: tr C^k = 0 for all k ⇒ nilpotent, via eigenvalues (over ℂ and its subfields)
+- [x] Ch 7 → Ch 8: p_T = p_{T|U} · p_{T̄} for T mapping U into U
 - [ ] Ch 7 → Ch 12: positive definiteness via Schur complements
 - [ ] Ch 7 → Ch 23: Gaussian elimination as repeated Schur complements
+- [ ] Ch 8 → Ch 9: recurrences with repeated roots (k^jλ^k) via the Jordan form; generalized eigenspaces named; cyclic vector when deg m = dim V; m and p together do not decide similarity
+- [ ] Ch 8 → Ch 11: Schur's orthonormal triangularization
+- [ ] Ch 8 → Ch 18: Perron–Frobenius gives the Markov limit for regular stochastic matrices

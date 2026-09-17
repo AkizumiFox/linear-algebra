@@ -51,7 +51,7 @@ does. Plain prose, no heading.
 ### C. Going deeper
 ```
 
-Use `##` for subsections (they appear in the page's table of contents) and `###` only inside Exercises or for a long worked computation. Aim for **2,500–5,000 words**. Split a longer section at a natural seam.
+Section titles (the `#` line) contain no math, since they appear in navigation links and page titles. Use `##` for subsections (they appear in the page's table of contents) and `###` only inside Exercises or for a long worked computation. Aim for **2,500–5,000 words**. Split a longer section at a natural seam.
 
 A chapter's `index.md` contains, in this order:
 1. `# Chapter Title`.
