@@ -456,23 +456,49 @@
     /**
      * Proofs can be hidden and solutions start hidden, so readers can try an example first.
      * Only outermost blocks fold (a claim's proof inside a proof stays with its proof).
+     * The block's own label ("Proof." / "Solution.") becomes the toggle, followed by a small
+     * chevron: v while folded, ^ while open.
      */
+    const CHEVRON = '<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false">'
+        + '<path d="M2.75 4.5 6 7.75 9.25 4.5" fill="none" stroke="currentColor" stroke-width="1.5" '
+        + 'stroke-linecap="round" stroke-linejoin="round"/></svg>';
+
     function setupFolding() {
         const blocks = document.querySelectorAll('.content .proof.small-env, .content .solution.small-env');
         blocks.forEach(block => {
             if (block.parentElement.closest('.proof, .solution')) return;
+            const first = block.firstElementChild;
+            if (!first || first.tagName !== 'P') return;
+            // The label runs from the start of the first paragraph to the italic "." after it
+            const nodes = [...first.childNodes];
+            const end = nodes.findIndex(n => n.nodeType === Node.ELEMENT_NODE && n.tagName === 'EM'
+                && n.textContent.trim() === '.');
+            if (end < 0) return;
+
             const kind = block.classList.contains('solution') ? 'solution' : 'proof';
             const button = document.createElement('button');
             button.type = 'button';
             button.className = 'fold-toggle';
+            const label = document.createElement('span');
+            label.className = 'fold-label';
+            nodes.slice(0, end + 1).forEach(node => label.append(node));
+            const chevron = document.createElement('span');
+            chevron.className = 'fold-chevron';
+            chevron.innerHTML = CHEVRON;
+            button.append(label, chevron);
+
+            // The rest of the first paragraph, hidden while folded
+            const rest = document.createElement('span');
+            rest.className = 'fold-rest';
+            while (first.firstChild) rest.append(first.firstChild);
+            first.append(button, rest);
+            first.classList.add('fold-head');
             block.classList.add('foldable');
-            block.dataset.foldLabel = kind === 'solution' ? 'Solution.' : 'Proof.';
-            block.prepend(button);
 
             const set = folded => {
                 block.classList.toggle('is-folded', folded);
                 button.setAttribute('aria-expanded', String(!folded));
-                button.innerHTML = `<i class="bi bi-chevron-${folded ? 'down' : 'up'}" aria-hidden="true"></i> ${folded ? 'Show' : 'Hide'} ${kind}`;
+                button.title = `${folded ? 'Show' : 'Hide'} ${kind}`;
             };
             button.addEventListener('click', () => set(!block.classList.contains('is-folded')));
             block.addEventListener('unfold', () => set(false));
