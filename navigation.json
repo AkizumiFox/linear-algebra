@@ -151,12 +151,55 @@
       ]
     },
     {
-      "title": "Linear Systems",
+      "title": "Linear Systems and Matrices",
       "number": 2,
       "part": "",
       "collapsed": false,
-      "path": null,
-      "sections": []
+      "path": "ch02-linear-systems/index.html",
+      "sections": [
+        {
+          "title": "Three Views of a Linear System",
+          "number": "2.1",
+          "path": "ch02-linear-systems/01-linear-systems.html",
+          "filename": "01-linear-systems.md"
+        },
+        {
+          "title": "Gaussian Elimination",
+          "number": "2.2",
+          "path": "ch02-linear-systems/02-gaussian-elimination.html",
+          "filename": "02-gaussian-elimination.md"
+        },
+        {
+          "title": "Uniqueness of the Reduced Form",
+          "number": "2.3",
+          "path": "ch02-linear-systems/03-rref-uniqueness.html",
+          "filename": "03-rref-uniqueness.md"
+        },
+        {
+          "title": "Elementary Matrices and Inverses",
+          "number": "2.4",
+          "path": "ch02-linear-systems/04-elementary-matrices-and-inverses.html",
+          "filename": "04-elementary-matrices-and-inverses.md"
+        },
+        {
+          "title": "Row Space, Column Space, Null Space and Rank",
+          "number": "2.5",
+          "path": "ch02-linear-systems/05-rank.html",
+          "filename": "05-rank.md"
+        },
+        {
+          "title": "LU and PLU Factorizations",
+          "number": "2.6",
+          "path": "ch02-linear-systems/06-lu-factorization.html",
+          "filename": "06-lu-factorization.md"
+        },
+        {
+          "title": "Applications of Linear Systems",
+          "number": "2.7",
+          "path": "ch02-linear-systems/07-applications.html",
+          "filename": "07-applications.md"
+        }
+      ]
     },
     {
       "title": "Linear Transformations",

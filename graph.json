@@ -4885,6 +4885,1650 @@
    "color": "#2f62b5"
   },
   {
+   "id": "cor-unique-solution-iff-trivial-kernel",
+   "type": "corollary",
+   "group": "statements",
+   "name": "Corollary 2.1.4",
+   "title": "Uniqueness of solutions",
+   "url": "ch02-linear-systems/01-linear-systems.html#cor-unique-solution-iff-trivial-kernel",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "def-homogeneous-system",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 2.1.2",
+   "title": "Homogeneous system",
+   "url": "ch02-linear-systems/01-linear-systems.html#def-homogeneous-system",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#b0414f"
+  },
+  {
+   "id": "def-linear-system",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 2.1.1",
+   "title": "Linear system",
+   "url": "ch02-linear-systems/01-linear-systems.html#def-linear-system",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#b0414f"
+  },
+  {
+   "id": "exm-solution-set-p-plus-span",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "Particular plus homogeneous",
+   "url": "ch02-linear-systems/01-linear-systems.html#exm-solution-set-p-plus-span",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-span-membership-by-system",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "Span membership as a system",
+   "url": "ch02-linear-systems/01-linear-systems.html#exm-span-membership-by-system",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-system-over-f2-two-solutions",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "Exactly two solutions over nF_2",
+   "url": "ch02-linear-systems/01-linear-systems.html#exm-system-over-f2-two-solutions",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-three-kinds-of-solution-sets",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "None, one, or a whole line",
+   "url": "ch02-linear-systems/01-linear-systems.html#exm-three-kinds-of-solution-sets",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exr-linear-systems-a1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "A1",
+   "url": "ch02-linear-systems/01-linear-systems.html#exr-linear-systems-a1",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-linear-systems-b1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B1: Three views",
+   "url": "ch02-linear-systems/01-linear-systems.html#exr-linear-systems-b1",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-linear-systems-b2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B2: In the span or not?",
+   "url": "ch02-linear-systems/01-linear-systems.html#exr-linear-systems-b2",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-linear-systems-b3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B3: Solve and describe",
+   "url": "ch02-linear-systems/01-linear-systems.html#exr-linear-systems-b3",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-linear-systems-c1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C1: How many solutions?",
+   "url": "ch02-linear-systems/01-linear-systems.html#exr-linear-systems-c1",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-linear-systems-c2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C2: The right-hand sides that work",
+   "url": "ch02-linear-systems/01-linear-systems.html#exr-linear-systems-c2",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#a8670c"
+  },
+  {
+   "id": "thm-consistent-iff-column-span",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 2.1.1",
+   "title": "Consistency and the span of the columns",
+   "url": "ch02-linear-systems/01-linear-systems.html#thm-consistent-iff-column-span",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-general-solution-structure",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 2.1.3",
+   "title": "Structure of the solution set",
+   "url": "ch02-linear-systems/01-linear-systems.html#thm-general-solution-structure",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-homogeneous-solutions-subspace",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 2.1.2",
+   "title": "Homogeneous solutions form a subspace",
+   "url": "ch02-linear-systems/01-linear-systems.html#thm-homogeneous-solutions-subspace",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "cor-more-unknowns-than-equations",
+   "type": "corollary",
+   "group": "statements",
+   "name": "Corollary 2.2.5",
+   "title": "More unknowns than equations",
+   "url": "ch02-linear-systems/02-gaussian-elimination.html#cor-more-unknowns-than-equations",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "def-elementary-row-operations",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 2.2.1",
+   "title": "Elementary row operations",
+   "url": "ch02-linear-systems/02-gaussian-elimination.html#def-elementary-row-operations",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#b0414f"
+  },
+  {
+   "id": "def-reduced-row-echelon-form",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 2.2.4",
+   "title": "Reduced row echelon form",
+   "url": "ch02-linear-systems/02-gaussian-elimination.html#def-reduced-row-echelon-form",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#b0414f"
+  },
+  {
+   "id": "def-row-echelon-form",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 2.2.3",
+   "title": "Row echelon form",
+   "url": "ch02-linear-systems/02-gaussian-elimination.html#def-row-echelon-form",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#b0414f"
+  },
+  {
+   "id": "def-row-equivalent",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 2.2.2",
+   "title": "Row equivalence",
+   "url": "ch02-linear-systems/02-gaussian-elimination.html#def-row-equivalent",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#b0414f"
+  },
+  {
+   "id": "exm-echelon-forms",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "Echelon or not?",
+   "url": "ch02-linear-systems/02-gaussian-elimination.html#exm-echelon-forms",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-elimination-f2",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "Elimination over nF_2",
+   "url": "ch02-linear-systems/02-gaussian-elimination.html#exm-elimination-f2",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-gauss-jordan-3x4",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "Gauss\u2013Jordan on a 3 \u00d7 4 system",
+   "url": "ch02-linear-systems/02-gaussian-elimination.html#exm-gauss-jordan-3x4",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-system-with-parameter",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "A system with a parameter",
+   "url": "ch02-linear-systems/02-gaussian-elimination.html#exm-system-with-parameter",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exr-gaussian-elimination-a1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "A1",
+   "url": "ch02-linear-systems/02-gaussian-elimination.html#exr-gaussian-elimination-a1",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-gaussian-elimination-b1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B1: Reduce and solve",
+   "url": "ch02-linear-systems/02-gaussian-elimination.html#exr-gaussian-elimination-b1",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-gaussian-elimination-b2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B2: A parameter",
+   "url": "ch02-linear-systems/02-gaussian-elimination.html#exr-gaussian-elimination-b2",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-gaussian-elimination-b3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B3: Over nF_3",
+   "url": "ch02-linear-systems/02-gaussian-elimination.html#exr-gaussian-elimination-b3",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-gaussian-elimination-c1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C1: Why i \u2260 j?",
+   "url": "ch02-linear-systems/02-gaussian-elimination.html#exr-gaussian-elimination-c1",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-gaussian-elimination-c2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C2: The cost of elimination",
+   "url": "ch02-linear-systems/02-gaussian-elimination.html#exr-gaussian-elimination-c2",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-gaussian-elimination-c3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C3: Solvable for every right-hand side",
+   "url": "ch02-linear-systems/02-gaussian-elimination.html#exr-gaussian-elimination-c3",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#a8670c"
+  },
+  {
+   "id": "lem-row-ops-act-on-columns",
+   "type": "lemma",
+   "group": "statements",
+   "name": "Lemma 2.2.1",
+   "title": "Row operations act column by column",
+   "url": "ch02-linear-systems/02-gaussian-elimination.html#lem-row-ops-act-on-columns",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-reading-rref",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 2.2.4",
+   "title": "Reading solutions from the RREF",
+   "url": "ch02-linear-systems/02-gaussian-elimination.html#thm-reading-rref",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-row-ops-preserve-solutions",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 2.2.2",
+   "title": "Row operations preserve solutions",
+   "url": "ch02-linear-systems/02-gaussian-elimination.html#thm-row-ops-preserve-solutions",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-rref-exists",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 2.2.3",
+   "title": "Existence of the reduced row echelon form",
+   "url": "ch02-linear-systems/02-gaussian-elimination.html#thm-rref-exists",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "cor-pivot-columns-well-defined",
+   "type": "corollary",
+   "group": "statements",
+   "name": "Corollary 2.3.5",
+   "title": "Pivot columns are well defined",
+   "url": "ch02-linear-systems/03-rref-uniqueness.html#cor-pivot-columns-well-defined",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "exm-two-echelon-forms-same-rref",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "Two echelon forms, one reduced form",
+   "url": "ch02-linear-systems/03-rref-uniqueness.html#exm-two-echelon-forms-same-rref",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exr-rref-uniqueness-a1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "A1",
+   "url": "ch02-linear-systems/03-rref-uniqueness.html#exr-rref-uniqueness-a1",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-rref-uniqueness-b1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B1: Column relations",
+   "url": "ch02-linear-systems/03-rref-uniqueness.html#exr-rref-uniqueness-b1",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-rref-uniqueness-b2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B2: Row equivalence via the RREF",
+   "url": "ch02-linear-systems/03-rref-uniqueness.html#exr-rref-uniqueness-b2",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-rref-uniqueness-b3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B3: Row equivalent or not?",
+   "url": "ch02-linear-systems/03-rref-uniqueness.html#exr-rref-uniqueness-b3",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-rref-uniqueness-c1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C1: Counting reduced forms",
+   "url": "ch02-linear-systems/03-rref-uniqueness.html#exr-rref-uniqueness-c1",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-rref-uniqueness-c2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C2: Deleting a column",
+   "url": "ch02-linear-systems/03-rref-uniqueness.html#exr-rref-uniqueness-c2",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#a8670c"
+  },
+  {
+   "id": "lem-row-equivalent-same-null-space",
+   "type": "lemma",
+   "group": "statements",
+   "name": "Lemma 2.3.1",
+   "title": "Row equivalent matrices have the same homogeneous solutions",
+   "url": "ch02-linear-systems/03-rref-uniqueness.html#lem-row-equivalent-same-null-space",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "lem-row-ops-preserve-column-relations",
+   "type": "lemma",
+   "group": "statements",
+   "name": "Lemma 2.3.2",
+   "title": "Row operations preserve column relations",
+   "url": "ch02-linear-systems/03-rref-uniqueness.html#lem-row-ops-preserve-column-relations",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "lem-rref-columns",
+   "type": "lemma",
+   "group": "statements",
+   "name": "Lemma 2.3.3",
+   "title": "Columns of a matrix in RREF",
+   "url": "ch02-linear-systems/03-rref-uniqueness.html#lem-rref-columns",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-rref-unique",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 2.3.4",
+   "title": "Uniqueness of the reduced row echelon form",
+   "url": "ch02-linear-systems/03-rref-uniqueness.html#thm-rref-unique",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "def-elementary-matrix",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 2.4.1",
+   "title": "Elementary matrix",
+   "url": "ch02-linear-systems/04-elementary-matrices-and-inverses.html#def-elementary-matrix",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#b0414f"
+  },
+  {
+   "id": "exm-elementary-matrices",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "Three operations, three products",
+   "url": "ch02-linear-systems/04-elementary-matrices-and-inverses.html#exm-elementary-matrices",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-inverse-3x3",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "A 3 \u00d7 3 inverse",
+   "url": "ch02-linear-systems/04-elementary-matrices-and-inverses.html#exm-inverse-3x3",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-inverse-fails-zero-row",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "When the algorithm stops",
+   "url": "ch02-linear-systems/04-elementary-matrices-and-inverses.html#exm-inverse-fails-zero-row",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-product-of-elementary-matrices",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "Factoring into elementary matrices",
+   "url": "ch02-linear-systems/04-elementary-matrices-and-inverses.html#exm-product-of-elementary-matrices",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exr-elementary-matrices-and-inverses-a1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "A1",
+   "url": "ch02-linear-systems/04-elementary-matrices-and-inverses.html#exr-elementary-matrices-and-inverses-a1",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-elementary-matrices-and-inverses-b1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B1: Inverses by row reduction",
+   "url": "ch02-linear-systems/04-elementary-matrices-and-inverses.html#exr-elementary-matrices-and-inverses-b1",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-elementary-matrices-and-inverses-b2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B2: A product of elementary matrices",
+   "url": "ch02-linear-systems/04-elementary-matrices-and-inverses.html#exr-elementary-matrices-and-inverses-b2",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-elementary-matrices-and-inverses-b3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B3: Invertible products",
+   "url": "ch02-linear-systems/04-elementary-matrices-and-inverses.html#exr-elementary-matrices-and-inverses-b3",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-elementary-matrices-and-inverses-c1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C1: Triangular matrices",
+   "url": "ch02-linear-systems/04-elementary-matrices-and-inverses.html#exr-elementary-matrices-and-inverses-c1",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-elementary-matrices-and-inverses-c2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C2: All right inverses",
+   "url": "ch02-linear-systems/04-elementary-matrices-and-inverses.html#exr-elementary-matrices-and-inverses-c2",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-elementary-matrices-and-inverses-c3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C3: Nilpotent perturbations of the identity",
+   "url": "ch02-linear-systems/04-elementary-matrices-and-inverses.html#exr-elementary-matrices-and-inverses-c3",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#a8670c"
+  },
+  {
+   "id": "lem-square-rref-identity-or-zero-row",
+   "type": "lemma",
+   "group": "statements",
+   "name": "Lemma 2.4.3",
+   "title": "Square reduced matrices",
+   "url": "ch02-linear-systems/04-elementary-matrices-and-inverses.html#lem-square-rref-identity-or-zero-row",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-elementary-invertible",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 2.4.2",
+   "title": "Elementary matrices are invertible",
+   "url": "ch02-linear-systems/04-elementary-matrices-and-inverses.html#thm-elementary-invertible",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-inverse-by-row-reduction",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 2.4.6",
+   "title": "Inverse by row reduction",
+   "url": "ch02-linear-systems/04-elementary-matrices-and-inverses.html#thm-inverse-by-row-reduction",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-invertible-tfae",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 2.4.4",
+   "title": "Invertible Matrix Theorem",
+   "url": "ch02-linear-systems/04-elementary-matrices-and-inverses.html#thm-invertible-tfae",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-one-sided-inverse",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 2.4.5",
+   "title": "One-sided inverses of square matrices",
+   "url": "ch02-linear-systems/04-elementary-matrices-and-inverses.html#thm-one-sided-inverse",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-row-equivalent-iff-invertible-multiple",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 2.4.7",
+   "title": "Row equivalence is left multiplication by an invertible matrix",
+   "url": "ch02-linear-systems/04-elementary-matrices-and-inverses.html#thm-row-equivalent-iff-invertible-multiple",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-row-op-is-left-multiplication",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 2.4.1",
+   "title": "Row operations are left multiplications",
+   "url": "ch02-linear-systems/04-elementary-matrices-and-inverses.html#thm-row-op-is-left-multiplication",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "cor-rank-from-any-echelon-form",
+   "type": "corollary",
+   "group": "statements",
+   "name": "Corollary 2.5.6",
+   "title": "Rank from any echelon form",
+   "url": "ch02-linear-systems/05-rank.html#cor-rank-from-any-echelon-form",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "def-column-space",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 2.5.1",
+   "title": "Column space",
+   "url": "ch02-linear-systems/05-rank.html#def-column-space",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#b0414f"
+  },
+  {
+   "id": "def-null-space",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 2.5.3",
+   "title": "Null space",
+   "url": "ch02-linear-systems/05-rank.html#def-null-space",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#b0414f"
+  },
+  {
+   "id": "def-nullity-matrix",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 2.5.5",
+   "title": "Nullity of a matrix",
+   "url": "ch02-linear-systems/05-rank.html#def-nullity-matrix",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#b0414f"
+  },
+  {
+   "id": "def-rank-matrix",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 2.5.4",
+   "title": "Rank of a matrix",
+   "url": "ch02-linear-systems/05-rank.html#def-rank-matrix",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#b0414f"
+  },
+  {
+   "id": "def-row-space",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 2.5.2",
+   "title": "Row space",
+   "url": "ch02-linear-systems/05-rank.html#def-row-space",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#b0414f"
+  },
+  {
+   "id": "exm-bases-of-three-subspaces",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "Bases for the running example",
+   "url": "ch02-linear-systems/05-rank.html#exm-bases-of-three-subspaces",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-counting-solutions-f3",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "Counting solutions over nF_3",
+   "url": "ch02-linear-systems/05-rank.html#exm-counting-solutions-f3",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-extend-basis-by-elimination",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "Extending to a basis by elimination",
+   "url": "ch02-linear-systems/05-rank.html#exm-extend-basis-by-elimination",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-independence-by-rank",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "Testing independence",
+   "url": "ch02-linear-systems/05-rank.html#exm-independence-by-rank",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-intersection-by-elimination",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "A basis of an intersection",
+   "url": "ch02-linear-systems/05-rank.html#exm-intersection-by-elimination",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-sum-by-elimination",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "A basis of a sum",
+   "url": "ch02-linear-systems/05-rank.html#exm-sum-by-elimination",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exr-rank-a1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "A1",
+   "url": "ch02-linear-systems/05-rank.html#exr-rank-a1",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-rank-b1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B1: The three subspaces of a 3 \u00d7 5 matrix",
+   "url": "ch02-linear-systems/05-rank.html#exr-rank-b1",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-rank-b2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B2: Independence and extension in \u211d^4",
+   "url": "ch02-linear-systems/05-rank.html#exr-rank-b2",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-rank-b3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B3: Sum and intersection in \u211d^5",
+   "url": "ch02-linear-systems/05-rank.html#exr-rank-b3",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-rank-c1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C1: Rank of a sum",
+   "url": "ch02-linear-systems/05-rank.html#exr-rank-c1",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-rank-c2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C2: Matrices of rank one",
+   "url": "ch02-linear-systems/05-rank.html#exr-rank-c2",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-rank-c3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C3: The matrix i + j",
+   "url": "ch02-linear-systems/05-rank.html#exr-rank-c3",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-rank-c4",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C4: Counting right-hand sides over a finite field",
+   "url": "ch02-linear-systems/05-rank.html#exr-rank-c4",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#a8670c"
+  },
+  {
+   "id": "prp-sum-intersection-by-elimination",
+   "type": "proposition",
+   "group": "statements",
+   "name": "Proposition 2.5.11",
+   "title": "Sum and intersection by elimination",
+   "url": "ch02-linear-systems/05-rank.html#prp-sum-intersection-by-elimination",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-basis-column-space",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 2.5.2",
+   "title": "Pivot columns form a basis of the column space",
+   "url": "ch02-linear-systems/05-rank.html#thm-basis-column-space",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-basis-null-space",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 2.5.4",
+   "title": "Basis of the null space",
+   "url": "ch02-linear-systems/05-rank.html#thm-basis-null-space",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-basis-row-space",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 2.5.3",
+   "title": "Basis of the row space",
+   "url": "ch02-linear-systems/05-rank.html#thm-basis-row-space",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-independence-spanning-by-rank",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 2.5.10",
+   "title": "Independence and spanning by rank",
+   "url": "ch02-linear-systems/05-rank.html#thm-independence-spanning-by-rank",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-rank-nullity-matrix",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 2.5.7",
+   "title": "Rank\u2013Nullity for Matrices",
+   "url": "ch02-linear-systems/05-rank.html#thm-rank-nullity-matrix",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-rank-product-inequality",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 2.5.9",
+   "title": "Rank of a product",
+   "url": "ch02-linear-systems/05-rank.html#thm-rank-product-inequality",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-rouche-capelli",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 2.5.8",
+   "title": "Rouch\u00e9\u2013Capelli Theorem",
+   "url": "ch02-linear-systems/05-rank.html#thm-rouche-capelli",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-row-ops-row-space",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 2.5.1",
+   "title": "Row operations and the three spaces",
+   "url": "ch02-linear-systems/05-rank.html#thm-row-ops-row-space",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-row-rank-equals-column-rank",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 2.5.5",
+   "title": "Row rank equals column rank",
+   "url": "ch02-linear-systems/05-rank.html#thm-row-rank-equals-column-rank",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "def-lu-factorization",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 2.6.1",
+   "title": "LU factorization",
+   "url": "ch02-linear-systems/06-lu-factorization.html#def-lu-factorization",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#b0414f"
+  },
+  {
+   "id": "def-permutation-matrix",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 2.6.2",
+   "title": "Permutation matrix",
+   "url": "ch02-linear-systems/06-lu-factorization.html#def-permutation-matrix",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#b0414f"
+  },
+  {
+   "id": "def-plu-factorization",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 2.6.3",
+   "title": "PLU factorization",
+   "url": "ch02-linear-systems/06-lu-factorization.html#def-plu-factorization",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#b0414f"
+  },
+  {
+   "id": "exm-lu-by-elimination",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "An LU factorization from elimination",
+   "url": "ch02-linear-systems/06-lu-factorization.html#exm-lu-by-elimination",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-lu-solve",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "Two right-hand sides, one factorization",
+   "url": "ch02-linear-systems/06-lu-factorization.html#exm-lu-solve",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-no-lu-factorization",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "An invertible matrix with no LU factorization",
+   "url": "ch02-linear-systems/06-lu-factorization.html#exm-no-lu-factorization",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-plu",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "A swap in the middle",
+   "url": "ch02-linear-systems/06-lu-factorization.html#exm-plu",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exr-lu-factorization-a1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "A1",
+   "url": "ch02-linear-systems/06-lu-factorization.html#exr-lu-factorization-a1",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-lu-factorization-b1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B1: An LU factorization",
+   "url": "ch02-linear-systems/06-lu-factorization.html#exr-lu-factorization-b1",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-lu-factorization-b2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B2: Two systems, one factorization",
+   "url": "ch02-linear-systems/06-lu-factorization.html#exr-lu-factorization-b2",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-lu-factorization-b3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B3: A PLU factorization",
+   "url": "ch02-linear-systems/06-lu-factorization.html#exr-lu-factorization-b3",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-lu-factorization-c1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C1: Leading principal submatrices",
+   "url": "ch02-linear-systems/06-lu-factorization.html#exr-lu-factorization-c1",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-lu-factorization-c2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C2: An LDL\u1d40 factorization",
+   "url": "ch02-linear-systems/06-lu-factorization.html#exr-lu-factorization-c2",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-lu-factorization-c3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C3: Counting matrices without an LU factorization",
+   "url": "ch02-linear-systems/06-lu-factorization.html#exr-lu-factorization-c3",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#a8670c"
+  },
+  {
+   "id": "lem-elimination-matrices",
+   "type": "lemma",
+   "group": "statements",
+   "name": "Lemma 2.6.3",
+   "title": "Multiplier matrices",
+   "url": "ch02-linear-systems/06-lu-factorization.html#lem-elimination-matrices",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "lem-permutation-matrices",
+   "type": "lemma",
+   "group": "statements",
+   "name": "Lemma 2.6.6",
+   "title": "Permutation matrices",
+   "url": "ch02-linear-systems/06-lu-factorization.html#lem-permutation-matrices",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "lem-triangular-invertible",
+   "type": "lemma",
+   "group": "statements",
+   "name": "Lemma 2.6.2",
+   "title": "Invertibility of a triangular matrix",
+   "url": "ch02-linear-systems/06-lu-factorization.html#lem-triangular-invertible",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "lem-unit-lower-triangular-closed",
+   "type": "lemma",
+   "group": "statements",
+   "name": "Lemma 2.6.1",
+   "title": "Unit lower triangular matrices are closed",
+   "url": "ch02-linear-systems/06-lu-factorization.html#lem-unit-lower-triangular-closed",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-ldlt",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 2.6.8",
+   "title": "LDL\u1d40 factorization",
+   "url": "ch02-linear-systems/06-lu-factorization.html#thm-ldlt",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-lu-exists-without-swaps",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 2.6.4",
+   "title": "LU from elimination",
+   "url": "ch02-linear-systems/06-lu-factorization.html#thm-lu-exists-without-swaps",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-lu-unique",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 2.6.5",
+   "title": "Uniqueness of the LU factorization",
+   "url": "ch02-linear-systems/06-lu-factorization.html#thm-lu-unique",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-plu-exists",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 2.6.7",
+   "title": "Existence of a PLU factorization",
+   "url": "ch02-linear-systems/06-lu-factorization.html#thm-plu-exists",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "cor-flow-solvable",
+   "type": "corollary",
+   "group": "statements",
+   "name": "Corollary 2.7.5",
+   "title": "Solvable flow problems",
+   "url": "ch02-linear-systems/07-applications.html#cor-flow-solvable",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "def-incidence-matrix",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 2.7.1",
+   "title": "Incidence matrix",
+   "url": "ch02-linear-systems/07-applications.html#def-incidence-matrix",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#b0414f"
+  },
+  {
+   "id": "exm-balance-ammonia",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "Burning ammonia",
+   "url": "ch02-linear-systems/07-applications.html#exm-balance-ammonia",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-interpolation-cubic",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "A cubic through four points",
+   "url": "ch02-linear-systems/07-applications.html#exm-interpolation-cubic",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-lights-out-3x3",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "Every pattern of the 3 \u00d7 3 puzzle is solvable",
+   "url": "ch02-linear-systems/07-applications.html#exm-lights-out-3x3",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-lights-out-center",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "Switching off the center",
+   "url": "ch02-linear-systems/07-applications.html#exm-lights-out-center",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-traffic-network",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "Traffic in a town center",
+   "url": "ch02-linear-systems/07-applications.html#exm-traffic-network",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exr-applications-a1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "A1",
+   "url": "ch02-linear-systems/07-applications.html#exr-applications-a1",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-applications-b1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B1: Interpolating four points",
+   "url": "ch02-linear-systems/07-applications.html#exr-applications-b1",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-applications-b2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B2: Balancing a redox reaction",
+   "url": "ch02-linear-systems/07-applications.html#exr-applications-b2",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-applications-b3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B3: A ring road",
+   "url": "ch02-linear-systems/07-applications.html#exr-applications-b3",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-applications-c1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C1: The 2 \u00d7 2 puzzle",
+   "url": "ch02-linear-systems/07-applications.html#exr-applications-c1",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-applications-c2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C2: Interpolating values and slopes",
+   "url": "ch02-linear-systems/07-applications.html#exr-applications-c2",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-applications-c3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C3: Networks in several pieces",
+   "url": "ch02-linear-systems/07-applications.html#exr-applications-c3",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#a8670c"
+  },
+  {
+   "id": "lem-factor-theorem-linear",
+   "type": "lemma",
+   "group": "statements",
+   "name": "Lemma 2.7.1",
+   "title": "Factor Theorem for a Linear Divisor",
+   "url": "ch02-linear-systems/07-applications.html#lem-factor-theorem-linear",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "lem-root-bound",
+   "type": "lemma",
+   "group": "statements",
+   "name": "Lemma 2.7.2",
+   "title": "Root bound",
+   "url": "ch02-linear-systems/07-applications.html#lem-root-bound",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "prp-incidence-rank-connected",
+   "type": "proposition",
+   "group": "statements",
+   "name": "Proposition 2.7.4",
+   "title": "Rank of an incidence matrix",
+   "url": "ch02-linear-systems/07-applications.html#prp-incidence-rank-connected",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-interpolation-unique",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 2.7.3",
+   "title": "Polynomial interpolation",
+   "url": "ch02-linear-systems/07-applications.html#thm-interpolation-unique",
+   "shard": "ch02-linear-systems",
+   "chapter": "Linear Systems and Matrices",
+   "chapterNumber": 2,
+   "color": "#2f62b5"
+  },
+  {
    "id": "def-linear-transformation",
    "type": "definition",
    "group": "definitions",
@@ -8561,6 +10205,1736 @@
   {
    "source": "def-vector-space",
    "target": "thm-tower-law",
+   "kind": "reference"
+  },
+  {
+   "source": "def-linear-independence",
+   "target": "cor-unique-solution-iff-trivial-kernel",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-general-solution-structure",
+   "target": "cor-unique-solution-iff-trivial-kernel",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-times-vector-columns",
+   "target": "cor-unique-solution-iff-trivial-kernel",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-general-solution-structure",
+   "target": "exm-solution-set-p-plus-span",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-consistent-iff-column-span",
+   "target": "exm-span-membership-by-system",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-unique-solution-iff-trivial-kernel",
+   "target": "exm-system-over-f2-two-solutions",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-three-kinds-of-solution-sets",
+   "target": "exm-system-over-f2-two-solutions",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-consistent-iff-column-span",
+   "target": "exr-linear-systems-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-homogeneous-solutions-subspace",
+   "target": "exr-linear-systems-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-consistent-iff-column-span",
+   "target": "exr-linear-systems-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-unique-solution-iff-trivial-kernel",
+   "target": "exr-linear-systems-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-general-solution-structure",
+   "target": "exr-linear-systems-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-homogeneous-solutions-subspace",
+   "target": "exr-linear-systems-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-zero-product",
+   "target": "exr-linear-systems-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-dimensions",
+   "target": "exr-linear-systems-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-consistent-iff-column-span",
+   "target": "exr-linear-systems-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-size-bounds",
+   "target": "exr-linear-systems-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-span-subspace",
+   "target": "exr-linear-systems-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "def-span",
+   "target": "thm-consistent-iff-column-span",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-times-vector-columns",
+   "target": "thm-consistent-iff-column-span",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-double-inclusion",
+   "target": "thm-general-solution-structure",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-multiplication-properties",
+   "target": "thm-general-solution-structure",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-null-space-subspace",
+   "target": "thm-homogeneous-solutions-subspace",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-multiplication-properties",
+   "target": "thm-homogeneous-solutions-subspace",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-subspace-test",
+   "target": "thm-homogeneous-solutions-subspace",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-row-ops-act-on-columns",
+   "target": "cor-more-unknowns-than-equations",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-times-vector-columns",
+   "target": "cor-more-unknowns-than-equations",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-reading-rref",
+   "target": "cor-more-unknowns-than-equations",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rref-exists",
+   "target": "cor-more-unknowns-than-equations",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-reading-rref",
+   "target": "exm-elimination-f2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-general-solution-structure",
+   "target": "exm-gauss-jordan-3x4",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-row-ops-preserve-solutions",
+   "target": "exm-gauss-jordan-3x4",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-reading-rref",
+   "target": "exm-system-with-parameter",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-more-unknowns-than-equations",
+   "target": "exr-gaussian-elimination-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "exr-linear-systems-c1",
+   "target": "exr-gaussian-elimination-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-reading-rref",
+   "target": "exr-gaussian-elimination-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-reading-rref",
+   "target": "exr-gaussian-elimination-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-reading-rref",
+   "target": "exr-gaussian-elimination-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-row-ops-act-on-columns",
+   "target": "exr-gaussian-elimination-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-sum-first-n",
+   "target": "exr-gaussian-elimination-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-row-ops-act-on-columns",
+   "target": "exr-gaussian-elimination-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-row-ops-preserve-solutions",
+   "target": "exr-gaussian-elimination-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rref-exists",
+   "target": "exr-gaussian-elimination-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-field-basic-properties",
+   "target": "lem-row-ops-act-on-columns",
+   "kind": "reference"
+  },
+  {
+   "source": "def-field",
+   "target": "thm-reading-rref",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-row-ops-preserve-solutions",
+   "target": "thm-reading-rref",
+   "kind": "reference"
+  },
+  {
+   "source": "def-field",
+   "target": "thm-row-ops-preserve-solutions",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-multiplication-properties",
+   "target": "thm-row-ops-preserve-solutions",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-induction",
+   "target": "thm-rref-exists",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-row-ops-preserve-solutions",
+   "target": "thm-rref-exists",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-two-echelon-forms-same-rref",
+   "target": "cor-pivot-columns-well-defined",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-row-ops-preserve-column-relations",
+   "target": "cor-pivot-columns-well-defined",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-rref-columns",
+   "target": "cor-pivot-columns-well-defined",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-field-basic-properties",
+   "target": "cor-pivot-columns-well-defined",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-row-ops-preserve-solutions",
+   "target": "cor-pivot-columns-well-defined",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rref-unique",
+   "target": "cor-pivot-columns-well-defined",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-row-ops-preserve-column-relations",
+   "target": "exm-two-echelon-forms-same-rref",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-rref-columns",
+   "target": "exm-two-echelon-forms-same-rref",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rref-unique",
+   "target": "exm-two-echelon-forms-same-rref",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-pivot-columns-well-defined",
+   "target": "exr-rref-uniqueness-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-row-ops-preserve-column-relations",
+   "target": "exr-rref-uniqueness-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-row-ops-preserve-column-relations",
+   "target": "exr-rref-uniqueness-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-rref-columns",
+   "target": "exr-rref-uniqueness-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-row-ops-preserve-solutions",
+   "target": "exr-rref-uniqueness-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rref-unique",
+   "target": "exr-rref-uniqueness-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-pivot-columns-well-defined",
+   "target": "exr-rref-uniqueness-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "exr-rref-uniqueness-b2",
+   "target": "exr-rref-uniqueness-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-partition",
+   "target": "exr-rref-uniqueness-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-row-ops-preserve-solutions",
+   "target": "exr-rref-uniqueness-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rref-exists",
+   "target": "exr-rref-uniqueness-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rref-unique",
+   "target": "exr-rref-uniqueness-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-row-ops-act-on-columns",
+   "target": "exr-rref-uniqueness-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rref-unique",
+   "target": "exr-rref-uniqueness-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-row-ops-act-on-columns",
+   "target": "lem-row-equivalent-same-null-space",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-row-ops-preserve-solutions",
+   "target": "lem-row-equivalent-same-null-space",
+   "kind": "reference"
+  },
+  {
+   "source": "def-span",
+   "target": "lem-row-ops-preserve-column-relations",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-row-equivalent-same-null-space",
+   "target": "lem-row-ops-preserve-column-relations",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-times-vector-columns",
+   "target": "lem-row-ops-preserve-column-relations",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-row-equivalent-same-null-space",
+   "target": "thm-rref-unique",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-row-ops-preserve-column-relations",
+   "target": "thm-rref-unique",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-rref-columns",
+   "target": "thm-rref-unique",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-row-ops-preserve-solutions",
+   "target": "thm-rref-unique",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rref-exists",
+   "target": "thm-rref-unique",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-standard-bases",
+   "target": "def-elementary-matrix",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-row-op-is-left-multiplication",
+   "target": "exm-elementary-matrices",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-inverse-by-row-reduction",
+   "target": "exm-inverse-3x3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-one-sided-inverse",
+   "target": "exm-inverse-3x3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-inverse-by-row-reduction",
+   "target": "exm-inverse-fails-zero-row",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-elementary-invertible",
+   "target": "exm-product-of-elementary-matrices",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-one-sided-inverse",
+   "target": "exm-product-of-elementary-matrices",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-row-op-is-left-multiplication",
+   "target": "exm-product-of-elementary-matrices",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-two-by-two-inverse",
+   "target": "exm-product-of-elementary-matrices",
+   "kind": "reference"
+  },
+  {
+   "source": "def-elementary-matrix",
+   "target": "exr-elementary-matrices-and-inverses-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-inverse-by-row-reduction",
+   "target": "exr-elementary-matrices-and-inverses-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-invertible-tfae",
+   "target": "exr-elementary-matrices-and-inverses-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-one-sided-inverse",
+   "target": "exr-elementary-matrices-and-inverses-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-three-views-of-product",
+   "target": "exr-elementary-matrices-and-inverses-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-inverse-by-row-reduction",
+   "target": "exr-elementary-matrices-and-inverses-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-one-sided-inverse",
+   "target": "exr-elementary-matrices-and-inverses-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-elementary-invertible",
+   "target": "exr-elementary-matrices-and-inverses-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-one-sided-inverse",
+   "target": "exr-elementary-matrices-and-inverses-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-row-op-is-left-multiplication",
+   "target": "exr-elementary-matrices-and-inverses-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-two-by-two-inverse",
+   "target": "exr-elementary-matrices-and-inverses-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-one-sided-inverse",
+   "target": "exr-elementary-matrices-and-inverses-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "def-upper-triangular",
+   "target": "exr-elementary-matrices-and-inverses-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-invertible-tfae",
+   "target": "exr-elementary-matrices-and-inverses-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-size-bounds",
+   "target": "exr-elementary-matrices-and-inverses-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-three-views-of-product",
+   "target": "exr-elementary-matrices-and-inverses-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-general-solution-structure",
+   "target": "exr-elementary-matrices-and-inverses-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-three-views-of-product",
+   "target": "exr-elementary-matrices-and-inverses-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-invertible-tfae",
+   "target": "exr-elementary-matrices-and-inverses-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-multiplication-properties",
+   "target": "exr-elementary-matrices-and-inverses-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-one-sided-inverse",
+   "target": "exr-elementary-matrices-and-inverses-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "def-reduced-row-echelon-form",
+   "target": "lem-square-rref-identity-or-zero-row",
+   "kind": "reference"
+  },
+  {
+   "source": "def-row-echelon-form",
+   "target": "lem-square-rref-identity-or-zero-row",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-row-op-is-left-multiplication",
+   "target": "thm-elementary-invertible",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-row-ops-preserve-solutions",
+   "target": "thm-elementary-invertible",
+   "kind": "reference"
+  },
+  {
+   "source": "def-reduced-row-echelon-form",
+   "target": "thm-inverse-by-row-reduction",
+   "kind": "reference"
+  },
+  {
+   "source": "def-row-echelon-form",
+   "target": "thm-inverse-by-row-reduction",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-elementary-invertible",
+   "target": "thm-inverse-by-row-reduction",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-inverse-matrix-properties",
+   "target": "thm-inverse-by-row-reduction",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-invertible-tfae",
+   "target": "thm-inverse-by-row-reduction",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-one-sided-inverse",
+   "target": "thm-inverse-by-row-reduction",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-row-op-is-left-multiplication",
+   "target": "thm-inverse-by-row-reduction",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rref-unique",
+   "target": "thm-inverse-by-row-reduction",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-three-views-of-product",
+   "target": "thm-inverse-by-row-reduction",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-more-unknowns-than-equations",
+   "target": "thm-invertible-tfae",
+   "kind": "reference"
+  },
+  {
+   "source": "def-basis",
+   "target": "thm-invertible-tfae",
+   "kind": "reference"
+  },
+  {
+   "source": "def-linear-independence",
+   "target": "thm-invertible-tfae",
+   "kind": "reference"
+  },
+  {
+   "source": "def-row-equivalent",
+   "target": "thm-invertible-tfae",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-dimensions",
+   "target": "thm-invertible-tfae",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-row-equivalent-same-null-space",
+   "target": "thm-invertible-tfae",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-square-rref-identity-or-zero-row",
+   "target": "thm-invertible-tfae",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-consistent-iff-column-span",
+   "target": "thm-invertible-tfae",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-elementary-invertible",
+   "target": "thm-invertible-tfae",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-inverse-matrix-properties",
+   "target": "thm-invertible-tfae",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-multiplication-properties",
+   "target": "thm-invertible-tfae",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-times-vector-columns",
+   "target": "thm-invertible-tfae",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-right-size-basis",
+   "target": "thm-invertible-tfae",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-row-op-is-left-multiplication",
+   "target": "thm-invertible-tfae",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rref-exists",
+   "target": "thm-invertible-tfae",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rref-unique",
+   "target": "thm-invertible-tfae",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-inverse-matrix-properties",
+   "target": "thm-one-sided-inverse",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-invertible-tfae",
+   "target": "thm-one-sided-inverse",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-multiplication-properties",
+   "target": "thm-one-sided-inverse",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-elementary-invertible",
+   "target": "thm-row-equivalent-iff-invertible-multiple",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-inverse-matrix-properties",
+   "target": "thm-row-equivalent-iff-invertible-multiple",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-invertible-tfae",
+   "target": "thm-row-equivalent-iff-invertible-multiple",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-row-op-is-left-multiplication",
+   "target": "thm-row-equivalent-iff-invertible-multiple",
+   "kind": "reference"
+  },
+  {
+   "source": "def-elementary-row-operations",
+   "target": "thm-row-op-is-left-multiplication",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-times-vector-columns",
+   "target": "thm-row-op-is-left-multiplication",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-three-views-of-product",
+   "target": "thm-row-op-is-left-multiplication",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-pivot-columns-well-defined",
+   "target": "cor-rank-from-any-echelon-form",
+   "kind": "reference"
+  },
+  {
+   "source": "def-row-echelon-form",
+   "target": "cor-rank-from-any-echelon-form",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-row-rank-equals-column-rank",
+   "target": "cor-rank-from-any-echelon-form",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-basis-column-space",
+   "target": "exm-bases-of-three-subspaces",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-basis-null-space",
+   "target": "exm-bases-of-three-subspaces",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-basis-row-space",
+   "target": "exm-bases-of-three-subspaces",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-rank-from-any-echelon-form",
+   "target": "exm-counting-solutions-f3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rouche-capelli",
+   "target": "exm-counting-solutions-f3",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-rank-from-any-echelon-form",
+   "target": "exm-extend-basis-by-elimination",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-independence-by-rank",
+   "target": "exm-extend-basis-by-elimination",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-basis-column-space",
+   "target": "exm-extend-basis-by-elimination",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-basis-column-space",
+   "target": "exm-independence-by-rank",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-independence-spanning-by-rank",
+   "target": "exm-independence-by-rank",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-sum-by-elimination",
+   "target": "exm-intersection-by-elimination",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-sum-intersection-by-elimination",
+   "target": "exm-intersection-by-elimination",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-basis-null-space",
+   "target": "exm-intersection-by-elimination",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dimension-formula-subspace-dim",
+   "target": "exm-intersection-by-elimination",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-sum-intersection-by-elimination",
+   "target": "exm-sum-by-elimination",
+   "kind": "reference"
+  },
+  {
+   "source": "def-column-space",
+   "target": "exr-rank-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "def-null-space",
+   "target": "exr-rank-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "def-rank-matrix",
+   "target": "exr-rank-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "def-row-space",
+   "target": "exr-rank-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-sum-intersection-by-elimination",
+   "target": "exr-rank-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rank-nullity-matrix",
+   "target": "exr-rank-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rouche-capelli",
+   "target": "exr-rank-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-row-ops-row-space",
+   "target": "exr-rank-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-row-rank-equals-column-rank",
+   "target": "exr-rank-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-basis-column-space",
+   "target": "exr-rank-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-basis-null-space",
+   "target": "exr-rank-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-basis-row-space",
+   "target": "exr-rank-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rank-nullity-matrix",
+   "target": "exr-rank-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-rank-from-any-echelon-form",
+   "target": "exr-rank-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-basis-column-space",
+   "target": "exr-rank-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-independence-spanning-by-rank",
+   "target": "exr-rank-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-sum-intersection-by-elimination",
+   "target": "exr-rank-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-basis-column-space",
+   "target": "exr-rank-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-basis-null-space",
+   "target": "exr-rank-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dimension-formula-subspace-dim",
+   "target": "exr-rank-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "def-sum-of-subspaces",
+   "target": "exr-rank-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dimension-formula-subspace-dim",
+   "target": "exr-rank-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-span-subspace",
+   "target": "exr-rank-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-subspace-dimension",
+   "target": "exr-rank-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-subspace-sum",
+   "target": "exr-rank-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-subspace-dimension",
+   "target": "exr-rank-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-three-views-of-product",
+   "target": "exr-rank-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-zero-product",
+   "target": "exr-rank-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rank-nullity-matrix",
+   "target": "exr-rank-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-row-rank-equals-column-rank",
+   "target": "exr-rank-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-size-bounds",
+   "target": "exr-rank-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-rank-from-any-echelon-form",
+   "target": "exr-rank-c4",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-consistent-iff-column-span",
+   "target": "exr-rank-c4",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-general-solution-structure",
+   "target": "exr-rank-c4",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rank-nullity-matrix",
+   "target": "exr-rank-c4",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rouche-capelli",
+   "target": "exr-rank-c4",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-unique-representation",
+   "target": "exr-rank-c4",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-sum-of-spans",
+   "target": "prp-sum-intersection-by-elimination",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-basis-column-space",
+   "target": "prp-sum-intersection-by-elimination",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-times-vector-columns",
+   "target": "prp-sum-intersection-by-elimination",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-row-rank-equals-column-rank",
+   "target": "prp-sum-intersection-by-elimination",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-pivot-columns-well-defined",
+   "target": "thm-basis-column-space",
+   "kind": "reference"
+  },
+  {
+   "source": "def-basis",
+   "target": "thm-basis-column-space",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-span-basic-properties",
+   "target": "thm-basis-column-space",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-row-ops-row-space",
+   "target": "thm-basis-column-space",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-sift",
+   "target": "thm-basis-column-space",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-row-ops-row-space",
+   "target": "thm-basis-null-space",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-row-ops-row-space",
+   "target": "thm-basis-row-space",
+   "kind": "reference"
+  },
+  {
+   "source": "def-basis",
+   "target": "thm-independence-spanning-by-rank",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dim-impl-eq",
+   "target": "thm-independence-spanning-by-rank",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-times-vector-columns",
+   "target": "thm-independence-spanning-by-rank",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rank-nullity-matrix",
+   "target": "thm-independence-spanning-by-rank",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-row-rank-equals-column-rank",
+   "target": "thm-independence-spanning-by-rank",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-basis-null-space",
+   "target": "thm-rank-nullity-matrix",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-row-rank-equals-column-rank",
+   "target": "thm-rank-nullity-matrix",
+   "kind": "reference"
+  },
+  {
+   "source": "def-column-space",
+   "target": "thm-rank-product-inequality",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-span-basic-properties",
+   "target": "thm-rank-product-inequality",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-times-vector-columns",
+   "target": "thm-rank-product-inequality",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-row-rank-equals-column-rank",
+   "target": "thm-rank-product-inequality",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-subspace-dimension",
+   "target": "thm-rank-product-inequality",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-three-views-of-product",
+   "target": "thm-rank-product-inequality",
+   "kind": "reference"
+  },
+  {
+   "source": "def-column-space",
+   "target": "thm-rouche-capelli",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-span-basic-properties",
+   "target": "thm-rouche-capelli",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-basis-null-space",
+   "target": "thm-rouche-capelli",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-consistent-iff-column-span",
+   "target": "thm-rouche-capelli",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dim-impl-eq",
+   "target": "thm-rouche-capelli",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-general-solution-structure",
+   "target": "thm-rouche-capelli",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rank-nullity-matrix",
+   "target": "thm-rouche-capelli",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-span-absorb",
+   "target": "thm-rouche-capelli",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-unique-representation",
+   "target": "thm-rouche-capelli",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-row-equivalent-same-null-space",
+   "target": "thm-row-ops-row-space",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-row-ops-preserve-column-relations",
+   "target": "thm-row-ops-row-space",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-span-basic-properties",
+   "target": "thm-row-ops-row-space",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-times-vector-columns",
+   "target": "thm-row-ops-row-space",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-row-equivalent-iff-invertible-multiple",
+   "target": "thm-row-ops-row-space",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-three-views-of-product",
+   "target": "thm-row-ops-row-space",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-basis-column-space",
+   "target": "thm-row-rank-equals-column-rank",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-basis-row-space",
+   "target": "thm-row-rank-equals-column-rank",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-lu-by-elimination",
+   "target": "exm-lu-solve",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-triangular-invertible",
+   "target": "exm-lu-solve",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-unit-lower-triangular-closed",
+   "target": "exm-lu-solve",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-field-basic-properties",
+   "target": "exm-no-lu-factorization",
+   "kind": "reference"
+  },
+  {
+   "source": "def-lu-factorization",
+   "target": "exr-lu-factorization-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "def-plu-factorization",
+   "target": "exr-lu-factorization-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-no-lu-factorization",
+   "target": "exr-lu-factorization-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-permutation-matrices",
+   "target": "exr-lu-factorization-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-unit-lower-triangular-closed",
+   "target": "exr-lu-factorization-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-lu-unique",
+   "target": "exr-lu-factorization-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-triangular-invertible",
+   "target": "exr-lu-factorization-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-unit-lower-triangular-closed",
+   "target": "exr-lu-factorization-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-inverse-matrix-properties",
+   "target": "exr-lu-factorization-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-lu-exists-without-swaps",
+   "target": "exr-lu-factorization-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "exr-lu-factorization-b1",
+   "target": "exr-lu-factorization-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-inverse-matrix-properties",
+   "target": "exr-lu-factorization-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-no-lu-factorization",
+   "target": "exr-lu-factorization-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-permutation-matrices",
+   "target": "exr-lu-factorization-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "def-matrix-multiplication",
+   "target": "exr-lu-factorization-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-triangular-invertible",
+   "target": "exr-lu-factorization-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-unit-lower-triangular-closed",
+   "target": "exr-lu-factorization-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-inverse-matrix-properties",
+   "target": "exr-lu-factorization-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-triangular-invertible",
+   "target": "exr-lu-factorization-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-unit-lower-triangular-closed",
+   "target": "exr-lu-factorization-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-inverse-matrix-properties",
+   "target": "exr-lu-factorization-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-ldlt",
+   "target": "exr-lu-factorization-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-lu-exists-without-swaps",
+   "target": "exr-lu-factorization-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-transpose-properties",
+   "target": "exr-lu-factorization-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-no-lu-factorization",
+   "target": "exr-lu-factorization-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-multiplication-properties",
+   "target": "lem-elimination-matrices",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-times-vector-columns",
+   "target": "lem-permutation-matrices",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-one-sided-inverse",
+   "target": "lem-permutation-matrices",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-three-views-of-product",
+   "target": "lem-permutation-matrices",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-transpose-properties",
+   "target": "lem-permutation-matrices",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-invertible-tfae",
+   "target": "lem-triangular-invertible",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-size-bounds",
+   "target": "lem-triangular-invertible",
+   "kind": "reference"
+  },
+  {
+   "source": "def-matrix-multiplication",
+   "target": "lem-unit-lower-triangular-closed",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-multiplication-properties",
+   "target": "lem-unit-lower-triangular-closed",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-no-lu-factorization",
+   "target": "thm-ldlt",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-triangular-invertible",
+   "target": "thm-ldlt",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-lu-unique",
+   "target": "thm-ldlt",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-transpose-properties",
+   "target": "thm-ldlt",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-lu-by-elimination",
+   "target": "thm-lu-exists-without-swaps",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-elimination-matrices",
+   "target": "thm-lu-exists-without-swaps",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-row-op-is-left-multiplication",
+   "target": "thm-lu-exists-without-swaps",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-triangular-invertible",
+   "target": "thm-lu-unique",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-unit-lower-triangular-closed",
+   "target": "thm-lu-unique",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-inverse-matrix-properties",
+   "target": "thm-lu-unique",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-elimination-matrices",
+   "target": "thm-plu-exists",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-permutation-matrices",
+   "target": "thm-plu-exists",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-lu-exists-without-swaps",
+   "target": "thm-plu-exists",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-row-op-is-left-multiplication",
+   "target": "thm-plu-exists",
+   "kind": "reference"
+  },
+  {
+   "source": "def-rank-matrix",
+   "target": "cor-flow-solvable",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-incidence-rank-connected",
+   "target": "cor-flow-solvable",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-consistent-iff-column-span",
+   "target": "cor-flow-solvable",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dim-impl-eq",
+   "target": "cor-flow-solvable",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-general-solution-structure",
+   "target": "cor-flow-solvable",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-homogeneous-solutions-subspace",
+   "target": "cor-flow-solvable",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rank-nullity-matrix",
+   "target": "cor-flow-solvable",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-span-subspace",
+   "target": "cor-flow-solvable",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rank-nullity-matrix",
+   "target": "exm-balance-ammonia",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-reading-rref",
+   "target": "exm-balance-ammonia",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-interpolation-unique",
+   "target": "exm-interpolation-cubic",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-unique-solution-iff-trivial-kernel",
+   "target": "exm-lights-out-3x3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dim-impl-eq",
+   "target": "exm-lights-out-3x3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rank-nullity-matrix",
+   "target": "exm-lights-out-3x3",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-flow-solvable",
+   "target": "exm-traffic-network",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-incidence-rank-connected",
+   "target": "exm-traffic-network",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-reading-rref",
+   "target": "exm-traffic-network",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-flow-solvable",
+   "target": "exr-applications-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-incidence-rank-connected",
+   "target": "exr-applications-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-interpolation-unique",
+   "target": "exr-applications-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-interpolation-unique",
+   "target": "exr-applications-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-flow-solvable",
+   "target": "exr-applications-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-permutation-matrices",
+   "target": "exr-applications-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-inverse-matrix-properties",
+   "target": "exr-applications-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-multiplication-properties",
+   "target": "exr-applications-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-triangular-invertible",
+   "target": "exr-applications-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-row-ops-preserve-solutions",
+   "target": "exr-applications-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "def-equivalence-relation",
+   "target": "exr-applications-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-incidence-rank-connected",
+   "target": "exr-applications-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-partition",
+   "target": "exr-applications-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rank-nullity-matrix",
+   "target": "exr-applications-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-row-rank-equals-column-rank",
+   "target": "exr-applications-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-evaluation-respects-operations",
+   "target": "lem-factor-theorem-linear",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-strong-induction",
+   "target": "lem-factor-theorem-linear",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-factor-theorem-linear",
+   "target": "lem-root-bound",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-degree-of-product",
+   "target": "lem-root-bound",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-evaluation-respects-operations",
+   "target": "lem-root-bound",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-field-basic-properties",
+   "target": "lem-root-bound",
+   "kind": "reference"
+  },
+  {
+   "source": "def-incidence-matrix",
+   "target": "prp-incidence-rank-connected",
+   "kind": "reference"
+  },
+  {
+   "source": "def-transpose",
+   "target": "prp-incidence-rank-connected",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rank-nullity-matrix",
+   "target": "prp-incidence-rank-connected",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-row-rank-equals-column-rank",
+   "target": "prp-incidence-rank-connected",
+   "kind": "reference"
+  },
+  {
+   "source": "def-polynomial",
+   "target": "thm-interpolation-unique",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-root-bound",
+   "target": "thm-interpolation-unique",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-inverse-matrix-properties",
+   "target": "thm-interpolation-unique",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-invertible-tfae",
+   "target": "thm-interpolation-unique",
    "kind": "reference"
   },
   {
