@@ -548,6 +548,75 @@
           "filename": "11-powers-recurrences-markov.md"
         }
       ]
+    },
+    {
+      "title": "Canonical Forms",
+      "number": 9,
+      "part": "",
+      "collapsed": true,
+      "path": "ch09-canonical-forms/index.html",
+      "sections": [
+        {
+          "title": "Generalized Eigenspaces",
+          "number": "9.1",
+          "path": "ch09-canonical-forms/01-generalized-eigenspaces.html",
+          "filename": "01-generalized-eigenspaces.md"
+        },
+        {
+          "title": "Nilpotent Operators",
+          "number": "9.2",
+          "path": "ch09-canonical-forms/02-nilpotent-operators.html",
+          "filename": "02-nilpotent-operators.md"
+        },
+        {
+          "title": "The Jordan Canonical Form",
+          "number": "9.3",
+          "path": "ch09-canonical-forms/03-jordan-canonical-form.html",
+          "filename": "03-jordan-canonical-form.md"
+        },
+        {
+          "title": "The Real Jordan Form and the Weyr Form",
+          "number": "9.4",
+          "path": "ch09-canonical-forms/04-real-jordan-and-weyr-forms.html",
+          "filename": "04-real-jordan-and-weyr-forms.md"
+        },
+        {
+          "title": "Cyclic Subspaces and Companion Matrices",
+          "number": "9.5",
+          "path": "ch09-canonical-forms/05-cyclic-subspaces-and-companion-matrices.html",
+          "filename": "05-cyclic-subspaces-and-companion-matrices.md"
+        },
+        {
+          "title": "The Rational Canonical Form",
+          "number": "9.6",
+          "path": "ch09-canonical-forms/06-rational-canonical-form.html",
+          "filename": "06-rational-canonical-form.md"
+        },
+        {
+          "title": "Polynomial Matrices and the Smith Normal Form",
+          "number": "9.7",
+          "path": "ch09-canonical-forms/07-smith-normal-form.html",
+          "filename": "07-smith-normal-form.md"
+        },
+        {
+          "title": "Semisimple Operators and the Jordan–Chevalley Decomposition",
+          "number": "9.8",
+          "path": "ch09-canonical-forms/08-jordan-chevalley.html",
+          "filename": "08-jordan-chevalley.md"
+        },
+        {
+          "title": "Functions of Matrices, the Exponential and Linear Differential Equations",
+          "number": "9.9",
+          "path": "ch09-canonical-forms/09-functions-of-matrices-and-odes.html",
+          "filename": "09-functions-of-matrices-and-odes.md"
+        },
+        {
+          "title": "Convergent and Power-Bounded Matrices",
+          "number": "9.10",
+          "path": "ch09-canonical-forms/10-convergent-matrices.html",
+          "filename": "10-convergent-matrices.md"
+        }
+      ]
     }
   ]
 }

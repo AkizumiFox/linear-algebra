@@ -15839,6 +15839,1818 @@
    "chapter": "Eigenvalues and Diagonalization",
    "chapterNumber": 8,
    "color": "#2f62b5"
+  },
+  {
+   "id": "cor-generalized-eigenspace-is-kernel",
+   "type": "corollary",
+   "group": "statements",
+   "name": "Corollary 9.1.2",
+   "title": "The Generalized Eigenspace Is One Kernel",
+   "url": "ch09-canonical-forms/01-generalized-eigenspaces.html#cor-generalized-eigenspace-is-kernel",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "def-generalized-eigenspace",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 9.1.2",
+   "title": "Generalized Eigenspace",
+   "url": "ch09-canonical-forms/01-generalized-eigenspaces.html#def-generalized-eigenspace",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#b0414f"
+  },
+  {
+   "id": "def-generalized-eigenvector",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 9.1.1",
+   "title": "Generalized Eigenvector",
+   "url": "ch09-canonical-forms/01-generalized-eigenspaces.html#def-generalized-eigenvector",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#b0414f"
+  },
+  {
+   "id": "exm-generalized-eigenspaces-4x4",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "Generalized Eigenspaces of a 4 \u00d7 4 Matrix",
+   "url": "ch09-canonical-forms/01-generalized-eigenspaces.html#exm-generalized-eigenspaces-4x4",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exr-generalized-eigenspaces-a1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "A1",
+   "url": "ch09-canonical-forms/01-generalized-eigenspaces.html#exr-generalized-eigenspaces-a1",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-generalized-eigenspaces-b1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B1: Computing generalized eigenspaces",
+   "url": "ch09-canonical-forms/01-generalized-eigenspaces.html#exr-generalized-eigenspaces-b1",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-generalized-eigenspaces-b2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B2: The image chain stabilizes too",
+   "url": "ch09-canonical-forms/01-generalized-eigenspaces.html#exr-generalized-eigenspaces-b2",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-generalized-eigenspaces-b3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B3: Reading the dimensions off a triangular matrix",
+   "url": "ch09-canonical-forms/01-generalized-eigenspaces.html#exr-generalized-eigenspaces-b3",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-generalized-eigenspaces-c1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C1: The Fitting decomposition",
+   "url": "ch09-canonical-forms/01-generalized-eigenspaces.html#exr-generalized-eigenspaces-c1",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-generalized-eigenspaces-c2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C2: Commuting operators preserve generalized eigenspaces",
+   "url": "ch09-canonical-forms/01-generalized-eigenspaces.html#exr-generalized-eigenspaces-c2",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#a8670c"
+  },
+  {
+   "id": "thm-generalized-eigenspace-decomposition",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 9.1.3",
+   "title": "Generalized Eigenspace Decomposition",
+   "url": "ch09-canonical-forms/01-generalized-eigenspaces.html#thm-generalized-eigenspace-decomposition",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-kernel-chain-stabilizes",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 9.1.1",
+   "title": "The Kernel Chain Stabilizes",
+   "url": "ch09-canonical-forms/01-generalized-eigenspaces.html#thm-kernel-chain-stabilizes",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "cor-nilpotent-similar-iff-ranks",
+   "type": "corollary",
+   "group": "statements",
+   "name": "Corollary 9.2.5",
+   "title": "Similarity of Nilpotent Matrices",
+   "url": "ch09-canonical-forms/02-nilpotent-operators.html#cor-nilpotent-similar-iff-ranks",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "def-jordan-chain",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 9.2.2",
+   "title": "Jordan Chain",
+   "url": "ch09-canonical-forms/02-nilpotent-operators.html#def-jordan-chain",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#b0414f"
+  },
+  {
+   "id": "def-nilpotent",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 9.2.1",
+   "title": "Nilpotent Operator, Index of Nilpotency",
+   "url": "ch09-canonical-forms/02-nilpotent-operators.html#def-nilpotent",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#b0414f"
+  },
+  {
+   "id": "def-partition-of-n",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 9.2.3",
+   "title": "Partition of an Integer, Young Diagram, Dual Partition",
+   "url": "ch09-canonical-forms/02-nilpotent-operators.html#def-partition-of-n",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#b0414f"
+  },
+  {
+   "id": "exm-nilpotent-jordan-basis",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "A Jordan Basis for a 4 \u00d7 4 Nilpotent Matrix",
+   "url": "ch09-canonical-forms/02-nilpotent-operators.html#exm-nilpotent-jordan-basis",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exr-nilpotent-operators-a1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "A1",
+   "url": "ch09-canonical-forms/02-nilpotent-operators.html#exr-nilpotent-operators-a1",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-nilpotent-operators-b1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B1: Block sizes from rank data",
+   "url": "ch09-canonical-forms/02-nilpotent-operators.html#exr-nilpotent-operators-b1",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-nilpotent-operators-b2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B2: The five classes in dimension four",
+   "url": "ch09-canonical-forms/02-nilpotent-operators.html#exr-nilpotent-operators-b2",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-nilpotent-operators-b3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B3: A Jordan basis by hand",
+   "url": "ch09-canonical-forms/02-nilpotent-operators.html#exr-nilpotent-operators-b3",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-nilpotent-operators-c1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C1: A nilpotent matrix is similar to its transpose",
+   "url": "ch09-canonical-forms/02-nilpotent-operators.html#exr-nilpotent-operators-c1",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-nilpotent-operators-c2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C2: One long chain",
+   "url": "ch09-canonical-forms/02-nilpotent-operators.html#exr-nilpotent-operators-c2",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#a8670c"
+  },
+  {
+   "id": "lem-jordan-chain-independent",
+   "type": "lemma",
+   "group": "statements",
+   "name": "Lemma 9.2.2",
+   "title": "A Jordan Chain Is Independent",
+   "url": "ch09-canonical-forms/02-nilpotent-operators.html#lem-jordan-chain-independent",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "prp-nilpotent-basic",
+   "type": "proposition",
+   "group": "statements",
+   "name": "Proposition 9.2.1",
+   "title": "Basic Properties of Nilpotent Operators",
+   "url": "ch09-canonical-forms/02-nilpotent-operators.html#prp-nilpotent-basic",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-nilpotent-block-sizes-from-ranks",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 9.2.4",
+   "title": "Block Sizes from Ranks of Powers",
+   "url": "ch09-canonical-forms/02-nilpotent-operators.html#thm-nilpotent-block-sizes-from-ranks",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-nilpotent-structure",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 9.2.3",
+   "title": "Structure Theorem for Nilpotent Operators",
+   "url": "ch09-canonical-forms/02-nilpotent-operators.html#thm-nilpotent-structure",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "cor-jordan-invariants",
+   "type": "corollary",
+   "group": "statements",
+   "name": "Corollary 9.3.2",
+   "title": "Invariants from the Jordan Form",
+   "url": "ch09-canonical-forms/03-jordan-canonical-form.html#cor-jordan-invariants",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "cor-similar-iff-same-jordan-form",
+   "type": "corollary",
+   "group": "statements",
+   "name": "Corollary 9.3.3",
+   "title": "Similarity via the Jordan Form",
+   "url": "ch09-canonical-forms/03-jordan-canonical-form.html#cor-similar-iff-same-jordan-form",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "def-jordan-block",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 9.3.1",
+   "title": "Jordan Block",
+   "url": "ch09-canonical-forms/03-jordan-canonical-form.html#def-jordan-block",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#b0414f"
+  },
+  {
+   "id": "def-jordan-form",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 9.3.2",
+   "title": "Jordan Matrix, Jordan Basis, Jordan Form",
+   "url": "ch09-canonical-forms/03-jordan-canonical-form.html#def-jordan-form",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#b0414f"
+  },
+  {
+   "id": "exm-jordan-form-5x5",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "The Jordan Form of a 5 \u00d7 5 Matrix",
+   "url": "ch09-canonical-forms/03-jordan-canonical-form.html#exm-jordan-form-5x5",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exr-jordan-canonical-form-a1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "A1",
+   "url": "ch09-canonical-forms/03-jordan-canonical-form.html#exr-jordan-canonical-form-a1",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-jordan-canonical-form-b1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B1: Jordan forms from polynomial data",
+   "url": "ch09-canonical-forms/03-jordan-canonical-form.html#exr-jordan-canonical-form-b1",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-jordan-canonical-form-b2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B2: Jordan forms and Jordan bases",
+   "url": "ch09-canonical-forms/03-jordan-canonical-form.html#exr-jordan-canonical-form-b2",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-jordan-canonical-form-b3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B3: Similar or not?",
+   "url": "ch09-canonical-forms/03-jordan-canonical-form.html#exr-jordan-canonical-form-b3",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-jordan-canonical-form-c1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C1: A matrix is similar to its transpose",
+   "url": "ch09-canonical-forms/03-jordan-canonical-form.html#exr-jordan-canonical-form-c1",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-jordan-canonical-form-c2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C2: How much do p and m decide?",
+   "url": "ch09-canonical-forms/03-jordan-canonical-form.html#exr-jordan-canonical-form-c2",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#a8670c"
+  },
+  {
+   "id": "thm-jordan-canonical-form",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 9.3.1",
+   "title": "Jordan Canonical Form Theorem",
+   "url": "ch09-canonical-forms/03-jordan-canonical-form.html#thm-jordan-canonical-form",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "cor-real-block-complex-jordan",
+   "type": "corollary",
+   "group": "statements",
+   "name": "Corollary 9.4.2",
+   "title": "A Real Jordan Block Splits into Two Complex Ones",
+   "url": "ch09-canonical-forms/04-real-jordan-and-weyr-forms.html#cor-real-block-complex-jordan",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "def-real-jordan-block",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 9.4.1",
+   "title": "Rotation-Scaling Block, Real Jordan Block",
+   "url": "ch09-canonical-forms/04-real-jordan-and-weyr-forms.html#def-real-jordan-block",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#b0414f"
+  },
+  {
+   "id": "def-weyr-form",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 9.4.2",
+   "title": "Basic Weyr Matrix, Weyr Structure, Weyr Form",
+   "url": "ch09-canonical-forms/04-real-jordan-and-weyr-forms.html#def-weyr-form",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#b0414f"
+  },
+  {
+   "id": "exm-real-jordan-4x4",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "The Real Jordan Form of a 4 \u00d7 4 Matrix",
+   "url": "ch09-canonical-forms/04-real-jordan-and-weyr-forms.html#exm-real-jordan-4x4",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exr-real-jordan-and-weyr-forms-a1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "A1",
+   "url": "ch09-canonical-forms/04-real-jordan-and-weyr-forms.html#exr-real-jordan-and-weyr-forms-a1",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-real-jordan-and-weyr-forms-b1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B1: Real forms of two by two matrices",
+   "url": "ch09-canonical-forms/04-real-jordan-and-weyr-forms.html#exr-real-jordan-and-weyr-forms-b1",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-real-jordan-and-weyr-forms-b2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B2: Weyr forms of Jordan matrices",
+   "url": "ch09-canonical-forms/04-real-jordan-and-weyr-forms.html#exr-real-jordan-and-weyr-forms-b2",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-real-jordan-and-weyr-forms-b3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B3: Real forms of three by three matrices from the characteristic polynomial",
+   "url": "ch09-canonical-forms/04-real-jordan-and-weyr-forms.html#exr-real-jordan-and-weyr-forms-b3",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-real-jordan-and-weyr-forms-c1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C1: The real form of a companion matrix",
+   "url": "ch09-canonical-forms/04-real-jordan-and-weyr-forms.html#exr-real-jordan-and-weyr-forms-c1",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-real-jordan-and-weyr-forms-c2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C2: Commuting with a Weyr matrix, and with a Jordan matrix",
+   "url": "ch09-canonical-forms/04-real-jordan-and-weyr-forms.html#exr-real-jordan-and-weyr-forms-c2",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#a8670c"
+  },
+  {
+   "id": "lem-real-null-space-complexifies",
+   "type": "lemma",
+   "group": "statements",
+   "name": "Lemma 9.4.3",
+   "title": "Real and Complex Null Spaces of a Real Matrix",
+   "url": "ch09-canonical-forms/04-real-jordan-and-weyr-forms.html#lem-real-null-space-complexifies",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "lem-realify-jordan-chain",
+   "type": "lemma",
+   "group": "statements",
+   "name": "Lemma 9.4.1",
+   "title": "Realifying a Conjugate Pair of Chains",
+   "url": "ch09-canonical-forms/04-real-jordan-and-weyr-forms.html#lem-realify-jordan-chain",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "prp-weyr-commutant",
+   "type": "proposition",
+   "group": "statements",
+   "name": "Proposition 9.4.6",
+   "title": "The Commutant of a Basic Weyr Matrix Is Block Triangular",
+   "url": "ch09-canonical-forms/04-real-jordan-and-weyr-forms.html#prp-weyr-commutant",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-real-jordan-form",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 9.4.4",
+   "title": "Real Jordan Form",
+   "url": "ch09-canonical-forms/04-real-jordan-and-weyr-forms.html#thm-real-jordan-form",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-weyr-form",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 9.4.5",
+   "title": "Weyr Form",
+   "url": "ch09-canonical-forms/04-real-jordan-and-weyr-forms.html#thm-weyr-form",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "def-companion-matrix",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 9.5.3",
+   "title": "Companion Matrix",
+   "url": "ch09-canonical-forms/05-cyclic-subspaces-and-companion-matrices.html#def-companion-matrix",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#b0414f"
+  },
+  {
+   "id": "def-cyclic-subspace",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 9.5.1",
+   "title": "Cyclic Subspace",
+   "url": "ch09-canonical-forms/05-cyclic-subspaces-and-companion-matrices.html#def-cyclic-subspace",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#b0414f"
+  },
+  {
+   "id": "def-cyclic-vector",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 9.5.4",
+   "title": "Cyclic Vector, Cyclic Operator",
+   "url": "ch09-canonical-forms/05-cyclic-subspaces-and-companion-matrices.html#def-cyclic-vector",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#b0414f"
+  },
+  {
+   "id": "def-t-annihilator",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 9.5.2",
+   "title": "The T-Annihilator of a Vector",
+   "url": "ch09-canonical-forms/05-cyclic-subspaces-and-companion-matrices.html#def-t-annihilator",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#b0414f"
+  },
+  {
+   "id": "exm-cyclic-3x3",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "A Cyclic Subspace and a Cyclic Vector",
+   "url": "ch09-canonical-forms/05-cyclic-subspaces-and-companion-matrices.html#exm-cyclic-3x3",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exr-cyclic-subspaces-and-companion-matrices-a1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "A1",
+   "url": "ch09-canonical-forms/05-cyclic-subspaces-and-companion-matrices.html#exr-cyclic-subspaces-and-companion-matrices-a1",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-cyclic-subspaces-and-companion-matrices-b1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B1: Annihilators of vectors",
+   "url": "ch09-canonical-forms/05-cyclic-subspaces-and-companion-matrices.html#exr-cyclic-subspaces-and-companion-matrices-b1",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-cyclic-subspaces-and-companion-matrices-b2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B2: Cyclic or not?",
+   "url": "ch09-canonical-forms/05-cyclic-subspaces-and-companion-matrices.html#exr-cyclic-subspaces-and-companion-matrices-b2",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-cyclic-subspaces-and-companion-matrices-b3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B3: Cyclic subspaces for differentiation",
+   "url": "ch09-canonical-forms/05-cyclic-subspaces-and-companion-matrices.html#exr-cyclic-subspaces-and-companion-matrices-b3",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-cyclic-subspaces-and-companion-matrices-c1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C1: What commutes with a cyclic operator",
+   "url": "ch09-canonical-forms/05-cyclic-subspaces-and-companion-matrices.html#exr-cyclic-subspaces-and-companion-matrices-c1",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-cyclic-subspaces-and-companion-matrices-c2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C2: How many cyclic vectors?",
+   "url": "ch09-canonical-forms/05-cyclic-subspaces-and-companion-matrices.html#exr-cyclic-subspaces-and-companion-matrices-c2",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#a8670c"
+  },
+  {
+   "id": "lem-annihilator-of-sum",
+   "type": "lemma",
+   "group": "statements",
+   "name": "Lemma 9.5.4",
+   "title": "Annihilator of a Sum with Coprime Annihilators",
+   "url": "ch09-canonical-forms/05-cyclic-subspaces-and-companion-matrices.html#lem-annihilator-of-sum",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "prp-cyclic-subspace-smallest",
+   "type": "proposition",
+   "group": "statements",
+   "name": "Proposition 9.5.1",
+   "title": "The Cyclic Subspace Is the Smallest Invariant Subspace Containing the Vector",
+   "url": "ch09-canonical-forms/05-cyclic-subspaces-and-companion-matrices.html#prp-cyclic-subspace-smallest",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "prp-vector-with-full-annihilator",
+   "type": "proposition",
+   "group": "statements",
+   "name": "Proposition 9.5.5",
+   "title": "Some Vector Has the Minimal Polynomial as Its Annihilator",
+   "url": "ch09-canonical-forms/05-cyclic-subspaces-and-companion-matrices.html#prp-vector-with-full-annihilator",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-companion-char-min",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 9.5.3",
+   "title": "The Companion Matrix Realizes Its Polynomial Twice",
+   "url": "ch09-canonical-forms/05-cyclic-subspaces-and-companion-matrices.html#thm-companion-char-min",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-cyclic-iff-min-equals-char",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 9.5.6",
+   "title": "Cyclic Operators",
+   "url": "ch09-canonical-forms/05-cyclic-subspaces-and-companion-matrices.html#thm-cyclic-iff-min-equals-char",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-cyclic-subspace-basis",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 9.5.2",
+   "title": "Basis and Matrix of a Cyclic Subspace",
+   "url": "ch09-canonical-forms/05-cyclic-subspaces-and-companion-matrices.html#thm-cyclic-subspace-basis",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "cor-companion-linear-power-is-jordan",
+   "type": "corollary",
+   "group": "statements",
+   "name": "Corollary 9.6.8",
+   "title": "Companion Blocks of Linear Powers Are Jordan Blocks",
+   "url": "ch09-canonical-forms/06-rational-canonical-form.html#cor-companion-linear-power-is-jordan",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "cor-invariant-factors-unique",
+   "type": "corollary",
+   "group": "statements",
+   "name": "Corollary 9.6.4",
+   "title": "Uniqueness of the Chain and of the Prime Powers",
+   "url": "ch09-canonical-forms/06-rational-canonical-form.html#cor-invariant-factors-unique",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "cor-similar-iff-same-invariant-factors",
+   "type": "corollary",
+   "group": "statements",
+   "name": "Corollary 9.6.6",
+   "title": "Similarity via the Invariant Factors",
+   "url": "ch09-canonical-forms/06-rational-canonical-form.html#cor-similar-iff-same-invariant-factors",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "cor-similarity-field-independent",
+   "type": "corollary",
+   "group": "statements",
+   "name": "Corollary 9.6.10",
+   "title": "Similarity Is Independent of the Field",
+   "url": "ch09-canonical-forms/06-rational-canonical-form.html#cor-similarity-field-independent",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "def-invariant-factors",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 9.6.1",
+   "title": "Invariant Factors, Elementary Divisors",
+   "url": "ch09-canonical-forms/06-rational-canonical-form.html#def-invariant-factors",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#b0414f"
+  },
+  {
+   "id": "exm-invariant-factors-from-data",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "Invariant Factors from Polynomial Data",
+   "url": "ch09-canonical-forms/06-rational-canonical-form.html#exm-invariant-factors-from-data",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-rational-form-4x4",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "The Rational Canonical Form of a Matrix over the Rationals",
+   "url": "ch09-canonical-forms/06-rational-canonical-form.html#exm-rational-form-4x4",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exr-rational-canonical-form-a1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "A1",
+   "url": "ch09-canonical-forms/06-rational-canonical-form.html#exr-rational-canonical-form-a1",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-rational-canonical-form-b1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B1: Invariant factors from given data",
+   "url": "ch09-canonical-forms/06-rational-canonical-form.html#exr-rational-canonical-form-b1",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-rational-canonical-form-b2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B2: Rational forms of matrices",
+   "url": "ch09-canonical-forms/06-rational-canonical-form.html#exr-rational-canonical-form-b2",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-rational-canonical-form-b3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B3: Counting similarity classes over a finite field",
+   "url": "ch09-canonical-forms/06-rational-canonical-form.html#exr-rational-canonical-form-b3",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-rational-canonical-form-c1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C1: Which matrices are companion matrices",
+   "url": "ch09-canonical-forms/06-rational-canonical-form.html#exr-rational-canonical-form-c1",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-rational-canonical-form-c2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C2: All similarity classes of two by two matrices over the smallest field",
+   "url": "ch09-canonical-forms/06-rational-canonical-form.html#exr-rational-canonical-form-c2",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-rational-canonical-form-c3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C3: A matrix over the rationals is similar to its transpose",
+   "url": "ch09-canonical-forms/06-rational-canonical-form.html#exr-rational-canonical-form-c3",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#a8670c"
+  },
+  {
+   "id": "lem-rank-field-independent",
+   "type": "lemma",
+   "group": "statements",
+   "name": "Lemma 9.6.9",
+   "title": "Rank Does Not Change with the Field",
+   "url": "ch09-canonical-forms/06-rational-canonical-form.html#lem-rank-field-independent",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "prp-elementary-divisors-from-kernels",
+   "type": "proposition",
+   "group": "statements",
+   "name": "Proposition 9.6.3",
+   "title": "Counting the Exponents",
+   "url": "ch09-canonical-forms/06-rational-canonical-form.html#prp-elementary-divisors-from-kernels",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-cyclic-decomposition",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 9.6.2",
+   "title": "Cyclic Decomposition Theorem",
+   "url": "ch09-canonical-forms/06-rational-canonical-form.html#thm-cyclic-decomposition",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-elementary-divisor-form",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 9.6.7",
+   "title": "Elementary Divisor Form",
+   "url": "ch09-canonical-forms/06-rational-canonical-form.html#thm-elementary-divisor-form",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-primary-cyclic-decomposition",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 9.6.1",
+   "title": "Cyclic Decomposition for a Single Prime Power",
+   "url": "ch09-canonical-forms/06-rational-canonical-form.html#thm-primary-cyclic-decomposition",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-rational-canonical-form",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 9.6.5",
+   "title": "Rational Canonical Form",
+   "url": "ch09-canonical-forms/06-rational-canonical-form.html#thm-rational-canonical-form",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "cor-a-similar-to-transpose",
+   "type": "corollary",
+   "group": "statements",
+   "name": "Corollary 9.7.7",
+   "title": "A Matrix Is Similar to Its Transpose",
+   "url": "ch09-canonical-forms/07-smith-normal-form.html#cor-a-similar-to-transpose",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "cor-invariant-factors-are-smith-entries",
+   "type": "corollary",
+   "group": "statements",
+   "name": "Corollary 9.7.6",
+   "title": "The Smith Form of xI - A Carries the Invariant Factors",
+   "url": "ch09-canonical-forms/07-smith-normal-form.html#cor-invariant-factors-are-smith-entries",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "def-polynomial-elementary-operations",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 9.7.1",
+   "title": "Elementary Operations over Flbrack xrbrack",
+   "url": "ch09-canonical-forms/07-smith-normal-form.html#def-polynomial-elementary-operations",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#b0414f"
+  },
+  {
+   "id": "def-polynomial-matrix-equivalence",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 9.7.2",
+   "title": "Equivalence over Flbrack xrbrack",
+   "url": "ch09-canonical-forms/07-smith-normal-form.html#def-polynomial-matrix-equivalence",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#b0414f"
+  },
+  {
+   "id": "exm-smith-form-3x3",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "A Smith Normal Form Computed by Hand",
+   "url": "ch09-canonical-forms/07-smith-normal-form.html#exm-smith-form-3x3",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exr-smith-normal-form-a1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "A1",
+   "url": "ch09-canonical-forms/07-smith-normal-form.html#exr-smith-normal-form-a1",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-smith-normal-form-b1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B1: Smith normal forms",
+   "url": "ch09-canonical-forms/07-smith-normal-form.html#exr-smith-normal-form-b1",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-smith-normal-form-b2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B2: Invariant factors from determinantal divisors",
+   "url": "ch09-canonical-forms/07-smith-normal-form.html#exr-smith-normal-form-b2",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-smith-normal-form-b3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B3: Deciding similarity",
+   "url": "ch09-canonical-forms/07-smith-normal-form.html#exr-smith-normal-form-b3",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-smith-normal-form-c1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C1: The same algorithm over the integers",
+   "url": "ch09-canonical-forms/07-smith-normal-form.html#exr-smith-normal-form-c1",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-smith-normal-form-c2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C2: Uniqueness by hand in the smallest case",
+   "url": "ch09-canonical-forms/07-smith-normal-form.html#exr-smith-normal-form-c2",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#a8670c"
+  },
+  {
+   "id": "lem-matrix-polynomial-division",
+   "type": "lemma",
+   "group": "statements",
+   "name": "Lemma 9.7.4",
+   "title": "Division of a Polynomial Matrix by xI - A",
+   "url": "ch09-canonical-forms/07-smith-normal-form.html#lem-matrix-polynomial-division",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "prp-operations-are-equivalence",
+   "type": "proposition",
+   "group": "statements",
+   "name": "Proposition 9.7.2",
+   "title": "Operations and Equivalence",
+   "url": "ch09-canonical-forms/07-smith-normal-form.html#prp-operations-are-equivalence",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "prp-polynomial-matrix-invertible",
+   "type": "proposition",
+   "group": "statements",
+   "name": "Proposition 9.7.1",
+   "title": "Invertible Polynomial Matrices",
+   "url": "ch09-canonical-forms/07-smith-normal-form.html#prp-polynomial-matrix-invertible",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-similar-iff-xi-minus-a-equivalent",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 9.7.5",
+   "title": "Similarity as Equivalence of xI - A and xI - B",
+   "url": "ch09-canonical-forms/07-smith-normal-form.html#thm-similar-iff-xi-minus-a-equivalent",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-smith-normal-form",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 9.7.3",
+   "title": "Smith Normal Form",
+   "url": "ch09-canonical-forms/07-smith-normal-form.html#thm-smith-normal-form",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "def-semisimple-operator",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 9.8.1",
+   "title": "Semisimple Operator",
+   "url": "ch09-canonical-forms/08-jordan-chevalley.html#def-semisimple-operator",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#b0414f"
+  },
+  {
+   "id": "exm-jordan-chevalley-3x3",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "The Semisimple and Nilpotent Parts of a 3 \u00d7 3 Matrix",
+   "url": "ch09-canonical-forms/08-jordan-chevalley.html#exm-jordan-chevalley-3x3",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exr-jordan-chevalley-a1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "A1",
+   "url": "ch09-canonical-forms/08-jordan-chevalley.html#exr-jordan-chevalley-a1",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-jordan-chevalley-b1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B1: Semisimple and nilpotent parts",
+   "url": "ch09-canonical-forms/08-jordan-chevalley.html#exr-jordan-chevalley-b1",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-jordan-chevalley-b2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B2: When is the nilpotent part zero?",
+   "url": "ch09-canonical-forms/08-jordan-chevalley.html#exr-jordan-chevalley-b2",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-jordan-chevalley-b3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B3: Block diagonal matrices",
+   "url": "ch09-canonical-forms/08-jordan-chevalley.html#exr-jordan-chevalley-b3",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-jordan-chevalley-c1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C1: The multiplicative version",
+   "url": "ch09-canonical-forms/08-jordan-chevalley.html#exr-jordan-chevalley-c1",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-jordan-chevalley-c2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C2: The parts inherit every symmetry",
+   "url": "ch09-canonical-forms/08-jordan-chevalley.html#exr-jordan-chevalley-c2",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#a8670c"
+  },
+  {
+   "id": "lem-minimal-polynomial-field-extension",
+   "type": "lemma",
+   "group": "statements",
+   "name": "Lemma 9.8.1",
+   "title": "The Minimal Polynomial Does Not Notice a Larger Field",
+   "url": "ch09-canonical-forms/08-jordan-chevalley.html#lem-minimal-polynomial-field-extension",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "prp-semisimple-iff-diagonalizable-over-extension",
+   "type": "proposition",
+   "group": "statements",
+   "name": "Proposition 9.8.2",
+   "title": "Semisimple Means Diagonalizable After Enlarging the Field",
+   "url": "ch09-canonical-forms/08-jordan-chevalley.html#prp-semisimple-iff-diagonalizable-over-extension",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-jordan-chevalley",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 9.8.3",
+   "title": "Jordan\u2013Chevalley Decomposition",
+   "url": "ch09-canonical-forms/08-jordan-chevalley.html#thm-jordan-chevalley",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "cor-exponential-of-jordan-block",
+   "type": "corollary",
+   "group": "statements",
+   "name": "Corollary 9.9.5",
+   "title": "Exponential of a Jordan Block, with a Parameter",
+   "url": "ch09-canonical-forms/09-functions-of-matrices-and-odes.html#cor-exponential-of-jordan-block",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "def-matrix-exponential",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 9.9.2",
+   "title": "Matrix Exponential",
+   "url": "ch09-canonical-forms/09-functions-of-matrices-and-odes.html#def-matrix-exponential",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#b0414f"
+  },
+  {
+   "id": "def-matrix-function-jordan",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 9.9.1",
+   "title": "Function of a Matrix",
+   "url": "ch09-canonical-forms/09-functions-of-matrices-and-odes.html#def-matrix-function-jordan",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#b0414f"
+  },
+  {
+   "id": "exm-matrix-square-root",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "Square Roots of Two Matrices",
+   "url": "ch09-canonical-forms/09-functions-of-matrices-and-odes.html#exm-matrix-square-root",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-ode-oscillation-and-resonance",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "Two Two-Dimensional Systems",
+   "url": "ch09-canonical-forms/09-functions-of-matrices-and-odes.html#exm-ode-oscillation-and-resonance",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-second-order-scalar-ode",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "A Second-Order Equation with a Repeated Root",
+   "url": "ch09-canonical-forms/09-functions-of-matrices-and-odes.html#exm-second-order-scalar-ode",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exr-functions-of-matrices-and-odes-a1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "A1",
+   "url": "ch09-canonical-forms/09-functions-of-matrices-and-odes.html#exr-functions-of-matrices-and-odes-a1",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-functions-of-matrices-and-odes-b1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B1: Computing exponentials",
+   "url": "ch09-canonical-forms/09-functions-of-matrices-and-odes.html#exr-functions-of-matrices-and-odes-b1",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-functions-of-matrices-and-odes-b2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B2: Solving systems",
+   "url": "ch09-canonical-forms/09-functions-of-matrices-and-odes.html#exr-functions-of-matrices-and-odes-b2",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-functions-of-matrices-and-odes-b3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B3: A square root and a logarithm",
+   "url": "ch09-canonical-forms/09-functions-of-matrices-and-odes.html#exr-functions-of-matrices-and-odes-b3",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-functions-of-matrices-and-odes-c1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C1: How badly the exponential law fails",
+   "url": "ch09-canonical-forms/09-functions-of-matrices-and-odes.html#exr-functions-of-matrices-and-odes-c1",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-functions-of-matrices-and-odes-c2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C2: When does every solution die out?",
+   "url": "ch09-canonical-forms/09-functions-of-matrices-and-odes.html#exr-functions-of-matrices-and-odes-c2",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#a8670c"
+  },
+  {
+   "id": "lem-polynomial-of-jordan-block",
+   "type": "lemma",
+   "group": "statements",
+   "name": "Lemma 9.9.1",
+   "title": "A Polynomial of a Jordan Block",
+   "url": "ch09-canonical-forms/09-functions-of-matrices-and-odes.html#lem-polynomial-of-jordan-block",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-exponential-properties",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 9.9.4",
+   "title": "Properties of the Matrix Exponential",
+   "url": "ch09-canonical-forms/09-functions-of-matrices-and-odes.html#thm-exponential-properties",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-exponential-series-converges",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 9.9.3",
+   "title": "The Exponential Series Converges to the Jordan Definition",
+   "url": "ch09-canonical-forms/09-functions-of-matrices-and-odes.html#thm-exponential-series-converges",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-linear-ode-solution",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 9.9.6",
+   "title": "Solution of a Linear System",
+   "url": "ch09-canonical-forms/09-functions-of-matrices-and-odes.html#thm-linear-ode-solution",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-matrix-function-hermite",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 9.9.2",
+   "title": "Functions of a Matrix Are Polynomials in It",
+   "url": "ch09-canonical-forms/09-functions-of-matrices-and-odes.html#thm-matrix-function-hermite",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "cor-markov-powers-converge",
+   "type": "corollary",
+   "group": "statements",
+   "name": "Corollary 9.10.5",
+   "title": "Convergence of a Markov Chain",
+   "url": "ch09-canonical-forms/10-convergent-matrices.html#cor-markov-powers-converge",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "def-entrywise-convergence",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 9.10.1",
+   "title": "Entrywise Convergence and Boundedness",
+   "url": "ch09-canonical-forms/10-convergent-matrices.html#def-entrywise-convergence",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#b0414f"
+  },
+  {
+   "id": "exm-markov-limit-2x2",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "A Two-State Chain",
+   "url": "ch09-canonical-forms/10-convergent-matrices.html#exm-markov-limit-2x2",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-neumann-2x2",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "Inverting by Summing a Series",
+   "url": "ch09-canonical-forms/10-convergent-matrices.html#exm-neumann-2x2",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-powers-of-two-matrices",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "Deciding and Computing Limits of Powers",
+   "url": "ch09-canonical-forms/10-convergent-matrices.html#exm-powers-of-two-matrices",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exr-convergent-matrices-a1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "A1",
+   "url": "ch09-canonical-forms/10-convergent-matrices.html#exr-convergent-matrices-a1",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-convergent-matrices-b1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B1: Decide the behavior",
+   "url": "ch09-canonical-forms/10-convergent-matrices.html#exr-convergent-matrices-b1",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-convergent-matrices-b2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B2: Computing limits",
+   "url": "ch09-canonical-forms/10-convergent-matrices.html#exr-convergent-matrices-b2",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-convergent-matrices-b3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B3: A Neumann series",
+   "url": "ch09-canonical-forms/10-convergent-matrices.html#exr-convergent-matrices-b3",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-convergent-matrices-c1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C1: Bounded but not convergent",
+   "url": "ch09-canonical-forms/10-convergent-matrices.html#exr-convergent-matrices-c1",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-convergent-matrices-c2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C2: Chapter 8\u2019s Markov theorem without diagonalizability",
+   "url": "ch09-canonical-forms/10-convergent-matrices.html#exr-convergent-matrices-c2",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#a8670c"
+  },
+  {
+   "id": "lem-powers-transfer-along-similarity",
+   "type": "lemma",
+   "group": "statements",
+   "name": "Lemma 9.10.1",
+   "title": "Convergence and Boundedness Survive a Similarity",
+   "url": "ch09-canonical-forms/10-convergent-matrices.html#lem-powers-transfer-along-similarity",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-matrix-powers-bounded",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 9.10.3",
+   "title": "Power-Bounded Matrices",
+   "url": "ch09-canonical-forms/10-convergent-matrices.html#thm-matrix-powers-bounded",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-matrix-powers-converge",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 9.10.4",
+   "title": "Convergent Matrices",
+   "url": "ch09-canonical-forms/10-convergent-matrices.html#thm-matrix-powers-converge",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-matrix-powers-converge-to-zero",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 9.10.2",
+   "title": "Powers Tending to Zero",
+   "url": "ch09-canonical-forms/10-convergent-matrices.html#thm-matrix-powers-converge-to-zero",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-neumann-series-spectral",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 9.10.6",
+   "title": "Neumann Series",
+   "url": "ch09-canonical-forms/10-convergent-matrices.html#thm-neumann-series-spectral",
+   "shard": "ch09-canonical-forms",
+   "chapter": "Canonical Forms",
+   "chapterNumber": 9,
+   "color": "#2f62b5"
   }
  ],
  "edges": [
@@ -34365,6 +36177,3426 @@
   {
    "source": "thm-vandermonde-determinant",
    "target": "thm-scalar-recurrence-distinct-roots",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-eigenvalue-characterizations",
+   "target": "cor-generalized-eigenspace-is-kernel",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-kernel-chain-stabilizes",
+   "target": "cor-generalized-eigenspace-is-kernel",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-kernel-image-of-polynomial-invariant",
+   "target": "cor-generalized-eigenspace-is-kernel",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-well-ordering",
+   "target": "cor-generalized-eigenspace-is-kernel",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-diagonalization",
+   "target": "exm-generalized-eigenspaces-4x4",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-generalized-eigenspace-decomposition",
+   "target": "exm-generalized-eigenspaces-4x4",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-geometric-le-algebraic",
+   "target": "exm-generalized-eigenspaces-4x4",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-kernel-splitting",
+   "target": "exm-generalized-eigenspaces-4x4",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rank-nullity-matrix",
+   "target": "exm-generalized-eigenspaces-4x4",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-generalized-eigenspace-is-kernel",
+   "target": "exr-generalized-eigenspaces-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "def-generalized-eigenspace",
+   "target": "exr-generalized-eigenspaces-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "def-generalized-eigenvector",
+   "target": "exr-generalized-eigenspaces-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-generalized-eigenspace-decomposition",
+   "target": "exr-generalized-eigenspaces-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-geometric-le-algebraic",
+   "target": "exr-generalized-eigenspaces-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-kernel-chain-stabilizes",
+   "target": "exr-generalized-eigenspaces-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-generalized-eigenspace-is-kernel",
+   "target": "exr-generalized-eigenspaces-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-differentiation-nilpotent",
+   "target": "exr-generalized-eigenspaces-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "exr-primary-decomposition-b2",
+   "target": "exr-generalized-eigenspaces-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-generalized-eigenspace-decomposition",
+   "target": "exr-generalized-eigenspaces-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dim-impl-eq",
+   "target": "exr-generalized-eigenspaces-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-kernel-chain-stabilizes",
+   "target": "exr-generalized-eigenspaces-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-kernel-image-of-polynomial-invariant",
+   "target": "exr-generalized-eigenspaces-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rank-nullity",
+   "target": "exr-generalized-eigenspaces-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-triangular",
+   "target": "exr-generalized-eigenspaces-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-generalized-eigenspace-decomposition",
+   "target": "exr-generalized-eigenspaces-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-generalized-eigenspace-is-kernel",
+   "target": "exr-generalized-eigenspaces-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-rank-nullity-consequences",
+   "target": "exr-generalized-eigenspaces-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "exr-generalized-eigenspaces-b2",
+   "target": "exr-generalized-eigenspaces-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dim-impl-eq",
+   "target": "exr-generalized-eigenspaces-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dimension-formula-subspace-dim",
+   "target": "exr-generalized-eigenspaces-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-direct-sum-criteria",
+   "target": "exr-generalized-eigenspaces-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-kernel-chain-stabilizes",
+   "target": "exr-generalized-eigenspaces-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-kernel-image-of-polynomial-invariant",
+   "target": "exr-generalized-eigenspaces-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rank-nullity",
+   "target": "exr-generalized-eigenspaces-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-commuting-preserves-eigenspaces",
+   "target": "exr-generalized-eigenspaces-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-direct-sum-invariant-block-diagonal",
+   "target": "exr-generalized-eigenspaces-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-evaluation-homomorphism",
+   "target": "exr-generalized-eigenspaces-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-generalized-eigenspace-decomposition",
+   "target": "exr-generalized-eigenspaces-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-kernel-image-of-polynomial-invariant",
+   "target": "exr-generalized-eigenspaces-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-generalized-eigenspace-is-kernel",
+   "target": "thm-generalized-eigenspace-decomposition",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-minimal-divides-characteristic",
+   "target": "thm-generalized-eigenspace-decomposition",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-primary-components-dimension",
+   "target": "thm-generalized-eigenspace-decomposition",
+   "kind": "reference"
+  },
+  {
+   "source": "def-restriction-operator",
+   "target": "thm-generalized-eigenspace-decomposition",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-monic-divisors",
+   "target": "thm-generalized-eigenspace-decomposition",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-charpoly-coefficients",
+   "target": "thm-generalized-eigenspace-decomposition",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dim-impl-eq",
+   "target": "thm-generalized-eigenspace-decomposition",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-direct-sum-invariant-block-diagonal",
+   "target": "thm-generalized-eigenspace-decomposition",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-eigenvalue-characterizations",
+   "target": "thm-generalized-eigenspace-decomposition",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-field-basic-properties",
+   "target": "thm-generalized-eigenspace-decomposition",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-invariant-subspace-matrix",
+   "target": "thm-generalized-eigenspace-decomposition",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-minimal-polynomial-divides",
+   "target": "thm-generalized-eigenspace-decomposition",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-primary-decomposition",
+   "target": "thm-generalized-eigenspace-decomposition",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-zero-product",
+   "target": "thm-generalized-eigenspace-decomposition",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-kernel-image-of-polynomial-invariant",
+   "target": "thm-kernel-chain-stabilizes",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-subspace-dimension",
+   "target": "thm-kernel-chain-stabilizes",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-well-ordering",
+   "target": "thm-kernel-chain-stabilizes",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-similarity",
+   "target": "cor-nilpotent-similar-iff-ranks",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-similarity-invariants",
+   "target": "cor-nilpotent-similar-iff-ranks",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-nilpotent-block-sizes-from-ranks",
+   "target": "cor-nilpotent-similar-iff-ranks",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-nilpotent-structure",
+   "target": "cor-nilpotent-similar-iff-ranks",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rank-map-equals-rank-matrix",
+   "target": "cor-nilpotent-similar-iff-ranks",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-similar-iff-same-operator",
+   "target": "cor-nilpotent-similar-iff-ranks",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-laplace-expansion",
+   "target": "exm-nilpotent-jordan-basis",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-nilpotent-block-sizes-from-ranks",
+   "target": "exm-nilpotent-jordan-basis",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-nilpotent-structure",
+   "target": "exm-nilpotent-jordan-basis",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rank-nullity-matrix",
+   "target": "exm-nilpotent-jordan-basis",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-nilpotent-similar-iff-ranks",
+   "target": "exr-nilpotent-operators-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "def-nilpotent",
+   "target": "exr-nilpotent-operators-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-nilpotent-basic",
+   "target": "exr-nilpotent-operators-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-nilpotent-block-sizes-from-ranks",
+   "target": "exr-nilpotent-operators-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-nilpotent-structure",
+   "target": "exr-nilpotent-operators-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-nilpotent-block-sizes-from-ranks",
+   "target": "exr-nilpotent-operators-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-nilpotent-similar-iff-ranks",
+   "target": "exr-nilpotent-operators-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-nilpotent-basic",
+   "target": "exr-nilpotent-operators-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-nilpotent-block-sizes-from-ranks",
+   "target": "exr-nilpotent-operators-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-laplace-expansion",
+   "target": "exr-nilpotent-operators-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-nilpotent-similar-iff-ranks",
+   "target": "exr-nilpotent-operators-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-nilpotent-basic",
+   "target": "exr-nilpotent-operators-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-row-rank-equals-column-rank",
+   "target": "exr-nilpotent-operators-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-transpose-properties",
+   "target": "exr-nilpotent-operators-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-minimal-divides-characteristic",
+   "target": "exr-nilpotent-operators-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "def-jordan-chain",
+   "target": "exr-nilpotent-operators-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-jordan-chain-independent",
+   "target": "exr-nilpotent-operators-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-nilpotent-basic",
+   "target": "exr-nilpotent-operators-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-similarity-invariants",
+   "target": "exr-nilpotent-operators-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-nilpotent-block-sizes-from-ranks",
+   "target": "exr-nilpotent-operators-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rank-nullity",
+   "target": "exr-nilpotent-operators-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-right-size-basis",
+   "target": "exr-nilpotent-operators-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "def-jordan-chain",
+   "target": "lem-jordan-chain-independent",
+   "kind": "reference"
+  },
+  {
+   "source": "def-matrix-of-linear-map",
+   "target": "lem-jordan-chain-independent",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-invariance-on-spanning-list",
+   "target": "lem-jordan-chain-independent",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-basis-extension",
+   "target": "lem-jordan-chain-independent",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-zero-product",
+   "target": "lem-jordan-chain-independent",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-generalized-eigenspace-is-kernel",
+   "target": "prp-nilpotent-basic",
+   "kind": "reference"
+  },
+  {
+   "source": "def-charpoly-operator",
+   "target": "prp-nilpotent-basic",
+   "kind": "reference"
+  },
+  {
+   "source": "def-matrix-of-linear-map",
+   "target": "prp-nilpotent-basic",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-monic-divisors",
+   "target": "prp-nilpotent-basic",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-basis-extension",
+   "target": "prp-nilpotent-basic",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-cayley-hamilton",
+   "target": "prp-nilpotent-basic",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-triangular",
+   "target": "prp-nilpotent-basic",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-diagonal-of-triangular-form",
+   "target": "prp-nilpotent-basic",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-kernel-chain-stabilizes",
+   "target": "prp-nilpotent-basic",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-minimal-polynomial-divides",
+   "target": "prp-nilpotent-basic",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-unique-representation",
+   "target": "prp-nilpotent-basic",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-image-spanned-by-basis-images",
+   "target": "thm-nilpotent-block-sizes-from-ranks",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-nilpotent-structure",
+   "target": "thm-nilpotent-block-sizes-from-ranks",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rank-nullity",
+   "target": "thm-nilpotent-block-sizes-from-ranks",
+   "kind": "reference"
+  },
+  {
+   "source": "def-nilpotent",
+   "target": "thm-nilpotent-structure",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-jordan-chain-independent",
+   "target": "thm-nilpotent-structure",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-basis-extension",
+   "target": "thm-nilpotent-structure",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-composition-preserves",
+   "target": "thm-nilpotent-structure",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-direct-sum-invariant-block-diagonal",
+   "target": "thm-nilpotent-structure",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-direct-sum-k-criteria",
+   "target": "thm-nilpotent-structure",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-kernel-image-of-polynomial-invariant",
+   "target": "thm-nilpotent-structure",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rank-nullity",
+   "target": "thm-nilpotent-structure",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-right-size-basis",
+   "target": "thm-nilpotent-structure",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-minimal-divides-characteristic",
+   "target": "cor-jordan-invariants",
+   "kind": "reference"
+  },
+  {
+   "source": "def-charpoly-operator",
+   "target": "cor-jordan-invariants",
+   "kind": "reference"
+  },
+  {
+   "source": "def-diagonalizable",
+   "target": "cor-jordan-invariants",
+   "kind": "reference"
+  },
+  {
+   "source": "def-geometric-multiplicity",
+   "target": "cor-jordan-invariants",
+   "kind": "reference"
+  },
+  {
+   "source": "def-lcm-polynomials",
+   "target": "cor-jordan-invariants",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-monic-divisors",
+   "target": "cor-jordan-invariants",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-multiplicity-cofactor",
+   "target": "cor-jordan-invariants",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-minimal-polynomial-block-diagonal",
+   "target": "cor-jordan-invariants",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-triangular",
+   "target": "cor-jordan-invariants",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-diagonalizable-iff-minimal-distinct-linear",
+   "target": "cor-jordan-invariants",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-eigenvalue-characterizations",
+   "target": "cor-jordan-invariants",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-jordan-canonical-form",
+   "target": "cor-jordan-invariants",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rank-nullity",
+   "target": "cor-jordan-invariants",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-unique-factorization-polynomials",
+   "target": "cor-jordan-invariants",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-jordan-invariants",
+   "target": "cor-similar-iff-same-jordan-form",
+   "kind": "reference"
+  },
+  {
+   "source": "def-jordan-form",
+   "target": "cor-similar-iff-same-jordan-form",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-similarity",
+   "target": "cor-similar-iff-same-jordan-form",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-similarity-invariants",
+   "target": "cor-similar-iff-same-jordan-form",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-charpoly-similarity-invariant",
+   "target": "cor-similar-iff-same-jordan-form",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-eigenvalue-characterizations",
+   "target": "cor-similar-iff-same-jordan-form",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-jordan-canonical-form",
+   "target": "cor-similar-iff-same-jordan-form",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-kernel-chain-stabilizes",
+   "target": "cor-similar-iff-same-jordan-form",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rank-nullity",
+   "target": "cor-similar-iff-same-jordan-form",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-jordan-invariants",
+   "target": "exm-jordan-form-5x5",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-jordan-canonical-form",
+   "target": "exm-jordan-form-5x5",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-laplace-expansion",
+   "target": "exm-jordan-form-5x5",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rank-nullity-matrix",
+   "target": "exm-jordan-form-5x5",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-right-size-basis",
+   "target": "exm-jordan-form-5x5",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-distinct-eigenvalues-diagonalizable",
+   "target": "exr-jordan-canonical-form-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-jordan-invariants",
+   "target": "exr-jordan-canonical-form-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-similar-iff-same-jordan-form",
+   "target": "exr-jordan-canonical-form-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "def-jordan-block",
+   "target": "exr-jordan-canonical-form-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "def-jordan-form",
+   "target": "exr-jordan-canonical-form-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-jordan-canonical-form",
+   "target": "exr-jordan-canonical-form-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-jordan-invariants",
+   "target": "exr-jordan-canonical-form-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-nilpotent-similar-iff-ranks",
+   "target": "exr-jordan-canonical-form-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-similar-iff-same-jordan-form",
+   "target": "exr-jordan-canonical-form-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "def-jordan-form",
+   "target": "exr-jordan-canonical-form-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "exr-jordan-canonical-form-b2",
+   "target": "exr-jordan-canonical-form-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-block-diagonal-arithmetic",
+   "target": "exr-jordan-canonical-form-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-similarity",
+   "target": "exr-jordan-canonical-form-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-block-transpose",
+   "target": "exr-jordan-canonical-form-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-block-diagonal-arithmetic",
+   "target": "exr-jordan-canonical-form-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-inverse-matrix-properties",
+   "target": "exr-jordan-canonical-form-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-jordan-canonical-form",
+   "target": "exr-jordan-canonical-form-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-transpose-properties",
+   "target": "exr-jordan-canonical-form-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-a-similar-to-transpose",
+   "target": "exr-jordan-canonical-form-c1",
+   "kind": "mention"
+  },
+  {
+   "source": "cor-jordan-invariants",
+   "target": "exr-jordan-canonical-form-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "exr-jordan-canonical-form-b1",
+   "target": "exr-jordan-canonical-form-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "def-jordan-block",
+   "target": "thm-jordan-canonical-form",
+   "kind": "reference"
+  },
+  {
+   "source": "def-triangularizable",
+   "target": "thm-jordan-canonical-form",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-block-diagonal-arithmetic",
+   "target": "thm-jordan-canonical-form",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-block-rank-inequalities",
+   "target": "thm-jordan-canonical-form",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-nonzero-iff-invertible",
+   "target": "thm-jordan-canonical-form",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-triangular",
+   "target": "thm-jordan-canonical-form",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-direct-sum-invariant-block-diagonal",
+   "target": "thm-jordan-canonical-form",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-generalized-eigenspace-decomposition",
+   "target": "thm-jordan-canonical-form",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-linear-maps-isomorphic-to-matrices",
+   "target": "thm-jordan-canonical-form",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-nilpotent-block-sizes-from-ranks",
+   "target": "thm-jordan-canonical-form",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-nilpotent-structure",
+   "target": "thm-jordan-canonical-form",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rank-map-equals-rank-matrix",
+   "target": "thm-jordan-canonical-form",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-similar-iff-same-operator",
+   "target": "thm-jordan-canonical-form",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-triangularization",
+   "target": "thm-jordan-canonical-form",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-jordan-invariants",
+   "target": "cor-real-block-complex-jordan",
+   "kind": "reference"
+  },
+  {
+   "source": "def-jordan-block",
+   "target": "cor-real-block-complex-jordan",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-jordan-chain-independent",
+   "target": "cor-real-block-complex-jordan",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-realify-jordan-chain",
+   "target": "cor-real-block-complex-jordan",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-minimal-polynomial-block-diagonal",
+   "target": "cor-real-block-complex-jordan",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-charpoly-similarity-invariant",
+   "target": "cor-real-block-complex-jordan",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-triangular",
+   "target": "cor-real-block-complex-jordan",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-direct-sum-invariant-block-diagonal",
+   "target": "cor-real-block-complex-jordan",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-linear-maps-isomorphic-to-matrices",
+   "target": "cor-real-block-complex-jordan",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-minimal-polynomial-similarity",
+   "target": "cor-real-block-complex-jordan",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-right-size-basis",
+   "target": "cor-real-block-complex-jordan",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-similar-iff-same-operator",
+   "target": "cor-real-block-complex-jordan",
+   "kind": "reference"
+  },
+  {
+   "source": "def-partition-of-n",
+   "target": "def-weyr-form",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-weyr-form",
+   "target": "def-weyr-form",
+   "kind": "mention"
+  },
+  {
+   "source": "cor-jordan-invariants",
+   "target": "exm-real-jordan-4x4",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-real-block-complex-jordan",
+   "target": "exm-real-jordan-4x4",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-realify-jordan-chain",
+   "target": "exm-real-jordan-4x4",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-triangular",
+   "target": "exm-real-jordan-4x4",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-real-jordan-form",
+   "target": "exm-real-jordan-4x4",
+   "kind": "reference"
+  },
+  {
+   "source": "def-real-jordan-block",
+   "target": "exr-real-jordan-and-weyr-forms-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-charpoly-similarity-invariant",
+   "target": "exr-real-jordan-and-weyr-forms-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-diagonal-of-triangular-form",
+   "target": "exr-real-jordan-and-weyr-forms-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-real-jordan-form",
+   "target": "exr-real-jordan-and-weyr-forms-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-weyr-form",
+   "target": "exr-real-jordan-and-weyr-forms-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-realify-jordan-chain",
+   "target": "exr-real-jordan-and-weyr-forms-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-real-jordan-form",
+   "target": "exr-real-jordan-and-weyr-forms-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-weyr-form",
+   "target": "exr-real-jordan-and-weyr-forms-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-triangular",
+   "target": "exr-real-jordan-and-weyr-forms-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-real-jordan-form",
+   "target": "exr-real-jordan-and-weyr-forms-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-jordan-invariants",
+   "target": "exr-real-jordan-and-weyr-forms-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-real-block-complex-jordan",
+   "target": "exr-real-jordan-and-weyr-forms-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "exr-characteristic-polynomial-c1",
+   "target": "exr-real-jordan-and-weyr-forms-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "exr-minimal-polynomial-b3",
+   "target": "exr-real-jordan-and-weyr-forms-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-real-jordan-form",
+   "target": "exr-real-jordan-and-weyr-forms-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-nilpotent-similar-iff-ranks",
+   "target": "exr-real-jordan-and-weyr-forms-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "def-weyr-form",
+   "target": "exr-real-jordan-and-weyr-forms-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-weyr-commutant",
+   "target": "exr-real-jordan-and-weyr-forms-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-weyr-form",
+   "target": "exr-real-jordan-and-weyr-forms-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "def-complex-numbers",
+   "target": "lem-real-null-space-complexifies",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rank-nullity-matrix",
+   "target": "lem-real-null-space-complexifies",
+   "kind": "reference"
+  },
+  {
+   "source": "def-complex-numbers",
+   "target": "lem-realify-jordan-chain",
+   "kind": "reference"
+  },
+  {
+   "source": "def-matrix-of-linear-map",
+   "target": "lem-realify-jordan-chain",
+   "kind": "reference"
+  },
+  {
+   "source": "def-real-jordan-block",
+   "target": "lem-realify-jordan-chain",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-invariance-on-spanning-list",
+   "target": "lem-realify-jordan-chain",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-conjugate-properties",
+   "target": "lem-realify-jordan-chain",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-span-preservation",
+   "target": "lem-realify-jordan-chain",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-jordan-invariants",
+   "target": "prp-weyr-commutant",
+   "kind": "reference"
+  },
+  {
+   "source": "def-weyr-form",
+   "target": "prp-weyr-commutant",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-block-multiplication",
+   "target": "prp-weyr-commutant",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-weyr-form",
+   "target": "prp-weyr-commutant",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-complex-polynomial-splits",
+   "target": "thm-real-jordan-form",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-generalized-eigenspace-is-kernel",
+   "target": "thm-real-jordan-form",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-real-block-complex-jordan",
+   "target": "thm-real-jordan-form",
+   "kind": "reference"
+  },
+  {
+   "source": "def-jordan-block",
+   "target": "thm-real-jordan-form",
+   "kind": "reference"
+  },
+  {
+   "source": "def-nilpotent",
+   "target": "thm-real-jordan-form",
+   "kind": "reference"
+  },
+  {
+   "source": "def-real-jordan-block",
+   "target": "thm-real-jordan-form",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-real-null-space-complexifies",
+   "target": "thm-real-jordan-form",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-realify-jordan-chain",
+   "target": "thm-real-jordan-form",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-block-diagonal-arithmetic",
+   "target": "thm-real-jordan-form",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-diagonal-of-triangular-form",
+   "target": "thm-real-jordan-form",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-direct-sum-invariant-block-diagonal",
+   "target": "thm-real-jordan-form",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-generalized-eigenspace-decomposition",
+   "target": "thm-real-jordan-form",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-jordan-canonical-form",
+   "target": "thm-real-jordan-form",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-kernel-image-of-polynomial-invariant",
+   "target": "thm-real-jordan-form",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-linear-maps-isomorphic-to-matrices",
+   "target": "thm-real-jordan-form",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-nilpotent-structure",
+   "target": "thm-real-jordan-form",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-real-matrix-complex-eigenvalues",
+   "target": "thm-real-jordan-form",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-right-size-basis",
+   "target": "thm-real-jordan-form",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-similar-iff-same-operator",
+   "target": "thm-real-jordan-form",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-jordan-invariants",
+   "target": "thm-weyr-form",
+   "kind": "reference"
+  },
+  {
+   "source": "def-jordan-chain",
+   "target": "thm-weyr-form",
+   "kind": "reference"
+  },
+  {
+   "source": "def-partition-of-n",
+   "target": "thm-weyr-form",
+   "kind": "reference"
+  },
+  {
+   "source": "def-triangularizable",
+   "target": "thm-weyr-form",
+   "kind": "reference"
+  },
+  {
+   "source": "def-weyr-form",
+   "target": "thm-weyr-form",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-nonzero-iff-invertible",
+   "target": "thm-weyr-form",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-triangular",
+   "target": "thm-weyr-form",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-direct-sum-invariant-block-diagonal",
+   "target": "thm-weyr-form",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-generalized-eigenspace-decomposition",
+   "target": "thm-weyr-form",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-jordan-canonical-form",
+   "target": "thm-weyr-form",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-nilpotent-structure",
+   "target": "thm-weyr-form",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-triangularization",
+   "target": "thm-weyr-form",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-monic-divisors",
+   "target": "exm-cyclic-3x3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-cyclic-iff-min-equals-char",
+   "target": "exm-cyclic-3x3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-cyclic-subspace-basis",
+   "target": "exm-cyclic-3x3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-laplace-expansion",
+   "target": "exm-cyclic-3x3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-minimal-polynomial-roots",
+   "target": "exm-cyclic-3x3",
+   "kind": "reference"
+  },
+  {
+   "source": "def-cyclic-subspace",
+   "target": "exr-cyclic-subspaces-and-companion-matrices-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "def-t-annihilator",
+   "target": "exr-cyclic-subspaces-and-companion-matrices-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-cyclic-subspace-smallest",
+   "target": "exr-cyclic-subspaces-and-companion-matrices-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-companion-char-min",
+   "target": "exr-cyclic-subspaces-and-companion-matrices-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-cyclic-iff-min-equals-char",
+   "target": "exr-cyclic-subspaces-and-companion-matrices-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-cyclic-subspace-basis",
+   "target": "exr-cyclic-subspaces-and-companion-matrices-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-monic-divisors",
+   "target": "exr-cyclic-subspaces-and-companion-matrices-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-cyclic-subspace-basis",
+   "target": "exr-cyclic-subspaces-and-companion-matrices-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-triangular",
+   "target": "exr-cyclic-subspaces-and-companion-matrices-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-vandermonde-nonzero",
+   "target": "exr-cyclic-subspaces-and-companion-matrices-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-annihilator-of-sum",
+   "target": "exr-cyclic-subspaces-and-companion-matrices-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-minimal-polynomial-block-diagonal",
+   "target": "exr-cyclic-subspaces-and-companion-matrices-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-cyclic-iff-min-equals-char",
+   "target": "exr-cyclic-subspaces-and-companion-matrices-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-cyclic-subspace-basis",
+   "target": "exr-cyclic-subspaces-and-companion-matrices-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-diagonalizable-iff-minimal-distinct-linear",
+   "target": "exr-cyclic-subspaces-and-companion-matrices-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-differentiation-nilpotent",
+   "target": "exr-cyclic-subspaces-and-companion-matrices-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-monic-divisors",
+   "target": "exr-cyclic-subspaces-and-companion-matrices-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-cyclic-iff-min-equals-char",
+   "target": "exr-cyclic-subspaces-and-companion-matrices-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-cyclic-subspace-smallest",
+   "target": "exr-cyclic-subspaces-and-companion-matrices-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-cyclic-iff-min-equals-char",
+   "target": "exr-cyclic-subspaces-and-companion-matrices-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-evaluation-homomorphism",
+   "target": "exr-cyclic-subspaces-and-companion-matrices-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-linear-transform-basis",
+   "target": "exr-cyclic-subspaces-and-companion-matrices-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-minimal-polynomial-divides",
+   "target": "exr-cyclic-subspaces-and-companion-matrices-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-polynomial-division",
+   "target": "exr-cyclic-subspaces-and-companion-matrices-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-cyclic-subspace-smallest",
+   "target": "exr-cyclic-subspaces-and-companion-matrices-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-cyclic-iff-min-equals-char",
+   "target": "exr-cyclic-subspaces-and-companion-matrices-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-zero-product",
+   "target": "exr-cyclic-subspaces-and-companion-matrices-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-coprime-product",
+   "target": "lem-annihilator-of-sum",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-divisibility-properties",
+   "target": "lem-annihilator-of-sum",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-coprime-divides-product",
+   "target": "lem-annihilator-of-sum",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-cyclic-subspace-basis",
+   "target": "lem-annihilator-of-sum",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-evaluation-homomorphism",
+   "target": "lem-annihilator-of-sum",
+   "kind": "reference"
+  },
+  {
+   "source": "def-polynomial-of-operator",
+   "target": "prp-cyclic-subspace-smallest",
+   "kind": "reference"
+  },
+  {
+   "source": "def-span",
+   "target": "prp-cyclic-subspace-smallest",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-invariance-on-spanning-list",
+   "target": "prp-cyclic-subspace-smallest",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-span-basic-properties",
+   "target": "prp-cyclic-subspace-smallest",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-evaluation-homomorphism",
+   "target": "prp-cyclic-subspace-smallest",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-size-bounds",
+   "target": "prp-cyclic-subspace-smallest",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-span-subspace",
+   "target": "prp-cyclic-subspace-smallest",
+   "kind": "reference"
+  },
+  {
+   "source": "exr-minimal-polynomial-c2",
+   "target": "prp-vector-with-full-annihilator",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-annihilator-of-sum",
+   "target": "prp-vector-with-full-annihilator",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-monic-divisors",
+   "target": "prp-vector-with-full-annihilator",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-divisibility-properties",
+   "target": "prp-vector-with-full-annihilator",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-minimal-polynomial-divides",
+   "target": "prp-vector-with-full-annihilator",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-primary-decomposition",
+   "target": "prp-vector-with-full-annihilator",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-unique-factorization-polynomials",
+   "target": "prp-vector-with-full-annihilator",
+   "kind": "reference"
+  },
+  {
+   "source": "def-charpoly-operator",
+   "target": "thm-companion-char-min",
+   "kind": "reference"
+  },
+  {
+   "source": "def-minimal-polynomial",
+   "target": "thm-companion-char-min",
+   "kind": "reference"
+  },
+  {
+   "source": "exr-characteristic-polynomial-c1",
+   "target": "thm-companion-char-min",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-cyclic-subspace-basis",
+   "target": "thm-companion-char-min",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-minimal-divides-characteristic",
+   "target": "thm-cyclic-iff-min-equals-char",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-divisibility-properties",
+   "target": "thm-cyclic-iff-min-equals-char",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-vector-with-full-annihilator",
+   "target": "thm-cyclic-iff-min-equals-char",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-charpoly-coefficients",
+   "target": "thm-cyclic-iff-min-equals-char",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-cyclic-subspace-basis",
+   "target": "thm-cyclic-iff-min-equals-char",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dim-impl-eq",
+   "target": "thm-cyclic-iff-min-equals-char",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-minimal-divides-characteristic",
+   "target": "thm-cyclic-subspace-basis",
+   "kind": "reference"
+  },
+  {
+   "source": "def-companion-matrix",
+   "target": "thm-cyclic-subspace-basis",
+   "kind": "reference"
+  },
+  {
+   "source": "def-minimal-polynomial",
+   "target": "thm-cyclic-subspace-basis",
+   "kind": "reference"
+  },
+  {
+   "source": "def-t-annihilator",
+   "target": "thm-cyclic-subspace-basis",
+   "kind": "reference"
+  },
+  {
+   "source": "exr-characteristic-polynomial-c1",
+   "target": "thm-cyclic-subspace-basis",
+   "kind": "reference"
+  },
+  {
+   "source": "exr-minimal-polynomial-c2",
+   "target": "thm-cyclic-subspace-basis",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-cyclic-subspace-smallest",
+   "target": "thm-cyclic-subspace-basis",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-divisibility-properties",
+   "target": "thm-cyclic-subspace-basis",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-charpoly-coefficients",
+   "target": "thm-cyclic-subspace-basis",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-evaluation-homomorphism",
+   "target": "thm-cyclic-subspace-basis",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-ideals-principal",
+   "target": "thm-cyclic-subspace-basis",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-polynomial-division",
+   "target": "thm-cyclic-subspace-basis",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-invariant-factors-unique",
+   "target": "cor-companion-linear-power-is-jordan",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-monic-divisors",
+   "target": "cor-companion-linear-power-is-jordan",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-cyclic-iff-min-equals-char",
+   "target": "cor-companion-linear-power-is-jordan",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-cyclic-subspace-basis",
+   "target": "cor-companion-linear-power-is-jordan",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-triangular",
+   "target": "cor-companion-linear-power-is-jordan",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-elementary-divisor-form",
+   "target": "cor-companion-linear-power-is-jordan",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-jordan-canonical-form",
+   "target": "cor-companion-linear-power-is-jordan",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-minimal-polynomial-divides",
+   "target": "cor-companion-linear-power-is-jordan",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rational-canonical-form",
+   "target": "cor-companion-linear-power-is-jordan",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-elementary-divisors-from-kernels",
+   "target": "cor-invariant-factors-unique",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-cyclic-decomposition",
+   "target": "cor-invariant-factors-unique",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-unique-factorization-polynomials",
+   "target": "cor-invariant-factors-unique",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-invariant-factors-unique",
+   "target": "cor-similar-iff-same-invariant-factors",
+   "kind": "reference"
+  },
+  {
+   "source": "def-invariant-factors",
+   "target": "cor-similar-iff-same-invariant-factors",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-similarity",
+   "target": "cor-similar-iff-same-invariant-factors",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-similarity-invariants",
+   "target": "cor-similar-iff-same-invariant-factors",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-cyclic-iff-min-equals-char",
+   "target": "cor-similar-iff-same-invariant-factors",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rank-nullity-matrix",
+   "target": "cor-similar-iff-same-invariant-factors",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rational-canonical-form",
+   "target": "cor-similar-iff-same-invariant-factors",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-similar-iff-same-invariant-factors",
+   "target": "cor-similarity-field-independent",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-rank-field-independent",
+   "target": "cor-similarity-field-independent",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-similarity-invariants",
+   "target": "cor-similarity-field-independent",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rank-nullity-matrix",
+   "target": "cor-similarity-field-independent",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-invariant-factors-unique",
+   "target": "def-invariant-factors",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-cyclic-decomposition",
+   "target": "def-invariant-factors",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-irreducible-deg-2-3",
+   "target": "def-invariant-factors",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-companion-linear-power-is-jordan",
+   "target": "exm-invariant-factors-from-data",
+   "kind": "reference"
+  },
+  {
+   "source": "def-invariant-factors",
+   "target": "exm-invariant-factors-from-data",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-cyclic-decomposition",
+   "target": "exm-invariant-factors-from-data",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-elementary-divisor-form",
+   "target": "exm-invariant-factors-from-data",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-irreducible-deg-2-3",
+   "target": "exm-invariant-factors-from-data",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rational-canonical-form",
+   "target": "exm-invariant-factors-from-data",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-monic-divisors",
+   "target": "exm-rational-form-4x4",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-cyclic-iff-min-equals-char",
+   "target": "exm-rational-form-4x4",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-block-triangular",
+   "target": "exm-rational-form-4x4",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-elementary-divisor-form",
+   "target": "exm-rational-form-4x4",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-laplace-expansion",
+   "target": "exm-rational-form-4x4",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-minimal-polynomial-divides",
+   "target": "exm-rational-form-4x4",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rational-canonical-form",
+   "target": "exm-rational-form-4x4",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-invariant-factors-unique",
+   "target": "exr-rational-canonical-form-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-similarity-field-independent",
+   "target": "exr-rational-canonical-form-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "def-invariant-factors",
+   "target": "exr-rational-canonical-form-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-cyclic-decomposition",
+   "target": "exr-rational-canonical-form-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-cyclic-iff-min-equals-char",
+   "target": "exr-rational-canonical-form-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rational-canonical-form",
+   "target": "exr-rational-canonical-form-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-elementary-divisors-from-kernels",
+   "target": "exr-rational-canonical-form-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-irreducible-deg-2-3",
+   "target": "exr-rational-canonical-form-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rational-canonical-form",
+   "target": "exr-rational-canonical-form-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-sqrt2-irrational",
+   "target": "exr-rational-canonical-form-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-rational-form-4x4",
+   "target": "exr-rational-canonical-form-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-minimal-polynomial-block-diagonal",
+   "target": "exr-rational-canonical-form-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-cyclic-iff-min-equals-char",
+   "target": "exr-rational-canonical-form-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-block-triangular",
+   "target": "exr-rational-canonical-form-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-elementary-divisor-form",
+   "target": "exr-rational-canonical-form-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rational-canonical-form",
+   "target": "exr-rational-canonical-form-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-similar-iff-same-invariant-factors",
+   "target": "exr-rational-canonical-form-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-irreducible-deg-2-3",
+   "target": "exr-rational-canonical-form-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-charpoly-similarity-invariant",
+   "target": "exr-rational-canonical-form-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-companion-char-min",
+   "target": "exr-rational-canonical-form-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-cyclic-decomposition",
+   "target": "exr-rational-canonical-form-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-cyclic-iff-min-equals-char",
+   "target": "exr-rational-canonical-form-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-minimal-polynomial-similarity",
+   "target": "exr-rational-canonical-form-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rational-canonical-form",
+   "target": "exr-rational-canonical-form-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-similar-iff-same-operator",
+   "target": "exr-rational-canonical-form-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "exr-cyclic-subspaces-and-companion-matrices-c1",
+   "target": "exr-rational-canonical-form-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-irreducible-deg-2-3",
+   "target": "exr-rational-canonical-form-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-complex-polynomial-splits",
+   "target": "exr-rational-canonical-form-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-similar-iff-same-jordan-form",
+   "target": "exr-rational-canonical-form-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-similarity-field-independent",
+   "target": "exr-rational-canonical-form-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "exr-jordan-canonical-form-c1",
+   "target": "exr-rational-canonical-form-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-smith-normal-form",
+   "target": "exr-rational-canonical-form-c3",
+   "kind": "mention"
+  },
+  {
+   "source": "def-determinant",
+   "target": "lem-rank-field-independent",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rank-via-minors",
+   "target": "lem-rank-field-independent",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-monic-divisors",
+   "target": "prp-elementary-divisors-from-kernels",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-cyclic-subspace-smallest",
+   "target": "prp-elementary-divisors-from-kernels",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-coprime-divides-product",
+   "target": "prp-elementary-divisors-from-kernels",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-cyclic-subspace-basis",
+   "target": "prp-elementary-divisors-from-kernels",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-direct-sum-k-criteria",
+   "target": "prp-elementary-divisors-from-kernels",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-kernel-image-of-polynomial-invariant",
+   "target": "prp-elementary-divisors-from-kernels",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-unique-factorization-polynomials",
+   "target": "prp-elementary-divisors-from-kernels",
+   "kind": "reference"
+  },
+  {
+   "source": "def-charpoly-operator",
+   "target": "thm-cyclic-decomposition",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-annihilator-of-sum",
+   "target": "thm-cyclic-decomposition",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-monic-divisors",
+   "target": "thm-cyclic-decomposition",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-cyclic-subspace-smallest",
+   "target": "thm-cyclic-decomposition",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-invariant-sum-intersection",
+   "target": "thm-cyclic-decomposition",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-charpoly-coefficients",
+   "target": "thm-cyclic-decomposition",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-cyclic-subspace-basis",
+   "target": "thm-cyclic-decomposition",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-block-triangular",
+   "target": "thm-cyclic-decomposition",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dim-impl-eq",
+   "target": "thm-cyclic-decomposition",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-direct-sum-invariant-block-diagonal",
+   "target": "thm-cyclic-decomposition",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-direct-sum-k-criteria",
+   "target": "thm-cyclic-decomposition",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-minimal-polynomial-divides",
+   "target": "thm-cyclic-decomposition",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-primary-cyclic-decomposition",
+   "target": "thm-cyclic-decomposition",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-primary-decomposition",
+   "target": "thm-cyclic-decomposition",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-unique-factorization-polynomials",
+   "target": "thm-cyclic-decomposition",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-invariant-factors-unique",
+   "target": "thm-elementary-divisor-form",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-cyclic-decomposition",
+   "target": "thm-elementary-divisor-form",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-cyclic-subspace-basis",
+   "target": "thm-elementary-divisor-form",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-direct-sum-invariant-block-diagonal",
+   "target": "thm-elementary-divisor-form",
+   "kind": "reference"
+  },
+  {
+   "source": "def-t-annihilator",
+   "target": "thm-primary-cyclic-decomposition",
+   "kind": "reference"
+  },
+  {
+   "source": "exr-primary-decomposition-c2",
+   "target": "thm-primary-cyclic-decomposition",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-monic-divisors",
+   "target": "thm-primary-cyclic-decomposition",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-cyclic-subspace-smallest",
+   "target": "thm-primary-cyclic-decomposition",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-invariant-sum-intersection",
+   "target": "thm-primary-cyclic-decomposition",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-composition-preserves",
+   "target": "thm-primary-cyclic-decomposition",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-cyclic-subspace-basis",
+   "target": "thm-primary-cyclic-decomposition",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dim-impl-eq",
+   "target": "thm-primary-cyclic-decomposition",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-direct-sum-k-criteria",
+   "target": "thm-primary-cyclic-decomposition",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-kernel-image-of-polynomial-invariant",
+   "target": "thm-primary-cyclic-decomposition",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-minimal-polynomial-divides",
+   "target": "thm-primary-cyclic-decomposition",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rank-nullity",
+   "target": "thm-primary-cyclic-decomposition",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-invariant-factors-unique",
+   "target": "thm-rational-canonical-form",
+   "kind": "reference"
+  },
+  {
+   "source": "def-charpoly-operator",
+   "target": "thm-rational-canonical-form",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-companion-char-min",
+   "target": "thm-rational-canonical-form",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-cyclic-decomposition",
+   "target": "thm-rational-canonical-form",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-cyclic-iff-min-equals-char",
+   "target": "thm-rational-canonical-form",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-cyclic-subspace-basis",
+   "target": "thm-rational-canonical-form",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-direct-sum-invariant-block-diagonal",
+   "target": "thm-rational-canonical-form",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-minimal-polynomial-similarity",
+   "target": "thm-rational-canonical-form",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-similar-iff-same-operator",
+   "target": "thm-rational-canonical-form",
+   "kind": "reference"
+  },
+  {
+   "source": "def-transpose",
+   "target": "cor-a-similar-to-transpose",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-operations-are-equivalence",
+   "target": "cor-a-similar-to-transpose",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-transpose",
+   "target": "cor-a-similar-to-transpose",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-similar-iff-xi-minus-a-equivalent",
+   "target": "cor-a-similar-to-transpose",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-smith-normal-form",
+   "target": "cor-a-similar-to-transpose",
+   "kind": "reference"
+  },
+  {
+   "source": "def-companion-matrix",
+   "target": "cor-invariant-factors-are-smith-entries",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-block-diagonal-arithmetic",
+   "target": "cor-invariant-factors-are-smith-entries",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-companion-char-min",
+   "target": "cor-invariant-factors-are-smith-entries",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-triangular",
+   "target": "cor-invariant-factors-are-smith-entries",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rational-canonical-form",
+   "target": "cor-invariant-factors-are-smith-entries",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-similar-iff-xi-minus-a-equivalent",
+   "target": "cor-invariant-factors-are-smith-entries",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-smith-normal-form",
+   "target": "cor-invariant-factors-are-smith-entries",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-jordan-invariants",
+   "target": "exm-smith-form-3x3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-smith-normal-form",
+   "target": "exm-smith-form-3x3",
+   "kind": "mention"
+  },
+  {
+   "source": "cor-invariant-factors-are-smith-entries",
+   "target": "exr-smith-normal-form-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-similar-iff-same-jordan-form",
+   "target": "exr-smith-normal-form-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "def-polynomial-elementary-operations",
+   "target": "exr-smith-normal-form-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-polynomial-matrix-invertible",
+   "target": "exr-smith-normal-form-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-smith-normal-form",
+   "target": "exr-smith-normal-form-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-cauchy-binet",
+   "target": "exr-smith-normal-form-a1",
+   "kind": "mention"
+  },
+  {
+   "source": "cor-invariant-factors-are-smith-entries",
+   "target": "exr-smith-normal-form-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-polynomial-matrix-invertible",
+   "target": "exr-smith-normal-form-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-smith-normal-form",
+   "target": "exr-smith-normal-form-b1",
+   "kind": "mention"
+  },
+  {
+   "source": "thm-cyclic-iff-min-equals-char",
+   "target": "exr-smith-normal-form-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-block-triangular",
+   "target": "exr-smith-normal-form-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-smith-normal-form",
+   "target": "exr-smith-normal-form-b2",
+   "kind": "mention"
+  },
+  {
+   "source": "cor-a-similar-to-transpose",
+   "target": "exr-smith-normal-form-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-smith-form-3x3",
+   "target": "exr-smith-normal-form-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "exr-jordan-canonical-form-c1",
+   "target": "exr-smith-normal-form-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "exr-smith-normal-form-b2",
+   "target": "exr-smith-normal-form-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-similar-iff-xi-minus-a-equivalent",
+   "target": "exr-smith-normal-form-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-smith-normal-form",
+   "target": "exr-smith-normal-form-b3",
+   "kind": "mention"
+  },
+  {
+   "source": "thm-smith-normal-form",
+   "target": "exr-smith-normal-form-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-cauchy-binet",
+   "target": "exr-smith-normal-form-c1",
+   "kind": "mention"
+  },
+  {
+   "source": "def-polynomial-elementary-operations",
+   "target": "exr-smith-normal-form-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-operations-are-equivalence",
+   "target": "exr-smith-normal-form-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-polynomial-matrix-invertible",
+   "target": "exr-smith-normal-form-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-multiplicative",
+   "target": "exr-smith-normal-form-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-ideals-principal",
+   "target": "exr-smith-normal-form-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-polynomial-matrix-invertible",
+   "target": "prp-operations-are-equivalence",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-row-operations",
+   "target": "prp-operations-are-equivalence",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-triangular",
+   "target": "prp-operations-are-equivalence",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-row-op-is-left-multiplication",
+   "target": "prp-operations-are-equivalence",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-adjugate-identity",
+   "target": "prp-polynomial-matrix-invertible",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-degree-of-product",
+   "target": "prp-polynomial-matrix-invertible",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-multiplicative",
+   "target": "prp-polynomial-matrix-invertible",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-matrix-polynomial-division",
+   "target": "thm-similar-iff-xi-minus-a-equivalent",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-polynomial-matrix-invertible",
+   "target": "thm-similar-iff-xi-minus-a-equivalent",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-one-sided-inverse",
+   "target": "thm-similar-iff-xi-minus-a-equivalent",
+   "kind": "reference"
+  },
+  {
+   "source": "def-matrix-multiplication",
+   "target": "thm-smith-normal-form",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-divisibility-properties",
+   "target": "thm-smith-normal-form",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-ideal-generated",
+   "target": "thm-smith-normal-form",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-operations-are-equivalence",
+   "target": "thm-smith-normal-form",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-cauchy-binet",
+   "target": "thm-smith-normal-form",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-triangular",
+   "target": "thm-smith-normal-form",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-gcd-properties",
+   "target": "thm-smith-normal-form",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-ideals-principal",
+   "target": "thm-smith-normal-form",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-polynomial-division",
+   "target": "thm-smith-normal-form",
+   "kind": "reference"
+  },
+  {
+   "source": "def-semisimple-operator",
+   "target": "exm-jordan-chevalley-3x3",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-nilpotent-basic",
+   "target": "exm-jordan-chevalley-3x3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-diagonalizable-iff-minimal-distinct-linear",
+   "target": "exm-jordan-chevalley-3x3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-kernel-splitting",
+   "target": "exm-jordan-chevalley-3x3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-minimal-polynomial-roots",
+   "target": "exm-jordan-chevalley-3x3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-trace-det-eigenvalues",
+   "target": "exm-jordan-chevalley-3x3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-jordan-chevalley",
+   "target": "exm-jordan-chevalley-3x3",
+   "kind": "mention"
+  },
+  {
+   "source": "def-semisimple-operator",
+   "target": "exr-jordan-chevalley-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-diagonalizable-iff-minimal-distinct-linear",
+   "target": "exr-jordan-chevalley-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-irreducible-deg-2-3",
+   "target": "exr-jordan-chevalley-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-jordan-chevalley",
+   "target": "exr-jordan-chevalley-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-distinct-eigenvalues-diagonalizable",
+   "target": "exr-jordan-chevalley-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-diagonalization",
+   "target": "exr-jordan-chevalley-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-kernel-splitting",
+   "target": "exr-jordan-chevalley-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-jordan-chevalley",
+   "target": "exr-jordan-chevalley-b1",
+   "kind": "mention"
+  },
+  {
+   "source": "thm-jordan-chevalley",
+   "target": "exr-jordan-chevalley-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-block-diagonal-arithmetic",
+   "target": "exr-jordan-chevalley-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-block-triangular",
+   "target": "exr-jordan-chevalley-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-jordan-chevalley",
+   "target": "exr-jordan-chevalley-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-invertible-tfae-eigen",
+   "target": "exr-jordan-chevalley-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-jordan-chevalley",
+   "target": "exr-jordan-chevalley-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-generalized-eigenspace-is-kernel",
+   "target": "exr-jordan-chevalley-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "exr-jordan-chevalley-b2",
+   "target": "exr-jordan-chevalley-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-jordan-chevalley",
+   "target": "exr-jordan-chevalley-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-rank-from-any-echelon-form",
+   "target": "lem-minimal-polynomial-field-extension",
+   "kind": "reference"
+  },
+  {
+   "source": "def-reduced-row-echelon-form",
+   "target": "lem-minimal-polynomial-field-extension",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-divisibility-properties",
+   "target": "lem-minimal-polynomial-field-extension",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-minimal-polynomial-first-dependence",
+   "target": "lem-minimal-polynomial-field-extension",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-minimal-polynomial-divides",
+   "target": "lem-minimal-polynomial-field-extension",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rank-nullity-matrix",
+   "target": "lem-minimal-polynomial-field-extension",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rref-exists",
+   "target": "lem-minimal-polynomial-field-extension",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rref-unique",
+   "target": "lem-minimal-polynomial-field-extension",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-bezout-polynomials",
+   "target": "prp-semisimple-iff-diagonalizable-over-extension",
+   "kind": "reference"
+  },
+  {
+   "source": "def-formal-derivative",
+   "target": "prp-semisimple-iff-diagonalizable-over-extension",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-irreducible-gcd",
+   "target": "prp-semisimple-iff-diagonalizable-over-extension",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-minimal-polynomial-field-extension",
+   "target": "prp-semisimple-iff-diagonalizable-over-extension",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-minimal-polynomial-block-diagonal",
+   "target": "prp-semisimple-iff-diagonalizable-over-extension",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-companion-char-min",
+   "target": "prp-semisimple-iff-diagonalizable-over-extension",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-diagonalizable-iff-minimal-distinct-linear",
+   "target": "prp-semisimple-iff-diagonalizable-over-extension",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-multiplicity-of-product",
+   "target": "prp-semisimple-iff-diagonalizable-over-extension",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-repeated-root-derivative",
+   "target": "prp-semisimple-iff-diagonalizable-over-extension",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-distinct-eigenvalues-diagonalizable",
+   "target": "thm-jordan-chevalley",
+   "kind": "reference"
+  },
+  {
+   "source": "def-nilpotent",
+   "target": "thm-jordan-chevalley",
+   "kind": "reference"
+  },
+  {
+   "source": "exr-commuting-operators-c2",
+   "target": "thm-jordan-chevalley",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-nilpotent-basic",
+   "target": "thm-jordan-chevalley",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-diagonalization",
+   "target": "thm-jordan-chevalley",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-evaluation-homomorphism",
+   "target": "thm-jordan-chevalley",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-generalized-eigenspace-decomposition",
+   "target": "thm-jordan-chevalley",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-primary-decomposition",
+   "target": "thm-jordan-chevalley",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-projection-direct-sum",
+   "target": "thm-jordan-chevalley",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-simultaneous-diagonalization",
+   "target": "thm-jordan-chevalley",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-polynomial-of-jordan-block",
+   "target": "cor-exponential-of-jordan-block",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-block-diagonal-arithmetic",
+   "target": "cor-exponential-of-jordan-block",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-exponential-properties",
+   "target": "cor-exponential-of-jordan-block",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-exponential-series-converges",
+   "target": "cor-exponential-of-jordan-block",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-jordan-invariants",
+   "target": "exm-matrix-square-root",
+   "kind": "reference"
+  },
+  {
+   "source": "def-matrix-function-jordan",
+   "target": "exm-matrix-square-root",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-function-hermite",
+   "target": "exm-matrix-square-root",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-exponential-of-jordan-block",
+   "target": "exm-ode-oscillation-and-resonance",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-a-similar-to-transpose",
+   "target": "exm-second-order-scalar-ode",
+   "kind": "reference"
+  },
+  {
+   "source": "def-companion-matrix",
+   "target": "exm-second-order-scalar-ode",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-exponential-properties",
+   "target": "exm-second-order-scalar-ode",
+   "kind": "reference"
+  },
+  {
+   "source": "def-matrix-function-jordan",
+   "target": "exr-functions-of-matrices-and-odes-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-polynomial-of-jordan-block",
+   "target": "exr-functions-of-matrices-and-odes-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-nonzero-iff-invertible",
+   "target": "exr-functions-of-matrices-and-odes-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-exponential-properties",
+   "target": "exr-functions-of-matrices-and-odes-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-function-hermite",
+   "target": "exr-functions-of-matrices-and-odes-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-polynomial-taylor",
+   "target": "exr-functions-of-matrices-and-odes-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-exponential-of-jordan-block",
+   "target": "exr-functions-of-matrices-and-odes-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "def-matrix-function-jordan",
+   "target": "exr-functions-of-matrices-and-odes-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-exponential-of-jordan-block",
+   "target": "exr-functions-of-matrices-and-odes-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-complex-eigenvalues-real-matrix",
+   "target": "exr-functions-of-matrices-and-odes-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-ode-oscillation-and-resonance",
+   "target": "exr-functions-of-matrices-and-odes-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "exr-functions-of-matrices-and-odes-b1",
+   "target": "exr-functions-of-matrices-and-odes-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-linear-ode-solution",
+   "target": "exr-functions-of-matrices-and-odes-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "def-matrix-function-jordan",
+   "target": "exr-functions-of-matrices-and-odes-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-nilpotent-basic",
+   "target": "exr-functions-of-matrices-and-odes-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-function-hermite",
+   "target": "exr-functions-of-matrices-and-odes-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "def-matrix-function-jordan",
+   "target": "exr-functions-of-matrices-and-odes-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-exponential-properties",
+   "target": "exr-functions-of-matrices-and-odes-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-exponential-of-jordan-block",
+   "target": "exr-functions-of-matrices-and-odes-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-jordan-canonical-form",
+   "target": "exr-functions-of-matrices-and-odes-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-linear-ode-solution",
+   "target": "exr-functions-of-matrices-and-odes-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "def-jordan-block",
+   "target": "lem-polynomial-of-jordan-block",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-evaluation-homomorphism",
+   "target": "lem-polynomial-of-jordan-block",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-polynomial-taylor",
+   "target": "lem-polynomial-of-jordan-block",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-det-similarity-invariant",
+   "target": "thm-exponential-properties",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-triangular",
+   "target": "thm-exponential-properties",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-exponential-series-converges",
+   "target": "thm-exponential-properties",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-one-sided-inverse",
+   "target": "thm-exponential-properties",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-trace-similarity-invariant",
+   "target": "thm-exponential-properties",
+   "kind": "reference"
+  },
+  {
+   "source": "def-matrix-function-jordan",
+   "target": "thm-exponential-series-converges",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-polynomial-of-jordan-block",
+   "target": "thm-exponential-series-converges",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-similarity-invariants",
+   "target": "thm-exponential-series-converges",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-block-diagonal-arithmetic",
+   "target": "thm-exponential-series-converges",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-jordan-canonical-form",
+   "target": "thm-exponential-series-converges",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-exponential-properties",
+   "target": "thm-linear-ode-solution",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-jordan-invariants",
+   "target": "thm-matrix-function-hermite",
+   "kind": "reference"
+  },
+  {
+   "source": "def-matrix-function-jordan",
+   "target": "thm-matrix-function-hermite",
+   "kind": "reference"
+  },
+  {
+   "source": "def-minimal-polynomial",
+   "target": "thm-matrix-function-hermite",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-hermite-via-crt",
+   "target": "thm-matrix-function-hermite",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-monic-divisors",
+   "target": "thm-matrix-function-hermite",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-polynomial-of-jordan-block",
+   "target": "thm-matrix-function-hermite",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-similarity-invariants",
+   "target": "thm-matrix-function-hermite",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-block-diagonal-arithmetic",
+   "target": "thm-matrix-function-hermite",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-crt-polynomials",
+   "target": "thm-matrix-function-hermite",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-polynomial-division",
+   "target": "thm-matrix-function-hermite",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-polynomial-taylor",
+   "target": "thm-matrix-function-hermite",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-unique-factorization-polynomials",
+   "target": "thm-matrix-function-hermite",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-jordan-invariants",
+   "target": "cor-markov-powers-converge",
+   "kind": "reference"
+  },
+  {
+   "source": "def-stochastic-matrix",
+   "target": "cor-markov-powers-converge",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-stochastic-properties",
+   "target": "cor-markov-powers-converge",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-powers-bounded",
+   "target": "cor-markov-powers-converge",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-powers-converge",
+   "target": "cor-markov-powers-converge",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-markov-powers-converge",
+   "target": "exm-markov-limit-2x2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-markov-limit-diagonalizable",
+   "target": "exm-markov-limit-2x2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-neumann-series-spectral",
+   "target": "exm-neumann-2x2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-two-by-two-inverse",
+   "target": "exm-neumann-2x2",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-polynomial-of-jordan-block",
+   "target": "exm-powers-of-two-matrices",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-powers-bounded",
+   "target": "exm-powers-of-two-matrices",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-powers-converge",
+   "target": "exm-powers-of-two-matrices",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-powers-converge-to-zero",
+   "target": "exm-powers-of-two-matrices",
+   "kind": "reference"
+  },
+  {
+   "source": "def-entrywise-convergence",
+   "target": "exr-convergent-matrices-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-polynomial-of-jordan-block",
+   "target": "exr-convergent-matrices-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-powers-bounded",
+   "target": "exr-convergent-matrices-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-powers-converge",
+   "target": "exr-convergent-matrices-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-powers-converge-to-zero",
+   "target": "exr-convergent-matrices-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-neumann-series-spectral",
+   "target": "exr-convergent-matrices-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-polynomial-of-jordan-block",
+   "target": "exr-convergent-matrices-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-powers-bounded",
+   "target": "exr-convergent-matrices-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-powers-converge",
+   "target": "exr-convergent-matrices-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-powers-converge-to-zero",
+   "target": "exr-convergent-matrices-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-triangular",
+   "target": "exr-convergent-matrices-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-powers-converge",
+   "target": "exr-convergent-matrices-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-triangular",
+   "target": "exr-convergent-matrices-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-neumann-series-spectral",
+   "target": "exr-convergent-matrices-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-two-by-two-inverse",
+   "target": "exr-convergent-matrices-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-powers-converge",
+   "target": "exr-convergent-matrices-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-generalized-eigenspace-is-kernel",
+   "target": "exr-convergent-matrices-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-markov-powers-converge",
+   "target": "exr-convergent-matrices-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "def-matrix-multiplication",
+   "target": "exr-convergent-matrices-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-stochastic-properties",
+   "target": "exr-convergent-matrices-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dim-impl-eq",
+   "target": "exr-convergent-matrices-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-generalized-eigenspace-decomposition",
+   "target": "exr-convergent-matrices-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-geometric-le-algebraic",
+   "target": "exr-convergent-matrices-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-markov-limit-diagonalizable",
+   "target": "exr-convergent-matrices-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-powers-converge",
+   "target": "exr-convergent-matrices-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-powers-converge-to-zero",
+   "target": "exr-convergent-matrices-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "def-matrix-multiplication",
+   "target": "lem-powers-transfer-along-similarity",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-similarity-invariants",
+   "target": "lem-powers-transfer-along-similarity",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-jordan-invariants",
+   "target": "thm-matrix-powers-bounded",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-powers-transfer-along-similarity",
+   "target": "thm-matrix-powers-bounded",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-block-diagonal-arithmetic",
+   "target": "thm-matrix-powers-bounded",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-jordan-canonical-form",
+   "target": "thm-matrix-powers-bounded",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-powers-converge-to-zero",
+   "target": "thm-matrix-powers-bounded",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-generalized-eigenspace-is-kernel",
+   "target": "thm-matrix-powers-converge",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-jordan-invariants",
+   "target": "thm-matrix-powers-converge",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-powers-transfer-along-similarity",
+   "target": "thm-matrix-powers-converge",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-block-diagonal-arithmetic",
+   "target": "thm-matrix-powers-converge",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-change-of-basis-maps",
+   "target": "thm-matrix-powers-converge",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dim-impl-eq",
+   "target": "thm-matrix-powers-converge",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-generalized-eigenspace-decomposition",
+   "target": "thm-matrix-powers-converge",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-jordan-canonical-form",
+   "target": "thm-matrix-powers-converge",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-powers-bounded",
+   "target": "thm-matrix-powers-converge",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-powers-converge-to-zero",
+   "target": "thm-matrix-powers-converge",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-projection-direct-sum",
+   "target": "thm-matrix-powers-converge",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-projection-matrix",
+   "target": "thm-matrix-powers-converge",
+   "kind": "mention"
+  },
+  {
+   "source": "cor-jordan-invariants",
+   "target": "thm-matrix-powers-converge-to-zero",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-powers-transfer-along-similarity",
+   "target": "thm-matrix-powers-converge-to-zero",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-block-diagonal-arithmetic",
+   "target": "thm-matrix-powers-converge-to-zero",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-jordan-canonical-form",
+   "target": "thm-matrix-powers-converge-to-zero",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-invertible-tfae-eigen",
+   "target": "thm-neumann-series-spectral",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-powers-converge-to-zero",
+   "target": "thm-neumann-series-spectral",
    "kind": "reference"
   }
  ]
