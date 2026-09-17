@@ -89,7 +89,8 @@
         },
         "src/ch06-determinants",
         "src/ch07-block-matrices",
-        "src/ch08-eigenvalues"
+        "src/ch08-eigenvalues",
+        "src/ch09-canonical-forms"
     ],
     "macros": "latex/macros.tex",
     "templates": {

@@ -84,3 +84,10 @@ Add a line when a section promises something later ("proved in Chapter 5"); tick
 - [ ] Ch 8 → Ch 9: recurrences with repeated roots (k^jλ^k) via the Jordan form; generalized eigenspaces named; cyclic vector when deg m = dim V; m and p together do not decide similarity
 - [ ] Ch 8 → Ch 11: Schur's orthonormal triangularization
 - [ ] Ch 8 → Ch 18: Perron–Frobenius gives the Markov limit for regular stochastic matrices
+- [x] Ch 3/6/8 → Ch 9: similarity decided; complete invariants (split case); generalized eigenspaces named; best matrix when g < a
+- [ ] Ch 9 → Ch 9 §06: canonical form over every field (rational form); §07 removes the splitting hypothesis from A ~ Aᵀ
+- [ ] Ch 9 → Ch 19: numerical instability of the Jordan form
+- [x] Ch 3 → Ch 9: A ~ Aᵀ over any field (`cor-a-similar-to-transpose`)
+- [x] Ch 8 §11 → Ch 9: Markov powers without diagonalizability (`cor-markov-powers-converge`)
+- [ ] Ch 9 → Ch 15: norms give quantitative bounds for e^A and for powers; ρ(A) ≤ ‖A‖ and the spectral radius as a limit
+- Ch 9 §07 is long (~10k raw); natural seam after the Smith theorem. Ch 9 §04, §06 also long. Consider in M7.
