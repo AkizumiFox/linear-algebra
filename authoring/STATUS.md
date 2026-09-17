@@ -6,9 +6,9 @@ The plan is at `~/.claude/plans/cached-gathering-sedgewick.md`. The outline of a
 
 | Ch | Dir | Topic | State |
 |---|---|---|---|
-| 0 | ch00-foundations | Preliminaries | drafting |
-| 1 | ch01-vector-spaces | Vector spaces | old draft, to rewrite |
-| 2 | ch02-linear-systems | Linear systems | not started |
+| 0 | ch00-foundations | Preliminaries | deployed |
+| 1 | ch01-vector-spaces | Vector spaces | deployed |
+| 2 | ch02-linear-systems | Linear systems | drafting |
 | 3 | ch03-linear-maps | Linear maps (old ch02-linear-transformations) | old draft, to rewrite |
 | 4–23 | | see plan | not started |
 
@@ -33,3 +33,8 @@ Add a line when a section promises something later ("proved in Chapter 5"); tick
 ## Notation added beyond NOTATION.md
 
 (none yet)
+- [ ] Ch 1 → Ch 3: Rank–Nullity by the same "basis, extend, Big Claim, count" move
+- [ ] Ch 1 → Ch 3: external direct sums; projection onto U along W (different complements, different projections)
+- [ ] Ch 1 → Ch 8: eigenspaces of a diagonalizable operator give a direct sum
+- [ ] Ch 1 → Ch 3: coordinate map is an isomorphism; shift map injective not surjective; (ℝⁿ)_ℂ ≅ ℂⁿ
+- [ ] Ch 1 → Ch 8/11: complexification gives real matrices complex eigenvalues; used in real spectral theory

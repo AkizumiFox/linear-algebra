@@ -75,9 +75,13 @@
         ]
     },
     "chapters": [
-        "src/ch00-foundations",
+        {
+            "dir": "src/ch00-foundations",
+            "part": "Part I · Spaces and Maps"
+        },
         "src/ch01-vector-spaces",
-        "src/ch02-linear-transformations"
+        "src/ch02-linear-systems",
+        "src/ch03-linear-maps"
     ],
     "macros": "latex/macros.tex",
     "templates": {
@@ -92,5 +96,8 @@
     "deploy-repo": "https://github.com/AkizumiFox/linear-algebra.git",
     "deploy-domain": "linear-algebra.akizumifox.com",
     "deploy-push-url": "git@github.com:AkizumiFox/linear-algebra.git",
-    "issues-url": "https://github.com/AkizumiFox/linear-algebra/issues/new"
+    "issues-url": "https://github.com/AkizumiFox/linear-algebra/issues/new",
+    "redirects": {
+        "ch02-linear-transformations/": "ch03-linear-maps/"
+    }
 }
