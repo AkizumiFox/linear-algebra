@@ -787,6 +787,239 @@ div.equation mjx-container[display="true"] {
   color: var(--ink-strong);
 }
 
+/* --- Sidebar links to the generated pages --- */
+.nav-extra a {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.nav-extra .bi {
+  color: var(--faint);
+  font-size: 0.9em;
+}
+
+.nav-extra.active a {
+  color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.nav-extra:last-of-type {
+  margin-bottom: 0.35rem;
+}
+
+/* --- List of results (build/extras.py) --- */
+.results-filters {
+  position: sticky;
+  top: 3.25rem;
+  z-index: 5;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem 1rem;
+  margin: 0 0 1.5rem;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid var(--rule);
+  background: var(--paper);
+  font-size: 0.85rem;
+}
+
+.results-filter {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.results-filter input {
+  accent-color: var(--accent);
+}
+
+.results-count {
+  color: var(--faint);
+  font-variant-numeric: tabular-nums;
+}
+
+.results-search {
+  flex: 1 1 12rem;
+  min-width: 10rem;
+  padding: 0.35rem 0.6rem;
+  border: 1px solid var(--rule-strong);
+  border-radius: 5px;
+  background: var(--paper);
+  color: var(--ink);
+  font: inherit;
+}
+
+.results-search:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-soft);
+}
+
+.results-chapter h2 {
+  margin-top: 2rem;
+}
+
+.results-section h3 {
+  margin: 1.4rem 0 0.4rem;
+  font-size: 1rem;
+}
+
+.results-section h3 a {
+  color: var(--ink-strong);
+  text-decoration: none;
+}
+
+.results-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.result {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0 0.5rem;
+  margin: 0;
+  padding: 0.3rem 0 0.3rem 0.75rem;
+  border-left: 2px solid var(--env-color, var(--rule));
+  font-size: 0.95rem;
+}
+
+.result + .result {
+  margin-top: 0.15rem;
+}
+
+.result-name {
+  flex-shrink: 0;
+  font-weight: 600;
+}
+
+.result-title {
+  color: var(--ink);
+}
+
+.results-empty {
+  color: var(--muted);
+  font-style: italic;
+}
+
+/* --- Dependency graph page --- */
+.wide-page {
+  --content-width: 60rem;
+}
+
+.graph-intro {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.graph-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 1.25rem;
+  margin: 1rem 0;
+  font-size: 0.85rem;
+}
+
+.graph-controls select {
+  margin-left: 0.35rem;
+  padding: 0.25rem 0.4rem;
+  border: 1px solid var(--rule-strong);
+  border-radius: 5px;
+  background: var(--paper);
+  color: var(--ink);
+  font: inherit;
+}
+
+.graph-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  cursor: pointer;
+}
+
+.graph-toggle input {
+  accent-color: var(--accent);
+}
+
+.graph-frame {
+  position: relative;
+}
+
+.dependency-graph {
+  width: 100%;
+  height: min(75vh, 48rem);
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  background: var(--paper);
+}
+
+.dependency-graph.graph-error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  padding: 2rem;
+  color: var(--danger);
+}
+
+.graph-preview {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  width: min(22rem, 45%);
+  max-height: calc(100% - 1.5rem);
+  overflow: auto;
+  padding: 0.75rem 0.9rem;
+  border: 1px solid var(--rule-strong);
+  border-left: 3px solid var(--env-color, var(--accent));
+  border-radius: 0 6px 6px 0;
+  background: var(--paper);
+  box-shadow: var(--shadow);
+  font-size: 0.85rem;
+  line-height: 1.5;
+  pointer-events: none;
+}
+
+.graph-preview-name {
+  color: var(--ink-strong);
+  font-weight: 700;
+}
+
+.graph-preview-title {
+  color: var(--ink);
+}
+
+.graph-preview-body {
+  margin-top: 0.4rem;
+  color: var(--ink);
+}
+
+.graph-preview-body p:last-child {
+  margin-bottom: 0;
+}
+
+.graph-preview-meta {
+  margin-top: 0.5rem;
+  color: var(--faint);
+  font-size: 0.75rem;
+}
+
+@media (max-width: 900px) {
+  .graph-preview {
+    display: none;
+  }
+
+  .results-filters {
+    top: 3rem;
+  }
+}
+
 /* ==========================================================================
    Link anchors and link targets (main.js)
    ========================================================================== */

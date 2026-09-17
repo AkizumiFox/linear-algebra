@@ -205,6 +205,15 @@ def check(book: Book, quiet: bool = False) -> bool:
         if entry:
             errors.extend(_compare_numbers(book, labels, aux_file, only=set(entry["labels"])))
 
+    # Named results mentioned without a reference: a reference gives readers a link and a
+    # preview, and makes the dependency graph exact
+    source_of = {path: entry["source"] for path, entry in scan["files"].items()}
+    for label, info in sorted(labels.items()):
+        for mentioned in info.get("mentions", []):
+            title = labels[mentioned].get("title", mentioned)
+            warnings.append(f"{source_of.get(info.get('file'), info.get('file'))}: {label} names "
+                            f"\"{title}\" without a reference; consider @{mentioned}")
+
     # Spelling: warnings only, since new terms are often correct
     for source, words in sorted(spelling_problems(book, scan).items()):
         warnings.append(f"spelling in {source}: {', '.join(words)}")

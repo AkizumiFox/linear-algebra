@@ -168,6 +168,28 @@ class TestHtmlBuild(FixtureBookCase):
         view_width = float(re.search(r'viewBox="[\d.]+ [\d.]+ ([\d.]+)', svg).group(1))
         self.assertAlmostEqual(width / view_width, 1.5, places=2)
 
+    def test_results_page_and_graph(self):
+        results = self.page("results.html")
+        self.assertIn('data-ref="thm-main"', results)
+        self.assertIn('href="ch01-basics/01-first.html#thm-main"', results)
+        self.assertIn("Main Theorem", results)
+        graph = json.loads((self.html / "graph.json").read_text())
+        self.assertIn({"source": "thm-main", "target": "thm-second", "kind": "reference"}, graph["edges"])
+        self.assertIn('data-graph="graph.json"', self.page("graph.html"))
+        self.assertIn("graph.js?v=", self.page("graph.html"))
+        navigation = json.loads((self.html / "navigation.json").read_text())
+        self.assertEqual([e["path"] for e in navigation["extras"]], ["results.html", "graph.html"])
+
+    def test_title_mentions_become_dependencies(self):
+        labels = self.labels()
+        # 02-second.md references thm-main explicitly, so it is a use, not a mention
+        self.assertIn("thm-main", labels["thm-second"]["uses"])
+        self.assertNotIn("thm-main", labels["thm-second"]["mentions"])
+
+    def test_figure_alt_text(self):
+        page = self.page("ch01-basics/01-first.html")
+        self.assertRegex(page, r'class="tikz"\s+alt="Diagram\. Labels: x"')
+
     def test_unchanged_rebuild_skips_pages(self):
         result = run_build(self.book_dir, "html")
         self.assertEqual(result.returncode, 0, result.stdout)

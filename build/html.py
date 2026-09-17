@@ -17,6 +17,7 @@ from .macros import mathjax_macros_js
 from .manifest import (scan_labels, load_scan, generate_theorem_manifest, generate_navigation_manifest,
                        generate_search_index, generate_site_files, page_description)
 from .pandoc import build_pandoc_command, page_metadata, run_pandoc
+from .extras import generate_extra_pages
 from .tikz import build_tikz_figures
 from .utils import print_step, print_file_action, print_success, print_error
 
@@ -35,6 +36,7 @@ def copy_html_assets(book: Book) -> str:
         "styles.css": book.html_styles.read_bytes(),
         "main.js": book.engine_file("templates/html/main.js").read_bytes(),
         "components.js": book.engine_file("templates/html/components.js").read_bytes(),
+        "graph.js": book.engine_file("templates/html/graph.js").read_bytes(),
         "favicon.svg": book.engine_file("templates/html/favicon.svg").read_bytes(),
         "mathjax-macros.js": mathjax_macros_js(book.macros_file).encode("utf-8"),
     }
@@ -183,4 +185,6 @@ def build_html(book: Book, specific_file: Optional[Path] = None, dev_reload: boo
     generate_navigation_manifest(book)
     generate_search_index(book)
     generate_site_files(book)
+    if not generate_extra_pages(book, extra):
+        failures += 1
     return failures == 0

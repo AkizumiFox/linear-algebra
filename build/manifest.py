@@ -75,6 +75,7 @@ def _scan_page(book: Book, page: Page, meta_file) -> dict | None:
             data = json.loads(line[len("SCAN_RESULT:"):])
             data = {"labels": data.get("labels") or {}, "refs": data.get("refs") or [], "text": data.get("text") or "",
                     "description": data.get("description") or "", "prose": data.get("prose") or "",
+                    "uses": data.get("uses") or {}, "block_text": data.get("block_text") or {},
                     "errors": errors}
             cache_file.parent.mkdir(parents=True, exist_ok=True)
             cache_file.write_text(json.dumps(data), encoding="utf-8")
@@ -99,8 +100,10 @@ def scan_labels(book: Book) -> dict:
     for page, data in zip(pages, results):
         if data is None:
             continue
+        uses = data.get("uses") or {}
         for label_id, info in data["labels"].items():
-            info = dict(info, file=page.html_path, shard=page.shard)
+            info = dict(info, file=page.html_path, shard=page.shard, uses=uses.get(label_id, []),
+                        text=(data.get("block_text") or {}).get(label_id, ""))
             global_labels.setdefault(label_id, info)
         scan_files[page.html_path] = {
             "source": str(page.source.relative_to(book.root)),
@@ -112,12 +115,37 @@ def scan_labels(book: Book) -> dict:
             "errors": data.get("errors", []),
         }
 
+    add_title_mentions(global_labels)
     book.build_dir.mkdir(parents=True, exist_ok=True)
     book.labels_file.write_text(json.dumps({"crossref_labels": global_labels}, indent=2), encoding="utf-8")
     scan = {"files": scan_files}
     book.scan_file.write_text(json.dumps(scan, indent=2), encoding="utf-8")
     print_success(f"Scanned {len(global_labels)} labels.")
     return scan
+
+
+STATEMENT_TYPES = {"theorem", "lemma", "corollary", "proposition"}
+
+
+def add_title_mentions(labels: dict):
+    """
+    "mentions": results whose title appears in another result's statement or proof
+    ("... by the Basis Extension Theorem ...") without an @reference. Only named
+    theorems, lemmas, corollaries and propositions count; definitions are mentioned
+    everywhere by their terms and are not dependencies in that sense.
+    """
+    named = {
+        label: re.compile(r"\b" + re.escape(info["title"]) + r"\b", re.IGNORECASE)
+        for label, info in labels.items()
+        if info.get("type") in STATEMENT_TYPES and len(info.get("title", "").split()) >= 2
+    }
+    for label, info in labels.items():
+        text = info.pop("text", "")
+        referenced = set(info.get("uses", []))
+        info["mentions"] = sorted(
+            other for other, pattern in named.items()
+            if other != label and other not in referenced and pattern.search(text)
+        )
 
 
 def load_scan(book: Book) -> tuple[dict, dict]:
@@ -164,6 +192,10 @@ def generate_navigation_manifest(book: Book):
         "title": book.title,
         "author": book.author,
         "home": {"title": preface.title, "path": preface.html_path} if preface else None,
+        "extras": [
+            {"title": "List of results", "path": "results.html", "icon": "bi-list-ol"},
+            {"title": "Dependency graph", "path": "graph.html", "icon": "bi-diagram-3"},
+        ],
         "chapters": [],
     }
     for chapter in book.chapters:
@@ -235,7 +267,8 @@ def generate_site_files(book: Book):
     """robots.txt and sitemap.xml (when deploy-domain is set) and a 404 page."""
     domain = (book.config.get("deploy-domain") or "").strip()
     if domain:
-        urls = "\n".join(f"  <url><loc>https://{domain}/{p.html_path}</loc></url>" for p in book.pages)
+        paths = [p.html_path for p in book.pages] + ["results.html", "graph.html"]
+        urls = "\n".join(f"  <url><loc>https://{domain}/{path}</loc></url>" for path in paths)
         _write_if_changed(book.html_dir / "sitemap.xml",
                           '<?xml version="1.0" encoding="UTF-8"?>\n'
                           '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'

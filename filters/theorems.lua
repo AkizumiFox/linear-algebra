@@ -768,6 +768,46 @@ local function scan_and_dump_labels(doc)
     -- (math kept as its TeX source; the plain writer would warn about every formula)
     local text_doc = doc:walk { Math = function(m) return pandoc.Str(m.text) end }
     local text = pandoc.write(text_doc, "plain", {wrap_text = "none"})
+    -- Dependencies: the references made by each labeled result, counting its statement
+    -- and the proofs, solutions and remarks that follow it (until the next result or
+    -- heading). Collected before the walk below edits the document.
+    local uses = {}
+    local block_text = {}  -- label -> prose of its statement and proofs (for title mentions)
+    do
+        local current = nil
+        local function add_cites(block)
+            if not current then return end
+            block:walk { Cite = function(cite)
+                for _, citation in ipairs(cite.citations) do
+                    if citation.id ~= current then uses[current][citation.id] = true end
+                end
+            end }
+            local without_math = block:walk { Math = function() return pandoc.Space() end }
+            block_text[current] = (block_text[current] or "") .. " " .. pandoc.utils.stringify(without_math)
+        end
+        for _, block in ipairs(doc.blocks) do
+            if block.t == "Header" then
+                current = nil
+            elseif block.t == "Div" then
+                local env_type = get_env_type(block)
+                if env_type and ENV_STYLES[env_type] == "big" then
+                    current = (block.identifier ~= "" and block.identifier) or nil
+                    if current then uses[current] = uses[current] or {} end
+                    add_cites(block)
+                elseif env_type then
+                    add_cites(block)
+                end
+            end
+        end
+    end
+    local uses_lists = {}
+    for label, set in pairs(uses) do
+        local list = {}
+        for id in pairs(set) do table.insert(list, id) end
+        table.sort(list)
+        uses_lists[label] = list
+    end
+
     -- Prose for the spell check: no mathematics, code or raw LaTeX
     local prose_doc = doc:walk {
         Math = function() return pandoc.Space() end,
@@ -843,7 +883,8 @@ local function scan_and_dump_labels(doc)
     
     if doc.meta.scan_mode then
         local json_str = pandoc.json.encode({labels = collected, refs = refs, text = text,
-            description = table.concat(description, " "), prose = prose})
+            description = table.concat(description, " "), prose = prose, uses = uses_lists,
+            block_text = block_text})
         print("SCAN_RESULT:" .. json_str)
         return pandoc.Pandoc({}, doc.meta)
     end

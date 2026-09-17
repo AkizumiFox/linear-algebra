@@ -91,6 +91,12 @@
         html += `<li class="nav-item nav-home">
             <a href="${basePath}${home.path}">${home.title}</a>
         </li>`;
+        for (const extra of navigationData.extras || []) {
+            const active = currentPagePath() === extra.path ? ' active' : '';
+            html += `<li class="nav-item nav-extra${active}">
+                <a href="${basePath}${extra.path}"><i class="bi ${extra.icon}" aria-hidden="true"></i> ${extra.title}</a>
+            </li>`;
+        }
 
         navigationData.chapters.forEach((chapter, chapterIdx) => {
             const isChapterActive = chapter.sections.some(s => s.path === currentPath);
@@ -408,6 +414,36 @@
                 }
             });
         });
+    }
+
+    // ==========================================================================
+    // List of Results: filters
+    // ==========================================================================
+
+    function setupResultsFilters() {
+        const filters = document.querySelector('.results-filters');
+        if (!filters) return;
+        const checkboxes = [...filters.querySelectorAll('input[type="checkbox"]')];
+        const search = filters.querySelector('.results-search');
+        const empty = document.querySelector('.results-empty');
+
+        const apply = () => {
+            const groups = new Set(checkboxes.filter(c => c.checked).map(c => c.value));
+            const words = search.value.toLowerCase().split(/\s+/).filter(Boolean);
+            let shown = 0;
+            document.querySelectorAll('.result').forEach(item => {
+                const visible = groups.has(item.dataset.group)
+                    && words.every(w => item.dataset.search.includes(w));
+                item.hidden = !visible;
+                if (visible) shown++;
+            });
+            document.querySelectorAll('.results-section, .results-chapter').forEach(block => {
+                block.hidden = !block.querySelector('.result:not([hidden])');
+            });
+            empty.hidden = shown > 0;
+        };
+        checkboxes.forEach(c => c.addEventListener('change', apply));
+        search.addEventListener('input', apply);
     }
 
     // ==========================================================================
@@ -976,6 +1012,7 @@
 
         // Fold solutions (and let readers fold proofs), before anchors are resolved
         setupFolding();
+        setupResultsFilters();
 
         // Link anchors on headings and theorems; highlight the linked element
         setupAnchorLinks();

@@ -86,7 +86,7 @@ $highlighting-css$
     $endfor$
 </head>
 
-<body>
+<body$if(wide-page)$ class="wide-page"$endif$>
     <a class="skip-link" href="#quarto-content">Skip to content</a>
 
     <div id="quarto-container">
@@ -229,6 +229,9 @@ $highlighting-css$
 
     <!-- Tooltip Script -->
     <script src="$if(asset-prefix)$$asset-prefix$$endif$main.js?v=$asset-version$"></script>
+    $for(page-scripts)$
+    <script type="module" src="$if(asset-prefix)$$asset-prefix$$endif$$page-scripts$?v=$asset-version$"></script>
+    $endfor$
     $if(has-components)$
     <script type="module" src="$if(asset-prefix)$$asset-prefix$$endif$components.js?v=$asset-version$"></script>
     $endif$
