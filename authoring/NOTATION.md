@@ -42,6 +42,7 @@ This list is fixed. A chapter that needs a new symbol adds it here, and a new ma
 | `T, S \colon V \to W` | linear maps (always T, S, R; never f for a linear map) |
 | `ST` | composition of linear maps: first T, then S |
 | `\cL(V, W)`, `\cL(V)` | all linear maps V → W; operators on V |
+| `T_A` | the map \( F^n \to F^m \), \( \x \mapsto A\x \) |
 | `\ker T`, `\im T` | kernel, image |
 | `\col(A)`, `\row(A)`, `\nul(A)` | column space (in F^m), row space (in M_{1×n}(F)), null space (in F^n) |
 | `P_{ij}`, `D_i(c)`, `I + cE_{ij}` | elementary matrices: swap, scale, add; `E_{ij}` is the matrix unit |
@@ -59,6 +60,7 @@ This list is fixed. A chapter that needs a new symbol adds it here, and a new ma
 | `T'` | dual map (transpose of T) W* → V*. The star is reserved for adjoints |
 | `V^{*}`, `\v^{*}` / `\varphi` | dual space; functionals are Greek letters φ, ψ |
 | `U^{0}` | annihilator of U in V* |
+| `V^{**}`, `\ev_{\v}`, `\ev_V` | double dual; evaluation at v, φ ↦ φ(v), an element of V**; the evaluation map V → V**, v ↦ ev_v |
 | `\GL_n(F)`, `\SL_n(F)` | general and special linear groups |
 
 ## Polynomials, eigenvalues, canonical forms

@@ -8,8 +8,8 @@ The plan is at `~/.claude/plans/cached-gathering-sedgewick.md`. The outline of a
 |---|---|---|---|
 | 0 | ch00-foundations | Preliminaries | deployed |
 | 1 | ch01-vector-spaces | Vector spaces | deployed |
-| 2 | ch02-linear-systems | Linear systems | drafting |
-| 3 | ch03-linear-maps | Linear maps (old ch02-linear-transformations) | old draft, to rewrite |
+| 2 | ch02-linear-systems | Linear systems | deployed |
+| 3 | ch03-linear-maps | Linear maps | deployed |
 | 4–23 | | see plan | not started |
 
 ## Open forward promises
@@ -51,3 +51,6 @@ Add a line when a section promises something later ("proved in Chapter 5"); tick
 - Long sections to consider splitting or trimming: Ch 0 §04 functions, §05 relations, §09 matrices; Ch 1 §01–§04; Ch 2 §02 Gaussian elimination (~11.7k raw words), §05 rank.
 - Ch 2 §03: "pivot columns of A" is defined inside `cor-pivot-columns-well-defined`; consider a separate def block.
 - Ch 2 §05 symbol reuse (r, **r**ᵢ, **b**) — tidy in M7.
+- Ch 3 §01 and §04 both define "operator" and the shorthand Tv; §04 should defer to §01 (check at Ch 3 referee).
+- Ch 3: 'every linear map Fⁿ → Fᵐ is T_A' proved twice (§04 C1(b), §06 inline) — consolidate into one result in M7. §06 long; rank/invertibility subsection could move to §08.
+- Ch 3 §09 long (~11k raw): consider splitting products/cosets from isomorphism theorems. §08 Sylvester proof duplicates exr-rank-nullity-c1.

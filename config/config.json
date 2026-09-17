@@ -81,7 +81,8 @@
         },
         "src/ch01-vector-spaces",
         "src/ch02-linear-systems",
-        "src/ch03-linear-maps"
+        "src/ch03-linear-maps",
+        "src/ch04-duality"
     ],
     "macros": "latex/macros.tex",
     "templates": {
@@ -98,6 +99,8 @@
     "deploy-push-url": "git@github.com:AkizumiFox/linear-algebra.git",
     "issues-url": "https://github.com/AkizumiFox/linear-algebra/issues/new",
     "redirects": {
+        "ch02-linear-transformations/01-linear-transformations.html": "ch03-linear-maps/01-linear-maps.html",
+        "ch03-linear-maps/01-linear-transformations.html": "ch03-linear-maps/01-linear-maps.html",
         "ch02-linear-transformations/": "ch03-linear-maps/"
     }
 }
