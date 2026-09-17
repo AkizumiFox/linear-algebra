@@ -6,6 +6,7 @@ Each picture is compiled once as a standalone document and cached by content has
 """
 
 import os
+import re
 import shutil
 import subprocess
 import tempfile
@@ -14,6 +15,10 @@ from pathlib import Path
 
 from .book import Book
 from .utils import print_step, print_success, print_error, print_warning
+
+# Web text (20px) is about 1.5 times the PDF's 10pt text, so figures are enlarged to keep
+# their size relative to the text (the viewBox is unchanged, so they stay sharp).
+WEB_SCALE = 1.5
 
 STANDALONE_TEMPLATE = r"""\documentclass[tikz,border=2pt]{standalone}
 \usepackage{amsmath,amssymb,amsthm,mathtools,bbm}
@@ -26,6 +31,17 @@ STANDALONE_TEMPLATE = r"""\documentclass[tikz,border=2pt]{standalone}
 %(picture)s
 \end{document}
 """
+
+
+def _scale_svg(svg: Path, factor: float):
+    """Multiply the root <svg> width and height attributes by `factor`."""
+    text = svg.read_text(encoding="utf-8")
+    head, rest = text.split("<svg", 1)
+    tag, body = rest.split(">", 1)
+    for attribute in ("width", "height"):
+        tag = re.sub(rf'\b{attribute}="([\d.]+)(pt)?"',
+                     lambda m: f'{attribute}="{float(m.group(1)) * factor:.3f}"', tag, count=1)
+    svg.write_text(f"{head}<svg{tag}>{body}", encoding="utf-8")
 
 
 def _compile_one(tex_source: Path, macros_file: Path, tex_inputs: str) -> tuple[Path, str | None]:
@@ -50,6 +66,7 @@ def _compile_one(tex_source: Path, macros_file: Path, tex_inputs: str) -> tuple[
         result = subprocess.run(["pdftocairo", "-svg", str(pdf), str(svg)], capture_output=True, text=True)
         if result.returncode != 0:
             return tex_source, result.stderr.strip() or "pdftocairo failed"
+        _scale_svg(svg, WEB_SCALE)
     return tex_source, None
 
 
@@ -64,6 +81,13 @@ def build_tikz_figures(book: Book):
 
     macros_file = book.macros_file
     macros_mtime = macros_file.stat().st_mtime if macros_file.exists() else 0
+    stamp = cache_dir / f"scale-{WEB_SCALE}"
+    if not stamp.exists():  # figures compiled at another scale
+        for old in cache_dir.glob("*.svg"):
+            old.unlink()
+        for old_stamp in cache_dir.glob("scale-*"):
+            old_stamp.unlink()
+        stamp.touch()
     pending = [
         src for src in sources
         if not src.with_suffix(".svg").exists() or src.with_suffix(".svg").stat().st_mtime < macros_mtime

@@ -7,7 +7,9 @@ the data files the website loads: tooltip shards, navigation and the search inde
 
 import hashlib
 import json
+import re
 import subprocess
+from html import escape as html_escape, unescape
 from concurrent.futures import ThreadPoolExecutor
 
 from .book import Book, Page
@@ -72,7 +74,7 @@ def _scan_page(book: Book, page: Page, meta_file) -> dict | None:
         if line.startswith("SCAN_RESULT:"):
             data = json.loads(line[len("SCAN_RESULT:"):])
             data = {"labels": data.get("labels") or {}, "refs": data.get("refs") or [], "text": data.get("text") or "",
-                    "errors": errors}
+                    "description": data.get("description") or "", "errors": errors}
             cache_file.parent.mkdir(parents=True, exist_ok=True)
             cache_file.write_text(json.dumps(data), encoding="utf-8")
             return data
@@ -104,6 +106,7 @@ def scan_labels(book: Book) -> dict:
             "labels": sorted(data["labels"]),
             "refs": data["refs"],
             "text": data["text"],
+            "description": data.get("description", ""),
             "errors": data.get("errors", []),
         }
 
@@ -178,16 +181,88 @@ def generate_navigation_manifest(book: Book):
     print_success(f"Navigation manifest: {sum(len(c['sections']) for c in navigation['chapters'])} sections")
 
 
+def _plain(html: str) -> str:
+    """Text of an HTML fragment, whitespace collapsed (math stays as TeX source)."""
+    text = re.sub(r"<[^>]+>", " ", html)
+    return " ".join(unescape(text).split())
+
+
 def generate_search_index(book: Book):
-    """Write search.json from the text collected during the scan."""
-    scan, _ = load_scan(book)
+    """
+    Write search.json: one entry per page, and one per labeled environment (theorems,
+    definitions, ...) so a search for a result's name leads straight to it.
+    """
+    scan, labels = load_scan(book)
+    pages = {p.html_path: p for p in book.pages}
     index = []
     for page in book.pages:
         entry = scan["files"].get(page.html_path)
         if entry:
-            index.append({"title": page.title, "url": page.html_path, "content": entry["text"].strip()})
+            title = f"{page.number} {page.title}" if page.number else page.title
+            index.append({"kind": "page", "title": title, "url": page.html_path,
+                          "content": " ".join(entry["text"].split())})
+    for label_id, info in labels.items():
+        if info.get("type") == "equation" or info.get("file") not in pages:
+            continue
+        name = " ".join(filter(None, [info.get("type_name"), info.get("number")]))
+        title = f"{name} ({info['title']})" if info.get("title") else name
+        page = pages[info["file"]]
+        index.append({"kind": "result", "title": title, "url": f"{info['file']}#{label_id}",
+                      "page": f"{page.number} {page.title}".strip(),
+                      "content": _plain(info.get("html_content", ""))})
     _write_if_changed(book.html_dir / "search.json", json.dumps(index, indent=2, ensure_ascii=False))
     print_success(f"Search index generated with {len(index)} entries")
+
+
+def page_description(text: str, limit: int = 160) -> str:
+    """Shorten a page's description text (see theorems.lua) to about `limit` characters."""
+    text = " ".join(text.split())
+    if len(text) <= limit:
+        return text
+    sentences = re.split(r"(?<=[.?!])\s+", text)
+    chosen = ""
+    for sentence in sentences:
+        candidate = f"{chosen} {sentence}".strip()
+        if len(candidate) > limit:
+            break
+        chosen = candidate
+    return chosen or text[:limit].rsplit(" ", 1)[0].rstrip(",;:") + "…"
+
+
+def generate_site_files(book: Book):
+    """robots.txt and sitemap.xml (when deploy-domain is set) and a 404 page."""
+    domain = (book.config.get("deploy-domain") or "").strip()
+    if domain:
+        urls = "\n".join(f"  <url><loc>https://{domain}/{p.html_path}</loc></url>" for p in book.pages)
+        _write_if_changed(book.html_dir / "sitemap.xml",
+                          '<?xml version="1.0" encoding="UTF-8"?>\n'
+                          '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+                          f"{urls}\n</urlset>\n")
+        _write_if_changed(book.html_dir / "robots.txt", f"User-agent: *\nAllow: /\nSitemap: https://{domain}/sitemap.xml\n")
+    # GitHub Pages serves 404.html for unknown paths at any depth, so links are absolute
+    root = "/"
+    title = html_escape(book.title)
+    _write_if_changed(book.html_dir / "404.html", f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>Page not found – {title}</title>
+    <link rel="icon" href="{root}favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400;0,600;0,700;1,400&display=swap">
+    <link rel="stylesheet" href="{root}styles.css">
+</head>
+<body>
+    <main class="not-found">
+        <p class="not-found-book"><a href="{root}index.html">{title}</a></p>
+        <h1>Page not found</h1>
+        <p>This page does not exist, or it moved when the book was reorganized.</p>
+        <p><a href="{root}index.html">Go to the start of the book</a>, or use the search in the sidebar there.</p>
+    </main>
+</body>
+</html>
+""")
 
 
 def _write_if_changed(path, text: str):

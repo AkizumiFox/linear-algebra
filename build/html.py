@@ -14,8 +14,8 @@ from typing import Optional
 
 from .book import Book, Page, ENGINE_ROOT
 from .macros import mathjax_macros_js
-from .manifest import (scan_labels, load_scan, generate_theorem_manifest,
-                       generate_navigation_manifest, generate_search_index)
+from .manifest import (scan_labels, load_scan, generate_theorem_manifest, generate_navigation_manifest,
+                       generate_search_index, generate_site_files, page_description)
 from .pandoc import build_pandoc_command, page_metadata, run_pandoc
 from .tikz import build_tikz_figures
 from .utils import print_step, print_file_action, print_success, print_error
@@ -35,6 +35,7 @@ def copy_html_assets(book: Book) -> str:
         "styles.css": book.html_styles.read_bytes(),
         "main.js": book.engine_file("templates/html/main.js").read_bytes(),
         "components.js": book.engine_file("templates/html/components.js").read_bytes(),
+        "favicon.svg": book.engine_file("templates/html/favicon.svg").read_bytes(),
         "mathjax-macros.js": mathjax_macros_js(book.macros_file).encode("utf-8"),
     }
     # Component modules, and widgets from the engine and the book (the book's win)
@@ -141,10 +142,17 @@ def build_html(book: Book, specific_file: Optional[Path] = None, dev_reload: boo
     if dev_reload:
         extra["dev-reload"] = True
 
+    domain = (book.config.get("deploy-domain") or "").strip()
     tasks = []
     for page in pages:
         output_file = book.html_dir / page.html_path
-        metadata = page_metadata(book, page, "html", extra)
+        page_extra = dict(extra)
+        description = page_description(scan["files"].get(page.html_path, {}).get("description", ""))
+        if description:
+            page_extra["description"] = description
+        if domain:
+            page_extra["canonical-url"] = f"https://{domain}/{page.html_path}"
+        metadata = page_metadata(book, page, "html", page_extra)
         fingerprint = page_fingerprint(book, page, metadata, engine, scan, labels)
         if store.unchanged(page.html_path, fingerprint, output_file):
             continue
@@ -170,4 +178,5 @@ def build_html(book: Book, specific_file: Optional[Path] = None, dev_reload: boo
     generate_theorem_manifest(book)
     generate_navigation_manifest(book)
     generate_search_index(book)
+    generate_site_files(book)
     return failures == 0

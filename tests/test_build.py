@@ -141,8 +141,32 @@ class TestHtmlBuild(FixtureBookCase):
     def test_search_index(self):
         index = json.loads((self.html / "search.json").read_text())
         entry = next(e for e in index if e["url"] == "ch01-basics/02-second.html")
-        self.assertEqual(entry["title"], "Second Section")
+        self.assertEqual(entry["title"], "1.2 Second Section")
         self.assertIn("builds on", entry["content"])
+
+    def test_search_index_has_results(self):
+        index = json.loads((self.html / "search.json").read_text())
+        result = next(e for e in index if e["url"] == "ch01-basics/01-first.html#thm-main")
+        self.assertEqual(result["kind"], "result")
+        self.assertEqual(result["title"], "Theorem 1.1.1 (Main Theorem)")
+        self.assertEqual(result["page"], "1.1 First Section")
+        page = next(e for e in index if e["url"] == "ch01-basics/02-second.html")
+        self.assertEqual(page["title"], "1.2 Second Section")
+
+    def test_page_metadata_and_site_files(self):
+        page = self.page("ch01-basics/index.html")
+        self.assertIn('<meta name="description" content="The first chapter.">', page)
+        self.assertIn('rel="icon" href="../favicon.svg"', page)
+        self.assertNotIn('rel="canonical"', page)            # no deploy-domain in the fixture
+        self.assertTrue((self.html / "favicon.svg").exists())
+        self.assertIn("Page not found", (self.html / "404.html").read_text())
+        self.assertFalse((self.html / "sitemap.xml").exists())
+
+    def test_tikz_svg_scaled_for_the_web(self):
+        svg = next((self.html / "tikz").glob("*.svg")).read_text()
+        width = float(re.search(r'<svg[^>]*\bwidth="([\d.]+)"', svg).group(1))
+        view_width = float(re.search(r'viewBox="[\d.]+ [\d.]+ ([\d.]+)', svg).group(1))
+        self.assertAlmostEqual(width / view_width, 1.5, places=2)
 
     def test_unchanged_rebuild_skips_pages(self):
         result = run_build(self.book_dir, "html")

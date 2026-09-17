@@ -25,7 +25,7 @@ Recall that for \( D : \nR[x]_{\leq 3} \to \nR[x]_{\leq 2} \) defined by
 \[
 D(f(x)) = f'(x),
 \]
-we have \( \ker(D) = \nR \) and \( \im (D) = \nR[x]_{\leq 2} \). Compute the nullity and image of \( D \).
+we have \( \ker(D) = \nR \) and \( \im (D) = \nR[x]_{\leq 2} \). Compute the nullity and rank of \( D \).
 :::
 
 ::: {.solution}
@@ -64,7 +64,7 @@ We verify two properties.
 \]
 where the last equality holds since \( \v_i \in \ker (f) \). Since \( \w \) can be expressed by \( f(\s_i) \)'s, therefore \( S'' \) spans \( \im (f) \).
 
-*Linear independence.* Suppose that \( \alpha_1 f(\s_1) + \cdots + \lambda_k f(\s_k) = \mathbf{0} \). By linearity of \( f \), it becomes \( f(\alpha_1 \s_1 + \cdots + \alpha_k \s_k) = \mathbf{0} \). Therefore we have \( \alpha_1 \s_1 + \cdots + \alpha_k \s_k \in \ker (f) \). Moreover, as \( S \) is a basis of \( \ker (f) \), we know that \( \sum \alpha_i \s_i = \sum \beta_i \v_i \) for some \( \beta_i \in F \). Reordering gives \( \sum \alpha_i \s_i - \sum \beta_i \v_i = \mathbf{0} \). As \( S' \) is linearly independent, this forces all \( \alpha_i \)'s and \( \beta_i \)'s to be \( 0 \). This completes the proof of the claim.
+*Linear independence.* Suppose that \( \alpha_1 f(\s_1) + \cdots + \alpha_k f(\s_k) = \mathbf{0} \). By linearity of \( f \), it becomes \( f(\alpha_1 \s_1 + \cdots + \alpha_k \s_k) = \mathbf{0} \). Therefore we have \( \alpha_1 \s_1 + \cdots + \alpha_k \s_k \in \ker (f) \). Moreover, as \( S \) is a basis of \( \ker (f) \), we know that \( \sum \alpha_i \s_i = \sum \beta_i \v_i \) for some \( \beta_i \in F \). Reordering gives \( \sum \alpha_i \s_i - \sum \beta_i \v_i = \mathbf{0} \). As \( S' \) is linearly independent, this forces all \( \alpha_i \)'s and \( \beta_i \)'s to be \( 0 \). This completes the proof of the claim.
 :::
 
 Hence, we have

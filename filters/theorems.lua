@@ -768,6 +768,22 @@ local function scan_and_dump_labels(doc)
     -- (math kept as its TeX source; the plain writer would warn about every formula)
     local text_doc = doc:walk { Math = function(m) return pandoc.Str(m.text) end }
     local text = pandoc.write(text_doc, "plain", {wrap_text = "none"})
+    -- Page description: leading top-level paragraphs without mathematics
+    local description = {}
+    for _, block in ipairs(doc.blocks) do
+        if block.t == "Para" then
+            local has_math = false
+            block:walk { Math = function() has_math = true end }
+            if has_math then
+                if #description > 0 then break end
+            else
+                table.insert(description, pandoc.utils.stringify(block))
+                if #table.concat(description, " ") > 160 then break end
+            end
+        elseif block.t ~= "Header" and #description > 0 then
+            break
+        end
+    end
     
     -- Walk the document to find all theorem environments and equations
     doc:walk {
@@ -816,7 +832,8 @@ local function scan_and_dump_labels(doc)
     }
     
     if doc.meta.scan_mode then
-        local json_str = pandoc.json.encode({labels = collected, refs = refs, text = text})
+        local json_str = pandoc.json.encode({labels = collected, refs = refs, text = text,
+            description = table.concat(description, " ")})
         print("SCAN_RESULT:" .. json_str)
         return pandoc.Pandoc({}, doc.meta)
     end

@@ -9,6 +9,20 @@
     <meta name="asset-prefix" content="$if(asset-prefix)$$asset-prefix$$else$./$endif$">
 
     <meta name="color-scheme" content="light dark">
+    $if(description)$
+    <meta name="description" content="$description$">
+    $endif$
+    $if(canonical-url)$
+    <link rel="canonical" href="$canonical-url$">
+    <meta property="og:url" content="$canonical-url$">
+    $endif$
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="$title$">
+    <meta property="og:title" content="$if(pagetitle)$$pagetitle$$else$$title$$endif$">
+    $if(description)$
+    <meta property="og:description" content="$description$">
+    $endif$
+    <link rel="icon" href="$if(asset-prefix)$$asset-prefix$$endif$favicon.svg" type="image/svg+xml">
 
     <!-- Fonts: STIX Two Text matches MathJax's math font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
