@@ -1,14 +1,38 @@
 {
  "nodes": [
   {
-   "id": "def-negation-of-quantifiers",
+   "id": "def-connectives",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 0.1.1",
+   "title": "Negation, conjunction, disjunction",
+   "url": "ch00-foundations/01-logic.html#def-connectives",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#b0414f"
+  },
+  {
+   "id": "def-implication-converse-contrapositive",
    "type": "definition",
    "group": "definitions",
    "name": "Definition 0.1.2",
-   "title": "Negation of Quantifiers",
+   "title": "Implication, converse, contrapositive",
+   "url": "ch00-foundations/01-logic.html#def-implication-converse-contrapositive",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#b0414f"
+  },
+  {
+   "id": "def-negation-of-quantifiers",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 0.1.4",
+   "title": "Negation of quantifiers",
    "url": "ch00-foundations/01-logic.html#def-negation-of-quantifiers",
    "shard": "ch00-foundations",
-   "chapter": "Preliminary",
+   "chapter": "Preliminaries",
    "chapterNumber": 0,
    "color": "#b0414f"
   },
@@ -16,11 +40,11 @@
    "id": "def-quantifiers",
    "type": "definition",
    "group": "definitions",
-   "name": "Definition 0.1.1",
+   "name": "Definition 0.1.3",
    "title": "Quantifiers",
    "url": "ch00-foundations/01-logic.html#def-quantifiers",
    "shard": "ch00-foundations",
-   "chapter": "Preliminary",
+   "chapter": "Preliminaries",
    "chapterNumber": 0,
    "color": "#b0414f"
   },
@@ -29,10 +53,10 @@
    "type": "example",
    "group": "examples",
    "name": "Example",
-   "title": "Basic Negation Examples",
+   "title": "Negating simple quantified statements",
    "url": "ch00-foundations/01-logic.html#exm-negation-basic",
    "shard": "ch00-foundations",
-   "chapter": "Preliminary",
+   "chapter": "Preliminaries",
    "chapterNumber": 0,
    "color": "#3b7a4c"
   },
@@ -41,10 +65,22 @@
    "type": "example",
    "group": "examples",
    "name": "Example",
-   "title": "Negating the Definition of Injectivity",
+   "title": "What \u201cnot injective\u201d means",
    "url": "ch00-foundations/01-logic.html#exm-negation-injectivity",
    "shard": "ch00-foundations",
-   "chapter": "Preliminary",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-negation-not-all-zero",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "Negating \u201conly the zero combination\u201d",
+   "url": "ch00-foundations/01-logic.html#exm-negation-not-all-zero",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
    "chapterNumber": 0,
    "color": "#3b7a4c"
   },
@@ -53,10 +89,10 @@
    "type": "example",
    "group": "examples",
    "name": "Example",
-   "title": "Negating the Definition of Surjectivity",
+   "title": "What \u201cnot surjective\u201d means",
    "url": "ch00-foundations/01-logic.html#exm-negation-surjectivity",
    "shard": "ch00-foundations",
-   "chapter": "Preliminary",
+   "chapter": "Preliminaries",
    "chapterNumber": 0,
    "color": "#3b7a4c"
   },
@@ -65,10 +101,10 @@
    "type": "example",
    "group": "examples",
    "name": "Example",
-   "title": "Nested Quantifiers",
+   "title": "Swapping two quantifiers",
    "url": "ch00-foundations/01-logic.html#exm-nested-quantifiers",
    "shard": "ch00-foundations",
-   "chapter": "Preliminary",
+   "chapter": "Preliminaries",
    "chapterNumber": 0,
    "color": "#3b7a4c"
   },
@@ -77,22 +113,382 @@
    "type": "example",
    "group": "examples",
    "name": "Example",
-   "title": "Quantified Statements",
+   "title": "Quantified statements",
    "url": "ch00-foundations/01-logic.html#exm-quantifiers",
    "shard": "ch00-foundations",
-   "chapter": "Preliminary",
+   "chapter": "Preliminaries",
    "chapterNumber": 0,
    "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-vacuous-truth",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "A vacuously true implication",
+   "url": "ch00-foundations/01-logic.html#exm-vacuous-truth",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exr-logic-a1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "A1",
+   "url": "ch00-foundations/01-logic.html#exr-logic-a1",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-logic-b1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B1: Negating definitions",
+   "url": "ch00-foundations/01-logic.html#exr-logic-b1",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-logic-b2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B2: Integers versus reals",
+   "url": "ch00-foundations/01-logic.html#exr-logic-b2",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-logic-c1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C1: Exporting a hypothesis",
+   "url": "ch00-foundations/01-logic.html#exr-logic-c1",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-logic-c2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C2: When can a converse fail too?",
+   "url": "ch00-foundations/01-logic.html#exr-logic-c2",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#a8670c"
+  },
+  {
+   "id": "thm-contrapositive-equivalent",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 0.1.1",
+   "title": "Contrapositive equivalence",
+   "url": "ch00-foundations/01-logic.html#thm-contrapositive-equivalent",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-de-morgan-logic",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 0.1.2",
+   "title": "De Morgan\u2019s laws for statements",
+   "url": "ch00-foundations/01-logic.html#thm-de-morgan-logic",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "def-divisibility-prime",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 0.2.2",
+   "title": "Divisibility and primes",
+   "url": "ch00-foundations/02-proofs.html#def-divisibility-prime",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#b0414f"
+  },
+  {
+   "id": "def-parity",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 0.2.1",
+   "title": "Even and odd",
+   "url": "ch00-foundations/02-proofs.html#def-parity",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#b0414f"
+  },
+  {
+   "id": "exm-every-prime-odd",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "Refuting \u201cevery prime is odd\u201d",
+   "url": "ch00-foundations/02-proofs.html#exm-every-prime-odd",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exr-proofs-a1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "A1",
+   "url": "ch00-foundations/02-proofs.html#exr-proofs-a1",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-proofs-b1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B1: Contrapositive",
+   "url": "ch00-foundations/02-proofs.html#exr-proofs-b1",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-proofs-b2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B2: Induction",
+   "url": "ch00-foundations/02-proofs.html#exr-proofs-b2",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-proofs-b3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B3: \u221a3 is irrational",
+   "url": "ch00-foundations/02-proofs.html#exr-proofs-b3",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-proofs-c1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C1: Stamps of 4 and 5",
+   "url": "ch00-foundations/02-proofs.html#exr-proofs-c1",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-proofs-c2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C2: Division with remainder",
+   "url": "ch00-foundations/02-proofs.html#exr-proofs-c2",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#a8670c"
+  },
+  {
+   "id": "prp-even-iff-square-even",
+   "type": "proposition",
+   "group": "statements",
+   "name": "Proposition 0.2.5",
+   "title": "Parity of a square",
+   "url": "ch00-foundations/02-proofs.html#prp-even-iff-square-even",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "prp-identity-element-unique",
+   "type": "proposition",
+   "group": "statements",
+   "name": "Proposition 0.2.6",
+   "title": "Uniqueness of the identity",
+   "url": "ch00-foundations/02-proofs.html#prp-identity-element-unique",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "prp-n-squared-plus-n-even",
+   "type": "proposition",
+   "group": "statements",
+   "name": "Proposition 0.2.4",
+   "title": "n^2 + n is even",
+   "url": "ch00-foundations/02-proofs.html#prp-n-squared-plus-n-even",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "prp-power-of-two",
+   "type": "proposition",
+   "group": "statements",
+   "name": "Proposition 0.2.9",
+   "title": "2^n > n",
+   "url": "ch00-foundations/02-proofs.html#prp-power-of-two",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "prp-prime-factor",
+   "type": "proposition",
+   "group": "statements",
+   "name": "Proposition 0.2.12",
+   "title": "Existence of a prime factor",
+   "url": "ch00-foundations/02-proofs.html#prp-prime-factor",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "prp-square-even",
+   "type": "proposition",
+   "group": "statements",
+   "name": "Proposition 0.2.2",
+   "title": "Even squares",
+   "url": "ch00-foundations/02-proofs.html#prp-square-even",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "prp-sum-first-n",
+   "type": "proposition",
+   "group": "statements",
+   "name": "Proposition 0.2.8",
+   "title": "Sum of the first n integers",
+   "url": "ch00-foundations/02-proofs.html#prp-sum-first-n",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "prp-sum-of-evens",
+   "type": "proposition",
+   "group": "statements",
+   "name": "Proposition 0.2.1",
+   "title": "Sum of even integers",
+   "url": "ch00-foundations/02-proofs.html#prp-sum-of-evens",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-induction",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 0.2.7",
+   "title": "Principle of Mathematical Induction",
+   "url": "ch00-foundations/02-proofs.html#thm-induction",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-infinitely-many-primes",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 0.2.13",
+   "title": "Infinitely many primes",
+   "url": "ch00-foundations/02-proofs.html#thm-infinitely-many-primes",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-sqrt2-irrational",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 0.2.3",
+   "title": "Irrationality of \u221a2",
+   "url": "ch00-foundations/02-proofs.html#thm-sqrt2-irrational",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-strong-induction",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 0.2.10",
+   "title": "Strong induction",
+   "url": "ch00-foundations/02-proofs.html#thm-strong-induction",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-well-ordering",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 0.2.11",
+   "title": "Well-Ordering Principle",
+   "url": "ch00-foundations/02-proofs.html#thm-well-ordering",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#2f62b5"
   },
   {
    "id": "def-cartesian-product",
    "type": "definition",
    "group": "definitions",
-   "name": "Definition 0.2.2",
-   "title": "Cartesian Product",
-   "url": "ch00-foundations/02-sets-and-notation.html#def-cartesian-product",
+   "name": "Definition 0.3.10",
+   "title": "Cartesian product",
+   "url": "ch00-foundations/03-sets.html#def-cartesian-product",
    "shard": "ch00-foundations",
-   "chapter": "Preliminary",
+   "chapter": "Preliminaries",
    "chapterNumber": 0,
    "color": "#b0414f"
   },
@@ -100,11 +496,11 @@
    "id": "def-common-number-sets",
    "type": "definition",
    "group": "definitions",
-   "name": "Definition 0.2.1",
-   "title": "Common Number Sets",
-   "url": "ch00-foundations/02-sets-and-notation.html#def-common-number-sets",
+   "name": "Definition 0.3.1",
+   "title": "Common number sets",
+   "url": "ch00-foundations/03-sets.html#def-common-number-sets",
    "shard": "ch00-foundations",
-   "chapter": "Preliminary",
+   "chapter": "Preliminaries",
    "chapterNumber": 0,
    "color": "#b0414f"
   },
@@ -112,11 +508,23 @@
    "id": "def-empty-set",
    "type": "definition",
    "group": "definitions",
-   "name": "Definition 0.2.5",
-   "title": "Empty Set",
-   "url": "ch00-foundations/02-sets-and-notation.html#def-empty-set",
+   "name": "Definition 0.3.3",
+   "title": "Empty set",
+   "url": "ch00-foundations/03-sets.html#def-empty-set",
    "shard": "ch00-foundations",
-   "chapter": "Preliminary",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#b0414f"
+  },
+  {
+   "id": "def-indexed-family",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 0.3.9",
+   "title": "Unions and intersections of indexed families",
+   "url": "ch00-foundations/03-sets.html#def-indexed-family",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
    "chapterNumber": 0,
    "color": "#b0414f"
   },
@@ -124,11 +532,11 @@
    "id": "def-intersection",
    "type": "definition",
    "group": "definitions",
-   "name": "Definition 0.2.9",
+   "name": "Definition 0.3.7",
    "title": "Intersection",
-   "url": "ch00-foundations/02-sets-and-notation.html#def-intersection",
+   "url": "ch00-foundations/03-sets.html#def-intersection",
    "shard": "ch00-foundations",
-   "chapter": "Preliminary",
+   "chapter": "Preliminaries",
    "chapterNumber": 0,
    "color": "#b0414f"
   },
@@ -136,11 +544,23 @@
    "id": "def-n-tuple",
    "type": "definition",
    "group": "definitions",
-   "name": "Definition 0.2.3",
-   "title": "n-Tuple",
-   "url": "ch00-foundations/02-sets-and-notation.html#def-n-tuple",
+   "name": "Definition 0.3.11",
+   "title": "n-tuples",
+   "url": "ch00-foundations/03-sets.html#def-n-tuple",
    "shard": "ch00-foundations",
-   "chapter": "Preliminary",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#b0414f"
+  },
+  {
+   "id": "def-power-set",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 0.3.12",
+   "title": "Power set",
+   "url": "ch00-foundations/03-sets.html#def-power-set",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
    "chapterNumber": 0,
    "color": "#b0414f"
   },
@@ -148,11 +568,11 @@
    "id": "def-set-builder",
    "type": "definition",
    "group": "definitions",
-   "name": "Definition 0.2.4",
-   "title": "Set-Builder Notation",
-   "url": "ch00-foundations/02-sets-and-notation.html#def-set-builder",
+   "name": "Definition 0.3.2",
+   "title": "Set-builder notation",
+   "url": "ch00-foundations/03-sets.html#def-set-builder",
    "shard": "ch00-foundations",
-   "chapter": "Preliminary",
+   "chapter": "Preliminaries",
    "chapterNumber": 0,
    "color": "#b0414f"
   },
@@ -160,11 +580,11 @@
    "id": "def-set-difference",
    "type": "definition",
    "group": "definitions",
-   "name": "Definition 0.2.10",
-   "title": "Set Difference",
-   "url": "ch00-foundations/02-sets-and-notation.html#def-set-difference",
+   "name": "Definition 0.3.8",
+   "title": "Set difference and complement",
+   "url": "ch00-foundations/03-sets.html#def-set-difference",
    "shard": "ch00-foundations",
-   "chapter": "Preliminary",
+   "chapter": "Preliminaries",
    "chapterNumber": 0,
    "color": "#b0414f"
   },
@@ -172,11 +592,11 @@
    "id": "def-set-equality",
    "type": "definition",
    "group": "definitions",
-   "name": "Definition 0.2.7",
-   "title": "Set Equality",
-   "url": "ch00-foundations/02-sets-and-notation.html#def-set-equality",
+   "name": "Definition 0.3.5",
+   "title": "Set equality",
+   "url": "ch00-foundations/03-sets.html#def-set-equality",
    "shard": "ch00-foundations",
-   "chapter": "Preliminary",
+   "chapter": "Preliminaries",
    "chapterNumber": 0,
    "color": "#b0414f"
   },
@@ -184,11 +604,11 @@
    "id": "def-subset",
    "type": "definition",
    "group": "definitions",
-   "name": "Definition 0.2.6",
+   "name": "Definition 0.3.4",
    "title": "Subset",
-   "url": "ch00-foundations/02-sets-and-notation.html#def-subset",
+   "url": "ch00-foundations/03-sets.html#def-subset",
    "shard": "ch00-foundations",
-   "chapter": "Preliminary",
+   "chapter": "Preliminaries",
    "chapterNumber": 0,
    "color": "#b0414f"
   },
@@ -196,23 +616,47 @@
    "id": "def-union",
    "type": "definition",
    "group": "definitions",
-   "name": "Definition 0.2.8",
+   "name": "Definition 0.3.6",
    "title": "Union",
-   "url": "ch00-foundations/02-sets-and-notation.html#def-union",
+   "url": "ch00-foundations/03-sets.html#def-union",
    "shard": "ch00-foundations",
-   "chapter": "Preliminary",
+   "chapter": "Preliminaries",
    "chapterNumber": 0,
    "color": "#b0414f"
+  },
+  {
+   "id": "exm-indexed-families",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "Indexed unions and intersections of intervals",
+   "url": "ch00-foundations/03-sets.html#exm-indexed-families",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#3b7a4c"
   },
   {
    "id": "exm-n-tuples",
    "type": "example",
    "group": "examples",
    "name": "Example",
-   "title": "n-Tuples",
-   "url": "ch00-foundations/02-sets-and-notation.html#exm-n-tuples",
+   "title": "Sets of tuples",
+   "url": "ch00-foundations/03-sets.html#exm-n-tuples",
    "shard": "ch00-foundations",
-   "chapter": "Preliminary",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-quadratic-solution-set",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "A solution set by double inclusion",
+   "url": "ch00-foundations/03-sets.html#exm-quadratic-solution-set",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
    "chapterNumber": 0,
    "color": "#3b7a4c"
   },
@@ -221,10 +665,10 @@
    "type": "example",
    "group": "examples",
    "name": "Example",
-   "title": "Set-Builder Examples",
-   "url": "ch00-foundations/02-sets-and-notation.html#exm-set-builder",
+   "title": "Reading set-builder notation",
+   "url": "ch00-foundations/03-sets.html#exm-set-builder",
    "shard": "ch00-foundations",
-   "chapter": "Preliminary",
+   "chapter": "Preliminaries",
    "chapterNumber": 0,
    "color": "#3b7a4c"
   },
@@ -233,10 +677,10 @@
    "type": "example",
    "group": "examples",
    "name": "Example",
-   "title": "Set Operations",
-   "url": "ch00-foundations/02-sets-and-notation.html#exm-set-operations",
+   "title": "Operations on finite sets",
+   "url": "ch00-foundations/03-sets.html#exm-set-operations",
    "shard": "ch00-foundations",
-   "chapter": "Preliminary",
+   "chapter": "Preliminaries",
    "chapterNumber": 0,
    "color": "#3b7a4c"
   },
@@ -245,10 +689,10 @@
    "type": "example",
    "group": "examples",
    "name": "Example",
-   "title": "Set Operations with Intervals",
-   "url": "ch00-foundations/02-sets-and-notation.html#exm-set-operations-intervals",
+   "title": "Operations on intervals",
+   "url": "ch00-foundations/03-sets.html#exm-set-operations-intervals",
    "shard": "ch00-foundations",
-   "chapter": "Preliminary",
+   "chapter": "Preliminaries",
    "chapterNumber": 0,
    "color": "#3b7a4c"
   },
@@ -257,22 +701,130 @@
    "type": "example",
    "group": "examples",
    "name": "Example",
-   "title": "Subset Examples",
-   "url": "ch00-foundations/02-sets-and-notation.html#exm-subsets",
+   "title": "Subsets",
+   "url": "ch00-foundations/03-sets.html#exm-subsets",
    "shard": "ch00-foundations",
-   "chapter": "Preliminary",
+   "chapter": "Preliminaries",
    "chapterNumber": 0,
    "color": "#3b7a4c"
+  },
+  {
+   "id": "exr-sets-a1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "A1",
+   "url": "ch00-foundations/03-sets.html#exr-sets-a1",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-sets-b1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B1: The second De Morgan law",
+   "url": "ch00-foundations/03-sets.html#exr-sets-b1",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-sets-b2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B2: A distributive law",
+   "url": "ch00-foundations/03-sets.html#exr-sets-b2",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-sets-b3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B3: An indexed intersection",
+   "url": "ch00-foundations/03-sets.html#exr-sets-b3",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-sets-c1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C1: When union equals intersection",
+   "url": "ch00-foundations/03-sets.html#exr-sets-c1",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-sets-c2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C2: Counting subsets",
+   "url": "ch00-foundations/03-sets.html#exr-sets-c2",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#a8670c"
+  },
+  {
+   "id": "thm-de-morgan-sets",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 0.3.2",
+   "title": "De Morgan\u2019s laws for sets",
+   "url": "ch00-foundations/03-sets.html#thm-de-morgan-sets",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-distributive-sets",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 0.3.3",
+   "title": "Distributive laws for sets",
+   "url": "ch00-foundations/03-sets.html#thm-distributive-sets",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-double-inclusion",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 0.3.1",
+   "title": "Double inclusion",
+   "url": "ch00-foundations/03-sets.html#thm-double-inclusion",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#2f62b5"
   },
   {
    "id": "def-composition",
    "type": "definition",
    "group": "definitions",
-   "name": "Definition 0.3.3",
-   "title": "Function Composition",
-   "url": "ch00-foundations/03-functions.html#def-composition",
+   "name": "Definition 0.4.4",
+   "title": "Composition",
+   "url": "ch00-foundations/04-functions.html#def-composition",
    "shard": "ch00-foundations",
-   "chapter": "Preliminary",
+   "chapter": "Preliminaries",
    "chapterNumber": 0,
    "color": "#b0414f"
   },
@@ -280,11 +832,11 @@
    "id": "def-function",
    "type": "definition",
    "group": "definitions",
-   "name": "Definition 0.3.1",
+   "name": "Definition 0.4.1",
    "title": "Function",
-   "url": "ch00-foundations/03-functions.html#def-function",
+   "url": "ch00-foundations/04-functions.html#def-function",
    "shard": "ch00-foundations",
-   "chapter": "Preliminary",
+   "chapter": "Preliminaries",
    "chapterNumber": 0,
    "color": "#b0414f"
   },
@@ -292,11 +844,23 @@
    "id": "def-identity-function",
    "type": "definition",
    "group": "definitions",
-   "name": "Definition 0.3.4",
-   "title": "Identity Function",
-   "url": "ch00-foundations/03-functions.html#def-identity-function",
+   "name": "Definition 0.4.5",
+   "title": "Identity function",
+   "url": "ch00-foundations/04-functions.html#def-identity-function",
    "shard": "ch00-foundations",
-   "chapter": "Preliminary",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#b0414f"
+  },
+  {
+   "id": "def-image-preimage",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 0.4.2",
+   "title": "Image and preimage",
+   "url": "ch00-foundations/04-functions.html#def-image-preimage",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
    "chapterNumber": 0,
    "color": "#b0414f"
   },
@@ -304,11 +868,11 @@
    "id": "def-injective-surjective-bijective",
    "type": "definition",
    "group": "definitions",
-   "name": "Definition 0.3.2",
-   "title": "Injective, Surjective, Bijective",
-   "url": "ch00-foundations/03-functions.html#def-injective-surjective-bijective",
+   "name": "Definition 0.4.3",
+   "title": "Injective, surjective, bijective",
+   "url": "ch00-foundations/04-functions.html#def-injective-surjective-bijective",
    "shard": "ch00-foundations",
-   "chapter": "Preliminary",
+   "chapter": "Preliminaries",
    "chapterNumber": 0,
    "color": "#b0414f"
   },
@@ -316,11 +880,23 @@
    "id": "def-inverse-function",
    "type": "definition",
    "group": "definitions",
-   "name": "Definition 0.3.5",
-   "title": "Inverse Function",
-   "url": "ch00-foundations/03-functions.html#def-inverse-function",
+   "name": "Definition 0.4.7",
+   "title": "Inverse function",
+   "url": "ch00-foundations/04-functions.html#def-inverse-function",
    "shard": "ch00-foundations",
-   "chapter": "Preliminary",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#b0414f"
+  },
+  {
+   "id": "def-left-right-inverse",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 0.4.6",
+   "title": "Left and right inverses",
+   "url": "ch00-foundations/04-functions.html#def-left-right-inverse",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
    "chapterNumber": 0,
    "color": "#b0414f"
   },
@@ -329,10 +905,34 @@
    "type": "example",
    "group": "examples",
    "name": "Example",
-   "title": "Function Composition",
-   "url": "ch00-foundations/03-functions.html#exm-composition",
+   "title": "Order matters",
+   "url": "ch00-foundations/04-functions.html#exm-composition",
    "shard": "ch00-foundations",
-   "chapter": "Preliminary",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-functions",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "First examples",
+   "url": "ch00-foundations/04-functions.html#exm-functions",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-image-preimage",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "Images and preimages of the squaring map",
+   "url": "ch00-foundations/04-functions.html#exm-image-preimage",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
    "chapterNumber": 0,
    "color": "#3b7a4c"
   },
@@ -341,10 +941,10 @@
    "type": "example",
    "group": "examples",
    "name": "Example",
-   "title": "Injective, Surjective, and Bijective Functions",
-   "url": "ch00-foundations/03-functions.html#exm-injective-surjective-bijective",
+   "title": "Deciding injectivity and surjectivity",
+   "url": "ch00-foundations/04-functions.html#exm-injective-surjective-bijective",
    "shard": "ch00-foundations",
-   "chapter": "Preliminary",
+   "chapter": "Preliminaries",
    "chapterNumber": 0,
    "color": "#3b7a4c"
   },
@@ -353,22 +953,118 @@
    "type": "example",
    "group": "examples",
    "name": "Example",
-   "title": "Inverse Functions",
-   "url": "ch00-foundations/03-functions.html#exm-inverse-function",
+   "title": "Finding inverses",
+   "url": "ch00-foundations/04-functions.html#exm-inverse-function",
    "shard": "ch00-foundations",
-   "chapter": "Preliminary",
+   "chapter": "Preliminaries",
    "chapterNumber": 0,
    "color": "#3b7a4c"
+  },
+  {
+   "id": "exr-functions-a1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "A1",
+   "url": "ch00-foundations/04-functions.html#exr-functions-a1",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-functions-b1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B1: Injective or surjective?",
+   "url": "ch00-foundations/04-functions.html#exr-functions-b1",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-functions-b2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B2: Inverses",
+   "url": "ch00-foundations/04-functions.html#exr-functions-b2",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-functions-b3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B3: Images of unions and intersections",
+   "url": "ch00-foundations/04-functions.html#exr-functions-b3",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-functions-c1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C1: Left inverses are not unique",
+   "url": "ch00-foundations/04-functions.html#exr-functions-c1",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-functions-c2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C2: Self-maps of finite and infinite sets",
+   "url": "ch00-foundations/04-functions.html#exr-functions-c2",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-functions-c3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C3: When images and preimages undo each other",
+   "url": "ch00-foundations/04-functions.html#exr-functions-c3",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#a8670c"
+  },
+  {
+   "id": "prp-image-preimage-inclusions",
+   "type": "proposition",
+   "group": "statements",
+   "name": "Proposition 0.4.1",
+   "title": "Image and preimage inclusions",
+   "url": "ch00-foundations/04-functions.html#prp-image-preimage-inclusions",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#2f62b5"
   },
   {
    "id": "thm-bijective-iff-invertible",
    "type": "theorem",
    "group": "statements",
-   "name": "Theorem 0.3.3",
-   "title": "Bijective if and only if Invertible",
-   "url": "ch00-foundations/03-functions.html#thm-bijective-iff-invertible",
+   "name": "Theorem 0.4.7",
+   "title": "Bijective if and only if invertible",
+   "url": "ch00-foundations/04-functions.html#thm-bijective-iff-invertible",
    "shard": "ch00-foundations",
-   "chapter": "Preliminary",
+   "chapter": "Preliminaries",
    "chapterNumber": 0,
    "color": "#2f62b5"
   },
@@ -376,11 +1072,23 @@
    "id": "thm-composition-associative",
    "type": "theorem",
    "group": "statements",
-   "name": "Theorem 0.3.1",
-   "title": "Associativity of Composition",
-   "url": "ch00-foundations/03-functions.html#thm-composition-associative",
+   "name": "Theorem 0.4.2",
+   "title": "Associativity of composition",
+   "url": "ch00-foundations/04-functions.html#thm-composition-associative",
    "shard": "ch00-foundations",
-   "chapter": "Preliminary",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-composition-partial-converse",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 0.4.4",
+   "title": "Partial converse for compositions",
+   "url": "ch00-foundations/04-functions.html#thm-composition-partial-converse",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
    "chapterNumber": 0,
    "color": "#2f62b5"
   },
@@ -388,11 +1096,23 @@
    "id": "thm-composition-preserves",
    "type": "theorem",
    "group": "statements",
-   "name": "Theorem 0.3.2",
-   "title": "Composition Preserves Injectivity and Surjectivity",
-   "url": "ch00-foundations/03-functions.html#thm-composition-preserves",
+   "name": "Theorem 0.4.3",
+   "title": "Composition preserves injectivity and surjectivity",
+   "url": "ch00-foundations/04-functions.html#thm-composition-preserves",
    "shard": "ch00-foundations",
-   "chapter": "Preliminary",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-finite-injective-iff-surjective",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 0.4.9",
+   "title": "Injective iff surjective for finite sets of equal size",
+   "url": "ch00-foundations/04-functions.html#thm-finite-injective-iff-surjective",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
    "chapterNumber": 0,
    "color": "#2f62b5"
   },
@@ -400,11 +1120,35 @@
    "id": "thm-inverse-of-composition",
    "type": "theorem",
    "group": "statements",
-   "name": "Theorem 0.3.4",
-   "title": "Inverse of a Composition",
-   "url": "ch00-foundations/03-functions.html#thm-inverse-of-composition",
+   "name": "Theorem 0.4.8",
+   "title": "Inverse of a composition",
+   "url": "ch00-foundations/04-functions.html#thm-inverse-of-composition",
    "shard": "ch00-foundations",
-   "chapter": "Preliminary",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-left-inverse-iff-injective",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 0.4.5",
+   "title": "Left inverses and injectivity",
+   "url": "ch00-foundations/04-functions.html#thm-left-inverse-iff-injective",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-right-inverse-iff-surjective",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 0.4.6",
+   "title": "Right inverses and surjectivity",
+   "url": "ch00-foundations/04-functions.html#thm-right-inverse-iff-surjective",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
    "chapterNumber": 0,
    "color": "#2f62b5"
   },
@@ -412,11 +1156,11 @@
    "id": "def-equivalence-class",
    "type": "definition",
    "group": "definitions",
-   "name": "Definition 0.4.3",
-   "title": "Equivalence Class",
-   "url": "ch00-foundations/04-relations.html#def-equivalence-class",
+   "name": "Definition 0.5.3",
+   "title": "Equivalence class",
+   "url": "ch00-foundations/05-relations.html#def-equivalence-class",
    "shard": "ch00-foundations",
-   "chapter": "Preliminary",
+   "chapter": "Preliminaries",
    "chapterNumber": 0,
    "color": "#b0414f"
   },
@@ -424,11 +1168,23 @@
    "id": "def-equivalence-relation",
    "type": "definition",
    "group": "definitions",
-   "name": "Definition 0.4.2",
-   "title": "Equivalence Relation",
-   "url": "ch00-foundations/04-relations.html#def-equivalence-relation",
+   "name": "Definition 0.5.2",
+   "title": "Equivalence relation",
+   "url": "ch00-foundations/05-relations.html#def-equivalence-relation",
    "shard": "ch00-foundations",
-   "chapter": "Preliminary",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#b0414f"
+  },
+  {
+   "id": "def-partition",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 0.5.4",
+   "title": "Partition",
+   "url": "ch00-foundations/05-relations.html#def-partition",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
    "chapterNumber": 0,
    "color": "#b0414f"
   },
@@ -436,11 +1192,11 @@
    "id": "def-quotient-set",
    "type": "definition",
    "group": "definitions",
-   "name": "Definition 0.4.4",
-   "title": "Quotient Set",
-   "url": "ch00-foundations/04-relations.html#def-quotient-set",
+   "name": "Definition 0.5.5",
+   "title": "Quotient set",
+   "url": "ch00-foundations/05-relations.html#def-quotient-set",
    "shard": "ch00-foundations",
-   "chapter": "Preliminary",
+   "chapter": "Preliminaries",
    "chapterNumber": 0,
    "color": "#b0414f"
   },
@@ -448,23 +1204,35 @@
    "id": "def-relation",
    "type": "definition",
    "group": "definitions",
-   "name": "Definition 0.4.1",
+   "name": "Definition 0.5.1",
    "title": "Relation",
-   "url": "ch00-foundations/04-relations.html#def-relation",
+   "url": "ch00-foundations/05-relations.html#def-relation",
    "shard": "ch00-foundations",
-   "chapter": "Preliminary",
+   "chapter": "Preliminaries",
    "chapterNumber": 0,
    "color": "#b0414f"
+  },
+  {
+   "id": "exm-addition-mod-n-well-defined",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "Addition modulo n is well defined",
+   "url": "ch00-foundations/05-relations.html#exm-addition-mod-n-well-defined",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#3b7a4c"
   },
   {
    "id": "exm-equivalence-classes",
    "type": "example",
    "group": "examples",
    "name": "Example",
-   "title": "Examples of Equivalence Classes",
-   "url": "ch00-foundations/04-relations.html#exm-equivalence-classes",
+   "title": "Equivalence classes",
+   "url": "ch00-foundations/05-relations.html#exm-equivalence-classes",
    "shard": "ch00-foundations",
-   "chapter": "Preliminary",
+   "chapter": "Preliminaries",
    "chapterNumber": 0,
    "color": "#3b7a4c"
   },
@@ -473,10 +1241,22 @@
    "type": "example",
    "group": "examples",
    "name": "Example",
-   "title": "Examples of Equivalence Relations",
-   "url": "ch00-foundations/04-relations.html#exm-equivalence-relations",
+   "title": "Equivalence relations",
+   "url": "ch00-foundations/05-relations.html#exm-equivalence-relations",
    "shard": "ch00-foundations",
-   "chapter": "Preliminary",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-fraction-numerator-not-well-defined",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "The numerator is not well defined",
+   "url": "ch00-foundations/05-relations.html#exm-fraction-numerator-not-well-defined",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
    "chapterNumber": 0,
    "color": "#3b7a4c"
   },
@@ -485,10 +1265,10 @@
    "type": "example",
    "group": "examples",
    "name": "Example",
-   "title": "Non-Examples",
-   "url": "ch00-foundations/04-relations.html#exm-non-equivalence",
+   "title": "Relations that are not equivalence relations",
+   "url": "ch00-foundations/05-relations.html#exm-non-equivalence",
    "shard": "ch00-foundations",
-   "chapter": "Preliminary",
+   "chapter": "Preliminaries",
    "chapterNumber": 0,
    "color": "#3b7a4c"
   },
@@ -497,10 +1277,10 @@
    "type": "example",
    "group": "examples",
    "name": "Example",
-   "title": "Quotient Sets",
-   "url": "ch00-foundations/04-relations.html#exm-quotient-set",
+   "title": "Quotient sets",
+   "url": "ch00-foundations/05-relations.html#exm-quotient-set",
    "shard": "ch00-foundations",
-   "chapter": "Preliminary",
+   "chapter": "Preliminaries",
    "chapterNumber": 0,
    "color": "#3b7a4c"
   },
@@ -509,166 +1289,430 @@
    "type": "example",
    "group": "examples",
    "name": "Example",
-   "title": "Examples of Relations",
-   "url": "ch00-foundations/04-relations.html#exm-relations",
+   "title": "Relations",
+   "url": "ch00-foundations/05-relations.html#exm-relations",
    "shard": "ch00-foundations",
-   "chapter": "Preliminary",
+   "chapter": "Preliminaries",
    "chapterNumber": 0,
    "color": "#3b7a4c"
   },
   {
-   "id": "exm-row-equivalence",
-   "type": "example",
-   "group": "examples",
-   "name": "Example",
-   "title": "Row Equivalence",
-   "url": "ch00-foundations/04-relations.html#exm-row-equivalence",
+   "id": "exr-relations-a1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "A1",
+   "url": "ch00-foundations/05-relations.html#exr-relations-a1",
    "shard": "ch00-foundations",
-   "chapter": "Preliminary",
+   "chapter": "Preliminaries",
    "chapterNumber": 0,
-   "color": "#3b7a4c"
+   "color": "#a8670c"
   },
   {
-   "id": "exm-similarity",
-   "type": "example",
-   "group": "examples",
-   "name": "Example",
-   "title": "Matrix Similarity",
-   "url": "ch00-foundations/04-relations.html#exm-similarity",
+   "id": "exr-relations-b1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B1: Which are equivalence relations?",
+   "url": "ch00-foundations/05-relations.html#exr-relations-b1",
    "shard": "ch00-foundations",
-   "chapter": "Preliminary",
+   "chapter": "Preliminaries",
    "chapterNumber": 0,
-   "color": "#3b7a4c"
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-relations-b2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B2: Parallel lines as classes",
+   "url": "ch00-foundations/05-relations.html#exr-relations-b2",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-relations-b3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B3: Multiplication modulo n",
+   "url": "ch00-foundations/05-relations.html#exr-relations-b3",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-relations-c1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C1: Squares and powers modulo n",
+   "url": "ch00-foundations/05-relations.html#exr-relations-c1",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-relations-c2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C2: Counting equivalence relations",
+   "url": "ch00-foundations/05-relations.html#exr-relations-c2",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-relations-c3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C3: Intersections and unions of equivalence relations",
+   "url": "ch00-foundations/05-relations.html#exr-relations-c3",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#a8670c"
+  },
+  {
+   "id": "lem-classes-equal-or-disjoint",
+   "type": "lemma",
+   "group": "statements",
+   "name": "Lemma 0.5.1",
+   "title": "Classes are equal or disjoint",
+   "url": "ch00-foundations/05-relations.html#lem-classes-equal-or-disjoint",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#2f62b5"
   },
   {
    "id": "thm-partition",
    "type": "theorem",
    "group": "statements",
-   "name": "Theorem 0.4.1",
-   "title": "Equivalence Classes Partition the Set",
-   "url": "ch00-foundations/04-relations.html#thm-partition",
+   "name": "Theorem 0.5.2",
+   "title": "Equivalence relations and partitions",
+   "url": "ch00-foundations/05-relations.html#thm-partition",
    "shard": "ch00-foundations",
-   "chapter": "Preliminary",
+   "chapter": "Preliminaries",
    "chapterNumber": 0,
    "color": "#2f62b5"
   },
   {
-   "id": "def-degree",
+   "id": "thm-well-defined-on-quotient",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 0.5.3",
+   "title": "Functions on a quotient",
+   "url": "ch00-foundations/05-relations.html#thm-well-defined-on-quotient",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "def-complex-numbers",
    "type": "definition",
    "group": "definitions",
-   "name": "Definition 0.5.2",
-   "title": "Degree",
-   "url": "ch00-foundations/05-polynomials.html#def-degree",
+   "name": "Definition 0.6.1",
+   "title": "Complex Numbers",
+   "url": "ch00-foundations/06-complex-numbers.html#def-complex-numbers",
    "shard": "ch00-foundations",
-   "chapter": "Preliminary",
+   "chapter": "Preliminaries",
    "chapterNumber": 0,
    "color": "#b0414f"
   },
   {
-   "id": "def-polynomial",
+   "id": "def-conjugate-modulus",
    "type": "definition",
    "group": "definitions",
-   "name": "Definition 0.5.1",
-   "title": "Polynomial",
-   "url": "ch00-foundations/05-polynomials.html#def-polynomial",
+   "name": "Definition 0.6.2",
+   "title": "Conjugate and Modulus",
+   "url": "ch00-foundations/06-complex-numbers.html#def-conjugate-modulus",
    "shard": "ch00-foundations",
-   "chapter": "Preliminary",
+   "chapter": "Preliminaries",
    "chapterNumber": 0,
    "color": "#b0414f"
   },
   {
-   "id": "def-polynomial-ring",
-   "type": "definition",
-   "group": "definitions",
-   "name": "Definition 0.5.3",
-   "title": "Polynomial Ring",
-   "url": "ch00-foundations/05-polynomials.html#def-polynomial-ring",
-   "shard": "ch00-foundations",
-   "chapter": "Preliminary",
-   "chapterNumber": 0,
-   "color": "#b0414f"
-  },
-  {
-   "id": "def-polynomials-bounded-degree",
-   "type": "definition",
-   "group": "definitions",
-   "name": "Definition 0.5.4",
-   "title": "Polynomials of Degree at Most n",
-   "url": "ch00-foundations/05-polynomials.html#def-polynomials-bounded-degree",
-   "shard": "ch00-foundations",
-   "chapter": "Preliminary",
-   "chapterNumber": 0,
-   "color": "#b0414f"
-  },
-  {
-   "id": "def-polynomials-exact-degree",
-   "type": "definition",
-   "group": "definitions",
-   "name": "Definition 0.5.5",
-   "title": "Polynomials of Degree Exactly n",
-   "url": "ch00-foundations/05-polynomials.html#def-polynomials-exact-degree",
-   "shard": "ch00-foundations",
-   "chapter": "Preliminary",
-   "chapterNumber": 0,
-   "color": "#b0414f"
-  },
-  {
-   "id": "exm-comparing-notations",
+   "id": "exm-complex-arithmetic",
    "type": "example",
    "group": "examples",
    "name": "Example",
-   "title": "Comparing Notations",
-   "url": "ch00-foundations/05-polynomials.html#exm-comparing-notations",
+   "title": "First Computations in \u2102",
+   "url": "ch00-foundations/06-complex-numbers.html#exm-complex-arithmetic",
    "shard": "ch00-foundations",
-   "chapter": "Preliminary",
+   "chapter": "Preliminaries",
    "chapterNumber": 0,
    "color": "#3b7a4c"
   },
   {
-   "id": "exm-elements-of-rx",
+   "id": "exm-complex-square-root",
    "type": "example",
    "group": "examples",
    "name": "Example",
-   "title": "Elements of the Polynomial Ring",
-   "url": "ch00-foundations/05-polynomials.html#exm-elements-of-rx",
+   "title": "Square Roots of 5 - 12i",
+   "url": "ch00-foundations/06-complex-numbers.html#exm-complex-square-root",
    "shard": "ch00-foundations",
-   "chapter": "Preliminary",
+   "chapter": "Preliminaries",
    "chapterNumber": 0,
    "color": "#3b7a4c"
   },
   {
-   "id": "exm-elements-of-rx-leq-2",
+   "id": "exm-polar-power",
    "type": "example",
    "group": "examples",
    "name": "Example",
-   "title": "Polynomials of Degree at Most 2",
-   "url": "ch00-foundations/05-polynomials.html#exm-elements-of-rx-leq-2",
+   "title": "A Power via Polar Form",
+   "url": "ch00-foundations/06-complex-numbers.html#exm-polar-power",
    "shard": "ch00-foundations",
-   "chapter": "Preliminary",
+   "chapter": "Preliminaries",
    "chapterNumber": 0,
    "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-roots-of-unity",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "Roots of Unity",
+   "url": "ch00-foundations/06-complex-numbers.html#exm-roots-of-unity",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exr-complex-numbers-a1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "A1",
+   "url": "ch00-foundations/06-complex-numbers.html#exr-complex-numbers-a1",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-complex-numbers-b1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B1: Arithmetic",
+   "url": "ch00-foundations/06-complex-numbers.html#exr-complex-numbers-b1",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-complex-numbers-b2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B2: A Square Root",
+   "url": "ch00-foundations/06-complex-numbers.html#exr-complex-numbers-b2",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-complex-numbers-b3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B3",
+   "url": "ch00-foundations/06-complex-numbers.html#exr-complex-numbers-b3",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-complex-numbers-b4",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B4: Polar Form",
+   "url": "ch00-foundations/06-complex-numbers.html#exr-complex-numbers-b4",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-complex-numbers-c1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C1: Reverse Triangle Inequality",
+   "url": "ch00-foundations/06-complex-numbers.html#exr-complex-numbers-c1",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-complex-numbers-c2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C2: Roots of Unity Sum to Zero",
+   "url": "ch00-foundations/06-complex-numbers.html#exr-complex-numbers-c2",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-complex-numbers-c3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C3: Symmetries of \u2102 Fixing \u211d",
+   "url": "ch00-foundations/06-complex-numbers.html#exr-complex-numbers-c3",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#a8670c"
+  },
+  {
+   "id": "prp-complex-arithmetic-laws",
+   "type": "proposition",
+   "group": "statements",
+   "name": "Proposition 0.6.1",
+   "title": "Arithmetic Laws in \u2102",
+   "url": "ch00-foundations/06-complex-numbers.html#prp-complex-arithmetic-laws",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "prp-complex-inverse",
+   "type": "proposition",
+   "group": "statements",
+   "name": "Proposition 0.6.3",
+   "title": "Inverse of a Complex Number",
+   "url": "ch00-foundations/06-complex-numbers.html#prp-complex-inverse",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-complex-triangle-inequality",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 0.6.4",
+   "title": "Triangle Inequality",
+   "url": "ch00-foundations/06-complex-numbers.html#thm-complex-triangle-inequality",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-conjugate-properties",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 0.6.2",
+   "title": "Properties of Conjugation and Modulus",
+   "url": "ch00-foundations/06-complex-numbers.html#thm-conjugate-properties",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-de-moivre",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 0.6.6",
+   "title": "De Moivre\u2019s Formula",
+   "url": "ch00-foundations/06-complex-numbers.html#thm-de-moivre",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-fta-statement",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 0.6.7",
+   "title": "Fundamental Theorem of Algebra",
+   "url": "ch00-foundations/06-complex-numbers.html#thm-fta-statement",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-polar-multiplication",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 0.6.5",
+   "title": "Multiplication in Polar Form",
+   "url": "ch00-foundations/06-complex-numbers.html#thm-polar-multiplication",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "def-characteristic",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 0.7.2",
+   "title": "Characteristic",
+   "url": "ch00-foundations/07-fields.html#def-characteristic",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#b0414f"
   },
   {
    "id": "def-field",
    "type": "definition",
    "group": "definitions",
-   "name": "Definition 0.6.1",
+   "name": "Definition 0.7.1",
    "title": "Field",
-   "url": "ch00-foundations/06-fields.html#def-field",
+   "url": "ch00-foundations/07-fields.html#def-field",
    "shard": "ch00-foundations",
-   "chapter": "Preliminary",
+   "chapter": "Preliminaries",
    "chapterNumber": 0,
    "color": "#b0414f"
+  },
+  {
+   "id": "exm-elimination-f5",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "Elimination over nF_5",
+   "url": "ch00-foundations/07-fields.html#exm-elimination-f5",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#3b7a4c"
   },
   {
    "id": "exm-fields",
    "type": "example",
    "group": "examples",
    "name": "Example",
-   "title": "Examples of Fields",
-   "url": "ch00-foundations/06-fields.html#exm-fields",
+   "title": "The Fields \u211a, \u211d and \u2102",
+   "url": "ch00-foundations/07-fields.html#exm-fields",
    "shard": "ch00-foundations",
-   "chapter": "Preliminary",
+   "chapter": "Preliminaries",
    "chapterNumber": 0,
    "color": "#3b7a4c"
   },
@@ -677,22 +1721,454 @@
    "type": "example",
    "group": "examples",
    "name": "Example",
-   "title": "Finite Fields",
-   "url": "ch00-foundations/06-fields.html#exm-finite-fields",
+   "title": "Arithmetic on \u2124/n\u2124 and the Field nF_2",
+   "url": "ch00-foundations/07-fields.html#exm-finite-fields",
    "shard": "ch00-foundations",
-   "chapter": "Preliminary",
+   "chapter": "Preliminaries",
    "chapterNumber": 0,
    "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-q-sqrt2-field",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "\u211a(\u221a2) Is a Field",
+   "url": "ch00-foundations/07-fields.html#exm-q-sqrt2-field",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exr-fields-a1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "A1",
+   "url": "ch00-foundations/07-fields.html#exr-fields-a1",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-fields-b1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B1: The Remaining Basic Properties",
+   "url": "ch00-foundations/07-fields.html#exr-fields-b1",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-fields-b2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B2: Solving Equations in nF_7",
+   "url": "ch00-foundations/07-fields.html#exr-fields-b2",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-fields-b3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B3: Which Are Fields?",
+   "url": "ch00-foundations/07-fields.html#exr-fields-b3",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-fields-c1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C1: A Field with Four Elements",
+   "url": "ch00-foundations/07-fields.html#exr-fields-c1",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-fields-c2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C2: Finite Fields Have Prime Characteristic",
+   "url": "ch00-foundations/07-fields.html#exr-fields-c2",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-fields-c3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C3: The Frobenius Identity",
+   "url": "ch00-foundations/07-fields.html#exr-fields-c3",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#a8670c"
+  },
+  {
+   "id": "lem-bezout-integers",
+   "type": "lemma",
+   "group": "statements",
+   "name": "Lemma 0.7.2",
+   "title": "B\u00e9zout\u2019s Lemma for Integers",
+   "url": "ch00-foundations/07-fields.html#lem-bezout-integers",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "lem-integer-multiples",
+   "type": "lemma",
+   "group": "statements",
+   "name": "Lemma 0.7.4",
+   "title": "Integer Multiples",
+   "url": "ch00-foundations/07-fields.html#lem-integer-multiples",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-characteristic-prime",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 0.7.5",
+   "title": "The Characteristic Is 0 or Prime",
+   "url": "ch00-foundations/07-fields.html#thm-characteristic-prime",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-field-basic-properties",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 0.7.1",
+   "title": "Basic Properties of Fields",
+   "url": "ch00-foundations/07-fields.html#thm-field-basic-properties",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-zp-field-iff-prime",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 0.7.3",
+   "title": "\u2124/n\u2124 Is a Field Exactly for Prime n",
+   "url": "ch00-foundations/07-fields.html#thm-zp-field-iff-prime",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "cor-polynomial-no-zero-divisors",
+   "type": "corollary",
+   "group": "statements",
+   "name": "Corollary 0.8.4",
+   "title": "No zero divisors in F[x]",
+   "url": "ch00-foundations/08-polynomials.html#cor-polynomial-no-zero-divisors",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "def-degree",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 0.8.3",
+   "title": "Degree",
+   "url": "ch00-foundations/08-polynomials.html#def-degree",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#b0414f"
+  },
+  {
+   "id": "def-polynomial",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 0.8.1",
+   "title": "Polynomial",
+   "url": "ch00-foundations/08-polynomials.html#def-polynomial",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#b0414f"
+  },
+  {
+   "id": "def-polynomial-evaluation",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 0.8.6",
+   "title": "Evaluation and roots",
+   "url": "ch00-foundations/08-polynomials.html#def-polynomial-evaluation",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#b0414f"
+  },
+  {
+   "id": "def-polynomial-ring",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 0.8.2",
+   "title": "The polynomial ring F[x]",
+   "url": "ch00-foundations/08-polynomials.html#def-polynomial-ring",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#b0414f"
+  },
+  {
+   "id": "def-polynomials-bounded-degree",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 0.8.4",
+   "title": "Polynomials of degree at most n",
+   "url": "ch00-foundations/08-polynomials.html#def-polynomials-bounded-degree",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#b0414f"
+  },
+  {
+   "id": "def-polynomials-exact-degree",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 0.8.5",
+   "title": "Polynomials of degree exactly n",
+   "url": "ch00-foundations/08-polynomials.html#def-polynomials-exact-degree",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#b0414f"
+  },
+  {
+   "id": "exm-comparing-notations",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "Comparing the two notations",
+   "url": "ch00-foundations/08-polynomials.html#exm-comparing-notations",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-elements-of-rx",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "Polynomials over various fields",
+   "url": "ch00-foundations/08-polynomials.html#exm-elements-of-rx",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-elements-of-rx-leq-2",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "Inside \u211d[x]_le 2",
+   "url": "ch00-foundations/08-polynomials.html#exm-elements-of-rx-leq-2",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-polynomial-product",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "A product, coefficient by coefficient",
+   "url": "ch00-foundations/08-polynomials.html#exm-polynomial-product",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-polynomial-vs-function-f2",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "Different polynomials, same function",
+   "url": "ch00-foundations/08-polynomials.html#exm-polynomial-vs-function-f2",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exr-polynomials-a1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "A1",
+   "url": "ch00-foundations/08-polynomials.html#exr-polynomials-a1",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-polynomials-b1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B1: Sums, products and degrees",
+   "url": "ch00-foundations/08-polynomials.html#exr-polynomials-b1",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-polynomials-b2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B2: Degree of a composition",
+   "url": "ch00-foundations/08-polynomials.html#exr-polynomials-b2",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-polynomials-b3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B3: All small polynomials over nF_2",
+   "url": "ch00-foundations/08-polynomials.html#exr-polynomials-b3",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-polynomials-c1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C1: Roots of a quadratic",
+   "url": "ch00-foundations/08-polynomials.html#exr-polynomials-c1",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-polynomials-c2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C2: A non-zero polynomial vanishing everywhere",
+   "url": "ch00-foundations/08-polynomials.html#exr-polynomials-c2",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-polynomials-c3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C3: Which polynomials have inverses?",
+   "url": "ch00-foundations/08-polynomials.html#exr-polynomials-c3",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#a8670c"
+  },
+  {
+   "id": "thm-degree-of-product",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 0.8.3",
+   "title": "Degree of a product",
+   "url": "ch00-foundations/08-polynomials.html#thm-degree-of-product",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-degree-of-sum",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 0.8.2",
+   "title": "Degree of a sum",
+   "url": "ch00-foundations/08-polynomials.html#thm-degree-of-sum",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-evaluation-respects-operations",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 0.8.5",
+   "title": "Evaluation respects sums and products",
+   "url": "ch00-foundations/08-polynomials.html#thm-evaluation-respects-operations",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-polynomial-ring-laws",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 0.8.1",
+   "title": "Arithmetic in F[x]",
+   "url": "ch00-foundations/08-polynomials.html#thm-polynomial-ring-laws",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#2f62b5"
   },
   {
    "id": "def-additive-inverse",
    "type": "definition",
    "group": "definitions",
-   "name": "Definition 0.7.9",
-   "title": "Additive Inverse",
-   "url": "ch00-foundations/07-matrices.html#def-additive-inverse",
+   "name": "Definition 0.9.8",
+   "title": "Additive inverse",
+   "url": "ch00-foundations/09-matrices.html#def-additive-inverse",
    "shard": "ch00-foundations",
-   "chapter": "Preliminary",
+   "chapter": "Preliminaries",
    "chapterNumber": 0,
    "color": "#b0414f"
   },
@@ -700,11 +2176,11 @@
    "id": "def-diagonal-matrix",
    "type": "definition",
    "group": "definitions",
-   "name": "Definition 0.7.6",
-   "title": "Diagonal Matrix",
-   "url": "ch00-foundations/07-matrices.html#def-diagonal-matrix",
+   "name": "Definition 0.9.4",
+   "title": "Diagonal matrix",
+   "url": "ch00-foundations/09-matrices.html#def-diagonal-matrix",
    "shard": "ch00-foundations",
-   "chapter": "Preliminary",
+   "chapter": "Preliminaries",
    "chapterNumber": 0,
    "color": "#b0414f"
   },
@@ -712,11 +2188,23 @@
    "id": "def-identity-matrix",
    "type": "definition",
    "group": "definitions",
-   "name": "Definition 0.7.3",
-   "title": "Identity Matrix",
-   "url": "ch00-foundations/07-matrices.html#def-identity-matrix",
+   "name": "Definition 0.9.3",
+   "title": "Identity matrix",
+   "url": "ch00-foundations/09-matrices.html#def-identity-matrix",
    "shard": "ch00-foundations",
-   "chapter": "Preliminary",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#b0414f"
+  },
+  {
+   "id": "def-invertible-matrix",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 0.9.13",
+   "title": "Invertible matrix",
+   "url": "ch00-foundations/09-matrices.html#def-invertible-matrix",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
    "chapterNumber": 0,
    "color": "#b0414f"
   },
@@ -724,11 +2212,11 @@
    "id": "def-matrix",
    "type": "definition",
    "group": "definitions",
-   "name": "Definition 0.7.1",
+   "name": "Definition 0.9.1",
    "title": "Matrix",
-   "url": "ch00-foundations/07-matrices.html#def-matrix",
+   "url": "ch00-foundations/09-matrices.html#def-matrix",
    "shard": "ch00-foundations",
-   "chapter": "Preliminary",
+   "chapter": "Preliminaries",
    "chapterNumber": 0,
    "color": "#b0414f"
   },
@@ -736,11 +2224,11 @@
    "id": "def-matrix-addition",
    "type": "definition",
    "group": "definitions",
-   "name": "Definition 0.7.8",
-   "title": "Matrix Addition",
-   "url": "ch00-foundations/07-matrices.html#def-matrix-addition",
+   "name": "Definition 0.9.6",
+   "title": "Matrix addition",
+   "url": "ch00-foundations/09-matrices.html#def-matrix-addition",
    "shard": "ch00-foundations",
-   "chapter": "Preliminary",
+   "chapter": "Preliminaries",
    "chapterNumber": 0,
    "color": "#b0414f"
   },
@@ -748,11 +2236,23 @@
    "id": "def-matrix-multiplication",
    "type": "definition",
    "group": "definitions",
-   "name": "Definition 0.7.10",
-   "title": "Matrix Multiplication",
-   "url": "ch00-foundations/07-matrices.html#def-matrix-multiplication",
+   "name": "Definition 0.9.9",
+   "title": "Matrix multiplication",
+   "url": "ch00-foundations/09-matrices.html#def-matrix-multiplication",
    "shard": "ch00-foundations",
-   "chapter": "Preliminary",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#b0414f"
+  },
+  {
+   "id": "def-polynomial-of-matrix",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 0.9.14",
+   "title": "Powers and polynomials of a matrix",
+   "url": "ch00-foundations/09-matrices.html#def-polynomial-of-matrix",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
    "chapterNumber": 0,
    "color": "#b0414f"
   },
@@ -760,11 +2260,11 @@
    "id": "def-scalar-multiplication",
    "type": "definition",
    "group": "definitions",
-   "name": "Definition 0.7.11",
-   "title": "Scalar Multiplication",
-   "url": "ch00-foundations/07-matrices.html#def-scalar-multiplication",
+   "name": "Definition 0.9.7",
+   "title": "Scalar multiplication",
+   "url": "ch00-foundations/09-matrices.html#def-scalar-multiplication",
    "shard": "ch00-foundations",
-   "chapter": "Preliminary",
+   "chapter": "Preliminaries",
    "chapterNumber": 0,
    "color": "#b0414f"
   },
@@ -772,11 +2272,11 @@
    "id": "def-symmetric-matrix",
    "type": "definition",
    "group": "definitions",
-   "name": "Definition 0.7.5",
-   "title": "Symmetric Matrix",
-   "url": "ch00-foundations/07-matrices.html#def-symmetric-matrix",
+   "name": "Definition 0.9.11",
+   "title": "Symmetric and skew-symmetric matrices",
+   "url": "ch00-foundations/09-matrices.html#def-symmetric-matrix",
    "shard": "ch00-foundations",
-   "chapter": "Preliminary",
+   "chapter": "Preliminaries",
    "chapterNumber": 0,
    "color": "#b0414f"
   },
@@ -784,11 +2284,11 @@
    "id": "def-trace",
    "type": "definition",
    "group": "definitions",
-   "name": "Definition 0.7.12",
+   "name": "Definition 0.9.12",
    "title": "Trace",
-   "url": "ch00-foundations/07-matrices.html#def-trace",
+   "url": "ch00-foundations/09-matrices.html#def-trace",
    "shard": "ch00-foundations",
-   "chapter": "Preliminary",
+   "chapter": "Preliminaries",
    "chapterNumber": 0,
    "color": "#b0414f"
   },
@@ -796,11 +2296,11 @@
    "id": "def-transpose",
    "type": "definition",
    "group": "definitions",
-   "name": "Definition 0.7.4",
+   "name": "Definition 0.9.10",
    "title": "Transpose",
-   "url": "ch00-foundations/07-matrices.html#def-transpose",
+   "url": "ch00-foundations/09-matrices.html#def-transpose",
    "shard": "ch00-foundations",
-   "chapter": "Preliminary",
+   "chapter": "Preliminaries",
    "chapterNumber": 0,
    "color": "#b0414f"
   },
@@ -808,11 +2308,11 @@
    "id": "def-upper-triangular",
    "type": "definition",
    "group": "definitions",
-   "name": "Definition 0.7.7",
-   "title": "Upper Triangular Matrix",
-   "url": "ch00-foundations/07-matrices.html#def-upper-triangular",
+   "name": "Definition 0.9.5",
+   "title": "Upper triangular matrix",
+   "url": "ch00-foundations/09-matrices.html#def-upper-triangular",
    "shard": "ch00-foundations",
-   "chapter": "Preliminary",
+   "chapter": "Preliminaries",
    "chapterNumber": 0,
    "color": "#b0414f"
   },
@@ -820,23 +2320,35 @@
    "id": "def-zero-matrix",
    "type": "definition",
    "group": "definitions",
-   "name": "Definition 0.7.2",
-   "title": "Zero Matrix",
-   "url": "ch00-foundations/07-matrices.html#def-zero-matrix",
+   "name": "Definition 0.9.2",
+   "title": "Zero matrix",
+   "url": "ch00-foundations/09-matrices.html#def-zero-matrix",
    "shard": "ch00-foundations",
-   "chapter": "Preliminary",
+   "chapter": "Preliminaries",
    "chapterNumber": 0,
    "color": "#b0414f"
+  },
+  {
+   "id": "exm-inverse-matrices",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "Some invertible matrices",
+   "url": "ch00-foundations/09-matrices.html#exm-inverse-matrices",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#3b7a4c"
   },
   {
    "id": "exm-matrices",
    "type": "example",
    "group": "examples",
    "name": "Example",
-   "title": "Matrices",
-   "url": "ch00-foundations/07-matrices.html#exm-matrices",
+   "title": "Matrices over different fields",
+   "url": "ch00-foundations/09-matrices.html#exm-matrices",
    "shard": "ch00-foundations",
-   "chapter": "Preliminary",
+   "chapter": "Preliminaries",
    "chapterNumber": 0,
    "color": "#3b7a4c"
   },
@@ -845,10 +2357,10 @@
    "type": "example",
    "group": "examples",
    "name": "Example",
-   "title": "Matrix Addition",
-   "url": "ch00-foundations/07-matrices.html#exm-matrix-addition",
+   "title": "Adding and scaling",
+   "url": "ch00-foundations/09-matrices.html#exm-matrix-addition",
    "shard": "ch00-foundations",
-   "chapter": "Preliminary",
+   "chapter": "Preliminaries",
    "chapterNumber": 0,
    "color": "#3b7a4c"
   },
@@ -857,10 +2369,10 @@
    "type": "example",
    "group": "examples",
    "name": "Example",
-   "title": "Matrix Multiplication",
-   "url": "ch00-foundations/07-matrices.html#exm-matrix-multiplication",
+   "title": "A product of square matrices",
+   "url": "ch00-foundations/09-matrices.html#exm-matrix-multiplication",
    "shard": "ch00-foundations",
-   "chapter": "Preliminary",
+   "chapter": "Preliminaries",
    "chapterNumber": 0,
    "color": "#3b7a4c"
   },
@@ -869,10 +2381,46 @@
    "type": "example",
    "group": "examples",
    "name": "Example",
-   "title": "Matrix Multiplication with Different Dimensions",
-   "url": "ch00-foundations/07-matrices.html#exm-matrix-multiplication-dimensions",
+   "title": "Products of rectangular matrices",
+   "url": "ch00-foundations/09-matrices.html#exm-matrix-multiplication-dimensions",
    "shard": "ch00-foundations",
-   "chapter": "Preliminary",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-polynomial-of-matrix",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "Plugging a matrix into a polynomial",
+   "url": "ch00-foundations/09-matrices.html#exm-polynomial-of-matrix",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-row-equivalence",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "Row equivalence",
+   "url": "ch00-foundations/09-matrices.html#exm-row-equivalence",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-similarity",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "Similarity",
+   "url": "ch00-foundations/09-matrices.html#exm-similarity",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
    "chapterNumber": 0,
    "color": "#3b7a4c"
   },
@@ -881,10 +2429,22 @@
    "type": "example",
    "group": "examples",
    "name": "Example",
-   "title": "Examples of Special Matrices",
-   "url": "ch00-foundations/07-matrices.html#exm-special-matrices",
+   "title": "Diagonal and triangular",
+   "url": "ch00-foundations/09-matrices.html#exm-special-matrices",
    "shard": "ch00-foundations",
-   "chapter": "Preliminary",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-three-views",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "One product, three ways",
+   "url": "ch00-foundations/09-matrices.html#exm-three-views",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
    "chapterNumber": 0,
    "color": "#3b7a4c"
   },
@@ -893,10 +2453,22 @@
    "type": "example",
    "group": "examples",
    "name": "Example",
-   "title": "Trace",
-   "url": "ch00-foundations/07-matrices.html#exm-trace",
+   "title": "Computing traces",
+   "url": "ch00-foundations/09-matrices.html#exm-trace",
    "shard": "ch00-foundations",
-   "chapter": "Preliminary",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-transpose",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "Transposes, symmetric and skew-symmetric matrices",
+   "url": "ch00-foundations/09-matrices.html#exm-transpose",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
    "chapterNumber": 0,
    "color": "#3b7a4c"
   },
@@ -905,22 +2477,130 @@
    "type": "example",
    "group": "examples",
    "name": "Example",
-   "title": "Zero and Identity Matrices",
-   "url": "ch00-foundations/07-matrices.html#exm-zero-identity",
+   "title": "Zero and identity matrices",
+   "url": "ch00-foundations/09-matrices.html#exm-zero-identity",
    "shard": "ch00-foundations",
-   "chapter": "Preliminary",
+   "chapter": "Preliminaries",
    "chapterNumber": 0,
    "color": "#3b7a4c"
+  },
+  {
+   "id": "exr-matrices-a1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "A1",
+   "url": "ch00-foundations/09-matrices.html#exr-matrices-a1",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-matrices-b1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B1: Products and sizes",
+   "url": "ch00-foundations/09-matrices.html#exr-matrices-b1",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-matrices-b2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B2: Traces of products",
+   "url": "ch00-foundations/09-matrices.html#exr-matrices-b2",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-matrices-b3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B3: Inverses of 2 \u00d7 2 matrices",
+   "url": "ch00-foundations/09-matrices.html#exr-matrices-b3",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-matrices-b4",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B4: Transposes of products",
+   "url": "ch00-foundations/09-matrices.html#exr-matrices-b4",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-matrices-c1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C1: AB - BA = I is impossible, or is it?",
+   "url": "ch00-foundations/09-matrices.html#exr-matrices-c1",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-matrices-c2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C2: Triangular matrices with non-zero diagonal",
+   "url": "ch00-foundations/09-matrices.html#exr-matrices-c2",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-matrices-c3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C3: Matrices that commute",
+   "url": "ch00-foundations/09-matrices.html#exr-matrices-c3",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#a8670c"
+  },
+  {
+   "id": "thm-inverse-matrix-properties",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 0.9.7",
+   "title": "Properties of inverses",
+   "url": "ch00-foundations/09-matrices.html#thm-inverse-matrix-properties",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#2f62b5"
   },
   {
    "id": "thm-matrix-addition-properties",
    "type": "theorem",
    "group": "statements",
-   "name": "Theorem 0.7.1",
-   "title": "Properties of Matrix Addition",
-   "url": "ch00-foundations/07-matrices.html#thm-matrix-addition-properties",
+   "name": "Theorem 0.9.1",
+   "title": "Properties of addition and scalar multiplication",
+   "url": "ch00-foundations/09-matrices.html#thm-matrix-addition-properties",
    "shard": "ch00-foundations",
-   "chapter": "Preliminary",
+   "chapter": "Preliminaries",
    "chapterNumber": 0,
    "color": "#2f62b5"
   },
@@ -928,11 +2608,47 @@
    "id": "thm-matrix-multiplication-properties",
    "type": "theorem",
    "group": "statements",
-   "name": "Theorem 0.7.2",
-   "title": "Properties of Matrix Multiplication",
-   "url": "ch00-foundations/07-matrices.html#thm-matrix-multiplication-properties",
+   "name": "Theorem 0.9.4",
+   "title": "Properties of matrix multiplication",
+   "url": "ch00-foundations/09-matrices.html#thm-matrix-multiplication-properties",
    "shard": "ch00-foundations",
-   "chapter": "Preliminary",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-matrix-times-vector-columns",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 0.9.3",
+   "title": "Ax is a combination of the columns of A",
+   "url": "ch00-foundations/09-matrices.html#thm-matrix-times-vector-columns",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-polynomial-of-matrix-properties",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 0.9.9",
+   "title": "Polynomials in one matrix",
+   "url": "ch00-foundations/09-matrices.html#thm-polynomial-of-matrix-properties",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-three-views-of-product",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 0.9.2",
+   "title": "Three views of a product",
+   "url": "ch00-foundations/09-matrices.html#thm-three-views-of-product",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
    "chapterNumber": 0,
    "color": "#2f62b5"
   },
@@ -940,11 +2656,11 @@
    "id": "thm-trace-properties",
    "type": "theorem",
    "group": "statements",
-   "name": "Theorem 0.7.4",
-   "title": "Properties of Trace",
-   "url": "ch00-foundations/07-matrices.html#thm-trace-properties",
+   "name": "Theorem 0.9.6",
+   "title": "Properties of the trace",
+   "url": "ch00-foundations/09-matrices.html#thm-trace-properties",
    "shard": "ch00-foundations",
-   "chapter": "Preliminary",
+   "chapter": "Preliminaries",
    "chapterNumber": 0,
    "color": "#2f62b5"
   },
@@ -952,11 +2668,203 @@
    "id": "thm-transpose-properties",
    "type": "theorem",
    "group": "statements",
-   "name": "Theorem 0.7.3",
-   "title": "Properties of Transpose",
-   "url": "ch00-foundations/07-matrices.html#thm-transpose-properties",
+   "name": "Theorem 0.9.5",
+   "title": "Properties of the transpose",
+   "url": "ch00-foundations/09-matrices.html#thm-transpose-properties",
    "shard": "ch00-foundations",
-   "chapter": "Preliminary",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-two-by-two-inverse",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 0.9.8",
+   "title": "Inverse of a 2 \u00d7 2 matrix",
+   "url": "ch00-foundations/09-matrices.html#thm-two-by-two-inverse",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "def-group",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 0.10.1",
+   "title": "Group",
+   "url": "ch00-foundations/10-groups.html#def-group",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#b0414f"
+  },
+  {
+   "id": "def-group-homomorphism",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 0.10.3",
+   "title": "Group homomorphism",
+   "url": "ch00-foundations/10-groups.html#def-group-homomorphism",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#b0414f"
+  },
+  {
+   "id": "def-subgroup",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 0.10.2",
+   "title": "Subgroup",
+   "url": "ch00-foundations/10-groups.html#def-subgroup",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#b0414f"
+  },
+  {
+   "id": "exm-cycle-notation",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "Computing with cycles",
+   "url": "ch00-foundations/10-groups.html#exm-cycle-notation",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-groups",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "Groups",
+   "url": "ch00-foundations/10-groups.html#exm-groups",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exr-groups-a1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "A1",
+   "url": "ch00-foundations/10-groups.html#exr-groups-a1",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-groups-b1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B1: The table of S_3",
+   "url": "ch00-foundations/10-groups.html#exr-groups-b1",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-groups-b2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B2: Invertible upper triangular matrices",
+   "url": "ch00-foundations/10-groups.html#exr-groups-b2",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-groups-b3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B3: The exponential is an isomorphism",
+   "url": "ch00-foundations/10-groups.html#exr-groups-b3",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-groups-c1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C1: Every element its own inverse",
+   "url": "ch00-foundations/10-groups.html#exr-groups-c1",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-groups-c2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C2: The order of a product of disjoint cycles",
+   "url": "ch00-foundations/10-groups.html#exr-groups-c2",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#a8670c"
+  },
+  {
+   "id": "thm-group-basic-properties",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 0.10.1",
+   "title": "Basic properties of groups",
+   "url": "ch00-foundations/10-groups.html#thm-group-basic-properties",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-homomorphism-basic-properties",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 0.10.3",
+   "title": "Basic properties of homomorphisms",
+   "url": "ch00-foundations/10-groups.html#thm-homomorphism-basic-properties",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-subgroup-test",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 0.10.2",
+   "title": "Subgroup test",
+   "url": "ch00-foundations/10-groups.html#thm-subgroup-test",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
+   "chapterNumber": 0,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-transpositions-generate",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 0.10.4",
+   "title": "Transpositions generate S_n",
+   "url": "ch00-foundations/10-groups.html#thm-transpositions-generate",
+   "shard": "ch00-foundations",
+   "chapter": "Preliminaries",
    "chapterNumber": 0,
    "color": "#2f62b5"
   },
@@ -2090,6 +3998,1556 @@
   }
  ],
  "edges": [
+  {
+   "source": "thm-de-morgan-logic",
+   "target": "def-negation-of-quantifiers",
+   "kind": "reference"
+  },
+  {
+   "source": "def-negation-of-quantifiers",
+   "target": "exm-negation-basic",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-nested-quantifiers",
+   "target": "exm-negation-basic",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-quantifiers",
+   "target": "exm-negation-basic",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-de-morgan-logic",
+   "target": "exm-negation-basic",
+   "kind": "reference"
+  },
+  {
+   "source": "def-negation-of-quantifiers",
+   "target": "exm-negation-injectivity",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-de-morgan-logic",
+   "target": "exm-negation-injectivity",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-de-morgan-logic",
+   "target": "exm-negation-not-all-zero",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-quantifiers",
+   "target": "exm-negation-surjectivity",
+   "kind": "reference"
+  },
+  {
+   "source": "def-implication-converse-contrapositive",
+   "target": "exm-vacuous-truth",
+   "kind": "reference"
+  },
+  {
+   "source": "def-negation-of-quantifiers",
+   "target": "exr-logic-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-contrapositive-equivalent",
+   "target": "exr-logic-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-de-morgan-logic",
+   "target": "exr-logic-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "def-negation-of-quantifiers",
+   "target": "exr-logic-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-negation-injectivity",
+   "target": "exr-logic-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-contrapositive-equivalent",
+   "target": "exr-logic-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-de-morgan-logic",
+   "target": "exr-logic-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-quantifiers",
+   "target": "exr-logic-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "def-implication-converse-contrapositive",
+   "target": "exr-logic-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "def-implication-converse-contrapositive",
+   "target": "exr-logic-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "def-connectives",
+   "target": "thm-contrapositive-equivalent",
+   "kind": "reference"
+  },
+  {
+   "source": "def-implication-converse-contrapositive",
+   "target": "thm-contrapositive-equivalent",
+   "kind": "reference"
+  },
+  {
+   "source": "def-connectives",
+   "target": "thm-de-morgan-logic",
+   "kind": "reference"
+  },
+  {
+   "source": "def-implication-converse-contrapositive",
+   "target": "thm-de-morgan-logic",
+   "kind": "reference"
+  },
+  {
+   "source": "def-negation-of-quantifiers",
+   "target": "exm-every-prime-odd",
+   "kind": "reference"
+  },
+  {
+   "source": "def-parity",
+   "target": "exr-proofs-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-contrapositive-equivalent",
+   "target": "exr-proofs-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-induction",
+   "target": "exr-proofs-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "def-parity",
+   "target": "exr-proofs-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-contrapositive-equivalent",
+   "target": "exr-proofs-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-induction",
+   "target": "exr-proofs-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-contrapositive-equivalent",
+   "target": "exr-proofs-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-strong-induction",
+   "target": "exr-proofs-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-well-ordering",
+   "target": "exr-proofs-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "def-parity",
+   "target": "prp-even-iff-square-even",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-square-even",
+   "target": "prp-even-iff-square-even",
+   "kind": "reference"
+  },
+  {
+   "source": "def-parity",
+   "target": "prp-n-squared-plus-n-even",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-induction",
+   "target": "prp-power-of-two",
+   "kind": "reference"
+  },
+  {
+   "source": "def-divisibility-prime",
+   "target": "prp-prime-factor",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-strong-induction",
+   "target": "prp-prime-factor",
+   "kind": "reference"
+  },
+  {
+   "source": "def-parity",
+   "target": "prp-square-even",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-contrapositive-equivalent",
+   "target": "prp-square-even",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-induction",
+   "target": "prp-sum-first-n",
+   "kind": "reference"
+  },
+  {
+   "source": "def-parity",
+   "target": "prp-sum-of-evens",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-prime-factor",
+   "target": "thm-infinitely-many-primes",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-sqrt2-irrational",
+   "target": "thm-infinitely-many-primes",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-well-ordering",
+   "target": "thm-infinitely-many-primes",
+   "kind": "reference"
+  },
+  {
+   "source": "def-parity",
+   "target": "thm-sqrt2-irrational",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-square-even",
+   "target": "thm-sqrt2-irrational",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-induction",
+   "target": "thm-strong-induction",
+   "kind": "reference"
+  },
+  {
+   "source": "def-indexed-family",
+   "target": "exm-indexed-families",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-double-inclusion",
+   "target": "exm-indexed-families",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-double-inclusion",
+   "target": "exm-quadratic-solution-set",
+   "kind": "reference"
+  },
+  {
+   "source": "def-parity",
+   "target": "exm-set-builder",
+   "kind": "reference"
+  },
+  {
+   "source": "def-empty-set",
+   "target": "exm-subsets",
+   "kind": "reference"
+  },
+  {
+   "source": "def-implication-converse-contrapositive",
+   "target": "exm-subsets",
+   "kind": "reference"
+  },
+  {
+   "source": "def-common-number-sets",
+   "target": "exr-sets-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "def-empty-set",
+   "target": "exr-sets-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "def-power-set",
+   "target": "exr-sets-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "def-set-equality",
+   "target": "exr-sets-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-subsets",
+   "target": "exr-sets-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "def-intersection",
+   "target": "exr-sets-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "def-set-difference",
+   "target": "exr-sets-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "def-union",
+   "target": "exr-sets-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-de-morgan-logic",
+   "target": "exr-sets-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-de-morgan-sets",
+   "target": "exr-sets-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-double-inclusion",
+   "target": "exr-sets-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-distributive-sets",
+   "target": "exr-sets-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-double-inclusion",
+   "target": "exr-sets-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "def-indexed-family",
+   "target": "exr-sets-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-double-inclusion",
+   "target": "exr-sets-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "def-intersection",
+   "target": "exr-sets-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "def-union",
+   "target": "exr-sets-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-double-inclusion",
+   "target": "exr-sets-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-double-inclusion",
+   "target": "exr-sets-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-induction",
+   "target": "exr-sets-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "def-intersection",
+   "target": "thm-de-morgan-sets",
+   "kind": "reference"
+  },
+  {
+   "source": "def-set-difference",
+   "target": "thm-de-morgan-sets",
+   "kind": "reference"
+  },
+  {
+   "source": "def-union",
+   "target": "thm-de-morgan-sets",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-de-morgan-logic",
+   "target": "thm-de-morgan-sets",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-double-inclusion",
+   "target": "thm-de-morgan-sets",
+   "kind": "reference"
+  },
+  {
+   "source": "def-intersection",
+   "target": "thm-distributive-sets",
+   "kind": "reference"
+  },
+  {
+   "source": "def-union",
+   "target": "thm-distributive-sets",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-double-inclusion",
+   "target": "thm-distributive-sets",
+   "kind": "reference"
+  },
+  {
+   "source": "def-quantifiers",
+   "target": "thm-double-inclusion",
+   "kind": "reference"
+  },
+  {
+   "source": "def-set-equality",
+   "target": "thm-double-inclusion",
+   "kind": "reference"
+  },
+  {
+   "source": "def-subset",
+   "target": "thm-double-inclusion",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-subsets",
+   "target": "thm-double-inclusion",
+   "kind": "reference"
+  },
+  {
+   "source": "def-function",
+   "target": "exm-functions",
+   "kind": "reference"
+  },
+  {
+   "source": "def-function",
+   "target": "exm-injective-surjective-bijective",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-bijective-iff-invertible",
+   "target": "exm-inverse-function",
+   "kind": "reference"
+  },
+  {
+   "source": "def-image-preimage",
+   "target": "exr-functions-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-composition-partial-converse",
+   "target": "exr-functions-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-finite-injective-iff-surjective",
+   "target": "exr-functions-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-bijective-iff-invertible",
+   "target": "exr-functions-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-inverse-of-composition",
+   "target": "exr-functions-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-double-inclusion",
+   "target": "exr-functions-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-bijective-iff-invertible",
+   "target": "exr-functions-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-left-inverse-iff-injective",
+   "target": "exr-functions-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-bijective-iff-invertible",
+   "target": "exr-functions-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-composition-associative",
+   "target": "exr-functions-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-composition-partial-converse",
+   "target": "exr-functions-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-finite-injective-iff-surjective",
+   "target": "exr-functions-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-image-preimage-inclusions",
+   "target": "exr-functions-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-double-inclusion",
+   "target": "exr-functions-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "def-image-preimage",
+   "target": "prp-image-preimage-inclusions",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-composition-associative",
+   "target": "thm-bijective-iff-invertible",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-composition-partial-converse",
+   "target": "thm-bijective-iff-invertible",
+   "kind": "reference"
+  },
+  {
+   "source": "def-composition",
+   "target": "thm-composition-associative",
+   "kind": "reference"
+  },
+  {
+   "source": "def-function",
+   "target": "thm-composition-associative",
+   "kind": "reference"
+  },
+  {
+   "source": "def-image-preimage",
+   "target": "thm-finite-injective-iff-surjective",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-contrapositive-equivalent",
+   "target": "thm-finite-injective-iff-surjective",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-bijective-iff-invertible",
+   "target": "thm-inverse-of-composition",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-composition-associative",
+   "target": "thm-inverse-of-composition",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-composition-partial-converse",
+   "target": "thm-left-inverse-iff-injective",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-composition-partial-converse",
+   "target": "thm-right-inverse-iff-surjective",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-left-inverse-iff-injective",
+   "target": "thm-right-inverse-iff-surjective",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-classes-equal-or-disjoint",
+   "target": "exm-addition-mod-n-well-defined",
+   "kind": "reference"
+  },
+  {
+   "source": "def-function",
+   "target": "exm-fraction-numerator-not-well-defined",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-equivalence-relations",
+   "target": "exm-fraction-numerator-not-well-defined",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-classes-equal-or-disjoint",
+   "target": "exm-fraction-numerator-not-well-defined",
+   "kind": "reference"
+  },
+  {
+   "source": "exr-proofs-c2",
+   "target": "exm-quotient-set",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-classes-equal-or-disjoint",
+   "target": "exm-quotient-set",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-non-equivalence",
+   "target": "exr-relations-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-quotient-set",
+   "target": "exr-relations-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-classes-equal-or-disjoint",
+   "target": "exr-relations-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-well-defined-on-quotient",
+   "target": "exr-relations-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-equivalence-relations",
+   "target": "exr-relations-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-sum-of-evens",
+   "target": "exr-relations-b1",
+   "kind": "mention"
+  },
+  {
+   "source": "exm-equivalence-relations",
+   "target": "exr-relations-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-classes-equal-or-disjoint",
+   "target": "exr-relations-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-partition",
+   "target": "exr-relations-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-well-defined-on-quotient",
+   "target": "exr-relations-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-classes-equal-or-disjoint",
+   "target": "exr-relations-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "exr-relations-b3",
+   "target": "exr-relations-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-induction",
+   "target": "exr-relations-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-well-defined-on-quotient",
+   "target": "exr-relations-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-partition",
+   "target": "exr-relations-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-double-inclusion",
+   "target": "lem-classes-equal-or-disjoint",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-classes-equal-or-disjoint",
+   "target": "thm-partition",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-double-inclusion",
+   "target": "thm-partition",
+   "kind": "reference"
+  },
+  {
+   "source": "def-quotient-set",
+   "target": "thm-well-defined-on-quotient",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-classes-equal-or-disjoint",
+   "target": "thm-well-defined-on-quotient",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-conjugate-properties",
+   "target": "exm-complex-square-root",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-de-moivre",
+   "target": "exm-polar-power",
+   "kind": "reference"
+  },
+  {
+   "source": "exr-complex-numbers-c2",
+   "target": "exm-roots-of-unity",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-de-moivre",
+   "target": "exm-roots-of-unity",
+   "kind": "reference"
+  },
+  {
+   "source": "def-conjugate-modulus",
+   "target": "exr-complex-numbers-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-complex-triangle-inequality",
+   "target": "exr-complex-numbers-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-conjugate-properties",
+   "target": "exr-complex-numbers-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-fta-statement",
+   "target": "exr-complex-numbers-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-complex-inverse",
+   "target": "exr-complex-numbers-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-conjugate-properties",
+   "target": "exr-complex-numbers-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-conjugate-properties",
+   "target": "exr-complex-numbers-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-complex-inverse",
+   "target": "exr-complex-numbers-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-de-moivre",
+   "target": "exr-complex-numbers-b4",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-complex-triangle-inequality",
+   "target": "exr-complex-numbers-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-conjugate-properties",
+   "target": "exr-complex-numbers-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-complex-inverse",
+   "target": "exr-complex-numbers-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-de-moivre",
+   "target": "exr-complex-numbers-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-conjugate-properties",
+   "target": "exr-complex-numbers-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-complex-arithmetic-laws",
+   "target": "prp-complex-inverse",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-conjugate-properties",
+   "target": "prp-complex-inverse",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-complex-arithmetic-laws",
+   "target": "thm-complex-triangle-inequality",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-conjugate-properties",
+   "target": "thm-complex-triangle-inequality",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-complex-arithmetic",
+   "target": "thm-conjugate-properties",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-complex-arithmetic-laws",
+   "target": "thm-conjugate-properties",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-induction",
+   "target": "thm-de-moivre",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-polar-multiplication",
+   "target": "thm-de-moivre",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-complex-arithmetic-laws",
+   "target": "thm-polar-multiplication",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-complex-arithmetic-laws",
+   "target": "exm-fields",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-complex-inverse",
+   "target": "exm-fields",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-addition-mod-n-well-defined",
+   "target": "exm-finite-fields",
+   "kind": "reference"
+  },
+  {
+   "source": "exr-proofs-b3",
+   "target": "exm-q-sqrt2-field",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-field-basic-properties",
+   "target": "exm-q-sqrt2-field",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-sqrt2-irrational",
+   "target": "exm-q-sqrt2-field",
+   "kind": "reference"
+  },
+  {
+   "source": "def-characteristic",
+   "target": "exr-fields-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "def-field",
+   "target": "exr-fields-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-field-basic-properties",
+   "target": "exr-fields-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-zp-field-iff-prime",
+   "target": "exr-fields-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-field-basic-properties",
+   "target": "exr-fields-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-fields",
+   "target": "exr-fields-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-finite-fields",
+   "target": "exr-fields-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-complex-inverse",
+   "target": "exr-fields-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-field-basic-properties",
+   "target": "exr-fields-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-zp-field-iff-prime",
+   "target": "exr-fields-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-finite-fields",
+   "target": "exr-fields-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-field-basic-properties",
+   "target": "exr-fields-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-integer-multiples",
+   "target": "exr-fields-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-characteristic-prime",
+   "target": "exr-fields-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-field-basic-properties",
+   "target": "exr-fields-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-bezout-integers",
+   "target": "exr-fields-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-integer-multiples",
+   "target": "exr-fields-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-field-basic-properties",
+   "target": "exr-fields-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "exr-proofs-c2",
+   "target": "lem-bezout-integers",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-well-ordering",
+   "target": "lem-bezout-integers",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-field-basic-properties",
+   "target": "lem-integer-multiples",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-induction",
+   "target": "lem-integer-multiples",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-integer-multiples",
+   "target": "thm-characteristic-prime",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-field-basic-properties",
+   "target": "thm-characteristic-prime",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-zp-field-iff-prime",
+   "target": "thm-characteristic-prime",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-finite-fields",
+   "target": "thm-zp-field-iff-prime",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-bezout-integers",
+   "target": "thm-zp-field-iff-prime",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-field-basic-properties",
+   "target": "thm-zp-field-iff-prime",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-degree-of-product",
+   "target": "cor-polynomial-no-zero-divisors",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-degree-of-sum",
+   "target": "cor-polynomial-no-zero-divisors",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-polynomial-ring-laws",
+   "target": "cor-polynomial-no-zero-divisors",
+   "kind": "reference"
+  },
+  {
+   "source": "def-polynomial",
+   "target": "exm-elements-of-rx",
+   "kind": "reference"
+  },
+  {
+   "source": "def-polynomial-ring",
+   "target": "exm-elements-of-rx",
+   "kind": "reference"
+  },
+  {
+   "source": "def-polynomial",
+   "target": "exm-polynomial-vs-function-f2",
+   "kind": "reference"
+  },
+  {
+   "source": "exr-polynomials-c2",
+   "target": "exm-polynomial-vs-function-f2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-degree-of-product",
+   "target": "exm-polynomial-vs-function-f2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-evaluation-respects-operations",
+   "target": "exm-polynomial-vs-function-f2",
+   "kind": "reference"
+  },
+  {
+   "source": "def-polynomial",
+   "target": "exr-polynomials-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-polynomial-vs-function-f2",
+   "target": "exr-polynomials-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-degree-of-product",
+   "target": "exr-polynomials-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-degree-of-sum",
+   "target": "exr-polynomials-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-degree-of-product",
+   "target": "exr-polynomials-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-degree-of-sum",
+   "target": "exr-polynomials-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-evaluation-respects-operations",
+   "target": "exr-polynomials-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-field-basic-properties",
+   "target": "exr-polynomials-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-degree-of-product",
+   "target": "exr-polynomials-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-degree-of-sum",
+   "target": "exr-polynomials-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-induction",
+   "target": "exr-polynomials-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-evaluation-respects-operations",
+   "target": "exr-polynomials-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-field-basic-properties",
+   "target": "exr-polynomials-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-polynomial-ring-laws",
+   "target": "exr-polynomials-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-polynomial-vs-function-f2",
+   "target": "exr-polynomials-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-field-basic-properties",
+   "target": "exr-polynomials-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-finite-injective-iff-surjective",
+   "target": "exr-polynomials-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-degree-of-product",
+   "target": "exr-polynomials-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "def-degree",
+   "target": "thm-degree-of-product",
+   "kind": "reference"
+  },
+  {
+   "source": "def-polynomial-ring",
+   "target": "thm-degree-of-product",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-field-basic-properties",
+   "target": "thm-degree-of-product",
+   "kind": "reference"
+  },
+  {
+   "source": "def-degree",
+   "target": "thm-degree-of-sum",
+   "kind": "reference"
+  },
+  {
+   "source": "def-polynomial-evaluation",
+   "target": "thm-evaluation-respects-operations",
+   "kind": "reference"
+  },
+  {
+   "source": "def-polynomial-ring",
+   "target": "thm-evaluation-respects-operations",
+   "kind": "reference"
+  },
+  {
+   "source": "def-field",
+   "target": "thm-polynomial-ring-laws",
+   "kind": "reference"
+  },
+  {
+   "source": "def-polynomial",
+   "target": "thm-polynomial-ring-laws",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-two-by-two-inverse",
+   "target": "exm-inverse-matrices",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-polynomial-of-matrix-properties",
+   "target": "exm-polynomial-of-matrix",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-inverse-matrix-properties",
+   "target": "exm-row-equivalence",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-times-vector-columns",
+   "target": "exm-row-equivalence",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-three-views-of-product",
+   "target": "exm-row-equivalence",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-two-by-two-inverse",
+   "target": "exm-row-equivalence",
+   "kind": "reference"
+  },
+  {
+   "source": "def-equivalence-relation",
+   "target": "exm-similarity",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-inverse-matrices",
+   "target": "exm-similarity",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-inverse-matrix-properties",
+   "target": "exm-similarity",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-trace-properties",
+   "target": "exm-similarity",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-two-by-two-inverse",
+   "target": "exm-similarity",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-times-vector-columns",
+   "target": "exm-three-views",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-three-views-of-product",
+   "target": "exm-three-views",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-times-vector-columns",
+   "target": "exr-matrices-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-three-views-of-product",
+   "target": "exr-matrices-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-transpose-properties",
+   "target": "exr-matrices-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-times-vector-columns",
+   "target": "exr-matrices-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "exr-matrices-b1",
+   "target": "exr-matrices-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-trace-properties",
+   "target": "exr-matrices-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-two-by-two-inverse",
+   "target": "exr-matrices-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-induction",
+   "target": "exr-matrices-b4",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-transpose-properties",
+   "target": "exr-matrices-b4",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-trace-properties",
+   "target": "exr-matrices-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-field-basic-properties",
+   "target": "exr-matrices-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-three-views-of-product",
+   "target": "exr-matrices-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-two-by-two-inverse",
+   "target": "exr-matrices-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-multiplication-properties",
+   "target": "exr-matrices-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-multiplication-properties",
+   "target": "thm-inverse-matrix-properties",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-transpose-properties",
+   "target": "thm-inverse-matrix-properties",
+   "kind": "reference"
+  },
+  {
+   "source": "def-field",
+   "target": "thm-matrix-addition-properties",
+   "kind": "reference"
+  },
+  {
+   "source": "def-identity-matrix",
+   "target": "thm-matrix-multiplication-properties",
+   "kind": "reference"
+  },
+  {
+   "source": "def-matrix-multiplication",
+   "target": "thm-matrix-multiplication-properties",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-field-basic-properties",
+   "target": "thm-matrix-multiplication-properties",
+   "kind": "reference"
+  },
+  {
+   "source": "def-matrix-addition",
+   "target": "thm-matrix-times-vector-columns",
+   "kind": "reference"
+  },
+  {
+   "source": "def-matrix-multiplication",
+   "target": "thm-matrix-times-vector-columns",
+   "kind": "reference"
+  },
+  {
+   "source": "def-scalar-multiplication",
+   "target": "thm-matrix-times-vector-columns",
+   "kind": "reference"
+  },
+  {
+   "source": "def-polynomial-of-matrix",
+   "target": "thm-polynomial-of-matrix-properties",
+   "kind": "reference"
+  },
+  {
+   "source": "def-polynomial-ring",
+   "target": "thm-polynomial-of-matrix-properties",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-evaluation-respects-operations",
+   "target": "thm-polynomial-of-matrix-properties",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-induction",
+   "target": "thm-polynomial-of-matrix-properties",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-addition-properties",
+   "target": "thm-polynomial-of-matrix-properties",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-multiplication-properties",
+   "target": "thm-polynomial-of-matrix-properties",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-polynomial-ring-laws",
+   "target": "thm-polynomial-of-matrix-properties",
+   "kind": "reference"
+  },
+  {
+   "source": "def-matrix-multiplication",
+   "target": "thm-three-views-of-product",
+   "kind": "reference"
+  },
+  {
+   "source": "def-matrix-multiplication",
+   "target": "thm-trace-properties",
+   "kind": "reference"
+  },
+  {
+   "source": "def-trace",
+   "target": "thm-trace-properties",
+   "kind": "reference"
+  },
+  {
+   "source": "def-matrix-multiplication",
+   "target": "thm-transpose-properties",
+   "kind": "reference"
+  },
+  {
+   "source": "def-transpose",
+   "target": "thm-transpose-properties",
+   "kind": "reference"
+  },
+  {
+   "source": "def-matrix-multiplication",
+   "target": "thm-two-by-two-inverse",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-multiplication-properties",
+   "target": "thm-two-by-two-inverse",
+   "kind": "reference"
+  },
+  {
+   "source": "def-field",
+   "target": "exm-groups",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-bijective-iff-invertible",
+   "target": "exm-groups",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-composition-associative",
+   "target": "exm-groups",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-composition-preserves",
+   "target": "exm-groups",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-field-basic-properties",
+   "target": "exm-groups",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-inverse-matrix-properties",
+   "target": "exm-groups",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-multiplication-properties",
+   "target": "exm-groups",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-cycle-notation",
+   "target": "exr-groups-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-group-basic-properties",
+   "target": "exr-groups-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-cycle-notation",
+   "target": "exr-groups-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-field-basic-properties",
+   "target": "exr-groups-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-subgroup-test",
+   "target": "exr-groups-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-two-by-two-inverse",
+   "target": "exr-groups-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-bijective-iff-invertible",
+   "target": "exr-groups-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-group-basic-properties",
+   "target": "exr-groups-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-addition-properties",
+   "target": "exr-groups-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-group-basic-properties",
+   "target": "thm-homomorphism-basic-properties",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-subgroup-test",
+   "target": "thm-homomorphism-basic-properties",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-group-basic-properties",
+   "target": "thm-subgroup-test",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-finite-injective-iff-surjective",
+   "target": "thm-transpositions-generate",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-induction",
+   "target": "thm-transpositions-generate",
+   "kind": "reference"
+  },
   {
    "source": "thm-zero-scalar-mult",
    "target": "thm-negation-scalar",

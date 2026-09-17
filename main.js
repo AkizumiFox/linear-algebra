@@ -107,6 +107,9 @@
             const firstSection = chapter.sections[0];
             const chapterUrl = chapter.path ? (basePath + chapter.path) : (firstSection ? (basePath + firstSection.path) : '#');
 
+            if (chapter.part) {
+                html += `<li class="nav-part">${chapter.part}</li>`;
+            }
             html += `
                 <li class="nav-chapter${isChapterActive ? ' active' : ''}">
                     <div class="nav-chapter-header" data-chapter="${chapterIdx}">

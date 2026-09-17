@@ -3,6 +3,7 @@ window.BOOK_MACROS = {
  "0": "\\mathbf{0}",
  "1": "\\mathbf{1}",
  "A": "\\mathbf{A}",
+ "Alt": "\\operatorname{Alt}",
  "B": "\\mathbf{B}",
  "C": "\\mathbf{C}",
  "Cor": "\\operatorname*{Cor}",
@@ -10,6 +11,7 @@ window.BOOK_MACROS = {
  "Cov": "\\operatorname*{Cov}",
  "D": "\\mathbf{D}",
  "E": "\\mathbf{E}",
+ "End": "\\operatorname{End}",
  "Ev": "\\operatorname*{\\mathbb{E}}",
  "Exp": [
   "\\mathbb{E}\\left[ #1 \\right]",
@@ -17,18 +19,22 @@ window.BOOK_MACROS = {
  ],
  "F": "\\mathbf{F}",
  "G": "\\mathbf{G}",
+ "GL": "\\operatorname{GL}",
  "H": "\\mathbf{H}",
+ "Hom": "\\operatorname{Hom}",
  "I": "\\mathbf{I}",
  "J": "\\mathbf{J}",
  "K": "\\mathbf{K}",
  "L": "\\mathbf{L}",
  "M": "\\mathbf{M}",
+ "Mat": "\\operatorname{M}",
  "N": "\\mathbf{N}",
  "Normal": [
   "\\mathcal{N}\\left( #1, #2 \\right)",
   2
  ],
  "O": "\\mathbf{O}",
+ "Orth": "\\operatorname{O}",
  "P": "\\mathbf{P}",
  "Pr": "\\operatorname{Pr}",
  "Prob": [
@@ -38,13 +44,18 @@ window.BOOK_MACROS = {
  "Q": "\\mathbf{Q}",
  "R": "\\mathbf{R}",
  "S": "\\mathbf{S}",
+ "SL": "\\operatorname{SL}",
+ "SO": "\\operatorname{SO}",
+ "Sp": "\\operatorname{Sp}",
  "Span": "\\operatorname{span}",
+ "Sym": "\\operatorname{Sym}",
  "T": "\\mathbf{T}",
  "U": "\\mathbf{U}",
  "Uniform": [
   "\\text{Uniform}\\left( #1, #2 \\right)",
   2
  ],
+ "Unit": "\\operatorname{U}",
  "V": "\\mathbf{V}",
  "Var": "\\operatorname*{Var}",
  "W": "\\mathbf{W}",
@@ -109,6 +120,7 @@ window.BOOK_MACROS = {
   "\\left| #1 \\right|",
   1
  ],
+ "charp": "p",
  "cl": [
   "\\mathcal{#1}",
   1
@@ -117,8 +129,18 @@ window.BOOK_MACROS = {
   "\\overline{#1}",
   1
  ],
+ "codim": "\\operatorname{codim}",
  "col": "\\operatorname{col}",
  "coloneqq": "\\mathrel{:=}",
+ "conj": [
+  "\\overline{#1}",
+  1
+ ],
+ "conv": "\\operatorname{conv}",
+ "coord": [
+  "[#1]_{#2}",
+  2
+ ],
  "d": "\\mathbf{d}",
  "dd": "\\mathrm{d}",
  "defeq": "\\stackrel{\\smash{\\textnormal{\\tiny def}}}{=}",
@@ -152,10 +174,15 @@ window.BOOK_MACROS = {
  "f": "\\mathbf{f}",
  "g": "\\mathbf{g}",
  "h": "\\mathbf{h}",
+ "hc": "^{*}",
  "i": "\\mathbf{i}",
  "id": "\\operatorname{id}",
  "im": "\\operatorname{im}",
  "img": "\\operatorname{img}",
+ "inner": [
+  "\\langle #1, #2 \\rangle",
+  2
+ ],
  "interior": [
   "\\text{int}\\left( #1 \\right)",
   1
@@ -185,6 +212,10 @@ window.BOOK_MACROS = {
   1
  ],
  "m": "\\mathbf{m}",
+ "mtx": [
+  "[#1]_{#2}^{#3}",
+  3
+ ],
  "n": "\\mathbf{n}",
  "nA": "\\mathbb{A}",
  "nB": "\\mathbb{B}",
@@ -267,6 +298,8 @@ window.BOOK_MACROS = {
  "sX": "\\mathcal{X}",
  "sY": "\\mathcal{Y}",
  "sZ": "\\mathcal{Z}",
+ "sgn": "\\operatorname{sgn}",
+ "spec": "\\operatorname{spec}",
  "spn": "\\operatorname{span}",
  "t": "\\mathbf{t}",
  "td": [
@@ -277,6 +310,7 @@ window.BOOK_MACROS = {
   "\\frac{d^2 #1}{d #2^2}",
   2
  ],
+ "tp": "^{\\mathsf{T}}",
  "tr": "\\operatorname{tr}",
  "u": "\\mathbf{u}",
  "v": "\\mathbf{v}",
@@ -303,6 +337,7 @@ window.BOOK_MACROS = {
  "vlambda": "\\bm{\\uplambda}",
  "vmu": "\\bm{\\upmu}",
  "vnu": "\\bm{\\upnu}",
+ "vol": "\\operatorname{vol}",
  "vomega": "\\bm{\\upomega}",
  "vphi": "\\bm{\\upphi}",
  "vpi": "\\bm{\\uppi}",

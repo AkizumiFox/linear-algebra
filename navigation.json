@@ -19,58 +19,78 @@
   ],
   "chapters": [
     {
-      "title": "Preliminary",
+      "title": "Preliminaries",
       "number": 0,
+      "part": "",
       "collapsed": false,
       "path": "ch00-foundations/index.html",
       "sections": [
         {
-          "title": "Logic and Quantifiers",
+          "title": "Statements, Implications and Quantifiers",
           "number": "0.1",
           "path": "ch00-foundations/01-logic.html",
           "filename": "01-logic.md"
         },
         {
-          "title": "Sets and Notation",
+          "title": "How Proofs Are Built",
           "number": "0.2",
-          "path": "ch00-foundations/02-sets-and-notation.html",
-          "filename": "02-sets-and-notation.md"
+          "path": "ch00-foundations/02-proofs.html",
+          "filename": "02-proofs.md"
+        },
+        {
+          "title": "Sets",
+          "number": "0.3",
+          "path": "ch00-foundations/03-sets.html",
+          "filename": "03-sets.md"
         },
         {
           "title": "Functions",
-          "number": "0.3",
-          "path": "ch00-foundations/03-functions.html",
-          "filename": "03-functions.md"
-        },
-        {
-          "title": "Equivalence Relations",
           "number": "0.4",
-          "path": "ch00-foundations/04-relations.html",
-          "filename": "04-relations.md"
+          "path": "ch00-foundations/04-functions.html",
+          "filename": "04-functions.md"
         },
         {
-          "title": "Polynomials",
+          "title": "Relations, Equivalence Classes and Quotients",
           "number": "0.5",
-          "path": "ch00-foundations/05-polynomials.html",
-          "filename": "05-polynomials.md"
+          "path": "ch00-foundations/05-relations.html",
+          "filename": "05-relations.md"
+        },
+        {
+          "title": "Complex Numbers",
+          "number": "0.6",
+          "path": "ch00-foundations/06-complex-numbers.html",
+          "filename": "06-complex-numbers.md"
         },
         {
           "title": "Fields",
-          "number": "0.6",
-          "path": "ch00-foundations/06-fields.html",
-          "filename": "06-fields.md"
+          "number": "0.7",
+          "path": "ch00-foundations/07-fields.html",
+          "filename": "07-fields.md"
+        },
+        {
+          "title": "Polynomials",
+          "number": "0.8",
+          "path": "ch00-foundations/08-polynomials.html",
+          "filename": "08-polynomials.md"
         },
         {
           "title": "Matrices",
-          "number": "0.7",
-          "path": "ch00-foundations/07-matrices.html",
-          "filename": "07-matrices.md"
+          "number": "0.9",
+          "path": "ch00-foundations/09-matrices.html",
+          "filename": "09-matrices.md"
+        },
+        {
+          "title": "Groups and Permutations",
+          "number": "0.10",
+          "path": "ch00-foundations/10-groups.html",
+          "filename": "10-groups.md"
         }
       ]
     },
     {
       "title": "Vector Spaces and Dimensions",
       "number": 1,
+      "part": "",
       "collapsed": false,
       "path": "ch01-vector-spaces/index.html",
       "sections": [
@@ -121,6 +141,7 @@
     {
       "title": "Linear Transformations",
       "number": 2,
+      "part": "",
       "collapsed": false,
       "path": "ch02-linear-transformations/index.html",
       "sections": [

@@ -1,10 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Preliminary – Linear Algebra</title>
+    <title>Preliminaries – Linear Algebra</title>
 
     <meta name="asset-prefix" content="../">
     <meta name="page-path" content="ch00-foundations/index.html">
@@ -25,24 +24,24 @@
             if (stored.toc === 'collapsed') root.dataset.toc = 'collapsed';
         })();
     </script>
-        <meta name="description" content="This chapter covers the
-essential background needed for the study of linear algebra. Feel free
-to skip sections that you are already familiar with.">
+        <meta name="description" content="Most people meet linear
+algebra as a way of computing: row reduction, determinants, maybe
+eigenvalues. This book treats it as a subject you prove.">
             <link rel="canonical" href="https://linear-algebra.akizumifox.com/ch00-foundations/index.html">
     <meta property="og:url" content="https://linear-algebra.akizumifox.com/ch00-foundations/index.html">
         <meta property="og:type" content="article">
     <meta property="og:site_name" content="Linear Algebra">
-    <meta property="og:title" content="Preliminary">
-        <meta property="og:description" content="This chapter covers the
-essential background needed for the study of linear algebra. Feel free
-to skip sections that you are already familiar with.">
+    <meta property="og:title" content="Preliminaries">
+        <meta property="og:description" content="Most people meet linear
+algebra as a way of computing: row reduction, determinants, maybe
+eigenvalues. This book treats it as a subject you prove.">
         <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 
     <!-- Fonts: STIX Two Text (matches MathJax's math font), served with the site -->
-    <link rel="preload" href="../fonts/stix-two-text-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../fonts/stix-two-text-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin="">
 
     <!-- Styles -->
-    <link rel="stylesheet" href="../styles.css?v=97c29d15ed">
+    <link rel="stylesheet" href="../styles.css?v=5d969a173c">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
         <!-- Math is rendered at build time (build/math.py); this is its stylesheet. MathJax itself
@@ -93,21 +92,18 @@ to skip sections that you are already familiar with.">
             <!-- Toolbar: book contents (drawer on phones, collapsible pane on wider screens),
                  light/dark theme, and the "On this page" pane -->
             <div class="topbar" role="toolbar" aria-label="Page layout">
-                <button type="button" class="icon-button sidebar-toggle" aria-controls="quarto-sidebar"
-                    aria-expanded="true" aria-label="Hide book contents" data-tooltip="Hide contents">
+                <button type="button" class="icon-button sidebar-toggle" aria-controls="quarto-sidebar" aria-expanded="true" aria-label="Hide book contents" data-tooltip="Hide contents">
                     <i class="bi bi-layout-sidebar sidebar-icon-pane" aria-hidden="true"></i>
                     <i class="bi bi-list sidebar-icon-menu" aria-hidden="true"></i>
                 </button>
                 <a href="../index.html" class="topbar-title">Linear
 Algebra</a>
                 <div class="topbar-actions">
-                    <button type="button" class="icon-button theme-toggle" aria-pressed="false"
-                        aria-label="Dark mode" data-tooltip="Dark mode">
+                    <button type="button" class="icon-button theme-toggle" aria-pressed="false" aria-label="Dark mode" data-tooltip="Dark mode">
                         <i class="bi bi-moon-stars theme-icon-moon" aria-hidden="true"></i>
                         <i class="bi bi-sun theme-icon-sun" aria-hidden="true"></i>
                     </button>
-                    <button type="button" class="icon-button toc-toggle" aria-controls="quarto-margin-sidebar"
-                        aria-expanded="true" aria-label="Hide on this page" data-tooltip="Hide “On this page”">
+                    <button type="button" class="icon-button toc-toggle" aria-controls="quarto-margin-sidebar" aria-expanded="true" aria-label="Hide on this page" data-tooltip="Hide “On this page”">
                         <i class="bi bi-layout-sidebar-reverse" aria-hidden="true"></i>
                     </button>
                 </div>
@@ -120,46 +116,96 @@ Algebra</a>
                 <header id="title-block-header" class="quarto-title-block default">
                                         <nav class="quarto-title-breadcrumbs" aria-label="Breadcrumb">
                         <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="../ch00-foundations/index.html">Preliminary</a></li>
-                        <li class="breadcrumb-item"><a href="../ch00-foundations/index.html"><span class="chapter-title">Preliminary</span></a></li>
+                        <li class="breadcrumb-item"><a href="../ch00-foundations/index.html">Preliminaries</a></li>
+                        <li class="breadcrumb-item"><a href="../ch00-foundations/index.html"><span class="chapter-title">Preliminaries</span></a></li>
                         </ol>
                     </nav>
                                         <div class="quarto-title">
                         <h1 class="title">
                             
-                            <span class="chapter-title">Preliminary</span>
+                            <span class="chapter-title">Preliminaries</span>
                         </h1>
                     </div>
                 </header>
 
-                <div id="preliminary">
+                <div id="preliminaries">
 
                 </div>
-                <p>This chapter covers the essential background needed
-                for the study of linear algebra. Feel free to skip
-                sections that you are already familiar with. This
-                chapter serves only as a quick recap of the necessary
-                mathematical background, so it might not be the best
-                place to start if you are fresh to these topics. If you
-                require a more detailed construction of these topics, I
-                recommend checking out the first chapter of
-                <em>Topology</em> by James Raymond Munkres (2nd
-                ed.).</p>
-                <p>In addition to the following knowledge presented in
-                this chapter, basic knowledge of logic and proof
-                techniques is recommended, including:</p>
+                <p>Most people meet linear algebra as a way of
+                computing: row reduction, determinants, maybe
+                eigenvalues. This book treats it as a subject you
+                <strong>prove</strong>. Every statement comes with a
+                reason, and those reasons are built from a small set of
+                ideas: sets, functions, equivalence relations, fields,
+                polynomials and matrices. This chapter collects that
+                toolkit in one place.</p>
+                <p>You have probably seen some of this before. Some of
+                it, such as negating a statement with several
+                quantifiers, or checking that a rule on equivalence
+                classes is well defined, is exactly where careful
+                readers later stumble. So each section spends its time
+                on the delicate points and moves quickly past the
+                rest.</p>
+                <p><strong>How to use this chapter.</strong> Skim the
+                sections you know, but try the <em>A. Check your
+                understanding</em> exercises at the end of each one. If
+                you can do them without looking back, move on. If not,
+                that section is worth a slower read.</p>
+                <p><strong>What you need.</strong> Nothing from this
+                book. School algebra is enough, plus some familiarity
+                with numbers such as <span class="math inline"><mjx-container class="MathJax" jax="CHTML" style="font-size: 113.1%; position: relative;"><mjx-math class=" MJX-TEX" aria-hidden="true"><mjx-TeXAtom texclass="ORD"><mjx-mi class="mjx-ds mjx-b"><mjx-c class="mjx-c2124 TEX-A"></mjx-c></mjx-mi></mjx-TeXAtom></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow data-mjx-texclass="ORD"><mi mathvariant="double-struck">Z</mi></mrow></math></mjx-assistive-mml></mjx-container></span>, <span class="math inline"><mjx-container class="MathJax" jax="CHTML" style="font-size: 113.1%; position: relative;"><mjx-math class=" MJX-TEX" aria-hidden="true"><mjx-TeXAtom texclass="ORD"><mjx-mi class="mjx-ds mjx-b"><mjx-c class="mjx-c211A TEX-A"></mjx-c></mjx-mi></mjx-TeXAtom></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow data-mjx-texclass="ORD"><mi mathvariant="double-struck">Q</mi></mrow></math></mjx-assistive-mml></mjx-container></span> and <span class="math inline"><mjx-container class="MathJax" jax="CHTML" style="font-size: 113.1%; position: relative;"><mjx-math class=" MJX-TEX" aria-hidden="true"><mjx-TeXAtom texclass="ORD"><mjx-mi class="mjx-ds mjx-b"><mjx-c class="mjx-c211D TEX-A"></mjx-c></mjx-mi></mjx-TeXAtom></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow data-mjx-texclass="ORD"><mi mathvariant="double-struck">R</mi></mrow></math></mjx-assistive-mml></mjx-container></span>. One convention to
+                note now: in this book the natural numbers <span class="math inline"><mjx-container class="MathJax" jax="CHTML" style="font-size: 113.1%; position: relative;"><mjx-math class=" MJX-TEX" aria-hidden="true"><mjx-TeXAtom texclass="ORD"><mjx-mi class="mjx-ds mjx-b"><mjx-c class="mjx-c2115 TEX-A"></mjx-c></mjx-mi></mjx-TeXAtom></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow data-mjx-texclass="ORD"><mi mathvariant="double-struck">N</mi></mrow></math></mjx-assistive-mml></mjx-container></span> start at <span class="math inline"><mjx-container class="MathJax" jax="CHTML" style="font-size: 113.1%; position: relative;"><mjx-math class=" MJX-TEX" aria-hidden="true"><mjx-mn class="mjx-n"><mjx-c class="mjx-c30"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>0</mn></math></mjx-assistive-mml></mjx-container></span>.</p>
+                <h2 id="roadmap">Roadmap</h2>
                 <ul>
-                <li>Direct proof</li>
-                <li>Proof by contradiction</li>
-                <li>Proof by induction</li>
-                <li>Proof by contrapositive</li>
-                <li>Proof by cases (exhaustion)</li>
-                <li>Constructive proof (constructive existence)</li>
-                <li>Non-constructive existence proof</li>
-                <li>Uniqueness proof</li>
-                <li>Proof of equivalence (iff proof)</li>
-                <li>Disproof by counterexample</li>
-                <li>Pigeonhole principle</li>
+                <li><strong>Statements, implications and
+                quantifiers.</strong> How mathematical statements are
+                built, and how to negate them correctly.</li>
+                <li><strong>How proofs are built.</strong> Direct proof,
+                contrapositive, contradiction, cases, uniqueness,
+                counterexamples and induction, and the conventions this
+                book’s proofs follow.</li>
+                <li><strong>Sets.</strong> Subsets, operations, indexed
+                families, and the habit of proving two sets equal by
+                double inclusion.</li>
+                <li><strong>Functions.</strong> Injective, surjective
+                and bijective maps; composition; left, right and
+                two-sided inverses.</li>
+                <li><strong>Relations, equivalence classes and
+                quotients.</strong> Sorting a set into classes, and
+                defining functions on classes without ambiguity.</li>
+                <li><strong>Complex numbers.</strong> Arithmetic,
+                conjugates, the modulus, polar form and roots of
+                unity.</li>
+                <li><strong>Fields.</strong> The number systems in which
+                linear algebra works, from <span class="math inline"><mjx-container class="MathJax" jax="CHTML" style="font-size: 113.1%; position: relative;"><mjx-math class=" MJX-TEX" aria-hidden="true"><mjx-TeXAtom texclass="ORD"><mjx-mi class="mjx-ds mjx-b"><mjx-c class="mjx-c211A TEX-A"></mjx-c></mjx-mi></mjx-TeXAtom></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow data-mjx-texclass="ORD"><mi mathvariant="double-struck">Q</mi></mrow></math></mjx-assistive-mml></mjx-container></span>, <span class="math inline"><mjx-container class="MathJax" jax="CHTML" style="font-size: 113.1%; position: relative;"><mjx-math class=" MJX-TEX" aria-hidden="true"><mjx-TeXAtom texclass="ORD"><mjx-mi class="mjx-ds mjx-b"><mjx-c class="mjx-c211D TEX-A"></mjx-c></mjx-mi></mjx-TeXAtom></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow data-mjx-texclass="ORD"><mi mathvariant="double-struck">R</mi></mrow></math></mjx-assistive-mml></mjx-container></span> and <span class="math inline"><mjx-container class="MathJax" jax="CHTML" style="font-size: 113.1%; position: relative;"><mjx-math class=" MJX-TEX" aria-hidden="true"><mjx-TeXAtom texclass="ORD"><mjx-mi class="mjx-ds mjx-b"><mjx-c class="mjx-c2102 TEX-A"></mjx-c></mjx-mi></mjx-TeXAtom></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow data-mjx-texclass="ORD"><mi mathvariant="double-struck">C</mi></mrow></math></mjx-assistive-mml></mjx-container></span> to the finite fields
+                <span class="math inline"><mjx-container class="MathJax" jax="CHTML" style="font-size: 113.1%; position: relative;"><mjx-math class=" MJX-TEX" aria-hidden="true"><mjx-msub><mjx-TeXAtom texclass="ORD"><mjx-mi class="mjx-ds mjx-b"><mjx-c class="mjx-c1D53D TEX-A"></mjx-c></mjx-mi></mjx-TeXAtom><mjx-script style="vertical-align: -0.15em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D45D TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msub></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow data-mjx-texclass="ORD"><mi mathvariant="double-struck">F</mi></mrow><mi>p</mi></msub></math></mjx-assistive-mml></mjx-container></span>.</li>
+                <li><strong>Polynomials.</strong> Degree, evaluation,
+                and why a polynomial is not the same thing as a
+                function.</li>
+                <li><strong>Matrices.</strong> Addition, the three ways
+                to read a matrix product, transpose, trace and
+                inverses.</li>
+                <li><strong>Groups and permutations.</strong> One
+                structure shared by invertible matrices, the non-zero
+                elements of a field, and rearrangements of a set.</li>
+                </ul>
+                <h2 id="named-moves">Named moves</h2>
+                <p>These proof techniques appear throughout the book.
+                Each is introduced in this chapter.</p>
+                <ul>
+                <li><strong>Contrapositive.</strong> To prove “if <span class="math inline"><mjx-container class="MathJax" jax="CHTML" style="font-size: 113.1%; position: relative;"><mjx-math class=" MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>P</mi></math></mjx-assistive-mml></mjx-container></span> then <span class="math inline"><mjx-container class="MathJax" jax="CHTML" style="font-size: 113.1%; position: relative;"><mjx-math class=" MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D444 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>Q</mi></math></mjx-assistive-mml></mjx-container></span>”, prove “if not <span class="math inline"><mjx-container class="MathJax" jax="CHTML" style="font-size: 113.1%; position: relative;"><mjx-math class=" MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D444 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>Q</mi></math></mjx-assistive-mml></mjx-container></span> then not <span class="math inline"><mjx-container class="MathJax" jax="CHTML" style="font-size: 113.1%; position: relative;"><mjx-math class=" MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>P</mi></math></mjx-assistive-mml></mjx-container></span>”.</li>
+                <li><strong>Assume two.</strong> To prove something is
+                unique, suppose two objects have the property and show
+                they are equal.</li>
+                <li><strong>Double inclusion.</strong> To prove <span class="math inline"><mjx-container class="MathJax" jax="CHTML" style="font-size: 113.1%; position: relative;"><mjx-math class=" MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D434 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D435 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>A</mi><mo>=</mo><mi>B</mi></math></mjx-assistive-mml></mjx-container></span>, prove <span class="math inline"><mjx-container class="MathJax" jax="CHTML" style="font-size: 113.1%; position: relative;"><mjx-math class=" MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D434 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c2286"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D435 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>A</mi><mo>⊆</mo><mi>B</mi></math></mjx-assistive-mml></mjx-container></span> and <span class="math inline"><mjx-container class="MathJax" jax="CHTML" style="font-size: 113.1%; position: relative;"><mjx-math class=" MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D435 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c2286"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D434 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>B</mi><mo>⊆</mo><mi>A</mi></math></mjx-assistive-mml></mjx-container></span>.</li>
+                <li><strong>Suppose <span class="math inline"><mjx-container class="MathJax" jax="CHTML" style="font-size: 113.1%; position: relative;"><mjx-math class=" MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D453 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D44E TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D453 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D44F TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>f</mi><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo><mo>=</mo><mi>f</mi><mo stretchy="false">(</mo><mi>b</mi><mo stretchy="false">)</mo></math></mjx-assistive-mml></mjx-container></span>.</strong> The standard first line when
+                proving that a function is injective.</li>
+                <li><strong>Check well-definedness.</strong> A rule
+                given through a representative must not depend on which
+                representative is chosen.</li>
+                <li><strong>Induction on <span class="math inline"><mjx-container class="MathJax" jax="CHTML" style="font-size: 113.1%; position: relative;"><mjx-math class=" MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>n</mi></math></mjx-assistive-mml></mjx-container></span>.</strong> Find a
+                smaller instance of the problem inside the larger
+                one.</li>
                 </ul>
             </article>
 
@@ -175,12 +221,12 @@ Algebra</a>
                     </a>
                                     </div>
                 <div class="nav-page nav-page-next">
-                                        <a href="../ch00-foundations/01-logic.html" class="pagination-link" aria-label="Logic
-and Quantifiers">
+                                        <a href="../ch00-foundations/01-logic.html" class="pagination-link" aria-label="Statements,
+Implications and Quantifiers">
                         <span class="nav-page-body">
                             <span class="nav-page-label">Next</span>
-                            <span class="nav-page-text">0.1 Logic and
-Quantifiers</span>
+                            <span class="nav-page-text">0.1 Statements,
+Implications and Quantifiers</span>
                         </span>
                         <i class="bi bi-arrow-right-short" aria-hidden="true"></i>
                     </a>
@@ -188,7 +234,7 @@ Quantifiers</span>
             </nav>
                         <p class="page-feedback">
                 Found a typo or a mistake?
-                <a href="https://github.com/AkizumiFox/linear-algebra/issues/new?title=Typo%20or%20mistake%20in%20Preliminary&amp;body=Page%3A%20https%3A%2F%2Flinear-algebra.akizumifox.com%2Fch00-foundations%2Findex.html%0A%0AWhat%20is%20wrong%20%28quote%20the%20sentence%20or%20formula%29%3A%0A%0A%0AWhat%20it%20should%20say%3A%0A" target="_blank" rel="noopener">Report it</a>
+                <a href="https://github.com/AkizumiFox/linear-algebra/issues/new?title=Typo%20or%20mistake%20in%20Preliminaries&amp;body=Page%3A%20https%3A%2F%2Flinear-algebra.akizumifox.com%2Fch00-foundations%2Findex.html%0A%0AWhat%20is%20wrong%20%28quote%20the%20sentence%20or%20formula%29%3A%0A%0A%0AWhat%20it%20should%20say%3A%0A" target="_blank" rel="noopener">Report it</a>
             </p>
                     </main>
 
@@ -209,7 +255,7 @@ Quantifiers</span>
     </div>
 
     <!-- Tooltip Script -->
-    <script src="../main.js?v=97c29d15ed"></script>
+    <script src="../main.js?v=5d969a173c"></script>
             </body>
 
 </html>
