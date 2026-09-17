@@ -92,13 +92,13 @@ Now the non-example, by a minimal change. Add one vector to the independent list
 \]
 with coefficients not all zero, so the clause "\( \Longrightarrow a_1 = \dots = a_k = 0 \)" fails, and the list is **dependent**. The polynomial version behaves the same way: \( (1, x) \) is independent, but \( (1, x, 1 + x) \) is dependent, because \( 1 \cdot 1 + 1 \cdot x + (-1)(1 + x) = 0 \).
 
-:::: {.check}
+::: {.check}
 Is the list \( ((1, 2, 0), (0, 1, 1), (1, 0, -2)) \) in \( \nR^3 \) linearly independent?
+:::
 
 ::: {.solution}
 No. Let \( a(1, 2, 0) + b(0, 1, 1) + c(1, 0, -2) = \0 \). Comparing entries: \( a + c = 0 \), \( 2a + b = 0 \), \( b - 2c = 0 \). The first two give \( c = -a \) and \( b = -2a \), and then the third reads \( -2a + 2a = 0 \), which holds for every \( a \). Taking \( a = 1 \) gives the relation \( (1, 2, 0) - 2(0, 1, 1) - (1, 0, -2) = \0 \), with coefficients not all zero.
 :::
-::::
 
 Two more kinds of question come up constantly: lists that depend on a parameter, and lists of matrices. The method does not change.
 

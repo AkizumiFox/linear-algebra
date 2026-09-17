@@ -251,6 +251,9 @@ def generate_search_index(book: Book):
 
 def page_description(text: str, limit: int = 160) -> str:
     """Shorten a page's description text (see theorems.lua) to about `limit` characters."""
+    # Cross-references would be parsed as citations in page metadata; drop them from the summary
+    text = re.sub(r"\s*\((?:see\s+)?@[\w-]+\)", "", text)
+    text = re.sub(r"@[\w-]+", "", text)
     text = " ".join(text.split())
     if len(text) <= limit:
         return text

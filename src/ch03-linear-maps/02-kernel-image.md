@@ -231,10 +231,10 @@ This pays off the pointer from Chapter 1, §8: \( R \) matches \( F^{\nN} \) one
 
 ::: {.check}
 Find \( \ker T \) and \( \im T \) for the map \( T \colon \nR^2 \to \nR^3 \), \( T(x, y) = (2x - y,\ x + y,\ x - y) \), of @exm-map-from-basis-values. Is \( T \) injective? Surjective?
+:::
 
 ::: {.solution}
 If \( T(x, y) = \0 \), then \( x + y = 0 \) and \( x - y = 0 \), so \( x = y = 0 \). Hence \( \ker T = \{\0\} \), and \( T \) is injective. By @thm-image-spanned-by-basis-images, \( \im T = \Span(T(\e_1), T(\e_2)) = \Span\bigl((2, 1, 1), (-1, 1, -1)\bigr) \), a plane in \( \nR^3 \). A span of two vectors has dimension at most \( 2 < 3 \), so \( \im T \neq \nR^3 \) and \( T \) is not surjective.
-:::
 :::
 
 ## What injective and surjective maps do to lists

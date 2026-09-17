@@ -276,13 +276,13 @@ The inductive step must work for **every** \( n \ge n_0 \), including the smalle
 **The "all horses are the same color" fallacy.** *Claim:* in every group of \( n \ge 1 \) horses, all horses have the same color. *"Proof":* for \( n = 1 \) there is nothing to show. Suppose the claim holds for groups of \( n \) horses, and take a group of \( n + 1 \) horses \( h_1, \dots, h_{n+1} \). The group \( h_1, \dots, h_n \) is single-colored by the induction hypothesis, and so is \( h_2, \dots, h_{n+1} \). The two groups share a horse, so all \( n + 1 \) horses have its color. The claim is plainly false, so this "proof" has a gap. Before opening the check below, try to find the exact value of \( n \) where the step breaks.
 :::
 
-:::: {.check}
+::: {.check}
 Where does the inductive step in the horse argument fail?
+:::
 
 ::: {.solution}
 It fails when passing from \( n = 1 \) to \( n + 1 = 2 \). The two groups are then \( \{h_1\} \) and \( \{h_2\} \), which share **no** horse, so nothing links the color of \( h_1 \) to that of \( h_2 \). The sentence "the two groups share a horse" is true only when \( n \ge 2 \). Since the step \( P(1) \Rightarrow P(2) \) is not proved, the chain of dominoes breaks at the very first push, and the base case alone gives nothing.
 :::
-::::
 
 ## Strong induction and well-ordering
 

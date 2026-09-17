@@ -321,10 +321,10 @@ The column view needed nothing beyond scaling and adding columns of \( A \). Whe
 
 ::: {.check}
 Without multiplying out, what is the second column of \( \begin{pmatrix} 5 & -1 & 7 \\ 2 & 0 & 3 \end{pmatrix} \begin{pmatrix} 1 & 0 \\ 0 & 0 \\ 4 & 1 \end{pmatrix} \)?
+:::
 
 ::: {.solution}
 The second column of the right factor is \( \e_3 = (0, 0, 1) \). By @thm-three-views-of-product and @thm-matrix-times-vector-columns, the second column of the product is \( A\e_3 \), the third column of the left factor: \( (7, 3) \).
-:::
 :::
 
 ## The rules of multiplication
@@ -391,10 +391,10 @@ we get \( AC = BC = \begin{pmatrix} 1 & 1 \\ 3 & 3 \end{pmatrix} \) although \( 
 
 ::: {.check}
 Find a non-zero \( A \in M_2(\nR) \) with \( A^2 = AA = 0 \).
+:::
 
 ::: {.solution}
 Take \( A = \begin{pmatrix} 0 & 1 \\ 0 & 0 \end{pmatrix} \). By the column view, \( A\e_1 = \0 \) and \( A\e_2 = \e_1 \), so the columns of \( A^2 \) are \( A\0 = \0 \) and \( A\e_1 = \0 \). Hence \( A^2 = 0 \) although \( A \neq 0 \). This small matrix is the source of a remarkable number of counterexamples in this book; it will reappear often.
-:::
 :::
 
 ## The transpose

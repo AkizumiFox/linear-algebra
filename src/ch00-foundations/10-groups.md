@@ -164,10 +164,10 @@ For \( \sigma \), start at \( 1 \) and follow: \( 1 \mapsto 3 \mapsto 1 \), a lo
 
 ::: {.check}
 Compute \( (1\ 2\ 3)(1\ 2) \) in \( S_3 \).
+:::
 
 ::: {.solution}
 Apply \( (1\ 2) \) first: \( 1 \mapsto 2 \mapsto 3 \), \( 2 \mapsto 1 \mapsto 2 \), \( 3 \mapsto 3 \mapsto 1 \). So \( 1 \) and \( 3 \) are swapped and \( 2 \) is fixed: \( (1\ 2\ 3)(1\ 2) = (1\ 3) \).
-:::
 :::
 
 The example showed \( (1\ 2\ 3) = (1\ 3)(1\ 2) \): a 3-cycle is a product of transpositions. Every permutation is, and the proof is a model induction on \( n \).

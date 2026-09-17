@@ -85,10 +85,10 @@ So internal and external direct sums are the same thing seen from two sides. An 
 
 ::: {.check}
 Use @thm-internal-external-direct-sum (a) and Rank–Nullity to explain why, for **finite-dimensional** subspaces \( U, W \) of \( V \), the sum \( U + W \) is direct if and only if \( \dim(U + W) = \dim U + \dim W \).
+:::
 
 ::: {.solution}
 The addition map \( S \colon U \times W \to V \) has image \( U + W \), and \( \dim(U \times W) = \dim U + \dim W \) by @thm-dimension-of-product. By @thm-rank-nullity, \( \dim U + \dim W = \dim(U + W) + \dim \ker S \). So \( \dim(U + W) = \dim U + \dim W \) exactly when \( \ker S = \{\0\} \), that is, when \( S \) is injective, which by the theorem means the sum is direct. This recovers @thm-direct-sum-criteria (a) ⇔ (c).
-:::
 :::
 
 ## Cosets
@@ -302,10 +302,10 @@ So every complement of \( U \) is isomorphic to \( V/U \), which gives a second 
 
 ::: {.check}
 In \( \nR^2/U \) with \( U = \Span((1, 1)) \), is \( (2, 3) + U = (0, 1) + U \)? Is \( (1, 0) + U = (0, 1) + U \)? What is \( \dim(\nR^2/U) \)?
+:::
 
 ::: {.solution}
 By @lem-coset-equality (b): \( (2, 3) - (0, 1) = (2, 2) \in U \), so the first two cosets are equal. \( (1, 0) - (0, 1) = (1, -1) \notin U \), so the second pair are different cosets. By @thm-dimension-quotient, \( \dim(\nR^2/U) = 2 - 1 = 1 \).
-:::
 :::
 
 ## The First Isomorphism Theorem

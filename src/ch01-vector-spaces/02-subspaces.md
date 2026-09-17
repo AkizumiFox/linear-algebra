@@ -292,10 +292,10 @@ The set \( Q \) shows that (3) does not imply (2). The next check shows that (2)
 
 ::: {.check}
 Find a subset of \( \nR^2 \) that contains \( \0 \) and is closed under addition, but is not a subspace. Which condition of the subspace test fails?
+:::
 
 ::: {.solution}
 Take the closed first quadrant \( U = \{ (x, y) : x \ge 0 \text{ and } y \ge 0 \} \). It contains \( (0, 0) \), and if \( x_1, y_1, x_2, y_2 \ge 0 \), then \( x_1 + x_2 \ge 0 \) and \( y_1 + y_2 \ge 0 \), so it is closed under addition. Condition (3) fails: \( (1, 0) \in U \) but \( (-1)(1, 0) = (-1, 0) \notin U \). Another answer is \( \nZ^2 \): it contains \( \0 \) and is closed under addition, but \( \tfrac12 (1, 0) \notin \nZ^2 \).
-:::
 :::
 
 ## Why this definition

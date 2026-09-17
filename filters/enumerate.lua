@@ -28,6 +28,16 @@ local function parse_label(options)
     return {raw = label, prefix = prefix, style = style, suffix = suffix}
 end
 
+-- The item indent fits the widest label ("(a)" gets a narrow gutter, "(VS10)" a wider one)
+local function labeled_list_div(items, labels)
+    local widest = 0
+    for _, text in ipairs(labels) do
+        widest = math.max(widest, utf8.len(text) or #text)
+    end
+    return pandoc.Div({pandoc.BulletList(items)},
+        pandoc.Attr("", {"labeled-list"}, {{"style", string.format("--label-chars: %d", widest)}}))
+end
+
 local function Div(div)
     if not div.classes:includes("enumerate") then return nil end
     local options = div.attributes["options"]
@@ -62,9 +72,10 @@ local function Div(div)
     end
 
     if FORMAT:match("html") then
-        local items = {}
+        local items, labels = {}, {}
         for i, item in ipairs(list.content) do
             local text = label.prefix .. COUNTER_STYLES[label.style](start + i - 1) .. label.suffix
+            table.insert(labels, text)
             local marker = pandoc.Span({pandoc.Str(text)}, pandoc.Attr("", {"item-label"}))
             local blocks = pandoc.Blocks(item)
             local first = blocks[1]
@@ -76,8 +87,7 @@ local function Div(div)
             end
             table.insert(items, blocks)
         end
-        local bullet = pandoc.BulletList(items)
-        return pandoc.Div({bullet}, pandoc.Attr("", {"labeled-list"}))
+        return labeled_list_div(items, labels)
     end
 
     return nil
@@ -163,9 +173,10 @@ local function render_list(list, label)
         return blocks
     end
     if FORMAT:match("html") then
-        local items = {}
+        local items, labels = {}, {}
         for i, item in ipairs(list.content) do
             local text = label.prefix .. COUNTER_STYLES[label.style](start + i - 1) .. label.suffix
+            table.insert(labels, text)
             local marker = pandoc.Span({pandoc.Str(text)}, pandoc.Attr("", {"item-label"}))
             local blocks = pandoc.Blocks(item)
             local first = blocks[1]
@@ -177,7 +188,7 @@ local function render_list(list, label)
             end
             table.insert(items, blocks)
         end
-        return pandoc.Div({pandoc.BulletList(items)}, pandoc.Attr("", {"labeled-list"}))
+        return labeled_list_div(items, labels)
     end
     return nil
 end

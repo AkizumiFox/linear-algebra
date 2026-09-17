@@ -155,10 +155,10 @@ At \( (1, 0) \): \( PR(1, 0) = (0, 0) \), while \( RP(1, 0) = (0, 1) \). So \( P
 
 ::: {.check}
 Let \( T \colon \nR^3 \to \nR^2 \) and \( S \colon \nR^2 \to \nR^4 \) be linear. Which of \( ST \) and \( TS \) is defined, and between which spaces does it go?
+:::
 
 ::: {.solution}
 \( ST = S \circ T \) first applies \( T \colon \nR^3 \to \nR^2 \), then \( S \colon \nR^2 \to \nR^4 \), so \( ST \in \cL(\nR^3, \nR^4) \). \( TS \) would apply \( S \) first, landing in \( \nR^4 \), where \( T \) is not defined; so \( TS \) is not defined.
-:::
 :::
 
 Because of the missing commutativity, school identities about products must be rechecked. By distributivity (@thm-composition-linear (d)),
@@ -261,10 +261,10 @@ For \( p = a_0 + a_1x + \dots + a_Nx^N \): every power of \( \id_V \) is \( \id_
 
 ::: {.check}
 With \( P \) the projection above, compute \( p(P) \) for \( p = x^3 - 2x + 1 \).
+:::
 
 ::: {.solution}
 Since \( P^2 = P \), also \( P^3 = P^2P = PP = P \). So \( p(P) = P^3 - 2P + \id = P - 2P + \id = \id - P \), which is the map \( (x, y) \mapsto (0, y) \): the projection onto the \( y \)-axis.
-:::
 :::
 
 Polynomial relations such as \( P^2 = P \), \( R^2 = -\id \) and \( D^{n+1} = 0 \) carry real information about an operator. In the next section we use one to write down an inverse without solving any equations, and later in the book the polynomials that kill an operator lead to the minimal polynomial and to canonical forms.

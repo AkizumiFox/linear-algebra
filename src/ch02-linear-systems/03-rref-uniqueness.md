@@ -206,13 +206,13 @@ This matrix is row equivalent to \( E \), hence to \( A \) (@thm-row-ops-preserv
 
 In practice, (b) means we may stop at any row echelon form to find the pivot columns, and (a) means we can sometimes find them with no elimination at all. Part (a) also says that the pivot columns of \( A \) are exactly the columns kept when the list \( (\a_1, \dots, \a_n) \) is sifted as in @thm-sift: a column is kept exactly when it is not in the span of the columns before it. The number of pivot columns is the first candidate for a measure of "how much a matrix contains"; later in this chapter it becomes the rank.
 
-:::: {.check}
+::: {.check}
 Without computing any row operations, find the pivot columns of \( A = \begin{pmatrix} 1 & 2 & 0 & 1 \\ 2 & 4 & 1 & 3 \end{pmatrix} \) over \( \nR \).
+:::
 
 ::: {.solution}
 Use @cor-pivot-columns-well-defined (a) column by column. \( \a_1 = (1, 2) \neq \0 \), so it is not in \( \Span() = \{ \0 \} \): pivot. \( \a_2 = (2, 4) = 2\a_1 \): not a pivot. \( \a_3 = (0, 1) \) is not a multiple of \( (1, 2) \), and \( \Span(\a_1, \a_2) = \Span((1, 2)) \): pivot. \( \a_4 = (1, 3) = \a_1 + \a_3 \): not a pivot. The pivot columns are 1 and 3.
 :::
-::::
 
 ::: {.warning}
 **Uniqueness is a property of the reduced form only.** A matrix has many row echelon forms (@exm-two-echelon-forms-same-rref gave two), and it is only their pivot positions that agree. Also, two different matrices in RREF with the **same** pivot columns need not be row equivalent: \( \begin{pmatrix} 1 & 2 \end{pmatrix} \) and \( \begin{pmatrix} 1 & 3 \end{pmatrix} \) are both in RREF with pivot column 1, but they are different RREF matrices, so by @thm-rref-unique neither is row equivalent to the other.

@@ -89,10 +89,10 @@ In practice this means: **to find a spanning list of a sum, concatenate spanning
 
 ::: {.check}
 In \( \nR^3 \), what is \( \Span((1, 0, 0)) + \Span((0, 1, 0)) \)? Is it equal to \( \Span((1, 0, 0)) \cup \Span((0, 1, 0)) \)?
+:::
 
 ::: {.solution}
 By @prp-sum-of-spans the sum is \( \Span((1, 0, 0), (0, 1, 0)) = \{ (a, b, 0) : a, b \in \nR \} \), the \( xy \)-plane. It is not the union: \( (1, 1, 0) \) lies in the plane but on neither axis.
-:::
 :::
 
 ## The dimension formula
@@ -336,10 +336,10 @@ The hypothesis on the characteristic is used twice, both times to divide by \( 2
 
 ::: {.check}
 Can two \( 2 \)-dimensional subspaces of \( \nR^3 \) form a direct sum?
+:::
 
 ::: {.solution}
 No. If the sum \( U + W \) were direct, @thm-direct-sum-criteria (c) would give \( \dim(U + W) = 2 + 2 = 4 \). But \( U + W \subseteq \nR^3 \), so \( \dim(U + W) \le 3 \) by @thm-subspace-dimension. So two planes through \( \0 \) in \( \nR^3 \) always share a non-zero vector.
-:::
 :::
 
 ## Direct sums of several subspaces

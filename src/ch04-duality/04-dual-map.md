@@ -66,10 +66,10 @@ Here is a non-example by minimal change. Try to push functionals **forward** ins
 
 ::: {.check}
 Let \( T \colon \nR^3 \to \nR^2 \), \( T(x, y, z) = (x - z, 2y) \), and \( \psi(u, v) = u + v \). Compute \( T'\psi \). If \( T' \) is written as a matrix in some bases, what is its size?
+:::
 
 ::: {.solution}
 \( (T'\psi)(x, y, z) = \psi(x - z, 2y) = x + 2y - z \). The map \( T' \) goes from \( (\nR^2)^{*} \), of dimension \( 2 \), to \( (\nR^3)^{*} \), of dimension \( 3 \) (@cor-dimension-dual-space), so its matrix is \( 3 \times 2 \), the size of the transpose of the \( 2 \times 3 \) matrix of \( T \).
-:::
 :::
 
 The first payoff is that duals behave well under the operations on maps, with one reversal.

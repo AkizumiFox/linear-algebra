@@ -166,10 +166,10 @@ The pair \( (Q, P) \) is far from unique; any choice of extension gives another.
 
 ::: {.check}
 How many equivalence classes does \( M_{3 \times 2}(F) \) have, and which is the class of \( \begin{pmatrix} 1 & 2 \\ 2 & 4 \\ 0 & 0 \end{pmatrix} \)?
+:::
 
 ::: {.solution}
 Ranks in \( M_{3 \times 2}(F) \) range over \( 0, 1, 2 \), so there are \( \min(3, 2) + 1 = 3 \) classes by @thm-rank-normal-form (c). The given matrix is non-zero and its second column is twice the first, so its rank is \( 1 \), and it lies in the class of \( N_1 \): all matrices of rank \( 1 \).
-:::
 :::
 
 ## Rank inequalities for compositions

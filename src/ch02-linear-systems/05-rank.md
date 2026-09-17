@@ -239,10 +239,10 @@ So \( \rank A = \dim \row(A) = 3 \) and \( \rank A + \nullity A = 5 \), the numb
 
 ::: {.check}
 Without computing anything, what is the largest possible rank of a \( 3 \times 5 \) matrix, and the smallest possible nullity?
+:::
 
 ::: {.solution}
 \( \rank A = \dim \col(A) \le 3 \), since \( \col(A) \subseteq F^3 \). By @thm-basis-null-space, the nullity is the number of free columns, \( 5 - r \), where \( r \le 3 \) is the number of pivots (one per non-zero row). So the nullity is at least \( 2 \). For example \( \begin{pmatrix} I_3 & 0_{3 \times 2} \end{pmatrix} \) attains rank \( 3 \) and nullity \( 2 \).
-:::
 :::
 
 ## Row rank equals column rank

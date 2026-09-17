@@ -123,10 +123,10 @@ P(a, b, c) = \Big(\tfrac{2a - b - c}{3},\ \tfrac{-a + 2b - c}{3},\ \tfrac{-a - b
 
 ::: {.check}
 Is \( P = \begin{pmatrix} 1 & 1 \\ 0 & 0 \end{pmatrix} \) (acting on \( \nR^2 \)) a projection? If so, onto which line, and along which line?
+:::
 
 ::: {.solution}
 \( P^2 = \begin{pmatrix} 1 & 1 \\ 0 & 0 \end{pmatrix}\begin{pmatrix} 1 & 1 \\ 0 & 0 \end{pmatrix} = \begin{pmatrix} 1 & 1 \\ 0 & 0 \end{pmatrix} = P \), so yes. Its image is spanned by its columns, \( \Span((1, 0)) \), the \( x \)-axis. Its kernel is \( \{ x + y = 0 \} = \Span((1, -1)) \). By @thm-projection-direct-sum, it is the projection onto the \( x \)-axis along the line \( y = -x \).
-:::
 :::
 
 ## The trace of an operator

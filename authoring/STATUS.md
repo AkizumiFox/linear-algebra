@@ -60,3 +60,6 @@ Add a line when a section promises something later ("proved in Chapter 5"); tick
 - [ ] Ch 4 → Ch 10: orthogonal complement vs annihilator; inner product gives chosen V ≅ V*; adjoint T*
 - Ch 4: ε_{ij} vs ε_c overload; zero functional notation — tidy in M7.
 - Ch 4: restriction map V* → U* named R (§02), ρ (§05), ι′ (§04) — unify to ρ in M7. §06 extra early Quick check.
+- [ ] Ch 5 → Ch 8: minimal polynomial = monic generator of I_T (`thm-annihilator-ideal`); invariant subspaces defined; Cayley–Hamilton; primary decomposition via `thm-kernel-splitting` and `exr-polynomials-of-operators-c2`
+- [ ] Ch 5 → Ch 9: canonical forms from primary decomposition
+- [ ] Ch 5 → Ch 8: diagonalizable ⇔ minimal polynomial splits with distinct roots; every complex operator has an eigenvalue (FTA)

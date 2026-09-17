@@ -101,13 +101,13 @@ Describe each span.
 :::
 :::
 
-:::: {.check}
+::: {.check}
 Is \( \Span((1, 2)) \) a subset of \( \Span((2, 4)) \) in \( \nR^2 \)? Are they equal?
+:::
 
 ::: {.solution}
 Yes to both. Since \( (2, 4) = 2(1, 2) \), every \( a(2, 4) = (2a)(1, 2) \) lies in \( \Span((1, 2)) \). Since \( (1, 2) = \tfrac12 (2, 4) \), every \( a(1, 2) = \tfrac{a}{2}(2, 4) \) lies in \( \Span((2, 4)) \). Both spans are the line \( y = 2x \). Different lists can have the same span.
 :::
-::::
 
 ## The span is the smallest subspace
 
@@ -326,13 +326,13 @@ so both \( 1 \) and \( x \) lie in \( \Span(1 + x, 1 - x) \). By @prp-span-basic
 Hence the spans are equal; both are \( \nR[x]_{\le 1} \). Notice that we only checked four vectors, not all combinations. We also used \( \tfrac12 \), so the argument needs \( 2 \neq 0 \) in the field.
 :::
 
-:::: {.check}
+::: {.check}
 Is \( x^2 + 1 \in \Span(x^2 + x, x + 1) \) in \( \nR[x] \)?
+:::
 
 ::: {.solution}
 No. Suppose \( a(x^2 + x) + b(x + 1) = x^2 + 1 \). The left side is \( ax^2 + (a + b)x + b \). Comparing coefficients (@def-polynomial): \( a = 1 \) from \( x^2 \), \( b = 1 \) from the constant term, and \( a + b = 0 \) from \( x \). But then \( a + b = 2 \neq 0 \), a contradiction. So no such \( a, b \) exist.
 :::
-::::
 
 ## Exercises
 

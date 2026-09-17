@@ -129,15 +129,15 @@ The converse is a different matter. It is a separate statement, and it can be fa
 
 Later in the book the converse question comes up constantly. In Chapter 2 we will see that if a square matrix \( A \) is invertible, then \( A\x = \0 \) has only the solution \( \x = \0 \). The converse, "if \( A\x = \0 \) has only the solution \( \x = \0 \), then \( A \) is invertible", also turns out to be true for square matrices. But it is a separate theorem, it needs its own proof, and that proof takes real work.
 
-:::: {.check}
+::: {.check}
 Consider "if an integer \( n \) is divisible by \( 6 \), then \( n \) is even". Write its converse and its contrapositive, and decide which of the three statements are true for every integer \( n \).
+:::
 
 ::: {.solution}
 The converse is "if \( n \) is even, then \( n \) is divisible by \( 6 \)". The contrapositive is "if \( n \) is not even, then \( n \) is not divisible by \( 6 \)", that is, "if \( n \) is odd, then \( 6 \nmid n \)".
 
 The original is true: if \( n = 6k \) then \( n = 2(3k) \) is even. The contrapositive is true, by @thm-contrapositive-equivalent. The converse is false: \( n = 2 \) is even but not divisible by \( 6 \).
 :::
-::::
 
 When an implication and its converse are both true, we say the two statements are equivalent.
 
@@ -232,13 +232,13 @@ The difference is **who chooses first**. In (i), \( x \) is chosen first and \( 
 Never swap a \( \forall \) and an \( \exists \) without a proof. The implication "\( \exists y \, \forall x \Rightarrow \forall x \, \exists y \)" is always valid, since the single \( y \) works for each \( x \). The reverse direction fails, as @exm-nested-quantifiers shows. Two quantifiers of the **same** kind, such as \( \forall x \, \forall y \), may be swapped freely.
 :::
 
-:::: {.check}
+::: {.check}
 Over the positive real numbers, statement (A) is "\( \forall \varepsilon > 0 \ \exists \delta > 0 : \delta < \varepsilon \)". Statement (B) is obtained by swapping the quantifiers: "\( \exists \delta > 0 \ \forall \varepsilon > 0 : \delta < \varepsilon \)". Are (A) and (B) both true?
+:::
 
 ::: {.solution}
 No. (A) is true: given \( \varepsilon > 0 \), take \( \delta = \varepsilon / 2 \), which is positive and smaller than \( \varepsilon \). (B) is false: whatever \( \delta > 0 \) is proposed, the choice \( \varepsilon = \delta \) makes \( \delta < \varepsilon \) false. In (A) the number \( \delta \) may depend on \( \varepsilon \); in (B) it may not.
 :::
-::::
 
 ## Negation
 
@@ -397,13 +397,13 @@ In Chapter 1 the original statement is what "the list is linearly independent" m
 **"Not all zero" is not "all non-zero".** The negation of "\( a = b = c = 0 \)" is "at least one of \( a, b, c \) is non-zero". In @exm-negation-not-all-zero the witness is \( (2, -1, 0) \), which has a zero entry. In fact **no** witness has all three entries non-zero: comparing entries, \( a + 2b = 0 \) and \( 2a + 4b + c = 0 \), so \( c = -2(a + 2b) = 0 \). Negating with "all non-zero" would wrongly conclude that the original statement is true.
 :::
 
-:::: {.check}
+::: {.check}
 Negate "every student passed some exam", with no "not" in front of the whole sentence.
+:::
 
 ::: {.solution}
 Write it as "\( \forall \) students \( s \) \( \exists \) exam \( e \) : \( s \) passed \( e \)". Flipping both quantifiers and negating the inside gives "\( \exists \) student \( s \) \( \forall \) exams \( e \) : \( s \) did not pass \( e \)". In words: **some student passed no exam**. The tempting answer "no student passed any exam" is the negation of "some student passed some exam", a different statement.
 :::
-::::
 
 ::: {.remark}
 Each form of statement suggests how to prove or refute it. To prove \( \forall x \in S : P(x) \), take an arbitrary \( x \in S \) and show \( P(x) \). To prove \( \exists x \in S : P(x) \), produce a witness. To refute a \( \forall \), produce one counterexample. To refute an \( \exists \), show every candidate fails. The next section develops these moves into proof techniques.

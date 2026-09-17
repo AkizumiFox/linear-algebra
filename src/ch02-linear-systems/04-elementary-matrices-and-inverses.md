@@ -85,10 +85,10 @@ In each case the product agrees with the operation, as @thm-row-op-is-left-multi
 
 ::: {.check}
 Which \( 3 \times 3 \) elementary matrix performs \( R_2 \to R_2 + 4R_3 \)? Which operation undoes it, and what is its matrix?
+:::
 
 ::: {.solution}
 Apply the operation to \( I_3 \): row 2 becomes \( \e_2\tp + 4\e_3\tp \), so the matrix is \( I_3 + 4E_{23} \), with \( 4 \) in entry \( (2, 3) \). The operation \( R_2 \to R_2 - 4R_3 \) undoes it, since row 3 is unchanged by both; its matrix is \( I_3 - 4E_{23} \).
-:::
 :::
 
 Every row operation can be undone by another row operation, and the matching statement for matrices is:
@@ -189,10 +189,10 @@ In practice the theorem is a menu. To show a matrix **is** invertible, pick the 
 
 ::: {.check}
 Is \( A = \begin{pmatrix} 1 & 2 & 3 \\ 0 & 1 & 1 \\ 1 & 3 & 4 \end{pmatrix} \in M_3(\nR) \) invertible? Use whichever item of @thm-invertible-tfae is quickest.
+:::
 
 ::: {.solution}
 No. The third column is the sum of the first two: \( (1, 0, 1) + (2, 1, 3) = (3, 1, 4) \). So \( \a_1 + \a_2 - \a_3 = \0 \) is a linear relation with coefficients not all zero, item (f) fails, and hence (a) fails. Equivalently, \( \x = (1, 1, -1) \) is a non-trivial solution of \( A\x = \0 \).
-:::
 :::
 
 ::: {.warning}

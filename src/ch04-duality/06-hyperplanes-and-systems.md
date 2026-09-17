@@ -275,10 +275,10 @@ For \( V = F^n \) and \( \varphi_i = \varphi_{\a_i} \), the map \( \Phi \) is \(
 
 ::: {.check}
 In \( \nR^3 \), consider \( \varphi_1 = x + y \), \( \varphi_2 = y + z \), \( \varphi_3 = x - z \). What is the codimension of \( \ker\varphi_1 \cap \ker\varphi_2 \cap \ker\varphi_3 \)? Is the system \( x + y = 1 \), \( y + z = 1 \), \( x - z = 1 \) solvable?
+:::
 
 ::: {.solution}
 \( \varphi_3 = \varphi_1 - \varphi_2 \), so the list is dependent, while \( (\varphi_1, \varphi_2) \) is independent (look at the coefficients of \( x \) and \( z \)). The three kernels intersect in \( \ker\varphi_1 \cap \ker\varphi_2 \), of codimension 2 by @thm-independent-functionals-surjective, so the intersection is a line, not \( \{\0\} \). The system is not solvable: any solution would give \( 1 = x - z = (x + y) - (y + z) = 1 - 1 = 0 \). This is (b) failing: \( (1, 1, 1) \notin \im\Phi \).
-:::
 :::
 
 ## Summary and transfer

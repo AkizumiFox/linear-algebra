@@ -145,13 +145,13 @@ Let \( \varepsilon_1(p) = p(1) \), a linear functional (@exm-linear-functionals)
 We never found a basis of \( U \) and never solved an equation. The conclusion is concrete: a functional on \( \nR[x]_{\le 2} \) vanishes on every polynomial with a root at \( 1 \) **only if** it is a multiple of \( p \mapsto p(1) \).
 :::
 
-:::: {.check}
+::: {.check}
 Let \( U = \Span((1, 1, 1)) \subseteq \nR^3 \). What is \( \dim U^{0} \)? Name a basis of \( U^{0} \) without solving a system.
+:::
 
 ::: {.solution}
 \( \dim U^{0} = 3 - 1 = 2 \) by @thm-dimension-annihilator. The functionals \( x - y \) and \( y - z \) vanish at \( (1, 1, 1) \), hence on \( U \), and they are independent: in \( a(x - y) + b(y - z) = 0 \), the coefficient of \( x \) gives \( a = 0 \), and then \( b = 0 \). Two independent vectors in a \( 2 \)-dimensional space form a basis (@thm-right-size-basis).
 :::
-::::
 
 ## Sums, intersections and spans
 

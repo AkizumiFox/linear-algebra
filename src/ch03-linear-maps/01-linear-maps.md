@@ -381,10 +381,10 @@ Let \( T \colon \nC \to \nC \), \( T(z) = \conj{z} \). Is \( T \) linear when \(
 
 ::: {.check}
 Which of these maps \( \nR^2 \to \nR^2 \) are linear? (i) \( (x, y) \mapsto (y, x) \); (ii) \( (x, y) \mapsto (x + y, 1) \); (iii) \( (x, y) \mapsto (xy, 0) \).
+:::
 
 ::: {.solution}
 (i) Linear: it is \( T_A \) with \( A = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix} \). (ii) Not linear: \( (0, 0) \mapsto (0, 1) \neq \0 \). (iii) Not linear, although \( \0 \mapsto \0 \): \( (2, 2) \mapsto (4, 0) \), but \( 2 \cdot T(1, 1) = 2(1, 0) = (2, 0) \), so (LT2) fails.
-:::
 :::
 
 **Why this definition.** Could one condition be dropped? Complex conjugation on \( \nC \) over \( \nC \) satisfies (LT1) but not (LT2), so additivity alone is not enough. (Over \( \nQ \), surprisingly, additivity does imply homogeneity; see @exr-linear-maps-c1.) Conversely, \( T \colon \nR^2 \to \nR \), \( T(x, y) = \sqrt[3]{x^3 + y^3} \) (the real cube root), satisfies (LT2), since \( \sqrt[3]{c^3x^3 + c^3y^3} = c\sqrt[3]{x^3 + y^3} \) for every real \( c \). But \( T(1, 0) + T(0, 1) = 2 \), while \( T(1, 1) = \sqrt[3]{2} \), so (LT1) fails. Neither condition implies the other, and we need both to get @thm-linear-combination. The name comes from the case \( \nR \to \nR \) just described: the graph of a linear map is a line through the origin.
@@ -499,10 +499,10 @@ The list \( (1, x, x^2, x^3) \) is a basis of \( \nR[x]_{\le 3} \) (@exm-standar
 
 ::: {.check}
 Let \( T \colon \nR^2 \to \nR \) be linear with \( T(1, 2) = 3 \) and \( T(2, 5) = 1 \). Find \( T(x, y) \).
+:::
 
 ::: {.solution}
 Here \( ad - bc = 1 \cdot 5 - 2 \cdot 2 = 1 \neq 0 \), so \( ((1, 2), (2, 5)) \) is a basis. Solving \( a(1, 2) + b(2, 5) = (x, y) \), that is \( a + 2b = x \) and \( 2a + 5b = y \), gives \( b = y - 2x \) and \( a = 5x - 2y \). Hence \( T(x, y) = 3(5x - 2y) + 1 \cdot (y - 2x) = 13x - 5y \). Check: \( 13 - 10 = 3 \) and \( 26 - 25 = 1 \).
-:::
 :::
 
 We now have a supply of linear maps and a way to build new ones from a basis. The next section attaches to every linear map two subspaces that measure how far it is from being injective and from being surjective.

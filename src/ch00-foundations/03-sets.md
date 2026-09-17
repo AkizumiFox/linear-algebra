@@ -128,13 +128,13 @@ Decide whether each inclusion holds.
 **\( \in \) and \( \subseteq \) are different relations.** \( x \in A \) says the object \( x \) is one of the elements of \( A \). \( A \subseteq B \) compares two sets, element by element. So \( 1 \in \{1, 2\} \) is true while \( 1 \subseteq \{1, 2\} \) makes no sense (\( 1 \) is not a set here); and \( \{1\} \subseteq \{1, 2\} \) is true while \( \{1\} \in \{1, 2\} \) is false.
 :::
 
-:::: {.check}
+::: {.check}
 Let \( X = \{ \{1, 2\}, 3 \} \). Is \( \{1, 2\} \subseteq X \)? Is \( \{1, 2\} \in X \)?
+:::
 
 ::: {.solution}
 The set \( X \) has exactly two elements: the set \( \{1, 2\} \) and the number \( 3 \). So \( \{1, 2\} \in X \) is **true**. But \( \{1, 2\} \subseteq X \) is **false**: \( 1 \in \{1, 2\} \), and \( 1 \) is neither the set \( \{1, 2\} \) nor the number \( 3 \), so \( 1 \notin X \).
 :::
-::::
 
 ## Equality of sets and double inclusion
 

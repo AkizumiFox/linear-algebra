@@ -115,10 +115,10 @@ Check: \( p(-1) = 1 + 1 + 1 - 1 = 2 \), \( p(0) = 1 \), \( p(1) = 1 - 1 + 1 + 1 
 
 ::: {.check}
 Find the polynomial \( p \in \nF_3[x]_{\le 2} \) with \( p(0) = 1 \), \( p(1) = 0 \) and \( p(2) = 0 \).
+:::
 
 ::: {.solution}
 The \( x \)-values \( 0, 1, 2 \) are distinct in \( \nF_3 \), so there is exactly one such \( p \). Since \( 1 \) and \( 2 \) are roots, try \( p = a(x - 1)(x - 2) \), which has degree at most \( 2 \) and vanishes at \( 1 \) and \( 2 \). Then \( p(0) = a \cdot (-1)(-2) = 2a \), and \( 2a = 1 \) gives \( a = 2 \), since \( 2 \cdot 2 = 4 = 1 \) in \( \nF_3 \). Expanding, \( p = 2(x^2 - 3x + 2) = 2(x^2 + 2) = 2x^2 + 1 \). Check: \( p(0) = 1 \), \( p(1) = 3 = 0 \), \( p(2) = 9 = 0 \). By uniqueness, this is the answer.
-:::
 :::
 
 **What the model leaves out.** Interpolation fits the data **exactly**. When the \( y_i \) are measurements with errors, an exact fit of high degree follows the noise and can swing wildly between the data points. The honest tool there is a low-degree polynomial that fits approximately, found by least squares in Chapter 10.
@@ -369,10 +369,10 @@ Check, counting how often each light is toggled. The center is toggled by all fi
 
 ::: {.check}
 Starting from all lights **off**, which set of presses produces the pattern with only the center light **on**?
+:::
 
 ::: {.solution}
 The same plus sign. Starting from \( \0 \), presses \( \x \) produce the pattern \( A\x \), so we need \( A\x = \b \) with \( \b \) the center pattern, which is exactly the system just solved. Over \( \nF_2 \), turning a pattern on and turning it off are the same problem.
-:::
 :::
 
 ::: {.remark}

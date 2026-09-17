@@ -157,10 +157,10 @@ The method is "rationalize the denominator", the same move as multiplying by the
 
 ::: {.check}
 Is \( \{ a + b\sqrt3 : a, b \in \nQ \} \), with the operations of \( \nR \), a field?
+:::
 
 ::: {.solution}
 Yes, by the same argument as @exm-q-sqrt2-field. Products stay in the set because \( \sqrt3 \cdot \sqrt3 = 3 \) is rational. For inverses, the number \( a^2 - 3b^2 \) is non-zero whenever \( a + b\sqrt3 \ne 0 \), because \( \sqrt3 \) is irrational (@exr-proofs-b3). The inverse is \( \frac{a - b\sqrt3}{a^2 - 3b^2} \).
-:::
 :::
 
 **The degenerate case.** Let \( F = \{0\} \) with \( 0 + 0 = 0 \) and \( 0 \cdot 0 = 0 \). Every axiom except one holds: (F1), (F2), (F5), (F6) and (F9) are identities between elements that all equal \( 0 \), (F3) and (F4) hold with \( -0 = 0 \), and (F8) holds vacuously because there is no non-zero element. The only failure is (F7): the one element that could serve as \( 1 \) is \( 0 \), and the axiom demands **\( 1 \ne 0 \)**. So \( \{0\} \) is not a field, and every field has at least the two elements \( 0 \) and \( 1 \). This one-element system is the reason the clause \( 1 \ne 0 \) is there.
@@ -266,10 +266,10 @@ For a prime \( p \) we write \( \nF_p \coloneqq \nZ/p\nZ \), and usually drop th
 
 ::: {.check}
 Find the inverse of \( 3 \) in \( \nF_7 \).
+:::
 
 ::: {.solution}
 We need \( x \) with \( 3x \) leaving remainder \( 1 \) on division by \( 7 \). Trying \( x = 1, 2, \dots \): \( 3 \cdot 5 = 15 = 2 \cdot 7 + 1 \). So \( 3^{-1} = 5 \) in \( \nF_7 \). (By @thm-field-basic-properties (c) this is the only inverse.)
-:::
 :::
 
 Because \( \nF_p \) is a field, the elimination from the start of the section runs unchanged in it. Only the arithmetic is new.

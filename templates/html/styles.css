@@ -469,7 +469,8 @@ img {
 
 .labeled-list > ul > li {
   position: relative;
-  padding-left: 3.6em;
+  /* the label's width in characters (set per list by the filter) plus a small gap */
+  padding-left: calc(var(--label-chars, 4) * 0.52em + 0.5em);
 }
 
 .labeled-list .item-label {
@@ -619,7 +620,7 @@ div.equation mjx-container[display="true"] {
   color: var(--danger);
 }
 
-/* Quick check: a question with its answer folded inside */
+/* Quick check: a question; its folded answer follows as a separate block */
 .check.small-env {
   border-left: 2px solid var(--accent);
   background: var(--subtle);
@@ -629,10 +630,6 @@ div.equation mjx-container[display="true"] {
 
 .check.small-env > p:first-child > em:first-child {
   color: var(--accent);
-}
-
-.check.small-env .solution.small-env {
-  margin: 0.8em 0 0;
 }
 
 /* Part headings in the sidebar */
@@ -650,80 +647,82 @@ div.equation mjx-container[display="true"] {
   margin-top: 0.9rem;
 }
 
-/* --- Foldable proofs and solutions (main.js) --- */
-.foldable {
-  position: relative;
+/* --- Foldable proofs and solutions (main.js) ---
+   The label ("Proof." / "Solution.") is the button, with a chevron after it:
+   v while folded, ^ while open. */
+.fold-toggle {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.28em;
+  margin: 0 0.1em 0 -0.2em;
+  padding: 0 0.2em;
+  border: 0;
+  border-radius: 5px;
+  background: none;
+  color: inherit;
+  font: inherit;
+  line-height: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
 }
 
-.fold-toggle {
-  position: absolute;
-  top: 0;
-  right: 0;
+.fold-label em {
+  color: var(--ink-strong);
+  transition: color 0.15s ease;
+}
+
+.fold-chevron {
   display: inline-flex;
   align-items: center;
-  gap: 0.25rem;
-  padding: 0.15rem 0.5rem;
-  border: 1px solid transparent;
-  border-radius: 999px;
-  background: var(--paper);
+  justify-content: center;
+  align-self: center;
+  width: 1.15em;
+  height: 1.15em;
+  border-radius: 50%;
   color: var(--faint);
-  font-family: var(--font-body);
-  font-size: 0.72rem;
-  line-height: 1.4;
-  cursor: pointer;
-  opacity: 0;
-  transition: opacity 0.2s ease, color 0.15s ease, border-color 0.15s ease, background-color 0.15s ease;
+  transform: rotate(180deg);
+  transition: transform 0.22s ease, color 0.15s ease, background-color 0.15s ease;
 }
 
-.foldable:hover > .fold-toggle,
-.fold-toggle:focus-visible {
-  opacity: 1;
+.fold-chevron svg {
+  width: 0.72em;
+  height: 0.72em;
 }
 
-@media (hover: none) {
-  .fold-toggle {
-    opacity: 1;
-  }
+.is-folded .fold-chevron {
+  transform: rotate(0deg);
 }
 
-.fold-toggle:hover {
-  border-color: var(--rule-strong);
+.fold-toggle:hover .fold-label em,
+.fold-toggle:focus-visible .fold-label em {
   color: var(--accent);
 }
 
-.fold-toggle .bi {
-  font-size: 0.8em;
+.fold-toggle:hover .fold-chevron,
+.fold-toggle:focus-visible .fold-chevron {
+  color: var(--accent);
+  background: var(--hover-wash);
 }
 
-/* Folded: only "Solution." / "Proof." and the button remain */
-.foldable.is-folded {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  padding-top: 0.25em;
-  padding-bottom: 0.25em;
+.fold-toggle:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
 }
 
-.foldable.is-folded::before {
-  content: attr(data-fold-label);
-  color: var(--ink-strong);
-  font-style: italic;
-}
-
-.foldable.is-folded > :not(.fold-toggle) {
+/* Folded: only the label and its chevron remain */
+.foldable.is-folded > :not(.fold-head),
+.foldable.is-folded .fold-rest {
   display: none;
 }
 
-.foldable.is-folded > .fold-toggle {
-  position: static;
-  border-color: var(--rule-strong);
-  color: var(--muted);
-  opacity: 1;
+.foldable.is-folded {
+  padding-top: 0.05em;
+  padding-bottom: 0.05em;
 }
 
-.foldable.is-folded > .fold-toggle:hover {
-  border-color: var(--accent);
-  color: var(--accent);
+.foldable.is-folded > .fold-head {
+  margin: 0;
 }
 
 .proof.is-folded::after {
@@ -731,21 +730,19 @@ div.equation mjx-container[display="true"] {
 }
 
 @media print {
-  .fold-toggle {
+  .fold-chevron {
     display: none !important;
   }
 
-  .foldable.is-folded {
-    display: block;
-  }
-
-  .foldable.is-folded::before {
-    content: none;
-  }
-
-  .foldable.is-folded > :not(.fold-toggle) {
+  .foldable.is-folded > :not(.fold-head),
+  .foldable.is-folded .fold-rest {
     display: revert;
   }
+}
+
+/* A solution directly after its quick check sits close to it */
+.check.small-env + .solution.small-env {
+  margin-top: -0.4em;
 }
 
 /* End of proof */

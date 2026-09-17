@@ -111,10 +111,10 @@ Now remove a vector instead. In \( \nR^3 \), the list \( ((1, 0, 0), (0, 1, 0)) 
 
 ::: {.check}
 Is \( ((1, 2), (2, 1), (0, 0)) \) a basis of \( \nR^2 \)? If not, which of (B1) and (B2) fails?
+:::
 
 ::: {.solution}
 No. (B2) holds: \( (1, 2) \) and \( (2, 1) \) already span \( \nR^2 \), because solving \( a(1, 2) + b(2, 1) = (x, y) \) gives \( a = \frac{2y - x}{3} \) and \( b = \frac{2x - y}{3} \). But (B1) fails, because the list contains the zero vector: \( 0(1, 2) + 0(2, 1) + 1(0, 0) = (0, 0) \) with a non-zero coefficient.
-:::
 :::
 
 **Why this definition.** Drop (B1), and addresses stop being unique, as the list \( ((1, 0), (0, 1), (1, 1)) \) showed. Drop (B2), and some vectors have no address at all. Keeping both is exactly what an addressing system needs. The name comes from the everyday word: the basis is what everything else is built on.
@@ -335,10 +335,10 @@ Both results are bases of \( \nR^2 \) (the lists span \( \nR^2 \) because they c
 
 ::: {.check}
 Sift the list \( (x, 2x, 1 + x, 1) \) in \( \nR[x]_{\le 1} \). Which vectors are kept?
+:::
 
 ::: {.solution}
 Keep \( x \), since \( x \ne 0 \). Discard \( 2x = 2 \cdot x \). Keep \( 1 + x \): every multiple \( ax \) has constant term \( 0 \), but \( 1 + x \) has constant term \( 1 \). Discard \( 1 = (1 + x) - x \). The sifted list is \( (x, 1 + x) \).
-:::
 :::
 
 The theorem answers the question we started with.

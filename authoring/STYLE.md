@@ -143,7 +143,7 @@ For each theorem:
 ## 5. Examples, checks, warnings, remarks
 
 - **Examples** `::: {#exm-slug}` with a `[Title]` first line. State the question inside the example. Put the worked answer in a following `::: {.solution}`; it starts folded on the web. Use integer data chosen so the computation is clean (characteristic polynomials that factor, pivots that are ±1 or small).
-- **Quick check** `::: {.check}`: one short question, with its answer in a nested `::: {.solution}`. Put at least one per section, placed right after the idea it tests. Good checks:
+- **Quick check** `::: {.check}`: one short question. Its answer is a `::: {.solution}` placed **right after** the check block closes, never nested inside it. Put at least one per section, placed right after the idea it tests. Good checks:
   - a non-example failing only clause k;
   - "why must this be strict?";
   - "is this look-alike an example?";
@@ -229,7 +229,7 @@ Let ...  This proves the theorem.
 - [ ] Every definition is preceded by its need. Major notions follow §3 in full.
 - [ ] Every proof cites only earlier results, and every step names its reason.
 - [ ] Every example's arithmetic is verified (sympy for anything with more than two steps).
-- [ ] There is at least one Quick check, one warning and one non-example. The exercises have A, B and C groups, each exercise with a complete solution.
+- [ ] There is at least one Quick check (its solution a sibling block after it), one warning and one non-example. The exercises have A, B and C groups, each exercise with a complete solution.
 - [ ] Every B-type task has a worked example in the text.
 - [ ] Notation matches `NOTATION.md`. No symbol is used before it is introduced, and none is reused with a new meaning.
 - [ ] Labels are unique (grep `src/`), and every `@ref` target exists or is created in this chapter.

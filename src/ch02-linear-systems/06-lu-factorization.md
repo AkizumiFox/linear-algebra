@@ -268,10 +268,10 @@ and the entry \( 7 = 1 + (-3)(-2) \) mixes two multipliers. This matrix is \( L^
 
 ::: {.check}
 Find the LU factorization of \( A = \begin{pmatrix} 2 & 4 \\ 6 & 5 \end{pmatrix} \) over \( \nQ \) by elimination, and check it by multiplying.
+:::
 
 ::: {.solution}
 The pivot is \( 2 \) and the multiplier is \( \ell_{21} = 6/2 = 3 \). Subtracting \( 3 \) times row 1 from row 2 gives \( U = \begin{pmatrix} 2 & 4 \\ 0 & 5 - 12 \end{pmatrix} = \begin{pmatrix} 2 & 4 \\ 0 & -7 \end{pmatrix} \), and \( L = \begin{pmatrix} 1 & 0 \\ 3 & 1 \end{pmatrix} \). Check: \( LU = \begin{pmatrix} 2 & 4 \\ 6 & 12 - 7 \end{pmatrix} = A \).
-:::
 :::
 
 ## Solving with an LU factorization

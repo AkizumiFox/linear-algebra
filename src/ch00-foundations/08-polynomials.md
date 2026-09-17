@@ -127,10 +127,10 @@ A set with an addition and a multiplication satisfying these rules is called a *
 
 ::: {.check}
 Over \( \nR \), are \( (x + 1)^2 \) and \( x^2 + 2x + 1 \) equal as polynomials? Over \( \nF_2 \), are \( (x + 1)^2 \) and \( x^2 + 1 \) equal as polynomials?
+:::
 
 ::: {.solution}
 Both answers are yes, but for a reason that depends on the field. Expanding gives \( (x + 1)^2 = x^2 + 2x + 1 \), with coefficient sequence \( (1, 2, 1, 0, \dots) \). Over \( \nR \) this is exactly the sequence of \( x^2 + 2x + 1 \). Over \( \nF_2 \) we have \( 2 = 1 + 1 = 0 \), so the sequence is \( (1, 0, 1, 0, \dots) \), which is the sequence of \( x^2 + 1 \).
-:::
 :::
 
 ## Degree
@@ -217,10 +217,10 @@ For 2, suppose \( pq = pr \) and \( p \neq 0 \). By @thm-polynomial-ring-laws, \
 
 ::: {.check}
 Let \( p, q \in \nR[x] \) with \( \deg p = 3 \) and \( \deg q = 2 \). What are \( \deg(pq) \), \( \deg(p + q) \) and \( \deg(p^2) \)? Can you say what \( \deg(p - x^3) \) is?
+:::
 
 ::: {.solution}
 By @thm-degree-of-product, \( \deg(pq) = 5 \) and \( \deg(p^2) = 6 \). Since the degrees differ, @thm-degree-of-sum gives \( \deg(p + q) = 3 \). The degree of \( p - x^3 \) is not determined: if the leading coefficient of \( p \) is \( 1 \), the \( x^3 \) terms cancel and the degree is at most \( 2 \) (it could even be \( -\infty \) if \( p = x^3 \)); otherwise it is \( 3 \).
-:::
 :::
 
 ## Polynomials of bounded degree

@@ -180,13 +180,13 @@ For \( Q \), a minimal change gives a non-example: replacing the \( 0 \) in posi
 
 Why insist on the reduced form, when row echelon form already allows back substitution? Because a system in reduced form needs **no** substitution: each pivot variable appears in exactly one equation. More importantly, the reduced form turns out to be **unique**: a matrix is row equivalent to exactly one matrix in RREF, however the operations are chosen. That is proved in the next section, and it is what makes later definitions, such as the rank, independent of choices. Row echelon form is not unique, as the warning after the worked example shows.
 
-:::: {.check}
+::: {.check}
 Is \( \begin{pmatrix} 1 & 2 & 0 & -1 \\ 0 & 0 & 1 & 3 \\ 0 & 0 & 0 & 0 \end{pmatrix} \) in reduced row echelon form? If it is the coefficient matrix of a homogeneous system in \( x_1, x_2, x_3, x_4 \), which unknowns correspond to pivot columns?
+:::
 
 ::: {.solution}
 Yes. Row 3 is the only zero row and it is last; the leading entries lie in columns \( 1 < 3 \); both are \( 1 \); and columns 1 and 3 are \( \e_1 \) and \( \e_2 \). The pivot columns are 1 and 3, so the unknowns \( x_1 \) and \( x_3 \) correspond to pivots, and \( x_2, x_4 \) do not.
 :::
-::::
 
 ## Gauss–Jordan elimination
 

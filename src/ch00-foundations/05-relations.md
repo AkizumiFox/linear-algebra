@@ -102,13 +102,13 @@ Decide which of (E1)–(E3) each relation satisfies.
 A tempting argument claims that (E1) follows from (E2) and (E3): "if \( x \sim y \), then \( y \sim x \) by symmetry, so \( x \sim x \) by transitivity." The gap is the word "if". The argument needs some \( y \) with \( x \sim y \), and there may be none. In @exm-non-equivalence (c), the element \( 0 \) is related to nothing, which is exactly why it escapes. Reflexivity must always be checked on its own.
 :::
 
-:::: {.check}
+::: {.check}
 On \( \nZ \), define \( a \sim b \) if \( ab \ge 0 \). Is \( \sim \) an equivalence relation?
+:::
 
 ::: {.solution}
 No. It is reflexive (\( a^2 \ge 0 \)) and symmetric, but not transitive: \( 1 \sim 0 \) and \( 0 \sim -1 \) since both products are \( 0 \), yet \( 1 \cdot (-1) = -1 < 0 \), so \( 1 \not\sim -1 \). Compare @exm-non-equivalence (c): moving from \( > \) to \( \ge \) repairs reflexivity at \( 0 \) but lets \( 0 \) link the positives to the negatives.
 :::
-::::
 
 **Why these three conditions.** They are precisely what the next subsection needs. Reflexivity will guarantee that every element lies in its own class, so no class is empty and nothing is lost. Symmetry and transitivity together will guarantee that two classes are either identical or disjoint. Drop any one of them and the picture of \( X \) cut cleanly into pieces falls apart, as the non-examples above show.
 
@@ -199,13 +199,13 @@ A **partition** of a set \( X \) is a collection \( \mathcal{P} \) of subsets of
 
 By (P2) and (P3), every element of \( X \) lies in **exactly one** block. For example, \( \{ \{1, 3\}, \{2\} \} \) is a partition of \( \{1, 2, 3\} \), while \( \{ \{1, 2\}, \{2, 3\} \} \) is not, because the distinct blocks share \( 2 \) and (P2) fails.
 
-:::: {.check}
+::: {.check}
 Is \( \{ \{1, 2, 3\}, \varnothing \} \) a partition of \( \{1, 2, 3\} \)? Is \( \{ \{1\}, \{2\} \} \)?
+:::
 
 ::: {.solution}
 Neither. The first contains the empty block, so (P1) fails, even though (P2) and (P3) hold. The second does not cover \( 3 \), so (P3) fails.
 :::
-::::
 
 The main theorem says that equivalence relations and partitions are two descriptions of the same thing: "which elements are the same" and "how \( X \) is cut into pieces".
 
@@ -338,15 +338,15 @@ This is the same principle as @thm-well-defined-on-quotient, applied to a functi
 A rule written in terms of a representative is not automatically a function on classes. Define it, then check it. For example, "\( [a] \mapsto a \)" from \( \nZ/5\nZ \) to \( \nZ \) is not a function, because \( [0] = [5] \) would be sent to both \( 0 \) and \( 5 \). The check is not a formality: forgetting it is the most common error in any argument that uses quotients.
 :::
 
-:::: {.check}
+::: {.check}
 Which of these rules defines a function? (i) \( \nZ/6\nZ \to \nZ/3\nZ \), \( [a]_6 \mapsto [a]_3 \). (ii) \( \nZ/6\nZ \to \nZ/4\nZ \), \( [a]_6 \mapsto [a]_4 \). Here the subscript records the modulus.
+:::
 
 ::: {.solution}
 (i) Yes. If \( [a]_6 = [a']_6 \), then \( a - a' = 6k = 3(2k) \), so \( [a]_3 = [a']_3 \).
 
 (ii) No. \( [0]_6 = [6]_6 \), but \( [0]_4 \ne [6]_4 = [2]_4 \), since \( 6 - 0 = 6 \) is not a multiple of \( 4 \). The first works because \( 3 \mid 6 \); the second fails because \( 4 \nmid 6 \).
 :::
-::::
 
 ## Exercises
 

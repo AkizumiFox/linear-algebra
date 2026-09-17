@@ -48,13 +48,13 @@ The same example shows that \( F^{\nN} \) is infinite-dimensional. For each \( n
 It is tempting to write \( (1, 1, 1, \dots) = \e_0 + \e_1 + \e_2 + \cdots \). In a vector space this sum **means nothing**: the axioms define sums of two vectors, hence of finitely many, and an infinite sum would need a notion of limit. So "the \( \e_i \) span" is false, even though every sequence is "made of" its entries. Infinite sums return only in spaces with a notion of distance, much later.
 :::
 
-:::: {.check}
+::: {.check}
 Let \( V \) be the space of formal power series \( a_0 + a_1x + a_2x^2 + \cdots \) over \( F \), that is, \( F^{\nN} \) with \( x^k \) standing for \( \e_k \). Is \( \{1, x, x^2, \dots\} \) a basis of \( V \)?
+:::
 
 ::: {.solution}
 No. It is independent, by the argument of @exm-sequence-standard-vectors. But its span consists of the series with only finitely many non-zero coefficients, which are the polynomials. The series \( 1 + x + x^2 + \cdots \) is not among them, so the set does not span \( V \).
 :::
-::::
 
 So does \( F^{\nN} \) have a basis? In finite dimension we built bases by sifting (@thm-sift) or by extending one vector at a time (@thm-basis-extension). Both constructions stop after finitely many steps. For \( F^{\nN} \) no step-by-step process can stop, and we need a different kind of existence argument.
 
@@ -225,13 +225,13 @@ is surjective, since every real number is a rational linear combination of \( b_
 
 The proof really shows more: **every** finite-dimensional vector space over \( \nQ \) is countable. It is honest about its inputs. Linear algebra supplied only "a spanning list gives a surjection from \( \nQ^n \)"; the rest is counting and one property of the real line.
 
-:::: {.check}
+::: {.check}
 Is \( \nC \) finite-dimensional as a vector space over \( \nQ \)?
+:::
 
 ::: {.solution}
 No. If \( \nC \) were countable, then \( \nR \subseteq \nC \) would be countable too: pick any \( y_0 \in \nR \) and send \( z \in \nC \) to \( z \) if \( z \in \nR \) and to \( y_0 \) otherwise, a surjection \( \nC \to \nR \), and apply @lem-countable-sets (a). That contradicts @lem-reals-uncountable. So \( \nC \) is uncountable, and the proof of @thm-reals-infinite-dimensional-over-rationals, with \( \nC \) in place of \( \nR \), shows it is not finite-dimensional over \( \nQ \).
 :::
-::::
 
 ## What changes in infinite dimension
 

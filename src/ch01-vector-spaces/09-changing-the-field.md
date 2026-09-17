@@ -117,13 +117,13 @@ This is the result of @exr-dimension-c2, now as a case of the tower law. For exa
 A subset of \( \nC^n \) can be a subspace over \( \nR \) without being a subspace over \( \nC \). The real vectors \( \nR^n \subseteq \nC^n \) contain \( \0 \) and are closed under addition and under multiplication by **real** scalars, so they form an \( \nR \)-subspace of dimension \( n \). But \( \e_1 \in \nR^n \) and \( i\e_1 \notin \nR^n \), so \( \nR^n \) is **not** a \( \nC \)-subspace. Always ask: a subspace over which field?
 :::
 
-:::: {.check}
+::: {.check}
 What is \( \dim_\nR M_{2 \times 3}(\nC) \)? What is \( \dim_\nQ \nQ(\sqrt2)^2 \)?
+:::
 
 ::: {.solution}
 \( M_{2 \times 3}(\nC) \) has dimension \( 6 \) over \( \nC \) (@exm-dimensions), so \( \dim_\nR = 2 \cdot 6 = 12 \) by @thm-restriction-of-scalars-dimension. The space \( \nQ(\sqrt2)^2 \) has dimension \( 2 \) over the field \( \nQ(\sqrt2) \), and \( [\nQ(\sqrt2) : \nQ] = 2 \) by @exm-field-degrees, so \( \dim_\nQ = 2 \cdot 2 = 4 \) by @thm-tower-law.
 :::
-::::
 
 ## Complexification
 

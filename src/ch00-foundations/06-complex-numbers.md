@@ -59,10 +59,10 @@ so two non-zero elements multiply to zero. Division also breaks down: \( (1, 1) 
 
 ::: {.check}
 Using the definition, compute \( i^{10} \) and \( (1 + i)^2 \). Is \( \operatorname{Im}(3 - 4i) \) equal to \( -4i \)?
+:::
 
 ::: {.solution}
 Since the powers of \( i \) repeat with period 4 and \( 10 = 8 + 2 \), we get \( i^{10} = i^2 = -1 \). Next, \( (1 + i)^2 = (1 - 1) + (1 + 1)i = 2i \). No: the imaginary part is the real number \( -4 \), not \( -4i \).
-:::
 :::
 
 **The usual rules of arithmetic hold.** Before computing freely, we should confirm that rearranging, regrouping and expanding brackets are legal in \( \nC \). The definition does not promise this; it has to be checked.
@@ -337,10 +337,10 @@ Expanding \( (\sqrt{3} + i)^6 \) with the binomial theorem gives the same answer
 
 ::: {.check}
 Use polar form to compute \( (1 + i)^8 \).
+:::
 
 ::: {.solution}
 We have \( \lvert 1 + i \rvert = \sqrt{2} \) and \( 1 + i = \sqrt{2}\big(\tfrac{1}{\sqrt 2} + \tfrac{1}{\sqrt 2} i\big) = \sqrt{2} \, e^{i\pi/4} \). By @thm-de-moivre, \( (1 + i)^8 = (\sqrt{2})^8 e^{i \cdot 8\pi/4} = 16 e^{2\pi i} = 16 \). As a cross-check, \( (1 + i)^2 = 2i \), so \( (1 + i)^8 = (2i)^4 = 16 i^4 = 16 \).
-:::
 :::
 
 ## Roots of unity
@@ -393,7 +393,7 @@ The six roots sum to \( 0 \): since \( \omega^3 = e^{i\pi} = -1 \), we have \( \
 We built \( \nC \) so that one polynomial equation, \( z^2 + 1 = 0 \), has a solution. It turns out that nothing more ever needs to be added: every polynomial equation already has a solution in \( \nC \). Here a **complex polynomial of degree \( n \)** means an expression \( a_n z^n + \dots + a_1 z + a_0 \) with \( a_0, \dots, a_n \in \nC \) and \( a_n \ne 0 \); polynomials are studied properly in a later section of this chapter.
 
 ::: {#thm-fta-statement}
-[Fundamental Theorem of Algebra]
+[Fundamental Theorem of Algebra, Statement]
 
 Let \( n \ge 1 \) and let \( a_0, a_1, \dots, a_n \in \nC \) with \( a_n \ne 0 \). Then there exists \( z \in \nC \) with
 \[

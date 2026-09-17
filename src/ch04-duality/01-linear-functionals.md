@@ -107,13 +107,13 @@ Since \( \varphi \neq 0 \), there is \( \u \in V \) with \( c \coloneqq \varphi(
 
 For example, \( \ker\tr \) in \( M_n(F) \) has dimension \( n^2 - 1 \), and the polynomials in \( F[x]_{\le n} \) with \( p(c) = 0 \) form a subspace of dimension \( n \). Every non-zero functional cuts out a subspace one dimension smaller than the whole space. Later in this chapter these kernels, the hyperplanes, become the building blocks of every subspace.
 
-:::: {.check}
+::: {.check}
 Which of the following are linear functionals? (a) \( p \mapsto p(0) + 1 \) on \( \nR[x] \). (b) \( p \mapsto p(1) - 2p'(0) \) on \( \nR[x] \). (c) \( A \mapsto a_{12} \) on \( M_2(F) \).
+:::
 
 ::: {.solution}
 (a) No. It sends the zero polynomial to \( 1 \), but a linear map sends \( 0 \) to \( 0 \) (@thm-zero-maps-to-zero). (b) Yes. Evaluation at \( 1 \), differentiation and evaluation at \( 0 \) are linear, and \( V^{*} \) is closed under linear combinations and composition with linear maps (@thm-linear-maps-vector-space, @thm-composition-linear). (c) Yes. It is the coordinate of \( A \) at \( E_{12} \) in the standard basis of @exm-standard-bases, and coordinates are linear (@thm-coordinates-linear).
 :::
-::::
 
 ## The dual basis
 
@@ -240,13 +240,13 @@ That is, \( \varepsilon_i(\ell_j) = \delta_{ij} \) for \( i, j \in \{-1, 0, 1\} 
 The last formula rebuilds a polynomial from three of its values. It is a preview of the Lagrange interpolation formula of Chapter 5, and it explains where the \( \ell \)'s come from: they are the basis dual to the evaluations.
 :::
 
-:::: {.check}
+::: {.check}
 Let \( (\v_1, \v_2, \v_3) \) be a basis of \( V \) with dual basis \( (\varphi_1, \varphi_2, \varphi_3) \). Compute \( \varphi_2(3\v_1 - \v_2 + 5\v_3) \) and \( (2\varphi_1 + \varphi_3)(\v_3) \).
+:::
 
 ::: {.solution}
 \( \varphi_2(3\v_1 - \v_2 + 5\v_3) = 3 \cdot 0 - 1 \cdot 1 + 5 \cdot 0 = -1 \), the second coordinate. \( (2\varphi_1 + \varphi_3)(\v_3) = 2 \cdot 0 + 1 = 1 \).
 :::
-::::
 
 ::: {.warning}
 **\( V \cong V^{*} \) is true in finite dimension, but no isomorphism is singled out.** @cor-dimension-dual-space gives an isomorphism by sending \( \v_i \mapsto \varphi_i \), and that depends on the basis. In \( \nR^2 \) with the standard basis, it sends \( (1, 0) \) to the functional \( (x, y) \mapsto x \). With the basis \( ((1, 0), (1, 1)) \), it sends the **same** vector \( (1, 0) \) to \( (x, y) \mapsto x - y \), by the warning above. A vector does not come with "its" functional. Later in this chapter we make precise the sense in which \( V^{*} \) needs a choice to be identified with \( V \), while the double dual \( V^{**} \) does not.

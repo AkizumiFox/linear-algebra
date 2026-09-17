@@ -88,10 +88,10 @@ The last row is no accident: \( \iota \) is injective and \( \pi \) is surjectiv
 
 ::: {.check}
 Let \( V \) be a vector space of dimension \( 6 \) and \( U \) a subspace of dimension \( 2 \). Find \( \dim U^{0} \), \( \dim (V/U)^{*} \), \( \dim U^{*} \) and \( \dim(V^{*}/U^{0}) \), and check that the two theorems are consistent with these numbers.
+:::
 
 ::: {.solution}
 By @thm-dimension-annihilator, \( \dim U^{0} = 6 - 2 = 4 \). By @thm-dimension-quotient and @cor-dimension-dual-space, \( \dim(V/U)^{*} = \dim(V/U) = 4 \), matching \( (V/U)^{*} \cong U^{0} \). Next, \( \dim U^{*} = \dim U = 2 \), and \( \dim(V^{*}/U^{0}) = 6 - 4 = 2 \), matching \( U^{*} \cong V^{*}/U^{0} \).
-:::
 :::
 
 ## A line in \( \nR^3 \), in coordinates
@@ -225,6 +225,7 @@ Decide which of the following are hyperplanes, and for each hyperplane give a no
 2. The symmetric matrices in \( M_3(F) \).
 3. \( \{ p \in F[x] : p(1) = 0 \} \) in \( F[x] \).
 :::
+:::
 
 ::: {.solution}
 (a) Yes. \( A \) is symmetric exactly when \( a_{12} - a_{21} = 0 \), so the symmetric matrices are the kernel of \( A \mapsto a_{12} - a_{21} \), which is linear and non-zero (it takes the value \( 1 \) at \( E_{12} \)). By @thm-hyperplane-kernel-functional this is a hyperplane.
@@ -232,7 +233,6 @@ Decide which of the following are hyperplanes, and for each hyperplane give a no
 (b) No. The symmetric \( 3 \times 3 \) matrices form a subspace of dimension \( 6 \) (choose the entries on and above the diagonal freely), so the codimension is \( 9 - 6 = 3 \ne 1 \).
 
 (c) Yes. It is the kernel of \( p \mapsto p(1) \), which is linear (@thm-evaluation-respects-operations) and non-zero (it sends the constant \( 1 \) to \( 1 \)).
-:::
 :::
 
 ## Exercises

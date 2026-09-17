@@ -119,10 +119,10 @@ Here is a non-example by minimal change. In @exm-matrix-of-differentiation, writ
 
 ::: {.check}
 What is the size of \( \mtx{T}{\sB}{\sC} \) for a linear map \( T \colon M_{2 \times 3}(\nR) \to \nR[x]_{\le 2} \)? And what is the first column of \( \mtx{T}{\sE}{\sE'} \) for \( T \colon \nR[x]_{\le 2} \to \nR^2 \), \( T(p) = (p(0), p(1)) \), with \( \sE = (1, x, x^2) \) and \( \sE' \) the standard basis of \( \nR^2 \)?
+:::
 
 ::: {.solution}
 \( \dim \nR[x]_{\le 2} = 3 \) and \( \dim M_{2 \times 3}(\nR) = 6 \), so the matrix is \( 3 \times 6 \): rows for the codomain, columns for the domain. For the second map, the first column is the coordinate vector of the image of the first basis vector \( 1 \): \( T(1) = (1, 1) \), so the column is \( (1, 1) \).
-:::
 :::
 
 ## The fundamental square

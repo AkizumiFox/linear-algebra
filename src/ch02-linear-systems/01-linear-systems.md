@@ -142,8 +142,9 @@ A linear system \( A\x = \b \) over \( F \) is **homogeneous** if \( \b = \0 \).
 
 The trivial solution exists by the zero rule of @thm-matrix-multiplication-properties: \( A\0 = \0 \). So for a homogeneous system the interesting question is never "is there a solution?" but "is there a **non-trivial** one?". For example, \( x + 2y = 0 \), \( 2x + 4y = 0 \) has the non-trivial solution \( (-2, 1) \), while \( 2x - y = 0 \), \( x + y = 0 \) has only the trivial one: adding the equations gives \( 3x = 0 \), so \( x = 0 \), and then \( y = -x = 0 \).
 
-:::: {.check}
+::: {.check}
 Over \( \nR \), write the system \( x_1 - x_2 + 3x_3 = 4 \), \( 2x_2 + x_3 = 0 \) in the matrix picture and the column picture, and give its augmented matrix. Is \( (4, 0, 0) \) a solution? Is \( (1, 0, 1) \)?
+:::
 
 ::: {.solution}
 With \( A = \begin{pmatrix} 1 & -1 & 3 \\ 0 & 2 & 1 \end{pmatrix} \) and \( \b = (4, 0) \), the system is \( A\x = \b \). In the column picture it reads \( x_1(1, 0) + x_2(-1, 2) + x_3(3, 1) = (4, 0) \). The augmented matrix is
@@ -152,7 +153,6 @@ With \( A = \begin{pmatrix} 1 & -1 & 3 \\ 0 & 2 & 1 \end{pmatrix} \) and \( \b =
 \]
 For \( (4, 0, 0) \): \( 4 - 0 + 0 = 4 \) and \( 0 + 0 = 0 \), so it is a solution. For \( (1, 0, 1) \): the first equation gives \( 1 - 0 + 3 = 4 \), but the second gives \( 0 + 1 = 1 \neq 0 \). One failing equation is enough, so it is not a solution.
 :::
-::::
 
 ## Consistency is a question about span
 

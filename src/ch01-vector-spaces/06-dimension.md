@@ -122,10 +122,10 @@ The theorem already settles questions that would otherwise need a computation.
 
 ::: {.check}
 Can the four polynomials \( 1 + x \), \( x + x^2 \), \( x^2 + 1 \), \( 1 + x + x^2 \) be linearly independent in \( \nR[x]_{\le 2} \)?
+:::
 
 ::: {.solution}
 No. The list \( (1, x, x^2) \) spans \( \nR[x]_{\le 2} \) and has length \( 3 \), so by @thm-steinitz every independent list there has length at most \( 3 < 4 \). Indeed \( (1 + x) + (x + x^2) + (x^2 + 1) - 2(1 + x + x^2) = 0 \).
-:::
 :::
 
 ## Dimension
@@ -200,10 +200,10 @@ Dimension depends on the field. The set \( \nC \) has dimension \( 1 \) over \( 
 
 ::: {.check}
 What are \( \dim M_{2 \times 3}(F) \) and \( \dim F[x]_{\le 5} \)? Which of them equals \( \dim F^6 \)?
+:::
 
 ::: {.solution}
 \( \dim M_{2 \times 3}(F) = 2 \cdot 3 = 6 \) and \( \dim F[x]_{\le 5} = 5 + 1 = 6 \). Both equal \( \dim F^6 = 6 \).
-:::
 :::
 
 ## Size bounds
@@ -381,10 +381,10 @@ This is the dimension version of "count instead of check": to prove two subspace
 
 ::: {.check}
 Let \( U \) be a subspace of \( \nR[x]_{\le 2} \) that contains \( 1 \), \( 1 + x \) and \( (1 + x)^2 \). Must \( U = \nR[x]_{\le 2} \)?
+:::
 
 ::: {.solution}
 Yes. By @exm-count-instead-of-check, \( (1, 1 + x, (1 + x)^2) \) is independent, and it lies in \( U \), so \( \dim U \ge 3 \) by @thm-size-bounds applied in \( U \) (which is finite-dimensional by @thm-subspace-dimension). Also \( \dim U \le \dim \nR[x]_{\le 2} = 3 \). So \( \dim U = 3 \), and @thm-dim-impl-eq gives \( U = \nR[x]_{\le 2} \).
-:::
 :::
 
 ::: {.warning}

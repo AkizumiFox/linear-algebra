@@ -204,10 +204,10 @@ Hence the spaces (i)–(v) are all isomorphic to each other (and to \( \nR^6 \))
 
 ::: {.check}
 Is \( M_2(\nR) \) isomorphic to \( \nR[x]_{\le 3} \)? Is it isomorphic to \( \nR[x]_{\le 4} \)?
+:::
 
 ::: {.solution}
 \( \dim M_2(\nR) = 4 = \dim \nR[x]_{\le 3} \), so \( M_2(\nR) \cong \nR[x]_{\le 3} \) by @thm-isomorphic-iff-same-dimension. But \( \dim \nR[x]_{\le 4} = 5 \neq 4 \) (not \( 4 \): count \( 1, x, x^2, x^3, x^4 \)), so \( M_2(\nR) \not\cong \nR[x]_{\le 4} \).
-:::
 :::
 
 ## One-sided inverses
@@ -325,10 +325,10 @@ So \( T - \id_V \) is a two-sided inverse, and \( T \) is invertible by @def-inv
 
 ::: {.check}
 Is \( T \in \cL(M_2(\nR)) \), \( T(A) = A + A\tp \), invertible? Use the cheapest item of @thm-invertible-operator-tfae.
+:::
 
 ::: {.solution}
 No. Let \( A = \begin{pmatrix} 0 & 1 \\ -1 & 0 \end{pmatrix} \neq 0 \). Then \( A\tp = -A \), so \( T(A) = 0 \), and \( \ker T \neq \{0\} \). Item (c) fails, so \( T \) is not invertible.
-:::
 :::
 
 Isomorphisms let us move a whole space into \( F^n \). The next section moves **maps** as well: once bases are chosen, every linear map between finite-dimensional spaces becomes a matrix, and composition becomes matrix multiplication.

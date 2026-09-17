@@ -12,7 +12,7 @@ You are drafting sections of a comprehensive, reader-caring linear algebra textb
 
 ## Rules
 - Original prose only. Do not copy from any textbook. The reference PDFs in `linear-algebra-textbook/` may be consulted only to check that a statement is true / coverage is complete — never paraphrase their text, examples or exercises.
-- Section length ~2,500–5,000 prose words (math spans count as one word); complete: opening frame, notions per the explain template, theorems with lead-in / Idea / Proof / aftermath, ≥1 `::: {.check}` with nested `::: {.solution}`, ≥1 `::: {.warning}`, `## Exercises` with `### A. Check your understanding` / `### B. Practice` / `### C. Going deeper`, each exercise `::: {#exr-<section-slug>-a1}` titled `[A1]` followed by a complete `::: {.solution}`.
+- Section length ~2,500–5,000 prose words (math spans count as one word); complete: opening frame, notions per the explain template, theorems with lead-in / Idea / Proof / aftermath, ≥1 `::: {.check}` followed (not nested) by a `::: {.solution}` block, ≥1 `::: {.warning}`, `## Exercises` with `### A. Check your understanding` / `### B. Practice` / `### C. Going deeper`, each exercise `::: {#exr-<section-slug>-a1}` titled `[A1]` followed by a complete `::: {.solution}`.
 - Math: `\( \)` and `\[ \]` only. Unicode proof tags (⇒), (⊆) are fine in prose. Pandoc fenced divs must be closed, blank lines around them.
 - Labels globally unique: grep `src/` before creating one. Keep every "keep label" exactly.
 - `@label` refs only to earlier material (earlier chapters, earlier sections of this chapter per the blueprint, or earlier in your file). Forward pointers in prose say "in Chapter N" without @ref.

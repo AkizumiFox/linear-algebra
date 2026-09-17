@@ -66,10 +66,10 @@ Here is a non-example by minimal change. On \( V = \nR^2 \), replace \( \ev_{\v}
 
 ::: {.check}
 Let \( \v = (1, 2) \in \nR^2 \). Compute \( \ev_{\v}(\varphi) \) for \( \varphi(x, y) = 3x - y \). Is there a **non-zero** \( \psi \in (\nR^2)^{*} \) with \( \ev_{\v}(\psi) = 0 \)?
+:::
 
 ::: {.solution}
 \( \ev_{\v}(\varphi) = \varphi(1, 2) = 3 - 2 = 1 \). Yes: \( \psi(x, y) = 2x - y \) is non-zero and \( \psi(1, 2) = 0 \). A single \( \ev_{\v} \) kills many functionals; what the next theorem says is that for \( \v \neq \0 \) it does not kill **all** of them.
-:::
 :::
 
 ## The evaluation map never loses information
@@ -134,10 +134,10 @@ There is a second, sharper meaning. A choice-free construction should be compati
 
 ::: {.check}
 In \( V = \nR \) with the basis \( \sB = (2) \), compute \( \Theta_{\sB^{*}}\Theta_{\sB}(1) \) as an element of \( V^{**} \), and evaluate it on \( \psi(t) = 5t \). Compare with \( \ev_1(\psi) \).
+:::
 
 ::: {.solution}
 The dual basis of \( \sB \) is \( \varphi_1(t) = t/2 \), so \( \Theta_{\sB}(1) = \tfrac12\Theta_{\sB}(2) = \tfrac12\varphi_1 \). The dual basis of \( \sB^{*} = (\varphi_1) \) is the \( \theta \in V^{**} \) with \( \theta(\varphi_1) = 1 \), and \( \ev_2(\varphi_1) = \varphi_1(2) = 1 \), so \( \theta = \ev_2 \) and \( \Theta_{\sB^{*}}(\varphi_1) = \ev_2 \). Hence \( \Theta_{\sB^{*}}\Theta_{\sB}(1) = \tfrac12\ev_2 = \ev_1 \), using linearity of \( \ev \). On \( \psi \) it gives \( \ev_1(\psi) = \psi(1) = 5 \). The factor \( \tfrac12 \) from the first step and the factor \( 2 \) hidden in \( \ev_2 \) cancel, exactly as the general computation predicts.
-:::
 :::
 
 ::: {.remark}
@@ -256,10 +256,10 @@ Let \( V \) be a finite-dimensional vector space, and let \( U \) and \( W \) be
 
 ::: {.check}
 Is @cor-subspaces-determined-by-annihilator still true if \( U \) and \( W \) are allowed to be arbitrary **subsets** of \( V \)?
+:::
 
 ::: {.solution}
 No. In \( \nR^2 \), take \( U = \{(1, 0)\} \) and \( W = \{(2, 0)\} \). A functional \( \varphi(x, y) = ax + by \) vanishes at \( (1, 0) \) exactly when \( a = 0 \), and at \( (2, 0) \) exactly when \( 2a = 0 \), that is, again when \( a = 0 \). So \( U^{0} = W^{0} \) but \( U \neq W \). An annihilator only sees the span, \( U^{0} = (\Span U)^{0} \) (@thm-annihilator-properties (b)).
-:::
 :::
 
 ## Infinite dimension: the evaluation map is not onto

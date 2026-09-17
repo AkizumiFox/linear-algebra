@@ -38,13 +38,13 @@ The failures are just as instructive. The rule "\( x \mapsto \) the real number 
 
 The equality clause says the codomain is part of the function. The functions \( \nR \to \nR \), \( x \mapsto x^2 \) and \( \nR \to [0, \infty) \), \( x \mapsto x^2 \) have the same values but are **different** functions. This is not pedantry: we will see in a moment that one of them is surjective and the other is not.
 
-:::: {.check}
+::: {.check}
 Let \( f, g \colon \nR \to \nR \) be \( f(x) = \lvert x \rvert \) and \( g(x) = \sqrt{x^2} \). Are \( f \) and \( g \) equal?
+:::
 
 ::: {.solution}
 Yes. They have the same domain and the same codomain, and for every real \( x \) we have \( \sqrt{x^2} = \lvert x \rvert \), because \( \lvert x \rvert \) is the non-negative number whose square is \( x^2 \). Different formulas can describe the same function; what counts is the values.
 :::
-::::
 
 ## Images and preimages
 
@@ -351,13 +351,13 @@ When \( Y \) is infinite, the step "choose one element from each of infinitely m
 
 Unlike an inverse in the usual sense, one-sided inverses are rarely unique. For \( q \colon \nR \to [0, \infty) \), \( x \mapsto x^2 \), both \( y \mapsto \sqrt{y} \) and \( y \mapsto -\sqrt{y} \) are right inverses: each picks one of the two square roots.
 
-:::: {.check}
+::: {.check}
 Give a function \( f \colon \nN \to \nN \) that has a left inverse but no right inverse.
+:::
 
 ::: {.solution}
 Take \( f(n) = n + 1 \). It is injective, since \( n_1 + 1 = n_2 + 1 \) gives \( n_1 = n_2 \), so by @thm-left-inverse-iff-injective it has a left inverse; explicitly, \( g(m) = m - 1 \) for \( m \ge 1 \) and \( g(0) = 0 \) satisfies \( g(f(n)) = n \). It is not surjective, since \( n + 1 = 0 \) has no solution in \( \nN \). So by @thm-right-inverse-iff-surjective it has no right inverse.
 :::
-::::
 
 ## Inverses
 

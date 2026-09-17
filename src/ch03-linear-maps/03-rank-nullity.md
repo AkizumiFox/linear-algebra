@@ -178,6 +178,7 @@ Answer each question with a count.
 2. Is there a linear map \( T \colon \nR^6 \to \nR^4 \) with \( \nullity T = 1 \)?
 3. A linear operator \( T \) on \( \nR[x]_{\le 3} \) satisfies \( \ker T = \{0\} \). Must \( T \) be surjective?
 :::
+:::
 
 ::: {.solution}
 (a) No, by @cor-rank-nullity-consequences (c): \( 5 > 2 \). Concretely, the rank is at most \( 2 \), so the nullity is at least \( 3 \).
@@ -185,7 +186,6 @@ Answer each question with a count.
 (b) No. By @thm-rank-nullity the rank would be \( 6 - 1 = 5 \), but \( \im T \subseteq \nR^4 \) has dimension at most \( 4 \).
 
 (c) Yes. The domain and codomain are both \( \nR[x]_{\le 3} \), of dimension \( 4 \), and \( T \) is injective, so it is surjective by @cor-rank-nullity-consequences (e).
-:::
 :::
 
 ## Polynomial interpolation by counting

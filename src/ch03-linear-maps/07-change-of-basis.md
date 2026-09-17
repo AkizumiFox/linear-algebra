@@ -195,10 +195,10 @@ Directly: \( D(1) = 0 \), \( D(x) = 1 \), \( D(\tfrac12 x^2) = x \), so \( D \) 
 
 ::: {.check}
 Let \( T \colon V \to W \), and suppose we change only the basis of \( W \), from \( \sC \) to \( \sC' \), keeping \( \sB \). Which of the two side matrices in @thm-change-of-basis-maps becomes the identity, and what is the formula?
+:::
 
 ::: {.solution}
 With \( \sB' = \sB \), the left side of the square is \( [\id]_{\sB} = I_n \). The formula becomes \( \mtx{T}{\sB}{\sC'} = \mtx{\id}{\sC}{\sC'}\,\mtx{T}{\sB}{\sC} \): only a multiplication on the left. Changing the output basis acts on the rows; changing the input basis acts on the columns.
-:::
 :::
 
 ## Similar matrices
@@ -305,10 +305,10 @@ It is tempting to turn this around and decide similarity by comparing a list of 
 
 ::: {.check}
 Are \( \diag(2, 5) \) and \( \diag(5, 2) \) similar? Are \( \begin{pmatrix} 2 & 0 \\ 0 & 2 \end{pmatrix} \) and \( \begin{pmatrix} 2 & 1 \\ 0 & 2 \end{pmatrix} \) similar?
+:::
 
 ::: {.solution}
 The first pair is similar: with \( P = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix} \), which is its own inverse, \( P^{-1}\diag(2, 5)P = \diag(5, 2) \). The second pair is not: \( 2I_2 \) is a scalar matrix, so it is similar only to itself, although both matrices have trace \( 4 \) and rank \( 2 \).
-:::
 :::
 
 ## A basis adapted to the operator

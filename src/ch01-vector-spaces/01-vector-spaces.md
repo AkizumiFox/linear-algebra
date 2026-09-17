@@ -196,6 +196,7 @@ Explain why each of the following, with the usual operations, is a vector space 
 1. The set \( S \) of twice-differentiable functions \( f \colon \nR \to \nR \) with \( f'' + f = 0 \).
 2. The set of symmetric matrices \( A \in M_2(\nR) \), that is, those with \( A\tp = A \).
 :::
+:::
 
 ::: {.solution}
 Both are subsets of known spaces, so we use the pattern after @exm-vector-spaces: check closure, the zero vector and additive inverses; the other six axioms are identities inherited from the big space.
@@ -203,7 +204,6 @@ Both are subsets of known spaces, so we use the pattern after @exm-vector-spaces
 (a) \( S \subseteq \nR^{\nR} \). If \( f, g \in S \) and \( c \in \nR \), then by the sum and constant multiple rules of calculus, \( f + g \) and \( cf \) are twice differentiable, with \( (f + g)'' + (f + g) = (f'' + f) + (g'' + g) = 0 \) and \( (cf)'' + cf = c(f'' + f) = 0 \). So both lie in \( S \). The zero function \( \0 \) satisfies \( \0'' + \0 = \0 \), so \( \0 \in S \). If \( f \in S \), its additive inverse in \( \nR^{\nR} \) is \( t \mapsto -f(t) \), and \( -f(t) = (-1)f(t) \) by @thm-field-basic-properties (e); so it is the function \( (-1)f \), which lies in \( S \) by closure under scaling. The identities hold in \( \nR^{\nR} \) (@exm-vector-spaces (d)), hence in \( S \). For instance \( \sin \) and \( \cos \) lie in \( S \).
 
 (b) By @thm-transpose-properties, \( (A + B)\tp = A\tp + B\tp = A + B \) and \( (cA)\tp = cA\tp = cA \) when \( A\tp = A \) and \( B\tp = B \). The zero matrix is symmetric, and the additive inverse \( -A \), which Chapter 0 defines as \( (-1)A \), is symmetric by closure under scaling. The identities hold in \( M_2(\nR) \), hence for symmetric matrices.
-:::
 :::
 
 ## Non-examples
