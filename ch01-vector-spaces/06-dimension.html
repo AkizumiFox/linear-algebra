@@ -9,12 +9,32 @@ Algebra</title>
 
     <meta name="asset-prefix" content="../">
 
+    <meta name="color-scheme" content="light dark">
+        <meta name="description" content="How “big” is a vector space?
+We intuitively know that a plane is “bigger” than a line, and 3D space
+is “bigger” than a plane.">
+            <link rel="canonical" href="https://linear-algebra.akizumifox.com/ch01-vector-spaces/06-dimension.html">
+    <meta property="og:url" content="https://linear-algebra.akizumifox.com/ch01-vector-spaces/06-dimension.html">
+        <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Linear Algebra">
+    <meta property="og:title" content="1.6 Sifting and the Replacement
+Theorem">
+        <meta property="og:description" content="How “big” is a vector
+space? We intuitively know that a plane is “bigger” than a line, and 3D
+space is “bigger” than a plane.">
+        <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+
+    <!-- Fonts: STIX Two Text matches MathJax's math font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400;0,600;0,700;1,400;1,700&display=swap">
+
     <!-- Styles -->
-    <link rel="stylesheet" href="../styles.css?v=ad126642ac">
+    <link rel="stylesheet" href="../styles.css?v=da5562a8f3">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
     <!-- MathJax Configuration with Custom Macros -->
-    <script src="../mathjax-macros.js?v=ad126642ac"></script>
+    <script src="../mathjax-macros.js?v=da5562a8f3"></script>
     <script>
         window.MathJax = {
             tex: {
@@ -42,26 +62,39 @@ Algebra</title>
     <script src="https://cdn.jsdelivr.net/npm/tippy.js@6.3.7/dist/tippy-bundle.umd.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tippy.js@6.3.7/animations/shift-away.css">
 
-    </head>
+        </head>
 
 <body>
+    <a class="skip-link" href="#quarto-content">Skip to content</a>
+
+    <!-- Top bar on narrow screens: the sidebar opens as a drawer -->
+    <header class="mobile-header">
+        <button type="button" class="menu-button" aria-controls="quarto-sidebar" aria-expanded="false">
+            <i class="bi bi-list" aria-hidden="true"></i>
+            <span class="visually-hidden">Contents</span>
+        </button>
+        <a href="../index.html" class="mobile-title">Linear Algebra</a>
+    </header>
+
     <div id="quarto-container">
         <!-- Left Sidebar Navigation -->
-        <nav id="quarto-sidebar">
+        <nav id="quarto-sidebar" aria-label="Book contents">
             <div class="sidebar-header">
                 <a href="../index.html" class="sidebar-title">
                     Linear Algebra
                 </a>
                 <div class="sidebar-tools">
-                    <a href="../book/book.pdf" title="Full Book PDF" target="_blank">
-                        <i class="bi bi-file-pdf" style="font-size: 1.1rem"></i>
+                    <a href="../book/book.pdf" title="Full book (PDF)" target="_blank">
+                        <i class="bi bi-file-earmark-pdf" aria-hidden="true"></i>
+                        <span class="visually-hidden">Full book (PDF)</span>
                     </a>
                                     </div>
             </div>
 
             <div class="sidebar-search">
-                <i class="bi bi-search"></i>
-                <input type="text" class="search-input" id="search-input" placeholder="">
+                <i class="bi bi-search" aria-hidden="true"></i>
+                <input type="search" class="search-input" id="search-input" placeholder="Search" aria-label="Search the book" autocomplete="off">
+                <kbd class="search-shortcut" aria-hidden="true">/</kbd>
             </div>
 
             <nav class="sidebar-nav">
@@ -79,8 +112,7 @@ Algebra</title>
                 <!-- Page title removed to avoid duplication with content H1 -->
                 <!-- Quarto-style Title Block -->
                 <header id="title-block-header" class="quarto-title-block default">
-                                        <nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block"
-                        aria-label="breadcrumb">
+                                        <nav class="quarto-title-breadcrumbs" aria-label="Breadcrumb">
                         <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="../ch01-vector-spaces/index.html">Vector Spaces and Dimensions</a></li>
                         <li class="breadcrumb-item"><a href="../ch01-vector-spaces/06-dimension.html"><span class="chapter-number">1.6</span>&nbsp; <span class="chapter-title">Sifting and the Replacement Theorem</span></a></li>
@@ -120,9 +152,9 @@ Replacement Theorem</span>
                 <h2 id="the-sifting-method"><span
                 class="header-section-number">1.6.1. </span> The Sifting
                 Method</h2>
-                <div id="thm-sift" class="theorem"
+                <div id="thm-sift" class="theorem env"
                 data-env-type="theorem" data-number="1.6.1"
-                style="border-left-color: #3b6eda; background-color: #f0f5ff; ">
+                style="--env-color: #2f62b5">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Theorem</strong><strong>
                 1.6.1</strong> (Sifting Method)</span>
@@ -191,9 +223,9 @@ Replacement Theorem</span>
                 proving results about dimension and in constructing
                 bases from spanning sets.</p>
                 </div>
-                <div id="exm-sifting" class="example"
+                <div id="exm-sifting" class="example env"
                 data-env-type="example" data-number=""
-                style="border-left-color: #3a8a3a; background-color: #eef7ee; ">
+                style="--env-color: #3b7a4c">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Example</strong>
                 (Sifting Example)</span>
@@ -243,9 +275,9 @@ Replacement Theorem</span>
                 spans the same space as <span
                 class="math inline">\(S\)</span>.</p>
                 </div>
-                <div id="exm-sifting-r2" class="example"
+                <div id="exm-sifting-r2" class="example env"
                 data-env-type="example" data-number=""
-                style="border-left-color: #3a8a3a; background-color: #eef7ee; ">
+                style="--env-color: #3b7a4c">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Example</strong>
                 (Sifting in <span
@@ -271,9 +303,9 @@ Replacement Theorem</span>
                 <h2 id="the-steinitz-replacement-theorem"><span
                 class="header-section-number">1.6.2. </span> The
                 Steinitz Replacement Theorem</h2>
-                <div id="thm-steinitz" class="theorem"
+                <div id="thm-steinitz" class="theorem env"
                 data-env-type="theorem" data-number="1.6.2"
-                style="border-left-color: #3b6eda; background-color: #f0f5ff; ">
+                style="--env-color: #2f62b5">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Theorem</strong><strong>
                 1.6.2</strong> (Steinitz Exchange/Replacement
@@ -375,9 +407,9 @@ Replacement Theorem</span>
                 major conclusion we can draw from it is that any
                 (finite) basis of the same vector space will have the
                 same size.</p>
-                <div id="thm-basis-theorem" class="theorem"
+                <div id="thm-basis-theorem" class="theorem env"
                 data-env-type="theorem" data-number="1.6.3"
-                style="border-left-color: #3b6eda; background-color: #f0f5ff; ">
+                style="--env-color: #2f62b5">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Theorem</strong><strong>
                 1.6.3</strong> (Basis Theorem)</span>
@@ -409,9 +441,9 @@ Replacement Theorem</span>
                 </ul>
                 <p>Thus <span class="math inline">\(n = m\)</span>.</p>
                 </div>
-                <div id="def-dimension" class="definition"
+                <div id="def-dimension" class="definition env"
                 data-env-type="definition" data-number="1.6.1"
-                style="border-left-color: #c94c6c; background-color: #fdf2f4; ">
+                style="--env-color: #b0414f">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Definition</strong><strong>
                 1.6.1</strong> (Dimension)</span>
@@ -447,9 +479,9 @@ Replacement Theorem</span>
                 class="math inline">\(\dim_F\)</span> and write it as
                 <span class="math inline">\(\dim\)</span>.</p>
                 </div>
-                <div id="exm-dimensions" class="example"
+                <div id="exm-dimensions" class="example env"
                 data-env-type="example" data-number=""
-                style="border-left-color: #3a8a3a; background-color: #eef7ee; ">
+                style="--env-color: #3b7a4c">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Example</strong>
                 (Examples of Dimensions)</span>
@@ -487,9 +519,9 @@ Replacement Theorem</span>
                 same set can have different dimensions depending on
                 which field we use for scalar multiplication!</p>
                 </div>
-                <div id="thm-size-bounds" class="theorem"
+                <div id="thm-size-bounds" class="theorem env"
                 data-env-type="theorem" data-number="1.6.4"
-                style="border-left-color: #3b6eda; background-color: #f0f5ff; ">
+                style="--env-color: #2f62b5">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Theorem</strong><strong>
                 1.6.4</strong> (Size Bounds for Independent and Spanning
@@ -553,9 +585,9 @@ Replacement Theorem</span>
                 basis } \leq \text{ Size of spanning set}.
                 \]</span></p>
                 </div>
-                <div id="thm-basis-extension" class="theorem"
+                <div id="thm-basis-extension" class="theorem env"
                 data-env-type="theorem" data-number="1.6.5"
-                style="border-left-color: #3b6eda; background-color: #f0f5ff; ">
+                style="--env-color: #2f62b5">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Theorem</strong><strong>
                 1.6.5</strong> (Basis Extension Theorem)</span>
@@ -597,9 +629,9 @@ Replacement Theorem</span>
                 <span class="math inline">\(V\)</span> that contains
                 <span class="math inline">\(S\)</span>.</p>
                 </div>
-                <div id="cor-basis-existence" class="corollary"
+                <div id="cor-basis-existence" class="corollary env"
                 data-env-type="corollary" data-number="1.6.6"
-                style="border-left-color: #17a2a2; background-color: #e8f6f5; ">
+                style="--env-color: #2f62b5">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Corollary</strong><strong>
                 1.6.6</strong> (Existence of Basis)</span>
@@ -615,9 +647,9 @@ Replacement Theorem</span>
                 class="math inline">\(S&#39;\)</span> is a basis for
                 <span class="math inline">\(V\)</span>.</p>
                 </div>
-                <div id="thm-dim-impl-eq" class="theorem"
+                <div id="thm-dim-impl-eq" class="theorem env"
                 data-env-type="theorem" data-number="1.6.7"
-                style="border-left-color: #3b6eda; background-color: #f0f5ff; ">
+                style="--env-color: #2f62b5">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Theorem</strong><strong>
                 1.6.7</strong> (Dimension Implies Equality)</span>
@@ -683,9 +715,9 @@ Replacement Theorem</span>
                 </div>
                 <p>An immediate consequence of the above theorem is the
                 following:</p>
-                <div id="thm-maximal-indep" class="theorem"
+                <div id="thm-maximal-indep" class="theorem env"
                 data-env-type="theorem" data-number="1.6.8"
-                style="border-left-color: #3b6eda; background-color: #f0f5ff; ">
+                style="--env-color: #2f62b5">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Theorem</strong><strong>
                 1.6.8</strong> (Maximal Independent Subset is a
@@ -729,18 +761,22 @@ Replacement Theorem</span>
             <nav class="page-navigation">
                 <div class="nav-page nav-page-previous">
                                         <a href="../ch01-vector-spaces/05-basis.html" class="pagination-link" aria-label="Bases">
-                        <i class="bi bi-arrow-left-short"></i>
-                        <span
-                            class="nav-page-text">1.5 Bases</span>
+                        <i class="bi bi-arrow-left-short" aria-hidden="true"></i>
+                        <span class="nav-page-body">
+                            <span class="nav-page-label">Previous</span>
+                            <span class="nav-page-text">1.5 Bases</span>
+                        </span>
                     </a>
                                     </div>
                 <div class="nav-page nav-page-next">
                                         <a href="../ch01-vector-spaces/07-sums-and-direct-sums.html" class="pagination-link" aria-label="Sums
 of Subspaces">
-                        <span
-                            class="nav-page-text">1.7 Sums of
+                        <span class="nav-page-body">
+                            <span class="nav-page-label">Next</span>
+                            <span class="nav-page-text">1.7 Sums of
 Subspaces</span>
-                        <i class="bi bi-arrow-right-short"></i>
+                        </span>
+                        <i class="bi bi-arrow-right-short" aria-hidden="true"></i>
                     </a>
                                     </div>
             </nav>
@@ -748,21 +784,22 @@ Subspaces</span>
 
         <!-- Right Sidebar (TOC) -->
         <aside id="quarto-margin-sidebar">
-            <nav class="toc">
-                <h2>Table of contents</h2>
+            <nav class="toc" aria-label="On this page">
+                <h2>On this page</h2>
                             </nav>
 
             <div class="other-formats">
-                <h3>Other Formats</h3>
+                <h3>Download</h3>
                 <ul>
-                    <li><a href="../pdf/ch01-vector-spaces/06-dimension.pdf" target="_blank">PDF</a></li>
+                    <li><a href="../pdf/ch01-vector-spaces/06-dimension.pdf" target="_blank">This section (PDF)</a></li>
+                    <li><a href="../book/book.pdf" target="_blank">Full book (PDF)</a></li>
                 </ul>
             </div>
         </aside>
     </div>
 
     <!-- Tooltip Script -->
-    <script src="../main.js?v=ad126642ac"></script>
-    </body>
+    <script src="../main.js?v=da5562a8f3"></script>
+        </body>
 
 </html>

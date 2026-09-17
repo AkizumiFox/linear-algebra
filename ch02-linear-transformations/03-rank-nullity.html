@@ -8,12 +8,25 @@
 
     <meta name="asset-prefix" content="../">
 
+    <meta name="color-scheme" content="light dark">
+            <link rel="canonical" href="https://linear-algebra.akizumifox.com/ch02-linear-transformations/03-rank-nullity.html">
+    <meta property="og:url" content="https://linear-algebra.akizumifox.com/ch02-linear-transformations/03-rank-nullity.html">
+        <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Linear Algebra">
+    <meta property="og:title" content="2.3 Rank-Nullity Theorem">
+        <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+
+    <!-- Fonts: STIX Two Text matches MathJax's math font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400;0,600;0,700;1,400;1,700&display=swap">
+
     <!-- Styles -->
-    <link rel="stylesheet" href="../styles.css?v=ad126642ac">
+    <link rel="stylesheet" href="../styles.css?v=da5562a8f3">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
     <!-- MathJax Configuration with Custom Macros -->
-    <script src="../mathjax-macros.js?v=ad126642ac"></script>
+    <script src="../mathjax-macros.js?v=da5562a8f3"></script>
     <script>
         window.MathJax = {
             tex: {
@@ -41,26 +54,104 @@
     <script src="https://cdn.jsdelivr.net/npm/tippy.js@6.3.7/dist/tippy-bundle.umd.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tippy.js@6.3.7/animations/shift-away.css">
 
-    </head>
+        <style>
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+    </style>
+        </head>
 
 <body>
+    <a class="skip-link" href="#quarto-content">Skip to content</a>
+
+    <!-- Top bar on narrow screens: the sidebar opens as a drawer -->
+    <header class="mobile-header">
+        <button type="button" class="menu-button" aria-controls="quarto-sidebar" aria-expanded="false">
+            <i class="bi bi-list" aria-hidden="true"></i>
+            <span class="visually-hidden">Contents</span>
+        </button>
+        <a href="../index.html" class="mobile-title">Linear Algebra</a>
+    </header>
+
     <div id="quarto-container">
         <!-- Left Sidebar Navigation -->
-        <nav id="quarto-sidebar">
+        <nav id="quarto-sidebar" aria-label="Book contents">
             <div class="sidebar-header">
                 <a href="../index.html" class="sidebar-title">
                     Linear Algebra
                 </a>
                 <div class="sidebar-tools">
-                    <a href="../book/book.pdf" title="Full Book PDF" target="_blank">
-                        <i class="bi bi-file-pdf" style="font-size: 1.1rem"></i>
+                    <a href="../book/book.pdf" title="Full book (PDF)" target="_blank">
+                        <i class="bi bi-file-earmark-pdf" aria-hidden="true"></i>
+                        <span class="visually-hidden">Full book (PDF)</span>
                     </a>
                                     </div>
             </div>
 
             <div class="sidebar-search">
-                <i class="bi bi-search"></i>
-                <input type="text" class="search-input" id="search-input" placeholder="">
+                <i class="bi bi-search" aria-hidden="true"></i>
+                <input type="search" class="search-input" id="search-input" placeholder="Search" aria-label="Search the book" autocomplete="off">
+                <kbd class="search-shortcut" aria-hidden="true">/</kbd>
             </div>
 
             <nav class="sidebar-nav">
@@ -78,8 +169,7 @@
                 <!-- Page title removed to avoid duplication with content H1 -->
                 <!-- Quarto-style Title Block -->
                 <header id="title-block-header" class="quarto-title-block default">
-                                        <nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block"
-                        aria-label="breadcrumb">
+                                        <nav class="quarto-title-breadcrumbs" aria-label="Breadcrumb">
                         <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="../ch02-linear-transformations/index.html">Linear Transformations</a></li>
                         <li class="breadcrumb-item"><a href="../ch02-linear-transformations/03-rank-nullity.html"><span class="chapter-number">2.3</span>&nbsp; <span class="chapter-title">Rank-Nullity Theorem</span></a></li>
@@ -100,9 +190,9 @@ Theorem</span>
                 <h2 id="nullity-and-rank"><span
                 class="header-section-number">2.3.1. </span> Nullity and
                 Rank</h2>
-                <div id="def-nullity" class="definition"
+                <div id="def-nullity" class="definition env"
                 data-env-type="definition" data-number="2.3.1"
-                style="border-left-color: #c94c6c; background-color: #fdf2f4; ">
+                style="--env-color: #b0414f">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Definition</strong><strong>
                 2.3.1</strong> (Nullity)</span>
@@ -113,9 +203,9 @@ Theorem</span>
                 \nullity(f) \coloneqq \dim (\ker (f)).
                 \]</span></p>
                 </div>
-                <div id="def-rank" class="definition"
+                <div id="def-rank" class="definition env"
                 data-env-type="definition" data-number="2.3.2"
-                style="border-left-color: #c94c6c; background-color: #fdf2f4; ">
+                style="--env-color: #b0414f">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Definition</strong><strong>
                 2.3.2</strong> (Rank)</span>
@@ -126,9 +216,9 @@ Theorem</span>
                 \rank(f) \coloneqq \dim (\im (f)).
                 \]</span></p>
                 </div>
-                <div id="exm-nullity-rank-diff" class="example"
+                <div id="exm-nullity-rank-diff" class="example env"
                 data-env-type="example" data-number=""
-                style="border-left-color: #3a8a3a; background-color: #eef7ee; ">
+                style="--env-color: #3b7a4c">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Example</strong></span>
                 <p>Recall that for <span class="math inline">\(D :
@@ -137,7 +227,7 @@ Theorem</span>
                 D(f(x)) = f&#39;(x),
                 \]</span> we have <span class="math inline">\(\ker(D) =
                 \nR\)</span> and <span class="math inline">\(\im (D) =
-                \nR[x]_{\leq 2}\)</span>. Compute the nullity and image
+                \nR[x]_{\leq 2}\)</span>. Compute the nullity and rank
                 of <span class="math inline">\(D\)</span>.</p>
                 </div>
                 <div class="solution small-env"
@@ -157,9 +247,9 @@ Theorem</span>
                 <h2 id="the-theorem"><span
                 class="header-section-number">2.3.2. </span> The
                 Theorem</h2>
-                <div id="thm-rank-nullity" class="theorem"
+                <div id="thm-rank-nullity" class="theorem env"
                 data-env-type="theorem" data-number="2.3.1"
-                style="border-left-color: #3b6eda; background-color: #f0f5ff; ">
+                style="--env-color: #2f62b5">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Theorem</strong><strong>
                 2.3.1</strong> (Rank-Nullity Theorem)</span>
@@ -215,7 +305,7 @@ Theorem</span>
                 class="math inline">\(\im (f)\)</span>.</p>
                 <p><em>Linear independence.</em> Suppose that <span
                 class="math inline">\(\alpha_1 f(\s_1) + \cdots +
-                \lambda_k f(\s_k) = \mathbf{0}\)</span>. By linearity of
+                \alpha_k f(\s_k) = \mathbf{0}\)</span>. By linearity of
                 <span class="math inline">\(f\)</span>, it becomes <span
                 class="math inline">\(f(\alpha_1 \s_1 + \cdots +
                 \alpha_k \s_k) = \mathbf{0}\)</span>. Therefore we have
@@ -240,6 +330,34 @@ Theorem</span>
                 - \nullity (f).
                 \]</span></p>
                 </div>
+                <p>For the map <span class="math inline">\(f_\A : \nR^4
+                \to \nR^3\)</span>, <span class="math inline">\(f_\A(\v)
+                = \A\v\)</span>, the rank and nullity can be computed
+                exactly with SymPy. In the online version the code can
+                be edited and run; for any matrix, the sum is the number
+                of columns, <span class="math inline">\(\dim (\nR^4) =
+                4\)</span>.</p>
+                <div id="cell-rank-nullity" class="code-cell"
+                data-lang="python" data-packages="">
+                <div class="sourceCode" id="cb1"><pre
+                class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sympy <span class="im">import</span> Matrix</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> Matrix([</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>],</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    [<span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">6</span>, <span class="dv">8</span>],</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    [<span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>],</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>])</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>rank <span class="op">=</span> A.rank()                  <span class="co"># dim(im f_A)</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>nullity <span class="op">=</span> <span class="bu">len</span>(A.nullspace())     <span class="co"># dim(ker f_A): size of a basis of the kernel</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;rank =&quot;</span>, rank, <span class="st">&quot; nullity =&quot;</span>, nullity, <span class="st">&quot; columns =&quot;</span>, A.cols)</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>rank <span class="op">+</span> nullity <span class="op">==</span> A.cols</span></code></pre></div>
+                <div class="code-cell-toolbar">
+                <button type="button" class="code-cell-run" title="Run (Shift+Enter)">Run</button>
+                <button type="button" class="code-cell-reset" hidden>Reset</button>
+                <span class="code-cell-status" aria-live="polite"></span>
+                </div>
+                <div class="code-cell-output" hidden></div>
+                </div>
             </article>
 
             <!-- Page Navigation -->
@@ -247,10 +365,12 @@ Theorem</span>
                 <div class="nav-page nav-page-previous">
                                         <a href="../ch02-linear-transformations/02-kernel-image.html" class="pagination-link" aria-label="Kernel
 and Image">
-                        <i class="bi bi-arrow-left-short"></i>
-                        <span
-                            class="nav-page-text">2.2 Kernel and
+                        <i class="bi bi-arrow-left-short" aria-hidden="true"></i>
+                        <span class="nav-page-body">
+                            <span class="nav-page-label">Previous</span>
+                            <span class="nav-page-text">2.2 Kernel and
 Image</span>
+                        </span>
                     </a>
                                     </div>
                 <div class="nav-page nav-page-next">
@@ -260,21 +380,23 @@ Image</span>
 
         <!-- Right Sidebar (TOC) -->
         <aside id="quarto-margin-sidebar">
-            <nav class="toc">
-                <h2>Table of contents</h2>
+            <nav class="toc" aria-label="On this page">
+                <h2>On this page</h2>
                             </nav>
 
             <div class="other-formats">
-                <h3>Other Formats</h3>
+                <h3>Download</h3>
                 <ul>
-                    <li><a href="../pdf/ch02-linear-transformations/03-rank-nullity.pdf" target="_blank">PDF</a></li>
+                    <li><a href="../pdf/ch02-linear-transformations/03-rank-nullity.pdf" target="_blank">This section (PDF)</a></li>
+                    <li><a href="../book/book.pdf" target="_blank">Full book (PDF)</a></li>
                 </ul>
             </div>
         </aside>
     </div>
 
     <!-- Tooltip Script -->
-    <script src="../main.js?v=ad126642ac"></script>
-    </body>
+    <script src="../main.js?v=da5562a8f3"></script>
+        <script type="module" src="../components.js?v=da5562a8f3"></script>
+        </body>
 
 </html>

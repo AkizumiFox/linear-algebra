@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://linear-algebra.akizumifox.com/index.html</loc></url>
+  <url><loc>https://linear-algebra.akizumifox.com/ch00-foundations/index.html</loc></url>
+  <url><loc>https://linear-algebra.akizumifox.com/ch00-foundations/01-logic.html</loc></url>
+  <url><loc>https://linear-algebra.akizumifox.com/ch00-foundations/02-sets-and-notation.html</loc></url>
+  <url><loc>https://linear-algebra.akizumifox.com/ch00-foundations/03-functions.html</loc></url>
+  <url><loc>https://linear-algebra.akizumifox.com/ch00-foundations/04-relations.html</loc></url>
+  <url><loc>https://linear-algebra.akizumifox.com/ch00-foundations/05-polynomials.html</loc></url>
+  <url><loc>https://linear-algebra.akizumifox.com/ch00-foundations/06-fields.html</loc></url>
+  <url><loc>https://linear-algebra.akizumifox.com/ch00-foundations/07-matrices.html</loc></url>
+  <url><loc>https://linear-algebra.akizumifox.com/ch01-vector-spaces/index.html</loc></url>
+  <url><loc>https://linear-algebra.akizumifox.com/ch01-vector-spaces/01-vector-spaces.html</loc></url>
+  <url><loc>https://linear-algebra.akizumifox.com/ch01-vector-spaces/02-subspaces.html</loc></url>
+  <url><loc>https://linear-algebra.akizumifox.com/ch01-vector-spaces/03-span.html</loc></url>
+  <url><loc>https://linear-algebra.akizumifox.com/ch01-vector-spaces/04-independence.html</loc></url>
+  <url><loc>https://linear-algebra.akizumifox.com/ch01-vector-spaces/05-basis.html</loc></url>
+  <url><loc>https://linear-algebra.akizumifox.com/ch01-vector-spaces/06-dimension.html</loc></url>
+  <url><loc>https://linear-algebra.akizumifox.com/ch01-vector-spaces/07-sums-and-direct-sums.html</loc></url>
+  <url><loc>https://linear-algebra.akizumifox.com/ch02-linear-transformations/index.html</loc></url>
+  <url><loc>https://linear-algebra.akizumifox.com/ch02-linear-transformations/01-linear-transformations.html</loc></url>
+  <url><loc>https://linear-algebra.akizumifox.com/ch02-linear-transformations/02-kernel-image.html</loc></url>
+  <url><loc>https://linear-algebra.akizumifox.com/ch02-linear-transformations/03-rank-nullity.html</loc></url>
+</urlset>

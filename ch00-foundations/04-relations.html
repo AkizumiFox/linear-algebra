@@ -8,12 +8,31 @@
 
     <meta name="asset-prefix" content="../">
 
+    <meta name="color-scheme" content="light dark">
+        <meta name="description" content="In mathematics, we often want
+to say that two objects are “the same” in some sense, even if they are
+not identical. For instance:">
+            <link rel="canonical" href="https://linear-algebra.akizumifox.com/ch00-foundations/04-relations.html">
+    <meta property="og:url" content="https://linear-algebra.akizumifox.com/ch00-foundations/04-relations.html">
+        <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Linear Algebra">
+    <meta property="og:title" content="0.4 Equivalence Relations">
+        <meta property="og:description" content="In mathematics, we
+often want to say that two objects are “the same” in some sense, even if
+they are not identical. For instance:">
+        <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+
+    <!-- Fonts: STIX Two Text matches MathJax's math font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400;0,600;0,700;1,400;1,700&display=swap">
+
     <!-- Styles -->
-    <link rel="stylesheet" href="../styles.css?v=ad126642ac">
+    <link rel="stylesheet" href="../styles.css?v=da5562a8f3">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
     <!-- MathJax Configuration with Custom Macros -->
-    <script src="../mathjax-macros.js?v=ad126642ac"></script>
+    <script src="../mathjax-macros.js?v=da5562a8f3"></script>
     <script>
         window.MathJax = {
             tex: {
@@ -41,26 +60,39 @@
     <script src="https://cdn.jsdelivr.net/npm/tippy.js@6.3.7/dist/tippy-bundle.umd.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tippy.js@6.3.7/animations/shift-away.css">
 
-    </head>
+        </head>
 
 <body>
+    <a class="skip-link" href="#quarto-content">Skip to content</a>
+
+    <!-- Top bar on narrow screens: the sidebar opens as a drawer -->
+    <header class="mobile-header">
+        <button type="button" class="menu-button" aria-controls="quarto-sidebar" aria-expanded="false">
+            <i class="bi bi-list" aria-hidden="true"></i>
+            <span class="visually-hidden">Contents</span>
+        </button>
+        <a href="../index.html" class="mobile-title">Linear Algebra</a>
+    </header>
+
     <div id="quarto-container">
         <!-- Left Sidebar Navigation -->
-        <nav id="quarto-sidebar">
+        <nav id="quarto-sidebar" aria-label="Book contents">
             <div class="sidebar-header">
                 <a href="../index.html" class="sidebar-title">
                     Linear Algebra
                 </a>
                 <div class="sidebar-tools">
-                    <a href="../book/book.pdf" title="Full Book PDF" target="_blank">
-                        <i class="bi bi-file-pdf" style="font-size: 1.1rem"></i>
+                    <a href="../book/book.pdf" title="Full book (PDF)" target="_blank">
+                        <i class="bi bi-file-earmark-pdf" aria-hidden="true"></i>
+                        <span class="visually-hidden">Full book (PDF)</span>
                     </a>
                                     </div>
             </div>
 
             <div class="sidebar-search">
-                <i class="bi bi-search"></i>
-                <input type="text" class="search-input" id="search-input" placeholder="">
+                <i class="bi bi-search" aria-hidden="true"></i>
+                <input type="search" class="search-input" id="search-input" placeholder="Search" aria-label="Search the book" autocomplete="off">
+                <kbd class="search-shortcut" aria-hidden="true">/</kbd>
             </div>
 
             <nav class="sidebar-nav">
@@ -78,8 +110,7 @@
                 <!-- Page title removed to avoid duplication with content H1 -->
                 <!-- Quarto-style Title Block -->
                 <header id="title-block-header" class="quarto-title-block default">
-                                        <nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block"
-                        aria-label="breadcrumb">
+                                        <nav class="quarto-title-breadcrumbs" aria-label="Breadcrumb">
                         <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="../ch00-foundations/index.html">Preliminary</a></li>
                         <li class="breadcrumb-item"><a href="../ch00-foundations/04-relations.html"><span class="chapter-number">0.4</span>&nbsp; <span class="chapter-title">Equivalence Relations</span></a></li>
@@ -123,9 +154,9 @@ Relations</span>
                 <h2 id="relations"><span
                 class="header-section-number">0.4.1. </span>
                 Relations</h2>
-                <div id="def-relation" class="definition"
+                <div id="def-relation" class="definition env"
                 data-env-type="definition" data-number="0.4.1"
-                style="border-left-color: #c94c6c; background-color: #fdf2f4; ">
+                style="--env-color: #b0414f">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Definition</strong><strong>
                 0.4.1</strong> (Relation)</span>
@@ -138,9 +169,9 @@ Relations</span>
                 and say “<span class="math inline">\(a\)</span> is
                 related to <span class="math inline">\(b\)</span>.”</p>
                 </div>
-                <div id="exm-relations" class="example"
+                <div id="exm-relations" class="example env"
                 data-env-type="example" data-number=""
-                style="border-left-color: #3a8a3a; background-color: #eef7ee; ">
+                style="--env-color: #3b7a4c">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Example</strong>
                 (Examples of Relations)</span>
@@ -170,9 +201,9 @@ Relations</span>
                 <strong>equivalence relation</strong> is one that
                 satisfies three natural properties that any notion of
                 sameness should have.</p>
-                <div id="def-equivalence-relation" class="definition"
-                data-env-type="definition" data-number="0.4.2"
-                style="border-left-color: #c94c6c; background-color: #fdf2f4; ">
+                <div id="def-equivalence-relation"
+                class="definition env" data-env-type="definition"
+                data-number="0.4.2" style="--env-color: #b0414f">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Definition</strong><strong>
                 0.4.2</strong> (Equivalence Relation)</span>
@@ -203,9 +234,9 @@ Relations</span>
                 class="math inline">\(c\)</span>.)</p></li>
                 </ol>
                 </div>
-                <div id="exm-equivalence-relations" class="example"
+                <div id="exm-equivalence-relations" class="example env"
                 data-env-type="example" data-number=""
-                style="border-left-color: #3a8a3a; background-color: #eef7ee; ">
+                style="--env-color: #3b7a4c">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Example</strong>
                 (Examples of Equivalence Relations)</span>
@@ -242,9 +273,9 @@ Relations</span>
                 This is an equivalence relation.</p></li>
                 </ol>
                 </div>
-                <div id="exm-non-equivalence" class="example"
+                <div id="exm-non-equivalence" class="example env"
                 data-env-type="example" data-number=""
-                style="border-left-color: #3a8a3a; background-color: #eef7ee; ">
+                style="--env-color: #3b7a4c">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Example</strong>
                 (Non-Examples)</span>
@@ -284,9 +315,9 @@ Relations</span>
                 disjoint groups of “equivalent” elements. Each such
                 group is called an <strong>equivalence
                 class</strong>.</p>
-                <div id="def-equivalence-class" class="definition"
+                <div id="def-equivalence-class" class="definition env"
                 data-env-type="definition" data-number="0.4.3"
-                style="border-left-color: #c94c6c; background-color: #fdf2f4; ">
+                style="--env-color: #b0414f">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Definition</strong><strong>
                 0.4.3</strong> (Equivalence Class)</span>
@@ -304,9 +335,9 @@ Relations</span>
                 <strong>representative</strong> of the class <span
                 class="math inline">\([a]\)</span>.</p>
                 </div>
-                <div id="exm-equivalence-classes" class="example"
+                <div id="exm-equivalence-classes" class="example env"
                 data-env-type="example" data-number=""
-                style="border-left-color: #3a8a3a; background-color: #eef7ee; ">
+                style="--env-color: #3b7a4c">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Example</strong>
                 (Examples of Equivalence Classes)</span>
@@ -339,9 +370,9 @@ Relations</span>
                 class="math inline">\([0] = \{ 0 \}\)</span>.</p></li>
                 </ol>
                 </div>
-                <div id="thm-partition" class="theorem"
+                <div id="thm-partition" class="theorem env"
                 data-env-type="theorem" data-number="0.4.1"
-                style="border-left-color: #3b6eda; background-color: #f0f5ff; ">
+                style="--env-color: #2f62b5">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Theorem</strong><strong>
                 0.4.1</strong> (Equivalence Classes Partition the
@@ -395,9 +426,9 @@ Relations</span>
                 class="math inline">\([a]\)</span>.</li>
                 </ol>
                 </div>
-                <div id="def-quotient-set" class="definition"
+                <div id="def-quotient-set" class="definition env"
                 data-env-type="definition" data-number="0.4.4"
-                style="border-left-color: #c94c6c; background-color: #fdf2f4; ">
+                style="--env-color: #b0414f">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Definition</strong><strong>
                 0.4.4</strong> (Quotient Set)</span>
@@ -412,9 +443,9 @@ Relations</span>
                         A / {\sim} = \{ [a] : a \in A \}
                 \]</span></p>
                 </div>
-                <div id="exm-quotient-set" class="example"
+                <div id="exm-quotient-set" class="example env"
                 data-env-type="example" data-number=""
-                style="border-left-color: #3a8a3a; background-color: #eef7ee; ">
+                style="--env-color: #3b7a4c">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Example</strong>
                 (Quotient Sets)</span>
@@ -438,9 +469,9 @@ Relations</span>
                 Relations in Linear Algebra</h2>
                 <p>The following equivalence relations will appear
                 throughout your study of linear algebra:</p>
-                <div id="exm-similarity" class="example"
+                <div id="exm-similarity" class="example env"
                 data-env-type="example" data-number=""
-                style="border-left-color: #3a8a3a; background-color: #eef7ee; ">
+                style="--env-color: #3b7a4c">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Example</strong>
                 (Matrix Similarity)</span>
@@ -470,9 +501,9 @@ Relations</span>
                 properties: determinant, trace, eigenvalues, and
                 characteristic polynomial.</p>
                 </div>
-                <div id="exm-row-equivalence" class="example"
+                <div id="exm-row-equivalence" class="example env"
                 data-env-type="example" data-number=""
-                style="border-left-color: #3a8a3a; background-color: #eef7ee; ">
+                style="--env-color: #3b7a4c">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Example</strong>
                 (Row Equivalence)</span>
@@ -496,16 +527,20 @@ Relations</span>
             <nav class="page-navigation">
                 <div class="nav-page nav-page-previous">
                                         <a href="../ch00-foundations/03-functions.html" class="pagination-link" aria-label="Functions">
-                        <i class="bi bi-arrow-left-short"></i>
-                        <span
-                            class="nav-page-text">0.3 Functions</span>
+                        <i class="bi bi-arrow-left-short" aria-hidden="true"></i>
+                        <span class="nav-page-body">
+                            <span class="nav-page-label">Previous</span>
+                            <span class="nav-page-text">0.3 Functions</span>
+                        </span>
                     </a>
                                     </div>
                 <div class="nav-page nav-page-next">
                                         <a href="../ch00-foundations/05-polynomials.html" class="pagination-link" aria-label="Polynomials">
-                        <span
-                            class="nav-page-text">0.5 Polynomials</span>
-                        <i class="bi bi-arrow-right-short"></i>
+                        <span class="nav-page-body">
+                            <span class="nav-page-label">Next</span>
+                            <span class="nav-page-text">0.5 Polynomials</span>
+                        </span>
+                        <i class="bi bi-arrow-right-short" aria-hidden="true"></i>
                     </a>
                                     </div>
             </nav>
@@ -513,21 +548,22 @@ Relations</span>
 
         <!-- Right Sidebar (TOC) -->
         <aside id="quarto-margin-sidebar">
-            <nav class="toc">
-                <h2>Table of contents</h2>
+            <nav class="toc" aria-label="On this page">
+                <h2>On this page</h2>
                             </nav>
 
             <div class="other-formats">
-                <h3>Other Formats</h3>
+                <h3>Download</h3>
                 <ul>
-                    <li><a href="../pdf/ch00-foundations/04-relations.pdf" target="_blank">PDF</a></li>
+                    <li><a href="../pdf/ch00-foundations/04-relations.pdf" target="_blank">This section (PDF)</a></li>
+                    <li><a href="../book/book.pdf" target="_blank">Full book (PDF)</a></li>
                 </ul>
             </div>
         </aside>
     </div>
 
     <!-- Tooltip Script -->
-    <script src="../main.js?v=ad126642ac"></script>
-    </body>
+    <script src="../main.js?v=da5562a8f3"></script>
+        </body>
 
 </html>

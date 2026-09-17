@@ -176,7 +176,7 @@
     "number": "",
     "title": "",
     "title_html": "",
-    "html": "<p>Recall that for <span class=\"math inline\">\\(D : \\nR[x]_{\\leq 3} \\to\n\\nR[x]_{\\leq 2}\\)</span> defined by <span class=\"math display\">\\[\nD(f(x)) = f&#39;(x),\n\\]</span> we have <span class=\"math inline\">\\(\\ker(D) = \\nR\\)</span> and\n<span class=\"math inline\">\\(\\im (D) = \\nR[x]_{\\leq 2}\\)</span>. Compute\nthe nullity and image of <span class=\"math inline\">\\(D\\)</span>.</p>",
+    "html": "<p>Recall that for <span class=\"math inline\">\\(D : \\nR[x]_{\\leq 3} \\to\n\\nR[x]_{\\leq 2}\\)</span> defined by <span class=\"math display\">\\[\nD(f(x)) = f&#39;(x),\n\\]</span> we have <span class=\"math inline\">\\(\\ker(D) = \\nR\\)</span> and\n<span class=\"math inline\">\\(\\im (D) = \\nR[x]_{\\leq 2}\\)</span>. Compute\nthe nullity and rank of <span class=\"math inline\">\\(D\\)</span>.</p>",
     "file": "ch02-linear-transformations/03-rank-nullity.html"
   },
   "exm-projection": {

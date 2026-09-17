@@ -138,6 +138,16 @@
         html += '</ul>';
         sidebarNav.innerHTML = html;
 
+        // Keep the current section in view in a long sidebar
+        const active = sidebarNav.querySelector('.nav-section-item.active');
+        const sidebar = document.getElementById('quarto-sidebar');
+        if (active && sidebar) {
+            const offset = active.getBoundingClientRect().top - sidebar.getBoundingClientRect().top;
+            if (offset > sidebar.clientHeight * 0.7) {
+                sidebar.scrollTop = offset - sidebar.clientHeight / 3;
+            }
+        }
+
         // Add click handlers for chapter expansion (ONLY on toggle arrow)
         setupChapterToggle();
     }
@@ -190,7 +200,7 @@
         const headings = content.querySelectorAll('h2, h3');
         if (headings.length === 0) return;
 
-        let html = '<h2>Table of contents</h2><ul class="toc-list">';
+        let html = '<h2>On this page</h2><ul class="toc-list">';
 
         headings.forEach(heading => {
             const level = heading.tagName.toLowerCase();
@@ -374,20 +384,89 @@
     function setupSmoothScrolling() {
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
-                const targetId = this.getAttribute('href').slice(1);
+                const targetId = decodeURIComponent(this.getAttribute('href').slice(1));
                 const target = document.getElementById(targetId);
 
                 if (target) {
                     e.preventDefault();
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
+                    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+                    target.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'start' });
 
                     // Update URL without jumping
                     history.pushState(null, null, `#${targetId}`);
+                    markTarget(target);
                 }
             });
+        });
+    }
+
+    // ==========================================================================
+    // Wide Inline Formulas
+    // ==========================================================================
+
+    /**
+     * MathJax cannot break inline formulas across lines. On narrow screens a long one
+     * overflows the column and is clipped; mark those so they scroll sideways instead.
+     */
+    function setupWideInlineMath() {
+        if (!window.MathJax) return;
+        const update = () => {
+            document.querySelectorAll('.content mjx-container:not([display="true"])').forEach(math => {
+                math.classList.remove('wide-inline');
+                const column = math.closest('li, p, .env, .small-env, .content');
+                if (column && math.getBoundingClientRect().width > column.clientWidth) {
+                    math.classList.add('wide-inline');
+                }
+            });
+        };
+        const whenReady = () => MathJax.startup?.promise?.then(update);
+        if (MathJax.startup?.promise) whenReady();
+        else window.addEventListener('load', whenReady);
+        let timer;
+        window.addEventListener('resize', () => { clearTimeout(timer); timer = setTimeout(update, 200); });
+    }
+
+    // ==========================================================================
+    // Link Anchors and Targets
+    // ==========================================================================
+
+    /** Briefly highlight the theorem or heading a link led to. */
+    function markTarget(element) {
+        document.querySelectorAll('.is-target').forEach(el => el.classList.remove('is-target'));
+        if (!element) return;
+        void element.offsetWidth;  // restart the animation when the same target is chosen again
+        element.classList.add('is-target');
+    }
+
+    function markTargetFromHash() {
+        if (location.hash.length > 1) {
+            markTarget(document.getElementById(decodeURIComponent(location.hash.slice(1))));
+        }
+    }
+
+    /**
+     * A "#" link after each heading and theorem title. Clicking it goes to the element and
+     * copies its address, so a result can be shared or cited.
+     */
+    function setupAnchorLinks() {
+        const content = document.querySelector('.content');
+        if (!content) return;
+        content.querySelectorAll('h2[id], h3[id], .env[id]').forEach(element => {
+            const host = element.classList.contains('env') ? element.querySelector('.theorem-title') : element;
+            if (!host) return;
+            const link = document.createElement('a');
+            link.className = 'anchor-link';
+            link.href = `#${element.id}`;
+            link.textContent = '#';
+            link.setAttribute('aria-label', 'Copy link to this ' + (element.classList.contains('env') ? 'result' : 'section'));
+            link.addEventListener('click', () => {
+                const url = `${location.origin}${location.pathname}#${element.id}`;
+                navigator.clipboard?.writeText(url).then(() => {
+                    link.dataset.copied = 'true';
+                    setTimeout(() => delete link.dataset.copied, 1500);
+                }).catch(() => {});
+            });
+            host.append(' ', link);
         });
     }
 
@@ -395,20 +474,41 @@
     // Mobile Menu Toggle
     // ==========================================================================
 
+    /**
+     * On narrow screens the sidebar is a drawer opened from the top bar's menu button.
+     */
     function setupMobileMenu() {
-        // Add mobile menu button if it doesn't exist
         const sidebar = document.getElementById('quarto-sidebar');
-        if (!sidebar) return;
+        const button = document.querySelector('.menu-button');
+        if (!sidebar || !button) return;
 
-        // Create overlay
         const overlay = document.createElement('div');
         overlay.className = 'sidebar-overlay';
         document.body.appendChild(overlay);
 
-        // Toggle on overlay click
-        overlay.addEventListener('click', () => {
-            sidebar.classList.remove('show');
-            overlay.classList.remove('show');
+        const setOpen = open => {
+            sidebar.classList.toggle('show', open);
+            overlay.classList.toggle('show', open);
+            document.body.classList.toggle('drawer-open', open);
+            button.setAttribute('aria-expanded', String(open));
+            if (open) {
+                const current = sidebar.querySelector('.nav-section-item.active a') || sidebar.querySelector('a');
+                current?.focus({ preventScroll: true });
+                current?.scrollIntoView({ block: 'center' });
+            }
+        };
+
+        button.addEventListener('click', () => setOpen(!sidebar.classList.contains('show')));
+        overlay.addEventListener('click', () => setOpen(false));
+        document.addEventListener('keydown', event => {
+            if (event.key === 'Escape' && sidebar.classList.contains('show')) {
+                setOpen(false);
+                button.focus();
+            }
+        });
+        // Following a link (including same-page anchors) closes the drawer
+        sidebar.addEventListener('click', event => {
+            if (event.target.closest('a')) setOpen(false);
         });
     }
 
@@ -437,104 +537,179 @@
         return false;
     }
 
+    function escapeHtml(text) {
+        return String(text).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+    }
+
+    /** Split text into [{math: bool, text}] at \\( ... \\) and \\[ ... \\] delimiters. */
+    function splitMath(text) {
+        const parts = [];
+        const pattern = /\\\(([\s\S]*?)\\\)|\\\[([\s\S]*?)\\\]/g;
+        let last = 0, match;
+        while ((match = pattern.exec(text))) {
+            if (match.index > last) parts.push({ math: false, text: text.slice(last, match.index) });
+            parts.push({ math: true, text: match[0] });
+            last = pattern.lastIndex;
+        }
+        if (last < text.length) parts.push({ math: false, text: text.slice(last) });
+        return parts;
+    }
+
+    /** Escape text and wrap query words in <mark>, outside formulas (MathJax typesets those). */
+    function highlight(text, words) {
+        return splitMath(text).map(part => {
+            if (part.math) return escapeHtml(part.text);
+            let html = escapeHtml(part.text);
+            for (const word of words) {
+                const pattern = new RegExp(escapeHtml(word).replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi');
+                html = html.replace(pattern, match => `<mark>${match}</mark>`);
+            }
+            return html;
+        }).join('');
+    }
+
+    /** A slice of `text` around `index` that never cuts through a formula. */
+    function snippetAround(text, index, before = 50, after = 110) {
+        let start = Math.max(0, index - before);
+        let end = Math.min(text.length, index + after);
+        for (const pattern of [/\\\(([\s\S]*?)\\\)/g, /\\\[([\s\S]*?)\\\]/g]) {
+            let match;
+            while ((match = pattern.exec(text))) {
+                const mStart = match.index, mEnd = pattern.lastIndex;
+                if (mStart < start && mEnd > start) start = mStart;
+                if (mStart < end && mEnd > end) end = mEnd;
+            }
+        }
+        return (start > 0 ? '…' : '') + text.slice(start, end) + (end < text.length ? '…' : '');
+    }
+
     /**
-     * Perform search
+     * Search pages and results (theorems, definitions, ...). Every word of the query must
+     * appear; matches in titles rank above matches in text, and results above pages.
      */
     function search(query) {
         if (!searchIndex || !query) return [];
-        
-        const normalizedQuery = query.toLowerCase();
+        const words = query.toLowerCase().split(/\s+/).filter(Boolean);
         const results = [];
-        
+
         for (const entry of searchIndex) {
-            const title = entry.title || '';
-            const content = entry.content || '';
-            
-            const titleMatch = title.toLowerCase().includes(normalizedQuery);
-            const contentMatch = content.toLowerCase().includes(normalizedQuery);
-            
-            if (titleMatch || contentMatch) {
-                let score = 0;
-                if (titleMatch) score += 10;
-                if (contentMatch) score += 1;
-                if (title.toLowerCase() === normalizedQuery) score += 20;
-                
-                // Create snippet
-                let snippet = '';
-                if (contentMatch) {
-                    const idx = content.toLowerCase().indexOf(normalizedQuery);
-                    const start = Math.max(0, idx - 40);
-                    const end = Math.min(content.length, idx + 80);
-                    snippet = (start > 0 ? '...' : '') + 
-                              content.substring(start, end) + 
-                              (end < content.length ? '...' : '');
-                } else {
-                    snippet = content.substring(0, 100) + '...';
-                }
-                
-                results.push({
-                    title: entry.title,
-                    url: entry.url,
-                    snippet: snippet,
-                    score: score
-                });
+            const title = (entry.title || '').toLowerCase();
+            const content = (entry.content || '').toLowerCase();
+            if (!words.every(w => title.includes(w) || content.includes(w))) continue;
+
+            let score = 0;
+            for (const w of words) {
+                if (title.includes(w)) score += 10;
+                else score += 1;
             }
+            if (title.includes(query.toLowerCase())) score += 15;
+            if (entry.kind === 'result') score += 2;
+
+            // Snippet around the first word found in the text
+            const hit = words.map(w => content.indexOf(w)).filter(i => i >= 0).sort((a, b) => a - b)[0];
+            const snippet = snippetAround(entry.content || '', hit === undefined ? 0 : hit, hit === undefined ? 0 : 50);
+            results.push({ ...entry, snippet, score });
         }
-        
-        return results.sort((a, b) => b.score - a.score).slice(0, 10);
+        return results.sort((a, b) => b.score - a.score).slice(0, 12);
     }
 
     function setupSearch() {
         const searchInput = document.getElementById('search-input');
         if (!searchInput) return;
-        
-        // Create results container
+
         const resultsContainer = document.createElement('div');
         resultsContainer.className = 'search-results';
+        resultsContainer.id = 'search-results';
+        resultsContainer.setAttribute('role', 'listbox');
         searchInput.parentElement.appendChild(resultsContainer);
-        
+        searchInput.setAttribute('aria-controls', 'search-results');
+
         let debounceTimer;
-        
-        // Load index on focus
+        let activeIndex = -1;
+
+        const items = () => [...resultsContainer.querySelectorAll('.search-result-item')];
+        const close = () => {
+            resultsContainer.classList.remove('active');
+            activeIndex = -1;
+        };
+        const setActive = index => {
+            const list = items();
+            if (!list.length) return;
+            activeIndex = (index + list.length) % list.length;
+            list.forEach((item, i) => item.classList.toggle('selected', i === activeIndex));
+            list[activeIndex].scrollIntoView({ block: 'nearest' });
+        };
+
         searchInput.addEventListener('focus', () => {
             loadSearchIndex();
+            if (resultsContainer.childElementCount && searchInput.value.trim().length >= 2) {
+                resultsContainer.classList.add('active');
+            }
         });
-        
-        searchInput.addEventListener('input', (e) => {
-            const query = e.target.value.trim();
-            
+
+        // "/" focuses search (unless the reader is typing somewhere else)
+        document.addEventListener('keydown', event => {
+            if (event.key !== '/' || event.ctrlKey || event.metaKey || event.altKey) return;
+            const target = event.target;
+            if (target.closest('input, textarea, select, [contenteditable="true"]')) return;
+            event.preventDefault();
+            if (window.matchMedia('(max-width: 900px)').matches) {
+                document.querySelector('.menu-button')?.click();
+            }
+            searchInput.focus();
+        });
+
+        searchInput.addEventListener('keydown', event => {
+            if (event.key === 'ArrowDown') { event.preventDefault(); setActive(activeIndex + 1); }
+            else if (event.key === 'ArrowUp') { event.preventDefault(); setActive(activeIndex - 1); }
+            else if (event.key === 'Enter') {
+                const list = items();
+                const chosen = list[activeIndex >= 0 ? activeIndex : 0];
+                if (chosen) { event.preventDefault(); chosen.click(); }
+            } else if (event.key === 'Escape') {
+                if (resultsContainer.classList.contains('active')) {
+                    event.stopPropagation();
+                    close();
+                } else {
+                    searchInput.blur();
+                }
+            }
+        });
+
+        searchInput.addEventListener('input', event => {
+            const query = event.target.value.trim();
             clearTimeout(debounceTimer);
             debounceTimer = setTimeout(async () => {
                 if (query.length < 2) {
-                    resultsContainer.classList.remove('active');
+                    close();
                     return;
                 }
-                
                 await loadSearchIndex();
+                const words = query.split(/\s+/).filter(Boolean);
                 const results = search(query);
-                
-                if (results.length > 0) {
+                activeIndex = -1;
+
+                if (results.length) {
                     resultsContainer.innerHTML = results.map(result => `
-                        <div class="search-result-item" onclick="window.location.href='${getBasePath()}${result.url}'">
-                            <a href="${getBasePath()}${result.url}">
-                                <div class="search-result-title">${result.title}</div>
-                                <div class="search-result-preview">${result.snippet}</div>
-                            </a>
-                        </div>
+                        <a class="search-result-item" role="option" href="${escapeHtml(getBasePath() + result.url)}">
+                            <span class="search-result-title">${highlight(result.title, words)}</span>
+                            ${result.kind === 'result' ? `<span class="search-result-page">${escapeHtml(result.page)}</span>` : ''}
+                            <span class="search-result-preview">${highlight(result.snippet, words)}</span>
+                        </a>
                     `).join('');
                 } else {
-                    resultsContainer.innerHTML = `<div class="search-no-results">No results found for "${query}"</div>`;
+                    resultsContainer.innerHTML = `<div class="search-no-results">No results for “${escapeHtml(query)}”</div>`;
                 }
-                
                 resultsContainer.classList.add('active');
-            }, 300);
+                if (results.length && window.MathJax && MathJax.typesetPromise) {
+                    MathJax.typesetClear?.([resultsContainer]);
+                    MathJax.typesetPromise([resultsContainer]).catch(() => {});
+                }
+            }, 150);
         });
-        
-        // Close on click outside
-        document.addEventListener('click', (e) => {
-            if (!searchInput.contains(e.target) && !resultsContainer.contains(e.target)) {
-                resultsContainer.classList.remove('active');
-            }
+
+        document.addEventListener('click', event => {
+            if (!searchInput.contains(event.target) && !resultsContainer.contains(event.target)) close();
         });
     }
 
@@ -554,6 +729,13 @@
 
         // Build table of contents
         buildTableOfContents();
+
+        setupWideInlineMath();
+
+        // Link anchors on headings and theorems; highlight the linked element
+        setupAnchorLinks();
+        markTargetFromHash();
+        window.addEventListener('hashchange', markTargetFromHash);
 
         // Attach tooltips
         attachTooltips();

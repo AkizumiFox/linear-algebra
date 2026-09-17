@@ -8,12 +8,31 @@
 
     <meta name="asset-prefix" content="../">
 
+    <meta name="color-scheme" content="light dark">
+        <meta name="description" content="In Chapter 1, we studied
+vector spaces as static objects—sets equipped with addition and scalar
+multiplication.">
+            <link rel="canonical" href="https://linear-algebra.akizumifox.com/ch02-linear-transformations/01-linear-transformations.html">
+    <meta property="og:url" content="https://linear-algebra.akizumifox.com/ch02-linear-transformations/01-linear-transformations.html">
+        <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Linear Algebra">
+    <meta property="og:title" content="2.1 Linear Transformations">
+        <meta property="og:description" content="In Chapter 1, we
+studied vector spaces as static objects—sets equipped with addition and
+scalar multiplication.">
+        <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+
+    <!-- Fonts: STIX Two Text matches MathJax's math font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400;0,600;0,700;1,400;1,700&display=swap">
+
     <!-- Styles -->
-    <link rel="stylesheet" href="../styles.css?v=ad126642ac">
+    <link rel="stylesheet" href="../styles.css?v=da5562a8f3">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
     <!-- MathJax Configuration with Custom Macros -->
-    <script src="../mathjax-macros.js?v=ad126642ac"></script>
+    <script src="../mathjax-macros.js?v=da5562a8f3"></script>
     <script>
         window.MathJax = {
             tex: {
@@ -41,26 +60,39 @@
     <script src="https://cdn.jsdelivr.net/npm/tippy.js@6.3.7/dist/tippy-bundle.umd.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tippy.js@6.3.7/animations/shift-away.css">
 
-    </head>
+        </head>
 
 <body>
+    <a class="skip-link" href="#quarto-content">Skip to content</a>
+
+    <!-- Top bar on narrow screens: the sidebar opens as a drawer -->
+    <header class="mobile-header">
+        <button type="button" class="menu-button" aria-controls="quarto-sidebar" aria-expanded="false">
+            <i class="bi bi-list" aria-hidden="true"></i>
+            <span class="visually-hidden">Contents</span>
+        </button>
+        <a href="../index.html" class="mobile-title">Linear Algebra</a>
+    </header>
+
     <div id="quarto-container">
         <!-- Left Sidebar Navigation -->
-        <nav id="quarto-sidebar">
+        <nav id="quarto-sidebar" aria-label="Book contents">
             <div class="sidebar-header">
                 <a href="../index.html" class="sidebar-title">
                     Linear Algebra
                 </a>
                 <div class="sidebar-tools">
-                    <a href="../book/book.pdf" title="Full Book PDF" target="_blank">
-                        <i class="bi bi-file-pdf" style="font-size: 1.1rem"></i>
+                    <a href="../book/book.pdf" title="Full book (PDF)" target="_blank">
+                        <i class="bi bi-file-earmark-pdf" aria-hidden="true"></i>
+                        <span class="visually-hidden">Full book (PDF)</span>
                     </a>
                                     </div>
             </div>
 
             <div class="sidebar-search">
-                <i class="bi bi-search"></i>
-                <input type="text" class="search-input" id="search-input" placeholder="">
+                <i class="bi bi-search" aria-hidden="true"></i>
+                <input type="search" class="search-input" id="search-input" placeholder="Search" aria-label="Search the book" autocomplete="off">
+                <kbd class="search-shortcut" aria-hidden="true">/</kbd>
             </div>
 
             <nav class="sidebar-nav">
@@ -78,8 +110,7 @@
                 <!-- Page title removed to avoid duplication with content H1 -->
                 <!-- Quarto-style Title Block -->
                 <header id="title-block-header" class="quarto-title-block default">
-                                        <nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block"
-                        aria-label="breadcrumb">
+                                        <nav class="quarto-title-breadcrumbs" aria-label="Breadcrumb">
                         <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="../ch02-linear-transformations/index.html">Linear Transformations</a></li>
                         <li class="breadcrumb-item"><a href="../ch02-linear-transformations/01-linear-transformations.html"><span class="chapter-number">2.1</span>&nbsp; <span class="chapter-title">Linear Transformations</span></a></li>
@@ -115,9 +146,9 @@ Transformations</span>
                 <h2 id="definition-and-basic-properties"><span
                 class="header-section-number">2.1.1. </span> Definition
                 and Basic Properties</h2>
-                <div id="def-linear-transformation" class="definition"
-                data-env-type="definition" data-number="2.1.1"
-                style="border-left-color: #c94c6c; background-color: #fdf2f4; ">
+                <div id="def-linear-transformation"
+                class="definition env" data-env-type="definition"
+                data-number="2.1.1" style="--env-color: #b0414f">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Definition</strong><strong>
                 2.1.1</strong> (Linear Transformation)</span>
@@ -150,9 +181,9 @@ Transformations</span>
                 and (LT2).</p>
                 <h3 id="geometric-transformations">Geometric
                 Transformations</h3>
-                <div id="exm-projection" class="example"
+                <div id="exm-projection" class="example env"
                 data-env-type="example" data-number=""
-                style="border-left-color: #3a8a3a; background-color: #eef7ee; ">
+                style="--env-color: #3b7a4c">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Example</strong>
                 (Projection onto a Coordinate Axis)</span>
@@ -187,9 +218,9 @@ Transformations</span>
                 <p>Thus <span class="math inline">\(T\)</span> is a
                 linear transformation.</p>
                 </div>
-                <div id="exm-rotation" class="example"
+                <div id="exm-rotation" class="example env"
                 data-env-type="example" data-number=""
-                style="border-left-color: #3a8a3a; background-color: #eef7ee; ">
+                style="--env-color: #3b7a4c">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Example</strong>
                 (Rotation in the Plane)</span>
@@ -239,9 +270,9 @@ Transformations</span>
                 </div>
                 <h3 id="matrix-induced-transformations">Matrix-Induced
                 Transformations</h3>
-                <div id="exm-matrix-transformation" class="example"
+                <div id="exm-matrix-transformation" class="example env"
                 data-env-type="example" data-number=""
-                style="border-left-color: #3a8a3a; background-color: #eef7ee; ">
+                style="--env-color: #3b7a4c">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Example</strong>
                 (Left Multiplication by a Matrix)</span>
@@ -270,9 +301,35 @@ Transformations</span>
                 <p>These follow from the distributive and scalar
                 properties of matrix multiplication.</p>
                 </div>
-                <div id="exm-coordinate-transformation" class="example"
-                data-env-type="example" data-number=""
-                style="border-left-color: #3a8a3a; background-color: #eef7ee; ">
+                <p>For <span class="math inline">\(F = \nR\)</span> and
+                <span class="math inline">\(m = n = 2\)</span>, the map
+                <span class="math inline">\(f_\A\)</span> sends the unit
+                square to the parallelogram spanned by <span
+                class="math inline">\(\A\e_1\)</span> and <span
+                class="math inline">\(\A\e_2\)</span>, the columns of
+                <span class="math inline">\(\A\)</span>.</p>
+                <div class="widget" data-matrix="2,1,0,1"
+                data-determinant="false"
+                data-src="../widgets/linear-map.js">
+                <div class="widget-mount"></div>
+                <div class="widget-fallback">
+                <div class="tikz-figure">
+                <img
+                src="../tikz/a3aae145a092f00990dfc6e70dff572f209c8aef.svg"
+                class="tikz" />
+                </div>
+                <p>The unit square (dashed) and its image under <span
+                class="math inline">\(\A = \begin{bmatrix} 2 &amp; 1 \\
+                0 &amp; 1 \end{bmatrix}\)</span>.</p>
+                </div>
+                </div>
+                <div class="content-visible" data-when-format="html">
+                <p>Drag the tips of the two arrows to change <span
+                class="math inline">\(\A\)</span>.</p>
+                </div>
+                <div id="exm-coordinate-transformation"
+                class="example env" data-env-type="example"
+                data-number="" style="--env-color: #3b7a4c">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Example</strong>
                 (A Specific Matrix Transformation)</span>
@@ -295,9 +352,9 @@ Transformations</span>
                 \]</span> By the previous example, <span
                 class="math inline">\(T\)</span> is linear.</p>
                 </div>
-                <div id="exm-trace-matrices" class="example"
+                <div id="exm-trace-matrices" class="example env"
                 data-env-type="example" data-number=""
-                style="border-left-color: #3a8a3a; background-color: #eef7ee; ">
+                style="--env-color: #3b7a4c">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Example</strong>
                 (Trace)</span>
@@ -328,9 +385,9 @@ Transformations</span>
                 <h3
                 id="polynomial-and-function-space-transformations">Polynomial
                 and Function Space Transformations</h3>
-                <div id="exm-multiplication-by-x" class="example"
+                <div id="exm-multiplication-by-x" class="example env"
                 data-env-type="example" data-number=""
-                style="border-left-color: #3a8a3a; background-color: #eef7ee; ">
+                style="--env-color: #3b7a4c">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Example</strong>
                 (Multiplication by <span
@@ -357,9 +414,9 @@ Transformations</span>
                 class="math inline">\(x\)</span> is a linear
                 transformation.</p>
                 </div>
-                <div id="exm-differentiation" class="example"
+                <div id="exm-differentiation" class="example env"
                 data-env-type="example" data-number=""
-                style="border-left-color: #3a8a3a; background-color: #eef7ee; ">
+                style="--env-color: #3b7a4c">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Example</strong>
                 (Differentiation)</span>
@@ -392,9 +449,9 @@ Transformations</span>
                 polynomials of degree at most <span
                 class="math inline">\(n-1\)</span>.</p>
                 </div>
-                <div id="exm-integration" class="example"
+                <div id="exm-integration" class="example env"
                 data-env-type="example" data-number=""
-                style="border-left-color: #3a8a3a; background-color: #eef7ee; ">
+                style="--env-color: #3b7a4c">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Example</strong>
                 (Integration)</span>
@@ -420,9 +477,9 @@ Transformations</span>
                 </ul>
                 <p>These follow from the linearity of the integral.</p>
                 </div>
-                <div id="exm-shift" class="example"
+                <div id="exm-shift" class="example env"
                 data-env-type="example" data-number=""
-                style="border-left-color: #3a8a3a; background-color: #eef7ee; ">
+                style="--env-color: #3b7a4c">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Example</strong>
                 (Shift Operator)</span>
@@ -454,9 +511,9 @@ Transformations</span>
                 </ul>
                 <p>Thus the shift operator is linear.</p>
                 </div>
-                <div id="exm-matrix-composition" class="example"
+                <div id="exm-matrix-composition" class="example env"
                 data-env-type="example" data-number=""
-                style="border-left-color: #3a8a3a; background-color: #eef7ee; ">
+                style="--env-color: #3b7a4c">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Example</strong>
                 (Composition Operator)</span>
@@ -488,9 +545,9 @@ Transformations</span>
                 </div>
                 <h3 id="identity-and-inclusion-maps">Identity and
                 Inclusion Maps</h3>
-                <div id="exm-identity" class="example"
+                <div id="exm-identity" class="example env"
                 data-env-type="example" data-number=""
-                style="border-left-color: #3a8a3a; background-color: #eef7ee; ">
+                style="--env-color: #3b7a4c">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Example</strong>
                 (Identity Map)</span>
@@ -516,9 +573,9 @@ Transformations</span>
                 </ul>
                 <p>The identity map is trivially linear.</p>
                 </div>
-                <div id="exm-inclusion" class="example"
+                <div id="exm-inclusion" class="example env"
                 data-env-type="example" data-number=""
-                style="border-left-color: #3a8a3a; background-color: #eef7ee; ">
+                style="--env-color: #3b7a4c">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Example</strong>
                 (Inclusion Map)</span>
@@ -538,9 +595,9 @@ Transformations</span>
                 <span class="math inline">\(V\)</span>. The verification
                 is identical to the identity map.</p>
                 </div>
-                <div id="exm-zero-map" class="example"
+                <div id="exm-zero-map" class="example env"
                 data-env-type="example" data-number=""
-                style="border-left-color: #3a8a3a; background-color: #eef7ee; ">
+                style="--env-color: #3b7a4c">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Example</strong>
                 (Zero Map)</span>
@@ -572,9 +629,9 @@ Transformations</span>
                 </div>
                 <h3 id="field-dependent-examples">Field-Dependent
                 Examples</h3>
-                <div id="exm-complex-conjugation" class="example"
+                <div id="exm-complex-conjugation" class="example env"
                 data-env-type="example" data-number=""
-                style="border-left-color: #3a8a3a; background-color: #eef7ee; ">
+                style="--env-color: #3b7a4c">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Example</strong>
                 (Complex Conjugation)</span>
@@ -630,9 +687,9 @@ Transformations</span>
                 are <strong>not</strong> linear transformations. We
                 verify non-linearity by finding a counterexample to
                 either (LT1) or (LT2).</p>
-                <div id="exm-squaring" class="example"
+                <div id="exm-squaring" class="example env"
                 data-env-type="example" data-number=""
-                style="border-left-color: #3a8a3a; background-color: #eef7ee; ">
+                style="--env-color: #3b7a4c">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Example</strong>
                 (Squaring)</span>
@@ -657,9 +714,9 @@ Transformations</span>
                 class="math inline">\(T(2\v) = T(2, 0) = (4, 0) \neq 2
                 \cdot (1, 0) = (2, 0) = 2T(\v)\)</span>.</p>
                 </div>
-                <div id="exm-norm" class="example"
+                <div id="exm-norm" class="example env"
                 data-env-type="example" data-number=""
-                style="border-left-color: #3a8a3a; background-color: #eef7ee; ">
+                style="--env-color: #3b7a4c">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Example</strong>
                 (Norm)</span>
@@ -693,9 +750,9 @@ Transformations</span>
                 <h2 id="basic-theorems"><span
                 class="header-section-number">2.1.4. </span> Basic
                 Theorems</h2>
-                <div id="thm-zero-maps-to-zero" class="theorem"
+                <div id="thm-zero-maps-to-zero" class="theorem env"
                 data-env-type="theorem" data-number="2.1.1"
-                style="border-left-color: #3b6eda; background-color: #f0f5ff; ">
+                style="--env-color: #2f62b5">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Theorem</strong><strong>
                 2.1.1</strong> (Zero Maps to Zero)</span>
@@ -722,9 +779,9 @@ Transformations</span>
                 \mathbf{0}\)</span>, then <span
                 class="math inline">\(T\)</span> is not linear.</p>
                 </div>
-                <div id="exm-constant-function" class="example"
+                <div id="exm-constant-function" class="example env"
                 data-env-type="example" data-number=""
-                style="border-left-color: #3a8a3a; background-color: #eef7ee; ">
+                style="--env-color: #3b7a4c">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Example</strong>
                 (Constant Function)</span>
@@ -746,9 +803,9 @@ Transformations</span>
                 <p>Therefore, <span class="math inline">\(T\)</span> is
                 not a linear transformation.</p>
                 </div>
-                <div id="exm-translation" class="example"
+                <div id="exm-translation" class="example env"
                 data-env-type="example" data-number=""
-                style="border-left-color: #3a8a3a; background-color: #eef7ee; ">
+                style="--env-color: #3b7a4c">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Example</strong>
                 (Translation)</span>
@@ -775,9 +832,9 @@ Transformations</span>
                 if and only if <span class="math inline">\(\mathbf{c} =
                 \mathbf{0}\)</span>.</p>
                 </div>
-                <div id="thm-preserves-negation" class="theorem"
+                <div id="thm-preserves-negation" class="theorem env"
                 data-env-type="theorem" data-number="2.1.2"
-                style="border-left-color: #3b6eda; background-color: #f0f5ff; ">
+                style="--env-color: #2f62b5">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Theorem</strong><strong>
                 2.1.2</strong> (Linear Maps Preserve Negation)</span>
@@ -793,9 +850,9 @@ Transformations</span>
                     T(-\v) = T((-1)\v) = (-1)T(\v) = -T(\v).
                 \]</span></p>
                 </div>
-                <div id="thm-equivalent-condition" class="theorem"
+                <div id="thm-equivalent-condition" class="theorem env"
                 data-env-type="theorem" data-number="2.1.3"
-                style="border-left-color: #3b6eda; background-color: #f0f5ff; ">
+                style="--env-color: #2f62b5">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Theorem</strong><strong>
                 2.1.3</strong> (Equivalent Characterization of
@@ -848,9 +905,9 @@ Transformations</span>
                 both (LT1) and (LT2), so <span
                 class="math inline">\(T\)</span> is linear.</p>
                 </div>
-                <div id="thm-linear-combination" class="theorem"
+                <div id="thm-linear-combination" class="theorem env"
                 data-env-type="theorem" data-number="2.1.4"
-                style="border-left-color: #3b6eda; background-color: #f0f5ff; ">
+                style="--env-color: #2f62b5">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Theorem</strong><strong>
                 2.1.4</strong> (Linear Maps Preserve Linear
@@ -886,9 +943,9 @@ Transformations</span>
                 <p>Another useful fact of a linear transformation is
                 that once we know how it acts on a basis, then we know
                 how it acts on every vector in the domain.</p>
-                <div id="thm-linear-transform-basis" class="theorem"
+                <div id="thm-linear-transform-basis" class="theorem env"
                 data-env-type="theorem" data-number="2.1.5"
-                style="border-left-color: #3b6eda; background-color: #f0f5ff; ">
+                style="--env-color: #2f62b5">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Theorem</strong><strong>
                 2.1.5</strong> (Linear Transformations are Determined by
@@ -944,9 +1001,9 @@ Transformations</span>
                 \in V\)</span>, we have <span class="math inline">\(f =
                 g\)</span>. This finishes the second condition.</p>
                 </div>
-                <div id="exm-deter" class="example"
+                <div id="exm-deter" class="example env"
                 data-env-type="example" data-number=""
-                style="border-left-color: #3a8a3a; background-color: #eef7ee; ">
+                style="--env-color: #3b7a4c">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Example</strong></span>
                 <p>Is it possible to have a linear map <span
@@ -980,9 +1037,9 @@ Transformations</span>
                 <p>Which is inconsistent with the third equation,
                 therefore no such transformation exists.</p>
                 </div>
-                <div id="exm-deter-two" class="example"
+                <div id="exm-deter-two" class="example env"
                 data-env-type="example" data-number=""
-                style="border-left-color: #3a8a3a; background-color: #eef7ee; ">
+                style="--env-color: #3b7a4c">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Example</strong></span>
                 <p>Suppose we are give a linear transformation <span
@@ -1013,19 +1070,23 @@ Transformations</span>
                 <div class="nav-page nav-page-previous">
                                         <a href="../ch02-linear-transformations/index.html" class="pagination-link" aria-label="Linear
 Transformations">
-                        <i class="bi bi-arrow-left-short"></i>
-                        <span
-                            class="nav-page-text">Linear
+                        <i class="bi bi-arrow-left-short" aria-hidden="true"></i>
+                        <span class="nav-page-body">
+                            <span class="nav-page-label">Previous</span>
+                            <span class="nav-page-text">Linear
 Transformations</span>
+                        </span>
                     </a>
                                     </div>
                 <div class="nav-page nav-page-next">
                                         <a href="../ch02-linear-transformations/02-kernel-image.html" class="pagination-link" aria-label="Kernel
 and Image">
-                        <span
-                            class="nav-page-text">2.2 Kernel and
+                        <span class="nav-page-body">
+                            <span class="nav-page-label">Next</span>
+                            <span class="nav-page-text">2.2 Kernel and
 Image</span>
-                        <i class="bi bi-arrow-right-short"></i>
+                        </span>
+                        <i class="bi bi-arrow-right-short" aria-hidden="true"></i>
                     </a>
                                     </div>
             </nav>
@@ -1033,21 +1094,23 @@ Image</span>
 
         <!-- Right Sidebar (TOC) -->
         <aside id="quarto-margin-sidebar">
-            <nav class="toc">
-                <h2>Table of contents</h2>
+            <nav class="toc" aria-label="On this page">
+                <h2>On this page</h2>
                             </nav>
 
             <div class="other-formats">
-                <h3>Other Formats</h3>
+                <h3>Download</h3>
                 <ul>
-                    <li><a href="../pdf/ch02-linear-transformations/01-linear-transformations.pdf" target="_blank">PDF</a></li>
+                    <li><a href="../pdf/ch02-linear-transformations/01-linear-transformations.pdf" target="_blank">This section (PDF)</a></li>
+                    <li><a href="../book/book.pdf" target="_blank">Full book (PDF)</a></li>
                 </ul>
             </div>
         </aside>
     </div>
 
     <!-- Tooltip Script -->
-    <script src="../main.js?v=ad126642ac"></script>
-    </body>
+    <script src="../main.js?v=da5562a8f3"></script>
+        <script type="module" src="../components.js?v=da5562a8f3"></script>
+        </body>
 
 </html>

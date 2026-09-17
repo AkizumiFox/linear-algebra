@@ -8,12 +8,31 @@
 
     <meta name="asset-prefix" content="../">
 
+    <meta name="color-scheme" content="light dark">
+        <meta name="description" content="Quantifiers can be nested:
+statements may involve multiple quantifiers in sequence. The order
+matters.">
+            <link rel="canonical" href="https://linear-algebra.akizumifox.com/ch00-foundations/01-logic.html">
+    <meta property="og:url" content="https://linear-algebra.akizumifox.com/ch00-foundations/01-logic.html">
+        <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Linear Algebra">
+    <meta property="og:title" content="0.1 Logic and Quantifiers">
+        <meta property="og:description" content="Quantifiers can be
+nested: statements may involve multiple quantifiers in sequence. The
+order matters.">
+        <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+
+    <!-- Fonts: STIX Two Text matches MathJax's math font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400;0,600;0,700;1,400;1,700&display=swap">
+
     <!-- Styles -->
-    <link rel="stylesheet" href="../styles.css?v=ad126642ac">
+    <link rel="stylesheet" href="../styles.css?v=da5562a8f3">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
     <!-- MathJax Configuration with Custom Macros -->
-    <script src="../mathjax-macros.js?v=ad126642ac"></script>
+    <script src="../mathjax-macros.js?v=da5562a8f3"></script>
     <script>
         window.MathJax = {
             tex: {
@@ -41,26 +60,39 @@
     <script src="https://cdn.jsdelivr.net/npm/tippy.js@6.3.7/dist/tippy-bundle.umd.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tippy.js@6.3.7/animations/shift-away.css">
 
-    </head>
+        </head>
 
 <body>
+    <a class="skip-link" href="#quarto-content">Skip to content</a>
+
+    <!-- Top bar on narrow screens: the sidebar opens as a drawer -->
+    <header class="mobile-header">
+        <button type="button" class="menu-button" aria-controls="quarto-sidebar" aria-expanded="false">
+            <i class="bi bi-list" aria-hidden="true"></i>
+            <span class="visually-hidden">Contents</span>
+        </button>
+        <a href="../index.html" class="mobile-title">Linear Algebra</a>
+    </header>
+
     <div id="quarto-container">
         <!-- Left Sidebar Navigation -->
-        <nav id="quarto-sidebar">
+        <nav id="quarto-sidebar" aria-label="Book contents">
             <div class="sidebar-header">
                 <a href="../index.html" class="sidebar-title">
                     Linear Algebra
                 </a>
                 <div class="sidebar-tools">
-                    <a href="../book/book.pdf" title="Full Book PDF" target="_blank">
-                        <i class="bi bi-file-pdf" style="font-size: 1.1rem"></i>
+                    <a href="../book/book.pdf" title="Full book (PDF)" target="_blank">
+                        <i class="bi bi-file-earmark-pdf" aria-hidden="true"></i>
+                        <span class="visually-hidden">Full book (PDF)</span>
                     </a>
                                     </div>
             </div>
 
             <div class="sidebar-search">
-                <i class="bi bi-search"></i>
-                <input type="text" class="search-input" id="search-input" placeholder="">
+                <i class="bi bi-search" aria-hidden="true"></i>
+                <input type="search" class="search-input" id="search-input" placeholder="Search" aria-label="Search the book" autocomplete="off">
+                <kbd class="search-shortcut" aria-hidden="true">/</kbd>
             </div>
 
             <nav class="sidebar-nav">
@@ -78,8 +110,7 @@
                 <!-- Page title removed to avoid duplication with content H1 -->
                 <!-- Quarto-style Title Block -->
                 <header id="title-block-header" class="quarto-title-block default">
-                                        <nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block"
-                        aria-label="breadcrumb">
+                                        <nav class="quarto-title-breadcrumbs" aria-label="Breadcrumb">
                         <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="../ch00-foundations/index.html">Preliminary</a></li>
                         <li class="breadcrumb-item"><a href="../ch00-foundations/01-logic.html"><span class="chapter-number">0.1</span>&nbsp; <span class="chapter-title">Logic and Quantifiers</span></a></li>
@@ -111,9 +142,9 @@ Quantifiers</span>
                 <h2 id="quantifiers"><span
                 class="header-section-number">0.1.1. </span>
                 Quantifiers</h2>
-                <div id="def-quantifiers" class="definition"
+                <div id="def-quantifiers" class="definition env"
                 data-env-type="definition" data-number="0.1.1"
-                style="border-left-color: #c94c6c; background-color: #fdf2f4; ">
+                style="--env-color: #b0414f">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Definition</strong><strong>
                 0.1.1</strong> (Quantifiers)</span>
@@ -157,9 +188,9 @@ Quantifiers</span>
                 class="math inline">\(S\)</span> such that <span
                 class="math inline">\(P(x)\)</span>.”</p>
                 </div>
-                <div id="exm-quantifiers" class="example"
+                <div id="exm-quantifiers" class="example env"
                 data-env-type="example" data-number=""
-                style="border-left-color: #3a8a3a; background-color: #eef7ee; ">
+                style="--env-color: #3b7a4c">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Example</strong>
                 (Quantified Statements)</span>
@@ -190,9 +221,9 @@ Quantifiers</span>
                 <p>Quantifiers can be <strong>nested</strong>:
                 statements may involve multiple quantifiers in sequence.
                 The <strong>order matters</strong>.</p>
-                <div id="exm-nested-quantifiers" class="example"
+                <div id="exm-nested-quantifiers" class="example env"
                 data-env-type="example" data-number=""
-                style="border-left-color: #3a8a3a; background-color: #eef7ee; ">
+                style="--env-color: #3b7a4c">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Example</strong>
                 (Nested Quantifiers)</span>
@@ -225,9 +256,9 @@ Quantifiers</span>
                 quantified statements, there is a systematic rule: the
                 universal quantifier becomes existential, and vice
                 versa, while the predicate gets negated.</p>
-                <div id="def-negation-of-quantifiers" class="definition"
-                data-env-type="definition" data-number="0.1.2"
-                style="border-left-color: #c94c6c; background-color: #fdf2f4; ">
+                <div id="def-negation-of-quantifiers"
+                class="definition env" data-env-type="definition"
+                data-number="0.1.2" style="--env-color: #b0414f">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Definition</strong><strong>
                 0.1.2</strong> (Negation of Quantifiers)</span>
@@ -253,9 +284,9 @@ Quantifiers</span>
                 <span class="math inline">\(P\)</span>.”</li>
                 </ul>
                 </div>
-                <div id="exm-negation-basic" class="example"
+                <div id="exm-negation-basic" class="example env"
                 data-env-type="example" data-number=""
-                style="border-left-color: #3a8a3a; background-color: #eef7ee; ">
+                style="--env-color: #3b7a4c">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Example</strong>
                 (Basic Negation Examples)</span>
@@ -279,9 +310,9 @@ Quantifiers</span>
                 <p>The following examples demonstrate how to negate
                 definitions that you will encounter repeatedly in linear
                 algebra.</p>
-                <div id="exm-negation-injectivity" class="example"
+                <div id="exm-negation-injectivity" class="example env"
                 data-env-type="example" data-number=""
-                style="border-left-color: #3a8a3a; background-color: #eef7ee; ">
+                style="--env-color: #3b7a4c">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Example</strong>
                 (Negating the Definition of Injectivity)</span>
@@ -305,9 +336,9 @@ Quantifiers</span>
                 <strong>distinct</strong> elements that map to the same
                 value.</p>
                 </div>
-                <div id="exm-negation-surjectivity" class="example"
+                <div id="exm-negation-surjectivity" class="example env"
                 data-env-type="example" data-number=""
-                style="border-left-color: #3a8a3a; background-color: #eef7ee; ">
+                style="--env-color: #3b7a4c">
                 <span
                 class="theorem-title theorem-title-resolved"><strong>Example</strong>
                 (Negating the Definition of Surjectivity)</span>
@@ -348,18 +379,22 @@ Quantifiers</span>
             <nav class="page-navigation">
                 <div class="nav-page nav-page-previous">
                                         <a href="../ch00-foundations/index.html" class="pagination-link" aria-label="Preliminary">
-                        <i class="bi bi-arrow-left-short"></i>
-                        <span
-                            class="nav-page-text">Preliminary</span>
+                        <i class="bi bi-arrow-left-short" aria-hidden="true"></i>
+                        <span class="nav-page-body">
+                            <span class="nav-page-label">Previous</span>
+                            <span class="nav-page-text">Preliminary</span>
+                        </span>
                     </a>
                                     </div>
                 <div class="nav-page nav-page-next">
                                         <a href="../ch00-foundations/02-sets-and-notation.html" class="pagination-link" aria-label="Sets
 and Notation">
-                        <span
-                            class="nav-page-text">0.2 Sets and
+                        <span class="nav-page-body">
+                            <span class="nav-page-label">Next</span>
+                            <span class="nav-page-text">0.2 Sets and
 Notation</span>
-                        <i class="bi bi-arrow-right-short"></i>
+                        </span>
+                        <i class="bi bi-arrow-right-short" aria-hidden="true"></i>
                     </a>
                                     </div>
             </nav>
@@ -367,21 +402,22 @@ Notation</span>
 
         <!-- Right Sidebar (TOC) -->
         <aside id="quarto-margin-sidebar">
-            <nav class="toc">
-                <h2>Table of contents</h2>
+            <nav class="toc" aria-label="On this page">
+                <h2>On this page</h2>
                             </nav>
 
             <div class="other-formats">
-                <h3>Other Formats</h3>
+                <h3>Download</h3>
                 <ul>
-                    <li><a href="../pdf/ch00-foundations/01-logic.pdf" target="_blank">PDF</a></li>
+                    <li><a href="../pdf/ch00-foundations/01-logic.pdf" target="_blank">This section (PDF)</a></li>
+                    <li><a href="../book/book.pdf" target="_blank">Full book (PDF)</a></li>
                 </ul>
             </div>
         </aside>
     </div>
 
     <!-- Tooltip Script -->
-    <script src="../main.js?v=ad126642ac"></script>
-    </body>
+    <script src="../main.js?v=da5562a8f3"></script>
+        </body>
 
 </html>
