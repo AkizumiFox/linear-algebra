@@ -9,7 +9,7 @@
    ========================================================================== */
 
 :root {
-  color-scheme: light dark;
+  color-scheme: light;
 
   /* Color */
   --paper: #ffffff;
@@ -39,23 +39,24 @@
   --toc-width: 15rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --paper: #16181c;
-    --ink: #d8dbe0;
-    --ink-strong: #f1f2f4;
-    --muted: #a1a7b1;
-    --faint: #7d838d;
-    --rule: #2b2f36;
-    --rule-strong: #3a3f47;
-    --subtle: #1d2025;
-    --accent: #83adf0;
-    --accent-soft: #1f2a3b;
-    --danger: #f08c82;
-    --shadow: 0 6px 24px rgba(0, 0, 0, 0.5);
-    --env-tint: 13%;
-    --env-rule-mix: 35%;
-  }
+/* Dark theme: data-theme is set before first paint from the saved choice or the system
+   setting (template.html), and switched by the toolbar button (main.js) */
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --paper: #16181c;
+  --ink: #d8dbe0;
+  --ink-strong: #f1f2f4;
+  --muted: #a1a7b1;
+  --faint: #7d838d;
+  --rule: #2b2f36;
+  --rule-strong: #3a3f47;
+  --subtle: #1d2025;
+  --accent: #83adf0;
+  --accent-soft: #1f2a3b;
+  --danger: #f08c82;
+  --shadow: 0 6px 24px rgba(0, 0, 0, 0.5);
+  --env-tint: 13%;
+  --env-rule-mix: 35%;
 }
 
 /* ==========================================================================
@@ -340,11 +341,9 @@ img {
   text-align: center;
 }
 
-@media (prefers-color-scheme: dark) {
-  /* Black-on-transparent drawings: invert lightness, keep hues */
-  .tikz-figure img.tikz {
-    filter: invert(0.88) hue-rotate(180deg);
-  }
+/* Black-on-transparent drawings: invert lightness, keep hues */
+[data-theme="dark"] .tikz-figure img.tikz {
+  filter: invert(0.88) hue-rotate(180deg);
 }
 
 /* ==========================================================================
@@ -557,29 +556,28 @@ div.sourceCode {
   background: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  .content code span.kw,
-  .content code span.cf,
-  .content code span.im { color: #8fb8ff; }
-  .content code span.st,
-  .content code span.ch,
-  .content code span.vs,
-  .content code span.sc { color: #a5d6a7; }
-  .content code span.dv,
-  .content code span.fl,
-  .content code span.bn,
-  .content code span.cn { color: #f2c38b; }
-  .content code span.co,
-  .content code span.do,
-  .content code span.an,
-  .content code span.cv { color: #8b929c; }
-  .content code span.fu,
-  .content code span.bu { color: #d7b8f3; }
-  .content code span.op,
-  .content code span.va,
-  .content code span.ot,
-  .content code span.dt { color: #d8dbe0; }
-}
+/* Code highlighting colors for the dark theme */
+[data-theme="dark"] .content code span.kw,
+[data-theme="dark"] .content code span.cf,
+[data-theme="dark"] .content code span.im { color: #8fb8ff; }
+[data-theme="dark"] .content code span.st,
+[data-theme="dark"] .content code span.ch,
+[data-theme="dark"] .content code span.vs,
+[data-theme="dark"] .content code span.sc { color: #a5d6a7; }
+[data-theme="dark"] .content code span.dv,
+[data-theme="dark"] .content code span.fl,
+[data-theme="dark"] .content code span.bn,
+[data-theme="dark"] .content code span.cn { color: #f2c38b; }
+[data-theme="dark"] .content code span.co,
+[data-theme="dark"] .content code span.do,
+[data-theme="dark"] .content code span.an,
+[data-theme="dark"] .content code span.cv { color: #8b929c; }
+[data-theme="dark"] .content code span.fu,
+[data-theme="dark"] .content code span.bu { color: #d7b8f3; }
+[data-theme="dark"] .content code span.op,
+[data-theme="dark"] .content code span.va,
+[data-theme="dark"] .content code span.ot,
+[data-theme="dark"] .content code span.dt { color: #d8dbe0; }
 
 /* ==========================================================================
    Tables
@@ -1049,13 +1047,249 @@ th {
   font-size: 0.9rem;
 }
 
-/* --- Top bar and drawer (narrow screens) --- */
-.mobile-header {
+.sidebar-overlay {
   display: none;
 }
 
-.sidebar-overlay {
+/* --- Toolbar (top of the text column) --- */
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 900;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: -2.5rem -3rem 1.25rem;
+  padding: 0.5rem 1.5rem;
+  background: color-mix(in srgb, var(--paper) 88%, transparent);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+.topbar-title {
+  overflow: hidden;
+  color: var(--ink-strong);
+  font-size: 1rem;
+  font-weight: 700;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+/* The book title appears in the toolbar when the sidebar (which shows it) is not visible */
+[data-sidebar="collapsed"] .topbar-title {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.topbar-actions {
+  display: flex;
+  gap: 0.25rem;
+  margin-left: auto;
+}
+
+/* --- Icon buttons --- */
+.icon-button {
+  position: relative;
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  padding: 0;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--muted);
+  font-size: 1.1rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease, transform 0.1s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.icon-button:hover {
+  background: var(--subtle);
+  border-color: var(--rule);
+  color: var(--ink-strong);
+}
+
+.icon-button:active {
+  transform: scale(0.92);
+  background: var(--accent-soft);
+}
+
+.icon-button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+
+/* A toggle whose pane is folded away shows that state (not the phone drawer, which is
+   normally closed) */
+[data-toc="collapsed"] .toc-toggle {
+  color: var(--accent);
+}
+
+@media (min-width: 901px) {
+  [data-sidebar="collapsed"] .sidebar-toggle {
+    color: var(--accent);
+  }
+}
+
+/* Contents button: a pane icon on wide screens, a menu icon where it opens a drawer */
+.sidebar-icon-menu {
   display: none;
+}
+
+@media (max-width: 900px) {
+  .sidebar-icon-pane {
+    display: none;
+  }
+
+  .sidebar-icon-menu {
+    display: inline;
+    font-size: 1.35em;
+  }
+}
+
+/* Theme icon: moon in light mode (switch to dark), sun in dark mode */
+.theme-toggle i {
+  position: absolute;
+  transition: opacity 0.2s ease, transform 0.3s ease;
+}
+
+.theme-icon-sun,
+[data-theme="dark"] .theme-icon-moon {
+  opacity: 0;
+  transform: rotate(-90deg) scale(0.6);
+}
+
+[data-theme="dark"] .theme-icon-sun {
+  opacity: 1;
+  transform: none;
+}
+
+/* Tooltips from data-tooltip, for mouse and keyboard users */
+@media (hover: hover) {
+  .icon-button[data-tooltip]::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    top: calc(100% + 6px);
+    z-index: 950;
+    padding: 0.25rem 0.5rem;
+    border-radius: 5px;
+    background: var(--ink-strong);
+    color: var(--paper);
+    font-family: var(--font-body);
+    font-size: 0.72rem;
+    line-height: 1.3;
+    white-space: nowrap;
+    pointer-events: none;
+    opacity: 0;
+    transform: translateY(-2px);
+    transition: opacity 0.15s ease, transform 0.15s ease;
+  }
+
+  .sidebar-toggle[data-tooltip]::after {
+    left: 0;
+  }
+
+  .topbar-actions .icon-button[data-tooltip]::after {
+    right: 0;
+  }
+
+  .icon-button:hover::after,
+  .icon-button:focus-visible::after {
+    opacity: 1;
+    transform: none;
+    transition-delay: 0.35s;
+  }
+}
+
+/* Touch screens: larger targets */
+@media (pointer: coarse) {
+  .icon-button {
+    width: 2.75rem;
+    height: 2.75rem;
+    font-size: 1.25rem;
+  }
+}
+
+/* Press feedback on the other buttons and button-like links */
+.pagination-link,
+.code-cell-toolbar button,
+.sidebar-nav a,
+.search-result-item {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.pagination-link:active,
+.code-cell-toolbar button:active {
+  transform: scale(0.97);
+}
+
+.pagination-link,
+.code-cell-toolbar button {
+  transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease, transform 0.1s ease;
+}
+
+.sidebar-nav a:active {
+  background: var(--accent-soft);
+}
+
+/* --- Collapsible panes (wide screens) --- */
+#quarto-container {
+  transition: grid-template-columns 0.25s ease;
+}
+
+.content,
+.page-navigation {
+  transition: max-width 0.25s ease;
+}
+
+#quarto-sidebar,
+#quarto-margin-sidebar {
+  transition: opacity 0.15s ease, visibility 0.15s;
+}
+
+[data-sidebar="collapsed"] #quarto-sidebar,
+[data-toc="collapsed"] #quarto-margin-sidebar {
+  overflow: hidden;
+  padding-left: 0;
+  padding-right: 0;
+  border-right-color: transparent;
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* With panes folded away, the text column widens */
+[data-sidebar="collapsed"],
+[data-toc="collapsed"] {
+  --content-width: 46rem;
+}
+
+[data-sidebar="collapsed"][data-toc="collapsed"] {
+  --content-width: 54rem;
+}
+
+@media (min-width: 1201px) {
+  [data-sidebar="collapsed"] #quarto-container {
+    grid-template-columns: 0 minmax(0, 1fr) var(--toc-width);
+  }
+
+  [data-toc="collapsed"] #quarto-container {
+    grid-template-columns: var(--sidebar-width) minmax(0, 1fr) 0;
+  }
+
+  [data-sidebar="collapsed"][data-toc="collapsed"] #quarto-container {
+    grid-template-columns: 0 minmax(0, 1fr) 0;
+  }
 }
 
 @media (max-width: 1200px) {
@@ -1063,8 +1297,22 @@ th {
     grid-template-columns: var(--sidebar-width) minmax(0, 1fr);
   }
 
-  #quarto-margin-sidebar {
+  #quarto-margin-sidebar,
+  .toc-toggle {
     display: none;
+  }
+
+  [data-sidebar="collapsed"] #quarto-container {
+    grid-template-columns: 0 minmax(0, 1fr);
+  }
+
+  /* Only the left pane can be folded here; the right pane's setting does not apply */
+  [data-toc="collapsed"]:not([data-sidebar="collapsed"]) {
+    --content-width: 39rem;
+  }
+
+  [data-sidebar="collapsed"][data-toc="collapsed"] {
+    --content-width: 46rem;
   }
 }
 
@@ -1081,47 +1329,37 @@ th {
     padding: 1.25rem 1.1rem 2.5rem;
   }
 
-  .mobile-header {
-    position: sticky;
-    top: 0;
-    z-index: 900;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    height: 3rem;
-    padding: 0 0.5rem;
-    border-bottom: 1px solid var(--rule);
-    background: color-mix(in srgb, var(--paper) 92%, transparent);
-    backdrop-filter: blur(6px);
+  .topbar {
+    margin: -1.25rem -1.1rem 1rem;
+    padding: 0.35rem 0.5rem;
+    border-bottom-color: var(--rule);
   }
 
-  .menu-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 2.5rem;
-    height: 2.5rem;
-    padding: 0;
-    border: none;
-    border-radius: 6px;
-    background: none;
-    color: var(--ink-strong);
-    font-size: 1.5rem;
-    cursor: pointer;
+  .topbar-title,
+  [data-sidebar="collapsed"] .topbar-title {
+    opacity: 1;
+    pointer-events: auto;
   }
 
-  .menu-button:hover {
-    background: var(--subtle);
+  /* The drawer ignores the wide-screen folding */
+  [data-sidebar="collapsed"] #quarto-sidebar {
+    overflow-y: auto;
+    padding: 1.25rem 1rem 2rem 1.25rem;
+    border-right-color: var(--rule);
+    opacity: 1;
   }
 
-  .mobile-title {
-    overflow: hidden;
-    color: var(--ink-strong);
-    font-size: 1rem;
-    font-weight: 700;
-    text-decoration: none;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+  [data-sidebar="collapsed"] #quarto-sidebar:not(.show) {
+    visibility: hidden;
+  }
+
+  [data-sidebar="collapsed"] #quarto-sidebar.show {
+    visibility: visible;
+  }
+
+  :root[data-sidebar],
+  :root[data-toc] {
+    --content-width: 39rem;
   }
 
   #quarto-sidebar {
@@ -1299,7 +1537,7 @@ th {
     --text-size: 11pt;
   }
 
-  .mobile-header,
+  .topbar,
   #quarto-sidebar,
   #quarto-margin-sidebar,
   .page-navigation,
@@ -1447,13 +1685,11 @@ th {
   aspect-ratio: 1;
 }
 
-@media (prefers-color-scheme: dark) {
-  .plot-board .JXGtext,
-  .plot-board svg,
-  .widget-board .JXGtext,
-  .widget-board svg {
-    filter: invert(0.88) hue-rotate(180deg);
-  }
+[data-theme="dark"] .plot-board .JXGtext,
+[data-theme="dark"] .plot-board svg,
+[data-theme="dark"] .widget-board .JXGtext,
+[data-theme="dark"] .widget-board svg {
+  filter: invert(0.88) hue-rotate(180deg);
 }
 
 .plot-board.plot-error {

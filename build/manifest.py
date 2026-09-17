@@ -248,6 +248,14 @@ def generate_site_files(book: Book):
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex">
+    <script>
+        (function () {{
+            var theme = null;
+            try {{ theme = localStorage.getItem('book-theme'); }} catch (e) {{}}
+            document.documentElement.dataset.theme = theme === 'light' || theme === 'dark' ? theme
+                : (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        }})();
+    </script>
     <title>Page not found – {title}</title>
     <link rel="icon" href="{root}favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400;0,600;0,700;1,400&display=swap">

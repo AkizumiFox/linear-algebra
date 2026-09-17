@@ -11,6 +11,13 @@ One source, Pandoc Markdown in `src/`, built by `build.py` into both the website
 | Validate references and numbering | `./build.py check` |
 | Publish | `./build.py deploy --push` → linear-algebra.akizumifox.com (see `DEPLOY.md`) |
 
+## Reading the site
+
+A toolbar at the top of each page folds the book contents (left) and "On this page" (right)
+away, which widens the text, and switches between light and dark themes (following the
+system setting until chosen). These choices are remembered in the browser. On phones the
+same toolbar opens the contents as a drawer. Press `/` to search.
+
 ## Layout
 
 - `src/`: the published chapters: ch00 foundations, ch01 vector spaces, ch02 linear transformations.
