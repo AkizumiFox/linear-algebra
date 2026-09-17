@@ -13139,6 +13139,846 @@
    "chapter": "Determinants",
    "chapterNumber": 6,
    "color": "#2f62b5"
+  },
+  {
+   "id": "cor-outer-product-expansion",
+   "type": "corollary",
+   "group": "statements",
+   "name": "Corollary 7.1.3",
+   "title": "Outer Product Expansion",
+   "url": "ch07-block-matrices/01-block-multiplication.html#cor-outer-product-expansion",
+   "shard": "ch07-block-matrices",
+   "chapter": "Block Matrices",
+   "chapterNumber": 7,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "def-block-diagonal",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 7.1.2",
+   "title": "Block Diagonal Matrix",
+   "url": "ch07-block-matrices/01-block-multiplication.html#def-block-diagonal",
+   "shard": "ch07-block-matrices",
+   "chapter": "Block Matrices",
+   "chapterNumber": 7,
+   "color": "#b0414f"
+  },
+  {
+   "id": "def-block-partition",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 7.1.1",
+   "title": "Block Partition",
+   "url": "ch07-block-matrices/01-block-multiplication.html#def-block-partition",
+   "shard": "ch07-block-matrices",
+   "chapter": "Block Matrices",
+   "chapterNumber": 7,
+   "color": "#b0414f"
+  },
+  {
+   "id": "exm-cyclic-shift-block-triangular",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "A Plane Mapped into Itself",
+   "url": "ch07-block-matrices/01-block-multiplication.html#exm-cyclic-shift-block-triangular",
+   "shard": "ch07-block-matrices",
+   "chapter": "Block Matrices",
+   "chapterNumber": 7,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exr-block-multiplication-a1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "A1",
+   "url": "ch07-block-matrices/01-block-multiplication.html#exr-block-multiplication-a1",
+   "shard": "ch07-block-matrices",
+   "chapter": "Block Matrices",
+   "chapterNumber": 7,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-block-multiplication-b1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B1: Multiplying block matrices",
+   "url": "ch07-block-matrices/01-block-multiplication.html#exr-block-multiplication-b1",
+   "shard": "ch07-block-matrices",
+   "chapter": "Block Matrices",
+   "chapterNumber": 7,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-block-multiplication-b2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B2: Inverting a block triangular matrix",
+   "url": "ch07-block-matrices/01-block-multiplication.html#exr-block-multiplication-b2",
+   "shard": "ch07-block-matrices",
+   "chapter": "Block Matrices",
+   "chapterNumber": 7,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-block-multiplication-b3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B3: A projection in an adapted basis",
+   "url": "ch07-block-matrices/01-block-multiplication.html#exr-block-multiplication-b3",
+   "shard": "ch07-block-matrices",
+   "chapter": "Block Matrices",
+   "chapterNumber": 7,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-block-multiplication-c1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C1: Square-zero matrices of half rank",
+   "url": "ch07-block-matrices/01-block-multiplication.html#exr-block-multiplication-c1",
+   "shard": "ch07-block-matrices",
+   "chapter": "Block Matrices",
+   "chapterNumber": 7,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-block-multiplication-c2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C2: Powers of block triangular matrices",
+   "url": "ch07-block-matrices/01-block-multiplication.html#exr-block-multiplication-c2",
+   "shard": "ch07-block-matrices",
+   "chapter": "Block Matrices",
+   "chapterNumber": 7,
+   "color": "#a8670c"
+  },
+  {
+   "id": "prp-block-transpose",
+   "type": "proposition",
+   "group": "statements",
+   "name": "Proposition 7.1.2",
+   "title": "Transpose of a Block Matrix",
+   "url": "ch07-block-matrices/01-block-multiplication.html#prp-block-transpose",
+   "shard": "ch07-block-matrices",
+   "chapter": "Block Matrices",
+   "chapterNumber": 7,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-block-diagonal-arithmetic",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 7.1.4",
+   "title": "Arithmetic of Block Diagonal Matrices",
+   "url": "ch07-block-matrices/01-block-multiplication.html#thm-block-diagonal-arithmetic",
+   "shard": "ch07-block-matrices",
+   "chapter": "Block Matrices",
+   "chapterNumber": 7,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-block-multiplication",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 7.1.1",
+   "title": "Block Multiplication",
+   "url": "ch07-block-matrices/01-block-multiplication.html#thm-block-multiplication",
+   "shard": "ch07-block-matrices",
+   "chapter": "Block Matrices",
+   "chapterNumber": 7,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-block-triangular-inverse",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 7.1.5",
+   "title": "Block Triangular Products and Inverses",
+   "url": "ch07-block-matrices/01-block-multiplication.html#thm-block-triangular-inverse",
+   "shard": "ch07-block-matrices",
+   "chapter": "Block Matrices",
+   "chapterNumber": 7,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-direct-sum-block-diagonal",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 7.1.6",
+   "title": "Direct Sums Give Block Diagonal Matrices",
+   "url": "ch07-block-matrices/01-block-multiplication.html#thm-direct-sum-block-diagonal",
+   "shard": "ch07-block-matrices",
+   "chapter": "Block Matrices",
+   "chapterNumber": 7,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-invariant-subspace-block-triangular",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 7.1.7",
+   "title": "Subspaces Mapped into Themselves Give Block Triangular Matrices",
+   "url": "ch07-block-matrices/01-block-multiplication.html#thm-invariant-subspace-block-triangular",
+   "shard": "ch07-block-matrices",
+   "chapter": "Block Matrices",
+   "chapterNumber": 7,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "exm-rank-i-minus-ab",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "Rank of I - AB versus I - BA",
+   "url": "ch07-block-matrices/02-rank-of-block-matrices.html#exm-rank-i-minus-ab",
+   "shard": "ch07-block-matrices",
+   "chapter": "Block Matrices",
+   "chapterNumber": 7,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exr-rank-of-block-matrices-a1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "A1",
+   "url": "ch07-block-matrices/02-rank-of-block-matrices.html#exr-rank-of-block-matrices-a1",
+   "shard": "ch07-block-matrices",
+   "chapter": "Block Matrices",
+   "chapterNumber": 7,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-rank-of-block-matrices-b1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B1: Ranks of block matrices",
+   "url": "ch07-block-matrices/02-rank-of-block-matrices.html#exr-rank-of-block-matrices-b1",
+   "shard": "ch07-block-matrices",
+   "chapter": "Block Matrices",
+   "chapterNumber": 7,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-rank-of-block-matrices-b2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B2: Shifted products",
+   "url": "ch07-block-matrices/02-rank-of-block-matrices.html#exr-rank-of-block-matrices-b2",
+   "shard": "ch07-block-matrices",
+   "chapter": "Block Matrices",
+   "chapterNumber": 7,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-rank-of-block-matrices-b3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B3: Idempotents by blocks",
+   "url": "ch07-block-matrices/02-rank-of-block-matrices.html#exr-rank-of-block-matrices-b3",
+   "shard": "ch07-block-matrices",
+   "chapter": "Block Matrices",
+   "chapterNumber": 7,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-rank-of-block-matrices-c1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C1: The rank of A - ABA",
+   "url": "ch07-block-matrices/02-rank-of-block-matrices.html#exr-rank-of-block-matrices-c1",
+   "shard": "ch07-block-matrices",
+   "chapter": "Block Matrices",
+   "chapterNumber": 7,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-rank-of-block-matrices-c2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C2: Involutions and the field",
+   "url": "ch07-block-matrices/02-rank-of-block-matrices.html#exr-rank-of-block-matrices-c2",
+   "shard": "ch07-block-matrices",
+   "chapter": "Block Matrices",
+   "chapterNumber": 7,
+   "color": "#a8670c"
+  },
+  {
+   "id": "thm-block-elimination-rank",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 7.2.2",
+   "title": "Block Elimination Preserves Rank",
+   "url": "ch07-block-matrices/02-rank-of-block-matrices.html#thm-block-elimination-rank",
+   "shard": "ch07-block-matrices",
+   "chapter": "Block Matrices",
+   "chapterNumber": 7,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-block-rank-inequalities",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 7.2.1",
+   "title": "Rank Inequalities for Block Matrices",
+   "url": "ch07-block-matrices/02-rank-of-block-matrices.html#thm-block-rank-inequalities",
+   "shard": "ch07-block-matrices",
+   "chapter": "Block Matrices",
+   "chapterNumber": 7,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-frobenius-rank-block-proof",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 7.2.3",
+   "title": "Frobenius\u2019s Rank Inequality",
+   "url": "ch07-block-matrices/02-rank-of-block-matrices.html#thm-frobenius-rank-block-proof",
+   "shard": "ch07-block-matrices",
+   "chapter": "Block Matrices",
+   "chapterNumber": 7,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "cor-sherman-morrison",
+   "type": "corollary",
+   "group": "statements",
+   "name": "Corollary 7.3.6",
+   "title": "Sherman\u2013Morrison Formula",
+   "url": "ch07-block-matrices/03-block-determinants-and-schur-complements.html#cor-sherman-morrison",
+   "shard": "ch07-block-matrices",
+   "chapter": "Block Matrices",
+   "chapterNumber": 7,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "def-schur-complement",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 7.3.1",
+   "title": "Schur Complement",
+   "url": "ch07-block-matrices/03-block-determinants-and-schur-complements.html#def-schur-complement",
+   "shard": "ch07-block-matrices",
+   "chapter": "Block Matrices",
+   "chapterNumber": 7,
+   "color": "#b0414f"
+  },
+  {
+   "id": "exm-block-inverse-4x4",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "A 4 \u00d7 4 Inverse through a 2 \u00d7 2 Schur Complement",
+   "url": "ch07-block-matrices/03-block-determinants-and-schur-complements.html#exm-block-inverse-4x4",
+   "shard": "ch07-block-matrices",
+   "chapter": "Block Matrices",
+   "chapterNumber": 7,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exr-block-determinants-and-schur-complements-a1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "A1",
+   "url": "ch07-block-matrices/03-block-determinants-and-schur-complements.html#exr-block-determinants-and-schur-complements-a1",
+   "shard": "ch07-block-matrices",
+   "chapter": "Block Matrices",
+   "chapterNumber": 7,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-block-determinants-and-schur-complements-b1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B1: A Schur complement, a determinant and a rank",
+   "url": "ch07-block-matrices/03-block-determinants-and-schur-complements.html#exr-block-determinants-and-schur-complements-b1",
+   "shard": "ch07-block-matrices",
+   "chapter": "Block Matrices",
+   "chapterNumber": 7,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-block-determinants-and-schur-complements-b2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B2: A rank-one update",
+   "url": "ch07-block-matrices/03-block-determinants-and-schur-complements.html#exr-block-determinants-and-schur-complements-b2",
+   "shard": "ch07-block-matrices",
+   "chapter": "Block Matrices",
+   "chapterNumber": 7,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-block-determinants-and-schur-complements-b3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B3: Identity corners",
+   "url": "ch07-block-matrices/03-block-determinants-and-schur-complements.html#exr-block-determinants-and-schur-complements-b3",
+   "shard": "ch07-block-matrices",
+   "chapter": "Block Matrices",
+   "chapterNumber": 7,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-block-determinants-and-schur-complements-c1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C1: Sylvester\u2019s determinant identity",
+   "url": "ch07-block-matrices/03-block-determinants-and-schur-complements.html#exr-block-determinants-and-schur-complements-c1",
+   "shard": "ch07-block-matrices",
+   "chapter": "Block Matrices",
+   "chapterNumber": 7,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-block-determinants-and-schur-complements-c2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C2: Pivots as Schur complements",
+   "url": "ch07-block-matrices/03-block-determinants-and-schur-complements.html#exr-block-determinants-and-schur-complements-c2",
+   "shard": "ch07-block-matrices",
+   "chapter": "Block Matrices",
+   "chapterNumber": 7,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-block-determinants-and-schur-complements-c3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C3: When A and C commute",
+   "url": "ch07-block-matrices/03-block-determinants-and-schur-complements.html#exr-block-determinants-and-schur-complements-c3",
+   "shard": "ch07-block-matrices",
+   "chapter": "Block Matrices",
+   "chapterNumber": 7,
+   "color": "#a8670c"
+  },
+  {
+   "id": "lem-evaluate-polynomial-matrix",
+   "type": "lemma",
+   "group": "statements",
+   "name": "Lemma 7.3.7",
+   "title": "Evaluating a Matrix of Polynomials",
+   "url": "ch07-block-matrices/03-block-determinants-and-schur-complements.html#lem-evaluate-polynomial-matrix",
+   "shard": "ch07-block-matrices",
+   "chapter": "Block Matrices",
+   "chapterNumber": 7,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-block-inverse-formula",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 7.3.4",
+   "title": "Block Inverse Formula",
+   "url": "ch07-block-matrices/03-block-determinants-and-schur-complements.html#thm-block-inverse-formula",
+   "shard": "ch07-block-matrices",
+   "chapter": "Block Matrices",
+   "chapterNumber": 7,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-block-ldu",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 7.3.1",
+   "title": "Block LDU Factorization",
+   "url": "ch07-block-matrices/03-block-determinants-and-schur-complements.html#thm-block-ldu",
+   "shard": "ch07-block-matrices",
+   "chapter": "Block Matrices",
+   "chapterNumber": 7,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-det-commuting-blocks",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 7.3.8",
+   "title": "Determinant with Commuting Blocks",
+   "url": "ch07-block-matrices/03-block-determinants-and-schur-complements.html#thm-det-commuting-blocks",
+   "shard": "ch07-block-matrices",
+   "chapter": "Block Matrices",
+   "chapterNumber": 7,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-schur-determinant",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 7.3.2",
+   "title": "Schur Determinant Formula",
+   "url": "ch07-block-matrices/03-block-determinants-and-schur-complements.html#thm-schur-determinant",
+   "shard": "ch07-block-matrices",
+   "chapter": "Block Matrices",
+   "chapterNumber": 7,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-schur-rank",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 7.3.3",
+   "title": "Schur Rank Formula",
+   "url": "ch07-block-matrices/03-block-determinants-and-schur-complements.html#thm-schur-rank",
+   "shard": "ch07-block-matrices",
+   "chapter": "Block Matrices",
+   "chapterNumber": 7,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-woodbury",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 7.3.5",
+   "title": "Sherman\u2013Morrison\u2013Woodbury Formula",
+   "url": "ch07-block-matrices/03-block-determinants-and-schur-complements.html#thm-woodbury",
+   "shard": "ch07-block-matrices",
+   "chapter": "Block Matrices",
+   "chapterNumber": 7,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "def-kronecker-product",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 7.4.1",
+   "title": "Kronecker product",
+   "url": "ch07-block-matrices/04-kronecker-product.html#def-kronecker-product",
+   "shard": "ch07-block-matrices",
+   "chapter": "Block Matrices",
+   "chapterNumber": 7,
+   "color": "#b0414f"
+  },
+  {
+   "id": "def-vec-operator",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 7.4.2",
+   "title": "Vectorization",
+   "url": "ch07-block-matrices/04-kronecker-product.html#def-vec-operator",
+   "shard": "ch07-block-matrices",
+   "chapter": "Block Matrices",
+   "chapterNumber": 7,
+   "color": "#b0414f"
+  },
+  {
+   "id": "exm-sylvester-equation-vec",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "A Sylvester Equation as a Linear System",
+   "url": "ch07-block-matrices/04-kronecker-product.html#exm-sylvester-equation-vec",
+   "shard": "ch07-block-matrices",
+   "chapter": "Block Matrices",
+   "chapterNumber": 7,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exr-kronecker-product-a1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "A1",
+   "url": "ch07-block-matrices/04-kronecker-product.html#exr-kronecker-product-a1",
+   "shard": "ch07-block-matrices",
+   "chapter": "Block Matrices",
+   "chapterNumber": 7,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-kronecker-product-b1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B1: Computing with Kronecker products",
+   "url": "ch07-block-matrices/04-kronecker-product.html#exr-kronecker-product-b1",
+   "shard": "ch07-block-matrices",
+   "chapter": "Block Matrices",
+   "chapterNumber": 7,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-kronecker-product-b2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B2: One-sided equations",
+   "url": "ch07-block-matrices/04-kronecker-product.html#exr-kronecker-product-b2",
+   "shard": "ch07-block-matrices",
+   "chapter": "Block Matrices",
+   "chapterNumber": 7,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-kronecker-product-b3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B3: Which identities hold?",
+   "url": "ch07-block-matrices/04-kronecker-product.html#exr-kronecker-product-b3",
+   "shard": "ch07-block-matrices",
+   "chapter": "Block Matrices",
+   "chapterNumber": 7,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-kronecker-product-c1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C1: When is a Kronecker product invertible?",
+   "url": "ch07-block-matrices/04-kronecker-product.html#exr-kronecker-product-c1",
+   "shard": "ch07-block-matrices",
+   "chapter": "Block Matrices",
+   "chapterNumber": 7,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-kronecker-product-c2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C2: Kronecker sums",
+   "url": "ch07-block-matrices/04-kronecker-product.html#exr-kronecker-product-c2",
+   "shard": "ch07-block-matrices",
+   "chapter": "Block Matrices",
+   "chapterNumber": 7,
+   "color": "#a8670c"
+  },
+  {
+   "id": "prp-kronecker-swap-similar",
+   "type": "proposition",
+   "group": "statements",
+   "name": "Proposition 7.4.2",
+   "title": "Swapping the Factors Is a Permutation Similarity",
+   "url": "ch07-block-matrices/04-kronecker-product.html#prp-kronecker-swap-similar",
+   "shard": "ch07-block-matrices",
+   "chapter": "Block Matrices",
+   "chapterNumber": 7,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-kronecker-properties",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 7.4.1",
+   "title": "Properties of the Kronecker Product",
+   "url": "ch07-block-matrices/04-kronecker-product.html#thm-kronecker-properties",
+   "shard": "ch07-block-matrices",
+   "chapter": "Block Matrices",
+   "chapterNumber": 7,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-kronecker-rank-trace-det",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 7.4.3",
+   "title": "Rank, Trace and Determinant of a Kronecker Product",
+   "url": "ch07-block-matrices/04-kronecker-product.html#thm-kronecker-rank-trace-det",
+   "shard": "ch07-block-matrices",
+   "chapter": "Block Matrices",
+   "chapterNumber": 7,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-vec-identity",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 7.4.4",
+   "title": "The vec Identity",
+   "url": "ch07-block-matrices/04-kronecker-product.html#thm-vec-identity",
+   "shard": "ch07-block-matrices",
+   "chapter": "Block Matrices",
+   "chapterNumber": 7,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "def-commutator",
+   "type": "definition",
+   "group": "definitions",
+   "name": "Definition 7.5.1",
+   "title": "Commutator",
+   "url": "ch07-block-matrices/05-commutators-and-shoda.html#def-commutator",
+   "shard": "ch07-block-matrices",
+   "chapter": "Block Matrices",
+   "chapterNumber": 7,
+   "color": "#b0414f"
+  },
+  {
+   "id": "exm-commutator-3x3",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "Writing a Trace-Zero 3 \u00d7 3 Matrix as a Commutator",
+   "url": "ch07-block-matrices/05-commutators-and-shoda.html#exm-commutator-3x3",
+   "shard": "ch07-block-matrices",
+   "chapter": "Block Matrices",
+   "chapterNumber": 7,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exm-heisenberg-characteristic-p",
+   "type": "example",
+   "group": "examples",
+   "name": "Example",
+   "title": "The Identity as a Commutator in Characteristic p",
+   "url": "ch07-block-matrices/05-commutators-and-shoda.html#exm-heisenberg-characteristic-p",
+   "shard": "ch07-block-matrices",
+   "chapter": "Block Matrices",
+   "chapterNumber": 7,
+   "color": "#3b7a4c"
+  },
+  {
+   "id": "exr-commutators-and-shoda-a1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "A1",
+   "url": "ch07-block-matrices/05-commutators-and-shoda.html#exr-commutators-and-shoda-a1",
+   "shard": "ch07-block-matrices",
+   "chapter": "Block Matrices",
+   "chapterNumber": 7,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-commutators-and-shoda-b1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B1: A 2 \u00d7 2 commutator",
+   "url": "ch07-block-matrices/05-commutators-and-shoda.html#exr-commutators-and-shoda-b1",
+   "shard": "ch07-block-matrices",
+   "chapter": "Block Matrices",
+   "chapterNumber": 7,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-commutators-and-shoda-b2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B2: A commutator over nF_2",
+   "url": "ch07-block-matrices/05-commutators-and-shoda.html#exr-commutators-and-shoda-b2",
+   "shard": "ch07-block-matrices",
+   "chapter": "Block Matrices",
+   "chapterNumber": 7,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-commutators-and-shoda-b3",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "B3: Commuting with a diagonal matrix",
+   "url": "ch07-block-matrices/05-commutators-and-shoda.html#exr-commutators-and-shoda-b3",
+   "shard": "ch07-block-matrices",
+   "chapter": "Block Matrices",
+   "chapterNumber": 7,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-commutators-and-shoda-c1",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C1: Trace-like functionals, again",
+   "url": "ch07-block-matrices/05-commutators-and-shoda.html#exr-commutators-and-shoda-c1",
+   "shard": "ch07-block-matrices",
+   "chapter": "Block Matrices",
+   "chapterNumber": 7,
+   "color": "#a8670c"
+  },
+  {
+   "id": "exr-commutators-and-shoda-c2",
+   "type": "exercise",
+   "group": "exercises",
+   "name": "Exercise",
+   "title": "C2: When A commutes with [A, B]",
+   "url": "ch07-block-matrices/05-commutators-and-shoda.html#exr-commutators-and-shoda-c2",
+   "shard": "ch07-block-matrices",
+   "chapter": "Block Matrices",
+   "chapterNumber": 7,
+   "color": "#a8670c"
+  },
+  {
+   "id": "lem-nonscalar-similar-zero-diagonal-entry",
+   "type": "lemma",
+   "group": "statements",
+   "name": "Lemma 7.5.2",
+   "title": "A Non-Scalar Matrix Has a Similar Matrix with Zero Corner",
+   "url": "ch07-block-matrices/05-commutators-and-shoda.html#lem-nonscalar-similar-zero-diagonal-entry",
+   "shard": "ch07-block-matrices",
+   "chapter": "Block Matrices",
+   "chapterNumber": 7,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "lem-trace-zero-similar-zero-diagonal",
+   "type": "lemma",
+   "group": "statements",
+   "name": "Lemma 7.5.3",
+   "title": "Trace Zero Means Similar to Zero Diagonal",
+   "url": "ch07-block-matrices/05-commutators-and-shoda.html#lem-trace-zero-similar-zero-diagonal",
+   "shard": "ch07-block-matrices",
+   "chapter": "Block Matrices",
+   "chapterNumber": 7,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "prp-commutator-properties",
+   "type": "proposition",
+   "group": "statements",
+   "name": "Proposition 7.5.1",
+   "title": "Rules for Commutators",
+   "url": "ch07-block-matrices/05-commutators-and-shoda.html#prp-commutator-properties",
+   "shard": "ch07-block-matrices",
+   "chapter": "Block Matrices",
+   "chapterNumber": 7,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-shoda",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 7.5.4",
+   "title": "Shoda\u2019s Theorem",
+   "url": "ch07-block-matrices/05-commutators-and-shoda.html#thm-shoda",
+   "shard": "ch07-block-matrices",
+   "chapter": "Block Matrices",
+   "chapterNumber": 7,
+   "color": "#2f62b5"
+  },
+  {
+   "id": "thm-span-of-commutators",
+   "type": "theorem",
+   "group": "statements",
+   "name": "Theorem 7.5.5",
+   "title": "Commutators Span the Trace-Zero Matrices",
+   "url": "ch07-block-matrices/05-commutators-and-shoda.html#thm-span-of-commutators",
+   "shard": "ch07-block-matrices",
+   "chapter": "Block Matrices",
+   "chapterNumber": 7,
+   "color": "#2f62b5"
   }
  ],
  "edges": [
@@ -20358,6 +21198,11 @@
    "kind": "reference"
   },
   {
+   "source": "thm-frobenius-rank-block-proof",
+   "target": "exr-rank-factorization-c1",
+   "kind": "mention"
+  },
+  {
    "source": "thm-rank-normal-form",
    "target": "exr-rank-factorization-c2",
    "kind": "reference"
@@ -27290,6 +28135,1376 @@
   {
    "source": "thm-matrix-multiplication-properties",
    "target": "thm-charpoly-similarity-invariant",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-block-multiplication",
+   "target": "cor-outer-product-expansion",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-invariant-subspace-block-triangular",
+   "target": "exm-cyclic-shift-block-triangular",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rank-nullity",
+   "target": "exm-cyclic-shift-block-triangular",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-right-size-basis",
+   "target": "exm-cyclic-shift-block-triangular",
+   "kind": "reference"
+  },
+  {
+   "source": "def-block-partition",
+   "target": "exr-block-multiplication-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-block-multiplication",
+   "target": "exr-block-multiplication-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-block-triangular-inverse",
+   "target": "exr-block-multiplication-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-invariant-subspace-block-triangular",
+   "target": "exr-block-multiplication-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-block-multiplication",
+   "target": "exr-block-multiplication-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-block-triangular-inverse",
+   "target": "exr-block-multiplication-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-two-by-two-inverse",
+   "target": "exr-block-multiplication-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-block-diagonal-arithmetic",
+   "target": "exr-block-multiplication-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-change-of-basis-maps",
+   "target": "exr-block-multiplication-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-nonzero-iff-invertible",
+   "target": "exr-block-multiplication-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-direct-sum-block-diagonal",
+   "target": "exr-block-multiplication-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-direct-sum-k-criteria",
+   "target": "exr-block-multiplication-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-invertible-tfae",
+   "target": "exr-block-multiplication-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-trace-similarity-invariant",
+   "target": "exr-block-multiplication-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-block-multiplication",
+   "target": "exr-block-multiplication-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dim-impl-eq",
+   "target": "exr-block-multiplication-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-invertible-tfae",
+   "target": "exr-block-multiplication-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rank-map-equals-rank-matrix",
+   "target": "exr-block-multiplication-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rank-nullity",
+   "target": "exr-block-multiplication-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-right-size-basis",
+   "target": "exr-block-multiplication-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-similar-iff-same-operator",
+   "target": "exr-block-multiplication-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-block-triangular-inverse",
+   "target": "exr-block-multiplication-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "def-block-partition",
+   "target": "prp-block-transpose",
+   "kind": "reference"
+  },
+  {
+   "source": "def-transpose",
+   "target": "prp-block-transpose",
+   "kind": "reference"
+  },
+  {
+   "source": "def-polynomial-of-matrix",
+   "target": "thm-block-diagonal-arithmetic",
+   "kind": "reference"
+  },
+  {
+   "source": "def-trace",
+   "target": "thm-block-diagonal-arithmetic",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-block-multiplication",
+   "target": "thm-block-diagonal-arithmetic",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-block-triangular",
+   "target": "thm-block-diagonal-arithmetic",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-nonzero-iff-invertible",
+   "target": "thm-block-diagonal-arithmetic",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-field-basic-properties",
+   "target": "thm-block-diagonal-arithmetic",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-one-sided-inverse",
+   "target": "thm-block-diagonal-arithmetic",
+   "kind": "reference"
+  },
+  {
+   "source": "def-block-partition",
+   "target": "thm-block-multiplication",
+   "kind": "reference"
+  },
+  {
+   "source": "def-matrix-addition",
+   "target": "thm-block-multiplication",
+   "kind": "reference"
+  },
+  {
+   "source": "def-matrix-multiplication",
+   "target": "thm-block-multiplication",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-row-operations",
+   "target": "thm-block-multiplication",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-block-multiplication",
+   "target": "thm-block-triangular-inverse",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-block-triangular",
+   "target": "thm-block-triangular-inverse",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-nonzero-iff-invertible",
+   "target": "thm-block-triangular-inverse",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-field-basic-properties",
+   "target": "thm-block-triangular-inverse",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-one-sided-inverse",
+   "target": "thm-block-triangular-inverse",
+   "kind": "reference"
+  },
+  {
+   "source": "def-matrix-of-linear-map",
+   "target": "thm-direct-sum-block-diagonal",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-direct-sum-k-criteria",
+   "target": "thm-direct-sum-block-diagonal",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-unique-representation",
+   "target": "thm-direct-sum-block-diagonal",
+   "kind": "reference"
+  },
+  {
+   "source": "def-matrix-of-linear-map",
+   "target": "thm-invariant-subspace-block-triangular",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-composition-linear",
+   "target": "thm-invariant-subspace-block-triangular",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dimension-quotient",
+   "target": "thm-invariant-subspace-block-triangular",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-direct-sum-block-diagonal",
+   "target": "thm-invariant-subspace-block-triangular",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-quotient-space-operations-well-defined",
+   "target": "thm-invariant-subspace-block-triangular",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-quotient-universal-property",
+   "target": "thm-invariant-subspace-block-triangular",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-unique-representation",
+   "target": "thm-invariant-subspace-block-triangular",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-block-elimination-rank",
+   "target": "exm-rank-i-minus-ab",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-block-multiplication",
+   "target": "exm-rank-i-minus-ab",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-block-rank-inequalities",
+   "target": "exm-rank-i-minus-ab",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-invertible-tfae",
+   "target": "exm-rank-i-minus-ab",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-block-elimination-rank",
+   "target": "exr-rank-of-block-matrices-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-block-multiplication",
+   "target": "exr-rank-of-block-matrices-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-block-rank-inequalities",
+   "target": "exr-rank-of-block-matrices-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-block-elimination-rank",
+   "target": "exr-rank-of-block-matrices-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-block-rank-inequalities",
+   "target": "exr-rank-of-block-matrices-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-rank-i-minus-ab",
+   "target": "exr-rank-of-block-matrices-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-row-rank-equals-column-rank",
+   "target": "exr-rank-of-block-matrices-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "def-projection-operator",
+   "target": "exr-rank-of-block-matrices-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-block-elimination-rank",
+   "target": "exr-rank-of-block-matrices-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-block-multiplication",
+   "target": "exr-rank-of-block-matrices-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-block-rank-inequalities",
+   "target": "exr-rank-of-block-matrices-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-projection-direct-sum",
+   "target": "exr-rank-of-block-matrices-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "exr-rank-of-block-matrices-b3",
+   "target": "exr-rank-of-block-matrices-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-block-elimination-rank",
+   "target": "exr-rank-of-block-matrices-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-block-multiplication",
+   "target": "exr-rank-of-block-matrices-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-block-rank-inequalities",
+   "target": "exr-rank-of-block-matrices-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-block-elimination-rank",
+   "target": "exr-rank-of-block-matrices-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-block-multiplication",
+   "target": "exr-rank-of-block-matrices-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-block-rank-inequalities",
+   "target": "exr-rank-of-block-matrices-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-involution-decomposition",
+   "target": "exr-rank-of-block-matrices-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "def-column-space",
+   "target": "thm-block-elimination-rank",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-block-transpose",
+   "target": "thm-block-elimination-rank",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-block-multiplication",
+   "target": "thm-block-elimination-rank",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-block-rank-inequalities",
+   "target": "thm-block-elimination-rank",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-block-triangular-inverse",
+   "target": "thm-block-elimination-rank",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-inverse-matrix-properties",
+   "target": "thm-block-elimination-rank",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-times-vector-columns",
+   "target": "thm-block-elimination-rank",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-one-sided-inverse",
+   "target": "thm-block-elimination-rank",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rank-product-inequality",
+   "target": "thm-block-elimination-rank",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-three-views-of-product",
+   "target": "thm-block-elimination-rank",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-block-transpose",
+   "target": "thm-block-rank-inequalities",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-sum-of-spans",
+   "target": "thm-block-rank-inequalities",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-basis-column-space",
+   "target": "thm-block-rank-inequalities",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-dimension-formula-subspace-dim",
+   "target": "thm-block-rank-inequalities",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-isomorphic-iff-same-dimension",
+   "target": "thm-block-rank-inequalities",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-row-rank-equals-column-rank",
+   "target": "thm-block-rank-inequalities",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-size-bounds",
+   "target": "thm-block-rank-inequalities",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-subspace-dimension",
+   "target": "thm-block-rank-inequalities",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-block-elimination-rank",
+   "target": "thm-frobenius-rank-block-proof",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-block-multiplication",
+   "target": "thm-frobenius-rank-block-proof",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-block-rank-inequalities",
+   "target": "thm-frobenius-rank-block-proof",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-woodbury",
+   "target": "cor-sherman-morrison",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-block-inverse-formula",
+   "target": "exm-block-inverse-4x4",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-schur-determinant",
+   "target": "exm-block-inverse-4x4",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-two-by-two-inverse",
+   "target": "exm-block-inverse-4x4",
+   "kind": "reference"
+  },
+  {
+   "source": "def-schur-complement",
+   "target": "exr-block-determinants-and-schur-complements-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-block-inverse-formula",
+   "target": "exr-block-determinants-and-schur-complements-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-block-ldu",
+   "target": "exr-block-determinants-and-schur-complements-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-commuting-blocks",
+   "target": "exr-block-determinants-and-schur-complements-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-invertible-tfae",
+   "target": "exr-block-determinants-and-schur-complements-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-schur-determinant",
+   "target": "exr-block-determinants-and-schur-complements-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-schur-rank",
+   "target": "exr-block-determinants-and-schur-complements-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-two-by-two-inverse",
+   "target": "exr-block-determinants-and-schur-complements-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-sherman-morrison",
+   "target": "exr-block-determinants-and-schur-complements-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-block-inverse-formula",
+   "target": "exr-block-determinants-and-schur-complements-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-block-triangular-inverse",
+   "target": "exr-block-determinants-and-schur-complements-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "def-schur-complement",
+   "target": "exr-block-determinants-and-schur-complements-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-row-operations",
+   "target": "exr-block-determinants-and-schur-complements-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-determinant-lemma",
+   "target": "exr-block-determinants-and-schur-complements-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-schur-determinant",
+   "target": "exr-block-determinants-and-schur-complements-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "def-schur-complement",
+   "target": "exr-block-determinants-and-schur-complements-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "exr-lu-factorization-c1",
+   "target": "exr-block-determinants-and-schur-complements-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-nonzero-iff-invertible",
+   "target": "exr-block-determinants-and-schur-complements-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-field-basic-properties",
+   "target": "exr-block-determinants-and-schur-complements-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-inverse-matrix-properties",
+   "target": "exr-block-determinants-and-schur-complements-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-lu-unique",
+   "target": "exr-block-determinants-and-schur-complements-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-schur-determinant",
+   "target": "exr-block-determinants-and-schur-complements-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-polynomial-no-zero-divisors",
+   "target": "exr-block-determinants-and-schur-complements-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-evaluate-polynomial-matrix",
+   "target": "exr-block-determinants-and-schur-complements-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-block-multiplication",
+   "target": "exr-block-determinants-and-schur-complements-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-block-triangular",
+   "target": "exr-block-determinants-and-schur-complements-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-commuting-blocks",
+   "target": "exr-block-determinants-and-schur-complements-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-multiplicative",
+   "target": "exr-block-determinants-and-schur-complements-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-schur-determinant",
+   "target": "exr-block-determinants-and-schur-complements-c3",
+   "kind": "reference"
+  },
+  {
+   "source": "def-determinant",
+   "target": "lem-evaluate-polynomial-matrix",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-charpoly-evaluation",
+   "target": "lem-evaluate-polynomial-matrix",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-evaluation-respects-operations",
+   "target": "lem-evaluate-polynomial-matrix",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-block-diagonal-arithmetic",
+   "target": "thm-block-inverse-formula",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-block-ldu",
+   "target": "thm-block-inverse-formula",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-block-multiplication",
+   "target": "thm-block-inverse-formula",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-block-triangular-inverse",
+   "target": "thm-block-inverse-formula",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-inverse-matrix-properties",
+   "target": "thm-block-inverse-formula",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-invertible-tfae",
+   "target": "thm-block-inverse-formula",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-schur-rank",
+   "target": "thm-block-inverse-formula",
+   "kind": "reference"
+  },
+  {
+   "source": "def-schur-complement",
+   "target": "thm-block-ldu",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-block-multiplication",
+   "target": "thm-block-ldu",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-multiplication-properties",
+   "target": "thm-block-ldu",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-polynomial-no-zero-divisors",
+   "target": "thm-det-commuting-blocks",
+   "kind": "reference"
+  },
+  {
+   "source": "def-characteristic-polynomial",
+   "target": "thm-det-commuting-blocks",
+   "kind": "reference"
+  },
+  {
+   "source": "exr-block-determinants-and-schur-complements-c3",
+   "target": "thm-det-commuting-blocks",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-evaluate-polynomial-matrix",
+   "target": "thm-det-commuting-blocks",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-block-multiplication",
+   "target": "thm-det-commuting-blocks",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-charpoly-coefficients",
+   "target": "thm-det-commuting-blocks",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-block-triangular",
+   "target": "thm-det-commuting-blocks",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-multiplicative",
+   "target": "thm-det-commuting-blocks",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-multiplication-properties",
+   "target": "thm-det-commuting-blocks",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-block-ldu",
+   "target": "thm-schur-determinant",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-block-triangular",
+   "target": "thm-schur-determinant",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-multiplicative",
+   "target": "thm-schur-determinant",
+   "kind": "reference"
+  },
+  {
+   "source": "def-schur-complement",
+   "target": "thm-schur-rank",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-block-elimination-rank",
+   "target": "thm-schur-rank",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-block-ldu",
+   "target": "thm-schur-rank",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-block-rank-inequalities",
+   "target": "thm-schur-rank",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-invertible-tfae",
+   "target": "thm-schur-rank",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rank-product-inequality",
+   "target": "thm-schur-rank",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-det-inverse",
+   "target": "thm-woodbury",
+   "kind": "reference"
+  },
+  {
+   "source": "def-schur-complement",
+   "target": "thm-woodbury",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-block-inverse-formula",
+   "target": "thm-woodbury",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-row-operations",
+   "target": "thm-woodbury",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-inverse-matrix-properties",
+   "target": "thm-woodbury",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-schur-determinant",
+   "target": "thm-woodbury",
+   "kind": "reference"
+  },
+  {
+   "source": "def-block-partition",
+   "target": "def-kronecker-product",
+   "kind": "reference"
+  },
+  {
+   "source": "def-kronecker-product",
+   "target": "exm-sylvester-equation-vec",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-triangular",
+   "target": "exm-sylvester-equation-vec",
+   "kind": "reference"
+  },
+  {
+   "source": "def-kronecker-product",
+   "target": "exr-kronecker-product-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-kronecker-swap-similar",
+   "target": "exr-kronecker-product-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-kronecker-properties",
+   "target": "exr-kronecker-product-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-kronecker-rank-trace-det",
+   "target": "exr-kronecker-product-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-vec-identity",
+   "target": "exr-kronecker-product-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "def-kronecker-product",
+   "target": "exr-kronecker-product-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-kronecker-properties",
+   "target": "exr-kronecker-product-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-kronecker-rank-trace-det",
+   "target": "exr-kronecker-product-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-two-by-two-inverse",
+   "target": "exr-kronecker-product-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-block-multiplication",
+   "target": "exr-kronecker-product-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-invertible-tfae",
+   "target": "exr-kronecker-product-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-vec-identity",
+   "target": "exr-kronecker-product-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "def-kronecker-product",
+   "target": "exr-kronecker-product-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-kronecker-properties",
+   "target": "exr-kronecker-product-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-kronecker-rank-trace-det",
+   "target": "exr-kronecker-product-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-nonzero-iff-invertible",
+   "target": "exr-kronecker-product-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-invertible-tfae",
+   "target": "exr-kronecker-product-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-kronecker-rank-trace-det",
+   "target": "exr-kronecker-product-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-nonzero-iff-invertible",
+   "target": "exr-kronecker-product-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-triangular",
+   "target": "exr-kronecker-product-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-invertible-tfae",
+   "target": "exr-kronecker-product-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-multiplication-properties",
+   "target": "exr-kronecker-product-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-vec-identity",
+   "target": "exr-kronecker-product-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-permutation-matrices",
+   "target": "prp-kronecker-swap-similar",
+   "kind": "reference"
+  },
+  {
+   "source": "def-invertible-matrix",
+   "target": "thm-kronecker-properties",
+   "kind": "reference"
+  },
+  {
+   "source": "def-kronecker-product",
+   "target": "thm-kronecker-properties",
+   "kind": "reference"
+  },
+  {
+   "source": "def-matrix-multiplication",
+   "target": "thm-kronecker-properties",
+   "kind": "reference"
+  },
+  {
+   "source": "def-transpose",
+   "target": "thm-kronecker-properties",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-block-multiplication",
+   "target": "thm-kronecker-properties",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-multiplication-properties",
+   "target": "thm-kronecker-properties",
+   "kind": "reference"
+  },
+  {
+   "source": "cor-det-similarity-invariant",
+   "target": "thm-kronecker-rank-trace-det",
+   "kind": "reference"
+  },
+  {
+   "source": "def-equivalent-matrices",
+   "target": "thm-kronecker-rank-trace-det",
+   "kind": "reference"
+  },
+  {
+   "source": "def-rank-matrix",
+   "target": "thm-kronecker-rank-trace-det",
+   "kind": "reference"
+  },
+  {
+   "source": "def-trace",
+   "target": "thm-kronecker-rank-trace-det",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-kronecker-swap-similar",
+   "target": "thm-kronecker-rank-trace-det",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-block-diagonal-arithmetic",
+   "target": "thm-kronecker-rank-trace-det",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-block-triangular",
+   "target": "thm-kronecker-rank-trace-det",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-det-multiplicative",
+   "target": "thm-kronecker-rank-trace-det",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-kronecker-properties",
+   "target": "thm-kronecker-rank-trace-det",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rank-normal-form",
+   "target": "thm-kronecker-rank-trace-det",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rank-product-inequality",
+   "target": "thm-kronecker-rank-trace-det",
+   "kind": "reference"
+  },
+  {
+   "source": "def-matrix-multiplication",
+   "target": "thm-vec-identity",
+   "kind": "reference"
+  },
+  {
+   "source": "def-vec-operator",
+   "target": "thm-vec-identity",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-trace-zero-similar-zero-diagonal",
+   "target": "exm-commutator-3x3",
+   "kind": "reference"
+  },
+  {
+   "source": "def-characteristic",
+   "target": "exm-heisenberg-characteristic-p",
+   "kind": "reference"
+  },
+  {
+   "source": "exr-algebra-of-linear-maps-c1",
+   "target": "exm-heisenberg-characteristic-p",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-integer-multiples",
+   "target": "exm-heisenberg-characteristic-p",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-three-views-of-product",
+   "target": "exm-heisenberg-characteristic-p",
+   "kind": "reference"
+  },
+  {
+   "source": "def-commutator",
+   "target": "exr-commutators-and-shoda-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-trace-zero-similar-zero-diagonal",
+   "target": "exr-commutators-and-shoda-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-commutator-properties",
+   "target": "exr-commutators-and-shoda-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-shoda",
+   "target": "exr-commutators-and-shoda-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-span-of-commutators",
+   "target": "exr-commutators-and-shoda-a1",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-nonscalar-similar-zero-diagonal-entry",
+   "target": "exr-commutators-and-shoda-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-shoda",
+   "target": "exr-commutators-and-shoda-b1",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-heisenberg-characteristic-p",
+   "target": "exr-commutators-and-shoda-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "exr-algebra-of-linear-maps-c1",
+   "target": "exr-commutators-and-shoda-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-nonscalar-similar-zero-diagonal-entry",
+   "target": "exr-commutators-and-shoda-b2",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-commutator-properties",
+   "target": "exr-commutators-and-shoda-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-rank-nullity",
+   "target": "exr-commutators-and-shoda-b3",
+   "kind": "reference"
+  },
+  {
+   "source": "exr-projections-and-trace-c2",
+   "target": "exr-commutators-and-shoda-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-span-of-commutators",
+   "target": "exr-commutators-and-shoda-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-span-subspace",
+   "target": "exr-commutators-and-shoda-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-trace-properties",
+   "target": "exr-commutators-and-shoda-c1",
+   "kind": "reference"
+  },
+  {
+   "source": "def-trace",
+   "target": "exr-commutators-and-shoda-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-commutator-properties",
+   "target": "exr-commutators-and-shoda-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-similarity-invariants",
+   "target": "exr-commutators-and-shoda-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-annihilating-polynomial-exists",
+   "target": "exr-commutators-and-shoda-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-block-multiplication",
+   "target": "exr-commutators-and-shoda-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-invertible-tfae",
+   "target": "exr-commutators-and-shoda-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-times-vector-columns",
+   "target": "exr-commutators-and-shoda-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-polynomial-of-matrix-properties",
+   "target": "exr-commutators-and-shoda-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-remainder-theorem",
+   "target": "exr-commutators-and-shoda-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-trace-similarity-invariant",
+   "target": "exr-commutators-and-shoda-c2",
+   "kind": "reference"
+  },
+  {
+   "source": "def-trace",
+   "target": "lem-nonscalar-similar-zero-diagonal-entry",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-basis-extension",
+   "target": "lem-nonscalar-similar-zero-diagonal-entry",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-independence-unique-combination",
+   "target": "lem-nonscalar-similar-zero-diagonal-entry",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-invertible-tfae",
+   "target": "lem-nonscalar-similar-zero-diagonal-entry",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-times-vector-columns",
+   "target": "lem-nonscalar-similar-zero-diagonal-entry",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-three-views-of-product",
+   "target": "lem-nonscalar-similar-zero-diagonal-entry",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-trace-similarity-invariant",
+   "target": "lem-nonscalar-similar-zero-diagonal-entry",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-zero-product",
+   "target": "lem-nonscalar-similar-zero-diagonal-entry",
+   "kind": "reference"
+  },
+  {
+   "source": "def-characteristic",
+   "target": "lem-trace-zero-similar-zero-diagonal",
+   "kind": "reference"
+  },
+  {
+   "source": "def-trace",
+   "target": "lem-trace-zero-similar-zero-diagonal",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-integer-multiples",
+   "target": "lem-trace-zero-similar-zero-diagonal",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-nonscalar-similar-zero-diagonal-entry",
+   "target": "lem-trace-zero-similar-zero-diagonal",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-block-diagonal-arithmetic",
+   "target": "lem-trace-zero-similar-zero-diagonal",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-block-multiplication",
+   "target": "lem-trace-zero-similar-zero-diagonal",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-induction",
+   "target": "lem-trace-zero-similar-zero-diagonal",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-inverse-matrix-properties",
+   "target": "lem-trace-zero-similar-zero-diagonal",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-matrix-multiplication-properties",
+   "target": "prp-commutator-properties",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-trace-properties",
+   "target": "prp-commutator-properties",
+   "kind": "reference"
+  },
+  {
+   "source": "def-characteristic",
+   "target": "thm-shoda",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-integer-multiples",
+   "target": "thm-shoda",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-trace-zero-similar-zero-diagonal",
+   "target": "thm-shoda",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-commutator-properties",
+   "target": "thm-shoda",
+   "kind": "reference"
+  },
+  {
+   "source": "def-commutator",
+   "target": "thm-span-of-commutators",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-standard-bases",
+   "target": "thm-span-of-commutators",
+   "kind": "reference"
+  },
+  {
+   "source": "exm-trace-free-matrices",
+   "target": "thm-span-of-commutators",
+   "kind": "reference"
+  },
+  {
+   "source": "lem-trace-zero-similar-zero-diagonal",
+   "target": "thm-span-of-commutators",
+   "kind": "reference"
+  },
+  {
+   "source": "prp-commutator-properties",
+   "target": "thm-span-of-commutators",
+   "kind": "reference"
+  },
+  {
+   "source": "thm-span-subspace",
+   "target": "thm-span-of-commutators",
    "kind": "reference"
   }
  ]

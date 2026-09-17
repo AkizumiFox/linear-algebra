@@ -434,6 +434,45 @@
           "filename": "10-characteristic-polynomial.md"
         }
       ]
+    },
+    {
+      "title": "Block Matrices",
+      "number": 7,
+      "part": "",
+      "collapsed": true,
+      "path": "ch07-block-matrices/index.html",
+      "sections": [
+        {
+          "title": "Partitions and Block Multiplication",
+          "number": "7.1",
+          "path": "ch07-block-matrices/01-block-multiplication.html",
+          "filename": "01-block-multiplication.md"
+        },
+        {
+          "title": "Rank and Block Matrices",
+          "number": "7.2",
+          "path": "ch07-block-matrices/02-rank-of-block-matrices.html",
+          "filename": "02-rank-of-block-matrices.md"
+        },
+        {
+          "title": "Schur Complements",
+          "number": "7.3",
+          "path": "ch07-block-matrices/03-block-determinants-and-schur-complements.html",
+          "filename": "03-block-determinants-and-schur-complements.md"
+        },
+        {
+          "title": "The Kronecker Product",
+          "number": "7.4",
+          "path": "ch07-block-matrices/04-kronecker-product.html",
+          "filename": "04-kronecker-product.md"
+        },
+        {
+          "title": "Commutators and Trace-Zero Matrices",
+          "number": "7.5",
+          "path": "ch07-block-matrices/05-commutators-and-shoda.html",
+          "filename": "05-commutators-and-shoda.md"
+        }
+      ]
     }
   ]
 }
