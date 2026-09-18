@@ -105,6 +105,7 @@ This list is fixed. A chapter that needs a new symbol adds it here, and a new ma
 | `\G` | Gram matrix of a list \( (\v_1, \dots, \v_k) \): \( (\G)_{ij} = \inner{\v_j}{\v_i} \), the index order chosen so that \( \G \) is Hermitian and \( \x^{*}\G\x = \norm{\sum x_j\v_j}^2 \) (Ch 10 §02, §06). **Local override:** in Ch 10 §08 `\G(i, j; c, s)` is a Givens rotation, which is the universal letter for it; no Gram matrix appears in that section, and the Givens form always carries its arguments on first use |
 | `P_n`, `T_n` | Legendre and Chebyshev polynomials (Ch 10 §§09–10), where both names are universal. §09 does use `P_U` and `P_{W_n}` for projections a few lines away, so keep the subscript doing the work: a subspace subscript means a projection, an integer subscript a polynomial, and §09 never abbreviates Legendre as `P_n` |
 | `\norm{\v}` | norm (induced unless stated) |
+| `\norm{\A}_F` | Frobenius norm of a matrix: \( \bigl(\sum_{i,j}\lvert a_{ij}\rvert^2\bigr)^{1/2} = \sqrt{\tr(\A^{*}\A)} \), the norm induced by the Frobenius inner product \( \inner{\A}{\B} = \tr(\B^{*}\A) \) of Ch 10 §01, given this symbol in Ch 11 §11. Unitarily invariant: \( \norm{\U\A\V}_F = \norm{\A}_F \) for unitary \( \U, \V \). The subscript is obligatory, since bare `\norm{\cdot}` is the vector norm |
 | `U^{\perp}` | orthogonal complement |
 | `P_U` | orthogonal projection onto U |
 | `T^{*}` | adjoint |
@@ -129,6 +130,10 @@ This list is fixed. A chapter that needs a new symbol adds it here, and a new ma
 | `A \otimes B` | Kronecker product of matrices |
 | `\vecop X` | vectorization of a matrix: its columns stacked into one column, rendered vec X (Ch 7) |
 | `A \circ B` | Hadamard (entrywise) product |
+| `\J` | the all-ones matrix, every entry \( 1 \) (Ch 2 §07, Ch 11 §§02, 05, 08, 09). Distinct from the Jordan block \( \J_k(\lambda) \), which always carries its size and eigenvalue |
+| `\cS_{\A,\B}` | the Sylvester operator \( \X \mapsto \A\X - \X\B \) on \( M_{m \times n} \) (Ch 11 §10) |
+| index origin | subscripts start at 1 everywhere, with one announced exception: Ch 11 §09 runs rows, columns and entries from \( 0 \) to \( n-1 \), because circulant and Fourier subscripts are read modulo n |
+| `\c \ast \d` | cyclic convolution of two vectors of length n, \( (\c \ast \d)_k = \sum_t c_t d_{k-t} \) with subscripts read modulo n (Ch 11 §09). The product of two circulants is the circulant of the convolution |
 | `[A, B] = AB - BA` | commutator |
 | `\norm{\x}_p` | p-norm. `\norm{A}_F` Frobenius, `\norm{A}_2` spectral/operator 2-norm |
 | `\norm{A}` | operator norm induced by the named vector norm |

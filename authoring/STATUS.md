@@ -111,3 +111,18 @@ Add a line when a section promises something later ("proved in Chapter 5"); tick
 - [ ] Ch 10 §05 → Hilbert spaces: representability needs completeness and continuity (stated as a boundary, not promised)
 - [ ] Ch 10 §06 → Ch 11: all spectral theory of self-adjoint and normal operators
 - [ ] Ch 10 §02 → Ch 11: what an inner product adds once an operator is also given
+
+### Chapter 11 (spectral theory)
+
+- [ ] Ch 11 §01 → Ch 15: norms and limits for matrices, making the "diagonalizable, then take a limit" argument precise
+- [ ] Ch 11 §02 → Ch 12: positive operators (`exr-self-adjoint-operators-c1` proves half the characterization)
+- [ ] Ch 11 §02 → Ch 16: the Rayleigh quotient and Courant–Fischer, the optimization route to eigenvalues of a self-adjoint operator
+- [x] Ch 7 §04 → Ch 11 §10: the Sylvester equation is uniquely solvable exactly when the spectra are disjoint (Ch 7 states the promise at the end of the Kronecker section)
+- [ ] Ch 11 §08/§10 → Ch 12: positive operators (the square root built in §08 is what Ch 12 needs for the polar decomposition and the SVD); positive definite solutions of the Lyapunov equation
+- [ ] Ch 11 §05 → Ch 13: congruence versus similarity, and Sylvester's law of inertia (promised twice in §05)
+- [ ] Ch 11 §11 → Ch 19: Bauer–Fike and eigenvalue perturbation
+- [ ] Ch 11 §10 → Ch 15: Lyapunov stability of \( \dot{\x} = \A\x \)
+- [ ] Ch 11 §10 → Ch 19: conditioning of the Sylvester equation (restates Ch 7 §04's own pointer)
+- [ ] Ch 11 §09 → Ch 23: the FFT as a fast way to apply the Fourier matrix, not a different theorem
+- Stated but deliberately not proved in Ch 11, each flagged in the text: Roth's removal rule (§10, route via Ch 9 §07's characteristic-matrix equivalence), the general Fuglede theorem (§07), general Cartan–Dieudonné (§06), and the connectedness of the unitary group (§08). Nothing later depends on any of them.
+- Note for §11's drafter: `\norm{\A}_F` is already used in Ch 11 §01 exercise C2, defined locally there from the Frobenius inner product of Ch 10 §01. §11 owes the NOTATION.md row.
