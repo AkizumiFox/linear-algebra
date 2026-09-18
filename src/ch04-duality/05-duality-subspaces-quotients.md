@@ -200,9 +200,9 @@ A non-zero functional maps onto the one-dimensional space \( F \), so the First 
 :::
 
 ::: {.proof}
-(⇐) Suppose \( \varphi \in V^{*} \) is non-zero. Then \( \im \varphi \) is a subspace of \( F \) (@thm-prop-image) containing a non-zero scalar, so \( \dim \im\varphi = 1 = \dim F \), and \( \im \varphi = F \) by @thm-dim-impl-eq. By @thm-first-isomorphism, \( V/\ker\varphi \cong F \), so \( \dim(V/\ker\varphi) = 1 \), and \( \ker\varphi \) is a hyperplane.
+\( (\Leftarrow) \) Suppose \( \varphi \in V^{*} \) is non-zero. Then \( \im \varphi \) is a subspace of \( F \) (@thm-prop-image) containing a non-zero scalar, so \( \dim \im\varphi = 1 = \dim F \), and \( \im \varphi = F \) by @thm-dim-impl-eq. By @thm-first-isomorphism, \( V/\ker\varphi \cong F \), so \( \dim(V/\ker\varphi) = 1 \), and \( \ker\varphi \) is a hyperplane.
 
-(⇒) Suppose \( \dim(V/H) = 1 \). By @thm-isomorphic-iff-same-dimension there is an isomorphism \( \theta \colon V/H \to F \). Let \( \varphi = \theta \circ \pi \), where \( \pi \colon V \to V/H \) is the quotient map. It is linear as a composition of linear maps (@thm-composition-linear), so \( \varphi \in V^{*} \). For \( \v \in V \), \( \varphi(\v) = 0 \) means \( \theta(\v + H) = 0 \), which holds exactly when \( \v + H \) is the zero coset, since \( \theta \) is injective; and \( \v + H = H \) means \( \v \in H \) by @lem-coset-equality (b). So \( \ker\varphi = H \). Finally \( \varphi \ne 0 \): since \( V/H \ne \{\0\} \), we have \( H \ne V \), so some \( \v \notin H = \ker\varphi \).
+\( (\Rightarrow) \) Suppose \( \dim(V/H) = 1 \). By @thm-isomorphic-iff-same-dimension there is an isomorphism \( \theta \colon V/H \to F \). Let \( \varphi = \theta \circ \pi \), where \( \pi \colon V \to V/H \) is the quotient map. It is linear as a composition of linear maps (@thm-composition-linear), so \( \varphi \in V^{*} \). For \( \v \in V \), \( \varphi(\v) = 0 \) means \( \theta(\v + H) = 0 \), which holds exactly when \( \v + H \) is the zero coset, since \( \theta \) is injective; and \( \v + H = H \) means \( \v \in H \) by @lem-coset-equality (b). So \( \ker\varphi = H \). Finally \( \varphi \ne 0 \): since \( V/H \ne \{\0\} \), we have \( H \ne V \), so some \( \v \notin H = \ker\varphi \).
 :::
 
 The functional is not unique, but almost: two functionals with the same kernel are scalar multiples of each other (@exr-linear-functionals-c1; @exr-duality-subspaces-quotients-b2 gives a second proof). So hyperplanes of \( V \) correspond to non-zero functionals **up to a non-zero scalar**, just as the plane \( x + y + z = 0 \) is also \( 2x + 2y + 2z = 0 \).
@@ -299,15 +299,15 @@ Check: \( \varphi_1(1, -1, 0, 2) = 0 \), \( \varphi_1(0, 1, 1, -1) = 0 \), \( \v
 ::: {#exr-duality-subspaces-quotients-b2}
 [B2: Functionals with the same kernel]
 
-Let \( V \) be a vector space over \( F \), of any dimension, and let \( \varphi, \psi \in V^{*} \) be non-zero. Prove that \( \ker\varphi = \ker\psi \) if and only if \( \psi = c\varphi \) for some non-zero \( c \in F \). (@exr-linear-functionals-c1 proved (⇒) by a different route; here use the hyperplane decomposition.)
+Let \( V \) be a vector space over \( F \), of any dimension, and let \( \varphi, \psi \in V^{*} \) be non-zero. Prove that \( \ker\varphi = \ker\psi \) if and only if \( \psi = c\varphi \) for some non-zero \( c \in F \). (@exr-linear-functionals-c1 proved \( (\Rightarrow) \) by a different route; here use the hyperplane decomposition.)
 
 *Hint: the remark after @thm-hyperplane-kernel-functional.*
 :::
 
 ::: {.solution}
-(⇐) If \( \psi = c\varphi \) with \( c \ne 0 \), then \( \psi(\v) = 0 \) if and only if \( c\varphi(\v) = 0 \), if and only if \( \varphi(\v) = 0 \), since \( c \) is invertible. So \( \ker\psi = \ker\varphi \).
+\( (\Leftarrow) \) If \( \psi = c\varphi \) with \( c \ne 0 \), then \( \psi(\v) = 0 \) if and only if \( c\varphi(\v) = 0 \), if and only if \( \varphi(\v) = 0 \), since \( c \) is invertible. So \( \ker\psi = \ker\varphi \).
 
-(⇒) Suppose \( \ker\varphi = \ker\psi = H \). Since \( \varphi \ne 0 \), choose \( \v_0 \) with \( \varphi(\v_0) \ne 0 \); then \( \v_0 \notin H \), so also \( \psi(\v_0) \ne 0 \). Put \( c = \psi(\v_0)/\varphi(\v_0) \), which is non-zero, and \( \chi = \psi - c\varphi \in V^{*} \). Then \( \chi \) vanishes on \( H \), because both \( \psi \) and \( \varphi \) do, and \( \chi(\v_0) = \psi(\v_0) - c\varphi(\v_0) = 0 \). By @thm-hyperplane-kernel-functional \( H \) is a hyperplane, and by the remark after it \( V = H \oplus \Span(\v_0) \). A linear map vanishing on \( H \) and on \( \v_0 \) vanishes on every \( \h + a\v_0 \), hence on \( V \). So \( \chi = 0 \), that is, \( \psi = c\varphi \).
+\( (\Rightarrow) \) Suppose \( \ker\varphi = \ker\psi = H \). Since \( \varphi \ne 0 \), choose \( \v_0 \) with \( \varphi(\v_0) \ne 0 \); then \( \v_0 \notin H \), so also \( \psi(\v_0) \ne 0 \). Put \( c = \psi(\v_0)/\varphi(\v_0) \), which is non-zero, and \( \chi = \psi - c\varphi \in V^{*} \). Then \( \chi \) vanishes on \( H \), because both \( \psi \) and \( \varphi \) do, and \( \chi(\v_0) = \psi(\v_0) - c\varphi(\v_0) = 0 \). By @thm-hyperplane-kernel-functional \( H \) is a hyperplane, and by the remark after it \( V = H \oplus \Span(\v_0) \). A linear map vanishing on \( H \) and on \( \v_0 \) vanishes on every \( \h + a\v_0 \), hence on \( V \). So \( \chi = 0 \), that is, \( \psi = c\varphi \).
 :::
 
 ::: {#exr-duality-subspaces-quotients-b3}

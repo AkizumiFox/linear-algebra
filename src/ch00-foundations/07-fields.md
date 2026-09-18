@@ -253,13 +253,13 @@ By @exm-finite-fields, only (F8) is in question. If \( n \) is prime, a non-zero
 ::: {.proof}
 By @exm-finite-fields, \( \nZ/n\nZ \) satisfies all field axioms except possibly (F8), including \( [1] \ne [0] \) since \( n \ge 2 \).
 
-(⇐) Suppose \( n = p \) is prime, and let \( [a] \ne [0] \). Then \( p \) does not divide \( a \). A positive integer dividing \( p \) is \( 1 \) or \( p \), and \( p \) does not divide \( a \), so the only positive common divisor of \( a \) and \( p \) is \( 1 \). By @lem-bezout-integers there are \( x, y \in \nZ \) with \( ax + py = 1 \). Since \( ax - 1 = -py \) is divisible by \( p \),
+\( (\Leftarrow) \) Suppose \( n = p \) is prime, and let \( [a] \ne [0] \). Then \( p \) does not divide \( a \). A positive integer dividing \( p \) is \( 1 \) or \( p \), and \( p \) does not divide \( a \), so the only positive common divisor of \( a \) and \( p \) is \( 1 \). By @lem-bezout-integers there are \( x, y \in \nZ \) with \( ax + py = 1 \). Since \( ax - 1 = -py \) is divisible by \( p \),
 \[
 [a][x] = [ax] = [1].
 \]
 So \( [x] \) is an inverse of \( [a] \), and (F8) holds. Hence \( \nZ/p\nZ \) is a field.
 
-(⇒) We prove the contrapositive. Suppose \( n \ge 2 \) is not prime. Then \( n = rs \) for some integers \( r, s \) with \( 1 < r < n \) and \( 1 < s < n \). Since \( 0 < r < n \), \( n \) does not divide \( r \), so \( [r] \ne [0] \); likewise \( [s] \ne [0] \). But \( [r][s] = [rs] = [n] = [0] \). By @thm-field-basic-properties (f), this cannot happen in a field. Hence \( \nZ/n\nZ \) is not a field. This proves the theorem.
+\( (\Rightarrow) \) We prove the contrapositive. Suppose \( n \ge 2 \) is not prime. Then \( n = rs \) for some integers \( r, s \) with \( 1 < r < n \) and \( 1 < s < n \). Since \( 0 < r < n \), \( n \) does not divide \( r \), so \( [r] \ne [0] \); likewise \( [s] \ne [0] \). But \( [r][s] = [rs] = [n] = [0] \). By @thm-field-basic-properties (f), this cannot happen in a field. Hence \( \nZ/n\nZ \) is not a field. This proves the theorem.
 :::
 
 For a prime \( p \) we write \( \nF_p \coloneqq \nZ/p\nZ \), and usually drop the brackets, writing its elements as \( 0, 1, \dots, p - 1 \) and computing "mod \( p \)". So \( \nF_2, \nF_3, \nF_5, \nF_7, \dots \) are fields, while \( \nZ/4\nZ \), \( \nZ/6\nZ \) and \( \nZ/9\nZ \) are not.

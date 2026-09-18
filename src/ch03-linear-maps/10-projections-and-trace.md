@@ -100,7 +100,7 @@ with \( r \) ones.
 :::
 
 ::: {.proof}
-By @thm-projection-direct-sum (a), \( V = \im P \oplus \ker P \), so the concatenated list \( \sB \) is a basis of \( V \) by @thm-direct-sum-k-criteria ((a) ⇒ (d)). Since \( P\u_i = \u_i \) and \( P\w_j = \0 \), the columns of \( [P]_{\sB} \) are \( \e_1, \dots, \e_r \) followed by \( s \) zero columns (@def-matrix-of-linear-map).
+By @thm-projection-direct-sum (a), \( V = \im P \oplus \ker P \), so the concatenated list \( \sB \) is a basis of \( V \) by @thm-direct-sum-k-criteria ((a) \( \Rightarrow \) (d)). Since \( P\u_i = \u_i \) and \( P\w_j = \0 \), the columns of \( [P]_{\sB} \) are \( \e_1, \dots, \e_r \) followed by \( s \) zero columns (@def-matrix-of-linear-map).
 :::
 
 Conversely, an operator whose matrix in some basis is \( \diag(1, \dots, 1, 0, \dots, 0) \) is a projection, since that matrix squares to itself. With the change-of-basis square, this gives a way to write down any projection in standard coordinates.
@@ -346,15 +346,15 @@ Let \( F \) have characteristic not \( 2 \), and let \( P, Q \in \cL(V) \) be pr
 3. Suppose \( V \) is finite-dimensional over \( \nR \) and \( P + Q \) is a projection. Deduce that \( \rank(P + Q) = \rank P + \rank Q \).
 :::
 
-*Hint: for (⇒) in (a), use the relation \( PQ + QP = 0 \) together with \( P^2 = P \).*
+*Hint: for \( (\Rightarrow) \) in (a), use the relation \( PQ + QP = 0 \) together with \( P^2 = P \).*
 :::
 
 ::: {.solution}
 (a) By @thm-composition-linear, \( (P + Q)^2 = P^2 + PQ + QP + Q^2 = P + Q + PQ + QP \).
 
-(⇐) If \( PQ = QP = 0 \), this is \( P + Q \).
+\( (\Leftarrow) \) If \( PQ = QP = 0 \), this is \( P + Q \).
 
-(⇒) If \( (P + Q)^2 = P + Q \), then \( PQ + QP = 0 \). Multiplying on the left by \( P \) and using \( P^2 = P \) gives \( PQ + PQP = 0 \); multiplying on the right by \( P \) gives \( PQP + QP = 0 \). Subtracting, \( PQ - QP = 0 \), so \( PQ = QP \). Then \( 2PQ = PQ + QP = 0 \), and since \( 2 \ne 0 \) in \( F \), \( PQ = 0 \). Hence also \( QP = 0 \).
+\( (\Rightarrow) \) If \( (P + Q)^2 = P + Q \), then \( PQ + QP = 0 \). Multiplying on the left by \( P \) and using \( P^2 = P \) gives \( PQ + PQP = 0 \); multiplying on the right by \( P \) gives \( PQP + QP = 0 \). Subtracting, \( PQ - QP = 0 \), so \( PQ = QP \). Then \( 2PQ = PQ + QP = 0 \), and since \( 2 \ne 0 \) in \( F \), \( PQ = 0 \). Hence also \( QP = 0 \).
 
 (b) Over \( \nF_2 \), let \( P = Q = \id_V \) with \( V \ne \{\0\} \). Then \( P + Q = 2\id_V = 0 \), which is a projection, but \( PQ = \id_V \ne 0 \). The step from \( 2PQ = 0 \) to \( PQ = 0 \) is the one that fails.
 

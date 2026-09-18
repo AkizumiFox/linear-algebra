@@ -78,7 +78,7 @@ How does the external product relate to the internal direct sum of Chapter 1? If
 ::: {.proof}
 (a) For lists \( (\u_i) \), \( (\u_i') \) and \( a \in F \), regrouping the finite sums gives \( S((\u_i) + (\u_i')) = \sum_i (\u_i + \u_i') = S((\u_i)) + S((\u_i')) \) and \( S(a(\u_i)) = \sum_i a\u_i = aS((\u_i)) \), so \( S \) is linear. Its image is \( \{ \u_1 + \dots + \u_k : \u_i \in U_i \} \), which is \( U_1 + \dots + U_k \) by @def-sum-of-subspaces. Its kernel consists of the lists with \( \u_1 + \dots + \u_k = \0 \). By @thm-injective-iff-trivial-kernel, \( S \) is injective if and only if the only such list is \( (\0, \dots, \0) \), which is condition (b) of @thm-direct-sum-k-criteria, equivalent to the sum being direct. In that case \( S \), viewed as a map onto its image, is a linear bijection, hence an isomorphism (@def-isomorphism).
 
-(b) Each \( \iota_i \) is linear and injective (its kernel is \( \{\0\} \), since \( \iota_i(\v) \) has \( \v \) as its \( i \)-th entry), so \( \iota_i(V_i) \) is a subspace (@thm-prop-image) and \( \iota_i \) is a bijection onto it. Every list satisfies \( (\v_1, \dots, \v_k) = \iota_1(\v_1) + \dots + \iota_k(\v_k) \), so the product is the sum of the subspaces \( \iota_i(V_i) \). If \( \iota_1(\v_1) + \dots + \iota_k(\v_k) = \0 \), then \( (\v_1, \dots, \v_k) = (\0, \dots, \0) \), so every piece \( \iota_i(\v_i) \) is \( \0 \). By @thm-direct-sum-k-criteria ((b) ⇒ (a)) the sum is direct.
+(b) Each \( \iota_i \) is linear and injective (its kernel is \( \{\0\} \), since \( \iota_i(\v) \) has \( \v \) as its \( i \)-th entry), so \( \iota_i(V_i) \) is a subspace (@thm-prop-image) and \( \iota_i \) is a bijection onto it. Every list satisfies \( (\v_1, \dots, \v_k) = \iota_1(\v_1) + \dots + \iota_k(\v_k) \), so the product is the sum of the subspaces \( \iota_i(V_i) \). If \( \iota_1(\v_1) + \dots + \iota_k(\v_k) = \0 \), then \( (\v_1, \dots, \v_k) = (\0, \dots, \0) \), so every piece \( \iota_i(\v_i) \) is \( \0 \). By @thm-direct-sum-k-criteria ((b) \( \Rightarrow \) (a)) the sum is direct.
 :::
 
 So internal and external direct sums are the same thing seen from two sides. An internal direct sum is a product that happens to live inside \( V \); a product is an internal direct sum of copies of its factors. Many books write \( \oplus \) for both. This book keeps \( \times \) for the external construction, so that \( U \oplus W \) always refers to subspaces of one space.
@@ -88,7 +88,7 @@ Use @thm-internal-external-direct-sum (a) and Rank–Nullity to explain why, for
 :::
 
 ::: {.solution}
-The addition map \( S \colon U \times W \to V \) has image \( U + W \), and \( \dim(U \times W) = \dim U + \dim W \) by @thm-dimension-of-product. By @thm-rank-nullity, \( \dim U + \dim W = \dim(U + W) + \dim \ker S \). So \( \dim(U + W) = \dim U + \dim W \) exactly when \( \ker S = \{\0\} \), that is, when \( S \) is injective, which by the theorem means the sum is direct. This recovers @thm-direct-sum-criteria (a) ⇔ (c).
+The addition map \( S \colon U \times W \to V \) has image \( U + W \), and \( \dim(U \times W) = \dim U + \dim W \) by @thm-dimension-of-product. By @thm-rank-nullity, \( \dim U + \dim W = \dim(U + W) + \dim \ker S \). So \( \dim(U + W) = \dim U + \dim W \) exactly when \( \ker S = \{\0\} \), that is, when \( S \) is injective, which by the theorem means the sum is direct. This recovers @thm-direct-sum-criteria (a) \( \Leftrightarrow \) (c).
 :::
 
 ## Cosets

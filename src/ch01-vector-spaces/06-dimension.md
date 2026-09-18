@@ -332,13 +332,13 @@ Let \( V \) be a vector space and \( \sL = (\v_1, \dots, \v_n) \) a list in \( V
 :::
 
 ::: {.proof}
-(a) (⇒) Let \( \sL \) be a basis and \( \v \in V \). Then \( \v \in \Span(\sL) = V \), so \( (\v_1, \dots, \v_n, \v) \) is dependent by @lem-append-independent. Hence \( \sL \) is maximal independent.
+(a) \( (\Rightarrow) \) Let \( \sL \) be a basis and \( \v \in V \). Then \( \v \in \Span(\sL) = V \), so \( (\v_1, \dots, \v_n, \v) \) is dependent by @lem-append-independent. Hence \( \sL \) is maximal independent.
 
-(⇐) Let \( \sL \) be maximal independent and \( \v \in V \). The list \( (\v_1, \dots, \v_n, \v) \) is dependent while \( \sL \) is independent, so \( \v \in \Span(\sL) \) by @lem-append-independent. Hence \( \sL \) spans \( V \), and \( \sL \) is a basis.
+\( (\Leftarrow) \) Let \( \sL \) be maximal independent and \( \v \in V \). The list \( (\v_1, \dots, \v_n, \v) \) is dependent while \( \sL \) is independent, so \( \v \in \Span(\sL) \) by @lem-append-independent. Hence \( \sL \) spans \( V \), and \( \sL \) is a basis.
 
-(b) (⇒) Let \( \sL \) be a basis, and suppose that deleting \( \v_j \) gives a list that still spans \( V \). Then \( \v_j = \sum_{i \ne j} c_i\v_i \) for some scalars, so \( \sum_{i \ne j} c_i\v_i + (-1)\v_j = \0 \), a linear relation with the coefficient \( -1 \ne 0 \). This contradicts independence. Hence \( \sL \) is minimal spanning.
+(b) \( (\Rightarrow) \) Let \( \sL \) be a basis, and suppose that deleting \( \v_j \) gives a list that still spans \( V \). Then \( \v_j = \sum_{i \ne j} c_i\v_i \) for some scalars, so \( \sum_{i \ne j} c_i\v_i + (-1)\v_j = \0 \), a linear relation with the coefficient \( -1 \ne 0 \). This contradicts independence. Hence \( \sL \) is minimal spanning.
 
-(⇐) Let \( \sL \) be minimal spanning. By @thm-sift, some sub-list \( S \) of \( \sL \) is a basis of \( V \). Suppose \( S \ne \sL \). Then \( S \) omits some entry \( \v_j \), so every entry of \( S \) is an entry of the list \( \sL' \) obtained by deleting \( \v_j \). By @thm-span-subspace, \( \Span(\sL') \) contains \( \Span(S) = V \), so \( \sL' \) spans \( V \), contradicting minimality. Hence \( S = \sL \), and \( \sL \) is a basis.
+\( (\Leftarrow) \) Let \( \sL \) be minimal spanning. By @thm-sift, some sub-list \( S \) of \( \sL \) is a basis of \( V \). Suppose \( S \ne \sL \). Then \( S \) omits some entry \( \v_j \), so every entry of \( S \) is an entry of the list \( \sL' \) obtained by deleting \( \v_j \). By @thm-span-subspace, \( \Span(\sL') \) contains \( \Span(S) = V \), so \( \sL' \) spans \( V \), contradicting minimality. Hence \( S = \sL \), and \( \sL \) is a basis.
 :::
 
 "Maximal" means "cannot be enlarged", which is different from "longest possible". In a finite-dimensional space the two agree: by @thm-size-bounds a longest independent list has length \( \dim V \), and by @thm-right-size-basis every independent list of that length is a basis.

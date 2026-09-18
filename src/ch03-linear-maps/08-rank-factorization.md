@@ -133,7 +133,7 @@ Now read off the columns of \( \mtx{T}{\sB}{\sC} \) (@def-matrix-of-linear-map).
 \]
 and both outer matrices are invertible by @thm-change-of-coordinates (c). Hence \( \A \) is equivalent to \( \N_r \).
 
-(c) (⇒) If \( \B = \Q\A\P \) with \( \Q, \P \) invertible, then \( \rank \B = \rank \A \) by @thm-rank-product-inequality. (⇐) If \( \rank \A = \rank \B = r \), then by (b) both \( \A \) and \( \B \) are equivalent to \( \N_r \). Since equivalence is symmetric and transitive, \( \A \) is equivalent to \( \B \). This proves the theorem.
+(c) \( (\Rightarrow) \) If \( \B = \Q\A\P \) with \( \Q, \P \) invertible, then \( \rank \B = \rank \A \) by @thm-rank-product-inequality. \( (\Leftarrow) \) If \( \rank \A = \rank \B = r \), then by (b) both \( \A \) and \( \B \) are equivalent to \( \N_r \). Since equivalence is symmetric and transitive, \( \A \) is equivalent to \( \B \). This proves the theorem.
 :::
 
 So the equivalence classes of \( M_{m \times n}(F) \) are exactly the sets of matrices of rank \( r \), for \( r = 0, 1, \dots, \min(m, n) \): there are \( \min(m, n) + 1 \) of them, whatever the field. Every linear map between finite-dimensional spaces looks like "keep \( r \) coordinates and delete the rest" once the bases on both sides are chosen well. **The right pair of bases makes any single map trivial.**
@@ -315,7 +315,7 @@ Let \( \A \in M_{m \times n}(F) \).
 \[
 (\C\R)_{il} = \sum_{k=1}^{r} c_{ik}r_{kl} = \sum_{k=1}^{r} (\c_k\r_k)_{il}, \qquad\text{that is,}\qquad \A = \c_1\r_1 + \dots + \c_r\r_r .
 \]
-Each \( \c_k\r_k \) has rank \( 1 \) by the (⇐) direction of @exr-rank-c2, since \( \c_k \ne \0 \) (a column of \( \C \), whose columns are independent) and \( \r_k \ne 0 \) (a row of \( \R \), whose rows are independent). If \( \A = \A_1 + \dots + \A_s \) with each \( \rank \A_i = 1 \), then by @exr-rank-c1 applied repeatedly, \( r = \rank \A \le \rank \A_1 + \dots + \rank \A_s = s \).
+Each \( \c_k\r_k \) has rank \( 1 \) by the \( (\Leftarrow) \) direction of @exr-rank-c2, since \( \c_k \ne \0 \) (a column of \( \C \), whose columns are independent) and \( \r_k \ne 0 \) (a row of \( \R \), whose rows are independent). If \( \A = \A_1 + \dots + \A_s \) with each \( \rank \A_i = 1 \), then by @exr-rank-c1 applied repeatedly, \( r = \rank \A \le \rank \A_1 + \dots + \rank \A_s = s \).
 
 (c) By @exm-column-row-factorization, \( \A = \C\R \) with \( \C = \begin{pmatrix} 1 & 0 \\ 2 & 1 \\ 3 & 1 \end{pmatrix} \) and \( \R = \begin{pmatrix} 1 & 2 & 0 & 3 \\ 0 & 0 & 1 & -2 \end{pmatrix} \), so
 \[

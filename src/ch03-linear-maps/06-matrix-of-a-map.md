@@ -350,13 +350,13 @@ Let \( n = \dim V \) and \( m = \dim W \), and write \( C_{\sB} \colon V \to F^n
 
 The subspaces involved are finite-dimensional (@thm-subspace-dimension), so @thm-isomorphic-iff-same-dimension gives \( \dim \ker T = \dim \nul(\A) \) and \( \dim \im T = \dim \col(\A) \), which are the stated equalities by @def-nullity, @def-rank, @def-nullity-matrix and @def-rank-matrix.
 
-(b) (⇒) Suppose \( T \) is invertible. By @thm-matrix-of-composition and @exm-matrix-of-matrix-map (b),
+(b) \( (\Rightarrow) \) Suppose \( T \) is invertible. By @thm-matrix-of-composition and @exm-matrix-of-matrix-map (b),
 \[
 \mtx{T^{-1}}{\sC}{\sB}\,\A = \mtx{T^{-1}T}{\sB}{\sB} = [\id_V]_{\sB} = \I_n, \qquad \A\,\mtx{T^{-1}}{\sC}{\sB} = \mtx{TT^{-1}}{\sC}{\sC} = [\id_W]_{\sC} = \I_n .
 \]
 So \( \A \) is invertible with \( \A^{-1} = \mtx{T^{-1}}{\sC}{\sB} \) (@def-invertible-matrix).
 
-(⇐) Suppose \( \A \) is invertible. By @thm-linear-maps-isomorphic-to-matrices (for \( \cL(W, V) \) with bases \( \sC \) and \( \sB \)), there is \( S \in \cL(W, V) \) with \( \mtx{S}{\sC}{\sB} = \A^{-1} \). Then by @thm-matrix-of-composition, \( [ST]_{\sB} = \A^{-1}\A = \I_n = [\id_V]_{\sB} \). Since \( T' \mapsto [T']_{\sB} \) is injective on \( \cL(V) \) (@thm-linear-maps-isomorphic-to-matrices), \( ST = \id_V \). By @thm-one-sided-inverse-maps, \( T \) is invertible with \( T^{-1} = S \). This proves the theorem.
+\( (\Leftarrow) \) Suppose \( \A \) is invertible. By @thm-linear-maps-isomorphic-to-matrices (for \( \cL(W, V) \) with bases \( \sC \) and \( \sB \)), there is \( S \in \cL(W, V) \) with \( \mtx{S}{\sC}{\sB} = \A^{-1} \). Then by @thm-matrix-of-composition, \( [ST]_{\sB} = \A^{-1}\A = \I_n = [\id_V]_{\sB} \). Since \( T' \mapsto [T']_{\sB} \) is injective on \( \cL(V) \) (@thm-linear-maps-isomorphic-to-matrices), \( ST = \id_V \). By @thm-one-sided-inverse-maps, \( T \) is invertible with \( T^{-1} = S \). This proves the theorem.
 :::
 
 So we may add one more item to the Invertible Operator Theorem (@thm-invertible-operator-tfae): for \( T \in \cL(V) \) and **any** basis \( \sB \) of \( V \), \( T \) is invertible if and only if \( [T]_{\sB} \) is invertible. Every item of the Invertible Matrix Theorem (@thm-invertible-tfae) now becomes a test for operators.
@@ -488,9 +488,9 @@ T\v_j \in U_j \quad \text{for every } j = 1, \dots, n. \tag{$\ast$}
 \]
 Indeed, if \( a_{ij} = 0 \) for \( i > j \), then \( T\v_j = \sum_{i \le j} a_{ij}\v_i \in U_j \); conversely, if \( T\v_j = \sum_{i \le j} b_i\v_i \), then by uniqueness of coordinates \( a_{ij} = 0 \) for \( i > j \).
 
-(⇒) Assume \( (\ast) \), and fix \( k \). For \( j \le k \), \( T\v_j \in U_j \subseteq U_k \). Let \( \u = \sum_{j \le k} c_j\v_j \in U_k \). Then \( T\u = \sum_{j \le k} c_jT\v_j \) by @thm-linear-combination, a combination of vectors of the subspace \( U_k \), so \( T\u \in U_k \) by @thm-span-subspace. Hence \( U_k \) is \( T \)-invariant.
+\( (\Rightarrow) \) Assume \( (\ast) \), and fix \( k \). For \( j \le k \), \( T\v_j \in U_j \subseteq U_k \). Let \( \u = \sum_{j \le k} c_j\v_j \in U_k \). Then \( T\u = \sum_{j \le k} c_jT\v_j \) by @thm-linear-combination, a combination of vectors of the subspace \( U_k \), so \( T\u \in U_k \) by @thm-span-subspace. Hence \( U_k \) is \( T \)-invariant.
 
-(⇐) Assume every \( U_k \) is \( T \)-invariant. For each \( j \), \( \v_j \in U_j \), so \( T\v_j \in U_j \) by invariance of \( U_j \). This is \( (\ast) \), so \( [T]_{\sB} \) is upper triangular.
+\( (\Leftarrow) \) Assume every \( U_k \) is \( T \)-invariant. For each \( j \), \( \v_j \in U_j \), so \( T\v_j \in U_j \) by invariance of \( U_j \). This is \( (\ast) \), so \( [T]_{\sB} \) is upper triangular.
 :::
 
 ::: {#exr-matrix-of-a-map-c2}

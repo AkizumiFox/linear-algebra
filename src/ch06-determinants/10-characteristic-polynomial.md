@@ -207,7 +207,7 @@ Let \( \A \in M_n(F) \) with \( n \ge 1 \), and let \( c \in F \).
 :::
 
 ::: {.proof}
-(a) By @lem-charpoly-evaluation, \( p_{\A}(c) = \det(c\I - \A) \), which is a determinant of a matrix over the **field** \( F \). By @thm-det-nonzero-iff-invertible, it is zero if and only if \( c\I - \A \) is not invertible; this is (i) ⇔ (ii). By @thm-invertible-tfae, \( c\I - \A \) is not invertible if and only if \( (c\I - \A)\v = \0 \) for some \( \v \ne \0 \), and \( (c\I - \A)\v = c\v - \A\v \) by @thm-matrix-multiplication-properties; this is (ii) ⇔ (iii).
+(a) By @lem-charpoly-evaluation, \( p_{\A}(c) = \det(c\I - \A) \), which is a determinant of a matrix over the **field** \( F \). By @thm-det-nonzero-iff-invertible, it is zero if and only if \( c\I - \A \) is not invertible; this is (i) \( \Leftrightarrow \) (ii). By @thm-invertible-tfae, \( c\I - \A \) is not invertible if and only if \( (c\I - \A)\v = \0 \) for some \( \v \ne \0 \), and \( (c\I - \A)\v = c\v - \A\v \) by @thm-matrix-multiplication-properties; this is (ii) \( \Leftrightarrow \) (iii).
 
 (b) By @thm-charpoly-coefficients, \( p_{\A} \) is monic of degree \( n \), in particular non-zero. By @cor-root-bound-general, it has at most \( n \) distinct roots in \( F \), and by (a) these are exactly the scalars in question.
 :::

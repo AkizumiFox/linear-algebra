@@ -251,7 +251,7 @@ Let \( V \) be a finite-dimensional vector space, and let \( U \) and \( W \) be
 :::
 
 ::: {.proof}
-(⇒) is immediate. (⇐) Suppose \( U^{0} = W^{0} \). By @cor-annihilator-of-annihilator, \( U = \{ \v : \varphi(\v) = 0 \text{ for all } \varphi \in U^{0} \} = \{ \v : \varphi(\v) = 0 \text{ for all } \varphi \in W^{0} \} = W \).
+\( (\Rightarrow) \) is immediate. \( (\Leftarrow) \) Suppose \( U^{0} = W^{0} \). By @cor-annihilator-of-annihilator, \( U = \{ \v : \varphi(\v) = 0 \text{ for all } \varphi \in U^{0} \} = \{ \v : \varphi(\v) = 0 \text{ for all } \varphi \in W^{0} \} = W \).
 :::
 
 ::: {.check}

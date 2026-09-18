@@ -34,9 +34,9 @@ f = (x - c)^m g \quad \text{for some } g \in F[x] \text{ with } g(c) \neq 0 .
 :::
 
 ::: {.proof}
-(⇒) Suppose \( \operatorname{mult}_c(f) = m \). Then \( f = (x - c)^m g \) for some \( g \in F[x] \). If \( g(c) = 0 \), then \( g = (x - c)h \) by @lem-factor-theorem-linear, so \( f = (x - c)^{m+1}h \), contradicting the maximality of \( m \). Hence \( g(c) \neq 0 \).
+\( (\Rightarrow) \) Suppose \( \operatorname{mult}_c(f) = m \). Then \( f = (x - c)^m g \) for some \( g \in F[x] \). If \( g(c) = 0 \), then \( g = (x - c)h \) by @lem-factor-theorem-linear, so \( f = (x - c)^{m+1}h \), contradicting the maximality of \( m \). Hence \( g(c) \neq 0 \).
 
-(⇐) Suppose \( f = (x - c)^m g \) with \( g(c) \neq 0 \). Then \( (x - c)^m \mid f \), so \( \operatorname{mult}_c(f) \ge m \). Suppose, for a contradiction, that \( (x - c)^{m+1} \mid f \), say \( f = (x - c)^{m+1}h \). Then \( (x - c)^m g = (x - c)^m (x - c) h \). Since \( (x - c)^m \neq 0 \), cancellation (@cor-polynomial-no-zero-divisors) gives \( g = (x - c)h \), and evaluating at \( c \) gives \( g(c) = 0 \) by @thm-evaluation-respects-operations, a contradiction. Every higher power \( (x - c)^k \) with \( k > m + 1 \) would also give \( (x - c)^{m+1} \mid f \). Hence \( \operatorname{mult}_c(f) = m \).
+\( (\Leftarrow) \) Suppose \( f = (x - c)^m g \) with \( g(c) \neq 0 \). Then \( (x - c)^m \mid f \), so \( \operatorname{mult}_c(f) \ge m \). Suppose, for a contradiction, that \( (x - c)^{m+1} \mid f \), say \( f = (x - c)^{m+1}h \). Then \( (x - c)^m g = (x - c)^m (x - c) h \). Since \( (x - c)^m \neq 0 \), cancellation (@cor-polynomial-no-zero-divisors) gives \( g = (x - c)h \), and evaluating at \( c \) gives \( g(c) = 0 \) by @thm-evaluation-respects-operations, a contradiction. Every higher power \( (x - c)^k \) with \( k > m + 1 \) would also give \( (x - c)^{m+1} \mid f \). Hence \( \operatorname{mult}_c(f) = m \).
 :::
 
 The first payoff is that multiplicities add when polynomials multiply, just as exponents do.
@@ -132,9 +132,9 @@ Put \( g = g_k \). By the claim, \( \operatorname{mult}_{c_i}(g) = 0 \), that is
 
 Since \( f \neq 0 \), also \( g \neq 0 \), and @thm-degree-of-product gives \( \deg f = m_1 + \dots + m_k + \deg g \ge m_1 + \dots + m_k \).
 
-(⇒) If equality holds, then \( \deg g = 0 \), so \( g = a \) is a non-zero constant and \( f = a(x - c_1)^{m_1} \cdots (x - c_k)^{m_k} \) splits over \( F \).
+\( (\Rightarrow) \) If equality holds, then \( \deg g = 0 \), so \( g = a \) is a non-zero constant and \( f = a(x - c_1)^{m_1} \cdots (x - c_k)^{m_k} \) splits over \( F \).
 
-(⇐) Suppose \( f = a(x - a_1) \cdots (x - a_n) \) with \( n = \deg f \). Group equal factors: \( f = a(x - d_1)^{n_1} \cdots (x - d_l)^{n_l} \) with \( d_1, \dots, d_l \) distinct and \( n_1 + \dots + n_l = n \). By the computation above, the cofactor \( a\prod_{s \neq r}(x - d_s)^{n_s} \) is non-zero at \( d_r \), so \( \operatorname{mult}_{d_r}(f) = n_r \) by @lem-multiplicity-cofactor. Every root \( d \) of \( f \) satisfies \( a\prod_s (d - d_s)^{n_s} = 0 \), so \( d \) is one of the \( d_r \). Hence the roots of \( f \) are exactly \( d_1, \dots, d_l \), and their multiplicities add up to \( n = \deg f \). This proves the theorem.
+\( (\Leftarrow) \) Suppose \( f = a(x - a_1) \cdots (x - a_n) \) with \( n = \deg f \). Group equal factors: \( f = a(x - d_1)^{n_1} \cdots (x - d_l)^{n_l} \) with \( d_1, \dots, d_l \) distinct and \( n_1 + \dots + n_l = n \). By the computation above, the cofactor \( a\prod_{s \neq r}(x - d_s)^{n_s} \) is non-zero at \( d_r \), so \( \operatorname{mult}_{d_r}(f) = n_r \) by @lem-multiplicity-cofactor. Every root \( d \) of \( f \) satisfies \( a\prod_s (d - d_s)^{n_s} = 0 \), so \( d \) is one of the \( d_r \). Hence the roots of \( f \) are exactly \( d_1, \dots, d_l \), and their multiplicities add up to \( n = \deg f \). This proves the theorem.
 :::
 
 The theorem sharpens @cor-root-bound-general, because the number \( k \) of distinct roots is at most \( m_1 + \dots + m_k \). It also shows that a split polynomial is determined by its leading coefficient and its roots with multiplicities. Whether a given polynomial splits depends on the field: the fifth-degree polynomial \( (x - 1)^3(x^2 + 1) \) has root multiplicities adding up to \( 3 < 5 \) over \( \nR \), but it splits over \( \nC \) as \( (x - 1)^3(x - i)(x + i) \). In the next section we prove that over \( \nC \) **every** polynomial splits.
@@ -221,9 +221,9 @@ Write \( f = (x - c)g \) and differentiate: \( f' = g + (x - c)g' \), so \( f'(c
 :::
 
 ::: {.proof}
-(a) (⇒) Suppose \( f = (x - c)^2 g \). By @thm-formal-derivative-rules (b) and (c), \( f' = 2(x - c)g + (x - c)^2g' \), and evaluating at \( c \) gives \( f(c) = 0 \) and \( f'(c) = 0 \).
+(a) \( (\Rightarrow) \) Suppose \( f = (x - c)^2 g \). By @thm-formal-derivative-rules (b) and (c), \( f' = 2(x - c)g + (x - c)^2g' \), and evaluating at \( c \) gives \( f(c) = 0 \) and \( f'(c) = 0 \).
 
-(⇐) Suppose \( f(c) = 0 \) and \( f'(c) = 0 \). By @lem-factor-theorem-linear, \( f = (x - c)g \) for some \( g \in F[x] \). By @thm-formal-derivative-rules, \( f' = g + (x - c)g' \), so \( 0 = f'(c) = g(c) \). By @lem-factor-theorem-linear again, \( g = (x - c)h \), so \( f = (x - c)^2h \) and \( \operatorname{mult}_c(f) \ge 2 \).
+\( (\Leftarrow) \) Suppose \( f(c) = 0 \) and \( f'(c) = 0 \). By @lem-factor-theorem-linear, \( f = (x - c)g \) for some \( g \in F[x] \). By @thm-formal-derivative-rules, \( f' = g + (x - c)g' \), so \( 0 = f'(c) = g(c) \). By @lem-factor-theorem-linear again, \( g = (x - c)h \), so \( f = (x - c)^2h \) and \( \operatorname{mult}_c(f) \ge 2 \).
 
 (b) By @lem-multiplicity-cofactor, \( f = (x - c)^m g \) with \( g(c) \neq 0 \). By @thm-formal-derivative-rules,
 \[

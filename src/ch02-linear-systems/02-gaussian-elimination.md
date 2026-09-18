@@ -334,7 +334,7 @@ In particular, setting every free variable to \( 0 \) gives the solution \( \p \
 ::: {.proof}
 By @thm-row-ops-preserve-solutions (c), \( \A\x = \b \) has the same solution set as \( \R\x = \c \), so we work with the latter.
 
-(a, ⇐) If row \( i \) of \( [\, \R \mid \c \,] \) has its pivot in column \( n + 1 \), then its first \( n \) entries are \( 0 \) and \( c_i = 1 \) by (E3). Equation \( i \) reads \( 0 = 1 \), which is false in any field (@def-field). So there is no solution.
+(a, \( \Leftarrow \)) If row \( i \) of \( [\, \R \mid \c \,] \) has its pivot in column \( n + 1 \), then its first \( n \) entries are \( 0 \) and \( c_i = 1 \) by (E3). Equation \( i \) reads \( 0 = 1 \), which is false in any field (@def-field). So there is no solution.
 
 (b) Suppose no pivot lies in column \( n + 1 \). Then all pivots of \( [\, \R \mid \c \,] \) lie in columns \( j_1, \dots, j_r \le n \). By (E1), rows \( r + 1, \dots, m \) of \( [\, \R \mid \c \,] \) are zero, so the corresponding equations read \( 0 = 0 \) and hold for every \( \x \). For \( i \le r \), row \( i \) of \( \R \) has \( r_{i j_i} = 1 \) by (E3) and \( r_{i j_h} = 0 \) for \( h \neq i \) by (E4). So equation \( i \) reads
 \[
@@ -342,7 +342,7 @@ x_{j_i} + \sum_{l \text{ free}} r_{il}\, x_l = c_i .
 \]
 Hence \( \x \) is a solution if and only if \( x_{j_i} = c_i - \sum_{l \text{ free}} r_{il} x_l \) for \( i = 1, \dots, r \). Each unknown is either a pivot variable or a free variable, not both. So once the free variables are given the values \( t_l \), these equations determine every pivot variable uniquely, and the resulting vector is a solution. This proves (b).
 
-(a, ⇒) This is the contrapositive of what (b) just showed: if there is no pivot in the last column, then choosing all \( t_l = 0 \) produces a solution, so the system is consistent.
+(a, \( \Rightarrow \)) This is the contrapositive of what (b) just showed: if there is no pivot in the last column, then choosing all \( t_l = 0 \) produces a solution, so the system is consistent.
 
 (c) By (a), a consistent system has no pivot in the last column, so (b) applies. If there are no free variables, (b) gives exactly one solution. If \( x_l \) is free, the choices \( t_l = 0 \) and \( t_l = 1 \), with all other free variables \( 0 \), give two solutions whose \( l \)-th entries differ, since \( 0 \neq 1 \). This proves (c).
 :::

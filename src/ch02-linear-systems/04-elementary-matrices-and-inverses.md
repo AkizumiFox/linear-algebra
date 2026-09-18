@@ -150,37 +150,37 @@ Let \( \A \in M_n(F) \), with columns \( \a_1, \dots, \a_n \in F^n \). The follo
 ::: {.idea}
 Eight conditions would need 56 implications if proved pairwise; a cycle through them needs far fewer. The plan:
 
-① the core cycle (a) ⇒ (b) ⇒ (c) ⇒ (d) ⇒ (a), where each arrow uses one earlier tool (cancel by \( \A^{-1} \); row reduction; elementary matrices; products of invertible matrices);
+① the core cycle (a) \( \Rightarrow \) (b) \( \Rightarrow \) (c) \( \Rightarrow \) (d) \( \Rightarrow \) (a), where each arrow uses one earlier tool (cancel by \( \A^{-1} \); row reduction; elementary matrices; products of invertible matrices);
 
-② (b) ⇔ (f), which is the column view \( \A\x = x_1\a_1 + \dots + x_n\a_n \);
+② (b) \( \Leftrightarrow \) (f), which is the column view \( \A\x = x_1\a_1 + \dots + x_n\a_n \);
 
-③ (f) ⇔ (h) ⇔ (g), which is "count instead of check" in the \( n \)-dimensional space \( F^n \);
+③ (f) \( \Leftrightarrow \) (h) \( \Leftrightarrow \) (g), which is "count instead of check" in the \( n \)-dimensional space \( F^n \);
 
-④ (g) ⇔ (e), which is "consistent means \( \b \) is in the column span".
+④ (g) \( \Leftrightarrow \) (e), which is "consistent means \( \b \) is in the column span".
 
-The only arrow that needs a new argument is (b) ⇒ (c); the others quote a result we already have. An RREF that is not \( \I_n \) has a zero row, so it really has fewer equations than unknowns, and such a homogeneous system has a non-trivial solution.
+The only arrow that needs a new argument is (b) \( \Rightarrow \) (c); the others quote a result we already have. An RREF that is not \( \I_n \) has a zero row, so it really has fewer equations than unknowns, and such a homogeneous system has a non-trivial solution.
 :::
 
 ::: {.proof}
-**(a) ⇒ (b).** Suppose \( \A \) is invertible and \( \A\x = \0 \). Multiplying on the left by \( \A^{-1} \) and using @thm-matrix-multiplication-properties, \( \x = (\A^{-1}\A)\x = \A^{-1}(\A\x) = \A^{-1}\0 = \0 \).
+**(a) \( \Rightarrow \) (b).** Suppose \( \A \) is invertible and \( \A\x = \0 \). Multiplying on the left by \( \A^{-1} \) and using @thm-matrix-multiplication-properties, \( \x = (\A^{-1}\A)\x = \A^{-1}(\A\x) = \A^{-1}\0 = \0 \).
 
-**(b) ⇒ (c).** Suppose (b) holds. By @thm-rref-exists, \( \A \) is row equivalent to a matrix \( \R \) in reduced row echelon form, and \( \R \) is the RREF of \( \A \) by @thm-rref-unique. By @lem-row-equivalent-same-null-space, \( \R\x = \0 \) has the same solutions as \( \A\x = \0 \), so it too has only the trivial solution. Suppose, for a contradiction, that \( \R \neq \I_n \). By @lem-square-rref-identity-or-zero-row, the last row of \( \R \) is zero. If \( n = 1 \), then \( \R = (0) \) and \( \x = (1) \) is a non-trivial solution. If \( n \ge 2 \), the last equation of \( \R\x = \0 \) reads \( 0 = 0 \), so \( \R\x = \0 \) has the same solutions as the homogeneous system \( \R'\x = \0 \) formed by the first \( n - 1 \) rows. That system has \( n - 1 \) equations in \( n > n - 1 \) unknowns, so by @cor-more-unknowns-than-equations it has a non-trivial solution. Either way we contradict (b). Hence \( \R = \I_n \).
+**(b) \( \Rightarrow \) (c).** Suppose (b) holds. By @thm-rref-exists, \( \A \) is row equivalent to a matrix \( \R \) in reduced row echelon form, and \( \R \) is the RREF of \( \A \) by @thm-rref-unique. By @lem-row-equivalent-same-null-space, \( \R\x = \0 \) has the same solutions as \( \A\x = \0 \), so it too has only the trivial solution. Suppose, for a contradiction, that \( \R \neq \I_n \). By @lem-square-rref-identity-or-zero-row, the last row of \( \R \) is zero. If \( n = 1 \), then \( \R = (0) \) and \( \x = (1) \) is a non-trivial solution. If \( n \ge 2 \), the last equation of \( \R\x = \0 \) reads \( 0 = 0 \), so \( \R\x = \0 \) has the same solutions as the homogeneous system \( \R'\x = \0 \) formed by the first \( n - 1 \) rows. That system has \( n - 1 \) equations in \( n > n - 1 \) unknowns, so by @cor-more-unknowns-than-equations it has a non-trivial solution. Either way we contradict (b). Hence \( \R = \I_n \).
 
-**(c) ⇒ (d).** Suppose the RREF of \( \A \) is \( \I_n \). By @def-row-equivalent there are row operations \( \rho_1, \dots, \rho_k \) taking \( \A \) to \( \I_n \). If \( k = 0 \), then \( \A = \I_n = \D_1(1) \) is elementary. Otherwise, with \( \E_i = \rho_i(\I_n) \), @thm-row-op-is-left-multiplication gives \( \E_k \cdots \E_1 \A = \I_n \). Each \( \E_i \) is invertible by @thm-elementary-invertible, so multiplying on the left by \( \E_k^{-1} \), then \( \E_{k-1}^{-1} \), and so on, gives
+**(c) \( \Rightarrow \) (d).** Suppose the RREF of \( \A \) is \( \I_n \). By @def-row-equivalent there are row operations \( \rho_1, \dots, \rho_k \) taking \( \A \) to \( \I_n \). If \( k = 0 \), then \( \A = \I_n = \D_1(1) \) is elementary. Otherwise, with \( \E_i = \rho_i(\I_n) \), @thm-row-op-is-left-multiplication gives \( \E_k \cdots \E_1 \A = \I_n \). Each \( \E_i \) is invertible by @thm-elementary-invertible, so multiplying on the left by \( \E_k^{-1} \), then \( \E_{k-1}^{-1} \), and so on, gives
 \[
 \A = \E_1^{-1} \E_2^{-1} \cdots \E_k^{-1},
 \]
 and each \( \E_i^{-1} \) is elementary by @thm-elementary-invertible.
 
-**(d) ⇒ (a).** Suppose \( \A = \E_1 \cdots \E_k \) with each \( \E_i \) elementary and \( k \ge 1 \). Each \( \E_i \) is invertible by @thm-elementary-invertible, and a product of two invertible matrices is invertible by @thm-inverse-matrix-properties (part 3). By induction on \( k \), \( \A \) is invertible.
+**(d) \( \Rightarrow \) (a).** Suppose \( \A = \E_1 \cdots \E_k \) with each \( \E_i \) elementary and \( k \ge 1 \). Each \( \E_i \) is invertible by @thm-elementary-invertible, and a product of two invertible matrices is invertible by @thm-inverse-matrix-properties (part 3). By induction on \( k \), \( \A \) is invertible.
 
 So far (a), (b), (c), (d) are equivalent.
 
-**(b) ⇔ (f).** By @thm-matrix-times-vector-columns, \( \A\x = x_1\a_1 + \dots + x_n\a_n \). So "\( \A\x = \0 \) only for \( \x = \0 \)" says exactly that \( x_1\a_1 + \dots + x_n\a_n = \0 \) forces \( x_1 = \dots = x_n = 0 \), which is @def-linear-independence for the columns.
+**(b) \( \Leftrightarrow \) (f).** By @thm-matrix-times-vector-columns, \( \A\x = x_1\a_1 + \dots + x_n\a_n \). So "\( \A\x = \0 \) only for \( \x = \0 \)" says exactly that \( x_1\a_1 + \dots + x_n\a_n = \0 \) forces \( x_1 = \dots = x_n = 0 \), which is @def-linear-independence for the columns.
 
-**(f) ⇔ (h) ⇔ (g).** The columns form a list of exactly \( n \) vectors in \( F^n \), and \( \dim F^n = n \) (@exm-dimensions). By @thm-right-size-basis, such a list is a basis if it is linearly independent, and also if it spans. Conversely a basis is independent and spanning by @def-basis. Hence (f) ⇒ (h) ⇒ (g) ⇒ (h) ⇒ (f).
+**(f) \( \Leftrightarrow \) (h) \( \Leftrightarrow \) (g).** The columns form a list of exactly \( n \) vectors in \( F^n \), and \( \dim F^n = n \) (@exm-dimensions). By @thm-right-size-basis, such a list is a basis if it is linearly independent, and also if it spans. Conversely a basis is independent and spanning by @def-basis. Hence (f) \( \Rightarrow \) (h) \( \Rightarrow \) (g) \( \Rightarrow \) (h) \( \Rightarrow \) (f).
 
-**(g) ⇔ (e).** By @thm-consistent-iff-column-span, \( \A\x = \b \) has a solution if and only if \( \b \in \Span(\a_1, \dots, \a_n) \). So (e) says every \( \b \in F^n \) lies in this span, that is, \( F^n \subseteq \Span(\a_1, \dots, \a_n) \). The reverse inclusion always holds, so (e) is equivalent to (g).
+**(g) \( \Leftrightarrow \) (e).** By @thm-consistent-iff-column-span, \( \A\x = \b \) has a solution if and only if \( \b \in \Span(\a_1, \dots, \a_n) \). So (e) says every \( \b \in F^n \) lies in this span, that is, \( F^n \subseteq \Span(\a_1, \dots, \a_n) \). The reverse inclusion always holds, so (e) is equivalent to (g).
 
 Combining the four parts, all eight conditions are equivalent. This proves the theorem.
 :::
@@ -196,7 +196,7 @@ No. The third column is the sum of the first two: \( (1, 0, 1) + (2, 1, 3) = (3,
 :::
 
 ::: {.warning}
-The theorem is about **square** matrices. For \( \A = \begin{pmatrix} 1 & 0 & 1 \\ 0 & 1 & 1 \end{pmatrix} \in M_{2 \times 3}(\nR) \), the columns span \( \nR^2 \) (the first two are \( \e_1, \e_2 \)), so (g) holds, but \( \x = (1, 1, -1) \) solves \( \A\x = \0 \), so (b) fails. The proof of (f) ⇔ (g) used that the number of columns equals \( \dim F^n \), and that is exactly what breaks.
+The theorem is about **square** matrices. For \( \A = \begin{pmatrix} 1 & 0 & 1 \\ 0 & 1 & 1 \end{pmatrix} \in M_{2 \times 3}(\nR) \), the columns span \( \nR^2 \) (the first two are \( \e_1, \e_2 \)), so (g) holds, but \( \x = (1, 1, -1) \) solves \( \A\x = \0 \), so (b) fails. The proof of (f) \( \Leftrightarrow \) (g) used that the number of columns equals \( \dim F^n \), and that is exactly what breaks.
 :::
 
 ## One-sided inverses are two-sided
@@ -218,7 +218,7 @@ Suppose \( \A\B = \I_n \), and let \( \x \in F^n \) with \( \B\x = \0 \). Then, 
 \[
 \x = \I_n\x = (\A\B)\x = \A(\B\x) = \A\0 = \0 .
 \]
-So \( \B\x = \0 \) has only the trivial solution, and \( \B \) is invertible by @thm-invertible-tfae ((b) ⇒ (a)). Multiplying \( \A\B = \I_n \) on the right by \( \B^{-1} \) and using associativity,
+So \( \B\x = \0 \) has only the trivial solution, and \( \B \) is invertible by @thm-invertible-tfae ((b) \( \Rightarrow \) (a)). Multiplying \( \A\B = \I_n \) on the right by \( \B^{-1} \) and using associativity,
 \[
 \A = \A(\B\B^{-1}) = (\A\B)\B^{-1} = \I_n \B^{-1} = \B^{-1} .
 \]
@@ -237,7 +237,7 @@ Then \( \A\B = \I_2 \), but \( \B\A = \diag(1, 1, 0) \neq \I_3 \). In fact no \(
 
 ## Computing the inverse
 
-@thm-invertible-tfae (c) says \( \A \) is invertible exactly when it row reduces to \( \I_n \). The proof of (c) ⇒ (d) even produced a matrix: if \( \E_k \cdots \E_1 \A = \I_n \), then \( \E_k \cdots \E_1 \) is a left inverse, hence **the** inverse by @thm-one-sided-inverse. We do not want to multiply out the \( \E_i \) by hand. The trick is to let the operations act on \( \I_n \) at the same time as on \( \A \): since \( \E_k \cdots \E_1 \I_n = \E_k \cdots \E_1 \), the operations that turn \( \A \) into \( \I_n \) turn \( \I_n \) into \( \A^{-1} \). We write \( [\A \mid \I_n] \) for the \( n \times 2n \) matrix whose first \( n \) columns are those of \( \A \) and whose last \( n \) columns are those of \( \I_n \).
+@thm-invertible-tfae (c) says \( \A \) is invertible exactly when it row reduces to \( \I_n \). The proof of (c) \( \Rightarrow \) (d) even produced a matrix: if \( \E_k \cdots \E_1 \A = \I_n \), then \( \E_k \cdots \E_1 \) is a left inverse, hence **the** inverse by @thm-one-sided-inverse. We do not want to multiply out the \( \E_i \) by hand. The trick is to let the operations act on \( \I_n \) at the same time as on \( \A \): since \( \E_k \cdots \E_1 \I_n = \E_k \cdots \E_1 \), the operations that turn \( \A \) into \( \I_n \) turn \( \I_n \) into \( \A^{-1} \). We write \( [\A \mid \I_n] \) for the \( n \times 2n \) matrix whose first \( n \) columns are those of \( \A \) and whose last \( n \) columns are those of \( \I_n \).
 
 ::: {.algorithm}
 **Input:** \( \A \in M_n(F) \).
@@ -273,7 +273,7 @@ Let \( \rho_1, \dots, \rho_k \) be row operations taking \( [\A \mid \I_n] \) to
 If row \( k \) of \( \R \) is non-zero, its first non-zero entry is also the first non-zero entry of row \( k \) of \( [\R \mid \C] \), so the pivots of the non-zero rows of \( \R \) are pivots of \( [\R \mid \C] \), in the same positions. Suppose row \( k \) of \( \R \) is zero but some later row \( l > k \) of \( \R \) is non-zero. Row \( k \) of \( [\R \mid \C] \) cannot be zero, since zero rows of \( [\R \mid \C] \) come after its non-zero rows and row \( l \) is non-zero. So its pivot lies in a column \( > n \), while the pivot of row \( l \) lies in a column \( \le n \), to the left: this contradicts the staircase condition of @def-row-echelon-form. Hence the zero rows of \( \R \) come last, the pivots of \( \R \) move strictly right, and each pivot of \( \R \) is \( 1 \) and the only non-zero entry in its column, because this holds in \( [\R \mid \C] \). So \( \R \) satisfies @def-reduced-row-echelon-form.
 :::
 
-Now \( \R = \E_k \cdots \E_1 \A \) is obtained from \( \A \) by the operations \( \rho_1, \dots, \rho_k \) (@thm-row-op-is-left-multiplication), so \( \A \) is row equivalent to \( \R \), and \( \R \) is in reduced form. By @thm-rref-unique, \( \R \) is the RREF of \( \A \). By @thm-invertible-tfae ((a) ⇔ (c)), \( \A \) is invertible if and only if \( \R = \I_n \). If \( \R = \I_n \), then \( \E\A = \I_n \), and @thm-one-sided-inverse gives \( \A^{-1} = \E = \C \). This proves the theorem.
+Now \( \R = \E_k \cdots \E_1 \A \) is obtained from \( \A \) by the operations \( \rho_1, \dots, \rho_k \) (@thm-row-op-is-left-multiplication), so \( \A \) is row equivalent to \( \R \), and \( \R \) is in reduced form. By @thm-rref-unique, \( \R \) is the RREF of \( \A \). By @thm-invertible-tfae ((a) \( \Leftrightarrow \) (c)), \( \A \) is invertible if and only if \( \R = \I_n \). If \( \R = \I_n \), then \( \E\A = \I_n \), and @thm-one-sided-inverse gives \( \A^{-1} = \E = \C \). This proves the theorem.
 :::
 
 ::: {.remark}
@@ -368,9 +368,9 @@ Let \( \A, \B \in M_{m \times n}(F) \). Then \( \A \) is row equivalent to \( \B
 :::
 
 ::: {.proof}
-(⇒) Suppose row operations \( \rho_1, \dots, \rho_k \) take \( \A \) to \( \B \). By @thm-row-op-is-left-multiplication, \( \B = \E_k \cdots \E_1 \A \) with \( \E_i = \rho_i(\I_m) \), and \( \E = \E_k \cdots \E_1 \) is invertible by @thm-elementary-invertible and @thm-inverse-matrix-properties (part 3). (If \( k = 0 \), take \( \E = \I_m \).)
+\( (\Rightarrow) \) Suppose row operations \( \rho_1, \dots, \rho_k \) take \( \A \) to \( \B \). By @thm-row-op-is-left-multiplication, \( \B = \E_k \cdots \E_1 \A \) with \( \E_i = \rho_i(\I_m) \), and \( \E = \E_k \cdots \E_1 \) is invertible by @thm-elementary-invertible and @thm-inverse-matrix-properties (part 3). (If \( k = 0 \), take \( \E = \I_m \).)
 
-(⇐) Suppose \( \B = \E\A \) with \( \E \) invertible. By @thm-invertible-tfae ((a) ⇒ (d)), \( \E = \E_k \cdots \E_1 \) for some elementary matrices \( \E_i \). Let \( \rho_i \) be the operation with \( \rho_i(\I_m) = \E_i \). By @thm-row-op-is-left-multiplication, performing \( \rho_1 \), then \( \rho_2 \), …, then \( \rho_k \) on \( \A \) produces \( \E_k \cdots \E_1 \A = \B \). Hence \( \A \) is row equivalent to \( \B \).
+\( (\Leftarrow) \) Suppose \( \B = \E\A \) with \( \E \) invertible. By @thm-invertible-tfae ((a) \( \Rightarrow \) (d)), \( \E = \E_k \cdots \E_1 \) for some elementary matrices \( \E_i \). Let \( \rho_i \) be the operation with \( \rho_i(\I_m) = \E_i \). By @thm-row-op-is-left-multiplication, performing \( \rho_1 \), then \( \rho_2 \), …, then \( \rho_k \) on \( \A \) produces \( \E_k \cdots \E_1 \A = \B \). Hence \( \A \) is row equivalent to \( \B \).
 :::
 
 So the equivalence relation of @exm-row-equivalence is the one Gaussian elimination moves along, and "two matrices have the same RREF" is the same as "each is an invertible matrix times the other". In the next section this form, \( \B = \E\A \), is what makes row spaces and ranks easy to compare.
@@ -518,9 +518,9 @@ Let \( \U = (u_{ij}) \in M_n(F) \) be upper triangular (@def-upper-triangular).
 
 ::: {.solution}
 ::: {.enumerate options="label=(\alph*)"}
-1. (⇐) Suppose every \( u_{ii} \neq 0 \), and let \( \U\x = \0 \). Row \( i \) of this system reads \( u_{ii}x_i + u_{i,i+1}x_{i+1} + \dots + u_{in}x_n = 0 \), since \( u_{ij} = 0 \) for \( j < i \). We show \( x_n = x_{n-1} = \dots = x_1 = 0 \) by downward induction. Row \( n \) is \( u_{nn}x_n = 0 \), and \( u_{nn} \neq 0 \), so \( x_n = 0 \). If \( x_{i+1} = \dots = x_n = 0 \), row \( i \) becomes \( u_{ii}x_i = 0 \), so \( x_i = 0 \) since \( u_{ii} \neq 0 \). Hence \( \x = \0 \), and \( \U \) is invertible by @thm-invertible-tfae ((b) ⇒ (a)).
+1. \( (\Leftarrow) \) Suppose every \( u_{ii} \neq 0 \), and let \( \U\x = \0 \). Row \( i \) of this system reads \( u_{ii}x_i + u_{i,i+1}x_{i+1} + \dots + u_{in}x_n = 0 \), since \( u_{ij} = 0 \) for \( j < i \). We show \( x_n = x_{n-1} = \dots = x_1 = 0 \) by downward induction. Row \( n \) is \( u_{nn}x_n = 0 \), and \( u_{nn} \neq 0 \), so \( x_n = 0 \). If \( x_{i+1} = \dots = x_n = 0 \), row \( i \) becomes \( u_{ii}x_i = 0 \), so \( x_i = 0 \) since \( u_{ii} \neq 0 \). Hence \( \x = \0 \), and \( \U \) is invertible by @thm-invertible-tfae ((b) \( \Rightarrow \) (a)).
 
-   (⇒) Suppose \( u_{kk} = 0 \) for some \( k \). Every column \( j \le k \) of \( \U \) has zero entries in rows \( k, k+1, \dots, n \): below the diagonal by triangularity, and in row \( k \) of column \( k \) by assumption. So the \( k \) columns \( \u_1, \dots, \u_k \) all lie in \( \Span(\e_1, \dots, \e_{k-1}) \), a subspace of dimension \( k - 1 \) (its spanning list is a sub-list of the standard basis, hence independent). By @thm-size-bounds (a), a list of \( k > k - 1 \) vectors there is linearly dependent. A non-trivial relation among \( \u_1, \dots, \u_k \), extended by zero coefficients on \( \u_{k+1}, \dots, \u_n \), is a non-trivial relation among all the columns. So the columns of \( \U \) are dependent, and \( \U \) is not invertible by @thm-invertible-tfae ((a) ⇒ (f)). (For \( k = 1 \), the span is \( \{\0\} \) and \( \u_1 = \0 \), so the same conclusion holds.)
+   \( (\Rightarrow) \) Suppose \( u_{kk} = 0 \) for some \( k \). Every column \( j \le k \) of \( \U \) has zero entries in rows \( k, k+1, \dots, n \): below the diagonal by triangularity, and in row \( k \) of column \( k \) by assumption. So the \( k \) columns \( \u_1, \dots, \u_k \) all lie in \( \Span(\e_1, \dots, \e_{k-1}) \), a subspace of dimension \( k - 1 \) (its spanning list is a sub-list of the standard basis, hence independent). By @thm-size-bounds (a), a list of \( k > k - 1 \) vectors there is linearly dependent. A non-trivial relation among \( \u_1, \dots, \u_k \), extended by zero coefficients on \( \u_{k+1}, \dots, \u_n \), is a non-trivial relation among all the columns. So the columns of \( \U \) are dependent, and \( \U \) is not invertible by @thm-invertible-tfae ((a) \( \Rightarrow \) (f)). (For \( k = 1 \), the span is \( \{\0\} \) and \( \u_1 = \0 \), so the same conclusion holds.)
 2. Suppose \( \U \) is invertible, so every \( u_{ii} \neq 0 \) by (a). Fix \( k \), and let \( \x \) be the \( k \)-th column of \( \U^{-1} \). By @thm-three-views-of-product, \( \U\x \) is the \( k \)-th column of \( \U\U^{-1} = \I_n \), so \( \U\x = \e_k \). For \( i > k \), row \( i \) of this system reads \( u_{ii}x_i + \dots + u_{in}x_n = 0 \). By the same downward induction as in (a), running only over \( i = n, n-1, \dots, k+1 \), we get \( x_n = \dots = x_{k+1} = 0 \). So the \( k \)-th column of \( \U^{-1} \) has zeros below position \( k \). As \( k \) was arbitrary, \( \U^{-1} \) is upper triangular.
 :::
 :::
@@ -564,7 +564,7 @@ Let \( \A \in M_n(F) \) and suppose \( \A^k = 0 \) for some integer \( k \ge 1 \
 
 ::: {.solution}
 ::: {.enumerate options="label=(\alph*)"}
-1. Let \( \x \in F^n \) with \( (\I_n + \A)\x = \0 \). Then \( \A\x = -\x \). Multiplying on the left by \( \A \) and using this again, \( \A^2\x = \A(-\x) = -\A\x = (-1)^2\x \), and inductively \( \A^j\x = (-1)^j\x \) for every \( j \ge 1 \). Taking \( j = k \), \( \0 = \A^k\x = (-1)^k\x \), so \( \x = \0 \) (multiply by \( (-1)^k \)). By @thm-invertible-tfae ((b) ⇒ (a)), \( \I_n + \A \) is invertible.
+1. Let \( \x \in F^n \) with \( (\I_n + \A)\x = \0 \). Then \( \A\x = -\x \). Multiplying on the left by \( \A \) and using this again, \( \A^2\x = \A(-\x) = -\A\x = (-1)^2\x \), and inductively \( \A^j\x = (-1)^j\x \) for every \( j \ge 1 \). Taking \( j = k \), \( \0 = \A^k\x = (-1)^k\x \), so \( \x = \0 \) (multiply by \( (-1)^k \)). By @thm-invertible-tfae ((b) \( \Rightarrow \) (a)), \( \I_n + \A \) is invertible.
 2. Expanding with @thm-matrix-multiplication-properties,
 \[
 (\I_n + \A)\sum_{j=0}^{k-1} (-1)^j \A^j = \sum_{j=0}^{k-1} (-1)^j \A^j + \sum_{j=0}^{k-1} (-1)^j \A^{j+1} = \I_n + (-1)^{k-1}\A^k = \I_n,

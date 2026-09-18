@@ -33,11 +33,11 @@ If \( (\varphi_1, \dots, \varphi_k) \) is a basis of \( U^{0} \), then \( U = \k
 :::
 
 ::: {.proof}
-(⇒) This is @def-annihilator.
+\( (\Rightarrow) \) This is @def-annihilator.
 
-(⇐) Suppose \( \v \notin U \). Then \( \v + U \) is a non-zero vector of \( V/U \) by @lem-coset-equality (b), and \( V/U \) is finite-dimensional (@thm-dimension-quotient). By @thm-functionals-separate-points there is \( \psi \in (V/U)^{*} \) with \( \psi(\v + U) \ne 0 \). By @thm-dual-of-quotient, \( \varphi = \psi \circ \pi \) lies in \( U^{0} \), and \( \varphi(\v) = \psi(\v + U) \ne 0 \). This proves the contrapositive.
+\( (\Leftarrow) \) Suppose \( \v \notin U \). Then \( \v + U \) is a non-zero vector of \( V/U \) by @lem-coset-equality (b), and \( V/U \) is finite-dimensional (@thm-dimension-quotient). By @thm-functionals-separate-points there is \( \psi \in (V/U)^{*} \) with \( \psi(\v + U) \ne 0 \). By @thm-dual-of-quotient, \( \varphi = \psi \circ \pi \) lies in \( U^{0} \), and \( \varphi(\v) = \psi(\v + U) \ne 0 \). This proves the contrapositive.
 
-For the last statement, \( U \subseteq \ker\varphi_i \) for each \( i \) since \( \varphi_i \in U^{0} \). Conversely, if \( \varphi_i(\v) = 0 \) for all \( i \), then every \( \varphi = \sum_i c_i\varphi_i \in U^{0} \) has \( \varphi(\v) = 0 \), so \( \v \in U \) by (⇐).
+For the last statement, \( U \subseteq \ker\varphi_i \) for each \( i \) since \( \varphi_i \in U^{0} \). Conversely, if \( \varphi_i(\v) = 0 \) for all \( i \), then every \( \varphi = \sum_i c_i\varphi_i \in U^{0} \) has \( \varphi(\v) = 0 \), so \( \v \in U \) by \( (\Leftarrow) \).
 :::
 
 The lemma is @cor-annihilator-of-annihilator in disguise. That corollary says \( U^{00} = U \) under \( V \cong V^{**} \); the lemma unpacks it into a statement about vectors. In \( F^n \), with rows in place of functionals, it becomes the main theorem of this section.
@@ -194,9 +194,9 @@ Let \( \A \in M_{m \times n}(F) \) and \( \B \in M_{p \times n}(F) \). Then \( \
 :::
 
 ::: {.proof}
-(⇐) If \( \row(\A) = \row(\B) \), then \( \nul(\A)^{0} = \nul(\B)^{0} \) by @thm-row-space-annihilates-null-space, so \( \nul(\A) = \nul(\B) \) by @cor-subspaces-determined-by-annihilator.
+\( (\Leftarrow) \) If \( \row(\A) = \row(\B) \), then \( \nul(\A)^{0} = \nul(\B)^{0} \) by @thm-row-space-annihilates-null-space, so \( \nul(\A) = \nul(\B) \) by @cor-subspaces-determined-by-annihilator.
 
-(⇒) If \( \nul(\A) = \nul(\B) \), then \( \{ \varphi_{\a} : \a\tp \in \row(\A) \} = \nul(\A)^{0} = \{ \varphi_{\a} : \a\tp \in \row(\B) \} \) by @thm-row-space-annihilates-null-space. Since \( \a\tp \mapsto \varphi_{\a} \) is injective, \( \row(\A) = \row(\B) \).
+\( (\Rightarrow) \) If \( \nul(\A) = \nul(\B) \), then \( \{ \varphi_{\a} : \a\tp \in \row(\A) \} = \nul(\A)^{0} = \{ \varphi_{\a} : \a\tp \in \row(\B) \} \) by @thm-row-space-annihilates-null-space. Since \( \a\tp \mapsto \varphi_{\a} \) is injective, \( \row(\A) = \row(\B) \).
 :::
 
 Chapter 2 showed that row operations preserve the null space (@thm-row-ops-row-space). The corollary gives a converse in terms of row spaces: two systems in the same unknowns have the same solutions **exactly** when each equation of one is a combination of the equations of the other.
@@ -260,15 +260,15 @@ A dependence \( \sum c_i\varphi_i = 0 \) says that \( \sum c_iy_i = 0 \) for eve
 :::
 
 ::: {.proof}
-(a) ⇒ (b). Suppose \( \Phi \) is not surjective. Then \( \im\Phi \) is a proper subspace of \( F^k \), so \( \dim\im\Phi < k \) and, by @thm-dimension-annihilator, \( (\im\Phi)^{0} \ne \{0\} \). Take a non-zero functional in it; as at the start of this section it is \( \varphi_{\c} \), \( \y \mapsto c_1y_1 + \dots + c_ky_k \), for a non-zero \( \c \in F^k \). For every \( \v \in V \), \( \Phi(\v) \in \im\Phi \), so
+(a) \( \Rightarrow \) (b). Suppose \( \Phi \) is not surjective. Then \( \im\Phi \) is a proper subspace of \( F^k \), so \( \dim\im\Phi < k \) and, by @thm-dimension-annihilator, \( (\im\Phi)^{0} \ne \{0\} \). Take a non-zero functional in it; as at the start of this section it is \( \varphi_{\c} \), \( \y \mapsto c_1y_1 + \dots + c_ky_k \), for a non-zero \( \c \in F^k \). For every \( \v \in V \), \( \Phi(\v) \in \im\Phi \), so
 \[
 (c_1\varphi_1 + \dots + c_k\varphi_k)(\v) = \varphi_{\c}(\Phi(\v)) = 0 .
 \]
 Thus \( c_1\varphi_1 + \dots + c_k\varphi_k = 0 \) with \( \c \ne \0 \), and the list is dependent. This proves the contrapositive.
 
-(b) ⇒ (a). Suppose \( \Phi \) is surjective and \( c_1\varphi_1 + \dots + c_k\varphi_k = 0 \). For each \( j \), choose \( \v_j \) with \( \Phi(\v_j) = \e_j \), that is, \( \varphi_i(\v_j) = \delta_{ij} \). Evaluating the relation at \( \v_j \) gives \( c_j = 0 \). So the list is independent.
+(b) \( \Rightarrow \) (a). Suppose \( \Phi \) is surjective and \( c_1\varphi_1 + \dots + c_k\varphi_k = 0 \). For each \( j \), choose \( \v_j \) with \( \Phi(\v_j) = \e_j \), that is, \( \varphi_i(\v_j) = \delta_{ij} \). Evaluating the relation at \( \v_j \) gives \( c_j = 0 \). So the list is independent.
 
-(b) ⇔ (c). By @thm-first-isomorphism, \( V/\ker\Phi \cong \im\Phi \), and \( \ker\Phi = \bigcap_i \ker\varphi_i \). So the codimension of \( \bigcap_i\ker\varphi_i \) is \( \dim\im\Phi \), which equals \( k \) exactly when \( \im\Phi = F^k \) (@thm-dim-impl-eq).
+(b) \( \Leftrightarrow \) (c). By @thm-first-isomorphism, \( V/\ker\Phi \cong \im\Phi \), and \( \ker\Phi = \bigcap_i \ker\varphi_i \). So the codimension of \( \bigcap_i\ker\varphi_i \) is \( \dim\im\Phi \), which equals \( k \) exactly when \( \im\Phi = F^k \) (@thm-dim-impl-eq).
 :::
 
 For \( V = F^n \) and \( \varphi_i = \varphi_{\a_i} \), the map \( \Phi \) is \( T_{\A} \), where \( \A \) has rows \( \a_i\tp \). The theorem then says: the rows of \( \A \) are independent if and only if \( \A\x = \b \) is solvable for **every** \( \b \in F^k \). Independent equations never contradict each other.

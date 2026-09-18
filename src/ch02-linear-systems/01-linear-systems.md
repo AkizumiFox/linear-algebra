@@ -167,9 +167,9 @@ Let \( \A \in M_{m \times n}(F) \) have columns \( \a_1, \dots, \a_n \in F^m \),
 ::: {.proof}
 By @thm-matrix-times-vector-columns, \( \A\s = s_1\a_1 + \dots + s_n\a_n \) for every \( \s \in F^n \). Hence \( \s \) is a solution, that is \( \A\s = \b \), exactly when \( \b = s_1\a_1 + \dots + s_n\a_n \). This proves the second statement.
 
-(⇒) If the system is consistent, it has a solution \( \s \), and then \( \b = s_1\a_1 + \dots + s_n\a_n \) is a linear combination of the columns. By @def-span, \( \b \in \Span(\a_1, \dots, \a_n) \).
+\( (\Rightarrow) \) If the system is consistent, it has a solution \( \s \), and then \( \b = s_1\a_1 + \dots + s_n\a_n \) is a linear combination of the columns. By @def-span, \( \b \in \Span(\a_1, \dots, \a_n) \).
 
-(⇐) If \( \b \in \Span(\a_1, \dots, \a_n) \), then \( \b = s_1\a_1 + \dots + s_n\a_n \) for some \( s_1, \dots, s_n \in F \), and \( \s = (s_1, \dots, s_n) \) is a solution by the first paragraph. Hence the system is consistent.
+\( (\Leftarrow) \) If \( \b \in \Span(\a_1, \dots, \a_n) \), then \( \b = s_1\a_1 + \dots + s_n\a_n \) for some \( s_1, \dots, s_n \in F \), and \( \s = (s_1, \dots, s_n) \) is a solution by the first paragraph. Hence the system is consistent.
 :::
 
 Read backwards, the theorem is a recipe for Chapter 1 questions: to decide whether \( \b \) lies in the span of some vectors of \( F^m \), put the vectors as the columns of a matrix and ask whether the system is consistent.
@@ -230,9 +230,9 @@ The theorem is "particular plus homogeneous". To prove equality of two sets, pro
 ::: {.proof}
 Let \( S \) be the solution set of \( \A\x = \b \). We use @thm-double-inclusion.
 
-(⊆) Let \( \s \in S \), and put \( \h = \s - \p \). By distributivity (@thm-matrix-multiplication-properties), \( \A\h = \A\s - \A\p = \b - \b = \0 \), so \( \h \in N \). Hence \( \s = \p + \h \in \p + N \).
+\( (\subseteq) \) Let \( \s \in S \), and put \( \h = \s - \p \). By distributivity (@thm-matrix-multiplication-properties), \( \A\h = \A\s - \A\p = \b - \b = \0 \), so \( \h \in N \). Hence \( \s = \p + \h \in \p + N \).
 
-(⊇) Let \( \h \in N \). Then \( \A(\p + \h) = \A\p + \A\h = \b + \0 = \b \), again by distributivity, so \( \p + \h \in S \).
+\( (\supseteq) \) Let \( \h \in N \). Then \( \A(\p + \h) = \A\p + \A\h = \b + \0 = \b \), again by distributivity, so \( \p + \h \in S \).
 
 Therefore \( S = \p + N \), as claimed.
 :::
@@ -288,12 +288,12 @@ Let \( \A \in M_{m \times n}(F) \) have columns \( \a_1, \dots, \a_n \), and let
 ::: {.proof}
 Let \( N \) be the solution set of \( \A\x = \0 \). Since the system is consistent, it has a solution \( \p \), and by @thm-general-solution-structure its solution set is \( \p + N \).
 
-(a ⇔ b) The function \( N \to \p + N \), \( \h \mapsto \p + \h \), is surjective by definition of \( \p + N \), and injective because \( \p + \h = \p + \h' \) implies \( \h = \h' \) by adding \( -\p \) to both sides. So it is a bijection, and \( \p + N \) has exactly one element if and only if \( N \) does. Since \( \0 \in N \) always, \( N \) has exactly one element if and only if \( N = \{ \0 \} \), which is (b).
+(a \( \Leftrightarrow \) b) The function \( N \to \p + N \), \( \h \mapsto \p + \h \), is surjective by definition of \( \p + N \), and injective because \( \p + \h = \p + \h' \) implies \( \h = \h' \) by adding \( -\p \) to both sides. So it is a bijection, and \( \p + N \) has exactly one element if and only if \( N \) does. Since \( \0 \in N \) always, \( N \) has exactly one element if and only if \( N = \{ \0 \} \), which is (b).
 
-(b ⇔ c) By @thm-matrix-times-vector-columns, \( \A\x = x_1\a_1 + \dots + x_n\a_n \) for every \( \x \in F^n \). So (b) says: for all \( x_1, \dots, x_n \in F \), \( x_1\a_1 + \dots + x_n\a_n = \0 \) implies \( x_1 = \dots = x_n = 0 \). This is word for word @def-linear-independence for the list \( (\a_1, \dots, \a_n) \).
+(b \( \Leftrightarrow \) c) By @thm-matrix-times-vector-columns, \( \A\x = x_1\a_1 + \dots + x_n\a_n \) for every \( \x \in F^n \). So (b) says: for all \( x_1, \dots, x_n \in F \), \( x_1\a_1 + \dots + x_n\a_n = \0 \) implies \( x_1 = \dots = x_n = 0 \). This is word for word @def-linear-independence for the list \( (\a_1, \dots, \a_n) \).
 :::
 
-Two remarks on the hypotheses. The equivalence of (b) and (c) does not need consistency; only (a) does. And consistency cannot be dropped from (a ⇔ b): the system \( x = 0 \), \( x = 1 \) in one unknown has only the trivial solution in its homogeneous version (\( x = 0 \), \( x = 0 \)), but it has no solution at all, so it certainly does not have exactly one.
+Two remarks on the hypotheses. The equivalence of (b) and (c) does not need consistency; only (a) does. And consistency cannot be dropped from (a \( \Leftrightarrow \) b): the system \( x = 0 \), \( x = 1 \) in one unknown has only the trivial solution in its homogeneous version (\( x = 0 \), \( x = 0 \)), but it has no solution at all, so it certainly does not have exactly one.
 
 So the three pictures answer the two basic questions about \( \A\x = \b \) in the language of Chapter 1: a solution **exists** when \( \b \) is in the span of the columns, and it is **unique** when the columns are independent. What we still lack is a reliable way to decide either question for a given matrix. That is the job of Gaussian elimination, in the next section.
 

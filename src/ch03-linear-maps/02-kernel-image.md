@@ -114,9 +114,9 @@ Let \( T \colon V \to W \) be linear. Then \( T \) is injective **if and only if
 :::
 
 ::: {.proof}
-(⇒) Suppose \( T \) is injective, and let \( \v \in \ker T \). Then \( T(\v) = \0_W = T(\0_V) \) by @thm-zero-maps-to-zero. Injectivity gives \( \v = \0_V \). Hence \( \ker T \subseteq \{\0\} \), and the reverse inclusion holds because \( \ker T \) is a subspace (@thm-prop-kernel).
+\( (\Rightarrow) \) Suppose \( T \) is injective, and let \( \v \in \ker T \). Then \( T(\v) = \0_W = T(\0_V) \) by @thm-zero-maps-to-zero. Injectivity gives \( \v = \0_V \). Hence \( \ker T \subseteq \{\0\} \), and the reverse inclusion holds because \( \ker T \) is a subspace (@thm-prop-kernel).
 
-(⇐) Suppose \( \ker T = \{\0\} \), and let \( T(\u) = T(\v) \). By @thm-preserves-negation, \( T(\u - \v) = T(\u) - T(\v) = \0 \), so \( \u - \v \in \ker T = \{\0\} \). Hence \( \u = \v \), and \( T \) is injective.
+\( (\Leftarrow) \) Suppose \( \ker T = \{\0\} \), and let \( T(\u) = T(\v) \). By @thm-preserves-negation, \( T(\u - \v) = T(\u) - T(\v) = \0 \), so \( \u - \v \in \ker T = \{\0\} \). Hence \( \u = \v \), and \( T \) is injective.
 :::
 
 Compare the work. The definition asks: for **all pairs** \( \u, \v \), does \( T(\u) = T(\v) \) force \( \u = \v \)? The theorem asks only: for **each** \( \v \), does \( T(\v) = \0 \) force \( \v = \0 \)? The second question is usually a homogeneous linear system or a coefficient comparison. For \( T_\A \), the theorem says that \( \x \mapsto \A\x \) is injective exactly when \( \A\x = \0 \) has only the trivial solution, which is the content of @cor-unique-solution-iff-trivial-kernel.
@@ -136,9 +136,9 @@ In particular, if \( V \) is finite-dimensional, then so is \( \im T \), even wh
 :::
 
 ::: {.proof}
-(⊇) Each \( T(\v_i) \) lies in \( \im T \), which is a subspace by @thm-prop-image. By @thm-span-subspace (3), the span of these vectors is contained in \( \im T \).
+\( (\supseteq) \) Each \( T(\v_i) \) lies in \( \im T \), which is a subspace by @thm-prop-image. By @thm-span-subspace (3), the span of these vectors is contained in \( \im T \).
 
-(⊆) Let \( \w \in \im T \), say \( \w = T(\v) \) with \( \v \in V \). Since \( (\v_1, \dots, \v_k) \) spans \( V \), \( \v = a_1\v_1 + \dots + a_k\v_k \) for some \( a_i \in F \). By @thm-linear-combination, \( \w = a_1T(\v_1) + \dots + a_kT(\v_k) \in \Span(T(\v_1), \dots, T(\v_k)) \).
+\( (\subseteq) \) Let \( \w \in \im T \), say \( \w = T(\v) \) with \( \v \in V \). Since \( (\v_1, \dots, \v_k) \) spans \( V \), \( \v = a_1\v_1 + \dots + a_k\v_k \) for some \( a_i \in F \). By @thm-linear-combination, \( \w = a_1T(\v_1) + \dots + a_kT(\v_k) \in \Span(T(\v_1), \dots, T(\v_k)) \).
 
 If \( V \) is finite-dimensional, some finite list spans \( V \) (@def-finite-dimensional), and its images form a finite list spanning \( \im T \).
 :::
@@ -258,7 +258,7 @@ Let \( T \colon V \to W \) be linear.
 
 (b) By @thm-image-spanned-by-basis-images, \( \Span(T(\v_1), \dots, T(\v_k)) = \im T \), and \( \im T = W \) because \( T \) is surjective (@thm-prop-image).
 
-(c) *Injectivity.* (⇒) is (a). (⇐) Suppose the images are independent, and let \( \v \in \ker T \). Write \( \v = a_1\v_1 + \dots + a_n\v_n \). By @thm-linear-combination, \( \0 = T(\v) = a_1T(\v_1) + \dots + a_nT(\v_n) \), so all \( a_i = 0 \) and \( \v = \0 \). Hence \( \ker T = \{\0\} \), and \( T \) is injective by @thm-injective-iff-trivial-kernel.
+(c) *Injectivity.* \( (\Rightarrow) \) is (a). \( (\Leftarrow) \) Suppose the images are independent, and let \( \v \in \ker T \). Write \( \v = a_1\v_1 + \dots + a_n\v_n \). By @thm-linear-combination, \( \0 = T(\v) = a_1T(\v_1) + \dots + a_nT(\v_n) \), so all \( a_i = 0 \) and \( \v = \0 \). Hence \( \ker T = \{\0\} \), and \( T \) is injective by @thm-injective-iff-trivial-kernel.
 
 *Surjectivity.* By @thm-image-spanned-by-basis-images, \( \im T = \Span(T(\v_1), \dots, T(\v_n)) \). By @thm-prop-image, \( T \) is surjective exactly when this span is \( W \).
 :::
@@ -373,9 +373,9 @@ Let \( T \colon U \to V \) and \( S \colon V \to W \) be linear, and suppose \( 
 :::
 
 ::: {.solution}
-(⇒) Suppose \( ST \) is injective, and let \( \v \in \ker S \cap \im T \). Then \( \v = T(\u) \) for some \( \u \in U \), and \( ST(\u) = S(\v) = \0 \). So \( \u \in \ker(ST) = \{\0\} \) (@thm-injective-iff-trivial-kernel), and \( \v = T(\0) = \0 \).
+\( (\Rightarrow) \) Suppose \( ST \) is injective, and let \( \v \in \ker S \cap \im T \). Then \( \v = T(\u) \) for some \( \u \in U \), and \( ST(\u) = S(\v) = \0 \). So \( \u \in \ker(ST) = \{\0\} \) (@thm-injective-iff-trivial-kernel), and \( \v = T(\0) = \0 \).
 
-(⇐) Suppose \( \ker S \cap \im T = \{\0\} \), and let \( \u \in \ker(ST) \). Then \( T(\u) \in \im T \) and \( S(T(\u)) = \0 \), so \( T(\u) \in \ker S \cap \im T = \{\0\} \). Since \( T \) is injective, \( \u = \0 \). Hence \( \ker(ST) = \{\0\} \), and \( ST \) is injective.
+\( (\Leftarrow) \) Suppose \( \ker S \cap \im T = \{\0\} \), and let \( \u \in \ker(ST) \). Then \( T(\u) \in \im T \) and \( S(T(\u)) = \0 \), so \( T(\u) \in \ker S \cap \im T = \{\0\} \). Since \( T \) is injective, \( \u = \0 \). Hence \( \ker(ST) = \{\0\} \), and \( ST \) is injective.
 
 Example: let \( T \colon \nR \to \nR^2 \), \( T(a) = (a, 0) \), which is injective with \( \im T \) the \( x \)-axis, and let \( S \colon \nR^2 \to \nR \), \( S(a_1, a_2) = a_1 \). Then \( \ker S \) is the \( y \)-axis, so \( S \) is not injective, but \( \ker S \cap \im T = \{\0\} \), and indeed \( ST(a) = a \) is injective.
 :::

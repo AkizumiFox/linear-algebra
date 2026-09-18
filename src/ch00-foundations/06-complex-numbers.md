@@ -494,9 +494,9 @@ Let \( z \in \nC \) with \( z \ne 0 \). Prove that \( \dfrac{1}{z} = \conj{z} \)
 ::: {.solution}
 By @prp-complex-inverse, \( \dfrac{1}{z} = \dfrac{1}{\lvert z \rvert^2} \conj{z} \).
 
-(⇐) Suppose \( \lvert z \rvert = 1 \). Then \( \dfrac{1}{z} = \dfrac{1}{1} \conj{z} = \conj{z} \).
+\( (\Leftarrow) \) Suppose \( \lvert z \rvert = 1 \). Then \( \dfrac{1}{z} = \dfrac{1}{1} \conj{z} = \conj{z} \).
 
-(⇒) Suppose \( \dfrac{1}{z} = \conj{z} \). Then \( \dfrac{1}{\lvert z \rvert^2} \conj{z} = \conj{z} \). Since \( z \ne 0 \), also \( \conj{z} \ne 0 \), so multiplying both sides by \( (\conj{z})^{-1} \) gives \( \dfrac{1}{\lvert z \rvert^2} = 1 \), that is, \( \lvert z \rvert^2 = 1 \). As \( \lvert z \rvert \ge 0 \), this forces \( \lvert z \rvert = 1 \). This proves the equivalence.
+\( (\Rightarrow) \) Suppose \( \dfrac{1}{z} = \conj{z} \). Then \( \dfrac{1}{\lvert z \rvert^2} \conj{z} = \conj{z} \). Since \( z \ne 0 \), also \( \conj{z} \ne 0 \), so multiplying both sides by \( (\conj{z})^{-1} \) gives \( \dfrac{1}{\lvert z \rvert^2} = 1 \), that is, \( \lvert z \rvert^2 = 1 \). As \( \lvert z \rvert \ge 0 \), this forces \( \lvert z \rvert = 1 \). This proves the equivalence.
 :::
 
 ::: {#exr-complex-numbers-b4}

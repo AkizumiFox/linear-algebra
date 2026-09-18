@@ -119,9 +119,9 @@ Pick a non-zero \( d \in I \) of smallest degree, made monic. Every multiple of 
 ::: {.proof}
 Suppose \( I \neq \{0\} \). The degrees of the non-zero elements of \( I \) form a non-empty set of natural numbers, so by @thm-well-ordering it has a least element \( m \). Choose \( g \in I \) with \( \deg g = m \), and let \( c \) be its leading coefficient. Put \( d = c^{-1} g \). Then \( d \in I \) by (I3), and \( d \) is monic of degree \( m \).
 
-(⊇) For every \( h \in F[x] \), \( hd \in I \) by (I3). Hence \( \langle d \rangle \subseteq I \).
+\( (\supseteq) \) For every \( h \in F[x] \), \( hd \in I \) by (I3). Hence \( \langle d \rangle \subseteq I \).
 
-(⊆) Let \( f \in I \). By @thm-polynomial-division, \( f = qd + r \) with \( \deg r < m \). By (I3), \( -qd \in I \), and by (I2), \( r = f + (-qd) \in I \). If \( r \neq 0 \), then \( r \) is a non-zero element of \( I \) of degree less than \( m \), contradicting the choice of \( m \). Hence \( r = 0 \), so \( f = qd \in \langle d \rangle \).
+\( (\subseteq) \) Let \( f \in I \). By @thm-polynomial-division, \( f = qd + r \) with \( \deg r < m \). By (I3), \( -qd \in I \), and by (I2), \( r = f + (-qd) \in I \). If \( r \neq 0 \), then \( r \) is a non-zero element of \( I \) of degree less than \( m \), contradicting the choice of \( m \). Hence \( r = 0 \), so \( f = qd \in \langle d \rangle \).
 
 Therefore \( I = \langle d \rangle \). For uniqueness, let \( d' \) be monic with \( I = \langle d' \rangle \). Then \( d \in \langle d' \rangle \) and \( d' \in \langle d \rangle \), so \( d' \mid d \) and \( d \mid d' \). Both are monic, so \( d = d' \) by @prp-divisibility-properties (d).
 
@@ -234,9 +234,9 @@ Let \( F \) be a field and \( f, g, q, r \in F[x] \) with \( f = qg + r \). Then
 :::
 
 ::: {.proof}
-(⊇) The ideal \( \langle f, g \rangle \) contains \( g \), and \( r = f + (-q)g \) by (I2) and (I3). By @prp-ideal-generated, \( \langle g, r \rangle \subseteq \langle f, g \rangle \).
+\( (\supseteq) \) The ideal \( \langle f, g \rangle \) contains \( g \), and \( r = f + (-q)g \) by (I2) and (I3). By @prp-ideal-generated, \( \langle g, r \rangle \subseteq \langle f, g \rangle \).
 
-(⊆) The ideal \( \langle g, r \rangle \) contains \( g \) and \( f = qg + r \). By @prp-ideal-generated, \( \langle f, g \rangle \subseteq \langle g, r \rangle \).
+\( (\subseteq) \) The ideal \( \langle g, r \rangle \) contains \( g \) and \( f = qg + r \). By @prp-ideal-generated, \( \langle f, g \rangle \subseteq \langle g, r \rangle \).
 
 Hence the two ideals are equal. The gcd is the canonical generator of the ideal (@def-gcd-polynomials), and \( f, g \) are both zero exactly when \( g, r \) are, so \( \gcd(f, g) = \gcd(g, r) \).
 :::
@@ -346,9 +346,9 @@ Let \( F \) be a field and \( f, g \in F[x] \). Then \( f \) and \( g \) are cop
 :::
 
 ::: {.proof}
-(⇒) This is @cor-bezout-polynomials with \( \gcd(f, g) = 1 \).
+\( (\Rightarrow) \) This is @cor-bezout-polynomials with \( \gcd(f, g) = 1 \).
 
-(⇐) If \( af + bg = 1 \), then \( 1 \in \langle f, g \rangle \), so \( \langle f, g \rangle = F[x] = \langle 1 \rangle \) by @exm-ideals-polynomials (a). In particular \( f, g \) are not both zero, and the monic generator is \( 1 \). Hence \( \gcd(f, g) = 1 \).
+\( (\Leftarrow) \) If \( af + bg = 1 \), then \( 1 \in \langle f, g \rangle \), so \( \langle f, g \rangle = F[x] = \langle 1 \rangle \) by @exm-ideals-polynomials (a). In particular \( f, g \) are not both zero, and the monic generator is \( 1 \). Hence \( \gcd(f, g) = 1 \).
 :::
 
 Examples: for **distinct** \( c, c' \in F \), the polynomials \( x - c \) and \( x - c' \) are coprime, since

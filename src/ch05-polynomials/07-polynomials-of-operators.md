@@ -257,7 +257,7 @@ V = \ker P \oplus \ker(P - \id_V),
 \]
 with projection \( E_1 = b(P)q(P) = -(P - \id_V) = \id_V - P \) onto \( \ker P \) along \( \ker(P - \id_V) \), and \( E_2 = a(P)p(P) = P \) onto \( \ker(P - \id_V) \) along \( \ker P \).
 
-To compare, note that \( \ker(P - \id_V) = \im P \). (⊆) If \( P\v = \v \), then \( \v \in \im P \). (⊇) If \( \v = P\u \), then \( P\v = P^2\u = P\u = \v \). So the lemma gives \( V = \im P \oplus \ker P \), with \( P \) the projection onto \( \im P \) along \( \ker P \): this is @thm-projection-direct-sum (a). It also reproves @exr-projections-and-trace-b2, that \( \id_V - P \) is the complementary projection.
+To compare, note that \( \ker(P - \id_V) = \im P \). \( (\subseteq) \) If \( P\v = \v \), then \( \v \in \im P \). \( (\supseteq) \) If \( \v = P\u \), then \( P\v = P^2\u = P\u = \v \). So the lemma gives \( V = \im P \oplus \ker P \), with \( P \) the projection onto \( \im P \) along \( \ker P \): this is @thm-projection-direct-sum (a). It also reproves @exr-projections-and-trace-b2, that \( \id_V - P \) is the complementary projection.
 :::
 
 ::: {#exm-splitting-involution}
@@ -416,7 +416,7 @@ Let \( F \) have characteristic not \( 2 \), and let \( T \in \cL(V) \) with \( 
 ::: {.solution}
 (a) \( x \cdot x + (-1)(x^2 - 1) = 1 \): take \( a = x \), \( b = -1 \). Then \( p \) and \( q \) are coprime, and \( (pq)(T) = T^3 - T = 0 \). By @thm-kernel-splitting (c), \( V = \ker T \oplus \ker(T^2 - \id_V) \), and the projection onto \( \ker T \) is \( b(T)q(T) = -(T^2 - \id_V) = \id_V - T^2 \).
 
-(b) Let \( W = \ker(T^2 - \id_V) \). Apply @thm-kernel-splitting (a) with \( p_1 = x - 1 \), \( q_1 = x + 1 \), which are coprime as in @exm-splitting-involution: \( W = \ker(p_1q_1)(T) = \ker(T - \id_V) \oplus \ker(T + \id_V) \). Write \( K_0 = \ker T \), \( K_{+} = \ker(T - \id_V) \), \( K_{-} = \ker(T + \id_V) \). Then \( V = K_0 + K_{+} + K_{-} \) by (a). If \( \u_0 + \u_{+} + \u_{-} = \0 \) with \( \u_0 \in K_0 \), \( \u_{\pm} \in K_{\pm} \), then \( \u_{+} + \u_{-} \in W \), so directness in (a) gives \( \u_0 = \0 \) and \( \u_{+} + \u_{-} = \0 \), and directness of \( W = K_{+} \oplus K_{-} \) gives \( \u_{+} = \u_{-} = \0 \). By @thm-direct-sum-k-criteria ((b) ⇒ (a)), the sum is direct.
+(b) Let \( W = \ker(T^2 - \id_V) \). Apply @thm-kernel-splitting (a) with \( p_1 = x - 1 \), \( q_1 = x + 1 \), which are coprime as in @exm-splitting-involution: \( W = \ker(p_1q_1)(T) = \ker(T - \id_V) \oplus \ker(T + \id_V) \). Write \( K_0 = \ker T \), \( K_{+} = \ker(T - \id_V) \), \( K_{-} = \ker(T + \id_V) \). Then \( V = K_0 + K_{+} + K_{-} \) by (a). If \( \u_0 + \u_{+} + \u_{-} = \0 \) with \( \u_0 \in K_0 \), \( \u_{\pm} \in K_{\pm} \), then \( \u_{+} + \u_{-} \in W \), so directness in (a) gives \( \u_0 = \0 \) and \( \u_{+} + \u_{-} = \0 \), and directness of \( W = K_{+} \oplus K_{-} \) gives \( \u_{+} = \u_{-} = \0 \). By @thm-direct-sum-k-criteria ((b) \( \Rightarrow \) (a)), the sum is direct.
 
 (c) The sum is \( \id_V - T^2 + \tfrac12T^2 + \tfrac12T + \tfrac12T^2 - \tfrac12T = \id_V \). Using \( T^3 = T \): \( T(\id_V - T^2) = T - T^3 = 0 \); \( (T - \id_V)\tfrac12(T^2 + T) = \tfrac12(T^3 - T) = 0 \); \( (T + \id_V)\tfrac12(T^2 - T) = \tfrac12(T^3 - T) = 0 \). So the three operators map \( V \) into \( K_0 \), \( K_{+} \), \( K_{-} \) respectively. For \( \v \in V \), \( \v \) is the sum of its three images, and by the uniqueness of the splitting in (b) these are the components of \( \v \). Hence each operator is the projection onto its summand along the sum of the other two.
 :::
@@ -442,7 +442,7 @@ Let \( V \) be a vector space over \( F \) and \( T \in \cL(V) \).
 
 (b) If \( V = \{\0\} \), then \( T^{-1} = \id_V = 1(T) \). Otherwise, by @thm-annihilating-polynomial-exists there is a non-zero \( p \) with \( p(T) = 0 \). Let \( k \) be the least index with a non-zero coefficient in \( p \); then \( p = x^kp_1 \) with \( p_1(0) \ne 0 \). Now \( 0 = p(T) = T^k\,p_1(T) \). Since \( T \) is invertible, so is \( T^k \), with inverse \( (T^{-1})^k \), and composing on the left with it gives \( p_1(T) = 0 \). By (a), \( T^{-1} \) is a polynomial in \( T \).
 
-(c) (⇒) If \( m(0) \ne 0 \), apply (a) to \( m \). (⇐) Suppose \( T \) is invertible and \( m(0) = 0 \). Then \( m = x\,m_1 \) with \( m_1 \) monic of degree \( \deg m - 1 \), and \( 0 = m(T) = T\,m_1(T) \). Composing with \( T^{-1} \) gives \( m_1(T) = 0 \), so \( m \mid m_1 \) by @thm-annihilator-ideal (b). Since \( V \ne \{\0\} \), \( m \) is not constant, so \( m_1 \ne 0 \) and \( \deg m \le \deg m_1 = \deg m - 1 \) by @thm-degree-of-product, a contradiction. Hence \( m(0) \ne 0 \).
+(c) \( (\Rightarrow) \) If \( m(0) \ne 0 \), apply (a) to \( m \). \( (\Leftarrow) \) Suppose \( T \) is invertible and \( m(0) = 0 \). Then \( m = x\,m_1 \) with \( m_1 \) monic of degree \( \deg m - 1 \), and \( 0 = m(T) = T\,m_1(T) \). Composing with \( T^{-1} \) gives \( m_1(T) = 0 \), so \( m \mid m_1 \) by @thm-annihilator-ideal (b). Since \( V \ne \{\0\} \), \( m \) is not constant, so \( m_1 \ne 0 \) and \( \deg m \le \deg m_1 = \deg m - 1 \) by @thm-degree-of-product, a contradiction. Hence \( m(0) \ne 0 \).
 :::
 
 :::: {#exr-polynomials-of-operators-c2}
@@ -468,7 +468,7 @@ Let \( T \in \cL(V) \), and let \( p_1, \dots, p_k \in F[x] \) be non-zero and p
 e_1(T)\w + \dots + e_k(T)\w = \w + h(T)\,p(T)\w = \w, \qquad p_i(T)\bigl(e_i(T)\w\bigr) = h_i(T)\,p(T)\w = \0 .
 \]
 
-(c) Each \( \ker p_i(T) \subseteq W \), since \( p(T) = \bigl(\prod_{j \ne i} p_j\bigr)(T)\,p_i(T) \). With (b), \( W = \ker p_1(T) + \dots + \ker p_k(T) \). Let \( \u_j \in \ker p_j(T) \). For \( j \ne i \), \( p_j \mid e_i \), say \( e_i = g\,p_j \), so \( e_i(T)\u_j = g(T)\,p_j(T)\u_j = \0 \). And \( e_i = 1 + g'p_i \), so \( e_i(T)\u_i = \u_i + g'(T)\,p_i(T)\u_i = \u_i \). This proves the second statement. Now suppose \( \u_1 + \dots + \u_k = \0 \) with \( \u_j \in \ker p_j(T) \). Applying \( e_i(T) \) gives \( \u_i = \0 \), for each \( i \). By @thm-direct-sum-k-criteria ((b) ⇒ (a)), the sum is direct.
+(c) Each \( \ker p_i(T) \subseteq W \), since \( p(T) = \bigl(\prod_{j \ne i} p_j\bigr)(T)\,p_i(T) \). With (b), \( W = \ker p_1(T) + \dots + \ker p_k(T) \). Let \( \u_j \in \ker p_j(T) \). For \( j \ne i \), \( p_j \mid e_i \), say \( e_i = g\,p_j \), so \( e_i(T)\u_j = g(T)\,p_j(T)\u_j = \0 \). And \( e_i = 1 + g'p_i \), so \( e_i(T)\u_i = \u_i + g'(T)\,p_i(T)\u_i = \u_i \). This proves the second statement. Now suppose \( \u_1 + \dots + \u_k = \0 \) with \( \u_j \in \ker p_j(T) \). Applying \( e_i(T) \) gives \( \u_i = \0 \), for each \( i \). By @thm-direct-sum-k-criteria ((b) \( \Rightarrow \) (a)), the sum is direct.
 
 (d) If \( p(T) = 0 \), then \( W = V \). By (c), \( V \) is the direct sum, and \( e_i(T) \in \cL(V) \) is the identity on the \( i \)-th summand and zero on the others. For \( \v = \u_1 + \dots + \u_k \), \( e_i(T)\v = \u_i \), which is the projection onto \( \ker p_i(T) \) along the sum of the other summands. For \( k = 2 \) this is @thm-kernel-splitting (c).
 :::

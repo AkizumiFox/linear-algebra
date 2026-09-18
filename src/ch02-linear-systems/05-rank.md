@@ -324,9 +324,9 @@ For (a), adding the column \( \b \) can only enlarge the column space, and the d
 ::: {.proof}
 (a) By @def-column-space, \( \col([\A \mid \b]) = \Span(\a_1, \dots, \a_n, \b) \), which contains \( \col(\A) \) by @prp-span-basic-properties (2).
 
-(⇒) Suppose the system is consistent. By @thm-consistent-iff-column-span, \( \b \in \Span(\a_1, \dots, \a_n) \), so by @thm-span-absorb \( \col([\A \mid \b]) = \col(\A) \), and the ranks are equal.
+\( (\Rightarrow) \) Suppose the system is consistent. By @thm-consistent-iff-column-span, \( \b \in \Span(\a_1, \dots, \a_n) \), so by @thm-span-absorb \( \col([\A \mid \b]) = \col(\A) \), and the ranks are equal.
 
-(⇐) Suppose \( \rank \A = \rank\,[\A \mid \b] \). Then \( \col(\A) \) is a subspace of \( \col([\A \mid \b]) \) of the same dimension, so \( \col(\A) = \col([\A \mid \b]) \) by @thm-dim-impl-eq. In particular \( \b \in \col(\A) \), and the system is consistent by @thm-consistent-iff-column-span.
+\( (\Leftarrow) \) Suppose \( \rank \A = \rank\,[\A \mid \b] \). Then \( \col(\A) \) is a subspace of \( \col([\A \mid \b]) \) of the same dimension, so \( \col(\A) = \col([\A \mid \b]) \) by @thm-dim-impl-eq. In particular \( \b \in \col(\A) \), and the system is consistent by @thm-consistent-iff-column-span.
 
 (b) By @thm-rank-nullity-matrix, \( \nullity \A = n - r \), so a basis \( \s_1, \dots, \s_{n-r} \) of \( \nul(\A) \) exists (@thm-basis-null-space). By @thm-general-solution-structure, \( \x \) is a solution if and only if \( \x - \p \in \nul(\A) \). By @thm-unique-representation, applied in the vector space \( \nul(\A) \) with this basis, each \( \x - \p \in \nul(\A) \) equals \( t_1\s_1 + \dots + t_{n-r}\s_{n-r} \) for exactly one \( (t_1, \dots, t_{n-r}) \). Conversely every such expression is in \( \nul(\A) \), so \( \p \) plus it is a solution. This proves (b).
 
@@ -689,9 +689,9 @@ Let \( \A \in M_{m \times n}(F) \). Prove that \( \rank \A = 1 \) if and only if
 :::
 
 ::: {.solution}
-(⇐) Suppose \( \A = \x\y\tp \) with \( \x, \y \neq \0 \), and write \( \y = (y_1, \dots, y_n) \). By @thm-three-views-of-product, the \( j \)-th column of \( \x\y\tp \) is \( \x \) times the \( j \)-th column of \( \y\tp \), the \( 1 \times 1 \) matrix \( (y_j) \); that is, \( y_j\x \). So every column lies in \( \Span(\x) \), and \( \col(\A) \subseteq \Span(\x) \). Since \( \y \neq \0 \), some \( y_j \neq 0 \), and then \( y_j\x \neq \0 \) because \( \x \neq \0 \) (@thm-zero-product). The list \( (\x) \) is independent, since \( a\x = \0 \) forces \( a = 0 \) (@thm-zero-product), so \( \Span(\x) \) has dimension \( 1 \), and \( \rank \A \le 1 \) by @thm-subspace-dimension. On the other hand \( \rank \A \neq 0 \): a space of dimension \( 0 \) has the empty list as a basis, so it equals \( \Span() = \{\0\} \), but \( \col(\A) \) contains the non-zero vector \( y_j\x \). Hence \( \rank \A = 1 \).
+\( (\Leftarrow) \) Suppose \( \A = \x\y\tp \) with \( \x, \y \neq \0 \), and write \( \y = (y_1, \dots, y_n) \). By @thm-three-views-of-product, the \( j \)-th column of \( \x\y\tp \) is \( \x \) times the \( j \)-th column of \( \y\tp \), the \( 1 \times 1 \) matrix \( (y_j) \); that is, \( y_j\x \). So every column lies in \( \Span(\x) \), and \( \col(\A) \subseteq \Span(\x) \). Since \( \y \neq \0 \), some \( y_j \neq 0 \), and then \( y_j\x \neq \0 \) because \( \x \neq \0 \) (@thm-zero-product). The list \( (\x) \) is independent, since \( a\x = \0 \) forces \( a = 0 \) (@thm-zero-product), so \( \Span(\x) \) has dimension \( 1 \), and \( \rank \A \le 1 \) by @thm-subspace-dimension. On the other hand \( \rank \A \neq 0 \): a space of dimension \( 0 \) has the empty list as a basis, so it equals \( \Span() = \{\0\} \), but \( \col(\A) \) contains the non-zero vector \( y_j\x \). Hence \( \rank \A = 1 \).
 
-(⇒) Suppose \( \rank \A = 1 \), and let \( (\x) \) be a basis of \( \col(\A) \); then \( \x \neq \0 \). Each column \( \a_j \in \col(\A) \) equals \( y_j\x \) for some \( y_j \in F \). Put \( \y = (y_1, \dots, y_n) \). By the computation in (⇐), the \( j \)-th column of \( \x\y\tp \) is \( y_j\x = \a_j \), so \( \A = \x\y\tp \). If \( \y = \0 \), then \( \A = 0 \) would have rank \( 0 \), so \( \y \neq \0 \). This proves the claim.
+\( (\Rightarrow) \) Suppose \( \rank \A = 1 \), and let \( (\x) \) be a basis of \( \col(\A) \); then \( \x \neq \0 \). Each column \( \a_j \in \col(\A) \) equals \( y_j\x \) for some \( y_j \in F \). Put \( \y = (y_1, \dots, y_n) \). By the computation in \( (\Leftarrow) \), the \( j \)-th column of \( \x\y\tp \) is \( y_j\x = \a_j \), so \( \A = \x\y\tp \). If \( \y = \0 \), then \( \A = 0 \) would have rank \( 0 \), so \( \y \neq \0 \). This proves the claim.
 :::
 
 ::: {#exr-rank-c3}

@@ -470,9 +470,9 @@ Let \( V \) be finite-dimensional, \( T \in \cL(V) \), and \( U \) a subspace of
 :::
 
 ::: {.solution}
-(⇒) Suppose \( U \) is \( T \)-invariant, and let \( \varphi \in U^{0} \). For every \( \u \in U \), \( (T'\varphi)(\u) = \varphi(T\u) = 0 \), because \( T\u \in U \). Hence \( T'\varphi \in U^{0} \), and \( U^{0} \) is \( T' \)-invariant.
+\( (\Rightarrow) \) Suppose \( U \) is \( T \)-invariant, and let \( \varphi \in U^{0} \). For every \( \u \in U \), \( (T'\varphi)(\u) = \varphi(T\u) = 0 \), because \( T\u \in U \). Hence \( T'\varphi \in U^{0} \), and \( U^{0} \) is \( T' \)-invariant.
 
-(⇐) Suppose \( U^{0} \) is \( T' \)-invariant, and let \( \u \in U \). For every \( \varphi \in U^{0} \), \( T'\varphi \in U^{0} \), so \( \varphi(T\u) = (T'\varphi)(\u) = 0 \). Thus \( T\u \) is killed by every functional in \( U^{0} \). By @cor-annihilator-of-annihilator, \( T\u \in U \). Hence \( U \) is \( T \)-invariant.
+\( (\Leftarrow) \) Suppose \( U^{0} \) is \( T' \)-invariant, and let \( \u \in U \). For every \( \varphi \in U^{0} \), \( T'\varphi \in U^{0} \), so \( \varphi(T\u) = (T'\varphi)(\u) = 0 \). Thus \( T\u \) is killed by every functional in \( U^{0} \). By @cor-annihilator-of-annihilator, \( T\u \in U \). Hence \( U \) is \( T \)-invariant.
 :::
 
 ::: {#exr-dual-map-c3}

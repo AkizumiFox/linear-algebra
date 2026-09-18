@@ -287,9 +287,9 @@ T(c\u + \v) = cT(\u) + T(\v) \qquad \text{for all } c \in F \text{ and all } \u,
 :::
 
 ::: {.proof}
-(⇒) Suppose \( T \) is linear. By (LT1) and then (LT2), \( T(c\u + \v) = T(c\u) + T(\v) = cT(\u) + T(\v) \).
+\( (\Rightarrow) \) Suppose \( T \) is linear. By (LT1) and then (LT2), \( T(c\u + \v) = T(c\u) + T(\v) = cT(\u) + T(\v) \).
 
-(⇐) Suppose the condition holds. Taking \( c = 1 \) gives \( T(\u + \v) = T(\u) + T(\v) \), which is (LT1). Taking \( \u = \v = \0 \) and \( c = 1 \) gives \( T(\0) = T(\0) + T(\0) \), so \( T(\0) = \0 \). Now taking \( \v = \0 \) gives \( T(c\u) = cT(\u) + T(\0) = cT(\u) \), which is (LT2).
+\( (\Leftarrow) \) Suppose the condition holds. Taking \( c = 1 \) gives \( T(\u + \v) = T(\u) + T(\v) \), which is (LT1). Taking \( \u = \v = \0 \) and \( c = 1 \) gives \( T(\0) = T(\0) + T(\0) \), so \( T(\0) = \0 \). Now taking \( \v = \0 \) gives \( T(c\u) = cT(\u) + T(\0) = cT(\u) \), which is (LT2).
 :::
 
 Finally, the slogan. Two applications of the axioms handle a combination of two vectors; induction handles any finite combination.

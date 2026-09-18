@@ -181,9 +181,9 @@ Parts (a)–(c) are unwinding definitions: fix a functional in one side and test
 
 (c) Since \( U \subseteq U + W \) and \( W \subseteq U + W \) (@thm-subspace-sum), part (a) gives \( (U + W)^{0} \subseteq U^{0} \) and \( (U + W)^{0} \subseteq W^{0} \), so \( (U + W)^{0} \subseteq U^{0} \cap W^{0} \). Conversely, let \( \varphi \in U^{0} \cap W^{0} \), and let \( \u + \w \in U + W \) with \( \u \in U \), \( \w \in W \). Then \( \varphi(\u + \w) = \varphi(\u) + \varphi(\w) = 0 + 0 = 0 \). Hence \( \varphi \in (U + W)^{0} \).
 
-(d) (⊇) Let \( \varphi = \psi + \chi \) with \( \psi \in U^{0} \) and \( \chi \in W^{0} \), and let \( \v \in U \cap W \). Since \( \v \in U \) and \( \v \in W \), \( \varphi(\v) = \psi(\v) + \chi(\v) = 0 + 0 = 0 \). Hence \( U^{0} + W^{0} \subseteq (U \cap W)^{0} \).
+(d) \( (\supseteq) \) Let \( \varphi = \psi + \chi \) with \( \psi \in U^{0} \) and \( \chi \in W^{0} \), and let \( \v \in U \cap W \). Since \( \v \in U \) and \( \v \in W \), \( \varphi(\v) = \psi(\v) + \chi(\v) = 0 + 0 = 0 \). Hence \( U^{0} + W^{0} \subseteq (U \cap W)^{0} \).
 
-(⊆) Let \( n = \dim V \). The subspaces \( U \), \( W \), \( U \cap W \) (@thm-intersection-subspaces) and \( U + W \) (@thm-subspace-sum) of \( V \) are finite-dimensional by @thm-subspace-dimension. The space \( V^{*} \) has dimension \( n \) by @cor-dimension-dual-space, so its subspaces \( U^{0} \), \( W^{0} \) are finite-dimensional too. By the Dimension Formula for Sums (@thm-dimension-formula-subspace-dim) in \( V^{*} \), then (c),
+\( (\subseteq) \) Let \( n = \dim V \). The subspaces \( U \), \( W \), \( U \cap W \) (@thm-intersection-subspaces) and \( U + W \) (@thm-subspace-sum) of \( V \) are finite-dimensional by @thm-subspace-dimension. The space \( V^{*} \) has dimension \( n \) by @cor-dimension-dual-space, so its subspaces \( U^{0} \), \( W^{0} \) are finite-dimensional too. By the Dimension Formula for Sums (@thm-dimension-formula-subspace-dim) in \( V^{*} \), then (c),
 \[
 \dim(U^{0} + W^{0}) = \dim U^{0} + \dim W^{0} - \dim(U^{0} \cap W^{0}) = \dim U^{0} + \dim W^{0} - \dim(U + W)^{0} .
 \]
@@ -191,13 +191,13 @@ By @thm-dimension-annihilator applied to \( U \), \( W \) and \( U + W \), the r
 \[
 (n - \dim U) + (n - \dim W) - \bigl(n - \dim(U + W)\bigr) = n - \bigl(\dim U + \dim W - \dim(U + W)\bigr) = n - \dim(U \cap W),
 \]
-where the last equality is @thm-dimension-formula-subspace-dim in \( V \). By @thm-dimension-annihilator once more, \( n - \dim(U \cap W) = \dim(U \cap W)^{0} \). So \( U^{0} + W^{0} \) is a subspace of \( (U \cap W)^{0} \) (by (⊇) and @thm-subspace-sum) with the same finite dimension, and @thm-dim-impl-eq gives \( U^{0} + W^{0} = (U \cap W)^{0} \). This proves the theorem.
+where the last equality is @thm-dimension-formula-subspace-dim in \( V \). By @thm-dimension-annihilator once more, \( n - \dim(U \cap W) = \dim(U \cap W)^{0} \). So \( U^{0} + W^{0} \) is a subspace of \( (U \cap W)^{0} \) (by \( (\supseteq) \) and @thm-subspace-sum) with the same finite dimension, and @thm-dim-impl-eq gives \( U^{0} + W^{0} = (U \cap W)^{0} \). This proves the theorem.
 :::
 
 Part (b) is what made the computations of this section legitimate: to find the annihilator of a subspace, test functionals on a spanning list only. Parts (c) and (d) form a dictionary. A subspace given as a **sum** has equations obtained by **intersecting** equation spaces; a subspace given as an **intersection** has equations obtained by **adding** them. Later in this chapter this dictionary becomes a practical method for computing sums and intersections of subspaces.
 
 ::: {.remark}
-Parts (a)–(c) and the inclusion (⊇) in (d) hold in every vector space; only the counting step used finite dimension. The equality (d) is in fact true for **every** \( V \), but the proof must then construct the splitting \( \varphi = \psi + \chi \) by hand; Exercise C1 below does this. In finite dimension, (a) also becomes strict: if \( U \subsetneq W \), then \( \dim U < \dim W \) (@thm-dim-impl-eq), so \( \dim W^{0} < \dim U^{0} \) and \( W^{0} \subsetneq U^{0} \).
+Parts (a)–(c) and the inclusion \( (\supseteq) \) in (d) hold in every vector space; only the counting step used finite dimension. The equality (d) is in fact true for **every** \( V \), but the proof must then construct the splitting \( \varphi = \psi + \chi \) by hand; Exercise C1 below does this. In finite dimension, (a) also becomes strict: if \( U \subsetneq W \), then \( \dim U < \dim W \) (@thm-dim-impl-eq), so \( \dim W^{0} < \dim U^{0} \) and \( W^{0} \subsetneq U^{0} \).
 :::
 
 ## Exercises
@@ -310,7 +310,7 @@ Then \( \psi \) kills a basis of \( U \), so \( \psi \in U^{0} \) (@thm-annihila
 \[
 \psi(\v) \coloneqq \sum_{\b \in Q} c_{\b}\,\varphi(\b),
 \]
-a finite sum over the vectors of \( Q \) that occur. Adding or scaling expansions gives expansions, so by uniqueness the coefficients add and scale, and \( \psi \) is linear. It vanishes on \( X \cup P \) and agrees with \( \varphi \) on \( Q \), so the rest of (a) is unchanged: \( \psi \in U^{0} \) and \( \chi = \varphi - \psi \) kills the basis \( X \cup Q \) of \( W \). Together with the inclusion (⊇) of @thm-annihilator-properties (d), which used no finiteness, this gives \( (U \cap W)^{0} = U^{0} + W^{0} \) in every vector space.
+a finite sum over the vectors of \( Q \) that occur. Adding or scaling expansions gives expansions, so by uniqueness the coefficients add and scale, and \( \psi \) is linear. It vanishes on \( X \cup P \) and agrees with \( \varphi \) on \( Q \), so the rest of (a) is unchanged: \( \psi \in U^{0} \) and \( \chi = \varphi - \psi \) kills the basis \( X \cup Q \) of \( W \). Together with the inclusion \( (\supseteq) \) of @thm-annihilator-properties (d), which used no finiteness, this gives \( (U \cap W)^{0} = U^{0} + W^{0} \) in every vector space.
 :::
 
 :::: {#exr-annihilators-c2}

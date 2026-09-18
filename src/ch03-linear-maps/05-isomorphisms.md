@@ -146,13 +146,13 @@ V \cong W \quad \iff \quad \dim V = \dim W .
 :::
 
 ::: {.idea}
-(⇒) is the payoff we just proved: an isomorphism moves a basis to a basis of the same length. For (⇐) we must **build** an isomorphism, and the only material we have is a basis on each side, \( (\v_1, \dots, \v_n) \) and \( (\w_1, \dots, \w_n) \). The obvious dictionary sends \( \v_i \) to \( \w_i \). Linear maps can be prescribed freely on a basis, so this defines \( T \), and the reverse prescription defines \( S \). To see \( ST = \id_V \) we do not compute: both sides are linear and agree on the basis, so they are equal. The hypothesis "same dimension" is exactly what makes the two bases the same length, so that "\( \v_i \mapsto \w_i \)" makes sense.
+\( (\Rightarrow) \) is the payoff we just proved: an isomorphism moves a basis to a basis of the same length. For \( (\Leftarrow) \) we must **build** an isomorphism, and the only material we have is a basis on each side, \( (\v_1, \dots, \v_n) \) and \( (\w_1, \dots, \w_n) \). The obvious dictionary sends \( \v_i \) to \( \w_i \). Linear maps can be prescribed freely on a basis, so this defines \( T \), and the reverse prescription defines \( S \). To see \( ST = \id_V \) we do not compute: both sides are linear and agree on the basis, so they are equal. The hypothesis "same dimension" is exactly what makes the two bases the same length, so that "\( \v_i \mapsto \w_i \)" makes sense.
 :::
 
 ::: {.proof}
-(⇒) Suppose \( T \colon V \to W \) is an isomorphism, and let \( (\v_1, \dots, \v_n) \) be a basis of \( V \), with \( n = \dim V \) (@cor-basis-existence). By @thm-isomorphism-preserves-bases, \( (T\v_1, \dots, T\v_n) \) is a basis of \( W \), so \( \dim W = n = \dim V \).
+\( (\Rightarrow) \) Suppose \( T \colon V \to W \) is an isomorphism, and let \( (\v_1, \dots, \v_n) \) be a basis of \( V \), with \( n = \dim V \) (@cor-basis-existence). By @thm-isomorphism-preserves-bases, \( (T\v_1, \dots, T\v_n) \) is a basis of \( W \), so \( \dim W = n = \dim V \).
 
-(⇐) Suppose \( \dim V = \dim W = n \), and choose bases \( (\v_1, \dots, \v_n) \) of \( V \) and \( (\w_1, \dots, \w_n) \) of \( W \) (@cor-basis-existence). By @thm-linear-transform-basis there are linear maps \( T \in \cL(V, W) \) with \( T\v_i = \w_i \) and \( S \in \cL(W, V) \) with \( S\w_i = \v_i \), for \( i = 1, \dots, n \). Then \( ST \in \cL(V) \) is linear (@thm-composition-linear) and \( ST\v_i = S\w_i = \v_i = \id_V\v_i \) for every \( i \). Two linear maps that agree on a basis are equal, by the uniqueness part of @thm-linear-transform-basis, so \( ST = \id_V \). Swapping the roles of \( V \) and \( W \) gives \( TS = \id_W \). Hence \( T \) is invertible, and \( V \cong W \). This proves the theorem.
+\( (\Leftarrow) \) Suppose \( \dim V = \dim W = n \), and choose bases \( (\v_1, \dots, \v_n) \) of \( V \) and \( (\w_1, \dots, \w_n) \) of \( W \) (@cor-basis-existence). By @thm-linear-transform-basis there are linear maps \( T \in \cL(V, W) \) with \( T\v_i = \w_i \) and \( S \in \cL(W, V) \) with \( S\w_i = \v_i \), for \( i = 1, \dots, n \). Then \( ST \in \cL(V) \) is linear (@thm-composition-linear) and \( ST\v_i = S\w_i = \v_i = \id_V\v_i \) for every \( i \). Two linear maps that agree on a basis are equal, by the uniqueness part of @thm-linear-transform-basis, so \( ST = \id_V \). Swapping the roles of \( V \) and \( W \) gives \( TS = \id_W \). Hence \( T \) is invertible, and \( V \cong W \). This proves the theorem.
 :::
 
 The theorem needs both spaces to be over the **same** field; this is part of @def-isomorphic. \( \nC \) over \( \nC \) has dimension \( 1 \) and \( \nR \) over \( \nR \) has dimension \( 1 \), but the question "is \( \nC \cong \nR \)?" makes no sense, since a linear map must respect one common set of scalars.
@@ -221,7 +221,7 @@ Let \( V \) and \( W \) be finite-dimensional vector spaces over \( F \) with \(
 :::
 
 ::: {.idea}
-Without any dimension hypothesis, \( ST = \id_V \) already gives half of what we need: \( T \) must be injective, since \( S \) recovers \( \v \) from \( T\v \). The missing half, surjectivity, is exactly what the Rank–Nullity Theorem supplies for free when \( \dim V = \dim W \) is finite. Once \( T \) is known to be invertible, we cancel it: \( S = (ST)T^{-1} = T^{-1} \). So the one hypothesis the infinite-dimensional counterexamples violate, finite equal dimension, is spent on a single line: injective ⇒ surjective.
+Without any dimension hypothesis, \( ST = \id_V \) already gives half of what we need: \( T \) must be injective, since \( S \) recovers \( \v \) from \( T\v \). The missing half, surjectivity, is exactly what the Rank–Nullity Theorem supplies for free when \( \dim V = \dim W \) is finite. Once \( T \) is known to be invertible, we cancel it: \( S = (ST)T^{-1} = T^{-1} \). So the one hypothesis the infinite-dimensional counterexamples violate, finite equal dimension, is spent on a single line: injective \( \Rightarrow \) surjective.
 :::
 
 ::: {.proof}
@@ -263,33 +263,33 @@ Let \( V \) be a **finite-dimensional** vector space over \( F \), and let \( T 
 ::: {.idea}
 Nine conditions, but almost every arrow is a citation. The plan:
 
-① the core, (a) ⇔ (b) ⇔ (c) ⇔ (d) ⇔ (e): kernel test for injectivity, Rank–Nullity for "injective ⇔ surjective", equal dimension for "image is everything";
+① the core, (a) \( \Leftrightarrow \) (b) \( \Leftrightarrow \) (c) \( \Leftrightarrow \) (d) \( \Leftrightarrow \) (e): kernel test for injectivity, Rank–Nullity for "injective \( \Leftrightarrow \) surjective", equal dimension for "image is everything";
 
 ② the one-sided inverses (f), (g): trivially implied by (a), and they imply (a) by @thm-one-sided-inverse-maps with \( W = V \);
 
-③ the bases, (a) ⇒ (i) ⇒ (h) ⇒ (d): isomorphisms carry bases to bases, some basis exists, and an image containing a basis is everything.
+③ the bases, (a) \( \Rightarrow \) (i) \( \Rightarrow \) (h) \( \Rightarrow \) (d): isomorphisms carry bases to bases, some basis exists, and an image containing a basis is everything.
 :::
 
 ::: {.proof}
-**(a) ⇒ (b).** An invertible map is bijective (@thm-inverse-is-linear).
+**(a) \( \Rightarrow \) (b).** An invertible map is bijective (@thm-inverse-is-linear).
 
-**(b) ⇔ (c).** This is @thm-injective-iff-trivial-kernel, and \( \ker T = \{\0\} \) is the same as \( \dim \ker T = 0 \).
+**(b) \( \Leftrightarrow \) (c).** This is @thm-injective-iff-trivial-kernel, and \( \ker T = \{\0\} \) is the same as \( \dim \ker T = 0 \).
 
-**(b) ⇔ (d).** Since \( T \) maps the finite-dimensional space \( V \) to a space of the same dimension, this is @cor-rank-nullity-consequences.
+**(b) \( \Leftrightarrow \) (d).** Since \( T \) maps the finite-dimensional space \( V \) to a space of the same dimension, this is @cor-rank-nullity-consequences.
 
-**(d) ⇔ (e).** If \( \im T = V \), then \( \rank T = \dim V \). Conversely, if \( \rank T = \dim V \), then \( \im T \) is a subspace of \( V \) of dimension \( \dim V \), so \( \im T = V \) by @thm-dim-impl-eq.
+**(d) \( \Leftrightarrow \) (e).** If \( \im T = V \), then \( \rank T = \dim V \). Conversely, if \( \rank T = \dim V \), then \( \im T \) is a subspace of \( V \) of dimension \( \dim V \), so \( \im T = V \) by @thm-dim-impl-eq.
 
-**(b) and (d) ⇒ (a).** If \( T \) is injective, it is also surjective by (b) ⇒ (d), hence bijective, hence invertible by @thm-inverse-is-linear. Together with the arrows above, (a)–(e) are equivalent.
+**(b) and (d) \( \Rightarrow \) (a).** If \( T \) is injective, it is also surjective by (b) \( \Rightarrow \) (d), hence bijective, hence invertible by @thm-inverse-is-linear. Together with the arrows above, (a)–(e) are equivalent.
 
-**(a) ⇒ (f) and (a) ⇒ (g).** Take \( S = T^{-1} \).
+**(a) \( \Rightarrow \) (f) and (a) \( \Rightarrow \) (g).** Take \( S = T^{-1} \).
 
-**(f) ⇒ (a) and (g) ⇒ (a).** Apply @thm-one-sided-inverse-maps with \( W = V \): if \( ST = \id_V \), then \( T \) is invertible; if \( TS = \id_V \), the same theorem with the roles of \( S \) and \( T \) swapped shows that \( S \) is invertible with \( S^{-1} = T \), so \( T \) is invertible.
+**(f) \( \Rightarrow \) (a) and (g) \( \Rightarrow \) (a).** Apply @thm-one-sided-inverse-maps with \( W = V \): if \( ST = \id_V \), then \( T \) is invertible; if \( TS = \id_V \), the same theorem with the roles of \( S \) and \( T \) swapped shows that \( S \) is invertible with \( S^{-1} = T \), so \( T \) is invertible.
 
-**(a) ⇒ (i).** This is @thm-isomorphism-preserves-bases.
+**(a) \( \Rightarrow \) (i).** This is @thm-isomorphism-preserves-bases.
 
-**(i) ⇒ (h).** \( V \) has a basis by @cor-basis-existence, and by (i) its image is a basis.
+**(i) \( \Rightarrow \) (h).** \( V \) has a basis by @cor-basis-existence, and by (i) its image is a basis.
 
-**(h) ⇒ (d).** Let \( (\v_1, \dots, \v_n) \) be a basis whose image \( (T\v_1, \dots, T\v_n) \) is a basis of \( V \). Each \( T\v_i \) lies in the subspace \( \im T \), so \( V = \Span(T\v_1, \dots, T\v_n) \subseteq \im T \) by @thm-span-subspace. Hence \( \im T = V \).
+**(h) \( \Rightarrow \) (d).** Let \( (\v_1, \dots, \v_n) \) be a basis whose image \( (T\v_1, \dots, T\v_n) \) is a basis of \( V \). Each \( T\v_i \) lies in the subspace \( \im T \), so \( V = \Span(T\v_1, \dots, T\v_n) \subseteq \im T \) by @thm-span-subspace. Hence \( \im T = V \).
 
 All nine conditions are equivalent. This proves the theorem.
 :::
@@ -310,7 +310,7 @@ As with the matrix theorem, the list is a menu. To prove that an operator **is**
 \[
 T(a + bx + cx^2) = a + 2bx + 3cx^2 .
 \]
-If \( T(p) = 0 \), then \( a = 2b = 3c = 0 \), so \( a = b = c = 0 \) and \( p = 0 \). Hence \( \ker T = \{0\} \), and \( T \) is invertible by @thm-invertible-operator-tfae ((c) ⇒ (a)). We did not have to check surjectivity: the count did it for us. For the inverse, let \( S(a + bx + cx^2) \coloneqq a + \frac{b}{2}x + \frac{c}{3}x^2 \), which is linear. Then \( TS(a + bx + cx^2) = a + 2 \cdot \frac{b}{2}x + 3 \cdot \frac{c}{3}x^2 = a + bx + cx^2 \), so \( TS = \id \), and by @thm-one-sided-inverse-maps, \( S = T^{-1} \).
+If \( T(p) = 0 \), then \( a = 2b = 3c = 0 \), so \( a = b = c = 0 \) and \( p = 0 \). Hence \( \ker T = \{0\} \), and \( T \) is invertible by @thm-invertible-operator-tfae ((c) \( \Rightarrow \) (a)). We did not have to check surjectivity: the count did it for us. For the inverse, let \( S(a + bx + cx^2) \coloneqq a + \frac{b}{2}x + \frac{c}{3}x^2 \), which is linear. Then \( TS(a + bx + cx^2) = a + 2 \cdot \frac{b}{2}x + 3 \cdot \frac{c}{3}x^2 = a + bx + cx^2 \), so \( TS = \id \), and by @thm-one-sided-inverse-maps, \( S = T^{-1} \).
 
 (b) The operators \( T \) and \( T - \id_V \) are polynomials in \( T \), so they commute (@thm-polynomial-of-operator-properties (c)). By @thm-composition-linear (d) and the hypothesis,
 \[
@@ -361,7 +361,7 @@ Isomorphisms let us move a whole space into \( F^n \). The next section moves **
 
 (e) False. \( \nR^2 \cong \nR^2 \), but the zero map \( \nR^2 \to \nR^2 \) is not injective.
 
-(f) The Invertible Operator Theorem, @thm-invertible-operator-tfae, (c) ⇒ (a).
+(f) The Invertible Operator Theorem, @thm-invertible-operator-tfae, (c) \( \Rightarrow \) (a).
 :::
 
 ### B. Practice
@@ -397,7 +397,7 @@ Let \( n \ge 0 \), and let \( T \in \cL(\nR[x]_{\le n}) \), \( T(p) = p + p' \).
 :::
 
 ::: {.solution}
-(a) Let \( p \in \ker T \), so \( p' = -p \). If \( p \neq 0 \), let \( d = \deg p \ge 0 \). Differentiation lowers the degree of a non-zero polynomial by at least one (it kills constants), so \( \deg p' < d = \deg(-p) \), contradicting \( p' = -p \). Hence \( p = 0 \) and \( \ker T = \{0\} \). By @thm-invertible-operator-tfae ((c) ⇒ (a)), \( T \) is an isomorphism.
+(a) Let \( p \in \ker T \), so \( p' = -p \). If \( p \neq 0 \), let \( d = \deg p \ge 0 \). Differentiation lowers the degree of a non-zero polynomial by at least one (it kills constants), so \( \deg p' < d = \deg(-p) \), contradicting \( p' = -p \). Hence \( p = 0 \) and \( \ker T = \{0\} \). By @thm-invertible-operator-tfae ((c) \( \Rightarrow \) (a)), \( T \) is an isomorphism.
 
 (b) \( T = \id + D = q(D) \) with \( q = 1 + x \), and \( S \coloneqq \sum_{k=0}^n (-1)^kD^k = r(D) \) with \( r = \sum_{k=0}^n (-x)^k \). The identity in the hint is the telescoping sum \( \sum_{k=0}^{n}(-x)^k - \sum_{k=0}^{n}(-x)^{k+1} = 1 - (-x)^{n+1} \). By @thm-polynomial-of-operator-properties (b),
 \[
@@ -450,7 +450,7 @@ By @thm-isomorphic-iff-same-dimension, in each case we compare dimensions over \
 :::
 
 ::: {.solution}
-(a) The inverse \( (ST)^{-1} \) lies in \( \cL(V) \) (@thm-inverse-is-linear), and \( (ST)(ST)^{-1} = \id_V = (ST)^{-1}(ST) \). By associativity (@thm-composition-linear (b)), \( S\bigl(T(ST)^{-1}\bigr) = \id_V \) and \( \bigl((ST)^{-1}S\bigr)T = \id_V \). By @thm-invertible-operator-tfae, (g) ⇒ (a) applied to \( S \) with right inverse \( T(ST)^{-1} \) shows that \( S \) is invertible, and (f) ⇒ (a) applied to \( T \) with left inverse \( (ST)^{-1}S \) shows that \( T \) is invertible. Then \( TS \) is a composition of isomorphisms, hence an isomorphism by @thm-isomorphic-equivalence-relation.
+(a) The inverse \( (ST)^{-1} \) lies in \( \cL(V) \) (@thm-inverse-is-linear), and \( (ST)(ST)^{-1} = \id_V = (ST)^{-1}(ST) \). By associativity (@thm-composition-linear (b)), \( S\bigl(T(ST)^{-1}\bigr) = \id_V \) and \( \bigl((ST)^{-1}S\bigr)T = \id_V \). By @thm-invertible-operator-tfae, (g) \( \Rightarrow \) (a) applied to \( S \) with right inverse \( T(ST)^{-1} \) shows that \( S \) is invertible, and (f) \( \Rightarrow \) (a) applied to \( T \) with left inverse \( (ST)^{-1}S \) shows that \( T \) is invertible. Then \( TS \) is a composition of isomorphisms, hence an isomorphism by @thm-isomorphic-equivalence-relation.
 
 (b) Let \( S = L \) and \( T = R \) be the left and right shifts of @exm-differentiation-integration-one-sided. Then \( ST = LR = \id \), which is invertible. But \( L \) is not injective and \( R \) is not surjective, so neither is invertible, and \( TS = RL \) sends \( (1, 0, 0, \dots) \) to \( \0 \), so it is not injective and not invertible. The proof of (a) breaks at the appeal to @thm-invertible-operator-tfae, which needs finite dimension.
 :::

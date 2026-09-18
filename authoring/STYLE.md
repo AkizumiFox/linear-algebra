@@ -110,7 +110,7 @@ For each theorem:
      - commuting before swapping;
      - invertible before cancelling.
    - **You may skip:** a symmetric half ("swapping the roles of U and W gives the reverse inclusion"), and a repeat of an argument just given.
-   - **Labels:** (⇒)/(⇐), (⊆)/(⊇), *Case 1.*/*Case 2.*, and `::: {.claim}` with a nested `::: {.proof}` for a genuinely separate fact inside a long proof.
+   - **Labels:** `\( (\Rightarrow) \)`/`\( (\Leftarrow) \)`, `\( (\subseteq) \)`/`\( (\supseteq) \)`, *Case 1.*/*Case 2.*, and `::: {.claim}` with a nested `::: {.proof}` for a genuinely separate fact inside a long proof.
    - **Ending:** "This shows …" / "This proves …" / "as claimed".
    - **Length:** most proofs are 5–20 lines. For a long theorem (Steinitz, Jordan form, spectral theorem, Perron–Frobenius, Courant–Fischer, Loewner), write a **Step roadmap** in the Idea, then `**Step 1.**` … inside the proof, with Claims.
    - **One proof per theorem.** A second route gets at most one short "Alternatively," paragraph, and only when it teaches something.
@@ -121,7 +121,7 @@ For each theorem:
 - **Givens and goal first.** Unwind the definitions; the definition tells you what to fix arbitrarily.
 - **Plug in a theorem.** If a big structure theorem applies (spectral, Jordan, SVD), its conclusion is the first real line.
 - **Find the job of each hypothesis.** An unused hypothesis is where the finish comes from.
-- **Count instead of check.** Rank–Nullity; "independent + right size ⇒ basis"; one inclusion + equal dimension ⇒ equality.
+- **Count instead of check.** Rank–Nullity; "independent + right size \( \Rightarrow \) basis"; one inclusion + equal dimension \( \Rightarrow \) equality.
 - **Dimension formulas.** Take a basis of the smallest space, extend it (Basis Extension), make a Big Claim that the combined list is a basis (spanning, then independence), and count.
 - **Independence template.** "Let a₁v₁ + ⋯ + a_kv_k = 0." Move a block across, name the common vector, and ask which subspaces it lies in.
 - **Injectivity via the kernel.** Surjectivity via rank or dimension.
@@ -198,6 +198,7 @@ Each section ends with `## Exercises` and three groups.
 - **Promises.** Every forward promise ("we will see in @sec…" or "in Chapter 8") must be paid off. When writing, add each promise to `authoring/STATUS.md`.
 - **Spelling.** American spelling: "normalize", "color", "behavior", "center". Mathematical names keep their accents (Gershgorin, Schur, Cauchy–Schwarz with an en dash).
 - **Math delimiters.** `\( … \)` inline and `\[ … \]` display, never `$` (except inside TikZ and inside `\tag{$\ast$}`). Numbered equations take `{#eq-slug}` right after `\]`.
+- **Relation symbols are typeset, never plain characters.** Write `\( \Rightarrow \)`, `\( \subseteq \)`, `\( \in \)`, `\( \le \)`, not the unicode characters — including proof-direction tags `\( (\Rightarrow) \)` and chains such as `(a) \( \Rightarrow \) (b)`. (An arrow used rhetorically, as in "abstract space → write down a matrix", is ordinary prose and stays plain, as does an environment title such as `[The 2 × 2 puzzle]`.)
 - **Matrices are bold.** Write `\A`, `\B`, … (bold upright capitals) for matrices, `\v` for vectors, plain italic for operators (T, S) and spaces (V, U, W). Entries remain plain (`a_{ij}`).
 - **Displays must fit the text column.** A formula wider than about 60 characters of ordinary math should be broken with `aligned`, `split` or `cases` inside `\[ … \]`, aligned at `=` or at a natural operator, rather than left to overflow.
 - **Macros** are in `latex/macros.tex`; use those listed in `NOTATION.md`. Define nothing ad hoc. If a new macro is needed, add it to `macros.tex` and `NOTATION.md`.

@@ -142,13 +142,13 @@ in **exactly one** way.
 :::
 
 ::: {.proof}
-(⇒) Let \( \v \in V \). Since \( \sB \) spans \( V \), there are scalars with \( \v = a_1\v_1 + \dots + a_n\v_n \). Suppose also \( \v = b_1\v_1 + \dots + b_n\v_n \). Subtracting the two expressions and regrouping with the vector space axioms,
+\( (\Rightarrow) \) Let \( \v \in V \). Since \( \sB \) spans \( V \), there are scalars with \( \v = a_1\v_1 + \dots + a_n\v_n \). Suppose also \( \v = b_1\v_1 + \dots + b_n\v_n \). Subtracting the two expressions and regrouping with the vector space axioms,
 \[
 (a_1 - b_1)\v_1 + \dots + (a_n - b_n)\v_n = \v - \v = \0.
 \]
 Since \( \sB \) is linearly independent, \( a_i - b_i = 0 \) for every \( i \). Hence the two expressions are the same.
 
-(⇐) Every \( \v \in V \) is a combination of \( \sB \), so \( \sB \) spans \( V \). For independence, let \( a_1\v_1 + \dots + a_n\v_n = \0 \). We also have \( \0 = 0\v_1 + \dots + 0\v_n \). By uniqueness of the expression for the vector \( \0 \), all \( a_i = 0 \). Hence \( \sB \) is linearly independent, and \( \sB \) is a basis.
+\( (\Leftarrow) \) Every \( \v \in V \) is a combination of \( \sB \), so \( \sB \) spans \( V \). For independence, let \( a_1\v_1 + \dots + a_n\v_n = \0 \). We also have \( \0 = 0\v_1 + \dots + 0\v_n \). By uniqueness of the expression for the vector \( \0 \), all \( a_i = 0 \). Hence \( \sB \) is linearly independent, and \( \sB \) is a basis.
 :::
 
 This is @thm-independence-unique-combination in the special case where the span is the whole space. The theorem also gives a second way to check that a list is a basis: solve for the coefficients of a general vector, and see that there is always exactly one solution. We did exactly that for \( ((1, 1), (1, -1)) \).
@@ -234,16 +234,16 @@ Let \( (\u_1, \dots, \u_k) \) be a linearly independent list in a vector space \
 :::
 
 ::: {.proof}
-(⇒) Suppose \( \v \in \Span(\u_1, \dots, \u_k) \), say \( \v = c_1\u_1 + \dots + c_k\u_k \). Then \( c_1\u_1 + \dots + c_k\u_k + (-1)\v = \0 \), with the coefficient \( -1 \ne 0 \). So the longer list is dependent. This proves (⇒) by contraposition.
+\( (\Rightarrow) \) Suppose \( \v \in \Span(\u_1, \dots, \u_k) \), say \( \v = c_1\u_1 + \dots + c_k\u_k \). Then \( c_1\u_1 + \dots + c_k\u_k + (-1)\v = \0 \), with the coefficient \( -1 \ne 0 \). So the longer list is dependent. This proves \( (\Rightarrow) \) by contraposition.
 
-(⇐) Suppose \( \v \notin \Span(\u_1, \dots, \u_k) \), and let \( a_1\u_1 + \dots + a_k\u_k + b\v = \0 \). If \( b \ne 0 \), then \( b^{-1} \) exists and
+\( (\Leftarrow) \) Suppose \( \v \notin \Span(\u_1, \dots, \u_k) \), and let \( a_1\u_1 + \dots + a_k\u_k + b\v = \0 \). If \( b \ne 0 \), then \( b^{-1} \) exists and
 \[
 \v = -b^{-1}a_1\u_1 - \dots - b^{-1}a_k\u_k \in \Span(\u_1, \dots, \u_k),
 \]
 a contradiction. Hence \( b = 0 \). Then \( a_1\u_1 + \dots + a_k\u_k = \0 \), and the independence of \( (\u_1, \dots, \u_k) \) gives \( a_1 = \dots = a_k = 0 \). So all coefficients are zero, and the longer list is independent.
 :::
 
-The direction (⇐) is @exr-independence-c2. When \( k = 0 \), the lemma says that the one-vector list \( (\v) \) is independent exactly when \( \v \notin \Span() = \{\0\} \), that is, when \( \v \ne \0 \), in agreement with @exm-independence-degenerate.
+The direction \( (\Leftarrow) \) is @exr-independence-c2. When \( k = 0 \), the lemma says that the one-vector list \( (\v) \) is independent exactly when \( \v \notin \Span() = \{\0\} \), that is, when \( \v \ne \0 \), in agreement with @exm-independence-degenerate.
 
 Now the procedure. Given a list \( (\v_1, \dots, \v_m) \) in \( V \), **sifting** it means the following.
 
@@ -492,9 +492,9 @@ Hence the list is a basis of \( U \).
 
 (b) Write \( 2 = 1 + 1 \in F \).
 
-(⇐) Suppose \( 2 \ne 0 \), so \( 2^{-1} \) exists. Let \( (x, y) \in F^2 \). The equation \( a(1, 1) + b(1, -1) = (x, y) \) says \( a + b = x \) and \( a - b = y \). If it holds, adding and subtracting gives \( 2a = x + y \) and \( 2b = x - y \), so \( a = 2^{-1}(x + y) \) and \( b = 2^{-1}(x - y) \). Conversely these values satisfy \( a + b = 2^{-1} \cdot 2x = x \) and \( a - b = 2^{-1} \cdot 2y = y \). So every vector has exactly one expression, and the list is a basis by @thm-unique-representation.
+\( (\Leftarrow) \) Suppose \( 2 \ne 0 \), so \( 2^{-1} \) exists. Let \( (x, y) \in F^2 \). The equation \( a(1, 1) + b(1, -1) = (x, y) \) says \( a + b = x \) and \( a - b = y \). If it holds, adding and subtracting gives \( 2a = x + y \) and \( 2b = x - y \), so \( a = 2^{-1}(x + y) \) and \( b = 2^{-1}(x - y) \). Conversely these values satisfy \( a + b = 2^{-1} \cdot 2x = x \) and \( a - b = 2^{-1} \cdot 2y = y \). So every vector has exactly one expression, and the list is a basis by @thm-unique-representation.
 
-(⇒) Suppose \( 2 = 0 \). Then \( 1 = -1 \), and the argument of (a) applies word for word: \( 1 \cdot (1, 1) + 1 \cdot (1, -1) = (2, 0) = (0, 0) \), so the list is dependent and is not a basis. This proves (⇒) by contraposition.
+\( (\Rightarrow) \) Suppose \( 2 = 0 \). Then \( 1 = -1 \), and the argument of (a) applies word for word: \( 1 \cdot (1, 1) + 1 \cdot (1, -1) = (2, 0) = (0, 0) \), so the list is dependent and is not a basis. This proves \( (\Rightarrow) \) by contraposition.
 :::
 
 ::: {#exr-basis-c3}

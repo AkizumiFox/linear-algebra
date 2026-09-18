@@ -32,7 +32,7 @@ a_1\v_1 + a_2\v_2 + \dots + a_k\v_k = \0 \quad \Longrightarrow \quad a_1 = a_2 =
 The list is **linearly dependent** if it is not linearly independent: that is, if there exist \( a_1, \dots, a_k \in F \), **not all zero**, with \( a_1\v_1 + \dots + a_k\v_k = \0 \). Such an equation is a **linear relation** among the vectors. The empty list is linearly independent.
 :::
 
-In words: the hypothesis is an arbitrary linear combination that happens to equal \( \0 \). The conclusion says that **every** coefficient in it is \( 0 \). Dependence is the negation, obtained by the rules of @def-negation-of-quantifiers: "for all \( a \), (combination \( = \0 \) ⇒ all \( a_i = 0 \))" becomes "there exist \( a \) with combination \( = \0 \) and **not** all \( a_i = 0 \)". This is exactly the negation worked out in @exm-negation-not-all-zero. The empty list is independent because the condition is vacuous: there are no coefficients, so "all of them are \( 0 \)" holds automatically.
+In words: the hypothesis is an arbitrary linear combination that happens to equal \( \0 \). The conclusion says that **every** coefficient in it is \( 0 \). Dependence is the negation, obtained by the rules of @def-negation-of-quantifiers: "for all \( a \), (combination \( = \0 \) \( \Rightarrow \) all \( a_i = 0 \))" becomes "there exist \( a \) with combination \( = \0 \) and **not** all \( a_i = 0 \)". This is exactly the negation worked out in @exm-negation-not-all-zero. The empty list is independent because the condition is vacuous: there are no coefficients, so "all of them are \( 0 \)" holds automatically.
 
 The definition also dictates how every independence proof starts. It is a "for all" statement about coefficients, so we take arbitrary coefficients and assume the hypothesis:
 
@@ -216,9 +216,9 @@ Let \( V \) be a vector space and \( (\v_1, \dots, \v_k) \) a list in \( V \) wi
 :::
 
 ::: {.proof}
-(⇒) By @thm-linear-dependence-lemma (1) there is an index \( j \) with \( \v_j \in \Span(\v_1, \dots, \v_{j-1}) \), and by part (2) removing that \( \v_j \) does not change the span.
+\( (\Rightarrow) \) By @thm-linear-dependence-lemma (1) there is an index \( j \) with \( \v_j \in \Span(\v_1, \dots, \v_{j-1}) \), and by part (2) removing that \( \v_j \) does not change the span.
 
-(⇐) Let \( L \) be the list with \( \v_j \) removed, and suppose \( \Span(L) = \Span(\v_1, \dots, \v_k) \). By @thm-span-subspace (2), \( \v_j \in \Span(\v_1, \dots, \v_k) = \Span(L) \). So \( \v_j = \sum_{i \neq j} c_i\v_i \) for some scalars \( c_i \), and therefore \( \sum_{i \neq j} c_i\v_i + (-1)\v_j = \0 \). The coefficient of \( \v_j \) is \( -1 \neq 0 \), so the list is dependent.
+\( (\Leftarrow) \) Let \( L \) be the list with \( \v_j \) removed, and suppose \( \Span(L) = \Span(\v_1, \dots, \v_k) \). By @thm-span-subspace (2), \( \v_j \in \Span(\v_1, \dots, \v_k) = \Span(L) \). So \( \v_j = \sum_{i \neq j} c_i\v_i \) for some scalars \( c_i \), and therefore \( \sum_{i \neq j} c_i\v_i + (-1)\v_j = \0 \). The coefficient of \( \v_j \) is \( -1 \neq 0 \), so the list is dependent.
 :::
 
 So a spanning list that is dependent can always be shortened and still span. Repeating this until the list becomes independent is the idea behind the next section's proof that every finite spanning list contains a basis.
@@ -239,13 +239,13 @@ Let \( V \) be a vector space over \( F \) and \( (\v_1, \dots, \v_k) \) a list 
 :::
 
 ::: {.proof}
-(a ⇒ b) Suppose the list is independent, and let \( a_1\v_1 + \dots + a_k\v_k = b_1\v_1 + \dots + b_k\v_k \). Subtracting the right side from both sides and using \( a\v - b\v = (a - b)\v \) (@thm-negative-scalar-dist and @def-vector-space) gives
+(a \( \Rightarrow \) b) Suppose the list is independent, and let \( a_1\v_1 + \dots + a_k\v_k = b_1\v_1 + \dots + b_k\v_k \). Subtracting the right side from both sides and using \( a\v - b\v = (a - b)\v \) (@thm-negative-scalar-dist and @def-vector-space) gives
 \[
 (a_1 - b_1)\v_1 + \dots + (a_k - b_k)\v_k = \0 .
 \]
 By independence, \( a_i - b_i = 0 \) for every \( i \), that is, \( a_i = b_i \).
 
-(b ⇒ a) Suppose (b) holds, and let \( a_1\v_1 + \dots + a_k\v_k = \0 \). By @thm-zero-scalar-mult, also \( 0\v_1 + \dots + 0\v_k = \0 \). These are two representations of \( \0 \in \Span(\v_1, \dots, \v_k) \), so by (b), \( a_i = 0 \) for every \( i \). Hence the list is independent.
+(b \( \Rightarrow \) a) Suppose (b) holds, and let \( a_1\v_1 + \dots + a_k\v_k = \0 \). By @thm-zero-scalar-mult, also \( 0\v_1 + \dots + 0\v_k = \0 \). These are two representations of \( \0 \in \Span(\v_1, \dots, \v_k) \), so by (b), \( a_i = 0 \) for every \( i \). Hence the list is independent.
 :::
 
 Every vector of a span has **at least** one representation, by definition of the span; independence is what makes it **at most** one. For a dependent list uniqueness fails: with the list \( ((1, 0), (0, 1), (1, 1)) \),

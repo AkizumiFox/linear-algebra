@@ -87,7 +87,7 @@ By @def-coordinates, \( \coord{\v_j'}{\sB} \) is the \( j \)-th column \( \p_j \
 \[
 c_1\p_1 + \dots + c_n\p_n = \coord{\0}{\sB} = \0,
 \]
-that is, \( \P\c = \0 \) with \( \c = (c_1, \dots, c_n) \), by @thm-matrix-times-vector-columns. Since \( \P \) is invertible, @thm-invertible-tfae ((a) ⇒ (b)) gives \( \c = \0 \). So \( \sB' \) is linearly independent. It has length \( n = \dim V \), hence it is a basis by @thm-right-size-basis (a). Finally, the \( j \)-th column of \( \mtx{\id}{\sB'}{\sB} \) is \( \coord{\v_j'}{\sB} = \p_j \), so \( \mtx{\id}{\sB'}{\sB} = \P \).
+that is, \( \P\c = \0 \) with \( \c = (c_1, \dots, c_n) \), by @thm-matrix-times-vector-columns. Since \( \P \) is invertible, @thm-invertible-tfae ((a) \( \Rightarrow \) (b)) gives \( \c = \0 \). So \( \sB' \) is linearly independent. It has length \( n = \dim V \), hence it is a basis by @thm-right-size-basis (a). Finally, the \( j \)-th column of \( \mtx{\id}{\sB'}{\sB} \) is \( \coord{\v_j'}{\sB} = \p_j \), so \( \mtx{\id}{\sB'}{\sB} = \P \).
 :::
 
 ::: {#exm-change-of-coordinates-polynomials}
@@ -467,9 +467,9 @@ Let \( n \ge 1 \) and \( \A \in M_n(F) \).
 :::
 
 ::: {.solution}
-(a) (⇐) If \( \A = c\I_n \), then \( \P^{-1}\A\P = c\P^{-1}\P = c\I_n = \A \) for every invertible \( \P \), so the only matrix similar to \( \A \) is \( \A \).
+(a) \( (\Leftarrow) \) If \( \A = c\I_n \), then \( \P^{-1}\A\P = c\P^{-1}\P = c\I_n = \A \) for every invertible \( \P \), so the only matrix similar to \( \A \) is \( \A \).
 
-(⇒) Suppose \( \P^{-1}\A\P = \A \) for every invertible \( \P \), that is, \( \A\P = \P\A \). If \( n = 1 \), \( \A = (a_{11}) = a_{11}\I_1 \). Let \( n \ge 2 \), and fix \( i \ne j \). The matrix \( \I_n + \E_{ij} \) is invertible, with inverse \( \I_n - \E_{ij} \), since \( \E_{ij}\E_{ij} = 0 \) for \( i \ne j \). So \( \A(\I_n + \E_{ij}) = (\I_n + \E_{ij})\A \), which gives \( \A\E_{ij} = \E_{ij}\A \). Compare the entries in position \( (k, l) \): by @def-matrix-multiplication,
+\( (\Rightarrow) \) Suppose \( \P^{-1}\A\P = \A \) for every invertible \( \P \), that is, \( \A\P = \P\A \). If \( n = 1 \), \( \A = (a_{11}) = a_{11}\I_1 \). Let \( n \ge 2 \), and fix \( i \ne j \). The matrix \( \I_n + \E_{ij} \) is invertible, with inverse \( \I_n - \E_{ij} \), since \( \E_{ij}\E_{ij} = 0 \) for \( i \ne j \). So \( \A(\I_n + \E_{ij}) = (\I_n + \E_{ij})\A \), which gives \( \A\E_{ij} = \E_{ij}\A \). Compare the entries in position \( (k, l) \): by @def-matrix-multiplication,
 \[
 (\A\E_{ij})_{kl} = \begin{cases} a_{ki} & l = j \\ 0 & l \ne j \end{cases}, \qquad (\E_{ij}\A)_{kl} = \begin{cases} a_{jl} & k = i \\ 0 & k \ne i. \end{cases}
 \]

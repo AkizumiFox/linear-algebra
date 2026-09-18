@@ -481,7 +481,7 @@ Now extend \( S \) to \( F^k \). The subspace \( \im T \subseteq F^k \) has a ba
 \]
 so \( \psi = a_1\varphi_1 + \dots + a_k\varphi_k \). Note that \( V \) was arbitrary; only \( F^k \) needed to be finite-dimensional.
 
-(b) (⇐) If the intersection is \( \{\0\} \), it lies in \( \ker\psi \) for every \( \psi \in V^{*} \), so every \( \psi \) is in the span by (a). (⇒) Suppose the \( \varphi_i \) span \( V^{*} \), and let \( \v \) lie in every \( \ker\varphi_i \). Every \( \psi \in V^{*} \) is a combination \( \sum c_i\varphi_i \), so \( \psi(\v) = \sum c_i\varphi_i(\v) = 0 \). By @thm-functionals-separate-points (b), \( \v = \0 \).
+(b) \( (\Leftarrow) \) If the intersection is \( \{\0\} \), it lies in \( \ker\psi \) for every \( \psi \in V^{*} \), so every \( \psi \) is in the span by (a). \( (\Rightarrow) \) Suppose the \( \varphi_i \) span \( V^{*} \), and let \( \v \) lie in every \( \ker\varphi_i \). Every \( \psi \in V^{*} \) is a combination \( \sum c_i\varphi_i \), so \( \psi(\v) = \sum c_i\varphi_i(\v) = 0 \). By @thm-functionals-separate-points (b), \( \v = \0 \).
 :::
 
 :::: {#exr-linear-functionals-c3}

@@ -59,9 +59,9 @@ Let \( F \) be a field and \( p \in F[x] \).
 :::
 
 ::: {.proof}
-(a) (⇐) If \( c \in F \) is a root, then \( p = (x - c)q \) by @thm-remainder-theorem (b). (⇒) If \( p = (ax + b)q \) with \( a \neq 0 \), then \( c = -a^{-1} b \) satisfies \( ac + b = 0 \), so \( p(c) = 0 \cdot q(c) = 0 \) by @thm-evaluation-respects-operations. For the last sentence, if \( \deg p \ge 2 \) and \( p = (x - c)q \), then \( \deg q = \deg p - 1 \ge 1 \), so both factors are non-constant of degree less than \( \deg p \), and \( p \) is reducible.
+(a) \( (\Leftarrow) \) If \( c \in F \) is a root, then \( p = (x - c)q \) by @thm-remainder-theorem (b). \( (\Rightarrow) \) If \( p = (ax + b)q \) with \( a \neq 0 \), then \( c = -a^{-1} b \) satisfies \( ac + b = 0 \), so \( p(c) = 0 \cdot q(c) = 0 \) by @thm-evaluation-respects-operations. For the last sentence, if \( \deg p \ge 2 \) and \( p = (x - c)q \), then \( \deg q = \deg p - 1 \ge 1 \), so both factors are non-constant of degree less than \( \deg p \), and \( p \) is reducible.
 
-(b) We prove both directions by contraposition. (⇒) If \( p \) has a root, it is reducible by (a), since \( \deg p \ge 2 \). (⇐) Suppose \( p \) is reducible. By the working form of the definition, \( p = gh \) with \( \deg g, \deg h \ge 1 \) and \( \deg g + \deg h = \deg p \in \{2, 3\} \). Two integers that are at least \( 1 \) and sum to \( 2 \) or \( 3 \) cannot both be at least \( 2 \), so one of \( g, h \) has degree \( 1 \). By (a), \( p \) has a root in \( F \). This proves the theorem.
+(b) We prove both directions by contraposition. \( (\Rightarrow) \) If \( p \) has a root, it is reducible by (a), since \( \deg p \ge 2 \). \( (\Leftarrow) \) Suppose \( p \) is reducible. By the working form of the definition, \( p = gh \) with \( \deg g, \deg h \ge 1 \) and \( \deg g + \deg h = \deg p \in \{2, 3\} \). Two integers that are at least \( 1 \) and sum to \( 2 \) or \( 3 \) cannot both be at least \( 2 \), so one of \( g, h \) has degree \( 1 \). By (a), \( p \) has a root in \( F \). This proves the theorem.
 :::
 
 Now the standard examples, each checked with the theorem.

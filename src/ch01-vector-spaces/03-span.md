@@ -167,9 +167,9 @@ Let \( V \) be a vector space and \( S \subseteq V \). Let \( \sU \) be the set 
 ::: {.proof}
 The index set \( \sU \) is non-empty, because \( V \) is a subspace of itself containing \( S \); so the intersection is defined (@def-indexed-family).
 
-(⊆) By @thm-span-subspace (3), \( \Span(S) \subseteq U \) for every \( U \in \sU \). Hence \( \Span(S) \) is contained in the intersection.
+\( (\subseteq) \) By @thm-span-subspace (3), \( \Span(S) \subseteq U \) for every \( U \in \sU \). Hence \( \Span(S) \) is contained in the intersection.
 
-(⊇) By @thm-span-subspace (1) and (2), \( \Span(S) \) is itself a member of \( \sU \). An intersection is contained in each of its members, so the intersection is contained in \( \Span(S) \).
+\( (\supseteq) \) By @thm-span-subspace (1) and (2), \( \Span(S) \) is itself a member of \( \sU \). An intersection is contained in each of its members, so the intersection is contained in \( \Span(S) \).
 
 By @thm-double-inclusion, the two sets are equal.
 :::
@@ -299,9 +299,9 @@ In particular, for a list: if \( \v \in \Span(\v_1, \dots, \v_k) \), then \( \Sp
 :::
 
 ::: {.proof}
-(⊇) Since \( S \subseteq S \cup \{ \v \} \), monotonicity (@prp-span-basic-properties (2)) gives \( \Span(S) \subseteq \Span(S \cup \{ \v \}) \).
+\( (\supseteq) \) Since \( S \subseteq S \cup \{ \v \} \), monotonicity (@prp-span-basic-properties (2)) gives \( \Span(S) \subseteq \Span(S \cup \{ \v \}) \).
 
-(⊆) By @thm-span-subspace (2), \( S \subseteq \Span(S) \), and \( \v \in \Span(S) \) by hypothesis. Hence \( S \cup \{ \v \} \subseteq \Span(S) \), and @prp-span-basic-properties (1) gives \( \Span(S \cup \{ \v \}) \subseteq \Span(S) \).
+\( (\subseteq) \) By @thm-span-subspace (2), \( S \subseteq \Span(S) \), and \( \v \in \Span(S) \) by hypothesis. Hence \( S \cup \{ \v \} \subseteq \Span(S) \), and @prp-span-basic-properties (1) gives \( \Span(S \cup \{ \v \}) \subseteq \Span(S) \).
 
 For the list version, the span of a list equals the span of the set of its entries, whatever the order. The entries of \( (\v_1, \dots, \v_k, \v) \) form the set \( \{ \v_1, \dots, \v_k \} \cup \{ \v \} \), so the first part applies.
 :::
@@ -315,9 +315,9 @@ Show that \( \Span(1 + x, 1 - x) = \Span(1, x) \) in \( \nR[x] \).
 :::
 
 ::: {.solution}
-(⊆) Both \( 1 + x = 1 \cdot 1 + 1 \cdot x \) and \( 1 - x = 1 \cdot 1 + (-1) \cdot x \) lie in \( \Span(1, x) \). By @prp-span-basic-properties (1), \( \Span(1 + x, 1 - x) \subseteq \Span(1, x) \).
+\( (\subseteq) \) Both \( 1 + x = 1 \cdot 1 + 1 \cdot x \) and \( 1 - x = 1 \cdot 1 + (-1) \cdot x \) lie in \( \Span(1, x) \). By @prp-span-basic-properties (1), \( \Span(1 + x, 1 - x) \subseteq \Span(1, x) \).
 
-(⊇) Conversely,
+\( (\supseteq) \) Conversely,
 \[
 1 = \tfrac12 (1 + x) + \tfrac12 (1 - x), \qquad x = \tfrac12 (1 + x) - \tfrac12 (1 - x),
 \]
@@ -389,9 +389,9 @@ Prove that \( \Span((1, 1, 0), (0, 1, 1)) = \Span((1, 2, 1), (1, 0, -1)) \) in \
 ::: {.solution}
 Write \( \u = (1, 1, 0) \), \( \w = (0, 1, 1) \).
 
-(⊆) We have \( \u = \tfrac12 (1, 2, 1) + \tfrac12 (1, 0, -1) \) and \( \w = \tfrac12 (1, 2, 1) - \tfrac12 (1, 0, -1) \): indeed \( \tfrac12(2, 2, 0) = (1, 1, 0) \) and \( \tfrac12 (0, 2, 2) = (0, 1, 1) \). So \( \u, \w \in \Span((1, 2, 1), (1, 0, -1)) \), and @prp-span-basic-properties (1) gives the inclusion.
+\( (\subseteq) \) We have \( \u = \tfrac12 (1, 2, 1) + \tfrac12 (1, 0, -1) \) and \( \w = \tfrac12 (1, 2, 1) - \tfrac12 (1, 0, -1) \): indeed \( \tfrac12(2, 2, 0) = (1, 1, 0) \) and \( \tfrac12 (0, 2, 2) = (0, 1, 1) \). So \( \u, \w \in \Span((1, 2, 1), (1, 0, -1)) \), and @prp-span-basic-properties (1) gives the inclusion.
 
-(⊇) We have \( (1, 2, 1) = \u + \w \) and \( (1, 0, -1) = \u - \w \). So both lie in \( \Span(\u, \w) \), and @prp-span-basic-properties (1) gives the reverse inclusion.
+\( (\supseteq) \) We have \( (1, 2, 1) = \u + \w \) and \( (1, 0, -1) = \u - \w \). So both lie in \( \Span(\u, \w) \), and @prp-span-basic-properties (1) gives the reverse inclusion.
 
 Hence the two spans are equal.
 :::
@@ -440,9 +440,9 @@ Let \( S, T \) be subsets of a vector space \( V \).
 2. Take \( S = \{ (1, 0), (0, 1) \} \) and \( T = \{ (1, 1) \} \). Then \( S \cap T = \varnothing \), so \( \Span(S \cap T) = \{ \0 \} \). But \( \Span(S) = \nR^2 \) (@exm-spanning-set), so \( \Span(S) \cap \Span(T) = \Span(T) \), the line \( y = x \), which contains \( (1, 1) \neq \0 \). The inclusion is strict.
 3. Write \( W = \{ \s + \t : \s \in \Span(S),\ \t \in \Span(T) \} \).
 
-   (⊆) Let \( \v \in \Span(S \cup T) \), say \( \v = a_1\u_1 + \dots + a_k\u_k \) with each \( \u_i \in S \cup T \). Let \( \s \) be the sum of the terms \( a_i\u_i \) with \( \u_i \in S \), and \( \t \) the sum of the remaining terms, whose vectors lie in \( T \). Since addition is commutative and associative, \( \v = \s + \t \). Now \( \s \in \Span(S) \) and \( \t \in \Span(T) \); if a group is empty, its sum is \( \0 \), which lies in every span. Hence \( \v \in W \).
+   \( (\subseteq) \) Let \( \v \in \Span(S \cup T) \), say \( \v = a_1\u_1 + \dots + a_k\u_k \) with each \( \u_i \in S \cup T \). Let \( \s \) be the sum of the terms \( a_i\u_i \) with \( \u_i \in S \), and \( \t \) the sum of the remaining terms, whose vectors lie in \( T \). Since addition is commutative and associative, \( \v = \s + \t \). Now \( \s \in \Span(S) \) and \( \t \in \Span(T) \); if a group is empty, its sum is \( \0 \), which lies in every span. Hence \( \v \in W \).
 
-   (⊇) Let \( \s \in \Span(S) \) and \( \t \in \Span(T) \). By monotonicity, both lie in \( \Span(S \cup T) \), which is closed under addition by @thm-span-subspace (1). Hence \( \s + \t \in \Span(S \cup T) \).
+   \( (\supseteq) \) Let \( \s \in \Span(S) \) and \( \t \in \Span(T) \). By monotonicity, both lie in \( \Span(S \cup T) \), which is closed under addition by @thm-span-subspace (1). Hence \( \s + \t \in \Span(S \cup T) \).
 
    By @thm-double-inclusion, \( \Span(S \cup T) = W \). (So \( W \) is the set \( \Span(S) + \Span(T) \) of @exr-subspaces-c2, the **sum** of the two subspaces, studied in section 7 of this chapter.)
 :::

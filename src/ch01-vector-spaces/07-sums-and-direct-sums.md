@@ -271,11 +271,11 @@ Uniqueness questions go through differences. If \( \u + \w = \u' + \w' \), then 
 :::
 
 ::: {.proof}
-(a) ⇒ (b). Suppose the sum is direct and let \( \v \in U \cap W \). Then \( \v = \v + \0 \) with \( \v \in U \), \( \0 \in W \), and \( \v = \0 + \v \) with \( \0 \in U \), \( \v \in W \). These are two splittings of \( \v \in U + W \), so by uniqueness their \( U \)-pieces agree: \( \v = \0 \). Hence \( U \cap W = \{\0\} \).
+(a) \( \Rightarrow \) (b). Suppose the sum is direct and let \( \v \in U \cap W \). Then \( \v = \v + \0 \) with \( \v \in U \), \( \0 \in W \), and \( \v = \0 + \v \) with \( \0 \in U \), \( \v \in W \). These are two splittings of \( \v \in U + W \), so by uniqueness their \( U \)-pieces agree: \( \v = \0 \). Hence \( U \cap W = \{\0\} \).
 
-(b) ⇒ (a). Suppose \( U \cap W = \{\0\} \), and let \( \u + \w = \u' + \w' \) with \( \u, \u' \in U \) and \( \w, \w' \in W \). Then \( \u - \u' = \w' - \w \). The left side lies in \( U \) and the right side in \( W \), since both are subspaces. So this common vector lies in \( U \cap W = \{\0\} \), which gives \( \u = \u' \) and \( \w = \w' \). Hence every vector of \( U + W \) has only one splitting.
+(b) \( \Rightarrow \) (a). Suppose \( U \cap W = \{\0\} \), and let \( \u + \w = \u' + \w' \) with \( \u, \u' \in U \) and \( \w, \w' \in W \). Then \( \u - \u' = \w' - \w \). The left side lies in \( U \) and the right side in \( W \), since both are subspaces. So this common vector lies in \( U \cap W = \{\0\} \), which gives \( \u = \u' \) and \( \w = \w' \). Hence every vector of \( U + W \) has only one splitting.
 
-(b) ⇔ (c). Now let \( U \) and \( W \) be finite-dimensional. By the dimension formula (@thm-dimension-formula-subspace-dim), (c) holds if and only if \( \dim(U \cap W) = 0 \). A space has dimension \( 0 \) exactly when the empty list is a basis of it, that is, when it equals the span of the empty list, which is \( \{\0\} \). So (c) holds if and only if \( U \cap W = \{\0\} \).
+(b) \( \Leftrightarrow \) (c). Now let \( U \) and \( W \) be finite-dimensional. By the dimension formula (@thm-dimension-formula-subspace-dim), (c) holds if and only if \( \dim(U \cap W) = 0 \). A space has dimension \( 0 \) exactly when the empty list is a basis of it, that is, when it equals the span of the empty list, which is \( \{\0\} \). So (c) holds if and only if \( U \cap W = \{\0\} \).
 :::
 
 This is the everyday test: to show \( V = U \oplus W \), show \( V = U + W \) and \( U \cap W = \{\0\} \). In finite dimension there is a shortcut that avoids checking \( V = U + W \) at all: if \( U \cap W = \{\0\} \) and \( \dim U + \dim W = \dim V \), then \( \dim(U + W) = \dim V \) by (c), so \( U + W = V \) by @thm-dim-impl-eq. Count instead of check.
@@ -371,25 +371,25 @@ If moreover each \( U_i \) is finite-dimensional with a basis \( \sB_i \), and \
 Here \( \sum_{i \ne j} U_i \) is the sum of the \( k - 1 \) subspaces other than \( U_j \) (and \( \{\0\} \) if \( k = 1 \)).
 
 ::: {.idea}
-Condition (b) is uniqueness for the single vector \( \0 \), and just as for independence, uniqueness for \( \0 \) gives uniqueness everywhere by taking differences. For (b) ⇔ (c), a non-trivial way of writing \( \0 \) is the same thing as a non-zero vector \( \u_j \) that equals minus the sum of the other pieces. For (d), a combination of \( \sB \) groups into one piece per \( U_i \); independence of each \( \sB_i \) turns "piece is \( \0 \)" into "coefficients are \( 0 \)". Finally (d) ⇔ (e) is count instead of check: \( \sB \) always spans \( S \), so it is a basis exactly when its length is right.
+Condition (b) is uniqueness for the single vector \( \0 \), and just as for independence, uniqueness for \( \0 \) gives uniqueness everywhere by taking differences. For (b) \( \Leftrightarrow \) (c), a non-trivial way of writing \( \0 \) is the same thing as a non-zero vector \( \u_j \) that equals minus the sum of the other pieces. For (d), a combination of \( \sB \) groups into one piece per \( U_i \); independence of each \( \sB_i \) turns "piece is \( \0 \)" into "coefficients are \( 0 \)". Finally (d) \( \Leftrightarrow \) (e) is count instead of check: \( \sB \) always spans \( S \), so it is a basis exactly when its length is right.
 :::
 
 ::: {.proof}
-(a) ⇒ (b). The vector \( \0 \in S \) has the splitting \( \0 = \0 + \dots + \0 \). If the sum is direct, it has no other, which is (b).
+(a) \( \Rightarrow \) (b). The vector \( \0 \in S \) has the splitting \( \0 = \0 + \dots + \0 \). If the sum is direct, it has no other, which is (b).
 
-(b) ⇒ (a). Assume (b), and let \( \u_1 + \dots + \u_k = \u_1' + \dots + \u_k' \) with \( \u_i, \u_i' \in U_i \). Subtracting and regrouping,
+(b) \( \Rightarrow \) (a). Assume (b), and let \( \u_1 + \dots + \u_k = \u_1' + \dots + \u_k' \) with \( \u_i, \u_i' \in U_i \). Subtracting and regrouping,
 \[
 (\u_1 - \u_1') + \dots + (\u_k - \u_k') = \0,
 \]
 where \( \u_i - \u_i' \in U_i \) because \( U_i \) is a subspace. By (b), \( \u_i - \u_i' = \0 \), that is, \( \u_i = \u_i' \), for every \( i \). Hence every vector of \( S \) has only one splitting.
 
-(b) ⇒ (c). Assume (b), fix \( j \), and let \( \v \in U_j \cap \sum_{i \ne j} U_i \). Then \( \v = \sum_{i \ne j} \u_i \) for some \( \u_i \in U_i \), and so
+(b) \( \Rightarrow \) (c). Assume (b), fix \( j \), and let \( \v \in U_j \cap \sum_{i \ne j} U_i \). Then \( \v = \sum_{i \ne j} \u_i \) for some \( \u_i \in U_i \), and so
 \[
 \u_1 + \dots + \u_{j-1} + (-\v) + \u_{j+1} + \dots + \u_k = \0,
 \]
 with \( -\v \in U_j \) in the \( j \)-th slot. By (b), every piece is \( \0 \); in particular \( -\v = \0 \), so \( \v = \0 \).
 
-(c) ⇒ (b). Assume (c), and let \( \u_1 + \dots + \u_k = \0 \) with \( \u_i \in U_i \). Fix \( j \). Then
+(c) \( \Rightarrow \) (b). Assume (c), and let \( \u_1 + \dots + \u_k = \0 \) with \( \u_i \in U_i \). Fix \( j \). Then
 \[
 \u_j = -\sum_{i \ne j} \u_i = \sum_{i \ne j} (-\u_i).
 \]
@@ -397,13 +397,13 @@ The left side lies in \( U_j \), and the right side lies in \( \sum_{i \ne j} U_
 
 For the rest, assume each \( U_i \) is finite-dimensional with basis \( \sB_i = (\b_{i1}, \dots, \b_{im_i}) \), where \( m_i = \dim U_i \). By @prp-sum-of-spans, \( \sB \) spans \( S = \Span(\sB_1) + \dots + \Span(\sB_k) \). In particular \( S \) is finite-dimensional.
 
-(b) ⇒ (d). Since \( \sB \) spans \( S \), it remains to prove independence. Let \( \sum_{i=1}^{k} \sum_{r=1}^{m_i} a_{ir}\b_{ir} = \0 \), and group the terms by subspace: put \( \u_i = \sum_{r=1}^{m_i} a_{ir}\b_{ir} \in U_i \). Then \( \u_1 + \dots + \u_k = \0 \), so each \( \u_i = \0 \) by (b). Since \( \sB_i \) is independent, \( a_{i1} = \dots = a_{im_i} = 0 \) for each \( i \). Hence \( \sB \) is independent, and so a basis of \( S \).
+(b) \( \Rightarrow \) (d). Since \( \sB \) spans \( S \), it remains to prove independence. Let \( \sum_{i=1}^{k} \sum_{r=1}^{m_i} a_{ir}\b_{ir} = \0 \), and group the terms by subspace: put \( \u_i = \sum_{r=1}^{m_i} a_{ir}\b_{ir} \in U_i \). Then \( \u_1 + \dots + \u_k = \0 \), so each \( \u_i = \0 \) by (b). Since \( \sB_i \) is independent, \( a_{i1} = \dots = a_{im_i} = 0 \) for each \( i \). Hence \( \sB \) is independent, and so a basis of \( S \).
 
-(d) ⇒ (b). Assume (d), and let \( \u_1 + \dots + \u_k = \0 \) with \( \u_i \in U_i \). Since \( \sB_i \) spans \( U_i \), write \( \u_i = \sum_{r=1}^{m_i} a_{ir}\b_{ir} \). Then \( \sum_{i=1}^{k} \sum_{r=1}^{m_i} a_{ir}\b_{ir} = \0 \) is a combination of the independent list \( \sB \), so every \( a_{ir} = 0 \), and therefore every \( \u_i = \0 \).
+(d) \( \Rightarrow \) (b). Assume (d), and let \( \u_1 + \dots + \u_k = \0 \) with \( \u_i \in U_i \). Since \( \sB_i \) spans \( U_i \), write \( \u_i = \sum_{r=1}^{m_i} a_{ir}\b_{ir} \). Then \( \sum_{i=1}^{k} \sum_{r=1}^{m_i} a_{ir}\b_{ir} = \0 \) is a combination of the independent list \( \sB \), so every \( a_{ir} = 0 \), and therefore every \( \u_i = \0 \).
 
-(d) ⇒ (e). The list \( \sB \) has length \( m_1 + \dots + m_k \), so if it is a basis of \( S \), then \( \dim S = \dim U_1 + \dots + \dim U_k \) by @def-dimension.
+(d) \( \Rightarrow \) (e). The list \( \sB \) has length \( m_1 + \dots + m_k \), so if it is a basis of \( S \), then \( \dim S = \dim U_1 + \dots + \dim U_k \) by @def-dimension.
 
-(e) ⇒ (d). The list \( \sB \) spans \( S \) and has length \( m_1 + \dots + m_k \), which equals \( \dim S \) by (e). A spanning list whose length is the dimension is a basis (@thm-right-size-basis). This proves the theorem.
+(e) \( \Rightarrow \) (d). The list \( \sB \) spans \( S \) and has length \( m_1 + \dots + m_k \), which equals \( \dim S \) by (e). A spanning list whose length is the dimension is a basis (@thm-right-size-basis). This proves the theorem.
 :::
 
 For \( k = 2 \), condition (c) reads \( U_1 \cap U_2 = \{\0\} \) and \( U_2 \cap U_1 = \{\0\} \), so we recover @thm-direct-sum-criteria. The criteria (d) and (e) say that **bases of the pieces assemble into a basis of a direct sum, and dimensions add.**
@@ -437,7 +437,7 @@ Let \( V \) be a finite-dimensional vector space and \( U \) a subspace of \( V 
 ::: {.proof}
 By @thm-subspace-dimension, \( U \) is finite-dimensional; let \( (\u_1, \dots, \u_m) \) be a basis of \( U \) (@cor-basis-existence). This list is independent in \( V \), so by the Basis Extension Theorem (@thm-basis-extension) there are \( \w_1, \dots, \w_r \in V \) such that \( (\u_1, \dots, \u_m, \w_1, \dots, \w_r) \) is a basis of \( V \). Put \( W = \Span(\w_1, \dots, \w_r) \), a subspace by @thm-span-subspace.
 
-By @prp-sum-of-spans, \( U + W = \Span(\u_1, \dots, \u_m, \w_1, \dots, \w_r) = V \). The list \( (\w_1, \dots, \w_r) \) is independent, since a relation \( c_1\w_1 + \dots + c_r\w_r = \0 \) is also a relation \( 0\u_1 + \dots + 0\u_m + c_1\w_1 + \dots + c_r\w_r = \0 \) among the basis vectors of \( V \), forcing all \( c_k = 0 \). So \( (\w_1, \dots, \w_r) \) is a basis of \( W \). The concatenation of the bases of \( U \) and \( W \) is a basis of \( U + W = V \), so the sum is direct by @thm-direct-sum-k-criteria ((d) ⇒ (a)). Hence \( V = U \oplus W \).
+By @prp-sum-of-spans, \( U + W = \Span(\u_1, \dots, \u_m, \w_1, \dots, \w_r) = V \). The list \( (\w_1, \dots, \w_r) \) is independent, since a relation \( c_1\w_1 + \dots + c_r\w_r = \0 \) is also a relation \( 0\u_1 + \dots + 0\u_m + c_1\w_1 + \dots + c_r\w_r = \0 \) among the basis vectors of \( V \), forcing all \( c_k = 0 \). So \( (\w_1, \dots, \w_r) \) is a basis of \( W \). The concatenation of the bases of \( U \) and \( W \) is a basis of \( U + W = V \), so the sum is direct by @thm-direct-sum-k-criteria ((d) \( \Rightarrow \) (a)). Hence \( V = U \oplus W \).
 
 Finally, if \( W \) is any subspace with \( V = U \oplus W \), then \( W \) is finite-dimensional (@thm-subspace-dimension), and @thm-direct-sum-criteria (c) gives \( \dim V = \dim U + \dim W \), as claimed.
 :::
@@ -556,7 +556,7 @@ Determine which of the following sums are direct. Justify your answer.
 
 (b) Not direct. The identity matrix \( \I_2 \) is both upper and lower triangular, so \( \I_2 \in T_{\mathrm{up}} \cap T_{\mathrm{low}} \ne \{0\} \), and @thm-direct-sum-criteria applies.
 
-(c) Direct. Each line has the basis given by its spanning vector, and we check that the concatenated list \( ((1, 0, 0), (0, 1, 0), (1, 1, 1)) \) is independent. If \( a(1, 0, 0) + b(0, 1, 0) + c(1, 1, 1) = (a + c, b + c, c) = \0 \), then \( c = 0 \), hence \( a = 0 \) and \( b = 0 \). The list spans the sum by @prp-sum-of-spans, so it is a basis of the sum, and the sum is direct by @thm-direct-sum-k-criteria ((d) ⇒ (a)).
+(c) Direct. Each line has the basis given by its spanning vector, and we check that the concatenated list \( ((1, 0, 0), (0, 1, 0), (1, 1, 1)) \) is independent. If \( a(1, 0, 0) + b(0, 1, 0) + c(1, 1, 1) = (a + c, b + c, c) = \0 \), then \( c = 0 \), hence \( a = 0 \) and \( b = 0 \). The list spans the sum by @prp-sum-of-spans, so it is a basis of the sum, and the sum is direct by @thm-direct-sum-k-criteria ((d) \( \Rightarrow \) (a)).
 
 (d) Not direct, although any two of the three lines meet only in \( \0 \) (no spanning vector is a multiple of another). Indeed
 \[

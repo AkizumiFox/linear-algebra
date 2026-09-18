@@ -324,13 +324,13 @@ Let \( f \colon X \to Y \) with \( X \) **non-empty**. Then \( f \) has a left i
 :::
 
 ::: {.idea}
-(⇒) is @thm-composition-partial-converse with \( g \circ f = \id_X \), which is injective. For (⇐) we must define \( g(y) \) for every \( y \in Y \). If \( y \) is in the image, injectivity gives a **unique** \( x \) with \( f(x) = y \), and \( g(y) \) must be that \( x \). If \( y \) is not in the image, the condition \( g \circ f = \id_X \) says nothing about \( g(y) \), so we send \( y \) anywhere in \( X \). That is where non-emptiness is used.
+\( (\Rightarrow) \) is @thm-composition-partial-converse with \( g \circ f = \id_X \), which is injective. For \( (\Leftarrow) \) we must define \( g(y) \) for every \( y \in Y \). If \( y \) is in the image, injectivity gives a **unique** \( x \) with \( f(x) = y \), and \( g(y) \) must be that \( x \). If \( y \) is not in the image, the condition \( g \circ f = \id_X \) says nothing about \( g(y) \), so we send \( y \) anywhere in \( X \). That is where non-emptiness is used.
 :::
 
 ::: {.proof}
-(⇒) Suppose \( g \circ f = \id_X \). The identity \( \id_X \) is injective, so \( f \) is injective by @thm-composition-partial-converse (a).
+\( (\Rightarrow) \) Suppose \( g \circ f = \id_X \). The identity \( \id_X \) is injective, so \( f \) is injective by @thm-composition-partial-converse (a).
 
-(⇐) Suppose \( f \) is injective. Since \( X \ne \varnothing \), we may fix some \( x_0 \in X \). Define \( g \colon Y \to X \) as follows. If \( y \in f(X) \), there is some \( x \in X \) with \( f(x) = y \), and this \( x \) is unique because \( f \) is injective; set \( g(y) = x \). If \( y \notin f(X) \), set \( g(y) = x_0 \). Every \( y \) receives exactly one value, so \( g \) is a function. For \( x \in X \), the element \( y = f(x) \) lies in \( f(X) \), and the unique input sent to it is \( x \), so \( g(f(x)) = x \). Hence \( g \circ f = \id_X \), as claimed.
+\( (\Leftarrow) \) Suppose \( f \) is injective. Since \( X \ne \varnothing \), we may fix some \( x_0 \in X \). Define \( g \colon Y \to X \) as follows. If \( y \in f(X) \), there is some \( x \in X \) with \( f(x) = y \), and this \( x \) is unique because \( f \) is injective; set \( g(y) = x \). If \( y \notin f(X) \), set \( g(y) = x_0 \). Every \( y \) receives exactly one value, so \( g \) is a function. For \( x \in X \), the element \( y = f(x) \) lies in \( f(X) \), and the unique input sent to it is \( x \), so \( g(f(x)) = x \). Hence \( g \circ f = \id_X \), as claimed.
 :::
 
 The hypothesis \( X \ne \varnothing \) is not decoration. The empty function \( \varnothing \to \{1\} \) is injective (there are no two inputs to collide), but there is no function \( \{1\} \to \varnothing \) at all, since \( 1 \) would have nowhere to go.
@@ -342,9 +342,9 @@ Let \( f \colon X \to Y \). Then \( f \) has a right inverse if and only if \( f
 :::
 
 ::: {.proof}
-(⇒) Suppose \( f \circ g = \id_Y \). The identity \( \id_Y \) is surjective, so \( f \) is surjective by @thm-composition-partial-converse (b).
+\( (\Rightarrow) \) Suppose \( f \circ g = \id_Y \). The identity \( \id_Y \) is surjective, so \( f \) is surjective by @thm-composition-partial-converse (b).
 
-(⇐) Suppose \( f \) is surjective. For each \( y \in Y \) the set \( f^{-1}(\{y\}) \) is non-empty, so we may choose one element of it and call it \( g(y) \). This defines \( g \colon Y \to X \) with \( f(g(y)) = y \) for every \( y \in Y \), that is, \( f \circ g = \id_Y \).
+\( (\Leftarrow) \) Suppose \( f \) is surjective. For each \( y \in Y \) the set \( f^{-1}(\{y\}) \) is non-empty, so we may choose one element of it and call it \( g(y) \). This defines \( g \colon Y \to X \) with \( f(g(y)) = y \) for every \( y \in Y \), that is, \( f \circ g = \id_Y \).
 :::
 
 When \( Y \) is infinite, the step "choose one element from each of infinitely many non-empty sets at once" is an axiom of set theory, the **axiom of choice**; we use it freely and never mention it again in this chapter.
@@ -382,13 +382,13 @@ A function \( f \colon X \to Y \) is invertible if and only if it is bijective. 
 :::
 
 ::: {.idea}
-For (⇐) one could combine the two one-sided theorems, but that route needs \( X \ne \varnothing \) and a choice. A bijection makes both unnecessary: every \( y \) has **exactly one** preimage, so \( f^{-1}(y) \) is forced. For uniqueness, the standard move is to assume two inverses \( g \) and \( h \), and sandwich: \( g = g \circ (f \circ h) = (g \circ f) \circ h = h \).
+For \( (\Leftarrow) \) one could combine the two one-sided theorems, but that route needs \( X \ne \varnothing \) and a choice. A bijection makes both unnecessary: every \( y \) has **exactly one** preimage, so \( f^{-1}(y) \) is forced. For uniqueness, the standard move is to assume two inverses \( g \) and \( h \), and sandwich: \( g = g \circ (f \circ h) = (g \circ f) \circ h = h \).
 :::
 
 ::: {.proof}
-(⇒) Suppose \( g \) is an inverse of \( f \). Since \( g \circ f = \id_X \) is injective, \( f \) is injective by @thm-composition-partial-converse (a). Since \( f \circ g = \id_Y \) is surjective, \( f \) is surjective by @thm-composition-partial-converse (b). Hence \( f \) is bijective.
+\( (\Rightarrow) \) Suppose \( g \) is an inverse of \( f \). Since \( g \circ f = \id_X \) is injective, \( f \) is injective by @thm-composition-partial-converse (a). Since \( f \circ g = \id_Y \) is surjective, \( f \) is surjective by @thm-composition-partial-converse (b). Hence \( f \) is bijective.
 
-(⇐) Suppose \( f \) is bijective, and let \( y \in Y \). Since \( f \) is surjective, some \( x \in X \) has \( f(x) = y \), and since \( f \) is injective, this \( x \) is unique. Define \( g(y) \) to be this \( x \). Then \( f(g(y)) = y \) for every \( y \in Y \), so \( f \circ g = \id_Y \). For \( x \in X \), the unique input sent to \( f(x) \) is \( x \) itself, so \( g(f(x)) = x \), and \( g \circ f = \id_X \). Hence \( g \) is an inverse of \( f \).
+\( (\Leftarrow) \) Suppose \( f \) is bijective, and let \( y \in Y \). Since \( f \) is surjective, some \( x \in X \) has \( f(x) = y \), and since \( f \) is injective, this \( x \) is unique. Define \( g(y) \) to be this \( x \). Then \( f(g(y)) = y \) for every \( y \in Y \), so \( f \circ g = \id_Y \). For \( x \in X \), the unique input sent to \( f(x) \) is \( x \) itself, so \( g(f(x)) = x \), and \( g \circ f = \id_X \). Hence \( g \) is an inverse of \( f \).
 
 (Uniqueness) Suppose \( g \) and \( h \) are both inverses of \( f \). Then
 \[
@@ -466,9 +466,9 @@ List the elements of \( X \) as \( x_1, \dots, x_n \); the image \( f(X) \) is t
 ::: {.proof}
 Let \( n = \lvert X \rvert = \lvert Y \rvert \), and write \( X = \{x_1, \dots, x_n\} \) with the \( x_i \) distinct. By @def-image-preimage, \( f(X) \) consists of the entries of the list \( f(x_1), \dots, f(x_n) \).
 
-(⇒) Suppose \( f \) is injective. Since the \( x_i \) are distinct, the entries \( f(x_1), \dots, f(x_n) \) are distinct. Hence \( f(X) \) is a subset of \( Y \) with \( n = \lvert Y \rvert \) elements, so \( f(X) = Y \), and \( f \) is surjective.
+\( (\Rightarrow) \) Suppose \( f \) is injective. Since the \( x_i \) are distinct, the entries \( f(x_1), \dots, f(x_n) \) are distinct. Hence \( f(X) \) is a subset of \( Y \) with \( n = \lvert Y \rvert \) elements, so \( f(X) = Y \), and \( f \) is surjective.
 
-(⇐) We prove the contrapositive (@thm-contrapositive-equivalent). Suppose \( f \) is not injective. Then \( f(x_i) = f(x_j) \) for some \( i \ne j \), so the list \( f(x_1), \dots, f(x_n) \) has a repeated entry and \( f(X) \) has at most \( n - 1 \) elements. Hence \( f(X) \ne Y \), and \( f \) is not surjective.
+\( (\Leftarrow) \) We prove the contrapositive (@thm-contrapositive-equivalent). Suppose \( f \) is not injective. Then \( f(x_i) = f(x_j) \) for some \( i \ne j \), so the list \( f(x_1), \dots, f(x_n) \) has a repeated entry and \( f(X) \) has at most \( n - 1 \) elements. Hence \( f(X) \ne Y \), and \( f \) is not surjective.
 
 So if \( f \) is injective or surjective, the two directions show that it is both, that is, bijective.
 :::
@@ -580,9 +580,9 @@ Let \( f \colon X \to Y \) and \( A_1, A_2 \subseteq X \).
 ::: {.solution}
 (a) We use double inclusion (@thm-double-inclusion).
 
-(⊆) Let \( y \in f(A_1 \cup A_2) \). Then \( y = f(a) \) for some \( a \in A_1 \cup A_2 \). If \( a \in A_1 \), then \( y \in f(A_1) \); if \( a \in A_2 \), then \( y \in f(A_2) \). In either case \( y \in f(A_1) \cup f(A_2) \).
+\( (\subseteq) \) Let \( y \in f(A_1 \cup A_2) \). Then \( y = f(a) \) for some \( a \in A_1 \cup A_2 \). If \( a \in A_1 \), then \( y \in f(A_1) \); if \( a \in A_2 \), then \( y \in f(A_2) \). In either case \( y \in f(A_1) \cup f(A_2) \).
 
-(⊇) Let \( y \in f(A_1) \cup f(A_2) \). If \( y \in f(A_1) \), then \( y = f(a) \) for some \( a \in A_1 \subseteq A_1 \cup A_2 \), so \( y \in f(A_1 \cup A_2) \). The case \( y \in f(A_2) \) is the same with the roles of \( A_1 \) and \( A_2 \) swapped. This proves the equality.
+\( (\supseteq) \) Let \( y \in f(A_1) \cup f(A_2) \). If \( y \in f(A_1) \), then \( y = f(a) \) for some \( a \in A_1 \subseteq A_1 \cup A_2 \), so \( y \in f(A_1 \cup A_2) \). The case \( y \in f(A_2) \) is the same with the roles of \( A_1 \) and \( A_2 \) swapped. This proves the equality.
 
 (b) Let \( y \in f(A_1 \cap A_2) \). Then \( y = f(a) \) for some \( a \in A_1 \cap A_2 \). Since \( a \in A_1 \), \( y \in f(A_1) \), and since \( a \in A_2 \), \( y \in f(A_2) \). Hence \( y \in f(A_1) \cap f(A_2) \).
 
@@ -652,11 +652,11 @@ Let \( f \colon X \to Y \).
 :::
 
 ::: {.solution}
-(a) (⇒) Suppose the equality holds for every \( B \), and let \( y \in Y \). Taking \( B = \{y\} \) gives \( f(f^{-1}(\{y\})) = \{y\} \), so \( y \in f(f^{-1}(\{y\})) \). Hence \( y = f(x) \) for some \( x \), and \( f \) is surjective.
+(a) \( (\Rightarrow) \) Suppose the equality holds for every \( B \), and let \( y \in Y \). Taking \( B = \{y\} \) gives \( f(f^{-1}(\{y\})) = \{y\} \), so \( y \in f(f^{-1}(\{y\})) \). Hence \( y = f(x) \) for some \( x \), and \( f \) is surjective.
 
-(⇐) Suppose \( f \) is surjective, and let \( B \subseteq Y \). The inclusion \( f(f^{-1}(B)) \subseteq B \) is @prp-image-preimage-inclusions. For the reverse, let \( y \in B \). Since \( f \) is surjective, \( y = f(x) \) for some \( x \in X \). Then \( f(x) \in B \), so \( x \in f^{-1}(B) \), and hence \( y = f(x) \in f(f^{-1}(B)) \). By @thm-double-inclusion, \( f(f^{-1}(B)) = B \).
+\( (\Leftarrow) \) Suppose \( f \) is surjective, and let \( B \subseteq Y \). The inclusion \( f(f^{-1}(B)) \subseteq B \) is @prp-image-preimage-inclusions. For the reverse, let \( y \in B \). Since \( f \) is surjective, \( y = f(x) \) for some \( x \in X \). Then \( f(x) \in B \), so \( x \in f^{-1}(B) \), and hence \( y = f(x) \in f(f^{-1}(B)) \). By @thm-double-inclusion, \( f(f^{-1}(B)) = B \).
 
-(b) (⇒) Suppose the equality holds for every \( A \), and suppose \( f(x_1) = f(x_2) \). Taking \( A = \{x_1\} \) gives \( f^{-1}(\{f(x_1)\}) = \{x_1\} \). Since \( f(x_2) = f(x_1) \), we have \( x_2 \in f^{-1}(\{f(x_1)\}) = \{x_1\} \), so \( x_2 = x_1 \). Hence \( f \) is injective.
+(b) \( (\Rightarrow) \) Suppose the equality holds for every \( A \), and suppose \( f(x_1) = f(x_2) \). Taking \( A = \{x_1\} \) gives \( f^{-1}(\{f(x_1)\}) = \{x_1\} \). Since \( f(x_2) = f(x_1) \), we have \( x_2 \in f^{-1}(\{f(x_1)\}) = \{x_1\} \), so \( x_2 = x_1 \). Hence \( f \) is injective.
 
-(⇐) Suppose \( f \) is injective, and let \( A \subseteq X \). The inclusion \( A \subseteq f^{-1}(f(A)) \) is @prp-image-preimage-inclusions. For the reverse, let \( x \in f^{-1}(f(A)) \). Then \( f(x) \in f(A) \), so \( f(x) = f(a) \) for some \( a \in A \). Since \( f \) is injective, \( x = a \in A \). By @thm-double-inclusion, \( f^{-1}(f(A)) = A \).
+\( (\Leftarrow) \) Suppose \( f \) is injective, and let \( A \subseteq X \). The inclusion \( A \subseteq f^{-1}(f(A)) \) is @prp-image-preimage-inclusions. For the reverse, let \( x \in f^{-1}(f(A)) \). Then \( f(x) \in f(A) \), so \( f(x) = f(a) \) for some \( a \in A \). Since \( f \) is injective, \( x = a \in A \). By @thm-double-inclusion, \( f^{-1}(f(A)) = A \).
 :::

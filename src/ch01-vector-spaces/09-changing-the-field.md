@@ -310,9 +310,9 @@ Let \( W \subseteq \nC^n \) be a subspace over \( \nR \).
 ::::
 
 ::: {.solution}
-(a) (⇒) If \( W \) is a \( \nC \)-subspace, it is closed under multiplication by \( i \).
+(a) \( (\Rightarrow) \) If \( W \) is a \( \nC \)-subspace, it is closed under multiplication by \( i \).
 
-(⇐) Suppose \( i\w \in W \) for every \( \w \in W \). We use @thm-subspace-test over \( \nC \). Since \( W \) is an \( \nR \)-subspace, \( \0 \in W \) and \( W \) is closed under addition. Let \( \w \in W \) and \( a + bi \in \nC \) with \( a, b \in \nR \). Then \( a\w \in W \) and \( b(i\w) \in W \), because \( W \) is closed under real scalars, and \( (a + bi)\w = a\w + b(i\w) \) by the axioms of \( \nC^n \). This lies in \( W \) by closure under addition. Hence \( W \) is a \( \nC \)-subspace.
+\( (\Leftarrow) \) Suppose \( i\w \in W \) for every \( \w \in W \). We use @thm-subspace-test over \( \nC \). Since \( W \) is an \( \nR \)-subspace, \( \0 \in W \) and \( W \) is closed under addition. Let \( \w \in W \) and \( a + bi \in \nC \) with \( a, b \in \nR \). Then \( a\w \in W \) and \( b(i\w) \in W \), because \( W \) is closed under real scalars, and \( (a + bi)\w = a\w + b(i\w) \) by the axioms of \( \nC^n \). This lies in \( W \) by closure under addition. Hence \( W \) is a \( \nC \)-subspace.
 
 (b) \( W \) is a subspace of the finite-dimensional \( \nC \)-space \( \nC^n \), so by @thm-subspace-dimension it is finite-dimensional over \( \nC \), and by @cor-basis-existence it has a basis over \( \nC \), of some length \( k \). Restricting the scalars of \( W \) to \( \nR \) gives the same real space as before, so \( \dim_\nR W = 2k \) by @thm-restriction-of-scalars-dimension.
 

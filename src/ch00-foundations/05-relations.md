@@ -176,9 +176,9 @@ Let \( \sim \) be an equivalence relation on \( X \), and let \( a, b \in X \).
 :::
 
 ::: {.proof}
-(a) (⇒) Suppose \( [a] = [b] \). By reflexivity \( a \sim a \), so \( a \in [a] = [b] \), which means \( a \sim b \).
+(a) \( (\Rightarrow) \) Suppose \( [a] = [b] \). By reflexivity \( a \sim a \), so \( a \in [a] = [b] \), which means \( a \sim b \).
 
-(⇐) Suppose \( a \sim b \). Let \( x \in [a] \), so \( x \sim a \). Since \( a \sim b \), transitivity gives \( x \sim b \), so \( x \in [b] \). Hence \( [a] \subseteq [b] \). By symmetry \( b \sim a \), and swapping the roles of \( a \) and \( b \) in the argument gives \( [b] \subseteq [a] \). By @thm-double-inclusion, \( [a] = [b] \).
+\( (\Leftarrow) \) Suppose \( a \sim b \). Let \( x \in [a] \), so \( x \sim a \). Since \( a \sim b \), transitivity gives \( x \sim b \), so \( x \in [b] \). Hence \( [a] \subseteq [b] \). By symmetry \( b \sim a \), and swapping the roles of \( a \) and \( b \) in the argument gives \( [b] \subseteq [a] \). By @thm-double-inclusion, \( [a] = [b] \).
 
 (b) Suppose \( [a] \cap [b] \ne \varnothing \), and let \( c \in [a] \cap [b] \). Then \( c \sim a \) and \( c \sim b \). By symmetry \( a \sim c \), and by transitivity \( a \sim b \). By (a), \( [a] = [b] \).
 :::
@@ -232,7 +232,7 @@ Part (a) is the lemma plus reflexivity: (P1) and (P3) come from \( x \in [x] \),
 *Symmetric.* "\( x \) and \( y \) lie in a common block" does not depend on the order of \( x \) and \( y \).
 *Transitive.* Suppose \( x, y \in B \) and \( y, z \in B' \) for blocks \( B, B' \). Then \( y \in B \cap B' \), so \( B = B' \) by (P2). Hence \( x, z \in B \), and \( x \sim_{\mathcal{P}} z \).
 
-Now let \( B \in \mathcal{P} \) and \( x \in B \); we show \( [x] = B \), where the class is taken for \( \sim_{\mathcal{P}} \). (⊆) If \( y \in [x] \), then \( y \) and \( x \) lie in a common block \( B' \); since \( x \in B \cap B' \), (P2) gives \( B' = B \), so \( y \in B \). (⊇) If \( y \in B \), then \( y \) and \( x \) both lie in \( B \), so \( y \sim_{\mathcal{P}} x \) and \( y \in [x] \). Hence \( [x] = B \) by @thm-double-inclusion. Every class \( [x] \) is therefore the block containing \( x \), which exists by (P3); and every block \( B \) is a class, namely \( [x] \) for any \( x \in B \), which exists by (P1). So the classes are exactly the blocks.
+Now let \( B \in \mathcal{P} \) and \( x \in B \); we show \( [x] = B \), where the class is taken for \( \sim_{\mathcal{P}} \). \( (\subseteq) \) If \( y \in [x] \), then \( y \) and \( x \) lie in a common block \( B' \); since \( x \in B \cap B' \), (P2) gives \( B' = B \), so \( y \in B \). \( (\supseteq) \) If \( y \in B \), then \( y \) and \( x \) both lie in \( B \), so \( y \sim_{\mathcal{P}} x \) and \( y \in [x] \). Hence \( [x] = B \) by @thm-double-inclusion. Every class \( [x] \) is therefore the block containing \( x \), which exists by (P3); and every block \( B \) is a class, namely \( [x] \) for any \( x \in B \), which exists by (P1). So the classes are exactly the blocks.
 
 (c) Let \( \sim \) be an equivalence relation, and let \( \approx \) be the relation built by (b) from the classes of \( \sim \). If \( x \sim y \), then \( x, y \in [y] \), so \( x \approx y \). Conversely, if \( x \approx y \), then \( x, y \in [z] \) for some \( z \); thus \( x \sim z \) and \( y \sim z \), and symmetry and transitivity give \( x \sim y \). Hence \( \approx \) and \( \sim \) are the same relation. This proves the theorem.
 :::

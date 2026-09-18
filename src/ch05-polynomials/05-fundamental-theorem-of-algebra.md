@@ -319,9 +319,9 @@ An irreducible real \( p \) has a complex root \( z \) by the theorem. If \( z \
 :::
 
 ::: {.proof}
-(⇐) A polynomial of degree \( 1 \) is irreducible, since a product of two non-constant polynomials has degree at least \( 2 \) (@thm-degree-of-product). A polynomial of degree \( 2 \) with no real root is irreducible by @thm-irreducible-deg-2-3.
+\( (\Leftarrow) \) A polynomial of degree \( 1 \) is irreducible, since a product of two non-constant polynomials has degree at least \( 2 \) (@thm-degree-of-product). A polynomial of degree \( 2 \) with no real root is irreducible by @thm-irreducible-deg-2-3.
 
-(⇒) Let \( p \in \nR[x] \) be irreducible. It is non-constant, so by @thm-fundamental-theorem-of-algebra it has a root \( z \in \nC \).
+\( (\Rightarrow) \) Let \( p \in \nR[x] \) be irreducible. It is non-constant, so by @thm-fundamental-theorem-of-algebra it has a root \( z \in \nC \).
 
 *Case 1: \( z \in \nR \).* By @lem-factor-theorem-linear in \( \nR[x] \), \( p = (x - z)q \) with \( q \in \nR[x] \). Since \( p \) is irreducible and \( x - z \) is not constant, \( q \) is a non-zero constant, so \( \deg p = 1 \).
 

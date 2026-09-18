@@ -283,9 +283,9 @@ Prove that two matrices \( \A, \B \in M_{m \times n}(F) \) are row equivalent if
 :::
 
 ::: {.solution}
-(⇒) Suppose \( \A \) and \( \B \) are row equivalent, and let \( \R \) be the RREF of \( \B \). Then \( \A \) is row equivalent to \( \B \), and \( \B \) to \( \R \), so \( \A \) is row equivalent to \( \R \) by transitivity (@thm-row-ops-preserve-solutions (b)). By the uniqueness in @thm-rref-unique, \( \R \) is the RREF of \( \A \).
+\( (\Rightarrow) \) Suppose \( \A \) and \( \B \) are row equivalent, and let \( \R \) be the RREF of \( \B \). Then \( \A \) is row equivalent to \( \B \), and \( \B \) to \( \R \), so \( \A \) is row equivalent to \( \R \) by transitivity (@thm-row-ops-preserve-solutions (b)). By the uniqueness in @thm-rref-unique, \( \R \) is the RREF of \( \A \).
 
-(⇐) Suppose both have the RREF \( \R \). Then \( \A \) is row equivalent to \( \R \), and by symmetry \( \R \) is row equivalent to \( \B \) (@thm-row-ops-preserve-solutions (b)). By transitivity \( \A \) is row equivalent to \( \B \).
+\( (\Leftarrow) \) Suppose both have the RREF \( \R \). Then \( \A \) is row equivalent to \( \R \), and by symmetry \( \R \) is row equivalent to \( \B \) (@thm-row-ops-preserve-solutions (b)). By transitivity \( \A \) is row equivalent to \( \B \).
 :::
 
 ::: {#exr-rref-uniqueness-b3}

@@ -370,13 +370,13 @@ Let \( V \) be a vector space over \( F \), let \( a \in F \) and \( \v \in V \)
 :::
 
 ::: {.idea}
-The direction (⇐) is the two zero results above, @thm-zero-scalar-mult and @thm-scalar-zero-vector. For (⇒), the only way to get rid of \( a \) is to multiply by \( a^{-1} \), and that is exactly where the hypothesis \( a \ne 0 \) and the field axiom (F8) are spent.
+The direction \( (\Leftarrow) \) is the two zero results above, @thm-zero-scalar-mult and @thm-scalar-zero-vector. For \( (\Rightarrow) \), the only way to get rid of \( a \) is to multiply by \( a^{-1} \), and that is exactly where the hypothesis \( a \ne 0 \) and the field axiom (F8) are spent.
 :::
 
 ::: {.proof}
-(⇐) If \( a = 0 \), then \( a\v = \0 \) by @thm-zero-scalar-mult. If \( \v = \0 \), then \( a\v = \0 \) by @thm-scalar-zero-vector.
+\( (\Leftarrow) \) If \( a = 0 \), then \( a\v = \0 \) by @thm-zero-scalar-mult. If \( \v = \0 \), then \( a\v = \0 \) by @thm-scalar-zero-vector.
 
-(⇒) Suppose \( a\v = \0 \). If \( a = 0 \) there is nothing to prove, so suppose \( a \ne 0 \). By (F8), \( a \) has an inverse \( a^{-1} \in F \). Then
+\( (\Rightarrow) \) Suppose \( a\v = \0 \). If \( a = 0 \) there is nothing to prove, so suppose \( a \ne 0 \). By (F8), \( a \) has an inverse \( a^{-1} \in F \). Then
 \[
 \v = 1\v = (a^{-1}a)\v = a^{-1}(a\v) = a^{-1}\0 = \0,
 \]

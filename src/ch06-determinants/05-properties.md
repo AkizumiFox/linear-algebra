@@ -123,17 +123,17 @@ Let \( \A \in M_n(F) \) and \( T_{\A} \colon F^n \to F^n \), \( \x \mapsto \A\x 
 ::: {.proof}
 Item (a) is item (a) of @thm-invertible-tfae, so it suffices to connect each new item with that theorem.
 
-**(a) ⇔ (g).** This is @thm-det-nonzero-iff-invertible.
+**(a) \( \Leftrightarrow \) (g).** This is @thm-det-nonzero-iff-invertible.
 
-**(a) ⇔ (b).** By @thm-invertible-operator-tfae ((b) ⇔ (c)) with \( V = F^n \), \( T_{\A} \) is injective if and only if \( \ker T_{\A} = \{\x : \A\x = \0\} \) is \( \{\0\} \). That is item (b) of @thm-invertible-tfae.
+**(a) \( \Leftrightarrow \) (b).** By @thm-invertible-operator-tfae ((b) \( \Leftrightarrow \) (c)) with \( V = F^n \), \( T_{\A} \) is injective if and only if \( \ker T_{\A} = \{\x : \A\x = \0\} \) is \( \{\0\} \). That is item (b) of @thm-invertible-tfae.
 
-**(b) ⇔ (c).** This is @thm-invertible-operator-tfae ((b) ⇔ (d)), since \( F^n \) is finite-dimensional.
+**(b) \( \Leftrightarrow \) (c).** This is @thm-invertible-operator-tfae ((b) \( \Leftrightarrow \) (d)), since \( F^n \) is finite-dimensional.
 
-**(c) ⇔ (d).** By @thm-matrix-times-vector-columns, \( \im T_{\A} \) is the set of combinations of the columns of \( \A \), that is, \( \col(\A) \). So \( T_{\A} \) is surjective if and only if \( \col(\A) = F^n \). Since \( \col(\A) \) is a subspace of \( F^n \), this holds if and only if \( \rank \A = \dim \col(\A) = n \) (@def-rank-matrix, @thm-dim-impl-eq).
+**(c) \( \Leftrightarrow \) (d).** By @thm-matrix-times-vector-columns, \( \im T_{\A} \) is the set of combinations of the columns of \( \A \), that is, \( \col(\A) \). So \( T_{\A} \) is surjective if and only if \( \col(\A) = F^n \). Since \( \col(\A) \) is a subspace of \( F^n \), this holds if and only if \( \rank \A = \dim \col(\A) = n \) (@def-rank-matrix, @thm-dim-impl-eq).
 
-**(a) ⇔ (e).** By @thm-det-transpose, \( \det \A\tp = \det \A \). Applying (a) ⇔ (g) to \( \A \) and to \( \A\tp \), both "\( \A \) invertible" and "\( \A\tp \) invertible" are equivalent to \( \det \A \ne 0 \).
+**(a) \( \Leftrightarrow \) (e).** By @thm-det-transpose, \( \det \A\tp = \det \A \). Applying (a) \( \Leftrightarrow \) (g) to \( \A \) and to \( \A\tp \), both "\( \A \) invertible" and "\( \A\tp \) invertible" are equivalent to \( \det \A \ne 0 \).
 
-**(e) ⇔ (f).** Let \( \r_1, \dots, \r_n \) be the rows of \( \A \). The columns of \( \A\tp \) are \( \r_1\tp, \dots, \r_n\tp \). By @thm-transpose-properties, \( c_1\r_1 + \dots + c_n\r_n = \0 \) if and only if \( c_1\r_1\tp + \dots + c_n\r_n\tp = \0 \), so the rows of \( \A \) are independent exactly when the columns of \( \A\tp \) are. By @thm-invertible-tfae ((a) ⇔ (f)) applied to \( \A\tp \), this holds exactly when \( \A\tp \) is invertible. This proves the theorem.
+**(e) \( \Leftrightarrow \) (f).** Let \( \r_1, \dots, \r_n \) be the rows of \( \A \). The columns of \( \A\tp \) are \( \r_1\tp, \dots, \r_n\tp \). By @thm-transpose-properties, \( c_1\r_1 + \dots + c_n\r_n = \0 \) if and only if \( c_1\r_1\tp + \dots + c_n\r_n\tp = \0 \), so the rows of \( \A \) are independent exactly when the columns of \( \A\tp \) are. By @thm-invertible-tfae ((a) \( \Leftrightarrow \) (f)) applied to \( \A\tp \), this holds exactly when \( \A\tp \) is invertible. This proves the theorem.
 :::
 
 The determinant is now one more item on the menu, and for the right problems it is the best one. For a concrete matrix with a parameter, one polynomial in the parameter decides invertibility at once. For an abstract matrix, such as \( \A + \I \) when \( \A^k = 0 \), the determinant is usually hopeless, and the kernel is the item to try first.

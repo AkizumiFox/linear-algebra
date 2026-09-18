@@ -304,7 +304,7 @@ Let \( \A \in M_n(\nQ) \) have all entries in \( \nZ \).
 ::: {.proof}
 (a) The Leibniz formula (@def-determinant) is a sum of products of entries with signs \( \pm 1 \), so the determinant of a matrix with integer entries is an integer. Each cofactor is \( \pm \) such a determinant, so \( \adj \A \) has integer entries (for \( n = 1 \), \( \adj \A = (1) \)).
 
-(b) (⇐) If \( \det \A = \pm 1 \), then \( \A \) is invertible and \( \A^{-1} = \pm \adj \A \) by @cor-inverse-formula, which has integer entries by (a). (⇒) Suppose \( \A^{-1} \) has integer entries. By @thm-det-multiplicative, \( \det \A \det(\A^{-1}) = \det \I_n = 1 \), and both factors are integers by (a). The only integers whose product is \( 1 \) are \( 1 \cdot 1 \) and \( (-1)(-1) \), so \( \det \A = \pm 1 \).
+(b) \( (\Leftarrow) \) If \( \det \A = \pm 1 \), then \( \A \) is invertible and \( \A^{-1} = \pm \adj \A \) by @cor-inverse-formula, which has integer entries by (a). \( (\Rightarrow) \) Suppose \( \A^{-1} \) has integer entries. By @thm-det-multiplicative, \( \det \A \det(\A^{-1}) = \det \I_n = 1 \), and both factors are integers by (a). The only integers whose product is \( 1 \) are \( 1 \cdot 1 \) and \( (-1)(-1) \), so \( \det \A = \pm 1 \).
 :::
 
 For example, \( \begin{pmatrix} 2 & 1 \\ 5 & 3 \end{pmatrix} \) has determinant \( 1 \) and inverse \( \begin{pmatrix} 3 & -1 \\ -5 & 2 \end{pmatrix} \), while \( \begin{pmatrix} 2 & 1 \\ 0 & 1 \end{pmatrix} \) has determinant \( 2 \) and inverse \( \begin{pmatrix} 1/2 & -1/2 \\ 0 & 1 \end{pmatrix} \). In the language of the remark after @thm-adjugate-identity, part (b) says that a matrix over the ring \( \nZ \) is invertible over \( \nZ \) exactly when its determinant is invertible in \( \nZ \).

@@ -66,13 +66,13 @@ Let \( V \) be a vector space over \( F \) and let \( U \subseteq V \). Then \( 
 :::
 
 ::: {.idea}
-Sort the eight axioms into two kinds. Six of them, (VS1), (VS2) and (VS5)–(VS8), say "an equation holds **for all** vectors"; they are true in \( V \), so they are automatically true for the fewer vectors in \( U \). The other two, (VS3) and (VS4), say "**there exists** a vector", and a witness must be found **inside** \( U \). Condition (1) supplies the zero. For inverses, the results of the previous section give \( -\u = (-1)\u \), so closure under scaling supplies them for free. For (⇒), the only non-obvious point is that the zero vector of \( U \) is the zero vector of \( V \); cancellation in \( V \) settles it.
+Sort the eight axioms into two kinds. Six of them, (VS1), (VS2) and (VS5)–(VS8), say "an equation holds **for all** vectors"; they are true in \( V \), so they are automatically true for the fewer vectors in \( U \). The other two, (VS3) and (VS4), say "**there exists** a vector", and a witness must be found **inside** \( U \). Condition (1) supplies the zero. For inverses, the results of the previous section give \( -\u = (-1)\u \), so closure under scaling supplies them for free. For \( (\Rightarrow) \), the only non-obvious point is that the zero vector of \( U \) is the zero vector of \( V \); cancellation in \( V \) settles it.
 :::
 
 ::: {.proof}
-(⇒) Suppose \( U \) is a subspace of \( V \). Conditions (2) and (3) are the closure condition of @def-subspace. By (VS3) in \( U \), there is \( \z \in U \) with \( \u + \z = \u \) for every \( \u \in U \); in particular \( \z + \z = \z \). By (VS3) in \( V \), also \( \z + \0 = \z \). Hence \( \z + \z = \z + \0 \), and @thm-left-cancellation in \( V \) gives \( \z = \0 \). Therefore \( \0 \in U \), which is (1).
+\( (\Rightarrow) \) Suppose \( U \) is a subspace of \( V \). Conditions (2) and (3) are the closure condition of @def-subspace. By (VS3) in \( U \), there is \( \z \in U \) with \( \u + \z = \u \) for every \( \u \in U \); in particular \( \z + \z = \z \). By (VS3) in \( V \), also \( \z + \0 = \z \). Hence \( \z + \z = \z + \0 \), and @thm-left-cancellation in \( V \) gives \( \z = \0 \). Therefore \( \0 \in U \), which is (1).
 
-(⇐) Suppose (1), (2) and (3) hold. By (2) and (3), addition and scalar multiplication of \( V \) restrict to functions \( U \times U \to U \) and \( F \times U \to U \). We check the axioms for \( U \) with these operations.
+\( (\Leftarrow) \) Suppose (1), (2) and (3) hold. By (2) and (3), addition and scalar multiplication of \( V \) restrict to functions \( U \times U \to U \) and \( F \times U \to U \). We check the axioms for \( U \) with these operations.
 
 - (VS1), (VS2), (VS5), (VS6), (VS7) and (VS8) state that certain equations hold for all vectors and scalars. They hold for all vectors of \( V \), since \( V \) is a vector space, so in particular for all vectors of \( U \).
 - (VS3): by (1), \( \0 \in U \), and \( \u + \0 = \u \) for every \( \u \in U \) by (VS3) in \( V \).
@@ -321,7 +321,7 @@ Let \( V \) be a vector space over \( F \), and let \( (U_i)_{i \in I} \) be a f
 :::
 
 ::: {.proof}
-Let \( U = \bigcap_{i \in I} U_i \). Each \( U_i \) is a subset of \( V \), so \( U \subseteq V \). We use the subspace test (@thm-subspace-test) for \( U \), and for each \( U_i \) its direction (⇒).
+Let \( U = \bigcap_{i \in I} U_i \). Each \( U_i \) is a subset of \( V \), so \( U \subseteq V \). We use the subspace test (@thm-subspace-test) for \( U \), and for each \( U_i \) its direction \( (\Rightarrow) \).
 
 (1) For every \( i \in I \), \( \0 \in U_i \), since \( U_i \) is a subspace. Therefore \( \0 \in U \).
 
@@ -365,13 +365,13 @@ Let \( V \) be a vector space over \( F \), and let \( U \) and \( W \) be subsp
 :::
 
 ::: {.idea}
-The direction (⇐) is immediate, because the union is then just the bigger of the two. For (⇒), a statement of the form "one of two inclusions holds" invites contradiction. If neither inclusion holds, there is a vector \( \u \) of \( U \) outside \( W \) and a vector \( \w \) of \( W \) outside \( U \), exactly like \( (1, 0) \) and \( (0, 1) \) for the axes. Look at \( \u + \w \). It must lie in \( U \) or in \( W \). If it lies in \( U \), subtracting \( \u \) keeps us in \( U \) and leaves \( \w \), which is not in \( U \).
+The direction \( (\Leftarrow) \) is immediate, because the union is then just the bigger of the two. For \( (\Rightarrow) \), a statement of the form "one of two inclusions holds" invites contradiction. If neither inclusion holds, there is a vector \( \u \) of \( U \) outside \( W \) and a vector \( \w \) of \( W \) outside \( U \), exactly like \( (1, 0) \) and \( (0, 1) \) for the axes. Look at \( \u + \w \). It must lie in \( U \) or in \( W \). If it lies in \( U \), subtracting \( \u \) keeps us in \( U \) and leaves \( \w \), which is not in \( U \).
 :::
 
 ::: {.proof}
-(⇐) If \( U \subseteq W \), then \( U \cup W = W \), which is a subspace. If \( W \subseteq U \), then \( U \cup W = U \), which is a subspace.
+\( (\Leftarrow) \) If \( U \subseteq W \), then \( U \cup W = W \), which is a subspace. If \( W \subseteq U \), then \( U \cup W = U \), which is a subspace.
 
-(⇒) Suppose \( U \cup W \) is a subspace of \( V \), and suppose, for a contradiction, that \( U \not\subseteq W \) and \( W \not\subseteq U \). Then there exist \( \u \in U \) with \( \u \notin W \), and \( \w \in W \) with \( \w \notin U \). Both lie in \( U \cup W \), so \( \u + \w \in U \cup W \) by condition (2) of the subspace test (@thm-subspace-test).
+\( (\Rightarrow) \) Suppose \( U \cup W \) is a subspace of \( V \), and suppose, for a contradiction, that \( U \not\subseteq W \) and \( W \not\subseteq U \). Then there exist \( \u \in U \) with \( \u \notin W \), and \( \w \in W \) with \( \w \notin U \). Both lie in \( U \cup W \), so \( \u + \w \in U \cup W \) by condition (2) of the subspace test (@thm-subspace-test).
 
 *Case 1: \( \u + \w \in U \).* Since \( U \) is a subspace and \( \u \in U \), condition (3) gives \( (-1)\u \in U \), and \( (-1)\u = -\u \) by @thm-negation-scalar. By condition (2) for \( U \), \( (\u + \w) + (-\u) \in U \). By (VS1), (VS2), (VS4) and (VS3),
 \[
@@ -617,15 +617,15 @@ Let \( V \) be a vector space over \( F \) and \( U \subseteq V \).
 :::
 
 ::: {.solution}
-(a) (⇒) Suppose \( U \) is a subspace. By the subspace test (@thm-subspace-test), \( \0 \in U \), so \( U \ne \varnothing \). For \( a \in F \) and \( \u, \w \in U \), condition (3) gives \( a\u \in U \), and then condition (2) gives \( a\u + \w \in U \).
+(a) \( (\Rightarrow) \) Suppose \( U \) is a subspace. By the subspace test (@thm-subspace-test), \( \0 \in U \), so \( U \ne \varnothing \). For \( a \in F \) and \( \u, \w \in U \), condition (3) gives \( a\u \in U \), and then condition (2) gives \( a\u + \w \in U \).
 
-(⇐) Suppose \( U \ne \varnothing \) and \( a\u + \w \in U \) for all \( a \in F \), \( \u, \w \in U \). Pick \( \u_0 \in U \). Taking \( a = -1 \) and \( \u = \w = \u_0 \), and using @thm-negation-scalar and (VS4),
+\( (\Leftarrow) \) Suppose \( U \ne \varnothing \) and \( a\u + \w \in U \) for all \( a \in F \), \( \u, \w \in U \). Pick \( \u_0 \in U \). Taking \( a = -1 \) and \( \u = \w = \u_0 \), and using @thm-negation-scalar and (VS4),
 \[
 (-1)\u_0 + \u_0 = -\u_0 + \u_0 = \0 \in U,
 \]
 where \( -\u_0 + \u_0 = \u_0 + (-\u_0) \) by (VS1). This is condition (1). For \( \u, \w \in U \), taking \( a = 1 \) and using (VS8) gives \( \u + \w = 1\u + \w \in U \), which is (2). For \( a \in F \) and \( \u \in U \), taking \( \w = \0 \in U \) and using (VS3) gives \( a\u = a\u + \0 \in U \), which is (3). By the subspace test (@thm-subspace-test), \( U \) is a subspace.
 
-(b) (⇒) This is part of the subspace test (@thm-subspace-test). (⇐) Suppose \( \0 \in U \) and \( U \) is closed under addition. The only scalars in \( \nF_2 \) are \( 0 \) and \( 1 \). For \( \u \in U \), \( 0\u = \0 \in U \) by @thm-zero-scalar-mult, and \( 1\u = \u \in U \) by (VS8). So \( U \) is closed under scalar multiplication, and by the subspace test (@thm-subspace-test) \( U \) is a subspace.
+(b) \( (\Rightarrow) \) This is part of the subspace test (@thm-subspace-test). \( (\Leftarrow) \) Suppose \( \0 \in U \) and \( U \) is closed under addition. The only scalars in \( \nF_2 \) are \( 0 \) and \( 1 \). For \( \u \in U \), \( 0\u = \0 \in U \) by @thm-zero-scalar-mult, and \( 1\u = \u \in U \) by (VS8). So \( U \) is closed under scalar multiplication, and by the subspace test (@thm-subspace-test) \( U \) is a subspace.
 
 (c) Take \( V = \nR^2 \) and \( U = \nZ^2 \). Then \( \0 \in U \), and the sum of two integer vectors is an integer vector. But \( \tfrac12 (1, 0) = (\tfrac12, 0) \notin U \), so \( U \) is not a subspace. Over \( \nR \) there are many more scalars to test than \( 0 \) and \( 1 \).
 :::

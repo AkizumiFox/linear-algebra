@@ -159,9 +159,9 @@ An upper triangular matrix \( \U \in M_n(F) \) is invertible if and only if **ev
 :::
 
 ::: {.proof}
-(⇐) Suppose every \( u_{kk} \neq 0 \), and let \( \U\x = \0 \). We show \( x_k = 0 \) for \( k = n, n-1, \dots, 1 \) in turn. Suppose \( x_{k+1} = \dots = x_n = 0 \) (nothing is assumed when \( k = n \)). Row \( k \) of \( \U\x = \0 \) reads \( u_{kk} x_k + \sum_{j > k} u_{kj} x_j = 0 \), because \( u_{kj} = 0 \) for \( j < k \). The sum vanishes, so \( u_{kk} x_k = 0 \), and \( x_k = 0 \) since \( u_{kk} \neq 0 \). Hence \( \x = \0 \) is the only solution of \( \U\x = \0 \), and \( \U \) is invertible by @thm-invertible-tfae.
+\( (\Leftarrow) \) Suppose every \( u_{kk} \neq 0 \), and let \( \U\x = \0 \). We show \( x_k = 0 \) for \( k = n, n-1, \dots, 1 \) in turn. Suppose \( x_{k+1} = \dots = x_n = 0 \) (nothing is assumed when \( k = n \)). Row \( k \) of \( \U\x = \0 \) reads \( u_{kk} x_k + \sum_{j > k} u_{kj} x_j = 0 \), because \( u_{kj} = 0 \) for \( j < k \). The sum vanishes, so \( u_{kk} x_k = 0 \), and \( x_k = 0 \) since \( u_{kk} \neq 0 \). Hence \( \x = \0 \) is the only solution of \( \U\x = \0 \), and \( \U \) is invertible by @thm-invertible-tfae.
 
-(⇒) We prove the contrapositive. Suppose \( u_{kk} = 0 \) for some \( k \). For each \( j \le k \), the entries of column \( j \) in rows \( i \ge k \) are zero: if \( i > j \) this is upper triangularity, and the only remaining case \( i = j = k \) is \( u_{kk} = 0 \). So the first \( k \) columns of \( \U \) lie in \( W = \Span(\e_1, \dots, \e_{k-1}) \). The list \( (\e_1, \dots, \e_{k-1}) \) is independent and spans \( W \), so \( \dim W = k - 1 \) (for \( k = 1 \), \( W = \{\0\} \) has dimension \( 0 \)). By @thm-size-bounds (a), these \( k \) columns are linearly dependent, so the columns of \( \U \) are dependent, and \( \U \) is not invertible by @thm-invertible-tfae. This proves the lemma.
+\( (\Rightarrow) \) We prove the contrapositive. Suppose \( u_{kk} = 0 \) for some \( k \). For each \( j \le k \), the entries of column \( j \) in rows \( i \ge k \) are zero: if \( i > j \) this is upper triangularity, and the only remaining case \( i = j = k \) is \( u_{kk} = 0 \). So the first \( k \) columns of \( \U \) lie in \( W = \Span(\e_1, \dots, \e_{k-1}) \). The list \( (\e_1, \dots, \e_{k-1}) \) is independent and spans \( W \), so \( \dim W = k - 1 \) (for \( k = 1 \), \( W = \{\0\} \) has dimension \( 0 \)). By @thm-size-bounds (a), these \( k \) columns are linearly dependent, so the columns of \( \U \) are dependent, and \( \U \) is not invertible by @thm-invertible-tfae. This proves the lemma.
 :::
 
 ## Elimination without row swaps
@@ -711,9 +711,9 @@ reading the \( 1 \times 1 \) matrix as a real number. Each term is \( \ge 0 \), 
 
 ::: {.solution}
 ::: {.enumerate options="label=(\alph*)"}
-1. (⇒) Suppose \( \A = \L\U \) with \( \L = \begin{pmatrix} 1 & 0 \\ \ell & 1 \end{pmatrix} \) and \( \U = \begin{pmatrix} u & v \\ 0 & w \end{pmatrix} \). As in @exm-no-lu-factorization, \( \L\U = \begin{pmatrix} u & v \\ \ell u & \ell v + w \end{pmatrix} \), so \( a = u \) and \( c = \ell u = \ell a \). If \( a = 0 \), then \( c = 0 \). Hence \( a \neq 0 \) or \( c = 0 \).
+1. \( (\Rightarrow) \) Suppose \( \A = \L\U \) with \( \L = \begin{pmatrix} 1 & 0 \\ \ell & 1 \end{pmatrix} \) and \( \U = \begin{pmatrix} u & v \\ 0 & w \end{pmatrix} \). As in @exm-no-lu-factorization, \( \L\U = \begin{pmatrix} u & v \\ \ell u & \ell v + w \end{pmatrix} \), so \( a = u \) and \( c = \ell u = \ell a \). If \( a = 0 \), then \( c = 0 \). Hence \( a \neq 0 \) or \( c = 0 \).
 
-   (⇐) If \( a \neq 0 \), elimination without row swaps succeeds with multiplier \( \ell = c/a \), and indeed
+   \( (\Leftarrow) \) If \( a \neq 0 \), elimination without row swaps succeeds with multiplier \( \ell = c/a \), and indeed
    \[
    \begin{pmatrix} 1 & 0 \\ c/a & 1 \end{pmatrix}\begin{pmatrix} a & b \\ 0 & d - cb/a \end{pmatrix} = \begin{pmatrix} a & b \\ c & cb/a + d - cb/a \end{pmatrix} = \A .
    \]
