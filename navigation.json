@@ -617,6 +617,83 @@
           "filename": "10-convergent-matrices.md"
         }
       ]
+    },
+    {
+      "title": "Inner Product Spaces",
+      "number": 10,
+      "part": "Part III · Inner Products and Spectral Theory",
+      "collapsed": true,
+      "path": "ch10-inner-products/index.html",
+      "sections": [
+        {
+          "title": "Inner Products and Norms",
+          "number": "10.1",
+          "path": "ch10-inner-products/01-inner-products.html",
+          "filename": "01-inner-products.md"
+        },
+        {
+          "title": "Orthonormal Bases and Gram–Schmidt",
+          "number": "10.2",
+          "path": "ch10-inner-products/02-orthonormal-bases.html",
+          "filename": "02-orthonormal-bases.md"
+        },
+        {
+          "title": "Orthogonal Complements and Projections",
+          "number": "10.3",
+          "path": "ch10-inner-products/03-orthogonal-complements-and-projections.html",
+          "filename": "03-orthogonal-complements-and-projections.md"
+        },
+        {
+          "title": "Least Squares and Minimum-Norm Solutions",
+          "number": "10.4",
+          "path": "ch10-inner-products/04-least-squares.html",
+          "filename": "04-least-squares.md"
+        },
+        {
+          "title": "The Riesz Representation Theorem",
+          "number": "10.5",
+          "path": "ch10-inner-products/05-riesz-and-duality.html",
+          "filename": "05-riesz-and-duality.md"
+        },
+        {
+          "title": "The Adjoint",
+          "number": "10.6",
+          "path": "ch10-inner-products/06-adjoints.html",
+          "filename": "06-adjoints.md"
+        },
+        {
+          "title": "Isometries and Unitary Maps",
+          "number": "10.7",
+          "path": "ch10-inner-products/07-isometries-and-unitary-maps.html",
+          "filename": "07-isometries-and-unitary-maps.md"
+        },
+        {
+          "title": "QR, Householder and Hessenberg",
+          "number": "10.8",
+          "path": "ch10-inner-products/08-qr-and-householder.html",
+          "filename": "08-qr-and-householder.md"
+        },
+        {
+          "title": "Bessel, Parseval and Fourier Series",
+          "number": "10.9",
+          "path": "ch10-inner-products/09-bessel-parseval-fourier.html",
+          "filename": "09-bessel-parseval-fourier.md"
+        },
+        {
+          "title": "Orthogonal Polynomials",
+          "number": "10.10",
+          "path": "ch10-inner-products/10-orthogonal-polynomials.html",
+          "filename": "10-orthogonal-polynomials.md"
+        }
+      ]
+    },
+    {
+      "title": "Spectral Theory",
+      "number": 11,
+      "part": "",
+      "collapsed": true,
+      "path": null,
+      "sections": []
     }
   ]
 }

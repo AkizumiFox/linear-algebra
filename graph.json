@@ -89,6 +89,24 @@
    "results": 151,
    "chapterNumber": 9,
    "part": ""
+  },
+  {
+   "id": "ch10-inner-products",
+   "name": "Chapter 10",
+   "title": "Inner Product Spaces",
+   "url": "ch10-inner-products/index.html",
+   "results": 170,
+   "chapterNumber": 10,
+   "part": "Part III \u00b7 Inner Products and Spectral Theory"
+  },
+  {
+   "id": "ch11-spectral-theory",
+   "name": "Chapter 11",
+   "title": "Spectral Theory",
+   "url": "",
+   "results": 0,
+   "chapterNumber": 11,
+   "part": ""
   }
  ],
  "edges": [
@@ -147,6 +165,12 @@
    "implied": true
   },
   {
+   "source": "ch00-foundations",
+   "target": "ch10-inner-products",
+   "weight": 26,
+   "implied": true
+  },
+  {
    "source": "ch01-vector-spaces",
    "target": "ch02-linear-systems",
    "weight": 64,
@@ -195,6 +219,12 @@
    "implied": true
   },
   {
+   "source": "ch01-vector-spaces",
+   "target": "ch10-inner-products",
+   "weight": 20,
+   "implied": true
+  },
+  {
    "source": "ch02-linear-systems",
    "target": "ch03-linear-maps",
    "weight": 58,
@@ -237,6 +267,12 @@
    "implied": true
   },
   {
+   "source": "ch02-linear-systems",
+   "target": "ch10-inner-products",
+   "weight": 25,
+   "implied": true
+  },
+  {
    "source": "ch03-linear-maps",
    "target": "ch04-duality",
    "weight": 122,
@@ -273,6 +309,12 @@
    "implied": true
   },
   {
+   "source": "ch03-linear-maps",
+   "target": "ch10-inner-products",
+   "weight": 31,
+   "implied": true
+  },
+  {
    "source": "ch04-duality",
    "target": "ch05-polynomials",
    "weight": 18,
@@ -294,6 +336,12 @@
    "source": "ch04-duality",
    "target": "ch09-canonical-forms",
    "weight": 1,
+   "implied": true
+  },
+  {
+   "source": "ch04-duality",
+   "target": "ch10-inner-products",
+   "weight": 21,
    "implied": true
   },
   {
@@ -321,6 +369,12 @@
    "implied": true
   },
   {
+   "source": "ch05-polynomials",
+   "target": "ch10-inner-products",
+   "weight": 22,
+   "implied": true
+  },
+  {
    "source": "ch06-determinants",
    "target": "ch07-block-matrices",
    "weight": 38,
@@ -339,6 +393,12 @@
    "implied": true
   },
   {
+   "source": "ch06-determinants",
+   "target": "ch10-inner-products",
+   "weight": 22,
+   "implied": true
+  },
+  {
    "source": "ch07-block-matrices",
    "target": "ch08-eigenvalues",
    "weight": 22,
@@ -351,9 +411,21 @@
    "implied": true
   },
   {
+   "source": "ch07-block-matrices",
+   "target": "ch10-inner-products",
+   "weight": 4,
+   "implied": true
+  },
+  {
    "source": "ch08-eigenvalues",
    "target": "ch09-canonical-forms",
    "weight": 155,
+   "implied": false
+  },
+  {
+   "source": "ch08-eigenvalues",
+   "target": "ch10-inner-products",
+   "weight": 5,
    "implied": false
   }
  ]
