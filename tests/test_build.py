@@ -20,6 +20,7 @@ sys.path.insert(0, str(ENGINE_ROOT))
 
 from build.book import Book  # noqa: E402
 from build.check import check_xref_links  # noqa: E402
+from build.extras import _implied_edges  # noqa: E402
 
 
 def run_build(book_dir: Path, *args: str) -> subprocess.CompletedProcess:
@@ -27,6 +28,26 @@ def run_build(book_dir: Path, *args: str) -> subprocess.CompletedProcess:
         [sys.executable, str(ENGINE_ROOT / "build.py"), *args, "--book", str(book_dir)],
         capture_output=True, text=True,
     )
+
+
+class TestTransitiveReduction(unittest.TestCase):
+    """The chapter graph drops dependencies that a longer chain already implies."""
+
+    def test_drops_the_shortcut(self):
+        counts = {("a", "b"): 3, ("b", "c"): 4, ("a", "c"): 9}
+        self.assertEqual(_implied_edges(counts), {("a", "c")})
+
+    def test_keeps_a_dependency_no_path_implies(self):
+        counts = {("a", "b"): 1, ("a", "c"): 1}
+        self.assertEqual(_implied_edges(counts), set())
+
+    def test_drops_a_shortcut_over_a_long_chain(self):
+        counts = {("a", "b"): 1, ("b", "c"): 1, ("c", "d"): 1, ("a", "d"): 1, ("b", "d"): 1}
+        self.assertEqual(_implied_edges(counts), {("a", "d"), ("b", "d")})
+
+    def test_a_cycle_leaves_every_edge_drawn(self):
+        counts = {("a", "b"): 1, ("b", "a"): 1, ("b", "c"): 1}
+        self.assertEqual(_implied_edges(counts), set())
 
 
 class FixtureBookCase(unittest.TestCase):
@@ -186,6 +207,8 @@ class TestHtmlBuild(FixtureBookCase):
         self.assertTrue(any(e["source"] == "ch01-basics" and e["target"] == "ch02-more" and e["weight"] >= 1
                             for e in graph["edges"]), graph["edges"])
         self.assertTrue(all(e["source"] != e["target"] for e in graph["edges"]))
+        # Only the transitive reduction is drawn; the rest carry implied = true
+        self.assertTrue(all("implied" in e for e in graph["edges"]), graph["edges"])
         self.assertIn('data-graph="graph.json"', self.page("graph.html"))
         self.assertIn("graph.js?v=", self.page("graph.html"))
         navigation = json.loads((self.html / "navigation.json").read_text())

@@ -1118,6 +1118,11 @@ div.equation mjx-container[display="true"] {
   margin-bottom: 0;
 }
 
+/* Dependencies the transitive reduction dropped: real, but implied by a longer chain */
+.graph-preview-implied {
+  color: var(--faint);
+}
+
 .graph-preview-meta {
   margin-top: 0.5rem;
   color: var(--faint);

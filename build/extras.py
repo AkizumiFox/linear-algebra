@@ -19,7 +19,7 @@ from pathlib import Path
 from .book import Book, Page
 from .manifest import load_scan, STATEMENT_TYPES
 from .pandoc import build_pandoc_command, page_metadata, run_pandoc
-from .utils import print_success, print_error
+from .utils import print_success, print_error, print_warning
 
 RESULTS_PAGE = "results.html"
 GRAPH_PAGE = "graph.html"
@@ -157,16 +157,62 @@ def _graph_data(book: Book, labels: dict) -> dict:
         "chapterNumber": chapter.number,
         "part": chapter.part,
     } for chapter in book.chapters]
-    edges = [{"source": source, "target": target, "weight": weight}
+    implied = _implied_edges(counts)
+    edges = [{"source": source, "target": target, "weight": weight,
+              "implied": (source, target) in implied}
              for (source, target), weight in sorted(counts.items())]
     return {"nodes": nodes, "edges": edges}
 
 
+def _implied_edges(counts: dict[tuple[str, str], int]) -> set[tuple[str, str]]:
+    """The edges a transitive reduction drops: those a longer path already implies.
+
+    An edge u -> v is implied when u has another direct successor w that reaches v, so
+    drawing u -> v tells the reader nothing that u -> w -> ... -> v does not. On a directed
+    acyclic graph the reduction is unique, so there is nothing to choose. A cycle would make
+    it ambiguous; chapters may not cite each other in a circle, and if they ever do we draw
+    every edge rather than pick a spanning shape at random.
+    """
+    successors: dict[str, set[str]] = {}
+    for source, target in counts:
+        successors.setdefault(source, set()).add(target)
+        successors.setdefault(target, set())
+    reach: dict[str, set[str]] = {}
+    visiting: set[str] = set()
+    cyclic = False
+
+    def reachable(node: str) -> set[str]:
+        nonlocal cyclic
+        if node in reach:
+            return reach[node]
+        if node in visiting:
+            cyclic = True
+            return set()
+        visiting.add(node)
+        seen: set[str] = set()
+        for nxt in successors[node]:
+            seen.add(nxt)
+            seen |= reachable(nxt)
+        visiting.discard(node)
+        reach[node] = seen
+        return seen
+
+    for node in successors:
+        reachable(node)
+    if cyclic:
+        print_warning("chapters cite each other in a circle; drawing every dependency")
+        return set()
+    return {(source, target) for source, target in counts
+            if any(other != target and target in reach[other] for other in successors[source])}
+
+
 GRAPH_BODY = """<p class="graph-intro">
 Each box is a chapter. An arrow from one chapter to another means results in the second
-cite results in the first; the thicker the arrow, the more citations. Hover over a chapter
-to see what it rests on and what rests on it; click to open it. For the results themselves,
-see the <a href="results.html">list of results</a>.
+cite results in the first; the thicker the arrow, the more citations. A dependency that a
+longer chain already implies is not drawn, so what you see is the skeleton: almost every
+chapter also draws on chapters further back. Hover over a chapter to see those dropped
+dependencies, as dashed arrows and as counts beside the graph; click to open it. For the
+results themselves, see the <a href="results.html">list of results</a>.
 </p>
 <div class="graph-frame">
   <div id="dependency-graph" class="dependency-graph" data-graph="graph.json" role="img"
