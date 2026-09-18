@@ -102,6 +102,8 @@ def deploy(book: Book, run_build: bool = True, push: bool = False) -> bool:
     for item in html_dir.iterdir():
         if item.is_dir() and re.match(r"ch\d+-", item.name) and item.name not in chapter_slugs:
             continue  # output of a chapter that was renamed or removed (stale build files)
+        if item.name.startswith("_"):
+            continue  # a scratch harness built by hand for measuring or testing, never published
         if item.is_dir():
             shutil.copytree(item, deploy_dir / item.name)
         else:
