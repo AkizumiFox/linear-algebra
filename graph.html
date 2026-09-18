@@ -34,7 +34,7 @@
     <link rel="preload" href="./fonts/stix-two-text-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 
     <!-- Styles -->
-    <link rel="stylesheet" href="./styles.css?v=6a8f935af2">
+    <link rel="stylesheet" href="./styles.css?v=eb261c7989">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
         <!-- Math is rendered at build time (build/math.py); this is its stylesheet. MathJax itself
@@ -129,18 +129,14 @@ graph</span>
 
                 </div>
                 <p class="graph-intro">
-                An arrow from one result to another means the second uses the first: a solid arrow for a
-                reference in its statement or proof, a dashed arrow where the proof names the result
-                without a reference. Hover over a result to see what it builds on and what builds on it;
-                click to open it.
+                Each box is a chapter. An arrow from one chapter to another means results in the second
+                cite results in the first; the thicker the arrow, the more citations. Hover over a chapter
+                to see what it rests on and what rests on it; click to open it. For the results themselves,
+                see the <a href="results.html">list of results</a>.
                 </p>
-                <div class="graph-controls">
-                  <label>Chapter <select class="graph-chapter"><option value="">All chapters</option></select></label>
-                  <label class="graph-toggle"><input type="checkbox" class="graph-isolated"> Show results without connections</label>
-                </div>
                 <div class="graph-frame">
                   <div id="dependency-graph" class="dependency-graph" data-graph="graph.json" role="img"
-                       aria-label="Dependency graph of the book's results"></div>
+                       aria-label="Dependency graph of the book's chapters"></div>
                   <aside class="graph-preview" hidden></aside>
                 </div>
                 <noscript><p>The graph needs JavaScript. The <a href="results.html">list of results</a> works without it.</p></noscript>
@@ -176,8 +172,8 @@ graph</span>
     </div>
 
     <!-- Tooltip Script -->
-    <script src="./main.js?v=6a8f935af2"></script>
-        <script type="module" src="./graph.js?v=6a8f935af2"></script>
+    <script src="./main.js?v=eb261c7989"></script>
+        <script type="module" src="./graph.js?v=eb261c7989"></script>
             </body>
 
 </html>

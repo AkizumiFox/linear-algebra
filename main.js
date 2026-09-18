@@ -527,75 +527,39 @@
         return document.querySelector('meta[name="page-path"]')?.content || '';
     }
 
-    /** Remember visited pages and the last reading position. */
-    function trackReading() {
-        const path = currentPagePath();
-        if (!path) return;
-        const visited = new Set(readJson('book-visited', []));
-        visited.add(path);
-        saveSetting('book-visited', JSON.stringify([...visited]));
+    /**
+     * Copying a passage that contains formulas puts their LaTeX source on the clipboard
+     * (the rendered glyphs carry no text of their own). The build stores each formula's
+     * source in data-tex; see build/render_math.cjs.
+     */
+    function setupMathCopy() {
+        const BREAK = ' ';  // marks a paragraph boundary while whitespace is collapsed
+        document.addEventListener('copy', event => {
+            const selection = window.getSelection();
+            if (!selection || selection.isCollapsed || !event.clipboardData) return;
+            const fragment = selection.getRangeAt(0).cloneContents();
+            if (!fragment.querySelector('mjx-container[data-tex]')) return;  // no maths: copy as usual
 
-        if (path === 'index.html') return;  // the start page is not a reading position
-        const title = document.querySelector('.quarto-title h1.title')?.textContent.replace(/\s+/g, ' ').trim() || document.title;
-        const headings = [...document.querySelectorAll('.content h2[id], .content h3[id]')];
-        let timer;
-        const save = () => {
-            let heading = null;
-            for (const h of headings) {
-                if (h.getBoundingClientRect().top < 120) heading = h;
-            }
-            saveSetting('book-last', JSON.stringify({
-                path, title,
-                heading: heading ? { id: heading.id, text: heading.textContent.replace(/[#\s]+$/, '').replace(/\s+/g, ' ').trim() } : null,
-                time: Date.now(),
-            }));
-        };
-        window.addEventListener('scroll', () => { clearTimeout(timer); timer = setTimeout(save, 400); }, { passive: true });
-        // Also when leaving or hiding the page, so a quick scroll-then-close is not lost
-        window.addEventListener('pagehide', save);
-        document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'hidden') save(); });
-        save();
-    }
-
-    /** Check marks next to visited sections in the sidebar. */
-    function markVisitedSections() {
-        const visited = new Set(readJson('book-visited', []));
-        document.querySelectorAll('.sidebar-nav .nav-section-item').forEach(item => {
-            const link = item.querySelector('a');
-            const path = link && new URL(link.href).pathname.match(/([^/]+\/[^/]+\.html)$/)?.[1];
-            if (path && visited.has(path)) {
-                item.classList.add('visited');
-                link.setAttribute('title', `${link.getAttribute('title') || ''} (read)`.trim());
-            }
+            fragment.querySelectorAll('mjx-assistive-mml, .fold-toggle, .anchor-link, .tab-continue')
+                .forEach(node => node.remove());
+            fragment.querySelectorAll('mjx-container[data-tex]').forEach(node => {
+                const tex = node.getAttribute('data-tex').replace(/\s+/g, ' ').trim();
+                const display = node.getAttribute('display') === 'true';
+                node.replaceWith(document.createTextNode(
+                    display ? `${BREAK}\\[ ${tex} \\]${BREAK}` : `\\( ${tex} \\)`));
+            });
+            const wrapper = document.createElement('div');
+            wrapper.append(fragment);
+            // A blank line between blocks; everything else collapses to single spaces
+            wrapper.querySelectorAll('p, li, h1, h2, h3, h4, h5, h6, blockquote, .env, .small-env, .tikz-figure')
+                .forEach(block => block.append(document.createTextNode(BREAK)));
+            const text = wrapper.textContent
+                .replace(/\s+/g, ' ')
+                .split(BREAK).map(part => part.trim()).filter(Boolean)
+                .join('\n\n');
+            event.clipboardData.setData('text/plain', text);
+            event.preventDefault();
         });
-    }
-
-    /** On the start page, offer to continue where the reader left off. */
-    function showContinueReading() {
-        if (currentPagePath() !== 'index.html') return;
-        const last = readJson('book-last', null);
-        if (!last || !last.path) return;
-        const header = document.querySelector('.quarto-title-block');
-        if (!header) return;
-        const href = getBasePath() + last.path + (last.heading ? `#${last.heading.id}` : '');
-        const card = document.createElement('aside');
-        card.className = 'continue-reading';
-        card.innerHTML = `
-            <a class="continue-reading-link" href="${href}">
-                <span class="continue-reading-label">Continue reading</span>
-                <span class="continue-reading-title"></span>
-                <span class="continue-reading-heading"></span>
-            </a>
-            <button type="button" class="continue-reading-dismiss" aria-label="Dismiss">
-                <i class="bi bi-x-lg" aria-hidden="true"></i>
-            </button>`;
-        card.querySelector('.continue-reading-title').textContent = last.title;
-        card.querySelector('.continue-reading-heading').textContent = last.heading ? last.heading.text : '';
-        card.querySelector('.continue-reading-dismiss').addEventListener('click', () => {
-            saveSetting('book-last', null);
-            card.remove();
-        });
-        header.after(card);
     }
 
     /** Left and right arrow keys go to the previous and next page. */
@@ -1192,12 +1156,9 @@
         if (navLoaded) {
             buildSidebarNav();
             updateSidebarHeader();
-            markVisitedSections();
         }
 
-        // Reading position, "continue reading" on the start page, arrow-key paging
-        trackReading();
-        showContinueReading();
+        // Arrow-key paging
         setupArrowKeys();
 
         // Reading / Exercises tabs (before the table of contents, which reflects them)
@@ -1210,6 +1171,7 @@
         }
 
         setupWideInlineMath();
+        setupMathCopy();
 
         // Fold solutions (and let readers fold proofs), before anchors are resolved
         setupFolding();
