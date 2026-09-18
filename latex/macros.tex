@@ -25,34 +25,38 @@
 \def \sY {\mathcal{Y}}
 \def \sZ {\mathcal{Z}}
 
-% Number sets (bbm package: \mathbbmss for blackboard sans-serif)
+% Number sets. \mathbb (amssymb/msbm10), not bbm's \mathbb: bbm ships no Type 1 face in
+% common TeX installations, so pdflatex falls back to a bitmap font. That put Type 3 glyphs
+% in every PDF (blurry, unsearchable, uncopyable) and turned blackboard letters inside TikZ
+% pictures into masked rectangles in the SVGs. The web already rewrote \mathbb to \mathbb
+% (build/macros.py), so this also makes the two formats agree.
 % Use \ensuremath so macros work in both text and math mode (e.g. in \begin{example}[\nQ ...])
-\def \nA {\ensuremath{\mathbbmss{A}}}
-\def \nB {\ensuremath{\mathbbmss{B}}}
-\def \nC {\ensuremath{\mathbbmss{C}}}
-\def \nD {\ensuremath{\mathbbmss{D}}}
-\def \nE {\ensuremath{\mathbbmss{E}}}
-\def \nF {\ensuremath{\mathbbmss{F}}}
-\def \nG {\ensuremath{\mathbbmss{G}}}
-\def \nH {\ensuremath{\mathbbmss{H}}}
-\def \nI {\ensuremath{\mathbbmss{I}}}
-\def \nJ {\ensuremath{\mathbbmss{J}}}
-\def \nK {\ensuremath{\mathbbmss{K}}}
-\def \nL {\ensuremath{\mathbbmss{L}}}
-\def \nM {\ensuremath{\mathbbmss{M}}}
-\def \nN {\ensuremath{\mathbbmss{N}}}
-\def \nO {\ensuremath{\mathbbmss{O}}}
-\def \nP {\ensuremath{\mathbbmss{P}}}
-\def \nQ {\ensuremath{\mathbbmss{Q}}}
-\def \nR {\ensuremath{\mathbbmss{R}}}
-\def \nS {\ensuremath{\mathbbmss{S}}}
-\def \nT {\ensuremath{\mathbbmss{T}}}
-\def \nU {\ensuremath{\mathbbmss{U}}}
-\def \nV {\ensuremath{\mathbbmss{V}}}
-\def \nW {\ensuremath{\mathbbmss{W}}}
-\def \nX {\ensuremath{\mathbbmss{X}}}
-\def \nY {\ensuremath{\mathbbmss{Y}}}
-\def \nZ {\ensuremath{\mathbbmss{Z}}}
+\def \nA {\ensuremath{\mathbb{A}}}
+\def \nB {\ensuremath{\mathbb{B}}}
+\def \nC {\ensuremath{\mathbb{C}}}
+\def \nD {\ensuremath{\mathbb{D}}}
+\def \nE {\ensuremath{\mathbb{E}}}
+\def \nF {\ensuremath{\mathbb{F}}}
+\def \nG {\ensuremath{\mathbb{G}}}
+\def \nH {\ensuremath{\mathbb{H}}}
+\def \nI {\ensuremath{\mathbb{I}}}
+\def \nJ {\ensuremath{\mathbb{J}}}
+\def \nK {\ensuremath{\mathbb{K}}}
+\def \nL {\ensuremath{\mathbb{L}}}
+\def \nM {\ensuremath{\mathbb{M}}}
+\def \nN {\ensuremath{\mathbb{N}}}
+\def \nO {\ensuremath{\mathbb{O}}}
+\def \nP {\ensuremath{\mathbb{P}}}
+\def \nQ {\ensuremath{\mathbb{Q}}}
+\def \nR {\ensuremath{\mathbb{R}}}
+\def \nS {\ensuremath{\mathbb{S}}}
+\def \nT {\ensuremath{\mathbb{T}}}
+\def \nU {\ensuremath{\mathbb{U}}}
+\def \nV {\ensuremath{\mathbb{V}}}
+\def \nW {\ensuremath{\mathbb{W}}}
+\def \nX {\ensuremath{\mathbb{X}}}
+\def \nY {\ensuremath{\mathbb{Y}}}
+\def \nZ {\ensuremath{\mathbb{Z}}}
 
 \def \a {\mathbf{a}}
 \def \b {\mathbf{b}}
@@ -153,7 +157,7 @@
 \def \vOmega {\bm{\Omega}}
 
 % Probability
-\def\Ev{\operatorname*{\mathbbmss{E}}}
+\def\Ev{\operatorname*{\mathbb{E}}}
 \def\Pr{\operatorname{Pr}}
 \def\Var{\operatorname*{Var}}
 \def\Cov{\operatorname*{Cov}}
@@ -330,8 +334,8 @@
 % ======================================================================================
 
 % Probability notation
-\providecommand{\Prob}[1]{\mathbbmss{P}\left( #1 \right)}
-\providecommand{\Exp}[1]{\mathbbmss{E}\left[ #1 \right]}
+\providecommand{\Prob}[1]{\mathbb{P}\left( #1 \right)}
+\providecommand{\Exp}[1]{\mathbb{E}\left[ #1 \right]}
 \providecommand{\Var}[1]{\text{Var}\left( #1 \right)}
 \providecommand{\Cov}[2]{\text{Cov}\left( #1, #2 \right)}
 
@@ -361,7 +365,7 @@
 % ======================================================================================
 
 % Blackboard bold shortcuts (bbm: sans-serif blackboard)
-\providecommand{\bb}[1]{\mathbbmss{#1}}
+\providecommand{\bb}[1]{\mathbb{#1}}
 
 % Calligraphic shortcuts
 \providecommand{\cl}[1]{\mathcal{#1}}

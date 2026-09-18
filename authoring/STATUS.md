@@ -20,7 +20,8 @@ The plan is at `~/.claude/plans/cached-gathering-sedgewick.md`. The outline of a
 | 11 | ch11-spectral-theory | Spectral theory | deployed |
 | 12 | ch12-psd-and-svd | Positive matrices and the SVD | deployed |
 | 13 | ch13-forms | Bilinear and quadratic forms | drafting |
-| 14–23 | | see plan | not started |
+| 14 | ch14-tensors | Tensors and exterior algebra | blueprint written |
+| 15–23 | | see plan | not started |
 
 ## Open forward promises
 
@@ -146,3 +147,12 @@ Add a line when a section promises something later ("proved in Chapter 5"); tick
 - [ ] Ch 12 → Ch 19: perturbation of singular values
 - [ ] Ch 12 → Ch 20: operator monotone functions, unitarily invariant norms, the spectral-norm Eckart–Young
 - [ ] Ch 12 → Ch 23: PCA and the numerical SVD
+
+### Chapter 13 (bilinear and quadratic forms)
+
+- [x] Ch 0 §07 → Ch 13 §03: "characteristic ≠ 2" earns its keep (`thm-alternating-vs-skew`, with the 𝔽₂ counterexample)
+- [x] Ch 11 §05 and Ch 12 §04 → Ch 13 §05: why the signs of a congruent diagonal match the signs of the eigenvalues
+- [x] Ch 12 §01 → Ch 13 §02: congruence studied for its own sake, with what it preserves and what it destroys
+- [ ] Ch 13 §12 → Ch 14: tensor algebras; the construction of Cl(q) as a quotient of one; the independence half of `thm-clifford-dimension`. **Chapter 13 states that theorem with its gap marked in the text**, so this debt is visible to readers
+- [ ] Ch 13 §09/§10 → nothing: the Pfaffian transformation rule and Sp(2m,F) ⊆ SL are recorded without proof and nothing may cite them
+- Polish deferred to M7: Ch 13 §§07–08 have no labelled worked examples (`exm-`), and §10 has no Idea blocks, both against the STYLE checklist

@@ -66,6 +66,7 @@ This list is fixed. A chapter that needs a new symbol adds it here, and a new ma
 | `M/A`, `M/D` | Schur complement of an invertible block of the block matrix M with blocks A, B (top) and C, D (bottom): M/A = D − CA⁻¹B, M/D = A − BD⁻¹C (Ch 7). Not a quotient space V/U |
 | `A \sim B` | similar |
 | `M \approx N` | equivalent over F[x] (Ch 9 §07): N = UMV with U, V invertible over F[x]. Elsewhere `\approx` means "approximately equal"; the two uses never meet |
+| `A \simeq B` | **congruent** (Ch 13 §02): B = P⊤AP for some invertible P, over the field named. The relation of forms, as `\sim` is the relation of maps. Chosen to sit beside `\sim` without colliding with it, with `\approx` (equivalence over F[x]) or with `\cong` (isomorphic); `\simeq` has no other use in the book |
 | `T'` | dual map (transpose of T) W* → V*. The star is reserved for adjoints |
 | `V^{*}`, `\v^{*}` / `\varphi` | dual space; functionals are Greek letters φ, ψ |
 | `U^{0}` | annihilator of U in V* |
@@ -112,6 +113,14 @@ This list is fixed. A chapter that needs a new symbol adds it here, and a new ma
 | `P_U` | orthogonal projection onto U |
 | `T^{*}` | adjoint |
 | `\Orth(n), \SO(n), \Unit(n)` | orthogonal, special orthogonal, unitary groups |
+| `\Orth(p, q)`, `\I_{p,q}` | the isometry group of the real form of signature (p, q), and its standard matrix \( \I_p \oplus (-\I_q) \) (Ch 13 §10) |
+| `\Sp(2m, F)`, `\vOmega_{2m}` | symplectic group, and the standard alternating matrix with blocks \( \0, \I_m; -\I_m, \0 \) (Ch 13 §§09–10). Both macros already exist in `latex/macros.tex` |
+| `\operatorname{Isom}(\beta)` | the isometry group of a form, \( \{\P : \P\tp\A\P = \A\} \) (Ch 13 §10). Spelled with `\operatorname`, matching `\operatorname{rad}`; deliberately not written \( \Orth(\A) \), which would call the symplectic group orthogonal |
+| `U \perp W` | orthogonal direct sum with respect to a form: a direct sum whose summands pair to zero (Ch 13 §§07–09) |
+| `\operatorname{ind}(\beta)` | Witt index: the largest dimension of a totally isotropic subspace, equal to the number of hyperbolic planes in any Witt decomposition (Ch 13 §07) |
+| `\H_f(\a)` | Hessian matrix of a twice-differentiable f at a point a (Ch 13 §06) |
+| `(V, \beta) \cong (V', \beta')` | **isometric** bilinear spaces (Ch 13 §08). This overloads `\cong`, which elsewhere means isomorphic as vector spaces; between spaces *carrying forms* it always means isometric, and Ch 13 §08 says so at the definition. An isometry is in particular an isomorphism, so the two never disagree |
+| `U^{\perp_\beta}` | the orthogonal complement of U with respect to a bilinear form \( \beta \) (Ch 13 §§01, 07, 09). The unadorned \( U^{\perp} \) is always the inner-product one |
 | `A \succeq 0`, `A \succ 0` | positive semidefinite / definite (Hermitian implied) |
 | `A \succeq B` | Loewner order |
 | `\lambda_1(A) \ge \dots \ge \lambda_n(A)` | eigenvalues of a Hermitian A, **decreasing** |
@@ -125,7 +134,9 @@ This list is fixed. A chapter that needs a new symbol adds it here, and a new ma
 | Type | Meaning |
 |---|---|
 | `\beta \colon V \times V \to F` | bilinear form. `q(\v) = \beta(\v, \v)` is a quadratic form |
-| `\mtx{\beta}{\sB}{}` | Gram matrix of a form: `[\beta]_{\sB}` |
+| `\mtx{\beta}{\sB}{}` | Gram matrix of a bilinear form: \( (\mtx{\beta}{\sB}{})_{ij} = \beta(\v_i, \v_j) \), indices **uncrossed** (Ch 13 §01). Chapter 10's `\G` (`def-gram-matrix`) crosses them, \( \inner{\v_j}{\v_i} \), to stay Hermitian under a conjugate-linear second slot. The two agree for real symmetric data and are transposes otherwise; Ch 13 §01 says so where it matters |
+| `(n_+, n_-, n_0)` | inertia of a real symmetric form: the counts of positive, negative and zero entries in any diagonalization, the same for all of them by Sylvester's law (Ch 13 §05). The **signature** is the pair \( (n_+, n_-) \); the single integer \( n_+ - n_- \) is also called that elsewhere, and Ch 13 §05 says so. Plain subscripts, no macro |
+| `\operatorname{rad}(\beta)` | radical of a bilinear form (Ch 13 §01): { v ∈ V : β(u, v) = 0 for every u ∈ V }, the kernel of v ↦ β(·, v). β is non-degenerate exactly when it is {0}. Spelled out with `\operatorname`, not a macro |
 | `V \otimes W`, `\v \otimes \w` | tensor product |
 | `\Lambda^{k} V`, `\v_1 \wedge \dots \wedge \v_k` | exterior power |
 | `\Sym^{k} V` | symmetric power |

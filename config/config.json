@@ -100,7 +100,8 @@
         {
             "dir": "src/ch13-forms",
             "part": "Part IV \u00b7 Forms and Multilinear Algebra"
-        }
+        },
+        "src/ch14-tensors"
     ],
     "macros": "latex/macros.tex",
     "templates": {
