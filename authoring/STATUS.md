@@ -16,8 +16,8 @@ The plan is at `~/.claude/plans/cached-gathering-sedgewick.md`. The outline of a
 | 7 | ch07-block-matrices | Block matrices | deployed |
 | 8 | ch08-eigenvalues | Eigenvalues and diagonalization | deployed |
 | 9 | ch09-canonical-forms | Canonical forms | deployed |
-| 10 | ch10-inner-products | Inner product spaces | drafting (blueprint done, sections out to agents) |
-| 11 | ch11-spectral-theory | Spectral theory | blueprint written |
+| 10 | ch10-inner-products | Inner product spaces | deployed |
+| 11 | ch11-spectral-theory | Spectral theory | deployed |
 | 12–23 | | see plan | not started |
 
 ## Open forward promises
