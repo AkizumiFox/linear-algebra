@@ -36,6 +36,10 @@ A helper lemma.
 
 See @eq-sum and @lem-helper.
 
+Prose before the tagged display must survive \[
+    d = e + f
+\]{#eq-inline-tagged} and so must prose after it.
+
 ::: {.enumerate options="label=(A\arabic*)"}
 1. first axiom
 2. second axiom

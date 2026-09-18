@@ -416,10 +416,39 @@ end
 -- Equation Processing
 -- =============================================================================
 
+-- A tagged display may share its paragraph with ordinary prose, as in
+-- "... so normality says \[ ... \]{#eq-foo}". Returning only the equation would
+-- silently drop that prose from both HTML and PDF, so keep whatever sits on either
+-- side of the display as its own paragraph.
+local function with_surrounding_text(para, math_index, id_index, equation_block)
+    local function trim(inlines)
+        while #inlines > 0 and (inlines[1].t == "Space" or inlines[1].t == "SoftBreak") do
+            table.remove(inlines, 1)
+        end
+        while #inlines > 0 and (inlines[#inlines].t == "Space" or inlines[#inlines].t == "SoftBreak") do
+            table.remove(inlines)
+        end
+        return inlines
+    end
+
+    local before, after = {}, {}
+    for i = 1, math_index - 1 do table.insert(before, para.content[i]) end
+    for i = (id_index or math_index) + 1, #para.content do table.insert(after, para.content[i]) end
+    trim(before)
+    trim(after)
+
+    local blocks = {}
+    if #before > 0 then table.insert(blocks, pandoc.Para(before)) end
+    table.insert(blocks, equation_block)
+    if #after > 0 then table.insert(blocks, pandoc.Para(after)) end
+    return blocks
+end
+
 local function process_para_math(para, mode)
     local found_math = nil
     local found_id = nil
     local math_index = nil
+    local id_index = nil
     
     for i, el in ipairs(para.content) do
         if el.t == "Math" and el.mathtype == "DisplayMath" then
@@ -431,6 +460,7 @@ local function process_para_math(para, mode)
                 local next_el = para.content[j]
                 if next_el.t == "Str" and next_el.text:match("^{#eq%-[%w%-]+}$") then
                     found_id = next_el.text:match("^{#(eq%-[%w%-]+)}$")
+                    id_index = j
                     break
                 elseif next_el.t ~= "Space" and next_el.t ~= "SoftBreak" then
                     break -- sequence broken
@@ -490,7 +520,7 @@ local function process_para_math(para, mode)
                     pandoc.Attr(found_id, {"equation"}, {style="display: flex; align-items: center; width: 100%; margin: 1em 0;"})
                  )
                  
-                 return outer_div
+                 return with_surrounding_text(para, math_index, id_index, outer_div)
                  
              elseif FORMAT:match("latex") then
                  -- \label must follow the body: directly after \begin{equation} it picks up
@@ -498,7 +528,7 @@ local function process_para_math(para, mode)
                  -- Blank lines inside the body would be paragraph breaks in math mode.
                  local body = math_content:gsub("^%s+", ""):gsub("%s+$", ""):gsub("\n%s*\n", "\n")
                  local tex = string.format("\\begin{equation}\n%s\n\\label{%s}\n\\end{equation}", body, found_id)
-                 return pandoc.RawBlock("latex", tex)
+                 return with_surrounding_text(para, math_index, id_index, pandoc.RawBlock("latex", tex))
              else
                  -- For other formats, try to do something reasonable or leave as is
                  return nil

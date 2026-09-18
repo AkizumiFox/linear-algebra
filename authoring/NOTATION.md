@@ -101,6 +101,8 @@ This list is fixed. A chapter that needs a new symbol adds it here, and a new ma
 | Type | Meaning |
 |---|---|
 | `\inner{\u}{\v}` | inner product, **linear in the first slot**, conjugate-linear in the second |
+| `\inner{\x}{\y}_{\A}` | the A-inner product \( \y^{*}\A\x \) of a positive definite A (Ch 12 §04); the plain \( \inner{\cdot}{\cdot} \) is always the ambient one |
+| `\B - \lambda\A` | a matrix pencil; its generalized eigenvalues solve \( \B\x = \lambda\A\x \) (Ch 12 §04) |
 | `\delta_{ij}` | Kronecker delta: 1 when i = j, 0 otherwise |
 | `\G` | Gram matrix of a list \( (\v_1, \dots, \v_k) \): \( (\G)_{ij} = \inner{\v_j}{\v_i} \), the index order chosen so that \( \G \) is Hermitian and \( \x^{*}\G\x = \norm{\sum x_j\v_j}^2 \) (Ch 10 §02, §06). **Local override:** in Ch 10 §08 `\G(i, j; c, s)` is a Givens rotation, which is the universal letter for it; no Gram matrix appears in that section, and the Givens form always carries its arguments on first use |
 | `P_n`, `T_n` | Legendre and Chebyshev polynomials (Ch 10 §§09–10), where both names are universal. §09 does use `P_U` and `P_{W_n}` for projections a few lines away, so keep the subscript doing the work: a subspace subscript means a projection, an integer subscript a polynomial, and §09 never abbreviates Legendre as `P_n` |
@@ -139,7 +141,7 @@ This list is fixed. A chapter that needs a new symbol adds it here, and a new ma
 | `\norm{A}` | operator norm induced by the named vector norm |
 | `\kappa(A)` | condition number |
 | `\conv(S)` | convex hull |
-| `\vol` | volume of a parallelepiped, \|det\| (Ch 6) |
+| `\vol` | volume: of a parallelepiped, \|det\| (Ch 6); extended in Ch 12 §03 to the k-dimensional volume of a list of any length in any inner product space, by the base-times-height recursion of `def-k-volume`. The two agree wherever both apply, and Ch 12 §03 proves it |
 | `x \prec y`, `x \prec_w y` | majorization, weak majorization |
 | `x^{\downarrow}` | decreasing rearrangement |
 

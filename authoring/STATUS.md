@@ -18,7 +18,9 @@ The plan is at `~/.claude/plans/cached-gathering-sedgewick.md`. The outline of a
 | 9 | ch09-canonical-forms | Canonical forms | deployed |
 | 10 | ch10-inner-products | Inner product spaces | deployed |
 | 11 | ch11-spectral-theory | Spectral theory | deployed |
-| 12–23 | | see plan | not started |
+| 12 | ch12-psd-and-svd | Positive matrices and the SVD | drafting (blueprint done) |
+| 13 | ch13-forms | Bilinear and quadratic forms | blueprint written |
+| 14–23 | | see plan | not started |
 
 ## Open forward promises
 
@@ -49,7 +51,7 @@ Add a line when a section promises something later ("proved in Chapter 5"); tick
 - [~] Ch 1 → Ch 8/11: complexification gives real matrices complex eigenvalues (Ch 8 half paid); used in real spectral theory (Ch 11)
 - [x] Ch 2 → Ch 3, 6, 8, 12: invertible-matrix TFAE grows (kernel/image; det; eigenvalues; singular values)
 - [ ] Ch 2 → Ch 3: Rank–Nullity for linear maps
-- [ ] Ch 2 → Ch 12: Cholesky
+- [x] Ch 2 §06 → Ch 12 §02: Cholesky, derived from `thm-ldlt` by absorbing the square root of the diagonal
 - [ ] Ch 2 → Ch 23: partial pivoting, rounding; graph Laplacian
 - [x] Ch 2 → Ch 5: Lagrange interpolation formula
 - [ ] Ch 2 → Ch 10: least squares
@@ -126,3 +128,21 @@ Add a line when a section promises something later ("proved in Chapter 5"); tick
 - [ ] Ch 11 §09 → Ch 23: the FFT as a fast way to apply the Fourier matrix, not a different theorem
 - Stated but deliberately not proved in Ch 11, each flagged in the text: Roth's removal rule (§10, route via Ch 9 §07's characteristic-matrix equivalence), the general Fuglede theorem (§07), general Cartan–Dieudonné (§06), and the connectedness of the unitary group (§08). Nothing later depends on any of them.
 - Note for §11's drafter: `\norm{\A}_F` is already used in Ch 11 §01 exercise C2, defined locally there from the Frobenius inner product of Ch 10 §01. §11 owes the NOTATION.md row.
+
+### Chapter 12 (positive matrices and the SVD)
+
+- [x] Ch 11 §02 → Ch 12 §01: positive operators; `exr-self-adjoint-operators-c1` supplies one implication of `thm-psd-characterizations`
+- [x] Ch 2 → Ch 3/6/8/12: the invertible-matrix TFAE grows; the Ch 12 instalment is `thm-invertible-tfae-positive`
+- [x] Ch 6 §07 → Ch 12 §03: Gram determinants, sharpened to "a Gram matrix is exactly a positive semidefinite matrix"
+- [x] Ch 6 §09 → Ch 12 §03: the area of a parallelogram in \( \nR^3 \) as \( \sqrt{\det(\A\tp\A)} \). Ch 6 said "Chapter 10 justifies this"; Chapter 10 never did, and the Ch 6 sentence now points at Chapter 12, which does
+- [x] Ch 10 §02 → Ch 12 §03: the converse — a positive semidefinite matrix *is* a Gram matrix, with the list unique up to isometry
+- [x] Ch 7 §03 → Ch 12 §06: positive definiteness tested one block at a time by Schur complements
+- [x] Ch 10 §04 → Ch 12 §11: the pseudoinverse packages least squares and minimum norm; the notation is settled, \( \x_{\min} = \A^{+}\b \)
+- [x] Ch 12 §06 → Ch 12 §11: the semidefinite block criterion with a singular corner (`prp-block-psd-general`). §06 promised it and §11 had not delivered; added by hand
+- [ ] Ch 12 §01 → Ch 13: congruence studied for its own sake
+- [ ] Ch 12 §02 → Ch 23: Cholesky costs about half of LU and needs no pivoting
+- [ ] Ch 12 → Ch 15: the operator norm, and \( \norm{\A}_2 = \sigma_1 \)
+- [ ] Ch 12 → Ch 16: Courant–Fischer, interlacing, eigenvalue monotonicity in the Loewner order
+- [ ] Ch 12 → Ch 19: perturbation of singular values
+- [ ] Ch 12 → Ch 20: operator monotone functions, unitarily invariant norms, the spectral-norm Eckart–Young
+- [ ] Ch 12 → Ch 23: PCA and the numerical SVD

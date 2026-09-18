@@ -360,7 +360,7 @@ Let \( T(x, y) = (2x + y,\ -x + 3y) \) on \( \nR^2 \).
 :::: {#exr-orientation-and-volume-c1}
 [C1: Area of a triangle in space]
 
-For \( \u, \v \in \nR^3 \), let \( \A = \begin{pmatrix} \u & \v \end{pmatrix} \in M_{3 \times 2}(\nR) \). We **define** the area of the parallelogram \( P(\u, \v) \subseteq \nR^3 \) to be \( \sqrt{\det(\A\tp \A)} \); Chapter 10 justifies this with inner products.
+For \( \u, \v \in \nR^3 \), let \( \A = \begin{pmatrix} \u & \v \end{pmatrix} \in M_{3 \times 2}(\nR) \). We **define** the area of the parallelogram \( P(\u, \v) \subseteq \nR^3 \) to be \( \sqrt{\det(\A\tp \A)} \); Chapter 12 justifies this with inner products, where \( \det(\A\tp\A) \) is recognized as a Gram determinant.
 
 ::: {.enumerate options="label=(\alph*)"}
 1. Show that \( \det(\A\tp \A) \ge 0 \), so the square root exists, and that \( \det(\A\tp \A) = (u_2v_3 - u_3v_2)^2 + (u_3v_1 - u_1v_3)^2 + (u_1v_2 - u_2v_1)^2 \).

@@ -108,6 +108,12 @@ class TestHtmlBuild(FixtureBookCase):
         self.assertEqual(numbers["thm-main"], "1.1.1")      # "main" counter
         self.assertEqual(numbers["lem-helper"], "1.1.2")    # shares "main" with theorems
         self.assertEqual(numbers["eq-sum"], "1.1.1")
+        # A tagged display sharing its paragraph with prose must not swallow that prose:
+        # the filter once returned only the equation, silently deleting the rest.
+        self.assertEqual(numbers["eq-inline-tagged"], "1.1.2")
+        page = self.page("ch01-basics/01-first.html")
+        self.assertIn("Prose before the tagged display must survive", page)
+        self.assertIn("and so must prose after it", page)
         self.assertEqual(numbers["thm-second"], "1.2.1")    # counters restart per section
         self.assertEqual(numbers["exm-titled"], "")         # unnumbered
 

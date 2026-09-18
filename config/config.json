@@ -95,7 +95,12 @@
             "dir": "src/ch10-inner-products",
             "part": "Part III \u00b7 Inner Products and Spectral Theory"
         },
-        "src/ch11-spectral-theory"
+        "src/ch11-spectral-theory",
+        "src/ch12-psd-and-svd",
+        {
+            "dir": "src/ch13-forms",
+            "part": "Part IV \u00b7 Forms and Multilinear Algebra"
+        }
     ],
     "macros": "latex/macros.tex",
     "templates": {
