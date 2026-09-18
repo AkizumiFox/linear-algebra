@@ -66,8 +66,8 @@ We will use the name \( T_\A \) for this map throughout the chapter. For \( F = 
     \draw[dashed, gray] (0,0) rectangle (1,1);
     \fill[green!50!black, opacity=0.15] (0,0) -- (2,0) -- (3,1) -- (1,1) -- cycle;
     \draw[green!50!black] (0,0) -- (2,0) -- (3,1) -- (1,1) -- cycle;
-    \draw[thick, blue, ->] (0,0) -- (2,0) node[below] {$A\e_1$};
-    \draw[thick, red, ->] (0,0) -- (1,1) node[above left] {$A\e_2$};
+    \draw[thick, blue, ->] (0,0) -- (2,0) node[below] {$\A\e_1$};
+    \draw[thick, red, ->] (0,0) -- (1,1) node[above left] {$\A\e_2$};
 \end{tikzpicture}
 \end{center}
 
