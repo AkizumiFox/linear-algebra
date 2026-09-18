@@ -17,13 +17,17 @@ To prove it we could check all eight axioms again. That is wasteful, and the pre
 ::: {#def-subspace}
 [Subspace]
 
-Let \( V \) be a vector space over \( F \). A subset \( U \subseteq V \) is a **subspace** of \( V \) if
+Let \( V \) be a vector space over \( F \). A subset \( U \subseteq V \) is a **subspace** of \( V \) if \( U \) is **itself a vector space over \( F \)** when it is given the addition and the scalar multiplication of \( V \).
 
-- \( \u + \w \in U \) and \( a\u \in U \) **for all** \( \u, \w \in U \) and \( a \in F \), so that the operations of \( V \) restrict to functions \( U \times U \to U \) and \( F \times U \to U \); and
-- \( U \), with these restricted operations, is a vector space **over \( F \)**.
+For that sentence to make sense, \( U \) must first be closed under those two operations:
+\[
+\u + \w \in U \quad\text{and}\quad a\u \in U \qquad \text{for all } \u, \w \in U \text{ and all } a \in F .
+\]
 :::
 
-In words: the first clause says that adding or scaling vectors of \( U \) never leads out of \( U \), so that \( U \) has an addition and a scalar multiplication at all. These are **the same** operations as in \( V \), only applied to fewer vectors. The second clause says that with these operations, all eight axioms hold in \( U \). In particular \( U \) must contain **a** zero vector of its own, and every vector of \( U \) must have an additive inverse **in \( U \)**. The field does not change: a subspace of a space over \( F \) is again a space over \( F \).
+In words: take the plus and the dot that \( V \) already has, use them only on vectors of \( U \), and ask whether \( U \) is a vector space with them. Nothing new is defined; \( U \) borrows everything from \( V \). The displayed condition is what makes the borrowing possible, because an operation on \( U \) must land **in \( U \)**: if \( \u, \w \in U \) but \( \u + \w \notin U \), then addition is not an operation on \( U \) at all, and the question of the axioms never arises. Once the condition holds, the eight axioms are asked of \( U \) exactly as they were asked of \( V \) in the previous section. In particular \( U \) must contain **a** zero vector of its own, and every vector of \( U \) must have an additive inverse **lying in \( U \)**. The field does not change: a subspace of a space over \( F \) is again a space over \( F \).
+
+Two words of the definition carry all the weight. **Itself a vector space** is the whole content. **The same operations** is what distinguishes a subspace from a subset that merely happens to be a vector space under some other rule: \( \nR_{>0} \) with the operations of @exm-positive-reals is a vector space and a subset of \( \nR \), but it is not a subspace of \( \nR \), because those are not the operations of \( \nR \).
 
 There is a question hidden in "a zero vector of its own". Could \( U \) have a zero vector different from the zero vector of \( V \)? The proof of the subspace test below shows that it cannot.
 
@@ -66,7 +70,7 @@ Sort the eight axioms into two kinds. Six of them, (VS1), (VS2) and (VS5)–(VS8
 :::
 
 ::: {.proof}
-(⇒) Suppose \( U \) is a subspace of \( V \). Conditions (2) and (3) are the first clause of @def-subspace. By (VS3) in \( U \), there is \( \z \in U \) with \( \u + \z = \u \) for every \( \u \in U \); in particular \( \z + \z = \z \). By (VS3) in \( V \), also \( \z + \0 = \z \). Hence \( \z + \z = \z + \0 \), and @thm-left-cancellation in \( V \) gives \( \z = \0 \). Therefore \( \0 \in U \), which is (1).
+(⇒) Suppose \( U \) is a subspace of \( V \). Conditions (2) and (3) are the closure condition of @def-subspace. By (VS3) in \( U \), there is \( \z \in U \) with \( \u + \z = \u \) for every \( \u \in U \); in particular \( \z + \z = \z \). By (VS3) in \( V \), also \( \z + \0 = \z \). Hence \( \z + \z = \z + \0 \), and @thm-left-cancellation in \( V \) gives \( \z = \0 \). Therefore \( \0 \in U \), which is (1).
 
 (⇐) Suppose (1), (2) and (3) hold. By (2) and (3), addition and scalar multiplication of \( V \) restrict to functions \( U \times U \to U \) and \( F \times U \to U \). We check the axioms for \( U \) with these operations.
 

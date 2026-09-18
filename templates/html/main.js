@@ -527,77 +527,6 @@
         return document.querySelector('meta[name="page-path"]')?.content || '';
     }
 
-    /** Remember visited pages and the last reading position. */
-    function trackReading() {
-        const path = currentPagePath();
-        if (!path) return;
-        const visited = new Set(readJson('book-visited', []));
-        visited.add(path);
-        saveSetting('book-visited', JSON.stringify([...visited]));
-
-        if (path === 'index.html') return;  // the start page is not a reading position
-        const title = document.querySelector('.quarto-title h1.title')?.textContent.replace(/\s+/g, ' ').trim() || document.title;
-        const headings = [...document.querySelectorAll('.content h2[id], .content h3[id]')];
-        let timer;
-        const save = () => {
-            let heading = null;
-            for (const h of headings) {
-                if (h.getBoundingClientRect().top < 120) heading = h;
-            }
-            saveSetting('book-last', JSON.stringify({
-                path, title,
-                heading: heading ? { id: heading.id, text: heading.textContent.replace(/[#\s]+$/, '').replace(/\s+/g, ' ').trim() } : null,
-                time: Date.now(),
-            }));
-        };
-        window.addEventListener('scroll', () => { clearTimeout(timer); timer = setTimeout(save, 400); }, { passive: true });
-        // Also when leaving or hiding the page, so a quick scroll-then-close is not lost
-        window.addEventListener('pagehide', save);
-        document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'hidden') save(); });
-        save();
-    }
-
-    /** Check marks next to visited sections in the sidebar. */
-    function markVisitedSections() {
-        const visited = new Set(readJson('book-visited', []));
-        document.querySelectorAll('.sidebar-nav .nav-section-item').forEach(item => {
-            const link = item.querySelector('a');
-            const path = link && new URL(link.href).pathname.match(/([^/]+\/[^/]+\.html)$/)?.[1];
-            if (path && visited.has(path)) {
-                item.classList.add('visited');
-                link.setAttribute('title', `${link.getAttribute('title') || ''} (read)`.trim());
-            }
-        });
-    }
-
-    /** On the start page, offer to continue where the reader left off. */
-    function showContinueReading() {
-        if (currentPagePath() !== 'index.html') return;
-        const last = readJson('book-last', null);
-        if (!last || !last.path) return;
-        const header = document.querySelector('.quarto-title-block');
-        if (!header) return;
-        const href = getBasePath() + last.path + (last.heading ? `#${last.heading.id}` : '');
-        const card = document.createElement('aside');
-        card.className = 'continue-reading';
-        card.innerHTML = `
-            <a class="continue-reading-link" href="${href}">
-                <span class="continue-reading-label">Continue reading</span>
-                <span class="continue-reading-title"></span>
-                <span class="continue-reading-heading"></span>
-            </a>
-            <button type="button" class="continue-reading-dismiss" aria-label="Dismiss">
-                <i class="bi bi-x-lg" aria-hidden="true"></i>
-            </button>`;
-        card.querySelector('.continue-reading-title').textContent = last.title;
-        card.querySelector('.continue-reading-heading').textContent = last.heading ? last.heading.text : '';
-        card.querySelector('.continue-reading-dismiss').addEventListener('click', () => {
-            saveSetting('book-last', null);
-            card.remove();
-        });
-        header.after(card);
-    }
-
     /** Left and right arrow keys go to the previous and next page. */
     function setupArrowKeys() {
         document.addEventListener('keydown', event => {
@@ -1192,12 +1121,9 @@
         if (navLoaded) {
             buildSidebarNav();
             updateSidebarHeader();
-            markVisitedSections();
         }
 
-        // Reading position, "continue reading" on the start page, arrow-key paging
-        trackReading();
-        showContinueReading();
+        // Arrow-key paging
         setupArrowKeys();
 
         // Reading / Exercises tabs (before the table of contents, which reflects them)

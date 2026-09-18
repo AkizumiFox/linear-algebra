@@ -126,46 +126,51 @@ def _results_body(book: Book, labels: dict) -> str:
 
 
 def _graph_data(book: Book, labels: dict) -> dict:
-    colors = _env_colors(book)
-    chapters = {p.html_path: (p.chapter.title if p.chapter else "") for p in book.pages}
-    numbers = {p.html_path: p.chapter.number if p.chapter else -1 for p in book.pages}
-    nodes, edges = [], []
+    """Chapter-level dependencies: how often a chapter's pages cite results of another chapter."""
+    scan, _ = load_scan(book)
+    chapter_of = {p.html_path: p.chapter for p in book.pages if p.chapter}
+    index_of = {c.slug: next((p.html_path for p in book.pages if p.chapter is c and p.section == 0), "")
+                for c in book.chapters}
+    counts: dict[tuple[str, str], int] = {}
+    results: dict[str, int] = {c.slug: 0 for c in book.chapters}
     for label, info in labels.items():
-        if info.get("type") == "equation" or info.get("file") not in chapters:
+        chapter = chapter_of.get(info.get("file"))
+        if chapter is not None and info.get("type") != "equation":
+            results[chapter.slug] = results.get(chapter.slug, 0) + 1
+    for path, entry in scan["files"].items():
+        citing = chapter_of.get(path)
+        if citing is None:
             continue
-        nodes.append({
-            "id": label,
-            "type": info.get("type"),
-            "group": _group_of(info.get("type", "")),
-            "name": " ".join(filter(None, [info.get("type_name"), info.get("number")])),
-            "title": plain_title(info.get("title", "")),
-            "url": f"{info['file']}#{label}",
-            "shard": info.get("shard", ""),
-            "chapter": chapters[info["file"]],
-            "chapterNumber": numbers[info["file"]],
-            "color": colors.get(info.get("type"), "#6b6f7a"),
-        })
-        for used in info.get("uses", []):
-            if used in labels and labels[used].get("type") != "equation":
-                edges.append({"source": used, "target": label, "kind": "reference"})
-        for used in info.get("mentions", []):
-            edges.append({"source": used, "target": label, "kind": "mention"})
+        for ref in entry.get("refs", []):
+            target = labels.get(ref)
+            cited = chapter_of.get(target.get("file")) if target else None
+            if cited is None or cited.slug == citing.slug or target.get("type") == "equation":
+                continue  # citations inside one chapter are not drawn
+            key = (cited.slug, citing.slug)
+            counts[key] = counts.get(key, 0) + 1
+    nodes = [{
+        "id": chapter.slug,
+        "name": f"Chapter {chapter.number}",
+        "title": chapter.title,
+        "url": index_of.get(chapter.slug, ""),
+        "results": results.get(chapter.slug, 0),
+        "chapterNumber": chapter.number,
+        "part": chapter.part,
+    } for chapter in book.chapters]
+    edges = [{"source": source, "target": target, "weight": weight}
+             for (source, target), weight in sorted(counts.items())]
     return {"nodes": nodes, "edges": edges}
 
 
 GRAPH_BODY = """<p class="graph-intro">
-An arrow from one result to another means the second uses the first: a solid arrow for a
-reference in its statement or proof, a dashed arrow where the proof names the result
-without a reference. Hover over a result to see what it builds on and what builds on it;
-click to open it.
+Each box is a chapter. An arrow from one chapter to another means results in the second
+cite results in the first; the thicker the arrow, the more citations. Hover over a chapter
+to see what it rests on and what rests on it; click to open it. For the results themselves,
+see the <a href="results.html">list of results</a>.
 </p>
-<div class="graph-controls">
-  <label>Chapter <select class="graph-chapter"><option value="">All chapters</option></select></label>
-  <label class="graph-toggle"><input type="checkbox" class="graph-isolated"> Show results without connections</label>
-</div>
 <div class="graph-frame">
   <div id="dependency-graph" class="dependency-graph" data-graph="graph.json" role="img"
-       aria-label="Dependency graph of the book's results"></div>
+       aria-label="Dependency graph of the book's chapters"></div>
   <aside class="graph-preview" hidden></aside>
 </div>
 <noscript><p>The graph needs JavaScript. The <a href="results.html">list of results</a> works without it.</p></noscript>

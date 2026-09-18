@@ -198,6 +198,8 @@ Each section ends with `## Exercises` and three groups.
 - **Promises.** Every forward promise ("we will see in @sec…" or "in Chapter 8") must be paid off. When writing, add each promise to `authoring/STATUS.md`.
 - **Spelling.** American spelling: "normalize", "color", "behavior", "center". Mathematical names keep their accents (Gershgorin, Schur, Cauchy–Schwarz with an en dash).
 - **Math delimiters.** `\( … \)` inline and `\[ … \]` display, never `$` (except inside TikZ and inside `\tag{$\ast$}`). Numbered equations take `{#eq-slug}` right after `\]`.
+- **Matrices are bold.** Write `\A`, `\B`, … (bold upright capitals) for matrices, `\v` for vectors, plain italic for operators (T, S) and spaces (V, U, W). Entries remain plain (`a_{ij}`).
+- **Displays must fit the text column.** A formula wider than about 60 characters of ordinary math should be broken with `aligned`, `split` or `cases` inside `\[ … \]`, aligned at `=` or at a natural operator, rather than left to overflow.
 - **Macros** are in `latex/macros.tex`; use those listed in `NOTATION.md`. Define nothing ad hoc. If a new macro is needed, add it to `macros.tex` and `NOTATION.md`.
 
 ## 8. Authoring syntax reference

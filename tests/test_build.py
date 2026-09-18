@@ -180,8 +180,12 @@ class TestHtmlBuild(FixtureBookCase):
         self.assertIn('data-ref="thm-main"', results)
         self.assertIn('href="ch01-basics/01-first.html#thm-main"', results)
         self.assertIn("Main Theorem", results)
+        # The graph is chapter-level: nodes are chapters, edges carry citation counts
         graph = json.loads((self.html / "graph.json").read_text())
-        self.assertIn({"source": "thm-main", "target": "thm-second", "kind": "reference"}, graph["edges"])
+        self.assertEqual([n["id"] for n in graph["nodes"]], ["ch01-basics", "ch02-more"])
+        self.assertTrue(any(e["source"] == "ch01-basics" and e["target"] == "ch02-more" and e["weight"] >= 1
+                            for e in graph["edges"]), graph["edges"])
+        self.assertTrue(all(e["source"] != e["target"] for e in graph["edges"]))
         self.assertIn('data-graph="graph.json"', self.page("graph.html"))
         self.assertIn("graph.js?v=", self.page("graph.html"))
         navigation = json.loads((self.html / "navigation.json").read_text())

@@ -40,6 +40,8 @@ This list is fixed. A chapter that needs a new symbol adds it here, and a new ma
 
 ## Linear maps and matrices
 
+**Bold is for matrices and vectors, never for maps or spaces.** A matrix is bold (`\A`), a vector is bold lowercase (`\v`), an operator or linear map is plain italic (T, S), and a vector space is plain italic (V, U, W). A letter that names a matrix is bold everywhere it appears, including in `[T]_{\sB}`-style expressions where the result is a matrix but the letter T is a map.
+
 | Type | Meaning |
 |---|---|
 | `T, S \colon V \to W` | linear maps (always T, S, R; never f for a linear map) |
@@ -50,10 +52,10 @@ This list is fixed. A chapter that needs a new symbol adds it here, and a new ma
 | `\col(A)`, `\row(A)`, `\nul(A)` | column space (in F^m), row space (in M_{1×n}(F)), null space (in F^n) |
 | `P_{ij}`, `D_i(c)`, `I + cE_{ij}` | elementary matrices: swap, scale, add; `E_{ij}` is the matrix unit |
 | `\rank T`, `\nullity T` | dim im T, dim ker T |
-| `I`, `I_n`, `\id_V` | identity matrix; identity operator |
-| `A, B, C` | matrices, plain capitals. Entries `a_{ij}`, or `(A)_{ij}` |
-| `A\tp` | transpose, rendered Aᵀ |
-| `A^{*}` | conjugate transpose (and adjoint of an operator) |
+| `\I`, `\I_n`, `\id_V` | identity matrix (bold); identity operator |
+| `\A, \B, \C` | matrices, **bold** upright capitals (`\mathbf`), like vectors. Entries stay plain: `a_{ij}`, or `(\A)_{ij}`. The macros `\A … \Z` give the bold letters |
+| `\A\tp` | transpose, rendered **A**ᵀ |
+| `\A^{*}` | conjugate transpose (and adjoint of an operator) |
 | `\mtx{T}{\sB}{\sC}` | matrix of T from basis 𝓑 (input) to 𝓒 (output), rendered [T]_𝓑^𝓒; `[T]_{\sB}` when 𝓑 = 𝓒 |
 | `\mtx{\id}{\sB}{\sC}` | change-of-coordinates matrix from 𝓑 to 𝓒 |
 | `\tr A`, `\det A` | trace, determinant |

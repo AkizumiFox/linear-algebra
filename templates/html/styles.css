@@ -884,79 +884,6 @@ div.equation mjx-container[display="true"] {
   margin-top: 0.1em;
   color: var(--muted);
 }
-
-/* --- "Continue reading" card on the start page (main.js) --- */
-.continue-reading {
-  position: relative;
-  margin: -1rem 0 2rem;
-}
-
-.continue-reading-link {
-  display: flex;
-  flex-direction: column;
-  gap: 0.1rem;
-  padding: 0.8rem 3rem 0.8rem 1rem;
-  border: 1px solid var(--rule);
-  border-left: 3px solid var(--accent);
-  border-radius: 0 8px 8px 0;
-  color: var(--ink);
-  text-decoration: none;
-  transition: border-color 0.2s ease;
-}
-
-.continue-reading-label {
-  color: var(--muted);
-  font-size: 0.75rem;
-}
-
-.continue-reading-title {
-  color: var(--ink-strong);
-  font-size: 1rem;
-  font-weight: 600;
-  transition: color 0.2s ease;
-}
-
-.continue-reading-heading {
-  color: var(--muted);
-  font-size: 0.85rem;
-}
-
-.continue-reading-heading:empty {
-  display: none;
-}
-
-@media (any-hover: hover) {
-  .continue-reading-link:hover {
-    border-color: var(--rule-strong);
-    border-left-color: var(--accent);
-  }
-
-  .continue-reading-link:hover .continue-reading-title {
-    color: var(--accent);
-  }
-}
-
-.continue-reading-dismiss {
-  position: absolute;
-  top: 50%;
-  right: 0.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 2rem;
-  height: 2rem;
-  padding: 0;
-  border: none;
-  border-radius: 6px;
-  background: none;
-  color: var(--faint);
-  cursor: pointer;
-  transform: translateY(-50%);
-}
-
-.continue-reading-dismiss:hover {
-  background: var(--subtle);
-  color: var(--ink-strong);
 }
 
 /* --- Sidebar links to the generated pages --- */
@@ -1639,15 +1566,6 @@ th {
   min-width: 1.7em;
   color: var(--faint);
   font-variant-numeric: lining-nums tabular-nums;
-}
-
-/* Sections the reader has visited (main.js) */
-.nav-section-item.visited a::after {
-  content: "✓";
-  margin-left: auto;
-  padding-left: 0.4rem;
-  color: var(--faint);
-  font-size: 0.75em;
 }
 
 .nav-section-item.active a {
