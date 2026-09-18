@@ -34,7 +34,7 @@
     <link rel="preload" href="./fonts/stix-two-text-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 
     <!-- Styles -->
-    <link rel="stylesheet" href="./styles.css?v=eb261c7989">
+    <link rel="stylesheet" href="./styles.css?v=4a8687625e">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
         <!-- Math is rendered at build time (build/math.py); this is its stylesheet. MathJax itself
@@ -130,9 +130,11 @@ graph</span>
                 </div>
                 <p class="graph-intro">
                 Each box is a chapter. An arrow from one chapter to another means results in the second
-                cite results in the first; the thicker the arrow, the more citations. Hover over a chapter
-                to see what it rests on and what rests on it; click to open it. For the results themselves,
-                see the <a href="results.html">list of results</a>.
+                cite results in the first; the thicker the arrow, the more citations. A dependency that a
+                longer chain already implies is not drawn, so what you see is the skeleton: almost every
+                chapter also draws on chapters further back. Hover over a chapter to see those dropped
+                dependencies, as dashed arrows and as counts beside the graph; click to open it. For the
+                results themselves, see the <a href="results.html">list of results</a>.
                 </p>
                 <div class="graph-frame">
                   <div id="dependency-graph" class="dependency-graph" data-graph="graph.json" role="img"
@@ -172,8 +174,8 @@ graph</span>
     </div>
 
     <!-- Tooltip Script -->
-    <script src="./main.js?v=eb261c7989"></script>
-        <script type="module" src="./graph.js?v=eb261c7989"></script>
+    <script src="./main.js?v=4a8687625e"></script>
+        <script type="module" src="./graph.js?v=4a8687625e"></script>
             </body>
 
 </html>

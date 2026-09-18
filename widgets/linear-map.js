@@ -10,9 +10,11 @@
  * Shows the unit square and its image under the matrix [[a, b], [c, d]] (given row by
  * row). Drag the images of e1 and e2 to change the matrix. Options:
  *   matrix="a,b,c,d"       initial matrix (default: identity)
- *   extent="3"             half-width of the visible square
- *   determinant="false"    hide the determinant (the signed area of the image), e.g. in
- *                          chapters before determinants are introduced
+ *   extent="3"             half-width of the visible square; by default the view is fitted
+ *                          to the image of the unit square, so nothing is cut off
+ *   determinant="false"    hide the signed area of the image
+ *   readout="area"         call the number "signed area" instead of "det A", for chapters
+ *                          before the determinant is defined
  */
 
 function parseMatrix(text) {
@@ -25,7 +27,19 @@ const round = v => Math.round(v * 100) / 100;
 export default async function mount(element, options, { loadJSXGraph, ensureId, COLORS }) {
     const JXG = await loadJSXGraph();
     const [a, b, c, d] = parseMatrix(options.matrix);
-    const extent = Number(options.extent) || 3;
+    // Fit the view to the image of the unit square (and the square itself), with a margin.
+    // The box is square, because the board keeps the aspect ratio, and is centred on the
+    // picture rather than on the origin, so no part is cut off and little space is wasted.
+    const xs = [0, 1, a, b, a + b], ys = [0, 1, c, d, c + d];
+    const fixed = Number(options.extent);
+    const pad = 1;
+    let [left, right] = [Math.min(...xs) - pad, Math.max(...xs) + pad];
+    let [bottom, top] = [Math.min(...ys) - pad, Math.max(...ys) + pad];
+    const side = Math.max(3, right - left, top - bottom);
+    const centre = [(left + right) / 2, (bottom + top) / 2];
+    const box = fixed
+        ? [-fixed, fixed, fixed, -fixed]
+        : [centre[0] - side / 2, centre[1] + side / 2, centre[0] + side / 2, centre[1] - side / 2];
 
     const boardElement = document.createElement('div');
     boardElement.className = 'widget-board';
@@ -34,7 +48,7 @@ export default async function mount(element, options, { loadJSXGraph, ensureId, 
     element.append(boardElement, readout);
 
     const board = JXG.JSXGraph.initBoard(ensureId(boardElement), {
-        boundingbox: [-extent, extent, extent, -extent],
+        boundingbox: box,
         axis: true, keepAspectRatio: true, showCopyright: false, showNavigation: false,
         pan: { enabled: false }, zoom: { enabled: false },
     });
@@ -59,11 +73,40 @@ export default async function mount(element, options, { loadJSXGraph, ensureId, 
     });
 
     const showDeterminant = options.determinant !== 'false';
+    const areaWording = options.readout === 'area';
+
+    // The readout is a real 2-by-2 array with brackets, not a line of ASCII
+    const matrixBox = document.createElement('span');
+    matrixBox.className = 'widget-matrix';
+    const name = document.createElement('span');
+    name.className = 'widget-matrix-name';
+    name.textContent = 'A';
+    const grid = document.createElement('span');
+    grid.className = 'widget-matrix-grid';
+    const cells = [0, 1, 2, 3].map(() => {
+        const cell = document.createElement('span');
+        cell.className = 'widget-matrix-cell';
+        grid.append(cell);
+        return cell;
+    });
+    matrixBox.append(name, document.createTextNode(' = '), grid);
+    const value = document.createElement('span');
+    value.className = 'widget-value';
+    readout.append(matrixBox, value);
+
     const update = () => {
         const [m11, m21, m12, m22] = [e1.X(), e1.Y(), e2.X(), e2.Y()].map(round);
-        let text = `A = [[${m11}, ${m12}], [${m21}, ${m22}]]`;
-        if (showDeterminant) text += `   det A = ${round(m11 * m22 - m12 * m21)}`;
-        readout.textContent = text;
+        [m11, m12, m21, m22].forEach((entry, i) => { cells[i].textContent = String(entry); });
+        const number = round(m11 * m22 - m12 * m21);
+        value.replaceChildren();
+        if (!showDeterminant) return;
+        if (areaWording) {
+            value.append(`signed area = ${number}`);
+        } else {
+            const bold = document.createElement('strong');
+            bold.textContent = 'A';
+            value.append('det ', bold, ` = ${number}`);
+        }
     };
     board.on('update', update);
     update();

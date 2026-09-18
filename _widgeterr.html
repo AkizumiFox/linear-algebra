@@ -1,0 +1,22 @@
+<!DOCTYPE html><html><body><iframe id="f" src="ch06-determinants/01-area-and-volume.html#the-rules-of-signed-area" width="1200" height="900"></iframe><pre id="out">…</pre>
+<script>
+const logs = [];
+window.addEventListener('load', () => {
+  const f = document.getElementById('f');
+  const w = f.contentWindow;
+  const wrap = (name) => { const orig = w.console[name]; w.console[name] = (...a) => { logs.push(name + ': ' + a.map(x => (x && x.message) ? x.message : String(x)).join(' ')); orig(...a); }; };
+  setTimeout(() => {
+    ['error','warn','log'].forEach(wrap);
+    w.addEventListener('error', e => logs.push('window error: ' + e.message));
+    const d = f.contentDocument;
+    const el = d.querySelector('.widget');
+    el.scrollIntoView();
+    setTimeout(() => {
+      const mount = d.querySelector('.widget-mount');
+      logs.push('classes: ' + el.className);
+      logs.push('mount children: ' + mount.children.length);
+      document.getElementById('out').textContent = logs.join('\n') || '(no logs)';
+    }, 5000);
+  }, 500);
+});
+</script></body></html>

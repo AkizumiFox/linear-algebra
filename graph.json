@@ -95,222 +95,266 @@
   {
    "source": "ch00-foundations",
    "target": "ch01-vector-spaces",
-   "weight": 92
+   "weight": 92,
+   "implied": false
   },
   {
    "source": "ch00-foundations",
    "target": "ch02-linear-systems",
-   "weight": 92
+   "weight": 92,
+   "implied": true
   },
   {
    "source": "ch00-foundations",
    "target": "ch03-linear-maps",
-   "weight": 112
+   "weight": 112,
+   "implied": true
   },
   {
    "source": "ch00-foundations",
    "target": "ch04-duality",
-   "weight": 23
+   "weight": 23,
+   "implied": true
   },
   {
    "source": "ch00-foundations",
    "target": "ch05-polynomials",
-   "weight": 145
+   "weight": 145,
+   "implied": true
   },
   {
    "source": "ch00-foundations",
    "target": "ch06-determinants",
-   "weight": 80
+   "weight": 80,
+   "implied": true
   },
   {
    "source": "ch00-foundations",
    "target": "ch07-block-matrices",
-   "weight": 68
+   "weight": 68,
+   "implied": true
   },
   {
    "source": "ch00-foundations",
    "target": "ch08-eigenvalues",
-   "weight": 43
+   "weight": 43,
+   "implied": true
   },
   {
    "source": "ch00-foundations",
    "target": "ch09-canonical-forms",
-   "weight": 26
+   "weight": 26,
+   "implied": true
   },
   {
    "source": "ch01-vector-spaces",
    "target": "ch02-linear-systems",
-   "weight": 64
+   "weight": 64,
+   "implied": false
   },
   {
    "source": "ch01-vector-spaces",
    "target": "ch03-linear-maps",
-   "weight": 134
+   "weight": 134,
+   "implied": true
   },
   {
    "source": "ch01-vector-spaces",
    "target": "ch04-duality",
-   "weight": 93
+   "weight": 93,
+   "implied": true
   },
   {
    "source": "ch01-vector-spaces",
    "target": "ch05-polynomials",
-   "weight": 20
+   "weight": 20,
+   "implied": true
   },
   {
    "source": "ch01-vector-spaces",
    "target": "ch06-determinants",
-   "weight": 13
+   "weight": 13,
+   "implied": true
   },
   {
    "source": "ch01-vector-spaces",
    "target": "ch07-block-matrices",
-   "weight": 23
+   "weight": 23,
+   "implied": true
   },
   {
    "source": "ch01-vector-spaces",
    "target": "ch08-eigenvalues",
-   "weight": 47
+   "weight": 47,
+   "implied": true
   },
   {
    "source": "ch01-vector-spaces",
    "target": "ch09-canonical-forms",
-   "weight": 50
+   "weight": 50,
+   "implied": true
   },
   {
    "source": "ch02-linear-systems",
    "target": "ch03-linear-maps",
-   "weight": 58
+   "weight": 58,
+   "implied": false
   },
   {
    "source": "ch02-linear-systems",
    "target": "ch04-duality",
-   "weight": 34
+   "weight": 34,
+   "implied": true
   },
   {
    "source": "ch02-linear-systems",
    "target": "ch05-polynomials",
-   "weight": 23
+   "weight": 23,
+   "implied": true
   },
   {
    "source": "ch02-linear-systems",
    "target": "ch06-determinants",
-   "weight": 43
+   "weight": 43,
+   "implied": true
   },
   {
    "source": "ch02-linear-systems",
    "target": "ch07-block-matrices",
-   "weight": 32
+   "weight": 32,
+   "implied": true
   },
   {
    "source": "ch02-linear-systems",
    "target": "ch08-eigenvalues",
-   "weight": 14
+   "weight": 14,
+   "implied": true
   },
   {
    "source": "ch02-linear-systems",
    "target": "ch09-canonical-forms",
-   "weight": 17
+   "weight": 17,
+   "implied": true
   },
   {
    "source": "ch03-linear-maps",
    "target": "ch04-duality",
-   "weight": 122
+   "weight": 122,
+   "implied": false
   },
   {
    "source": "ch03-linear-maps",
    "target": "ch05-polynomials",
-   "weight": 47
+   "weight": 47,
+   "implied": true
   },
   {
    "source": "ch03-linear-maps",
    "target": "ch06-determinants",
-   "weight": 28
+   "weight": 28,
+   "implied": true
   },
   {
    "source": "ch03-linear-maps",
    "target": "ch07-block-matrices",
-   "weight": 41
+   "weight": 41,
+   "implied": true
   },
   {
    "source": "ch03-linear-maps",
    "target": "ch08-eigenvalues",
-   "weight": 82
+   "weight": 82,
+   "implied": true
   },
   {
    "source": "ch03-linear-maps",
    "target": "ch09-canonical-forms",
-   "weight": 59
+   "weight": 59,
+   "implied": true
   },
   {
    "source": "ch04-duality",
    "target": "ch05-polynomials",
-   "weight": 18
+   "weight": 18,
+   "implied": false
   },
   {
    "source": "ch04-duality",
    "target": "ch06-determinants",
-   "weight": 2
+   "weight": 2,
+   "implied": true
   },
   {
    "source": "ch04-duality",
    "target": "ch08-eigenvalues",
-   "weight": 1
+   "weight": 1,
+   "implied": true
   },
   {
    "source": "ch04-duality",
    "target": "ch09-canonical-forms",
-   "weight": 1
+   "weight": 1,
+   "implied": true
   },
   {
    "source": "ch05-polynomials",
    "target": "ch06-determinants",
-   "weight": 6
+   "weight": 6,
+   "implied": false
   },
   {
    "source": "ch05-polynomials",
    "target": "ch07-block-matrices",
-   "weight": 2
+   "weight": 2,
+   "implied": true
   },
   {
    "source": "ch05-polynomials",
    "target": "ch08-eigenvalues",
-   "weight": 104
+   "weight": 104,
+   "implied": true
   },
   {
    "source": "ch05-polynomials",
    "target": "ch09-canonical-forms",
-   "weight": 91
+   "weight": 91,
+   "implied": true
   },
   {
    "source": "ch06-determinants",
    "target": "ch07-block-matrices",
-   "weight": 38
+   "weight": 38,
+   "implied": false
   },
   {
    "source": "ch06-determinants",
    "target": "ch08-eigenvalues",
-   "weight": 114
+   "weight": 114,
+   "implied": true
   },
   {
    "source": "ch06-determinants",
    "target": "ch09-canonical-forms",
-   "weight": 66
+   "weight": 66,
+   "implied": true
   },
   {
    "source": "ch07-block-matrices",
    "target": "ch08-eigenvalues",
-   "weight": 22
+   "weight": 22,
+   "implied": false
   },
   {
    "source": "ch07-block-matrices",
    "target": "ch09-canonical-forms",
-   "weight": 27
+   "weight": 27,
+   "implied": true
   },
   {
    "source": "ch08-eigenvalues",
    "target": "ch09-canonical-forms",
-   "weight": 155
+   "weight": 155,
+   "implied": false
   }
  ]
 }

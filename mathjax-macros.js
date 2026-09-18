@@ -311,7 +311,7 @@ window.BOOK_MACROS = {
   "\\frac{d^2 #1}{d #2^2}",
   2
  ],
- "tp": "^{\\mathsf{T}}",
+ "tp": "^{\\top}",
  "tr": "\\operatorname{tr}",
  "u": "\\mathbf{u}",
  "v": "\\mathbf{v}",
