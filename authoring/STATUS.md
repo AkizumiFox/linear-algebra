@@ -18,8 +18,8 @@ The plan is at `~/.claude/plans/cached-gathering-sedgewick.md`. The outline of a
 | 9 | ch09-canonical-forms | Canonical forms | deployed |
 | 10 | ch10-inner-products | Inner product spaces | deployed |
 | 11 | ch11-spectral-theory | Spectral theory | deployed |
-| 12 | ch12-psd-and-svd | Positive matrices and the SVD | drafting (blueprint done) |
-| 13 | ch13-forms | Bilinear and quadratic forms | blueprint written |
+| 12 | ch12-psd-and-svd | Positive matrices and the SVD | deployed |
+| 13 | ch13-forms | Bilinear and quadratic forms | drafting |
 | 14–23 | | see plan | not started |
 
 ## Open forward promises
