@@ -103,8 +103,8 @@
    "id": "ch11-spectral-theory",
    "name": "Chapter 11",
    "title": "Spectral Theory",
-   "url": "",
-   "results": 0,
+   "url": "ch11-spectral-theory/index.html",
+   "results": 170,
    "chapterNumber": 11,
    "part": ""
   }
@@ -171,6 +171,12 @@
    "implied": true
   },
   {
+   "source": "ch00-foundations",
+   "target": "ch11-spectral-theory",
+   "weight": 22,
+   "implied": true
+  },
+  {
    "source": "ch01-vector-spaces",
    "target": "ch02-linear-systems",
    "weight": 64,
@@ -225,6 +231,12 @@
    "implied": true
   },
   {
+   "source": "ch01-vector-spaces",
+   "target": "ch11-spectral-theory",
+   "weight": 11,
+   "implied": true
+  },
+  {
    "source": "ch02-linear-systems",
    "target": "ch03-linear-maps",
    "weight": 58,
@@ -273,6 +285,12 @@
    "implied": true
   },
   {
+   "source": "ch02-linear-systems",
+   "target": "ch11-spectral-theory",
+   "weight": 5,
+   "implied": true
+  },
+  {
    "source": "ch03-linear-maps",
    "target": "ch04-duality",
    "weight": 122,
@@ -312,6 +330,12 @@
    "source": "ch03-linear-maps",
    "target": "ch10-inner-products",
    "weight": 31,
+   "implied": true
+  },
+  {
+   "source": "ch03-linear-maps",
+   "target": "ch11-spectral-theory",
+   "weight": 24,
    "implied": true
   },
   {
@@ -375,6 +399,12 @@
    "implied": true
   },
   {
+   "source": "ch05-polynomials",
+   "target": "ch11-spectral-theory",
+   "weight": 24,
+   "implied": true
+  },
+  {
    "source": "ch06-determinants",
    "target": "ch07-block-matrices",
    "weight": 38,
@@ -399,6 +429,12 @@
    "implied": true
   },
   {
+   "source": "ch06-determinants",
+   "target": "ch11-spectral-theory",
+   "weight": 25,
+   "implied": true
+  },
+  {
    "source": "ch07-block-matrices",
    "target": "ch08-eigenvalues",
    "weight": 22,
@@ -417,6 +453,12 @@
    "implied": true
   },
   {
+   "source": "ch07-block-matrices",
+   "target": "ch11-spectral-theory",
+   "weight": 25,
+   "implied": true
+  },
+  {
    "source": "ch08-eigenvalues",
    "target": "ch09-canonical-forms",
    "weight": 155,
@@ -426,6 +468,24 @@
    "source": "ch08-eigenvalues",
    "target": "ch10-inner-products",
    "weight": 5,
+   "implied": false
+  },
+  {
+   "source": "ch08-eigenvalues",
+   "target": "ch11-spectral-theory",
+   "weight": 82,
+   "implied": true
+  },
+  {
+   "source": "ch09-canonical-forms",
+   "target": "ch11-spectral-theory",
+   "weight": 20,
+   "implied": false
+  },
+  {
+   "source": "ch10-inner-products",
+   "target": "ch11-spectral-theory",
+   "weight": 191,
    "implied": false
   }
  ]

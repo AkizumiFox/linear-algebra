@@ -692,8 +692,75 @@
       "number": 11,
       "part": "",
       "collapsed": true,
-      "path": null,
-      "sections": []
+      "path": "ch11-spectral-theory/index.html",
+      "sections": [
+        {
+          "title": "Schur Triangularization",
+          "number": "11.1",
+          "path": "ch11-spectral-theory/01-schur-triangularization.html",
+          "filename": "01-schur-triangularization.md"
+        },
+        {
+          "title": "Self-Adjoint Operators",
+          "number": "11.2",
+          "path": "ch11-spectral-theory/02-self-adjoint-operators.html",
+          "filename": "02-self-adjoint-operators.md"
+        },
+        {
+          "title": "Normal Operators",
+          "number": "11.3",
+          "path": "ch11-spectral-theory/03-normal-operators.html",
+          "filename": "03-normal-operators.md"
+        },
+        {
+          "title": "The Complex Spectral Theorem",
+          "number": "11.4",
+          "path": "ch11-spectral-theory/04-spectral-theorem-complex.html",
+          "filename": "04-spectral-theorem-complex.md"
+        },
+        {
+          "title": "The Real Spectral Theorem",
+          "number": "11.5",
+          "path": "ch11-spectral-theory/05-spectral-theorem-real.html",
+          "filename": "05-spectral-theorem-real.md"
+        },
+        {
+          "title": "The Shape of an Orthogonal Matrix",
+          "number": "11.6",
+          "path": "ch11-spectral-theory/06-orthogonal-matrices-and-rotations.html",
+          "filename": "06-orthogonal-matrices-and-rotations.md"
+        },
+        {
+          "title": "Commuting Families",
+          "number": "11.7",
+          "path": "ch11-spectral-theory/07-commuting-normal-families.html",
+          "filename": "07-commuting-normal-families.md"
+        },
+        {
+          "title": "Spectral Resolutions and Functions of a Normal Operator",
+          "number": "11.8",
+          "path": "ch11-spectral-theory/08-spectral-resolutions-and-functional-calculus.html",
+          "filename": "08-spectral-resolutions-and-functional-calculus.md"
+        },
+        {
+          "title": "Circulants and the Discrete Fourier Transform",
+          "number": "11.9",
+          "path": "ch11-spectral-theory/09-circulants-and-the-dft.html",
+          "filename": "09-circulants-and-the-dft.md"
+        },
+        {
+          "title": "The Sylvester Equation",
+          "number": "11.10",
+          "path": "ch11-spectral-theory/10-sylvester-equation.html",
+          "filename": "10-sylvester-equation.md"
+        },
+        {
+          "title": "How Far from Normal",
+          "number": "11.11",
+          "path": "ch11-spectral-theory/11-defect-from-normality.html",
+          "filename": "11-defect-from-normality.md"
+        }
+      ]
     }
   ]
 }
