@@ -288,6 +288,18 @@ body {
   background: var(--accent-soft);
 }
 
+/* Formulas highlight with the text around them, and copy as their LaTeX source (main.js) */
+.content mjx-container,
+.content mjx-container * {
+  -webkit-user-select: text;
+  user-select: text;
+}
+
+.content mjx-container ::selection,
+.content mjx-container::selection {
+  background: var(--accent-soft);
+}
+
 /* ==========================================================================
    Headings
    ========================================================================== */

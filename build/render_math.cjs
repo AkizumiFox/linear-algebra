@@ -56,6 +56,68 @@ MathJax.startup.promise.then(() => {
         }
     };
 
+    // Keep each formula's TeX source in the page, so the site can put it on the clipboard.
+    // The book's own macros are expanded first, so what a reader pastes compiles anywhere.
+    const readGroup = (text, start) => {
+        let i = start;
+        while (i < text.length && /\s/.test(text[i])) i++;
+        if (text[i] !== '{') return null;
+        let depth = 0;
+        for (let j = i; j < text.length; j++) {
+            if (text[j] === '{' && text[j - 1] !== '\\') depth++;
+            else if (text[j] === '}' && text[j - 1] !== '\\') {
+                depth--;
+                if (depth === 0) return { body: text.slice(i + 1, j), end: j + 1 };
+            }
+        }
+        return null;
+    };
+
+    const expandMacros = tex => {
+        let out = tex;
+        for (let pass = 0; pass < 12; pass++) {
+            let changed = false;
+            out = out.replace(/\\([A-Za-z]+|[0-9])/g, (match, name, offset, whole) => {
+                const macro = job.macros[name];
+                if (macro === undefined) return match;
+                if (typeof macro === 'string') {
+                    changed = true;
+                    return macro;
+                }
+                return match;  // macros with arguments are handled below
+            });
+            // macros that take arguments, one at a time so the groups can be read
+            const withArgs = /\\([A-Za-z]+)/g;
+            let match;
+            while ((match = withArgs.exec(out)) !== null) {
+                const macro = job.macros[match[1]];
+                if (!Array.isArray(macro)) continue;
+                const [body, count] = macro;
+                const args = [];
+                let cursor = match.index + match[0].length;
+                for (let k = 0; k < count; k++) {
+                    const group = readGroup(out, cursor);
+                    if (!group) break;
+                    args.push(group.body);
+                    cursor = group.end;
+                }
+                if (args.length !== count) continue;
+                const filled = body.replace(/#(\d)/g, (_, k) => args[Number(k) - 1] ?? '');
+                out = out.slice(0, match.index) + filled + out.slice(cursor);
+                changed = true;
+                withArgs.lastIndex = 0;
+            }
+            if (!changed) break;
+        }
+        return out;
+    };
+
+    const tagSource = document => {
+        for (const item of document.math) {
+            if (item.typesetRoot) adaptor.setAttribute(item.typesetRoot, 'data-tex', expandMacros(item.math));
+        }
+    };
+
     const writeCss = document => {
         if (cssWritten) return;
         const sheet = MathJax.startup.output.styleSheet(document);
@@ -70,6 +132,7 @@ MathJax.startup.promise.then(() => {
         }
         const document = mathjax.document(html, options);
         document.render();
+        tagSource(document);
         writeCss(document);
         // The stylesheet is shared (mathjax.css), not inlined in every page
         const style = adaptor.elementById(adaptor.head(document.document), 'MJX-CHTML-styles');
@@ -84,6 +147,7 @@ MathJax.startup.promise.then(() => {
         if (!fragment || !/\\\(|\\\[|\\begin\{/.test(fragment)) return fragment;
         const document = mathjax.document(`<!DOCTYPE html><html><head></head><body>${fragment}</body></html>`, options);
         document.render();
+        tagSource(document);
         writeCss(document);
         const output = adaptor.innerHTML(adaptor.body(document.document));
         collectErrors(output, where);

@@ -527,6 +527,41 @@
         return document.querySelector('meta[name="page-path"]')?.content || '';
     }
 
+    /**
+     * Copying a passage that contains formulas puts their LaTeX source on the clipboard
+     * (the rendered glyphs carry no text of their own). The build stores each formula's
+     * source in data-tex; see build/render_math.cjs.
+     */
+    function setupMathCopy() {
+        const BREAK = ' ';  // marks a paragraph boundary while whitespace is collapsed
+        document.addEventListener('copy', event => {
+            const selection = window.getSelection();
+            if (!selection || selection.isCollapsed || !event.clipboardData) return;
+            const fragment = selection.getRangeAt(0).cloneContents();
+            if (!fragment.querySelector('mjx-container[data-tex]')) return;  // no maths: copy as usual
+
+            fragment.querySelectorAll('mjx-assistive-mml, .fold-toggle, .anchor-link, .tab-continue')
+                .forEach(node => node.remove());
+            fragment.querySelectorAll('mjx-container[data-tex]').forEach(node => {
+                const tex = node.getAttribute('data-tex').replace(/\s+/g, ' ').trim();
+                const display = node.getAttribute('display') === 'true';
+                node.replaceWith(document.createTextNode(
+                    display ? `${BREAK}\\[ ${tex} \\]${BREAK}` : `\\( ${tex} \\)`));
+            });
+            const wrapper = document.createElement('div');
+            wrapper.append(fragment);
+            // A blank line between blocks; everything else collapses to single spaces
+            wrapper.querySelectorAll('p, li, h1, h2, h3, h4, h5, h6, blockquote, .env, .small-env, .tikz-figure')
+                .forEach(block => block.append(document.createTextNode(BREAK)));
+            const text = wrapper.textContent
+                .replace(/\s+/g, ' ')
+                .split(BREAK).map(part => part.trim()).filter(Boolean)
+                .join('\n\n');
+            event.clipboardData.setData('text/plain', text);
+            event.preventDefault();
+        });
+    }
+
     /** Left and right arrow keys go to the previous and next page. */
     function setupArrowKeys() {
         document.addEventListener('keydown', event => {
@@ -1136,6 +1171,7 @@
         }
 
         setupWideInlineMath();
+        setupMathCopy();
 
         // Fold solutions (and let readers fold proofs), before anchors are resolved
         setupFolding();
