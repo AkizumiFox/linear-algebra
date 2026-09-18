@@ -1,19 +1,19 @@
 # Linear Maps
 
-Chapter 1 studied vector spaces one at a time, and Chapter 2 studied one kind of question inside \( F^n \): does \( A\x = \b \) have a solution? This chapter studies the functions **between** vector spaces that respect addition and scaling. This section defines them, collects examples from geometry, matrices, calculus and algebra, and proves the fact that makes them manageable: a linear map is completely determined by what it does to a basis.
+Chapter 1 studied vector spaces one at a time, and Chapter 2 studied one kind of question inside \( F^n \): does \( \A\x = \b \) have a solution? This chapter studies the functions **between** vector spaces that respect addition and scaling. This section defines them, collects examples from geometry, matrices, calculus and algebra, and proves the fact that makes them manageable: a linear map is completely determined by what it does to a basis.
 
 ## Functions that behave like matrices
 
 Objects come first, then the maps between them that respect their structure. For sets the maps are functions; for groups they are homomorphisms (@def-group-homomorphism). For vector spaces the structure is addition and scalar multiplication, so we want functions that respect those two operations.
 
-The standard example is a matrix. For \( A \in M_{m \times n}(F) \), the rules of matrix multiplication (@thm-matrix-multiplication-properties) give
+The standard example is a matrix. For \( \A \in M_{m \times n}(F) \), the rules of matrix multiplication (@thm-matrix-multiplication-properties) give
 \[
-A(\x + \y) = A\x + A\y, \qquad A(c\x) = c(A\x) \qquad \text{for all } \x, \y \in F^n,\ c \in F .
+\A(\x + \y) = \A\x + \A\y, \qquad \A(c\x) = c(\A\x) \qquad \text{for all } \x, \y \in F^n,\ c \in F .
 \]
 Now look at three functions that are not given by matrices at all.
 
 - **Differentiation** on polynomials: \( (p + q)' = p' + q' \) and \( (cp)' = cp' \).
-- **Trace** on square matrices: \( \tr(A + B) = \tr A + \tr B \) and \( \tr(cA) = c\tr A \) (@thm-trace-properties).
+- **Trace** on square matrices: \( \tr(\A + \B) = \tr \A + \tr \B \) and \( \tr(c\A) = c\tr \A \) (@thm-trace-properties).
 - **Rotation** of the plane about the origin: rotating a parallelogram gives a parallelogram, so the rotation of a sum is the sum of the rotations, and rotating a stretched arrow gives the stretched rotated arrow.
 
 The inputs are polynomials, matrices and arrows, not columns. Yet all three obey exactly the two rules that matrices obey. Whatever we can prove from those two rules alone will hold for all of them at once. So we give the two rules a name.
@@ -48,14 +48,14 @@ We check the examples against (LT1) and (LT2), grouped by where they come from.
 ::: {#exm-matrix-transformation}
 [Multiplication by a Matrix]
 
-Let \( A \in M_{m \times n}(F) \). Show that \( T_A \colon F^n \to F^m \), \( T_A(\x) = A\x \), is a linear map.
+Let \( \A \in M_{m \times n}(F) \). Show that \( T_\A \colon F^n \to F^m \), \( T_\A(\x) = \A\x \), is a linear map.
 :::
 
 ::: {.solution}
-Let \( \x, \y \in F^n \) and \( c \in F \). By the distributive law in @thm-matrix-multiplication-properties, \( T_A(\x + \y) = A(\x + \y) = A\x + A\y = T_A(\x) + T_A(\y) \), which is (LT1). By the scalar rule in the same theorem, \( T_A(c\x) = A(c\x) = c(A\x) = cT_A(\x) \), which is (LT2). Hence \( T_A \) is linear.
+Let \( \x, \y \in F^n \) and \( c \in F \). By the distributive law in @thm-matrix-multiplication-properties, \( T_\A(\x + \y) = \A(\x + \y) = \A\x + \A\y = T_\A(\x) + T_\A(\y) \), which is (LT1). By the scalar rule in the same theorem, \( T_\A(c\x) = \A(c\x) = c(\A\x) = cT_\A(\x) \), which is (LT2). Hence \( T_\A \) is linear.
 :::
 
-We will use the name \( T_A \) for this map throughout the chapter. For \( F = \nR \) and \( n = m = 2 \), the map \( T_A \) sends the unit square to the parallelogram spanned by \( A\e_1 \) and \( A\e_2 \), the columns of \( A \) (@thm-matrix-times-vector-columns).
+We will use the name \( T_\A \) for this map throughout the chapter. For \( F = \nR \) and \( n = m = 2 \), the map \( T_\A \) sends the unit square to the parallelogram spanned by \( \A\e_1 \) and \( \A\e_2 \), the columns of \( \A \) (@thm-matrix-times-vector-columns).
 
 ::: {.widget src="widgets/linear-map.js" matrix="2,1,0,1" determinant="false"}
 ::: {.print}
@@ -71,12 +71,12 @@ We will use the name \( T_A \) for this map throughout the chapter. For \( F = \
 \end{tikzpicture}
 \end{center}
 
-The unit square (dashed) and its image under \( A = \begin{pmatrix} 2 & 1 \\ 0 & 1 \end{pmatrix} \).
+The unit square (dashed) and its image under \( \A = \begin{pmatrix} 2 & 1 \\ 0 & 1 \end{pmatrix} \).
 :::
 :::
 
 ::: {.content-visible when-format="html"}
-Drag the tips of the two arrows to change \( A \).
+Drag the tips of the two arrows to change \( \A \).
 :::
 
 ::: {#exm-coordinate-transformation}
@@ -93,7 +93,7 @@ Drag the tips of the two arrows to change \( A \).
 \[
 \begin{pmatrix} 2 & 0 & 1 \\ -1 & 1 & 0 \end{pmatrix}\begin{pmatrix} a_1 \\ a_2 \\ a_3 \end{pmatrix} = \begin{pmatrix} 2a_1 + a_3 \\ -a_1 + a_2 \end{pmatrix}.
 \]
-So \( T = T_A \) for this \( 2 \times 3 \) matrix \( A \), and \( T \) is linear by @exm-matrix-transformation. The same argument shows that every map \( F^n \to F^m \) whose output entries are combinations of the input entries, with constant coefficients and no constant terms, is linear.
+So \( T = T_\A \) for this \( 2 \times 3 \) matrix \( \A \), and \( T \) is linear by @exm-matrix-transformation. The same argument shows that every map \( F^n \to F^m \) whose output entries are combinations of the input entries, with constant coefficients and no constant terms, is linear.
 
 (b) By @thm-coordinates-linear, \( \coord{\u + \v}{\sB} = \coord{\u}{\sB} + \coord{\v}{\sB} \) and \( \coord{c\v}{\sB} = c\coord{\v}{\sB} \). These are (LT1) and (LT2).
 :::
@@ -146,7 +146,7 @@ Write \( (a_1, a_2) = (r\cos\varphi, r\sin\varphi) \) in polar coordinates. Rota
 \[
 R_\theta(a_1, a_2) = \bigl(r\cos(\varphi + \theta),\ r\sin(\varphi + \theta)\bigr) = (a_1\cos\theta - a_2\sin\theta,\ a_1\sin\theta + a_2\cos\theta).
 \]
-This is \( T_A \) for \( A = \begin{pmatrix} \cos\theta & -\sin\theta \\ \sin\theta & \cos\theta \end{pmatrix} \), so \( R_\theta \) is linear by @exm-matrix-transformation.
+This is \( T_\A \) for \( \A = \begin{pmatrix} \cos\theta & -\sin\theta \\ \sin\theta & \cos\theta \end{pmatrix} \), so \( R_\theta \) is linear by @exm-matrix-transformation.
 :::
 
 **Calculus.** For a polynomial \( p = a_0 + a_1x + \dots + a_nx^n \in F[x] \), define its **(formal) derivative** as \( p' = a_1 + 2a_2x + \dots + na_nx^{n-1} \), where \( ka_k \) means \( a_k \) added to itself \( k \) times. Over \( \nR \) this is the derivative of calculus.
@@ -190,11 +190,11 @@ By the distributive laws in @thm-polynomial-ring-laws, \( x(p + q) = xp + xq \),
 ::: {#exm-trace-matrices}
 [Trace and Transpose]
 
-Show that the trace \( \tr \colon M_n(F) \to F \) and the transpose \( M_{m \times n}(F) \to M_{n \times m}(F) \), \( A \mapsto A\tp \), are linear.
+Show that the trace \( \tr \colon M_n(F) \to F \) and the transpose \( M_{m \times n}(F) \to M_{n \times m}(F) \), \( \A \mapsto \A\tp \), are linear.
 :::
 
 ::: {.solution}
-For the trace, @thm-trace-properties (1) says \( \tr(A + B) = \tr A + \tr B \) and \( \tr(cA) = c\tr A \), which are (LT1) and (LT2); the target is \( F \), regarded as a vector space over itself. For the transpose, the \( (i, j) \) entry of \( (A + B)\tp \) is \( a_{ji} + b_{ji} \), the \( (i, j) \) entry of \( A\tp + B\tp \); and the \( (i, j) \) entry of \( (cA)\tp \) is \( ca_{ji} \), the \( (i, j) \) entry of \( cA\tp \).
+For the trace, @thm-trace-properties (1) says \( \tr(\A + \B) = \tr \A + \tr \B \) and \( \tr(c\A) = c\tr \A \), which are (LT1) and (LT2); the target is \( F \), regarded as a vector space over itself. For the transpose, the \( (i, j) \) entry of \( (\A + \B)\tp \) is \( a_{ji} + b_{ji} \), the \( (i, j) \) entry of \( \A\tp + \B\tp \); and the \( (i, j) \) entry of \( (c\A)\tp \) is \( ca_{ji} \), the \( (i, j) \) entry of \( c\A\tp \).
 :::
 
 ::: {#exm-shift}
@@ -334,7 +334,7 @@ Let \( \b \in \nR^2 \) be **non-zero**. Is the translation \( T \colon \nR^2 \to
 :::
 
 ::: {.solution}
-No: \( T(\0) = \b \neq \0 \), which is impossible for a linear map by @thm-zero-maps-to-zero. This is a minimal change of the identity map (@exm-identity): the formula differs only by the constant \( \b \), and that constant is exactly what breaks linearity. For the record, (LT1) fails too: \( T(\u + \v) = \u + \v + \b \), while \( T(\u) + T(\v) = \u + \v + 2\b \). Maps of the form \( \v \mapsto A\v + \b \) are called **affine**; they are linear exactly when \( \b = \0 \).
+No: \( T(\0) = \b \neq \0 \), which is impossible for a linear map by @thm-zero-maps-to-zero. This is a minimal change of the identity map (@exm-identity): the formula differs only by the constant \( \b \), and that constant is exactly what breaks linearity. For the record, (LT1) fails too: \( T(\u + \v) = \u + \v + \b \), while \( T(\u) + T(\v) = \u + \v + 2\b \). Maps of the form \( \v \mapsto \A\v + \b \) are called **affine**; they are linear exactly when \( \b = \0 \).
 :::
 
 Passing the zero test does not make a function linear.
@@ -384,7 +384,7 @@ Which of these maps \( \nR^2 \to \nR^2 \) are linear? (i) \( (x, y) \mapsto (y, 
 :::
 
 ::: {.solution}
-(i) Linear: it is \( T_A \) with \( A = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix} \). (ii) Not linear: \( (0, 0) \mapsto (0, 1) \neq \0 \). (iii) Not linear, although \( \0 \mapsto \0 \): \( (2, 2) \mapsto (4, 0) \), but \( 2 \cdot T(1, 1) = 2(1, 0) = (2, 0) \), so (LT2) fails.
+(i) Linear: it is \( T_\A \) with \( \A = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix} \). (ii) Not linear: \( (0, 0) \mapsto (0, 1) \neq \0 \). (iii) Not linear, although \( \0 \mapsto \0 \): \( (2, 2) \mapsto (4, 0) \), but \( 2 \cdot T(1, 1) = 2(1, 0) = (2, 0) \), so (LT2) fails.
 :::
 
 **Why this definition.** Could one condition be dropped? Complex conjugation on \( \nC \) over \( \nC \) satisfies (LT1) but not (LT2), so additivity alone is not enough. (Over \( \nQ \), surprisingly, additivity does imply homogeneity; see @exr-linear-maps-c1.) Conversely, \( T \colon \nR^2 \to \nR \), \( T(x, y) = \sqrt[3]{x^3 + y^3} \) (the real cube root), satisfies (LT2), since \( \sqrt[3]{c^3x^3 + c^3y^3} = c\sqrt[3]{x^3 + y^3} \) for every real \( c \). But \( T(1, 0) + T(0, 1) = 2 \), while \( T(1, 1) = \sqrt[3]{2} \), so (LT1) fails. Neither condition implies the other, and we need both to get @thm-linear-combination. The name comes from the case \( \nR \to \nR \) just described: the graph of a linear map is a line through the origin.
@@ -553,11 +553,11 @@ Determine which of the following functions are linear maps over \( \nR \). Justi
 :::
 
 ::: {.solution}
-(a) Linear. \( T = T_A \) with \( A = \begin{pmatrix} 1 & 0 & -2 \\ 0 & 3 & 0 \end{pmatrix} \), which is linear by @exm-matrix-transformation.
+(a) Linear. \( T = T_\A \) with \( \A = \begin{pmatrix} 1 & 0 & -2 \\ 0 & 3 & 0 \end{pmatrix} \), which is linear by @exm-matrix-transformation.
 
 (b) Not linear. \( T(0, 0) = (1, 0) \neq \0 \), contradicting @thm-zero-maps-to-zero.
 
-(c) Not linear. Take \( I_2 \) and \( c = 2 \): \( T(2I_2) = 2 \cdot 2 - 0 = 4 \), but \( 2T(I_2) = 2 \cdot 1 = 2 \). So (LT2) fails. (Additivity fails too: \( T(E_{11}) + T(E_{22}) = 0 + 0 = 0 \), but \( T(E_{11} + E_{22}) = T(I_2) = 1 \).)
+(c) Not linear. Take \( \I_2 \) and \( c = 2 \): \( T(2\I_2) = 2 \cdot 2 - 0 = 4 \), but \( 2T(\I_2) = 2 \cdot 1 = 2 \). So (LT2) fails. (Additivity fails too: \( T(\E_{11}) + T(\E_{22}) = 0 + 0 = 0 \), but \( T(\E_{11} + \E_{22}) = T(\I_2) = 1 \).)
 
 (d) Linear. For \( p \in \nR[x]_{\le 2} \), \( p' \) has degree at most \( 1 \), so \( x^2p' \in \nR[x]_{\le 3} \). For \( p, q \) and \( c \in \nR \), by @exm-differentiation and the distributive law, \( T(cp + q) = x^2(cp' + q') = c\,x^2p' + x^2q' = cT(p) + T(q) \). By @thm-equivalent-condition, \( T \) is linear.
 
@@ -570,7 +570,7 @@ Determine which of the following functions are linear maps over \( \nR \). Justi
 [B2: A Formula from Values on a Basis]
 
 ::: {.enumerate options="label=(\alph*)"}
-1. Show that there is exactly one linear map \( T \colon \nR^2 \to \nR^2 \) with \( T(2, 1) = (1, 4) \) and \( T(1, 1) = (0, 3) \). Hence find \( T(x, y) \) and a matrix \( A \) with \( T = T_A \).
+1. Show that there is exactly one linear map \( T \colon \nR^2 \to \nR^2 \) with \( T(2, 1) = (1, 4) \) and \( T(1, 1) = (0, 3) \). Hence find \( T(x, y) \) and a matrix \( \A \) with \( T = T_\A \).
 2. Let \( S \colon \nR[x]_{\le 2} \to \nR \) be linear with \( S(1) = 1 \), \( S(1 + x) = 3 \) and \( S(1 + x + x^2) = 6 \). Find \( S(a + bx + cx^2) \).
 :::
 :::
@@ -580,7 +580,7 @@ Determine which of the following functions are linear maps over \( \nR \). Justi
 \[
 T(x, y) = (x - y)(1, 4) + (2y - x)(0, 3) = (x - y,\ x + 2y).
 \]
-Check: \( T(2, 1) = (1, 4) \) and \( T(1, 1) = (0, 3) \). Hence \( T = T_A \) with \( A = \begin{pmatrix} 1 & -1 \\ 1 & 2 \end{pmatrix} \).
+Check: \( T(2, 1) = (1, 4) \) and \( T(1, 1) = (0, 3) \). Hence \( T = T_\A \) with \( \A = \begin{pmatrix} 1 & -1 \\ 1 & 2 \end{pmatrix} \).
 
 (b) The polynomials \( 1, 1 + x, 1 + x + x^2 \) are non-zero of distinct degrees, so they are independent (@thm-distinct-degrees-independent); there are \( 3 = \dim \nR[x]_{\le 2} \) of them, so they form a basis (@thm-right-size-basis). By (LT1) and @thm-preserves-negation, \( S(x) = S(1 + x) - S(1) = 2 \) and \( S(x^2) = S(1 + x + x^2) - S(1 + x) = 3 \). By @thm-linear-combination,
 \[

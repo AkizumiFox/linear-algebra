@@ -15,7 +15,7 @@ Two subspaces measure how far a linear map is from being injective and surjectiv
 - **Isomorphisms.** When two spaces are "the same", and why dimension alone decides it.
 - **The matrix of a linear map.** Coordinates turn maps into matrices and composition into matrix multiplication.
 - **Change of basis and similarity.** How the matrix of a map depends on the chosen bases.
-- **Rank, equivalence and factorizations.** With free choice of bases on both sides, every matrix becomes \( \begin{pmatrix} I_r & 0 \\ 0 & 0 \end{pmatrix} \).
+- **Rank, equivalence and factorizations.** With free choice of bases on both sides, every matrix becomes \( \begin{pmatrix} \I_r & 0 \\ 0 & 0 \end{pmatrix} \).
 - **Products and quotient spaces.** Building new spaces from old ones, and the isomorphism theorems.
 - **Projections and the trace.** Direct sums seen through operators, and a basis-free trace.
 
@@ -25,5 +25,5 @@ Two subspaces measure how far a linear map is from being injective and surjectiv
 - **Count with Rank–Nullity.** When \( \dim V = \dim W \), injective, surjective and bijective are the same; check the easiest one.
 - **Basis of the kernel, then extend.** The proof pattern behind Rank–Nullity, the same one that proved the dimension formula for sums.
 - **Abstract space → write down a matrix.** Choose a basis that makes the map simple, then compute with its matrix.
-- **The change-of-basis square.** Go around the square instead of across it: \( [T]_{\sB'} = P^{-1}[T]_{\sB}P \).
+- **The change-of-basis square.** Go around the square instead of across it: \( [T]_{\sB'} = \P^{-1}[T]_{\sB}\P \).
 - **Check well-definedness on cosets.** Every operation on a quotient space, and every map out of one, starts with this check.

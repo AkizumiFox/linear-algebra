@@ -72,7 +72,7 @@ Show that each map is an isomorphism, and give its inverse.
 1. \( \Phi \colon \nR[x]_{\le n} \to \nR^{n+1} \), \( a_0 + a_1x + \dots + a_nx^n \mapsto (a_0, a_1, \dots, a_n) \).
 2. \( \Psi \colon M_{m \times n}(F) \to F^{mn} \), which lists the entries row by row: \( (a_{ij}) \mapsto (a_{11}, \dots, a_{1n}, a_{21}, \dots, a_{mn}) \).
 3. \( \Theta \colon \nC \to \nR^2 \), \( a + bi \mapsto (a, b) \), where \( \nC \) is a vector space **over \( \nR \)**.
-4. \( T_A \colon F^n \to F^n \), \( \x \mapsto A\x \), for an invertible \( A \in M_n(F) \); and \( \id_V \) for any \( V \).
+4. \( T_\A \colon F^n \to F^n \), \( \x \mapsto \A\x \), for an invertible \( \A \in M_n(F) \); and \( \id_V \) for any \( V \).
 :::
 :::
 
@@ -83,7 +83,7 @@ Show that each map is an isomorphism, and give its inverse.
 
 (c) For \( a, b, a', b', c \in \nR \): \( (a + bi) + (a' + b'i) = (a + a') + (b + b')i \) and \( c(a + bi) = ca + cbi \), so \( \Theta \) is linear over \( \nR \). Every complex number has unique real and imaginary parts (@def-complex-numbers), so \( (a, b) \mapsto a + bi \) is a two-sided inverse. Hence \( \nC \cong \nR^2 \) **as real vector spaces**. In the same way @exm-complexification-rn showed that \( (\x, \y) \mapsto \x + i\y \) is a bijection \( (\nR^n)_\nC \to \nC^n \) respecting complex scalars; in our new language, \( (\nR^n)_\nC \cong \nC^n \) over \( \nC \).
 
-(d) \( T_A \) is linear (@exm-matrix-transformation). Since \( A(A^{-1}\x) = (AA^{-1})\x = \x \) and \( A^{-1}(A\x) = \x \) by @thm-matrix-multiplication-properties, the linear map \( T_{A^{-1}} \) is a two-sided inverse: \( T_A^{-1} = T_{A^{-1}} \). The identity \( \id_V \) is its own inverse. This degenerate example matters: it shows \( V \cong V \), and even the zero space is isomorphic to itself, via the zero map \( \{\0\} \to \{\0\} \), which is \( \id_{\{\0\}} \).
+(d) \( T_\A \) is linear (@exm-matrix-transformation). Since \( \A(\A^{-1}\x) = (\A\A^{-1})\x = \x \) and \( \A^{-1}(\A\x) = \x \) by @thm-matrix-multiplication-properties, the linear map \( T_{\A^{-1}} \) is a two-sided inverse: \( T_\A^{-1} = T_{\A^{-1}} \). The identity \( \id_V \) is its own inverse. This degenerate example matters: it shows \( V \cong V \), and even the zero space is isomorphic to itself, via the zero map \( \{\0\} \to \{\0\} \), which is \( \id_{\{\0\}} \).
 :::
 
 Here is a non-example by minimal change. Take (a) with \( n = 3 \), but keep only three coefficients: \( \Phi' \colon \nR[x]_{\le 3} \to \nR^3 \), \( a_0 + a_1x + a_2x^2 + a_3x^3 \mapsto (a_0, a_1, a_2) \). It is still linear, and still onto, since \( (a_0, a_1, a_2) = \Phi'(a_0 + a_1x + a_2x^2) \). But \( \Phi'(x^3) = \0 = \Phi'(0) \), so \( \Phi' \) is **not injective**. No \( S \) can satisfy \( S\Phi' = \id \), because \( S\Phi'(x^3) = S(\0) = 0 \neq x^3 \). The clause \( ST = \id_V \) is the one that fails.
@@ -193,7 +193,7 @@ Which of the following real vector spaces are isomorphic to each other?
 ::: {.solution}
 By @thm-isomorphic-iff-same-dimension it suffices to compute dimensions over \( \nR \).
 
-(i) The basis \( (1, x, \dots, x^5) \) gives dimension \( 6 \). (ii) \( \dim M_{2 \times 3}(\nR) = 2 \cdot 3 = 6 \) (@exm-dimensions). (iii) An upper triangular matrix is \( \sum_{i \le j} a_{ij}E_{ij} \), and this expression is unique because the coefficient of \( E_{ij} \) is the \( (i, j) \)-entry. By @thm-unique-representation the six matrix units \( E_{ij} \) with \( 1 \le i \le j \le 3 \) form a basis, so the dimension is \( 6 \). (iv) \( \dim_\nC \nC^3 = 3 \), so \( \dim_\nR \nC^3 = 6 \) by @thm-restriction-of-scalars-dimension.
+(i) The basis \( (1, x, \dots, x^5) \) gives dimension \( 6 \). (ii) \( \dim M_{2 \times 3}(\nR) = 2 \cdot 3 = 6 \) (@exm-dimensions). (iii) An upper triangular matrix is \( \sum_{i \le j} a_{ij}\E_{ij} \), and this expression is unique because the coefficient of \( \E_{ij} \) is the \( (i, j) \)-entry. By @thm-unique-representation the six matrix units \( \E_{ij} \) with \( 1 \le i \le j \le 3 \) form a basis, so the dimension is \( 6 \). (iv) \( \dim_\nC \nC^3 = 3 \), so \( \dim_\nR \nC^3 = 6 \) by @thm-restriction-of-scalars-dimension.
 
 (v) The evaluation map \( E \colon \nR[x]_{\le 6} \to \nR \), \( p \mapsto p(1) \), is linear, and surjective because \( E(c) = c \) for each constant \( c \). Its kernel is \( U \). By @thm-rank-nullity, \( \dim U = \dim \nR[x]_{\le 6} - \rank E = 7 - 1 = 6 \).
 
@@ -212,7 +212,7 @@ Is \( M_2(\nR) \) isomorphic to \( \nR[x]_{\le 3} \)? Is it isomorphic to \( \nR
 
 ## One-sided inverses
 
-For square matrices, Chapter 2 proved that one equation is enough: if \( A, B \in M_n(F) \) and \( AB = I_n \), then \( BA = I_n \) (@thm-one-sided-inverse). @exm-differentiation-integration-one-sided shows that this fails for operators on infinite-dimensional spaces. And it fails between spaces of different dimension: for \( T \colon \nR^2 \to \nR^3 \), \( (x, y) \mapsto (x, y, 0) \), and \( S \colon \nR^3 \to \nR^2 \), \( (x, y, z) \mapsto (x, y) \), we have \( ST = \id_{\nR^2} \) but \( TS(0, 0, 1) = \0 \), so \( TS \neq \id_{\nR^3} \). What survives is exactly the case that looks like "square":
+For square matrices, Chapter 2 proved that one equation is enough: if \( \A, \B \in M_n(F) \) and \( \A\B = \I_n \), then \( \B\A = \I_n \) (@thm-one-sided-inverse). @exm-differentiation-integration-one-sided shows that this fails for operators on infinite-dimensional spaces. And it fails between spaces of different dimension: for \( T \colon \nR^2 \to \nR^3 \), \( (x, y) \mapsto (x, y, 0) \), and \( S \colon \nR^3 \to \nR^2 \), \( (x, y, z) \mapsto (x, y) \), we have \( ST = \id_{\nR^2} \) but \( TS(0, 0, 1) = \0 \), so \( TS \neq \id_{\nR^3} \). What survives is exactly the case that looks like "square":
 
 ::: {#thm-one-sided-inverse-maps}
 [One-Sided Inverses of Linear Maps]
@@ -233,7 +233,7 @@ Therefore \( TS = TT^{-1} = \id_W \). Finally \( S = T^{-1} \) is an isomorphism
 :::
 
 ::: {.remark}
-Compare the two proofs. For matrices (@thm-one-sided-inverse), the step "\( B\x = \0 \) has only the trivial solution, hence \( B \) is invertible" came from row reduction, through the Invertible Matrix Theorem. Here the same step, "injective, hence bijective", comes from Rank–Nullity, with no matrices at all. Once we can write maps as matrices (next section), the two theorems become the same theorem seen from two sides.
+Compare the two proofs. For matrices (@thm-one-sided-inverse), the step "\( \B\x = \0 \) has only the trivial solution, hence \( \B \) is invertible" came from row reduction, through the Invertible Matrix Theorem. Here the same step, "injective, hence bijective", comes from Rank–Nullity, with no matrices at all. Once we can write maps as matrices (next section), the two theorems become the same theorem seen from two sides.
 :::
 
 In practice this means: **to verify that \( S \) is the inverse of \( T \) between spaces of the same finite dimension, one composition suffices.** By symmetry, \( TS = \id_W \) also implies \( ST = \id_V \): apply the theorem with the roles of \( T \) and \( S \) (and of \( V \) and \( W \)) swapped.
@@ -324,11 +324,11 @@ So \( T - \id_V \) is a two-sided inverse, and \( T \) is invertible by @def-inv
 :::
 
 ::: {.check}
-Is \( T \in \cL(M_2(\nR)) \), \( T(A) = A + A\tp \), invertible? Use the cheapest item of @thm-invertible-operator-tfae.
+Is \( T \in \cL(M_2(\nR)) \), \( T(\A) = \A + \A\tp \), invertible? Use the cheapest item of @thm-invertible-operator-tfae.
 :::
 
 ::: {.solution}
-No. Let \( A = \begin{pmatrix} 0 & 1 \\ -1 & 0 \end{pmatrix} \neq 0 \). Then \( A\tp = -A \), so \( T(A) = 0 \), and \( \ker T \neq \{0\} \). Item (c) fails, so \( T \) is not invertible.
+No. Let \( \A = \begin{pmatrix} 0 & 1 \\ -1 & 0 \end{pmatrix} \neq 0 \). Then \( \A\tp = -\A \), so \( T(\A) = 0 \), and \( \ker T \neq \{0\} \). Item (c) fails, so \( T \) is not invertible.
 :::
 
 Isomorphisms let us move a whole space into \( F^n \). The next section moves **maps** as well: once bases are chosen, every linear map between finite-dimensional spaces becomes a matrix, and composition becomes matrix multiplication.
@@ -369,17 +369,17 @@ Isomorphisms let us move a whole space into \( F^n \). The next section moves **
 ::: {#exr-isomorphisms-b1}
 [B1: An explicit isomorphism]
 
-Let \( U = \{ A \in M_2(\nR) : A\tp = A \} \) be the space of symmetric \( 2 \times 2 \) real matrices. Find an explicit isomorphism \( U \to \nR[x]_{\le 2} \), and verify that it is one.
+Let \( U = \{ \A \in M_2(\nR) : \A\tp = \A \} \) be the space of symmetric \( 2 \times 2 \) real matrices. Find an explicit isomorphism \( U \to \nR[x]_{\le 2} \), and verify that it is one.
 :::
 
 ::: {.solution}
-Every \( A \in U \) has the form \( \begin{pmatrix} a & b \\ b & c \end{pmatrix} \) with \( a, b, c \in \nR \). Define
+Every \( \A \in U \) has the form \( \begin{pmatrix} a & b \\ b & c \end{pmatrix} \) with \( a, b, c \in \nR \). Define
 \[
 T\begin{pmatrix} a & b \\ b & c \end{pmatrix} \coloneqq a + bx + cx^2, \qquad S(a + bx + cx^2) \coloneqq \begin{pmatrix} a & b \\ b & c \end{pmatrix}.
 \]
-*Linearity of \( T \).* Adding two symmetric matrices adds the entries \( a, b, c \), and adding polynomials adds coefficients, so \( T(A + A') = T(A) + T(A') \); similarly \( T(\lambda A) = \lambda T(A) \).
+*Linearity of \( T \).* Adding two symmetric matrices adds the entries \( a, b, c \), and adding polynomials adds coefficients, so \( T(\A + \A') = T(\A) + T(\A') \); similarly \( T(\lambda \A) = \lambda T(\A) \).
 
-*Inverse.* \( S \) takes values in \( U \), and \( ST(A) = A \) for every \( A \in U \), since \( A \) is determined by its entries \( a, b, c \). Also \( TS(p) = p \) for every \( p \), since \( p \) is determined by its coefficients. So \( T \) has a two-sided inverse and is bijective, hence an isomorphism by @thm-inverse-is-linear. (Alternatively: both spaces have dimension \( 3 \) by @exm-dimensions, so by @thm-one-sided-inverse-maps the single equation \( ST = \id \) would already suffice.)
+*Inverse.* \( S \) takes values in \( U \), and \( ST(\A) = \A \) for every \( \A \in U \), since \( \A \) is determined by its entries \( a, b, c \). Also \( TS(p) = p \) for every \( p \), since \( p \) is determined by its coefficients. So \( T \) has a two-sided inverse and is bijective, hence an isomorphism by @thm-inverse-is-linear. (Alternatively: both spaces have dimension \( 3 \) by @exm-dimensions, so by @thm-one-sided-inverse-maps the single equation \( ST = \id \) would already suffice.)
 :::
 
 ::: {#exr-isomorphisms-b2}
@@ -415,7 +415,7 @@ Determine which of the following pairs of real vector spaces are isomorphic. Jus
 
 ::: {.enumerate options="label=(\alph*)"}
 1. \( \nR^4 \) and \( M_2(\nR) \).
-2. \( \nR[x]_{\le 3} \) and \( \{ A \in M_3(\nR) : A\tp = -A \} \).
+2. \( \nR[x]_{\le 3} \) and \( \{ \A \in M_3(\nR) : \A\tp = -\A \} \).
 3. \( \{ p \in \nR[x]_{\le 4} : p(2) = 0 \} \) and \( \nR^4 \).
 4. \( \nC^2 \) (over \( \nR \)) and \( \nR[x]_{\le 3} \).
 5. The plane \( \{ (x, y, z) \in \nR^3 : x + y + z = 0 \} \) and \( \nC \) (over \( \nR \)).
@@ -427,7 +427,7 @@ By @thm-isomorphic-iff-same-dimension, in each case we compare dimensions over \
 
 (a) Isomorphic: \( \dim \nR^4 = 4 = \dim M_2(\nR) \).
 
-(b) Not isomorphic. \( \dim \nR[x]_{\le 3} = 4 \). If \( A\tp = -A \), then \( a_{ii} = -a_{ii} \), so \( 2a_{ii} = 0 \) and \( a_{ii} = 0 \), and \( a_{ji} = -a_{ij} \). Hence \( A = a_{12}(E_{12} - E_{21}) + a_{13}(E_{13} - E_{31}) + a_{23}(E_{23} - E_{32}) \), and the coefficients are entries of \( A \), so this expression is unique. By @thm-unique-representation these three matrices form a basis, and the dimension is \( 3 \neq 4 \).
+(b) Not isomorphic. \( \dim \nR[x]_{\le 3} = 4 \). If \( \A\tp = -\A \), then \( a_{ii} = -a_{ii} \), so \( 2a_{ii} = 0 \) and \( a_{ii} = 0 \), and \( a_{ji} = -a_{ij} \). Hence \( \A = a_{12}(\E_{12} - \E_{21}) + a_{13}(\E_{13} - \E_{31}) + a_{23}(\E_{23} - \E_{32}) \), and the coefficients are entries of \( \A \), so this expression is unique. By @thm-unique-representation these three matrices form a basis, and the dimension is \( 3 \neq 4 \).
 
 (c) Isomorphic. The evaluation \( p \mapsto p(2) \), \( \nR[x]_{\le 4} \to \nR \), is linear and surjective (constants), with kernel the given space, so by @thm-rank-nullity its dimension is \( 5 - 1 = 4 \).
 

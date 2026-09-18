@@ -82,7 +82,7 @@ These are rules read off from pictures, not yet a definition. The question is wh
 
 ## The rules force \( ad - bc \)
 
-A \( 2 \times 2 \) matrix \( A = \begin{pmatrix} a & b \\ c & d \end{pmatrix} \) has columns \( \u = (a, c) \) and \( \v = (b, d) \), and \( P(\u, \v) \) is the image of the unit square under \( \x \mapsto A\x \). We now show that the first four rules leave no freedom at all. The method is the column version of elimination: use shears to clear entries until the parallelogram becomes a rectangle.
+A \( 2 \times 2 \) matrix \( \A = \begin{pmatrix} a & b \\ c & d \end{pmatrix} \) has columns \( \u = (a, c) \) and \( \v = (b, d) \), and \( P(\u, \v) \) is the image of the unit square under \( \x \mapsto \A\x \). We now show that the first four rules leave no freedom at all. The method is the column version of elimination: use shears to clear entries until the parallelogram becomes a rectangle.
 
 ::: {#exm-two-by-two-from-rules}
 [\( ad - bc \) from the Rules]
@@ -93,7 +93,10 @@ Let \( D \colon \nR^2 \times \nR^2 \to \nR \) be **any** function satisfying (R1
 ::: {.solution}
 Write \( \u = (a, c) \) and \( \v = (b, d) \). Two consequences of (R1) come first. Taking the scalar \( 0 \) in (R1) gives \( D(\u, \0) = D(\u, 0\v) = 0 \cdot D(\u, \v) = 0 \), and likewise \( D(\0, \v) = 0 \). Using (R1) twice and then (R4),
 \[
-  D((p, 0), (0, q)) = D(p\e_1, q\e_2) = pq\,D(\e_1, \e_2) = pq \qquad \text{for all } p, q \in \nR. \tag{$\ast$}
+  \begin{aligned}
+  D((p, 0), (0, q)) &= D(p\e_1, q\e_2) = pq\,D(\e_1, \e_2) \\
+  &= pq \qquad \text{for all } p, q \in \nR.
+  \end{aligned} \tag{$\ast$}
 \]
 
 *Case 1: \( a \neq 0 \).* By the second shear rule with scalar \( -b/a \),
@@ -139,9 +142,9 @@ Apply shears and one scaling:
 With \( \u = \e_1 \), \( \v = \e_2 \) and (R4), \( D(\e_2, \e_1) = -D(\e_1, \e_2) = -1 \). This agrees with \( ad - bc = 0 \cdot 0 - 1 \cdot 1 \) for the columns \( (0, 1), (1, 0) \).
 :::
 
-Now compare with Chapter 0. By @thm-two-by-two-inverse, \( A \) is invertible **if and only if** \( ad - bc \neq 0 \). In the language of this section: \( A \) is invertible exactly when the parallelogram spanned by its columns is **not flat**, that is, when the columns do not lie on a common line through the origin. The number that decides invertibility and the signed area of the image of the unit square are the same number. Drag the images of \( \e_1 \) and \( \e_2 \) below and watch the signed area pass through \( 0 \) exactly when the two columns line up.
+Now compare with Chapter 0. By @thm-two-by-two-inverse, \( \A \) is invertible **if and only if** \( ad - bc \neq 0 \). In the language of this section: \( \A \) is invertible exactly when the parallelogram spanned by its columns is **not flat**, that is, when the columns do not lie on a common line through the origin. The number that decides invertibility and the signed area of the image of the unit square are the same number. Drag the images of \( \e_1 \) and \( \e_2 \) below and watch the signed area pass through \( 0 \) exactly when the two columns line up.
 
-::: {.widget src="widgets/linear-map.js" matrix="2,1,1,3"}
+::: {.widget src="widgets/linear-map.js" matrix="2,1,1,3" readout="area"}
 ::: {.print}
 \begin{center}
 \begin{tikzpicture}[scale=0.9]
@@ -155,7 +158,7 @@ Now compare with Chapter 0. By @thm-two-by-two-inverse, \( A \) is invertible **
 \end{tikzpicture}
 \end{center}
 
-The unit square (dashed) and its image under \( A = \begin{pmatrix} 2 & 1 \\ 1 & 3 \end{pmatrix} \), a parallelogram of signed area \( 2 \cdot 3 - 1 \cdot 1 = 5 \). The second column lies counterclockwise from the first, so the sign is positive.
+The unit square (dashed) and its image under \( \A = \begin{pmatrix} 2 & 1 \\ 1 & 3 \end{pmatrix} \), a parallelogram of signed area \( 2 \cdot 3 - 1 \cdot 1 = 5 \). The second column lies counterclockwise from the first, so the sign is positive.
 :::
 :::
 
@@ -207,7 +210,7 @@ Here is the goal for the next three sections. Let \( F \) be a field and \( n \g
 
 > There is **exactly one** function \( D \) of \( n \) vectors in \( F^n \) that is linear in each argument separately, is \( 0 \) whenever two arguments are equal, and takes the value \( 1 \) at \( (\e_1, \dots, \e_n) \).
 
-Its value on the columns of a matrix \( A \) will be the determinant \( \det A \). The plan follows the shorter route for \( n = 2 \). Expanding every argument in the standard basis gives \( n^n \) terms. The rule for equal arguments kills every term with a repeated basis vector, which leaves one term for each rearrangement \( (\e_{\sigma(1)}, \dots, \e_{\sigma(n)}) \) of the standard basis. Each surviving value is \( \pm 1 \), reached from \( D(\e_1, \dots, \e_n) = 1 \) by swaps, with one sign change per swap. That creates two tasks:
+Its value on the columns of a matrix \( \A \) will be the determinant \( \det \A \). The plan follows the shorter route for \( n = 2 \). Expanding every argument in the standard basis gives \( n^n \) terms. The rule for equal arguments kills every term with a repeated basis vector, which leaves one term for each rearrangement \( (\e_{\sigma(1)}, \dots, \e_{\sigma(n)}) \) of the standard basis. Each surviving value is \( \pm 1 \), reached from \( D(\e_1, \dots, \e_n) = 1 \) by swaps, with one sign change per swap. That creates two tasks:
 
 1. Name and study functions of several vectors with these rules. This is the next section, on multilinear alternating forms.
 2. Make sure the sign of a rearrangement is well defined, even though it can be reached by different sequences of swaps. This is the section on permutations and sign.

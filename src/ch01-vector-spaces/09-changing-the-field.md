@@ -260,17 +260,17 @@ is a basis of \( \nQ(\sqrt2)^3 \) over \( \nQ \). Hence \( \dim_\nQ \nQ(\sqrt2)^
 :::: {#exr-changing-the-field-b2}
 [B2: Complex Matrices over \( \nR \)]
 
-Let \( E_{11}, E_{12}, E_{21}, E_{22} \) be the matrix units of \( M_2(\nC) \). Find a basis of \( M_2(\nC) \) over \( \nR \), and write \( A = \begin{pmatrix} 1 + i & 2 \\ -i & 3i \end{pmatrix} \) in it.
+Let \( \E_{11}, \E_{12}, \E_{21}, \E_{22} \) be the matrix units of \( M_2(\nC) \). Find a basis of \( M_2(\nC) \) over \( \nR \), and write \( \A = \begin{pmatrix} 1 + i & 2 \\ -i & 3i \end{pmatrix} \) in it.
 ::::
 
 ::: {.solution}
 The matrix units form a basis of \( M_2(\nC) \) over \( \nC \) (@exm-standard-bases). By @thm-restriction-of-scalars-dimension,
 \[
-(E_{11}, iE_{11}, E_{12}, iE_{12}, E_{21}, iE_{21}, E_{22}, iE_{22})
+(\E_{11}, i\E_{11}, \E_{12}, i\E_{12}, \E_{21}, i\E_{21}, \E_{22}, i\E_{22})
 \]
-is a basis of \( M_2(\nC) \) over \( \nR \), so \( \dim_\nR M_2(\nC) = 8 \). Splitting each entry of \( A \) into real and imaginary parts,
+is a basis of \( M_2(\nC) \) over \( \nR \), so \( \dim_\nR M_2(\nC) = 8 \). Splitting each entry of \( \A \) into real and imaginary parts,
 \[
-A = 1E_{11} + 1(iE_{11}) + 2E_{12} + 0(iE_{12}) + 0E_{21} + (-1)(iE_{21}) + 0E_{22} + 3(iE_{22}).
+\A = 1\E_{11} + 1(i\E_{11}) + 2\E_{12} + 0(i\E_{12}) + 0\E_{21} + (-1)(i\E_{21}) + 0\E_{22} + 3(i\E_{22}).
 \]
 :::
 

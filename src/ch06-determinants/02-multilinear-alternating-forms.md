@@ -240,7 +240,7 @@ Determine which of the following functions are multilinear, and which of those a
 1. \( \nR^2 \times \nR^2 \to \nR \), \( (\u, \v) \mapsto 3u_1v_2 - 3u_2v_1 \).
 2. \( \nR^2 \times \nR^2 \to \nR \), \( (\u, \v) \mapsto u_1v_2 - u_2v_1 + 1 \).
 3. \( \nR^3 \times \nR^3 \times \nR^3 \to \nR \), \( (\u, \v, \w) \mapsto u_1v_2w_3 \).
-4. \( M_2(\nR) \times M_2(\nR) \to \nR \), \( (A, B) \mapsto \tr(AB) - \tr(BA) \).
+4. \( M_2(\nR) \times M_2(\nR) \to \nR \), \( (\A, \B) \mapsto \tr(\A\B) - \tr(\B\A) \).
 5. \( \nR[x] \times \nR[x] \to \nR \), \( (p, q) \mapsto p(1)q'(1) - p'(1)q(1) \).
 :::
 ::::
@@ -252,7 +252,7 @@ Determine which of the following functions are multilinear, and which of those a
 
 (c) Multilinear: in each position it is a coordinate functional times a fixed scalar, as for products of functionals. Not alternating: with \( \u = \v = \e_1 + \e_2 \) and \( \w = \e_3 \), the value is \( 1 \cdot 1 \cdot 1 = 1 \neq 0 \).
 
-(d) By @thm-trace-properties, \( \tr(AB) = \tr(BA) \), so this is the zero function. The zero function is multilinear and alternating (@thm-alternating-forms-space). This is the degenerate case.
+(d) By @thm-trace-properties, \( \tr(\A\B) = \tr(\B\A) \), so this is the zero function. The zero function is multilinear and alternating (@thm-alternating-forms-space). This is the degenerate case.
 
 (e) Multilinear: \( p \mapsto p(1) \) and \( p \mapsto p'(1) \) are linear, the second as a composition of differentiation (@exm-differentiation) with evaluation (@thm-evaluation-respects-operations). So for fixed \( q \), \( p \mapsto q'(1)\,p(1) - q(1)\,p'(1) \) is linear, and similarly in \( q \). Alternating: \( p(1)p'(1) - p'(1)p(1) = 0 \).
 :::

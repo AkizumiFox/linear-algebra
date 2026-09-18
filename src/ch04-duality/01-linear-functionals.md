@@ -56,7 +56,7 @@ Show that each map is a linear functional.
 
 (b) By linearity of the integral, \( \int_0^1 (p + q) = \int_0^1 p + \int_0^1 q \) and \( \int_0^1 ap = a\int_0^1 p \). On coefficients, \( \iota(a_0 + a_1x + a_2x^2) = a_0 + \frac{a_1}{2} + \frac{a_2}{3} \).
 
-(c) This is @thm-trace-properties (1): \( \tr(A + B) = \tr A + \tr B \) and \( \tr(cA) = c\tr A \).
+(c) This is @thm-trace-properties (1): \( \tr(\A + \B) = \tr \A + \tr \B \) and \( \tr(c\A) = c\tr \A \).
 
 (d) \( 0 = 0 + 0 \) and \( 0 = c \cdot 0 \) in \( F \), so the zero functional is linear. On \( \{\0\} \), a linear functional must send \( \0 \) to \( 0 \) (@thm-zero-maps-to-zero), and there is only one vector. So the zero functional is the only element, and \( \{\0\}^{*} = \{0\} \). This degenerate case matters: it is the case \( n = 0 \) of the count \( \dim V^{*} = \dim V \) proved below.
 :::
@@ -85,7 +85,7 @@ So in \( F^n \) a functional **is** a row vector acting by matrix multiplication
 
 - On \( \nR^2 \), the length \( (x, y) \mapsto \sqrt{x^2 + y^2} \) (@exm-norm). It sends \( \0 \) to \( 0 \) and respects **positive** scalars. But with \( c = -1 \) and \( \v = (1, 0) \) it gives \( 1 \), not \( -1 \), so the scaling condition fails.
 - On \( \nR[x] \), squaring the evaluation at \( 0 \): \( p \mapsto p(0)^2 \). The outputs are still scalars. But for \( p = q = 1 \) we get \( (1 + 1)^2 = 4 \neq 1 + 1 \), so additivity fails.
-- On \( M_2(F) \), replace the trace \( a + d \) of \( A = \begin{pmatrix} a & b \\ c & d \end{pmatrix} \) by \( ad - bc \). Then \( E_{11} \mapsto 0 \) and \( E_{22} \mapsto 0 \), but \( E_{11} + E_{22} = I_2 \mapsto 1 \), so additivity fails. The expression \( ad - bc \) is linear in each **row** separately, which is a different property.
+- On \( M_2(F) \), replace the trace \( a + d \) of \( \A = \begin{pmatrix} a & b \\ c & d \end{pmatrix} \) by \( ad - bc \). Then \( \E_{11} \mapsto 0 \) and \( \E_{22} \mapsto 0 \), but \( \E_{11} + \E_{22} = \I_2 \mapsto 1 \), so additivity fails. The expression \( ad - bc \) is linear in each **row** separately, which is a different property.
 
 **Why this definition.** Why single out the target \( F \)? Because nothing is lost. A linear map \( T \colon V \to F^m \) is the same thing as \( m \) functionals: if \( \varphi_i(\v) \) denotes the \( i \)-th entry of \( T\v \), then each \( \varphi_i \) is linear and \( T\v = (\varphi_1(\v), \dots, \varphi_m(\v)) \); conversely any \( m \) functionals stacked this way give a linear map. So functionals are the "rows" of linear maps, and understanding them one at a time is a way of understanding all maps into \( F^m \). The name comes from analysis, where the vectors were themselves functions and a map such as \( f \mapsto \int_0^1 f \) was called a "functional", a function of a function. The word "dual" will explain itself in this chapter: every statement about \( V \) has a mirror statement about \( V^{*} \).
 
@@ -108,11 +108,11 @@ Since \( \varphi \neq 0 \), there is \( \u \in V \) with \( c \coloneqq \varphi(
 For example, \( \ker\tr \) in \( M_n(F) \) has dimension \( n^2 - 1 \), and the polynomials in \( F[x]_{\le n} \) with \( p(c) = 0 \) form a subspace of dimension \( n \). Every non-zero functional cuts out a subspace one dimension smaller than the whole space. Later in this chapter these kernels, the hyperplanes, become the building blocks of every subspace.
 
 ::: {.check}
-Which of the following are linear functionals? (a) \( p \mapsto p(0) + 1 \) on \( \nR[x] \). (b) \( p \mapsto p(1) - 2p'(0) \) on \( \nR[x] \). (c) \( A \mapsto a_{12} \) on \( M_2(F) \).
+Which of the following are linear functionals? (a) \( p \mapsto p(0) + 1 \) on \( \nR[x] \). (b) \( p \mapsto p(1) - 2p'(0) \) on \( \nR[x] \). (c) \( \A \mapsto a_{12} \) on \( M_2(F) \).
 :::
 
 ::: {.solution}
-(a) No. It sends the zero polynomial to \( 1 \), but a linear map sends \( 0 \) to \( 0 \) (@thm-zero-maps-to-zero). (b) Yes. Evaluation at \( 1 \), differentiation and evaluation at \( 0 \) are linear, and \( V^{*} \) is closed under linear combinations and composition with linear maps (@thm-linear-maps-vector-space, @thm-composition-linear). (c) Yes. It is the coordinate of \( A \) at \( E_{12} \) in the standard basis of @exm-standard-bases, and coordinates are linear (@thm-coordinates-linear).
+(a) No. It sends the zero polynomial to \( 1 \), but a linear map sends \( 0 \) to \( 0 \) (@thm-zero-maps-to-zero). (b) Yes. Evaluation at \( 1 \), differentiation and evaluation at \( 0 \) are linear, and \( V^{*} \) is closed under linear combinations and composition with linear maps (@thm-linear-maps-vector-space, @thm-composition-linear). (c) Yes. It is the coordinate of \( \A \) at \( \E_{12} \) in the standard basis of @exm-standard-bases, and coordinates are linear (@thm-coordinates-linear).
 :::
 
 ## The dual basis
@@ -193,14 +193,14 @@ How do we find a dual basis in practice? In \( F^n \), functionals are rows, and
 
 ::: {.enumerate options="label=(\alph*)"}
 1. Find the dual basis of \( \sB = ((1, 1), (1, -1)) \) in \( \nR^2 \).
-2. More generally, let \( \sB = (\v_1, \dots, \v_n) \) be a basis of \( F^n \), and let \( P = \begin{pmatrix} \v_1 & \cdots & \v_n \end{pmatrix} \). Show that \( P \) is invertible and that the dual basis of \( \sB \) is \( \varphi_i(\x) = \r_i\x \), where \( \r_i \) is the \( i \)-th **row** of \( P^{-1} \).
+2. More generally, let \( \sB = (\v_1, \dots, \v_n) \) be a basis of \( F^n \), and let \( \P = \begin{pmatrix} \v_1 & \cdots & \v_n \end{pmatrix} \). Show that \( \P \) is invertible and that the dual basis of \( \sB \) is \( \varphi_i(\x) = \r_i\x \), where \( \r_i \) is the \( i \)-th **row** of \( \P^{-1} \).
 :::
 ::::
 
 ::: {.solution}
-(a) By @thm-functionals-on-fn, \( \varphi_1(x, y) = px + qy \) for some \( p, q \in \nR \), that is, \( \varphi_1(\x) = \begin{pmatrix} p & q \end{pmatrix}\x \). The conditions \( \varphi_1(1, 1) = 1 \) and \( \varphi_1(1, -1) = 0 \) say \( \begin{pmatrix} p & q \end{pmatrix}P = \begin{pmatrix} 1 & 0 \end{pmatrix} \) with \( P = \begin{pmatrix} 1 & 1 \\ 1 & -1 \end{pmatrix} \). Likewise the row \( \r_2 \) of \( \varphi_2 \) satisfies \( \r_2P = \begin{pmatrix} 0 & 1 \end{pmatrix} \). Stacking the two rows into a matrix \( R \), the four conditions become \( RP = I_2 \), so \( R = P^{-1} \). By @thm-two-by-two-inverse, with \( ad - bc = -2 \),
+(a) By @thm-functionals-on-fn, \( \varphi_1(x, y) = px + qy \) for some \( p, q \in \nR \), that is, \( \varphi_1(\x) = \begin{pmatrix} p & q \end{pmatrix}\x \). The conditions \( \varphi_1(1, 1) = 1 \) and \( \varphi_1(1, -1) = 0 \) say \( \begin{pmatrix} p & q \end{pmatrix}\P = \begin{pmatrix} 1 & 0 \end{pmatrix} \) with \( \P = \begin{pmatrix} 1 & 1 \\ 1 & -1 \end{pmatrix} \). Likewise the row \( \r_2 \) of \( \varphi_2 \) satisfies \( \r_2\P = \begin{pmatrix} 0 & 1 \end{pmatrix} \). Stacking the two rows into a matrix \( \R \), the four conditions become \( \R\P = \I_2 \), so \( \R = \P^{-1} \). By @thm-two-by-two-inverse, with \( ad - bc = -2 \),
 \[
-P^{-1} = \frac{1}{-2}\begin{pmatrix} -1 & -1 \\ -1 & 1 \end{pmatrix} = \begin{pmatrix} \tfrac12 & \tfrac12 \\ \tfrac12 & -\tfrac12 \end{pmatrix}.
+\P^{-1} = \frac{1}{-2}\begin{pmatrix} -1 & -1 \\ -1 & 1 \end{pmatrix} = \begin{pmatrix} \tfrac12 & \tfrac12 \\ \tfrac12 & -\tfrac12 \end{pmatrix}.
 \]
 Hence
 \[
@@ -208,13 +208,13 @@ Hence
 \]
 Check: \( \varphi_1(1, 1) = 1 \), \( \varphi_1(1, -1) = 0 \), \( \varphi_2(1, 1) = 0 \), \( \varphi_2(1, -1) = 1 \). And the first formula of @thm-dual-basis (c) for \( \v = (3, 1) \) reads \( (3, 1) = 2(1, 1) + 1(1, -1) \), which is true. The second formula expresses a functional in the dual basis through its values on \( \sB \): for \( \psi(x, y) = x \), the values are \( \psi(1, 1) = 1 \) and \( \psi(1, -1) = 1 \), so \( \psi = \varphi_1 + \varphi_2 \), and indeed \( \frac{x + y}{2} + \frac{x - y}{2} = x \).
 
-(b) The columns of \( P \) form a basis of \( F^n \), so \( P \) is invertible by @thm-invertible-tfae. Let \( R \in M_n(F) \) have rows \( \r_1, \dots, \r_n \), and let \( \psi_i(\x) \coloneqq \r_i\x \). By the entry formula for a product (@thm-three-views-of-product), \( \psi_i(\v_j) = \r_i\v_j = (RP)_{ij} \). Hence \( \psi_i(\v_j) = \delta_{ij} \) for all \( i, j \) if and only if \( RP = I_n \), if and only if \( R = P^{-1} \) (multiply by \( P^{-1} \) on the right). Now take \( R = P^{-1} \): the functionals \( \psi_i(\x) = \r_i\x \) are linear (@thm-functionals-on-fn) and satisfy \( \psi_i(\v_j) = \delta_{ij} \), so by the uniqueness in @thm-dual-basis (a) they are the dual basis.
+(b) The columns of \( \P \) form a basis of \( F^n \), so \( \P \) is invertible by @thm-invertible-tfae. Let \( \R \in M_n(F) \) have rows \( \r_1, \dots, \r_n \), and let \( \psi_i(\x) \coloneqq \r_i\x \). By the entry formula for a product (@thm-three-views-of-product), \( \psi_i(\v_j) = \r_i\v_j = (\R\P)_{ij} \). Hence \( \psi_i(\v_j) = \delta_{ij} \) for all \( i, j \) if and only if \( \R\P = \I_n \), if and only if \( \R = \P^{-1} \) (multiply by \( \P^{-1} \) on the right). Now take \( \R = \P^{-1} \): the functionals \( \psi_i(\x) = \r_i\x \) are linear (@thm-functionals-on-fn) and satisfy \( \psi_i(\v_j) = \delta_{ij} \), so by the uniqueness in @thm-dual-basis (a) they are the dual basis.
 
-This agrees with Chapter 3: \( P = \mtx{\id}{\sB}{\sE} \) and \( P^{-1} = \mtx{\id}{\sE}{\sB} \) (@thm-change-of-coordinates), so \( P^{-1}\x = \coord{\x}{\sB} \), and row \( i \) of \( P^{-1} \) computes the \( i \)-th coordinate, as @thm-dual-basis (a) predicts. The columns of \( P \) are the basis; the rows of \( P^{-1} \) are the dual basis.
+This agrees with Chapter 3: \( \P = \mtx{\id}{\sB}{\sE} \) and \( \P^{-1} = \mtx{\id}{\sE}{\sB} \) (@thm-change-of-coordinates), so \( \P^{-1}\x = \coord{\x}{\sB} \), and row \( i \) of \( \P^{-1} \) computes the \( i \)-th coordinate, as @thm-dual-basis (a) predicts. The columns of \( \P \) are the basis; the rows of \( \P^{-1} \) are the dual basis.
 :::
 
 ::: {.warning}
-**A dual basis functional depends on the whole basis, not only on its own vector.** In \( \nR^2 \), the basis \( ((1, 0), (0, 1)) \) has first dual functional \( \varphi_1(x, y) = x \). The basis \( ((1, 0), (1, 1)) \) has the same first vector, but \( P^{-1} = \begin{pmatrix} 1 & -1 \\ 0 & 1 \end{pmatrix} \), so its first dual functional is \( \varphi_1(x, y) = x - y \). Changing \( \v_2 \) changed \( \varphi_1 \), because \( \varphi_1 \) must vanish on \( \v_2 \).
+**A dual basis functional depends on the whole basis, not only on its own vector.** In \( \nR^2 \), the basis \( ((1, 0), (0, 1)) \) has first dual functional \( \varphi_1(x, y) = x \). The basis \( ((1, 0), (1, 1)) \) has the same first vector, but \( \P^{-1} = \begin{pmatrix} 1 & -1 \\ 0 & 1 \end{pmatrix} \), so its first dual functional is \( \varphi_1(x, y) = x - y \). Changing \( \v_2 \) changed \( \varphi_1 \), because \( \varphi_1 \) must vanish on \( \v_2 \).
 :::
 
 The same method works away from \( F^n \), once we recognize the coordinates.
@@ -289,17 +289,17 @@ Parts (a), (b) (first sentence) and (c) hold for **every** vector space \( V \);
 :::: {#exm-trace-test-zero-matrix}
 [A Matrix Killed by Every Trace]
 
-Let \( A \in M_n(F) \) satisfy \( \tr(AX) = 0 \) for every \( X \in M_n(F) \). Show that \( A = 0 \). Deduce that every linear functional on \( M_n(F) \) is \( X \mapsto \tr(AX) \) for exactly one \( A \in M_n(F) \).
+Let \( \A \in M_n(F) \) satisfy \( \tr(\A\X) = 0 \) for every \( \X \in M_n(F) \). Show that \( \A = 0 \). Deduce that every linear functional on \( M_n(F) \) is \( \X \mapsto \tr(\A\X) \) for exactly one \( \A \in M_n(F) \).
 ::::
 
 ::: {.solution}
-The matrix units \( E_{ij} \) form a basis of \( M_n(F) \) (@exm-standard-bases), and \( A = \sum_{i,j} a_{ij}E_{ij} \). By @thm-dual-basis (a), its dual basis consists of the coordinate functionals \( \varepsilon_{ij}(A) = a_{ij} \). We compute \( \varepsilon_{ij}(A) \) as a trace. By @def-matrix-multiplication, \( (AE_{ji})_{kk} = \sum_l a_{kl}(E_{ji})_{lk} \), and \( (E_{ji})_{lk} = 1 \) only for \( l = j \) and \( k = i \). So the only non-zero diagonal entry of \( AE_{ji} \) is \( (AE_{ji})_{ii} = a_{ij} \), and
+The matrix units \( \E_{ij} \) form a basis of \( M_n(F) \) (@exm-standard-bases), and \( \A = \sum_{i,j} a_{ij}\E_{ij} \). By @thm-dual-basis (a), its dual basis consists of the coordinate functionals \( \varepsilon_{ij}(\A) = a_{ij} \). We compute \( \varepsilon_{ij}(\A) \) as a trace. By @def-matrix-multiplication, \( (\A\E_{ji})_{kk} = \sum_l a_{kl}(\E_{ji})_{lk} \), and \( (\E_{ji})_{lk} = 1 \) only for \( l = j \) and \( k = i \). So the only non-zero diagonal entry of \( \A\E_{ji} \) is \( (\A\E_{ji})_{ii} = a_{ij} \), and
 \[
-\tr(AE_{ji}) = a_{ij} = \varepsilon_{ij}(A).
+\tr(\A\E_{ji}) = a_{ij} = \varepsilon_{ij}(\A).
 \]
-Taking \( X = E_{ji} \) in the hypothesis gives \( \varepsilon_{ij}(A) = 0 \) for all \( i, j \). By @thm-functionals-separate-points (b), \( A = 0 \).
+Taking \( \X = \E_{ji} \) in the hypothesis gives \( \varepsilon_{ij}(\A) = 0 \) for all \( i, j \). By @thm-functionals-separate-points (b), \( \A = 0 \).
 
-For the deduction, let \( \Theta \colon M_n(F) \to M_n(F)^{*} \), \( \Theta(A)(X) \coloneqq \tr(AX) \). Each \( \Theta(A) \) is linear in \( X \), and \( \Theta \) is linear in \( A \), both by @thm-trace-properties (1) and the distributive laws of @thm-matrix-multiplication-properties. We just showed \( \ker\Theta = \{0\} \), so \( \Theta \) is injective (@thm-injective-iff-trivial-kernel). Since \( \dim M_n(F)^{*} = n^2 = \dim M_n(F) \) (@cor-dimension-dual-space), \( \Theta \) is bijective by @cor-rank-nullity-consequences (e). This is the matrix analogue of @thm-functionals-on-fn.
+For the deduction, let \( \Theta \colon M_n(F) \to M_n(F)^{*} \), \( \Theta(\A)(\X) \coloneqq \tr(\A\X) \). Each \( \Theta(\A) \) is linear in \( \X \), and \( \Theta \) is linear in \( \A \), both by @thm-trace-properties (1) and the distributive laws of @thm-matrix-multiplication-properties. We just showed \( \ker\Theta = \{0\} \), so \( \Theta \) is injective (@thm-injective-iff-trivial-kernel). Since \( \dim M_n(F)^{*} = n^2 = \dim M_n(F) \) (@cor-dimension-dual-space), \( \Theta \) is bijective by @cor-rank-nullity-consequences (e). This is the matrix analogue of @thm-functionals-on-fn.
 :::
 
 ## When \( V \) is infinite-dimensional
@@ -371,11 +371,11 @@ More is true, and we state it without proof. For every infinite-dimensional \( V
 ::::
 
 ::: {.solution}
-(a) Let \( P \) have the three vectors as columns. Row reduction of \( [P \mid I_3] \) (@thm-inverse-by-row-reduction) gives
+(a) Let \( \P \) have the three vectors as columns. Row reduction of \( [\P \mid \I_3] \) (@thm-inverse-by-row-reduction) gives
 \[
-P = \begin{pmatrix} 1 & 0 & 1 \\ 0 & 1 & 1 \\ 1 & 1 & 1 \end{pmatrix}, \qquad P^{-1} = \begin{pmatrix} 0 & -1 & 1 \\ -1 & 0 & 1 \\ 1 & 1 & -1 \end{pmatrix},
+\P = \begin{pmatrix} 1 & 0 & 1 \\ 0 & 1 & 1 \\ 1 & 1 & 1 \end{pmatrix}, \qquad \P^{-1} = \begin{pmatrix} 0 & -1 & 1 \\ -1 & 0 & 1 \\ 1 & 1 & -1 \end{pmatrix},
 \]
-and one checks \( P^{-1}P = I_3 \). By @exm-dual-basis-inverse-rows (b), the dual basis is
+and one checks \( \P^{-1}\P = \I_3 \). By @exm-dual-basis-inverse-rows (b), the dual basis is
 \[
 \varphi_1(x, y, z) = -y + z, \qquad \varphi_2(x, y, z) = -x + z, \qquad \varphi_3(x, y, z) = x + y - z .
 \]
@@ -403,7 +403,7 @@ Determine which of the following are linear functionals. Justify your answer.
 ::: {.enumerate options="label=(\alph*)"}
 1. \( \nR^3 \to \nR \), \( (x, y, z) \mapsto 2x - z \).
 2. \( \nR^3 \to \nR \), \( (x, y, z) \mapsto xy \).
-3. \( M_2(\nR) \to \nR \), \( A \mapsto a_{12} - 3a_{21} \).
+3. \( M_2(\nR) \to \nR \), \( \A \mapsto a_{12} - 3a_{21} \).
 4. \( \nR[x] \to \nR \), \( p \mapsto \int_0^1 t\,p(t)\,\dd t \).
 5. \( \nR[x]_{\le 2} \to \nR \), \( p \mapsto p(0) + p'(0) + 1 \).
 6. \( \nC^2 \to \nC \), \( (z, w) \mapsto z + \conj{w} \), where \( \nC^2 \) is a vector space over \( \nC \).

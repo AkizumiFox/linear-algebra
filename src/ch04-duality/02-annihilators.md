@@ -44,7 +44,7 @@ Hence \( \varphi + \psi \in S^{0} \) and \( c\varphi \in S^{0} \), and \( S^{0} 
 
 ::: {.enumerate options="label=(\alph*)"}
 1. For any vector space \( V \), find \( \{\0\}^{0} \), \( \varnothing^{0} \) and \( V^{0} \).
-2. In \( M_2(F) \), find the annihilator of the single matrix \( E_{11} \).
+2. In \( M_2(F) \), find the annihilator of the single matrix \( \E_{11} \).
 3. In \( \nR[x]_{\le 2} \), find the annihilator of \( S = \{1, x\} \).
 :::
 ::::
@@ -52,11 +52,11 @@ Hence \( \varphi + \psi \in S^{0} \) and \( c\varphi \in S^{0} \), and \( S^{0} 
 ::: {.solution}
 (a) Every functional sends \( \0 \) to \( 0 \) (@thm-zero-maps-to-zero), so \( \{\0\}^{0} = V^{*} \). The condition "for all \( \s \in \varnothing \)" holds vacuously, so \( \varnothing^{0} = V^{*} \). A functional in \( V^{0} \) takes the value \( 0 \) at every vector, so it is the zero functional, and \( V^{0} = \{0\} \). These degenerate cases fix the direction of everything that follows: the smallest subspace of \( V \) has the largest annihilator, and the largest has the smallest.
 
-(b) Let \( \varepsilon_{ij}(A) = a_{ij} \) be the dual basis of the standard basis \( (E_{11}, E_{12}, E_{21}, E_{22}) \). By @thm-dual-basis (c), every \( \psi \in M_2(F)^{*} \) is \( \psi = \sum_{i,j} \psi(E_{ij})\,\varepsilon_{ij} \). Such a \( \psi \) lies in \( \{E_{11}\}^{0} \) exactly when \( \psi(E_{11}) = 0 \). Hence
+(b) Let \( \varepsilon_{ij}(\A) = a_{ij} \) be the dual basis of the standard basis \( (\E_{11}, \E_{12}, \E_{21}, \E_{22}) \). By @thm-dual-basis (c), every \( \psi \in M_2(F)^{*} \) is \( \psi = \sum_{i,j} \psi(\E_{ij})\,\varepsilon_{ij} \). Such a \( \psi \) lies in \( \{\E_{11}\}^{0} \) exactly when \( \psi(\E_{11}) = 0 \). Hence
 \[
-\{E_{11}\}^{0} = \Span(\varepsilon_{12}, \varepsilon_{21}, \varepsilon_{22}) ,
+\{\E_{11}\}^{0} = \Span(\varepsilon_{12}, \varepsilon_{21}, \varepsilon_{22}) ,
 \]
-the functionals \( A \mapsto c_{12}a_{12} + c_{21}a_{21} + c_{22}a_{22} \). It has dimension \( 3 \), and \( 3 + 1 = 4 = \dim M_2(F) \).
+the functionals \( \A \mapsto c_{12}a_{12} + c_{21}a_{21} + c_{22}a_{22} \). It has dimension \( 3 \), and \( 3 + 1 = 4 = \dim M_2(F) \).
 
 (c) Let \( (\varphi_0, \varphi_1, \varphi_2) \) be the dual basis of \( (1, x, x^2) \), so \( \varphi_k \) reads off the coefficient of \( x^k \). A functional \( \psi = \psi(1)\varphi_0 + \psi(x)\varphi_1 + \psi(x^2)\varphi_2 \) lies in \( S^{0} \) exactly when \( \psi(1) = \psi(x) = 0 \), that is, when \( \psi = \psi(x^2)\varphi_2 \). So \( S^{0} = \Span(\varphi_2) \): the only equations satisfied by both \( 1 \) and \( x \) are the multiples of "the coefficient of \( x^2 \) is \( 0 \)".
 :::
@@ -116,19 +116,19 @@ Find a basis of \( U^{0} \) for \( U = \Span((1, 2, 0), (0, 1, 1)) \subseteq \nR
 ::: {.solution}
 By @thm-functionals-on-fn, every functional is \( \varphi_{\a}(\x) = \a\tp\x \) for a unique \( \a = (a_1, a_2, a_3) \). By linearity, \( \varphi_{\a} \) vanishes on \( U \) if and only if it vanishes on the two spanning vectors (a combination of vectors killed by \( \varphi_{\a} \) is killed, by @thm-linear-combination). These two conditions are
 \[
-a_1 + 2a_2 = 0, \qquad a_2 + a_3 = 0, \qquad \text{that is,} \qquad A\a = \0 \quad \text{with} \quad A = \begin{pmatrix} 1 & 2 & 0 \\ 0 & 1 & 1 \end{pmatrix},
+a_1 + 2a_2 = 0, \qquad a_2 + a_3 = 0, \qquad \text{that is,} \qquad \A\a = \0 \quad \text{with} \quad \A = \begin{pmatrix} 1 & 2 & 0 \\ 0 & 1 & 1 \end{pmatrix},
 \]
-the matrix whose **rows** are the spanning vectors. So \( \varphi_{\a} \in U^{0} \) if and only if \( \a \in \nul(A) \). Subtracting twice row 2 from row 1 gives the RREF
+the matrix whose **rows** are the spanning vectors. So \( \varphi_{\a} \in U^{0} \) if and only if \( \a \in \nul(\A) \). Subtracting twice row 2 from row 1 gives the RREF
 \[
 \begin{pmatrix} 1 & 0 & -2 \\ 0 & 1 & 1 \end{pmatrix},
 \]
-with \( a_3 \) free. By @thm-basis-null-space, \( \nul(A) = \Span((2, -1, 1)) \). Hence \( U^{0} = \Span(\psi) \) with
+with \( a_3 \) free. By @thm-basis-null-space, \( \nul(\A) = \Span((2, -1, 1)) \). Hence \( U^{0} = \Span(\psi) \) with
 \[
 \psi(x, y, z) = 2x - y + z .
 \]
 Check: \( \psi(1, 2, 0) = 2 - 2 + 0 = 0 \) and \( \psi(0, 1, 1) = -1 + 1 = 0 \). The two spanning vectors are independent (neither is a multiple of the other), so \( \dim U = 2 \), and \( \dim U + \dim U^{0} = 2 + 1 = 3 \), as @thm-dimension-annihilator predicts. As a by-product, \( U \) is the plane \( 2x - y + z = 0 \): \( U \subseteq \ker\psi \), both have dimension \( 2 \) (@prp-nonzero-functional-surjective), and @thm-dim-impl-eq gives equality.
 
-The same recipe works in general. For \( U = \Span(\u_1, \dots, \u_m) \subseteq F^n \), let \( A \) have rows \( \u_1\tp, \dots, \u_m\tp \). Then \( U^{0} = \{ \varphi_{\a} : \a \in \nul(A) \} \), and the isomorphism of @thm-functionals-on-fn carries a basis of \( \nul(A) \) to a basis of \( U^{0} \).
+The same recipe works in general. For \( U = \Span(\u_1, \dots, \u_m) \subseteq F^n \), let \( \A \) have rows \( \u_1\tp, \dots, \u_m\tp \). Then \( U^{0} = \{ \varphi_{\a} : \a \in \nul(\A) \} \), and the isomorphism of @thm-functionals-on-fn carries a basis of \( \nul(\A) \) to a basis of \( U^{0} \).
 :::
 
 Away from \( F^n \), counting often replaces the computation entirely.
@@ -228,7 +228,7 @@ Parts (a)–(c) and the inclusion (⊇) in (d) hold in every vector space; only 
 
 (e) True. By @thm-annihilator-properties (a), \( W^{0} \subseteq U^{0} \). Since \( U \subsetneq W \), \( \dim U < \dim W \) by @thm-dim-impl-eq, so \( \dim W^{0} = \dim V - \dim W < \dim V - \dim U = \dim U^{0} \). Hence the inclusion is strict.
 
-(f) The matrix \( A \) whose **rows** are \( \u_1\tp, \dots, \u_m\tp \). By @thm-functionals-on-fn a functional is \( \x \mapsto \a\tp\x \), and it kills every \( \u_i \) exactly when \( A\a = \0 \); so \( U^{0} \) corresponds to \( \nul(A) \) (@exm-annihilator-via-null-space).
+(f) The matrix \( \A \) whose **rows** are \( \u_1\tp, \dots, \u_m\tp \). By @thm-functionals-on-fn a functional is \( \x \mapsto \a\tp\x \), and it kills every \( \u_i \) exactly when \( \A\a = \0 \); so \( U^{0} \) corresponds to \( \nul(\A) \) (@exm-annihilator-via-null-space).
 :::
 
 ### B. Practice
@@ -243,15 +243,15 @@ Parts (a)–(c) and the inclusion (⊇) in (d) hold in every vector space; only 
 ::::
 
 ::: {.solution}
-(a) Let \( A \) have the three spanning vectors as rows. As in @exm-annihilator-via-null-space, \( \varphi_{\a} \in U^{0} \) if and only if \( A\a = \0 \). Subtracting \( 2 \) times row 1 from row 2 and row 1 from row 3 gives rows \( (1, 2, 1, 0) \), \( (0, 0, 1, 1) \), \( (0, 0, 1, 1) \); subtracting row 2 from row 3 and then row 2 from row 1 gives the RREF
+(a) Let \( \A \) have the three spanning vectors as rows. As in @exm-annihilator-via-null-space, \( \varphi_{\a} \in U^{0} \) if and only if \( \A\a = \0 \). Subtracting \( 2 \) times row 1 from row 2 and row 1 from row 3 gives rows \( (1, 2, 1, 0) \), \( (0, 0, 1, 1) \), \( (0, 0, 1, 1) \); subtracting row 2 from row 3 and then row 2 from row 1 gives the RREF
 \[
 \begin{pmatrix} 1 & 2 & 0 & -1 \\ 0 & 0 & 1 & 1 \\ 0 & 0 & 0 & 0 \end{pmatrix}.
 \]
-The free variables are \( a_2 \) and \( a_4 \), and @thm-basis-null-space gives \( \nul(A) = \Span((-2, 1, 0, 0), (1, 0, -1, 1)) \). Hence \( U^{0} \) has the basis
+The free variables are \( a_2 \) and \( a_4 \), and @thm-basis-null-space gives \( \nul(\A) = \Span((-2, 1, 0, 0), (1, 0, -1, 1)) \). Hence \( U^{0} \) has the basis
 \[
 \psi_1(x_1, x_2, x_3, x_4) = -2x_1 + x_2, \qquad \psi_2(x_1, x_2, x_3, x_4) = x_1 - x_3 + x_4 .
 \]
-Check on the first two spanning vectors: \( \psi_1(1, 2, 1, 0) = 0 \), \( \psi_2(1, 2, 1, 0) = 0 \), \( \psi_1(2, 4, 3, 1) = 0 \), \( \psi_2(2, 4, 3, 1) = 2 - 3 + 1 = 0 \); the third vector is their difference, \( (2, 4, 3, 1) - (1, 2, 1, 0) \). The RREF has two pivots, so \( \dim U = \dim\row(A) = 2 \) (@thm-row-rank-equals-column-rank), and \( 2 + 2 = 4 \).
+Check on the first two spanning vectors: \( \psi_1(1, 2, 1, 0) = 0 \), \( \psi_2(1, 2, 1, 0) = 0 \), \( \psi_1(2, 4, 3, 1) = 0 \), \( \psi_2(2, 4, 3, 1) = 2 - 3 + 1 = 0 \); the third vector is their difference, \( (2, 4, 3, 1) - (1, 2, 1, 0) \). The RREF has two pivots, so \( \dim U = \dim\row(\A) = 2 \) (@thm-row-rank-equals-column-rank), and \( 2 + 2 = 4 \).
 
 (b) By definition \( \varepsilon_1, \varepsilon_{-1} \in U^{0} \). *Independent:* if \( a\varepsilon_1 + b\varepsilon_{-1} = 0 \), applying it to \( x + 1 \) gives \( 2a = 0 \) and applying it to \( x - 1 \) gives \( -2b = 0 \). *Dimension of \( U \):* the map \( T \colon \nR[x]_{\le 3} \to \nR^2 \), \( p \mapsto (p(1), p(-1)) \), is linear with kernel \( U \), and its image contains \( T(x + 1) = (2, 0) \) and \( T(x - 1) = (0, -2) \), which span \( \nR^2 \). So \( \rank T = 2 \) and \( \dim U = 4 - 2 = 2 \) by @thm-rank-nullity. By @thm-dimension-annihilator, \( \dim U^{0} = 2 \). Hence the \( 2 \)-dimensional subspace \( \Span(\varepsilon_1, \varepsilon_{-1}) \) of \( U^{0} \) is all of \( U^{0} \) (@thm-dim-impl-eq).
 :::
@@ -259,11 +259,11 @@ Check on the first two spanning vectors: \( \psi_1(1, 2, 1, 0) = 0 \), \( \psi_2
 :::: {#exr-annihilators-b2}
 [B2: Equations of the symmetric matrices]
 
-Let \( U = \{ A \in M_2(\nR) : A\tp = A \} \). Find \( U^{0} \), and verify the dimension formula.
+Let \( U = \{ \A \in M_2(\nR) : \A\tp = \A \} \). Find \( U^{0} \), and verify the dimension formula.
 ::::
 
 ::: {.solution}
-Every symmetric matrix is \( aE_{11} + b(E_{12} + E_{21}) + cE_{22} \), so \( U = \Span(E_{11}, E_{12} + E_{21}, E_{22}) \). Let \( (\varepsilon_{ij}) \) be the dual basis of the standard basis, so that every \( \psi \in M_2(\nR)^{*} \) is \( \psi = \sum_{i,j} c_{ij}\varepsilon_{ij} \) with \( c_{ij} = \psi(E_{ij}) \) (@thm-dual-basis (c)). By @thm-annihilator-properties (b), \( \psi \in U^{0} \) if and only if \( \psi \) kills the three spanning matrices:
+Every symmetric matrix is \( a\E_{11} + b(\E_{12} + \E_{21}) + c\E_{22} \), so \( U = \Span(\E_{11}, \E_{12} + \E_{21}, \E_{22}) \). Let \( (\varepsilon_{ij}) \) be the dual basis of the standard basis, so that every \( \psi \in M_2(\nR)^{*} \) is \( \psi = \sum_{i,j} c_{ij}\varepsilon_{ij} \) with \( c_{ij} = \psi(\E_{ij}) \) (@thm-dual-basis (c)). By @thm-annihilator-properties (b), \( \psi \in U^{0} \) if and only if \( \psi \) kills the three spanning matrices:
 \[
 c_{11} = 0, \qquad c_{12} + c_{21} = 0, \qquad c_{22} = 0 .
 \]

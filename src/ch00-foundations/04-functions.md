@@ -1,6 +1,6 @@
 # Functions
 
-Sets are the objects of this chapter. The next question is how to move between them, and the tool is a function. Almost everything in linear algebra is a question about a function: a linear map is a function, a matrix will turn out to encode one, and "does \( A\x = \b \) have a solution, and is it unique?" is a question about whether a function is surjective and injective. This section fixes the language of functions, composition and inverses, and proves the handful of facts about them that the rest of the book uses without comment.
+Sets are the objects of this chapter. The next question is how to move between them, and the tool is a function. Almost everything in linear algebra is a question about a function: a linear map is a function, a matrix will turn out to encode one, and "does \( \A\x = \b \) have a solution, and is it unique?" is a question about whether a function is surjective and injective. This section fixes the language of functions, composition and inverses, and proves the handful of facts about them that the rest of the book uses without comment.
 
 ## What a function is
 
@@ -445,7 +445,7 @@ Using @thm-composition-associative to regroup,
 and in the same way \( (g \circ f) \circ (f^{-1} \circ g^{-1}) = g \circ (f \circ f^{-1}) \circ g^{-1} = g \circ g^{-1} = \id_Z \). Hence \( f^{-1} \circ g^{-1} \) is an inverse of \( g \circ f \). By @thm-bijective-iff-invertible, \( g \circ f \) is bijective and its unique inverse is \( f^{-1} \circ g^{-1} \), as claimed.
 :::
 
-The same reversal will appear for matrices as \( (AB)^{-1} = B^{-1} A^{-1} \), and for the same reason.
+The same reversal will appear for matrices as \( (\A\B)^{-1} = \B^{-1} \A^{-1} \), and for the same reason.
 
 ## Maps between finite sets
 
@@ -635,7 +635,7 @@ Let \( f \colon X \to Y \) and \( A_1, A_2 \subseteq X \).
 \[
 g = g \circ \id_X = g \circ (f \circ f^{-1}) = (g \circ f) \circ f^{-1} = \id_X \circ f^{-1} = f^{-1},
 \]
-using @thm-composition-associative. Hence \( f \circ g = f \circ f^{-1} = \id_X \), as claimed. (For \( X = \nN \) this fails: with \( f(n) = n + 1 \) and \( g_0 \) from C1(b), \( g_0 \circ f = \id_{\nN} \) but \( f(g_0(0)) = 1 \ne 0 \). The matrix version of (d), "\( AB = I \) implies \( BA = I \) for square matrices", is proved in Chapter 2.)
+using @thm-composition-associative. Hence \( f \circ g = f \circ f^{-1} = \id_X \), as claimed. (For \( X = \nN \) this fails: with \( f(n) = n + 1 \) and \( g_0 \) from C1(b), \( g_0 \circ f = \id_{\nN} \) but \( f(g_0(0)) = 1 \ne 0 \). The matrix version of (d), "\( \A\B = \I \) implies \( \B\A = \I \) for square matrices", is proved in Chapter 2.)
 :::
 
 ::: {#exr-functions-c3}

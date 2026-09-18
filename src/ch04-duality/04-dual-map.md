@@ -6,11 +6,11 @@ So far each space has had its own dual, but the duals of different spaces have n
 
 After spaces come the maps between them. We have a linear map \( T \colon V \to W \) and the two spaces of measurements \( V^{*} \) and \( W^{*} \). We want to know how \( T \) relates them.
 
-Start with the standard example, a matrix map \( T_A \colon F^n \to F^m \), \( \x \mapsto A\x \), with \( A \in M_{m \times n}(F) \). A functional on \( F^m \) is \( \psi(\y) = \b\tp\y \) for a unique \( \b \in F^m \) (@thm-functionals-on-fn). Given \( \psi \), there is one obvious way to measure a vector \( \x \in F^n \): move it to \( F^m \) with \( T_A \), then measure. The result is
+Start with the standard example, a matrix map \( T_{\A} \colon F^n \to F^m \), \( \x \mapsto \A\x \), with \( \A \in M_{m \times n}(F) \). A functional on \( F^m \) is \( \psi(\y) = \b\tp\y \) for a unique \( \b \in F^m \) (@thm-functionals-on-fn). Given \( \psi \), there is one obvious way to measure a vector \( \x \in F^n \): move it to \( F^m \) with \( T_{\A} \), then measure. The result is
 \[
-\psi(T_A\x) = \b\tp A\x = (A\tp\b)\tp\x,
+\psi(T_{\A}\x) = \b\tp \A\x = (\A\tp\b)\tp\x,
 \]
-using \( (A\tp\b)\tp = \b\tp A \) (@thm-transpose-properties). So "move, then measure" is again a functional, now on \( F^n \), and it is given by the vector \( A\tp\b \). The transpose appears by itself. The recipe "compose with \( T \)" makes sense for any linear map, and it deserves a name.
+using \( (\A\tp\b)\tp = \b\tp \A \) (@thm-transpose-properties). So "move, then measure" is again a functional, now on \( F^n \), and it is given by the vector \( \A\tp\b \). The transpose appears by itself. The recipe "compose with \( T \)" makes sense for any linear map, and it deserves a name.
 
 *The dual map pulls a measurement of \( W \) back to a measurement of \( V \): first move the vector with \( T \), then measure it in \( W \).*
 
@@ -39,7 +39,7 @@ T'(\psi_1 + \psi_2) = (\psi_1 + \psi_2)T = \psi_1T + \psi_2T = T'\psi_1 + T'\psi
 [Dual Maps in Four Settings]
 
 ::: {.enumerate options="label=(\alph*)"}
-1. For \( A \in M_{m \times n}(F) \), describe \( T_A' \) in terms of the vectors \( \b \) and \( A\tp\b \) that represent functionals.
+1. For \( \A \in M_{m \times n}(F) \), describe \( T_{\A}' \) in terms of the vectors \( \b \) and \( \A\tp\b \) that represent functionals.
 2. Let \( D \colon \nR[x]_{\le 3} \to \nR[x]_{\le 2} \), \( D(p) = p' \), and let \( \varepsilon_2 \in (\nR[x]_{\le 2})^{*} \) be \( \varepsilon_2(q) = q(2) \). Compute \( D'(\varepsilon_2) \).
 3. Let \( S \colon F[x] \to F[x] \), \( S(p) = xp \), and let \( \varphi_k \in F[x]^{*} \) send a polynomial to its coefficient of \( x^k \). Compute \( S'(\varphi_k) \) for every \( k \in \nN \).
 4. Find \( (\id_V)' \), the dual map of the zero map \( V \to W \), and the dual map of the inclusion \( \iota \colon U \to V \), \( \iota(\u) = \u \), of a subspace \( U \subseteq V \).
@@ -47,7 +47,7 @@ T'(\psi_1 + \psi_2) = (\psi_1 + \psi_2)T = \psi_1T + \psi_2T = T'\psi_1 + T'\psi
 :::
 
 ::: {.solution}
-(a) If \( \psi(\y) = \b\tp\y \), the computation before the definition shows \( (T_A'\psi)(\x) = (A\tp\b)\tp\x \). So, identifying a functional with its vector, \( T_A' \) is \( \b \mapsto A\tp\b \). In row language: \( T_A' \) sends the row \( \b\tp \) to the row \( \b\tp A \).
+(a) If \( \psi(\y) = \b\tp\y \), the computation before the definition shows \( (T_{\A}'\psi)(\x) = (\A\tp\b)\tp\x \). So, identifying a functional with its vector, \( T_{\A}' \) is \( \b \mapsto \A\tp\b \). In row language: \( T_{\A}' \) sends the row \( \b\tp \) to the row \( \b\tp \A \).
 
 (b) For \( p \in \nR[x]_{\le 3} \), \( (D'\varepsilon_2)(p) = \varepsilon_2(Dp) = p'(2) \). So \( D' \) turns "the value at \( 2 \)" into "the slope at \( 2 \)".
 
@@ -61,7 +61,7 @@ Here is a non-example by minimal change. Try to push functionals **forward** ins
 **Why this definition.** From \( T \colon V \to W \) and \( \psi \colon W \to F \), the only composite we can form is \( \psi T \); the non-example shows that the other direction is not a function. Linearity of \( T' \) comes for free from the distributive laws. The name "dual map" says that \( T' \) is the map \( T \) induces between the duals. It is also called the **transpose** of \( T \), for a reason that the matrix theorem below makes exact. We write \( T' \) rather than \( T^{*} \), because \( T^{*} \) is reserved for the adjoint of Chapter 10, which is related to \( T' \) but needs an inner product.
 
 ::: {.warning}
-**The dual map goes backwards.** For \( T \colon V \to W \), the dual map is \( T' \colon W^{*} \to V^{*} \), **not** \( V^{*} \to W^{*} \). As a result, composition reverses order: if \( T \colon U \to V \) and \( S \colon V \to W \), then \( (ST)' = T'S' \), just as \( (AB)\tp = B\tp A\tp \). The other order \( S'T' \) does not even make sense: \( T' \) lands in \( U^{*} \), where \( S' \) is not defined.
+**The dual map goes backwards.** For \( T \colon V \to W \), the dual map is \( T' \colon W^{*} \to V^{*} \), **not** \( V^{*} \to W^{*} \). As a result, composition reverses order: if \( T \colon U \to V \) and \( S \colon V \to W \), then \( (ST)' = T'S' \), just as \( (\A\B)\tp = \B\tp \A\tp \). The other order \( S'T' \) does not even make sense: \( T' \) lands in \( U^{*} \), where \( S' \) is not defined.
 :::
 
 ::: {.check}
@@ -133,7 +133,7 @@ Both matrices are tables of the same numbers \( \psi_i(T\v_j) \). In \( \mtx{T}{
 :::
 
 ::: {.proof}
-Write \( \sB = (\v_1, \dots, \v_n) \), \( \sB^{*} = (\varphi_1, \dots, \varphi_n) \), \( \sC = (\w_1, \dots, \w_m) \), \( \sC^{*} = (\psi_1, \dots, \psi_m) \), and \( A = (a_{kj}) = \mtx{T}{\sB}{\sC} \). By @def-matrix-of-linear-map, \( a_{ij} \) is the \( i \)-th entry of \( \coord{T\v_j}{\sC} \), and by @thm-dual-basis (a) that entry is read off by \( \psi_i \):
+Write \( \sB = (\v_1, \dots, \v_n) \), \( \sB^{*} = (\varphi_1, \dots, \varphi_n) \), \( \sC = (\w_1, \dots, \w_m) \), \( \sC^{*} = (\psi_1, \dots, \psi_m) \), and \( \A = (a_{kj}) = \mtx{T}{\sB}{\sC} \). By @def-matrix-of-linear-map, \( a_{ij} \) is the \( i \)-th entry of \( \coord{T\v_j}{\sC} \), and by @thm-dual-basis (a) that entry is read off by \( \psi_i \):
 \[
 \psi_i(T\v_j) = a_{ij} . \tag{$\ast$}
 \]
@@ -143,10 +143,10 @@ By @def-matrix-of-linear-map, column \( i \) of \( \mtx{T'}{\sC^{*}}{\sB^{*}} \)
 \[
 (T'\psi_i)(\v_j) = \psi_i(T\v_j) = a_{ij} .
 \]
-So the \( (j, i) \) entry of \( \mtx{T'}{\sC^{*}}{\sB^{*}} \) is \( a_{ij} \), which is the \( (j, i) \) entry of \( A\tp \) (@def-transpose). Both matrices are \( n \times m \), so \( \mtx{T'}{\sC^{*}}{\sB^{*}} = A\tp \). This proves the theorem.
+So the \( (j, i) \) entry of \( \mtx{T'}{\sC^{*}}{\sB^{*}} \) is \( a_{ij} \), which is the \( (j, i) \) entry of \( \A\tp \) (@def-transpose). Both matrices are \( n \times m \), so \( \mtx{T'}{\sC^{*}}{\sB^{*}} = \A\tp \). This proves the theorem.
 :::
 
-This is the meaning of the transpose. In Chapter 0, @def-transpose was a rule for rearranging entries. Now we see it as the matrix shadow of pulling functionals back: **transposing a matrix is dualizing the map**, provided we use dual bases on both sides. Every property of the transpose becomes a property of dual maps, and conversely; for instance, @thm-dual-map-properties (b) and this theorem together give \( (AB)\tp = B\tp A\tp \) a second time (Exercise B3 below).
+This is the meaning of the transpose. In Chapter 0, @def-transpose was a rule for rearranging entries. Now we see it as the matrix shadow of pulling functionals back: **transposing a matrix is dualizing the map**, provided we use dual bases on both sides. Every property of the transpose becomes a property of dual maps, and conversely; for instance, @thm-dual-map-properties (b) and this theorem together give \( (\A\B)\tp = \B\tp \A\tp \) a second time (Exercise B3 below).
 
 ::: {#exm-matrix-of-dual-map}
 [A \( 2 \times 3 \) Example]
@@ -154,8 +154,8 @@ This is the meaning of the transpose. In Chapter 0, @def-transpose was a rule fo
 Let \( T \colon \nR[x]_{\le 2} \to \nR^2 \), \( T(p) = (p(1), p'(1)) \). Use the basis \( \sB = (1, x, x^2) \), whose dual basis \( \sB^{*} = (\varphi_0, \varphi_1, \varphi_2) \) consists of \( \varphi_0(p) = p(0) \), \( \varphi_1(p) = p'(0) \), \( \varphi_2(p) = p''(0)/2 \) (@exm-dual-basis-polynomials), and the standard basis \( \sC = (\e_1, \e_2) \) of \( \nR^2 \), with dual basis \( \sC^{*} = (\eta_1, \eta_2) \), \( \eta_1(u, v) = u \), \( \eta_2(u, v) = v \).
 
 ::: {.enumerate options="label=(\alph*)"}
-1. Find \( A = \mtx{T}{\sB}{\sC} \).
-2. Compute \( T'\eta_1 \) and \( T'\eta_2 \) directly as combinations of \( \varphi_0, \varphi_1, \varphi_2 \), write down \( \mtx{T'}{\sC^{*}}{\sB^{*}} \), and compare with \( A\tp \).
+1. Find \( \A = \mtx{T}{\sB}{\sC} \).
+2. Compute \( T'\eta_1 \) and \( T'\eta_2 \) directly as combinations of \( \varphi_0, \varphi_1, \varphi_2 \), write down \( \mtx{T'}{\sC^{*}}{\sB^{*}} \), and compare with \( \A\tp \).
 3. Use the matrix to compute \( T'\psi \) for \( \psi = -2\eta_1 + \eta_2 \), and check the answer directly.
 :::
 :::
@@ -163,7 +163,7 @@ Let \( T \colon \nR[x]_{\le 2} \to \nR^2 \), \( T(p) = (p(1), p'(1)) \). Use the
 ::: {.solution}
 (a) \( T(1) = (1, 0) \), \( T(x) = (1, 1) \), \( T(x^2) = (1, 2) \). These are the columns:
 \[
-A = \mtx{T}{\sB}{\sC} = \begin{pmatrix} 1 & 1 & 1 \\ 0 & 1 & 2 \end{pmatrix}.
+\A = \mtx{T}{\sB}{\sC} = \begin{pmatrix} 1 & 1 & 1 \\ 0 & 1 & 2 \end{pmatrix}.
 \]
 (b) Let \( p = a + bx + cx^2 \), so \( \varphi_0(p) = a \), \( \varphi_1(p) = b \), \( \varphi_2(p) = c \). Then
 \[
@@ -171,19 +171,19 @@ A = \mtx{T}{\sB}{\sC} = \begin{pmatrix} 1 & 1 & 1 \\ 0 & 1 & 2 \end{pmatrix}.
 \]
 So \( T'\eta_1 = \varphi_0 + \varphi_1 + \varphi_2 \) and \( T'\eta_2 = \varphi_1 + 2\varphi_2 \). Their coordinate vectors in \( \sB^{*} \) are the columns of
 \[
-\mtx{T'}{\sC^{*}}{\sB^{*}} = \begin{pmatrix} 1 & 0 \\ 1 & 1 \\ 1 & 2 \end{pmatrix} = A\tp,
+\mtx{T'}{\sC^{*}}{\sB^{*}} = \begin{pmatrix} 1 & 0 \\ 1 & 1 \\ 1 & 2 \end{pmatrix} = \A\tp,
 \]
 as @thm-matrix-of-dual-map predicts. Read in words, the first column is Taylor's formula \( p(1) = p(0) + p'(0) + \tfrac12 p''(0) \) for quadratics, and the second is \( p'(1) = p'(0) + p''(0) \).
 
 (c) \( \coord{\psi}{\sC^{*}} = (-2, 1) \). By @thm-matrix-of-map-coordinates,
 \[
-\coord{T'\psi}{\sB^{*}} = A\tp\begin{pmatrix} -2 \\ 1 \end{pmatrix} = \begin{pmatrix} -2 \\ -1 \\ 0 \end{pmatrix},
+\coord{T'\psi}{\sB^{*}} = \A\tp\begin{pmatrix} -2 \\ 1 \end{pmatrix} = \begin{pmatrix} -2 \\ -1 \\ 0 \end{pmatrix},
 \]
 so \( T'\psi = -2\varphi_0 - \varphi_1 \). Directly: \( (T'\psi)(p) = -2p(1) + p'(1) = -2(a + b + c) + (b + 2c) = -2a - b \), which is \( (-2\varphi_0 - \varphi_1)(p) \).
 :::
 
 ::: {.warning}
-**Dual bases on both sides.** The transpose rule needs the **dual** bases \( \sC^{*} \) and \( \sB^{*} \). With other bases of \( W^{*} \) and \( V^{*} \) the matrix of \( T' \) is usually not \( A\tp \). In @exm-matrix-of-dual-map, keep \( \sB^{*} \) but use the basis \( (\eta_1 + \eta_2, \eta_2) \) of \( (\nR^2)^{*} \): then \( T'(\eta_1 + \eta_2) = \varphi_0 + 2\varphi_1 + 3\varphi_2 \), so the first column is \( (1, 2, 3) \), not the first column \( (1, 1, 1) \) of \( A\tp \).
+**Dual bases on both sides.** The transpose rule needs the **dual** bases \( \sC^{*} \) and \( \sB^{*} \). With other bases of \( W^{*} \) and \( V^{*} \) the matrix of \( T' \) is usually not \( \A\tp \). In @exm-matrix-of-dual-map, keep \( \sB^{*} \) but use the basis \( (\eta_1 + \eta_2, \eta_2) \) of \( (\nR^2)^{*} \): then \( T'(\eta_1 + \eta_2) = \varphi_0 + 2\varphi_1 + 3\varphi_2 \), so the first column is \( (1, 2, 3) \), not the first column \( (1, 1, 1) \) of \( \A\tp \).
 :::
 
 ## Kernel and image of the dual map
@@ -223,28 +223,28 @@ By @thm-dimension-annihilator for the subspace \( \ker T \) of \( V \), and Rank
 So \( \im T' \) is a subspace of the finite-dimensional space \( (\ker T)^{0} \) with the same dimension, and @thm-dim-impl-eq gives \( \im T' = (\ker T)^{0} \). This proves the theorem.
 :::
 
-For a matrix map, this is a statement about rows. By @exm-dual-map-examples (a), \( T_A' \) sends the row \( \b\tp \) to \( \b\tp A \), so \( \im T_A' \) is the set of combinations of the rows of \( A \): it is the row space, read as functionals. Part (b) then says that **the functionals vanishing on \( \nul(A) \) are exactly the combinations of the rows of \( A \)**. Part (a) says that the functionals vanishing on \( \col(A) \) are the rows \( \b\tp \) with \( \b\tp A = 0 \), that is, \( A\tp\b = \0 \).
+For a matrix map, this is a statement about rows. By @exm-dual-map-examples (a), \( T_{\A}' \) sends the row \( \b\tp \) to \( \b\tp \A \), so \( \im T_{\A}' \) is the set of combinations of the rows of \( \A \): it is the row space, read as functionals. Part (b) then says that **the functionals vanishing on \( \nul(\A) \) are exactly the combinations of the rows of \( \A \)**. Part (a) says that the functionals vanishing on \( \col(\A) \) are the rows \( \b\tp \) with \( \b\tp \A = 0 \), that is, \( \A\tp\b = \0 \).
 
 ::: {#exm-kernel-image-dual-map}
 [Kernel and Image of a Dual Map]
 
-Let \( T = T_A \colon \nR^3 \to \nR^3 \) with
+Let \( T = T_{\A} \colon \nR^3 \to \nR^3 \) with
 \[
-A = \begin{pmatrix} 1 & 0 & 2 \\ 0 & 1 & -1 \\ 1 & 1 & 1 \end{pmatrix}.
+\A = \begin{pmatrix} 1 & 0 & 2 \\ 0 & 1 & -1 \\ 1 & 1 & 1 \end{pmatrix}.
 \]
 Find bases of \( \ker T' \) and \( \im T' \), written as explicit functionals, and check @thm-kernel-image-dual-map.
 :::
 
 ::: {.solution}
-*The matrix world.* The third row of \( A \) is the sum of the first two, and subtracting them leaves the RREF \( \begin{pmatrix} 1 & 0 & 2 \\ 0 & 1 & -1 \\ 0 & 0 & 0 \end{pmatrix} \). So \( \rank A = 2 \), and \( A\x = \0 \) gives \( x = -2z \), \( y = z \): \( \ker T = \Span\bigl((-2, 1, 1)\bigr) \). The pivot columns give \( \im T = \Span\bigl((1, 0, 1), (0, 1, 1)\bigr) \) (@thm-basis-column-space).
+*The matrix world.* The third row of \( \A \) is the sum of the first two, and subtracting them leaves the RREF \( \begin{pmatrix} 1 & 0 & 2 \\ 0 & 1 & -1 \\ 0 & 0 & 0 \end{pmatrix} \). So \( \rank \A = 2 \), and \( \A\x = \0 \) gives \( x = -2z \), \( y = z \): \( \ker T = \Span\bigl((-2, 1, 1)\bigr) \). The pivot columns give \( \im T = \Span\bigl((1, 0, 1), (0, 1, 1)\bigr) \) (@thm-basis-column-space).
 
-*Kernel of \( T' \).* By @thm-matrix-of-dual-map with standard bases and @exm-matrix-of-matrix-map (a), a functional \( \psi(u, v, w) = b_1u + b_2v + b_3w \) lies in \( \ker T' \) iff \( A\tp\b = \0 \):
+*Kernel of \( T' \).* By @thm-matrix-of-dual-map with standard bases and @exm-matrix-of-matrix-map (a), a functional \( \psi(u, v, w) = b_1u + b_2v + b_3w \) lies in \( \ker T' \) iff \( \A\tp\b = \0 \):
 \[
 b_1 + b_3 = 0, \qquad b_2 + b_3 = 0, \qquad 2b_1 - b_2 + b_3 = 0 .
 \]
 The first two give \( \b = t(1, 1, -1) \), and these satisfy the third. So \( \ker T' = \Span(\psi_0) \) with \( \psi_0(u, v, w) = u + v - w \). *Check:* \( \psi_0(1, 0, 1) = 0 \) and \( \psi_0(0, 1, 1) = 0 \), so \( \psi_0 \) vanishes on \( \im T \); and \( \dim (\im T)^{0} = 3 - 2 = 1 \) (@thm-dimension-annihilator). So \( \ker T' = (\im T)^{0} \).
 
-*Image of \( T' \).* By @exm-dual-map-examples (a), \( \im T' \) is spanned by the rows of \( A \) read as functionals, and the first two rows already span (the third is their sum):
+*Image of \( T' \).* By @exm-dual-map-examples (a), \( \im T' \) is spanned by the rows of \( \A \) read as functionals, and the first two rows already span (the third is their sum):
 \[
 \varphi_1(x, y, z) = x + 2z, \qquad \varphi_2(x, y, z) = y - z .
 \]
@@ -258,25 +258,25 @@ Counting dimensions in the proof of @thm-kernel-image-dual-map already gave \( \
 
 ::: {.enumerate options="label=(\alph*)"}
 1. Let \( V \) and \( W \) be finite-dimensional vector spaces over \( F \), and \( T \in \cL(V, W) \). Then \( \rank T' = \rank T \).
-2. For every \( A \in M_{m \times n}(F) \), \( \rank A\tp = \rank A \). Equivalently, \( \dim \row(A) = \dim \col(A) \): **row rank equals column rank**.
+2. For every \( \A \in M_{m \times n}(F) \), \( \rank \A\tp = \rank \A \). Equivalently, \( \dim \row(\A) = \dim \col(\A) \): **row rank equals column rank**.
 :::
 :::
 
 ::: {.proof}
 (a) This is the first display in the proof of @thm-kernel-image-dual-map (b).
 
-(b) Let \( \sE_n \), \( \sE_m \) be the standard bases. By @exm-matrix-of-matrix-map (a), \( \mtx{T_A}{\sE_n}{\sE_m} = A \), so by @thm-matrix-of-dual-map, \( \mtx{T_A'}{\sE_m^{*}}{\sE_n^{*}} = A\tp \). By @thm-rank-map-equals-rank-matrix (a), applied to \( T_A \) and to \( T_A' \), and by (a),
+(b) Let \( \sE_n \), \( \sE_m \) be the standard bases. By @exm-matrix-of-matrix-map (a), \( \mtx{T_{\A}}{\sE_n}{\sE_m} = \A \), so by @thm-matrix-of-dual-map, \( \mtx{T_{\A}'}{\sE_m^{*}}{\sE_n^{*}} = \A\tp \). By @thm-rank-map-equals-rank-matrix (a), applied to \( T_{\A} \) and to \( T_{\A}' \), and by (a),
 \[
-\rank A = \rank T_A = \rank T_A' = \rank A\tp .
+\rank \A = \rank T_{\A} = \rank T_{\A}' = \rank \A\tp .
 \]
-Finally, the transpose \( M_{1 \times n}(F) \to F^n \) is linear (@thm-transpose-properties) and bijective (it is its own inverse), and it sends row \( i \) of \( A \) to column \( i \) of \( A\tp \). By @thm-linear-combination it maps \( \row(A) \) onto \( \col(A\tp) \), so these spaces are isomorphic and \( \dim \row(A) = \dim \col(A\tp) = \rank A\tp = \rank A = \dim \col(A) \) (@thm-isomorphic-iff-same-dimension, @def-rank-matrix).
+Finally, the transpose \( M_{1 \times n}(F) \to F^n \) is linear (@thm-transpose-properties) and bijective (it is its own inverse), and it sends row \( i \) of \( \A \) to column \( i \) of \( \A\tp \). By @thm-linear-combination it maps \( \row(\A) \) onto \( \col(\A\tp) \), so these spaces are isomorphic and \( \dim \row(\A) = \dim \col(\A\tp) = \rank \A\tp = \rank \A = \dim \col(\A) \) (@thm-isomorphic-iff-same-dimension, @def-rank-matrix).
 :::
 
 This is the third proof of this fact in the book, and each one explains it differently.
 
 - **Chapter 2** (@thm-row-rank-equals-column-rank) counted pivots. Row reduction preserves the row space and the relations among the columns, and in the RREF both dimensions visibly equal the number of pivots. The proof is an algorithm.
-- **Chapter 3, §8** factored \( A = BD \) through a space of dimension \( \dim \col(A) \), after @prp-rank-minimal-factorization, and saw that the rows of \( A \) are combinations of the few rows of \( D \). The proof is a factorization.
-- **Here** there are no row operations and no factorizations. The equality is the dimension formula \( \dim U + \dim U^{0} = \dim V \), applied once to \( \im T \) in \( W \) and once to \( \ker T \) in \( V \), glued together by Rank–Nullity. The rows of \( A \) are the functionals that \( T_A' \) produces, and the columns span the image of \( T_A \); the two counts agree because pulling back measurements loses exactly as much as pushing forward vectors.
+- **Chapter 3, §8** factored \( \A = \B\D \) through a space of dimension \( \dim \col(\A) \), after @prp-rank-minimal-factorization, and saw that the rows of \( \A \) are combinations of the few rows of \( \D \). The proof is a factorization.
+- **Here** there are no row operations and no factorizations. The equality is the dimension formula \( \dim U + \dim U^{0} = \dim V \), applied once to \( \im T \) in \( W \) and once to \( \ker T \) in \( V \), glued together by Rank–Nullity. The rows of \( \A \) are the functionals that \( T_{\A}' \) produces, and the columns span the image of \( T_{\A} \); the two counts agree because pulling back measurements loses exactly as much as pushing forward vectors.
 
 (The dimension formula for annihilators in section 2 was proved by extending a basis of \( U \), without using ranks of matrices, so this proof does not go in a circle.)
 
@@ -301,7 +301,7 @@ Let \( n = \dim V \) and \( m = \dim W \). A finite-dimensional space is \( \{\0
 (b) \( T' \) is surjective iff \( \im T' = V^{*} \), iff \( \dim \im T' = n \) (by @thm-dim-impl-eq for one direction, since \( \dim V^{*} = n \)). By @cor-rank-dual-map (a), \( \dim \im T' = \rank T \), so this holds iff \( \rank T = n \), that is, iff \( T \) is injective (@cor-rank-nullity-consequences (a)).
 :::
 
-For \( T_A \), part (a) reads: \( A\x = \b \) is solvable for every \( \b \) exactly when \( A\tp\y = \0 \) has only the trivial solution. So a question about the columns of \( A \) turns into a question about the columns of \( A\tp \), the rows of \( A \). Exercise C1 below sharpens this into a test for a single \( \b \).
+For \( T_{\A} \), part (a) reads: \( \A\x = \b \) is solvable for every \( \b \) exactly when \( \A\tp\y = \0 \) has only the trivial solution. So a question about the columns of \( \A \) turns into a question about the columns of \( \A\tp \), the rows of \( \A \). Exercise C1 below sharpens this into a test for a single \( \b \).
 
 ## Naturality of the double dual
 
@@ -344,7 +344,7 @@ Let \( \v \in V \). Both \( T''(\ev_{\v}) \) and \( \ev_{T\v} \) are functionals
 Hence \( T''(\ev_{\v}) = \ev_{T\v} \) for every \( \v \), which is \( T''\ev_V = \ev_W T \). If \( V \) is finite-dimensional, \( \ev_V \) is an isomorphism (@thm-double-dual-isomorphism); composing on the right with \( \ev_V^{-1} \) gives \( T'' = \ev_W T\ev_V^{-1} \).
 :::
 
-So, once \( V \) is identified with \( V^{**} \) and \( W \) with \( W^{**} \) through evaluation, the double dual map \( T'' \) **is** \( T \). The matrices agree: by @thm-double-dual-isomorphism, \( \ev \) carries \( \sB \) and \( \sC \) to the dual bases \( \sB^{**} \) and \( \sC^{**} \) of \( \sB^{*} \) and \( \sC^{*} \), and two applications of @thm-matrix-of-dual-map give \( \mtx{T''}{\sB^{**}}{\sC^{**}} = \bigl((\mtx{T}{\sB}{\sC})\tp\bigr)\tp = \mtx{T}{\sB}{\sC} \) (@thm-transpose-properties). The rule \( (A\tp)\tp = A \) is the matrix form of naturality.
+So, once \( V \) is identified with \( V^{**} \) and \( W \) with \( W^{**} \) through evaluation, the double dual map \( T'' \) **is** \( T \). The matrices agree: by @thm-double-dual-isomorphism, \( \ev \) carries \( \sB \) and \( \sC \) to the dual bases \( \sB^{**} \) and \( \sC^{**} \) of \( \sB^{*} \) and \( \sC^{*} \), and two applications of @thm-matrix-of-dual-map give \( \mtx{T''}{\sB^{**}}{\sC^{**}} = \bigl((\mtx{T}{\sB}{\sC})\tp\bigr)\tp = \mtx{T}{\sB}{\sC} \) (@thm-transpose-properties). The rule \( (\A\tp)\tp = \A \) is the matrix form of naturality.
 
 ::: {.remark}
 No such statement holds for \( V \cong V^{*} \). Suppose that for every finite-dimensional real space \( V \) we had an isomorphism \( \theta_V \colon V \to V^{*} \), compatible with isomorphisms in the only way the directions allow: \( \theta_V = T'\,\theta_W\,T \) for every isomorphism \( T \colon V \to W \). Take \( V = W = \nR \) and \( T = 2\id \). Then \( T' = 2\id \) by @thm-dual-map-properties (a) and (c), so \( \theta_{\nR} = 2 \cdot 2 \cdot \theta_{\nR} = 4\theta_{\nR} \), which forces \( \theta_{\nR} = 0 \), not an isomorphism. The dual space is isomorphic to \( V \), but not naturally.
@@ -406,15 +406,15 @@ From the formulas, \( D'(c_0\varphi_0 + c_1\varphi_1 + c_2\varphi_2) = c_0\varph
 ::: {#exr-dual-map-b2}
 [B2: Kernel and image of a dual map]
 
-Let \( A = \begin{pmatrix} 1 & 2 & -1 \\ -2 & -4 & 2 \end{pmatrix} \) and \( T = T_A \colon \nR^3 \to \nR^2 \). Find bases of \( \ker T' \) and \( \im T' \) as explicit functionals, and verify \( \dim \ker T' + \dim \im T' = 2 \) and \( \rank T' = \rank T \).
+Let \( \A = \begin{pmatrix} 1 & 2 & -1 \\ -2 & -4 & 2 \end{pmatrix} \) and \( T = T_{\A} \colon \nR^3 \to \nR^2 \). Find bases of \( \ker T' \) and \( \im T' \) as explicit functionals, and verify \( \dim \ker T' + \dim \im T' = 2 \) and \( \rank T' = \rank T \).
 :::
 
 ::: {.solution}
-The second row is \( -2 \) times the first, so \( \rank A = 1 \), \( \im T = \col(A) = \Span\bigl((1, -2)\bigr) \), and \( \ker T = \{ (x, y, z) : x + 2y - z = 0 \} \), of dimension \( 2 \).
+The second row is \( -2 \) times the first, so \( \rank \A = 1 \), \( \im T = \col(\A) = \Span\bigl((1, -2)\bigr) \), and \( \ker T = \{ (x, y, z) : x + 2y - z = 0 \} \), of dimension \( 2 \).
 
-*Kernel of \( T' \).* As in @exm-kernel-image-dual-map, \( \psi(u, v) = b_1u + b_2v \) lies in \( \ker T' \) iff \( A\tp\b = \0 \), that is, \( b_1 - 2b_2 = 0 \), \( 2b_1 - 4b_2 = 0 \), \( -b_1 + 2b_2 = 0 \). So \( \b = t(2, 1) \), and \( \ker T' = \Span(\psi_0) \) with \( \psi_0(u, v) = 2u + v \). Check: \( \psi_0(1, -2) = 0 \), so \( \psi_0 \in (\im T)^{0} \), which has dimension \( 2 - 1 = 1 \).
+*Kernel of \( T' \).* As in @exm-kernel-image-dual-map, \( \psi(u, v) = b_1u + b_2v \) lies in \( \ker T' \) iff \( \A\tp\b = \0 \), that is, \( b_1 - 2b_2 = 0 \), \( 2b_1 - 4b_2 = 0 \), \( -b_1 + 2b_2 = 0 \). So \( \b = t(2, 1) \), and \( \ker T' = \Span(\psi_0) \) with \( \psi_0(u, v) = 2u + v \). Check: \( \psi_0(1, -2) = 0 \), so \( \psi_0 \in (\im T)^{0} \), which has dimension \( 2 - 1 = 1 \).
 
-*Image of \( T' \).* By @exm-dual-map-examples (a), \( \im T' \) is spanned by the rows of \( A \) read as functionals, \( x + 2y - z \) and \( -2x - 4y + 2z \). The second is \( -2 \) times the first, so \( \im T' = \Span(\varphi_0) \) with \( \varphi_0(x, y, z) = x + 2y - z \). Check: \( \varphi_0 \) vanishes on \( \ker T \) by the description of \( \ker T \), and \( \dim (\ker T)^{0} = 3 - 2 = 1 \).
+*Image of \( T' \).* By @exm-dual-map-examples (a), \( \im T' \) is spanned by the rows of \( \A \) read as functionals, \( x + 2y - z \) and \( -2x - 4y + 2z \). The second is \( -2 \) times the first, so \( \im T' = \Span(\varphi_0) \) with \( \varphi_0(x, y, z) = x + 2y - z \). Check: \( \varphi_0 \) vanishes on \( \ker T \) by the description of \( \ker T \), and \( \dim (\ker T)^{0} = 3 - 2 = 1 \).
 
 Hence \( \dim \ker T' + \dim \im T' = 1 + 1 = 2 = \dim (\nR^2)^{*} \), and \( \rank T' = 1 = \rank T \).
 :::
@@ -422,13 +422,13 @@ Hence \( \dim \ker T' + \dim \im T' = 1 + 1 = 2 = \dim (\nR^2)^{*} \), and \( \r
 ::: {#exr-dual-map-b3}
 [B3: The transpose of a product, again]
 
-Let \( A \in M_{m \times n}(F) \) and \( B \in M_{n \times p}(F) \). Using \( T_AT_B = T_{AB} \) (Chapter 3, §6), @thm-dual-map-properties (b) and @thm-matrix-of-dual-map, give a new proof that \( (AB)\tp = B\tp A\tp \).
+Let \( \A \in M_{m \times n}(F) \) and \( \B \in M_{n \times p}(F) \). Using \( T_{\A}T_{\B} = T_{\A\B} \) (Chapter 3, §6), @thm-dual-map-properties (b) and @thm-matrix-of-dual-map, give a new proof that \( (\A\B)\tp = \B\tp \A\tp \).
 :::
 
 ::: {.solution}
-Let \( \sE_p, \sE_n, \sE_m \) be the standard bases, with dual bases \( \sE_p^{*}, \sE_n^{*}, \sE_m^{*} \). By @exm-matrix-of-matrix-map (a), \( \mtx{T_A}{\sE_n}{\sE_m} = A \), \( \mtx{T_B}{\sE_p}{\sE_n} = B \), and \( \mtx{T_{AB}}{\sE_p}{\sE_m} = AB \). Since \( T_{AB} = T_AT_B \), @thm-dual-map-properties (b) gives \( T_{AB}' = T_B'T_A' \). Taking matrices, with @thm-matrix-of-composition in the middle and @thm-matrix-of-dual-map on the outside,
+Let \( \sE_p, \sE_n, \sE_m \) be the standard bases, with dual bases \( \sE_p^{*}, \sE_n^{*}, \sE_m^{*} \). By @exm-matrix-of-matrix-map (a), \( \mtx{T_{\A}}{\sE_n}{\sE_m} = \A \), \( \mtx{T_{\B}}{\sE_p}{\sE_n} = \B \), and \( \mtx{T_{\A\B}}{\sE_p}{\sE_m} = \A\B \). Since \( T_{\A\B} = T_{\A}T_{\B} \), @thm-dual-map-properties (b) gives \( T_{\A\B}' = T_{\B}'T_{\A}' \). Taking matrices, with @thm-matrix-of-composition in the middle and @thm-matrix-of-dual-map on the outside,
 \[
-(AB)\tp = \mtx{T_{AB}'}{\sE_m^{*}}{\sE_p^{*}} = \mtx{T_B'T_A'}{\sE_m^{*}}{\sE_p^{*}} = \mtx{T_B'}{\sE_n^{*}}{\sE_p^{*}}\,\mtx{T_A'}{\sE_m^{*}}{\sE_n^{*}} = B\tp A\tp .
+(\A\B)\tp = \mtx{T_{\A\B}'}{\sE_m^{*}}{\sE_p^{*}} = \mtx{T_{\B}'T_{\A}'}{\sE_m^{*}}{\sE_p^{*}} = \mtx{T_{\B}'}{\sE_n^{*}}{\sE_p^{*}}\,\mtx{T_{\A}'}{\sE_m^{*}}{\sE_n^{*}} = \B\tp \A\tp .
 \]
 The reversal of order is now explained: it is the reversal of arrows under duality.
 :::
@@ -440,8 +440,8 @@ The reversal of order is now explained: it is the reversal of arrows under duali
 
 ::: {.enumerate options="label=(\alph*)"}
 1. Let \( V, W \) be finite-dimensional, \( T \in \cL(V, W) \) and \( \w \in W \). Prove that \( T\v = \w \) has a solution \( \v \in V \) if and only if \( \psi(\w) = 0 \) for every \( \psi \in \ker T' \).
-2. Deduce: for \( A \in M_{m \times n}(F) \) and \( \b \in F^m \), the system \( A\x = \b \) is consistent if and only if \( \y\tp\b = 0 \) for every \( \y \in F^m \) with \( A\tp\y = \0 \).
-3. Let \( A = \begin{pmatrix} 1 & 1 \\ 1 & 2 \\ 1 & 3 \end{pmatrix} \). Find a single linear condition on \( \b = (b_1, b_2, b_3) \in \nR^3 \) that is equivalent to consistency of \( A\x = \b \).
+2. Deduce: for \( \A \in M_{m \times n}(F) \) and \( \b \in F^m \), the system \( \A\x = \b \) is consistent if and only if \( \y\tp\b = 0 \) for every \( \y \in F^m \) with \( \A\tp\y = \0 \).
+3. Let \( \A = \begin{pmatrix} 1 & 1 \\ 1 & 2 \\ 1 & 3 \end{pmatrix} \). Find a single linear condition on \( \b = (b_1, b_2, b_3) \in \nR^3 \) that is equivalent to consistency of \( \A\x = \b \).
 :::
 
 *Hint: for (a), combine @thm-kernel-image-dual-map with the description of a subspace by its annihilator in the previous section.*
@@ -454,9 +454,9 @@ The reversal of order is now explained: it is the reversal of arrows under duali
 \]
 This is the claim.
 
-(b) Apply (a) to \( T_A \colon F^n \to F^m \). By @thm-functionals-on-fn, every \( \psi \in (F^m)^{*} \) is \( \psi(\u) = \y\tp\u \) for a unique \( \y \in F^m \). By @exm-dual-map-examples (a), \( T_A'\psi \) is represented by \( A\tp\y \), and the zero functional by \( \0 \); by uniqueness of the representing vector, \( \psi \in \ker T_A' \) iff \( A\tp\y = \0 \). For such \( \psi \), \( \psi(\b) = \y\tp\b \). So (a) says: \( A\x = \b \) is consistent iff \( \y\tp\b = 0 \) for every \( \y \) with \( A\tp\y = \0 \).
+(b) Apply (a) to \( T_{\A} \colon F^n \to F^m \). By @thm-functionals-on-fn, every \( \psi \in (F^m)^{*} \) is \( \psi(\u) = \y\tp\u \) for a unique \( \y \in F^m \). By @exm-dual-map-examples (a), \( T_{\A}'\psi \) is represented by \( \A\tp\y \), and the zero functional by \( \0 \); by uniqueness of the representing vector, \( \psi \in \ker T_{\A}' \) iff \( \A\tp\y = \0 \). For such \( \psi \), \( \psi(\b) = \y\tp\b \). So (a) says: \( \A\x = \b \) is consistent iff \( \y\tp\b = 0 \) for every \( \y \) with \( \A\tp\y = \0 \).
 
-(c) \( A\tp\y = \0 \) reads \( y_1 + y_2 + y_3 = 0 \) and \( y_1 + 2y_2 + 3y_3 = 0 \). Subtracting, \( y_2 + 2y_3 = 0 \), so \( \y = t(1, -2, 1) \). By (b), \( A\x = \b \) is consistent iff \( \y\tp\b = 0 \) for all these \( \y \), that is, iff
+(c) \( \A\tp\y = \0 \) reads \( y_1 + y_2 + y_3 = 0 \) and \( y_1 + 2y_2 + 3y_3 = 0 \). Subtracting, \( y_2 + 2y_3 = 0 \), so \( \y = t(1, -2, 1) \). By (b), \( \A\x = \b \) is consistent iff \( \y\tp\b = 0 \) for all these \( \y \), that is, iff
 \[
 b_1 - 2b_2 + b_3 = 0 .
 \]

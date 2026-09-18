@@ -162,30 +162,30 @@ The line \( U \) is the set of solutions of one homogeneous equation. The same t
 ::: {#exm-null-space-subspace}
 [Solutions of a Homogeneous System]
 
-Let \( A \in M_{m \times n}(F) \). Show that \( N = \{ \x \in F^n : A\x = \0 \} \) is a subspace of \( F^n \).
+Let \( \A \in M_{m \times n}(F) \). Show that \( N = \{ \x \in F^n : \A\x = \0 \} \) is a subspace of \( F^n \).
 :::
 
 ::: {.solution}
-By definition, \( N \) is a subset of \( F^n \). Recall that \( F^n = M_{n \times 1}(F) \), so \( A\x \in F^m \) is a matrix product, and we may use @thm-matrix-multiplication-properties.
+By definition, \( N \) is a subset of \( F^n \). Recall that \( F^n = M_{n \times 1}(F) \), so \( \A\x \in F^m \) is a matrix product, and we may use @thm-matrix-multiplication-properties.
 
-**(1) Zero vector.** By the zero rule of @thm-matrix-multiplication-properties, \( A\0 = \0 \), where the first \( \0 \) is the zero column in \( F^n \) and the second is the zero column in \( F^m \). Therefore \( \0 \in N \).
+**(1) Zero vector.** By the zero rule of @thm-matrix-multiplication-properties, \( \A\0 = \0 \), where the first \( \0 \) is the zero column in \( F^n \) and the second is the zero column in \( F^m \). Therefore \( \0 \in N \).
 
-**(2) Closed under addition.** Let \( \x, \y \in N \), so that \( A\x = \0 \) and \( A\y = \0 \). By distributivity (@thm-matrix-multiplication-properties),
+**(2) Closed under addition.** Let \( \x, \y \in N \), so that \( \A\x = \0 \) and \( \A\y = \0 \). By distributivity (@thm-matrix-multiplication-properties),
 \[
-A(\x + \y) = A\x + A\y = \0 + \0 = \0.
+\A(\x + \y) = \A\x + \A\y = \0 + \0 = \0.
 \]
 Therefore \( \x + \y \in N \). This shows that \( N \) is closed under addition.
 
 **(3) Closed under scalar multiplication.** Let \( a \in F \) and \( \x \in N \). By the scalar rule of @thm-matrix-multiplication-properties and @thm-scalar-zero-vector in \( F^m \),
 \[
-A(a\x) = a(A\x) = a\0 = \0.
+\A(a\x) = a(\A\x) = a\0 = \0.
 \]
 Therefore \( a\x \in N \). This shows that \( N \) is closed under scalar multiplication.
 
 Hence \( N \) is a subspace of \( F^n \) by the subspace test (@thm-subspace-test).
 :::
 
-With \( A = \begin{pmatrix} 1 & 2 \end{pmatrix} \) and \( F = \nR \), this is @exm-line-subspace again, and with \( A = \begin{pmatrix} 1 & 1 & -1 \end{pmatrix} \) it is the plane \( P \) from the start of the section. The word **homogeneous** (right-hand side \( \0 \)) is essential: @exm-line-not-subspace is a system with right-hand side \( 3 \). This subspace will be called the null space of \( A \) in Chapter 2.
+With \( \A = \begin{pmatrix} 1 & 2 \end{pmatrix} \) and \( F = \nR \), this is @exm-line-subspace again, and with \( \A = \begin{pmatrix} 1 & 1 & -1 \end{pmatrix} \) it is the plane \( P \) from the start of the section. The word **homogeneous** (right-hand side \( \0 \)) is essential: @exm-line-not-subspace is a system with right-hand side \( 3 \). This subspace will be called the null space of \( \A \) in Chapter 2.
 
 Next, polynomials. The pair "degree at most \( n \)" and "degree exactly \( n \)" is another minimal change. The previous section checked the first of them by hand; here it is as a three-check move.
 
@@ -246,7 +246,7 @@ Finally, two families of matrices. Each uses one rule from Chapter 0 for all thr
 ::: {#exm-symmetric-matrices}
 [Symmetric Matrices]
 
-Show that the set \( S = \{ A \in M_n(F) : A\tp = A \} \) of symmetric matrices (@def-symmetric-matrix) is a subspace of \( M_n(F) \).
+Show that the set \( S = \{ \A \in M_n(F) : \A\tp = \A \} \) of symmetric matrices (@def-symmetric-matrix) is a subspace of \( M_n(F) \).
 :::
 
 ::: {.solution}
@@ -254,13 +254,13 @@ By definition, \( S \) is a subset of \( M_n(F) \).
 
 **(1) Zero vector.** Every entry of the zero matrix is \( 0 \), so \( (0)_{ji} = 0 = (0)_{ij} \) for all \( i, j \), and the zero matrix is symmetric. Therefore \( \0 \in S \).
 
-**(2) Closed under addition.** Let \( A, B \in S \), so that \( A\tp = A \) and \( B\tp = B \). By @thm-transpose-properties,
+**(2) Closed under addition.** Let \( \A, \B \in S \), so that \( \A\tp = \A \) and \( \B\tp = \B \). By @thm-transpose-properties,
 \[
-(A + B)\tp = A\tp + B\tp = A + B.
+(\A + \B)\tp = \A\tp + \B\tp = \A + \B.
 \]
-Therefore \( A + B \in S \). This shows that \( S \) is closed under addition.
+Therefore \( \A + \B \in S \). This shows that \( S \) is closed under addition.
 
-**(3) Closed under scalar multiplication.** Let \( c \in F \) and \( A \in S \). By @thm-transpose-properties, \( (cA)\tp = cA\tp = cA \). Therefore \( cA \in S \). This shows that \( S \) is closed under scalar multiplication.
+**(3) Closed under scalar multiplication.** Let \( c \in F \) and \( \A \in S \). By @thm-transpose-properties, \( (c\A)\tp = c\A\tp = c\A \). Therefore \( c\A \in S \). This shows that \( S \) is closed under scalar multiplication.
 
 Hence \( S \) is a subspace of \( M_n(F) \) by the subspace test (@thm-subspace-test).
 :::
@@ -268,7 +268,7 @@ Hence \( S \) is a subspace of \( M_n(F) \) by the subspace test (@thm-subspace-
 ::: {#exm-trace-free-matrices}
 [Trace-Free Matrices]
 
-Show that the set \( T = \{ A \in M_n(F) : \tr A = 0 \} \) of trace-free matrices is a subspace of \( M_n(F) \).
+Show that the set \( T = \{ \A \in M_n(F) : \tr \A = 0 \} \) of trace-free matrices is a subspace of \( M_n(F) \).
 :::
 
 ::: {.solution}
@@ -276,9 +276,9 @@ By definition, \( T \) is a subset of \( M_n(F) \).
 
 **(1) Zero vector.** The zero matrix has trace \( 0 + \dots + 0 = 0 \). Therefore \( \0 \in T \).
 
-**(2) Closed under addition.** Let \( A, B \in T \), so that \( \tr A = \tr B = 0 \). By @thm-trace-properties, \( \tr(A + B) = \tr A + \tr B = 0 + 0 = 0 \). Therefore \( A + B \in T \). This shows that \( T \) is closed under addition.
+**(2) Closed under addition.** Let \( \A, \B \in T \), so that \( \tr \A = \tr \B = 0 \). By @thm-trace-properties, \( \tr(\A + \B) = \tr \A + \tr \B = 0 + 0 = 0 \). Therefore \( \A + \B \in T \). This shows that \( T \) is closed under addition.
 
-**(3) Closed under scalar multiplication.** Let \( c \in F \) and \( A \in T \). By @thm-trace-properties, \( \tr(cA) = c \tr A = c \cdot 0 = 0 \). Therefore \( cA \in T \). This shows that \( T \) is closed under scalar multiplication.
+**(3) Closed under scalar multiplication.** Let \( c \in F \) and \( \A \in T \). By @thm-trace-properties, \( \tr(c\A) = c \tr \A = c \cdot 0 = 0 \). Therefore \( c\A \in T \). This shows that \( T \) is closed under scalar multiplication.
 
 Hence \( T \) is a subspace of \( M_n(F) \) by the subspace test (@thm-subspace-test).
 :::
@@ -334,7 +334,7 @@ Hence \( U \) is a subspace of \( V \) by the subspace test (@thm-subspace-test)
 
 The index set may be infinite, and this matters. In the next section we will build the smallest subspace containing a given set of vectors, and one way to describe it is as the intersection of **all** subspaces containing that set.
 
-For two subspaces, the theorem gives familiar pictures: two different planes through the origin in \( \nR^3 \) meet in a line through the origin. It also explains @exm-null-space-subspace from a new angle. The solution set of \( A\x = \0 \) is the intersection of the solution sets of its \( m \) individual equations, each of which is a subspace of \( F^n \). An algebraic example: in \( M_2(F) \), the matrices that are both symmetric and trace-free (@exm-symmetric-matrices, @exm-trace-free-matrices) are those of the form \( \begin{pmatrix} a & b \\ b & -a \end{pmatrix} \), and they form a subspace.
+For two subspaces, the theorem gives familiar pictures: two different planes through the origin in \( \nR^3 \) meet in a line through the origin. It also explains @exm-null-space-subspace from a new angle. The solution set of \( \A\x = \0 \) is the intersection of the solution sets of its \( m \) individual equations, each of which is a subspace of \( F^n \). An algebraic example: in \( M_2(F) \), the matrices that are both symmetric and trace-free (@exm-symmetric-matrices, @exm-trace-free-matrices) are those of the form \( \begin{pmatrix} a & b \\ b & -a \end{pmatrix} \), and they form a subspace.
 
 ## Unions of subspaces
 
@@ -347,7 +347,7 @@ In \( \nR^2 \), let \( U = \{ (x, 0) : x \in \nR \} \) be the \( x \)-axis and \
 :::
 
 ::: {.solution}
-The \( x \)-axis is the solution set of the homogeneous equation \( y = 0 \), that is, of \( A\x = \0 \) with \( A = \begin{pmatrix} 0 & 1 \end{pmatrix} \). By @exm-null-space-subspace, \( U \) is a subspace. In the same way \( W \) is the solution set of \( x = 0 \), so it is a subspace.
+The \( x \)-axis is the solution set of the homogeneous equation \( y = 0 \), that is, of \( \A\x = \0 \) with \( \A = \begin{pmatrix} 0 & 1 \end{pmatrix} \). By @exm-null-space-subspace, \( U \) is a subspace. In the same way \( W \) is the solution set of \( x = 0 \), so it is a subspace.
 
 For the union, condition (2) fails. We have \( (1, 0) \in U \subseteq U \cup W \) and \( (0, 1) \in W \subseteq U \cup W \), but
 \[
@@ -433,8 +433,8 @@ Determine which of the following are subspaces of the given vector space over \(
 ::: {.enumerate options="label=(\alph*)"}
 1. \( \{ (x, y, z) \in \nR^3 : x - 2y + z = 0 \} \) in \( \nR^3 \).
 2. \( \{ (x, y, z) \in \nR^3 : x = y^2 \} \) in \( \nR^3 \).
-3. \( \{ A \in M_2(\nR) : A \text{ is invertible} \} \) in \( M_2(\nR) \).
-4. \( \{ A \in M_2(\nR) : a_{12} = 2a_{21} \} \) in \( M_2(\nR) \).
+3. \( \{ \A \in M_2(\nR) : \A \text{ is invertible} \} \) in \( M_2(\nR) \).
+4. \( \{ \A \in M_2(\nR) : a_{12} = 2a_{21} \} \) in \( M_2(\nR) \).
 5. \( \{ p \in \nR[x] : p(2) = 0 \text{ and } p'(2) = 0 \} \) in \( \nR[x] \), where \( p' \) is the derivative of \( p \).
 6. The even functions \( \{ f \in \nR^{\nR} : f(-t) = f(t) \text{ for all } t \in \nR \} \) in \( \nR^{\nR} \).
 7. \( \{ f \in \nR^{\nR} : f(0) = 1 \} \) in \( \nR^{\nR} \).
@@ -443,19 +443,19 @@ Determine which of the following are subspaces of the given vector space over \(
 :::
 
 ::: {.solution}
-(a) A subspace. It is \( \{ \x \in \nR^3 : A\x = \0 \} \) with \( A = \begin{pmatrix} 1 & -2 & 1 \end{pmatrix} \), a subspace by @exm-null-space-subspace.
+(a) A subspace. It is \( \{ \x \in \nR^3 : \A\x = \0 \} \) with \( \A = \begin{pmatrix} 1 & -2 & 1 \end{pmatrix} \), a subspace by @exm-null-space-subspace.
 
 (b) Not a subspace: (3) fails. The vector \( (1, 1, 0) \) lies in the set, since \( 1 = 1^2 \). But \( 2(1, 1, 0) = (2, 2, 0) \) does not, since \( 2 \ne 2^2 \).
 
-(c) Not a subspace: (1) fails. The zero matrix is not invertible, because \( 0 \cdot B = 0 \ne I_2 \) for every \( B \in M_2(\nR) \).
+(c) Not a subspace: (1) fails. The zero matrix is not invertible, because \( 0 \cdot \B = 0 \ne \I_2 \) for every \( \B \in M_2(\nR) \).
 
 (d) A subspace. Call the set \( U \).
 
 **(1)** The zero matrix has \( a_{12} = 0 = 2 \cdot 0 = 2a_{21} \). Therefore \( \0 \in U \).
 
-**(2)** Let \( A, B \in U \), so \( a_{12} = 2a_{21} \) and \( b_{12} = 2b_{21} \). The \( (1, 2) \)-entry of \( A + B \) is \( a_{12} + b_{12} = 2a_{21} + 2b_{21} = 2(a_{21} + b_{21}) \), which is twice its \( (2, 1) \)-entry. Therefore \( A + B \in U \). This shows that \( U \) is closed under addition.
+**(2)** Let \( \A, \B \in U \), so \( a_{12} = 2a_{21} \) and \( b_{12} = 2b_{21} \). The \( (1, 2) \)-entry of \( \A + \B \) is \( a_{12} + b_{12} = 2a_{21} + 2b_{21} = 2(a_{21} + b_{21}) \), which is twice its \( (2, 1) \)-entry. Therefore \( \A + \B \in U \). This shows that \( U \) is closed under addition.
 
-**(3)** Let \( c \in \nR \) and \( A \in U \). The \( (1, 2) \)-entry of \( cA \) is \( ca_{12} = c(2a_{21}) = 2(ca_{21}) \), twice its \( (2, 1) \)-entry. Therefore \( cA \in U \). This shows that \( U \) is closed under scalar multiplication.
+**(3)** Let \( c \in \nR \) and \( \A \in U \). The \( (1, 2) \)-entry of \( c\A \) is \( ca_{12} = c(2a_{21}) = 2(ca_{21}) \), twice its \( (2, 1) \)-entry. Therefore \( c\A \in U \). This shows that \( U \) is closed under scalar multiplication.
 
 Hence \( U \) is a subspace of \( M_2(\nR) \) by the subspace test (@thm-subspace-test).
 
@@ -487,34 +487,34 @@ Hence \( E \) is a subspace of \( \nR^{\nR} \) by the subspace test (@thm-subspa
 ::: {#exr-subspaces-b2}
 [B2: Matrices Commuting with a Given Matrix]
 
-Fix \( B \in M_n(F) \), and let \( C(B) = \{ A \in M_n(F) : AB = BA \} \).
+Fix \( \B \in M_n(F) \), and let \( C(\B) = \{ \A \in M_n(F) : \A\B = \B\A \} \).
 
 ::: {.enumerate options="label=(\alph*)"}
-1. Prove that \( C(B) \) is a subspace of \( M_n(F) \).
-2. Let \( n = 2 \), \( F = \nR \) and \( B = \begin{pmatrix} 1 & 0 \\ 0 & 2 \end{pmatrix} \). Find all \( A \in C(B) \). Hence describe \( C(B) \) in words.
+1. Prove that \( C(\B) \) is a subspace of \( M_n(F) \).
+2. Let \( n = 2 \), \( F = \nR \) and \( \B = \begin{pmatrix} 1 & 0 \\ 0 & 2 \end{pmatrix} \). Find all \( \A \in C(\B) \). Hence describe \( C(\B) \) in words.
 :::
 :::
 
 ::: {.solution}
-(a) By definition, \( C(B) \subseteq M_n(F) \). We use @thm-matrix-multiplication-properties throughout.
+(a) By definition, \( C(\B) \subseteq M_n(F) \). We use @thm-matrix-multiplication-properties throughout.
 
-**(1)** By the zero rule, \( 0B = 0 = B0 \). Therefore \( \0 \in C(B) \).
+**(1)** By the zero rule, \( 0\B = 0 = \B0 \). Therefore \( \0 \in C(\B) \).
 
-**(2)** Let \( A_1, A_2 \in C(B) \), so \( A_1 B = BA_1 \) and \( A_2 B = BA_2 \). By distributivity,
+**(2)** Let \( \A_1, \A_2 \in C(\B) \), so \( \A_1 \B = \B\A_1 \) and \( \A_2 \B = \B\A_2 \). By distributivity,
 \[
-(A_1 + A_2)B = A_1 B + A_2 B = BA_1 + BA_2 = B(A_1 + A_2).
+(\A_1 + \A_2)\B = \A_1 \B + \A_2 \B = \B\A_1 + \B\A_2 = \B(\A_1 + \A_2).
 \]
-Therefore \( A_1 + A_2 \in C(B) \). This shows that \( C(B) \) is closed under addition.
+Therefore \( \A_1 + \A_2 \in C(\B) \). This shows that \( C(\B) \) is closed under addition.
 
-**(3)** Let \( c \in F \) and \( A \in C(B) \). By the scalar rule, \( (cA)B = c(AB) = c(BA) = B(cA) \). Therefore \( cA \in C(B) \). This shows that \( C(B) \) is closed under scalar multiplication.
+**(3)** Let \( c \in F \) and \( \A \in C(\B) \). By the scalar rule, \( (c\A)\B = c(\A\B) = c(\B\A) = \B(c\A) \). Therefore \( c\A \in C(\B) \). This shows that \( C(\B) \) is closed under scalar multiplication.
 
-Hence \( C(B) \) is a subspace of \( M_n(F) \) by the subspace test (@thm-subspace-test).
+Hence \( C(\B) \) is a subspace of \( M_n(F) \) by the subspace test (@thm-subspace-test).
 
-(b) Let \( A = \begin{pmatrix} a & b \\ c & d \end{pmatrix} \). Then
+(b) Let \( \A = \begin{pmatrix} a & b \\ c & d \end{pmatrix} \). Then
 \[
-AB = \begin{pmatrix} a & 2b \\ c & 2d \end{pmatrix}, \qquad BA = \begin{pmatrix} a & b \\ 2c & 2d \end{pmatrix}.
+\A\B = \begin{pmatrix} a & 2b \\ c & 2d \end{pmatrix}, \qquad \B\A = \begin{pmatrix} a & b \\ 2c & 2d \end{pmatrix}.
 \]
-So \( AB = BA \) if and only if \( 2b = b \) and \( c = 2c \), that is, \( b = 0 \) and \( c = 0 \). Hence \( C(B) \) is the set of diagonal matrices \( \begin{pmatrix} a & 0 \\ 0 & d \end{pmatrix} \) with \( a, d \in \nR \).
+So \( \A\B = \B\A \) if and only if \( 2b = b \) and \( c = 2c \), that is, \( b = 0 \) and \( c = 0 \). Hence \( C(\B) \) is the set of diagonal matrices \( \begin{pmatrix} a & 0 \\ 0 & d \end{pmatrix} \) with \( a, d \in \nR \).
 :::
 
 ::: {#exr-subspaces-b3}
@@ -529,7 +529,7 @@ In \( \nR^3 \), let \( U = \{ (x, y, z) : x + y + z = 0 \} \) and \( W = \{ (x, 
 :::
 
 ::: {.solution}
-(a) \( U \) and \( W \) are the solution sets of \( A\x = \0 \) for \( A = \begin{pmatrix} 1 & 1 & 1 \end{pmatrix} \) and \( A = \begin{pmatrix} 1 & -1 & 0 \end{pmatrix} \), so they are subspaces by @exm-null-space-subspace. A vector \( (x, y, z) \) lies in \( U \cap W \) exactly when \( x + y + z = 0 \) and \( x = y \). Substituting \( y = x \) gives \( z = -2x \). Hence
+(a) \( U \) and \( W \) are the solution sets of \( \A\x = \0 \) for \( \A = \begin{pmatrix} 1 & 1 & 1 \end{pmatrix} \) and \( \A = \begin{pmatrix} 1 & -1 & 0 \end{pmatrix} \), so they are subspaces by @exm-null-space-subspace. A vector \( (x, y, z) \) lies in \( U \cap W \) exactly when \( x + y + z = 0 \) and \( x = y \). Substituting \( y = x \) gives \( z = -2x \). Hence
 \[
 U \cap W = \{ (t, t, -2t) : t \in \nR \},
 \]

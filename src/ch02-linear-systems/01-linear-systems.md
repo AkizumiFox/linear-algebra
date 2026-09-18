@@ -47,10 +47,10 @@ Now the unknowns are **weights**. We are asked how much of the vector \( \a_1 = 
 
 **The matrix picture.** Collect the coefficients into a matrix and the unknowns into a column. By the definition of matrix multiplication (@def-matrix-multiplication), the system is the single equation
 \[
-\begin{pmatrix} 2 & -1 \\ 1 & 1 \end{pmatrix} \begin{pmatrix} x \\ y \end{pmatrix} = \begin{pmatrix} 1 \\ 5 \end{pmatrix}, \qquad \text{that is,} \qquad A\x = \b .
+\begin{pmatrix} 2 & -1 \\ 1 & 1 \end{pmatrix} \begin{pmatrix} x \\ y \end{pmatrix} = \begin{pmatrix} 1 \\ 5 \end{pmatrix}, \qquad \text{that is,} \qquad \A\x = \b .
 \]
 
-The three pictures say the same thing, and they are tied together by one fact from Chapter 0: \( A\x = x_1\a_1 + \dots + x_n\a_n \), a combination of the columns of \( A \) weighted by the entries of \( \x \) (@thm-matrix-times-vector-columns). The row picture is the one we draw. The column picture connects to Chapter 1, since it asks whether \( \b \) lies in a span. The matrix picture is the one we compute and prove things with.
+The three pictures say the same thing, and they are tied together by one fact from Chapter 0: \( \A\x = x_1\a_1 + \dots + x_n\a_n \), a combination of the columns of \( \A \) weighted by the entries of \( \x \) (@thm-matrix-times-vector-columns). The row picture is the one we draw. The column picture connects to Chapter 1, since it asks whether \( \b \) lies in a span. The matrix picture is the one we compute and prove things with.
 
 ::: {.remark}
 With more unknowns the pictures can no longer be drawn, but they do not change. An equation in three unknowns whose coefficients are not all zero describes a plane in \( \nR^3 \), and a system asks where several planes meet. In the column picture, three unknowns mean three columns, and we ask whether a combination of them hits \( \b \).
@@ -76,13 +76,13 @@ a_{m1}x_1 + a_{m2}x_2 + \dots + a_{mn}x_n &= b_m,
 \]
 where all \( a_{ij} \) and \( b_i \) lie in \( F \).
 
-- The **coefficient matrix** is \( A = (a_{ij}) \in M_{m \times n}(F) \), the **right-hand side** is \( \b = (b_1, \dots, b_m) \in F^m \), and the system is written \( A\x = \b \).
-- The **augmented matrix** is the \( m \times (n + 1) \) matrix \( [\, A \mid \b \,] \) obtained by appending \( \b \) to \( A \) as a last column.
-- A **solution** is a vector \( \s = (s_1, \dots, s_n) \in F^n \) such that **every** equation holds when \( x_j = s_j \) for all \( j \); equivalently, \( A\s = \b \). The **solution set** is the set of all solutions, a subset of \( F^n \).
+- The **coefficient matrix** is \( \A = (a_{ij}) \in M_{m \times n}(F) \), the **right-hand side** is \( \b = (b_1, \dots, b_m) \in F^m \), and the system is written \( \A\x = \b \).
+- The **augmented matrix** is the \( m \times (n + 1) \) matrix \( [\, \A \mid \b \,] \) obtained by appending \( \b \) to \( \A \) as a last column.
+- A **solution** is a vector \( \s = (s_1, \dots, s_n) \in F^n \) such that **every** equation holds when \( x_j = s_j \) for all \( j \); equivalently, \( \A\s = \b \). The **solution set** is the set of all solutions, a subset of \( F^n \).
 - The system is **consistent** if it has **at least one** solution, and **inconsistent** if its solution set is empty.
 :::
 
-In words: the coefficient matrix records the left-hand sides, row \( i \) for equation \( i \) and column \( j \) for unknown \( x_j \). The augmented matrix records the whole system, and it is the object we will manipulate in the next section. A solution is a single vector of \( F^n \), and it must satisfy all \( m \) equations at once, not just some of them. "Equivalently, \( A\s = \b \)" holds because the \( i \)-th entry of \( A\s \) is \( a_{i1}s_1 + \dots + a_{in}s_n \) by @def-matrix-multiplication, and two columns are equal exactly when all their entries agree.
+In words: the coefficient matrix records the left-hand sides, row \( i \) for equation \( i \) and column \( j \) for unknown \( x_j \). The augmented matrix records the whole system, and it is the object we will manipulate in the next section. A solution is a single vector of \( F^n \), and it must satisfy all \( m \) equations at once, not just some of them. "Equivalently, \( \A\s = \b \)" holds because the \( i \)-th entry of \( \A\s \) is \( a_{i1}s_1 + \dots + a_{in}s_n \) by @def-matrix-multiplication, and two columns are equal exactly when all their entries agree.
 
 Two small words deserve attention. A solution lives in \( F^n \), with entries in **the field \( F \)**: the equation \( 2x = 1 \) has the solution \( \tfrac12 \) over \( \nQ \), but over \( \nF_2 \) it reads \( 0 = 1 \) and has none. And "consistent" means **at least one** solution, not exactly one.
 
@@ -130,26 +130,26 @@ Now a non-example, by a minimal change. The equation \( x + y^2 = 1 \) looks lik
 **"Consistent" does not mean "has exactly one solution".** The system \( x + 2y = 1 \), \( 2x + 4y = 2 \) of @exm-three-kinds-of-solution-sets (c) is consistent, and it has infinitely many solutions. Consistency only rules out the empty solution set. Whether the solution is unique is a separate question, answered by @cor-unique-solution-iff-trivial-kernel below.
 :::
 
-Why record the augmented matrix at all, when \( A\x = \b \) is shorter? Because solving a system never touches the names of the unknowns. Adding two equations adds their coefficients and their right-hand sides, and nothing else. The augmented matrix keeps exactly this data and throws away the symbols \( x_1, \dots, x_n \) and the plus signs. In the next section every manipulation is performed on it.
+Why record the augmented matrix at all, when \( \A\x = \b \) is shorter? Because solving a system never touches the names of the unknowns. Adding two equations adds their coefficients and their right-hand sides, and nothing else. The augmented matrix keeps exactly this data and throws away the symbols \( x_1, \dots, x_n \) and the plus signs. In the next section every manipulation is performed on it.
 
 One kind of system is always consistent, because it has an obvious solution.
 
 ::: {#def-homogeneous-system}
 [Homogeneous system]
 
-A linear system \( A\x = \b \) over \( F \) is **homogeneous** if \( \b = \0 \). The vector \( \0 \in F^n \) is a solution of every homogeneous system \( A\x = \0 \), called the **trivial solution**. For any system \( A\x = \b \), the system \( A\x = \0 \), with the same coefficient matrix, is its **associated homogeneous system**.
+A linear system \( \A\x = \b \) over \( F \) is **homogeneous** if \( \b = \0 \). The vector \( \0 \in F^n \) is a solution of every homogeneous system \( \A\x = \0 \), called the **trivial solution**. For any system \( \A\x = \b \), the system \( \A\x = \0 \), with the same coefficient matrix, is its **associated homogeneous system**.
 :::
 
-The trivial solution exists by the zero rule of @thm-matrix-multiplication-properties: \( A\0 = \0 \). So for a homogeneous system the interesting question is never "is there a solution?" but "is there a **non-trivial** one?". For example, \( x + 2y = 0 \), \( 2x + 4y = 0 \) has the non-trivial solution \( (-2, 1) \), while \( 2x - y = 0 \), \( x + y = 0 \) has only the trivial one: adding the equations gives \( 3x = 0 \), so \( x = 0 \), and then \( y = -x = 0 \).
+The trivial solution exists by the zero rule of @thm-matrix-multiplication-properties: \( \A\0 = \0 \). So for a homogeneous system the interesting question is never "is there a solution?" but "is there a **non-trivial** one?". For example, \( x + 2y = 0 \), \( 2x + 4y = 0 \) has the non-trivial solution \( (-2, 1) \), while \( 2x - y = 0 \), \( x + y = 0 \) has only the trivial one: adding the equations gives \( 3x = 0 \), so \( x = 0 \), and then \( y = -x = 0 \).
 
 ::: {.check}
 Over \( \nR \), write the system \( x_1 - x_2 + 3x_3 = 4 \), \( 2x_2 + x_3 = 0 \) in the matrix picture and the column picture, and give its augmented matrix. Is \( (4, 0, 0) \) a solution? Is \( (1, 0, 1) \)?
 :::
 
 ::: {.solution}
-With \( A = \begin{pmatrix} 1 & -1 & 3 \\ 0 & 2 & 1 \end{pmatrix} \) and \( \b = (4, 0) \), the system is \( A\x = \b \). In the column picture it reads \( x_1(1, 0) + x_2(-1, 2) + x_3(3, 1) = (4, 0) \). The augmented matrix is
+With \( \A = \begin{pmatrix} 1 & -1 & 3 \\ 0 & 2 & 1 \end{pmatrix} \) and \( \b = (4, 0) \), the system is \( \A\x = \b \). In the column picture it reads \( x_1(1, 0) + x_2(-1, 2) + x_3(3, 1) = (4, 0) \). The augmented matrix is
 \[
-[\, A \mid \b \,] = \left[ \begin{array}{ccc|c} 1 & -1 & 3 & 4 \\ 0 & 2 & 1 & 0 \end{array} \right].
+[\, \A \mid \b \,] = \left[ \begin{array}{ccc|c} 1 & -1 & 3 & 4 \\ 0 & 2 & 1 & 0 \end{array} \right].
 \]
 For \( (4, 0, 0) \): \( 4 - 0 + 0 = 4 \) and \( 0 + 0 = 0 \), so it is a solution. For \( (1, 0, 1) \): the first equation gives \( 1 - 0 + 3 = 4 \), but the second gives \( 0 + 1 = 1 \neq 0 \). One failing equation is enough, so it is not a solution.
 :::
@@ -161,11 +161,11 @@ The column picture turns "does this system have a solution?" into a question fro
 ::: {#thm-consistent-iff-column-span}
 [Consistency and the span of the columns]
 
-Let \( A \in M_{m \times n}(F) \) have columns \( \a_1, \dots, \a_n \in F^m \), and let \( \b \in F^m \). Then the system \( A\x = \b \) is consistent **if and only if** \( \b \in \Span(\a_1, \dots, \a_n) \). More precisely, \( \s = (s_1, \dots, s_n) \) is a solution exactly when \( \b = s_1\a_1 + \dots + s_n\a_n \).
+Let \( \A \in M_{m \times n}(F) \) have columns \( \a_1, \dots, \a_n \in F^m \), and let \( \b \in F^m \). Then the system \( \A\x = \b \) is consistent **if and only if** \( \b \in \Span(\a_1, \dots, \a_n) \). More precisely, \( \s = (s_1, \dots, s_n) \) is a solution exactly when \( \b = s_1\a_1 + \dots + s_n\a_n \).
 :::
 
 ::: {.proof}
-By @thm-matrix-times-vector-columns, \( A\s = s_1\a_1 + \dots + s_n\a_n \) for every \( \s \in F^n \). Hence \( \s \) is a solution, that is \( A\s = \b \), exactly when \( \b = s_1\a_1 + \dots + s_n\a_n \). This proves the second statement.
+By @thm-matrix-times-vector-columns, \( \A\s = s_1\a_1 + \dots + s_n\a_n \) for every \( \s \in F^n \). Hence \( \s \) is a solution, that is \( \A\s = \b \), exactly when \( \b = s_1\a_1 + \dots + s_n\a_n \). This proves the second statement.
 
 (⇒) If the system is consistent, it has a solution \( \s \), and then \( \b = s_1\a_1 + \dots + s_n\a_n \) is a linear combination of the columns. By @def-span, \( \b \in \Span(\a_1, \dots, \a_n) \).
 
@@ -181,7 +181,7 @@ In \( \nR^3 \), let \( \v_1 = (1, 2, 3) \) and \( \v_2 = (0, 1, 2) \). Decide wh
 :::
 
 ::: {.solution}
-Let \( A \) be the \( 3 \times 2 \) matrix with columns \( \v_1, \v_2 \). By @thm-consistent-iff-column-span, \( (1, 4, 7) \in \Span(\v_1, \v_2) \) if and only if the system
+Let \( \A \) be the \( 3 \times 2 \) matrix with columns \( \v_1, \v_2 \). By @thm-consistent-iff-column-span, \( (1, 4, 7) \in \Span(\v_1, \v_2) \) if and only if the system
 \[
 a = 1, \qquad 2a + b = 4, \qquad 3a + 2b = 7
 \]
@@ -194,50 +194,50 @@ Geometrically, \( \Span(\v_1, \v_2) \) is a plane through \( \0 \) in \( \nR^3 \
 
 ## The shape of the solution set
 
-We now describe the solution set of an arbitrary system, starting with the homogeneous case. Chapter 1 already did the work there: in @exm-null-space-subspace we checked, with the three conditions of the subspace test, that the solutions of \( A\x = \0 \) form a subspace.
+We now describe the solution set of an arbitrary system, starting with the homogeneous case. Chapter 1 already did the work there: in @exm-null-space-subspace we checked, with the three conditions of the subspace test, that the solutions of \( \A\x = \0 \) form a subspace.
 
 ::: {#thm-homogeneous-solutions-subspace}
 [Homogeneous solutions form a subspace]
 
-Let \( A \in M_{m \times n}(F) \). The solution set \( N = \{ \x \in F^n : A\x = \0 \} \) of the homogeneous system \( A\x = \0 \) is a subspace of \( F^n \).
+Let \( \A \in M_{m \times n}(F) \). The solution set \( N = \{ \x \in F^n : \A\x = \0 \} \) of the homogeneous system \( \A\x = \0 \) is a subspace of \( F^n \).
 :::
 
 ::: {.proof}
-This is @exm-null-space-subspace: \( A\0 = \0 \), and for \( \x, \y \in N \) and \( c \in F \), the rules of @thm-matrix-multiplication-properties give \( A(\x + \y) = A\x + A\y = \0 \) and \( A(c\x) = c(A\x) = \0 \). By the subspace test (@thm-subspace-test), \( N \) is a subspace of \( F^n \).
+This is @exm-null-space-subspace: \( \A\0 = \0 \), and for \( \x, \y \in N \) and \( c \in F \), the rules of @thm-matrix-multiplication-properties give \( \A(\x + \y) = \A\x + \A\y = \0 \) and \( \A(c\x) = c(\A\x) = \0 \). By the subspace test (@thm-subspace-test), \( N \) is a subspace of \( F^n \).
 :::
 
-The solutions of \( A\x = \b \) with \( \b \neq \0 \) behave differently.
+The solutions of \( \A\x = \b \) with \( \b \neq \0 \) behave differently.
 
 ::: {.warning}
-**The solution set of \( A\x = \b \) with \( \b \neq \0 \) is never a subspace.** A subspace must contain \( \0 \), but \( A\0 = \0 \neq \b \), so \( \0 \) is not a solution. For example, the solutions of \( x - y = 1 \) in \( \nR^2 \) form a line that misses the origin. The sum of the solutions \( (1, 0) \) and \( (2, 1) \) is \( (3, 1) \), and \( 3 - 1 = 2 \neq 1 \): adding two solutions does not give a solution.
+**The solution set of \( \A\x = \b \) with \( \b \neq \0 \) is never a subspace.** A subspace must contain \( \0 \), but \( \A\0 = \0 \neq \b \), so \( \0 \) is not a solution. For example, the solutions of \( x - y = 1 \) in \( \nR^2 \) form a line that misses the origin. The sum of the solutions \( (1, 0) \) and \( (2, 1) \) is \( (3, 1) \), and \( 3 - 1 = 2 \neq 1 \): adding two solutions does not give a solution.
 :::
 
-What does survive is this: the **difference** of two solutions of \( A\x = \b \) solves the homogeneous system, since \( A(\s - \s') = \b - \b = \0 \). So once one solution is known, every other one differs from it by a homogeneous solution. That is the whole structure.
+What does survive is this: the **difference** of two solutions of \( \A\x = \b \) solves the homogeneous system, since \( \A(\s - \s') = \b - \b = \0 \). So once one solution is known, every other one differs from it by a homogeneous solution. That is the whole structure.
 
 ::: {#thm-general-solution-structure}
 [Structure of the solution set]
 
-Let \( A \in M_{m \times n}(F) \) and \( \b \in F^m \), let \( N \) be the solution set of \( A\x = \0 \), and suppose \( \p \in F^n \) is **one** solution of \( A\x = \b \). Then the solution set of \( A\x = \b \) is
+Let \( \A \in M_{m \times n}(F) \) and \( \b \in F^m \), let \( N \) be the solution set of \( \A\x = \0 \), and suppose \( \p \in F^n \) is **one** solution of \( \A\x = \b \). Then the solution set of \( \A\x = \b \) is
 \[
 \p + N = \{ \p + \h : \h \in N \}.
 \]
 :::
 
 ::: {.idea}
-The theorem is "particular plus homogeneous". To prove equality of two sets, prove both inclusions. Going from a solution \( \s \) to \( \p + N \) uses the difference \( \s - \p \), as observed above; going back uses the sum \( A(\p + \h) = A\p + A\h \).
+The theorem is "particular plus homogeneous". To prove equality of two sets, prove both inclusions. Going from a solution \( \s \) to \( \p + N \) uses the difference \( \s - \p \), as observed above; going back uses the sum \( \A(\p + \h) = \A\p + \A\h \).
 :::
 
 ::: {.proof}
-Let \( S \) be the solution set of \( A\x = \b \). We use @thm-double-inclusion.
+Let \( S \) be the solution set of \( \A\x = \b \). We use @thm-double-inclusion.
 
-(⊆) Let \( \s \in S \), and put \( \h = \s - \p \). By distributivity (@thm-matrix-multiplication-properties), \( A\h = A\s - A\p = \b - \b = \0 \), so \( \h \in N \). Hence \( \s = \p + \h \in \p + N \).
+(⊆) Let \( \s \in S \), and put \( \h = \s - \p \). By distributivity (@thm-matrix-multiplication-properties), \( \A\h = \A\s - \A\p = \b - \b = \0 \), so \( \h \in N \). Hence \( \s = \p + \h \in \p + N \).
 
-(⊇) Let \( \h \in N \). Then \( A(\p + \h) = A\p + A\h = \b + \0 = \b \), again by distributivity, so \( \p + \h \in S \).
+(⊇) Let \( \h \in N \). Then \( \A(\p + \h) = \A\p + \A\h = \b + \0 = \b \), again by distributivity, so \( \p + \h \in S \).
 
 Therefore \( S = \p + N \), as claimed.
 :::
 
-The theorem splits solving \( A\x = \b \) into two independent jobs: find **one** solution, and find **all** solutions of the homogeneous system. The set \( \p + N \) is a translate of the subspace \( N \) by the vector \( \p \), the kind of set that the picture in @exm-line-not-subspace showed. For \( x - y = 1 \) in \( \nR^2 \), the homogeneous solutions form the line \( N = \Span((1, 1)) \) through \( \0 \), one solution is \( \p = (1, 0) \), and the solution set is the parallel line through \( \p \).
+The theorem splits solving \( \A\x = \b \) into two independent jobs: find **one** solution, and find **all** solutions of the homogeneous system. The set \( \p + N \) is a translate of the subspace \( N \) by the vector \( \p \), the kind of set that the picture in @exm-line-not-subspace showed. For \( x - y = 1 \) in \( \nR^2 \), the homogeneous solutions form the line \( N = \Span((1, 1)) \) through \( \0 \), one solution is \( \p = (1, 0) \), and the solution set is the parallel line through \( \p \).
 
 \begin{center}
 \begin{tikzpicture}[scale=0.8]
@@ -276,26 +276,26 @@ A consistent system has a unique solution exactly when there is nothing to add t
 ::: {#cor-unique-solution-iff-trivial-kernel}
 [Uniqueness of solutions]
 
-Let \( A \in M_{m \times n}(F) \) have columns \( \a_1, \dots, \a_n \), and let \( \b \in F^m \) be such that \( A\x = \b \) is **consistent**. The following are equivalent:
+Let \( \A \in M_{m \times n}(F) \) have columns \( \a_1, \dots, \a_n \), and let \( \b \in F^m \) be such that \( \A\x = \b \) is **consistent**. The following are equivalent:
 
 ::: {.enumerate options="label=(\alph*)"}
-1. \( A\x = \b \) has exactly one solution;
-2. \( A\x = \0 \) has only the trivial solution;
+1. \( \A\x = \b \) has exactly one solution;
+2. \( \A\x = \0 \) has only the trivial solution;
 3. the list \( (\a_1, \dots, \a_n) \) is linearly independent.
 :::
 :::
 
 ::: {.proof}
-Let \( N \) be the solution set of \( A\x = \0 \). Since the system is consistent, it has a solution \( \p \), and by @thm-general-solution-structure its solution set is \( \p + N \).
+Let \( N \) be the solution set of \( \A\x = \0 \). Since the system is consistent, it has a solution \( \p \), and by @thm-general-solution-structure its solution set is \( \p + N \).
 
 (a ⇔ b) The function \( N \to \p + N \), \( \h \mapsto \p + \h \), is surjective by definition of \( \p + N \), and injective because \( \p + \h = \p + \h' \) implies \( \h = \h' \) by adding \( -\p \) to both sides. So it is a bijection, and \( \p + N \) has exactly one element if and only if \( N \) does. Since \( \0 \in N \) always, \( N \) has exactly one element if and only if \( N = \{ \0 \} \), which is (b).
 
-(b ⇔ c) By @thm-matrix-times-vector-columns, \( A\x = x_1\a_1 + \dots + x_n\a_n \) for every \( \x \in F^n \). So (b) says: for all \( x_1, \dots, x_n \in F \), \( x_1\a_1 + \dots + x_n\a_n = \0 \) implies \( x_1 = \dots = x_n = 0 \). This is word for word @def-linear-independence for the list \( (\a_1, \dots, \a_n) \).
+(b ⇔ c) By @thm-matrix-times-vector-columns, \( \A\x = x_1\a_1 + \dots + x_n\a_n \) for every \( \x \in F^n \). So (b) says: for all \( x_1, \dots, x_n \in F \), \( x_1\a_1 + \dots + x_n\a_n = \0 \) implies \( x_1 = \dots = x_n = 0 \). This is word for word @def-linear-independence for the list \( (\a_1, \dots, \a_n) \).
 :::
 
 Two remarks on the hypotheses. The equivalence of (b) and (c) does not need consistency; only (a) does. And consistency cannot be dropped from (a ⇔ b): the system \( x = 0 \), \( x = 1 \) in one unknown has only the trivial solution in its homogeneous version (\( x = 0 \), \( x = 0 \)), but it has no solution at all, so it certainly does not have exactly one.
 
-So the three pictures answer the two basic questions about \( A\x = \b \) in the language of Chapter 1: a solution **exists** when \( \b \) is in the span of the columns, and it is **unique** when the columns are independent. What we still lack is a reliable way to decide either question for a given matrix. That is the job of Gaussian elimination, in the next section.
+So the three pictures answer the two basic questions about \( \A\x = \b \) in the language of Chapter 1: a solution **exists** when \( \b \) is in the span of the columns, and it is **unique** when the columns are independent. What we still lack is a reliable way to decide either question for a given matrix. That is the job of Gaussian elimination, in the next section.
 
 ## Exercises
 
@@ -305,21 +305,21 @@ So the three pictures answer the two basic questions about \( A\x = \b \) in the
 [A1]
 
 ::: {.enumerate options="label=(\alph*)"}
-1. Define what it means for a linear system \( A\x = \b \) over \( F \) to be consistent, and what its augmented matrix is. What is the size of the augmented matrix of a system of \( m \) equations in \( n \) unknowns?
-2. Determine whether the following statement is true: "the solution set of \( A\x = \b \) is a subspace of \( F^n \)." Justify your answer.
-3. Determine whether the following statement is true: "if \( A\x = \b \) has two different solutions, then \( A\x = \0 \) has a non-trivial solution." Justify your answer.
-4. Let \( A \in M_{3 \times 5}(\nR) \). In which spaces do the unknown vector \( \x \) and the right-hand side \( \b \) of \( A\x = \b \) live?
+1. Define what it means for a linear system \( \A\x = \b \) over \( F \) to be consistent, and what its augmented matrix is. What is the size of the augmented matrix of a system of \( m \) equations in \( n \) unknowns?
+2. Determine whether the following statement is true: "the solution set of \( \A\x = \b \) is a subspace of \( F^n \)." Justify your answer.
+3. Determine whether the following statement is true: "if \( \A\x = \b \) has two different solutions, then \( \A\x = \0 \) has a non-trivial solution." Justify your answer.
+4. Let \( \A \in M_{3 \times 5}(\nR) \). In which spaces do the unknown vector \( \x \) and the right-hand side \( \b \) of \( \A\x = \b \) live?
 5. Name the theorem that turns "is \( \b \) in the span of \( \a_1, \dots, \a_n \)?" into a question about a linear system, and state which system.
 :::
 :::
 
 ::: {.solution}
 ::: {.enumerate options="label=(\alph*)"}
-1. It is consistent if it has at least one solution \( \s \in F^n \), that is, some \( \s \) with \( A\s = \b \). The augmented matrix is \( [\, A \mid \b \,] \), the matrix \( A \) with \( \b \) appended as an extra last column. It has size \( m \times (n + 1) \).
-2. False in general. If \( \b \neq \0 \), then \( A\0 = \0 \neq \b \), so \( \0 \) is not a solution and the solution set is not a subspace. (If \( \b = \0 \), it is a subspace, by @thm-homogeneous-solutions-subspace.)
-3. True. If \( \s \neq \s' \) are solutions, then \( A(\s - \s') = \b - \b = \0 \) by distributivity, and \( \s - \s' \neq \0 \).
-4. \( \x \in \nR^5 \), one entry per column of \( A \), and \( \b \in \nR^3 \), one entry per row.
-5. @thm-consistent-iff-column-span: \( \b \in \Span(\a_1, \dots, \a_n) \) if and only if \( A\x = \b \) is consistent, where \( A \) is the matrix with columns \( \a_1, \dots, \a_n \).
+1. It is consistent if it has at least one solution \( \s \in F^n \), that is, some \( \s \) with \( \A\s = \b \). The augmented matrix is \( [\, \A \mid \b \,] \), the matrix \( \A \) with \( \b \) appended as an extra last column. It has size \( m \times (n + 1) \).
+2. False in general. If \( \b \neq \0 \), then \( \A\0 = \0 \neq \b \), so \( \0 \) is not a solution and the solution set is not a subspace. (If \( \b = \0 \), it is a subspace, by @thm-homogeneous-solutions-subspace.)
+3. True. If \( \s \neq \s' \) are solutions, then \( \A(\s - \s') = \b - \b = \0 \) by distributivity, and \( \s - \s' \neq \0 \).
+4. \( \x \in \nR^5 \), one entry per column of \( \A \), and \( \b \in \nR^3 \), one entry per row.
+5. @thm-consistent-iff-column-span: \( \b \in \Span(\a_1, \dots, \a_n) \) if and only if \( \A\x = \b \) is consistent, where \( \A \) is the matrix with columns \( \a_1, \dots, \a_n \).
 :::
 :::
 
@@ -394,11 +394,11 @@ and conversely each such vector is a solution. So the solution set is \( (-2, 0,
 ::: {#exr-linear-systems-c1}
 [C1: How many solutions?]
 
-Let \( A \in M_{m \times n}(F) \) and \( \b \in F^m \), and let \( N \) be the solution set of \( A\x = \0 \).
+Let \( \A \in M_{m \times n}(F) \) and \( \b \in F^m \), and let \( N \) be the solution set of \( \A\x = \0 \).
 
 ::: {.enumerate options="label=(\alph*)"}
-1. Suppose \( F \) is **infinite**. Prove that \( A\x = \b \) has either no solution, exactly one solution, or infinitely many solutions.
-2. Suppose \( F \) is **finite**. Prove that \( A\x = \b \) has either no solution or exactly \( \lvert N \rvert \) solutions.
+1. Suppose \( F \) is **infinite**. Prove that \( \A\x = \b \) has either no solution, exactly one solution, or infinitely many solutions.
+2. Suppose \( F \) is **finite**. Prove that \( \A\x = \b \) has either no solution or exactly \( \lvert N \rvert \) solutions.
 3. Give a system over \( \nF_3 \) with exactly three solutions.
 :::
 
@@ -416,12 +416,12 @@ Let \( A \in M_{m \times n}(F) \) and \( \b \in F^m \), and let \( N \) be the s
 ::: {#exr-linear-systems-c2}
 [C2: The right-hand sides that work]
 
-Let \( A \in M_{m \times n}(F) \) have columns \( \a_1, \dots, \a_n \).
+Let \( \A \in M_{m \times n}(F) \) have columns \( \a_1, \dots, \a_n \).
 
 ::: {.enumerate options="label=(\alph*)"}
-1. Prove that the set \( C = \{ \b \in F^m : A\x = \b \text{ is consistent} \} \) is a subspace of \( F^m \).
-2. Deduce that if \( n < m \), then there is some \( \b \in F^m \) for which \( A\x = \b \) is inconsistent.
-3. For \( A = \begin{pmatrix} 1 & 2 \\ 2 & 4 \\ 0 & 1 \end{pmatrix} \) over \( \nR \), find one such \( \b \).
+1. Prove that the set \( C = \{ \b \in F^m : \A\x = \b \text{ is consistent} \} \) is a subspace of \( F^m \).
+2. Deduce that if \( n < m \), then there is some \( \b \in F^m \) for which \( \A\x = \b \) is inconsistent.
+3. For \( \A = \begin{pmatrix} 1 & 2 \\ 2 & 4 \\ 0 & 1 \end{pmatrix} \) over \( \nR \), find one such \( \b \).
 :::
 :::
 
@@ -429,6 +429,6 @@ Let \( A \in M_{m \times n}(F) \) have columns \( \a_1, \dots, \a_n \).
 ::: {.enumerate options="label=(\alph*)"}
 1. By @thm-consistent-iff-column-span, \( \b \in C \) if and only if \( \b \in \Span(\a_1, \dots, \a_n) \). So \( C = \Span(\a_1, \dots, \a_n) \), which is a subspace of \( F^m \) by @thm-span-subspace.
 2. By (a), \( C \) is spanned by the \( n \) vectors \( \a_1, \dots, \a_n \). Since \( \dim F^m = m \) (@exm-dimensions), @thm-size-bounds says no list of fewer than \( m \) vectors spans \( F^m \). As \( n < m \), \( C \neq F^m \), so some \( \b \in F^m \) is not in \( C \), and for that \( \b \) the system is inconsistent.
-3. Take \( \b = (1, 0, 0) \). A solution would satisfy \( x + 2y = 1 \) and \( 2x + 4y = 0 \). Doubling the first gives \( 2x + 4y = 2 \neq 0 \), a contradiction. So \( A\x = (1, 0, 0) \) is inconsistent.
+3. Take \( \b = (1, 0, 0) \). A solution would satisfy \( x + 2y = 1 \) and \( 2x + 4y = 0 \). Doubling the first gives \( 2x + 4y = 2 \neq 0 \), a contradiction. So \( \A\x = (1, 0, 0) \) is inconsistent.
 :::
 :::

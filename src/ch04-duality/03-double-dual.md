@@ -192,15 +192,15 @@ Show that \( (\psi_1, \psi_2, \psi_3) \) is a basis of \( V^{*} \), and find the
 \]
 So \( \psi_i(p) = \r_i\coord{p}{\sE} \), where \( \r_i \) is row \( i \) of
 \[
-A = \begin{pmatrix} 1 & 0 & 0 \\ 1 & 1 & 1 \\ 0 & 1 & 2 \end{pmatrix}.
+\A = \begin{pmatrix} 1 & 0 & 0 \\ 1 & 1 & 1 \\ 0 & 1 & 2 \end{pmatrix}.
 \]
-*Translate the condition.* Let \( P \) be the \( 3 \times 3 \) matrix whose \( j \)-th column is \( \coord{p_j}{\sE} \). By @thm-three-views-of-product, the \( (i, j) \) entry of \( AP \) is \( \r_i\coord{p_j}{\sE} = \psi_i(p_j) \). So the condition \( \psi_i(p_j) = \delta_{ij} \) says exactly \( AP = I_3 \).
+*Translate the condition.* Let \( \P \) be the \( 3 \times 3 \) matrix whose \( j \)-th column is \( \coord{p_j}{\sE} \). By @thm-three-views-of-product, the \( (i, j) \) entry of \( \A\P \) is \( \r_i\coord{p_j}{\sE} = \psi_i(p_j) \). So the condition \( \psi_i(p_j) = \delta_{ij} \) says exactly \( \A\P = \I_3 \).
 
 *Solve.* Row reduction (@thm-inverse-by-row-reduction) gives
 \[
-A^{-1} = \begin{pmatrix} 1 & 0 & 0 \\ -2 & 2 & -1 \\ 1 & -1 & 1 \end{pmatrix},
+\A^{-1} = \begin{pmatrix} 1 & 0 & 0 \\ -2 & 2 & -1 \\ 1 & -1 & 1 \end{pmatrix},
 \]
-and one checks \( AA^{-1} = I_3 \), so \( A \) is invertible by @thm-one-sided-inverse. Multiplying \( AP = I_3 \) on the left by \( A^{-1} \) forces \( P = A^{-1} \). Since the columns of the invertible matrix \( P \) are independent, \( (p_1, p_2, p_3) \) is a basis of \( V \) (via the coordinate isomorphism, @cor-coordinate-isomorphism). By the uniqueness in @thm-dual-basis (a), its dual basis is \( (\psi_1, \psi_2, \psi_3) \), which in particular is a basis of \( V^{*} \). Reading the columns,
+and one checks \( \A\A^{-1} = \I_3 \), so \( \A \) is invertible by @thm-one-sided-inverse. Multiplying \( \A\P = \I_3 \) on the left by \( \A^{-1} \) forces \( \P = \A^{-1} \). Since the columns of the invertible matrix \( \P \) are independent, \( (p_1, p_2, p_3) \) is a basis of \( V \) (via the coordinate isomorphism, @cor-coordinate-isomorphism). By the uniqueness in @thm-dual-basis (a), its dual basis is \( (\psi_1, \psi_2, \psi_3) \), which in particular is a basis of \( V^{*} \). Reading the columns,
 \[
 p_1 = 1 - 2x + x^2 = (1 - x)^2, \qquad p_2 = 2x - x^2, \qquad p_3 = x^2 - x .
 \]
@@ -326,15 +326,15 @@ The functional \( \theta \) exists, but nobody can write it down: it comes from 
 :::
 
 ::: {.solution}
-(a) As in @exm-basis-from-dual-basis, \( \psi_i(\v) = \r_i\v \) with \( \r_i \) the rows of \( A = \begin{pmatrix} 2 & 1 \\ 1 & 1 \end{pmatrix} \), and the condition \( \psi_i(\v_j) = \delta_{ij} \) says \( AP = I_2 \) for \( P = \begin{pmatrix} \v_1 & \v_2 \end{pmatrix} \). Here \( 2 \cdot 1 - 1 \cdot 1 = 1 \neq 0 \), so by @thm-two-by-two-inverse
+(a) As in @exm-basis-from-dual-basis, \( \psi_i(\v) = \r_i\v \) with \( \r_i \) the rows of \( \A = \begin{pmatrix} 2 & 1 \\ 1 & 1 \end{pmatrix} \), and the condition \( \psi_i(\v_j) = \delta_{ij} \) says \( \A\P = \I_2 \) for \( \P = \begin{pmatrix} \v_1 & \v_2 \end{pmatrix} \). Here \( 2 \cdot 1 - 1 \cdot 1 = 1 \neq 0 \), so by @thm-two-by-two-inverse
 \[
-A^{-1} = \begin{pmatrix} 1 & -1 \\ -1 & 2 \end{pmatrix},
+\A^{-1} = \begin{pmatrix} 1 & -1 \\ -1 & 2 \end{pmatrix},
 \]
-\( P = A^{-1} \), so \( \v_1 = (1, -1) \) and \( \v_2 = (-1, 2) \). These are independent (the columns of an invertible matrix), hence a basis. Check: \( \psi_1(\v_1) = 1 \), \( \psi_2(\v_1) = 0 \), \( \psi_1(\v_2) = 0 \), \( \psi_2(\v_2) = 1 \). By the uniqueness part of @thm-dual-basis, the dual basis of \( (\v_1, \v_2) \) is \( (\psi_1, \psi_2) \).
+\( \P = \A^{-1} \), so \( \v_1 = (1, -1) \) and \( \v_2 = (-1, 2) \). These are independent (the columns of an invertible matrix), hence a basis. Check: \( \psi_1(\v_1) = 1 \), \( \psi_2(\v_1) = 0 \), \( \psi_1(\v_2) = 0 \), \( \psi_2(\v_2) = 1 \). By the uniqueness part of @thm-dual-basis, the dual basis of \( (\v_1, \v_2) \) is \( (\psi_1, \psi_2) \).
 
-(b) For \( p = a + bx \), \( \psi_1(p) = a \) and \( \psi_2(p) = a + \tfrac12 b \). So \( A = \begin{pmatrix} 1 & 0 \\ 1 & 1/2 \end{pmatrix} \) and
+(b) For \( p = a + bx \), \( \psi_1(p) = a \) and \( \psi_2(p) = a + \tfrac12 b \). So \( \A = \begin{pmatrix} 1 & 0 \\ 1 & 1/2 \end{pmatrix} \) and
 \[
-P = A^{-1} = \begin{pmatrix} 1 & 0 \\ -2 & 2 \end{pmatrix},
+\P = \A^{-1} = \begin{pmatrix} 1 & 0 \\ -2 & 2 \end{pmatrix},
 \]
 whose columns are the coordinates of \( p_1 = 1 - 2x \) and \( p_2 = 2x \) in \( (1, x) \). Check: \( p_1(0) = 1 \), \( \int_0^1 (1 - 2x)\,\dd x = 1 - 1 = 0 \), \( p_2(0) = 0 \), \( \int_0^1 2x\,\dd x = 1 \). As in (a), \( (p_1, p_2) \) is a basis with dual basis \( (\psi_1, \psi_2) \).
 :::

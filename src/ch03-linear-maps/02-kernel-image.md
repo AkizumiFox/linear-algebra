@@ -10,7 +10,7 @@ T(\u - \v) = T(\u) - T(\v) = \0 .
 \]
 So a collision between \( \u \) and \( \v \) is the same thing as their difference being sent to \( \0 \). To detect every collision at once, it is enough to know **which vectors are sent to \( \0 \)**. For a general function this trick is unavailable, because there is no subtraction; linearity turns a question about all pairs into a question about one set.
 
-Surjectivity asks whether every \( \w \in W \) is an output, so the set to know is **the set of all outputs**. Chapter 2 met both sets for \( T_A(\x) = A\x \): the system \( A\x = \b \) is consistent exactly when \( \b \) is in the column space (@thm-consistent-iff-column-span), and a consistent system has a unique solution exactly when \( A\x = \0 \) has only the trivial solution (@cor-unique-solution-iff-trivial-kernel). The definitions below give these two sets a name for every linear map. They are defined for what they measure.
+Surjectivity asks whether every \( \w \in W \) is an output, so the set to know is **the set of all outputs**. Chapter 2 met both sets for \( T_\A(\x) = \A\x \): the system \( \A\x = \b \) is consistent exactly when \( \b \) is in the column space (@thm-consistent-iff-column-span), and a consistent system has a unique solution exactly when \( \A\x = \0 \) has only the trivial solution (@cor-unique-solution-iff-trivial-kernel). The definitions below give these two sets a name for every linear map. They are defined for what they measure.
 
 *The kernel is everything \( T \) sends to zero; the image is everything \( T \) reaches.*
 
@@ -69,7 +69,7 @@ Let \( T \colon V \to W \) be linear. Then:
 (b) The inclusion \( \im T \subseteq W \) always holds. By @def-injective-surjective-bijective, \( T \) is surjective exactly when every \( \w \in W \) equals \( T(\v) \) for some \( \v \), that is, when \( W \subseteq \im T \). So \( T \) is surjective if and only if \( \im T = W \).
 :::
 
-This pays off a pattern from Chapter 1, §2. The null space of a matrix (@exm-null-space-subspace), the symmetric matrices (@exm-symmetric-matrices) and the trace-free matrices (@exm-trace-free-matrices) were each shown to be subspaces by a separate check, and that section promised a single theorem. Each is the kernel of a linear map (\( T_A \), \( A \mapsto A - A\tp \), and the trace), so @thm-prop-kernel covers them all at once.
+This pays off a pattern from Chapter 1, §2. The null space of a matrix (@exm-null-space-subspace), the symmetric matrices (@exm-symmetric-matrices) and the trace-free matrices (@exm-trace-free-matrices) were each shown to be subspaces by a separate check, and that section promised a single theorem. Each is the kernel of a linear map (\( T_\A \), \( \A \mapsto \A - \A\tp \), and the trace), so @thm-prop-kernel covers them all at once.
 
 **First examples.** Start with the maps that have the most extreme kernels and images.
 
@@ -95,12 +95,12 @@ Find the kernel and image of the projection \( T \colon \nR^2 \to \nR^2 \), \( T
 \( T(a_1, a_2) = (0, 0) \) exactly when \( a_1 = 0 \). So \( \ker T = \{ (0, a_2) : a_2 \in \nR \} \), the \( y \)-axis. Every output has second entry \( 0 \), and every \( (a_1, 0) \) is an output, namely \( T(a_1, 0) \). So \( \im T \) is the \( x \)-axis. The kernel is the direction the light shines along; the image is the screen the shadow falls on.
 :::
 
-**A non-example by minimal change.** Replace \( \0 \) by another vector: for the projection, \( \{ \v : T(\v) = (1, 0) \} = \{ (1, a_2) : a_2 \in \nR \} \). This is the vertical line through \( (1, 0) \). It does not contain \( \0 \), and it is not closed under addition, since \( (1, 0) + (1, 0) = (2, 0) \) lies off the line. So it is **not** a subspace. It is the kernel shifted by \( (1, 0) \). The same thing happened for systems in Chapter 2: the solutions of \( A\x = \b \) are \( \p + \nul(A) \) (@thm-general-solution-structure).
+**A non-example by minimal change.** Replace \( \0 \) by another vector: for the projection, \( \{ \v : T(\v) = (1, 0) \} = \{ (1, a_2) : a_2 \in \nR \} \). This is the vertical line through \( (1, 0) \). It does not contain \( \0 \), and it is not closed under addition, since \( (1, 0) + (1, 0) = (2, 0) \) lies off the line. So it is **not** a subspace. It is the kernel shifted by \( (1, 0) \). The same thing happened for systems in Chapter 2: the solutions of \( \A\x = \b \) are \( \p + \nul(\A) \) (@thm-general-solution-structure).
 
 **Why the preimage of \( \0 \)?** Because \( \0 \) is the one output that every linear map is guaranteed to hit, so its preimage is never empty, and because all other preimages are translates of it. If \( T(\p) = \w \), then \( T(\v) = \w \) exactly when \( T(\v - \p) = \0 \), that is, when \( \v \in \p + \ker T \). The kernel describes the shape of every non-empty preimage at once.
 
 ::: {.warning}
-**Keep track of where each subspace lives.** The kernel sits inside the **domain** \( V \); the image sits inside the **codomain** \( W \). For \( T_A \colon F^n \to F^m \), the kernel consists of columns with \( n \) entries and the image of columns with \( m \) entries, so "\( \ker T = \im T \)" does not even make sense unless \( V = W \). And the image is **not** the codomain in general: the differentiation map \( D \colon \nR[x]_{\le 3} \to \nR[x]_{\le 3} \) has codomain \( \nR[x]_{\le 3} \), but \( x^3 \) is not the derivative of any cubic, so \( \im D \neq \nR[x]_{\le 3} \).
+**Keep track of where each subspace lives.** The kernel sits inside the **domain** \( V \); the image sits inside the **codomain** \( W \). For \( T_\A \colon F^n \to F^m \), the kernel consists of columns with \( n \) entries and the image of columns with \( m \) entries, so "\( \ker T = \im T \)" does not even make sense unless \( V = W \). And the image is **not** the codomain in general: the differentiation map \( D \colon \nR[x]_{\le 3} \to \nR[x]_{\le 3} \) has codomain \( \nR[x]_{\le 3} \), but \( x^3 \) is not the derivative of any cubic, so \( \im D \neq \nR[x]_{\le 3} \).
 :::
 
 ## Injectivity via the kernel
@@ -119,7 +119,7 @@ Let \( T \colon V \to W \) be linear. Then \( T \) is injective **if and only if
 (⇐) Suppose \( \ker T = \{\0\} \), and let \( T(\u) = T(\v) \). By @thm-preserves-negation, \( T(\u - \v) = T(\u) - T(\v) = \0 \), so \( \u - \v \in \ker T = \{\0\} \). Hence \( \u = \v \), and \( T \) is injective.
 :::
 
-Compare the work. The definition asks: for **all pairs** \( \u, \v \), does \( T(\u) = T(\v) \) force \( \u = \v \)? The theorem asks only: for **each** \( \v \), does \( T(\v) = \0 \) force \( \v = \0 \)? The second question is usually a homogeneous linear system or a coefficient comparison. For \( T_A \), the theorem says that \( \x \mapsto A\x \) is injective exactly when \( A\x = \0 \) has only the trivial solution, which is the content of @cor-unique-solution-iff-trivial-kernel.
+Compare the work. The definition asks: for **all pairs** \( \u, \v \), does \( T(\u) = T(\v) \) force \( \u = \v \)? The theorem asks only: for **each** \( \v \), does \( T(\v) = \0 \) force \( \v = \0 \)? The second question is usually a homogeneous linear system or a coefficient comparison. For \( T_\A \), the theorem says that \( \x \mapsto \A\x \) is injective exactly when \( \A\x = \0 \) has only the trivial solution, which is the content of @cor-unique-solution-iff-trivial-kernel.
 
 ## Computing the image
 
@@ -152,21 +152,21 @@ We now compute kernels and images across the families. In each case we then read
 ::: {#exm-kernel-image-matrix-map}
 [A Matrix Map]
 
-Let \( A = \begin{pmatrix} 1 & 2 & 0 & 3 \\ 2 & 4 & 1 & 8 \\ -1 & -2 & 1 & -1 \end{pmatrix} \in M_{3 \times 4}(\nR) \). Find bases of \( \ker T_A \) and \( \im T_A \) for \( T_A \colon \nR^4 \to \nR^3 \), and decide whether \( T_A \) is injective or surjective.
+Let \( \A = \begin{pmatrix} 1 & 2 & 0 & 3 \\ 2 & 4 & 1 & 8 \\ -1 & -2 & 1 & -1 \end{pmatrix} \in M_{3 \times 4}(\nR) \). Find bases of \( \ker T_\A \) and \( \im T_\A \) for \( T_\A \colon \nR^4 \to \nR^3 \), and decide whether \( T_\A \) is injective or surjective.
 :::
 
 ::: {.solution}
-By definition, \( \ker T_A = \{ \x : A\x = \0 \} = \nul(A) \) (@def-null-space) and \( \im T_A = \{ A\x : \x \in \nR^4 \} = \col(A) \) (@def-column-space). So Chapter 2's methods apply. Row reduce:
+By definition, \( \ker T_\A = \{ \x : \A\x = \0 \} = \nul(\A) \) (@def-null-space) and \( \im T_\A = \{ \A\x : \x \in \nR^4 \} = \col(\A) \) (@def-column-space). So Chapter 2's methods apply. Row reduce:
 \[
-A \xrightarrow[R_3 + R_1]{R_2 - 2R_1} \begin{pmatrix} 1 & 2 & 0 & 3 \\ 0 & 0 & 1 & 2 \\ 0 & 0 & 1 & 2 \end{pmatrix} \xrightarrow{R_3 - R_2} \begin{pmatrix} 1 & 2 & 0 & 3 \\ 0 & 0 & 1 & 2 \\ 0 & 0 & 0 & 0 \end{pmatrix}.
+\A \xrightarrow[R_3 + R_1]{R_2 - 2R_1} \begin{pmatrix} 1 & 2 & 0 & 3 \\ 0 & 0 & 1 & 2 \\ 0 & 0 & 1 & 2 \end{pmatrix} \xrightarrow{R_3 - R_2} \begin{pmatrix} 1 & 2 & 0 & 3 \\ 0 & 0 & 1 & 2 \\ 0 & 0 & 0 & 0 \end{pmatrix}.
 \]
-This is the RREF, with pivot columns \( 1 \) and \( 3 \) and free columns \( 2 \) and \( 4 \). By @thm-basis-null-space, a basis of \( \ker T_A \) is
+This is the RREF, with pivot columns \( 1 \) and \( 3 \) and free columns \( 2 \) and \( 4 \). By @thm-basis-null-space, a basis of \( \ker T_\A \) is
 \[
 \bigl((-2, 1, 0, 0),\ (-3, 0, -2, 1)\bigr).
 \]
-By @thm-basis-column-space, the pivot columns of \( A \) form a basis of \( \im T_A \): \( \bigl((1, 2, -1),\ (0, 1, 1)\bigr) \).
+By @thm-basis-column-space, the pivot columns of \( \A \) form a basis of \( \im T_\A \): \( \bigl((1, 2, -1),\ (0, 1, 1)\bigr) \).
 
-Since \( \ker T_A \neq \{\0\} \), \( T_A \) is not injective (@thm-injective-iff-trivial-kernel); for instance \( T_A(-2, 1, 0, 0) = \0 = T_A(\0) \). Since \( \dim \im T_A = 2 < 3 = \dim \nR^3 \), \( \im T_A \neq \nR^3 \), so \( T_A \) is not surjective (@thm-prop-image).
+Since \( \ker T_\A \neq \{\0\} \), \( T_\A \) is not injective (@thm-injective-iff-trivial-kernel); for instance \( T_\A(-2, 1, 0, 0) = \0 = T_\A(\0) \). Since \( \dim \im T_\A = 2 < 3 = \dim \nR^3 \), \( \im T_\A \neq \nR^3 \), so \( T_\A \) is not surjective (@thm-prop-image).
 :::
 
 ::: {#exm-differentiation-kernel-image}
@@ -194,11 +194,11 @@ Find the kernel and image of \( \tr \colon M_2(\nR) \to \nR \).
 ::: {.solution}
 *Kernel.* A matrix \( \begin{pmatrix} a & b \\ c & d \end{pmatrix} \) has trace \( 0 \) exactly when \( d = -a \), that is, when it equals
 \[
-\begin{pmatrix} a & b \\ c & -a \end{pmatrix} = a\begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix} + bE_{12} + cE_{21}.
+\begin{pmatrix} a & b \\ c & -a \end{pmatrix} = a\begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix} + b\E_{12} + c\E_{21}.
 \]
-So \( E_{11} - E_{22}, E_{12}, E_{21} \) span \( \ker \tr \). They are independent: the combination above is the zero matrix only if \( a = b = c = 0 \). Hence they form a basis, and \( \dim \ker \tr = 3 \).
+So \( \E_{11} - \E_{22}, \E_{12}, \E_{21} \) span \( \ker \tr \). They are independent: the combination above is the zero matrix only if \( a = b = c = 0 \). Hence they form a basis, and \( \dim \ker \tr = 3 \).
 
-*Image.* \( \im \tr \) is a subspace of \( \nR \), and it contains \( \tr E_{11} = 1 \). The lazy preimage \( rE_{11} \) of any \( r \in \nR \) shows \( \im \tr = \nR \). So the trace is surjective but not injective. Again \( 3 + 1 = 4 = \dim M_2(\nR) \).
+*Image.* \( \im \tr \) is a subspace of \( \nR \), and it contains \( \tr \E_{11} = 1 \). The lazy preimage \( r\E_{11} \) of any \( r \in \nR \) shows \( \im \tr = \nR \). So the trace is surjective but not injective. Again \( 3 + 1 = 4 = \dim M_2(\nR) \).
 :::
 
 The next two examples live in infinite-dimensional spaces, and the pattern "one property but not the other" goes the opposite way.
@@ -302,17 +302,17 @@ Part (c) turns a question about a map into a question about \( n \) vectors in \
 ::: {#exr-kernel-image-b1}
 [B1: Kernel and Image of a Matrix Map]
 
-Let \( B = \begin{pmatrix} 1 & -1 & 2 & 0 \\ 2 & -2 & 5 & 1 \\ 0 & 0 & 1 & 1 \end{pmatrix} \in M_{3 \times 4}(\nR) \). Find bases of \( \ker T_B \) and \( \im T_B \). Hence decide whether \( T_B \colon \nR^4 \to \nR^3 \) is injective, and whether it is surjective.
+Let \( \B = \begin{pmatrix} 1 & -1 & 2 & 0 \\ 2 & -2 & 5 & 1 \\ 0 & 0 & 1 & 1 \end{pmatrix} \in M_{3 \times 4}(\nR) \). Find bases of \( \ker T_\B \) and \( \im T_\B \). Hence decide whether \( T_\B \colon \nR^4 \to \nR^3 \) is injective, and whether it is surjective.
 :::
 
 ::: {.solution}
-As in @exm-kernel-image-matrix-map, \( \ker T_B = \nul(B) \) and \( \im T_B = \col(B) \). Row reduce:
+As in @exm-kernel-image-matrix-map, \( \ker T_\B = \nul(\B) \) and \( \im T_\B = \col(\B) \). Row reduce:
 \[
-B \xrightarrow{R_2 - 2R_1} \begin{pmatrix} 1 & -1 & 2 & 0 \\ 0 & 0 & 1 & 1 \\ 0 & 0 & 1 & 1 \end{pmatrix} \xrightarrow[R_1 - 2R_2]{R_3 - R_2} \begin{pmatrix} 1 & -1 & 0 & -2 \\ 0 & 0 & 1 & 1 \\ 0 & 0 & 0 & 0 \end{pmatrix}.
+\B \xrightarrow{R_2 - 2R_1} \begin{pmatrix} 1 & -1 & 2 & 0 \\ 0 & 0 & 1 & 1 \\ 0 & 0 & 1 & 1 \end{pmatrix} \xrightarrow[R_1 - 2R_2]{R_3 - R_2} \begin{pmatrix} 1 & -1 & 0 & -2 \\ 0 & 0 & 1 & 1 \\ 0 & 0 & 0 & 0 \end{pmatrix}.
 \]
-The pivot columns are \( 1 \) and \( 3 \); the free columns are \( 2 \) and \( 4 \). By @thm-basis-null-space, \( \ker T_B \) has basis \( \bigl((1, 1, 0, 0),\ (2, 0, -1, 1)\bigr) \). Check: \( B(2, 0, -1, 1) = (2 - 2,\ 4 - 5 + 1,\ -1 + 1) = \0 \). By @thm-basis-column-space, \( \im T_B \) has basis \( \bigl((1, 2, 0),\ (2, 5, 1)\bigr) \).
+The pivot columns are \( 1 \) and \( 3 \); the free columns are \( 2 \) and \( 4 \). By @thm-basis-null-space, \( \ker T_\B \) has basis \( \bigl((1, 1, 0, 0),\ (2, 0, -1, 1)\bigr) \). Check: \( \B(2, 0, -1, 1) = (2 - 2,\ 4 - 5 + 1,\ -1 + 1) = \0 \). By @thm-basis-column-space, \( \im T_\B \) has basis \( \bigl((1, 2, 0),\ (2, 5, 1)\bigr) \).
 
-Hence \( \ker T_B \neq \{\0\} \), so \( T_B \) is not injective (@thm-injective-iff-trivial-kernel). And \( \dim \im T_B = 2 < 3 \), so \( \im T_B \neq \nR^3 \) and \( T_B \) is not surjective (@thm-prop-image).
+Hence \( \ker T_\B \neq \{\0\} \), so \( T_\B \) is not injective (@thm-injective-iff-trivial-kernel). And \( \dim \im T_\B = 2 < 3 \), so \( \im T_\B \neq \nR^3 \) and \( T_\B \) is not surjective (@thm-prop-image).
 :::
 
 ::: {#exr-kernel-image-b2}
@@ -322,12 +322,12 @@ For each map, find a basis of the kernel and a basis of the image, and decide wh
 
 ::: {.enumerate options="label=(\alph*)"}
 1. \( T \colon \nR[x]_{\le 2} \to \nR[x]_{\le 2} \), \( T(p) = p' + p \).
-2. \( S \colon M_2(\nR) \to M_2(\nR) \), \( S(A) = A - A\tp \).
+2. \( S \colon M_2(\nR) \to M_2(\nR) \), \( S(\A) = \A - \A\tp \).
 :::
 :::
 
 ::: {.solution}
-Both maps are linear. For \( c \in \nR \), by linearity of differentiation (@exm-differentiation), \( T(cp + q) = (cp' + q') + (cp + q) = cT(p) + T(q) \). By linearity of the transpose (@exm-trace-matrices), \( S(cA + B) = cA + B - cA\tp - B\tp = cS(A) + S(B) \). Both are linear by @thm-equivalent-condition.
+Both maps are linear. For \( c \in \nR \), by linearity of differentiation (@exm-differentiation), \( T(cp + q) = (cp' + q') + (cp + q) = cT(p) + T(q) \). By linearity of the transpose (@exm-trace-matrices), \( S(c\A + \B) = c\A + \B - c\A\tp - \B\tp = cS(\A) + S(\B) \). Both are linear by @thm-equivalent-condition.
 
 (a) *Kernel.* Let \( p = a + bx + cx^2 \). Then \( T(p) = (b + 2cx) + (a + bx + cx^2) = (a + b) + (b + 2c)x + cx^2 \). This is zero exactly when \( c = 0 \), \( b + 2c = 0 \) and \( a + b = 0 \), that is, \( c = b = a = 0 \). So \( \ker T = \{0\} \), with the empty list as basis, and \( T \) is injective.
 
@@ -337,9 +337,9 @@ T(p) = (q' - q'' + q''') + (q - q' + q'') = q .
 \]
 So \( \im T = \nR[x]_{\le 2} \), with basis \( (1, x, x^2) \), and \( T \) is surjective.
 
-(b) *Kernel.* \( S(A) = 0 \) exactly when \( A\tp = A \). A matrix \( \begin{pmatrix} a & b \\ c & d \end{pmatrix} \) is symmetric exactly when \( b = c \), that is, when it equals \( aE_{11} + dE_{22} + b(E_{12} + E_{21}) \). These three matrices are independent (compare entries), so \( (E_{11}, E_{22}, E_{12} + E_{21}) \) is a basis of \( \ker S \). \( S \) is not injective.
+(b) *Kernel.* \( S(\A) = 0 \) exactly when \( \A\tp = \A \). A matrix \( \begin{pmatrix} a & b \\ c & d \end{pmatrix} \) is symmetric exactly when \( b = c \), that is, when it equals \( a\E_{11} + d\E_{22} + b(\E_{12} + \E_{21}) \). These three matrices are independent (compare entries), so \( (\E_{11}, \E_{22}, \E_{12} + \E_{21}) \) is a basis of \( \ker S \). \( S \) is not injective.
 
-*Image.* By @thm-image-spanned-by-basis-images with the basis \( (E_{11}, E_{12}, E_{21}, E_{22}) \), \( \im S \) is spanned by \( S(E_{11}) = 0 \), \( S(E_{12}) = E_{12} - E_{21} \), \( S(E_{21}) = E_{21} - E_{12} \) and \( S(E_{22}) = 0 \). So \( \im S = \Span(E_{12} - E_{21}) \), with basis \( (E_{12} - E_{21}) \), the skew-symmetric matrices. Since \( I_2 \notin \im S \), \( S \) is not surjective.
+*Image.* By @thm-image-spanned-by-basis-images with the basis \( (\E_{11}, \E_{12}, \E_{21}, \E_{22}) \), \( \im S \) is spanned by \( S(\E_{11}) = 0 \), \( S(\E_{12}) = \E_{12} - \E_{21} \), \( S(\E_{21}) = \E_{21} - \E_{12} \) and \( S(\E_{22}) = 0 \). So \( \im S = \Span(\E_{12} - \E_{21}) \), with basis \( (\E_{12} - \E_{21}) \), the skew-symmetric matrices. Since \( \I_2 \notin \im S \), \( S \) is not surjective.
 :::
 
 ### C. Going deeper

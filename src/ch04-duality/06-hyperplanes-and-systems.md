@@ -1,6 +1,6 @@
 # Hyperplanes and Linear Systems Revisited
 
-Chapter 2 met subspaces of \( F^n \) in two disguises. A **parametric** description lists spanning vectors, as in \( \col(A) \). An **implicit** description lists equations, as in \( \nul(A) \). We moved from equations to spanning vectors by elimination, but we never asked whether the reverse is always possible, or how many equations it takes. Duality answers both questions at once: the equations of a subspace \( U \) are the elements of \( U^{0} \). This section turns that sentence into an algorithm, proves once more that row rank and nullity add up to \( n \), and ends the chapter with a dictionary between a space and its dual.
+Chapter 2 met subspaces of \( F^n \) in two disguises. A **parametric** description lists spanning vectors, as in \( \col(\A) \). An **implicit** description lists equations, as in \( \nul(\A) \). We moved from equations to spanning vectors by elimination, but we never asked whether the reverse is always possible, or how many equations it takes. Duality answers both questions at once: the equations of a subspace \( U \) are the elements of \( U^{0} \). This section turns that sentence into an algorithm, proves once more that row rank and nullity add up to \( n \), and ends the chapter with a dictionary between a space and its dual.
 
 ## Row vectors are functionals
 
@@ -10,9 +10,9 @@ Recall from @thm-functionals-on-fn how functionals on \( F^n \) look. For \( \a 
 \]
 By that theorem, every \( \varphi \in (F^n)^{*} \) is \( \varphi_{\a} \) for exactly one \( \a \), namely \( a_j = \varphi(\e_j) \), and \( \a \mapsto \varphi_{\a} \) is an isomorphism \( F^n \to (F^n)^{*} \).
 
-The functional \( \varphi_{\a} \) is "multiply by the **row** vector \( \a\tp \)". So the identification is really between functionals and row vectors, and that is what makes a system of equations a dual object. Write the rows of \( A \in M_{m \times n}(F) \) as \( \a_1\tp, \dots, \a_m\tp \) with \( \a_i \in F^n \). The \( i \)-th entry of \( A\x \) is \( \a_i\tp\x = \varphi_{\a_i}(\x) \), so the homogeneous system \( A\x = \0 \) says exactly that \( \varphi_{\a_1}(\x) = \dots = \varphi_{\a_m}(\x) = 0 \). Hence
+The functional \( \varphi_{\a} \) is "multiply by the **row** vector \( \a\tp \)". So the identification is really between functionals and row vectors, and that is what makes a system of equations a dual object. Write the rows of \( \A \in M_{m \times n}(F) \) as \( \a_1\tp, \dots, \a_m\tp \) with \( \a_i \in F^n \). The \( i \)-th entry of \( \A\x \) is \( \a_i\tp\x = \varphi_{\a_i}(\x) \), so the homogeneous system \( \A\x = \0 \) says exactly that \( \varphi_{\a_1}(\x) = \dots = \varphi_{\a_m}(\x) = 0 \). Hence
 \[
-\nul(A) = \ker\varphi_{\a_1} \cap \dots \cap \ker\varphi_{\a_m} .
+\nul(\A) = \ker\varphi_{\a_1} \cap \dots \cap \ker\varphi_{\a_m} .
 \]
 Each non-zero row contributes a hyperplane (@thm-hyperplane-kernel-functional), and the null space is their intersection. **An equation is a functional, and a system is a list of functionals.**
 
@@ -48,21 +48,21 @@ The lemma is @cor-annihilator-of-annihilator in disguise. That corollary says \(
 Let \( U \) be a subspace of \( F^n \) with \( \dim U = k \).
 
 ::: {.enumerate options="label=(\alph*)"}
-1. There is a matrix \( A \in M_{(n-k) \times n}(F) \) with \( U = \nul(A) \). One may take as rows of \( A \) the vectors \( \a_1\tp, \dots, \a_{n-k}\tp \) for any \( \a_i \in F^n \) such that \( (\varphi_{\a_1}, \dots, \varphi_{\a_{n-k}}) \) is a basis of \( U^{0} \).
-2. If \( B \in M_{m \times n}(F) \) and \( \nul(B) = U \), then \( m \ge n - k \).
+1. There is a matrix \( \A \in M_{(n-k) \times n}(F) \) with \( U = \nul(\A) \). One may take as rows of \( \A \) the vectors \( \a_1\tp, \dots, \a_{n-k}\tp \) for any \( \a_i \in F^n \) such that \( (\varphi_{\a_1}, \dots, \varphi_{\a_{n-k}}) \) is a basis of \( U^{0} \).
+2. If \( \B \in M_{m \times n}(F) \) and \( \nul(\B) = U \), then \( m \ge n - k \).
 :::
 
 So \( U \) is the solution set of a homogeneous system of exactly \( n - k = \codim U \) equations, and of no system with fewer. (When \( k = n \), that is \( U = F^n \), this is the empty system, with no equations.)
 :::
 
 ::: {.proof}
-(a) By @thm-dimension-annihilator, \( \dim U^{0} = n - k \). Choose a basis of \( U^{0} \); by the identification above it is \( (\varphi_{\a_1}, \dots, \varphi_{\a_{n-k}}) \) for some \( \a_i \in F^n \). Let \( A \) have rows \( \a_1\tp, \dots, \a_{n-k}\tp \). Then
+(a) By @thm-dimension-annihilator, \( \dim U^{0} = n - k \). Choose a basis of \( U^{0} \); by the identification above it is \( (\varphi_{\a_1}, \dots, \varphi_{\a_{n-k}}) \) for some \( \a_i \in F^n \). Let \( \A \) have rows \( \a_1\tp, \dots, \a_{n-k}\tp \). Then
 \[
-\nul(A) = \ker\varphi_{\a_1} \cap \dots \cap \ker\varphi_{\a_{n-k}} = U,
+\nul(\A) = \ker\varphi_{\a_1} \cap \dots \cap \ker\varphi_{\a_{n-k}} = U,
 \]
 where the second equality is @lem-subspace-cut-out-by-annihilator.
 
-(b) By @thm-rank-nullity-matrix, \( \rank B = n - \nullity B = n - k \). By @thm-row-rank-equals-column-rank, \( \rank B = \dim \row(B) \). The row space is spanned by the \( m \) rows of \( B \), so \( m \ge \dim\row(B) \) by @thm-size-bounds (b). Hence \( m \ge n - k \).
+(b) By @thm-rank-nullity-matrix, \( \rank \B = n - \nullity \B = n - k \). By @thm-row-rank-equals-column-rank, \( \rank \B = \dim \row(\B) \). The row space is spanned by the \( m \) rows of \( \B \), so \( m \ge \dim\row(\B) \) by @thm-size-bounds (b). Hence \( m \ge n - k \).
 :::
 
 The count is the one promised by codimension: **dimension counts free parameters, codimension counts independent equations**, and in \( F^n \) the two add up to \( n \).
@@ -78,9 +78,9 @@ The two vectors are independent (compare first entries, then third), so \( \dim 
 \[
 a_1 + a_2 + a_4 = 0, \qquad a_2 + a_3 + a_4 = 0 .
 \]
-This is the system \( M\a = \0 \) for the matrix \( M \) whose **rows** are \( \u_1\tp \) and \( \u_2\tp \). Subtracting the second row from the first gives the RREF
+This is the system \( \M\a = \0 \) for the matrix \( \M \) whose **rows** are \( \u_1\tp \) and \( \u_2\tp \). Subtracting the second row from the first gives the RREF
 \[
-M = \begin{pmatrix} 1 & 1 & 0 & 1 \\ 0 & 1 & 1 & 1 \end{pmatrix} \ \longrightarrow\ \begin{pmatrix} 1 & 0 & -1 & 0 \\ 0 & 1 & 1 & 1 \end{pmatrix},
+\M = \begin{pmatrix} 1 & 1 & 0 & 1 \\ 0 & 1 & 1 & 1 \end{pmatrix} \ \longrightarrow\ \begin{pmatrix} 1 & 0 & -1 & 0 \\ 0 & 1 & 1 & 1 \end{pmatrix},
 \]
 with free variables \( a_3, a_4 \). By @thm-basis-null-space, a basis of the solutions is \( (1, -1, 1, 0) \) (from \( a_3 = 1, a_4 = 0 \)) and \( (0, -1, 0, 1) \) (from \( a_3 = 0, a_4 = 1 \)). The corresponding functionals form a basis of \( U^{0} \), and by @thm-subspace-is-solution-set,
 \[
@@ -96,11 +96,11 @@ The example is an instance of a general procedure. Both directions of the conver
 ::: {.algorithm}
 **Parametric to implicit.** Input: vectors \( \v_1, \dots, \v_p \in F^n \) with \( U = \Span(\v_1, \dots, \v_p) \).
 
-1. Form \( M \in M_{p \times n}(F) \) whose \( i \)-th **row** is \( \v_i\tp \).
-2. Row reduce \( M \) and find a basis \( \n_1, \dots, \n_d \) of \( \nul(M) \) as in @thm-basis-null-space.
-3. Output the matrix \( A \in M_{d \times n}(F) \) whose \( j \)-th row is \( \n_j\tp \), that is, the equations \( \n_j\tp\x = 0 \) for \( j = 1, \dots, d \).
+1. Form \( \M \in M_{p \times n}(F) \) whose \( i \)-th **row** is \( \v_i\tp \).
+2. Row reduce \( \M \) and find a basis \( \n_1, \dots, \n_d \) of \( \nul(\M) \) as in @thm-basis-null-space.
+3. Output the matrix \( \A \in M_{d \times n}(F) \) whose \( j \)-th row is \( \n_j\tp \), that is, the equations \( \n_j\tp\x = 0 \) for \( j = 1, \dots, d \).
 
-**Implicit to parametric.** Input: \( A \in M_{m \times n}(F) \). Output: a basis of \( \nul(A) \), found by row reduction as in @thm-basis-null-space.
+**Implicit to parametric.** Input: \( \A \in M_{m \times n}(F) \). Output: a basis of \( \nul(\A) \), found by row reduction as in @thm-basis-null-space.
 :::
 
 The second half was proved correct in Chapter 2. The first half is new.
@@ -108,24 +108,24 @@ The second half was proved correct in Chapter 2. The first half is new.
 ::: {#thm-parametric-to-implicit}
 [Correctness of the Conversion]
 
-Let \( \v_1, \dots, \v_p \in F^n \), \( U = \Span(\v_1, \dots, \v_p) \), and let \( M \) and \( A \) be as in the algorithm. Then \( \nul(A) = U \), and \( A \) has exactly \( d = n - \dim U \) rows, which are linearly independent.
+Let \( \v_1, \dots, \v_p \in F^n \), \( U = \Span(\v_1, \dots, \v_p) \), and let \( \M \) and \( \A \) be as in the algorithm. Then \( \nul(\A) = U \), and \( \A \) has exactly \( d = n - \dim U \) rows, which are linearly independent.
 :::
 
 ::: {.idea}
-The only thing to see is what step 2 computes. The \( i \)-th entry of \( M\n \) is \( \v_i\tp\n = \varphi_{\n}(\v_i) \). So \( \n \in \nul(M) \) says that the functional \( \varphi_{\n} \) vanishes at every \( \v_i \), that is, \( \varphi_{\n} \in U^{0} \). Step 2 therefore computes a basis of \( U^{0} \), and the theorem of the previous subsection does the rest.
+The only thing to see is what step 2 computes. The \( i \)-th entry of \( \M\n \) is \( \v_i\tp\n = \varphi_{\n}(\v_i) \). So \( \n \in \nul(\M) \) says that the functional \( \varphi_{\n} \) vanishes at every \( \v_i \), that is, \( \varphi_{\n} \in U^{0} \). Step 2 therefore computes a basis of \( U^{0} \), and the theorem of the previous subsection does the rest.
 :::
 
 ::: {.proof}
-For \( \n \in F^n \), the \( i \)-th entry of \( M\n \) is \( \v_i\tp\n = \n\tp\v_i = \varphi_{\n}(\v_i) \), where the middle equality holds because both sides equal \( \sum_j (\v_i)_j n_j \). Hence
+For \( \n \in F^n \), the \( i \)-th entry of \( \M\n \) is \( \v_i\tp\n = \n\tp\v_i = \varphi_{\n}(\v_i) \), where the middle equality holds because both sides equal \( \sum_j (\v_i)_j n_j \). Hence
 \[
-\n \in \nul(M) \iff \varphi_{\n}(\v_i) = 0 \text{ for all } i \iff \varphi_{\n} \in \{\v_1, \dots, \v_p\}^{0} = U^{0},
+\n \in \nul(\M) \iff \varphi_{\n}(\v_i) = 0 \text{ for all } i \iff \varphi_{\n} \in \{\v_1, \dots, \v_p\}^{0} = U^{0},
 \]
-where the last equality is @thm-annihilator-properties (b). So the isomorphism \( \n \mapsto \varphi_{\n} \) maps \( \nul(M) \) onto \( U^{0} \). An isomorphism carries a basis to a basis (@thm-isomorphism-preserves-bases), so \( (\varphi_{\n_1}, \dots, \varphi_{\n_d}) \) is a basis of \( U^{0} \). In particular \( d = \dim U^{0} = n - \dim U \) by @thm-dimension-annihilator, and the \( \n_j \), hence the rows \( \n_j\tp \), are independent. By @thm-subspace-is-solution-set (a), the matrix \( A \) with rows \( \n_1\tp, \dots, \n_d\tp \) satisfies \( \nul(A) = U \).
+where the last equality is @thm-annihilator-properties (b). So the isomorphism \( \n \mapsto \varphi_{\n} \) maps \( \nul(\M) \) onto \( U^{0} \). An isomorphism carries a basis to a basis (@thm-isomorphism-preserves-bases), so \( (\varphi_{\n_1}, \dots, \varphi_{\n_d}) \) is a basis of \( U^{0} \). In particular \( d = \dim U^{0} = n - \dim U \) by @thm-dimension-annihilator, and the \( \n_j \), hence the rows \( \n_j\tp \), are independent. By @thm-subspace-is-solution-set (a), the matrix \( \A \) with rows \( \n_1\tp, \dots, \n_d\tp \) satisfies \( \nul(\A) = U \).
 :::
 
-The algorithm does not need the \( \v_i \) to be independent. Redundant spanning vectors only produce zero rows in the RREF of \( M \), and the count \( d = n - \rank M \) automatically uses \( \dim U = \rank M \).
+The algorithm does not need the \( \v_i \) to be independent. Redundant spanning vectors only produce zero rows in the RREF of \( \M \), and the count \( d = n - \rank \M \) automatically uses \( \dim U = \rank \M \).
 
-Running both halves in turn is a useful self-check. Starting from \( A \) in @exm-implicit-equations and computing \( \nul(A) \) must return a basis of \( U \); starting from that basis and running the first half must return equations with the same solution set, though not necessarily the same equations.
+Running both halves in turn is a useful self-check. Starting from \( \A \) in @exm-implicit-equations and computing \( \nul(\A) \) must return a basis of \( U \); starting from that basis and running the first half must return equations with the same solution set, though not necessarily the same equations.
 
 ::: {.warning}
 **Equations for a subspace are far from unique, and more equations do not mean a smaller solution set.** In @exm-implicit-equations, the system \( x_1 - x_2 + x_3 = 0 \), \( x_4 - x_2 = 0 \), \( x_1 + x_3 - x_4 = 0 \) has the **same** solution set \( U \): the third equation is the sum of the first and the negative of the second, so it adds a functional already in \( U^{0} \). Three equations in \( \nR^4 \) cut out a two-dimensional subspace here, not a one-dimensional one. Each new equation lowers the dimension by one **only if** its functional is not a combination of the previous ones. A theorem later in this section makes this precise.
@@ -135,79 +135,79 @@ Running both halves in turn is a useful self-check. Starting from \( A \) in @ex
 
 An inhomogeneous equation \( \a\tp\x = b \) with \( \a \ne \0 \) defines a set that is not a subspace when \( b \ne 0 \). It is a translate of the hyperplane \( H = \ker\varphi_{\a} \): if \( \p \) is one solution, then by @thm-general-solution-structure the solutions are \( \p + H \). We call a coset \( \p + H \) of a hyperplane \( H \) (@def-coset) an **affine hyperplane**. In \( \nR^3 \), the plane \( x + y + z = 1 \) is an affine hyperplane, parallel to the hyperplane \( x + y + z = 0 \).
 
-A system \( A\x = \b \) with rows \( \a_i\tp \) and right-hand sides \( b_i \) asks for the vectors lying on all the sets \( \{ \x : \a_i\tp\x = b_i \} \) at once. Each such set is an affine hyperplane if \( \a_i \ne \0 \); if \( \a_i = \0 \), it is all of \( F^n \) (when \( b_i = 0 \)) or empty (when \( b_i \ne 0 \)). So **the solution set of a linear system is an intersection of affine hyperplanes**, apart from these trivial rows. The duality theorems give the converse.
+A system \( \A\x = \b \) with rows \( \a_i\tp \) and right-hand sides \( b_i \) asks for the vectors lying on all the sets \( \{ \x : \a_i\tp\x = b_i \} \) at once. Each such set is an affine hyperplane if \( \a_i \ne \0 \); if \( \a_i = \0 \), it is all of \( F^n \) (when \( b_i = 0 \)) or empty (when \( b_i \ne 0 \)). So **the solution set of a linear system is an intersection of affine hyperplanes**, apart from these trivial rows. The duality theorems give the converse.
 
 ::: {#prp-affine-subspace-intersection}
 [Cosets as intersections of affine hyperplanes]
 
-Let \( U \) be a subspace of \( F^n \) of dimension \( k < n \), and let \( \p \in F^n \). Let \( A \in M_{(n-k) \times n}(F) \) be as in @thm-subspace-is-solution-set (a), with rows \( \a_1\tp, \dots, \a_{n-k}\tp \). Then
+Let \( U \) be a subspace of \( F^n \) of dimension \( k < n \), and let \( \p \in F^n \). Let \( \A \in M_{(n-k) \times n}(F) \) be as in @thm-subspace-is-solution-set (a), with rows \( \a_1\tp, \dots, \a_{n-k}\tp \). Then
 \[
-\p + U = \{ \x \in F^n : A\x = A\p \} = \bigcap_{i=1}^{n-k} \{ \x : \a_i\tp\x = \a_i\tp\p \},
+\p + U = \{ \x \in F^n : \A\x = \A\p \} = \bigcap_{i=1}^{n-k} \{ \x : \a_i\tp\x = \a_i\tp\p \},
 \]
 an intersection of \( n - k \) affine hyperplanes.
 :::
 
 ::: {.proof}
-By @thm-subspace-is-solution-set, \( \nul(A) = U \). The vector \( \p \) is one solution of \( A\x = A\p \), so by @thm-general-solution-structure its solution set is \( \p + \nul(A) = \p + U \). The \( i \)-th equation reads \( \a_i\tp\x = \a_i\tp\p \). Each \( \varphi_{\a_i} \) is non-zero, because it belongs to a basis of \( U^{0} \); so \( \ker\varphi_{\a_i} \) is a hyperplane (@thm-hyperplane-kernel-functional), and \( \{ \x : \a_i\tp\x = \a_i\tp\p \} = \p + \ker\varphi_{\a_i} \) is an affine hyperplane, again by @thm-general-solution-structure applied to this one equation.
+By @thm-subspace-is-solution-set, \( \nul(\A) = U \). The vector \( \p \) is one solution of \( \A\x = \A\p \), so by @thm-general-solution-structure its solution set is \( \p + \nul(\A) = \p + U \). The \( i \)-th equation reads \( \a_i\tp\x = \a_i\tp\p \). Each \( \varphi_{\a_i} \) is non-zero, because it belongs to a basis of \( U^{0} \); so \( \ker\varphi_{\a_i} \) is a hyperplane (@thm-hyperplane-kernel-functional), and \( \{ \x : \a_i\tp\x = \a_i\tp\p \} = \p + \ker\varphi_{\a_i} \) is an affine hyperplane, again by @thm-general-solution-structure applied to this one equation.
 :::
 
 Unlike hyperplanes, which all contain \( \0 \), affine hyperplanes can be disjoint: \( x_1 + x_2 = 0 \) and \( x_1 + x_2 = 1 \) are parallel lines in \( \nR^2 \). That is the geometric picture of an inconsistent system.
 
 ## The row space annihilates the null space
 
-In Chapter 2, @thm-rank-nullity-matrix said \( \rank A + \nullity A = n \), and its proof counted pivot and free columns in the RREF. The duality of this chapter explains the same equation without elimination: the rows of \( A \) are exactly the equations satisfied by the null space.
+In Chapter 2, @thm-rank-nullity-matrix said \( \rank \A + \nullity \A = n \), and its proof counted pivot and free columns in the RREF. The duality of this chapter explains the same equation without elimination: the rows of \( \A \) are exactly the equations satisfied by the null space.
 
 ::: {#thm-row-space-annihilates-null-space}
 [The Row Space Is the Annihilator of the Null Space]
 
-Let \( A \in M_{m \times n}(F) \). Identifying a row vector \( \a\tp \in M_{1 \times n}(F) \) with the functional \( \varphi_{\a} \in (F^n)^{*} \),
+Let \( \A \in M_{m \times n}(F) \). Identifying a row vector \( \a\tp \in M_{1 \times n}(F) \) with the functional \( \varphi_{\a} \in (F^n)^{*} \),
 \[
-\{ \varphi_{\a} : \a\tp \in \row(A) \} = \nul(A)^{0} .
+\{ \varphi_{\a} : \a\tp \in \row(\A) \} = \nul(\A)^{0} .
 \]
-Consequently \( \dim \row(A) + \dim \nul(A) = n \).
+Consequently \( \dim \row(\A) + \dim \nul(\A) = n \).
 :::
 
 ::: {.idea}
-Let \( T = T_A \colon F^n \to F^m \). Its kernel is \( \nul(A) \), and @thm-kernel-image-dual-map says \( \im T' = (\ker T)^{0} \). So it is enough to see that \( \im T' \) is the row space. Pull back a functional \( \varphi_{\y} \) on \( F^m \): the result is \( \x \mapsto \y\tp A\x \), which is multiplication by the row \( \y\tp A \), the combination of the rows of \( A \) with coefficients \( y_1, \dots, y_m \). The transpose of Chapter 0 appears exactly here: \( \y\tp A = (A\tp\y)\tp \).
+Let \( T = T_{\A} \colon F^n \to F^m \). Its kernel is \( \nul(\A) \), and @thm-kernel-image-dual-map says \( \im T' = (\ker T)^{0} \). So it is enough to see that \( \im T' \) is the row space. Pull back a functional \( \varphi_{\y} \) on \( F^m \): the result is \( \x \mapsto \y\tp \A\x \), which is multiplication by the row \( \y\tp \A \), the combination of the rows of \( \A \) with coefficients \( y_1, \dots, y_m \). The transpose of Chapter 0 appears exactly here: \( \y\tp \A = (\A\tp\y)\tp \).
 :::
 
 ::: {.proof}
-Let \( T = T_A \colon F^n \to F^m \), \( T(\x) = A\x \), so that \( \ker T = \nul(A) \). Every functional on \( F^m \) is \( \varphi_{\y} \) for a unique \( \y \in F^m \), as recalled at the start of this section. By @def-dual-map, associativity of matrix multiplication, and @thm-transpose-properties,
+Let \( T = T_{\A} \colon F^n \to F^m \), \( T(\x) = \A\x \), so that \( \ker T = \nul(\A) \). Every functional on \( F^m \) is \( \varphi_{\y} \) for a unique \( \y \in F^m \), as recalled at the start of this section. By @def-dual-map, associativity of matrix multiplication, and @thm-transpose-properties,
 \[
-T'(\varphi_{\y})(\x) = \varphi_{\y}(A\x) = \y\tp(A\x) = (\y\tp A)\x = (A\tp\y)\tp\x = \varphi_{A\tp\y}(\x) \qquad (\x \in F^n),
+T'(\varphi_{\y})(\x) = \varphi_{\y}(\A\x) = \y\tp(\A\x) = (\y\tp \A)\x = (\A\tp\y)\tp\x = \varphi_{\A\tp\y}(\x) \qquad (\x \in F^n),
 \]
-so \( T'(\varphi_{\y}) = \varphi_{A\tp\y} \). The columns of \( A\tp \) are \( \a_1, \dots, \a_m \), where \( \a_i\tp \) are the rows of \( A \), so \( A\tp\y = y_1\a_1 + \dots + y_m\a_m \) by @thm-matrix-times-vector-columns. As \( \y \) runs over \( F^m \), these are all the combinations of \( \a_1, \dots, \a_m \), and since transposing respects combinations (@thm-transpose-properties), they are exactly the vectors \( \a \) with \( \a\tp \in \row(A) \) (@def-row-space). Hence
+so \( T'(\varphi_{\y}) = \varphi_{\A\tp\y} \). The columns of \( \A\tp \) are \( \a_1, \dots, \a_m \), where \( \a_i\tp \) are the rows of \( \A \), so \( \A\tp\y = y_1\a_1 + \dots + y_m\a_m \) by @thm-matrix-times-vector-columns. As \( \y \) runs over \( F^m \), these are all the combinations of \( \a_1, \dots, \a_m \), and since transposing respects combinations (@thm-transpose-properties), they are exactly the vectors \( \a \) with \( \a\tp \in \row(\A) \) (@def-row-space). Hence
 \[
-\im T' = \{ \varphi_{\a} : \a\tp \in \row(A) \} .
+\im T' = \{ \varphi_{\a} : \a\tp \in \row(\A) \} .
 \]
-By @thm-kernel-image-dual-map, \( \im T' = (\ker T)^{0} = \nul(A)^{0} \), which is the first claim.
+By @thm-kernel-image-dual-map, \( \im T' = (\ker T)^{0} = \nul(\A)^{0} \), which is the first claim.
 
-For the count, \( \a\tp \mapsto \varphi_{\a} \) is an isomorphism \( M_{1 \times n}(F) \to (F^n)^{*} \) (transposition followed by \( \a \mapsto \varphi_{\a} \)), so \( \dim \row(A) = \dim \nul(A)^{0} = n - \dim\nul(A) \) by @thm-dimension-annihilator.
+For the count, \( \a\tp \mapsto \varphi_{\a} \) is an isomorphism \( M_{1 \times n}(F) \to (F^n)^{*} \) (transposition followed by \( \a \mapsto \varphi_{\a} \)), so \( \dim \row(\A) = \dim \nul(\A)^{0} = n - \dim\nul(\A) \) by @thm-dimension-annihilator.
 :::
 
-The count is Rank–Nullity for matrices once more, now as a statement about annihilators: \( \rank A = \dim\row(A) \) counts independent equations and \( \nullity A \) counts free parameters. It also says that the given equations generate **all** the equations satisfied by \( \nul(A) \): any linear equation that holds on the solution set of \( A\x = \0 \) is a combination of the rows of \( A \).
+The count is Rank–Nullity for matrices once more, now as a statement about annihilators: \( \rank \A = \dim\row(\A) \) counts independent equations and \( \nullity \A \) counts free parameters. It also says that the given equations generate **all** the equations satisfied by \( \nul(\A) \): any linear equation that holds on the solution set of \( \A\x = \0 \) is a combination of the rows of \( \A \).
 
 ::: {#cor-same-null-space-iff-same-row-space}
 [Same solutions, same row space]
 
-Let \( A \in M_{m \times n}(F) \) and \( B \in M_{p \times n}(F) \). Then \( \nul(A) = \nul(B) \) if and only if \( \row(A) = \row(B) \).
+Let \( \A \in M_{m \times n}(F) \) and \( \B \in M_{p \times n}(F) \). Then \( \nul(\A) = \nul(\B) \) if and only if \( \row(\A) = \row(\B) \).
 :::
 
 ::: {.proof}
-(⇐) If \( \row(A) = \row(B) \), then \( \nul(A)^{0} = \nul(B)^{0} \) by @thm-row-space-annihilates-null-space, so \( \nul(A) = \nul(B) \) by @cor-subspaces-determined-by-annihilator.
+(⇐) If \( \row(\A) = \row(\B) \), then \( \nul(\A)^{0} = \nul(\B)^{0} \) by @thm-row-space-annihilates-null-space, so \( \nul(\A) = \nul(\B) \) by @cor-subspaces-determined-by-annihilator.
 
-(⇒) If \( \nul(A) = \nul(B) \), then \( \{ \varphi_{\a} : \a\tp \in \row(A) \} = \nul(A)^{0} = \{ \varphi_{\a} : \a\tp \in \row(B) \} \) by @thm-row-space-annihilates-null-space. Since \( \a\tp \mapsto \varphi_{\a} \) is injective, \( \row(A) = \row(B) \).
+(⇒) If \( \nul(\A) = \nul(\B) \), then \( \{ \varphi_{\a} : \a\tp \in \row(\A) \} = \nul(\A)^{0} = \{ \varphi_{\a} : \a\tp \in \row(\B) \} \) by @thm-row-space-annihilates-null-space. Since \( \a\tp \mapsto \varphi_{\a} \) is injective, \( \row(\A) = \row(\B) \).
 :::
 
 Chapter 2 showed that row operations preserve the null space (@thm-row-ops-row-space). The corollary gives a converse in terms of row spaces: two systems in the same unknowns have the same solutions **exactly** when each equation of one is a combination of the equations of the other.
 
 ## Sums and intersections by duality
 
-Parametric and implicit descriptions are good at different things. A **sum** is easy parametrically: \( U + W \) is spanned by a spanning list of \( U \) followed by one of \( W \) (@prp-sum-of-spans). An **intersection** is easy implicitly: if \( U = \nul(A) \) and \( W = \nul(B) \), then \( \x \in U \cap W \) exactly when \( \x \) satisfies both systems, so
+Parametric and implicit descriptions are good at different things. A **sum** is easy parametrically: \( U + W \) is spanned by a spanning list of \( U \) followed by one of \( W \) (@prp-sum-of-spans). An **intersection** is easy implicitly: if \( U = \nul(\A) \) and \( W = \nul(\B) \), then \( \x \in U \cap W \) exactly when \( \x \) satisfies both systems, so
 \[
-U \cap W = \nul \begin{pmatrix} A \\ B \end{pmatrix},
+U \cap W = \nul \begin{pmatrix} \A \\ \B \end{pmatrix},
 \]
-the null space of the matrix with the rows of \( A \) above the rows of \( B \). Duality explains why each is easy where it is. The rows of the stacked matrix span \( \row(A) + \row(B) \), which corresponds to \( U^{0} + W^{0} = (U \cap W)^{0} \) by @thm-row-space-annihilates-null-space and @thm-annihilator-properties (d); and \( (U + W)^{0} = U^{0} \cap W^{0} \) says that the equations of a sum are the equations common to both pieces.
+the null space of the matrix with the rows of \( \A \) above the rows of \( \B \). Duality explains why each is easy where it is. The rows of the stacked matrix span \( \row(\A) + \row(\B) \), which corresponds to \( U^{0} + W^{0} = (U \cap W)^{0} \) by @thm-row-space-annihilates-null-space and @thm-annihilator-properties (d); and \( (U + W)^{0} = U^{0} \cap W^{0} \) says that the equations of a sum are the equations common to both pieces.
 
 ::: {#exm-intersection-via-equations}
 [An intersection computed from equations]
@@ -271,7 +271,7 @@ Thus \( c_1\varphi_1 + \dots + c_k\varphi_k = 0 \) with \( \c \ne \0 \), and the
 (b) ⇔ (c). By @thm-first-isomorphism, \( V/\ker\Phi \cong \im\Phi \), and \( \ker\Phi = \bigcap_i \ker\varphi_i \). So the codimension of \( \bigcap_i\ker\varphi_i \) is \( \dim\im\Phi \), which equals \( k \) exactly when \( \im\Phi = F^k \) (@thm-dim-impl-eq).
 :::
 
-For \( V = F^n \) and \( \varphi_i = \varphi_{\a_i} \), the map \( \Phi \) is \( T_A \), where \( A \) has rows \( \a_i\tp \). The theorem then says: the rows of \( A \) are independent if and only if \( A\x = \b \) is solvable for **every** \( \b \in F^k \). Independent equations never contradict each other.
+For \( V = F^n \) and \( \varphi_i = \varphi_{\a_i} \), the map \( \Phi \) is \( T_{\A} \), where \( \A \) has rows \( \a_i\tp \). The theorem then says: the rows of \( \A \) are independent if and only if \( \A\x = \b \) is solvable for **every** \( \b \in F^k \). Independent equations never contradict each other.
 
 ::: {.check}
 In \( \nR^3 \), consider \( \varphi_1 = x + y \), \( \varphi_2 = y + z \), \( \varphi_3 = x - z \). What is the codimension of \( \ker\varphi_1 \cap \ker\varphi_2 \cap \ker\varphi_3 \)? Is the system \( x + y = 1 \), \( y + z = 1 \), \( x - z = 1 \) solvable?
@@ -304,8 +304,8 @@ The chapter has built a dictionary. On the left is a finite-dimensional space \(
 | \( \ker T \) | \( \im T' = (\ker T)^{0} \) |
 | \( \im T \) | \( \ker T' = (\im T)^{0} \) |
 | \( \rank T \) | \( \rank T' = \rank T \) |
-| the matrix \( A = \mtx{T}{\sB}{\sC} \) | the transpose \( A\tp = \mtx{T'}{\sC^{*}}{\sB^{*}} \) |
-| \( \nul(A) \) | \( \row(A) \), as \( \nul(A)^{0} \) |
+| the matrix \( \A = \mtx{T}{\sB}{\sC} \) | the transpose \( \A\tp = \mtx{T'}{\sC^{*}}{\sB^{*}} \) |
+| \( \nul(\A) \) | \( \row(\A) \), as \( \nul(\A)^{0} \) |
 | \( V \) | \( V^{**} \), naturally isomorphic via \( \ev_V \) |
 
 Three moves make the dictionary usable, and they transfer to any situation with a pairing between two spaces.
@@ -327,8 +327,8 @@ In Chapter 10, an inner product will give a **chosen** isomorphism \( V \cong V^
 1. Explain how a row vector \( \a\tp \) (with \( \a \in F^n \)) defines a linear functional on \( F^n \), and why every functional arises this way.
 2. What is the least number of homogeneous linear equations whose solution set is a given \( 3 \)-dimensional subspace of \( F^7 \)?
 3. True or false: every system of three homogeneous equations in \( \nR^5 \) has a solution set of dimension \( 2 \). Justify your answer.
-4. State the relation between \( \row(A) \) and \( \nul(A) \) in terms of annihilators.
-5. True or false: if \( A \) and \( B \) have \( n \) columns and \( \nul(A) = \nul(B) \), then \( A \) and \( B \) have the same number of rows. Justify your answer.
+4. State the relation between \( \row(\A) \) and \( \nul(\A) \) in terms of annihilators.
+5. True or false: if \( \A \) and \( \B \) have \( n \) columns and \( \nul(\A) = \nul(\B) \), then \( \A \) and \( \B \) have the same number of rows. Justify your answer.
 6. Name the dual counterparts of: a sum of subspaces; an injective linear map; the matrix of a linear map.
 :::
 :::
@@ -338,11 +338,11 @@ In Chapter 10, an inner product will give a **chosen** isomorphism \( V \cong V^
 
 (b) \( 7 - 3 = 4 \), by @thm-subspace-is-solution-set.
 
-(c) False. The equations may be dependent: \( x_1 = 0 \) written three times has a solution set of dimension \( 4 \). The dimension is \( 5 - \rank A \), which is \( 2 \) only when the three rows are independent.
+(c) False. The equations may be dependent: \( x_1 = 0 \) written three times has a solution set of dimension \( 4 \). The dimension is \( 5 - \rank \A \), which is \( 2 \) only when the three rows are independent.
 
-(d) Identifying rows with functionals, \( \row(A) = \nul(A)^{0} \) (@thm-row-space-annihilates-null-space).
+(d) Identifying rows with functionals, \( \row(\A) = \nul(\A)^{0} \) (@thm-row-space-annihilates-null-space).
 
-(e) False. By @cor-same-null-space-iff-same-row-space they have the same row space, but not necessarily the same number of rows: \( A = \begin{pmatrix} 1 & 0 \end{pmatrix} \) and \( B = \begin{pmatrix} 1 & 0 \\ 2 & 0 \end{pmatrix} \) both have null space \( \Span(\e_2) \).
+(e) False. By @cor-same-null-space-iff-same-row-space they have the same row space, but not necessarily the same number of rows: \( \A = \begin{pmatrix} 1 & 0 \end{pmatrix} \) and \( \B = \begin{pmatrix} 1 & 0 \\ 2 & 0 \end{pmatrix} \) both have null space \( \Span(\e_2) \).
 
 (f) An intersection of annihilators, \( (U + W)^{0} = U^{0} \cap W^{0} \); a surjective dual map; the transpose matrix.
 :::
@@ -364,9 +364,9 @@ Let \( U = \Span((1, 2, 0, -1), (2, 1, 1, 0), (3, 3, 1, -1)) \subseteq \nR^4 \).
 ::: {.solution}
 (a) The third vector is the sum of the first two, so \( U = \Span((1, 2, 0, -1), (2, 1, 1, 0)) \) by @thm-span-absorb. These two vectors are independent, since neither is a multiple of the other, so they form a basis of \( U \) and \( \dim U = 2 \).
 
-(b) By @thm-parametric-to-implicit, we need a basis of \( \nul(M) \), where \( M \) has the three vectors as rows. Row reduction gives
+(b) By @thm-parametric-to-implicit, we need a basis of \( \nul(\M) \), where \( \M \) has the three vectors as rows. Row reduction gives
 \[
-M = \begin{pmatrix} 1 & 2 & 0 & -1 \\ 2 & 1 & 1 & 0 \\ 3 & 3 & 1 & -1 \end{pmatrix} \longrightarrow \begin{pmatrix} 1 & 0 & \tfrac23 & \tfrac13 \\ 0 & 1 & -\tfrac13 & -\tfrac23 \\ 0 & 0 & 0 & 0 \end{pmatrix}.
+\M = \begin{pmatrix} 1 & 2 & 0 & -1 \\ 2 & 1 & 1 & 0 \\ 3 & 3 & 1 & -1 \end{pmatrix} \longrightarrow \begin{pmatrix} 1 & 0 & \tfrac23 & \tfrac13 \\ 0 & 1 & -\tfrac13 & -\tfrac23 \\ 0 & 0 & 0 & 0 \end{pmatrix}.
 \]
 The free variables are the third and fourth. Setting them to \( (3, 0) \) and \( (0, 3) \) to clear denominators gives the null vectors \( (-2, 1, 3, 0) \) and \( (-1, 2, 0, 3) \). So
 \[
@@ -398,7 +398,7 @@ Let \( U = \{ \x \in \nR^4 : x_1 + x_2 - x_3 + 2x_4 = 0, \ \ 2x_1 + 2x_2 + x_3 +
 \]
 The pivots are in columns 1 and 3, and \( x_2, x_4 \) are free. By @thm-basis-null-space, a basis is \( \n_1 = (-1, 1, 0, 0) \) and \( \n_2 = (-1, 0, 1, 1) \).
 
-(b) Put \( \n_1\tp, \n_2\tp \) as the rows of \( M \) and solve \( M\a = \0 \): \( -a_1 + a_2 = 0 \) and \( -a_1 + a_3 + a_4 = 0 \). So \( a_2 = a_1 \) and \( a_3 = a_1 - a_4 \), with \( a_1, a_4 \) free; the basic solutions are \( (1, 1, 1, 0) \) and \( (0, 0, -1, 1) \). The new system is \( x_1 + x_2 + x_3 = 0 \), \( -x_3 + x_4 = 0 \). Its rows lie in the row space of the original matrix, which equals the row space of the RREF (@thm-row-ops-row-space), since \( (1, 1, 1, 0) = (1, 1, 0, 1) + (0, 0, 1, -1) \) and \( (0, 0, -1, 1) = -(0, 0, 1, -1) \). Both row spaces are two-dimensional, so they are equal (@thm-dim-impl-eq), and the two systems have the same solution set by @cor-same-null-space-iff-same-row-space.
+(b) Put \( \n_1\tp, \n_2\tp \) as the rows of \( \M \) and solve \( \M\a = \0 \): \( -a_1 + a_2 = 0 \) and \( -a_1 + a_3 + a_4 = 0 \). So \( a_2 = a_1 \) and \( a_3 = a_1 - a_4 \), with \( a_1, a_4 \) free; the basic solutions are \( (1, 1, 1, 0) \) and \( (0, 0, -1, 1) \). The new system is \( x_1 + x_2 + x_3 = 0 \), \( -x_3 + x_4 = 0 \). Its rows lie in the row space of the original matrix, which equals the row space of the RREF (@thm-row-ops-row-space), since \( (1, 1, 1, 0) = (1, 1, 0, 1) + (0, 0, 1, -1) \) and \( (0, 0, -1, 1) = -(0, 0, 1, -1) \). Both row spaces are two-dimensional, so they are equal (@thm-dim-impl-eq), and the two systems have the same solution set by @cor-same-null-space-iff-same-row-space.
 :::
 
 ::: {#exr-hyperplanes-and-systems-b3}
@@ -455,19 +455,19 @@ Let \( F \) be an **infinite** field, \( V \) a vector space over \( F \) with \
 ::: {#exr-hyperplanes-and-systems-c2}
 [C2: The least number of equations for a system]
 
-Let \( A \in M_{m \times n}(F) \) and \( \b \in F^m \), and suppose the solution set \( S \) of \( A\x = \b \) is non-empty.
+Let \( \A \in M_{m \times n}(F) \) and \( \b \in F^m \), and suppose the solution set \( S \) of \( \A\x = \b \) is non-empty.
 
 ::: {.enumerate options="label=(\alph*)"}
-1. Prove that if \( B \in M_{p \times n}(F) \), \( \c \in F^p \) and \( B\x = \c \) has the same solution set \( S \), then \( \nul(B) = \nul(A) \).
-2. Deduce that every system with solution set \( S \) has at least \( \rank A \) equations, and that some system with solution set \( S \) has exactly \( \rank A \) equations.
+1. Prove that if \( \B \in M_{p \times n}(F) \), \( \c \in F^p \) and \( \B\x = \c \) has the same solution set \( S \), then \( \nul(\B) = \nul(\A) \).
+2. Deduce that every system with solution set \( S \) has at least \( \rank \A \) equations, and that some system with solution set \( S \) has exactly \( \rank \A \) equations.
 3. Show by an example that (b) fails without the hypothesis \( S \ne \varnothing \).
 :::
 :::
 
 ::: {.solution}
-(a) Fix \( \p \in S \). By @thm-general-solution-structure, \( S = \p + \nul(A) \) and also \( S = \p + \nul(B) \). For \( \h \in \nul(A) \), \( \p + \h \in S = \p + \nul(B) \), so \( \h \in \nul(B) \). Swapping the roles of \( A \) and \( B \) gives the reverse inclusion, so \( \nul(A) = \nul(B) \).
+(a) Fix \( \p \in S \). By @thm-general-solution-structure, \( S = \p + \nul(\A) \) and also \( S = \p + \nul(\B) \). For \( \h \in \nul(\A) \), \( \p + \h \in S = \p + \nul(\B) \), so \( \h \in \nul(\B) \). Swapping the roles of \( \A \) and \( \B \) gives the reverse inclusion, so \( \nul(\A) = \nul(\B) \).
 
-(b) Let \( k = \dim\nul(A) = n - \rank A \) (@thm-rank-nullity-matrix). If \( B\x = \c \) with \( p \) equations has solution set \( S \), then \( \nul(B) = \nul(A) \) by (a), so \( p \ge n - k = \rank A \) by @thm-subspace-is-solution-set (b). Conversely, take \( A_0 \in M_{(n-k) \times n}(F) \) with \( \nul(A_0) = \nul(A) \), which exists by @thm-subspace-is-solution-set (a) (if \( k = n \), take the empty system, whose solution set is \( F^n = S \)). By @prp-affine-subspace-intersection, or directly by @thm-general-solution-structure, the system \( A_0\x = A_0\p \) has solution set \( \p + \nul(A) = S \), and it has \( n - k = \rank A \) equations.
+(b) Let \( k = \dim\nul(\A) = n - \rank \A \) (@thm-rank-nullity-matrix). If \( \B\x = \c \) with \( p \) equations has solution set \( S \), then \( \nul(\B) = \nul(\A) \) by (a), so \( p \ge n - k = \rank \A \) by @thm-subspace-is-solution-set (b). Conversely, take \( \A_0 \in M_{(n-k) \times n}(F) \) with \( \nul(\A_0) = \nul(\A) \), which exists by @thm-subspace-is-solution-set (a) (if \( k = n \), take the empty system, whose solution set is \( F^n = S \)). By @prp-affine-subspace-intersection, or directly by @thm-general-solution-structure, the system \( \A_0\x = \A_0\p \) has solution set \( \p + \nul(\A) = S \), and it has \( n - k = \rank \A \) equations.
 
-(c) Over any field, \( 0x_1 = 1 \) (in \( F^1 \)) has empty solution set and coefficient matrix of rank \( 0 \), yet no system with \( 0 \) equations has empty solution set, since the empty system is solved by every vector. So at least one equation is needed, which is more than \( \rank A = 0 \).
+(c) Over any field, \( 0x_1 = 1 \) (in \( F^1 \)) has empty solution set and coefficient matrix of rank \( 0 \), yet no system with \( 0 \) equations has empty solution set, since the empty system is solved by every vector. So at least one equation is needed, which is more than \( \rank \A = 0 \).
 :::

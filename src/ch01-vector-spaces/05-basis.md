@@ -65,7 +65,7 @@ Show that each of the following lists is a basis. They are called the **standard
 ::: {.enumerate options="label=(\alph*)"}
 1. \( (\e_1, \dots, \e_n) \) in \( F^n \), where \( \e_i \) has \( 1 \) in position \( i \) and \( 0 \) elsewhere.
 2. \( (1, x, x^2, \dots, x^n) \) in \( F[x]_{\le n} \).
-3. \( (E_{11}, E_{12}, \dots, E_{1n}, E_{21}, \dots, E_{mn}) \) in \( M_{m \times n}(F) \), where the **matrix unit** \( E_{ij} \) has \( 1 \) in entry \( (i, j) \) and \( 0 \) elsewhere, listed row by row.
+3. \( (\E_{11}, \E_{12}, \dots, \E_{1n}, \E_{21}, \dots, \E_{mn}) \) in \( M_{m \times n}(F) \), where the **matrix unit** \( \E_{ij} \) has \( 1 \) in entry \( (i, j) \) and \( 0 \) elsewhere, listed row by row.
 :::
 :::
 
@@ -74,7 +74,7 @@ Show that each of the following lists is a basis. They are called the **standard
 
 (b) (B2): by @def-polynomials-bounded-degree, every element of \( F[x]_{\le n} \) has the form \( a_0 + a_1x + \dots + a_nx^n \), which is a combination of \( 1, x, \dots, x^n \). (B1): let \( a_0 \cdot 1 + a_1x + \dots + a_nx^n = 0 \). Here \( 0 \) is the zero polynomial, all of whose coefficients are \( 0 \). Two polynomials are equal exactly when their coefficients agree (@def-polynomial), so \( a_0 = a_1 = \dots = a_n = 0 \).
 
-(c) (B2): a matrix \( A = (a_{ij}) \) equals \( \sum_{i, j} a_{ij}E_{ij} \), since both sides have \( a_{ij} \) in entry \( (i, j) \). (B1): if \( \sum_{i, j} c_{ij}E_{ij} \) is the zero matrix, then its \( (i, j) \) entry \( c_{ij} \) is \( 0 \) for every \( i, j \).
+(c) (B2): a matrix \( \A = (a_{ij}) \) equals \( \sum_{i, j} a_{ij}\E_{ij} \), since both sides have \( a_{ij} \) in entry \( (i, j) \). (B1): if \( \sum_{i, j} c_{ij}\E_{ij} \) is the zero matrix, then its \( (i, j) \) entry \( c_{ij} \) is \( 0 \) for every \( i, j \).
 :::
 
 The next examples show that a space has other bases, that the field matters, and what happens in the smallest space.
@@ -432,18 +432,18 @@ The sifted list is \( (1 + x, x^2, x) \). The original list contains \( 1 \), \(
 ::: {#exr-basis-b3}
 [B3: Symmetric Matrices]
 
-Let \( U = \{ A \in M_2(\nR) : A\tp = A \} \). Show that \( (E_{11}, \; E_{12} + E_{21}, \; E_{22}) \) is a basis of \( U \), and find the coordinate vector of \( \begin{pmatrix} 2 & -1 \\ -1 & 5 \end{pmatrix} \) with respect to it.
+Let \( U = \{ \A \in M_2(\nR) : \A\tp = \A \} \). Show that \( (\E_{11}, \; \E_{12} + \E_{21}, \; \E_{22}) \) is a basis of \( U \), and find the coordinate vector of \( \begin{pmatrix} 2 & -1 \\ -1 & 5 \end{pmatrix} \) with respect to it.
 :::
 
 ::: {.solution}
 Each of the three matrices is symmetric, so the list lies in \( U \).
 
-*Spanning.* Let \( A \in U \). Writing \( A = \begin{pmatrix} a & b \\ c & d \end{pmatrix} \), the condition \( A\tp = A \) says \( c = b \). Hence
+*Spanning.* Let \( \A \in U \). Writing \( \A = \begin{pmatrix} a & b \\ c & d \end{pmatrix} \), the condition \( \A\tp = \A \) says \( c = b \). Hence
 \[
-A = \begin{pmatrix} a & b \\ b & d \end{pmatrix} = aE_{11} + b(E_{12} + E_{21}) + dE_{22}.
+\A = \begin{pmatrix} a & b \\ b & d \end{pmatrix} = a\E_{11} + b(\E_{12} + \E_{21}) + d\E_{22}.
 \]
 
-*Independence.* Let \( aE_{11} + b(E_{12} + E_{21}) + dE_{22} = 0 \). The left side is \( \begin{pmatrix} a & b \\ b & d \end{pmatrix} \), so comparing entries with the zero matrix gives \( a = b = d = 0 \).
+*Independence.* Let \( a\E_{11} + b(\E_{12} + \E_{21}) + d\E_{22} = 0 \). The left side is \( \begin{pmatrix} a & b \\ b & d \end{pmatrix} \), so comparing entries with the zero matrix gives \( a = b = d = 0 \).
 
 Hence the list is a basis of \( U \). Reading off \( a = 2 \), \( b = -1 \), \( d = 5 \), the coordinate vector is \( (2, -1, 5) \).
 :::

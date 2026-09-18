@@ -1,6 +1,6 @@
 # Linear Combinations and Span
 
-We now have vector spaces and, inside them, subspaces. So far every subspace has been handed to us by a condition, such as "\( x + 2y = 0 \)" or "\( A\tp = A \)". This section goes the other way. We start from a few vectors, build everything that can be built from them, and show that the result is always a subspace: the smallest one containing the vectors we started with. Along the way we meet the first way of measuring a space, by asking whether finitely many vectors are enough to build all of it.
+We now have vector spaces and, inside them, subspaces. So far every subspace has been handed to us by a condition, such as "\( x + 2y = 0 \)" or "\( \A\tp = \A \)". This section goes the other way. We start from a few vectors, build everything that can be built from them, and show that the result is always a subspace: the smallest one containing the vectors we started with. Along the way we meet the first way of measuring a space, by asking whether finitely many vectors are enough to build all of it.
 
 ## Linear combinations
 
@@ -201,7 +201,7 @@ Show that each list spans the given space.
 1. \( (\e_1, \dots, \e_n) \) in \( F^n \), where \( \e_i \) has \( 1 \) in position \( i \) and \( 0 \) elsewhere.
 2. \( (1, x, x^2) \) in \( F[x]_{\le 2} \).
 3. \( ((1, 1), (1, -1)) \) in \( \nR^2 \).
-4. \( (E_{11}, E_{12}, E_{21}, E_{22}) \) in \( M_2(F) \), where \( E_{ij} \) has \( 1 \) in entry \( (i, j) \) and \( 0 \) elsewhere.
+4. \( (\E_{11}, \E_{12}, \E_{21}, \E_{22}) \) in \( M_2(F) \), where \( \E_{ij} \) has \( 1 \) in entry \( (i, j) \) and \( 0 \) elsewhere.
 5. The empty list, in the zero space \( \{ \0 \} \).
 :::
 :::
@@ -215,7 +215,7 @@ Show that each list spans the given space.
 a + b = p, \qquad a - b = q.
 \]
 Adding the equations gives \( 2a = p + q \), and subtracting gives \( 2b = p - q \). So \( a = \tfrac{p + q}{2} \) and \( b = \tfrac{p - q}{2} \). Check: \( \tfrac{p + q}{2} + \tfrac{p - q}{2} = p \) and \( \tfrac{p + q}{2} - \tfrac{p - q}{2} = q \). Hence \( (p, q) = \tfrac{p + q}{2}(1, 1) + \tfrac{p - q}{2}(1, -1) \), and the list spans \( \nR^2 \). For instance \( (3, 5) = 4(1, 1) - (1, -1) \).
-4. For any matrix, \( \begin{pmatrix} a & b \\ c & d \end{pmatrix} = aE_{11} + bE_{12} + cE_{21} + dE_{22} \), by adding entry by entry.
+4. For any matrix, \( \begin{pmatrix} a & b \\ c & d \end{pmatrix} = a\E_{11} + b\E_{12} + c\E_{21} + d\E_{22} \), by adding entry by entry.
 5. \( \Span() = \{ \0 \} \) by @def-span. So the empty list spans the zero space. (So does the list \( (\0) \).)
 :::
 :::

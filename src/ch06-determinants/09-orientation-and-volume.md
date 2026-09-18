@@ -29,7 +29,7 @@ In words: stack the \( n \) edge vectors as the columns of a square matrix, take
 
 **Examples.**
 
-- The unit cube \( P(\e_1, \dots, \e_n) \) has volume \( \lvert \det I_n \rvert = 1 \).
+- The unit cube \( P(\e_1, \dots, \e_n) \) has volume \( \lvert \det \I_n \rvert = 1 \).
 - A box with edges \( d_1\e_1, \dots, d_n\e_n \) has volume \( \lvert \det\diag(d_1, \dots, d_n) \rvert = \lvert d_1 \cdots d_n \rvert \) by @thm-det-triangular: the product of its side lengths, as it should be.
 - The parallelepiped spanned by \( (1, 2, 0) \), \( (0, 1, 1) \), \( (1, 0, 3) \) in \( \nR^3 \) has volume
 \[
@@ -43,7 +43,7 @@ expanding along the first row.
 **Why this definition.** Reordering the vectors multiplies the determinant by a sign (@thm-alternating-properties), which the absolute value removes, so the volume does not depend on the order in which the edges are listed. The absolute value is also what makes volume non-negative. The sign we threw away is not garbage: it is the orientation, the subject of the second half of this section.
 
 ::: {.warning}
-**Volume is not linear.** Scaling **one** edge by \( 2 \) doubles the volume, but scaling the whole parallelepiped by \( 2 \) multiplies it by \( 2^n \): \( \vol(2\a_1, \dots, 2\a_n) = \lvert \det(2A) \rvert = 2^n \vol(\a_1, \dots, \a_n) \), where \( A \) has columns \( \a_1, \dots, \a_n \). A cube of side \( 2 \) in \( \nR^3 \) has volume \( 8 \), not \( 2 \); this failure persists even with the sign kept, since \( \det \) is linear in each edge separately, not in all edges at once. The absolute value also destroys additivity in a single edge: \( \vol(\a_1 + \b_1, \a_2, \dots) \) is in general not \( \vol(\a_1, \a_2, \dots) + \vol(\b_1, \a_2, \dots) \): with \( \a_1 = \e_1 \), \( \b_1 = -\e_1 \) in \( \nR^2 \) and \( \a_2 = \e_2 \), the left side is \( 0 \) and the right side is \( 2 \).
+**Volume is not linear.** Scaling **one** edge by \( 2 \) doubles the volume, but scaling the whole parallelepiped by \( 2 \) multiplies it by \( 2^n \): \( \vol(2\a_1, \dots, 2\a_n) = \lvert \det(2\A) \rvert = 2^n \vol(\a_1, \dots, \a_n) \), where \( \A \) has columns \( \a_1, \dots, \a_n \). A cube of side \( 2 \) in \( \nR^3 \) has volume \( 8 \), not \( 2 \); this failure persists even with the sign kept, since \( \det \) is linear in each edge separately, not in all edges at once. The absolute value also destroys additivity in a single edge: \( \vol(\a_1 + \b_1, \a_2, \dots) \) is in general not \( \vol(\a_1, \a_2, \dots) + \vol(\b_1, \a_2, \dots) \): with \( \a_1 = \e_1 \), \( \b_1 = -\e_1 \) in \( \nR^2 \) and \( \a_2 = \e_2 \), the left side is \( 0 \) and the right side is \( 2 \).
 :::
 
 ## Volume is forced by its rules
@@ -65,27 +65,27 @@ Then \( g(\a_1, \dots, \a_n) = \vol(\a_1, \dots, \a_n) \) for every list. Moreov
 :::
 
 ::: {.idea}
-Think of \( g \) as a function of the matrix \( M \) with columns \( \a_1, \dots, \a_n \). ① If the columns are dependent, shear one column to \( \0 \) and scale by \( 0 \): \( g = 0 \). ② Each elementary column operation changes \( g \) by the factor \( \lvert \det E \rvert \). Scaling and shearing are (V1) and (V2); a swap is not among the rules, but three shears and a sign change perform it. ③ An invertible \( M \) is a product of elementary matrices, so peel them off one at a time until only \( I \) is left.
+Think of \( g \) as a function of the matrix \( \M \) with columns \( \a_1, \dots, \a_n \). ① If the columns are dependent, shear one column to \( \0 \) and scale by \( 0 \): \( g = 0 \). ② Each elementary column operation changes \( g \) by the factor \( \lvert \det \E \rvert \). Scaling and shearing are (V1) and (V2); a swap is not among the rules, but three shears and a sign change perform it. ③ An invertible \( \M \) is a product of elementary matrices, so peel them off one at a time until only \( \I \) is left.
 :::
 
 ::: {.proof}
-For \( M \in M_n(\nR) \) with columns \( \a_1, \dots, \a_n \), write \( h(M) = g(\a_1, \dots, \a_n) \).
+For \( \M \in M_n(\nR) \) with columns \( \a_1, \dots, \a_n \), write \( h(\M) = g(\a_1, \dots, \a_n) \).
 
-**Step 1: dependent columns give \( h(M) = 0 \).** Suppose the columns are linearly dependent. By @thm-linear-dependence-lemma, some \( \a_i = c_1\a_1 + \dots + c_{i-1}\a_{i-1} \) (for \( i = 1 \), \( \a_1 = \0 \)). Applying (V2) to slot \( i \) with the scalars \( -c_1, \dots, -c_{i-1} \), one at a time, does not change \( g \), and it replaces \( \a_i \) by \( \0 \) while the other slots stay fixed. Then (V1) with \( c = 0 \) gives \( g(\dots, \0, \dots) = g(\dots, 0 \cdot \0, \dots) = 0 \cdot g(\dots, \0, \dots) = 0 \). Hence \( h(M) = 0 \).
+**Step 1: dependent columns give \( h(\M) = 0 \).** Suppose the columns are linearly dependent. By @thm-linear-dependence-lemma, some \( \a_i = c_1\a_1 + \dots + c_{i-1}\a_{i-1} \) (for \( i = 1 \), \( \a_1 = \0 \)). Applying (V2) to slot \( i \) with the scalars \( -c_1, \dots, -c_{i-1} \), one at a time, does not change \( g \), and it replaces \( \a_i \) by \( \0 \) while the other slots stay fixed. Then (V1) with \( c = 0 \) gives \( g(\dots, \0, \dots) = g(\dots, 0 \cdot \0, \dots) = 0 \cdot g(\dots, \0, \dots) = 0 \). Hence \( h(\M) = 0 \).
 
-**Step 2: \( h(ME) = \lvert \det E \rvert\, h(M) \) for every elementary matrix \( E \).** By @thm-row-op-is-left-multiplication and @thm-transpose-properties, \( ME = (E\tp M\tp)\tp \), and \( E\tp \) is the elementary matrix \( P_{ij} \), \( D_i(c) \) or \( I + cE_{ji} \) when \( E \) is \( P_{ij} \), \( D_i(c) \) or \( I + cE_{ij} \). So right multiplication by \( E \) performs a column operation: swap columns \( i \) and \( j \); multiply column \( i \) by \( c \ne 0 \); or add \( c \) times column \( i \) to column \( j \). The determinants are \( \det P_{ij} = -1 \), \( \det D_i(c) = c \) and \( \det(I + cE_{ij}) = 1 \) by @thm-det-row-operations.
+**Step 2: \( h(\M\E) = \lvert \det \E \rvert\, h(\M) \) for every elementary matrix \( \E \).** By @thm-row-op-is-left-multiplication and @thm-transpose-properties, \( \M\E = (\E\tp \M\tp)\tp \), and \( \E\tp \) is the elementary matrix \( \P_{ij} \), \( \D_i(c) \) or \( \I + c\E_{ji} \) when \( \E \) is \( \P_{ij} \), \( \D_i(c) \) or \( \I + c\E_{ij} \). So right multiplication by \( \E \) performs a column operation: swap columns \( i \) and \( j \); multiply column \( i \) by \( c \ne 0 \); or add \( c \) times column \( i \) to column \( j \). The determinants are \( \det \P_{ij} = -1 \), \( \det \D_i(c) = c \) and \( \det(\I + c\E_{ij}) = 1 \) by @thm-det-row-operations.
 
-- For \( E = I + cE_{ij} \), (V2) gives \( h(ME) = h(M) = \lvert 1 \rvert\, h(M) \).
-- For \( E = D_i(c) \), (V1) gives \( h(ME) = \lvert c \rvert\, h(M) \).
-- For \( E = P_{ij} \), watch only slots \( i \) and \( j \), holding \( \x \) and \( \y \). By (V2) three times, \( (\x, \y) \to (\x + \y, \y) \to (\x + \y, -\x) \to (\y, -\x) \) leaves \( g \) unchanged, where the second step subtracts slot \( i \) from slot \( j \) and the third adds slot \( j \) to slot \( i \). By (V1) with \( c = -1 \) on slot \( j \), \( g \) at \( (\y, \x) \) equals \( \lvert -1 \rvert \) times \( g \) at \( (\y, -\x) \). Hence \( h(MP_{ij}) = h(M) = \lvert -1 \rvert\, h(M) \).
+- For \( \E = \I + c\E_{ij} \), (V2) gives \( h(\M\E) = h(\M) = \lvert 1 \rvert\, h(\M) \).
+- For \( \E = \D_i(c) \), (V1) gives \( h(\M\E) = \lvert c \rvert\, h(\M) \).
+- For \( \E = \P_{ij} \), watch only slots \( i \) and \( j \), holding \( \x \) and \( \y \). By (V2) three times, \( (\x, \y) \to (\x + \y, \y) \to (\x + \y, -\x) \to (\y, -\x) \) leaves \( g \) unchanged, where the second step subtracts slot \( i \) from slot \( j \) and the third adds slot \( j \) to slot \( i \). By (V1) with \( c = -1 \) on slot \( j \), \( g \) at \( (\y, \x) \) equals \( \lvert -1 \rvert \) times \( g \) at \( (\y, -\x) \). Hence \( h(\M\P_{ij}) = h(\M) = \lvert -1 \rvert\, h(\M) \).
 
-**Step 3: conclusion.** If the columns of \( M \) are dependent, then \( h(M) = 0 \) by Step 1 and \( \det M = 0 \) by @thm-alternating-properties, so \( h(M) = \lvert \det M \rvert \). Otherwise \( M \) is invertible by @thm-invertible-tfae, hence \( M = E_1E_2\cdots E_k \) is a product of elementary matrices by the same theorem. Applying Step 2 \( k \) times, starting from \( I \), and then (V3),
+**Step 3: conclusion.** If the columns of \( \M \) are dependent, then \( h(\M) = 0 \) by Step 1 and \( \det \M = 0 \) by @thm-alternating-properties, so \( h(\M) = \lvert \det \M \rvert \). Otherwise \( \M \) is invertible by @thm-invertible-tfae, hence \( \M = \E_1\E_2\cdots \E_k \) is a product of elementary matrices by the same theorem. Applying Step 2 \( k \) times, starting from \( \I \), and then (V3),
 \[
-h(M) = h(IE_1\cdots E_k) = \lvert \det E_1 \rvert \cdots \lvert \det E_k \rvert\, h(I) = \lvert \det(E_1\cdots E_k) \rvert = \lvert \det M \rvert,
+h(\M) = h(\I\E_1\cdots \E_k) = \lvert \det \E_1 \rvert \cdots \lvert \det \E_k \rvert\, h(\I) = \lvert \det(\E_1\cdots \E_k) \rvert = \lvert \det \M \rvert,
 \]
 where the third equality uses @thm-det-multiplicative and \( \lvert xy \rvert = \lvert x \rvert \lvert y \rvert \). This proves \( g = \vol \).
 
-Finally, \( \vol \) satisfies (V1) because the determinant is linear in each column (@thm-leibniz-formula-alternating) and \( \lvert c\,d \rvert = \lvert c \rvert \lvert d \rvert \); (V2) by @thm-alternating-properties; and (V3) because \( \det I_n = 1 \).
+Finally, \( \vol \) satisfies (V1) because the determinant is linear in each column (@thm-leibniz-formula-alternating) and \( \lvert c\,d \rvert = \lvert c \rvert \lvert d \rvert \); (V2) by @thm-alternating-properties; and (V3) because \( \det \I_n = 1 \).
 :::
 
 **Agreement with area and volume from school.** For \( n = 2 \), let \( g(\a_1, \a_2) \) be the area of the parallelogram \( P(\a_1, \a_2) \) in the sense of school geometry, base times height. The pictures of §1 are exactly (V1)–(V3) for this \( g \): stretching a side by \( c \) stretches the base or the height by \( \lvert c \rvert \); a shear \( \a_1 \mapsto \a_1 + c\a_2 \) slides the opposite side along a line parallel to the base \( \a_2 \), keeping base and height; and the unit square has area \( 1 \). Hence, by @thm-volume-characterization, school area equals \( \lvert \det\begin{pmatrix} \a_1 & \a_2 \end{pmatrix} \rvert \). For \( n = 3 \) the same argument works with "area of base times height". What the theorem cannot supply is the geometric input itself: it takes the three rules as given.
@@ -115,14 +115,14 @@ In particular, the image of the unit cube under \( T \) has volume \( \lvert \de
 :::
 
 ::: {.proof}
-Let \( B \) be the matrix of \( T \) in the standard basis, so \( T\x = B\x \) for all \( \x \) (@thm-matrix-of-map-coordinates) and \( \det T = \det B \) (@def-det-operator). Let \( A = \begin{pmatrix} \a_1 & \cdots & \a_n \end{pmatrix} \). By @thm-three-views-of-product, \( BA = \begin{pmatrix} B\a_1 & \cdots & B\a_n \end{pmatrix} \). By @thm-det-multiplicative,
+Let \( \B \) be the matrix of \( T \) in the standard basis, so \( T\x = \B\x \) for all \( \x \) (@thm-matrix-of-map-coordinates) and \( \det T = \det \B \) (@def-det-operator). Let \( \A = \begin{pmatrix} \a_1 & \cdots & \a_n \end{pmatrix} \). By @thm-three-views-of-product, \( \B\A = \begin{pmatrix} \B\a_1 & \cdots & \B\a_n \end{pmatrix} \). By @thm-det-multiplicative,
 \[
-\vol(T\a_1, \dots, T\a_n) = \lvert \det(BA) \rvert = \lvert \det B \rvert\,\lvert \det A \rvert = \lvert \det T \rvert\,\vol(\a_1, \dots, \a_n).
+\vol(T\a_1, \dots, T\a_n) = \lvert \det(\B\A) \rvert = \lvert \det \B \rvert\,\lvert \det \A \rvert = \lvert \det T \rvert\,\vol(\a_1, \dots, \a_n).
 \]
 For the unit cube take \( \a_i = \e_i \), with \( \vol(\e_1, \dots, \e_n) = 1 \).
 :::
 
-This is the meaning of the determinant of a real operator: **the factor by which it scales every volume**. An operator with \( \det T = 0 \) squashes \( \nR^n \) into a lower-dimensional subspace, where \( n \)-dimensional volume is \( 0 \). In multivariable calculus the same fact, applied to the linear approximation of a smooth map, becomes the Jacobian factor \( \lvert \det J \rvert \) in the change-of-variables formula for integrals.
+This is the meaning of the determinant of a real operator: **the factor by which it scales every volume**. An operator with \( \det T = 0 \) squashes \( \nR^n \) into a lower-dimensional subspace, where \( n \)-dimensional volume is \( 0 \). In multivariable calculus the same fact, applied to the linear approximation of a smooth map, becomes the Jacobian factor \( \lvert \det \J \rvert \) in the change-of-variables formula for integrals.
 
 ::: {#exm-volume-scaling}
 [Area of an Image]
@@ -131,7 +131,7 @@ Let \( T \colon \nR^2 \to \nR^2 \) be \( T(x, y) = (3x + y,\ x + 2y) \). Find th
 :::
 
 ::: {.solution}
-The standard matrix is \( B = \begin{pmatrix} 3 & 1 \\ 1 & 2 \end{pmatrix} \), with \( \det T = 6 - 1 = 5 \). By @thm-det-volume-scaling the image of the unit square, the parallelogram spanned by \( (3, 1) \) and \( (1, 2) \), has area \( 5 \). The parallelogram \( P((1, 1), (-1, 2)) \) has area \( \lvert 2 + 1 \rvert = 3 \), so its image has area \( 5 \cdot 3 = 15 \). Check directly: \( T(1, 1) = (4, 3) \) and \( T(-1, 2) = (-1, 3) \), and \( \lvert \det\begin{pmatrix} 4 & -1 \\ 3 & 3 \end{pmatrix} \rvert = \lvert 12 + 3 \rvert = 15 \).
+The standard matrix is \( \B = \begin{pmatrix} 3 & 1 \\ 1 & 2 \end{pmatrix} \), with \( \det T = 6 - 1 = 5 \). By @thm-det-volume-scaling the image of the unit square, the parallelogram spanned by \( (3, 1) \) and \( (1, 2) \), has area \( 5 \). The parallelogram \( P((1, 1), (-1, 2)) \) has area \( \lvert 2 + 1 \rvert = 3 \), so its image has area \( 5 \cdot 3 = 15 \). Check directly: \( T(1, 1) = (4, 3) \) and \( T(-1, 2) = (-1, 3) \), and \( \lvert \det\begin{pmatrix} 4 & -1 \\ 3 & 3 \end{pmatrix} \rvert = \lvert 12 + 3 \rvert = 15 \).
 :::
 
 ## Orientation
@@ -169,18 +169,18 @@ and **opposite orientations** if \( \det\mtx{\id}{\sB}{\sC} < 0 \).
 
 In words: write each vector of \( \sB \) in coordinates with respect to \( \sC \), put the coordinate columns side by side (@def-change-of-coordinates-matrix), and look at the **sign** of the determinant. Exactly one of the two cases occurs, because \( \mtx{\id}{\sB}{\sC} \) is invertible (@thm-change-of-coordinates (c)), so its determinant is non-zero (@thm-det-nonzero-iff-invertible), and a non-zero real number is either positive or negative. The bases must be **ordered**: reordering a basis can change the answer.
 
-For \( V = \nR^n \) there is a shortcut. If \( B \) and \( C \) are the matrices whose columns are the vectors of \( \sB \) and \( \sC \), then \( \mtx{\id}{\sB}{\sE} = B \) and \( \mtx{\id}{\sC}{\sE} = C \) for the standard basis \( \sE \). By @thm-change-of-coordinates (b) and (c), \( \mtx{\id}{\sB}{\sC} = C^{-1}B \). Since \( \det C\,\det C^{-1} = \det I = 1 \) (@thm-det-multiplicative), \( \det\mtx{\id}{\sB}{\sC} = \det B / \det C \). So **\( \sB \) and \( \sC \) have the same orientation if and only if \( \det B \) and \( \det C \) have the same sign.**
+For \( V = \nR^n \) there is a shortcut. If \( \B \) and \( \C \) are the matrices whose columns are the vectors of \( \sB \) and \( \sC \), then \( \mtx{\id}{\sB}{\sE} = \B \) and \( \mtx{\id}{\sC}{\sE} = \C \) for the standard basis \( \sE \). By @thm-change-of-coordinates (b) and (c), \( \mtx{\id}{\sB}{\sC} = \C^{-1}\B \). Since \( \det \C\,\det \C^{-1} = \det \I = 1 \) (@thm-det-multiplicative), \( \det\mtx{\id}{\sB}{\sC} = \det \B / \det \C \). So **\( \sB \) and \( \sC \) have the same orientation if and only if \( \det \B \) and \( \det \C \) have the same sign.**
 
 **Examples.**
 
-- In \( \nR^2 \), \( (\e_1, \e_2) \) and \( (\e_2, \e_1) \) have opposite orientations: \( \det I_2 = 1 \) and \( \det\begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix} = -1 \).
+- In \( \nR^2 \), \( (\e_1, \e_2) \) and \( (\e_2, \e_1) \) have opposite orientations: \( \det \I_2 = 1 \) and \( \det\begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix} = -1 \).
 - In \( \nR^3 \), \( (\e_1, \e_2, \e_3) \) and \( (\e_2, \e_3, \e_1) \) have the **same** orientation. The second matrix is the permutation matrix of a \( 3 \)-cycle, whose sign is \( (-1)^{3-1} = 1 \). A cyclic shift of three vectors is two swaps.
 - In \( V = \nR[x]_{\le 1} \), the bases \( \sB = (1, x) \) and \( \sC = (x, 1 + x) \) have \( 1 = -x + (1 + x) \) and \( x = x + 0 \cdot (1 + x) \), so \( \mtx{\id}{\sB}{\sC} = \begin{pmatrix} -1 & 1 \\ 1 & 0 \end{pmatrix} \), with determinant \( -1 \). They have opposite orientations. Orientation makes sense in any real space, with no picture at all.
 - **Degenerate case, \( n = 1 \).** Bases of \( \nR \) are single non-zero numbers \( (a) \), and \( \mtx{\id}{(a)}{(b)} = (a/b) \). So \( (a) \) and \( (b) \) have the same orientation exactly when \( a \) and \( b \) have the same sign. The two orientations of a line are its two directions.
 
-**Non-example by minimal change.** In \( \nR^2 \), \( (-\e_1, -\e_2) \) has the same orientation as \( (\e_1, \e_2) \): \( \det(-I_2) = 1 \), and indeed it is the rotation of \( (\e_1, \e_2) \) by a half-turn. Change only **one** sign, to \( (\e_1, -\e_2) \): the determinant becomes \( -1 \), and the orientation flips. What changed is the sign of the determinant, which is the whole content of the definition. In \( \nR^3 \), by contrast, \( -I_3 \) has determinant \( -1 \): negating all three vectors reverses orientation.
+**Non-example by minimal change.** In \( \nR^2 \), \( (-\e_1, -\e_2) \) has the same orientation as \( (\e_1, \e_2) \): \( \det(-\I_2) = 1 \), and indeed it is the rotation of \( (\e_1, \e_2) \) by a half-turn. Change only **one** sign, to \( (\e_1, -\e_2) \): the determinant becomes \( -1 \), and the orientation flips. What changed is the sign of the determinant, which is the whole content of the definition. In \( \nR^3 \), by contrast, \( -\I_3 \) has determinant \( -1 \): negating all three vectors reverses orientation.
 
-**Why this definition.** Using the change-of-coordinates matrix, rather than the matrices \( B \) and \( C \) above, makes the definition work in every real space, including spaces like \( \nR[x]_{\le 1} \) that have no standard picture. Requiring \( \det > 0 \) rather than \( \det = 1 \) is what gives a coarse, two-valued answer: rescaling a basis vector by a positive number should not change its handedness.
+**Why this definition.** Using the change-of-coordinates matrix, rather than the matrices \( \B \) and \( \C \) above, makes the definition work in every real space, including spaces like \( \nR[x]_{\le 1} \) that have no standard picture. Requiring \( \det > 0 \) rather than \( \det = 1 \) is what gives a coarse, two-valued answer: rescaling a basis vector by a positive number should not change its handedness.
 
 The payoff is that "same orientation" really sorts all bases into two families, as the pictures suggest.
 
@@ -196,7 +196,7 @@ Let \( V \) be a vector space over \( \nR \) with \( \dim V = n \ge 1 \).
 :::
 
 ::: {.idea}
-The three axioms are three facts about change-of-coordinates matrices: \( \mtx{\id}{\sB}{\sB} = I \); the matrix back is the inverse; and matrices compose along a chain \( \sB \to \sC \to \sD \). Determinants turn these into \( 1 > 0 \), \( 1/\text{positive} > 0 \) and \( \text{positive} \cdot \text{positive} > 0 \). For "exactly two", flipping one vector gives a second class, and "negative times negative is positive" shows there is no third.
+The three axioms are three facts about change-of-coordinates matrices: \( \mtx{\id}{\sB}{\sB} = \I \); the matrix back is the inverse; and matrices compose along a chain \( \sB \to \sC \to \sD \). Determinants turn these into \( 1 > 0 \), \( 1/\text{positive} > 0 \) and \( \text{positive} \cdot \text{positive} > 0 \). For "exactly two", flipping one vector gives a second class, and "negative times negative is positive" shows there is no third.
 :::
 
 ::: {.proof}
@@ -205,7 +205,7 @@ Write \( d(\sB, \sC) = \det\mtx{\id}{\sB}{\sC} \). By @thm-change-of-coordinates
 d(\sB, \sD) = d(\sC, \sD)\, d(\sB, \sC). \tag{$\ast$}
 \]
 
-(a) *Reflexive:* \( \mtx{\id}{\sB}{\sB} = I_n \), so \( d(\sB, \sB) = 1 > 0 \). *Symmetric:* by \( (\ast) \) with \( \sD = \sB \), \( d(\sC, \sB)\,d(\sB, \sC) = d(\sB, \sB) = 1 \), so \( d(\sC, \sB) = 1/d(\sB, \sC) \), which is positive when \( d(\sB, \sC) \) is. *Transitive:* if \( d(\sB, \sC) > 0 \) and \( d(\sC, \sD) > 0 \), then \( d(\sB, \sD) > 0 \) by \( (\ast) \), since a product of positive reals is positive. By @def-equivalence-relation, this is an equivalence relation.
+(a) *Reflexive:* \( \mtx{\id}{\sB}{\sB} = \I_n \), so \( d(\sB, \sB) = 1 > 0 \). *Symmetric:* by \( (\ast) \) with \( \sD = \sB \), \( d(\sC, \sB)\,d(\sB, \sC) = d(\sB, \sB) = 1 \), so \( d(\sC, \sB) = 1/d(\sB, \sC) \), which is positive when \( d(\sB, \sC) \) is. *Transitive:* if \( d(\sB, \sC) > 0 \) and \( d(\sC, \sD) > 0 \), then \( d(\sB, \sD) > 0 \) by \( (\ast) \), since a product of positive reals is positive. By @def-equivalence-relation, this is an equivalence relation.
 
 (b) *At least two classes.* \( \sB^- \) is a basis, and \( \mtx{\id}{\sB^-}{\sB} = \diag(-1, 1, \dots, 1) \), because \( -\v_1 = (-1)\v_1 \) and \( \v_j = 1 \cdot \v_j \). Its determinant is \( -1 \) by @thm-det-triangular. So \( d(\sB^-, \sB) < 0 \), and \( \sB^- \) and \( \sB \) lie in different classes.
 
@@ -271,7 +271,7 @@ Hence \( \sB \) and \( T\sB \) have the same orientation if and only if \( \det 
 Since \( T \) is invertible, it is an isomorphism, so \( T\sB \) is a basis by @thm-isomorphism-preserves-bases. By @def-change-of-coordinates-matrix, column \( j \) of \( \mtx{\id}{T\sB}{\sB} \) is \( \coord{T\v_j}{\sB} \), which is column \( j \) of \( [T]_{\sB} \) by @def-matrix-of-linear-map. Hence the two matrices are equal, and by @def-det-operator, \( \det\mtx{\id}{T\sB}{\sB} = \det T \). By @def-orientation and the symmetry in @thm-two-orientations (a), \( \sB \) and \( T\sB \) have the same orientation exactly when \( \det T > 0 \).
 :::
 
-An invertible operator with \( \det T > 0 \) is **orientation-preserving**, and one with \( \det T < 0 \) is **orientation-reversing**. Rotations of the plane preserve orientation and reflections reverse it (@exr-orientation-and-volume-c2). In \( \nR^3 \), the map \( \x \mapsto -\x \) reverses orientation, since \( \det(-I_3) = -1 \): a right hand, pushed through the origin, becomes a left hand.
+An invertible operator with \( \det T > 0 \) is **orientation-preserving**, and one with \( \det T < 0 \) is **orientation-reversing**. Rotations of the plane preserve orientation and reflections reverse it (@exr-orientation-and-volume-c2). In \( \nR^3 \), the map \( \x \mapsto -\x \) reverses orientation, since \( \det(-\I_3) = -1 \): a right hand, pushed through the origin, becomes a left hand.
 
 ## Exercises
 
@@ -301,7 +301,7 @@ An invertible operator with \( \det T > 0 \) is **orientation-preserving**, and 
 
 (e) \( \sB \) and \( \sC \) have the same orientation if \( \det\mtx{\id}{\sB}{\sC} > 0 \) (@def-orientation).
 
-(f) False. \( \det(-I_n) = (-1)^n \), so by @prp-orientation-preserving the map reverses orientation for odd \( n \) and preserves it for even \( n \). In \( \nR^2 \) it is the rotation by a half-turn.
+(f) False. \( \det(-\I_n) = (-1)^n \), so by @prp-orientation-preserving the map reverses orientation for odd \( n \) and preserves it for even \( n \). In \( \nR^2 \) it is the rotation by a half-turn.
 :::
 
 ### B. Practice
@@ -360,41 +360,41 @@ Let \( T(x, y) = (2x + y,\ -x + 3y) \) on \( \nR^2 \).
 :::: {#exr-orientation-and-volume-c1}
 [C1: Area of a triangle in space]
 
-For \( \u, \v \in \nR^3 \), let \( A = \begin{pmatrix} \u & \v \end{pmatrix} \in M_{3 \times 2}(\nR) \). We **define** the area of the parallelogram \( P(\u, \v) \subseteq \nR^3 \) to be \( \sqrt{\det(A\tp A)} \); Chapter 10 justifies this with inner products.
+For \( \u, \v \in \nR^3 \), let \( \A = \begin{pmatrix} \u & \v \end{pmatrix} \in M_{3 \times 2}(\nR) \). We **define** the area of the parallelogram \( P(\u, \v) \subseteq \nR^3 \) to be \( \sqrt{\det(\A\tp \A)} \); Chapter 10 justifies this with inner products.
 
 ::: {.enumerate options="label=(\alph*)"}
-1. Show that \( \det(A\tp A) \ge 0 \), so the square root exists, and that \( \det(A\tp A) = (u_2v_3 - u_3v_2)^2 + (u_3v_1 - u_1v_3)^2 + (u_1v_2 - u_2v_1)^2 \).
+1. Show that \( \det(\A\tp \A) \ge 0 \), so the square root exists, and that \( \det(\A\tp \A) = (u_2v_3 - u_3v_2)^2 + (u_3v_1 - u_1v_3)^2 + (u_1v_2 - u_2v_1)^2 \).
 2. Show that if \( \u \) and \( \v \) lie in the plane \( z = 0 \), this area equals the area \( \vol((u_1, u_2), (v_1, v_2)) \) of @def-parallelepiped-volume in \( \nR^2 \).
 3. Find the area of the triangle with vertices \( (1, 0, 0) \), \( (0, 2, 0) \), \( (0, 0, 3) \).
 :::
 
-*Hint: apply @cor-gram-determinant-nonnegative to \( A\tp \).*
+*Hint: apply @cor-gram-determinant-nonnegative to \( \A\tp \).*
 ::::
 
 ::: {.solution}
-(a) \( A\tp \in M_{2 \times 3}(\nR) \) and \( (A\tp)\tp = A \), so by @cor-gram-determinant-nonnegative applied to \( A\tp \), \( \det(A\tp A) = \sum_{|S| = 2} (\det (A\tp)_{[2],S})^2 \ge 0 \). The \( 2 \times 2 \) minors of \( A\tp = \begin{pmatrix} u_1 & u_2 & u_3 \\ v_1 & v_2 & v_3 \end{pmatrix} \) are \( u_1v_2 - u_2v_1 \), \( u_1v_3 - u_3v_1 \), \( u_2v_3 - u_3v_2 \) for \( S = \{1,2\}, \{1,3\}, \{2,3\} \); squaring removes the signs, giving the stated sum.
+(a) \( \A\tp \in M_{2 \times 3}(\nR) \) and \( (\A\tp)\tp = \A \), so by @cor-gram-determinant-nonnegative applied to \( \A\tp \), \( \det(\A\tp \A) = \sum_{|S| = 2} (\det (\A\tp)_{[2],S})^2 \ge 0 \). The \( 2 \times 2 \) minors of \( \A\tp = \begin{pmatrix} u_1 & u_2 & u_3 \\ v_1 & v_2 & v_3 \end{pmatrix} \) are \( u_1v_2 - u_2v_1 \), \( u_1v_3 - u_3v_1 \), \( u_2v_3 - u_3v_2 \) for \( S = \{1,2\}, \{1,3\}, \{2,3\} \); squaring removes the signs, giving the stated sum.
 
-(b) If \( u_3 = v_3 = 0 \), two of the three squares vanish, and \( \det(A\tp A) = (u_1v_2 - u_2v_1)^2 \). Hence \( \sqrt{\det(A\tp A)} = \lvert u_1v_2 - u_2v_1 \rvert = \lvert \det\begin{pmatrix} u_1 & v_1 \\ u_2 & v_2 \end{pmatrix} \rvert \), which is \( \vol((u_1, u_2), (v_1, v_2)) \).
+(b) If \( u_3 = v_3 = 0 \), two of the three squares vanish, and \( \det(\A\tp \A) = (u_1v_2 - u_2v_1)^2 \). Hence \( \sqrt{\det(\A\tp \A)} = \lvert u_1v_2 - u_2v_1 \rvert = \lvert \det\begin{pmatrix} u_1 & v_1 \\ u_2 & v_2 \end{pmatrix} \rvert \), which is \( \vol((u_1, u_2), (v_1, v_2)) \).
 
-(c) The triangle is half of the parallelogram spanned by \( \u = (0, 2, 0) - (1, 0, 0) = (-1, 2, 0) \) and \( \v = (0, 0, 3) - (1, 0, 0) = (-1, 0, 3) \). By (a), \( \det(A\tp A) = (6 - 0)^2 + (0 + 3)^2 + (0 + 2)^2 = 36 + 9 + 4 = 49 \). As a check, \( A\tp A = \begin{pmatrix} 5 & 1 \\ 1 & 10 \end{pmatrix} \) has determinant \( 50 - 1 = 49 \). So the parallelogram has area \( 7 \), and the triangle has area \( \frac72 \).
+(c) The triangle is half of the parallelogram spanned by \( \u = (0, 2, 0) - (1, 0, 0) = (-1, 2, 0) \) and \( \v = (0, 0, 3) - (1, 0, 0) = (-1, 0, 3) \). By (a), \( \det(\A\tp \A) = (6 - 0)^2 + (0 + 3)^2 + (0 + 2)^2 = 36 + 9 + 4 = 49 \). As a check, \( \A\tp \A = \begin{pmatrix} 5 & 1 \\ 1 & 10 \end{pmatrix} \) has determinant \( 50 - 1 = 49 \). So the parallelogram has area \( 7 \), and the triangle has area \( \frac72 \).
 :::
 
 :::: {#exr-orientation-and-volume-c2}
 [C2: Rotations and reflections]
 
-For \( \theta \in \nR \), let \( R_\theta = \begin{pmatrix} \cos\theta & -\sin\theta \\ \sin\theta & \cos\theta \end{pmatrix} \) (rotation by \( \theta \)) and \( S_\theta = \begin{pmatrix} \cos 2\theta & \sin 2\theta \\ \sin 2\theta & -\cos 2\theta \end{pmatrix} \) (reflection in the line through \( 0 \) at angle \( \theta \)).
+For \( \theta \in \nR \), let \( \R_\theta = \begin{pmatrix} \cos\theta & -\sin\theta \\ \sin\theta & \cos\theta \end{pmatrix} \) (rotation by \( \theta \)) and \( \S_\theta = \begin{pmatrix} \cos 2\theta & \sin 2\theta \\ \sin 2\theta & -\cos 2\theta \end{pmatrix} \) (reflection in the line through \( 0 \) at angle \( \theta \)).
 
 ::: {.enumerate options="label=(\alph*)"}
 1. Show that every rotation preserves orientation and area, and every reflection reverses orientation and preserves area.
-2. Show that \( S_\theta S_\varphi \) is orientation-preserving for all \( \theta, \varphi \). (It is in fact a rotation, but you need not show this.)
-3. Prove that no \( M \in M_2(\nR) \) satisfies \( M^2 = S_0 = \diag(1, -1) \). Does the same argument rule out \( M^2 = -I_2 \)?
+2. Show that \( \S_\theta \S_\varphi \) is orientation-preserving for all \( \theta, \varphi \). (It is in fact a rotation, but you need not show this.)
+3. Prove that no \( \M \in M_2(\nR) \) satisfies \( \M^2 = \S_0 = \diag(1, -1) \). Does the same argument rule out \( \M^2 = -\I_2 \)?
 :::
 ::::
 
 ::: {.solution}
-(a) \( \det R_\theta = \cos^2\theta + \sin^2\theta = 1 > 0 \) and \( \det S_\theta = -\cos^2 2\theta - \sin^2 2\theta = -1 < 0 \). By @prp-orientation-preserving, rotations preserve and reflections reverse orientation. Both have \( \lvert \det \rvert = 1 \), so both preserve area by @thm-det-volume-scaling.
+(a) \( \det \R_\theta = \cos^2\theta + \sin^2\theta = 1 > 0 \) and \( \det \S_\theta = -\cos^2 2\theta - \sin^2 2\theta = -1 < 0 \). By @prp-orientation-preserving, rotations preserve and reflections reverse orientation. Both have \( \lvert \det \rvert = 1 \), so both preserve area by @thm-det-volume-scaling.
 
-(b) By @thm-det-multiplicative, \( \det(S_\theta S_\varphi) = (-1)(-1) = 1 > 0 \).
+(b) By @thm-det-multiplicative, \( \det(\S_\theta \S_\varphi) = (-1)(-1) = 1 > 0 \).
 
-(c) If \( M^2 = S_0 \), then \( (\det M)^2 = \det S_0 = -1 \) by @thm-det-multiplicative, impossible for a real number \( \det M \). The argument says nothing about \( -I_2 \), since \( \det(-I_2) = 1 \); and indeed \( R_{\pi/2}^2 = R_{\pi/2}R_{\pi/2} = \begin{pmatrix} 0 & -1 \\ 1 & 0 \end{pmatrix}^2 = -I_2 \). An orientation-reversing map can never be the square of a real map, since the square of anything preserves orientation.
+(c) If \( \M^2 = \S_0 \), then \( (\det \M)^2 = \det \S_0 = -1 \) by @thm-det-multiplicative, impossible for a real number \( \det \M \). The argument says nothing about \( -\I_2 \), since \( \det(-\I_2) = 1 \); and indeed \( \R_{\pi/2}^2 = \R_{\pi/2}\R_{\pi/2} = \begin{pmatrix} 0 & -1 \\ 1 & 0 \end{pmatrix}^2 = -\I_2 \). An orientation-reversing map can never be the square of a real map, since the square of anything preserves orientation.
 :::

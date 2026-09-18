@@ -8,7 +8,7 @@ We would like to say that a plane is smaller than space, and that \( M_2(\nR) \)
 
 A better measure counts **how many vectors it takes to build everything, without waste**, which is the length of a basis. The standard bases give
 \[
-\nR^2 : 2, \qquad M_2(\nR) : 4 \;\; (E_{11}, E_{12}, E_{21}, E_{22}), \qquad \nR[x]_{\le 3} : 4 \;\; (1, x, x^2, x^3).
+\nR^2 : 2, \qquad M_2(\nR) : 4 \;\; (\E_{11}, \E_{12}, \E_{21}, \E_{22}), \qquad \nR[x]_{\le 3} : 4 \;\; (1, x, x^2, x^3).
 \]
 This matches intuition: a matrix \( \begin{pmatrix} a & b \\ c & d \end{pmatrix} \) and a polynomial \( a + bx + cx^2 + dx^3 \) are both described by four free numbers.
 
@@ -165,7 +165,7 @@ Find the dimension of each space.
 1. \( F^n \), \( M_{m \times n}(F) \) and \( F[x]_{\le n} \).
 2. The zero space \( \{\0\} \).
 3. \( \nC \) over \( \nC \), and \( \nC \) over \( \nR \).
-4. \( U = \{ A \in M_2(\nR) : A\tp = A \} \), the symmetric \( 2 \times 2 \) real matrices.
+4. \( U = \{ \A \in M_2(\nR) : \A\tp = \A \} \), the symmetric \( 2 \times 2 \) real matrices.
 5. \( \nQ(\sqrt 2) = \{ a + b\sqrt 2 : a, b \in \nQ \} \) over \( \nQ \) (@exm-q-adjoin-sqrt2).
 :::
 :::
@@ -179,7 +179,7 @@ In each case we exhibit one basis and count it.
 
 (c) Over \( \nC \), the list \( (1) \) is a basis of \( \nC \): every \( z \) equals \( z \cdot 1 \), and \( z \cdot 1 = 0 \) forces \( z = 0 \). So \( \dim_\nC \nC = 1 \). Over \( \nR \), the list \( (1, i) \) is a basis (@exm-more-bases), so \( \dim_\nR \nC = 2 \).
 
-(d) A symmetric matrix has the form \( \begin{pmatrix} a & b \\ b & d \end{pmatrix} = aE_{11} + b(E_{12} + E_{21}) + dE_{22} \), and this combination is the zero matrix only when \( a = b = d = 0 \). So \( (E_{11}, E_{12} + E_{21}, E_{22}) \) is a basis of \( U \), as in @exr-basis-b3, and \( \dim U = 3 \).
+(d) A symmetric matrix has the form \( \begin{pmatrix} a & b \\ b & d \end{pmatrix} = a\E_{11} + b(\E_{12} + \E_{21}) + d\E_{22} \), and this combination is the zero matrix only when \( a = b = d = 0 \). So \( (\E_{11}, \E_{12} + \E_{21}, \E_{22}) \) is a basis of \( U \), as in @exr-basis-b3, and \( \dim U = 3 \).
 
 (e) Every element is \( a \cdot 1 + b\sqrt 2 \) with \( a, b \in \nQ \), so \( (1, \sqrt 2) \) spans. Let \( a + b\sqrt 2 = 0 \) with \( a, b \in \nQ \). If \( b \ne 0 \), then \( \sqrt 2 = -a/b \in \nQ \), contradicting @thm-sqrt2-irrational. So \( b = 0 \), and then \( a = 0 \). Hence \( (1, \sqrt 2) \) is a basis, and \( \dim_\nQ \nQ(\sqrt 2) = 2 \).
 :::
@@ -431,7 +431,7 @@ Find a basis and the dimension of each subspace.
 
 ::: {.enumerate options="label=(\alph*)"}
 1. \( U_1 = \{ (x_1, x_2, x_3, x_4) \in \nR^4 : x_1 + x_2 = 0 \text{ and } x_3 - x_4 = 0 \} \).
-2. \( U_2 = \{ A \in M_3(\nR) : \tr A = 0 \} \).
+2. \( U_2 = \{ \A \in M_3(\nR) : \tr \A = 0 \} \).
 3. \( U_3 = \{ p \in \nR[x]_{\le 3} : p(1) = p(-1) = 0 \} \).
 :::
 :::
@@ -443,11 +443,11 @@ Find a basis and the dimension of each subspace.
 \]
 So \( ((1, -1, 0, 0), (0, 0, 1, 1)) \) spans \( U_1 \). It is independent: \( a(1, -1, 0, 0) + b(0, 0, 1, 1) = (a, -a, b, b) = \0 \) forces \( a = b = 0 \). Hence it is a basis, and \( \dim U_1 = 2 \).
 
-(b) Write \( A = (a_{ij}) \). The condition \( a_{11} + a_{22} + a_{33} = 0 \) says \( a_{33} = -a_{11} - a_{22} \), so
+(b) Write \( \A = (a_{ij}) \). The condition \( a_{11} + a_{22} + a_{33} = 0 \) says \( a_{33} = -a_{11} - a_{22} \), so
 \[
-A = \sum_{i \ne j} a_{ij}E_{ij} + a_{11}(E_{11} - E_{33}) + a_{22}(E_{22} - E_{33}).
+\A = \sum_{i \ne j} a_{ij}\E_{ij} + a_{11}(\E_{11} - \E_{33}) + a_{22}(\E_{22} - \E_{33}).
 \]
-All eight matrices on the right have trace \( 0 \), so the list of the six \( E_{ij} \) with \( i \ne j \), followed by \( E_{11} - E_{33} \) and \( E_{22} - E_{33} \), spans \( U_2 \). For independence, let \( \sum_{i \ne j} c_{ij}E_{ij} + d_1(E_{11} - E_{33}) + d_2(E_{22} - E_{33}) = 0 \). The entry \( (i, j) \) with \( i \ne j \) of the left side is \( c_{ij} \), the entry \( (1, 1) \) is \( d_1 \), and the entry \( (2, 2) \) is \( d_2 \); all must be \( 0 \). Hence the list is a basis, and \( \dim U_2 = 8 \).
+All eight matrices on the right have trace \( 0 \), so the list of the six \( \E_{ij} \) with \( i \ne j \), followed by \( \E_{11} - \E_{33} \) and \( \E_{22} - \E_{33} \), spans \( U_2 \). For independence, let \( \sum_{i \ne j} c_{ij}\E_{ij} + d_1(\E_{11} - \E_{33}) + d_2(\E_{22} - \E_{33}) = 0 \). The entry \( (i, j) \) with \( i \ne j \) of the left side is \( c_{ij} \), the entry \( (1, 1) \) is \( d_1 \), and the entry \( (2, 2) \) is \( d_2 \); all must be \( 0 \). Hence the list is a basis, and \( \dim U_2 = 8 \).
 
 (c) Let \( p = a_0 + a_1x + a_2x^2 + a_3x^3 \). Then \( p(1) = a_0 + a_1 + a_2 + a_3 \) and \( p(-1) = a_0 - a_1 + a_2 - a_3 \). Adding and subtracting, \( p \in U_3 \) exactly when \( a_0 + a_2 = 0 \) and \( a_1 + a_3 = 0 \). Hence \( p \in U_3 \) exactly when
 \[
@@ -495,7 +495,7 @@ Hence the coordinate vector of \( x^2 \) is \( (1, 2, 1) \).
 ::: {#exr-dimension-c1}
 [C1: Symmetric and Skew-Symmetric Matrices]
 
-Let \( n \ge 1 \). For a field \( F \), let \( U_+ \) and \( U_- \) be the subspaces of symmetric and of skew-symmetric matrices in \( M_n(F) \) (@def-symmetric-matrix): \( U_+ = \{ A : A\tp = A \} \) and \( U_- = \{ A : A\tp = -A \} \).
+Let \( n \ge 1 \). For a field \( F \), let \( U_+ \) and \( U_- \) be the subspaces of symmetric and of skew-symmetric matrices in \( M_n(F) \) (@def-symmetric-matrix): \( U_+ = \{ \A : \A\tp = \A \} \) and \( U_- = \{ \A : \A\tp = -\A \} \).
 
 ::: {.enumerate options="label=(\alph*)"}
 1. For \( F = \nR \), prove that \( \dim U_+ = \frac{n(n + 1)}{2} \).
@@ -505,19 +505,19 @@ Let \( n \ge 1 \). For a field \( F \), let \( U_+ \) and \( U_- \) be the subsp
 :::
 
 ::: {.solution}
-(a) Consider the list \( \sS \) consisting of \( E_{ii} \) for \( 1 \le i \le n \) and \( E_{ij} + E_{ji} \) for \( 1 \le i < j \le n \). Each is symmetric. If \( A = (a_{ij}) \) is symmetric, then \( a_{ji} = a_{ij} \), so
+(a) Consider the list \( \sS \) consisting of \( \E_{ii} \) for \( 1 \le i \le n \) and \( \E_{ij} + \E_{ji} \) for \( 1 \le i < j \le n \). Each is symmetric. If \( \A = (a_{ij}) \) is symmetric, then \( a_{ji} = a_{ij} \), so
 \[
-A = \sum_{i} a_{ii}E_{ii} + \sum_{i < j} a_{ij}(E_{ij} + E_{ji}),
+\A = \sum_{i} a_{ii}\E_{ii} + \sum_{i < j} a_{ij}(\E_{ij} + \E_{ji}),
 \]
-because both sides have \( a_{ij} \) in entry \( (i, j) \) and \( a_{ij} = a_{ji} \) in entry \( (j, i) \). So \( \sS \) spans \( U_+ \). If \( \sum_i c_{ii}E_{ii} + \sum_{i < j} c_{ij}(E_{ij} + E_{ji}) = 0 \), then for \( i \le j \) the entry \( (i, j) \) of the left side is \( c_{ij} \), so every coefficient is \( 0 \). Hence \( \sS \) is a basis, of length \( n + \frac{n(n - 1)}{2} = \frac{n(n + 1)}{2} \).
+because both sides have \( a_{ij} \) in entry \( (i, j) \) and \( a_{ij} = a_{ji} \) in entry \( (j, i) \). So \( \sS \) spans \( U_+ \). If \( \sum_i c_{ii}\E_{ii} + \sum_{i < j} c_{ij}(\E_{ij} + \E_{ji}) = 0 \), then for \( i \le j \) the entry \( (i, j) \) of the left side is \( c_{ij} \), so every coefficient is \( 0 \). Hence \( \sS \) is a basis, of length \( n + \frac{n(n - 1)}{2} = \frac{n(n + 1)}{2} \).
 
-(b) If \( A\tp = -A \), then comparing diagonal entries gives \( a_{ii} = -a_{ii} \), so \( 2a_{ii} = 0 \), and \( a_{ii} = 0 \) because \( 2 \ne 0 \) in \( \nR \). Off the diagonal, \( a_{ji} = -a_{ij} \). Hence
+(b) If \( \A\tp = -\A \), then comparing diagonal entries gives \( a_{ii} = -a_{ii} \), so \( 2a_{ii} = 0 \), and \( a_{ii} = 0 \) because \( 2 \ne 0 \) in \( \nR \). Off the diagonal, \( a_{ji} = -a_{ij} \). Hence
 \[
-A = \sum_{i < j} a_{ij}(E_{ij} - E_{ji}).
+\A = \sum_{i < j} a_{ij}(\E_{ij} - \E_{ji}).
 \]
-Each \( E_{ij} - E_{ji} \) is skew-symmetric, so these matrices span \( U_- \), and as in (a) the entry \( (i, j) \) with \( i < j \) of a combination is its coefficient, so they are independent. There are \( \frac{n(n - 1)}{2} \) pairs \( i < j \), so \( \dim U_- = \frac{n(n - 1)}{2} \).
+Each \( \E_{ij} - \E_{ji} \) is skew-symmetric, so these matrices span \( U_- \), and as in (a) the entry \( (i, j) \) with \( i < j \) of a combination is its coefficient, so they are independent. There are \( \frac{n(n - 1)}{2} \) pairs \( i < j \), so \( \dim U_- = \frac{n(n - 1)}{2} \).
 
-(c) In \( \nF_2 \), \( -1 = 1 \), so \( -A = A \) for every matrix \( A \), and the conditions \( A\tp = -A \) and \( A\tp = A \) coincide. Hence \( U_- = U_+ \) over \( \nF_2 \), which has dimension \( \frac{n(n + 1)}{2} \) by the argument of (a), which works over any field. The step of (b) that fails is "\( 2a_{ii} = 0 \) implies \( a_{ii} = 0 \)", which divides by \( 2 = 0 \). For example, \( I_n \in U_- \) over \( \nF_2 \), although its diagonal entries are not \( 0 \).
+(c) In \( \nF_2 \), \( -1 = 1 \), so \( -\A = \A \) for every matrix \( \A \), and the conditions \( \A\tp = -\A \) and \( \A\tp = \A \) coincide. Hence \( U_- = U_+ \) over \( \nF_2 \), which has dimension \( \frac{n(n + 1)}{2} \) by the argument of (a), which works over any field. The step of (b) that fails is "\( 2a_{ii} = 0 \) implies \( a_{ii} = 0 \)", which divides by \( 2 = 0 \). For example, \( \I_n \in U_- \) over \( \nF_2 \), although its diagonal entries are not \( 0 \).
 :::
 
 ::: {#exr-dimension-c2}

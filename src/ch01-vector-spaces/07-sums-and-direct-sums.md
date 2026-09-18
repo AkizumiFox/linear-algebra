@@ -317,19 +317,19 @@ For example, \( e^x = \cosh x + \sinh x \) is the splitting of the exponential f
 ::: {#exm-direct-sum-of-matrix}
 [Symmetric and skew-symmetric matrices]
 
-Let \( F \) be a field of characteristic not \( 2 \) (for instance \( \nR \) or \( \nC \)), and let \( n \ge 1 \). In \( M_n(F) \), let \( U_+ = \{ A : A\tp = A \} \) be the symmetric matrices and \( U_- = \{ A : A\tp = -A \} \) the skew-symmetric ones (@def-symmetric-matrix). Then \( M_n(F) = U_+ \oplus U_- \).
+Let \( F \) be a field of characteristic not \( 2 \) (for instance \( \nR \) or \( \nC \)), and let \( n \ge 1 \). In \( M_n(F) \), let \( U_+ = \{ \A : \A\tp = \A \} \) be the symmetric matrices and \( U_- = \{ \A : \A\tp = -\A \} \) the skew-symmetric ones (@def-symmetric-matrix). Then \( M_n(F) = U_+ \oplus U_- \).
 :::
 
 ::: {.solution}
-Both are subspaces: \( 0\tp = 0 = -0 \), and by @thm-transpose-properties, \( (A + B)\tp = A\tp + B\tp \) and \( (cA)\tp = cA\tp \), so the equations \( A\tp = \pm A \) survive sums and scalar multiples.
+Both are subspaces: \( 0\tp = 0 = -0 \), and by @thm-transpose-properties, \( (\A + \B)\tp = \A\tp + \B\tp \) and \( (c\A)\tp = c\A\tp \), so the equations \( \A\tp = \pm \A \) survive sums and scalar multiples.
 
-Since the characteristic is not \( 2 \), we have \( 2 = 1 + 1 \ne 0 \) in \( F \), so \( \frac12 \) exists (@def-characteristic). For \( A \in M_n(F) \),
+Since the characteristic is not \( 2 \), we have \( 2 = 1 + 1 \ne 0 \) in \( F \), so \( \frac12 \) exists (@def-characteristic). For \( \A \in M_n(F) \),
 \[
-A = \tfrac12 (A + A\tp) + \tfrac12 (A - A\tp).
+\A = \tfrac12 (\A + \A\tp) + \tfrac12 (\A - \A\tp).
 \]
-By @thm-transpose-properties, \( \big(\tfrac12(A + A\tp)\big)\tp = \tfrac12(A\tp + A) \) and \( \big(\tfrac12(A - A\tp)\big)\tp = \tfrac12(A\tp - A) = -\tfrac12(A - A\tp) \). So the first piece is in \( U_+ \), the second in \( U_- \), and \( M_n(F) = U_+ + U_- \).
+By @thm-transpose-properties, \( \big(\tfrac12(\A + \A\tp)\big)\tp = \tfrac12(\A\tp + \A) \) and \( \big(\tfrac12(\A - \A\tp)\big)\tp = \tfrac12(\A\tp - \A) = -\tfrac12(\A - \A\tp) \). So the first piece is in \( U_+ \), the second in \( U_- \), and \( M_n(F) = U_+ + U_- \).
 
-If \( A \in U_+ \cap U_- \), then \( A = A\tp = -A \), so \( 2A = 0 \). Multiplying by \( \frac12 \) gives \( A = 0 \). Hence \( U_+ \cap U_- = \{0\} \), and \( M_n(F) = U_+ \oplus U_- \) by @thm-direct-sum-criteria. The pattern is the same as even plus odd: transpose plays the role of \( x \mapsto -x \).
+If \( \A \in U_+ \cap U_- \), then \( \A = \A\tp = -\A \), so \( 2\A = 0 \). Multiplying by \( \frac12 \) gives \( \A = 0 \). Hence \( U_+ \cap U_- = \{0\} \), and \( M_n(F) = U_+ \oplus U_- \) by @thm-direct-sum-criteria. The pattern is the same as even plus odd: transpose plays the role of \( x \mapsto -x \).
 :::
 
 The hypothesis on the characteristic is used twice, both times to divide by \( 2 \). @exr-sums-and-direct-sums-c1 shows what goes wrong over \( \nF_2 \).
@@ -554,7 +554,7 @@ Determine which of the following sums are direct. Justify your answer.
 ::: {.solution}
 (a) Direct. If \( p \in \Span(1, x^2) \cap \Span(x, x^3) \), then \( p = a + bx^2 = cx + dx^3 \). Comparing coefficients of \( 1, x, x^2, x^3 \) gives \( a = c = b = d = 0 \), so \( p = 0 \). By @thm-direct-sum-criteria the sum is direct.
 
-(b) Not direct. The identity matrix \( I_2 \) is both upper and lower triangular, so \( I_2 \in T_{\mathrm{up}} \cap T_{\mathrm{low}} \ne \{0\} \), and @thm-direct-sum-criteria applies.
+(b) Not direct. The identity matrix \( \I_2 \) is both upper and lower triangular, so \( \I_2 \in T_{\mathrm{up}} \cap T_{\mathrm{low}} \ne \{0\} \), and @thm-direct-sum-criteria applies.
 
 (c) Direct. Each line has the basis given by its spanning vector, and we check that the concatenated list \( ((1, 0, 0), (0, 1, 0), (1, 1, 1)) \) is independent. If \( a(1, 0, 0) + b(0, 1, 0) + c(1, 1, 1) = (a + c, b + c, c) = \0 \), then \( c = 0 \), hence \( a = 0 \) and \( b = 0 \). The list spans the sum by @prp-sum-of-spans, so it is a basis of the sum, and the sum is direct by @thm-direct-sum-k-criteria ((d) ⇒ (a)).
 
@@ -579,9 +579,9 @@ Let \( U_+ \) and \( U_- \) be the symmetric and skew-symmetric matrices in \( M
 :::
 
 ::: {.solution}
-(a) In \( \nF_2 \) we have \( 1 + 1 = 0 \), so \( -a = a \) for every \( a \in \nF_2 \), and hence \( -A = A \) for every \( A \in M_2(\nF_2) \). Therefore \( A\tp = -A \) holds if and only if \( A\tp = A \), which says \( U_- = U_+ \).
+(a) In \( \nF_2 \) we have \( 1 + 1 = 0 \), so \( -a = a \) for every \( a \in \nF_2 \), and hence \( -\A = \A \) for every \( \A \in M_2(\nF_2) \). Therefore \( \A\tp = -\A \) holds if and only if \( \A\tp = \A \), which says \( U_- = U_+ \).
 
-(b) By (a), \( U_+ \cap U_- = U_+ \), which contains \( I_2 \ne 0 \). So the sum is not direct (@thm-direct-sum-criteria). It is not even all of \( M_2(\nF_2) \): \( U_+ + U_- = U_+ + U_+ = U_+ \), and \( \begin{pmatrix} 0 & 1 \\ 0 & 0 \end{pmatrix} \) is not symmetric. In @exm-direct-sum-of-matrix both halves of the proof divide by \( 2 \): the splitting \( A = \frac12(A + A\tp) + \frac12(A - A\tp) \) and the step from \( 2A = 0 \) to \( A = 0 \). In \( \nF_2 \), \( 2 = 1 + 1 = 0 \) has no inverse, so neither step is available. This is exactly the case of characteristic \( 2 \) excluded by the hypothesis.
+(b) By (a), \( U_+ \cap U_- = U_+ \), which contains \( \I_2 \ne 0 \). So the sum is not direct (@thm-direct-sum-criteria). It is not even all of \( M_2(\nF_2) \): \( U_+ + U_- = U_+ + U_+ = U_+ \), and \( \begin{pmatrix} 0 & 1 \\ 0 & 0 \end{pmatrix} \) is not symmetric. In @exm-direct-sum-of-matrix both halves of the proof divide by \( 2 \): the splitting \( \A = \frac12(\A + \A\tp) + \frac12(\A - \A\tp) \) and the step from \( 2\A = 0 \) to \( \A = 0 \). In \( \nF_2 \), \( 2 = 1 + 1 = 0 \) has no inverse, so neither step is available. This is exactly the case of characteristic \( 2 \) excluded by the hypothesis.
 :::
 
 ::: {#exr-sums-and-direct-sums-c2}

@@ -2,7 +2,7 @@
 
 Chapter 1 kept asking questions that end in a system of equations. Is this vector in the span of those? Is this list independent? Extend this list to a basis. Each time we solved a small system by hand and promised a systematic method. This chapter keeps that promise. Every question about finitely many vectors in \( F^n \) turns into a linear system, and linear systems have a complete algorithm: Gaussian elimination.
 
-We do not treat the algorithm as a recipe. We prove that row operations never change the answer, that the fully reduced form of a matrix does not depend on the choices made along the way, and that the numbers it produces, pivots and free variables, measure exactly the dimensions of Chapter 1. Along the way the invertible matrices get their first full characterization, and we prove a fact Chapter 0 had to postpone: for square matrices, \( AB = I \) already forces \( BA = I \).
+We do not treat the algorithm as a recipe. We prove that row operations never change the answer, that the fully reduced form of a matrix does not depend on the choices made along the way, and that the numbers it produces, pivots and free variables, measure exactly the dimensions of Chapter 1. Along the way the invertible matrices get their first full characterization, and we prove a fact Chapter 0 had to postpone: for square matrices, \( \A\B = \I \) already forces \( \B\A = \I \).
 
 **What you need.** From Chapter 0, matrix multiplication read column by column (@thm-matrix-times-vector-columns) and invertible matrices (@def-invertible-matrix). From Chapter 1, span (@def-span), linear independence (@def-linear-independence), bases (@def-basis) and dimension (@def-dimension).
 

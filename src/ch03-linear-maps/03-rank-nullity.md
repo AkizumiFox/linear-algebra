@@ -1,6 +1,6 @@
 # The Rank–Nullity Theorem
 
-The examples of the last section kept producing the same coincidence. Differentiation \( \nR[x]_{\le 3} \to \nR[x]_{\le 2} \) has a kernel of dimension \( 1 \) and an image of dimension \( 3 \), and \( 1 + 3 = 4 = \dim \nR[x]_{\le 3} \). The trace on \( M_2(\nR) \) gives \( 3 + 1 = 4 \) again. For matrices, Chapter 2 proved that \( \rank A + \nullity A \) is the number of columns (@thm-rank-nullity-matrix). This section proves the same equation for every linear map on a finite-dimensional space, with no matrices at all, and then turns it into the most useful counting tool of the chapter.
+The examples of the last section kept producing the same coincidence. Differentiation \( \nR[x]_{\le 3} \to \nR[x]_{\le 2} \) has a kernel of dimension \( 1 \) and an image of dimension \( 3 \), and \( 1 + 3 = 4 = \dim \nR[x]_{\le 3} \). The trace on \( M_2(\nR) \) gives \( 3 + 1 = 4 \) again. For matrices, Chapter 2 proved that \( \rank \A + \nullity \A \) is the number of columns (@thm-rank-nullity-matrix). This section proves the same equation for every linear map on a finite-dimensional space, with no matrices at all, and then turns it into the most useful counting tool of the chapter.
 
 ## Rank and nullity
 
@@ -23,13 +23,13 @@ If \( V \) is finite-dimensional, both numbers are defined: \( \ker T \) is a su
 ::: {#exm-nullity-rank-diff}
 [Rank and Nullity in Examples]
 
-Find the nullity and rank of (a) differentiation \( D \colon \nR[x]_{\le 3} \to \nR[x]_{\le 2} \); (b) the matrix map \( T_A \colon F^n \to F^m \) for \( A \in M_{m \times n}(F) \); (c) the zero map and the identity on a space of dimension \( n \).
+Find the nullity and rank of (a) differentiation \( D \colon \nR[x]_{\le 3} \to \nR[x]_{\le 2} \); (b) the matrix map \( T_\A \colon F^n \to F^m \) for \( \A \in M_{m \times n}(F) \); (c) the zero map and the identity on a space of dimension \( n \).
 :::
 
 ::: {.solution}
 (a) By @exm-differentiation-kernel-image, \( \ker D = \Span(1) \) and \( \im D = \nR[x]_{\le 2} \). So \( \nullity D = 1 \) and \( \rank D = 3 \).
 
-(b) By @exm-kernel-image-matrix-map, \( \ker T_A = \nul(A) \) and \( \im T_A = \col(A) \). So \( \nullity T_A = \dim \nul(A) = \nullity A \) and \( \rank T_A = \dim \col(A) = \rank A \) (@def-nullity-matrix, @def-rank-matrix). The new names agree with the old ones.
+(b) By @exm-kernel-image-matrix-map, \( \ker T_\A = \nul(\A) \) and \( \im T_\A = \col(\A) \). So \( \nullity T_\A = \dim \nul(\A) = \nullity \A \) and \( \rank T_\A = \dim \col(\A) = \rank \A \) (@def-nullity-matrix, @def-rank-matrix). The new names agree with the old ones.
 
 (c) By @exm-kernel-image-degenerate, the zero map \( V \to V \) has nullity \( n \) and rank \( 0 \), and the identity has nullity \( 0 \) and rank \( n \).
 :::
@@ -116,7 +116,7 @@ as claimed.
 
 The proof reads correctly when \( k = 0 \) (injective \( T \): the \( \v \)'s are a basis of \( V \)) and when \( r = 0 \) (\( \ker T = V \): the claim says \( \im T \) has the empty basis). Notice what was **not** used: nothing about \( W \) beyond its being a vector space. The theorem counts only in the domain.
 
-Applied to \( T_A \colon F^n \to F^m \), where \( \nullity T_A = \nullity A \) and \( \rank T_A = \rank A \) (@exm-nullity-rank-diff), the theorem says \( \nullity A + \rank A = n \). This is @thm-rank-nullity-matrix again, now with a second proof. Chapter 2 counted free and pivot columns of a reduced matrix; here we counted basis vectors, and no row operation appeared. In particular, **the solution space of a homogeneous system \( A\x = \0 \) in \( n \) unknowns has dimension \( n - \rank A \)**, whatever method is used to find the rank.
+Applied to \( T_\A \colon F^n \to F^m \), where \( \nullity T_\A = \nullity \A \) and \( \rank T_\A = \rank \A \) (@exm-nullity-rank-diff), the theorem says \( \nullity \A + \rank \A = n \). This is @thm-rank-nullity-matrix again, now with a second proof. Chapter 2 counted free and pivot columns of a reduced matrix; here we counted basis vectors, and no row operation appeared. In particular, **the solution space of a homogeneous system \( \A\x = \0 \) in \( n \) unknowns has dimension \( n - \rank \A \)**, whatever method is used to find the rank.
 
 In the online version you can test the count on any matrix map.
 
@@ -164,7 +164,7 @@ Let \( V \) and \( W \) be finite-dimensional vector spaces over \( F \), and le
 (e) If \( \dim V = \dim W \), then (a) and (b) have the same right-hand side, so \( T \) is injective if and only if it is surjective. Hence either property gives both, which is bijectivity; and bijective maps are injective by definition.
 :::
 
-Part (e) is the linear version of the pigeonhole principle for finite sets (@thm-finite-injective-iff-surjective), with dimension in place of the number of elements. It is a **count instead of check**: to show that a map between spaces of the same finite dimension is bijective, check **only** the kernel, usually the easier half, and let the count supply surjectivity. For \( T_A \) with \( A \) square, it is the equivalence of (b) and (e) in the Invertible Matrix Theorem (@thm-invertible-tfae). Parts (c) and (d) are the linear version of "no injection from a bigger finite set into a smaller one, and no surjection the other way".
+Part (e) is the linear version of the pigeonhole principle for finite sets (@thm-finite-injective-iff-surjective), with dimension in place of the number of elements. It is a **count instead of check**: to show that a map between spaces of the same finite dimension is bijective, check **only** the kernel, usually the easier half, and let the count supply surjectivity. For \( T_\A \) with \( \A \) square, it is the equivalence of (b) and (e) in the Invertible Matrix Theorem (@thm-invertible-tfae). Parts (c) and (d) are the linear version of "no injection from a bigger finite set into a smaller one, and no surjection the other way".
 
 ::: {.warning}
 **Both finiteness and equal dimension are needed.** Rank–Nullity requires \( V \) to be finite-dimensional; \( W \) may be anything, as for the inclusion \( \nR[x]_{\le 2} \to \nR[x] \), with nullity \( 0 \) and rank \( 3 \). Part (e) fails when the spaces are infinite-dimensional, even for an operator \( V \to V \): the right shift \( R \) on \( F^{\nN} \) is injective but not surjective, and the left shift \( L \) is surjective but not injective (@exm-shift-kernel-image). And the hypothesis \( \dim V = \dim W \) cannot be dropped: \( T(x, y) = (2x - y,\ x + y,\ x - y) \) from \( \nR^2 \) to \( \nR^3 \) is injective but not surjective.
@@ -248,13 +248,13 @@ Many subspaces are defined as "all vectors satisfying some linear conditions", w
 Find the dimension of each subspace.
 
 ::: {.enumerate options="label=(\alph*)"}
-1. The trace-free matrices \( U = \{ A \in M_n(F) : \tr A = 0 \} \) (@exm-trace-free-matrices).
+1. The trace-free matrices \( U = \{ \A \in M_n(F) : \tr \A = 0 \} \) (@exm-trace-free-matrices).
 2. \( U' = \{ p \in \nR[x]_{\le n} : \int_0^1 p(t)\,\dd t = 0 \} \).
 :::
 :::
 
 ::: {.solution}
-(a) \( U = \ker \tr \), where \( \tr \colon M_n(F) \to F \) is linear (@exm-trace-matrices). Its image is a subspace of \( F \) containing \( \tr E_{11} = 1 \), so it contains \( c \cdot 1 = c \) for every \( c \in F \); it is all of \( F \), and \( \rank \tr = 1 \). Since \( \dim M_n(F) = n^2 \) (@exm-standard-bases), @thm-rank-nullity gives \( \dim U = n^2 - 1 \).
+(a) \( U = \ker \tr \), where \( \tr \colon M_n(F) \to F \) is linear (@exm-trace-matrices). Its image is a subspace of \( F \) containing \( \tr \E_{11} = 1 \), so it contains \( c \cdot 1 = c \) for every \( c \in F \); it is all of \( F \), and \( \rank \tr = 1 \). Since \( \dim M_n(F) = n^2 \) (@exm-standard-bases), @thm-rank-nullity gives \( \dim U = n^2 - 1 \).
 
 (b) \( U' = \ker \psi \), where \( \psi \colon \nR[x]_{\le n} \to \nR \), \( \psi(p) = \int_0^1 p(t)\,\dd t \), is linear by @exr-linear-maps-b3 (b). Since \( \psi(1) = 1 \), the image is a subspace of \( \nR \) containing \( 1 \), hence all of \( \nR \), so \( \rank \psi = 1 \). By @thm-rank-nullity, \( \dim U' = (n + 1) - 1 = n \).
 :::
@@ -300,22 +300,22 @@ Without the theorem, (a) needs an explicit basis of \( n^2 - 1 \) matrices toget
 For each map, find a basis of the kernel and a basis of the image, and verify that \( \nullity T + \rank T = \dim V \).
 
 ::: {.enumerate options="label=(\alph*)"}
-1. \( T_C \colon \nR^4 \to \nR^3 \), where \( C = \begin{pmatrix} 1 & 0 & 1 & 2 \\ 0 & 1 & 1 & -1 \\ 1 & 1 & 2 & 1 \end{pmatrix} \).
+1. \( T_\C \colon \nR^4 \to \nR^3 \), where \( \C = \begin{pmatrix} 1 & 0 & 1 & 2 \\ 0 & 1 & 1 & -1 \\ 1 & 1 & 2 & 1 \end{pmatrix} \).
 2. \( T \colon \nR[x]_{\le 3} \to \nR^2 \), \( T(p) = (p(0), p(1)) \).
-3. \( T \colon M_2(\nR) \to M_2(\nR) \), \( T(A) = A + A\tp \).
+3. \( T \colon M_2(\nR) \to M_2(\nR) \), \( T(\A) = \A + \A\tp \).
 :::
 :::
 
 ::: {.solution}
 (a) Row reduce: \( R_3 - R_1 \) gives \( (0, 1, 1, -1) \), and then \( R_3 - R_2 \) gives a zero row, so
 \[
-C \longrightarrow \begin{pmatrix} 1 & 0 & 1 & 2 \\ 0 & 1 & 1 & -1 \\ 0 & 0 & 0 & 0 \end{pmatrix},
+\C \longrightarrow \begin{pmatrix} 1 & 0 & 1 & 2 \\ 0 & 1 & 1 & -1 \\ 0 & 0 & 0 & 0 \end{pmatrix},
 \]
-which is the RREF. The free columns are \( 3 \) and \( 4 \). By @thm-basis-null-space, \( \ker T_C \) has basis \( \bigl((-1, -1, 1, 0),\ (-2, 1, 0, 1)\bigr) \). By @thm-basis-column-space, \( \im T_C \) has basis \( \bigl((1, 0, 1),\ (0, 1, 1)\bigr) \). So \( 2 + 2 = 4 = \dim \nR^4 \).
+which is the RREF. The free columns are \( 3 \) and \( 4 \). By @thm-basis-null-space, \( \ker T_\C \) has basis \( \bigl((-1, -1, 1, 0),\ (-2, 1, 0, 1)\bigr) \). By @thm-basis-column-space, \( \im T_\C \) has basis \( \bigl((1, 0, 1),\ (0, 1, 1)\bigr) \). So \( 2 + 2 = 4 = \dim \nR^4 \).
 
 (b) \( T \) is linear by @thm-evaluation-respects-operations. *Kernel:* for \( p = a_0 + a_1x + a_2x^2 + a_3x^3 \), \( T(p) = \0 \) means \( a_0 = 0 \) and \( a_1 + a_2 + a_3 = 0 \), that is, \( p = a_2(x^2 - x) + a_3(x^3 - x) \). The list \( (x^2 - x, x^3 - x) \) spans \( \ker T \), and it is independent by @thm-distinct-degrees-independent, so it is a basis. *Image:* \( T(1) = (1, 1) \) and \( T(x) = (0, 1) \) are independent, so they span a \( 2 \)-dimensional subspace of \( \nR^2 \), which is \( \nR^2 \) (@thm-dim-impl-eq). So \( \im T = \nR^2 \) with basis \( ((1, 1), (0, 1)) \). Hence \( 2 + 2 = 4 = \dim \nR[x]_{\le 3} \).
 
-(c) \( T \) is linear because the transpose is (@exm-trace-matrices). *Kernel:* \( A + A\tp = 0 \) means \( a_{11} = a_{22} = 0 \) and \( a_{21} = -a_{12} \), so \( \ker T = \Span(E_{12} - E_{21}) \), with basis \( (E_{12} - E_{21}) \). *Image:* each \( A + A\tp \) is symmetric, since \( (A + A\tp)\tp = A\tp + A \), and each symmetric \( B \) equals \( T(\tfrac12 B) \). So \( \im T \) is the space of symmetric matrices, with basis \( (E_{11}, E_{22}, E_{12} + E_{21}) \) (as in @exr-kernel-image-b2). Hence \( 1 + 3 = 4 = \dim M_2(\nR) \).
+(c) \( T \) is linear because the transpose is (@exm-trace-matrices). *Kernel:* \( \A + \A\tp = 0 \) means \( a_{11} = a_{22} = 0 \) and \( a_{21} = -a_{12} \), so \( \ker T = \Span(\E_{12} - \E_{21}) \), with basis \( (\E_{12} - \E_{21}) \). *Image:* each \( \A + \A\tp \) is symmetric, since \( (\A + \A\tp)\tp = \A\tp + \A \), and each symmetric \( \B \) equals \( T(\tfrac12 \B) \). So \( \im T \) is the space of symmetric matrices, with basis \( (\E_{11}, \E_{22}, \E_{12} + \E_{21}) \) (as in @exr-kernel-image-b2). Hence \( 1 + 3 = 4 = \dim M_2(\nR) \).
 :::
 
 ::: {#exr-rank-nullity-b2}
@@ -362,7 +362,7 @@ Let \( U \) and \( V \) be finite-dimensional, let \( W \) be a vector space, al
 1. Show that \( S' \) is linear, that \( \im S' = \im(ST) \) and that \( \ker S' = \ker S \cap \im T \).
 2. Deduce that \( \rank(ST) = \rank T - \dim(\ker S \cap \im T) \).
 3. Hence prove **Sylvester's inequality**: \( \rank(ST) \ge \rank S + \rank T - \dim V \).
-4. Deduce that \( \rank(AB) \ge \rank A + \rank B - n \) for \( A \in M_{m \times n}(F) \) and \( B \in M_{n \times p}(F) \).
+4. Deduce that \( \rank(\A\B) \ge \rank \A + \rank \B - n \) for \( \A \in M_{m \times n}(F) \) and \( \B \in M_{n \times p}(F) \).
 :::
 
 *Hint: for (c), compare \( \ker S \cap \im T \) with \( \ker S \).*
@@ -381,7 +381,7 @@ Let \( U \) and \( V \) be finite-dimensional, let \( W \) be a vector space, al
 \rank(ST) \ge \rank T - (\dim V - \rank S) = \rank S + \rank T - \dim V .
 \]
 
-(d) Take \( T = T_B \colon F^p \to F^n \) and \( S = T_A \colon F^n \to F^m \). By associativity (@thm-matrix-multiplication-properties), \( T_AT_B(\x) = A(B\x) = (AB)\x \), so \( ST = T_{AB} \). By @exm-nullity-rank-diff (b), ranks of matrix maps are ranks of matrices, and \( \dim F^n = n \). So (c) gives \( \rank(AB) \ge \rank A + \rank B - n \).
+(d) Take \( T = T_\B \colon F^p \to F^n \) and \( S = T_\A \colon F^n \to F^m \). By associativity (@thm-matrix-multiplication-properties), \( T_\A T_\B(\x) = \A(\B\x) = (\A\B)\x \), so \( ST = T_{\A\B} \). By @exm-nullity-rank-diff (b), ranks of matrix maps are ranks of matrices, and \( \dim F^n = n \). So (c) gives \( \rank(\A\B) \ge \rank \A + \rank \B - n \).
 :::
 
 ::: {#exr-rank-nullity-c2}

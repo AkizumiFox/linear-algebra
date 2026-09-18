@@ -320,7 +320,7 @@ For products, all non-zero coefficients of \( pq \) occur at positions \( k \le 
 where the first equality is @def-polynomial-ring, the second uses distributivity and \( c^{i+j} = c^i c^j \) and regroups the pairs \( (i, j) \), the third uses **commutativity** of multiplication in \( F \) to move \( c^i \) past \( b_j \), and the last is distributivity again. This shows \( (pq)(c) = p(c)q(c) \).
 :::
 
-Note which step used commutativity. In the next section we will plug a square matrix \( A \) into a polynomial. Products of matrices do not commute in general, but the proof only moves **scalars** past powers of \( A \), and multiplies powers of the same \( A \); both are still allowed for matrices, so the same identity will hold there.
+Note which step used commutativity. In the next section we will plug a square matrix \( \A \) into a polynomial. Products of matrices do not commute in general, but the proof only moves **scalars** past powers of \( \A \), and multiplies powers of the same \( \A \); both are still allowed for matrices, so the same identity will hold there.
 
 As a first use, a root of a factor is a root of the product: if \( q(c) = 0 \), then \( (pq)(c) = p(c) \cdot 0 = 0 \). Conversely, if \( (pq)(c) = 0 \) then \( p(c) q(c) = 0 \), so \( p(c) = 0 \) or \( q(c) = 0 \) by @thm-field-basic-properties. This is how one solves \( x^2 - 3x + 2 = (x - 1)(x - 2) = 0 \) at school.
 
@@ -359,7 +359,7 @@ Two tools will be built on this section later.
 :::
 
 ::: {.remark}
-**Polynomials in a matrix.** In the next section, once matrices and their products are available, we substitute a square matrix \( A \) for \( x \), replacing the constant term \( a_0 \) by \( a_0 I \). This is how the characteristic and minimal polynomials of later chapters act on matrices.
+**Polynomials in a matrix.** In the next section, once matrices and their products are available, we substitute a square matrix \( \A \) for \( x \), replacing the constant term \( a_0 \) by \( a_0 \I \). This is how the characteristic and minimal polynomials of later chapters act on matrices.
 :::
 
 ## Exercises

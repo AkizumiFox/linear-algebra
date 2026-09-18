@@ -12,12 +12,12 @@ This chapter does not start from a formula. It starts from what a signed volume 
 - **Multilinear alternating forms.** The rules made precise for functions of \( n \) vectors, and their first consequences.
 - **Permutations and sign.** Counting inversions, and why the parity of a permutation is well defined.
 - **Existence and uniqueness of the determinant.** Exactly one alternating form takes the value 1 on the identity; the Leibniz formula.
-- **Row operations and multiplicativity.** Computing determinants by elimination, \( \det(AB) = \det A \det B \), and the determinant of an operator.
+- **Row operations and multiplicativity.** Computing determinants by elimination, \( \det(\A\B) = \det \A \det \B \), and the determinant of an operator.
 - **Cofactor expansion, the adjugate and Cramer's rule.** Expanding along a row or column, and a formula for the inverse.
 - **Minors, rank and Cauchy–Binet.** Rank read off from minors, and the determinant of a product of rectangular matrices.
 - **Special determinants.** Vandermonde, tridiagonal and block triangular matrices, and rank-one updates.
 - **Orientation and volume.** The determinant as a volume scaling factor, and the two orientations of \( \nR^n \).
-- **The characteristic polynomial.** \( \det(xI - A) \), its coefficients, and why similar matrices share it.
+- **The characteristic polynomial.** \( \det(x\I - \A) \), its coefficients, and why similar matrices share it.
 
 ## Named moves
 

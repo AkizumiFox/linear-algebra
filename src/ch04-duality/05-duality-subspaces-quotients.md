@@ -171,7 +171,7 @@ A **hyperplane** in \( V \) is a subspace \( H \) of \( V \) of codimension **ex
 **Examples.**
 
 - **Finite dimension.** If \( V \) is finite-dimensional, then \( \codim U = \dim V - \dim U \) by @thm-dimension-quotient. The hyperplanes of \( F^n \) are its subspaces of dimension \( n - 1 \): the lines through \( \0 \) in \( F^2 \) and the planes through \( \0 \) in \( F^3 \).
-- **Trace.** In \( M_n(F) \) with \( n \ge 1 \), the trace-zero matrices are the kernel of \( \tr \colon M_n(F) \to F \). This map is linear and onto, since \( \tr(cE_{11}) = c \), so \( M_n(F)/\ker\tr \cong F \) by @thm-first-isomorphism, and the trace-zero matrices form a hyperplane.
+- **Trace.** In \( M_n(F) \) with \( n \ge 1 \), the trace-zero matrices are the kernel of \( \tr \colon M_n(F) \to F \). This map is linear and onto, since \( \tr(c\E_{11}) = c \), so \( M_n(F)/\ker\tr \cong F \) by @thm-first-isomorphism, and the trace-zero matrices form a hyperplane.
 - **Polynomials.** In \( F[x] \), let \( U = \{ p : p(0) = 0 \} \). Evaluation at \( 0 \) is a linear map \( F[x] \to F \) with kernel \( U \), and it is surjective because the constant \( c \) maps to \( c \). By @thm-first-isomorphism, \( F[x]/U \cong F \), so \( U \) is a hyperplane in the infinite-dimensional space \( F[x] \). In the same way \( \{ p : p(0) = p(1) = 0 \} \) has codimension 2 (@exr-duality-subspaces-quotients-b3).
 - **Degenerate cases.** \( \codim V = 0 \), since \( V/V \) is the zero space, and \( \codim\{\0\} = \dim V \) when \( V \) is finite-dimensional. In particular \( V \) itself is **not** a hyperplane, and the only hyperplane of a one-dimensional space is \( \{\0\} \). The zero space \( \{\0\} \) has no hyperplanes at all.
 
@@ -228,7 +228,7 @@ Decide which of the following are hyperplanes, and for each hyperplane give a no
 :::
 
 ::: {.solution}
-(a) Yes. \( A \) is symmetric exactly when \( a_{12} - a_{21} = 0 \), so the symmetric matrices are the kernel of \( A \mapsto a_{12} - a_{21} \), which is linear and non-zero (it takes the value \( 1 \) at \( E_{12} \)). By @thm-hyperplane-kernel-functional this is a hyperplane.
+(a) Yes. \( \A \) is symmetric exactly when \( a_{12} - a_{21} = 0 \), so the symmetric matrices are the kernel of \( \A \mapsto a_{12} - a_{21} \), which is linear and non-zero (it takes the value \( 1 \) at \( \E_{12} \)). By @thm-hyperplane-kernel-functional this is a hyperplane.
 
 (b) No. The symmetric \( 3 \times 3 \) matrices form a subspace of dimension \( 6 \) (choose the entries on and above the diagonal freely), so the codimension is \( 9 - 6 = 3 \ne 1 \).
 

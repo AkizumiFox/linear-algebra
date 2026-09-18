@@ -42,25 +42,25 @@ For \( p = \sum_k a_kx^k \), distributivity (@thm-composition-linear) gives \( S
 
 Parts (a) and (b) together say that \( p \mapsto p(T) \) is a **homomorphism of algebras**: it translates every identity built from sums, scalar multiples and products of polynomials into the same identity for operators. (This map should not be confused with the evaluation map \( V \to V^{**} \) of Chapter 4; here we evaluate polynomials, not functionals.) Part (d) is what we will use most. It says that anything commuting with \( T \) commutes with the whole family of polynomials in \( T \).
 
-For matrices nothing new is needed. If \( V \) is finite-dimensional with basis \( \sB \), then \( [p(T)]_{\sB} = p([T]_{\sB}) \) by @cor-matrix-of-polynomial-of-operator. So every statement in this section holds verbatim for \( A \in M_n(F) \), applied to the operator \( T_A \).
+For matrices nothing new is needed. If \( V \) is finite-dimensional with basis \( \sB \), then \( [p(T)]_{\sB} = p([T]_{\sB}) \) by @cor-matrix-of-polynomial-of-operator. So every statement in this section holds verbatim for \( \A \in M_n(F) \), applied to the operator \( T_{\A} \).
 
 ::: {#exm-polynomial-of-2x2}
 [Two Ways to Evaluate]
 
-Let \( A = \begin{pmatrix} 3 & 1 \\ -1 & 1 \end{pmatrix} \in M_2(\nQ) \). Compute \( p(A) \) for \( p = x^2 - 4x + 4 \) and \( q = x^2 - 3x \), once by expanding and once by factoring.
+Let \( \A = \begin{pmatrix} 3 & 1 \\ -1 & 1 \end{pmatrix} \in M_2(\nQ) \). Compute \( p(\A) \) for \( p = x^2 - 4x + 4 \) and \( q = x^2 - 3x \), once by expanding and once by factoring.
 :::
 
 ::: {.solution}
-*Expanding.* \( A^2 = \begin{pmatrix} 9 - 1 & 3 + 1 \\ -3 - 1 & -1 + 1 \end{pmatrix} = \begin{pmatrix} 8 & 4 \\ -4 & 0 \end{pmatrix} \). Hence
+*Expanding.* \( \A^2 = \begin{pmatrix} 9 - 1 & 3 + 1 \\ -3 - 1 & -1 + 1 \end{pmatrix} = \begin{pmatrix} 8 & 4 \\ -4 & 0 \end{pmatrix} \). Hence
 \[
-p(A) = \begin{pmatrix} 8 - 12 + 4 & 4 - 4 \\ -4 + 4 & 0 - 4 + 4 \end{pmatrix} = 0, \qquad
-q(A) = \begin{pmatrix} 8 - 9 & 4 - 3 \\ -4 + 3 & 0 - 3 \end{pmatrix} = \begin{pmatrix} -1 & 1 \\ -1 & -3 \end{pmatrix}.
+p(\A) = \begin{pmatrix} 8 - 12 + 4 & 4 - 4 \\ -4 + 4 & 0 - 4 + 4 \end{pmatrix} = 0, \qquad
+q(\A) = \begin{pmatrix} 8 - 9 & 4 - 3 \\ -4 + 3 & 0 - 3 \end{pmatrix} = \begin{pmatrix} -1 & 1 \\ -1 & -3 \end{pmatrix}.
 \]
-*Factoring.* \( p = (x - 2)^2 \), so \( p(A) = (A - 2I)^2 \) by @thm-evaluation-homomorphism (b). Here \( A - 2I = \begin{pmatrix} 1 & 1 \\ -1 & -1 \end{pmatrix} \), whose square is \( \begin{pmatrix} 1 - 1 & 1 - 1 \\ -1 + 1 & -1 + 1 \end{pmatrix} = 0 \). Likewise \( q = x(x - 3) \), so
+*Factoring.* \( p = (x - 2)^2 \), so \( p(\A) = (\A - 2\I)^2 \) by @thm-evaluation-homomorphism (b). Here \( \A - 2\I = \begin{pmatrix} 1 & 1 \\ -1 & -1 \end{pmatrix} \), whose square is \( \begin{pmatrix} 1 - 1 & 1 - 1 \\ -1 + 1 & -1 + 1 \end{pmatrix} = 0 \). Likewise \( q = x(x - 3) \), so
 \[
-q(A) = A(A - 3I) = \begin{pmatrix} 3 & 1 \\ -1 & 1 \end{pmatrix}\begin{pmatrix} 0 & 1 \\ -1 & -2 \end{pmatrix} = \begin{pmatrix} -1 & 1 \\ -1 & -3 \end{pmatrix},
+q(\A) = \A(\A - 3\I) = \begin{pmatrix} 3 & 1 \\ -1 & 1 \end{pmatrix}\begin{pmatrix} 0 & 1 \\ -1 & -2 \end{pmatrix} = \begin{pmatrix} -1 & 1 \\ -1 & -3 \end{pmatrix},
 \]
-in agreement with the expansion. The factored form showed at a glance why \( p(A) = 0 \): the matrix \( A - 2I \) squares to zero.
+in agreement with the expansion. The factored form showed at a glance why \( p(\A) = 0 \): the matrix \( \A - 2\I \) squares to zero.
 :::
 
 ::: {.warning}
@@ -84,40 +84,40 @@ In finite dimension a counting argument settles existence. The space \( \cL(V) \
 ::: {#thm-annihilating-polynomial-exists}
 [Every Operator Satisfies a Polynomial]
 
-Let \( V \) be a finite-dimensional vector space over \( F \) with \( \dim V = n \), and let \( T \in \cL(V) \). Then there is a **non-zero** \( p \in F[x] \) with \( \deg p \le n^2 \) and \( p(T) = 0 \). The same holds for every \( A \in M_n(F) \).
+Let \( V \) be a finite-dimensional vector space over \( F \) with \( \dim V = n \), and let \( T \in \cL(V) \). Then there is a **non-zero** \( p \in F[x] \) with \( \deg p \le n^2 \) and \( p(T) = 0 \). The same holds for every \( \A \in M_n(F) \).
 :::
 
 ::: {.proof}
-If \( n = 0 \), the constant \( 1 \) works, as noted above. Let \( n \ge 1 \). By @thm-linear-maps-isomorphic-to-matrices, \( \dim \cL(V) = n \cdot n = n^2 \). The list \( (\id_V, T, T^2, \dots, T^{n^2}) \) in \( \cL(V) \) has length \( n^2 + 1 > n^2 \), so it is linearly dependent by @thm-size-bounds (a). Hence there are \( a_0, \dots, a_{n^2} \in F \), **not all zero**, with \( a_0\id_V + a_1T + \dots + a_{n^2}T^{n^2} = 0 \). The polynomial \( p = a_0 + a_1x + \dots + a_{n^2}x^{n^2} \) is non-zero, has degree at most \( n^2 \), and satisfies \( p(T) = 0 \) by @def-polynomial-of-operator. For \( A \in M_n(F) \), apply the same argument in \( M_n(F) \), which has dimension \( n^2 \) (@exm-dimensions).
+If \( n = 0 \), the constant \( 1 \) works, as noted above. Let \( n \ge 1 \). By @thm-linear-maps-isomorphic-to-matrices, \( \dim \cL(V) = n \cdot n = n^2 \). The list \( (\id_V, T, T^2, \dots, T^{n^2}) \) in \( \cL(V) \) has length \( n^2 + 1 > n^2 \), so it is linearly dependent by @thm-size-bounds (a). Hence there are \( a_0, \dots, a_{n^2} \in F \), **not all zero**, with \( a_0\id_V + a_1T + \dots + a_{n^2}T^{n^2} = 0 \). The polynomial \( p = a_0 + a_1x + \dots + a_{n^2}x^{n^2} \) is non-zero, has degree at most \( n^2 \), and satisfies \( p(T) = 0 \) by @def-polynomial-of-operator. For \( \A \in M_n(F) \), apply the same argument in \( M_n(F) \), which has dimension \( n^2 \) (@exm-dimensions).
 :::
 
 The bound \( n^2 \) is crude. In Chapter 8, the Cayley–Hamilton Theorem will produce an annihilating polynomial of degree exactly \( n \). The finite dimension is essential: on \( F[x] \), let \( S \) be multiplication by \( x \), \( S(f) = xf \). Then \( S^k(1) = x^k \), so \( p(S)(1) = p \) for every \( p \in F[x] \), and \( p(S) \ne 0 \) whenever \( p \ne 0 \).
 
-The proof is also an algorithm: search for the first power of \( A \) that is a combination of the earlier ones. This is a question about linear dependence, which elimination answers (@thm-independence-spanning-by-rank).
+The proof is also an algorithm: search for the first power of \( \A \) that is a combination of the earlier ones. This is a question about linear dependence, which elimination answers (@thm-independence-spanning-by-rank).
 
 ::: {#exm-annihilating-polynomial-3x3}
 [Finding an Annihilating Polynomial]
 
-Find a non-zero polynomial of least possible degree that annihilates \( B = \begin{pmatrix} 2 & 1 & 1 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{pmatrix} \in M_3(\nQ) \).
+Find a non-zero polynomial of least possible degree that annihilates \( \B = \begin{pmatrix} 2 & 1 & 1 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{pmatrix} \in M_3(\nQ) \).
 :::
 
 ::: {.solution}
-*Degree \( 1 \).* \( B \) is not a scalar multiple of \( I_3 \) (its \( (1, 2) \)-entry is non-zero), so \( (I_3, B) \) is independent, and no non-zero polynomial of degree at most \( 1 \) annihilates \( B \).
+*Degree \( 1 \).* \( \B \) is not a scalar multiple of \( \I_3 \) (its \( (1, 2) \)-entry is non-zero), so \( (\I_3, \B) \) is independent, and no non-zero polynomial of degree at most \( 1 \) annihilates \( \B \).
 
 *Degree \( 2 \).* Compute
 \[
-B^2 = \begin{pmatrix} 4 & 3 & 3 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{pmatrix}.
+\B^2 = \begin{pmatrix} 4 & 3 & 3 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{pmatrix}.
 \]
-We look for \( a, b, c \) with \( aI_3 + bB + cB^2 = 0 \). Reading entries: position \( (1, 2) \) gives \( b + 3c = 0 \); position \( (1, 1) \) gives \( a + 2b + 4c = 0 \); position \( (2, 2) \) gives \( a + b + c = 0 \). The positions \( (1, 3) \) and \( (3, 3) \) repeat the \( (1, 2) \) and \( (2, 2) \) equations, and all other entries are \( 0 = 0 \). With \( c = 1 \): \( b = -3 \) and \( a = 2 \), and indeed \( 2 - 6 + 4 = 0 \). So
+We look for \( a, b, c \) with \( a\I_3 + b\B + c\B^2 = 0 \). Reading entries: position \( (1, 2) \) gives \( b + 3c = 0 \); position \( (1, 1) \) gives \( a + 2b + 4c = 0 \); position \( (2, 2) \) gives \( a + b + c = 0 \). The positions \( (1, 3) \) and \( (3, 3) \) repeat the \( (1, 2) \) and \( (2, 2) \) equations, and all other entries are \( 0 = 0 \). With \( c = 1 \): \( b = -3 \) and \( a = 2 \), and indeed \( 2 - 6 + 4 = 0 \). So
 \[
-B^2 - 3B + 2I_3 = 0,
+\B^2 - 3\B + 2\I_3 = 0,
 \]
-and \( p = x^2 - 3x + 2 = (x - 1)(x - 2) \) annihilates \( B \). Check with the factored form: \( B - I_3 = \begin{pmatrix} 1 & 1 & 1 \\ 0 & 0 & 0 \\ 0 & 0 & 0 \end{pmatrix} \) and \( B - 2I_3 = \begin{pmatrix} 0 & 1 & 1 \\ 0 & -1 & 0 \\ 0 & 0 & -1 \end{pmatrix} \), whose product is \( \begin{pmatrix} 0 & 1 - 1 & 1 - 1 \\ 0 & 0 & 0 \\ 0 & 0 & 0 \end{pmatrix} = 0 \).
+and \( p = x^2 - 3x + 2 = (x - 1)(x - 2) \) annihilates \( \B \). Check with the factored form: \( \B - \I_3 = \begin{pmatrix} 1 & 1 & 1 \\ 0 & 0 & 0 \\ 0 & 0 & 0 \end{pmatrix} \) and \( \B - 2\I_3 = \begin{pmatrix} 0 & 1 & 1 \\ 0 & -1 & 0 \\ 0 & 0 & -1 \end{pmatrix} \), whose product is \( \begin{pmatrix} 0 & 1 - 1 & 1 - 1 \\ 0 & 0 & 0 \\ 0 & 0 & 0 \end{pmatrix} = 0 \).
 
 The bound of @thm-annihilating-polynomial-exists allowed degree \( 9 \); the search stopped at degree \( 2 \).
 :::
 
-Annihilating polynomials are far from unique: if \( p \) annihilates \( T \), so does every multiple \( qp \), since \( (qp)(T) = q(T)p(T) = q(T) \cdot 0 = 0 \). In @exm-annihilating-polynomial-3x3, \( x^3 - 3x^2 + 2x \) annihilates \( B \) too. This closure under multiplication is the defining property of an ideal, and ideals of \( F[x] \) are completely understood (@thm-ideals-principal).
+Annihilating polynomials are far from unique: if \( p \) annihilates \( T \), so does every multiple \( qp \), since \( (qp)(T) = q(T)p(T) = q(T) \cdot 0 = 0 \). In @exm-annihilating-polynomial-3x3, \( x^3 - 3x^2 + 2x \) annihilates \( \B \) too. This closure under multiplication is the defining property of an ideal, and ideals of \( F[x] \) are completely understood (@thm-ideals-principal).
 
 ::: {#thm-annihilator-ideal}
 [The Annihilating Polynomials Form an Ideal]
@@ -152,7 +152,7 @@ This monic generator is one of the most important invariants of an operator. **C
 
 - **Projections.** Let \( P \) be a projection with \( P \ne 0 \) and \( P \ne \id_V \). Then \( x^2 - x = x(x - 1) \in I_P \), so the monic generator divides \( x(x - 1) \). By unique factorization (@thm-unique-factorization-polynomials), its monic divisors are \( 1 \), \( x \), \( x - 1 \) and \( x(x - 1) \). The first three do not annihilate \( P \): \( 1(P) = \id_V \ne 0 \), \( x(P) = P \ne 0 \) and \( (x - 1)(P) = P - \id_V \ne 0 \). So the generator is \( x^2 - x \).
 - **Degenerate cases.** For the identity on \( V \ne \{\0\} \), the generator is \( x - 1 \); for the zero operator on \( V \ne \{\0\} \), it is \( x \); on \( V = \{\0\} \), it is \( 1 \).
-- **The matrix \( B \).** In @exm-annihilating-polynomial-3x3, no non-zero polynomial of degree at most \( 1 \) annihilates \( B \), and \( x^2 - 3x + 2 \) does, so the generator is \( x^2 - 3x + 2 \).
+- **The matrix \( \B \).** In @exm-annihilating-polynomial-3x3, no non-zero polynomial of degree at most \( 1 \) annihilates \( \B \), and \( x^2 - 3x + 2 \) does, so the generator is \( x^2 - 3x + 2 \).
 - **Infinite dimension.** For multiplication by \( x \) on \( F[x] \), we saw that \( I_S = \{0\} \).
 
 ::: {.check}
@@ -287,27 +287,27 @@ The lemma applies just as well when neither factor is linear, and then it finds 
 ::: {#exm-splitting-3x3}
 [A Splitting with a Repeated Factor]
 
-Let \( A = \begin{pmatrix} 0 & 1 & -1 \\ 0 & 0 & 1 \\ 0 & 0 & 1 \end{pmatrix} \in M_3(\nQ) \). Verify that \( A^2(A - I_3) = 0 \), and use @thm-kernel-splitting with \( p = x^2 \), \( q = x - 1 \) to split \( \nQ^3 \), giving both projections as polynomials in \( A \).
+Let \( \A = \begin{pmatrix} 0 & 1 & -1 \\ 0 & 0 & 1 \\ 0 & 0 & 1 \end{pmatrix} \in M_3(\nQ) \). Verify that \( \A^2(\A - \I_3) = 0 \), and use @thm-kernel-splitting with \( p = x^2 \), \( q = x - 1 \) to split \( \nQ^3 \), giving both projections as polynomials in \( \A \).
 :::
 
 ::: {.solution}
-*The relation.* \( A^2 = \begin{pmatrix} 0 & 0 & 0 \\ 0 & 0 & 1 \\ 0 & 0 & 1 \end{pmatrix} \), and \( A^3 = A \cdot A^2 = \begin{pmatrix} 0 & 0 & 0 \\ 0 & 0 & 1 \\ 0 & 0 & 1 \end{pmatrix} = A^2 \). So \( A^2(A - I_3) = A^3 - A^2 = 0 \).
+*The relation.* \( \A^2 = \begin{pmatrix} 0 & 0 & 0 \\ 0 & 0 & 1 \\ 0 & 0 & 1 \end{pmatrix} \), and \( \A^3 = \A \cdot \A^2 = \begin{pmatrix} 0 & 0 & 0 \\ 0 & 0 & 1 \\ 0 & 0 & 1 \end{pmatrix} = \A^2 \). So \( \A^2(\A - \I_3) = \A^3 - \A^2 = 0 \).
 
 *Bézout.* \( x^2 = (x + 1)(x - 1) + 1 \), so \( 1 \cdot x^2 + \bigl(-(x + 1)\bigr)(x - 1) = 1 \): take \( a = 1 \), \( b = -(x + 1) \). Then
 \[
-E_1 = b(A)q(A) = -(A + I_3)(A - I_3) = I_3 - A^2 = \begin{pmatrix} 1 & 0 & 0 \\ 0 & 1 & -1 \\ 0 & 0 & 0 \end{pmatrix}, \qquad E_2 = a(A)p(A) = A^2 .
+\E_1 = b(\A)q(\A) = -(\A + \I_3)(\A - \I_3) = \I_3 - \A^2 = \begin{pmatrix} 1 & 0 & 0 \\ 0 & 1 & -1 \\ 0 & 0 & 0 \end{pmatrix}, \qquad \E_2 = a(\A)p(\A) = \A^2 .
 \]
-*The summands.* \( \ker A^2 = \{ (x, y, z) : z = 0 \} = \Span(\e_1, \e_2) \), and \( \ker(A - I_3) \) is cut out by \( -x + y - z = 0 \), \( -y + z = 0 \), \( 0 = 0 \), so it is \( \Span((0, 1, 1)) \). By @thm-kernel-splitting (c),
+*The summands.* \( \ker \A^2 = \{ (x, y, z) : z = 0 \} = \Span(\e_1, \e_2) \), and \( \ker(\A - \I_3) \) is cut out by \( -x + y - z = 0 \), \( -y + z = 0 \), \( 0 = 0 \), so it is \( \Span((0, 1, 1)) \). By @thm-kernel-splitting (c),
 \[
 \nQ^3 = \Span(\e_1, \e_2) \oplus \Span((0, 1, 1)),
 \]
-and for \( \v = (x, y, z) \), the splitting is \( E_1\v + E_2\v = (x, y - z, 0) + (0, z, z) \). One checks directly that \( (x, y - z, 0) \) has third entry \( 0 \) and \( (0, z, z) \) is a multiple of \( (0, 1, 1) \).
+and for \( \v = (x, y, z) \), the splitting is \( \E_1\v + \E_2\v = (x, y - z, 0) + (0, z, z) \). One checks directly that \( (x, y - z, 0) \) has third entry \( 0 \) and \( (0, z, z) \) is a multiple of \( (0, 1, 1) \).
 
-Note that \( \ker A = \Span(\e_1) \) is strictly smaller than \( \ker A^2 \). The factor \( p = x^2 \) could not be replaced by \( x \): the polynomial \( x(x - 1) \) does not annihilate \( A \), since \( A^2 - A \ne 0 \).
+Note that \( \ker \A = \Span(\e_1) \) is strictly smaller than \( \ker \A^2 \). The factor \( p = x^2 \) could not be replaced by \( x \): the polynomial \( x(x - 1) \) does not annihilate \( \A \), since \( \A^2 - \A \ne 0 \).
 :::
 
 ::: {.warning}
-**Without coprimality the kernels need not fill \( \ker(pq)(T) \), or even form a direct sum.** Let \( T = T_N \) with \( N = \begin{pmatrix} 0 & 1 \\ 0 & 0 \end{pmatrix} \) on \( F^2 \), and \( p = q = x \). Then \( (pq)(T) = N^2 = 0 \), so \( \ker(pq)(T) = F^2 \). But \( \ker p(T) = \ker q(T) = \ker N = \Span(\e_1) \). The two kernels are equal, so their sum is not direct, and \( \Span(\e_1) + \Span(\e_1) = \Span(\e_1) \ne F^2 \). Here \( \gcd(x, x) = x \), and no identity \( ax + bx = 1 \) exists, since its left side vanishes at \( 0 \).
+**Without coprimality the kernels need not fill \( \ker(pq)(T) \), or even form a direct sum.** Let \( T = T_{\N} \) with \( \N = \begin{pmatrix} 0 & 1 \\ 0 & 0 \end{pmatrix} \) on \( F^2 \), and \( p = q = x \). Then \( (pq)(T) = \N^2 = 0 \), so \( \ker(pq)(T) = F^2 \). But \( \ker p(T) = \ker q(T) = \ker \N = \Span(\e_1) \). The two kernels are equal, so their sum is not direct, and \( \Span(\e_1) + \Span(\e_1) = \Span(\e_1) \ne F^2 \). Here \( \gcd(x, x) = x \), and no identity \( ax + bx = 1 \) exists, since its left side vanishes at \( 0 \).
 :::
 
 ::: {.check}
@@ -356,48 +356,48 @@ In Chapter 8 the lemma is used with an annihilating polynomial factored into pow
 :::: {#exr-polynomials-of-operators-b1}
 [B1: A polynomial of a \( 2 \times 2 \) matrix]
 
-Let \( A = \begin{pmatrix} 1 & 2 \\ 3 & -1 \end{pmatrix} \in M_2(\nQ) \).
+Let \( \A = \begin{pmatrix} 1 & 2 \\ 3 & -1 \end{pmatrix} \in M_2(\nQ) \).
 
 ::: {.enumerate options="label=(\alph*)"}
-1. Compute \( p(A) \) for \( p = x^2 - 7 \) and for \( q = x^2 + x - 5 \).
-2. Hence show that \( A \) is invertible and find \( A^{-1} \) as a polynomial in \( A \).
+1. Compute \( p(\A) \) for \( p = x^2 - 7 \) and for \( q = x^2 + x - 5 \).
+2. Hence show that \( \A \) is invertible and find \( \A^{-1} \) as a polynomial in \( \A \).
 :::
 ::::
 
 ::: {.solution}
-(a) \( A^2 = \begin{pmatrix} 1 + 6 & 2 - 2 \\ 3 - 3 & 6 + 1 \end{pmatrix} = 7I_2 \). Hence \( p(A) = A^2 - 7I_2 = 0 \). For \( q \), divide: \( q = (x^2 - 7) + (x + 2) \), so by @thm-evaluation-homomorphism \( q(A) = p(A) + A + 2I_2 = \begin{pmatrix} 3 & 2 \\ 3 & 1 \end{pmatrix} \). (Directly: \( 7I_2 + A - 5I_2 = A + 2I_2 \).)
+(a) \( \A^2 = \begin{pmatrix} 1 + 6 & 2 - 2 \\ 3 - 3 & 6 + 1 \end{pmatrix} = 7\I_2 \). Hence \( p(\A) = \A^2 - 7\I_2 = 0 \). For \( q \), divide: \( q = (x^2 - 7) + (x + 2) \), so by @thm-evaluation-homomorphism \( q(\A) = p(\A) + \A + 2\I_2 = \begin{pmatrix} 3 & 2 \\ 3 & 1 \end{pmatrix} \). (Directly: \( 7\I_2 + \A - 5\I_2 = \A + 2\I_2 \).)
 
-(b) From \( A^2 = 7I_2 \), \( A\bigl(\tfrac17A\bigr) = \bigl(\tfrac17A\bigr)A = I_2 \). So \( A \) is invertible with \( A^{-1} = \tfrac17A = \begin{pmatrix} \frac17 & \frac27 \\ \frac37 & -\frac17 \end{pmatrix} \).
+(b) From \( \A^2 = 7\I_2 \), \( \A\bigl(\tfrac17\A\bigr) = \bigl(\tfrac17\A\bigr)\A = \I_2 \). So \( \A \) is invertible with \( \A^{-1} = \tfrac17\A = \begin{pmatrix} \frac17 & \frac27 \\ \frac37 & -\frac17 \end{pmatrix} \).
 :::
 
 :::: {#exr-polynomials-of-operators-b2}
 [B2: An annihilating polynomial by elimination]
 
-Let \( C = \begin{pmatrix} 0 & 0 & 2 \\ 1 & 0 & -1 \\ 0 & 1 & 2 \end{pmatrix} \in M_3(\nQ) \).
+Let \( \C = \begin{pmatrix} 0 & 0 & 2 \\ 1 & 0 & -1 \\ 0 & 1 & 2 \end{pmatrix} \in M_3(\nQ) \).
 
 ::: {.enumerate options="label=(\alph*)"}
-1. Compute \( C^2 \) and \( C^3 \), and show that \( (I_3, C, C^2) \) is linearly independent.
-2. Find a linear dependence among \( I_3, C, C^2, C^3 \), and hence a monic polynomial \( p \) of degree \( 3 \) with \( p(C) = 0 \).
-3. Hence show that \( C \) is invertible and write \( C^{-1} \) as a polynomial in \( C \).
+1. Compute \( \C^2 \) and \( \C^3 \), and show that \( (\I_3, \C, \C^2) \) is linearly independent.
+2. Find a linear dependence among \( \I_3, \C, \C^2, \C^3 \), and hence a monic polynomial \( p \) of degree \( 3 \) with \( p(\C) = 0 \).
+3. Hence show that \( \C \) is invertible and write \( \C^{-1} \) as a polynomial in \( \C \).
 :::
 ::::
 
 ::: {.solution}
 (a) Multiplying out,
 \[
-C^2 = \begin{pmatrix} 0 & 2 & 4 \\ 0 & -1 & 0 \\ 1 & 2 & 3 \end{pmatrix}, \qquad C^3 = C \cdot C^2 = \begin{pmatrix} 2 & 4 & 6 \\ -1 & 0 & 1 \\ 2 & 3 & 6 \end{pmatrix}.
+\C^2 = \begin{pmatrix} 0 & 2 & 4 \\ 0 & -1 & 0 \\ 1 & 2 & 3 \end{pmatrix}, \qquad \C^3 = \C \cdot \C^2 = \begin{pmatrix} 2 & 4 & 6 \\ -1 & 0 & 1 \\ 2 & 3 & 6 \end{pmatrix}.
 \]
-Let \( aI_3 + bC + cC^2 = 0 \). The \( (2, 1) \)-entry gives \( b = 0 \); the \( (3, 1) \)-entry gives \( c = 0 \); then the \( (1, 1) \)-entry gives \( a = 0 \). So the list is independent.
+Let \( a\I_3 + b\C + c\C^2 = 0 \). The \( (2, 1) \)-entry gives \( b = 0 \); the \( (3, 1) \)-entry gives \( c = 0 \); then the \( (1, 1) \)-entry gives \( a = 0 \). So the list is independent.
 
-(b) Let \( aI_3 + bC + cC^2 + dC^3 = 0 \). Reading entries: \( (2, 1) \): \( b - d = 0 \); \( (3, 1) \): \( c + 2d = 0 \); \( (1, 1) \): \( a + 2d = 0 \). With \( d = 1 \): \( b = 1 \), \( c = -2 \), \( a = -2 \). Check all entries of \( -2I_3 + C - 2C^2 + C^3 \): row 1 is \( (-2 + 0 - 0 + 2,\ 0 - 4 + 4,\ 2 - 8 + 6) = (0, 0, 0) \); row 2 is \( (1 - 0 - 1,\ -2 + 0 + 2 + 0,\ -1 - 0 + 1) = (0, 0, 0) \); row 3 is \( (0 - 2 + 2,\ 1 - 4 + 3,\ -2 + 2 - 6 + 6) = (0, 0, 0) \). Hence
+(b) Let \( a\I_3 + b\C + c\C^2 + d\C^3 = 0 \). Reading entries: \( (2, 1) \): \( b - d = 0 \); \( (3, 1) \): \( c + 2d = 0 \); \( (1, 1) \): \( a + 2d = 0 \). With \( d = 1 \): \( b = 1 \), \( c = -2 \), \( a = -2 \). Check all entries of \( -2\I_3 + \C - 2\C^2 + \C^3 \): row 1 is \( (-2 + 0 - 0 + 2,\ 0 - 4 + 4,\ 2 - 8 + 6) = (0, 0, 0) \); row 2 is \( (1 - 0 - 1,\ -2 + 0 + 2 + 0,\ -1 - 0 + 1) = (0, 0, 0) \); row 3 is \( (0 - 2 + 2,\ 1 - 4 + 3,\ -2 + 2 - 6 + 6) = (0, 0, 0) \). Hence
 \[
 p = x^3 - 2x^2 + x - 2 = (x - 2)(x^2 + 1)
 \]
-satisfies \( p(C) = 0 \). By (a) no non-zero polynomial of degree at most \( 2 \) annihilates \( C \), so \( p \) is the monic generator of \( I_C \) (@thm-annihilator-ideal).
+satisfies \( p(\C) = 0 \). By (a) no non-zero polynomial of degree at most \( 2 \) annihilates \( \C \), so \( p \) is the monic generator of \( I_C \) (@thm-annihilator-ideal).
 
-(c) \( C^3 - 2C^2 + C = 2I_3 \), that is, \( C\,(C^2 - 2C + I_3) = (C^2 - 2C + I_3)\,C = 2I_3 \), using @thm-evaluation-homomorphism (c) for the second equality. Since \( 2 \ne 0 \) in \( \nQ \), \( C \) is invertible with
+(c) \( \C^3 - 2\C^2 + \C = 2\I_3 \), that is, \( \C\,(\C^2 - 2\C + \I_3) = (\C^2 - 2\C + \I_3)\,\C = 2\I_3 \), using @thm-evaluation-homomorphism (c) for the second equality. Since \( 2 \ne 0 \) in \( \nQ \), \( \C \) is invertible with
 \[
-C^{-1} = \tfrac12\bigl(C^2 - 2C + I_3\bigr) = \begin{pmatrix} \frac12 & 1 & 0 \\ -1 & 0 & 1 \\ \frac12 & 0 & 0 \end{pmatrix}.
+\C^{-1} = \tfrac12\bigl(\C^2 - 2\C + \I_3\bigr) = \begin{pmatrix} \frac12 & 1 & 0 \\ -1 & 0 & 1 \\ \frac12 & 0 & 0 \end{pmatrix}.
 \]
 :::
 
@@ -476,22 +476,22 @@ e_1(T)\w + \dots + e_k(T)\w = \w + h(T)\,p(T)\w = \w, \qquad p_i(T)\bigl(e_i(T)\
 :::: {#exr-polynomials-of-operators-c3}
 [C3: The same rotation over \( \nR \) and over \( \nC \)]
 
-Let \( A = \begin{pmatrix} 0 & -1 \\ 1 & 0 \end{pmatrix} \), so that \( A^2 + I_2 = 0 \).
+Let \( \A = \begin{pmatrix} 0 & -1 \\ 1 & 0 \end{pmatrix} \), so that \( \A^2 + \I_2 = 0 \).
 
 ::: {.enumerate options="label=(\alph*)"}
-1. Over \( \nC \), apply @thm-kernel-splitting to \( T_A \) on \( \nC^2 \) with \( p = x - i \) and \( q = x + i \). Find both kernels and write the projection onto \( \ker(A - iI_2) \) as a polynomial in \( A \).
-2. Over \( \nR \), show that the only subspaces of \( \nR^2 \) that \( T_A \) maps into themselves are \( \{\0\} \) and \( \nR^2 \). Explain why this matches the fact that \( x^2 + 1 \) admits no factorization into coprime non-constant factors in \( \nR[x] \).
+1. Over \( \nC \), apply @thm-kernel-splitting to \( T_{\A} \) on \( \nC^2 \) with \( p = x - i \) and \( q = x + i \). Find both kernels and write the projection onto \( \ker(\A - i\I_2) \) as a polynomial in \( \A \).
+2. Over \( \nR \), show that the only subspaces of \( \nR^2 \) that \( T_{\A} \) maps into themselves are \( \{\0\} \) and \( \nR^2 \). Explain why this matches the fact that \( x^2 + 1 \) admits no factorization into coprime non-constant factors in \( \nR[x] \).
 :::
 ::::
 
 ::: {.solution}
-(a) \( (x + i) - (x - i) = 2i \), so \( \tfrac{i}{2}(x - i) - \tfrac{i}{2}(x + i) = \tfrac{i}{2}(-2i) = 1 \): take \( a = \tfrac{i}{2} \) and \( b = -\tfrac{i}{2} \). So \( p, q \) are coprime, and \( (pq)(A) = A^2 + I_2 = 0 \). By @thm-kernel-splitting (c), \( \nC^2 = \ker(A - iI_2) \oplus \ker(A + iI_2) \). Solving, \( (A - iI_2)(z, w) = (-iz - w,\ z - iw) = \0 \) gives \( w = -iz \), so \( \ker(A - iI_2) = \Span((1, -i)) \); similarly \( \ker(A + iI_2) = \Span((1, i)) \). The projection onto \( \ker(A - iI_2) \) is
+(a) \( (x + i) - (x - i) = 2i \), so \( \tfrac{i}{2}(x - i) - \tfrac{i}{2}(x + i) = \tfrac{i}{2}(-2i) = 1 \): take \( a = \tfrac{i}{2} \) and \( b = -\tfrac{i}{2} \). So \( p, q \) are coprime, and \( (pq)(\A) = \A^2 + \I_2 = 0 \). By @thm-kernel-splitting (c), \( \nC^2 = \ker(\A - i\I_2) \oplus \ker(\A + i\I_2) \). Solving, \( (\A - i\I_2)(z, w) = (-iz - w,\ z - iw) = \0 \) gives \( w = -iz \), so \( \ker(\A - i\I_2) = \Span((1, -i)) \); similarly \( \ker(\A + i\I_2) = \Span((1, i)) \). The projection onto \( \ker(\A - i\I_2) \) is
 \[
-b(A)q(A) = -\tfrac{i}{2}(A + iI_2) = \tfrac12(I_2 - iA) = \begin{pmatrix} \frac12 & \frac{i}{2} \\ -\frac{i}{2} & \frac12 \end{pmatrix}.
+b(\A)q(\A) = -\tfrac{i}{2}(\A + i\I_2) = \tfrac12(\I_2 - i\A) = \begin{pmatrix} \frac12 & \frac{i}{2} \\ -\frac{i}{2} & \frac12 \end{pmatrix}.
 \]
 Check: it sends \( (1, -i) \) to \( (\tfrac12 + \tfrac12,\ -\tfrac{i}{2} - \tfrac{i}{2}) = (1, -i) \) and \( (1, i) \) to \( (\tfrac12 - \tfrac12,\ -\tfrac{i}{2} + \tfrac{i}{2}) = \0 \).
 
-(b) A subspace of \( \nR^2 \) other than \( \{\0\} \) and \( \nR^2 \) has dimension \( 1 \) (@thm-subspace-dimension), so it is \( \Span(\v) \) with \( \v = (s, t) \ne \0 \). If \( A\v \in \Span(\v) \), then \( (-t, s) = c(s, t) \) for some \( c \in \nR \), so \( -t = cs \) and \( s = ct \), giving \( s = -c^2s \) and \( t = -c^2t \). Since \( 1 + c^2 > 0 \), \( s = t = 0 \), a contradiction. So only \( \{\0\} \) and \( \nR^2 \) are mapped into themselves.
+(b) A subspace of \( \nR^2 \) other than \( \{\0\} \) and \( \nR^2 \) has dimension \( 1 \) (@thm-subspace-dimension), so it is \( \Span(\v) \) with \( \v = (s, t) \ne \0 \). If \( \A\v \in \Span(\v) \), then \( (-t, s) = c(s, t) \) for some \( c \in \nR \), so \( -t = cs \) and \( s = ct \), giving \( s = -c^2s \) and \( t = -c^2t \). Since \( 1 + c^2 > 0 \), \( s = t = 0 \), a contradiction. So only \( \{\0\} \) and \( \nR^2 \) are mapped into themselves.
 
-Over \( \nR \), \( x^2 + 1 \) has no root, so its only monic divisors are \( 1 \) and \( x^2 + 1 \), and the only factorizations \( x^2 + 1 = pq \) into monic factors have \( p = 1 \) or \( q = 1 \). The lemma then gives only \( \ker p(T) \oplus \ker q(T) = \{\0\} \oplus \nR^2 \), and by (b) there is no finer splitting into subspaces preserved by \( T_A \) at all. Enlarging the field to \( \nC \) creates the coprime factors \( x \mp i \), and with them the splitting of (a).
+Over \( \nR \), \( x^2 + 1 \) has no root, so its only monic divisors are \( 1 \) and \( x^2 + 1 \), and the only factorizations \( x^2 + 1 = pq \) into monic factors have \( p = 1 \) or \( q = 1 \). The lemma then gives only \( \ker p(T) \oplus \ker q(T) = \{\0\} \oplus \nR^2 \), and by (b) there is no finer splitting into subspaces preserved by \( T_{\A} \) at all. Enlarging the field to \( \nC \) creates the coprime factors \( x \mp i \), and with them the splitting of (a).
 :::

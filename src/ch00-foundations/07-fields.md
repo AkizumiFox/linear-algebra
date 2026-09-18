@@ -298,7 +298,7 @@ Each of these fails some part of the slogan, and it pays to name the exact claus
   \[
   \begin{pmatrix} 0 & 1 \\ 0 & 0 \end{pmatrix} \begin{pmatrix} 0 & 0 \\ 1 & 0 \end{pmatrix} = \begin{pmatrix} 1 & 0 \\ 0 & 0 \end{pmatrix}, \qquad \begin{pmatrix} 0 & 0 \\ 1 & 0 \end{pmatrix} \begin{pmatrix} 0 & 1 \\ 0 & 0 \end{pmatrix} = \begin{pmatrix} 0 & 0 \\ 0 & 1 \end{pmatrix}.
   \]
-  (F8) fails too: \( E = \begin{pmatrix} 1 & 0 \\ 0 & 0 \end{pmatrix} \) is not the zero matrix, but every product \( EX \) has second row zero, so \( EX \) is never the identity.
+  (F8) fails too: \( \E = \begin{pmatrix} 1 & 0 \\ 0 & 0 \end{pmatrix} \) is not the zero matrix, but every product \( \E\X \) has second row zero, so \( \E\X \) is never the identity.
 
 ::: {.warning}
 "\( [a] \ne [0] \)" does not mean \( [a] \) can be divided by in \( \nZ/n\nZ \). In \( \nZ/6\nZ \) the equation \( [2]x = [1] \) has no solution, and \( [2]x = [4] \) has two, \( x = [2] \) and \( x = [5] \). Before dividing modulo \( n \), check that \( n \) is prime, or at least that \( a \) and \( n \) share no factor.

@@ -101,7 +101,7 @@ Let \( F \) be a field. Explain why each of the following is a vector space over
 :::
 
 ::: {.solution}
-(b) The sum and scalar multiple of \( m \times n \) matrices are \( m \times n \) matrices, so both operations are functions into \( M_{m \times n}(F) \). The eight axioms are exactly the rules of @thm-matrix-addition-properties, with the zero matrix as \( \0 \) and \( -A \) as an additive inverse of \( A \).
+(b) The sum and scalar multiple of \( m \times n \) matrices are \( m \times n \) matrices, so both operations are functions into \( M_{m \times n}(F) \). The eight axioms are exactly the rules of @thm-matrix-addition-properties, with the zero matrix as \( \0 \) and \( -\A \) as an additive inverse of \( \A \).
 
 (a) Chapter 0 defines \( F^n = M_{n \times 1}(F) \), the column vectors, and the entrywise operations are the matrix operations. So (a) is the case of (b) with \( n \) rows and \( 1 \) column. The zero vector is \( (0, \dots, 0) \).
 
@@ -194,7 +194,7 @@ Explain why each of the following, with the usual operations, is a vector space 
 
 ::: {.enumerate options="label=(\alph*)"}
 1. The set \( S \) of twice-differentiable functions \( f \colon \nR \to \nR \) with \( f'' + f = 0 \).
-2. The set of symmetric matrices \( A \in M_2(\nR) \), that is, those with \( A\tp = A \).
+2. The set of symmetric matrices \( \A \in M_2(\nR) \), that is, those with \( \A\tp = \A \).
 :::
 :::
 
@@ -203,7 +203,7 @@ Both are subsets of known spaces, so we use the pattern after @exm-vector-spaces
 
 (a) \( S \subseteq \nR^{\nR} \). If \( f, g \in S \) and \( c \in \nR \), then by the sum and constant multiple rules of calculus, \( f + g \) and \( cf \) are twice differentiable, with \( (f + g)'' + (f + g) = (f'' + f) + (g'' + g) = 0 \) and \( (cf)'' + cf = c(f'' + f) = 0 \). So both lie in \( S \). The zero function \( \0 \) satisfies \( \0'' + \0 = \0 \), so \( \0 \in S \). If \( f \in S \), its additive inverse in \( \nR^{\nR} \) is \( t \mapsto -f(t) \), and \( -f(t) = (-1)f(t) \) by @thm-field-basic-properties (e); so it is the function \( (-1)f \), which lies in \( S \) by closure under scaling. The identities hold in \( \nR^{\nR} \) (@exm-vector-spaces (d)), hence in \( S \). For instance \( \sin \) and \( \cos \) lie in \( S \).
 
-(b) By @thm-transpose-properties, \( (A + B)\tp = A\tp + B\tp = A + B \) and \( (cA)\tp = cA\tp = cA \) when \( A\tp = A \) and \( B\tp = B \). The zero matrix is symmetric, and the additive inverse \( -A \), which Chapter 0 defines as \( (-1)A \), is symmetric by closure under scaling. The identities hold in \( M_2(\nR) \), hence for symmetric matrices.
+(b) By @thm-transpose-properties, \( (\A + \B)\tp = \A\tp + \B\tp = \A + \B \) and \( (c\A)\tp = c\A\tp = c\A \) when \( \A\tp = \A \) and \( \B\tp = \B \). The zero matrix is symmetric, and the additive inverse \( -\A \), which Chapter 0 defines as \( (-1)\A \), is symmetric by closure under scaling. The identities hold in \( M_2(\nR) \), hence for symmetric matrices.
 :::
 
 ## Non-examples
@@ -436,7 +436,7 @@ Determine which of the following are vector spaces. Justify your answer.
 ::: {.solution}
 (a) Not a vector space: (VS3) fails. Suppose \( \0 = (z_1, z_2) \) satisfied (VS3). Then \( (0, 1) + (z_1, z_2) = (z_1, 0) \) would equal \( (0, 1) \), which is impossible since the second entries differ.
 
-(b) A vector space. Let \( A = \begin{pmatrix} a & b \\ 0 & d \end{pmatrix} \) and \( B = \begin{pmatrix} a' & b' \\ 0 & d' \end{pmatrix} \) be upper triangular and \( c \in \nR \). Then \( A + B = \begin{pmatrix} a + a' & b + b' \\ 0 & d + d' \end{pmatrix} \) and \( cA = \begin{pmatrix} ca & cb \\ 0 & cd \end{pmatrix} \) are upper triangular, so the operations land in the set. The zero matrix is upper triangular, and so is \( -A = (-1)A \). The identities (VS1), (VS2), (VS5)–(VS8) hold for all matrices in \( M_2(\nR) \) by @exm-vector-spaces (b), hence for upper triangular ones.
+(b) A vector space. Let \( \A = \begin{pmatrix} a & b \\ 0 & d \end{pmatrix} \) and \( \B = \begin{pmatrix} a' & b' \\ 0 & d' \end{pmatrix} \) be upper triangular and \( c \in \nR \). Then \( \A + \B = \begin{pmatrix} a + a' & b + b' \\ 0 & d + d' \end{pmatrix} \) and \( c\A = \begin{pmatrix} ca & cb \\ 0 & cd \end{pmatrix} \) are upper triangular, so the operations land in the set. The zero matrix is upper triangular, and so is \( -\A = (-1)\A \). The identities (VS1), (VS2), (VS5)–(VS8) hold for all matrices in \( M_2(\nR) \) by @exm-vector-spaces (b), hence for upper triangular ones.
 
 (c) A vector space. Let \( U = \{ p \in \nR[x] : p(1) = 0 \} \), \( p, q \in U \) and \( c \in \nR \). By @thm-evaluation-respects-operations, \( (p + q)(1) = p(1) + q(1) = 0 \). Also \( cp \) is the product of the constant polynomial \( c \) with \( p \), since by the product formula of @def-polynomial-ring that product has coefficients \( c a_k \). So \( (cp)(1) = c\, p(1) = 0 \). Hence \( p + q, cp \in U \). The zero polynomial has value \( 0 \) at \( 1 \), and \( -p = (-1)p \in U \) by closure under scaling. The identities hold in \( \nR[x] \) by @exm-vector-spaces (c), hence in \( U \).
 

@@ -2612,10 +2612,39 @@ a.xref {
 }
 
 .widget-readout {
-  margin-top: 0.5em;
-  color: var(--muted);
-  font-family: var(--font-mono);
-  font-size: 0.78rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.4em;
+  margin-top: 0.6em;
+  color: var(--ink);
+  font-size: 0.95rem;
+}
+
+.widget-matrix {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35em;
+}
+
+.widget-matrix-name {
+  font-weight: 700;
+}
+
+/* Two-by-two array between upright brackets */
+.widget-matrix-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(1.6em, auto));
+  gap: 0.1em 0.55em;
+  padding: 0.15em 0.4em;
+  border-left: 1.5px solid currentColor;
+  border-right: 1.5px solid currentColor;
+  border-radius: 3px;
+  font-variant-numeric: lining-nums tabular-nums;
   text-align: center;
-  white-space: pre;
+}
+
+.widget-value {
+  color: var(--muted);
+  font-variant-numeric: lining-nums tabular-nums;
 }

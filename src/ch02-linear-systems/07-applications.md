@@ -1,6 +1,6 @@
 # Applications of Linear Systems
 
-We now have a complete engine: elimination decides whether \( A\x = \b \) is consistent, rank–nullity counts the free parameters, and the null space describes the freedom. This section runs the engine on four problems from outside linear algebra. In each one the modeling step is where the thinking happens: which quantities are unknown, why the constraints are linear, and over which field. Each model is also honest about what it leaves out.
+We now have a complete engine: elimination decides whether \( \A\x = \b \) is consistent, rank–nullity counts the free parameters, and the null space describes the freedom. This section runs the engine on four problems from outside linear algebra. In each one the modeling step is where the thinking happens: which quantities are unknown, why the constraints are linear, and over which field. Each model is also honest about what it leaves out.
 
 ## Polynomial interpolation
 
@@ -12,9 +12,9 @@ and is it unique?
 
 The unknowns are the coefficients. Writing \( p = c_0 + c_1 x + \dots + c_n x^n \), the condition \( p(x_i) = y_i \) reads \( c_0 + c_1 x_i + \dots + c_n x_i^n = y_i \), by @def-polynomial-evaluation. The \( x_i \) and \( y_i \) are known numbers, so this is a **linear** equation in \( c_0, \dots, c_n \), even though \( p \) itself is not linear. The \( n + 1 \) conditions form a square system
 \[
-V\c = \y, \qquad V = \begin{pmatrix} 1 & x_0 & x_0^2 & \cdots & x_0^n \\ 1 & x_1 & x_1^2 & \cdots & x_1^n \\ \vdots & \vdots & \vdots & & \vdots \\ 1 & x_n & x_n^2 & \cdots & x_n^n \end{pmatrix}, \quad \c = \begin{pmatrix} c_0 \\ \vdots \\ c_n \end{pmatrix}, \quad \y = \begin{pmatrix} y_0 \\ \vdots \\ y_n \end{pmatrix}.
+\V\c = \y, \qquad \V = \begin{pmatrix} 1 & x_0 & x_0^2 & \cdots & x_0^n \\ 1 & x_1 & x_1^2 & \cdots & x_1^n \\ \vdots & \vdots & \vdots & & \vdots \\ 1 & x_n & x_n^2 & \cdots & x_n^n \end{pmatrix}, \quad \c = \begin{pmatrix} c_0 \\ \vdots \\ c_n \end{pmatrix}, \quad \y = \begin{pmatrix} y_0 \\ \vdots \\ y_n \end{pmatrix}.
 \]
-By @thm-invertible-tfae, this has exactly one solution for **every** \( \y \) as soon as \( V\c = \0 \) has only the trivial solution. And \( V\c = \0 \) says that the polynomial with coefficients \( \c \) has the \( n + 1 \) roots \( x_0, \dots, x_n \). So everything hinges on a fact about polynomials: a non-zero polynomial of degree at most \( n \) cannot have \( n + 1 \) distinct roots. Chapter 0 proved this only for degree at most \( 2 \), in @exr-polynomials-c1, so we prove it now in general. It takes two lemmas.
+By @thm-invertible-tfae, this has exactly one solution for **every** \( \y \) as soon as \( \V\c = \0 \) has only the trivial solution. And \( \V\c = \0 \) says that the polynomial with coefficients \( \c \) has the \( n + 1 \) roots \( x_0, \dots, x_n \). So everything hinges on a fact about polynomials: a non-zero polynomial of degree at most \( n \) cannot have \( n + 1 \) distinct roots. Chapter 0 proved this only for degree at most \( 2 \), in @exr-polynomials-c1, so we prove it now in general. It takes two lemmas.
 
 The first is long division by \( x - c \), carried out one leading term at a time.
 
@@ -73,12 +73,12 @@ Let \( x_0, x_1, \dots, x_n \in F \) be **distinct**, and let \( y_0, y_1, \dots
 :::
 
 ::: {.proof}
-A polynomial \( p \in F[x]_{\le n} \) is the same thing as its coefficient vector \( \c = (c_0, \dots, c_n) \in F^{n+1} \), since two polynomials are equal exactly when their coefficients agree (@def-polynomial). As computed above, \( p(x_i) = y_i \) for all \( i \) if and only if \( V\c = \y \), where \( V \in M_{n+1}(F) \) has \( (i, j) \)-entry \( x_i^j \) (rows and columns numbered from \( 0 \) to \( n \)).
+A polynomial \( p \in F[x]_{\le n} \) is the same thing as its coefficient vector \( \c = (c_0, \dots, c_n) \in F^{n+1} \), since two polynomials are equal exactly when their coefficients agree (@def-polynomial). As computed above, \( p(x_i) = y_i \) for all \( i \) if and only if \( \V\c = \y \), where \( \V \in M_{n+1}(F) \) has \( (i, j) \)-entry \( x_i^j \) (rows and columns numbered from \( 0 \) to \( n \)).
 
-Let \( V\c = \0 \), and let \( q = c_0 + c_1 x + \dots + c_n x^n \). Then \( q(x_i) = 0 \) for every \( i \), so \( q \) has the \( n + 1 \) distinct roots \( x_0, \dots, x_n \), while \( \deg q \le n \). By @lem-root-bound, \( q \) cannot be non-zero, so \( q = 0 \) and \( \c = \0 \). Hence \( V\c = \0 \) has only the trivial solution, and \( V \) is invertible by @thm-invertible-tfae. By @thm-inverse-matrix-properties (7), \( V\c = \y \) has exactly one solution \( \c = V^{-1}\y \). The polynomial with these coefficients is the unique \( p \) required. This proves the theorem.
+Let \( \V\c = \0 \), and let \( q = c_0 + c_1 x + \dots + c_n x^n \). Then \( q(x_i) = 0 \) for every \( i \), so \( q \) has the \( n + 1 \) distinct roots \( x_0, \dots, x_n \), while \( \deg q \le n \). By @lem-root-bound, \( q \) cannot be non-zero, so \( q = 0 \) and \( \c = \0 \). Hence \( \V\c = \0 \) has only the trivial solution, and \( \V \) is invertible by @thm-invertible-tfae. By @thm-inverse-matrix-properties (7), \( \V\c = \y \) has exactly one solution \( \c = \V^{-1}\y \). The polynomial with these coefficients is the unique \( p \) required. This proves the theorem.
 :::
 
-The proof is a model of how this chapter turns questions into systems. Existence for every right-hand side and uniqueness are both properties of the square matrix \( V \), and for a square matrix they come together. So we only had to prove uniqueness for the zero data, and that was a statement about roots. Chapter 5 gives an explicit formula for \( p \), the Lagrange interpolation formula. Here is the computation by elimination.
+The proof is a model of how this chapter turns questions into systems. Existence for every right-hand side and uniqueness are both properties of the square matrix \( \V \), and for a square matrix they come together. So we only had to prove uniqueness for the zero data, and that was a statement about roots. Chapter 5 gives an explicit formula for \( p \), the Lagrange interpolation formula. Here is the computation by elimination.
 
 ::: {#exm-interpolation-cubic}
 [A cubic through four points]
@@ -110,7 +110,7 @@ Check: \( p(-1) = 1 + 1 + 1 - 1 = 2 \), \( p(0) = 1 \), \( p(1) = 1 - 1 + 1 + 1 
 :::
 
 ::: {.warning}
-**The \( x \)-values must be distinct as elements of \( F \).** If \( x_0 = x_1 \), the first two equations of \( V\c = \y \) have the same left-hand side, so the system is inconsistent for any data with \( y_0 \neq y_1 \). This depends on the field: over \( \nF_3 \) the numbers \( -1 \) and \( 2 \) are the **same** element, so the four points of @exm-interpolation-cubic do not have distinct \( x \)-values there. Note also that the theorem promises degree **at most** \( n \): the three points \( (0, 0), (1, 1), (2, 2) \) are interpolated by \( p = x \), of degree \( 1 \).
+**The \( x \)-values must be distinct as elements of \( F \).** If \( x_0 = x_1 \), the first two equations of \( \V\c = \y \) have the same left-hand side, so the system is inconsistent for any data with \( y_0 \neq y_1 \). This depends on the field: over \( \nF_3 \) the numbers \( -1 \) and \( 2 \) are the **same** element, so the four points of @exm-interpolation-cubic do not have distinct \( x \)-values there. Note also that the theorem promises degree **at most** \( n \): the three points \( (0, 0), (1, 1), (2, 2) \) are interpolated by \( p = x \), of degree \( 1 \).
 :::
 
 ::: {.check}
@@ -192,44 +192,44 @@ The model has one assumption: at every intersection, as many cars leave per minu
 ::: {#def-incidence-matrix}
 [Incidence matrix]
 
-The **incidence matrix** of a network with vertices \( 1, \dots, m \) and edges \( 1, \dots, k \), where \( k \ge 1 \), is \( N \in M_{m \times k}(\nR) \) with
+The **incidence matrix** of a network with vertices \( 1, \dots, m \) and edges \( 1, \dots, k \), where \( k \ge 1 \), is \( \N \in M_{m \times k}(\nR) \) with
 \[
-N_{ve} = \begin{cases} 1 & \text{if } v = \operatorname{tail}(e), \\ -1 & \text{if } v = \operatorname{head}(e), \\ 0 & \text{otherwise.} \end{cases}
+\N_{ve} = \begin{cases} 1 & \text{if } v = \operatorname{tail}(e), \\ -1 & \text{if } v = \operatorname{head}(e), \\ 0 & \text{otherwise.} \end{cases}
 \]
 :::
 
-Row \( v \) of \( N\mathbf{f} \) is \( \sum_e N_{ve} f_e \), the flow out of \( v \) minus the flow into \( v \). So conservation at every vertex is the single matrix equation \( N\mathbf{f} = \s \). Column \( e \) of \( N \) has exactly one \( 1 \) and one \( -1 \), so its entries sum to \( 0 \). Adding up all the conservation equations therefore gives \( 0 = s_1 + \dots + s_m \): **total inflow equals total outflow**. This is necessary for a solution. The next result shows that, for a network in one piece, it is also sufficient.
+Row \( v \) of \( \N\mathbf{f} \) is \( \sum_e \N_{ve} f_e \), the flow out of \( v \) minus the flow into \( v \). So conservation at every vertex is the single matrix equation \( \N\mathbf{f} = \s \). Column \( e \) of \( \N \) has exactly one \( 1 \) and one \( -1 \), so its entries sum to \( 0 \). Adding up all the conservation equations therefore gives \( 0 = s_1 + \dots + s_m \): **total inflow equals total outflow**. This is necessary for a solution. The next result shows that, for a network in one piece, it is also sufficient.
 
 A network is **connected** if for any two vertices \( v, w \) there is a sequence of vertices \( v = w_0, w_1, \dots, w_t = w \) in which each consecutive pair is joined by an edge, in either direction.
 
 ::: {#prp-incidence-rank-connected}
 [Rank of an incidence matrix]
 
-Let \( N \in M_{m \times k}(\nR) \) be the incidence matrix of a **connected** network with \( m \) vertices. Then \( \rank N = m - 1 \).
+Let \( \N \in M_{m \times k}(\nR) \) be the incidence matrix of a **connected** network with \( m \) vertices. Then \( \rank \N = m - 1 \).
 :::
 
 ::: {.idea}
-Rank is easier to see through the transpose. A vector \( \y \in \nR^m \) assigns a number to each vertex, and \( N\tp\y \) records, for each edge, the difference of the numbers at its two ends. So \( N\tp\y = \0 \) says that the numbers agree across every edge. Along a chain of edges they then agree everywhere, so the null space of \( N\tp \) is the line of constant vectors. Rank–nullity and "row rank equals column rank" finish.
+Rank is easier to see through the transpose. A vector \( \y \in \nR^m \) assigns a number to each vertex, and \( \N\tp\y \) records, for each edge, the difference of the numbers at its two ends. So \( \N\tp\y = \0 \) says that the numbers agree across every edge. Along a chain of edges they then agree everywhere, so the null space of \( \N\tp \) is the line of constant vectors. Rank–nullity and "row rank equals column rank" finish.
 :::
 
 ::: {.proof}
-Let \( \y \in \nR^m \). For each edge \( e \), entry \( e \) of \( N\tp\y \) is \( \sum_{v} N_{ve} y_v = y_{\operatorname{tail}(e)} - y_{\operatorname{head}(e)} \), by @def-transpose and @def-incidence-matrix. Hence \( N\tp\y = \0 \) if and only if \( y_u = y_w \) whenever \( u \) and \( w \) are joined by an edge.
+Let \( \y \in \nR^m \). For each edge \( e \), entry \( e \) of \( \N\tp\y \) is \( \sum_{v} \N_{ve} y_v = y_{\operatorname{tail}(e)} - y_{\operatorname{head}(e)} \), by @def-transpose and @def-incidence-matrix. Hence \( \N\tp\y = \0 \) if and only if \( y_u = y_w \) whenever \( u \) and \( w \) are joined by an edge.
 
-Suppose \( N\tp\y = \0 \). Given any vertex \( w \), connectedness gives a sequence \( 1 = w_0, w_1, \dots, w_t = w \) with consecutive vertices joined by edges, so \( y_1 = y_{w_1} = \dots = y_w \). Hence \( \y = y_1 \mathbf{1} \), where \( \mathbf{1} = (1, \dots, 1) \in \nR^m \). Conversely \( N\tp \mathbf{1} = \0 \), since all differences vanish. So \( \nul(N\tp) = \Span(\mathbf{1}) \), and since \( \mathbf{1} \neq \0 \), its dimension is \( 1 \).
+Suppose \( \N\tp\y = \0 \). Given any vertex \( w \), connectedness gives a sequence \( 1 = w_0, w_1, \dots, w_t = w \) with consecutive vertices joined by edges, so \( y_1 = y_{w_1} = \dots = y_w \). Hence \( \y = y_1 \mathbf{1} \), where \( \mathbf{1} = (1, \dots, 1) \in \nR^m \). Conversely \( \N\tp \mathbf{1} = \0 \), since all differences vanish. So \( \nul(\N\tp) = \Span(\mathbf{1}) \), and since \( \mathbf{1} \neq \0 \), its dimension is \( 1 \).
 
-The matrix \( N\tp \) has \( m \) columns, so @thm-rank-nullity-matrix gives \( \rank N\tp = m - 1 \). By @thm-row-rank-equals-column-rank, \( \rank N = \rank N\tp = m - 1 \). This proves the proposition.
+The matrix \( \N\tp \) has \( m \) columns, so @thm-rank-nullity-matrix gives \( \rank \N\tp = m - 1 \). By @thm-row-rank-equals-column-rank, \( \rank \N = \rank \N\tp = m - 1 \). This proves the proposition.
 :::
 
 ::: {#cor-flow-solvable}
 [Solvable flow problems]
 
-Let \( N \in M_{m \times k}(\nR) \) be the incidence matrix of a connected network, and let \( \s \in \nR^m \). Then \( N\mathbf{f} = \s \) has a solution if and only if \( s_1 + \dots + s_m = 0 \). In that case the solutions form \( \mathbf{f}_0 + \nul(N) \) for any one solution \( \mathbf{f}_0 \), and \( \dim \nul(N) = k - m + 1 \).
+Let \( \N \in M_{m \times k}(\nR) \) be the incidence matrix of a connected network, and let \( \s \in \nR^m \). Then \( \N\mathbf{f} = \s \) has a solution if and only if \( s_1 + \dots + s_m = 0 \). In that case the solutions form \( \mathbf{f}_0 + \nul(\N) \) for any one solution \( \mathbf{f}_0 \), and \( \dim \nul(\N) = k - m + 1 \).
 :::
 
 ::: {.proof}
 Let \( W = \{ \z \in \nR^m : z_1 + \dots + z_m = 0 \} \). It is the solution set of the homogeneous system with the \( 1 \times m \) coefficient matrix \( \begin{pmatrix} 1 & \cdots & 1 \end{pmatrix} \), so it is a subspace by @thm-homogeneous-solutions-subspace. That matrix has rank \( 1 \), since its column space is spanned by the non-zero column \( (1) \) and so equals \( \nR^1 \). By @thm-rank-nullity-matrix, \( \dim W = m - 1 \).
 
-Each column of \( N \) has entries summing to \( 0 \), so it lies in \( W \), and since \( W \) is a subspace, \( \col(N) \subseteq W \) by @thm-span-subspace. Also \( \dim \col(N) = \rank N = m - 1 = \dim W \), by @def-rank-matrix and @prp-incidence-rank-connected. Hence \( \col(N) = W \) by @thm-dim-impl-eq. By @thm-consistent-iff-column-span, \( N\mathbf{f} = \s \) is consistent if and only if \( \s \in \col(N) = W \), which is the first claim. The description of all solutions is @thm-general-solution-structure, and \( \dim \nul(N) = k - (m - 1) \) by @thm-rank-nullity-matrix, since \( N \) has \( k \) columns.
+Each column of \( \N \) has entries summing to \( 0 \), so it lies in \( W \), and since \( W \) is a subspace, \( \col(\N) \subseteq W \) by @thm-span-subspace. Also \( \dim \col(\N) = \rank \N = m - 1 = \dim W \), by @def-rank-matrix and @prp-incidence-rank-connected. Hence \( \col(\N) = W \) by @thm-dim-impl-eq. By @thm-consistent-iff-column-span, \( \N\mathbf{f} = \s \) is consistent if and only if \( \s \in \col(\N) = W \), which is the first claim. The description of all solutions is @thm-general-solution-structure, and \( \dim \nul(\N) = k - (m - 1) \) by @thm-rank-nullity-matrix, since \( \N \) has \( k \) columns.
 :::
 
 The \( k - m + 1 \) free parameters have a clear meaning: they are flows around **loops**. Adding the same amount of traffic all the way around a closed circuit of streets changes no intersection's balance.
@@ -261,7 +261,7 @@ Find all flows that satisfy conservation. If street \( 4 \to 1 \) is closed for 
 :::
 
 ::: {.solution}
-The network is connected, and \( \s = (40, 20, -35, -25) \) sums to \( 0 \), so by @cor-flow-solvable a solution exists and the solutions have \( 5 - 4 + 1 = 2 \) free parameters. We row reduce \( [N \mid \s] \), with rows for vertices \( 1, 2, 3, 4 \) and columns for \( f_1, \dots, f_5 \):
+The network is connected, and \( \s = (40, 20, -35, -25) \) sums to \( 0 \), so by @cor-flow-solvable a solution exists and the solutions have \( 5 - 4 + 1 = 2 \) free parameters. We row reduce \( [\N \mid \s] \), with rows for vertices \( 1, 2, 3, 4 \) and columns for \( f_1, \dots, f_5 \):
 \[
 \left(\begin{array}{ccccc|c} 1 & 0 & 0 & -1 & 1 & 40 \\ -1 & 1 & 0 & 0 & 0 & 20 \\ 0 & -1 & 1 & 0 & -1 & -35 \\ 0 & 0 & -1 & 1 & 0 & -25 \end{array}\right)
 \xrightarrow{R_2 \to R_2 + R_1}
@@ -273,7 +273,7 @@ The network is connected, and \( \s = (40, 20, -35, -25) \) sums to \( 0 \), so 
 \xrightarrow{R_4 \to R_4 + R_3}
 \left(\begin{array}{ccccc|c} 1 & 0 & 0 & -1 & 1 & 40 \\ 0 & 1 & 0 & -1 & 1 & 60 \\ 0 & 0 & 1 & -1 & 0 & 25 \\ 0 & 0 & 0 & 0 & 0 & 0 \end{array}\right).
 \]
-This is the RREF, with pivots in columns 1, 2, 3, so \( \rank N = 3 = m - 1 \), as @prp-incidence-rank-connected predicts. The free variables are \( f_4 = \alpha \) and \( f_5 = \beta \), and by @thm-reading-rref,
+This is the RREF, with pivots in columns 1, 2, 3, so \( \rank \N = 3 = m - 1 \), as @prp-incidence-rank-connected predicts. The free variables are \( f_4 = \alpha \) and \( f_5 = \beta \), and by @thm-reading-rref,
 \[
 \mathbf{f} = \begin{pmatrix} 40 \\ 60 \\ 25 \\ 0 \\ 0 \end{pmatrix} + \alpha \begin{pmatrix} 1 \\ 1 \\ 1 \\ 1 \\ 0 \end{pmatrix} + \beta \begin{pmatrix} -1 \\ -1 \\ 0 \\ 0 \\ 1 \end{pmatrix}, \qquad \alpha, \beta \in \nR .
 \]
@@ -282,7 +282,7 @@ The two null space vectors are the loops: \( \alpha \) sends extra cars around \
 With street \( 4 \to 1 \) closed, \( \alpha = f_4 = 0 \) and \( \mathbf{f} = (40 - \beta, \; 60 - \beta, \; 25, \; 0, \; \beta) \). Non-negativity requires \( \beta \ge 0 \), \( 40 - \beta \ge 0 \) and \( 60 - \beta \ge 0 \), that is, \( 0 \le \beta \le 40 \). So the diagonal may carry up to \( 40 \) cars per minute, which happens when street \( 1 \to 2 \) is empty. Check, for \( \mathbf{f} = (0, 20, 25, 0, 40) \): at vertex 1, out \( 0 + 40 \) minus in \( 0 \) is \( 40 \); at 2, out \( 20 \) minus in \( 0 \) is \( 20 \); at 3, out \( 25 \) minus in \( 20 + 40 \) is \( -35 \); at 4, out \( 0 \) minus in \( 25 \) is \( -25 \).
 :::
 
-**What the model leaves out.** Linear algebra finds every flow that conserves cars, including physically meaningless ones with negative entries, and it cannot say which of the many valid flows drivers actually choose. Non-negativity and street capacities turn the problem into one about inequalities, which is the subject of linear programming. The matrix \( NN\tp \) of this model, the graph Laplacian, returns in Chapter 23.
+**What the model leaves out.** Linear algebra finds every flow that conserves cars, including physically meaningless ones with negative entries, and it cannot say which of the many valid flows drivers actually choose. Non-negativity and street capacities turn the problem into one about inequalities, which is the subject of linear programming. The matrix \( \N\N\tp \) of this model, the graph Laplacian, returns in Chapter 23.
 
 ## Lights out over \( \nF_2 \)
 
@@ -293,10 +293,10 @@ The model rests on two observations about the puzzle, and together they say that
 1. Encode "on" as \( 1 \) and "off" as \( 0 \). Toggling a light is adding \( 1 \) in \( \nF_2 \), because \( 0 + 1 = 1 \) and \( 1 + 1 = 0 \). The effect of several presses on a light is the sum of their effects, and since addition is commutative, **the order of presses does not matter**.
 2. Pressing a button twice toggles each affected light twice, which is \( 1 + 1 = 0 \): nothing. So a strategy is just the **set** of buttons pressed once, a vector \( \x \in \nF_2^9 \).
 
-Number the cells \( (i, j) \), row \( i \), column \( j \), and list them row by row. Pressing button \( (i, j) \) adds to the pattern a fixed vector \( \a_{ij} \in \nF_2^9 \), with \( 1 \)'s at \( (i, j) \) and its neighbors. Let \( A \in M_9(\nF_2) \) be the matrix with these columns. Starting from pattern \( \b \) and pressing the buttons in \( \x \), the final pattern is \( \b + A\x \) by @thm-matrix-times-vector-columns, and we want it to be \( \0 \). Since \( -\b = \b \) in \( \nF_2^9 \), the puzzle is the linear system
+Number the cells \( (i, j) \), row \( i \), column \( j \), and list them row by row. Pressing button \( (i, j) \) adds to the pattern a fixed vector \( \a_{ij} \in \nF_2^9 \), with \( 1 \)'s at \( (i, j) \) and its neighbors. Let \( \A \in M_9(\nF_2) \) be the matrix with these columns. Starting from pattern \( \b \) and pressing the buttons in \( \x \), the final pattern is \( \b + \A\x \) by @thm-matrix-times-vector-columns, and we want it to be \( \0 \). Since \( -\b = \b \) in \( \nF_2^9 \), the puzzle is the linear system
 \[
-A\x = \b \quad\text{over } \nF_2, \qquad
-A = \begin{pmatrix}
+\A\x = \b \quad\text{over } \nF_2, \qquad
+\A = \begin{pmatrix}
 1&1&0&1&0&0&0&0&0\\
 1&1&1&0&1&0&0&0&0\\
 0&1&1&0&0&1&0&0&0\\
@@ -308,16 +308,16 @@ A = \begin{pmatrix}
 0&0&0&0&0&1&0&1&1
 \end{pmatrix}.
 \]
-By @thm-consistent-iff-column-span, pattern \( \b \) is solvable exactly when \( \b \in \col(A) \). So "is every pattern solvable?" asks whether \( \rank A = 9 \).
+By @thm-consistent-iff-column-span, pattern \( \b \) is solvable exactly when \( \b \in \col(\A) \). So "is every pattern solvable?" asks whether \( \rank \A = 9 \).
 
 ::: {#exm-lights-out-3x3}
 [Every pattern of the 3 × 3 puzzle is solvable]
 
-Show that \( \rank A = 9 \). Deduce that every one of the \( 2^9 = 512 \) starting patterns can be switched off, by exactly one set of presses.
+Show that \( \rank \A = 9 \). Deduce that every one of the \( 2^9 = 512 \) starting patterns can be switched off, by exactly one set of presses.
 :::
 
 ::: {.solution}
-We show that \( A\x = \0 \) has only the trivial solution. Write the presses as a grid \( x_{ij} \), and suppose \( A\x = \0 \): the presses change no light. The equation for light \( (i, j) \) says that the presses at \( (i, j) \) and its neighbors add up to \( 0 \). We solve these equations row by row, remembering that \( -u = u \) in \( \nF_2 \). Name the top row \( x_{11} = p \), \( x_{12} = q \), \( x_{13} = r \).
+We show that \( \A\x = \0 \) has only the trivial solution. Write the presses as a grid \( x_{ij} \), and suppose \( \A\x = \0 \): the presses change no light. The equation for light \( (i, j) \) says that the presses at \( (i, j) \) and its neighbors add up to \( 0 \). We solve these equations row by row, remembering that \( -u = u \) in \( \nF_2 \). Name the top row \( x_{11} = p \), \( x_{12} = q \), \( x_{13} = r \).
 
 *Lights of row 1 determine the presses of row 2.* Light \( (1, 1) \) gives \( x_{11} + x_{12} + x_{21} = 0 \), so \( x_{21} = p + q \). Likewise lights \( (1, 2) \) and \( (1, 3) \) give
 \[
@@ -335,7 +335,7 @@ x_{22} = x_{11} + x_{12} + x_{13} = p + q + r, \qquad x_{23} = x_{12} + x_{13} =
 \]
 The first and third give \( r = q \) and \( p = q \), and then the second gives \( 3q = q = 0 \). So \( p = q = r = 0 \), and the formulas above make every \( x_{ij} = 0 \).
 
-Hence the null space of \( A \) is \( \{\0\} \), and \( \rank A = 9 - 0 = 9 \) by @thm-rank-nullity-matrix. So \( \col(A) \) is a subspace of \( \nF_2^9 \) of dimension \( 9 \), and \( \col(A) = \nF_2^9 \) by @thm-dim-impl-eq. Every pattern \( \b \) lies in \( \col(A) \), so every pattern is solvable. The solution is unique by @cor-unique-solution-iff-trivial-kernel, since \( A\x = \0 \) has only the trivial solution. In particular exactly one of the \( 512 \) press sets solves each of the \( 512 \) patterns.
+Hence the null space of \( \A \) is \( \{\0\} \), and \( \rank \A = 9 - 0 = 9 \) by @thm-rank-nullity-matrix. So \( \col(\A) \) is a subspace of \( \nF_2^9 \) of dimension \( 9 \), and \( \col(\A) = \nF_2^9 \) by @thm-dim-impl-eq. Every pattern \( \b \) lies in \( \col(\A) \), so every pattern is solvable. The solution is unique by @cor-unique-solution-iff-trivial-kernel, since \( \A\x = \0 \) has only the trivial solution. In particular exactly one of the \( 512 \) press sets solves each of the \( 512 \) patterns.
 :::
 
 The same chase finds an actual solution: the constants from \( \b \) simply ride along.
@@ -372,11 +372,11 @@ Starting from all lights **off**, which set of presses produces the pattern with
 :::
 
 ::: {.solution}
-The same plus sign. Starting from \( \0 \), presses \( \x \) produce the pattern \( A\x \), so we need \( A\x = \b \) with \( \b \) the center pattern, which is exactly the system just solved. Over \( \nF_2 \), turning a pattern on and turning it off are the same problem.
+The same plus sign. Starting from \( \0 \), presses \( \x \) produce the pattern \( \A\x \), so we need \( \A\x = \b \) with \( \b \) the center pattern, which is exactly the system just solved. Over \( \nF_2 \), turning a pattern on and turning it off are the same problem.
 :::
 
 ::: {.remark}
-Larger boards behave differently. A computation over \( \nF_2 \), by the same elimination, gives \( \rank A = 12 \) for the \( 4 \times 4 \) board and \( \rank A = 23 \) for the \( 5 \times 5 \) board. On the \( 5 \times 5 \) board, \( \col(A) \) has dimension \( 23 \), so it contains \( 2^{23} \) patterns (coordinates in a basis match its elements with \( \nF_2^{23} \)), and only one pattern in four can be switched off.
+Larger boards behave differently. A computation over \( \nF_2 \), by the same elimination, gives \( \rank \A = 12 \) for the \( 4 \times 4 \) board and \( \rank \A = 23 \) for the \( 5 \times 5 \) board. On the \( 5 \times 5 \) board, \( \col(\A) \) has dimension \( 23 \), so it contains \( 2^{23} \) patterns (coordinates in a basis match its elements with \( \nF_2^{23} \)), and only one pattern in four can be switched off.
 :::
 
 **What the model leaves out.** Nothing, which is rare. The puzzle is linear over \( \nF_2 \) by its rules, so the model is exact. It even predicts features that are not obvious when playing, such as the irrelevance of the order of presses.
@@ -463,7 +463,7 @@ Check: K \( 2 = 2 \); Mn \( 2 = 2 \); O \( 8 = 8 \); H \( 16 = 16 \); Cl \( 16 =
 Four intersections lie on a ring of one-way streets \( 1 \to 2 \), \( 2 \to 3 \), \( 3 \to 4 \), \( 4 \to 1 \), with flows \( f_1, f_2, f_3, f_4 \) in that order. From outside, \( 30 \) cars per minute enter at intersection 1 and \( 10 \) at intersection 3, while \( 15 \) leave at intersection 2 and \( 25 \) at intersection 4.
 
 ::: {.enumerate options="label=(\alph*)"}
-1. Write down the incidence matrix \( N \) and the supply vector \( \s \), and explain without computation why the system \( N\mathbf{f} = \s \) is consistent.
+1. Write down the incidence matrix \( \N \) and the supply vector \( \s \), and explain without computation why the system \( \N\mathbf{f} = \s \) is consistent.
 2. Find all solutions.
 3. If all flows must be non-negative, what is the smallest possible flow on each street?
 :::
@@ -473,10 +473,10 @@ Four intersections lie on a ring of one-way streets \( 1 \to 2 \), \( 2 \to 3 \)
 ::: {.enumerate options="label=(\alph*)"}
 1. With rows for the vertices and columns for the edges,
 \[
-N = \begin{pmatrix} 1 & 0 & 0 & -1 \\ -1 & 1 & 0 & 0 \\ 0 & -1 & 1 & 0 \\ 0 & 0 & -1 & 1 \end{pmatrix}, \qquad \s = \begin{pmatrix} 30 \\ -15 \\ 10 \\ -25 \end{pmatrix}.
+\N = \begin{pmatrix} 1 & 0 & 0 & -1 \\ -1 & 1 & 0 & 0 \\ 0 & -1 & 1 & 0 \\ 0 & 0 & -1 & 1 \end{pmatrix}, \qquad \s = \begin{pmatrix} 30 \\ -15 \\ 10 \\ -25 \end{pmatrix}.
 \]
 The ring is connected, and \( 30 - 15 + 10 - 25 = 0 \), so the system is consistent by @cor-flow-solvable.
-2. Row reducing \( [N \mid \s] \): \( R_2 + R_1 \) gives \( (0, 1, 0, -1 \mid 15) \); then \( R_3 + R_2 \) gives \( (0, 0, 1, -1 \mid 25) \); then \( R_4 + R_3 \) gives the zero row. The pivots are in columns 1, 2, 3, and \( f_4 = t \) is free, so
+2. Row reducing \( [\N \mid \s] \): \( R_2 + R_1 \) gives \( (0, 1, 0, -1 \mid 15) \); then \( R_3 + R_2 \) gives \( (0, 0, 1, -1 \mid 25) \); then \( R_4 + R_3 \) gives the zero row. The pivots are in columns 1, 2, 3, and \( f_4 = t \) is free, so
 \[
 \mathbf{f} = (30 + t, \; 15 + t, \; 25 + t, \; t), \qquad t \in \nR .
 \]
@@ -493,8 +493,8 @@ There is \( 4 - 4 + 1 = 1 \) parameter, the flow around the ring. Check at \( t 
 Consider lights out on a \( 2 \times 2 \) grid, where pressing a light toggles it and its two horizontal and vertical neighbors. Number the cells \( 1 = (1, 1) \), \( 2 = (1, 2) \), \( 3 = (2, 1) \), \( 4 = (2, 2) \).
 
 ::: {.enumerate options="label=(\alph*)"}
-1. Write down the matrix \( A \in M_4(\nF_2) \) of the puzzle.
-2. Show that \( A^2 = I \).
+1. Write down the matrix \( \A \in M_4(\nF_2) \) of the puzzle.
+2. Show that \( \A^2 = \I \).
 3. Deduce that every pattern is solvable by exactly one set of presses, and find the presses that switch off the pattern with only light \( 1 \) on.
 :::
 :::
@@ -503,14 +503,14 @@ Consider lights out on a \( 2 \times 2 \) grid, where pressing a light toggles i
 ::: {.enumerate options="label=(\alph*)"}
 1. Button \( j \) toggles every light except the one diagonally opposite. So
 \[
-A = \begin{pmatrix} 1 & 1 & 1 & 0 \\ 1 & 1 & 0 & 1 \\ 1 & 0 & 1 & 1 \\ 0 & 1 & 1 & 1 \end{pmatrix}.
+\A = \begin{pmatrix} 1 & 1 & 1 & 0 \\ 1 & 1 & 0 & 1 \\ 1 & 0 & 1 & 1 \\ 0 & 1 & 1 & 1 \end{pmatrix}.
 \]
-2. Let \( J \) be the \( 4 \times 4 \) all-ones matrix and \( Q \) the permutation matrix exchanging \( 1 \leftrightarrow 4 \) and \( 2 \leftrightarrow 3 \), which has \( 1 \)'s on the anti-diagonal. Then \( A = J - Q = J + Q \) over \( \nF_2 \). Every entry of \( J^2 \) is \( 1 + 1 + 1 + 1 = 0 \), so \( J^2 = 0 \). Each row and each column of \( Q \) has a single \( 1 \), so \( JQ = J \) and \( QJ = J \). And \( Q = P_\sigma \) for \( \sigma = (1\ 4)(2\ 3) \), with \( \sigma \circ \sigma = \id \), so \( Q^2 = P_{\id} = I \) by @lem-permutation-matrices (a). By @thm-matrix-multiplication-properties,
+2. Let \( \J \) be the \( 4 \times 4 \) all-ones matrix and \( \Q \) the permutation matrix exchanging \( 1 \leftrightarrow 4 \) and \( 2 \leftrightarrow 3 \), which has \( 1 \)'s on the anti-diagonal. Then \( \A = \J - \Q = \J + \Q \) over \( \nF_2 \). Every entry of \( \J^2 \) is \( 1 + 1 + 1 + 1 = 0 \), so \( \J^2 = 0 \). Each row and each column of \( \Q \) has a single \( 1 \), so \( \J\Q = \J \) and \( \Q\J = \J \). And \( \Q = \P_\sigma \) for \( \sigma = (1\ 4)(2\ 3) \), with \( \sigma \circ \sigma = \id \), so \( \Q^2 = \P_{\id} = \I \) by @lem-permutation-matrices (a). By @thm-matrix-multiplication-properties,
 \[
-A^2 = J^2 + JQ + QJ + Q^2 = 0 + J + J + I = I,
+\A^2 = \J^2 + \J\Q + \Q\J + \Q^2 = 0 + \J + \J + \I = \I,
 \]
-because \( J + J = 2J = 0 \) over \( \nF_2 \).
-3. By (b), \( A \) is invertible with \( A^{-1} = A \). By @thm-inverse-matrix-properties (7), \( A\x = \b \) has exactly one solution \( \x = A\b \) for every \( \b \in \nF_2^4 \). For \( \b = \e_1 \), \( \x = A\e_1 = (1, 1, 1, 0) \): press lights \( 1, 2, 3 \). Check: light 1 is toggled by presses 1, 2, 3, three times, so it goes off; light 2 by presses 1 and 2; light 3 by presses 1 and 3; light 4 by presses 2 and 3; each of these is toggled twice and stays off.
+because \( \J + \J = 2\J = 0 \) over \( \nF_2 \).
+3. By (b), \( \A \) is invertible with \( \A^{-1} = \A \). By @thm-inverse-matrix-properties (7), \( \A\x = \b \) has exactly one solution \( \x = \A\b \) for every \( \b \in \nF_2^4 \). For \( \b = \e_1 \), \( \x = \A\e_1 = (1, 1, 1, 0) \): press lights \( 1, 2, 3 \). Check: light 1 is toggled by presses 1, 2, 3, three times, so it goes off; light 2 by presses 1 and 2; light 3 by presses 1 and 3; light 4 by presses 2 and 3; each of these is toggled twice and stays off.
 :::
 :::
 
@@ -552,17 +552,17 @@ Row operations preserve the solution set (@thm-row-ops-preserve-solutions), so t
 ::: {#exr-applications-c3}
 [C3: Networks in several pieces]
 
-Let \( N \in M_{m \times k}(\nR) \) be the incidence matrix of a network with \( m \) vertices. Say that vertices \( v \) and \( w \) are **linked** if they are joined by a sequence of vertices in which consecutive ones share an edge, in either direction (every vertex is linked to itself by the sequence of length zero).
+Let \( \N \in M_{m \times k}(\nR) \) be the incidence matrix of a network with \( m \) vertices. Say that vertices \( v \) and \( w \) are **linked** if they are joined by a sequence of vertices in which consecutive ones share an edge, in either direction (every vertex is linked to itself by the sequence of length zero).
 
 ::: {.enumerate options="label=(\alph*)"}
 1. Show that "linked" is an equivalence relation. Its equivalence classes are called the **components** of the network; let \( c \) be their number.
-2. Prove that \( \rank N = m - c \).
+2. Prove that \( \rank \N = m - c \).
 :::
 :::
 
 ::: {.solution}
 ::: {.enumerate options="label=(\alph*)"}
 1. *Reflexive:* by the sequence of length zero. *Symmetric:* reversing a sequence from \( v \) to \( w \) gives one from \( w \) to \( v \), and consecutive vertices still share an edge. *Transitive:* following a sequence from \( u \) to \( v \) by one from \( v \) to \( w \) gives a sequence from \( u \) to \( w \). So "linked" is an equivalence relation (@def-equivalence-relation).
-2. Let \( C_1, \dots, C_c \) be the components, and let \( \mathbf{1}_{C_r} \in \nR^m \) have entry \( 1 \) at the vertices of \( C_r \) and \( 0 \) elsewhere. As in the proof of @prp-incidence-rank-connected, \( N\tp\y = \0 \) if and only if \( y_u = y_w \) for every edge joining \( u \) and \( w \). Following sequences of edges, this holds if and only if \( \y \) is constant on each component, that is, \( \y = \sum_r \lambda_r \mathbf{1}_{C_r} \) with \( \lambda_r \) the common value on \( C_r \). (Conversely each \( \mathbf{1}_{C_r} \) is in the null space, since both ends of an edge lie in the same component.) So \( (\mathbf{1}_{C_1}, \dots, \mathbf{1}_{C_c}) \) spans \( \nul(N\tp) \). It is independent: if \( \sum_r \lambda_r \mathbf{1}_{C_r} = \0 \), then reading the entry at any vertex of \( C_r \), where only the \( r \)-th vector is non-zero because the components are disjoint (@thm-partition), gives \( \lambda_r = 0 \). Hence \( \dim \nul(N\tp) = c \). Since \( N\tp \) has \( m \) columns, @thm-rank-nullity-matrix gives \( \rank N\tp = m - c \), and @thm-row-rank-equals-column-rank gives \( \rank N = m - c \), as claimed.
+2. Let \( C_1, \dots, C_c \) be the components, and let \( \mathbf{1}_{C_r} \in \nR^m \) have entry \( 1 \) at the vertices of \( C_r \) and \( 0 \) elsewhere. As in the proof of @prp-incidence-rank-connected, \( \N\tp\y = \0 \) if and only if \( y_u = y_w \) for every edge joining \( u \) and \( w \). Following sequences of edges, this holds if and only if \( \y \) is constant on each component, that is, \( \y = \sum_r \lambda_r \mathbf{1}_{C_r} \) with \( \lambda_r \) the common value on \( C_r \). (Conversely each \( \mathbf{1}_{C_r} \) is in the null space, since both ends of an edge lie in the same component.) So \( (\mathbf{1}_{C_1}, \dots, \mathbf{1}_{C_c}) \) spans \( \nul(\N\tp) \). It is independent: if \( \sum_r \lambda_r \mathbf{1}_{C_r} = \0 \), then reading the entry at any vertex of \( C_r \), where only the \( r \)-th vector is non-zero because the components are disjoint (@thm-partition), gives \( \lambda_r = 0 \). Hence \( \dim \nul(\N\tp) = c \). Since \( \N\tp \) has \( m \) columns, @thm-rank-nullity-matrix gives \( \rank \N\tp = m - c \), and @thm-row-rank-equals-column-rank gives \( \rank \N = m - c \), as claimed.
 :::
 :::

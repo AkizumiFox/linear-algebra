@@ -61,10 +61,10 @@ The step that used commutativity of \( F \) is worth a second look: \( cT \) is 
 ::: {#exm-sum-of-matrix-maps}
 [Sums of Matrix Maps and Other First Examples]
 
-For \( A \in M_{m \times n}(F) \), write \( T_A \colon F^n \to F^m \), \( \x \mapsto A\x \), for the matrix map of @exm-matrix-transformation.
+For \( \A \in M_{m \times n}(F) \), write \( T_\A \colon F^n \to F^m \), \( \x \mapsto \A\x \), for the matrix map of @exm-matrix-transformation.
 
 ::: {.enumerate options="label=(\alph*)"}
-1. Show that \( T_A + T_B = T_{A + B} \) and \( cT_A = T_{cA} \) for \( A, B \in M_{m \times n}(F) \) and \( c \in F \).
+1. Show that \( T_\A + T_\B = T_{\A + \B} \) and \( cT_\A = T_{c\A} \) for \( \A, \B \in M_{m \times n}(F) \) and \( c \in F \).
 2. Describe \( \cL(V, W) \) when \( V = \{\0\} \), and when \( W = \{\0\} \).
 3. On \( \nR[x]_{\le 2} \), write \( T(p) = p' - 2p \) in terms of \( \id \) and \( D \), and compute \( T(1 + x^2) \).
 :::
@@ -73,7 +73,7 @@ For \( A \in M_{m \times n}(F) \), write \( T_A \colon F^n \to F^m \), \( \x \ma
 ::: {.solution}
 (a) Let \( \x \in F^n \). By @def-space-of-linear-maps and distributivity (@thm-matrix-multiplication-properties),
 \[
-(T_A + T_B)(\x) = A\x + B\x = (A + B)\x = T_{A + B}(\x), \qquad (cT_A)(\x) = c(A\x) = (cA)\x = T_{cA}(\x).
+(T_\A + T_\B)(\x) = \A\x + \B\x = (\A + \B)\x = T_{\A + \B}(\x), \qquad (cT_\A)(\x) = c(\A\x) = (c\A)\x = T_{c\A}(\x).
 \]
 The maps agree at every \( \x \), so they are equal. So adding and scaling matrix maps is adding and scaling matrices.
 
@@ -146,7 +146,7 @@ In \( PR \) the rotation acts first:
 \[
 PR(x, y) = P(-y, x) = (-y, 0), \qquad RP(x, y) = R(x, 0) = (0, x).
 \]
-At \( (1, 0) \): \( PR(1, 0) = (0, 0) \), while \( RP(1, 0) = (0, 1) \). So \( PR \neq RP \). Geometrically, \( PR \) rotates \( \e_1 \) onto the \( y \)-axis and then squashes it to \( \0 \); \( RP \) leaves \( \e_1 \) alone under the projection and then rotates it to \( \e_2 \). In matrix form, \( P = T_{A} \) and \( R = T_{B} \) with \( A = \begin{pmatrix} 1 & 0 \\ 0 & 0 \end{pmatrix} \) and \( B = \begin{pmatrix} 0 & -1 \\ 1 & 0 \end{pmatrix} \), and indeed \( AB = \begin{pmatrix} 0 & -1 \\ 0 & 0 \end{pmatrix} \neq \begin{pmatrix} 0 & 0 \\ 1 & 0 \end{pmatrix} = BA \).
+At \( (1, 0) \): \( PR(1, 0) = (0, 0) \), while \( RP(1, 0) = (0, 1) \). So \( PR \neq RP \). Geometrically, \( PR \) rotates \( \e_1 \) onto the \( y \)-axis and then squashes it to \( \0 \); \( RP \) leaves \( \e_1 \) alone under the projection and then rotates it to \( \e_2 \). In matrix form, \( P = T_{\A} \) and \( R = T_{\B} \) with \( \A = \begin{pmatrix} 1 & 0 \\ 0 & 0 \end{pmatrix} \) and \( \B = \begin{pmatrix} 0 & -1 \\ 1 & 0 \end{pmatrix} \), and indeed \( \A\B = \begin{pmatrix} 0 & -1 \\ 0 & 0 \end{pmatrix} \neq \begin{pmatrix} 0 & 0 \\ 1 & 0 \end{pmatrix} = \B\A \).
 :::
 
 ::: {.warning}
@@ -386,7 +386,7 @@ Let \( F \) be a field, let \( D \in \cL(F[x]) \) be formal differentiation, \( 
 
 ::: {.enumerate options="label=(\alph*)"}
 1. Prove that \( DS - SD = \id \).
-2. Let \( T \in \cL(F^n, F^m) \). Prove that \( T = T_A \), where \( A \in M_{m \times n}(F) \) is the matrix with columns \( T\e_1, \dots, T\e_n \).
+2. Let \( T \in \cL(F^n, F^m) \). Prove that \( T = T_\A \), where \( \A \in M_{m \times n}(F) \) is the matrix with columns \( T\e_1, \dots, T\e_n \).
 3. Now suppose that \( F \) has **characteristic \( 0 \)** (@def-characteristic), and let \( n \ge 1 \). Deduce that there are no operators \( D', S' \in \cL(F^n) \) with \( D'S' - S'D' = \id \).
 4. Show that the assumption on the characteristic in (c) cannot be dropped.
 :::
@@ -403,21 +403,21 @@ Every \( p \in F[x] \) is a finite combination \( p = \sum_k a_kx^k \), so by @t
 
 (b) Let \( \x = (x_1, \dots, x_n) = x_1\e_1 + \dots + x_n\e_n \in F^n \). By @thm-linear-combination and @thm-matrix-times-vector-columns,
 \[
-T\x = x_1T\e_1 + \dots + x_nT\e_n = A\x = T_A(\x).
+T\x = x_1T\e_1 + \dots + x_nT\e_n = \A\x = T_\A(\x).
 \]
-Since \( \x \) was arbitrary, \( T = T_A \).
+Since \( \x \) was arbitrary, \( T = T_\A \).
 
-(c) Suppose, for a contradiction, that \( D', S' \in \cL(F^n) \) satisfy \( D'S' - S'D' = \id \). By (b), \( D' = T_A \) and \( S' = T_B \) for some \( A, B \in M_n(F) \), and \( \id = T_{I_n} \). By associativity of matrix multiplication, \( T_AT_B(\x) = A(B\x) = (AB)\x \), so \( T_AT_B = T_{AB} \), and similarly \( T_BT_A = T_{BA} \). With @exm-sum-of-matrix-maps (a),
+(c) Suppose, for a contradiction, that \( D', S' \in \cL(F^n) \) satisfy \( D'S' - S'D' = \id \). By (b), \( D' = T_\A \) and \( S' = T_\B \) for some \( \A, \B \in M_n(F) \), and \( \id = T_{\I_n} \). By associativity of matrix multiplication, \( T_\A T_\B(\x) = \A(\B\x) = (\A\B)\x \), so \( T_\A T_\B = T_{\A\B} \), and similarly \( T_\B T_\A = T_{\B\A} \). With @exm-sum-of-matrix-maps (a),
 \[
-T_{AB - BA} = T_AT_B - T_BT_A = \id = T_{I_n} .
+T_{\A\B - \B\A} = T_\A T_\B - T_\B T_\A = \id = T_{\I_n} .
 \]
-Evaluating at \( \e_j \) gives equal \( j \)-th columns (@thm-matrix-times-vector-columns), so \( AB - BA = I_n \). Taking traces and using @thm-trace-properties,
+Evaluating at \( \e_j \) gives equal \( j \)-th columns (@thm-matrix-times-vector-columns), so \( \A\B - \B\A = \I_n \). Taking traces and using @thm-trace-properties,
 \[
-n \cdot 1 = \tr I_n = \tr(AB) - \tr(BA) = 0 .
+n \cdot 1 = \tr \I_n = \tr(\A\B) - \tr(\B\A) = 0 .
 \]
 Since \( n \ge 1 \) and \( F \) has characteristic \( 0 \), \( n \cdot 1 \neq 0 \) by @def-characteristic. This is a contradiction, so no such \( D', S' \) exist. In words: over \( \nQ \), \( \nR \), \( \nC \) or any field of characteristic \( 0 \), the relation \( DS - SD = \id \) of (a) has no analogue on \( F^n \), \( n \ge 1 \). Since every \( n \)-dimensional space is isomorphic to \( F^n \), as we show in the next section, the same holds on every non-zero finite-dimensional space. (On the zero space \( \id = 0 \), so the relation holds trivially there; that is why \( n \ge 1 \).)
 
-(d) Over \( \nF_2 \) (characteristic \( 2 \)), take \( A = \begin{pmatrix} 0 & 0 \\ 1 & 0 \end{pmatrix} \) and \( B = \begin{pmatrix} 0 & 1 \\ 0 & 0 \end{pmatrix} \) as in @exr-matrices-c1. There \( AB - BA = \begin{pmatrix} -1 & 0 \\ 0 & 1 \end{pmatrix} = I_2 \), because \( -1 = 1 \) in \( \nF_2 \). By the computation in (c), \( D' = T_A \) and \( S' = T_B \) satisfy \( D'S' - S'D' = T_{AB - BA} = \id \) on \( \nF_2^2 \). So the conclusion of (c) fails without the characteristic assumption; the proof breaks exactly at \( n \cdot 1 \neq 0 \), since \( 2 \cdot 1 = 0 \) in \( \nF_2 \).
+(d) Over \( \nF_2 \) (characteristic \( 2 \)), take \( \A = \begin{pmatrix} 0 & 0 \\ 1 & 0 \end{pmatrix} \) and \( \B = \begin{pmatrix} 0 & 1 \\ 0 & 0 \end{pmatrix} \) as in @exr-matrices-c1. There \( \A\B - \B\A = \begin{pmatrix} -1 & 0 \\ 0 & 1 \end{pmatrix} = \I_2 \), because \( -1 = 1 \) in \( \nF_2 \). By the computation in (c), \( D' = T_\A \) and \( S' = T_\B \) satisfy \( D'S' - S'D' = T_{\A\B - \B\A} = \id \) on \( \nF_2^2 \). So the conclusion of (c) fails without the characteristic assumption; the proof breaks exactly at \( n \cdot 1 \neq 0 \), since \( 2 \cdot 1 = 0 \) in \( \nF_2 \).
 :::
 
 ::: {#exr-algebra-of-linear-maps-c2}

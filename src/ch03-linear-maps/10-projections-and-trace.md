@@ -25,7 +25,7 @@ In words: \( P^2 \) is the composite \( PP \) (@def-polynomial-of-operator), so 
 **Examples.**
 
 - **Onto an axis.** \( P(x, y) = (x, 0) \) on \( F^2 \). Then \( P^2(x, y) = P(x, 0) = (x, 0) \), so \( P^2 = P \).
-- **A rank-one projection.** \( T(x, y) = (2x - y,\ 2x - y) \) on \( \nR^2 \) from @exm-projection-adapted-basis. We saw there that its matrix \( A \) satisfies \( A^2 = A \); directly, \( T(2x - y, 2x - y) = (4x - 2y - 2x + y, \dots) = (2x - y, 2x - y) \).
+- **A rank-one projection.** \( T(x, y) = (2x - y,\ 2x - y) \) on \( \nR^2 \) from @exm-projection-adapted-basis. We saw there that its matrix \( \A \) satisfies \( \A^2 = \A \); directly, \( T(2x - y, 2x - y) = (4x - 2y - 2x + y, \dots) = (2x - y, 2x - y) \).
 - **Constant term.** On \( F[x]_{\le n} \), \( P(p) = p(0) \), the constant polynomial with value \( p(0) \). The constant polynomial \( c \) has value \( c \) at \( 0 \), so \( P(P(p)) = P(p) \).
 - **Degenerate cases.** The identity \( \id_V \) and the zero operator are projections, since \( \id_V^2 = \id_V \) and \( 0^2 = 0 \). They correspond to keeping everything and keeping nothing.
 
@@ -94,7 +94,7 @@ In finite dimension, the direct sum \( V = \im P \oplus \ker P \) hands us a bas
 
 Let \( V \) be finite-dimensional and \( P \in \cL(V) \) a projection with \( \rank P = r \). Let \( (\u_1, \dots, \u_r) \) be a basis of \( \im P \) and \( (\w_1, \dots, \w_s) \) a basis of \( \ker P \). Then \( \sB = (\u_1, \dots, \u_r, \w_1, \dots, \w_s) \) is a basis of \( V \), and
 \[
-[P]_{\sB} = \begin{pmatrix} I_r & 0 \\ 0 & 0 \end{pmatrix} = \diag(1, \dots, 1, 0, \dots, 0),
+[P]_{\sB} = \begin{pmatrix} \I_r & 0 \\ 0 & 0 \end{pmatrix} = \diag(1, \dots, 1, 0, \dots, 0),
 \]
 with \( r \) ones.
 :::
@@ -118,7 +118,7 @@ P(a, b, c) = \Big(\tfrac{2a - b - c}{3},\ \tfrac{-a + 2b - c}{3},\ \tfrac{-a - b
 \]
 *Adapted basis.* \( (1, -1, 0) \) and \( (0, -1, 1) \) lie in \( U \) and are independent (look at the first and third entries), so they form a basis of the \( 2 \)-dimensional plane \( U \). With \( \sB = ((1, -1, 0), (0, -1, 1), (1, 1, 1)) \), @cor-projection-matrix gives \( [P]_{\sB} = \diag(1, 1, 0) \), and by @thm-change-of-basis-maps \( [P]_{\sE} = M\,\diag(1, 1, 0)\,M^{-1} \) with \( M = \mtx{\id}{\sB}{\sE} \), whose columns are the vectors of \( \sB \). Multiplying out gives the same matrix as the direct route.
 
-*Check.* Let \( A \) be the matrix found. The first column of \( A^2 \) is \( A \) applied to \( \frac13(2, -1, -1) \), which is \( \frac19(4 + 1 + 1,\ -2 - 2 + 1,\ -2 + 1 - 2) = \frac13(2, -1, -1) \), the first column of \( A \); the other columns work the same way by symmetry of the entries. Also \( A(1, 1, 1) = \0 \) and \( A(1, -1, 0) = (1, -1, 0) \), as a projection onto \( U \) along \( L \) must satisfy. The division by \( 3 \) needs \( 3 \ne 0 \) in the field, which holds over \( \nR \).
+*Check.* Let \( \A \) be the matrix found. The first column of \( \A^2 \) is \( \A \) applied to \( \frac13(2, -1, -1) \), which is \( \frac19(4 + 1 + 1,\ -2 - 2 + 1,\ -2 + 1 - 2) = \frac13(2, -1, -1) \), the first column of \( \A \); the other columns work the same way by symmetry of the entries. Also \( \A(1, 1, 1) = \0 \) and \( \A(1, -1, 0) = (1, -1, 0) \), as a projection onto \( U \) along \( L \) must satisfy. The division by \( 3 \) needs \( 3 \ne 0 \) in the field, which holds over \( \nR \).
 :::
 
 ::: {.check}
@@ -151,7 +151,7 @@ In words: to find \( \tr T \), choose a basis, write down the matrix of \( T \) 
 
 **Examples.**
 
-- **Identity.** In every basis, \( [\id_V]_{\sB} = I_n \), so \( \tr \id_V = n \cdot 1 \), where \( n = \dim V \). Over \( \nR \) this is \( n \); over \( \nF_2 \) it is \( 0 \) when \( n \) is even.
+- **Identity.** In every basis, \( [\id_V]_{\sB} = \I_n \), so \( \tr \id_V = n \cdot 1 \), where \( n = \dim V \). Over \( \nR \) this is \( n \); over \( \nF_2 \) it is \( 0 \) when \( n \) is even.
 - **Differentiation.** On \( F[x]_{\le n} \) with the basis \( (1, x, \dots, x^n) \), \( D(x^k) = kx^{k-1} \) has no \( x^k \)-component, so every diagonal entry of the matrix is \( 0 \) and \( \tr D = 0 \).
 - **A shift of the variable.** On \( \nR[x]_{\le 2} \), let \( T(p) = p(x + 1) \). In \( (1, x, x^2) \), \( T(1) = 1 \), \( T(x) = 1 + x \), \( T(x^2) = 1 + 2x + x^2 \), so the matrix is \( \begin{pmatrix} 1 & 1 & 1 \\ 0 & 1 & 2 \\ 0 & 0 & 1 \end{pmatrix} \) and \( \tr T = 3 \).
 - **The reflection.** \( R(x, y) = (y, x) \) has trace \( 0 \), whether computed from \( \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix} \) or from \( \diag(1, -1) \) (@exm-reflection-diagonal-basis).
@@ -199,7 +199,7 @@ The hypothesis cannot be dropped. Over \( \nF_2 \), the identity of \( \nF_2^2 \
 
 ## Involutions and reflections
 
-A projection satisfies \( P^2 = P \). The other simple polynomial relation is \( T^2 = \id_V \): doing \( T \) twice changes nothing. Such an operator is called an **involution**. Examples are the reflection \( R(x, y) = (y, x) \), the transpose \( A \mapsto A\tp \) on \( M_n(F) \), and \( f(x) \mapsto f(-x) \) on functions \( \nR \to \nR \). In Chapter 1 the last two produced direct sums: symmetric plus skew-symmetric matrices (@exm-direct-sum-of-matrix), and even plus odd functions (@exm-even-odd-functions). The next theorem explains both at once. For an involution \( T \), write
+A projection satisfies \( P^2 = P \). The other simple polynomial relation is \( T^2 = \id_V \): doing \( T \) twice changes nothing. Such an operator is called an **involution**. Examples are the reflection \( R(x, y) = (y, x) \), the transpose \( \A \mapsto \A\tp \) on \( M_n(F) \), and \( f(x) \mapsto f(-x) \) on functions \( \nR \to \nR \). In Chapter 1 the last two produced direct sums: symmetric plus skew-symmetric matrices (@exm-direct-sum-of-matrix), and even plus odd functions (@exm-even-odd-functions). The next theorem explains both at once. For an involution \( T \), write
 \[
 E_{+} \coloneqq \{ \v \in V : T\v = \v \}, \qquad E_{-} \coloneqq \{ \v \in V : T\v = -\v \}.
 \]
@@ -232,7 +232,7 @@ The operator \( \frac12(\id_V + T) \) is linear by @thm-linear-maps-vector-space
 For the transpose, \( E_{+} \) is the symmetric and \( E_{-} \) the skew-symmetric matrices; for \( f(x) \mapsto f(-x) \), they are the even and odd functions; for the reflection \( R(x, y) = (y, x) \), they are the mirror line \( y = x \) and the perpendicular line \( y = -x \), and the adapted basis \( ((1, 1), (1, -1)) \) is the one of @exm-reflection-diagonal-basis. In finite dimension, a basis of \( E_{+} \) followed by a basis of \( E_{-} \) gives \( [T]_{\sB} = \diag(1, \dots, 1, -1, \dots, -1) \), and so \( \tr T = (\dim E_{+}) \cdot 1 - (\dim E_{-}) \cdot 1 \). In Chapter 8 the non-zero vectors of \( E_{+} \) and \( E_{-} \) will be called eigenvectors with eigenvalues \( 1 \) and \( -1 \).
 
 ::: {.warning}
-**In characteristic \( 2 \) an involution need not split the space.** Over \( \nF_2 \), let \( T\x = J\x \) with \( J = \begin{pmatrix} 1 & 1 \\ 0 & 1 \end{pmatrix} \). Then \( J^2 = \begin{pmatrix} 1 & 2 \\ 0 & 1 \end{pmatrix} = I_2 \), since \( 2 = 0 \). But \( -1 = 1 \), so \( E_{-} = E_{+} = \ker(J - I_2) = \Span(\e_1) \), and \( E_{+} + E_{-} = \Span(\e_1) \ne \nF_2^2 \).
+**In characteristic \( 2 \) an involution need not split the space.** Over \( \nF_2 \), let \( T\x = \J\x \) with \( \J = \begin{pmatrix} 1 & 1 \\ 0 & 1 \end{pmatrix} \). Then \( \J^2 = \begin{pmatrix} 1 & 2 \\ 0 & 1 \end{pmatrix} = \I_2 \), since \( 2 = 0 \). But \( -1 = 1 \), so \( E_{-} = E_{+} = \ker(\J - \I_2) = \Span(\e_1) \), and \( E_{+} + E_{-} = \Span(\e_1) \ne \nF_2^2 \).
 :::
 
 ## Exercises
@@ -275,8 +275,8 @@ Let \( U = \{ (x, y, z) \in \nR^3 : x + y - z = 0 \} \) and \( L = \Span((1, 1, 
 
 ::: {.enumerate options="label=(\alph*)"}
 1. Show that \( \nR^3 = U \oplus L \).
-2. Find the standard matrix \( A \) of the projection \( P \) onto \( U \) along \( L \).
-3. Verify that \( A^2 = A \), and that \( \tr A = \rank A \).
+2. Find the standard matrix \( \A \) of the projection \( P \) onto \( U \) along \( L \).
+3. Verify that \( \A^2 = \A \), and that \( \tr \A = \rank \A \).
 :::
 :::
 
@@ -285,15 +285,15 @@ Let \( U = \{ (x, y, z) \in \nR^3 : x + y - z = 0 \} \) and \( L = \Span((1, 1, 
 
 (b) Split \( (a, b, c) = \u + t(1, 1, 1) \) with \( \u = (a - t, b - t, c - t) \in U \): the condition \( (a - t) + (b - t) - (c - t) = 0 \) gives \( t = a + b - c \). So
 \[
-P(a, b, c) = (-b + c,\ -a + c,\ -a - b + 2c), \qquad A = \begin{pmatrix} 0 & -1 & 1 \\ -1 & 0 & 1 \\ -1 & -1 & 2 \end{pmatrix}.
+P(a, b, c) = (-b + c,\ -a + c,\ -a - b + 2c), \qquad \A = \begin{pmatrix} 0 & -1 & 1 \\ -1 & 0 & 1 \\ -1 & -1 & 2 \end{pmatrix}.
 \]
-Check: \( A(1, 1, 1) = \0 \), and for the vectors \( (1, 0, 1), (0, 1, 1) \in U \), \( A(1, 0, 1) = (1, 0, 1) \) and \( A(0, 1, 1) = (0, 1, 1) \).
+Check: \( \A(1, 1, 1) = \0 \), and for the vectors \( (1, 0, 1), (0, 1, 1) \in U \), \( \A(1, 0, 1) = (1, 0, 1) \) and \( \A(0, 1, 1) = (0, 1, 1) \).
 
 (c) Row by row,
 \[
-A^2 = \begin{pmatrix} 0 + 1 - 1 & 0 + 0 - 1 & 0 - 1 + 2 \\ 0 + 0 - 1 & 1 + 0 - 1 & -1 + 0 + 2 \\ 0 + 1 - 2 & 1 + 0 - 2 & -1 - 1 + 4 \end{pmatrix} = \begin{pmatrix} 0 & -1 & 1 \\ -1 & 0 & 1 \\ -1 & -1 & 2 \end{pmatrix} = A .
+\A^2 = \begin{pmatrix} 0 + 1 - 1 & 0 + 0 - 1 & 0 - 1 + 2 \\ 0 + 0 - 1 & 1 + 0 - 1 & -1 + 0 + 2 \\ 0 + 1 - 2 & 1 + 0 - 2 & -1 - 1 + 4 \end{pmatrix} = \begin{pmatrix} 0 & -1 & 1 \\ -1 & 0 & 1 \\ -1 & -1 & 2 \end{pmatrix} = \A .
 \]
-\( \tr A = 0 + 0 + 2 = 2 \), and \( \rank A = \rank P = \dim U = 2 \) by @thm-projection-direct-sum (b), in agreement with @thm-rank-equals-trace-projection.
+\( \tr \A = 0 + 0 + 2 = 2 \), and \( \rank \A = \rank P = \dim U = 2 \) by @thm-projection-direct-sum (b), in agreement with @thm-rank-equals-trace-projection.
 :::
 
 ::: {#exr-projections-and-trace-b2}
@@ -320,17 +320,17 @@ Let \( P \in \cL(V) \) be a projection.
 [B3: Traces of operators on matrices]
 
 ::: {.enumerate options="label=(\alph*)"}
-1. Let \( \tau \colon M_n(F) \to M_n(F) \), \( \tau(A) = A\tp \). Show that \( \tr \tau = n \cdot 1 \).
-2. Fix \( B \in M_2(F) \), and let \( L_B \colon M_2(F) \to M_2(F) \), \( L_B(X) = BX \). Show that \( \tr L_B = 2\tr B \).
+1. Let \( \tau \colon M_n(F) \to M_n(F) \), \( \tau(\A) = \A\tp \). Show that \( \tr \tau = n \cdot 1 \).
+2. Fix \( \B \in M_2(F) \), and let \( L_\B \colon M_2(F) \to M_2(F) \), \( L_\B(\X) = \B\X \). Show that \( \tr L_\B = 2\tr \B \).
 :::
 
-*Hint: use the basis of matrix units \( E_{ij} \).*
+*Hint: use the basis of matrix units \( \E_{ij} \).*
 :::
 
 ::: {.solution}
-(a) Order the basis \( (E_{ij}) \) of \( M_n(F) \) in any way. Since \( \tau(E_{ij}) = E_{ji} \), the coordinate column of \( \tau(E_{ij}) \) has a \( 1 \) in the position of \( E_{ji} \) and \( 0 \) elsewhere. The diagonal entry of the matrix in the column of \( E_{ij} \) is therefore \( 1 \) if \( E_{ji} = E_{ij} \), that is \( i = j \), and \( 0 \) otherwise. There are \( n \) basis vectors \( E_{ii} \), so \( \tr \tau = n \cdot 1 \) by @def-trace-operator. (Consistently with @thm-involution-decomposition over \( \nR \): symmetric matrices have dimension \( \frac{n(n+1)}{2} \), skew-symmetric ones \( \frac{n(n-1)}{2} \), and the difference is \( n \).)
+(a) Order the basis \( (\E_{ij}) \) of \( M_n(F) \) in any way. Since \( \tau(\E_{ij}) = \E_{ji} \), the coordinate column of \( \tau(\E_{ij}) \) has a \( 1 \) in the position of \( \E_{ji} \) and \( 0 \) elsewhere. The diagonal entry of the matrix in the column of \( \E_{ij} \) is therefore \( 1 \) if \( \E_{ji} = \E_{ij} \), that is \( i = j \), and \( 0 \) otherwise. There are \( n \) basis vectors \( \E_{ii} \), so \( \tr \tau = n \cdot 1 \) by @def-trace-operator. (Consistently with @thm-involution-decomposition over \( \nR \): symmetric matrices have dimension \( \frac{n(n+1)}{2} \), skew-symmetric ones \( \frac{n(n-1)}{2} \), and the difference is \( n \).)
 
-(b) Use the basis \( (E_{11}, E_{12}, E_{21}, E_{22}) \) and write \( B = (b_{ij}) \). The product \( BE_{ij} \) has the \( i \)-th column of \( B \) in column \( j \) and zeros elsewhere, so \( BE_{ij} = b_{1i}E_{1j} + b_{2i}E_{2j} \). The diagonal entry in the column of \( E_{ij} \) is the coefficient of \( E_{ij} \) itself, which is \( b_{ii} \). Adding over the four basis vectors, \( \tr L_B = b_{11} + b_{11} + b_{22} + b_{22} = 2\tr B \).
+(b) Use the basis \( (\E_{11}, \E_{12}, \E_{21}, \E_{22}) \) and write \( \B = (b_{ij}) \). The product \( \B\E_{ij} \) has the \( i \)-th column of \( \B \) in column \( j \) and zeros elsewhere, so \( \B\E_{ij} = b_{1i}\E_{1j} + b_{2i}\E_{2j} \). The diagonal entry in the column of \( \E_{ij} \) is the coefficient of \( \E_{ij} \) itself, which is \( b_{ii} \). Adding over the four basis vectors, \( \tr L_\B = b_{11} + b_{11} + b_{22} + b_{22} = 2\tr \B \).
 :::
 
 ### C. Going deeper
@@ -367,25 +367,25 @@ Let \( F \) have characteristic not \( 2 \), and let \( P, Q \in \cL(V) \) be pr
 ::: {#exr-projections-and-trace-c2}
 [C2: The trace is the only trace-like functional]
 
-Let \( n \ge 1 \), and let \( \varphi \colon M_n(F) \to F \) be linear with \( \varphi(AB) = \varphi(BA) \) for all \( A, B \in M_n(F) \).
+Let \( n \ge 1 \), and let \( \varphi \colon M_n(F) \to F \) be linear with \( \varphi(\A\B) = \varphi(\B\A) \) for all \( \A, \B \in M_n(F) \).
 
 ::: {.enumerate options="label=(\alph*)"}
-1. Using \( E_{ij}E_{jk} = E_{ik} \) and \( E_{jk}E_{ij} = 0 \) for \( k \ne i \), show that \( \varphi(E_{ik}) = 0 \) whenever \( i \ne k \).
-2. Show that \( \varphi(E_{ii}) = \varphi(E_{jj}) \) for all \( i, j \).
+1. Using \( \E_{ij}\E_{jk} = \E_{ik} \) and \( \E_{jk}\E_{ij} = 0 \) for \( k \ne i \), show that \( \varphi(\E_{ik}) = 0 \) whenever \( i \ne k \).
+2. Show that \( \varphi(\E_{ii}) = \varphi(\E_{jj}) \) for all \( i, j \).
 3. Deduce that \( \varphi = c\,\tr \) for some \( c \in F \), and conversely that every \( c\,\tr \) has the property.
 :::
 :::
 
 ::: {.solution}
-Recall that \( E_{ij}E_{kl} \) is \( E_{il} \) if \( j = k \) and \( 0 \) otherwise, by @def-matrix-multiplication.
+Recall that \( \E_{ij}\E_{kl} \) is \( \E_{il} \) if \( j = k \) and \( 0 \) otherwise, by @def-matrix-multiplication.
 
-(a) Let \( i \ne k \). Then \( E_{ik} = E_{ii}E_{ik} \) and \( E_{ik}E_{ii} = 0 \), because \( k \ne i \). By the hypothesis and linearity, \( \varphi(E_{ik}) = \varphi(E_{ii}E_{ik}) = \varphi(E_{ik}E_{ii}) = \varphi(0) = 0 \).
+(a) Let \( i \ne k \). Then \( \E_{ik} = \E_{ii}\E_{ik} \) and \( \E_{ik}\E_{ii} = 0 \), because \( k \ne i \). By the hypothesis and linearity, \( \varphi(\E_{ik}) = \varphi(\E_{ii}\E_{ik}) = \varphi(\E_{ik}\E_{ii}) = \varphi(0) = 0 \).
 
-(b) \( E_{ii} = E_{ij}E_{ji} \) and \( E_{jj} = E_{ji}E_{ij} \). Hence \( \varphi(E_{ii}) = \varphi(E_{ij}E_{ji}) = \varphi(E_{ji}E_{ij}) = \varphi(E_{jj}) \).
+(b) \( \E_{ii} = \E_{ij}\E_{ji} \) and \( \E_{jj} = \E_{ji}\E_{ij} \). Hence \( \varphi(\E_{ii}) = \varphi(\E_{ij}\E_{ji}) = \varphi(\E_{ji}\E_{ij}) = \varphi(\E_{jj}) \).
 
-(c) Let \( c = \varphi(E_{11}) \). For \( A = (a_{ij}) = \sum_{i,j} a_{ij}E_{ij} \), linearity with (a) and (b) gives
+(c) Let \( c = \varphi(\E_{11}) \). For \( \A = (a_{ij}) = \sum_{i,j} a_{ij}\E_{ij} \), linearity with (a) and (b) gives
 \[
-\varphi(A) = \sum_{i,j} a_{ij}\varphi(E_{ij}) = \sum_{i} a_{ii}\varphi(E_{ii}) = c\sum_i a_{ii} = c\,\tr A .
+\varphi(\A) = \sum_{i,j} a_{ij}\varphi(\E_{ij}) = \sum_{i} a_{ii}\varphi(\E_{ii}) = c\sum_i a_{ii} = c\,\tr \A .
 \]
-Conversely, \( c\,\tr \) is linear and \( c\,\tr(AB) = c\,\tr(BA) \) by @thm-trace-properties. So the linear functionals with \( \varphi(AB) = \varphi(BA) \) are exactly the multiples of the trace.
+Conversely, \( c\,\tr \) is linear and \( c\,\tr(\A\B) = c\,\tr(\B\A) \) by @thm-trace-properties. So the linear functionals with \( \varphi(\A\B) = \varphi(\B\A) \) are exactly the multiples of the trace.
 :::

@@ -31,7 +31,7 @@ In words: the \( i \)-th entry of a sum is the sum of the \( i \)-th entries, co
 
 - **The standard example.** \( F \times \dots \times F \) (\( n \) factors) is \( F^n \) with its usual operations.
 - **Unrelated spaces.** An element of \( \nR^2 \times \nR[x]_{\le 1} \) is a pair \( ((a, b), c + dx) \), and \( ((1, 0), x) + ((2, 5), 3 - x) = ((3, 5), 3) \).
-- **Augmented data.** A linear system \( A\x = \b \) with \( m \) equations in \( n \) unknowns is a single element \( (A, \b) \) of \( M_{m \times n}(F) \times F^m \).
+- **Augmented data.** A linear system \( \A\x = \b \) with \( m \) equations in \( n \) unknowns is a single element \( (\A, \b) \) of \( M_{m \times n}(F) \times F^m \).
 - **Degenerate cases.** For \( k = 1 \) the product is \( V_1 \) itself, with entries written in parentheses. And \( V \times \{\0\} \) consists of the pairs \( (\v, \0) \); the map \( \v \mapsto (\v, \0) \) is a linear bijection \( V \to V \times \{\0\} \), so a zero factor adds nothing.
 
 **Non-example by minimal change.** Take \( V_1 = \nC \) as a vector space over \( \nC \) and \( V_2 = \nR \) over \( \nR \). The set \( \nC \times \nR \) is fine, but the entrywise rule \( i \cdot (z, t) = (iz, it) \) fails: \( it \notin \nR \) for \( t \ne 0 \). The clause that fails is "over the **same** field". Restricting the scalars of \( \nC \) to \( \nR \) (@def-restriction-of-scalars) repairs it, and \( \nC \times \nR \) over \( \nR \) is a vector space of dimension \( 3 \).
@@ -93,7 +93,7 @@ The addition map \( S \colon U \times W \to V \) has image \( U + W \), and \( \
 
 ## Cosets
 
-The second construction starts from a picture you have already seen. In Chapter 1 we compared the line \( U = \{ x + 2y = 0 \} \) through the origin with the parallel line \( L = \{ x + 2y = 3 \} \), which is not a subspace. In Chapter 2 we found that the solutions of a consistent system \( A\x = \b \) form a set \( \p + \nul(A) \), a subspace shifted by one particular solution (@thm-general-solution-structure). Both are translates of a subspace. They deserve a name.
+The second construction starts from a picture you have already seen. In Chapter 1 we compared the line \( U = \{ x + 2y = 0 \} \) through the origin with the parallel line \( L = \{ x + 2y = 3 \} \), which is not a subspace. In Chapter 2 we found that the solutions of a consistent system \( \A\x = \b \) form a set \( \p + \nul(\A) \), a subspace shifted by one particular solution (@thm-general-solution-structure). Both are translates of a subspace. They deserve a name.
 
 ::: {#def-coset}
 [Coset]
@@ -517,21 +517,21 @@ Let \( T \colon \nR[x]_{\le 2} \to \nR^2 \), \( T(p) = (p(1), p'(1)) \), and \( 
 ::: {#exr-products-and-quotients-b3}
 [B3: Matrices modulo scalars]
 
-Let \( n \ge 1 \) and \( S = \{ cI_n : c \in F \} \subseteq M_n(F) \).
+Let \( n \ge 1 \) and \( S = \{ c\I_n : c \in F \} \subseteq M_n(F) \).
 
 ::: {.enumerate options="label=(\alph*)"}
 1. Show that \( S \) is a subspace and find \( \dim(M_n(F)/S) \).
 2. For \( n = 2 \), find a basis of \( M_2(F)/S \).
-3. Show that \( A + S = B + S \) if and only if \( A - B \) is a scalar matrix, and decide whether \( \begin{pmatrix} 3 & 1 \\ 0 & 5 \end{pmatrix} + S = \begin{pmatrix} 1 & 1 \\ 0 & 3 \end{pmatrix} + S \).
+3. Show that \( \A + S = \B + S \) if and only if \( \A - \B \) is a scalar matrix, and decide whether \( \begin{pmatrix} 3 & 1 \\ 0 & 5 \end{pmatrix} + S = \begin{pmatrix} 1 & 1 \\ 0 & 3 \end{pmatrix} + S \).
 :::
 :::
 
 ::: {.solution}
-(a) \( S = \Span(I_n) \) is a subspace by @thm-span-subspace, of dimension \( 1 \) since \( I_n \ne 0 \). By @thm-dimension-quotient, \( \dim(M_n(F)/S) = n^2 - 1 \).
+(a) \( S = \Span(\I_n) \) is a subspace by @thm-span-subspace, of dimension \( 1 \) since \( \I_n \ne 0 \). By @thm-dimension-quotient, \( \dim(M_n(F)/S) = n^2 - 1 \).
 
-(b) Extend \( (I_2) \) by \( E_{11}, E_{12}, E_{21} \). If \( aI_2 + bE_{11} + cE_{12} + dE_{21} = \begin{pmatrix} a + b & c \\ d & a \end{pmatrix} = 0 \), then \( a = c = d = 0 \) and then \( b = 0 \). So the four matrices are independent, hence a basis of \( M_2(F) \) (@thm-right-size-basis), and \( (E_{11} + S, E_{12} + S, E_{21} + S) \) is a basis of \( M_2(F)/S \) by @thm-dimension-quotient.
+(b) Extend \( (\I_2) \) by \( \E_{11}, \E_{12}, \E_{21} \). If \( a\I_2 + b\E_{11} + c\E_{12} + d\E_{21} = \begin{pmatrix} a + b & c \\ d & a \end{pmatrix} = 0 \), then \( a = c = d = 0 \) and then \( b = 0 \). So the four matrices are independent, hence a basis of \( M_2(F) \) (@thm-right-size-basis), and \( (\E_{11} + S, \E_{12} + S, \E_{21} + S) \) is a basis of \( M_2(F)/S \) by @thm-dimension-quotient.
 
-(c) This is @lem-coset-equality (b) for the subspace \( S \). Here the difference is \( \begin{pmatrix} 2 & 0 \\ 0 & 2 \end{pmatrix} = 2I_2 \in S \), so the two cosets are equal.
+(c) This is @lem-coset-equality (b) for the subspace \( S \). Here the difference is \( \begin{pmatrix} 2 & 0 \\ 0 & 2 \end{pmatrix} = 2\I_2 \in S \), so the two cosets are equal.
 :::
 
 ### C. Going deeper
@@ -569,9 +569,9 @@ Let \( V \) be finite-dimensional, \( T \in \cL(V) \), and \( U \) a subspace wi
 1. Prove that \( \bar T(\v + U) \coloneqq T\v + U \) is a well-defined linear operator on \( V/U \).
 2. Let \( (\u_1, \dots, \u_m) \) be a basis of \( U \), extended to a basis \( \sB = (\u_1, \dots, \u_m, \w_1, \dots, \w_s) \) of \( V \). Show that
    \[
-   [T]_{\sB} = \begin{pmatrix} A & B \\ 0 & D \end{pmatrix},
+   [T]_{\sB} = \begin{pmatrix} \A & \B \\ 0 & D \end{pmatrix},
    \]
-   where \( A \in M_m(F) \) is the matrix of the restriction \( T|_U \colon U \to U \) in \( (\u_1, \dots, \u_m) \), \( D \in M_s(F) \) is the matrix of \( \bar T \) in \( (\w_1 + U, \dots, \w_s + U) \), and \( 0 \) is the \( s \times m \) zero matrix.
+   where \( \A \in M_m(F) \) is the matrix of the restriction \( T|_U \colon U \to U \) in \( (\u_1, \dots, \u_m) \), \( D \in M_s(F) \) is the matrix of \( \bar T \) in \( (\w_1 + U, \dots, \w_s + U) \), and \( 0 \) is the \( s \times m \) zero matrix.
 3. Check (b) when \( T \) is differentiation on \( \nR[x]_{\le 2} \), with \( U = \nR[x]_{\le 1} \) and \( \sB = (1, x, x^2) \).
 :::
 
@@ -581,9 +581,9 @@ Let \( V \) be finite-dimensional, \( T \in \cL(V) \), and \( U \) a subspace wi
 ::: {.solution}
 (a) The map \( \pi \circ T \colon V \to V/U \), \( \v \mapsto T\v + U \), is linear as a composition of linear maps (@thm-composition-linear). For \( \u \in U \), \( T\u \in U \), so \( (\pi \circ T)(\u) = U \), the zero of \( V/U \); thus \( U \subseteq \ker(\pi \circ T) \). By @thm-quotient-universal-property (a) there is exactly one linear map \( \bar T \colon V/U \to V/U \) with \( \bar T(\v + U) = T\v + U \).
 
-(b) For \( j \le m \), \( T\u_j \in U \), so it is a combination of \( \u_1, \dots, \u_m \) only, and its \( \sB \)-coordinates are \( 0 \) in the last \( s \) places. These first \( m \) columns, restricted to their first \( m \) entries, are the columns of the matrix \( A \) of \( T|_U \) (which maps \( U \) to \( U \) by hypothesis and is linear). For the remaining columns, write \( T\w_k = \sum_i b_{ik}\u_i + \sum_l d_{lk}\w_l \). Passing to \( V/U \), where \( \u_i + U = U \) is zero, gives \( \bar T(\w_k + U) = \sum_l d_{lk}(\w_l + U) \). So the \( s \times s \) matrix \( (d_{lk}) \) is the matrix \( D \) of \( \bar T \) in the basis \( (\w_1 + U, \dots, \w_s + U) \) of @thm-dimension-quotient, and the bottom-right block of \( [T]_{\sB} \) is \( D \).
+(b) For \( j \le m \), \( T\u_j \in U \), so it is a combination of \( \u_1, \dots, \u_m \) only, and its \( \sB \)-coordinates are \( 0 \) in the last \( s \) places. These first \( m \) columns, restricted to their first \( m \) entries, are the columns of the matrix \( \A \) of \( T|_U \) (which maps \( U \) to \( U \) by hypothesis and is linear). For the remaining columns, write \( T\w_k = \sum_i b_{ik}\u_i + \sum_l d_{lk}\w_l \). Passing to \( V/U \), where \( \u_i + U = U \) is zero, gives \( \bar T(\w_k + U) = \sum_l d_{lk}(\w_l + U) \). So the \( s \times s \) matrix \( (d_{lk}) \) is the matrix \( D \) of \( \bar T \) in the basis \( (\w_1 + U, \dots, \w_s + U) \) of @thm-dimension-quotient, and the bottom-right block of \( [T]_{\sB} \) is \( D \).
 
-(c) \( T(1) = 0 \), \( T(x) = 1 \), \( T(x^2) = 2x \), so \( [T]_{\sB} = \begin{pmatrix} 0 & 1 & 0 \\ 0 & 0 & 2 \\ 0 & 0 & 0 \end{pmatrix} \). Differentiation maps \( U = \nR[x]_{\le 1} \) into itself. The block \( A = \begin{pmatrix} 0 & 1 \\ 0 & 0 \end{pmatrix} \) is the matrix of \( T \) on \( U \) in \( (1, x) \), the lower-left block is \( \begin{pmatrix} 0 & 0 \end{pmatrix} \), and the block \( D \) is the \( 1 \times 1 \) matrix \( (0) \): indeed \( \bar T(x^2 + U) = 2x + U = U \), the zero coset, since \( 2x \in U \).
+(c) \( T(1) = 0 \), \( T(x) = 1 \), \( T(x^2) = 2x \), so \( [T]_{\sB} = \begin{pmatrix} 0 & 1 & 0 \\ 0 & 0 & 2 \\ 0 & 0 & 0 \end{pmatrix} \). Differentiation maps \( U = \nR[x]_{\le 1} \) into itself. The block \( \A = \begin{pmatrix} 0 & 1 \\ 0 & 0 \end{pmatrix} \) is the matrix of \( T \) on \( U \) in \( (1, x) \), the lower-left block is \( \begin{pmatrix} 0 & 0 \end{pmatrix} \), and the block \( D \) is the \( 1 \times 1 \) matrix \( (0) \): indeed \( \bar T(x^2 + U) = 2x + U = U \), the zero coset, since \( 2x \in U \).
 :::
 
 ::: {#exr-products-and-quotients-c3}

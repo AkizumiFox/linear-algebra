@@ -4,11 +4,11 @@ An isomorphism \( V \cong F^n \) turns the vectors of an abstract space into col
 
 ## Writing a map as a matrix
 
-We have seen one family of linear maps that is completely described by a table of numbers: the matrix maps \( T_A \colon F^n \to F^m \), \( \x \mapsto A\x \). In fact **every** linear map \( T \colon F^n \to F^m \) is one of them. By @thm-linear-combination and @thm-matrix-times-vector-columns, for \( \x = x_1\e_1 + \dots + x_n\e_n \),
+We have seen one family of linear maps that is completely described by a table of numbers: the matrix maps \( T_\A \colon F^n \to F^m \), \( \x \mapsto \A\x \). In fact **every** linear map \( T \colon F^n \to F^m \) is one of them. By @thm-linear-combination and @thm-matrix-times-vector-columns, for \( \x = x_1\e_1 + \dots + x_n\e_n \),
 \[
-T\x = x_1T\e_1 + \dots + x_nT\e_n = A\x, \qquad \text{where } A = \begin{pmatrix} T\e_1 & \cdots & T\e_n \end{pmatrix}.
+T\x = x_1T\e_1 + \dots + x_nT\e_n = \A\x, \qquad \text{where } \A = \begin{pmatrix} T\e_1 & \cdots & T\e_n \end{pmatrix}.
 \]
-The \( j \)-th column of \( A \) is the image of the \( j \)-th basis vector. We want the same description for maps between arbitrary finite-dimensional spaces, such as differentiation on polynomials.
+The \( j \)-th column of \( \A \) is the image of the \( j \)-th basis vector. We want the same description for maps between arbitrary finite-dimensional spaces, such as differentiation on polynomials.
 
 Take \( D \colon \nR[x]_{\le 3} \to \nR[x]_{\le 2} \). Then
 \[
@@ -39,7 +39,7 @@ When \( V = W \) and \( \sB = \sC \), we write \( [T]_{\sB} \coloneqq \mtx{T}{\s
 In words, clause by clause:
 
 - **The input basis \( \sB \) is the subscript, the output basis \( \sC \) is the superscript.** The subscript sits next to where the input goes, as in \( \mtx{T}{\sB}{\sC}\coord{\v}{\sB} \) below.
-- **Columns correspond to input basis vectors**, so there are \( n = \dim V \) of them; **rows correspond to output basis vectors**, so there are \( m = \dim W \). The size is "\( \dim(\text{codomain}) \times \dim(\text{domain}) \)", the same order as \( M_{m \times n} \) for \( T_A \colon F^n \to F^m \).
+- **Columns correspond to input basis vectors**, so there are \( n = \dim V \) of them; **rows correspond to output basis vectors**, so there are \( m = \dim W \). The size is "\( \dim(\text{codomain}) \times \dim(\text{domain}) \)", the same order as \( M_{m \times n} \) for \( T_\A \colon F^n \to F^m \).
 - Column \( j \) answers one question: **where does \( \v_j \) go?**
 
 **Well-definedness.** Each \( T\v_j \) lies in \( W \), and \( \sC \) is a basis, so \( \coord{T\v_j}{\sC} \) exists and is unique by @thm-unique-representation. So the matrix is determined by \( T \), \( \sB \) and \( \sC \). It is **not** determined by \( T \) alone: change either basis, or even the **order** of the vectors in one of them, and the matrix changes. That is why the bases are ordered.
@@ -63,29 +63,29 @@ The same rule \( p \mapsto p' \) gives a \( 3 \times 4 \) or a \( 4 \times 4 \) 
 [Matrix Maps and the Identity]
 
 ::: {.enumerate options="label=(\alph*)"}
-1. Let \( A \in M_{m \times n}(F) \), and let \( \sE_n \), \( \sE_m \) be the standard bases of \( F^n \), \( F^m \). Show that \( \mtx{T_A}{\sE_n}{\sE_m} = A \).
+1. Let \( \A \in M_{m \times n}(F) \), and let \( \sE_n \), \( \sE_m \) be the standard bases of \( F^n \), \( F^m \). Show that \( \mtx{T_\A}{\sE_n}{\sE_m} = \A \).
 2. Let \( \sB \) be any basis of an \( n \)-dimensional space \( V \). Find \( [\id_V]_{\sB} \) and the matrix of the zero map \( V \to W \) for any bases.
 :::
 :::
 
 ::: {.solution}
-(a) The \( j \)-th column of \( \mtx{T_A}{\sE_n}{\sE_m} \) is \( \coord{A\e_j}{\sE_m} = A\e_j \), since coordinates in the standard basis of \( F^m \) are the entries themselves; and \( A\e_j \) is the \( j \)-th column of \( A \) (@thm-matrix-times-vector-columns). So the matrix of a matrix map in the standard bases is the matrix we started with.
+(a) The \( j \)-th column of \( \mtx{T_\A}{\sE_n}{\sE_m} \) is \( \coord{\A\e_j}{\sE_m} = \A\e_j \), since coordinates in the standard basis of \( F^m \) are the entries themselves; and \( \A\e_j \) is the \( j \)-th column of \( \A \) (@thm-matrix-times-vector-columns). So the matrix of a matrix map in the standard bases is the matrix we started with.
 
-(b) \( \id_V\v_j = \v_j = 0\v_1 + \dots + 1\v_j + \dots + 0\v_n \), so the \( j \)-th column of \( [\id_V]_{\sB} \) is \( \e_j \), and \( [\id_V]_{\sB} = I_n \). The zero map sends every \( \v_j \) to \( \0 \), whose coordinates are all \( 0 \), so its matrix is the zero matrix of size \( \dim W \times \dim V \), whatever the bases. These degenerate cases fix the expectations "identity map, identity matrix" and "zero map, zero matrix". The first needs the **same** basis on both sides, as the warning below shows.
+(b) \( \id_V\v_j = \v_j = 0\v_1 + \dots + 1\v_j + \dots + 0\v_n \), so the \( j \)-th column of \( [\id_V]_{\sB} \) is \( \e_j \), and \( [\id_V]_{\sB} = \I_n \). The zero map sends every \( \v_j \) to \( \0 \), whose coordinates are all \( 0 \), so its matrix is the zero matrix of size \( \dim W \times \dim V \), whatever the bases. These degenerate cases fix the expectations "identity map, identity matrix" and "zero map, zero matrix". The first needs the **same** basis on both sides, as the warning below shows.
 :::
 
 ::: {#exm-matrix-of-transpose}
 [The Transpose Map]
 
-Let \( T \colon M_2(F) \to M_2(F) \), \( T(X) = X\tp \), and let \( \sE = (E_{11}, E_{12}, E_{21}, E_{22}) \). Find \( [T]_{\sE} \).
+Let \( T \colon M_2(F) \to M_2(F) \), \( T(\X) = \X\tp \), and let \( \sE = (\E_{11}, \E_{12}, \E_{21}, \E_{22}) \). Find \( [T]_{\sE} \).
 :::
 
 ::: {.solution}
-\( T \) is linear by @thm-transpose-properties. Its values on the basis are \( E_{11}\tp = E_{11} \), \( E_{12}\tp = E_{21} \), \( E_{21}\tp = E_{12} \), \( E_{22}\tp = E_{22} \). In \( \sE \), these have coordinates \( \e_1, \e_3, \e_2, \e_4 \). So
+\( T \) is linear by @thm-transpose-properties. Its values on the basis are \( \E_{11}\tp = \E_{11} \), \( \E_{12}\tp = \E_{21} \), \( \E_{21}\tp = \E_{12} \), \( \E_{22}\tp = \E_{22} \). In \( \sE \), these have coordinates \( \e_1, \e_3, \e_2, \e_4 \). So
 \[
 [T]_{\sE} = \begin{pmatrix} 1 & 0 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 0 & 1 \end{pmatrix}.
 \]
-A map on a space of \( 2 \times 2 \) matrices is described by a \( 4 \times 4 \) matrix, because \( \dim M_2(F) = 4 \). Do not confuse the matrix \( X \) that \( T \) acts on with the matrix \( [T]_{\sE} \) that describes \( T \).
+A map on a space of \( 2 \times 2 \) matrices is described by a \( 4 \times 4 \) matrix, because \( \dim M_2(F) = 4 \). Do not confuse the matrix \( \X \) that \( T \) acts on with the matrix \( [T]_{\sE} \) that describes \( T \).
 :::
 
 ::: {#exm-matrix-of-reflection}
@@ -108,13 +108,13 @@ The matrix also works in reverse: from \( [T]_{\sB} \) alone we can recover \( T
 
 Here is a non-example by minimal change. In @exm-matrix-of-differentiation, write the coordinate vectors \( \coord{D(x^j)}{\sE_2} \) as **rows** instead of columns. The numbers are the same, but the result is the \( 4 \times 3 \) matrix \( \begin{pmatrix} 0 & 0 & 0 \\ 1 & 0 & 0 \\ 0 & 2 & 0 \\ 0 & 0 & 3 \end{pmatrix} \), and it cannot even be multiplied by the coordinate vector \( (a_0, a_1, a_2, a_3) \) of an input polynomial. The clause that fails is "the \( j \)-th **column** is \( \coord{T\v_j}{\sC} \)".
 
-**Why this definition.** Why columns, and why coordinates in \( \sC \)? Because these are the choices under which "apply \( T \)" becomes "multiply by the matrix", as the \( D \) computation above suggested; we prove this next. With rows, we would get the transpose, and the natural formula \( \coord{T\v}{\sC} = A\coord{\v}{\sB} \) would fail. The convention that the input basis is the subscript is chosen to make that formula easy to read: the \( \sB \) of the matrix sits next to the \( \sB \) of the vector.
+**Why this definition.** Why columns, and why coordinates in \( \sC \)? Because these are the choices under which "apply \( T \)" becomes "multiply by the matrix", as the \( D \) computation above suggested; we prove this next. With rows, we would get the transpose, and the natural formula \( \coord{T\v}{\sC} = \A\coord{\v}{\sB} \) would fail. The convention that the input basis is the subscript is chosen to make that formula easy to read: the \( \sB \) of the matrix sits next to the \( \sB \) of the vector.
 
 ::: {.warning}
 **Three ways to get a matrix of a map wrong.**
 (1) **Columns, not rows.** The \( j \)-th **column** is \( \coord{T\v_j}{\sC} \), as in the non-example above.
 (2) **Order matters.** In @exm-matrix-of-reflection, reordering the standard basis as \( (\e_2, \e_1) \) leaves \( [T] = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix} \) unchanged, but reordering \( \sB \) as \( (\u_2, \u_1) \) gives \( \begin{pmatrix} -1 & 0 \\ 0 & 1 \end{pmatrix} \neq [T]_{\sB} \).
-(3) **Input subscript, output superscript.** \( \mtx{T}{\sB}{\sC} \) and \( \mtx{T}{\sC}{\sB} \) are different objects, and for \( T \colon V \to W \) with \( V \neq W \) only one of them makes sense. Also \( \mtx{\id_V}{\sB}{\sC} \neq I_n \) when \( \sB \neq \sC \): for \( \sB = (\e_1, \e_2) \) and \( \sC = (\e_2, \e_1) \) in \( \nR^2 \), \( \mtx{\id}{\sB}{\sC} = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix} \).
+(3) **Input subscript, output superscript.** \( \mtx{T}{\sB}{\sC} \) and \( \mtx{T}{\sC}{\sB} \) are different objects, and for \( T \colon V \to W \) with \( V \neq W \) only one of them makes sense. Also \( \mtx{\id_V}{\sB}{\sC} \neq \I_n \) when \( \sB \neq \sC \): for \( \sB = (\e_1, \e_2) \) and \( \sC = (\e_2, \e_1) \) in \( \nR^2 \), \( \mtx{\id}{\sB}{\sC} = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix} \).
 :::
 
 ::: {.check}
@@ -136,7 +136,7 @@ Let \( V \) and \( W \) be finite-dimensional vector spaces over \( F \) with or
 \[
 \coord{T\v}{\sC} = \mtx{T}{\sB}{\sC}\,\coord{\v}{\sB} .
 \]
-Moreover, \( \mtx{T}{\sB}{\sC} \) is the **only** matrix \( A \in M_{m \times n}(F) \) with \( \coord{T\v}{\sC} = A\coord{\v}{\sB} \) for all \( \v \in V \).
+Moreover, \( \mtx{T}{\sB}{\sC} \) is the **only** matrix \( \A \in M_{m \times n}(F) \) with \( \coord{T\v}{\sC} = \A\coord{\v}{\sB} \) for all \( \v \in V \).
 :::
 
 The statement says that the following square **commutes**: starting from \( \v \) in the top-left corner, the two routes to the bottom-right corner give the same column.
@@ -161,7 +161,7 @@ The statement says that the following square **commutes**: starting from \( \v \
 The top row is the abstract world, where \( T \) acts on vectors of \( V \). The bottom row is the matrix world, where a matrix acts on columns. The vertical arrows are the coordinate isomorphisms of @cor-coordinate-isomorphism, so nothing is lost going down or coming back up. **Right then down** (apply \( T \), then take coordinates) equals **down then right** (take coordinates, then multiply by the matrix).
 
 ::: {.idea}
-Both sides are linear in \( \v \), so it is enough to check the formula on the basis vectors \( \v_j \), and there it is the definition: \( \coord{\v_j}{\sB} = \e_j \), and multiplying a matrix by \( \e_j \) picks out its \( j \)-th column, which was defined to be \( \coord{T\v_j}{\sC} \). Written out for a general \( \v \), this becomes a one-line chain. Uniqueness uses the same observation backwards: any \( A \) that works must have \( \coord{T\v_j}{\sC} \) as its \( j \)-th column.
+Both sides are linear in \( \v \), so it is enough to check the formula on the basis vectors \( \v_j \), and there it is the definition: \( \coord{\v_j}{\sB} = \e_j \), and multiplying a matrix by \( \e_j \) picks out its \( j \)-th column, which was defined to be \( \coord{T\v_j}{\sC} \). Written out for a general \( \v \), this becomes a one-line chain. Uniqueness uses the same observation backwards: any \( \A \) that works must have \( \coord{T\v_j}{\sC} \) as its \( j \)-th column.
 :::
 
 ::: {.proof}
@@ -171,7 +171,7 @@ Let \( \v \in V \) and \( \coord{\v}{\sB} = (x_1, \dots, x_n) \), so that \( \v 
 \]
 where the middle equality is @thm-matrix-times-vector-columns applied to the columns \( \coord{T\v_j}{\sC} \) of \( \mtx{T}{\sB}{\sC} \).
 
-For uniqueness, suppose \( A \in M_{m \times n}(F) \) satisfies \( \coord{T\v}{\sC} = A\coord{\v}{\sB} \) for all \( \v \). Taking \( \v = \v_j \), whose coordinate vector is \( \e_j \), the \( j \)-th column of \( A \) is \( A\e_j = \coord{T\v_j}{\sC} \) (@thm-matrix-times-vector-columns), which is the \( j \)-th column of \( \mtx{T}{\sB}{\sC} \). Hence \( A = \mtx{T}{\sB}{\sC} \). This proves the theorem.
+For uniqueness, suppose \( \A \in M_{m \times n}(F) \) satisfies \( \coord{T\v}{\sC} = \A\coord{\v}{\sB} \) for all \( \v \). Taking \( \v = \v_j \), whose coordinate vector is \( \e_j \), the \( j \)-th column of \( \A \) is \( \A\e_j = \coord{T\v_j}{\sC} \) (@thm-matrix-times-vector-columns), which is the \( j \)-th column of \( \mtx{T}{\sB}{\sC} \). Hence \( \A = \mtx{T}{\sB}{\sC} \). This proves the theorem.
 :::
 
 This is the dictionary that lets us "write down a matrix first". A question about \( T \) (its kernel, its image, a preimage) becomes a question about a matrix, which Chapter 2 taught us to answer by row reduction; the coordinate isomorphisms carry the answer back.
@@ -185,11 +185,11 @@ Let \( T \colon \nR[x]_{\le 2} \to \nR^2 \), \( T(p) = (p(1), p(-1)) \). Find \(
 ::: {.solution}
 *Write down the matrix.* \( T(1) = (1, 1) \), \( T(x) = (1, -1) \), \( T(x^2) = (1, 1) \), so
 \[
-A = \mtx{T}{\sE}{\sE'} = \begin{pmatrix} 1 & 1 & 1 \\ 1 & -1 & 1 \end{pmatrix}.
+\A = \mtx{T}{\sE}{\sE'} = \begin{pmatrix} 1 & 1 & 1 \\ 1 & -1 & 1 \end{pmatrix}.
 \]
-*Solve in the matrix world.* Subtracting the first row from the second gives \( \begin{pmatrix} 1 & 1 & 1 \\ 0 & -2 & 0 \end{pmatrix} \), so \( A\x = \0 \) means \( x_2 = 0 \) and \( x_1 = -x_3 \): \( \nul(A) = \Span\bigl((-1, 0, 1)\bigr) \). Both rows are pivot rows, so \( \rank A = 2 \).
+*Solve in the matrix world.* Subtracting the first row from the second gives \( \begin{pmatrix} 1 & 1 & 1 \\ 0 & -2 & 0 \end{pmatrix} \), so \( \A\x = \0 \) means \( x_2 = 0 \) and \( x_1 = -x_3 \): \( \nul(\A) = \Span\bigl((-1, 0, 1)\bigr) \). Both rows are pivot rows, so \( \rank \A = 2 \).
 
-*Translate back.* By @thm-matrix-of-map-coordinates, \( T(p) = \0 \) exactly when \( A\coord{p}{\sE} = \0 \) (the only vector with zero coordinates is \( \0 \)). The coordinate vector \( (-1, 0, 1) \) belongs to \( p = -1 + x^2 \). So
+*Translate back.* By @thm-matrix-of-map-coordinates, \( T(p) = \0 \) exactly when \( \A\coord{p}{\sE} = \0 \) (the only vector with zero coordinates is \( \0 \)). The coordinate vector \( (-1, 0, 1) \) belongs to \( p = -1 + x^2 \). So
 \[
 \ker T = \Span(x^2 - 1),
 \]
@@ -198,11 +198,11 @@ as a check confirms: \( x^2 - 1 \) vanishes at \( 1 \) and \( -1 \). By @thm-ran
 
 ## Composition is matrix multiplication
 
-In Chapter 0, §9 we asked why matrices are multiplied row-against-column. The answer given there was **substitution**. If \( \y = B\x \) and \( \z = A\y \), with
+In Chapter 0, §9 we asked why matrices are multiplied row-against-column. The answer given there was **substitution**. If \( \y = \B\x \) and \( \z = \A\y \), with
 \[
-B = \begin{pmatrix} 2 & 1 \\ 1 & 4 \end{pmatrix}, \qquad A = \begin{pmatrix} 1 & 2 \\ 3 & -1 \end{pmatrix},
+\B = \begin{pmatrix} 2 & 1 \\ 1 & 4 \end{pmatrix}, \qquad \A = \begin{pmatrix} 1 & 2 \\ 3 & -1 \end{pmatrix},
 \]
-then substituting gives \( \z = \begin{pmatrix} 4 & 9 \\ 5 & -1 \end{pmatrix}\x \), and the table of the combined substitution turned out to be \( AB \). At the time we promised that this fact would become a statement about linear maps. We can now say what it is. Each substitution is a linear map, \( T_B \colon \x \mapsto \y \) and \( T_A \colon \y \mapsto \z \), and substituting one into the other is **composing** them: \( \z = T_A(T_B\x) = (T_AT_B)\x \). So the Chapter 0 computation says \( T_AT_B = T_{AB} \). Here is the general statement, for arbitrary spaces and bases.
+then substituting gives \( \z = \begin{pmatrix} 4 & 9 \\ 5 & -1 \end{pmatrix}\x \), and the table of the combined substitution turned out to be \( \A\B \). At the time we promised that this fact would become a statement about linear maps. We can now say what it is. Each substitution is a linear map, \( T_\B \colon \x \mapsto \y \) and \( T_\A \colon \y \mapsto \z \), and substituting one into the other is **composing** them: \( \z = T_\A(T_\B\x) = (T_\A T_\B)\x \). So the Chapter 0 computation says \( T_\A T_\B = T_{\A\B} \). Here is the general statement, for arbitrary spaces and bases.
 
 ::: {#thm-matrix-of-composition}
 [Matrix of a Composition]
@@ -248,9 +248,9 @@ where the last equality is associativity of matrix multiplication (@thm-matrix-m
 This is the payoff of the hook in Chapter 0, §9 (@def-matrix-multiplication). The row-times-column rule was not an arbitrary convention: it is the **only** rule under which the matrix of a composition is the product of the matrices, because composing linear maps is substituting one coordinate formula into another. Everything Chapter 0 proved about matrix multiplication now has a meaning for maps, and conversely:
 
 - **associativity** of matrix multiplication is associativity of composition (@thm-composition-associative);
-- \( AB \neq BA \) in general is \( ST \neq TS \) (@exm-rotation-projection-dont-commute);
-- the size condition "columns of \( A \) = rows of \( B \)" is "the codomain of the first map is the domain of the second";
-- in particular \( T_AT_B = T_{AB} \): apply the theorem with standard bases and @exm-matrix-of-matrix-map (a).
+- \( \A\B \neq \B\A \) in general is \( ST \neq TS \) (@exm-rotation-projection-dont-commute);
+- the size condition "columns of \( \A \) = rows of \( \B \)" is "the codomain of the first map is the domain of the second";
+- in particular \( T_\A T_\B = T_{\A\B} \): apply the theorem with standard bases and @exm-matrix-of-matrix-map (a).
 
 ::: {#exm-matrix-of-composition}
 [Multiply by \( x \), Then Differentiate]
@@ -284,7 +284,7 @@ Let \( \sB = (\v_1, \dots, \v_n) \) be a basis of a finite-dimensional space \( 
 :::
 
 ::: {.proof}
-The first formula is @thm-matrix-of-composition with \( \sB = \sC = \sD \). For sums and scalar multiples, the \( j \)-th column of \( [S + T]_{\sB} \) is \( \coord{S\v_j + T\v_j}{\sB} = \coord{S\v_j}{\sB} + \coord{T\v_j}{\sB} \) by @thm-coordinates-linear, and similarly \( \coord{cT\v_j}{\sB} = c\coord{T\v_j}{\sB} \). For powers we induct on \( k \): \( [T^0]_{\sB} = [\id_V]_{\sB} = I_n \) by @exm-matrix-of-matrix-map (b), and if \( [T^k]_{\sB} = ([T]_{\sB})^k \), then \( [T^{k+1}]_{\sB} = [T^kT]_{\sB} = ([T]_{\sB})^k[T]_{\sB} = ([T]_{\sB})^{k+1} \), by the first formula and @def-polynomial-of-matrix. Finally, for \( p = \sum_k a_kx^k \), combining the three rules gives \( [p(T)]_{\sB} = \sum_k a_k[T^k]_{\sB} = \sum_k a_k([T]_{\sB})^k = p([T]_{\sB}) \), using @def-polynomial-of-operator and @def-polynomial-of-matrix.
+The first formula is @thm-matrix-of-composition with \( \sB = \sC = \sD \). For sums and scalar multiples, the \( j \)-th column of \( [S + T]_{\sB} \) is \( \coord{S\v_j + T\v_j}{\sB} = \coord{S\v_j}{\sB} + \coord{T\v_j}{\sB} \) by @thm-coordinates-linear, and similarly \( \coord{cT\v_j}{\sB} = c\coord{T\v_j}{\sB} \). For powers we induct on \( k \): \( [T^0]_{\sB} = [\id_V]_{\sB} = \I_n \) by @exm-matrix-of-matrix-map (b), and if \( [T^k]_{\sB} = ([T]_{\sB})^k \), then \( [T^{k+1}]_{\sB} = [T^kT]_{\sB} = ([T]_{\sB})^k[T]_{\sB} = ([T]_{\sB})^{k+1} \), by the first formula and @def-polynomial-of-matrix. Finally, for \( p = \sum_k a_kx^k \), combining the three rules gives \( [p(T)]_{\sB} = \sum_k a_k[T^k]_{\sB} = \sum_k a_k([T]_{\sB})^k = p([T]_{\sB}) \), using @def-polynomial-of-operator and @def-polynomial-of-matrix.
 :::
 
 For example, with \( [D]_{\sE_3} \) from @exm-matrix-of-differentiation, \( ([D]_{\sE_3})^4 = [D^4]_{\sE_3} = 0 \), recovering @exm-differentiation-nilpotent in matrix form.
@@ -312,7 +312,7 @@ Three things to check. *Linear:* columns of \( \mtx{S + T}{\sB}{\sC} \) are coor
 
 *Injective.* Suppose \( \Phi(T) = 0 \). Then \( \coord{T\v_j}{\sC} = \0 \), so \( T\v_j = \0 \) for every \( j \). The zero map also sends every \( \v_j \) to \( \0 \), so \( T = 0 \) by the uniqueness part of @thm-linear-transform-basis. Hence \( \ker \Phi = \{0\} \), and \( \Phi \) is injective by @thm-injective-iff-trivial-kernel.
 
-*Surjective.* Let \( A = (a_{ij}) \in M_{m \times n}(F) \). By the existence part of @thm-linear-transform-basis there is \( T \in \cL(V, W) \) with \( T\v_j = a_{1j}\w_1 + \dots + a_{mj}\w_m \) for each \( j \). By @def-matrix-of-linear-map, \( \mtx{T}{\sB}{\sC} = A \).
+*Surjective.* Let \( \A = (a_{ij}) \in M_{m \times n}(F) \). By the existence part of @thm-linear-transform-basis there is \( T \in \cL(V, W) \) with \( T\v_j = a_{1j}\w_1 + \dots + a_{mj}\w_m \) for each \( j \). By @def-matrix-of-linear-map, \( \mtx{T}{\sB}{\sC} = \A \).
 
 So \( \Phi \) is a bijective linear map, an isomorphism by @thm-inverse-is-linear. For the dimension, we cannot quote @thm-isomorphic-iff-same-dimension directly, since we do not yet know that \( \cL(V, W) \) is finite-dimensional. Instead, \( M_{m \times n}(F) \) has a basis of \( mn \) matrix units (@exm-dimensions), and the inverse isomorphism \( \Phi^{-1} \) carries it to a basis of \( \cL(V, W) \) of length \( mn \) (@thm-isomorphism-preserves-bases, applied to \( \Phi^{-1} \), which is an isomorphism by @thm-isomorphic-equivalence-relation). Hence \( \dim \cL(V, W) = mn \). This proves the theorem.
 :::
@@ -326,57 +326,57 @@ Chapter 2 developed tools for the rank and the invertibility of matrices. The sq
 ::: {#thm-rank-map-equals-rank-matrix}
 [Rank and Invertibility from the Matrix]
 
-Let \( V \) and \( W \) be finite-dimensional vector spaces over \( F \) with ordered bases \( \sB \) and \( \sC \), let \( T \in \cL(V, W) \), and let \( A = \mtx{T}{\sB}{\sC} \).
+Let \( V \) and \( W \) be finite-dimensional vector spaces over \( F \) with ordered bases \( \sB \) and \( \sC \), let \( T \in \cL(V, W) \), and let \( \A = \mtx{T}{\sB}{\sC} \).
 
 ::: {.enumerate options="label=(\alph*)"}
-1. The coordinate map \( \v \mapsto \coord{\v}{\sB} \) restricts to an isomorphism \( \ker T \to \nul(A) \), and the coordinate map \( \w \mapsto \coord{\w}{\sC} \) restricts to an isomorphism \( \im T \to \col(A) \). Hence
+1. The coordinate map \( \v \mapsto \coord{\v}{\sB} \) restricts to an isomorphism \( \ker T \to \nul(\A) \), and the coordinate map \( \w \mapsto \coord{\w}{\sC} \) restricts to an isomorphism \( \im T \to \col(\A) \). Hence
 \[
-\rank T = \rank A \qquad \text{and} \qquad \nullity T = \nullity A .
+\rank T = \rank \A \qquad \text{and} \qquad \nullity T = \nullity \A .
 \]
-2. Suppose \( \dim V = \dim W \). Then \( T \) is invertible if and only if \( A \) is invertible, and in that case \( \mtx{T^{-1}}{\sC}{\sB} = A^{-1} \).
+2. Suppose \( \dim V = \dim W \). Then \( T \) is invertible if and only if \( \A \) is invertible, and in that case \( \mtx{T^{-1}}{\sC}{\sB} = \A^{-1} \).
 :::
 :::
 
 ::: {.idea}
-For (a), the commutative square says a vector is killed by \( T \) exactly when its coordinate column is killed by \( A \), and the outputs of \( T \), in coordinates, are exactly the outputs of \( A \). Isomorphic subspaces have the same dimension. For (b), \( T^{-1}T = \id_V \) translates, by the composition theorem, into a matrix equation with \( I_n \) on the right; conversely an inverse matrix is the matrix of **some** map, by the isomorphism \( \cL(W, V) \cong M_n(F) \), and that map is the inverse of \( T \).
+For (a), the commutative square says a vector is killed by \( T \) exactly when its coordinate column is killed by \( \A \), and the outputs of \( T \), in coordinates, are exactly the outputs of \( \A \). Isomorphic subspaces have the same dimension. For (b), \( T^{-1}T = \id_V \) translates, by the composition theorem, into a matrix equation with \( \I_n \) on the right; conversely an inverse matrix is the matrix of **some** map, by the isomorphism \( \cL(W, V) \cong M_n(F) \), and that map is the inverse of \( T \).
 :::
 
 ::: {.proof}
 Let \( n = \dim V \) and \( m = \dim W \), and write \( C_{\sB} \colon V \to F^n \) and \( C_{\sC} \colon W \to F^m \) for the coordinate isomorphisms (@cor-coordinate-isomorphism).
 
-(a) *Kernel.* For \( \v \in V \): \( \v \in \ker T \) iff \( T\v = \0 \) iff \( \coord{T\v}{\sC} = \0 \) (since \( C_{\sC} \) is injective) iff \( A\coord{\v}{\sB} = \0 \) (@thm-matrix-of-map-coordinates) iff \( \coord{\v}{\sB} \in \nul(A) \). So \( C_{\sB} \) maps \( \ker T \) into \( \nul(A) \), and every \( \x \in \nul(A) \) is \( \coord{\v}{\sB} \) for some \( \v \in V \) (surjectivity of \( C_{\sB} \)), which then lies in \( \ker T \). Thus the restriction of \( C_{\sB} \) is a linear map \( \ker T \to \nul(A) \), injective because \( C_{\sB} \) is, and surjective. By @thm-inverse-is-linear it is an isomorphism.
+(a) *Kernel.* For \( \v \in V \): \( \v \in \ker T \) iff \( T\v = \0 \) iff \( \coord{T\v}{\sC} = \0 \) (since \( C_{\sC} \) is injective) iff \( \A\coord{\v}{\sB} = \0 \) (@thm-matrix-of-map-coordinates) iff \( \coord{\v}{\sB} \in \nul(\A) \). So \( C_{\sB} \) maps \( \ker T \) into \( \nul(\A) \), and every \( \x \in \nul(\A) \) is \( \coord{\v}{\sB} \) for some \( \v \in V \) (surjectivity of \( C_{\sB} \)), which then lies in \( \ker T \). Thus the restriction of \( C_{\sB} \) is a linear map \( \ker T \to \nul(\A) \), injective because \( C_{\sB} \) is, and surjective. By @thm-inverse-is-linear it is an isomorphism.
 
-*Image.* By @thm-matrix-of-map-coordinates, \( C_{\sC}(T\v) = A\,C_{\sB}(\v) \) for every \( \v \in V \). As \( \v \) runs over \( V \), \( C_{\sB}(\v) \) runs over all of \( F^n \), so \( \{ C_{\sC}(\w) : \w \in \im T \} = \{ A\x : \x \in F^n \} = \col(A) \) (@def-column-space). So the restriction of \( C_{\sC} \) is a linear map \( \im T \to \col(A) \), surjective by this computation and injective because \( C_{\sC} \) is; hence an isomorphism.
+*Image.* By @thm-matrix-of-map-coordinates, \( C_{\sC}(T\v) = \A\,C_{\sB}(\v) \) for every \( \v \in V \). As \( \v \) runs over \( V \), \( C_{\sB}(\v) \) runs over all of \( F^n \), so \( \{ C_{\sC}(\w) : \w \in \im T \} = \{ \A\x : \x \in F^n \} = \col(\A) \) (@def-column-space). So the restriction of \( C_{\sC} \) is a linear map \( \im T \to \col(\A) \), surjective by this computation and injective because \( C_{\sC} \) is; hence an isomorphism.
 
-The subspaces involved are finite-dimensional (@thm-subspace-dimension), so @thm-isomorphic-iff-same-dimension gives \( \dim \ker T = \dim \nul(A) \) and \( \dim \im T = \dim \col(A) \), which are the stated equalities by @def-nullity, @def-rank, @def-nullity-matrix and @def-rank-matrix.
+The subspaces involved are finite-dimensional (@thm-subspace-dimension), so @thm-isomorphic-iff-same-dimension gives \( \dim \ker T = \dim \nul(\A) \) and \( \dim \im T = \dim \col(\A) \), which are the stated equalities by @def-nullity, @def-rank, @def-nullity-matrix and @def-rank-matrix.
 
 (b) (⇒) Suppose \( T \) is invertible. By @thm-matrix-of-composition and @exm-matrix-of-matrix-map (b),
 \[
-\mtx{T^{-1}}{\sC}{\sB}\,A = \mtx{T^{-1}T}{\sB}{\sB} = [\id_V]_{\sB} = I_n, \qquad A\,\mtx{T^{-1}}{\sC}{\sB} = \mtx{TT^{-1}}{\sC}{\sC} = [\id_W]_{\sC} = I_n .
+\mtx{T^{-1}}{\sC}{\sB}\,\A = \mtx{T^{-1}T}{\sB}{\sB} = [\id_V]_{\sB} = \I_n, \qquad \A\,\mtx{T^{-1}}{\sC}{\sB} = \mtx{TT^{-1}}{\sC}{\sC} = [\id_W]_{\sC} = \I_n .
 \]
-So \( A \) is invertible with \( A^{-1} = \mtx{T^{-1}}{\sC}{\sB} \) (@def-invertible-matrix).
+So \( \A \) is invertible with \( \A^{-1} = \mtx{T^{-1}}{\sC}{\sB} \) (@def-invertible-matrix).
 
-(⇐) Suppose \( A \) is invertible. By @thm-linear-maps-isomorphic-to-matrices (for \( \cL(W, V) \) with bases \( \sC \) and \( \sB \)), there is \( S \in \cL(W, V) \) with \( \mtx{S}{\sC}{\sB} = A^{-1} \). Then by @thm-matrix-of-composition, \( [ST]_{\sB} = A^{-1}A = I_n = [\id_V]_{\sB} \). Since \( T' \mapsto [T']_{\sB} \) is injective on \( \cL(V) \) (@thm-linear-maps-isomorphic-to-matrices), \( ST = \id_V \). By @thm-one-sided-inverse-maps, \( T \) is invertible with \( T^{-1} = S \). This proves the theorem.
+(⇐) Suppose \( \A \) is invertible. By @thm-linear-maps-isomorphic-to-matrices (for \( \cL(W, V) \) with bases \( \sC \) and \( \sB \)), there is \( S \in \cL(W, V) \) with \( \mtx{S}{\sC}{\sB} = \A^{-1} \). Then by @thm-matrix-of-composition, \( [ST]_{\sB} = \A^{-1}\A = \I_n = [\id_V]_{\sB} \). Since \( T' \mapsto [T']_{\sB} \) is injective on \( \cL(V) \) (@thm-linear-maps-isomorphic-to-matrices), \( ST = \id_V \). By @thm-one-sided-inverse-maps, \( T \) is invertible with \( T^{-1} = S \). This proves the theorem.
 :::
 
 So we may add one more item to the Invertible Operator Theorem (@thm-invertible-operator-tfae): for \( T \in \cL(V) \) and **any** basis \( \sB \) of \( V \), \( T \) is invertible if and only if \( [T]_{\sB} \) is invertible. Every item of the Invertible Matrix Theorem (@thm-invertible-tfae) now becomes a test for operators.
 
 ::: {#exm-rank-from-matrix}
-[Rank of \( X \mapsto X + X\tp \)]
+[Rank of \( \X \mapsto \X + \X\tp \)]
 
-Let \( T \colon M_2(\nR) \to M_2(\nR) \), \( T(X) = X + X\tp \), and \( \sE = (E_{11}, E_{12}, E_{21}, E_{22}) \). Find \( [T]_{\sE} \), use it to find \( \rank T \), a basis of \( \ker T \) and a basis of \( \im T \), and decide whether \( T \) is invertible. Then do the same for the transpose map of @exm-matrix-of-transpose.
+Let \( T \colon M_2(\nR) \to M_2(\nR) \), \( T(\X) = \X + \X\tp \), and \( \sE = (\E_{11}, \E_{12}, \E_{21}, \E_{22}) \). Find \( [T]_{\sE} \), use it to find \( \rank T \), a basis of \( \ker T \) and a basis of \( \im T \), and decide whether \( T \) is invertible. Then do the same for the transpose map of @exm-matrix-of-transpose.
 :::
 
 ::: {.solution}
-*Matrix.* \( T(E_{11}) = 2E_{11} \), \( T(E_{12}) = E_{12} + E_{21} = T(E_{21}) \), \( T(E_{22}) = 2E_{22} \). So
+*Matrix.* \( T(\E_{11}) = 2\E_{11} \), \( T(\E_{12}) = \E_{12} + \E_{21} = T(\E_{21}) \), \( T(\E_{22}) = 2\E_{22} \). So
 \[
-A = [T]_{\sE} = \begin{pmatrix} 2 & 0 & 0 & 0 \\ 0 & 1 & 1 & 0 \\ 0 & 1 & 1 & 0 \\ 0 & 0 & 0 & 2 \end{pmatrix}.
+\A = [T]_{\sE} = \begin{pmatrix} 2 & 0 & 0 & 0 \\ 0 & 1 & 1 & 0 \\ 0 & 1 & 1 & 0 \\ 0 & 0 & 0 & 2 \end{pmatrix}.
 \]
-*Matrix world.* Subtracting row 2 from row 3 turns row 3 into a zero row; moving it to the bottom gives an echelon form with three non-zero rows and pivots in columns 1, 2, 4. So \( \rank A = 3 \) and \( \nullity A = 1 \). The free column is column 3, and \( A\x = \0 \) gives \( x_1 = x_4 = 0 \), \( x_2 = -x_3 \), so \( \nul(A) = \Span\bigl((0, -1, 1, 0)\bigr) \). By @thm-basis-column-space, the pivot columns \( (2, 0, 0, 0) \), \( (0, 1, 1, 0) \), \( (0, 0, 0, 2) \) form a basis of \( \col(A) \).
+*Matrix world.* Subtracting row 2 from row 3 turns row 3 into a zero row; moving it to the bottom gives an echelon form with three non-zero rows and pivots in columns 1, 2, 4. So \( \rank \A = 3 \) and \( \nullity \A = 1 \). The free column is column 3, and \( \A\x = \0 \) gives \( x_1 = x_4 = 0 \), \( x_2 = -x_3 \), so \( \nul(\A) = \Span\bigl((0, -1, 1, 0)\bigr) \). By @thm-basis-column-space, the pivot columns \( (2, 0, 0, 0) \), \( (0, 1, 1, 0) \), \( (0, 0, 0, 2) \) form a basis of \( \col(\A) \).
 
-*Translate back.* By @thm-rank-map-equals-rank-matrix, \( \rank T = 3 \). The column \( (0, -1, 1, 0) \) is the coordinate vector of \( E_{21} - E_{12} \), so \( \ker T = \Span\left(\begin{pmatrix} 0 & -1 \\ 1 & 0 \end{pmatrix}\right) \), the skew-symmetric matrices. The basis of \( \col(A) \) translates to \( 2E_{11} \), \( E_{12} + E_{21} \), \( 2E_{22} \), a basis of \( \im T \), which is therefore the space of symmetric matrices. Since \( \rank A = 3 < 4 \), \( A \) is not invertible (@thm-invertible-tfae), and neither is \( T \).
+*Translate back.* By @thm-rank-map-equals-rank-matrix, \( \rank T = 3 \). The column \( (0, -1, 1, 0) \) is the coordinate vector of \( \E_{21} - \E_{12} \), so \( \ker T = \Span\left(\begin{pmatrix} 0 & -1 \\ 1 & 0 \end{pmatrix}\right) \), the skew-symmetric matrices. The basis of \( \col(\A) \) translates to \( 2\E_{11} \), \( \E_{12} + \E_{21} \), \( 2\E_{22} \), a basis of \( \im T \), which is therefore the space of symmetric matrices. Since \( \rank \A = 3 < 4 \), \( \A \) is not invertible (@thm-invertible-tfae), and neither is \( T \).
 
-*Transpose.* The matrix \( P = [X \mapsto X\tp]_{\sE} \) from @exm-matrix-of-transpose satisfies \( P^2 = I_4 \) (swapping two coordinates twice does nothing). So \( P \) is invertible with \( P^{-1} = P \), and by @thm-rank-map-equals-rank-matrix (b) the transpose map is invertible and is its own inverse, which is \( (X\tp)\tp = X \) again.
+*Transpose.* The matrix \( \P = [\X \mapsto \X\tp]_{\sE} \) from @exm-matrix-of-transpose satisfies \( \P^2 = \I_4 \) (swapping two coordinates twice does nothing). So \( \P \) is invertible with \( \P^{-1} = \P \), and by @thm-rank-map-equals-rank-matrix (b) the transpose map is invertible and is its own inverse, which is \( (\X\tp)\tp = \X \) again.
 :::
 
 We now have both halves of the working method: a basis turns spaces into \( F^n \) and maps into matrices, and every computation can be done with Chapter 2's tools. What we have not yet controlled is the choice. @exm-matrix-of-reflection shows that one map can have a complicated matrix in one basis and a diagonal one in another; the next section finds the formula relating the two.
@@ -392,7 +392,7 @@ We now have both halves of the working method: a basis turns spaces into \( F^n 
 1. Define \( \mtx{T}{\sB}{\sC} \) for \( T \in \cL(V, W) \) and ordered bases \( \sB \) of \( V \), \( \sC \) of \( W \).
 2. State the formula relating \( \coord{T\v}{\sC} \) and \( \coord{\v}{\sB} \), and the formula for the matrix of a composition.
 3. True or false: the \( j \)-th **row** of \( \mtx{T}{\sB}{\sC} \) is \( \coord{T\v_j}{\sC} \). Justify your answer.
-4. True or false: \( \mtx{\id_V}{\sB}{\sC} = I_n \) for any two bases \( \sB \), \( \sC \) of an \( n \)-dimensional space \( V \). Justify your answer.
+4. True or false: \( \mtx{\id_V}{\sB}{\sC} = \I_n \) for any two bases \( \sB \), \( \sC \) of an \( n \)-dimensional space \( V \). Justify your answer.
 5. What is \( \dim \cL(\nR^3, \nR[x]_{\le 2}) \)?
 :::
 :::
@@ -418,7 +418,7 @@ Find the matrix of each operator in the given basis. (Both maps are linear; you 
 
 ::: {.enumerate options="label=(\alph*)"}
 1. \( T \colon \nR[x]_{\le 2} \to \nR[x]_{\le 2} \), \( T(p) = p(x + 1) \), in \( \sE = (1, x, x^2) \).
-2. \( T \colon M_2(\nR) \to M_2(\nR) \), \( T(X) = BX \) with \( B = \begin{pmatrix} 1 & 2 \\ 3 & 4 \end{pmatrix} \), in \( \sE = (E_{11}, E_{12}, E_{21}, E_{22}) \).
+2. \( T \colon M_2(\nR) \to M_2(\nR) \), \( T(\X) = \B\X \) with \( \B = \begin{pmatrix} 1 & 2 \\ 3 & 4 \end{pmatrix} \), in \( \sE = (\E_{11}, \E_{12}, \E_{21}, \E_{22}) \).
 :::
 :::
 
@@ -427,9 +427,9 @@ Find the matrix of each operator in the given basis. (Both maps are linear; you 
 \[
 [T]_{\sE} = \begin{pmatrix} 1 & 1 & 1 \\ 0 & 1 & 2 \\ 0 & 0 & 1 \end{pmatrix}.
 \]
-(b) Multiplying \( B \) by a matrix unit \( E_{kj} \) on the right keeps column \( k \) of \( B \) and moves it to column \( j \):
+(b) Multiplying \( \B \) by a matrix unit \( \E_{kj} \) on the right keeps column \( k \) of \( \B \) and moves it to column \( j \):
 \[
-BE_{11} = \begin{pmatrix} 1 & 0 \\ 3 & 0 \end{pmatrix}, \quad BE_{12} = \begin{pmatrix} 0 & 1 \\ 0 & 3 \end{pmatrix}, \quad BE_{21} = \begin{pmatrix} 2 & 0 \\ 4 & 0 \end{pmatrix}, \quad BE_{22} = \begin{pmatrix} 0 & 2 \\ 0 & 4 \end{pmatrix}.
+\B\E_{11} = \begin{pmatrix} 1 & 0 \\ 3 & 0 \end{pmatrix}, \quad \B\E_{12} = \begin{pmatrix} 0 & 1 \\ 0 & 3 \end{pmatrix}, \quad \B\E_{21} = \begin{pmatrix} 2 & 0 \\ 4 & 0 \end{pmatrix}, \quad \B\E_{22} = \begin{pmatrix} 0 & 2 \\ 0 & 4 \end{pmatrix}.
 \]
 Reading entries in the order \( (1,1), (1,2), (2,1), (2,2) \) gives the columns \( (1, 0, 3, 0) \), \( (0, 1, 0, 3) \), \( (2, 0, 4, 0) \), \( (0, 2, 0, 4) \), so
 \[
@@ -520,7 +520,7 @@ Each lies in \( V \), and \( D \) is linear, so \( D \) maps every combination o
 \]
 (c) The matrix is upper triangular with non-zero diagonal entries, and one checks directly that
 \[
-\begin{pmatrix} 1 & -1 & 2 \\ 0 & 1 & -2 \\ 0 & 0 & 1 \end{pmatrix}\begin{pmatrix} 1 & 1 & 0 \\ 0 & 1 & 2 \\ 0 & 0 & 1 \end{pmatrix} = I_3,
+\begin{pmatrix} 1 & -1 & 2 \\ 0 & 1 & -2 \\ 0 & 0 & 1 \end{pmatrix}\begin{pmatrix} 1 & 1 & 0 \\ 0 & 1 & 2 \\ 0 & 0 & 1 \end{pmatrix} = \I_3,
 \]
 so \( [D]_{\sB} \) is invertible with this inverse (@thm-one-sided-inverse). By @thm-rank-map-equals-rank-matrix (b), \( D \) is invertible on \( V \) and \( [D^{-1}]_{\sB} = ([D]_{\sB})^{-1} \). We want \( g = D^{-1}(f_3) \). Since \( \coord{f_3}{\sB} = (0, 0, 1) \), @thm-matrix-of-map-coordinates gives
 \[

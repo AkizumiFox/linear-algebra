@@ -4,7 +4,7 @@ Several structures in this chapter have quietly behaved alike. The invertible \(
 
 ## Groups
 
-Look at four situations side by side. In \( \GL_n(F) \), the set of invertible matrices in \( M_n(F) \), we multiply matrices, \( I_n \) does nothing, and each \( A \) is undone by \( A^{-1} \) (@thm-inverse-matrix-properties). In a field \( F \), we multiply non-zero elements, \( 1 \) does nothing, and each \( a \) is undone by \( a^{-1} \). The four rotations of a square about its center (by \( 0^\circ, 90^\circ, 180^\circ, 270^\circ \)) can be performed one after another, the rotation by \( 0^\circ \) does nothing, and each rotation is undone by rotating back. The bijections \( X \to X \) of a set are composed, \( \id_X \) does nothing, and each is undone by its inverse function (@thm-bijective-iff-invertible). The objects differ completely, but the rules we use are the same three. So we give the pattern a name.
+Look at four situations side by side. In \( \GL_n(F) \), the set of invertible matrices in \( M_n(F) \), we multiply matrices, \( \I_n \) does nothing, and each \( \A \) is undone by \( \A^{-1} \) (@thm-inverse-matrix-properties). In a field \( F \), we multiply non-zero elements, \( 1 \) does nothing, and each \( a \) is undone by \( a^{-1} \). The four rotations of a square about its center (by \( 0^\circ, 90^\circ, 180^\circ, 270^\circ \)) can be performed one after another, the rotation by \( 0^\circ \) does nothing, and each rotation is undone by rotating back. The bijections \( X \to X \) of a set are composed, \( \id_X \) does nothing, and each is undone by its inverse function (@thm-bijective-iff-invertible). The objects differ completely, but the rules we use are the same three. So we give the pattern a name.
 
 *A group is a set with one way of combining elements, in which combining is associative, some element does nothing, and every element can be undone.*
 
@@ -35,17 +35,17 @@ Check that each of the following is a group, and decide which are abelian: \( (\
 
 \( (F \setminus \{0\}, \cdot) \): the product of two non-zero elements is non-zero by @thm-field-basic-properties, so the operation lands in \( F \setminus \{0\} \). Associativity and the identity \( 1 \neq 0 \) come from the field axioms, and each \( a \neq 0 \) has an inverse \( a^{-1} \), which is non-zero since \( a a^{-1} = 1 \neq 0 \). It is abelian.
 
-\( \GL_n(F) \): by @thm-inverse-matrix-properties (part 3), a product of invertible matrices is invertible, so the operation lands in \( \GL_n(F) \). Associativity holds by @thm-matrix-multiplication-properties, \( I_n \) is invertible and is an identity, and \( A^{-1} \in \GL_n(F) \) undoes \( A \) by part 2. For \( n \ge 2 \) it is **not** abelian: for \( n = 2 \), \( \begin{pmatrix} 1 & 1 \\ 0 & 1 \end{pmatrix} \begin{pmatrix} 1 & 0 \\ 1 & 1 \end{pmatrix} = \begin{pmatrix} 2 & 1 \\ 1 & 1 \end{pmatrix} \), while the product in the other order is \( \begin{pmatrix} 1 & 1 \\ 1 & 2 \end{pmatrix} \). (Over \( \nF_2 \) read \( 2 \) as \( 0 \); the two products still differ.) For \( n \ge 3 \), put these blocks in the top-left corner and \( 1 \)'s further down the diagonal. \( \GL_1(F) \) is just \( F \setminus \{0\} \), and is abelian.
+\( \GL_n(F) \): by @thm-inverse-matrix-properties (part 3), a product of invertible matrices is invertible, so the operation lands in \( \GL_n(F) \). Associativity holds by @thm-matrix-multiplication-properties, \( \I_n \) is invertible and is an identity, and \( \A^{-1} \in \GL_n(F) \) undoes \( \A \) by part 2. For \( n \ge 2 \) it is **not** abelian: for \( n = 2 \), \( \begin{pmatrix} 1 & 1 \\ 0 & 1 \end{pmatrix} \begin{pmatrix} 1 & 0 \\ 1 & 1 \end{pmatrix} = \begin{pmatrix} 2 & 1 \\ 1 & 1 \end{pmatrix} \), while the product in the other order is \( \begin{pmatrix} 1 & 1 \\ 1 & 2 \end{pmatrix} \). (Over \( \nF_2 \) read \( 2 \) as \( 0 \); the two products still differ.) For \( n \ge 3 \), put these blocks in the top-left corner and \( 1 \)'s further down the diagonal. \( \GL_1(F) \) is just \( F \setminus \{0\} \), and is abelian.
 
 \( S_n \): a composition of bijections is a bijection (@thm-composition-preserves), composition is associative (@thm-composition-associative), \( \id \) is an identity, and each bijection has an inverse function (@thm-bijective-iff-invertible), which is again a bijection. We will see below that \( S_n \) is not abelian for \( n \ge 3 \).
 
 \( \{e\} \): all three axioms reduce to \( ee = e \). This **trivial group** is the degenerate case; it reappears as the smallest subgroup of every group.
 :::
 
-Now non-examples, each a minimal change of an example. Replace addition on \( \nZ \) by multiplication. The operation still lands in \( \nZ \), it is associative, and \( 1 \) is an identity. But (G3) fails: there is no integer \( b \) with \( 2b = 1 \). So \( (\nZ, \cdot) \) is **not** a group. Similarly, replace \( \GL_n(F) \) by all of \( M_n(F) \) under multiplication: (G1) and (G2) still hold with \( I_n \), but the zero matrix has no inverse, so (G3) fails. Keep \( \nN \) under \( + \): the identity \( 0 \) is there, but \( 1 \) has no inverse in \( \nN \).
+Now non-examples, each a minimal change of an example. Replace addition on \( \nZ \) by multiplication. The operation still lands in \( \nZ \), it is associative, and \( 1 \) is an identity. But (G3) fails: there is no integer \( b \) with \( 2b = 1 \). So \( (\nZ, \cdot) \) is **not** a group. Similarly, replace \( \GL_n(F) \) by all of \( M_n(F) \) under multiplication: (G1) and (G2) still hold with \( \I_n \), but the zero matrix has no inverse, so (G3) fails. Keep \( \nN \) under \( + \): the identity \( 0 \) is there, but \( 1 \) has no inverse in \( \nN \).
 
 ::: {.warning}
-**The operation must land in the set.** \( \GL_n(F) \) under matrix **addition** is not a group: \( I_n \) and \( -I_n \) are invertible, but \( I_n + (-I_n) = 0 \) is not, so addition is not even a binary operation on \( \GL_n(F) \). Before checking (G1)–(G3), check that combining two elements of the set gives an element of the set.
+**The operation must land in the set.** \( \GL_n(F) \) under matrix **addition** is not a group: \( \I_n \) and \( -\I_n \) are invertible, but \( \I_n + (-\I_n) = 0 \) is not, so addition is not even a binary operation on \( \GL_n(F) \). Before checking (G1)–(G3), check that combining two elements of the set gives an element of the set.
 :::
 
 The rules we proved separately for fields and for matrices follow from the axioms alone. It is worth proving them once:
@@ -104,7 +104,7 @@ Let \( G \) be a group and \( H \subseteq G \). Then \( H \) is a subgroup of \(
 (\( \Leftarrow \)) Suppose \( H \neq \emptyset \) and \( ab^{-1} \in H \) for all \( a, b \in H \). Pick \( h \in H \). Taking \( a = b = h \) gives \( e = hh^{-1} \in H \). For \( b \in H \), taking \( a = e \) gives \( b^{-1} = eb^{-1} \in H \). For \( a, b \in H \), we now know \( b^{-1} \in H \), so \( ab = a(b^{-1})^{-1} \in H \) by @thm-group-basic-properties. Hence \( H \) is a subgroup. This proves the theorem.
 :::
 
-For example, \( 2\nZ = \{2k : k \in \nZ\} \) is a subgroup of \( (\nZ, +) \). In additive notation the test reads "\( a - b \in H \)", and \( 2k - 2l = 2(k - l) \in 2\nZ \), while \( 0 \in 2\nZ \). By contrast \( \nN \subseteq \nZ \) is non-empty and closed under \( + \), but \( 0 - 1 = -1 \notin \nN \): the test fails, because \( \nN \) lacks inverses. The set of odd integers fails more badly, since it does not contain \( 0 \). In \( \GL_n(F) \), the invertible diagonal matrices form a subgroup: \( I_n \) is one, and by @exm-inverse-matrices the inverse of \( \diag(d_1, \dots, d_n) \) is \( \diag(d_1^{-1}, \dots, d_n^{-1}) \), so \( DE^{-1} \) is again diagonal with non-zero diagonal entries. Every group \( G \) has the subgroups \( \{e\} \) and \( G \).
+For example, \( 2\nZ = \{2k : k \in \nZ\} \) is a subgroup of \( (\nZ, +) \). In additive notation the test reads "\( a - b \in H \)", and \( 2k - 2l = 2(k - l) \in 2\nZ \), while \( 0 \in 2\nZ \). By contrast \( \nN \subseteq \nZ \) is non-empty and closed under \( + \), but \( 0 - 1 = -1 \notin \nN \): the test fails, because \( \nN \) lacks inverses. The set of odd integers fails more badly, since it does not contain \( 0 \). In \( \GL_n(F) \), the invertible diagonal matrices form a subgroup: \( \I_n \) is one, and by @exm-inverse-matrices the inverse of \( \diag(d_1, \dots, d_n) \) is \( \diag(d_1^{-1}, \dots, d_n^{-1}) \), so \( \D\E^{-1} \) is again diagonal with non-zero diagonal entries. Every group \( G \) has the subgroups \( \{e\} \) and \( G \).
 
 ## Homomorphisms
 
@@ -159,7 +159,7 @@ For \( \sigma \), start at \( 1 \) and follow: \( 1 \mapsto 3 \mapsto 1 \), a lo
 :::
 
 ::: {.warning}
-**Mind the order.** \( \sigma\tau \) applies \( \tau \) first, exactly as for functions, and as for matrices: \( (AB)\x = A(B\x) \) applies \( B \) first. Reading a product of cycles from left to right gives the wrong answer, as the two different products \( (1\ 3)(1\ 2) \neq (1\ 2)(1\ 3) \) above show.
+**Mind the order.** \( \sigma\tau \) applies \( \tau \) first, exactly as for functions, and as for matrices: \( (\A\B)\x = \A(\B\x) \) applies \( \B \) first. Reading a product of cycles from left to right gives the wrong answer, as the two different products \( (1\ 3)(1\ 2) \neq (1\ 2)(1\ 3) \) above show.
 :::
 
 ::: {.check}
@@ -208,7 +208,7 @@ The product is not unique: \( (1\ 2\ 3) = (1\ 3)(1\ 2) = (1\ 2)(2\ 3) \), and on
 2. Is \( \nZ \) with the operation \( (a, b) \mapsto a - b \) a group? Justify your answer.
 3. Determine whether the following statement is true: "in every group, \( (ab)^{-1} = a^{-1}b^{-1} \)." Justify your answer.
 4. Compute \( (1\ 3)(1\ 2\ 3) \) in \( S_3 \).
-5. Explain why \( \{A \in M_2(\nR) : A \text{ is not invertible}\} \) is **not** a subgroup of \( \GL_2(\nR) \).
+5. Explain why \( \{\A \in M_2(\nR) : \A \text{ is not invertible}\} \) is **not** a subgroup of \( \GL_2(\nR) \).
 :::
 :::
 
@@ -218,7 +218,7 @@ The product is not unique: \( (1\ 2\ 3) = (1\ 3)(1\ 2) = (1\ 2)(2\ 3) \), and on
 2. No. Associativity fails: \( (1 - 1) - 1 = -1 \), but \( 1 - (1 - 1) = 1 \).
 3. False. By @thm-group-basic-properties, \( (ab)^{-1} = b^{-1}a^{-1} \), and this can differ from \( a^{-1}b^{-1} \). In \( S_3 \) take \( a = (1\ 2) \) and \( b = (1\ 3) \), which are their own inverses. By @exm-cycle-notation, \( ab = (1\ 3\ 2) \), whose inverse is \( (1\ 2\ 3) \), while \( a^{-1}b^{-1} = ab = (1\ 3\ 2) \). The statement is true in abelian groups.
 4. Apply \( (1\ 2\ 3) \) first: \( 1 \mapsto 2 \mapsto 2 \), \( 2 \mapsto 3 \mapsto 1 \), \( 3 \mapsto 1 \mapsto 3 \). Hence \( (1\ 3)(1\ 2\ 3) = (1\ 2) \).
-5. It is not even a subset of \( \GL_2(\nR) \), since its elements are not invertible; for instance it does not contain the identity \( I_2 \).
+5. It is not even a subset of \( \GL_2(\nR) \), since its elements are not invertible; for instance it does not contain the identity \( \I_2 \).
 :::
 :::
 
@@ -260,12 +260,12 @@ Let \( F \) be a field and \( T = \left\{ \begin{pmatrix} a & b \\ 0 & d \end{pm
 
 ::: {.solution}
 ::: {.enumerate options="label=(\alph*)"}
-1. Let \( X = \begin{pmatrix} a & b \\ 0 & d \end{pmatrix} \in T \). Since \( a, d \neq 0 \), \( ad - b \cdot 0 = ad \neq 0 \) by @thm-field-basic-properties, so \( X \) is invertible by @thm-two-by-two-inverse. Hence \( T \subseteq \GL_2(F) \), and \( T \neq \emptyset \) since \( I_2 \in T \). Now let \( Y = \begin{pmatrix} a' & b' \\ 0 & d' \end{pmatrix} \in T \). By @thm-two-by-two-inverse, \( Y^{-1} = (a'd')^{-1} \begin{pmatrix} d' & -b' \\ 0 & a' \end{pmatrix} = \begin{pmatrix} a'^{-1} & -b'(a'd')^{-1} \\ 0 & d'^{-1} \end{pmatrix} \). Therefore
+1. Let \( \X = \begin{pmatrix} a & b \\ 0 & d \end{pmatrix} \in T \). Since \( a, d \neq 0 \), \( ad - b \cdot 0 = ad \neq 0 \) by @thm-field-basic-properties, so \( \X \) is invertible by @thm-two-by-two-inverse. Hence \( T \subseteq \GL_2(F) \), and \( T \neq \emptyset \) since \( \I_2 \in T \). Now let \( \Y = \begin{pmatrix} a' & b' \\ 0 & d' \end{pmatrix} \in T \). By @thm-two-by-two-inverse, \( \Y^{-1} = (a'd')^{-1} \begin{pmatrix} d' & -b' \\ 0 & a' \end{pmatrix} = \begin{pmatrix} a'^{-1} & -b'(a'd')^{-1} \\ 0 & d'^{-1} \end{pmatrix} \). Therefore
 \[
-  XY^{-1} = \begin{pmatrix} a a'^{-1} & -ab'(a'd')^{-1} + b d'^{-1} \\ 0 & d d'^{-1} \end{pmatrix},
+  \X\Y^{-1} = \begin{pmatrix} a a'^{-1} & -ab'(a'd')^{-1} + b d'^{-1} \\ 0 & d d'^{-1} \end{pmatrix},
 \]
-whose \( (2, 1) \)-entry is \( 0 \) and whose diagonal entries \( aa'^{-1} \), \( dd'^{-1} \) are non-zero by @thm-field-basic-properties. So \( XY^{-1} \in T \), and \( T \) is a subgroup by @thm-subgroup-test.
-2. It depends on the field. *Case 1: \( F \) has an element \( c \) with \( c \neq 0 \) and \( c \neq 1 \)* (for example \( c = 2 \) in \( \nR \) or \( \nF_3 \)). Let \( X = \begin{pmatrix} 1 & 1 \\ 0 & 1 \end{pmatrix} \) and \( Y = \diag(1, c) \), both in \( T \). Then \( XY = \begin{pmatrix} 1 & c \\ 0 & c \end{pmatrix} \) and \( YX = \begin{pmatrix} 1 & 1 \\ 0 & c \end{pmatrix} \), which differ in the \( (1, 2) \)-entry since \( c \neq 1 \). So \( T \) is **not** abelian. *Case 2: \( F = \{0, 1\} \)*, that is, \( F = \nF_2 \). Then \( a = d = 1 \) is forced, so \( T = \left\{ \begin{pmatrix} 1 & b \\ 0 & 1 \end{pmatrix} : b \in \nF_2 \right\} \), and \( \begin{pmatrix} 1 & b \\ 0 & 1 \end{pmatrix}\begin{pmatrix} 1 & b' \\ 0 & 1 \end{pmatrix} = \begin{pmatrix} 1 & b + b' \\ 0 & 1 \end{pmatrix} \) is symmetric in \( b, b' \). So \( T \) **is** abelian over \( \nF_2 \), and over every other field it is not.
+whose \( (2, 1) \)-entry is \( 0 \) and whose diagonal entries \( aa'^{-1} \), \( dd'^{-1} \) are non-zero by @thm-field-basic-properties. So \( \X\Y^{-1} \in T \), and \( T \) is a subgroup by @thm-subgroup-test.
+2. It depends on the field. *Case 1: \( F \) has an element \( c \) with \( c \neq 0 \) and \( c \neq 1 \)* (for example \( c = 2 \) in \( \nR \) or \( \nF_3 \)). Let \( \X = \begin{pmatrix} 1 & 1 \\ 0 & 1 \end{pmatrix} \) and \( \Y = \diag(1, c) \), both in \( T \). Then \( \X\Y = \begin{pmatrix} 1 & c \\ 0 & c \end{pmatrix} \) and \( \Y\X = \begin{pmatrix} 1 & 1 \\ 0 & c \end{pmatrix} \), which differ in the \( (1, 2) \)-entry since \( c \neq 1 \). So \( T \) is **not** abelian. *Case 2: \( F = \{0, 1\} \)*, that is, \( F = \nF_2 \). Then \( a = d = 1 \) is forced, so \( T = \left\{ \begin{pmatrix} 1 & b \\ 0 & 1 \end{pmatrix} : b \in \nF_2 \right\} \), and \( \begin{pmatrix} 1 & b \\ 0 & 1 \end{pmatrix}\begin{pmatrix} 1 & b' \\ 0 & 1 \end{pmatrix} = \begin{pmatrix} 1 & b + b' \\ 0 & 1 \end{pmatrix} \) is symmetric in \( b, b' \). So \( T \) **is** abelian over \( \nF_2 \), and over every other field it is not.
 :::
 :::
 
@@ -299,7 +299,7 @@ Since \( e^x > 0 \), \( \exp \) maps \( \nR \) into \( \nR_{>0} \), and \( e^{x+
   ab = (ab)^{-1} = b^{-1}a^{-1} = ba .
 \]
 Hence \( G \) is abelian.
-2. \( (M_2(\nF_2), +) \) is a group by @thm-matrix-addition-properties: addition is associative, \( 0 \) is an identity, and \( -A \) is an inverse. In additive notation, "\( g^2 = e \)" reads \( A + A = 0 \), and indeed \( (A + A)_{ij} = a_{ij} + a_{ij} = (1 + 1)a_{ij} = 0 \) in \( \nF_2 \). (This group is abelian anyway, consistent with (a).)
+2. \( (M_2(\nF_2), +) \) is a group by @thm-matrix-addition-properties: addition is associative, \( 0 \) is an identity, and \( -\A \) is an inverse. In additive notation, "\( g^2 = e \)" reads \( \A + \A = 0 \), and indeed \( (\A + \A)_{ij} = a_{ij} + a_{ij} = (1 + 1)a_{ij} = 0 \) in \( \nF_2 \). (This group is abelian anyway, consistent with (a).)
 :::
 :::
 

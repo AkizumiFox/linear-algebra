@@ -74,7 +74,7 @@ Check each of the following against @def-ideal-polynomials.
 ::: {.enumerate options="label=(\alph*)"}
 1. \( \{0\} \) and \( F[x] \); and any ideal containing a non-zero constant.
 2. \( I_c = \{ f \in F[x] : f(c) = 0 \} \) for a fixed \( c \in F \).
-3. For \( A = \begin{pmatrix} 0 & 1 \\ 0 & 0 \end{pmatrix} \in M_2(F) \), the set \( \{ p \in F[x] : p(A) = 0 \} \).
+3. For \( \A = \begin{pmatrix} 0 & 1 \\ 0 & 0 \end{pmatrix} \in M_2(F) \), the set \( \{ p \in F[x] : p(\A) = 0 \} \).
 :::
 :::
 
@@ -83,7 +83,7 @@ Check each of the following against @def-ideal-polynomials.
 
 (b) \( 0 \in I_c \). If \( f(c) = g(c) = 0 \), then \( (f + g)(c) = 0 \) and \( (hf)(c) = h(c) f(c) = 0 \) for every \( h \in F[x] \), by @thm-evaluation-respects-operations. So \( I_c \) is an ideal. By @thm-remainder-theorem (b), \( f(c) = 0 \) exactly when \( x - c \mid f \), so \( I_c = \langle x - c \rangle \).
 
-(c) Call the set \( I \). The zero polynomial is in \( I \). If \( p(A) = q(A) = 0 \), then by @thm-polynomial-of-matrix-properties, \( (p + q)(A) = p(A) + q(A) = 0 \) and \( (hp)(A) = h(A)\,p(A) = h(A) \cdot 0 = 0 \) for every \( h \). So \( I \) is an ideal. It contains \( x^2 \), since \( A^2 = 0 \). It contains no non-zero polynomial of degree at most \( 1 \): \( (a + bx)(A) = \begin{pmatrix} a & b \\ 0 & a \end{pmatrix} = 0 \) forces \( a = b = 0 \). The same argument works for any linear operator \( T \) in place of \( A \), with @thm-polynomial-of-operator-properties. In Chapter 8 the ideal of all polynomials killing an operator is where the minimal polynomial comes from.
+(c) Call the set \( I \). The zero polynomial is in \( I \). If \( p(\A) = q(\A) = 0 \), then by @thm-polynomial-of-matrix-properties, \( (p + q)(\A) = p(\A) + q(\A) = 0 \) and \( (hp)(\A) = h(\A)\,p(\A) = h(\A) \cdot 0 = 0 \) for every \( h \). So \( I \) is an ideal. It contains \( x^2 \), since \( \A^2 = 0 \). It contains no non-zero polynomial of degree at most \( 1 \): \( (a + bx)(\A) = \begin{pmatrix} a & b \\ 0 & a \end{pmatrix} = 0 \) forces \( a = b = 0 \). The same argument works for any linear operator \( T \) in place of \( \A \), with @thm-polynomial-of-operator-properties. In Chapter 8 the ideal of all polynomials killing an operator is where the minimal polynomial comes from.
 :::
 
 Now the non-example, by a minimal change. Take \( F[x]_{\le n} \) for some \( n \in \nN \). It is non-empty, closed under addition, and closed under multiplication by **constants**: it is a subspace of \( F[x] \) (@exm-poly-degree-bound). But it fails (I3): \( x^n \in F[x]_{\le n} \) and \( x \in F[x] \), while \( x \cdot x^n = x^{n+1} \notin F[x]_{\le n} \). The exact clause that fails is "for **every** \( h \in F[x] \)".
