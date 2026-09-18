@@ -212,7 +212,10 @@ Of the \( \rank T \) dimensions that reach \( W \), the map \( S \) can destroy 
 ::: {.proof}
 Let \( S' = S|_{\im T} \), so that \( \im S' = \im(ST) \) as in the proof of @thm-rank-of-composition, and \( \ker S' = \ker S \cap \im T \subseteq \ker S \). By Rank–Nullity for \( S' \) and then for \( S \),
 \[
-\rank T = \rank(ST) + \dim(\ker S \cap \im T) \le \rank(ST) + \dim \ker S = \rank(ST) + \dim W - \rank S,
+\begin{aligned}
+\rank T &= \rank(ST) + \dim(\ker S \cap \im T) \\
+&\le \rank(ST) + \dim \ker S = \rank(ST) + \dim W - \rank S,
+\end{aligned}
 \]
 where the inequality is @thm-subspace-dimension. Rearranging gives the claim. For matrices, apply it to \( S\y = \A\y \) on \( W = F^n \) and \( T\x = \B\x \) on \( V = F^p \): the matrix of \( ST \) in standard bases is \( \A\B \) by @thm-matrix-of-composition, and ranks of maps and matrices agree by @thm-rank-map-equals-rank-matrix.
 :::
@@ -319,7 +322,10 @@ Each \( \c_k\r_k \) has rank \( 1 \) by the \( (\Leftarrow) \) direction of @exr
 
 (c) By @exm-column-row-factorization, \( \A = \C\R \) with \( \C = \begin{pmatrix} 1 & 0 \\ 2 & 1 \\ 3 & 1 \end{pmatrix} \) and \( \R = \begin{pmatrix} 1 & 2 & 0 & 3 \\ 0 & 0 & 1 & -2 \end{pmatrix} \), so
 \[
-\A = \begin{pmatrix} 1 \\ 2 \\ 3 \end{pmatrix}\begin{pmatrix} 1 & 2 & 0 & 3 \end{pmatrix} + \begin{pmatrix} 0 \\ 1 \\ 1 \end{pmatrix}\begin{pmatrix} 0 & 0 & 1 & -2 \end{pmatrix} = \begin{pmatrix} 1 & 2 & 0 & 3 \\ 2 & 4 & 0 & 6 \\ 3 & 6 & 0 & 9 \end{pmatrix} + \begin{pmatrix} 0 & 0 & 0 & 0 \\ 0 & 0 & 1 & -2 \\ 0 & 0 & 1 & -2 \end{pmatrix}.
+\begin{aligned}
+\A &= \begin{pmatrix} 1 \\ 2 \\ 3 \end{pmatrix}\begin{pmatrix} 1 & 2 & 0 & 3 \end{pmatrix} + \begin{pmatrix} 0 \\ 1 \\ 1 \end{pmatrix}\begin{pmatrix} 0 & 0 & 1 & -2 \end{pmatrix} \\
+&= \begin{pmatrix} 1 & 2 & 0 & 3 \\ 2 & 4 & 0 & 6 \\ 3 & 6 & 0 & 9 \end{pmatrix} + \begin{pmatrix} 0 & 0 & 0 & 0 \\ 0 & 0 & 1 & -2 \\ 0 & 0 & 1 & -2 \end{pmatrix}.
+\end{aligned}
 \]
 :::
 
@@ -353,7 +359,11 @@ Let \( \A \in M_{m \times n}(F) \), \( \B \in M_{n \times p}(F) \) and \( \C \in
 
 (c) Every vector \( \B\C\x = \B(\C\x) \) lies in \( \col(\B) \), so \( \col(\B\C) \subseteq \col(\B) \). Hence \( N \cap \col(\B\C) \subseteq N \cap \col(\B) \), and by @thm-subspace-dimension, \( \dim(N \cap \col(\B\C)) \le \dim(N \cap \col(\B)) \). By (b) and then (a),
 \[
-\rank(\A\B\C) = \rank(\B\C) - \dim(N \cap \col(\B\C)) \ge \rank(\B\C) - \dim(N \cap \col(\B)) = \rank(\B\C) - \rank \B + \rank(\A\B).
+\begin{aligned}
+\rank(\A\B\C) &= \rank(\B\C) - \dim(N \cap \col(\B\C)) \\
+&\ge \rank(\B\C) - \dim(N \cap \col(\B)) \\
+&= \rank(\B\C) - \rank \B + \rank(\A\B).
+\end{aligned}
 \]
 Rearranging gives Frobenius's inequality.
 

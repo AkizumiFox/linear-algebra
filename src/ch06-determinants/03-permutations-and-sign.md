@@ -91,7 +91,10 @@ This is defined: \( i \neq j \) and \( \rho(i) \neq \rho(j) \) since \( \rho \) 
 
 Now let \( \{i, j\} \in \mathcal{P} \). Since \( \tau(i) \neq \tau(j) \), we have \( (\tau(i) - \tau(j))^2 > 0 \). Multiplying inside \( s \) by this positive integer does not change the value, so
 \[
-  \varepsilon_{\sigma\tau}(\{i, j\}) = s\Bigl(\bigl(\sigma(\tau(i)) - \sigma(\tau(j))\bigr)\bigl(\tau(i) - \tau(j)\bigr) \cdot \bigl(\tau(i) - \tau(j)\bigr)(i - j)\Bigr) = \varepsilon_\sigma(\{\tau(i), \tau(j)\})\ \varepsilon_\tau(\{i, j\}).
+  \begin{aligned}
+  \varepsilon_{\sigma\tau}(\{i, j\}) &= s\Bigl(\bigl(\sigma(\tau(i)) - \sigma(\tau(j))\bigr)\bigl(\tau(i) - \tau(j)\bigr) \cdot \bigl(\tau(i) - \tau(j)\bigr)(i - j)\Bigr) \\
+  &= \varepsilon_\sigma(\{\tau(i), \tau(j)\})\ \varepsilon_\tau(\{i, j\}).
+  \end{aligned}
 \]
 Let \( \hat\tau \colon \mathcal{P} \to \mathcal{P} \), \( \{i, j\} \mapsto \{\tau(i), \tau(j)\} \); the image has two elements because \( \tau \) is injective. The same construction with \( \tau^{-1} \) gives an inverse function, so \( \hat\tau \) is a bijection (@thm-bijective-iff-invertible). Taking the product over all \( P \in \mathcal{P} \) and using (1) three times,
 \[

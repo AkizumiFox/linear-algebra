@@ -101,7 +101,11 @@ Multiplying out, both real parts equal \( ace - adf - bcf - bde \) and both imag
 
 (c) We have \( w + u = (c + e) + (d + f)i \), so
 \[
-z(w + u) = \big(a(c + e) - b(d + f)\big) + \big(a(d + f) + b(c + e)\big)i = \big((ac - bd) + (ae - bf)\big) + \big((ad + bc) + (af + be)\big)i,
+\begin{aligned}
+z(w + u)
+&= \big(a(c + e) - b(d + f)\big) + \big(a(d + f) + b(c + e)\big)i \\
+&= \big((ac - bd) + (ae - bf)\big) + \big((ad + bc) + (af + be)\big)i,
+\end{aligned}
 \]
 which is \( zw + zu \) by the definitions of the product and the sum.
 
@@ -150,7 +154,12 @@ Let \( z = a + bi \) and \( w = c + di \) with \( a, b, c, d \in \nR \).
 
 (b) Since \( zw = (ac - bd) + (ad + bc)i \), we get \( \conj{zw} = (ac - bd) - (ad + bc)i \). On the other hand,
 \[
-\conj{z} \, \conj{w} = (a - bi)(c - di) = \big(ac - (-b)(-d)\big) + \big(a(-d) + (-b)c\big)i = (ac - bd) - (ad + bc)i.
+\begin{aligned}
+\conj{z} \, \conj{w}
+&= (a - bi)(c - di) \\
+&= \big(ac - (-b)(-d)\big) + \big(a(-d) + (-b)c\big)i \\
+&= (ac - bd) - (ad + bc)i.
+\end{aligned}
 \]
 
 (c) By the computation in @exm-complex-arithmetic, \( z \conj{z} = a^2 + b^2 = \lvert z \rvert^2 \). Also \( z + \conj{z} = 2a = 2 \operatorname{Re} z \).
@@ -180,7 +189,10 @@ as claimed.
 
 In practice, "multiply top and bottom by the conjugate". For instance
 \[
-\frac{1}{3 + 4i} = \frac{3 - 4i}{(3 + 4i)(3 - 4i)} = \frac{3 - 4i}{25}, \qquad \frac{5 + i}{1 - i} = \frac{(5 + i)(1 + i)}{(1 - i)(1 + i)} = \frac{4 + 6i}{2} = 2 + 3i,
+\begin{aligned}
+\frac{1}{3 + 4i} &= \frac{3 - 4i}{(3 + 4i)(3 - 4i)} = \frac{3 - 4i}{25}, \\
+\frac{5 + i}{1 - i} &= \frac{(5 + i)(1 + i)}{(1 - i)(1 + i)} = \frac{4 + 6i}{2} = 2 + 3i,
+\end{aligned}
 \]
 which agrees with \( (2 + 3i)(1 - i) = 5 + i \) from @exm-complex-arithmetic. Only one inverse exists; this is a special case of a general fact about fields proved in the next section.
 
@@ -276,7 +288,11 @@ Consequently, if \( z = r e^{i\theta} \) and \( w = s e^{i\varphi} \) with \( r,
 ::: {.proof}
 By the multiplication rule,
 \[
-e^{i\theta} e^{i\varphi} = (\cos\theta\cos\varphi - \sin\theta\sin\varphi) + (\cos\theta\sin\varphi + \sin\theta\cos\varphi)i = \cos(\theta + \varphi) + i \sin(\theta + \varphi),
+\begin{aligned}
+e^{i\theta} e^{i\varphi}
+&= (\cos\theta\cos\varphi - \sin\theta\sin\varphi) + (\cos\theta\sin\varphi + \sin\theta\cos\varphi)i \\
+&= \cos(\theta + \varphi) + i \sin(\theta + \varphi),
+\end{aligned}
 \]
 where the last equality uses the addition formulas for cosine and sine. This is \( e^{i(\theta + \varphi)} \). For the second statement, \( zw = (rs)(e^{i\theta} e^{i\varphi}) \) by @prp-complex-arithmetic-laws, and the first statement finishes the proof.
 :::

@@ -89,11 +89,13 @@ Find the polynomial \( p \in \nQ[x]_{\le 3} \) whose graph passes through \( (-1
 ::: {.solution}
 The \( x \)-values \( -1, 0, 1, 2 \) are distinct, so by @thm-interpolation-unique there is exactly one such \( p = c_0 + c_1x + c_2x^2 + c_3x^3 \). The conditions \( p(x_i) = y_i \) give the augmented matrix below. We first swap the rows for \( x = -1 \) and \( x = 0 \), so that the simplest row leads:
 \[
+\begin{aligned}
 \left(\begin{array}{cccc|c} 1 & -1 & 1 & -1 & 2 \\ 1 & 0 & 0 & 0 & 1 \\ 1 & 1 & 1 & 1 & 2 \\ 1 & 2 & 4 & 8 & 11 \end{array}\right)
-\xrightarrow{R_1 \leftrightarrow R_2}
-\left(\begin{array}{cccc|c} 1 & 0 & 0 & 0 & 1 \\ 1 & -1 & 1 & -1 & 2 \\ 1 & 1 & 1 & 1 & 2 \\ 1 & 2 & 4 & 8 & 11 \end{array}\right)
-\xrightarrow[R_4 \to R_4 - R_1]{R_2 \to R_2 - R_1,\ R_3 \to R_3 - R_1}
+&\xrightarrow{R_1 \leftrightarrow R_2}
+\left(\begin{array}{cccc|c} 1 & 0 & 0 & 0 & 1 \\ 1 & -1 & 1 & -1 & 2 \\ 1 & 1 & 1 & 1 & 2 \\ 1 & 2 & 4 & 8 & 11 \end{array}\right) \\
+&\xrightarrow[R_4 \to R_4 - R_1]{R_2 \to R_2 - R_1,\ R_3 \to R_3 - R_1}
 \left(\begin{array}{cccc|c} 1 & 0 & 0 & 0 & 1 \\ 0 & -1 & 1 & -1 & 1 \\ 0 & 1 & 1 & 1 & 1 \\ 0 & 2 & 4 & 8 & 10 \end{array}\right).
+\end{aligned}
 \]
 Next clear column 2 below the pivot \( -1 \):
 \[
@@ -329,7 +331,8 @@ x_{22} = x_{11} + x_{12} + x_{13} = p + q + r, \qquad x_{23} = x_{12} + x_{13} =
 \[
 \begin{aligned}
 (3, 1)&: & x_{21} + x_{31} + x_{32} &= (p + q) + (p + r) + 0 = q + r = 0, \\
-(3, 2)&: & x_{22} + x_{31} + x_{32} + x_{33} &= (p + q + r) + (p + r) + 0 + (p + r) = p + q + r = 0, \\
+(3, 2)&: & x_{22} + x_{31} + x_{32} + x_{33} &= (p + q + r) + (p + r) + 0 + (p + r) \\
+& & &\qquad = p + q + r = 0, \\
 (3, 3)&: & x_{23} + x_{32} + x_{33} &= (q + r) + 0 + (p + r) = p + q = 0 .
 \end{aligned}
 \]
@@ -418,11 +421,13 @@ Find the polynomial \( p \in \nQ[x]_{\le 3} \) with \( p(0) = -1 \), \( p(1) = 1
 ::: {.solution}
 The \( x \)-values \( 0, 1, 2, 3 \) are distinct, so there is exactly one such \( p = c_0 + c_1x + c_2x^2 + c_3x^3 \), by @thm-interpolation-unique. Its coefficients solve
 \[
+\begin{aligned}
 \left(\begin{array}{cccc|c} 1 & 0 & 0 & 0 & -1 \\ 1 & 1 & 1 & 1 & 1 \\ 1 & 2 & 4 & 8 & 3 \\ 1 & 3 & 9 & 27 & 11 \end{array}\right)
-\xrightarrow[R_4 \to R_4 - R_1]{R_2 \to R_2 - R_1,\ R_3 \to R_3 - R_1}
-\left(\begin{array}{cccc|c} 1 & 0 & 0 & 0 & -1 \\ 0 & 1 & 1 & 1 & 2 \\ 0 & 2 & 4 & 8 & 4 \\ 0 & 3 & 9 & 27 & 12 \end{array}\right)
-\xrightarrow[R_4 \to R_4 - 3R_2]{R_3 \to R_3 - 2R_2}
+&\xrightarrow[R_4 \to R_4 - R_1]{R_2 \to R_2 - R_1,\ R_3 \to R_3 - R_1}
+\left(\begin{array}{cccc|c} 1 & 0 & 0 & 0 & -1 \\ 0 & 1 & 1 & 1 & 2 \\ 0 & 2 & 4 & 8 & 4 \\ 0 & 3 & 9 & 27 & 12 \end{array}\right) \\
+&\xrightarrow[R_4 \to R_4 - 3R_2]{R_3 \to R_3 - 2R_2}
 \left(\begin{array}{cccc|c} 1 & 0 & 0 & 0 & -1 \\ 0 & 1 & 1 & 1 & 2 \\ 0 & 0 & 2 & 6 & 0 \\ 0 & 0 & 6 & 24 & 6 \end{array}\right)
+\end{aligned}
 \]
 and then \( R_4 - 3R_3 \) turns the last row into \( (0, 0, 0, 6 \mid 6) \). Back substitution: \( c_3 = 1 \); \( 2c_2 + 6 = 0 \), so \( c_2 = -3 \); \( c_1 - 3 + 1 = 2 \), so \( c_1 = 4 \); \( c_0 = -1 \). Hence
 \[
@@ -534,15 +539,21 @@ p(0) = a, \qquad p'(0) = b, \qquad p(1) = c, \qquad p'(1) = d .
 ::: {.enumerate options="label=(\alph*)"}
 1. The four conditions are linear in \( c_0, \dots, c_3 \): \( p(0) = c_0 \), \( p'(0) = c_1 \), \( p(1) = c_0 + c_1 + c_2 + c_3 \), \( p'(1) = c_1 + 2c_2 + 3c_3 \). Row reducing the augmented matrix, using only additions of multiples of rows,
 \[
+\begin{aligned}
 \left(\begin{array}{cccc|c} 1 & 0 & 0 & 0 & a \\ 0 & 1 & 0 & 0 & b \\ 1 & 1 & 1 & 1 & c \\ 0 & 1 & 2 & 3 & d \end{array}\right)
-\xrightarrow[R_4 \to R_4 - R_2]{R_3 \to R_3 - R_1 - R_2}
-\left(\begin{array}{cccc|c} 1 & 0 & 0 & 0 & a \\ 0 & 1 & 0 & 0 & b \\ 0 & 0 & 1 & 1 & c - a - b \\ 0 & 0 & 2 & 3 & d - b \end{array}\right)
-\xrightarrow{R_4 \to R_4 - 2R_3}
+&\xrightarrow[R_4 \to R_4 - R_2]{R_3 \to R_3 - R_1 - R_2}
+\left(\begin{array}{cccc|c} 1 & 0 & 0 & 0 & a \\ 0 & 1 & 0 & 0 & b \\ 0 & 0 & 1 & 1 & c - a - b \\ 0 & 0 & 2 & 3 & d - b \end{array}\right) \\
+&\xrightarrow{R_4 \to R_4 - 2R_3}
 \left(\begin{array}{cccc|c} 1 & 0 & 0 & 0 & a \\ 0 & 1 & 0 & 0 & b \\ 0 & 0 & 1 & 1 & c - a - b \\ 0 & 0 & 0 & 1 & 2a + b - 2c + d \end{array}\right).
+\end{aligned}
 \]
 Here \( 3 - 2 = 1 \) holds in every field. The coefficient matrix is now upper triangular with every diagonal entry equal to \( 1 \), so it is invertible by @lem-triangular-invertible, and back substitution gives the unique solution without any division:
 \[
-c_3 = 2a + b - 2c + d, \quad c_2 = (c - a - b) - c_3 = -3a - 2b + 3c - d, \quad c_1 = b, \quad c_0 = a .
+\begin{aligned}
+c_3 &= 2a + b - 2c + d, \\
+c_2 &= (c - a - b) - c_3 = -3a - 2b + 3c - d, \\
+c_1 &= b, \qquad c_0 = a .
+\end{aligned}
 \]
 Row operations preserve the solution set (@thm-row-ops-preserve-solutions), so the original system also has exactly this one solution, for every field \( F \).
 2. With \( (a, b, c, d) = (0, 1, 1, 0) \): \( c_3 = 0 + 1 - 2 + 0 = -1 \), \( c_2 = 0 - 2 + 3 - 0 = 1 \), \( c_1 = 1 \), \( c_0 = 0 \). So \( p = x + x^2 - x^3 \). Check: \( p(0) = 0 \); \( p' = 1 + 2x - 3x^2 \), so \( p'(0) = 1 \); \( p(1) = 1 + 1 - 1 = 1 \); \( p'(1) = 1 + 2 - 3 = 0 \).

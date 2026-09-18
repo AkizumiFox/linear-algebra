@@ -374,7 +374,11 @@ Show that \( \N \) is nilpotent, find its chain lengths, and find a Jordan basis
 \]
 the last because every row of \( \N^2 \) is a multiple of \( (1, -1, 1, 1) \), while
 \[
-(1, -1, 1, 1)\,\N = (1 - 1 + 1 - 1,\ \ 0 + 1 - 1 + 0,\ \ 1 - 1 + 1 - 1,\ \ 1 - 1 + 1 - 1) = 0 .
+\begin{aligned}
+(1, -1, 1, 1)\,\N
+  &= (1 - 1 + 1 - 1,\ \ 0 + 1 - 1 + 0,\ \ 1 - 1 + 1 - 1,\ \ 1 - 1 + 1 - 1) \\
+  &= 0 .
+\end{aligned}
 \]
 Since \( \N^2 \ne 0 \), the index is \( 3 \). Rows \( 2 \) and \( 3 \) of \( \N \) are equal and row \( 4 = -\)row \( 1 \), so \( \rank \N = 2 \), and \( \rank \N^2 = 1 \). Thus
 \[
@@ -395,7 +399,10 @@ The end of the long chain, \( \N^2\e_1 = (1, 0, 0, -1) \), is the second of thes
 
 *The basis and the matrix.* Take
 \[
-\sB = \big(\,(1, 0, 0, -1),\ (1, 1, 1, -1),\ \e_1,\ (-1, 0, 1, 0)\,\big), \qquad \P = \begin{pmatrix} 1 & 1 & 1 & -1 \\ 0 & 1 & 0 & 0 \\ 0 & 1 & 0 & 1 \\ -1 & -1 & 0 & 0 \end{pmatrix},
+\begin{aligned}
+\sB &= \big(\,(1, 0, 0, -1),\ (1, 1, 1, -1),\ \e_1,\ (-1, 0, 1, 0)\,\big), \\
+\P &= \begin{pmatrix} 1 & 1 & 1 & -1 \\ 0 & 1 & 0 & 0 \\ 0 & 1 & 0 & 1 \\ -1 & -1 & 0 & 0 \end{pmatrix},
+\end{aligned}
 \]
 the matrix whose columns are the vectors of \( \sB \). Its third column has a single non-zero entry, the \( 1 \) in row \( 1 \), so expanding along that column (@thm-laplace-expansion) gives
 \[
@@ -407,7 +414,12 @@ the last determinant computed by expanding along its own first column. So \( \P 
 \]
 There is no need to invert \( \P \) to check this: the claim \( \P^{-1}N\P = \J \) is the same as \( N\P = \P \J \), which reads column by column as
 \[
-\N(1,0,0,-1) = \0, \quad \N(1,1,1,-1) = (1,0,0,-1), \quad \N\e_1 = (1,1,1,-1), \quad \N(-1,0,1,0) = \0 ,
+\begin{aligned}
+\N(1,0,0,-1) &= \0, \\
+\N(1,1,1,-1) &= (1,0,0,-1), \\
+\N\e_1 &= (1,1,1,-1), \\
+\N(-1,0,1,0) &= \0 ,
+\end{aligned}
 \]
 and these four statements are exactly how the chains were built (the first and last say that the two chain ends lie in \( \ker \N \)). As a sample verification, the second row of \( \N(1,1,1,-1) \) is \( 1 - 1 + 1 - 1 = 0 \), matching the second coordinate of \( (1, 0, 0, -1) \).
 :::
@@ -514,10 +526,17 @@ Let
 ::: {.solution}
 (a) Write \( \m_1, \dots, \m_4 \) for the columns of \( \M \), so \( \m_1 = (-1,1,1,1) \), \( \m_2 = (-1,2,2,1) \), \( \m_3 = -\m_2 \) and \( \m_4 = \m_1 \). The columns of \( \M^2 \) are \( \M\m_1, \dots, \M\m_4 \), so it is enough to check the first two. Row by row,
 \[
-\M\m_1 = (1 - 1 + 1 - 1,\ -1 + 2 - 2 + 1,\ -1 + 2 - 2 + 1,\ -1 + 1 - 1 + 1) = \0,
+\begin{aligned}
+\M\m_1 &= (1 - 1 + 1 - 1,\ -1 + 2 - 2 + 1,\ -1 + 2 - 2 + 1,\ -1 + 1 - 1 + 1) \\
+  &= \0,
+\end{aligned}
 \]
 \[
-\M\m_2 = (1 - 2 + 2 - 1,\ -1 + 4 - 4 + 1,\ -1 + 4 - 4 + 1,\ -1 + 2 - 2 + 1) = \0 .
+\begin{aligned}
+\M\m_2 &= (1 - 2 + 2 - 1,\ -1 + 4 - 4 + 1,\ -1 + 4 - 4 + 1,\ -1 + 2 - 2 + 1) \\
+  &= \0 .
+\end{aligned}
+
 \]
 Hence \( \M\m_3 = -\M\m_2 = \0 \) and \( \M\m_4 = \M\m_1 = \0 \), so \( \M^2 = 0 \). Also \( \im \M = \Span(\m_1, \m_2) \) by the relations among the columns, and \( \m_1, \m_2 \) are not proportional, so \( \rank \M = 2 \).
 

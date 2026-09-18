@@ -31,7 +31,11 @@ There is one thing to check about the notation. The number \( N \) in the displa
 
 Read off the coefficient sequence of each polynomial, and check it against @def-polynomial.
 \[
-  3x^2 - x + 2 \in \nR[x], \qquad x^5 + \pi x^3 - \sqrt{2} \in \nR[x], \qquad (1 + i)x - i \in \nC[x], \qquad x^2 + x \in \nF_2[x], \qquad 7, \qquad 0 .
+  \begin{aligned}
+  &3x^2 - x + 2 \in \nR[x], \qquad x^5 + \pi x^3 - \sqrt{2} \in \nR[x], \\
+  &(1 + i)x - i \in \nC[x], \qquad x^2 + x \in \nF_2[x], \\
+  &7, \qquad 0 .
+  \end{aligned}
 \]
 (The symbol \( F[x] \) for the set of all polynomials over \( F \) is defined formally in @def-polynomial-ring below.)
 :::
@@ -255,7 +259,11 @@ Sometimes we need the degree to be exactly \( n \), for instance when we speak o
 
 Let \( F \) be a field and \( n \in \nN \). The set of polynomials over \( F \) of degree **exactly** \( n \) is
 \[
-  F[x]_{= n} = \{ p \in F[x] : \deg p = n \} = \{ a_0 + a_1 x + \dots + a_n x^n : a_0, \dots, a_n \in F, \ a_n \neq 0 \} .
+  \begin{aligned}
+  F[x]_{= n}
+  &= \{ p \in F[x] : \deg p = n \} \\
+  &= \{ a_0 + a_1 x + \dots + a_n x^n : a_0, \dots, a_n \in F, \ a_n \neq 0 \} .
+  \end{aligned}
 \]
 :::
 
@@ -312,10 +320,13 @@ Let \( p = \sum_{i=0}^{m} a_i x^i \) and \( q = \sum_{j=0}^{n} b_j x^j \), where
 
 For products, all non-zero coefficients of \( pq \) occur at positions \( k \le m + n \), so
 \[
-  (pq)(c) = \sum_{k=0}^{m+n} \Bigl( \sum_{i + j = k} a_i b_j \Bigr) c^{k}
-  = \sum_{i=0}^{m} \sum_{j=0}^{n} a_i b_j c^{i} c^{j}
-  = \sum_{i=0}^{m} \sum_{j=0}^{n} (a_i c^{i})(b_j c^{j})
-  = \Bigl( \sum_{i=0}^{m} a_i c^i \Bigr) \Bigl( \sum_{j=0}^{n} b_j c^j \Bigr),
+  \begin{aligned}
+  (pq)(c)
+  &= \sum_{k=0}^{m+n} \Bigl( \sum_{i + j = k} a_i b_j \Bigr) c^{k} \\
+  &= \sum_{i=0}^{m} \sum_{j=0}^{n} a_i b_j c^{i} c^{j}
+  = \sum_{i=0}^{m} \sum_{j=0}^{n} (a_i c^{i})(b_j c^{j}) \\
+  &= \Bigl( \sum_{i=0}^{m} a_i c^i \Bigr) \Bigl( \sum_{j=0}^{n} b_j c^j \Bigr),
+  \end{aligned}
 \]
 where the first equality is @def-polynomial-ring, the second uses distributivity and \( c^{i+j} = c^i c^j \) and regroups the pairs \( (i, j) \), the third uses **commutativity** of multiplication in \( F \) to move \( c^i \) past \( b_j \), and the last is distributivity again. This shows \( (pq)(c) = p(c)q(c) \).
 :::
@@ -475,7 +486,11 @@ Let \( F \) be a field.
 ::: {.enumerate options="label=(\alph*)"}
 1. Since \( p(r) = 0 \), we have \( ar^2 + br + c = 0 \), so \( c = -ar^2 - br \). Expanding with @thm-polynomial-ring-laws,
 \[
-  (x - r)\bigl(ax + (b + ar)\bigr) = ax^2 + (b + ar)x - arx - r(b + ar) = ax^2 + bx - (br + ar^2) = ax^2 + bx + c = p .
+  \begin{aligned}
+  (x - r)\bigl(ax + (b + ar)\bigr)
+  &= ax^2 + (b + ar)x - arx - r(b + ar) \\
+  &= ax^2 + bx - (br + ar^2) = ax^2 + bx + c = p .
+  \end{aligned}
 \]
 2. Let \( p \neq 0 \) with \( \deg p \le 2 \). *Case 1.* \( \deg p = 0 \). Then \( p = c \neq 0 \) is constant and \( p(r) = c \neq 0 \) for every \( r \), so \( p \) has no roots. *Case 2.* \( \deg p = 1 \), say \( p = bx + c \) with \( b \neq 0 \). Then \( p(r) = 0 \) if and only if \( r = -b^{-1}c \), so \( p \) has exactly one root. *Case 3.* \( \deg p = 2 \), say \( p = ax^2 + bx + c \) with \( a \neq 0 \). If \( p \) has no root we are done. Otherwise let \( r \) be a root. By (a), \( p = (x - r)q \) with \( q = ax + (b + ar) \), of degree \( 1 \) since \( a \neq 0 \). Let \( s \) be any root of \( p \). By @thm-evaluation-respects-operations, \( 0 = p(s) = (s - r) q(s) \), so \( s = r \) or \( q(s) = 0 \) by @thm-field-basic-properties. By Case 2, \( q \) has exactly one root. Hence every root of \( p \) is \( r \) or the root of \( q \), and \( p \) has at most \( 2 \) roots. This proves the claim.
 3. In \( \nZ/8\nZ \), \( 1^2 = 1 \), \( 3^2 = 9 = 1 \), \( 5^2 = 25 = 1 \) and \( 7^2 = 49 = 1 \), so \( 1, 3, 5, 7 \) are four roots of \( x^2 - 1 \). The argument in (b) breaks at "\( (s - r)q(s) = 0 \) implies \( s - r = 0 \) or \( q(s) = 0 \)": for \( r = 1 \), \( s = 3 \) we get \( (3 - 1)(3 + 1) = 2 \cdot 4 = 0 \) with both factors non-zero. That step needs the field property that a product of non-zero elements is non-zero.

@@ -22,7 +22,10 @@ is linear. A \( 2 \)-linear form is called **bilinear**.
 
 In words: fix all arguments except the one in position \( i \). What remains is a function of one vector, and it must be a linear functional (@def-linear-functional). Written out, for all \( \x, \y \in V \) and \( c \in F \),
 \[
-  f(\dots, \x + \y, \dots) = f(\dots, \x, \dots) + f(\dots, \y, \dots), \qquad f(\dots, c\x, \dots) = c\,f(\dots, \x, \dots),
+  \begin{aligned}
+  f(\dots, \x + \y, \dots) &= f(\dots, \x, \dots) + f(\dots, \y, \dots), \\
+  f(\dots, c\x, \dots) &= c\,f(\dots, \x, \dots),
+  \end{aligned}
 \]
 where the dots stand for the same fixed vectors on both sides. The condition is imposed for **every** position \( i \), one at a time.
 
@@ -133,7 +136,11 @@ the value of \( f \) with \( \x \) in position \( i \), \( \y \) in position \( 
 
 (a) By bilinearity of \( g \),
 \[
-  0 = g(\v_i + \v_j, \v_i + \v_j) = g(\v_i, \v_i) + g(\v_i, \v_j) + g(\v_j, \v_i) + g(\v_j, \v_j) = g(\v_i, \v_j) + g(\v_j, \v_i),
+  \begin{aligned}
+  0 &= g(\v_i + \v_j, \v_i + \v_j) \\
+  &= g(\v_i, \v_i) + g(\v_i, \v_j) + g(\v_j, \v_i) + g(\v_j, \v_j) \\
+  &= g(\v_i, \v_j) + g(\v_j, \v_i),
+  \end{aligned}
 \]
 where the first and last equalities use \( g(\x, \x) = 0 \). Hence \( g(\v_j, \v_i) = -g(\v_i, \v_j) \), which is the swap statement. Since \( \v_1, \dots, \v_k \) and \( i < j \) were arbitrary, \( f \) is skew-symmetric (@def-skew-symmetric-form).
 
@@ -188,7 +195,11 @@ The zero function is \( k \)-linear, since in each position it is the zero funct
 
 Let \( f \) and \( g \) be \( k \)-linear and \( a \in F \). Fix a position \( i \) and vectors in the other positions, and write \( f(\dots, \x, \dots) \) for the value with \( \x \) in position \( i \). For \( \x, \y \in V \) and \( c \in F \), the pointwise definition and linearity of \( f \) and \( g \) in position \( i \) give
 \[
-  (f + g)(\dots, \x + \y, \dots) = f(\dots, \x, \dots) + f(\dots, \y, \dots) + g(\dots, \x, \dots) + g(\dots, \y, \dots) = (f + g)(\dots, \x, \dots) + (f + g)(\dots, \y, \dots)
+  \begin{aligned}
+  (f + g)(\dots, \x + \y, \dots) &= f(\dots, \x, \dots) + f(\dots, \y, \dots) \\
+  &\qquad + g(\dots, \x, \dots) + g(\dots, \y, \dots) \\
+  &= (f + g)(\dots, \x, \dots) + (f + g)(\dots, \y, \dots)
+  \end{aligned}
 \]
 and
 \[

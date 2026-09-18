@@ -158,7 +158,12 @@ Let \( n \ge 2 \), and assume the statement for trace-zero matrices of size \( n
 \]
 By the induction hypothesis there is an invertible \( \Q \in M_{n-1}(F) \) such that \( \Z_1 \coloneqq \Q^{-1}\A_1\Q \) has zero diagonal. Let \( \R = (1) \oplus \Q = \begin{pmatrix} 1 & \0\tp \\ \0 & \Q \end{pmatrix} \). By @thm-block-diagonal-arithmetic, \( \R \) is invertible with \( \R^{-1} = (1) \oplus \Q^{-1} \). By @thm-block-multiplication,
 \[
-\R^{-1}\M \R = \begin{pmatrix} 1 & \0\tp \\ \0 & \Q^{-1} \end{pmatrix}\begin{pmatrix} 0 & \r\tp \\ \e_1 & \A_1 \end{pmatrix}\begin{pmatrix} 1 & \0\tp \\ \0 & \Q \end{pmatrix} = \begin{pmatrix} 0 & \r\tp \Q \\ \Q^{-1}\e_1 & \Q^{-1}\A_1\Q \end{pmatrix} = \begin{pmatrix} 0 & \r\tp \Q \\ \Q^{-1}\e_1 & \Z_1 \end{pmatrix}.
+\begin{aligned}
+\R^{-1}\M \R
+  &= \begin{pmatrix} 1 & \0\tp \\ \0 & \Q^{-1} \end{pmatrix}\begin{pmatrix} 0 & \r\tp \\ \e_1 & \A_1 \end{pmatrix}\begin{pmatrix} 1 & \0\tp \\ \0 & \Q \end{pmatrix} \\
+  &= \begin{pmatrix} 0 & \r\tp \Q \\ \Q^{-1}\e_1 & \Q^{-1}\A_1\Q \end{pmatrix} = \begin{pmatrix} 0 & \r\tp \Q \\ \Q^{-1}\e_1 & \Z_1 \end{pmatrix}.
+\end{aligned}
+
 \]
 Its \( (1, 1) \)-entry is \( 0 \), and its other diagonal entries are those of \( \Z_1 \), which are \( 0 \). Since \( \R^{-1}\M \R = (\P \R)^{-1}\A(\P \R) \) by @thm-inverse-matrix-properties (3), and \( \P \R \) is invertible, \( \A \) is similar to a matrix with zero diagonal. This completes the induction.
 :::
@@ -442,7 +447,11 @@ with \( \N^s = 0 \) and \( g(\D) = 0 \).
 ::: {.solution}
 (a) First, \( \C^{k-1}\A = \A \C^{k-1} \) for all \( k \ge 1 \), by induction on \( k \) from \( \C \A = \A \C \). Hence
 \[
-[\A, \B \C^{k-1}] = \A \B \C^{k-1} - \B \C^{k-1}\A = \A \B \C^{k-1} - \B \A \C^{k-1} = (\A \B - \B \A)\C^{k-1} = \C^k .
+\begin{aligned}
+[\A, \B \C^{k-1}]
+  &= \A \B \C^{k-1} - \B \C^{k-1}\A = \A \B \C^{k-1} - \B \A \C^{k-1} \\
+  &= (\A \B - \B \A)\C^{k-1} = \C^k .
+\end{aligned}
 \]
 By @prp-commutator-properties (c), \( \tr \C^k = 0 \).
 

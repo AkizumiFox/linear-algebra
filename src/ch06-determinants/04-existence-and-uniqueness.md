@@ -68,7 +68,8 @@ For \( n = 2 \), write \( \a_1 = a_{11}\e_1 + a_{21}\e_2 \) and \( \a_2 = a_{12}
 \[
 \begin{aligned}
 f(\a_1, \a_2) &= a_{11}\, f(\e_1, \a_2) + a_{21}\, f(\e_2, \a_2) \\
-&= a_{11}a_{12}\, f(\e_1, \e_1) + a_{11}a_{22}\, f(\e_1, \e_2) + a_{21}a_{12}\, f(\e_2, \e_1) + a_{21}a_{22}\, f(\e_2, \e_2) .
+&= a_{11}a_{12}\, f(\e_1, \e_1) + a_{11}a_{22}\, f(\e_1, \e_2) \\
+&\qquad + a_{21}a_{12}\, f(\e_2, \e_1) + a_{21}a_{22}\, f(\e_2, \e_2) .
 \end{aligned}
 \]
 The first and last terms vanish because two arguments are equal, and \( f(\e_2, \e_1) = -f(\e_1, \e_2) \). What is left is \( (a_{11}a_{22} - a_{21}a_{12})\, f(\e_1, \e_2) \), the formula for \( n = 2 \).
@@ -423,7 +424,11 @@ In the next section we will see that the determinant can be read off from this t
 1. There is one term for each \( \sigma \in S_n \), that is, \( n! \) terms, and each is a product of \( n \) entries, which takes \( n - 1 \) multiplications. For \( n = 20 \), \( 20! \cdot 19 = 46\,225\,138\,155\,356\,160\,000 \approx 4.6 \times 10^{19} \). At \( 10^9 \) per second this takes about \( 4.6 \times 10^{10} \) seconds, roughly \( 1\,460 \) years.
 2. Step \( k \) costs \( (n - k)(1 + (n - k)) \) operations. With \( m = n - k \) running from \( 1 \) to \( n - 1 \), the total is
    \[
-   \sum_{m=1}^{n-1} m(m + 1) = \sum_{m=1}^{n-1} m^2 + \sum_{m=1}^{n-1} m = \frac{(n-1)n(2n-1)}{6} + \frac{(n-1)n}{2} = \frac{(n-1)n\big((2n - 1) + 3\big)}{6} = \frac{(n-1)n(n+1)}{3}.
+   \begin{aligned}
+   \sum_{m=1}^{n-1} m(m + 1) &= \sum_{m=1}^{n-1} m^2 + \sum_{m=1}^{n-1} m \\
+   &= \frac{(n-1)n(2n-1)}{6} + \frac{(n-1)n}{2} \\
+   &= \frac{(n-1)n\big((2n - 1) + 3\big)}{6} = \frac{(n-1)n(n+1)}{3}.
+   \end{aligned}
    \]
    For \( n = 20 \) this is \( \frac{19 \cdot 20 \cdot 21}{3} = 2\,660 \), a few microseconds. The Leibniz formula is a definition and a proof tool, not an algorithm.
 :::

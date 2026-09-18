@@ -247,7 +247,10 @@ and \( 1 \mid x-1 \mid (x-1)^2 \), so this is the Smith normal form.
 
 *The check.* The matrix \( x\I - \A \) has an entry \( -1 \), so \( \Delta_1 = 1 \). Its determinant is \( p_{\A} = (x-1)^3 \) — expanding along the first row,
 \[
-(x-2)\big[(x-2)(x+1) + 2\big] + \big[-(x+1) + 2\big] + 2\big[1 + (x-2)\big] = (x-2)(x^2 - x) + (1 - x) + 2(x-1),
+\begin{aligned}
+&(x-2)\big[(x-2)(x+1) + 2\big] + \big[-(x+1) + 2\big] + 2\big[1 + (x-2)\big] \\
+&\qquad = (x-2)(x^2 - x) + (1 - x) + 2(x-1),
+\end{aligned}
 \]
 which is \( (x-2)x(x-1) + (x-1) = (x-1)(x^2 - 2x + 1) = (x-1)^3 \) — so \( \Delta_3 = (x-1)^3 \). For \( \Delta_2 \), the minor on rows \( \{2,3\} \) and columns \( \{1,2\} \) is \( \det\begin{pmatrix} -1 & x-2 \\ -1 & -1\end{pmatrix} = 1 + (x-2) = x-1 \), so \( \Delta_2 \mid x - 1 \); and every \( 2 \times 2 \) minor is divisible by \( x - 1 \), as Claim 2 predicts from \( \D \). Hence \( \Delta_2 = x-1 \), and
 \[
@@ -286,7 +289,11 @@ Expanding the product and telescoping,
 \]
 for every \( k \ge 0 \). Therefore
 \[
-\M = \sum_{k=0}^{m} \big(x^{k}\I\big)\M_k = \sum_{k=0}^{m}\big(x^k\I - \A^k\big)\M_k + \sum_{k=0}^{m}\A^k\M_k = (x\I - \A)\underbrace{\sum_{k=0}^{m}\S_k\M_k}_{=\,\Q} + \underbrace{\sum_{k=0}^{m}\A^k\M_k}_{=\,\R},
+\begin{aligned}
+\M &= \sum_{k=0}^{m} \big(x^{k}\I\big)\M_k
+   = \sum_{k=0}^{m}\big(x^k\I - \A^k\big)\M_k + \sum_{k=0}^{m}\A^k\M_k \\
+  &= (x\I - \A)\underbrace{\sum_{k=0}^{m}\S_k\M_k}_{=\,\Q} + \underbrace{\sum_{k=0}^{m}\A^k\M_k}_{=\,\R},
+\end{aligned}
 \]
 with \( \Q \in M_n(F[x]) \) and \( \R \in M_n(F) \), as claimed.
 :::
@@ -348,7 +355,12 @@ the second form because \( \P(x\I-\A) = x\P - \P \A = x\P - \B \P = (x\I-\B)\P \
 
 **Step 4. \( \P \) is invertible.** Multiplying (3) by (4),
 \[
-\I = \V^{-1}\V = \bigl[\P + \Q(x\I-\A)\bigr]\bigl[\P' + \Q'(x\I-\B)\bigr] = \P \P' + \P \Q'(x\I-\B) + \Q(x\I-\A)\P' + \Q(x\I-\A)\Q'(x\I-\B).
+\begin{aligned}
+\I = \V^{-1}\V
+  &= \bigl[\P + \Q(x\I-\A)\bigr]\bigl[\P' + \Q'(x\I-\B)\bigr] \\
+  &= \P \P' + \P \Q'(x\I-\B) + \Q(x\I-\A)\P' \\
+  &\qquad + \Q(x\I-\A)\Q'(x\I-\B).
+\end{aligned}
 \]
 By the first identity in (4), \( (x\I-\A)\P' = \P'(x\I-\B) \), so the third summand is \( \Q \P'(x\I-\B) \) and
 \[
@@ -497,7 +509,13 @@ so the Smith normal form is \( \diag(1, 1, x^2, x^2) \), the invariant factors a
 
 (b) Now \( x\I - \A = \N_3 \oplus (x) \) with \( \N_3 = \begin{pmatrix} x & -1 & 0 \\ 0 & x & -1 \\ 0 & 0 & x\end{pmatrix} \). The minors of \( \N_3 \) are \( \{x, -1, 0\} \) for \( k = 1 \); \( \{x^2, -x, 1, 0\} \) for \( k = 2 \), the value \( 1 \) coming from rows \( \{1,2\} \) and columns \( \{2,3\} \); and \( x^3 \) for \( k = 3 \). By the remark, the \( k \times k \) minors of \( x\I - \A \) are those of \( \N_3 \) together with \( x \) times its \( (k-1) \times (k-1) \) minors, so
 \[
-\Delta_1 = 1, \qquad \Delta_2 = \gcd(x^2, -x, 1, x\cdot x, -x) = 1, \qquad \Delta_3 = \gcd(x^3,\ x\cdot x^2,\ -x\cdot x,\ x\cdot 1) = x, \qquad \Delta_4 = x^{4}.
+\begin{aligned}
+\Delta_1 &= 1, \\
+\Delta_2 &= \gcd(x^2, -x, 1, x\cdot x, -x) = 1, \\
+\Delta_3 &= \gcd(x^3,\ x\cdot x^2,\ -x\cdot x,\ x\cdot 1) = x, \\
+\Delta_4 &= x^{4}.
+\end{aligned}
+
 \]
 The Smith normal form is \( \diag(1, 1, x, x^3) \): the invariant factors are \( x \mid x^3 \), \( m_{\A} = x^3 \) is the last of them, and the Jordan form is \( \J_3(0) \oplus \J_1(0) \). Compared with (a) the determinants agree but \( \Delta_3 \) does not, which is exactly why the two matrices are not similar.
 

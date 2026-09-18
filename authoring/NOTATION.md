@@ -101,6 +101,9 @@ This list is fixed. A chapter that needs a new symbol adds it here, and a new ma
 | Type | Meaning |
 |---|---|
 | `\inner{\u}{\v}` | inner product, **linear in the first slot**, conjugate-linear in the second |
+| `\delta_{ij}` | Kronecker delta: 1 when i = j, 0 otherwise |
+| `\G` | Gram matrix of a list \( (\v_1, \dots, \v_k) \): \( (\G)_{ij} = \inner{\v_j}{\v_i} \), the index order chosen so that \( \G \) is Hermitian and \( \x^{*}\G\x = \norm{\sum x_j\v_j}^2 \) (Ch 10 §02, §06). **Local override:** in Ch 10 §08 `\G(i, j; c, s)` is a Givens rotation, which is the universal letter for it; no Gram matrix appears in that section, and the Givens form always carries its arguments on first use |
+| `P_n`, `T_n` | Legendre and Chebyshev polynomials (Ch 10 §§09–10), where both names are universal. §09 does use `P_U` and `P_{W_n}` for projections a few lines away, so keep the subscript doing the work: a subspace subscript means a projection, an integer subscript a polynomial, and §09 never abbreviates Legendre as `P_n` |
 | `\norm{\v}` | norm (induced unless stated) |
 | `U^{\perp}` | orthogonal complement |
 | `P_U` | orthogonal projection onto U |

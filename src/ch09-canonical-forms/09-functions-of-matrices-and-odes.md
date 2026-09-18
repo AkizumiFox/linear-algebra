@@ -108,7 +108,12 @@ The moduli \( (x - \mu_1)^{s_1}, \dots, (x-\mu_d)^{s_d} \) are pairwise coprime:
 \]
 the derivatives involved having order at most \( k_i - 1 \le s_l - 1 \). So \( p(\J_{k_i}(\lambda_i)) = f(\J_{k_i}(\lambda_i)) \) for every \( i \). Since evaluating a polynomial blockwise gives the polynomial of the block diagonal matrix (@thm-block-diagonal-arithmetic (a), (b)),
 \[
-p(\A) = p(\P \J \P^{-1}) = \P\,p(\J)\,\P^{-1} = \P\Bigl(\bigoplus_i p\bigl(\J_{k_i}(\lambda_i)\bigr)\Bigr)\P^{-1} = \P\Bigl(\bigoplus_i f\bigl(\J_{k_i}(\lambda_i)\bigr)\Bigr)\P^{-1} = f(\A),
+\begin{aligned}
+p(\A) = p(\P \J \P^{-1})
+  &= \P\,p(\J)\,\P^{-1}
+   = \P\Bigl(\bigoplus_i p\bigl(\J_{k_i}(\lambda_i)\bigr)\Bigr)\P^{-1} \\
+  &= \P\Bigl(\bigoplus_i f\bigl(\J_{k_i}(\lambda_i)\bigr)\Bigr)\P^{-1} = f(\A),
+\end{aligned}
 \]
 the second equality by @prp-similarity-invariants (c). The left-hand side mentions neither \( \P \) nor the order of the blocks, so neither does the right-hand side. This proves the theorem.
 :::
@@ -254,7 +259,12 @@ Part (b) is termwise differentiation, entry by entry. Everything after it is the
 
 (b) Fix a position \( (r,s) \). By @thm-exponential-series-converges the series \( \sum_m t^{m}(\A^{m})_{rs}/m! \) converges for every real \( t \), since \( (t\A)^{m} = t^{m}\A^{m} \). So (A2) applies with \( c_m = (\A^{m})_{rs}/m! \) and gives
 \[
-\frac{d}{dt}\,\bigl(e^{t\A}\bigr)_{rs} = \sum_{m \ge 1}\frac{m\,t^{m-1}}{m!}(\A^{m})_{rs} = \sum_{m \ge 1}\frac{t^{m-1}}{(m-1)!}\bigl(\A\cdot \A^{m-1}\bigr)_{rs} = \Bigl(\A\sum_{l \ge 0}\frac{t^{l}\A^{l}}{l!}\Bigr)_{rs},
+\begin{aligned}
+\frac{d}{dt}\,\bigl(e^{t\A}\bigr)_{rs}
+  &= \sum_{m \ge 1}\frac{m\,t^{m-1}}{m!}(\A^{m})_{rs}
+   = \sum_{m \ge 1}\frac{t^{m-1}}{(m-1)!}\bigl(\A\cdot \A^{m-1}\bigr)_{rs} \\
+  &= \Bigl(\A\sum_{l \ge 0}\frac{t^{l}\A^{l}}{l!}\Bigr)_{rs},
+\end{aligned}
 \]
 where the last step moves the constant matrix \( \A \) outside the limit: each entry of \( \A\bigl(\sum_{l \le L}t^l\A^l/l!\bigr) \) is a fixed linear combination of entries of the partial sum, so (A3) applies. Hence \( \frac{d}{dt}e^{t\A} = \A e^{t\A} \). The same computation with \( \A^{m} = \A^{m-1}\A \) gives \( e^{t\A}\A \).
 
@@ -379,7 +389,11 @@ Solve \( \x' = \A\x \) with \( \x(0) = (1, 0) \) for
 ::: {.solution}
 (a) \( p_{\A} = (x-1)^2 + 4 \), with roots \( \lambda = 1 \pm 2i \), distinct, so \( \A \) is diagonalizable over \( \nC \) and every block has size \( 1 \). Solving \( (\A - (1+2i)\I)\x = \0 \): the first row reads \( -2ix_1 - 2x_2 = 0 \), so \( x_2 = -ix_1 \) and \( (1, -i) \) is an eigenvector; \( (1, i) \) is one for \( 1 - 2i \). With \( \P = \begin{pmatrix} 1 & 1 \\ -i & i\end{pmatrix} \) we get \( \det \P = 2i \) and \( \P^{-1} = \tfrac{1}{2i}\begin{pmatrix} i & -1 \\ i & 1\end{pmatrix} = \tfrac12\begin{pmatrix} 1 & i \\ 1 & -i \end{pmatrix} \), so \( \P^{-1}\A \P = \diag(1+2i, 1-2i) \). By @cor-exponential-of-jordan-block,
 \[
-e^{t\A} = \P\diag\bigl(e^{(1+2i)t},\, e^{(1-2i)t}\bigr)\P^{-1} = \tfrac12\begin{pmatrix} e^{(1+2i)t} + e^{(1-2i)t} & i\bigl(e^{(1+2i)t} - e^{(1-2i)t}\bigr) \\ -i\bigl(e^{(1+2i)t} - e^{(1-2i)t}\bigr) & e^{(1+2i)t} + e^{(1-2i)t}\end{pmatrix}.
+\begin{aligned}
+e^{t\A}
+  &= \P\diag\bigl(e^{(1+2i)t},\, e^{(1-2i)t}\bigr)\P^{-1} \\
+  &= \tfrac12\begin{pmatrix} e^{(1+2i)t} + e^{(1-2i)t} & i\bigl(e^{(1+2i)t} - e^{(1-2i)t}\bigr) \\ -i\bigl(e^{(1+2i)t} - e^{(1-2i)t}\bigr) & e^{(1+2i)t} + e^{(1-2i)t}\end{pmatrix}.
+\end{aligned}
 \]
 By (A1), \( e^{(1 \pm 2i)t} = e^{t}(\cos 2t \pm i\sin 2t) \), so \( e^{(1+2i)t} + e^{(1-2i)t} = 2e^{t}\cos 2t \) and \( e^{(1+2i)t} - e^{(1-2i)t} = 2ie^{t}\sin 2t \). Substituting, and using \( i \cdot 2i = -2 \),
 \[
@@ -577,7 +591,13 @@ e^{\A}e^{\B} = \begin{pmatrix} 2 & 1 \\ 1 & 1\end{pmatrix}, \qquad e^{\B}e^{\A} 
 
 (b) Let \( \K = \A + \B = \begin{pmatrix} 0&1\\1&0\end{pmatrix} \). Then \( \K^2 = \I \), so \( \K^{2l} = \I \) and \( \K^{2l+1} = \K \). Splitting the partial sums by parity, which is legitimate because each entry sequence is a sum of two convergent sequences (A3),
 \[
-e^{\K} = \Bigl(\sum_{l \ge 0}\frac{1}{(2l)!}\Bigr)\I + \Bigl(\sum_{l \ge 0}\frac{1}{(2l+1)!}\Bigr)\K = \frac{e + e^{-1}}{2}\I + \frac{e - e^{-1}}{2}\K = \begin{pmatrix} \tfrac{e+e^{-1}}{2} & \tfrac{e - e^{-1}}{2} \\ \tfrac{e-e^{-1}}{2} & \tfrac{e+e^{-1}}{2}\end{pmatrix},
+\begin{aligned}
+e^{\K}
+  &= \Bigl(\sum_{l \ge 0}\frac{1}{(2l)!}\Bigr)\I + \Bigl(\sum_{l \ge 0}\frac{1}{(2l+1)!}\Bigr)\K \\
+  &= \frac{e + e^{-1}}{2}\I + \frac{e - e^{-1}}{2}\K
+   = \begin{pmatrix} \tfrac{e+e^{-1}}{2} & \tfrac{e - e^{-1}}{2} \\ \tfrac{e-e^{-1}}{2} & \tfrac{e+e^{-1}}{2}\end{pmatrix},
+\end{aligned}
+
 \]
 where the two scalar sums were identified by adding and subtracting the series for \( e^{1} \) and \( e^{-1} \) term by term (A1). Numerically the diagonal entries are about \( 1.543 \), not \( 2 \), so \( e^{\A+\B} \ne e^{\A}e^{\B} \).
 

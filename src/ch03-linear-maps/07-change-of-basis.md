@@ -168,11 +168,13 @@ Let \( R(x, y) = (y, x) \) on \( \nR^2 \), and \( \sB = ((1, 1), (1, -1)) \). Co
 ::: {.solution}
 Here \( \P = \mtx{\id}{\sB}{\sE} = \begin{pmatrix} 1 & 1 \\ 1 & -1 \end{pmatrix} \), with inverse \( \P^{-1} = \mtx{\id}{\sE}{\sB} = \frac12 \begin{pmatrix} 1 & 1 \\ 1 & -1 \end{pmatrix} \), found in the examples after @def-change-of-coordinates-matrix. Then
 \[
+\begin{aligned}
 \P^{-1}[R]_{\sE}\P
-= \frac12 \begin{pmatrix} 1 & 1 \\ 1 & -1 \end{pmatrix} \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix} \begin{pmatrix} 1 & 1 \\ 1 & -1 \end{pmatrix}
-= \frac12 \begin{pmatrix} 1 & 1 \\ 1 & -1 \end{pmatrix} \begin{pmatrix} 1 & -1 \\ 1 & 1 \end{pmatrix}
+&= \frac12 \begin{pmatrix} 1 & 1 \\ 1 & -1 \end{pmatrix} \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix} \begin{pmatrix} 1 & 1 \\ 1 & -1 \end{pmatrix} \\
+&= \frac12 \begin{pmatrix} 1 & 1 \\ 1 & -1 \end{pmatrix} \begin{pmatrix} 1 & -1 \\ 1 & 1 \end{pmatrix}
 = \frac12 \begin{pmatrix} 2 & 0 \\ 0 & -2 \end{pmatrix}
 = \begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix},
+\end{aligned}
 \]
 which agrees with the direct computation. The direct route was shorter here, because we chose \( \sB \) so that \( R \) acts simply on it. The formula earns its keep when the new matrix is not visible by inspection, or when we want to go back from the simple matrix to the standard one: \( [R]_{\sE} = \P\,[R]_{\sB}\,\P^{-1} \).
 :::

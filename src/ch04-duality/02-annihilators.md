@@ -116,7 +116,10 @@ Find a basis of \( U^{0} \) for \( U = \Span((1, 2, 0), (0, 1, 1)) \subseteq \nR
 ::: {.solution}
 By @thm-functionals-on-fn, every functional is \( \varphi_{\a}(\x) = \a\tp\x \) for a unique \( \a = (a_1, a_2, a_3) \). By linearity, \( \varphi_{\a} \) vanishes on \( U \) if and only if it vanishes on the two spanning vectors (a combination of vectors killed by \( \varphi_{\a} \) is killed, by @thm-linear-combination). These two conditions are
 \[
-a_1 + 2a_2 = 0, \qquad a_2 + a_3 = 0, \qquad \text{that is,} \qquad \A\a = \0 \quad \text{with} \quad \A = \begin{pmatrix} 1 & 2 & 0 \\ 0 & 1 & 1 \end{pmatrix},
+\begin{aligned}
+&a_1 + 2a_2 = 0, \qquad a_2 + a_3 = 0, \\
+&\text{that is,} \qquad \A\a = \0 \quad \text{with} \quad \A = \begin{pmatrix} 1 & 2 & 0 \\ 0 & 1 & 1 \end{pmatrix},
+\end{aligned}
 \]
 the matrix whose **rows** are the spanning vectors. So \( \varphi_{\a} \in U^{0} \) if and only if \( \a \in \nul(\A) \). Subtracting twice row 2 from row 1 gives the RREF
 \[
@@ -185,11 +188,18 @@ Parts (a)–(c) are unwinding definitions: fix a functional in one side and test
 
 \( (\subseteq) \) Let \( n = \dim V \). The subspaces \( U \), \( W \), \( U \cap W \) (@thm-intersection-subspaces) and \( U + W \) (@thm-subspace-sum) of \( V \) are finite-dimensional by @thm-subspace-dimension. The space \( V^{*} \) has dimension \( n \) by @cor-dimension-dual-space, so its subspaces \( U^{0} \), \( W^{0} \) are finite-dimensional too. By the Dimension Formula for Sums (@thm-dimension-formula-subspace-dim) in \( V^{*} \), then (c),
 \[
-\dim(U^{0} + W^{0}) = \dim U^{0} + \dim W^{0} - \dim(U^{0} \cap W^{0}) = \dim U^{0} + \dim W^{0} - \dim(U + W)^{0} .
+\begin{aligned}
+\dim(U^{0} + W^{0}) &= \dim U^{0} + \dim W^{0} - \dim(U^{0} \cap W^{0}) \\
+&= \dim U^{0} + \dim W^{0} - \dim(U + W)^{0} .
+\end{aligned}
 \]
 By @thm-dimension-annihilator applied to \( U \), \( W \) and \( U + W \), the right-hand side is
 \[
-(n - \dim U) + (n - \dim W) - \bigl(n - \dim(U + W)\bigr) = n - \bigl(\dim U + \dim W - \dim(U + W)\bigr) = n - \dim(U \cap W),
+\begin{aligned}
+&(n - \dim U) + (n - \dim W) - \bigl(n - \dim(U + W)\bigr) \\
+&\qquad = n - \bigl(\dim U + \dim W - \dim(U + W)\bigr) \\
+&\qquad = n - \dim(U \cap W),
+\end{aligned}
 \]
 where the last equality is @thm-dimension-formula-subspace-dim in \( V \). By @thm-dimension-annihilator once more, \( n - \dim(U \cap W) = \dim(U \cap W)^{0} \). So \( U^{0} + W^{0} \) is a subspace of \( (U \cap W)^{0} \) (by \( (\supseteq) \) and @thm-subspace-sum) with the same finite dimension, and @thm-dim-impl-eq gives \( U^{0} + W^{0} = (U \cap W)^{0} \). This proves the theorem.
 :::

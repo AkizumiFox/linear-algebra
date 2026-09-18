@@ -391,7 +391,11 @@ Let \( V \) be a vector space over \( F \) and \( (\u, \v, \w) \) a linearly ind
 1. Let \( a(\u + \v) + b(\v + \w) + c(\w + \u) = \0 \). Expanding and regrouping with the axioms of @def-vector-space gives \( (a + c)\u + (a + b)\v + (b + c)\w = \0 \). By independence of \( (\u, \v, \w) \), \( a + c = 0 \), \( a + b = 0 \) and \( b + c = 0 \). The first two give \( c = -a \) and \( b = -a \), and then the third gives \( -2a = 0 \). Since \( 2 \neq 0 \) in \( \nR \), \( a = 0 \), and hence \( b = c = 0 \). This proves independence.
 2. Over \( \nF_2 \),
 \[
-1(\u + \v) + 1(\v + \w) + 1(\w + \u) = (1 + 1)\u + (1 + 1)\v + (1 + 1)\w = 0\u + 0\v + 0\w = \0 ,
+\begin{aligned}
+1(\u + \v) + 1(\v + \w) + 1(\w + \u)
+&= (1 + 1)\u + (1 + 1)\v + (1 + 1)\w \\
+&= 0\u + 0\v + 0\w = \0 ,
+\end{aligned}
 \]
 using \( 1 + 1 = 0 \) in \( \nF_2 \) and @thm-zero-scalar-mult. The coefficients are \( 1 \neq 0 \), so the list is dependent. For an example, \( (\e_1, \e_2, \e_3) \) in \( \nF_2^3 \) is independent by the argument of @exm-linear-independence (a), which works over any field.
 3. Part (a) divided by \( 2 = 1 + 1 \), that is, used \( 2 \neq 0 \), to pass from \( -2a = 0 \) to \( a = 0 \). In \( \nF_2 \), \( 2 = 0 \). In any field with \( 1 + 1 \neq 0 \), the element \( 2 \) has an inverse, and the proof of (a) goes through word for word.

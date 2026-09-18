@@ -178,7 +178,11 @@ For the null space, each free variable gets one basis vector: set that free vari
 
 Let \( \A \in M_{m \times n}(F) \) have RREF \( \R = (r_{kj}) \) with pivot columns \( j_1 < \dots < j_r \). For each free column \( f \), define \( \s_f \in F^n \) by
 \[
-(\s_f)_f = 1, \qquad (\s_f)_{f'} = 0 \text{ for every other free } f', \qquad (\s_f)_{j_k} = -r_{kf} \text{ for } k = 1, \dots, r .
+\begin{aligned}
+(\s_f)_f &= 1, \\
+(\s_f)_{f'} &= 0 \text{ for every other free } f', \\
+(\s_f)_{j_k} &= -r_{kf} \text{ for } k = 1, \dots, r .
+\end{aligned}
 \]
 Then the vectors \( \s_f \), one for each free column \( f \), form a basis of \( \nul(\A) \). In particular \( \nullity \A = n - r \), the number of free columns.
 :::
@@ -207,12 +211,14 @@ Find bases of \( \col(\A) \), \( \row(\A) \) and \( \nul(\A) \), and the rank an
 ::: {.solution}
 Row reduce:
 \[
+\begin{aligned}
 \A \xrightarrow[R_3 \to R_3 - R_1]{R_2 \to R_2 - 2R_1}
 \begin{pmatrix} 1 & 2 & 0 & 0 & -1 \\ 0 & 0 & 1 & 0 & 2 \\ 0 & 0 & 1 & 1 & 3 \\ 0 & 0 & 1 & 1 & 3 \end{pmatrix}
-\xrightarrow[R_4 \to R_4 - R_2]{R_3 \to R_3 - R_2}
-\begin{pmatrix} 1 & 2 & 0 & 0 & -1 \\ 0 & 0 & 1 & 0 & 2 \\ 0 & 0 & 0 & 1 & 1 \\ 0 & 0 & 0 & 1 & 1 \end{pmatrix}
-\xrightarrow{R_4 \to R_4 - R_3}
+&\xrightarrow[R_4 \to R_4 - R_2]{R_3 \to R_3 - R_2}
+\begin{pmatrix} 1 & 2 & 0 & 0 & -1 \\ 0 & 0 & 1 & 0 & 2 \\ 0 & 0 & 0 & 1 & 1 \\ 0 & 0 & 0 & 1 & 1 \end{pmatrix} \\
+&\xrightarrow{R_4 \to R_4 - R_3}
 \R = \begin{pmatrix} 1 & 2 & 0 & 0 & -1 \\ 0 & 0 & 1 & 0 & 2 \\ 0 & 0 & 0 & 1 & 1 \\ 0 & 0 & 0 & 0 & 0 \end{pmatrix}.
+\end{aligned}
 \]
 The pivot columns are \( 1, 3, 4 \), and the free columns are \( 2, 5 \).
 
@@ -348,11 +354,13 @@ Decide whether \( \A\x = \b \) and \( \A\x = \b' \) are consistent, and count th
 ::: {.solution}
 We reduce both augmented matrices at once, carrying two right-hand columns; arithmetic is modulo \( 3 \), so \( -1 = 2 \) and \( -2 = 1 \).
 \[
+\begin{aligned}
 \left[\begin{array}{cccc|c|c} 1 & 1 & 0 & 2 & 1 & 1 \\ 1 & 2 & 1 & 0 & 0 & 0 \\ 2 & 0 & 1 & 2 & 1 & 0 \end{array}\right]
-\xrightarrow[R_3 \to R_3 - 2R_1]{R_2 \to R_2 - R_1}
-\left[\begin{array}{cccc|c|c} 1 & 1 & 0 & 2 & 1 & 1 \\ 0 & 1 & 1 & 1 & 2 & 2 \\ 0 & 1 & 1 & 1 & 2 & 1 \end{array}\right]
-\xrightarrow[R_1 \to R_1 - R_2]{R_3 \to R_3 - R_2}
+&\xrightarrow[R_3 \to R_3 - 2R_1]{R_2 \to R_2 - R_1}
+\left[\begin{array}{cccc|c|c} 1 & 1 & 0 & 2 & 1 & 1 \\ 0 & 1 & 1 & 1 & 2 & 2 \\ 0 & 1 & 1 & 1 & 2 & 1 \end{array}\right] \\
+&\xrightarrow[R_1 \to R_1 - R_2]{R_3 \to R_3 - R_2}
 \left[\begin{array}{cccc|c|c} 1 & 0 & 2 & 1 & 2 & 2 \\ 0 & 1 & 1 & 1 & 2 & 2 \\ 0 & 0 & 0 & 0 & 0 & 2 \end{array}\right].
+\end{aligned}
 \]
 Row operations act on each column separately, so deleting either right-hand column gives a reduction of the corresponding augmented matrix. For instance, in row 2, \( (1, 2, 1, 0) - (1, 1, 0, 2) = (0, 1, 1, -2) = (0, 1, 1, 1) \), and in row 3, \( (2, 0, 1, 2) - 2(1, 1, 0, 2) = (0, -2, 1, -2) = (0, 1, 1, 1) \).
 
@@ -416,13 +424,15 @@ Decide whether \( \v_1 = (1, 2, 0, 1) \), \( \v_2 = (2, 4, 1, 1) \), \( \v_3 = (
 ::: {.solution}
 Row reduce the matrix with these columns:
 \[
+\begin{aligned}
 \begin{pmatrix} 1 & 2 & 0 \\ 2 & 4 & 0 \\ 0 & 1 & 1 \\ 1 & 1 & -1 \end{pmatrix}
-\xrightarrow[R_4 \to R_4 - R_1]{R_2 \to R_2 - 2R_1}
-\begin{pmatrix} 1 & 2 & 0 \\ 0 & 0 & 0 \\ 0 & 1 & 1 \\ 0 & -1 & -1 \end{pmatrix}
-\xrightarrow{R_2 \leftrightarrow R_3}
-\begin{pmatrix} 1 & 2 & 0 \\ 0 & 1 & 1 \\ 0 & 0 & 0 \\ 0 & -1 & -1 \end{pmatrix}
-\xrightarrow[R_1 \to R_1 - 2R_2]{R_4 \to R_4 + R_2}
+&\xrightarrow[R_4 \to R_4 - R_1]{R_2 \to R_2 - 2R_1}
+\begin{pmatrix} 1 & 2 & 0 \\ 0 & 0 & 0 \\ 0 & 1 & 1 \\ 0 & -1 & -1 \end{pmatrix} \\
+&\xrightarrow{R_2 \leftrightarrow R_3}
+\begin{pmatrix} 1 & 2 & 0 \\ 0 & 1 & 1 \\ 0 & 0 & 0 \\ 0 & -1 & -1 \end{pmatrix} \\
+&\xrightarrow[R_1 \to R_1 - 2R_2]{R_4 \to R_4 + R_2}
 \begin{pmatrix} 1 & 0 & -2 \\ 0 & 1 & 1 \\ 0 & 0 & 0 \\ 0 & 0 & 0 \end{pmatrix}.
+\end{aligned}
 \]
 Only columns 1 and 2 are pivot columns, so the rank is \( 2 < 3 \), and the vectors are **dependent** by @thm-independence-spanning-by-rank (a). Column 3 of the RREF gives the relation, by @thm-basis-column-space (b): \( \v_3 = -2\v_1 + \v_2 \). Check: \( -2(1, 2, 0, 1) + (2, 4, 1, 1) = (0, 0, 1, -1) \). Moreover \( (\v_1, \v_2) \) is a basis of \( \Span(\v_1, \v_2, \v_3) \) by @thm-basis-column-space (a).
 :::
@@ -438,11 +448,13 @@ Extend the independent list \( (\v_1, \v_2) = ((1, 2, 0, 1), (2, 4, 1, 1)) \) fr
 ::: {.solution}
 Form \( \M = \begin{pmatrix} \v_1 & \v_2 & \e_1 & \e_2 & \e_3 & \e_4 \end{pmatrix} \) and row reduce:
 \[
+\begin{aligned}
 \begin{pmatrix} 1 & 2 & 1 & 0 & 0 & 0 \\ 2 & 4 & 0 & 1 & 0 & 0 \\ 0 & 1 & 0 & 0 & 1 & 0 \\ 1 & 1 & 0 & 0 & 0 & 1 \end{pmatrix}
-\xrightarrow[R_4 \to R_4 - R_1]{R_2 \to R_2 - 2R_1}
-\begin{pmatrix} 1 & 2 & 1 & 0 & 0 & 0 \\ 0 & 0 & -2 & 1 & 0 & 0 \\ 0 & 1 & 0 & 0 & 1 & 0 \\ 0 & -1 & -1 & 0 & 0 & 1 \end{pmatrix}
-\xrightarrow[\text{then } R_4 \to R_4 + R_2]{R_2 \leftrightarrow R_3}
+&\xrightarrow[R_4 \to R_4 - R_1]{R_2 \to R_2 - 2R_1}
+\begin{pmatrix} 1 & 2 & 1 & 0 & 0 & 0 \\ 0 & 0 & -2 & 1 & 0 & 0 \\ 0 & 1 & 0 & 0 & 1 & 0 \\ 0 & -1 & -1 & 0 & 0 & 1 \end{pmatrix} \\
+&\xrightarrow[\text{then } R_4 \to R_4 + R_2]{R_2 \leftrightarrow R_3}
 \begin{pmatrix} 1 & 2 & 1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 & 1 & 0 \\ 0 & 0 & -2 & 1 & 0 & 0 \\ 0 & 0 & -1 & 0 & 1 & 1 \end{pmatrix}
+\end{aligned}
 \]
 \[
 \xrightarrow[\text{then } R_3 \to -R_3]{R_3 \leftrightarrow R_4}
@@ -613,11 +625,13 @@ Let \( \v_1 = (1, 0, 2, 1) \), \( \v_2 = (2, 1, 3, 1) \), \( \v_3 = (0, 1, -1, -
 The rank is \( 2 < 3 \), so the list is dependent by @thm-independence-spanning-by-rank (a). Column 3 gives \( \v_3 = -2\v_1 + \v_2 \) (@thm-basis-column-space (b)); check: \( (-2, 0, -4, -2) + (2, 1, 3, 1) = (0, 1, -1, -1) \).
 2. By @thm-basis-column-space (a), \( (\v_1, \v_2) \) is a basis of \( \Span(\v_1, \v_2, \v_3) \). To extend it, row reduce \( \begin{pmatrix} \v_1 & \v_2 & \e_1 & \e_2 & \e_3 & \e_4 \end{pmatrix} \):
 \[
+\begin{aligned}
 \begin{pmatrix} 1 & 2 & 1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 1 & 0 & 0 \\ 2 & 3 & 0 & 0 & 1 & 0 \\ 1 & 1 & 0 & 0 & 0 & 1 \end{pmatrix}
-\xrightarrow[R_4 \to R_4 - R_1]{R_3 \to R_3 - 2R_1}
-\begin{pmatrix} 1 & 2 & 1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 1 & 0 & 0 \\ 0 & -1 & -2 & 0 & 1 & 0 \\ 0 & -1 & -1 & 0 & 0 & 1 \end{pmatrix}
-\xrightarrow[R_4 \to R_4 + R_2]{R_3 \to R_3 + R_2}
+&\xrightarrow[R_4 \to R_4 - R_1]{R_3 \to R_3 - 2R_1}
+\begin{pmatrix} 1 & 2 & 1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 1 & 0 & 0 \\ 0 & -1 & -2 & 0 & 1 & 0 \\ 0 & -1 & -1 & 0 & 0 & 1 \end{pmatrix} \\
+&\xrightarrow[R_4 \to R_4 + R_2]{R_3 \to R_3 + R_2}
 \begin{pmatrix} 1 & 2 & 1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 1 & 0 & 0 \\ 0 & 0 & -2 & 1 & 1 & 0 \\ 0 & 0 & -1 & 1 & 0 & 1 \end{pmatrix}
+\end{aligned}
 \]
 \[
 \xrightarrow[\text{then } R_3 \to -R_3]{R_3 \leftrightarrow R_4}
@@ -634,7 +648,10 @@ This echelon form has pivots in columns \( 1, 2, 3, 4 \), which are the pivot co
 
 Let \( U = \Span(\u_1, \u_2, \u_3) \) and \( W = \Span(\w_1, \w_2) \) in \( \nR^5 \), where
 \[
-\u_1 = (1, 1, 0, 0, 1), \quad \u_2 = (0, 1, 1, 0, 0), \quad \u_3 = (1, 0, 0, 1, 0), \quad \w_1 = (1, 2, 2, 1, 2), \quad \w_2 = (0, 0, 1, 1, 1).
+\begin{aligned}
+&\u_1 = (1, 1, 0, 0, 1), \quad \u_2 = (0, 1, 1, 0, 0), \quad \u_3 = (1, 0, 0, 1, 0), \\
+&\w_1 = (1, 2, 2, 1, 2), \quad \w_2 = (0, 0, 1, 1, 1).
+\end{aligned}
 \]
 Find \( \dim U \), \( \dim W \), a basis of \( U + W \) and a basis of \( U \cap W \). Hence verify @thm-dimension-formula-subspace-dim.
 :::
@@ -642,11 +659,13 @@ Find \( \dim U \), \( \dim W \), a basis of \( U + W \) and a basis of \( U \cap
 ::: {.solution}
 Row reduce \( \M = \begin{pmatrix} \u_1 & \u_2 & \u_3 & \w_1 & \w_2 \end{pmatrix} \):
 \[
+\begin{aligned}
 \begin{pmatrix} 1 & 0 & 1 & 1 & 0 \\ 1 & 1 & 0 & 2 & 0 \\ 0 & 1 & 0 & 2 & 1 \\ 0 & 0 & 1 & 1 & 1 \\ 1 & 0 & 0 & 2 & 1 \end{pmatrix}
-\xrightarrow[R_5 \to R_5 - R_1]{R_2 \to R_2 - R_1}
-\begin{pmatrix} 1 & 0 & 1 & 1 & 0 \\ 0 & 1 & -1 & 1 & 0 \\ 0 & 1 & 0 & 2 & 1 \\ 0 & 0 & 1 & 1 & 1 \\ 0 & 0 & -1 & 1 & 1 \end{pmatrix}
-\xrightarrow{R_3 \to R_3 - R_2}
+&\xrightarrow[R_5 \to R_5 - R_1]{R_2 \to R_2 - R_1}
+\begin{pmatrix} 1 & 0 & 1 & 1 & 0 \\ 0 & 1 & -1 & 1 & 0 \\ 0 & 1 & 0 & 2 & 1 \\ 0 & 0 & 1 & 1 & 1 \\ 0 & 0 & -1 & 1 & 1 \end{pmatrix} \\
+&\xrightarrow{R_3 \to R_3 - R_2}
 \begin{pmatrix} 1 & 0 & 1 & 1 & 0 \\ 0 & 1 & -1 & 1 & 0 \\ 0 & 0 & 1 & 1 & 1 \\ 0 & 0 & 1 & 1 & 1 \\ 0 & 0 & -1 & 1 & 1 \end{pmatrix}
+\end{aligned}
 \]
 \[
 \xrightarrow[R_5 \to R_5 + R_3]{R_4 \to R_4 - R_3}
@@ -677,7 +696,12 @@ Let \( \A, \B \in M_{m \times n}(F) \). Prove that \( \rank(\A + \B) \le \rank \
 ::: {.solution}
 The \( j \)-th column of \( \A + \B \) is \( \a_j + \b_j \), which lies in \( \col(\A) + \col(\B) \) (@def-sum-of-subspaces). This sum is a subspace (@thm-subspace-sum), so by @thm-span-subspace, \( \col(\A + \B) \subseteq \col(\A) + \col(\B) \). By @thm-subspace-dimension and @thm-dimension-formula-subspace-dim,
 \[
-\rank(\A + \B) \le \dim(\col(\A) + \col(\B)) = \rank \A + \rank \B - \dim(\col(\A) \cap \col(\B)) \le \rank \A + \rank \B .
+\begin{aligned}
+\rank(\A + \B)
+&\le \dim(\col(\A) + \col(\B)) \\
+&= \rank \A + \rank \B - \dim(\col(\A) \cap \col(\B)) \\
+&\le \rank \A + \rank \B .
+\end{aligned}
 \]
 For strictness, take \( \A = \I_2 \) and \( \B = -\I_2 \) over \( \nR \): \( \rank(\A + \B) = \rank 0 = 0 < 2 + 2 \).
 :::

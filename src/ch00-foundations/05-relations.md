@@ -139,7 +139,11 @@ The word "representative" is chosen carefully. A class is one set, but it usuall
 1. For equality on \( X \), \( [x] = \{x\} \). Every class has one element.
 2. For congruence modulo \( 3 \) on \( \nZ \):
    \[
-   [0] = \{ \dots, -6, -3, 0, 3, 6, \dots \}, \quad [1] = \{ \dots, -5, -2, 1, 4, 7, \dots \}, \quad [2] = \{ \dots, -4, -1, 2, 5, 8, \dots \}.
+   \begin{aligned}
+   {[0]} &= \{ \dots, -6, -3, 0, 3, 6, \dots \}, \\
+   {[1]} &= \{ \dots, -5, -2, 1, 4, 7, \dots \}, \\
+   {[2]} &= \{ \dots, -4, -1, 2, 5, 8, \dots \}.
+   \end{aligned}
    \]
    Here \( [0] = [3] = [-3] \) and \( [2] = [-1] \): one class, many names.
 3. For "same length" on strings of \( a, b \), the class of \( ab \) is \( \{ aa, ab, ba, bb \} \), and the class of the empty string contains only the empty string.

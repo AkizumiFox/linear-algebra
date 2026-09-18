@@ -30,9 +30,11 @@ A \( 1 \times 1 \) minor is a single entry, \( \det \A_{\{i\},\{j\}} = a_{ij} \)
 \]
 Its \( 2 \times 2 \) minors all use \( I = \{1, 2\} \), and there are three choices of \( J \):
 \[
-\det \A_{I,\{1,2\}} = \det\begin{pmatrix} 1 & 2 \\ 0 & 1 \end{pmatrix} = 1, \quad
-\det \A_{I,\{1,3\}} = \det\begin{pmatrix} 1 & 0 \\ 0 & 3 \end{pmatrix} = 3, \quad
-\det \A_{I,\{2,3\}} = \det\begin{pmatrix} 2 & 0 \\ 1 & 3 \end{pmatrix} = 6.
+\begin{aligned}
+\det \A_{I,\{1,2\}} &= \det\begin{pmatrix} 1 & 2 \\ 0 & 1 \end{pmatrix} = 1, \\
+\det \A_{I,\{1,3\}} &= \det\begin{pmatrix} 1 & 0 \\ 0 & 3 \end{pmatrix} = 3, \\
+\det \A_{I,\{2,3\}} &= \det\begin{pmatrix} 2 & 0 \\ 1 & 3 \end{pmatrix} = 6.
+\end{aligned}
 \]
 Its six \( 1 \times 1 \) minors are its entries. It has no \( 3 \times 3 \) minors, since it has only two rows.
 
@@ -96,7 +98,10 @@ Find \( \rank \A(t) \) for every \( t \).
 ::: {.solution}
 The only \( 3 \times 3 \) minor is \( \det \A(t) \). By cofactor expansion along the first row (@thm-laplace-expansion),
 \[
-\det \A(t) = 1\cdot(t^2 - 18) - 2\cdot(2t - 9) + 1\cdot(12 - 3t) = t^2 - 7t + 12 = (t - 3)(t - 4).
+\begin{aligned}
+\det \A(t) &= 1\cdot(t^2 - 18) - 2\cdot(2t - 9) + 1\cdot(12 - 3t) \\
+&= t^2 - 7t + 12 = (t - 3)(t - 4).
+\end{aligned}
 \]
 So for \( t \ne 3, 4 \), \( \A(t) \) has a non-zero \( 3 \times 3 \) minor and \( \rank \A(t) = 3 \) by @thm-rank-via-minors.
 
@@ -260,7 +265,10 @@ For \( s \in \nQ \), let \( \A(s) = \begin{pmatrix} 1 & s & 1 \\ s & 1 & 1 \\ 1 
 ::: {.solution}
 By cofactor expansion along the first row (@thm-laplace-expansion),
 \[
-\det \A(s) = 1\cdot(s - 1) - s\,(s^2 - 1) + 1\cdot(s - 1) = -s^3 + 3s - 2 = -(s - 1)^2(s + 2).
+\begin{aligned}
+\det \A(s) &= 1\cdot(s - 1) - s\,(s^2 - 1) + 1\cdot(s - 1) \\
+&= -s^3 + 3s - 2 = -(s - 1)^2(s + 2).
+\end{aligned}
 \]
 If \( s \ne 1, -2 \), this \( 3 \times 3 \) minor is non-zero, so \( \rank \A(s) = 3 \) by @thm-rank-via-minors.
 
@@ -350,7 +358,10 @@ The **matrix-tree theorem** says that for every connected network, \( \det \L_0 
 \]
 (Diagonal entries count the edges at a vertex; off-diagonal entries are \( -1 \) for each edge joining two vertices.) Expanding along the first row,
 \[
-\det \L_0 = \det\begin{pmatrix} 3 & -1 & -1 \\ -1 & 2 & -1 \\ -1 & -1 & 3 \end{pmatrix} = 3(6 - 1) + 1\cdot(-3 - 1) - 1\cdot(1 + 2) = 15 - 4 - 3 = 8 .
+\begin{aligned}
+\det \L_0 &= \det\begin{pmatrix} 3 & -1 & -1 \\ -1 & 2 & -1 \\ -1 & -1 & 3 \end{pmatrix} \\
+&= 3(6 - 1) + 1\cdot(-3 - 1) - 1\cdot(1 + 2) = 15 - 4 - 3 = 8 .
+\end{aligned}
 \]
 
 (b) There are \( \binom{5}{3} = 10 \) sets of three edges. Three edges on four vertices connect everything exactly when they contain no cycle, and the only \( 3 \)-edge cycles are the triangles \( \{e_1, e_2, e_5\} \) (vertices \( 1, 2, 3 \)) and \( \{e_3, e_4, e_5\} \) (vertices \( 1, 3, 4 \)). So there are \( 10 - 2 = 8 \) spanning trees, matching \( \det \L_0 \).

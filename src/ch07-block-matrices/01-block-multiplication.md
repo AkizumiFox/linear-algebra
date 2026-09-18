@@ -81,7 +81,12 @@ Fix \( r, t \), and let \( 1 \le i \le m_r \) and \( 1 \le k \le p_t \). Put \( 
 \]
 The sets \( J_1, \dots, J_b \) are disjoint with union \( \{1, \dots, n\} \), so the finite sum may be grouped according to them. In the group for \( J_s \), substitute \( j = \nu_{s-1} + l \); as \( l \) runs through \( 1, \dots, n_s \), \( j \) runs through \( J_s \) exactly once. Hence
 \[
-\big((\A \B)_{rt}\big)_{ik} = \sum_{s=1}^{b} \sum_{j \in J_s} a_{i^*j}\,b_{jk^*} = \sum_{s=1}^{b} \sum_{l=1}^{n_s} a_{\mu_{r-1}+i,\ \nu_{s-1}+l}\ b_{\nu_{s-1}+l,\ \rho_{t-1}+k} = \sum_{s=1}^{b} \sum_{l=1}^{n_s} (\A_{rs})_{il}\,(\B_{st})_{lk},
+\begin{aligned}
+\big((\A \B)_{rt}\big)_{ik}
+  &= \sum_{s=1}^{b} \sum_{j \in J_s} a_{i^*j}\,b_{jk^*} \\
+  &= \sum_{s=1}^{b} \sum_{l=1}^{n_s} a_{\mu_{r-1}+i,\ \nu_{s-1}+l}\ b_{\nu_{s-1}+l,\ \rho_{t-1}+k} \\
+  &= \sum_{s=1}^{b} \sum_{l=1}^{n_s} (\A_{rs})_{il}\,(\B_{st})_{lk},
+\end{aligned}
 \]
 where the last step is the definition of the blocks \( \A_{rs} \) and \( \B_{st} \). By @def-matrix-multiplication the inner sum is \( (\A_{rs}\B_{st})_{ik} \), and by @def-matrix-addition the outer sum is the \( (i, k) \)-entry of \( \sum_s \A_{rs}\B_{st} \). Since \( i \) and \( k \) were arbitrary, \( (\A \B)_{rt} = \sum_s \A_{rs}\B_{st} \). This proves the theorem.
 :::
@@ -138,10 +143,12 @@ Give \( \A \) the row partition \( m \) and the column partition \( 1, \dots, 1 
 
 Each term \( \a_k\r_k \) is a column times a row, an **outer product**, and it has rank at most \( 1 \): its columns are the multiples \( r_{kj}\a_k \) of the single vector \( \a_k \). So the corollary writes every product of an \( m \times n \) and an \( n \times p \) matrix as a sum of \( n \) matrices of rank at most one, in the spirit of @exr-rank-factorization-b3, which writes a matrix of rank \( r \) as a sum of \( r \) rank-one matrices. For example,
 \[
-\begin{pmatrix} 1 & 2 \\ 3 & 4 \\ 0 & 1 \end{pmatrix}\begin{pmatrix} 1 & 0 & 2 \\ -1 & 1 & 1 \end{pmatrix}
-= \begin{pmatrix} 1 \\ 3 \\ 0 \end{pmatrix}\begin{pmatrix} 1 & 0 & 2 \end{pmatrix} + \begin{pmatrix} 2 \\ 4 \\ 1 \end{pmatrix}\begin{pmatrix} -1 & 1 & 1 \end{pmatrix}
-= \begin{pmatrix} 1 & 0 & 2 \\ 3 & 0 & 6 \\ 0 & 0 & 0 \end{pmatrix} + \begin{pmatrix} -2 & 2 & 2 \\ -4 & 4 & 4 \\ -1 & 1 & 1 \end{pmatrix}
-= \begin{pmatrix} -1 & 2 & 4 \\ -1 & 4 & 10 \\ -1 & 1 & 1 \end{pmatrix},
+\begin{aligned}
+&\begin{pmatrix} 1 & 2 \\ 3 & 4 \\ 0 & 1 \end{pmatrix}\begin{pmatrix} 1 & 0 & 2 \\ -1 & 1 & 1 \end{pmatrix} \\
+&\qquad = \begin{pmatrix} 1 \\ 3 \\ 0 \end{pmatrix}\begin{pmatrix} 1 & 0 & 2 \end{pmatrix} + \begin{pmatrix} 2 \\ 4 \\ 1 \end{pmatrix}\begin{pmatrix} -1 & 1 & 1 \end{pmatrix} \\
+&\qquad = \begin{pmatrix} 1 & 0 & 2 \\ 3 & 0 & 6 \\ 0 & 0 & 0 \end{pmatrix} + \begin{pmatrix} -2 & 2 & 2 \\ -4 & 4 & 4 \\ -1 & 1 & 1 \end{pmatrix} \\
+&\qquad = \begin{pmatrix} -1 & 2 & 4 \\ -1 & 4 & 10 \\ -1 & 1 & 1 \end{pmatrix},
+\end{aligned}
 \]
 which is the product computed entry by entry.
 
@@ -324,7 +331,11 @@ Let \( T \colon \nR^3 \to \nR^3 \), \( T(x, y, z) = (y, z, x) \), and \( U = \{ 
 ::: {.solution}
 If \( x + y + z = 0 \), then the entries of \( T(x, y, z) = (y, z, x) \) also sum to \( 0 \), so \( T \) maps \( U \) into \( U \). The vectors \( \u_1, \u_2 \) lie in \( U \) and are independent (look at the first entries, then the last), and \( \dim U = 2 \) since \( U \) is the kernel of the non-zero functional \( (x, y, z) \mapsto x + y + z \) (@thm-rank-nullity). So \( (\u_1, \u_2) \) is a basis of \( U \) (@thm-right-size-basis), and \( \sB \) is a basis of \( \nR^3 \): in a relation \( a\u_1 + b\u_2 + c\e_3 = \0 \), the entries sum to \( c = 0 \), and then \( a = b = 0 \), so \( \sB \) is an independent list of \( 3 \) vectors (@thm-right-size-basis). Now
 \[
-T\u_1 = (-1, 0, 1) = -\u_1 - \u_2, \qquad T\u_2 = (1, -1, 0) = \u_1, \qquad T\e_3 = (0, 1, 0) = \u_2 + \e_3,
+\begin{aligned}
+T\u_1 &= (-1, 0, 1) = -\u_1 - \u_2, \\
+T\u_2 &= (1, -1, 0) = \u_1, \\
+T\e_3 &= (0, 1, 0) = \u_2 + \e_3,
+\end{aligned}
 \]
 so
 \[
@@ -384,7 +395,11 @@ both with row and column partition \( 2, 1 \).
 ::: {.solution}
 (a) Write \( \M = \begin{pmatrix} \A & \b \\ \c & d \end{pmatrix} \) and \( \N = \begin{pmatrix} \E & \f \\ \g & h \end{pmatrix} \) with \( \A = \begin{pmatrix} 1 & 2 \\ 0 & 1 \end{pmatrix} \), \( \b = \begin{pmatrix} 1 \\ -1 \end{pmatrix} \), \( \c = \begin{pmatrix} 2 & 0 \end{pmatrix} \), \( d = (3) \), \( \E = \begin{pmatrix} 1 & 0 \\ 1 & 1 \end{pmatrix} \), \( \f = \begin{pmatrix} 0 \\ 2 \end{pmatrix} \), \( \g = \begin{pmatrix} 1 & -1 \end{pmatrix} \), \( h = (1) \). The partitions are conformable (both middle partitions are \( 2, 1 \)), so by @thm-block-multiplication
 \[
-\A \E + \b\g = \begin{pmatrix} 3 & 2 \\ 1 & 1 \end{pmatrix} + \begin{pmatrix} 1 & -1 \\ -1 & 1 \end{pmatrix} = \begin{pmatrix} 4 & 1 \\ 0 & 2 \end{pmatrix}, \qquad \A\f + \b h = \begin{pmatrix} 4 \\ 2 \end{pmatrix} + \begin{pmatrix} 1 \\ -1 \end{pmatrix} = \begin{pmatrix} 5 \\ 1 \end{pmatrix},
+\begin{aligned}
+\A \E + \b\g &= \begin{pmatrix} 3 & 2 \\ 1 & 1 \end{pmatrix} + \begin{pmatrix} 1 & -1 \\ -1 & 1 \end{pmatrix} = \begin{pmatrix} 4 & 1 \\ 0 & 2 \end{pmatrix}, \\
+\A\f + \b h &= \begin{pmatrix} 4 \\ 2 \end{pmatrix} + \begin{pmatrix} 1 \\ -1 \end{pmatrix} = \begin{pmatrix} 5 \\ 1 \end{pmatrix},
+\end{aligned}
+
 \]
 \[
 \c \E + d\g = \begin{pmatrix} 2 & 0 \end{pmatrix} + \begin{pmatrix} 3 & -3 \end{pmatrix} = \begin{pmatrix} 5 & -3 \end{pmatrix}, \qquad \c\f + dh = (0) + (3) = (3).

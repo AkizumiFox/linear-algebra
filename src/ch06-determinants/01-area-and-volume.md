@@ -137,7 +137,12 @@ Using only (R1) and (R2), show that \( D(\u, \v) = -D(\v, \u) \) for all \( \u, 
 ::: {.solution}
 Apply shears and one scaling:
 \[
-  D(\u, \v) \overset{\text{(R2)}}{=} D(\u + \v, \v) \overset{\text{(R2)}}{=} D\bigl(\u + \v, \v - (\u + \v)\bigr) = D(\u + \v, -\u) \overset{\text{(R2)}}{=} D\bigl((\u + \v) + (-\u), -\u\bigr) = D(\v, -\u) \overset{\text{(R1)}}{=} -D(\v, \u).
+  \begin{aligned}
+  D(\u, \v) &\overset{\text{(R2)}}{=} D(\u + \v, \v) \\
+  &\overset{\text{(R2)}}{=} D\bigl(\u + \v, \v - (\u + \v)\bigr) = D(\u + \v, -\u) \\
+  &\overset{\text{(R2)}}{=} D\bigl((\u + \v) + (-\u), -\u\bigr) = D(\v, -\u) \\
+  &\overset{\text{(R1)}}{=} -D(\v, \u).
+  \end{aligned}
 \]
 With \( \u = \e_1 \), \( \v = \e_2 \) and (R4), \( D(\e_2, \e_1) = -D(\e_1, \e_2) = -1 \). This agrees with \( ad - bc = 0 \cdot 0 - 1 \cdot 1 \) for the columns \( (0, 1), (1, 0) \).
 :::

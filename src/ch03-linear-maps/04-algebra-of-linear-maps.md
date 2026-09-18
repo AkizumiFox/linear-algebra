@@ -73,7 +73,10 @@ For \( \A \in M_{m \times n}(F) \), write \( T_\A \colon F^n \to F^m \), \( \x \
 ::: {.solution}
 (a) Let \( \x \in F^n \). By @def-space-of-linear-maps and distributivity (@thm-matrix-multiplication-properties),
 \[
-(T_\A + T_\B)(\x) = \A\x + \B\x = (\A + \B)\x = T_{\A + \B}(\x), \qquad (cT_\A)(\x) = c(\A\x) = (c\A)\x = T_{c\A}(\x).
+\begin{aligned}
+(T_\A + T_\B)(\x) &= \A\x + \B\x = (\A + \B)\x = T_{\A + \B}(\x), \\
+(cT_\A)(\x) &= c(\A\x) = (c\A)\x = T_{c\A}(\x).
+\end{aligned}
 \]
 The maps agree at every \( \x \), so they are equal. So adding and scaling matrix maps is adding and scaling matrices.
 
@@ -105,7 +108,11 @@ Let \( U, V, W, X \) be vector spaces over \( F \).
 3. **(Identities)** If \( T \in \cL(U, V) \), then \( T\id_U = T = \id_V T \).
 4. **(Distributivity)** If \( T, T_1, T_2 \in \cL(U, V) \), \( S, S_1, S_2 \in \cL(V, W) \) and \( c \in F \), then
 \[
-(S_1 + S_2)T = S_1T + S_2T, \qquad S(T_1 + T_2) = ST_1 + ST_2, \qquad (cS)T = c(ST) = S(cT).
+\begin{aligned}
+(S_1 + S_2)T &= S_1T + S_2T, \\
+S(T_1 + T_2) &= ST_1 + ST_2, \\
+(cS)T &= c(ST) = S(cT).
+\end{aligned}
 \]
 :::
 :::
@@ -212,7 +219,10 @@ T^jT^{k+1} = T^j(T^kT) = (T^jT^k)T = T^{j+k}T = T^{j+k+1} .
 
 (b) Let \( p = \sum_{i=0}^{m} a_ix^i \) and \( q = \sum_{j=0}^{l} b_jx^j \). The statement for sums holds because \( (a_i + b_i)T^i = a_iT^i + b_iT^i \) in the vector space \( \cL(V) \) (@thm-linear-maps-vector-space). For products, the coefficient of \( x^k \) in \( pq \) is \( \sum_{i+j=k} a_ib_j \) (@def-polynomial-ring), so
 \[
-(pq)(T) = \sum_k \Bigl( \sum_{i+j=k} a_ib_j \Bigr) T^k = \sum_{i=0}^{m} \sum_{j=0}^{l} (a_ib_j)\,T^iT^j = \Bigl( \sum_{i=0}^{m} a_iT^i \Bigr)\Bigl( \sum_{j=0}^{l} b_jT^j \Bigr) = p(T)\,q(T),
+\begin{aligned}
+(pq)(T) &= \sum_k \Bigl( \sum_{i+j=k} a_ib_j \Bigr) T^k = \sum_{i=0}^{m} \sum_{j=0}^{l} (a_ib_j)\,T^iT^j \\
+&= \Bigl( \sum_{i=0}^{m} a_iT^i \Bigr)\Bigl( \sum_{j=0}^{l} b_jT^j \Bigr) = p(T)\,q(T),
+\end{aligned}
 \]
 where the second equality uses (a), and the third uses both distributive laws and \( (a_iT^i)(b_jT^j) = (a_ib_j)\,T^iT^j \), all from @thm-composition-linear (d).
 

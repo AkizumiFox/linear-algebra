@@ -71,7 +71,13 @@ By @thm-invariant-subspace-matrix, \( p_T = f g \) with \( f = p_{T|_U} \) and \
 \]
 Adding, and using @thm-multiplicity-of-product and then @thm-roots-with-multiplicity for the split polynomial \( p_T \),
 \[
-\deg f + \deg g = \deg p_T = \sum_{i=1}^{k} \operatorname{mult}_{c_i}(p_T) = \sum_{i=1}^{k} \operatorname{mult}_{c_i}(f) + \sum_{i=1}^{k} \operatorname{mult}_{c_i}(g) \le \deg f + \deg g .
+\begin{aligned}
+\deg f + \deg g = \deg p_T
+  &= \sum_{i=1}^{k} \operatorname{mult}_{c_i}(p_T) \\
+  &= \sum_{i=1}^{k} \operatorname{mult}_{c_i}(f) + \sum_{i=1}^{k} \operatorname{mult}_{c_i}(g) \\
+  &\le \deg f + \deg g .
+\end{aligned}
+
 \]
 So both inequalities above are equalities, and \( f \) and \( g \) split over \( F \) by @thm-roots-with-multiplicity.
 :::

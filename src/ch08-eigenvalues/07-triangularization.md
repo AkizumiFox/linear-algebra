@@ -184,7 +184,10 @@ Show that \( \A \) is not diagonalizable but is triangularizable over \( \nR \),
 ::: {.solution}
 *The characteristic polynomial.* Expanding along the first row (@thm-laplace-expansion over \( \nR[x] \)),
 \[
-p_{\A} = \det\begin{pmatrix} x - 2 & 0 & -1 \\ 0 & x - 2 & -1 \\ -1 & 1 & x - 2 \end{pmatrix} = (x - 2)\big[(x - 2)^2 + 1\big] + (-1)\det\begin{pmatrix} 0 & x - 2 \\ -1 & 1 \end{pmatrix}.
+\begin{aligned}
+p_{\A} &= \det\begin{pmatrix} x - 2 & 0 & -1 \\ 0 & x - 2 & -1 \\ -1 & 1 & x - 2 \end{pmatrix} \\
+  &= (x - 2)\big[(x - 2)^2 + 1\big] + (-1)\det\begin{pmatrix} 0 & x - 2 \\ -1 & 1 \end{pmatrix}.
+\end{aligned}
 \]
 The last determinant is \( 0 \cdot 1 - (x - 2)(-1) = x - 2 \), so \( p_{\A} = (x - 2)\big[(x - 2)^2 + 1 - 1\big] = (x - 2)^3 \). It splits, so \( \A \) is triangularizable by @thm-triangularization.
 
@@ -268,7 +271,11 @@ For each real matrix, find an invertible \( \P \) such that \( \P^{-1}\A \P \) i
 
 (b) \( \A\e_2 = (0, 3, 0) = 3\e_2 \), so \( \v_1 = \e_2 \) is an eigenvector for \( 3 \). Let \( U = \Span(\e_2) \) and extend to \( (\e_2, \e_1, \e_3) \). Then \( \A\e_1 = (2, 1, 1) = \e_2 + 2\e_1 + \e_3 \) and \( \A\e_3 = (1, 1, 2) = \e_2 + \e_1 + 2\e_3 \), so the induced operator has matrix \( \begin{pmatrix} 2 & 1 \\ 1 & 2 \end{pmatrix} \) in the basis \( (\e_1 + U, \e_3 + U) \). Its characteristic polynomial is \( x^2 - 4x + 3 = (x - 3)(x - 1) \), with eigenvectors \( (1, 1) \) for \( 3 \) and \( (1, -1) \) for \( 1 \), that is, \( \e_1 + \e_3 + U \) and \( \e_1 - \e_3 + U \). Lifting gives the basis \( (\e_2,\ \e_1 + \e_3,\ \e_1 - \e_3) \). Now
 \[
-\A(\e_1 + \e_3) = (3, 2, 3) = 2\e_2 + 3(\e_1 + \e_3), \qquad \A(\e_1 - \e_3) = (1, 0, -1) = \e_1 - \e_3,
+\begin{aligned}
+\A(\e_1 + \e_3) &= (3, 2, 3) = 2\e_2 + 3(\e_1 + \e_3), \\
+\A(\e_1 - \e_3) &= (1, 0, -1) = \e_1 - \e_3,
+\end{aligned}
+
 \]
 so
 \[

@@ -190,7 +190,11 @@ using \( (i + j) \cdot 1 = i \cdot 1 + j \cdot 1 \) from @lem-integer-multiples.
 
 Now let \( f = \sum_i a_ix^i \) and \( g = \sum_j b_jx^j \). By @thm-polynomial-ring-laws, \( fg = \sum_{i,j} a_ib_j\,x^ix^j \), a finite sum. Applying (a) and the monomial case,
 \[
-(fg)' = \sum_{i,j} a_ib_j\bigl((x^i)'x^j + x^i(x^j)'\bigr) = \Bigl(\sum_i a_i(x^i)'\Bigr)\Bigl(\sum_j b_jx^j\Bigr) + \Bigl(\sum_i a_ix^i\Bigr)\Bigl(\sum_j b_j(x^j)'\Bigr) = f'g + fg' ,
+\begin{aligned}
+(fg)' &= \sum_{i,j} a_ib_j\bigl((x^i)'x^j + x^i(x^j)'\bigr) \\
+&= \Bigl(\sum_i a_i(x^i)'\Bigr)\Bigl(\sum_j b_jx^j\Bigr) + \Bigl(\sum_i a_ix^i\Bigr)\Bigl(\sum_j b_j(x^j)'\Bigr) \\
+&= f'g + fg' ,
+\end{aligned}
 \]
 where the middle equality regroups with the distributive laws, and the last uses (a) again.
 
@@ -347,7 +351,10 @@ Expand \( f = x^3 - 2x + 5 \in \nQ[x] \) in powers of \( x - 1 \).
 ::: {.solution}
 The derivatives are \( f' = 3x^2 - 2 \), \( f'' = 6x \), \( f''' = 6 \). At \( c = 1 \): \( f(1) = 4 \), \( f'(1) = 1 \), \( f''(1) = 6 \), \( f'''(1) = 6 \). By @thm-polynomial-taylor (b), since \( \nQ \) has characteristic \( 0 \),
 \[
-f = 4 + 1\cdot(x - 1) + \frac{6}{2}(x - 1)^2 + \frac{6}{6}(x - 1)^3 = 4 + (x - 1) + 3(x - 1)^2 + (x - 1)^3 .
+\begin{aligned}
+f &= 4 + 1\cdot(x - 1) + \frac{6}{2}(x - 1)^2 + \frac{6}{6}(x - 1)^3 \\
+&= 4 + (x - 1) + 3(x - 1)^2 + (x - 1)^3 .
+\end{aligned}
 \]
 Check by expanding: \( (x - 1)^3 + 3(x - 1)^2 + (x - 1) + 4 = (x^3 - 3x^2 + 3x - 1) + (3x^2 - 6x + 3) + (x - 1) + 4 = x^3 - 2x + 5 \).
 
@@ -403,7 +410,10 @@ The two halves of this section meet in Chapter 8, where a matrix is diagonalizab
 ::: {.enumerate options="label=(\alph*)"}
 1. Here \( f(1) = 1 - 3 + 4 - 4 + 3 - 1 = 0 \). Dividing by \( x - 1 \) repeatedly,
 \[
-f = (x - 1)(x^4 - 2x^3 + 2x^2 - 2x + 1), \quad x^4 - 2x^3 + 2x^2 - 2x + 1 = (x - 1)(x^3 - x^2 + x - 1),
+\begin{aligned}
+f &= (x - 1)(x^4 - 2x^3 + 2x^2 - 2x + 1), \\
+x^4 - 2x^3 + 2x^2 - 2x + 1 &= (x - 1)(x^3 - x^2 + x - 1),
+\end{aligned}
 \]
 and \( x^3 - x^2 + x - 1 = (x - 1)(x^2 + 1) \). Since \( x^2 + 1 \) takes the value \( 2 \neq 0 \) at \( 1 \), @lem-multiplicity-cofactor gives \( f = (x - 1)^3(x^2 + 1) \) and \( \operatorname{mult}_1(f) = 3 \). Over \( \nR \), \( x^2 + 1 \) has no root (\( c^2 + 1 \ge 1 \)), so the only real root of \( f \) is \( 1 \), and \( 3 < 5 = \deg f \). By @thm-roots-with-multiplicity, \( f \) does not split over \( \nR \). Over \( \nC \), \( x^2 + 1 = (x - i)(x + i) \), so \( f = (x - 1)^3(x - i)(x + i) \) splits.
 2. In \( \nF_2[x] \), \( x^4 + x^2 = x^2(x^2 + 1) \), and \( x^2 + 1 = (x + 1)^2 \) because \( (x + 1)^2 = x^2 + 2x + 1 = x^2 + 1 \). Hence \( g = x^2(x + 1)^2 = (x - 0)^2(x - 1)^2 \), using \( -1 = 1 \). The cofactor \( (x + 1)^2 \) is \( 1 \) at \( 0 \), and \( x^2 \) is \( 1 \) at \( 1 \), so \( \operatorname{mult}_0(g) = \operatorname{mult}_1(g) = 2 \) by @lem-multiplicity-cofactor. These are the only elements of \( \nF_2 \), the multiplicities add to \( 4 = \deg g \), and \( g \) splits over \( \nF_2 \).

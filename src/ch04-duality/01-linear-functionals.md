@@ -233,7 +233,11 @@ The same method works away from \( F^n \), once we recognize the coordinates.
 
 (b) The values of the \( \ell \)'s at the three points are
 \[
-\ell_{-1}(-1) = 1,\ \ell_{-1}(0) = 0,\ \ell_{-1}(1) = 0; \quad \ell_0(-1) = 0,\ \ell_0(0) = 1,\ \ell_0(1) = 0; \quad \ell_1(-1) = 0,\ \ell_1(0) = 0,\ \ell_1(1) = 1.
+\begin{aligned}
+&\ell_{-1}(-1) = 1,\ \ell_{-1}(0) = 0,\ \ell_{-1}(1) = 0; \\
+&\ell_0(-1) = 0,\ \ell_0(0) = 1,\ \ell_0(1) = 0; \\
+&\ell_1(-1) = 0,\ \ell_1(0) = 0,\ \ell_1(1) = 1.
+\end{aligned}
 \]
 That is, \( \varepsilon_i(\ell_j) = \delta_{ij} \) for \( i, j \in \{-1, 0, 1\} \). *Basis.* Let \( c_{-1}\ell_{-1} + c_0\ell_0 + c_1\ell_1 = 0 \). Evaluating at \( j \in \{-1, 0, 1\} \) gives \( c_j = 0 \). So the list is independent, of length \( 3 = \dim \nR[x]_{\le 2} \), hence a basis by @thm-right-size-basis. *Dual basis.* The evaluations are linear (@exm-linear-functionals) and satisfy \( \varepsilon_i(\ell_j) = \delta_{ij} \), so they are the dual basis by the uniqueness in @thm-dual-basis (a). The first formula of @thm-dual-basis (c) now reads \( p = \sum_i \varepsilon_i(p)\,\ell_i = p(-1)\ell_{-1} + p(0)\ell_0 + p(1)\ell_1 \).
 
@@ -383,7 +387,10 @@ For instance \( \varphi_3(1, 0, 1) = 0 \), \( \varphi_3(0, 1, 1) = 0 \) and \( \
 
 (b) The three maps are linear, as combinations of differentiation and evaluation at \( 1 \). Call them \( \psi_1, \psi_2, \psi_3 \). On the basis:
 \[
-\psi_1(1) = 1,\ \psi_1(x - 1) = 0,\ \psi_1((x - 1)^2) = 0; \quad \psi_2(1) = 0,\ \psi_2(x - 1) = 1,\ \psi_2((x - 1)^2) = 2(1 - 1) = 0;
+\begin{aligned}
+&\psi_1(1) = 1,\ \psi_1(x - 1) = 0,\ \psi_1((x - 1)^2) = 0; \\
+&\psi_2(1) = 0,\ \psi_2(x - 1) = 1,\ \psi_2((x - 1)^2) = 2(1 - 1) = 0;
+\end{aligned}
 \]
 \[
 \psi_3(1) = 0,\ \psi_3(x - 1) = 0,\ \psi_3((x - 1)^2) = \tfrac12 \cdot 2 = 1 .

@@ -29,3 +29,9 @@ A formula over 100% overflows at all; at 110% and above it is clearly scrolling 
 broken with `aligned`, `split` or `cases` (a `\tag` goes after `\end{aligned}`, never inside).
 
 To measure a phone-width column instead, change `#stage { width: 39rem }` to 20rem.
+
+## Three traps
+
+- **Chrome caches the pages.** Re-running with the same `--user-data-dir` after editing can re-report the *old* widths, so an "after" number is a lie. Delete the profile directory before every run.
+- **A row at exactly 100% is not an overflow.** An equation carrying a `\tag` gets `width="full"` from MathJax, which stretches `mjx-math` to precisely the column. Those rows are measurement artifacts.
+- **The incremental build races.** `_build/cache/html-fingerprints.json` can record stale HTML as freshly built when two builds run at once, and later builds then skip that page. Before trusting a measurement, delete that file and `_build/html` and rebuild; a serial `./build.py html` afterwards is the only state worth measuring.

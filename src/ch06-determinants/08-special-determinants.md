@@ -47,7 +47,10 @@ g(t) \coloneqq (t - x_1)(t - x_2)\cdots(t - x_{n-1}) \ \text{ divides } \ f .
 \]
 Write \( f = hg \) with \( h \in F[t] \). If \( h \ne 0 \), then \( \deg h = \deg f - (n - 1) \le 0 \) by @thm-degree-of-product, since \( \deg f \le n - 1 \); so in every case \( h \) is a constant \( h \in F \). As \( g \) is monic of degree \( n - 1 \), the coefficient of \( t^{n-1} \) in \( hg \) is \( h \), so \( h = C_{nn} = \det \V(x_1, \dots, x_{n-1}) \). Evaluating at \( x_n \) (@thm-evaluation-respects-operations) and using the induction hypothesis,
 \[
-\det \V = f(x_n) = \det \V(x_1, \dots, x_{n-1}) \prod_{i=1}^{n-1}(x_n - x_i) = \prod_{1 \le i < j \le n-1}(x_j - x_i) \prod_{i=1}^{n-1}(x_n - x_i) .
+\begin{aligned}
+\det \V &= f(x_n) = \det \V(x_1, \dots, x_{n-1}) \prod_{i=1}^{n-1}(x_n - x_i) \\
+&= \prod_{1 \le i < j \le n-1}(x_j - x_i) \prod_{i=1}^{n-1}(x_n - x_i) .
+\end{aligned}
 \]
 The two products together run over all pairs \( i < j \le n \), the second one collecting exactly the pairs with \( j = n \). This proves the formula for \( n \), and the theorem follows by induction.
 :::

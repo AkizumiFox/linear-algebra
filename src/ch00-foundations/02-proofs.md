@@ -247,7 +247,12 @@ We prove this by induction on \( n \), using @thm-induction with \( n_0 = 1 \). 
 
 *Inductive step.* Let \( n \ge 1 \) and suppose \( P(n) \) is true. Then
 \[
-1 + 2 + \cdots + n + (n + 1) = \frac{n(n+1)}{2} + (n + 1) = (n + 1)\Bigl(\frac{n}{2} + 1\Bigr) = \frac{(n+1)(n+2)}{2},
+\begin{aligned}
+1 + 2 + \cdots + n + (n + 1)
+&= \frac{n(n+1)}{2} + (n + 1) \\
+&= (n + 1)\Bigl(\frac{n}{2} + 1\Bigr) \\
+&= \frac{(n+1)(n+2)}{2},
+\end{aligned}
 \]
 where the first equality uses the induction hypothesis \( P(n) \). This is \( P(n + 1) \).
 

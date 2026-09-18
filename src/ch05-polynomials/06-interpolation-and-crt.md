@@ -77,20 +77,34 @@ Use @thm-lagrange-interpolation to find the \( p \in \nQ[x]_{\le 3} \) with \( p
 ::: {.solution}
 The nodes \( -1, 0, 1, 2 \) are distinct. Write \( \ell_{-1}, \ell_0, \ell_1, \ell_2 \) for the Lagrange polynomials, indexed by the node. The denominators are \( \prod_{j \ne i}(c_i - c_j) \):
 \[
-\ell_{-1} = \frac{x(x - 1)(x - 2)}{(-1)(-2)(-3)} = -\tfrac16x(x - 1)(x - 2), \qquad
-\ell_0 = \frac{(x + 1)(x - 1)(x - 2)}{(1)(-1)(-2)} = \tfrac12(x + 1)(x - 1)(x - 2),
+\begin{aligned}
+\ell_{-1} &= \frac{x(x - 1)(x - 2)}{(-1)(-2)(-3)} = -\tfrac16x(x - 1)(x - 2), \\
+\ell_0 &= \frac{(x + 1)(x - 1)(x - 2)}{(1)(-1)(-2)} = \tfrac12(x + 1)(x - 1)(x - 2),
+\end{aligned}
 \]
 \[
-\ell_1 = \frac{(x + 1)x(x - 2)}{(2)(1)(-1)} = -\tfrac12(x + 1)x(x - 2), \qquad
-\ell_2 = \frac{(x + 1)x(x - 1)}{(3)(2)(1)} = \tfrac16(x + 1)x(x - 1).
+\begin{aligned}
+\ell_1 &= \frac{(x + 1)x(x - 2)}{(2)(1)(-1)} = -\tfrac12(x + 1)x(x - 2), \\
+\ell_2 &= \frac{(x + 1)x(x - 1)}{(3)(2)(1)} = \tfrac16(x + 1)x(x - 1).
+\end{aligned}
 \]
 Expanding,
 \[
-\ell_{-1} = -\tfrac16x^3 + \tfrac12x^2 - \tfrac13x, \quad \ell_0 = \tfrac12x^3 - x^2 - \tfrac12x + 1, \quad \ell_1 = -\tfrac12x^3 + \tfrac12x^2 + x, \quad \ell_2 = \tfrac16x^3 - \tfrac16x .
+\begin{aligned}
+\ell_{-1} &= -\tfrac16x^3 + \tfrac12x^2 - \tfrac13x, \\
+\ell_0 &= \tfrac12x^3 - x^2 - \tfrac12x + 1, \\
+\ell_1 &= -\tfrac12x^3 + \tfrac12x^2 + x, \\
+\ell_2 &= \tfrac16x^3 - \tfrac16x .
+\end{aligned}
 \]
 By @thm-lagrange-interpolation (c), \( p = 2\ell_{-1} + \ell_0 + 2\ell_1 + 11\ell_2 \). Collecting coefficients:
 \[
-x^3\colon\ -\tfrac13 + \tfrac12 - 1 + \tfrac{11}{6} = 1, \qquad x^2\colon\ 1 - 1 + 1 + 0 = 1, \qquad x\colon\ -\tfrac23 - \tfrac12 + 2 - \tfrac{11}{6} = -1, \qquad 1\colon\ 1 .
+\begin{aligned}
+x^3 &\colon\ -\tfrac13 + \tfrac12 - 1 + \tfrac{11}{6} = 1, \\
+x^2 &\colon\ 1 - 1 + 1 + 0 = 1, \\
+x &\colon\ -\tfrac23 - \tfrac12 + 2 - \tfrac{11}{6} = -1, \\
+1 &\colon\ 1 .
+\end{aligned}
 \]
 Hence \( p = x^3 + x^2 - x + 1 \), the polynomial found by elimination in @exm-interpolation-cubic, as uniqueness demands. The elimination solved a \( 4 \times 4 \) system for these particular values. The Lagrange polynomials were computed once, and would serve for any other values at the same nodes.
 :::
@@ -140,7 +154,11 @@ The formula for \( \varphi \) has a practical reading: **any** linear measuremen
 ::: {.solution}
 (a) Integration over \( [0, 1] \) is a linear functional on \( \nR[x]_{\le 2} \) (@exm-linear-functionals). For the nodes \( 0, \tfrac12, 1 \),
 \[
-\ell_0 = \frac{(x - \frac12)(x - 1)}{(-\frac12)(-1)} = 2x^2 - 3x + 1, \qquad \ell_{1/2} = \frac{x(x - 1)}{(\frac12)(-\frac12)} = -4x^2 + 4x, \qquad \ell_1 = \frac{x(x - \frac12)}{(1)(\frac12)} = 2x^2 - x .
+\begin{aligned}
+\ell_0 &= \frac{(x - \frac12)(x - 1)}{(-\frac12)(-1)} = 2x^2 - 3x + 1, \\
+\ell_{1/2} &= \frac{x(x - 1)}{(\frac12)(-\frac12)} = -4x^2 + 4x, \\
+\ell_1 &= \frac{x(x - \frac12)}{(1)(\frac12)} = 2x^2 - x .
+\end{aligned}
 \]
 Their integrals are \( \tfrac23 - \tfrac32 + 1 = \tfrac16 \), \( -\tfrac43 + 2 = \tfrac23 \) and \( \tfrac23 - \tfrac12 = \tfrac16 \). By @cor-evaluations-dual-to-lagrange,
 \[
@@ -319,7 +337,10 @@ The Chinese Remainder Theorem now becomes a statement about linear maps. Reducin
 
 Let \( m_1, \dots, m_k \in F[x] \) be non-zero and pairwise coprime, and put \( m = m_1 \cdots m_k \). Then
 \[
-\Phi \colon F[x]/\langle m \rangle \to F[x]/\langle m_1 \rangle \times \dots \times F[x]/\langle m_k \rangle, \qquad f + \langle m \rangle \mapsto \bigl(f + \langle m_1 \rangle, \dots, f + \langle m_k \rangle\bigr),
+\begin{aligned}
+&\Phi \colon F[x]/\langle m \rangle \to F[x]/\langle m_1 \rangle \times \dots \times F[x]/\langle m_k \rangle, \\
+&\qquad f + \langle m \rangle \mapsto \bigl(f + \langle m_1 \rangle, \dots, f + \langle m_k \rangle\bigr),
+\end{aligned}
 \]
 is a well-defined isomorphism of vector spaces.
 :::
@@ -333,7 +354,10 @@ Let \( \Psi \colon F[x] \to F[x]/\langle m_1 \rangle \times \dots \times F[x]/\l
 
 By the First Isomorphism Theorem (@thm-first-isomorphism), the rule \( f + \langle m \rangle \mapsto \Psi(f) \) is a well-defined injective linear map; this is \( \Phi \). By @thm-dimension-polynomial-quotient, @thm-degree-of-product and @thm-dimension-of-product,
 \[
-\dim F[x]/\langle m \rangle = \deg m = \sum_{i=1}^{k} \deg m_i = \sum_{i=1}^{k} \dim F[x]/\langle m_i \rangle = \dim\Bigl(F[x]/\langle m_1 \rangle \times \dots \times F[x]/\langle m_k \rangle\Bigr).
+\begin{aligned}
+\dim F[x]/\langle m \rangle &= \deg m = \sum_{i=1}^{k} \deg m_i = \sum_{i=1}^{k} \dim F[x]/\langle m_i \rangle \\
+&= \dim\Bigl(F[x]/\langle m_1 \rangle \times \dots \times F[x]/\langle m_k \rangle\Bigr).
+\end{aligned}
 \]
 Since \( \Phi \) is injective between spaces of the same finite dimension, it is bijective by @cor-rank-nullity-consequences (e), hence an isomorphism (@def-isomorphism).
 :::
@@ -390,11 +414,20 @@ Let \( c_0, c_1, c_2, c_3 = 0, 1, 2, 3 \). Write down the Lagrange basis for the
 ::: {.solution}
 The denominators \( \prod_{j \ne i}(c_i - c_j) \) are \( (-1)(-2)(-3) = -6 \), \( (1)(-1)(-2) = 2 \), \( (2)(1)(-1) = -2 \) and \( (3)(2)(1) = 6 \). So
 \[
-\ell_0 = -\tfrac16(x - 1)(x - 2)(x - 3), \quad \ell_1 = \tfrac12x(x - 2)(x - 3), \quad \ell_2 = -\tfrac12x(x - 1)(x - 3), \quad \ell_3 = \tfrac16x(x - 1)(x - 2).
+\begin{aligned}
+\ell_0 &= -\tfrac16(x - 1)(x - 2)(x - 3), \\
+\ell_1 &= \tfrac12x(x - 2)(x - 3), \\
+\ell_2 &= -\tfrac12x(x - 1)(x - 3), \\
+\ell_3 &= \tfrac16x(x - 1)(x - 2).
+\end{aligned}
 \]
 By @thm-lagrange-interpolation (c), \( p = \ell_0 + 0 \cdot \ell_1 + \ell_2 + 10\ell_3 \). Expanding each needed term,
 \[
-\ell_0 = -\tfrac16(x^3 - 6x^2 + 11x - 6), \qquad \ell_2 = -\tfrac12(x^3 - 4x^2 + 3x), \qquad 10\ell_3 = \tfrac53(x^3 - 3x^2 + 2x).
+\begin{aligned}
+\ell_0 &= -\tfrac16(x^3 - 6x^2 + 11x - 6), \\
+\ell_2 &= -\tfrac12(x^3 - 4x^2 + 3x), \\
+10\ell_3 &= \tfrac53(x^3 - 3x^2 + 2x).
+\end{aligned}
 \]
 The coefficient of \( x^3 \) is \( -\tfrac16 - \tfrac12 + \tfrac53 = 1 \); of \( x^2 \), \( 1 + 2 - 5 = -2 \); of \( x \), \( -\tfrac{11}{6} - \tfrac32 + \tfrac{10}{3} = 0 \); the constant is \( 1 \). Hence
 \[
@@ -496,7 +529,10 @@ p_3 = 1 - x + x(x - 1) + x(x - 1)(x - 2) = x^3 - 2x^2 + 1,
 \]
 agreeing with @exr-interpolation-and-crt-b1. Adding \( (4, 0) \): \( p_3(4) = 33 \) and \( N_4(4) = 4 \cdot 3 \cdot 2 \cdot 1 = 24 \), so by (c)
 \[
-p_4 = x^3 - 2x^2 + 1 - \tfrac{33}{24}\,x(x - 1)(x - 2)(x - 3) = x^3 - 2x^2 + 1 - \tfrac{11}{8}\,x(x - 1)(x - 2)(x - 3).
+\begin{aligned}
+p_4 &= x^3 - 2x^2 + 1 - \tfrac{33}{24}\,x(x - 1)(x - 2)(x - 3) \\
+&= x^3 - 2x^2 + 1 - \tfrac{11}{8}\,x(x - 1)(x - 2)(x - 3).
+\end{aligned}
 \]
 One checks \( p_4(4) = 33 - \tfrac{11}{8} \cdot 24 = 0 \). Adding a node changes **every** Lagrange polynomial, since each \( \ell_i \) acquires a new factor; in Newton's form the old coefficients \( a_0, \dots, a_n \) survive and only one new coefficient is computed.
 :::

@@ -39,7 +39,10 @@ In words: subtract \( \A \) from \( x \) times the identity, so that \( x \) app
 - **\( 1 \times 1 \).** For \( \A = (a) \), \( p_{\A}(x) = x - a \).
 - **\( 2 \times 2 \).** For \( \A = \begin{pmatrix} a & b \\ c & d \end{pmatrix} \),
 \[
-p_{\A}(x) = (x - a)(x - d) - bc = x^2 - (a + d)x + (ad - bc) = x^2 - (\tr \A)\,x + \det \A .
+\begin{aligned}
+p_{\A}(x) &= (x - a)(x - d) - bc = x^2 - (a + d)x + (ad - bc) \\
+&= x^2 - (\tr \A)\,x + \det \A .
+\end{aligned}
 \]
 For \( \A = \begin{pmatrix} 1 & 2 \\ 3 & 4 \end{pmatrix} \) this is \( x^2 - 5x - 2 \), as above.
 - **Triangular.** If \( \A \) is upper or lower triangular, so is \( x\I - \A \), with diagonal entries \( x - a_{ii} \). By @thm-det-triangular over \( F[x] \), \( p_{\A}(x) = (x - a_{11})(x - a_{22})\cdots(x - a_{nn}) \).
@@ -58,14 +61,20 @@ x\I - \A = \begin{pmatrix} x - 2 & 0 & -1 \\ -1 & x - 3 & -1 \\ -1 & 0 & x - 2 \
 \]
 Column \( 2 \) has a single non-zero entry, \( x - 3 \) in position \( (2, 2) \). Expanding along it (@thm-laplace-expansion over \( F[x] \)),
 \[
-p_{\A}(x) = (x - 3)\,(-1)^{2+2}\det\begin{pmatrix} x - 2 & -1 \\ -1 & x - 2 \end{pmatrix} = (x - 3)\big((x - 2)^2 - 1\big) = (x - 1)(x - 3)^2 .
+\begin{aligned}
+p_{\A}(x) &= (x - 3)\,(-1)^{2+2}\det\begin{pmatrix} x - 2 & -1 \\ -1 & x - 2 \end{pmatrix} \\
+&= (x - 3)\big((x - 2)^2 - 1\big) = (x - 1)(x - 3)^2 .
+\end{aligned}
 \]
 Multiplied out, \( p_{\A}(x) = x^3 - 7x^2 + 15x - 9 \). Compare with \( \tr \A = 2 + 3 + 2 = 7 \) and \( \det \A = 9 \) (expand \( \A \) along column \( 2 \): \( 3(4 - 1) = 9 \)).
 :::
 
 **A companion-type example.** Let \( \A = \begin{pmatrix} 0 & 0 & 6 \\ 1 & 0 & -11 \\ 0 & 1 & 6 \end{pmatrix} \), with ones just below the diagonal, a last column \( (6, -11, 6) \), and zeros elsewhere. Expanding \( x\I - \A = \begin{pmatrix} x & 0 & -6 \\ -1 & x & 11 \\ 0 & -1 & x - 6 \end{pmatrix} \) along the first row (@thm-laplace-expansion over \( F[x] \)),
 \[
-p_{\A}(x) = x\det\begin{pmatrix} x & 11 \\ -1 & x - 6 \end{pmatrix} + (-6)\det\begin{pmatrix} -1 & x \\ 0 & -1 \end{pmatrix} = x(x^2 - 6x + 11) - 6 = x^3 - 6x^2 + 11x - 6 ,
+\begin{aligned}
+p_{\A}(x) &= x\det\begin{pmatrix} x & 11 \\ -1 & x - 6 \end{pmatrix} + (-6)\det\begin{pmatrix} -1 & x \\ 0 & -1 \end{pmatrix} \\
+&= x(x^2 - 6x + 11) - 6 = x^3 - 6x^2 + 11x - 6 ,
+\end{aligned}
 \]
 which factors as \( (x - 1)(x - 2)(x - 3) \). The last column of \( \A \) lists the coefficients \( -6, 11, -6 \) of \( 1, x, x^2 \) in \( p_{\A} \), with their signs changed. This is no accident: @exr-characteristic-polynomial-c1 shows that the same pattern works in every size.
 
@@ -154,7 +163,10 @@ Let \( \B = \P^{-1}\A\P \) with \( \P \in M_n(F) \) invertible. Regard \( \P \),
 \]
 By @thm-det-multiplicative, valid over \( F[x] \) by the remark in §5,
 \[
-p_{\B} = \det\big(\P^{-1}(x\I - \A)\P\big) = \det(\P^{-1})\,\det(x\I - \A)\,\det \P = \det(\P^{-1})\det(\P)\; p_{\A} ,
+\begin{aligned}
+p_{\B} &= \det\big(\P^{-1}(x\I - \A)\P\big) = \det(\P^{-1})\,\det(x\I - \A)\,\det \P \\
+&= \det(\P^{-1})\det(\P)\; p_{\A} ,
+\end{aligned}
 \]
 using commutativity of \( F[x] \) in the last step. Finally \( \det(\P^{-1})\det \P = \det(\P^{-1}\P) = \det \I = 1 \) by @thm-det-multiplicative over \( F \). Hence \( p_{\B} = p_{\A} \).
 :::
@@ -290,7 +302,10 @@ Hence list the \( c \in \nQ \) for which \( c\I - \A \), respectively \( c\I - \
 ::: {.solution}
 *For \( \A \).* Expanding \( x\I - \A = \begin{pmatrix} x - 1 & -1 & 0 \\ 0 & x - 1 & -1 \\ -1 & 0 & x - 1 \end{pmatrix} \) along the first row (@thm-laplace-expansion over \( F[x] \)),
 \[
-p_{\A}(x) = (x - 1)\big((x - 1)^2 - 0\big) - (-1)\big(0 - 1\big) + 0 = (x - 1)^3 - 1 = x^3 - 3x^2 + 3x - 2 .
+\begin{aligned}
+p_{\A}(x) &= (x - 1)\big((x - 1)^2 - 0\big) - (-1)\big(0 - 1\big) + 0 \\
+&= (x - 1)^3 - 1 = x^3 - 3x^2 + 3x - 2 .
+\end{aligned}
 \]
 Check: \( -\tr \A = -3 \); \( \det \A = 1\cdot(1 - 0) - 1\cdot(0 - 1) + 0 = 2 \), and \( (-1)^3 \cdot 2 = -2 \). Since \( p_{\A}(2) = 1 - 1 = 0 \), divide by \( x - 2 \): \( p_{\A} = (x - 2)(x^2 - x + 1) \). The quadratic has discriminant \( 1 - 4 = -3 < 0 \), so no rational (indeed no real) root. By @thm-charpoly-root-iff-singular, \( c\I - \A \) is singular only for \( c = 2 \).
 
@@ -361,7 +376,10 @@ Let \( n \ge 2 \) and \( p(x) = x^n + a_{n-1}x^{n-1} + \dots + a_1x + a_0 \in F[
 
 (b) By @thm-laplace-expansion along column \( n \), valid over \( F[x] \),
 \[
-p_{\C(p)} = \det \M = \sum_{i=1}^{n-1} a_{i-1}\,x^{i-1} + (x + a_{n-1})\,x^{n-1} = a_0 + a_1x + \dots + a_{n-1}x^{n-1} + x^n = p .
+\begin{aligned}
+p_{\C(p)} &= \det \M = \sum_{i=1}^{n-1} a_{i-1}\,x^{i-1} + (x + a_{n-1})\,x^{n-1} \\
+&= a_0 + a_1x + \dots + a_{n-1}x^{n-1} + x^n = p .
+\end{aligned}
 \]
 
 (c) Here \( a_3 = 1 \), \( a_2 = 0 \), \( a_1 = -2 \), \( a_0 = 3 \), so

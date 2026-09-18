@@ -289,11 +289,13 @@ Find the inverse of \( \A = \begin{pmatrix} 1 & 2 & 1 \\ 2 & 5 & 3 \\ 1 & 3 & 3 
 ::: {.solution}
 Row reduce \( [\A \mid \I_3] \), naming each operation.
 \[
+\begin{aligned}
 \left[\begin{array}{ccc|ccc} 1 & 2 & 1 & 1 & 0 & 0 \\ 2 & 5 & 3 & 0 & 1 & 0 \\ 1 & 3 & 3 & 0 & 0 & 1 \end{array}\right]
-\xrightarrow[R_3 \to R_3 - R_1]{R_2 \to R_2 - 2R_1}
-\left[\begin{array}{ccc|ccc} 1 & 2 & 1 & 1 & 0 & 0 \\ 0 & 1 & 1 & -2 & 1 & 0 \\ 0 & 1 & 2 & -1 & 0 & 1 \end{array}\right]
-\xrightarrow{R_3 \to R_3 - R_2}
+&\xrightarrow[R_3 \to R_3 - R_1]{R_2 \to R_2 - 2R_1}
+\left[\begin{array}{ccc|ccc} 1 & 2 & 1 & 1 & 0 & 0 \\ 0 & 1 & 1 & -2 & 1 & 0 \\ 0 & 1 & 2 & -1 & 0 & 1 \end{array}\right] \\
+&\xrightarrow{R_3 \to R_3 - R_2}
 \left[\begin{array}{ccc|ccc} 1 & 2 & 1 & 1 & 0 & 0 \\ 0 & 1 & 1 & -2 & 1 & 0 \\ 0 & 0 & 1 & 1 & -1 & 1 \end{array}\right]
+\end{aligned}
 \]
 The left half now has three pivots, so no zero row will appear. Clear above the pivots, from the bottom up:
 \[
@@ -318,11 +320,13 @@ Decide whether \( \A = \begin{pmatrix} 1 & 2 & 3 \\ 2 & 5 & 7 \\ 1 & 3 & 4 \end{
 ::: {.solution}
 Row reduce \( [\A \mid \I_3] \):
 \[
+\begin{aligned}
 \left[\begin{array}{ccc|ccc} 1 & 2 & 3 & 1 & 0 & 0 \\ 2 & 5 & 7 & 0 & 1 & 0 \\ 1 & 3 & 4 & 0 & 0 & 1 \end{array}\right]
-\xrightarrow[R_3 \to R_3 - R_1]{R_2 \to R_2 - 2R_1}
-\left[\begin{array}{ccc|ccc} 1 & 2 & 3 & 1 & 0 & 0 \\ 0 & 1 & 1 & -2 & 1 & 0 \\ 0 & 1 & 1 & -1 & 0 & 1 \end{array}\right]
-\xrightarrow{R_3 \to R_3 - R_2}
+&\xrightarrow[R_3 \to R_3 - R_1]{R_2 \to R_2 - 2R_1}
+\left[\begin{array}{ccc|ccc} 1 & 2 & 3 & 1 & 0 & 0 \\ 0 & 1 & 1 & -2 & 1 & 0 \\ 0 & 1 & 1 & -1 & 0 & 1 \end{array}\right] \\
+&\xrightarrow{R_3 \to R_3 - R_2}
 \left[\begin{array}{ccc|ccc} 1 & 2 & 3 & 1 & 0 & 0 \\ 0 & 1 & 1 & -2 & 1 & 0 \\ 0 & 0 & 0 & 1 & -1 & 1 \end{array}\right].
+\end{aligned}
 \]
 A zero row has appeared in the left half, so by the remark after @thm-inverse-by-row-reduction, \( \A \) is not invertible. The right half of that row is not wasted: it records the combination of rows that produced zero. Row 3 of the left half is \( 1 \cdot (\text{row } 1) - 1 \cdot (\text{row } 2) + 1 \cdot (\text{row } 3) \) of \( \A \), and indeed \( (1, 2, 3) - (2, 5, 7) + (1, 3, 4) = (0, 0, 0) \).
 :::
@@ -421,11 +425,13 @@ For each matrix, find the inverse or show that it is not invertible.
 ::: {.enumerate options="label=(\alph*)"}
 1. Row reduce \( [\A \mid \I_3] \):
 \[
+\begin{aligned}
 \left[\begin{array}{ccc|ccc} 1 & 0 & 2 & 1 & 0 & 0 \\ 2 & 1 & 3 & 0 & 1 & 0 \\ 4 & 1 & 8 & 0 & 0 & 1 \end{array}\right]
-\xrightarrow[R_3 \to R_3 - 4R_1]{R_2 \to R_2 - 2R_1}
-\left[\begin{array}{ccc|ccc} 1 & 0 & 2 & 1 & 0 & 0 \\ 0 & 1 & -1 & -2 & 1 & 0 \\ 0 & 1 & 0 & -4 & 0 & 1 \end{array}\right]
-\xrightarrow{R_3 \to R_3 - R_2}
+&\xrightarrow[R_3 \to R_3 - 4R_1]{R_2 \to R_2 - 2R_1}
+\left[\begin{array}{ccc|ccc} 1 & 0 & 2 & 1 & 0 & 0 \\ 0 & 1 & -1 & -2 & 1 & 0 \\ 0 & 1 & 0 & -4 & 0 & 1 \end{array}\right] \\
+&\xrightarrow{R_3 \to R_3 - R_2}
 \left[\begin{array}{ccc|ccc} 1 & 0 & 2 & 1 & 0 & 0 \\ 0 & 1 & -1 & -2 & 1 & 0 \\ 0 & 0 & 1 & -2 & -1 & 1 \end{array}\right]
+\end{aligned}
 \]
 \[
 \xrightarrow[R_1 \to R_1 - 2R_3]{R_2 \to R_2 + R_3}
@@ -434,22 +440,26 @@ For each matrix, find the inverse or show that it is not invertible.
 The left half is \( \I_3 \), so by @thm-inverse-by-row-reduction, \( \A^{-1} = \begin{pmatrix} 5 & 2 & -2 \\ -4 & 0 & 1 \\ -2 & -1 & 1 \end{pmatrix} \). Check: row 1 of \( \A \) against the columns of \( \A^{-1} \) gives \( 5 - 4 = 1 \), \( 2 - 2 = 0 \), \( -2 + 2 = 0 \), and rows 2 and 3 give \( (0, 1, 0) \) and \( (0, 0, 1) \), so \( \A\A^{-1} = \I_3 \), which suffices by @thm-one-sided-inverse.
 2. Row reduce \( [\B \mid \I_3] \):
 \[
+\begin{aligned}
 \left[\begin{array}{ccc|ccc} 1 & 2 & -1 & 1 & 0 & 0 \\ 0 & 1 & 1 & 0 & 1 & 0 \\ 2 & 5 & -1 & 0 & 0 & 1 \end{array}\right]
-\xrightarrow{R_3 \to R_3 - 2R_1}
-\left[\begin{array}{ccc|ccc} 1 & 2 & -1 & 1 & 0 & 0 \\ 0 & 1 & 1 & 0 & 1 & 0 \\ 0 & 1 & 1 & -2 & 0 & 1 \end{array}\right]
-\xrightarrow{R_3 \to R_3 - R_2}
+&\xrightarrow{R_3 \to R_3 - 2R_1}
+\left[\begin{array}{ccc|ccc} 1 & 2 & -1 & 1 & 0 & 0 \\ 0 & 1 & 1 & 0 & 1 & 0 \\ 0 & 1 & 1 & -2 & 0 & 1 \end{array}\right] \\
+&\xrightarrow{R_3 \to R_3 - R_2}
 \left[\begin{array}{ccc|ccc} 1 & 2 & -1 & 1 & 0 & 0 \\ 0 & 1 & 1 & 0 & 1 & 0 \\ 0 & 0 & 0 & -2 & -1 & 1 \end{array}\right].
+\end{aligned}
 \]
 A zero row appears in the left half, so \( \B \) is not invertible (remark after @thm-inverse-by-row-reduction). The right half of that row says \( -2(\text{row } 1) - (\text{row } 2) + (\text{row } 3) = \0 \), that is, row 3 of \( \B \) is \( 2(\text{row } 1) + (\text{row } 2) \).
 3. Over \( \nF_2 \) we have \( -1 = 1 \), so subtracting a row is adding it. Row reduce \( [\C \mid \I_3] \):
 \[
+\begin{aligned}
 \left[\begin{array}{ccc|ccc} 1 & 1 & 0 & 1 & 0 & 0 \\ 0 & 1 & 1 & 0 & 1 & 0 \\ 1 & 1 & 1 & 0 & 0 & 1 \end{array}\right]
-\xrightarrow{R_3 \to R_3 + R_1}
-\left[\begin{array}{ccc|ccc} 1 & 1 & 0 & 1 & 0 & 0 \\ 0 & 1 & 1 & 0 & 1 & 0 \\ 0 & 0 & 1 & 1 & 0 & 1 \end{array}\right]
-\xrightarrow{R_2 \to R_2 + R_3}
-\left[\begin{array}{ccc|ccc} 1 & 1 & 0 & 1 & 0 & 0 \\ 0 & 1 & 0 & 1 & 1 & 1 \\ 0 & 0 & 1 & 1 & 0 & 1 \end{array}\right]
-\xrightarrow{R_1 \to R_1 + R_2}
+&\xrightarrow{R_3 \to R_3 + R_1}
+\left[\begin{array}{ccc|ccc} 1 & 1 & 0 & 1 & 0 & 0 \\ 0 & 1 & 1 & 0 & 1 & 0 \\ 0 & 0 & 1 & 1 & 0 & 1 \end{array}\right] \\
+&\xrightarrow{R_2 \to R_2 + R_3}
+\left[\begin{array}{ccc|ccc} 1 & 1 & 0 & 1 & 0 & 0 \\ 0 & 1 & 0 & 1 & 1 & 1 \\ 0 & 0 & 1 & 1 & 0 & 1 \end{array}\right] \\
+&\xrightarrow{R_1 \to R_1 + R_2}
 \left[\begin{array}{ccc|ccc} 1 & 0 & 0 & 0 & 1 & 1 \\ 0 & 1 & 0 & 1 & 1 & 1 \\ 0 & 0 & 1 & 1 & 0 & 1 \end{array}\right].
+\end{aligned}
 \]
 Hence \( \C^{-1} = \begin{pmatrix} 0 & 1 & 1 \\ 1 & 1 & 1 \\ 1 & 0 & 1 \end{pmatrix} \). Check in \( \nF_2 \): row 1 of \( \C \) is \( (1, 1, 0) \), and against the columns of \( \C^{-1} \) it gives \( 0 + 1 = 1 \), \( 1 + 1 = 0 \), \( 1 + 1 = 0 \); rows 2 and 3 give \( (0, 1, 0) \) and \( (0, 0, 1) \) similarly.
 :::

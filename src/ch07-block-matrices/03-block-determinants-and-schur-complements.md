@@ -98,8 +98,12 @@ since \( \C \A^{-1}\A = \C \) and \( \C \A^{-1}\B + (\D - \C \A^{-1}\B) = \D \).
 
 (b) Write \( \S' = \M/\D = \A - \B \D^{-1}\C \). By @thm-block-multiplication,
 \[
-\begin{pmatrix} \S' & 0 \\ 0 & \D \end{pmatrix}\begin{pmatrix} \I_k & 0 \\ \D^{-1}\C & \I_l \end{pmatrix} = \begin{pmatrix} \S' & 0 \\ \C & \D \end{pmatrix}, \qquad
-\begin{pmatrix} \I_m & \B \D^{-1} \\ 0 & \I_l \end{pmatrix}\begin{pmatrix} \S' & 0 \\ \C & \D \end{pmatrix} = \begin{pmatrix} \S' + \B \D^{-1}\C & \B \D^{-1}\D \\ \C & \D \end{pmatrix} = \M .
+\begin{aligned}
+\begin{pmatrix} \S' & 0 \\ 0 & \D \end{pmatrix}\begin{pmatrix} \I_k & 0 \\ \D^{-1}\C & \I_l \end{pmatrix}
+  &= \begin{pmatrix} \S' & 0 \\ \C & \D \end{pmatrix}, \\
+\begin{pmatrix} \I_m & \B \D^{-1} \\ 0 & \I_l \end{pmatrix}\begin{pmatrix} \S' & 0 \\ \C & \D \end{pmatrix}
+  &= \begin{pmatrix} \S' + \B \D^{-1}\C & \B \D^{-1}\D \\ \C & \D \end{pmatrix} = \M .
+\end{aligned}
 \]
 :::
 
@@ -174,8 +178,11 @@ In particular the upper-left \( k \times k \) block of \( \M^{-1} \) is \( (\M/\
 
 Suppose \( \S \) is invertible. In @thm-block-ldu (a), \( \M = \L(\A \oplus \S)\U \), where \( \L^{-1} = \begin{pmatrix} \I_k & 0 \\ -\C \A^{-1} & \I_l \end{pmatrix} \) and \( \U^{-1} = \begin{pmatrix} \I_k & -\A^{-1}\B \\ 0 & \I_l \end{pmatrix} \) by @thm-block-triangular-inverse, and \( (\A \oplus \S)^{-1} = \A^{-1} \oplus \S^{-1} \) by @thm-block-diagonal-arithmetic (c). By @thm-inverse-matrix-properties (3), \( \M^{-1} = \U^{-1}(\A^{-1} \oplus \S^{-1})\L^{-1} \). By @thm-block-multiplication,
 \[
-\U^{-1}(\A^{-1} \oplus \S^{-1}) = \begin{pmatrix} \A^{-1} & -\A^{-1}\B \S^{-1} \\ 0 & \S^{-1} \end{pmatrix}, \qquad
-\begin{pmatrix} \A^{-1} & -\A^{-1}\B \S^{-1} \\ 0 & \S^{-1} \end{pmatrix}\begin{pmatrix} \I_k & 0 \\ -\C \A^{-1} & \I_l \end{pmatrix} = \begin{pmatrix} \A^{-1} + \A^{-1}\B \S^{-1}\C \A^{-1} & -\A^{-1}\B \S^{-1} \\ -\S^{-1}\C \A^{-1} & \S^{-1} \end{pmatrix}.
+\begin{aligned}
+&\U^{-1}(\A^{-1} \oplus \S^{-1}) = \begin{pmatrix} \A^{-1} & -\A^{-1}\B \S^{-1} \\ 0 & \S^{-1} \end{pmatrix}, \\
+&\begin{pmatrix} \A^{-1} & -\A^{-1}\B \S^{-1} \\ 0 & \S^{-1} \end{pmatrix}\begin{pmatrix} \I_k & 0 \\ -\C \A^{-1} & \I_l \end{pmatrix} \\
+&\qquad = \begin{pmatrix} \A^{-1} + \A^{-1}\B \S^{-1}\C \A^{-1} & -\A^{-1}\B \S^{-1} \\ -\S^{-1}\C \A^{-1} & \S^{-1} \end{pmatrix}.
+\end{aligned}
 \]
 
 (b) The equivalence follows from the second statement of @thm-schur-rank in the same way. By @thm-block-ldu (b), \( \M^{-1} = \begin{pmatrix} \I_k & 0 \\ -\D^{-1}\C & \I_l \end{pmatrix}(\S'^{-1} \oplus \D^{-1})\begin{pmatrix} \I_k & -\B \D^{-1} \\ 0 & \I_l \end{pmatrix} \), and
@@ -211,8 +218,10 @@ The blocks are \( \A = \begin{pmatrix} 1 & 1 \\ 1 & 2 \end{pmatrix} \), \( \B = 
 
 *Step 4: the blocks of \( \M^{-1} \).* Using Step 2,
 \[
--\A^{-1}\B \S^{-1} = -\begin{pmatrix} 1 & -1 \\ -1 & 0 \end{pmatrix}\begin{pmatrix} 1 & 0 \\ 1 & -1 \end{pmatrix} = \begin{pmatrix} 0 & -1 \\ 1 & 0 \end{pmatrix}, \qquad
--\S^{-1}\C \A^{-1} = -\begin{pmatrix} 1 & 0 \\ 1 & -1 \end{pmatrix}\begin{pmatrix} -1 & 0 \\ -1 & 1 \end{pmatrix} = \begin{pmatrix} 1 & 0 \\ 0 & 1 \end{pmatrix},
+\begin{aligned}
+-\A^{-1}\B \S^{-1} &= -\begin{pmatrix} 1 & -1 \\ -1 & 0 \end{pmatrix}\begin{pmatrix} 1 & 0 \\ 1 & -1 \end{pmatrix} = \begin{pmatrix} 0 & -1 \\ 1 & 0 \end{pmatrix}, \\
+-\S^{-1}\C \A^{-1} &= -\begin{pmatrix} 1 & 0 \\ 1 & -1 \end{pmatrix}\begin{pmatrix} -1 & 0 \\ -1 & 1 \end{pmatrix} = \begin{pmatrix} 1 & 0 \\ 0 & 1 \end{pmatrix},
+\end{aligned}
 \]
 and \( \A^{-1} + \A^{-1}\B \S^{-1}\C \A^{-1} = \A^{-1} + (\A^{-1}\B \S^{-1})(\C \A^{-1}) = \begin{pmatrix} 2 & -1 \\ -1 & 1 \end{pmatrix} + \begin{pmatrix} 0 & 1 \\ -1 & 0 \end{pmatrix}\begin{pmatrix} -1 & 0 \\ -1 & 1 \end{pmatrix} = \begin{pmatrix} 2 & -1 \\ -1 & 1 \end{pmatrix} + \begin{pmatrix} -1 & 1 \\ 1 & 0 \end{pmatrix} = \begin{pmatrix} 1 & 0 \\ 0 & 1 \end{pmatrix} \).
 Hence
@@ -239,7 +248,11 @@ Let \( n, k \ge 1 \), let \( \A \in M_n(F) \) and \( \C \in M_k(F) \) be inverti
 1. \( \A + \U \C \V \) is invertible if and only if \( \W \) is invertible.
 2. In that case
 \[
-(\A + \U \C \V)^{-1} = \A^{-1} - \A^{-1}\U\,\W^{-1}\,\V \A^{-1} = \A^{-1} - \A^{-1}\U\big(\C^{-1} + \V \A^{-1}\U\big)^{-1}\V \A^{-1} .
+\begin{aligned}
+(\A + \U \C \V)^{-1}
+  &= \A^{-1} - \A^{-1}\U\,\W^{-1}\,\V \A^{-1} \\
+  &= \A^{-1} - \A^{-1}\U\big(\C^{-1} + \V \A^{-1}\U\big)^{-1}\V \A^{-1} .
+\end{aligned}
 \]
 3. \( \det(\A + \U \C \V) = \det \A \cdot \det \C \cdot \det \W \).
 :::
@@ -252,7 +265,10 @@ Look for a block matrix whose two Schur complements are \( \A + \U \C \V \) and 
 ::: {.proof}
 Let \( \D = -\C^{-1} \), which is invertible with \( \D^{-1} = -\C \) by @thm-inverse-matrix-properties (2) and (5), and let \( \M = \begin{pmatrix} \A & \U \\ \V & \D \end{pmatrix} \in M_{n+k}(F) \). By @def-schur-complement,
 \[
-\M/\A = \D - \V \A^{-1}\U = -\C^{-1} - \V \A^{-1}\U = -\W, \qquad \M/\D = \A - \U \D^{-1}\V = \A + \U \C \V .
+\begin{aligned}
+\M/\A &= \D - \V \A^{-1}\U = -\C^{-1} - \V \A^{-1}\U = -\W, \\
+\M/\D &= \A - \U \D^{-1}\V = \A + \U \C \V .
+\end{aligned}
 \]
 
 (a) By @thm-block-inverse-formula (a) and (b), \( \M \) is invertible if and only if \( -\W \) is, and if and only if \( \A + \U \C \V \) is. Since \( -\W \) is invertible exactly when \( \W \) is (@thm-inverse-matrix-properties (5)), this proves (a).
@@ -284,7 +300,12 @@ Apply @thm-woodbury with \( k = 1 \), \( \C = (1) \), \( \U = \u \) and \( \V = 
 
 For example, over \( \nQ \) let \( \A = \diag(1, -1) \), so \( \A^{-1} = \A \), and \( \u = (1, 1) \). For \( \v = (2, 1) \), \( \A^{-1}\u = (1, -1) \), \( \v\tp \A^{-1} = \begin{pmatrix} 2 & -1 \end{pmatrix} \) and \( 1 + \v\tp \A^{-1}\u = 1 + (2 - 1) = 2 \ne 0 \). So \( \A + \u\v\tp = \begin{pmatrix} 3 & 1 \\ 2 & 0 \end{pmatrix} \) has determinant \( \det \A \cdot 2 = -2 \), and
 \[
-(\A + \u\v\tp)^{-1} = \begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix} - \frac12\begin{pmatrix} 1 \\ -1 \end{pmatrix}\begin{pmatrix} 2 & -1 \end{pmatrix} = \begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix} - \begin{pmatrix} 1 & -\frac12 \\ -1 & \frac12 \end{pmatrix} = \begin{pmatrix} 0 & \frac12 \\ 1 & -\frac32 \end{pmatrix},
+\begin{aligned}
+(\A + \u\v\tp)^{-1}
+  &= \begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix} - \frac12\begin{pmatrix} 1 \\ -1 \end{pmatrix}\begin{pmatrix} 2 & -1 \end{pmatrix} \\
+  &= \begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix} - \begin{pmatrix} 1 & -\frac12 \\ -1 & \frac12 \end{pmatrix}
+   = \begin{pmatrix} 0 & \frac12 \\ 1 & -\frac32 \end{pmatrix},
+\end{aligned}
 \]
 which agrees with @thm-two-by-two-inverse. For \( \v = (1, 2) \) instead, \( 1 + \v\tp \A^{-1}\u = 1 + (1 - 2) = 0 \), and indeed \( \A + \u\v\tp = \begin{pmatrix} 2 & 2 \\ 1 & 1 \end{pmatrix} \) is not invertible.
 
@@ -294,7 +315,10 @@ With \( \A = \I_n \), the determinant statement is the Matrix Determinant Lemma 
 
 Section 1 warned that \( \det\begin{pmatrix} \A & \B \\ \C & \D \end{pmatrix} \ne \det(\A \D - \B \C) \) in general. With the Schur complement we can see what goes wrong and what extra hypothesis repairs it. Take all four blocks in \( M_n(F) \) and suppose \( \D \) is invertible. By @thm-schur-determinant (b),
 \[
-\det \M = \det \D\,\det(\A - \B \D^{-1}\C) = \det\big((\A - \B \D^{-1}\C)\D\big) = \det(\A \D - \B \D^{-1}\C \D),
+\begin{aligned}
+\det \M &= \det \D\,\det(\A - \B \D^{-1}\C) \\
+  &= \det\big((\A - \B \D^{-1}\C)\D\big) = \det(\A \D - \B \D^{-1}\C \D),
+\end{aligned}
 \]
 using @thm-det-multiplicative. If \( \C \) and \( \D \) commute, then \( \D^{-1}\C \D = \D^{-1}\D \C = \C \), and the right side is \( \det(\A \D - \B \C) \). So commuting is exactly what lets \( \D^{-1} \) cancel. The real question is how to remove the hypothesis that \( \D \) is invertible, which is not needed for the conclusion to make sense.
 
@@ -414,9 +438,12 @@ Let \( \A = \diag(1, 2, 4) \in M_3(\nQ) \), \( \u = (1, 1, 1) \) and \( \v = (1,
 ::: {.solution}
 \( \A^{-1} = \diag(1, \frac12, \frac14) \), so \( \A^{-1}\u = (1, \frac12, \frac14) \) and \( \v\tp \A^{-1} = \begin{pmatrix} 1 & -\frac12 & \frac12 \end{pmatrix} \). Then \( \v\tp \A^{-1}\u = 1 - \frac12 + \frac12 = 1 \), so \( 1 + \v\tp \A^{-1}\u = 2 \ne 0 \). By @cor-sherman-morrison, \( \A + \u\v\tp \) is invertible, \( \det(\A + \u\v\tp) = 8 \cdot 2 = 16 \), and
 \[
-(\A + \u\v\tp)^{-1} = \diag\big(1, \tfrac12, \tfrac14\big) - \frac12\begin{pmatrix} 1 \\ \frac12 \\ \frac14 \end{pmatrix}\begin{pmatrix} 1 & -\frac12 & \frac12 \end{pmatrix}
-= \begin{pmatrix} 1 & 0 & 0 \\ 0 & \frac12 & 0 \\ 0 & 0 & \frac14 \end{pmatrix} - \begin{pmatrix} \frac12 & -\frac14 & \frac14 \\ \frac14 & -\frac18 & \frac18 \\ \frac18 & -\frac1{16} & \frac1{16} \end{pmatrix}
-= \begin{pmatrix} \frac12 & \frac14 & -\frac14 \\ -\frac14 & \frac58 & -\frac18 \\ -\frac18 & \frac1{16} & \frac3{16} \end{pmatrix}.
+\begin{aligned}
+(\A + \u\v\tp)^{-1}
+  &= \diag\big(1, \tfrac12, \tfrac14\big) - \frac12\begin{pmatrix} 1 \\ \frac12 \\ \frac14 \end{pmatrix}\begin{pmatrix} 1 & -\frac12 & \frac12 \end{pmatrix} \\
+  &= \begin{pmatrix} 1 & 0 & 0 \\ 0 & \frac12 & 0 \\ 0 & 0 & \frac14 \end{pmatrix} - \begin{pmatrix} \frac12 & -\frac14 & \frac14 \\ \frac14 & -\frac18 & \frac18 \\ \frac18 & -\frac1{16} & \frac1{16} \end{pmatrix} \\
+  &= \begin{pmatrix} \frac12 & \frac14 & -\frac14 \\ -\frac14 & \frac58 & -\frac18 \\ -\frac18 & \frac1{16} & \frac3{16} \end{pmatrix}.
+\end{aligned}
 \]
 Check: \( \A + \u\v\tp = \begin{pmatrix} 2 & -1 & 2 \\ 1 & 1 & 2 \\ 1 & -1 & 6 \end{pmatrix} \), and its row \( 1 \) times column \( 1 \) of the answer is \( 1 + \frac14 - \frac14 = 1 \), times column \( 2 \) is \( \frac12 - \frac58 + \frac18 = 0 \).
 :::
@@ -468,13 +495,20 @@ Let \( \A \in M_{m \times n}(F) \) and \( \B \in M_{n \times m}(F) \) with \( m,
 ::: {.solution}
 (a) Both identity blocks are invertible. By @def-schur-complement,
 \[
-\M/\I_m = \I_n - \B \I_m^{-1}(-\A) = \I_n + \B \A, \qquad \M/\I_n = \I_m - (-\A)\I_n^{-1}\B = \I_m + \A \B .
+\begin{aligned}
+\M/\I_m &= \I_n - \B \I_m^{-1}(-\A) = \I_n + \B \A, \\
+\M/\I_n &= \I_m - (-\A)\I_n^{-1}\B = \I_m + \A \B .
+\end{aligned}
 \]
 By @thm-schur-determinant (a) and (b), \( \det \M = \det \I_m\det(\I_n + \B \A) \) and \( \det \M = \det \I_n\det(\I_m + \A \B) \). Hence \( \det(\I_m + \A \B) = \det(\I_n + \B \A) \).
 
 (b) Let \( \A' = -c^{-1}\A \). Then \( c\I_m - \A \B = c(\I_m + \A'\B) \) and \( c\I_n - \B \A = c(\I_n + \B \A') \). Multiplying an \( m \times m \) matrix by \( c \) multiplies each of its \( m \) rows by \( c \), so it multiplies the determinant by \( c^m \) (@thm-det-row-operations). By (a) applied to \( \A' \) and \( \B \),
 \[
-\det(c\I_m - \A \B) = c^m\det(\I_m + \A'\B) = c^m\det(\I_n + \B \A') = c^m c^{-n}\det(c\I_n - \B \A) = c^{m-n}\det(c\I_n - \B \A) .
+\begin{aligned}
+\det(c\I_m - \A \B)
+  &= c^m\det(\I_m + \A'\B) = c^m\det(\I_n + \B \A') \\
+  &= c^m c^{-n}\det(c\I_n - \B \A) = c^{m-n}\det(c\I_n - \B \A) .
+\end{aligned}
 \]
 
 (c) Let \( \u, \v \in F^n \), and apply (a) with the sizes \( m, n \) there replaced by \( n, 1 \): \( \A = \u \in M_{n \times 1}(F) \) and \( \B = \v\tp \in M_{1 \times n}(F) \). Then \( \det(\I_n + \u\v\tp) = \det(\I_1 + \v\tp\u) = 1 + \v\tp\u \), because the determinant of a \( 1 \times 1 \) matrix is its entry.
@@ -520,7 +554,11 @@ Let \( n \ge 1 \) and \( \A, \B, \C, \D \in M_n(F) \) with \( \A \C = \C \A \), 
 ::: {.solution}
 (a) By @thm-schur-determinant (a) and @thm-det-multiplicative,
 \[
-\det \M = \det \A\det(\D - \C \A^{-1}\B) = \det\big(\A(\D - \C \A^{-1}\B)\big) = \det(\A \D - \A \C \A^{-1}\B) .
+\begin{aligned}
+\det \M &= \det \A\det(\D - \C \A^{-1}\B) \\
+  &= \det\big(\A(\D - \C \A^{-1}\B)\big) = \det(\A \D - \A \C \A^{-1}\B) .
+\end{aligned}
+
 \]
 Since \( \A \C = \C \A \), \( \A \C \A^{-1} = \C \A \A^{-1} = \C \), so \( \det \M = \det(\A \D - \C \B) \).
 

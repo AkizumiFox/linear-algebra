@@ -70,7 +70,11 @@ For (a), write the chain relation as \( \A\w_j = \lambda\w_j + \w_{j-1} \) and c
 ::: {.proof}
 (a) Every \( \z \in \nC^n \) is uniquely \( \x + i\y \) with \( \x, \y \in \nR^n \), by @def-complex-numbers applied entry by entry; so \( \u_j, \v_j \) are well defined. The chain relation says \( \A\w_j = \lambda\w_j + \w_{j-1} \) for \( 1 \le j \le k \). Expanding both sides with \( \w_j = \u_j - i\v_j \) and \( \lambda = a + bi \),
 \[
-\A\u_j - i\A\v_j = (a + bi)(\u_j - i\v_j) + \u_{j-1} - i\v_{j-1} = \big(a\u_j + b\v_j + \u_{j-1}\big) + i\big(b\u_j - a\v_j - \v_{j-1}\big),
+\begin{aligned}
+\A\u_j - i\A\v_j
+  &= (a + bi)(\u_j - i\v_j) + \u_{j-1} - i\v_{j-1} \\
+  &= \big(a\u_j + b\v_j + \u_{j-1}\big) + i\big(b\u_j - a\v_j - \v_{j-1}\big),
+\end{aligned}
 \]
 where we used \( i^2 = -1 \) and, on the left, that \( \A \) has real entries, so \( \A(\u_j - i\v_j) = \A\u_j - i\A\v_j \) with \( \A\u_j, \A\v_j \in \nR^n \). Comparing real parts gives the first identity, and comparing imaginary parts gives \( -\A\v_j = b\u_j - a\v_j - \v_{j-1} \), that is, the second.
 
@@ -100,7 +104,12 @@ In particular \( p_{\C_k(\lambda)} = \big((x - \lambda)(x - \conj\lambda)\big)^{
 ::: {.proof}
 Put \( \A = \C_k(\lambda) \in M_{2k}(\nR) \) and let \( (\u_1, \v_1, \dots, \u_k, \v_k) \) be the standard basis of \( \nR^{2k} \) in this order. Reading the columns of \( \C_k(\lambda) \) gives exactly the identities of @lem-realify-jordan-chain (a). Put \( \w_j = \u_j - i\v_j \), so that \( \w_1 = \e_1 - i\e_2 \ne \0 \). Combining the two real identities,
 \[
-\A\w_j = \A\u_j - i\A\v_j = (a\u_j + b\v_j + \u_{j-1}) - i(-b\u_j + a\v_j + \v_{j-1}) = (a + bi)\u_j + (b - ai)\v_j + \w_{j-1} = \lambda\w_j + \w_{j-1},
+\begin{aligned}
+\A\w_j = \A\u_j - i\A\v_j
+  &= (a\u_j + b\v_j + \u_{j-1}) - i(-b\u_j + a\v_j + \v_{j-1}) \\
+  &= (a + bi)\u_j + (b - ai)\v_j + \w_{j-1} \\
+  &= \lambda\w_j + \w_{j-1},
+\end{aligned}
 \]
 since \( \lambda(-i\v_j) = (b - ai)\v_j \). So \( (\w_1, \dots, \w_k) \) is a Jordan chain of \( \A \) for \( \lambda \), and by (b) so is \( (\conj{\w_1}, \dots, \conj{\w_k}) \) for \( \conj\lambda \). By (c), the \( 2k \) vectors \( \w_1, \dots, \w_k, \conj{\w_1}, \dots, \conj{\w_k} \) are independent over \( \nC \), because the standard basis is; being \( 2k \) independent vectors in \( \nC^{2k} \), they form a basis (@thm-right-size-basis (a)). On the span of one chain, \( \A - \lambda \I \) has matrix \( \J_k(0) \) by @lem-jordan-chain-independent (b), so \( \A \) has matrix \( \lambda \I_k + \J_k(0) = \J_k(\lambda) \) there, the matrix of a sum of operators being the sum of their matrices (@thm-linear-maps-isomorphic-to-matrices, @def-jordan-block); likewise \( \J_k(\conj\lambda) \) on the span of the conjugate chain. By @thm-direct-sum-invariant-block-diagonal the matrix of \( T_{\A} \) in the combined basis is \( \J_k(\lambda) \oplus \J_k(\conj\lambda) \). Hence \( \C_k(\lambda) \sim \J_k(\lambda) \oplus \J_k(\conj\lambda) \) over \( \nC \) (@thm-similar-iff-same-operator).
 
@@ -145,7 +154,10 @@ Now the theorem. Read it as the Jordan form with one amendment: a conjugate pair
 
 Let \( \A \in M_n(\nR) \) with \( n \ge 1 \). List the eigenvalues of \( \A \) in \( \nC \) as
 \[
-\mu_1, \dots, \mu_p \in \nR \quad\text{(the real ones, distinct)}, \qquad \lambda_1, \conj{\lambda_1}, \dots, \lambda_q, \conj{\lambda_q} \quad\text{(the conjugate pairs, with } \operatorname{Im}\lambda_t > 0).
+\begin{aligned}
+&\mu_1, \dots, \mu_p \in \nR \quad\text{(the real ones, distinct)}, \\
+&\lambda_1, \conj{\lambda_1}, \dots, \lambda_q, \conj{\lambda_q} \quad\text{(the conjugate pairs, with } \operatorname{Im}\lambda_t > 0).
+\end{aligned}
 \]
 
 ::: {.enumerate options="label=(\alph*)"}
@@ -258,15 +270,29 @@ Now read off \( \w_j' = \u_j - i\v_j \) with \( \u_j, \v_j \) real, as @lem-real
 
 *The check, column by column.* Writing \( \c_1, \dots, \c_4 \) for the columns of \( \P \), the identity \( \A \P = \P\,\C_2(1+i) \) says
 \[
-\A\c_1 = \c_1 + \c_2, \quad \A\c_2 = -\c_1 + \c_2, \quad \A\c_3 = \c_1 + \c_3 + \c_4, \quad \A\c_4 = \c_2 - \c_3 + \c_4 ,
+\begin{aligned}
+\A\c_1 &= \c_1 + \c_2, \\
+\A\c_2 &= -\c_1 + \c_2, \\
+\A\c_3 &= \c_1 + \c_3 + \c_4, \\
+\A\c_4 &= \c_2 - \c_3 + \c_4 ,
+\end{aligned}
 \]
 read off the four columns of \( \C_2(1+i) \); these are exactly the identities of @lem-realify-jordan-chain (a) with \( a = b = 1 \). Two of them in full:
 \[
-\A\c_1 = \A(1,0,1,0) = (0 + 1,\ 1 + 0,\ -1 + 2,\ 0 + 1) = (1,1,1,1) = (1,0,1,0) + (0,1,0,1) = \c_1 + \c_2,
+\begin{aligned}
+\A\c_1 = \A(1,0,1,0)
+  &= (0 + 1,\ 1 + 0,\ -1 + 2,\ 0 + 1) = (1,1,1,1) \\
+  &= (1,0,1,0) + (0,1,0,1) = \c_1 + \c_2,
+\end{aligned}
 \]
 adding columns \( 1 \) and \( 3 \) of \( \A \); and
 \[
-\A\c_3 = \A(0,0,1,0) = (1, 0, 2, 1) = (1,0,1,0) + (0,0,1,0) + (0,0,0,1) = \c_1 + \c_3 + \c_4 ,
+\begin{aligned}
+\A\c_3 = \A(0,0,1,0)
+  &= (1, 0, 2, 1) = (1,0,1,0) + (0,0,1,0) + (0,0,0,1) \\
+  &= \c_1 + \c_3 + \c_4 ,
+\end{aligned}
+
 \]
 the third column of \( \A \). The remaining two are the same kind of one-line computation.
 

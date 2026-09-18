@@ -130,7 +130,11 @@ as in @thm-generalized-eigenspace-decomposition, so that \( V = G_1 \oplus \dots
 \]
 is the projection onto \( G_i \) along \( \bigoplus_{j \ne i}G_j \). Put
 \[
-g \coloneqq \sum_{i=1}^{k}\lambda_ih_i \in F[x], \qquad S \coloneqq g(T) = \sum_{i=1}^{k}\lambda_i\pi_i, \qquad N \coloneqq T - S = h(T) \text{ with } h = x - g .
+\begin{aligned}
+g &\coloneqq \sum_{i=1}^{k}\lambda_ih_i \in F[x], \\
+S &\coloneqq g(T) = \sum_{i=1}^{k}\lambda_i\pi_i, \\
+N &\coloneqq T - S = h(T) \text{ with } h = x - g .
+\end{aligned}
 \]
 
 *\( S \) is diagonalizable.* Fix \( i \) and \( \v \in G_i \). Then \( \pi_i\v = \v \) and \( \pi_j\v = \0 \) for \( j \ne i \) (@thm-projection-direct-sum), so \( S\v = \lambda_i\v \). Choose a basis of each \( G_i \) and let \( \sB \) be the concatenation, a basis of \( V \) because \( V = \bigoplus_iG_i \). Every vector of \( \sB \) is an eigenvector of \( S \), so \( [S]_{\sB} \) is diagonal and \( S \) is diagonalizable (@thm-diagonalization).
@@ -193,12 +197,19 @@ Following @thm-kernel-splitting with \( p = (x-2)^2 \) and \( q = x-3 \): the pr
 \]
 Hence
 \[
-\S = 2\pi_2 + 3\pi_3 = 2\I + \B^2 = \begin{pmatrix} 1 & 3 & -2 \\ 0 & 2 & 0 \\ 1 & -3 & 4\end{pmatrix}, \qquad \N = \A - \S = \B - \B^2 = \begin{pmatrix} 1 & -1 & 1 \\ -1 & 1 & -1 \\ -2 & 2 & -2 \end{pmatrix}.
+\begin{aligned}
+\S = 2\pi_2 + 3\pi_3 &= 2\I + \B^2 = \begin{pmatrix} 1 & 3 & -2 \\ 0 & 2 & 0 \\ 1 & -3 & 4\end{pmatrix}, \\
+\N = \A - \S &= \B - \B^2 = \begin{pmatrix} 1 & -1 & 1 \\ -1 & 1 & -1 \\ -2 & 2 & -2 \end{pmatrix}.
+\end{aligned}
 \]
 
 *The checks.* First \( \S + \N = \A \) by construction. Next \( \N^2 = 0 \): reading the rows of \( \N \) as multiples of \( (1, -1, 1) \) shows that \( \N = \u\w\tp \) with \( \u = (1, -1, -2) \) and \( \w = (1, -1, 1) \), and \( \w\tp\u = 1 + 1 - 2 = 0 \), so \( \N^2 = \u(\w\tp\u)\w\tp = 0 \). Next \( \S \) is diagonalizable: \( (\S - 2\I)(\S - 3\I) = \B^2(\B^2 - \I) = \B^4 - \B^2 = 0 \), because \( \B^3 = \B^2 \) gives \( \B^4 = \B^2 \); so \( m_{\S} \) divides a product of distinct linear factors and \( \S \) is diagonalizable (@thm-diagonalizable-iff-minimal-distinct-linear). Finally \( \S \N = \N \S \), since both are polynomials in \( \A \): explicitly \( \S = 2\I + (\A-2\I)^2 \) and \( \N = (\A - 2\I) - (\A-2\I)^2 \), that is,
 \[
-\S = g(\A) \text{ with } g = x^2 - 4x + 6, \qquad \N = h(\A) \text{ with } h = -x^2 + 5x - 6 = -(x-2)(x-3) .
+\begin{aligned}
+\S &= g(\A) \text{ with } g = x^2 - 4x + 6, \\
+\N &= h(\A) \text{ with } h = -x^2 + 5x - 6 = -(x-2)(x-3) .
+\end{aligned}
+
 \]
 As a cross-check, \( g + h = x \), so \( g(\A) + h(\A) = \A \); and \( \tr \S = 1 + 2 + 4 = 7 = 2 + 2 + 3 \) is the sum of the eigenvalues of \( \A \), while \( \tr \N = 1 + 1 - 2 = 0 \), as it must be for a nilpotent matrix (@prp-nilpotent-basic (c) and @thm-trace-det-eigenvalues).
 :::

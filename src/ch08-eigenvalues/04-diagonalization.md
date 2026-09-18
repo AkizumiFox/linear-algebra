@@ -140,8 +140,11 @@ Decide whether \( \A \) is diagonalizable over \( \nR \). If it is, find an inve
 ::: {.solution}
 *Characteristic polynomial.* Expanding along the first row (@thm-laplace-expansion over \( \nR[x] \)),
 \[
-p_{\A}(x) = \det\begin{pmatrix} x - 3 & -2 & 2 \\ 2 & x + 1 & -2 \\ 2 & 2 & x - 3 \end{pmatrix}
-= (x - 3)\big[(x + 1)(x - 3) + 4\big] + 2\big[2(x - 3) + 4\big] + 2\big[4 - 2(x + 1)\big].
+\begin{aligned}
+p_{\A}(x) &= \det\begin{pmatrix} x - 3 & -2 & 2 \\ 2 & x + 1 & -2 \\ 2 & 2 & x - 3 \end{pmatrix} \\
+  &= (x - 3)\big[(x + 1)(x - 3) + 4\big] + 2\big[2(x - 3) + 4\big] \\
+  &\qquad + 2\big[4 - 2(x + 1)\big].
+\end{aligned}
 \]
 The brackets are \( x^2 - 2x + 1 = (x - 1)^2 \), \( 2(x - 1) \) and \( -2(x - 1) \), so the last two terms cancel and
 \[
@@ -227,7 +230,11 @@ where \( \det \P = \varphi - \psi = \sqrt5 \ne 0 \) and \( \P^{-1} \) comes from
 
 *The power.* By @thm-powers-diagonalizable, \( \x_k = \P \D^k\P^{-1}\x_0 \). Working from the right:
 \[
-\P^{-1}\x_0 = \frac{1}{\sqrt5}\begin{pmatrix} 1 \\ -1 \end{pmatrix}, \qquad \D^k\P^{-1}\x_0 = \frac{1}{\sqrt5}\begin{pmatrix} \varphi^k \\ -\psi^k \end{pmatrix}, \qquad \P \D^k\P^{-1}\x_0 = \frac{1}{\sqrt5}\begin{pmatrix} \varphi^{k+1} - \psi^{k+1} \\ \varphi^k - \psi^k \end{pmatrix}.
+\begin{aligned}
+\P^{-1}\x_0 &= \frac{1}{\sqrt5}\begin{pmatrix} 1 \\ -1 \end{pmatrix}, \\
+\D^k\P^{-1}\x_0 &= \frac{1}{\sqrt5}\begin{pmatrix} \varphi^k \\ -\psi^k \end{pmatrix}, \\
+\P \D^k\P^{-1}\x_0 &= \frac{1}{\sqrt5}\begin{pmatrix} \varphi^{k+1} - \psi^{k+1} \\ \varphi^k - \psi^k \end{pmatrix}.
+\end{aligned}
 \]
 The second entry of \( \x_k \) is \( F_k \), so
 \[
@@ -324,7 +331,10 @@ and indeed \( \A_1\P = \begin{pmatrix} 2 & 3 \\ 4 & 9 \end{pmatrix} = \P \D \).
 
 (b) Expanding along the first row,
 \[
-p(x) = \det\begin{pmatrix} x - 1 & -1 & -1 \\ -2 & x & -1 \\ 3 & -3 & x - 2 \end{pmatrix} = (x - 1)\big[x(x - 2) - 3\big] + \big[-2(x - 2) + 3\big] - \big[6 - 3x\big].
+\begin{aligned}
+p(x) &= \det\begin{pmatrix} x - 1 & -1 & -1 \\ -2 & x & -1 \\ 3 & -3 & x - 2 \end{pmatrix} \\
+  &= (x - 1)\big[x(x - 2) - 3\big] + \big[-2(x - 2) + 3\big] - \big[6 - 3x\big].
+\end{aligned}
 \]
 The first bracket is \( (x - 3)(x + 1) \), and the last two terms add up to \( -2x + 7 - 6 + 3x = x + 1 \). So \( p(x) = (x + 1)\big[(x - 1)(x - 3) + 1\big] = (x + 1)(x - 2)^2 \), and \( a(2) = 2 \). Now
 \[
@@ -334,7 +344,11 @@ Row \( 3 \) equals row \( 1 \) minus row \( 2 \), and rows \( 1 \) and \( 2 \) a
 
 (c) Expanding along the first row,
 \[
-p(x) = \det\begin{pmatrix} x + 1 & -2 & 2 \\ 2 & x - 3 & 2 \\ -2 & 2 & x - 3 \end{pmatrix} = (x + 1)\big[(x - 3)^2 - 4\big] + 2\big[2(x - 3) + 4\big] + 2\big[4 + 2(x - 3)\big].
+\begin{aligned}
+p(x) &= \det\begin{pmatrix} x + 1 & -2 & 2 \\ 2 & x - 3 & 2 \\ -2 & 2 & x - 3 \end{pmatrix} \\
+  &= (x + 1)\big[(x - 3)^2 - 4\big] + 2\big[2(x - 3) + 4\big] \\
+  &\qquad + 2\big[4 + 2(x - 3)\big].
+\end{aligned}
 \]
 The first bracket is \( (x - 5)(x - 1) \) and the other two are \( 2(x - 1) \) each, so \( p(x) = (x - 1)\big[(x + 1)(x - 5) + 8\big] = (x - 1)(x^2 - 4x + 3) = (x - 1)^2(x - 3) \). For \( \lambda = 1 \), \( \A_3 - \I = \begin{pmatrix} -2 & 2 & -2 \\ -2 & 2 & -2 \\ 2 & -2 & 2 \end{pmatrix} \) has rank \( 1 \), so \( g(1) = 2 = a(1) \), and \( E_1 \) is the plane \( x - y + z = 0 \), with basis \( (1, 1, 0), (-1, 0, 1) \). Also \( g(3) = 1 = a(3) \), so \( \A_3 \) is diagonalizable. From \( \A_3 - 3\I = \begin{pmatrix} -4 & 2 & -2 \\ -2 & 0 & -2 \\ 2 & -2 & 0 \end{pmatrix} \), row \( 3 \) gives \( y = x \) and row \( 2 \) gives \( z = -x \), so \( E_3 = \Span((1, 1, -1)) \). Hence
 \[
@@ -445,7 +459,12 @@ The eigenvalues of \( \tau \) lie among \( \pm 1 \) (as in @exr-eigenvalues-and-
 
 (b) In a basis of eigenvectors, \( [\tau] = \diag(1, \dots, 1, -1, \dots, -1) \) with \( n(n+1)/2 \) ones and \( n(n-1)/2 \) entries \( -1 \) (@thm-diagonalization). This matrix is triangular, so
 \[
-p_\tau = (x - 1)^{n(n+1)/2}(x + 1)^{n(n-1)/2}, \qquad \tr\tau = \frac{n(n+1)}{2} - \frac{n(n-1)}{2} = n, \qquad \det\tau = (-1)^{n(n-1)/2}.
+\begin{aligned}
+p_\tau &= (x - 1)^{n(n+1)/2}(x + 1)^{n(n-1)/2}, \\
+\tr\tau &= \frac{n(n+1)}{2} - \frac{n(n-1)}{2} = n, \\
+\det\tau &= (-1)^{n(n-1)/2}.
+\end{aligned}
+
 \]
 As a check on the trace: in the basis \( (\E_{ij}) \), \( \tau(\E_{ij}) = \E_{ji} \), so the diagonal entry of \( [\tau] \) at \( \E_{ij} \) is \( 1 \) if \( i = j \) and \( 0 \) otherwise, and the trace is \( n \).
 

@@ -311,7 +311,12 @@ Hence decide whether \( \A_3 \) and \( \A_4 \) are similar.
 
 (c) By @thm-minimal-polynomial-roots, \( (x - 1)(x - 2) \mid m_{\A_3} \). First candidate:
 \[
-(\A_3 - \I)(\A_3 - 2\I) = \begin{pmatrix} 1 & 1 & 1 \\ 0 & 0 & -1 \\ -1 & -1 & 0 \end{pmatrix}\begin{pmatrix} 0 & 1 & 1 \\ 0 & -1 & -1 \\ -1 & -1 & -1 \end{pmatrix} = \begin{pmatrix} -1 & -1 & -1 \\ 1 & 1 & 1 \\ 0 & 0 & 0 \end{pmatrix} \ne 0 .
+\begin{aligned}
+(\A_3 - \I)(\A_3 - 2\I)
+  &= \begin{pmatrix} 1 & 1 & 1 \\ 0 & 0 & -1 \\ -1 & -1 & 0 \end{pmatrix}\begin{pmatrix} 0 & 1 & 1 \\ 0 & -1 & -1 \\ -1 & -1 & -1 \end{pmatrix} \\
+  &= \begin{pmatrix} -1 & -1 & -1 \\ 1 & 1 & 1 \\ 0 & 0 & 0 \end{pmatrix} \ne 0 .
+\end{aligned}
+
 \]
 Next candidate: multiplying this on the left by \( \A_3 - \I \), the rows of the result are \( (1, 1, 1)\M \), \( (0, 0, -1)\M \) and \( (-1, -1, 0)\M \), where \( \M \) is the matrix just found. Since the rows of \( \M \) sum to zero and its third row is zero, all three products are \( \0 \). So \( (\A_3 - \I)^2(\A_3 - 2\I) = 0 \), and by @lem-monic-divisors, \( m_{\A_3} = (x - 1)^2(x - 2) \).
 

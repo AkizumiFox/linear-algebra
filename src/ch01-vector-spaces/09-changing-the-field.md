@@ -154,12 +154,21 @@ In words: addition is entry by entry. Multiplication by \( a + bi \) is the form
 - \( 1\z = \z \): we get \( (1\u - 0\v, \; 1\v + 0\u) = (\u, \v) \), since \( 0\v = \0 \) by @thm-zero-scalar-mult.
 - \( \alpha(\beta\z) = (\alpha\beta)\z \): since \( \beta\z = (c\u - d\v, \; c\v + d\u) \), the axioms of \( V \) give
 \[
-\alpha(\beta\z) = \bigl( a(c\u - d\v) - b(c\v + d\u), \; a(c\v + d\u) + b(c\u - d\v) \bigr) = \bigl( (ac - bd)\u - (ad + bc)\v, \; (ac - bd)\v + (ad + bc)\u \bigr).
+\begin{aligned}
+\alpha(\beta\z)
+&= \bigl( a(c\u - d\v) - b(c\v + d\u), \; a(c\v + d\u) + b(c\u - d\v) \bigr) \\
+&= \bigl( (ac - bd)\u - (ad + bc)\v, \; (ac - bd)\v + (ad + bc)\u \bigr).
+\end{aligned}
 \]
 Since \( \alpha\beta = (ac - bd) + (ad + bc)i \), this is \( (\alpha\beta)\z \).
 - \( (\alpha + \beta)\z = \alpha\z + \beta\z \): with \( \alpha + \beta = (a + c) + (b + d)i \),
 \[
-(\alpha + \beta)\z = \bigl( (a + c)\u - (b + d)\v, \; (a + c)\v + (b + d)\u \bigr) = (a\u - b\v, \; a\v + b\u) + (c\u - d\v, \; c\v + d\u) = \alpha\z + \beta\z.
+\begin{aligned}
+(\alpha + \beta)\z
+&= \bigl( (a + c)\u - (b + d)\v, \; (a + c)\v + (b + d)\u \bigr) \\
+&= (a\u - b\v, \; a\v + b\u) + (c\u - d\v, \; c\v + d\u) \\
+&= \alpha\z + \beta\z.
+\end{aligned}
 \]
 
 The remaining axiom, \( \alpha(\z + \w) = \alpha\z + \alpha\w \), is @exr-changing-the-field-b3.
@@ -288,7 +297,11 @@ Let \( V \) be a vector space over \( \nR \).
 ::: {.solution}
 (a) Let \( \alpha = a + bi \) with \( a, b \in \nR \), \( \z = (\u, \v) \) and \( \w = (\u', \v') \). Then \( \z + \w = (\u + \u', \v + \v') \), and by the distributive law in \( V \) and @thm-negative-scalar-dist,
 \[
-\alpha(\z + \w) = \bigl( a(\u + \u') - b(\v + \v'), \; a(\v + \v') + b(\u + \u') \bigr) = \bigl( (a\u - b\v) + (a\u' - b\v'), \; (a\v + b\u) + (a\v' + b\u') \bigr),
+\begin{aligned}
+\alpha(\z + \w)
+&= \bigl( a(\u + \u') - b(\v + \v'), \; a(\v + \v') + b(\u + \u') \bigr) \\
+&= \bigl( (a\u - b\v) + (a\u' - b\v'), \; (a\v + b\u) + (a\v' + b\u') \bigr),
+\end{aligned}
 \]
 where we also rearranged the sums using commutativity and associativity of addition in \( V \). The right side is \( (a\u - b\v, \; a\v + b\u) + (a\u' - b\v', \; a\v' + b\u') = \alpha\z + \alpha\w \).
 

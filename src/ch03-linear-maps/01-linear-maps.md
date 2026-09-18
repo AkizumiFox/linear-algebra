@@ -119,7 +119,10 @@ Show that \( T \colon \nR^2 \to \nR^2 \), \( T(a_1, a_2) = (a_1, 0) \), is linea
 ::: {.solution}
 Let \( \u = (a_1, a_2) \), \( \v = (b_1, b_2) \) and \( c \in \nR \). Then
 \[
-T(\u + \v) = (a_1 + b_1, 0) = (a_1, 0) + (b_1, 0) = T(\u) + T(\v), \qquad T(c\u) = (ca_1, 0) = c(a_1, 0) = cT(\u).
+\begin{aligned}
+T(\u + \v) &= (a_1 + b_1, 0) = (a_1, 0) + (b_1, 0) = T(\u) + T(\v), \\
+T(c\u) &= (ca_1, 0) = c(a_1, 0) = cT(\u).
+\end{aligned}
 \]
 So (LT1) and (LT2) hold. The map drops each point vertically onto the \( x \)-axis, like a shadow cast by light from straight above.
 :::
@@ -144,7 +147,10 @@ Let \( \theta \in \nR \), and let \( R_\theta \colon \nR^2 \to \nR^2 \) rotate e
 ::: {.solution}
 Write \( (a_1, a_2) = (r\cos\varphi, r\sin\varphi) \) in polar coordinates. Rotating adds \( \theta \) to the angle and keeps the length \( r \), so by the addition formulas for sine and cosine,
 \[
-R_\theta(a_1, a_2) = \bigl(r\cos(\varphi + \theta),\ r\sin(\varphi + \theta)\bigr) = (a_1\cos\theta - a_2\sin\theta,\ a_1\sin\theta + a_2\cos\theta).
+\begin{aligned}
+R_\theta(a_1, a_2) &= \bigl(r\cos(\varphi + \theta),\ r\sin(\varphi + \theta)\bigr) \\
+&= (a_1\cos\theta - a_2\sin\theta,\ a_1\sin\theta + a_2\cos\theta).
+\end{aligned}
 \]
 This is \( T_\A \) for \( \A = \begin{pmatrix} \cos\theta & -\sin\theta \\ \sin\theta & \cos\theta \end{pmatrix} \), so \( R_\theta \) is linear by @exm-matrix-transformation.
 :::
@@ -170,7 +176,10 @@ Show that \( J \colon \nR[x] \to \nR[x] \), \( J(p)(x) = \int_0^x p(t)\,\dd t \)
 ::: {.solution}
 On coefficients, \( J \) sends \( a_0 + a_1x + \dots + a_nx^n \) to \( a_0x + \frac{a_1}{2}x^2 + \dots + \frac{a_n}{n + 1}x^{n+1} \), so it does map polynomials to polynomials. By linearity of the integral from calculus,
 \[
-J(p + q)(x) = \int_0^x \bigl(p(t) + q(t)\bigr)\,\dd t = J(p)(x) + J(q)(x), \qquad J(cp)(x) = \int_0^x cp(t)\,\dd t = cJ(p)(x)
+\begin{aligned}
+J(p + q)(x) &= \int_0^x \bigl(p(t) + q(t)\bigr)\,\dd t = J(p)(x) + J(q)(x), \\
+J(cp)(x) &= \int_0^x cp(t)\,\dd t = cJ(p)(x)
+\end{aligned}
 \]
 for every \( x \in \nR \). Hence \( J \) is linear. (The coefficient formula divides by \( k + 1 \); over a field such as \( \nF_2 \), where \( 1 + 1 = 0 \), it breaks down.)
 :::
@@ -651,7 +660,10 @@ Multiplying by \( \frac1n \in \nQ \) gives \( T(q\v) = \frac{m}{n}T(\v) = qT(\v)
 
 (b) (LT1) holds because \( T \) is linear over \( \nR \). For (LT2), let \( c = a + bi \in \nC \) with \( a, b \in \nR \), and \( \v \in V \). By the vector space axioms, \( c\v = a\v + b(i\v) \). Using (LT1), then \( \nR \)-homogeneity, then the hypothesis,
 \[
-T(c\v) = T(a\v) + T(b(i\v)) = aT(\v) + bT(i\v) = aT(\v) + b\,iT(\v) = (a + bi)T(\v) = cT(\v).
+\begin{aligned}
+T(c\v) &= T(a\v) + T(b(i\v)) = aT(\v) + bT(i\v) \\
+&= aT(\v) + b\,iT(\v) = (a + bi)T(\v) = cT(\v).
+\end{aligned}
 \]
 Hence \( T \) is linear over \( \nC \).
 :::

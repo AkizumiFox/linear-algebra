@@ -40,7 +40,11 @@ Collecting all of them, together with \( \0 \), gives the space we are after.
 
 Let \( V \) be a vector space over \( F \), let \( T \in \cL(V) \) and \( \lambda \in F \). The **generalized eigenspace** of \( T \) for \( \lambda \) is
 \[
-G_\lambda(T) \coloneqq \{\, \v \in V : (T - \lambda\,\id_V)^k\,\v = \0 \text{ for some integer } k \ge 1 \,\} = \bigcup_{k \ge 1} \ker (T - \lambda\,\id_V)^k .
+\begin{aligned}
+G_\lambda(T) &\coloneqq \{\, \v \in V : (T - \lambda\,\id_V)^k\,\v = \0 \text{ for some integer } k \ge 1 \,\} \\
+  &= \bigcup_{k \ge 1} \ker (T - \lambda\,\id_V)^k .
+\end{aligned}
+
 \]
 For \( \A \in M_n(F) \) we write \( G_\lambda(\A) = G_\lambda(T_{\A}) \).
 :::

@@ -250,11 +250,13 @@ x_1 + x_2 + x_3 \phantom{{} + x_4} &= 3, \\
 ::: {.solution}
 We work on the augmented matrix. **Column 1.** Row 1 has a \( 0 \) there, so we bring up row 2, whose entry is already \( 1 \). Then we clear the rest of column 1.
 \[
+\begin{aligned}
 \left[ \begin{array}{cccc|c} 0 & 2 & -2 & 1 & 3 \\ 1 & 1 & 1 & 0 & 3 \\ 2 & 1 & 3 & 1 & 3 \end{array} \right]
-\xrightarrow{R_1 \leftrightarrow R_2}
-\left[ \begin{array}{cccc|c} 1 & 1 & 1 & 0 & 3 \\ 0 & 2 & -2 & 1 & 3 \\ 2 & 1 & 3 & 1 & 3 \end{array} \right]
-\xrightarrow{R_3 \to R_3 - 2R_1}
+&\xrightarrow{R_1 \leftrightarrow R_2}
+\left[ \begin{array}{cccc|c} 1 & 1 & 1 & 0 & 3 \\ 0 & 2 & -2 & 1 & 3 \\ 2 & 1 & 3 & 1 & 3 \end{array} \right] \\
+&\xrightarrow{R_3 \to R_3 - 2R_1}
 \left[ \begin{array}{cccc|c} 1 & 1 & 1 & 0 & 3 \\ 0 & 2 & -2 & 1 & 3 \\ 0 & -1 & 1 & 1 & -3 \end{array} \right]
+\end{aligned}
 \]
 **Column 2.** The candidates below row 1 are \( 2 \) and \( -1 \). Choosing \( -1 \) avoids fractions, so we swap it up and scale.
 \[
@@ -272,12 +274,14 @@ Now clear column 2 above and below the pivot.
 \]
 **Column 3.** The only entry below row 2 is \( 0 \), so column 3 gets no pivot. **Column 4.** The entry \( 3 \) in row 3 becomes the pivot.
 \[
-\xrightarrow{R_3 \to \frac13 R_3}
-\left[ \begin{array}{cccc|c} 1 & 0 & 2 & 1 & 0 \\ 0 & 1 & -1 & -1 & 3 \\ 0 & 0 & 0 & 1 & -1 \end{array} \right]
-\xrightarrow{R_1 \to R_1 - R_3}
-\left[ \begin{array}{cccc|c} 1 & 0 & 2 & 0 & 1 \\ 0 & 1 & -1 & -1 & 3 \\ 0 & 0 & 0 & 1 & -1 \end{array} \right]
-\xrightarrow{R_2 \to R_2 + R_3}
+\begin{aligned}
+&\xrightarrow{R_3 \to \frac13 R_3}
+\left[ \begin{array}{cccc|c} 1 & 0 & 2 & 1 & 0 \\ 0 & 1 & -1 & -1 & 3 \\ 0 & 0 & 0 & 1 & -1 \end{array} \right] \\
+&\xrightarrow{R_1 \to R_1 - R_3}
+\left[ \begin{array}{cccc|c} 1 & 0 & 2 & 0 & 1 \\ 0 & 1 & -1 & -1 & 3 \\ 0 & 0 & 0 & 1 & -1 \end{array} \right] \\
+&\xrightarrow{R_2 \to R_2 + R_3}
 \left[ \begin{array}{cccc|c} 1 & 0 & 2 & 0 & 1 \\ 0 & 1 & -1 & 0 & 2 \\ 0 & 0 & 0 & 1 & -1 \end{array} \right]
+\end{aligned}
 \]
 **Column 5.** No rows remain below row 3, so we stop. The final matrix is in RREF, with pivot columns 1, 2 and 4. It is the system
 \[
@@ -506,22 +510,26 @@ The last column is a pivot column, so by @thm-reading-rref (a) the system is inc
 \left[ \begin{array}{ccc|c} 1 & 1 & 2 & 3 \\ 0 & 1 & 1 & 1 \\ 0 & 1 & 2 & 2 \end{array} \right]
 \]
 \[
-\xrightarrow{R_1 \to R_1 - R_2}
-\left[ \begin{array}{ccc|c} 1 & 0 & 1 & 2 \\ 0 & 1 & 1 & 1 \\ 0 & 1 & 2 & 2 \end{array} \right]
-\xrightarrow{R_3 \to R_3 - R_2}
-\left[ \begin{array}{ccc|c} 1 & 0 & 1 & 2 \\ 0 & 1 & 1 & 1 \\ 0 & 0 & 1 & 1 \end{array} \right]
-\xrightarrow{R_1 \to R_1 - R_3}
-\left[ \begin{array}{ccc|c} 1 & 0 & 0 & 1 \\ 0 & 1 & 1 & 1 \\ 0 & 0 & 1 & 1 \end{array} \right]
-\xrightarrow{R_2 \to R_2 - R_3}
+\begin{aligned}
+&\xrightarrow{R_1 \to R_1 - R_2}
+\left[ \begin{array}{ccc|c} 1 & 0 & 1 & 2 \\ 0 & 1 & 1 & 1 \\ 0 & 1 & 2 & 2 \end{array} \right] \\
+&\xrightarrow{R_3 \to R_3 - R_2}
+\left[ \begin{array}{ccc|c} 1 & 0 & 1 & 2 \\ 0 & 1 & 1 & 1 \\ 0 & 0 & 1 & 1 \end{array} \right] \\
+&\xrightarrow{R_1 \to R_1 - R_3}
+\left[ \begin{array}{ccc|c} 1 & 0 & 0 & 1 \\ 0 & 1 & 1 & 1 \\ 0 & 0 & 1 & 1 \end{array} \right] \\
+&\xrightarrow{R_2 \to R_2 - R_3}
 \left[ \begin{array}{ccc|c} 1 & 0 & 0 & 1 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 1 & 1 \end{array} \right].
+\end{aligned}
 \]
 Columns 1, 2, 3 are pivot columns and the last column is not, so by @thm-reading-rref (c) there is exactly one solution, \( (1, 0, 1) \). Check: \( 1 + 0 + 2 = 3 \), \( 2 + 0 + 5 = 7 \), \( 1 + 0 + 4 = 5 \).
 3. \[
+\begin{aligned}
 \left[ \begin{array}{cccc|c} 1 & -1 & 2 & 1 & 2 \\ 2 & -2 & 5 & 4 & 5 \\ -1 & 1 & -1 & 1 & -1 \end{array} \right]
-\xrightarrow{R_2 \to R_2 - 2R_1}
-\left[ \begin{array}{cccc|c} 1 & -1 & 2 & 1 & 2 \\ 0 & 0 & 1 & 2 & 1 \\ -1 & 1 & -1 & 1 & -1 \end{array} \right]
-\xrightarrow{R_3 \to R_3 + R_1}
+&\xrightarrow{R_2 \to R_2 - 2R_1}
+\left[ \begin{array}{cccc|c} 1 & -1 & 2 & 1 & 2 \\ 0 & 0 & 1 & 2 & 1 \\ -1 & 1 & -1 & 1 & -1 \end{array} \right] \\
+&\xrightarrow{R_3 \to R_3 + R_1}
 \left[ \begin{array}{cccc|c} 1 & -1 & 2 & 1 & 2 \\ 0 & 0 & 1 & 2 & 1 \\ 0 & 0 & 1 & 2 & 1 \end{array} \right]
+\end{aligned}
 \]
 Column 2 has only zeros below row 1, so no pivot. Column 3 has its pivot in row 2:
 \[
@@ -549,13 +557,15 @@ inconsistent, which give exactly one solution, and which give infinitely many? J
 
 ::: {.solution}
 \[
+\begin{aligned}
 \left[ \begin{array}{ccc|c} 1 & 1 & -1 & 2 \\ 1 & 2 & 1 & 3 \\ 1 & 1 & k^2 - 5 & k \end{array} \right]
-\xrightarrow{R_2 \to R_2 - R_1}
-\left[ \begin{array}{ccc|c} 1 & 1 & -1 & 2 \\ 0 & 1 & 2 & 1 \\ 1 & 1 & k^2 - 5 & k \end{array} \right]
-\xrightarrow{R_3 \to R_3 - R_1}
-\left[ \begin{array}{ccc|c} 1 & 1 & -1 & 2 \\ 0 & 1 & 2 & 1 \\ 0 & 0 & k^2 - 4 & k - 2 \end{array} \right]
-\xrightarrow{R_1 \to R_1 - R_2}
+&\xrightarrow{R_2 \to R_2 - R_1}
+\left[ \begin{array}{ccc|c} 1 & 1 & -1 & 2 \\ 0 & 1 & 2 & 1 \\ 1 & 1 & k^2 - 5 & k \end{array} \right] \\
+&\xrightarrow{R_3 \to R_3 - R_1}
+\left[ \begin{array}{ccc|c} 1 & 1 & -1 & 2 \\ 0 & 1 & 2 & 1 \\ 0 & 0 & k^2 - 4 & k - 2 \end{array} \right] \\
+&\xrightarrow{R_1 \to R_1 - R_2}
 \left[ \begin{array}{ccc|c} 1 & 0 & -3 & 1 \\ 0 & 1 & 2 & 1 \\ 0 & 0 & k^2 - 4 & k - 2 \end{array} \right].
+\end{aligned}
 \]
 Whether column 3 gets a pivot depends on whether \( k^2 - 4 = (k - 2)(k + 2) \) is zero.
 
@@ -596,14 +606,16 @@ In \( \nF_3 \) the inverses are \( 1^{-1} = 1 \) and \( 2^{-1} = 2 \), since \( 
 \]
 Here \( 1 - 4 = -3 = 0 \), \( 1 - 2 = -1 = 2 \), \( 0 - 2 = 1 \), and \( 0 - 2 = 1 \), \( 2 - 1 = 1 \). Column 2 has entries \( 0, 1 \) below row 1, so we swap:
 \[
-\xrightarrow{R_2 \leftrightarrow R_3}
-\left[ \begin{array}{ccc|c} 1 & 2 & 1 & 1 \\ 0 & 1 & 0 & 1 \\ 0 & 0 & 2 & 1 \end{array} \right]
-\xrightarrow{R_1 \to R_1 - 2R_2}
-\left[ \begin{array}{ccc|c} 1 & 0 & 1 & 2 \\ 0 & 1 & 0 & 1 \\ 0 & 0 & 2 & 1 \end{array} \right]
-\xrightarrow{R_3 \to 2R_3}
-\left[ \begin{array}{ccc|c} 1 & 0 & 1 & 2 \\ 0 & 1 & 0 & 1 \\ 0 & 0 & 1 & 2 \end{array} \right]
-\xrightarrow{R_1 \to R_1 - R_3}
+\begin{aligned}
+&\xrightarrow{R_2 \leftrightarrow R_3}
+\left[ \begin{array}{ccc|c} 1 & 2 & 1 & 1 \\ 0 & 1 & 0 & 1 \\ 0 & 0 & 2 & 1 \end{array} \right] \\
+&\xrightarrow{R_1 \to R_1 - 2R_2}
+\left[ \begin{array}{ccc|c} 1 & 0 & 1 & 2 \\ 0 & 1 & 0 & 1 \\ 0 & 0 & 2 & 1 \end{array} \right] \\
+&\xrightarrow{R_3 \to 2R_3}
+\left[ \begin{array}{ccc|c} 1 & 0 & 1 & 2 \\ 0 & 1 & 0 & 1 \\ 0 & 0 & 1 & 2 \end{array} \right] \\
+&\xrightarrow{R_1 \to R_1 - R_3}
 \left[ \begin{array}{ccc|c} 1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 1 \\ 0 & 0 & 1 & 2 \end{array} \right].
+\end{aligned}
 \]
 There are no free variables, so the unique solution is \( (0, 1, 2) \). Check: \( 0 + 2 + 2 = 4 = 1 \), \( 0 + 1 + 2 = 3 = 0 \), \( 0 + 2 = 2 \).
 2. \[

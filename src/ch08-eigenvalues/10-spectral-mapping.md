@@ -182,8 +182,10 @@ Both are block triangular, so their characteristic polynomials are \( p_{\A \B} 
 ::: {.proof}
 Let \( \M, \N, \S \in M_{m+n}(F) \) be the block matrices displayed in the Idea, partitioned by \( m, n \) in rows and columns. By @thm-block-multiplication,
 \[
-\M \S = \begin{pmatrix} \A \B\cdot \I_m + 0 & \A \B\cdot \A + 0 \\ \B\cdot \I_m + 0 & \B\cdot \A + 0 \end{pmatrix} = \begin{pmatrix} \A \B & \A \B \A \\ \B & \B \A \end{pmatrix}, \qquad
-\S \N = \begin{pmatrix} 0 + \A \B & 0 + \A\cdot \B \A \\ 0 + \B & 0 + \B \A \end{pmatrix} = \begin{pmatrix} \A \B & \A \B \A \\ \B & \B \A \end{pmatrix},
+\begin{aligned}
+\M \S &= \begin{pmatrix} \A \B\cdot \I_m + 0 & \A \B\cdot \A + 0 \\ \B\cdot \I_m + 0 & \B\cdot \A + 0 \end{pmatrix} = \begin{pmatrix} \A \B & \A \B \A \\ \B & \B \A \end{pmatrix}, \\
+\S \N &= \begin{pmatrix} 0 + \A \B & 0 + \A\cdot \B \A \\ 0 + \B & 0 + \B \A \end{pmatrix} = \begin{pmatrix} \A \B & \A \B \A \\ \B & \B \A \end{pmatrix},
+\end{aligned}
 \]
 using associativity (@thm-matrix-multiplication-properties). So \( \M \S = \S \N \). The matrix \( \S \) is invertible: by @thm-block-multiplication, \( \begin{pmatrix} \I_m & \A \\ 0 & \I_n \end{pmatrix}\begin{pmatrix} \I_m & -\A \\ 0 & \I_n \end{pmatrix} = \begin{pmatrix} \I_m & -\A + \A \\ 0 & \I_n \end{pmatrix} = \I_{m+n} \), and @thm-one-sided-inverse applies. Hence \( \S^{-1}\M \S = \N \), and \( p_{\M} = p_{\N} \) by @thm-charpoly-similarity-invariant.
 
@@ -393,7 +395,10 @@ Let \( \A = \begin{pmatrix} 1 & 0 & 1 \\ 0 & 2 & 0 \end{pmatrix} \) and \( \B = 
 \]
 \( \A \B \) is upper triangular, so \( p_{\A \B} = (x - 2)(x + 2) = x^2 - 4 \). Expanding \( \det(x\I - \B \A) \) along the second row, whose only non-zero entry is \( x + 2 \) in position \( (2, 2) \),
 \[
-p_{\B \A} = (x + 2)\det\begin{pmatrix} x - 1 & -1 \\ -1 & x - 1 \end{pmatrix} = (x + 2)\big((x - 1)^2 - 1\big) = (x + 2)\,x\,(x - 2) = x^3 - 4x .
+\begin{aligned}
+p_{\B \A} &= (x + 2)\det\begin{pmatrix} x - 1 & -1 \\ -1 & x - 1 \end{pmatrix} \\
+  &= (x + 2)\big((x - 1)^2 - 1\big) = (x + 2)\,x\,(x - 2) = x^3 - 4x .
+\end{aligned}
 \]
 Then \( x^3p_{\A \B} = x^5 - 4x^3 = x^2(x^3 - 4x) = x^2p_{\B \A} \).
 
@@ -440,9 +445,13 @@ Let \( \A \in M_{m \times n}(F) \) and \( \B \in M_{n \times m}(F) \).
 ::: {.solution}
 (a) By induction on \( k \). For \( k = 1 \) both sides are \( \B \A \). If \( \B(\A \B)^{k-1}\A = (\B \A)^k \), then by associativity
 \[
-\B(\A \B)^k\A = \B(\A \B)^{k-1}(\A \B)\A = \big(\B(\A \B)^{k-1}\A\big)(\B \A) = (\B \A)^k(\B \A) = (\B \A)^{k+1}.
+\begin{aligned}
+\B(\A \B)^k\A &= \B(\A \B)^{k-1}(\A \B)\A = \big(\B(\A \B)^{k-1}\A\big)(\B \A) \\
+  &= (\B \A)^k(\B \A) = (\B \A)^{k+1}.
+\end{aligned}
+
 \]
-Now \( (\A \B)^k = \A\,\big(\B(\A \B)^{k-1}\big) \), with \( \A \) of size \( m \times n \) and \( \B(\A \B)^{k-1} \) of size \( n \times m \). By @thm-trace-properties (c),
+Now \( (\A \B)^k = \A\,\big(\B(\A \B)^{k-1}\big) \), with \( \A \) of size \( m \times n \) and \( \B(\A \B)^{k-1} \) of size \( n \times m \). By @thm-trace-properties (3),
 \[
 \tr\big((\A \B)^k\big) = \tr\big(\A \cdot \B(\A \B)^{k-1}\big) = \tr\big(\B(\A \B)^{k-1} \cdot \A\big) = \tr\big((\B \A)^k\big).
 \]

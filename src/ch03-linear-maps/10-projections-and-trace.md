@@ -167,7 +167,12 @@ The rules for the trace of a matrix carry over at once.
 
 Let \( V \) be finite-dimensional with \( n = \dim V \), let \( S, T \in \cL(V) \) and \( c \in F \). Then
 \[
-\tr(S + T) = \tr S + \tr T, \qquad \tr(cT) = c\,\tr T, \qquad \tr(ST) = \tr(TS), \qquad \tr \id_V = n \cdot 1 .
+\begin{aligned}
+\tr(S + T) &= \tr S + \tr T, \\
+\tr(cT) &= c\,\tr T, \\
+\tr(ST) &= \tr(TS), \\
+\tr \id_V &= n \cdot 1 .
+\end{aligned}
 \]
 :::
 

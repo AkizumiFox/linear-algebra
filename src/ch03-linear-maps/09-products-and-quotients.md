@@ -19,7 +19,10 @@ V_1 \times \dots \times V_k = \{ (\v_1, \dots, \v_k) : \v_i \in V_i \text{ for e
 \]
 with addition and scalar multiplication defined **entrywise**: for \( a \in F \),
 \[
-(\v_1, \dots, \v_k) + (\w_1, \dots, \w_k) \coloneqq (\v_1 + \w_1, \dots, \v_k + \w_k), \qquad a(\v_1, \dots, \v_k) \coloneqq (a\v_1, \dots, a\v_k).
+\begin{aligned}
+(\v_1, \dots, \v_k) + (\w_1, \dots, \w_k) &\coloneqq (\v_1 + \w_1, \dots, \v_k + \w_k), \\
+a(\v_1, \dots, \v_k) &\coloneqq (a\v_1, \dots, a\v_k).
+\end{aligned}
 \]
 :::
 
@@ -176,7 +179,10 @@ V/U \coloneqq \{ \v + U : \v \in V \},
 \]
 with the operations
 \[
-(\v + U) + (\w + U) \coloneqq (\v + \w) + U, \qquad a(\v + U) \coloneqq a\v + U \qquad (\v, \w \in V,\ a \in F).
+\begin{aligned}
+(\v + U) + (\w + U) &\coloneqq (\v + \w) + U, \\
+a(\v + U) &\coloneqq a\v + U \qquad (\v, \w \in V,\ a \in F).
+\end{aligned}
 \]
 The **quotient map** is \( \pi \colon V \to V/U \), \( \pi(\v) = \v + U \).
 :::
@@ -330,7 +336,10 @@ V/\ker T \cong \im T .
 
 *Linear.* For \( \v, \w \in V \) and \( a \in F \), by @def-quotient-space and the linearity of \( T \),
 \[
-\bar T\big((\v + K) + (\w + K)\big) = \bar T\big((\v + \w) + K\big) = T(\v + \w) = T\v + T\w = \bar T(\v + K) + \bar T(\w + K),
+\begin{aligned}
+\bar T\big((\v + K) + (\w + K)\big) &= \bar T\big((\v + \w) + K\big) = T(\v + \w) \\
+&= T\v + T\w = \bar T(\v + K) + \bar T(\w + K),
+\end{aligned}
 \]
 and similarly \( \bar T(a(\v + K)) = \bar T(a\v + K) = T(a\v) = a\bar T(\v + K) \).
 

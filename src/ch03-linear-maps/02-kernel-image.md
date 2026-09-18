@@ -180,7 +180,10 @@ Find the kernel and image of \( D \colon \nR[x]_{\le 3} \to \nR[x]_{\le 2} \), \
 
 *Image.* By @thm-image-spanned-by-basis-images applied to the basis \( (1, x, x^2, x^3) \),
 \[
-\im D = \Span\bigl(D(1), D(x), D(x^2), D(x^3)\bigr) = \Span(0, 1, 2x, 3x^2) = \Span(1, x, x^2) = \nR[x]_{\le 2}.
+\begin{aligned}
+\im D &= \Span\bigl(D(1), D(x), D(x^2), D(x^3)\bigr) = \Span(0, 1, 2x, 3x^2) \\
+&= \Span(1, x, x^2) = \nR[x]_{\le 2}.
+\end{aligned}
 \]
 So \( D \) is surjective but not injective: \( p \) and \( p + 5 \) have the same derivative. Note \( \dim \ker D + \dim \im D = 1 + 3 = 4 = \dim \nR[x]_{\le 3} \).
 :::

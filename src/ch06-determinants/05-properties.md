@@ -31,7 +31,10 @@ By @thm-det-transpose, \( \det \) is an alternating \( n \)-linear function of t
 
 (c) By linearity in row \( i \),
 \[
-\det \B = \det(\dots, \r_i + c\r_j, \dots, \r_j, \dots) = \det(\dots, \r_i, \dots, \r_j, \dots) + c \det(\dots, \r_j, \dots, \r_j, \dots),
+\begin{aligned}
+\det \B &= \det(\dots, \r_i + c\r_j, \dots, \r_j, \dots) \\
+&= \det(\dots, \r_i, \dots, \r_j, \dots) + c \det(\dots, \r_j, \dots, \r_j, \dots),
+\end{aligned}
 \]
 where the displayed arguments sit in positions \( i \) and \( j \). The last determinant has two equal rows, so it is \( 0 \). Hence \( \det \B = \det \A \).
 
@@ -368,7 +371,10 @@ Let \( t \in \nR \) and \( \A_t = \begin{pmatrix} t & 1 & 1 \\ 1 & t & 1 \\ 1 & 
 ::: {.solution}
 The replacements \( R_1 \to R_1 + R_2 \) and \( R_1 \to R_1 + R_3 \) do not change the determinant and make row \( 1 \) equal to \( (t + 2, t + 2, t + 2) \). By linearity in row \( 1 \) (this holds for every value of \( t + 2 \), including \( 0 \)),
 \[
-\det \A_t = (t + 2) \det \begin{pmatrix} 1 & 1 & 1 \\ 1 & t & 1 \\ 1 & 1 & t \end{pmatrix} = (t + 2) \det \begin{pmatrix} 1 & 1 & 1 \\ 0 & t - 1 & 0 \\ 0 & 0 & t - 1 \end{pmatrix} = (t + 2)(t - 1)^2,
+\begin{aligned}
+\det \A_t &= (t + 2) \det \begin{pmatrix} 1 & 1 & 1 \\ 1 & t & 1 \\ 1 & 1 & t \end{pmatrix} \\
+&= (t + 2) \det \begin{pmatrix} 1 & 1 & 1 \\ 0 & t - 1 & 0 \\ 0 & 0 & t - 1 \end{pmatrix} = (t + 2)(t - 1)^2,
+\end{aligned}
 \]
 where the second step uses \( R_2 \to R_2 - R_1 \), \( R_3 \to R_3 - R_1 \), and the last uses @thm-det-triangular. By @thm-det-nonzero-iff-invertible, \( \A_t \) is invertible if and only if \( t \ne 1 \) and \( t \ne -2 \).
 :::

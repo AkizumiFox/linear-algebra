@@ -328,7 +328,11 @@ First some notation. For \( a \in F \) and \( m \in \nN \), define the **integer
 
 Let \( F \) be a field, \( a \in F \) and \( m, k \in \nN \). Then
 \[
-(m \cdot 1) + (k \cdot 1) = (m + k) \cdot 1, \qquad (m \cdot 1)(k \cdot 1) = (mk) \cdot 1, \qquad (m \cdot 1)\, a = m \cdot a.
+\begin{aligned}
+(m \cdot 1) + (k \cdot 1) &= (m + k) \cdot 1, \\
+(m \cdot 1)(k \cdot 1) &= (mk) \cdot 1, \\
+(m \cdot 1)\, a &= m \cdot a.
+\end{aligned}
 \]
 :::
 
@@ -491,7 +495,10 @@ Determine which of the following are fields, with the stated operations. Justify
 
 Let \( F = \{ a + b\alpha : a, b \in \nF_2 \} \), a set of four formal symbols \( 0, 1, \alpha, \beta \), where \( \beta \coloneqq 1 + \alpha \). Define
 \[
-(a + b\alpha) + (c + d\alpha) \coloneqq (a + c) + (b + d)\alpha, \qquad (a + b\alpha)(c + d\alpha) \coloneqq (ac + bd) + (ad + bc + bd)\alpha,
+\begin{aligned}
+(a + b\alpha) + (c + d\alpha) &\coloneqq (a + c) + (b + d)\alpha, \\
+(a + b\alpha)(c + d\alpha) &\coloneqq (ac + bd) + (ad + bc + bd)\alpha,
+\end{aligned}
 \]
 with all coefficient arithmetic in \( \nF_2 \). (The product is what expanding gives if we replace \( \alpha^2 \) by \( \alpha + 1 \).)
 
@@ -543,7 +550,10 @@ and expanding the coefficients shows this is \( \big((ac + bd) + (ae + bf)\big) 
 
 *(F5).* Write \( xy = g + h\alpha \) with \( g = ac + bd \), \( h = ad + bc + bd \). Then \( (xy)z = (ge + hf) + (gf + he + hf)\alpha \). Expanding,
 \[
-ge + hf = ace + adf + bcf + bde + bdf, \qquad gf + he + hf = acf + ade + adf + bce + bcf + bde,
+\begin{aligned}
+ge + hf &= ace + adf + bcf + bde + bdf, \\
+gf + he + hf &= acf + ade + adf + bce + bcf + bde,
+\end{aligned}
 \]
 where in the second we used \( bdf + bdf = 0 \) in \( \nF_2 \). Similarly \( yz = k + l\alpha \) with \( k = ce + df \), \( l = cf + de + df \), and \( x(yz) = (ak + bl) + (al + bk + bl)\alpha \). Expanding gives \( ak + bl = ace + adf + bcf + bde + bdf \) and \( al + bk + bl = acf + ade + adf + bce + bcf + bde \), again using \( bdf + bdf = 0 \). Hence \( (xy)z = x(yz) \).
 

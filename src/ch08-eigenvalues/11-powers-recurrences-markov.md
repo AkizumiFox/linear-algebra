@@ -114,7 +114,11 @@ Here \( p = x^2 - 4x + 4 = (x - 2)^2 \), and the window matrix is \( \C = \begin
 \]
 *Claim:* \( \C^k = 2^k\I + k2^{k-1}\N \) for all \( k \in \nN \). For \( k = 0 \) both sides are \( \I \). If it holds for \( k \), then, since \( \C = 2\I + \N \) and \( \N^2 = 0 \),
 \[
-\C^{k+1} = \big(2^k\I + k2^{k-1}\N\big)(2\I + \N) = 2^{k+1}\I + 2^k\N + k2^k\N + k2^{k-1}\N^2 = 2^{k+1}\I + (k + 1)2^k\N .
+\begin{aligned}
+\C^{k+1} &= \big(2^k\I + k2^{k-1}\N\big)(2\I + \N) \\
+  &= 2^{k+1}\I + 2^k\N + k2^k\N + k2^{k-1}\N^2 = 2^{k+1}\I + (k + 1)2^k\N .
+\end{aligned}
+
 \]
 Now \( \x_k = \C^k\x_0 \) with \( \x_0 = (a_0, a_1) \), and \( a_k \) is the first entry. Row \( 1 \) of \( \C^k \) is \( \big(2^k - 2k2^{k-1},\ k2^{k-1}\big) = \big((1 - k)2^k,\ k2^{k-1}\big) \), so
 \[
@@ -327,7 +331,10 @@ Starting from \( \x_0 = (20, 10, 5) \) (in hundreds of animals), find \( \x_k \)
 ::: {.solution}
 *Characteristic polynomial.* Expanding \( \det(x\I - \L) \) along the first column,
 \[
-p_{\L} = x\det\begin{pmatrix} x & 0 \\ -1/2 & x \end{pmatrix} + \frac12\det\begin{pmatrix} -7/2 & -3 \\ -1/2 & x \end{pmatrix} = x^3 + \frac12\Big(-\frac72x - \frac32\Big) = x^3 - \frac74x - \frac34 .
+\begin{aligned}
+p_{\L} &= x\det\begin{pmatrix} x & 0 \\ -1/2 & x \end{pmatrix} + \frac12\det\begin{pmatrix} -7/2 & -3 \\ -1/2 & x \end{pmatrix} \\
+  &= x^3 + \frac12\Big(-\frac72x - \frac32\Big) = x^3 - \frac74x - \frac34 .
+\end{aligned}
 \]
 Trying simple values, \( p_{\L}(-1) = -1 + \frac74 - \frac34 = 0 \), and dividing, \( p_{\L} = (x + 1)\big(x^2 - x - \frac34\big) = (x + 1)\big(x - \frac32\big)\big(x + \frac12\big) \). The eigenvalues \( \frac32, -1, -\frac12 \) are distinct, so \( \L \) is diagonalizable.
 

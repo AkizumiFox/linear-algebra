@@ -139,23 +139,27 @@ Let \( \A = \begin{pmatrix} 1 & 2 & 1 & 3 \\ 2 & 4 & 0 & 2 \\ 3 & 6 & 2 & 7 \end
 ::: {.enumerate options="label=(\alph*)"}
 1. First route:
 \[
+\begin{aligned}
 \A \xrightarrow{R_2 \to R_2 - 2R_1}
 \begin{pmatrix} 1 & 2 & 1 & 3 \\ 0 & 0 & -2 & -4 \\ 3 & 6 & 2 & 7 \end{pmatrix}
-\xrightarrow{R_3 \to R_3 - 3R_1}
-\begin{pmatrix} 1 & 2 & 1 & 3 \\ 0 & 0 & -2 & -4 \\ 0 & 0 & -1 & -2 \end{pmatrix}
-\xrightarrow{R_3 \to R_3 - \frac12 R_2}
+&\xrightarrow{R_3 \to R_3 - 3R_1}
+\begin{pmatrix} 1 & 2 & 1 & 3 \\ 0 & 0 & -2 & -4 \\ 0 & 0 & -1 & -2 \end{pmatrix} \\
+&\xrightarrow{R_3 \to R_3 - \frac12 R_2}
 \begin{pmatrix} 1 & 2 & 1 & 3 \\ 0 & 0 & -2 & -4 \\ 0 & 0 & 0 & 0 \end{pmatrix} = \E_1 .
+\end{aligned}
 \]
 Second route:
 \[
+\begin{aligned}
 \A \xrightarrow{R_1 \leftrightarrow R_2}
 \begin{pmatrix} 2 & 4 & 0 & 2 \\ 1 & 2 & 1 & 3 \\ 3 & 6 & 2 & 7 \end{pmatrix}
-\xrightarrow{R_2 \to R_2 - \frac12 R_1}
-\begin{pmatrix} 2 & 4 & 0 & 2 \\ 0 & 0 & 1 & 2 \\ 3 & 6 & 2 & 7 \end{pmatrix}
-\xrightarrow{R_3 \to R_3 - \frac32 R_1}
-\begin{pmatrix} 2 & 4 & 0 & 2 \\ 0 & 0 & 1 & 2 \\ 0 & 0 & 2 & 4 \end{pmatrix}
-\xrightarrow{R_3 \to R_3 - 2R_2}
+&\xrightarrow{R_2 \to R_2 - \frac12 R_1}
+\begin{pmatrix} 2 & 4 & 0 & 2 \\ 0 & 0 & 1 & 2 \\ 3 & 6 & 2 & 7 \end{pmatrix} \\
+&\xrightarrow{R_3 \to R_3 - \frac32 R_1}
+\begin{pmatrix} 2 & 4 & 0 & 2 \\ 0 & 0 & 1 & 2 \\ 0 & 0 & 2 & 4 \end{pmatrix} \\
+&\xrightarrow{R_3 \to R_3 - 2R_2}
 \begin{pmatrix} 2 & 4 & 0 & 2 \\ 0 & 0 & 1 & 2 \\ 0 & 0 & 0 & 0 \end{pmatrix} = \E_2 .
+\end{aligned}
 \]
 Both \( \E_1 \) and \( \E_2 \) are in row echelon form, and \( \E_1 \neq \E_2 \). Both have pivot columns 1 and 3.
 2. From \( \E_1 \):
@@ -254,20 +258,24 @@ Let \( \A = \begin{pmatrix} 1 & -1 & 0 & 2 & 1 \\ 2 & -2 & 1 & 7 & 0 \\ 1 & -1 &
 
 ::: {.solution}
 \[
+\begin{aligned}
 \A \xrightarrow{R_2 \to R_2 - 2R_1}
 \begin{pmatrix} 1 & -1 & 0 & 2 & 1 \\ 0 & 0 & 1 & 3 & -2 \\ 1 & -1 & 1 & 5 & 1 \end{pmatrix}
-\xrightarrow{R_3 \to R_3 - R_1}
-\begin{pmatrix} 1 & -1 & 0 & 2 & 1 \\ 0 & 0 & 1 & 3 & -2 \\ 0 & 0 & 1 & 3 & 0 \end{pmatrix}
-\xrightarrow{R_3 \to R_3 - R_2}
+&\xrightarrow{R_3 \to R_3 - R_1}
+\begin{pmatrix} 1 & -1 & 0 & 2 & 1 \\ 0 & 0 & 1 & 3 & -2 \\ 0 & 0 & 1 & 3 & 0 \end{pmatrix} \\
+&\xrightarrow{R_3 \to R_3 - R_2}
 \begin{pmatrix} 1 & -1 & 0 & 2 & 1 \\ 0 & 0 & 1 & 3 & -2 \\ 0 & 0 & 0 & 0 & 2 \end{pmatrix}
+\end{aligned}
 \]
 \[
-\xrightarrow{R_3 \to \frac12 R_3}
-\begin{pmatrix} 1 & -1 & 0 & 2 & 1 \\ 0 & 0 & 1 & 3 & -2 \\ 0 & 0 & 0 & 0 & 1 \end{pmatrix}
-\xrightarrow{R_1 \to R_1 - R_3}
-\begin{pmatrix} 1 & -1 & 0 & 2 & 0 \\ 0 & 0 & 1 & 3 & -2 \\ 0 & 0 & 0 & 0 & 1 \end{pmatrix}
-\xrightarrow{R_2 \to R_2 + 2R_3}
+\begin{aligned}
+&\xrightarrow{R_3 \to \frac12 R_3}
+\begin{pmatrix} 1 & -1 & 0 & 2 & 1 \\ 0 & 0 & 1 & 3 & -2 \\ 0 & 0 & 0 & 0 & 1 \end{pmatrix} \\
+&\xrightarrow{R_1 \to R_1 - R_3}
+\begin{pmatrix} 1 & -1 & 0 & 2 & 0 \\ 0 & 0 & 1 & 3 & -2 \\ 0 & 0 & 0 & 0 & 1 \end{pmatrix} \\
+&\xrightarrow{R_2 \to R_2 + 2R_3}
 \begin{pmatrix} 1 & -1 & 0 & 2 & 0 \\ 0 & 0 & 1 & 3 & 0 \\ 0 & 0 & 0 & 0 & 1 \end{pmatrix}.
+\end{aligned}
 \]
 The pivot columns are 1, 3 and 5. By @lem-rref-columns (b), in the RREF column 2 is \( -1 \) times column 1, and column 4 is \( 2 \) times column 1 plus \( 3 \) times column 3. By @lem-row-ops-preserve-column-relations (b), the columns of \( \A \) satisfy
 \[

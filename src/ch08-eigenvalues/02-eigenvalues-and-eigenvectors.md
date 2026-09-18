@@ -386,12 +386,18 @@ Hence write down a basis of \( \nR^2 \) consisting of eigenvectors of \( \A \), 
 
 (b) Expanding \( \det(x\I - \B) \) along the first row,
 \[
-p_{\B}(x) = \det\begin{pmatrix} x - 2 & 0 & -1 \\ 1 & x - 3 & -1 \\ -2 & 2 & x - 1 \end{pmatrix}
-= (x - 2)\big[(x - 3)(x - 1) + 2\big] + (-1)\big[1 \cdot 2 - (x - 3)(-2)\big].
+\begin{aligned}
+p_{\B}(x) &= \det\begin{pmatrix} x - 2 & 0 & -1 \\ 1 & x - 3 & -1 \\ -2 & 2 & x - 1 \end{pmatrix} \\
+  &= (x - 2)\big[(x - 3)(x - 1) + 2\big] + (-1)\big[1 \cdot 2 - (x - 3)(-2)\big].
+\end{aligned}
 \]
 The first bracket is \( x^2 - 4x + 5 \) and the second is \( 2x - 4 = 2(x - 2) \), so
 \[
-p_{\B}(x) = (x - 2)(x^2 - 4x + 5) - 2(x - 2) = (x - 2)(x^2 - 4x + 3) = (x - 1)(x - 2)(x - 3).
+\begin{aligned}
+p_{\B}(x) &= (x - 2)(x^2 - 4x + 5) - 2(x - 2) \\
+  &= (x - 2)(x^2 - 4x + 3) = (x - 1)(x - 2)(x - 3).
+\end{aligned}
+
 \]
 So \( \spec(\B) = \{1, 2, 3\} \). Solving \( (\B - \lambda \I)\x = \0 \):
 

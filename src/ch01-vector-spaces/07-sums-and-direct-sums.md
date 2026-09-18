@@ -173,7 +173,10 @@ a combination of the basis \( (\v_1, \dots, \v_r, \u_1, \dots, \u_s) \) of \( U 
 
 **Step 3: count.** By the claim, \( U + W \) has a finite basis of length \( r + s + t \), so it is finite-dimensional with \( \dim(U + W) = r + s + t \) (@def-dimension). Therefore
 \[
-\dim(U + W) = r + s + t = (r + s) + (r + t) - r = \dim U + \dim W - \dim(U \cap W),
+\begin{aligned}
+\dim(U + W) &= r + s + t = (r + s) + (r + t) - r \\
+&= \dim U + \dim W - \dim(U \cap W),
+\end{aligned}
 \]
 as claimed.
 :::
@@ -613,7 +616,11 @@ A subspace of positive dimension has a basis with at least one vector, which is 
 1. Let \( U_1, U_2, U_3 \) be subspaces of a vector space \( V \). Show that \( (U_1 + U_2) + U_3 = U_1 + U_2 + U_3 \).
 2. Now let \( U_1, U_2, U_3 \) be finite-dimensional. Prove that
    \[
-   \dim(U_1 + U_2 + U_3) = \dim U_1 + \dim U_2 + \dim U_3 - \dim(U_1 \cap U_2) - \dim\big((U_1 + U_2) \cap U_3\big).
+   \begin{aligned}
+   \dim(U_1 + U_2 + U_3)
+   &= \dim U_1 + \dim U_2 + \dim U_3 \\
+   &\qquad - \dim(U_1 \cap U_2) - \dim\big((U_1 + U_2) \cap U_3\big).
+   \end{aligned}
    \]
 3. In \( \nR^3 \), let \( U_1 = \{ z = 0 \} \), \( U_2 = \{ y = 0 \} \) and \( U_3 = \{ y = z \} \). Compute \( \dim(U_1 + U_2 + U_3) \), every \( \dim(U_i \cap U_j) \) and \( \dim(U_1 \cap U_2 \cap U_3) \). Show that the inclusion–exclusion formula fails, and compare with (b).
 :::

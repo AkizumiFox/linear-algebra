@@ -1,0 +1,28 @@
+# Inner Product Spaces
+
+Nine chapters have described vector spaces without measuring anything in them. We can say that a list spans, that a subspace has dimension four, that two matrices are similar; we cannot say that a vector has length \( 3 \), that two vectors are perpendicular, or that one vector is the closest point of a plane to another. Every picture in the book so far has secretly used lengths and angles that the theory did not supply. This chapter supplies them, with a single piece of extra structure: an **inner product**, abstracted from the dot product on \( \nR^n \) by keeping exactly the properties that make the law of cosines work.
+
+The gain is out of all proportion to the cost. Length gives the Cauchy–Schwarz and triangle inequalities. Perpendicularity gives orthonormal bases, in which coordinates are read off by a single inner product and Gram–Schmidt produces one from any basis at all. Splitting a space into a subspace and its orthogonal complement gives the nearest point of a subspace to a given vector, and with it least squares, the standard answer to an inconsistent system. The Riesz representation theorem pays off a debt from Chapter 4: an inner product is precisely the extra data that makes \( V \) and \( V^{*} \) the same space. From Riesz comes the **adjoint** \( T^{*} \), which turns the four fundamental subspaces into two orthogonal decompositions, and the isometries, which are the maps that preserve the whole geometry. The chapter ends with the computational and classical faces of the same ideas: the QR factorization, Fourier series and orthogonal polynomials. **Throughout, the field is \( \nR \) or \( \nC \)**, because the construction needs both an ordering, so that a length squared can be positive, and complex conjugation, so that it can be real.
+
+**What you need.** From Chapter 0, the complex conjugate and modulus with their arithmetic (@def-conjugate-modulus, @thm-conjugate-properties) and the trace (@def-trace, @thm-trace-properties). From Chapter 1, independence, bases, dimension, basis extension and direct sums (@def-linear-independence, @thm-right-size-basis, @thm-basis-extension, @thm-direct-sum-criteria). From Chapter 2, the Invertible Matrix Theorem (@thm-invertible-tfae). From Chapter 3, the matrix of a linear map, the coordinate isomorphism and Rank–Nullity (@def-matrix-of-linear-map, @cor-coordinate-isomorphism, @thm-rank-nullity). From Chapter 4, the dual space, the annihilator and the dual map, together with the warning that an isomorphism \( V \cong V^{*} \) needs a choice (@def-dual-space, @def-annihilator, @def-dual-map, @thm-matrix-of-dual-map). From Chapter 5, the root bound and Lagrange interpolation (@cor-root-bound-general, @thm-lagrange-interpolation). From Chapter 6, multiplicativity of the determinant and the non-negativity of Gram determinants (@thm-det-multiplicative, @cor-gram-determinant-nonnegative). Chapter 8 is used only in examples and in one classification (@def-eigenvalue); nothing before Section 7 needs an eigenvalue.
+
+## Roadmap
+
+- **Inner products and norms.** The axioms, abstracted from the dot product; length, orthogonality, Pythagoras, Cauchy–Schwarz and the triangle inequality.
+- **Orthonormal bases and Gram–Schmidt.** Coordinates that cost one inner product each, the process that builds such a basis from any basis, and Gram matrices.
+- **Orthogonal complements and projections.** The splitting \( V = U \oplus U^{\perp} \), the projection \( P_U \), and the fact that \( P_U\v \) is the point of \( U \) nearest to \( \v \).
+- **Least squares and minimum-norm solutions.** What to do with an inconsistent system: the normal equations, and the smallest solution of an underdetermined one.
+- **The Riesz representation theorem.** Every linear functional is an inner product with one fixed vector, which is the chosen isomorphism \( V \cong V^{*} \) that Chapter 4 could not supply.
+- **The adjoint.** Moving an operator to the other side of an inner product, the matrix \( \A^{*} \), and the four fundamental subspaces in orthogonal form.
+- **Isometries and unitary maps.** The maps that preserve all lengths, their many equivalent descriptions, and the classification of \( \Orth(2) \).
+- **QR, Householder and Hessenberg.** Gram–Schmidt as a matrix factorization, reflections that do the same job more robustly, and the first step of a serious eigenvalue algorithm.
+- **Bessel, Parseval and Fourier series.** What an orthonormal list captures of a vector, and the classical Fourier coefficients as an instance.
+- **Orthogonal polynomials.** Gram–Schmidt on \( 1, x, x^2, \dots \), the three-term recurrence, real roots, and Gaussian quadrature.
+
+## Named moves
+
+- **To show a vector is zero, pair it with itself.** Only \( \0 \) has \( \inner{\z}{\z} = 0 \), so an identity of that form ends the argument.
+- **To move \( T \) across an inner product, pay with \( T^{*} \).** The adjoint is the price of the transfer, and most proofs about special operators compute one inner product in two ways.
+- **Work with the norm squared, then expand.** Square roots do not expand; \( \norm{\u + \v}^2 = \inner{\u + \v}{\u + \v} \) does.
+- **Fix an orthonormal basis.** In its coordinates every inner product becomes the dot product, and an abstract statement becomes a matrix statement.
+- **Project, then subtract.** The same move orthogonalizes a list (Gram–Schmidt), finds the nearest point of a subspace, and solves a least-squares problem.

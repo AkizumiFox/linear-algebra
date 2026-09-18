@@ -91,7 +91,12 @@ T|_{G_i} = \lambda_i\,\id_{G_i} + N_i, \qquad N_i = (T - \lambda_i\,\id_V)|_{G_i
 \]
 Since \( [\,\cdot\,]_{\sB_i} \) is linear (@thm-linear-maps-isomorphic-to-matrices) and \( [\id_{G_i}]_{\sB_i} = \I_{a_i} = \I_{k_{i1}} \oplus \dots \oplus \I_{k_{ir_i}} \),
 \[
-[T|_{G_i}]_{\sB_i} = \lambda_i \I_{a_i} + [N_i]_{\sB_i} = \big(\lambda_i \I_{k_{i1}} + \J_{k_{i1}}(0)\big) \oplus \dots \oplus \big(\lambda_i \I_{k_{ir_i}} + \J_{k_{ir_i}}(0)\big) = \J_{k_{i1}}(\lambda_i) \oplus \dots \oplus \J_{k_{ir_i}}(\lambda_i),
+\begin{aligned}
+[T|_{G_i}]_{\sB_i}
+  &= \lambda_i \I_{a_i} + [N_i]_{\sB_i} \\
+  &= \big(\lambda_i \I_{k_{i1}} + \J_{k_{i1}}(0)\big) \oplus \dots \oplus \big(\lambda_i \I_{k_{ir_i}} + \J_{k_{ir_i}}(0)\big) \\
+  &= \J_{k_{i1}}(\lambda_i) \oplus \dots \oplus \J_{k_{ir_i}}(\lambda_i),
+\end{aligned}
 \]
 where the middle equality is the blockwise addition of @thm-block-diagonal-arithmetic (a) and the last is @def-jordan-block.
 
@@ -177,7 +182,12 @@ the last equality because the least common multiple of powers of linear factors 
 \]
 Since \( \sum_{i=1}^{m}k_i = n \), we have \( n - c = \sum_{\mu_i = \lambda}k_i \), so by @thm-rank-nullity
 \[
-\dim\ker(T - \lambda\,\id_V)^j = n - c - \sum_{\mu_i = \lambda}\max(k_i - j, 0) = \sum_{\mu_i = \lambda}\big(k_i - \max(k_i - j, 0)\big) = \sum_{\mu_i = \lambda}\min(k_i, j).
+\begin{aligned}
+\dim\ker(T - \lambda\,\id_V)^j
+  &= n - c - \sum_{\mu_i = \lambda}\max(k_i - j, 0) \\
+  &= \sum_{\mu_i = \lambda}\big(k_i - \max(k_i - j, 0)\big) \\
+  &= \sum_{\mu_i = \lambda}\min(k_i, j).
+\end{aligned}
 \]
 
 (e) If every block has size \( 1 \), then \( \J \) is diagonal and \( T \) is diagonalizable (@def-diagonalizable). Conversely, if \( T \) is diagonalizable, then \( m_T \) is a product of distinct linear factors (@thm-diagonalizable-iff-minimal-distinct-linear), so every exponent in (c) is \( 1 \), which says that every block has size \( 1 \).
@@ -283,7 +293,10 @@ Since \( a_{\A}(1) = 2 \), the only partition of \( 2 \) with one part is \( (2)
 \]
 whose kernel is cut out by \( x_1 + x_2 - x_5 = 0 \), \( -x_1 + x_3 - x_4 = 0 \) and \( x_3 - x_4 = 0 \), giving \( x_1 = 0 \), \( x_3 = x_4 \), \( x_2 = x_5 \); so \( \ker \M^2 = \Span\big((0,0,1,1,0),\ (0,1,0,0,1)\big) \), of dimension \( 2 = a_{\A}(1) \) as expected. Take \( \w = (0, 1, 0, 0, 1) \); then
 \[
-\M\w = (\text{column } 2 + \text{column } 5 \text{ of } \M) = (1, 1, 0, 0, -1) + (-1, -1, 1, 1, 1) = (0, 0, 1, 1, 0),
+\begin{aligned}
+\M\w &= (\text{column } 2 + \text{column } 5 \text{ of } \M) \\
+  &= (1, 1, 0, 0, -1) + (-1, -1, 1, 1, 1) = (0, 0, 1, 1, 0),
+\end{aligned}
 \]
 which is the eigenvector, as it must be.
 
@@ -292,7 +305,10 @@ which is the eigenvector, as it must be.
 \sB = \big(\,(1,-1,0,0,-1),\ \e_2,\ (1,0,1,0,0),\ (0,0,1,1,0),\ (0,1,0,0,1)\,\big),
 \]
 \[
-\P = \begin{pmatrix} 1 & 0 & 1 & 0 & 0 \\ -1 & 1 & 0 & 0 & 1 \\ 0 & 0 & 1 & 1 & 0 \\ 0 & 0 & 0 & 1 & 0 \\ -1 & 0 & 0 & 0 & 1 \end{pmatrix}, \qquad \J = \J_2(3) \oplus \J_1(3) \oplus \J_2(1) = \begin{pmatrix} 3 & 1 & 0 & 0 & 0 \\ 0 & 3 & 0 & 0 & 0 \\ 0 & 0 & 3 & 0 & 0 \\ 0 & 0 & 0 & 1 & 1 \\ 0 & 0 & 0 & 0 & 1 \end{pmatrix}.
+\begin{aligned}
+\P &= \begin{pmatrix} 1 & 0 & 1 & 0 & 0 \\ -1 & 1 & 0 & 0 & 1 \\ 0 & 0 & 1 & 1 & 0 \\ 0 & 0 & 0 & 1 & 0 \\ -1 & 0 & 0 & 0 & 1 \end{pmatrix}, \\
+\J &= \J_2(3) \oplus \J_1(3) \oplus \J_2(1) = \begin{pmatrix} 3 & 1 & 0 & 0 & 0 \\ 0 & 3 & 0 & 0 & 0 \\ 0 & 0 & 3 & 0 & 0 \\ 0 & 0 & 0 & 1 & 1 \\ 0 & 0 & 0 & 0 & 1 \end{pmatrix}.
+\end{aligned}
 \]
 \( \P \) is invertible: its fourth row is \( (0,0,0,1,0) \), so expanding \( \det \P \) along that row (@thm-laplace-expansion) leaves
 \[
@@ -314,7 +330,11 @@ which are exactly how the chains were constructed: \( \p_1, \p_3 \in \ker(\A - 3
 \]
 reading the second column of \( \A \); and
 \[
-\A\p_4 = \A(0,0,1,1,0) = (0 + 0,\ 2 - 2,\ 2 - 1,\ -1 + 2,\ 2 - 2) = (0, 0, 1, 1, 0) = \p_4 ,
+\begin{aligned}
+\A\p_4 = \A(0,0,1,1,0)
+  &= (0 + 0,\ 2 - 2,\ 2 - 1,\ -1 + 2,\ 2 - 2) \\
+  &= (0, 0, 1, 1, 0) = \p_4 ,
+\end{aligned}
 \]
 adding the third and fourth columns of \( \A \). The remaining three are the same kind of one-line computation.
 
@@ -488,7 +508,11 @@ Work over \( \nC \).
 
 (b) For \( \lambda = 1 \): partitions of \( 4 \) with largest part \( 2 \), namely \( (2,2) \) and \( (2,1,1) \). For \( \lambda = 2 \): \( (1,1) \) as before. So there are two Jordan forms,
 \[
-\J_2(1) \oplus \J_2(1) \oplus \J_1(2) \oplus \J_1(2) \qquad \text{and} \qquad \J_2(1) \oplus \J_1(1) \oplus \J_1(1) \oplus \J_1(2) \oplus \J_1(2).
+\begin{aligned}
+&\J_2(1) \oplus \J_2(1) \oplus \J_1(2) \oplus \J_1(2) \\
+\text{and} \quad &\J_2(1) \oplus \J_1(1) \oplus \J_1(1) \oplus \J_1(2) \oplus \J_1(2).
+\end{aligned}
+
 \]
 
 (c) The single number \( g(1) \), which is \( 2 \) for the first and \( 3 \) for the second; equivalently \( \rank(T - \id_V) \) or \( \dim\ker(T - \id_V) \) (@cor-jordan-invariants (b)).

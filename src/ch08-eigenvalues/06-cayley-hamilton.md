@@ -156,7 +156,10 @@ Compute \( p_{\A} \) and verify \( p_{\A}(\A) = 0 \). Then use it to find \( \A^
 ::: {.solution}
 *Characteristic polynomial.* Expand \( \det(x\I - \A) \) along the first row (@thm-laplace-expansion over \( \nQ[x] \)):
 \[
-p_{\A} = \det\begin{pmatrix} x - 1 & -1 & 0 \\ 0 & x & -1 \\ -1 & 0 & x - 1 \end{pmatrix} = (x - 1)\det\begin{pmatrix} x & -1 \\ 0 & x - 1 \end{pmatrix} + (-1)(-1)^{1+2}\det\begin{pmatrix} 0 & -1 \\ -1 & x - 1 \end{pmatrix}.
+\begin{aligned}
+p_{\A} &= \det\begin{pmatrix} x - 1 & -1 & 0 \\ 0 & x & -1 \\ -1 & 0 & x - 1 \end{pmatrix} \\
+  &= (x - 1)\det\begin{pmatrix} x & -1 \\ 0 & x - 1 \end{pmatrix} + (-1)(-1)^{1+2}\det\begin{pmatrix} 0 & -1 \\ -1 & x - 1 \end{pmatrix}.
+\end{aligned}
 \]
 The two minors are \( x(x - 1) \) and \( -1 \), so \( p_{\A} = x(x - 1)^2 - 1 = x^3 - 2x^2 + x - 1 \). As a check, \( \tr \A = 2 \) matches the coefficient \( -2 \) of \( x^2 \), and \( c_0 = -1 = (-1)^3\det \A \) says \( \det \A = 1 \).
 
@@ -186,7 +189,10 @@ Check: the first row of \( \A\,\A^{-1} \) is \( (0 + 1,\ -1 + 1,\ 1 - 1) = (1, 0
 
 *The matrices of the proof.* By (2), \( \B_2 = \I \), \( \B_1 = \A \B_2 + c_2\I = \A - 2\I \) and \( \B_0 = \A \B_1 + c_1\I = \A^2 - 2\A + \I \). So
 \[
-\adj(x\I - \A) = x^2 \I + x(\A - 2\I) + (\A^2 - 2\A + \I) = \begin{pmatrix} x^2 - x & x - 1 & 1 \\ 1 & x^2 - 2x + 1 & x - 1 \\ x & 1 & x^2 - x \end{pmatrix},
+\begin{aligned}
+\adj(x\I - \A) &= x^2 \I + x(\A - 2\I) + (\A^2 - 2\A + \I) \\
+  &= \begin{pmatrix} x^2 - x & x - 1 & 1 \\ 1 & x^2 - 2x + 1 & x - 1 \\ x & 1 & x^2 - x \end{pmatrix},
+\end{aligned}
 \]
 which one can confirm entry by entry from cofactors of \( x\I - \A \); for instance the \( (1, 3) \)-entry is the cofactor \( C_{31} = \det\begin{pmatrix} -1 & 0 \\ x & -1 \end{pmatrix} = 1 \). The last equation of (2), \( -\A \B_0 = c_0\I = -\I \), is the statement \( \A^{-1} = \B_0 \) found above.
 :::
@@ -347,7 +353,12 @@ Let \( n \ge 2 \), \( \A \in M_n(F) \), \( p_{\A} = x^n + c_{n-1}x^{n-1} + \dots
 
 (d) Here \( n = 3 \), \( c_2 = -6 \), \( c_1 = 2 \), so the formula predicts \( \adj \S = \S^2 - 6\S + 2\I \). Now
 \[
-\S^2 = \begin{pmatrix} 8 & 10 & 18 \\ 16 & 20 & 36 \\ 2 & 2 & 4 \end{pmatrix}, \qquad \S^2 - 6\S + 2\I = \begin{pmatrix} 8 - 6 + 2 & 10 - 12 & 18 - 18 \\ 16 - 12 & 20 - 24 + 2 & 36 - 36 \\ 2 - 6 & 2 & 4 - 6 + 2 \end{pmatrix} = \begin{pmatrix} 4 & -2 & 0 \\ 4 & -2 & 0 \\ -4 & 2 & 0 \end{pmatrix},
+\begin{aligned}
+\S^2 &= \begin{pmatrix} 8 & 10 & 18 \\ 16 & 20 & 36 \\ 2 & 2 & 4 \end{pmatrix}, \\
+\S^2 - 6\S + 2\I &= \begin{pmatrix} 8 - 6 + 2 & 10 - 12 & 18 - 18 \\ 16 - 12 & 20 - 24 + 2 & 36 - 36 \\ 2 - 6 & 2 & 4 - 6 + 2 \end{pmatrix} \\
+  &= \begin{pmatrix} 4 & -2 & 0 \\ 4 & -2 & 0 \\ -4 & 2 & 0 \end{pmatrix},
+\end{aligned}
+
 \]
 which is the adjugate found in Chapter 6.
 :::

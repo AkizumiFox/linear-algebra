@@ -28,7 +28,7 @@ Both are triangular, so both are cheap. The expensive part, finding \( \L \) and
 
 A matrix \( \L \in M_n(F) \) is **unit lower triangular** if it is lower triangular and **every** diagonal entry equals \( 1 \). Let \( \A \in M_n(F) \). An **LU factorization** of \( \A \) is a pair \( (\L, \U) \) of matrices in \( M_n(F) \) such that
 \[
-\A = \L\U, \qquad \L \text{ is **unit** lower triangular}, \qquad \U \text{ is upper triangular}.
+\A = \L\U, \qquad \L \text{ is \textbf{unit} lower triangular}, \qquad \U \text{ is upper triangular}.
 \]
 :::
 
@@ -290,11 +290,19 @@ Let \( \A = \begin{pmatrix} 2 & 1 & -1 \\ 4 & 5 & -1 \\ -2 & 8 & 2 \end{pmatrix}
 ::: {.solution}
 *First right-hand side.* Forward substitution in \( \L\y = \b \):
 \[
-y_1 = -1, \qquad 2y_1 + y_2 = -3 \Rightarrow y_2 = -1, \qquad -y_1 + 3y_2 + y_3 = -6 \Rightarrow y_3 = -6 - 1 + 3 = -4 .
+\begin{aligned}
+y_1 &= -1, \\
+2y_1 + y_2 &= -3 \Rightarrow y_2 = -1, \\
+-y_1 + 3y_2 + y_3 &= -6 \Rightarrow y_3 = -6 - 1 + 3 = -4 .
+\end{aligned}
 \]
 Back substitution in \( \U\x = \y \):
 \[
--2x_3 = -4 \Rightarrow x_3 = 2, \qquad 3x_2 + x_3 = -1 \Rightarrow x_2 = -1, \qquad 2x_1 + x_2 - x_3 = -1 \Rightarrow x_1 = 1 .
+\begin{aligned}
+-2x_3 &= -4 \Rightarrow x_3 = 2, \\
+3x_2 + x_3 &= -1 \Rightarrow x_2 = -1, \\
+2x_1 + x_2 - x_3 &= -1 \Rightarrow x_1 = 1 .
+\end{aligned}
 \]
 So \( \x = (1, -1, 2) \). Check: \( \A\x = (2 - 1 - 2, \; 4 - 5 - 2, \; -2 - 8 + 4) = (-1, -3, -6) = \b \).
 
@@ -402,7 +410,10 @@ By (c) and @thm-row-op-is-left-multiplication, \( \P_\tau \A \) is \( \A \) with
 
 Let \( \A \in M_n(F) \). A **PLU factorization** of \( \A \) is a triple \( (\P, \L, \U) \) of matrices in \( M_n(F) \) such that
 \[
-\P\A = \L\U, \qquad \P \text{ is a permutation matrix}, \qquad \L \text{ is unit lower triangular}, \qquad \U \text{ is upper triangular}.
+\begin{aligned}
+&\P\A = \L\U, \qquad \P \text{ is a permutation matrix}, \\
+&\L \text{ is unit lower triangular}, \qquad \U \text{ is upper triangular}.
+\end{aligned}
 \]
 :::
 
@@ -621,7 +632,12 @@ Let \( \A = \begin{pmatrix} 0 & 1 & 2 \\ 1 & 1 & 1 \\ 2 & 3 & 1 \end{pmatrix} \i
 1. If \( \A = \L\U \), then the \( (1, 1) \)-entry gives \( u_{11} = a_{11} = 0 \), and the \( (2, 1) \)-entry gives \( a_{21} = \ell_{21}u_{11} = 0 \). But \( a_{21} = 1 \neq 0 \), a contradiction, exactly as in @exm-no-lu-factorization.
 2. The first pivot position holds \( 0 \) and the entry below is \( 1 \), so swap rows 1 and 2, \( \P_1 = \P_{12} \):
 \[
-\A \xrightarrow{R_1 \leftrightarrow R_2} \begin{pmatrix} 1 & 1 & 1 \\ 0 & 1 & 2 \\ 2 & 3 & 1 \end{pmatrix} \xrightarrow[R_3 \to R_3 - 2R_1]{R_2 \to R_2 - 0R_1} \begin{pmatrix} 1 & 1 & 1 \\ 0 & 1 & 2 \\ 0 & 1 & -1 \end{pmatrix} \xrightarrow{R_3 \to R_3 - 1R_2} \begin{pmatrix} 1 & 1 & 1 \\ 0 & 1 & 2 \\ 0 & 0 & -3 \end{pmatrix} = \U .
+\begin{aligned}
+\A
+&\xrightarrow{R_1 \leftrightarrow R_2} \begin{pmatrix} 1 & 1 & 1 \\ 0 & 1 & 2 \\ 2 & 3 & 1 \end{pmatrix}
+\xrightarrow[R_3 \to R_3 - 2R_1]{R_2 \to R_2 - 0R_1} \begin{pmatrix} 1 & 1 & 1 \\ 0 & 1 & 2 \\ 0 & 1 & -1 \end{pmatrix} \\
+&\xrightarrow{R_3 \to R_3 - 1R_2} \begin{pmatrix} 1 & 1 & 1 \\ 0 & 1 & 2 \\ 0 & 0 & -3 \end{pmatrix} = \U .
+\end{aligned}
 \]
 The multipliers are \( \ell_{21} = 0 \), \( \ell_{31} = 2 \), \( \ell_{32} = 1 \), and no swap happens after step 1, so they need no rearranging. Hence
 \[

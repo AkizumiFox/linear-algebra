@@ -75,7 +75,11 @@ Put \( m = s \), and for \( q < i \le m \) put \( \u_i = \z_i \) and \( k_i = 1 
 
 **Step 4. The pieces fill \( V \).** First count. By @thm-cyclic-subspace-basis (a), \( \dim Z(\u_i; T) = \deg p^{k_i} = dk_i \). Hence
 \[
-\sum_{i=1}^{m} \dim Z(\u_i;T) = \sum_{i=1}^{q} d(l_i + 1) + (m - q)d = \Big(\sum_{i=1}^{q} dl_i\Big) + md = \dim W + \dim U = n ,
+\begin{aligned}
+\sum_{i=1}^{m} \dim Z(\u_i;T)
+  &= \sum_{i=1}^{q} d(l_i + 1) + (m - q)d \\
+  &= \Big(\sum_{i=1}^{q} dl_i\Big) + md = \dim W + \dim U = n ,
+\end{aligned}
 \]
 where \( \sum_i dl_i = \sum_i \dim Z(\w_i;T) = \dim W \) by Step 1, \( md = \sum_j \dim Z(\z_j;T) = \dim U \) by Step 3, and the last equality is @thm-rank-nullity.
 
@@ -398,7 +402,10 @@ If \( \M = 0 \), both ranks are \( 0 \). Otherwise, by @thm-rank-via-minors (a),
 
 Let \( K \) be a subfield of \( L \) and let \( \A, \B \in M_n(K) \), \( n \ge 1 \). If \( \A \) and \( \B \) are similar over \( L \), then they are similar over \( K \):
 \[
-\A = \Q^{-1}\B \Q \ \text{ for some invertible } \Q \in M_n(L) \implies \A = \P^{-1}\B \P \ \text{ for some invertible } \P \in M_n(K) .
+\begin{aligned}
+&\A = \Q^{-1}\B \Q \ \text{ for some invertible } \Q \in M_n(L) \\
+&\qquad \implies \A = \P^{-1}\B \P \ \text{ for some invertible } \P \in M_n(K) .
+\end{aligned}
 \]
 :::
 
@@ -485,7 +492,12 @@ Find the invariant factors of \( \A \), its rational canonical form (@thm-ration
 \A\c_1 = \A(0,1,0,0) = (-1,0,0,0), \qquad \A\c_2 = \A(-1,0,0,0) = (0,-1,0,0),
 \]
 \[
-\A\c_3 = \A(1,0,0,1) = (0,1,0,0) + (0,1,-1,0) = (0,2,-1,0), \qquad \A\c_4 = \A(0,1,-1,0) = (-1,0,0,0) + (-1,0,0,-1) = (-2,0,0,-1).
+\begin{aligned}
+\A\c_3 = \A(1,0,0,1)
+  &= (0,1,0,0) + (0,1,-1,0) = (0,2,-1,0), \\
+\A\c_4 = \A(0,1,-1,0)
+  &= (-1,0,0,0) + (-1,0,0,-1) = (-2,0,0,-1).
+\end{aligned}
 \]
 So
 \[
@@ -499,7 +511,10 @@ The elementary divisor form (@thm-elementary-divisor-form) is the same matrix, s
 
 *A cyclic vector.* By @thm-cyclic-iff-min-equals-char we need \( \v \) with \( m_{\A,\v} = m_{\A} \); since \( \A^2 + \I \ne 0 \), pick \( \v \) with \( (\A^2+\I)\v \ne \0 \). The third column of \( \A^2 + \I \) is non-zero, so \( \v = \e_3 \) works: then \( (\A^2+\I)\v \ne \0 \), so \( m_{\A,\v} \nmid x^2+1 \), and as \( m_{\A,\v} \) divides \( (x^2+1)^2 \) it must equal \( (x^2+1)^2 \) (@lem-monic-divisors). Its chain is
 \[
-\v = (0,0,1,0), \quad \A\v = (1,0,0,1), \quad \A^2\v = (0,2,-1,0), \quad \A^3\v = \A(0,2,-1,0) = (-2,0,0,0) + (-1,0,0,-1) = (-3,0,0,-1) ,
+\begin{aligned}
+\v &= (0,0,1,0), \quad \A\v = (1,0,0,1), \quad \A^2\v = (0,2,-1,0), \\
+\A^3\v &= \A(0,2,-1,0) = (-2,0,0,0) + (-1,0,0,-1) = (-3,0,0,-1) ,
+\end{aligned}
 \]
 reading columns of \( \A \) as before. Hence
 \[
@@ -507,7 +522,11 @@ reading columns of \( \A \) as before. Hence
 \]
 *Invertibility of \( \P \).* Expanding \( \det \P \) along the third row, whose entries are \( (1, 0, -1, 0) \) (@thm-laplace-expansion), and then each \( 3 \times 3 \) determinant along its own first column,
 \[
-\det \P = 1\cdot\det\begin{pmatrix} 1 & 0 & -3 \\ 0 & 2 & 0 \\ 1 & 0 & -1 \end{pmatrix} + (-1)(-1)^{3+3}\det\begin{pmatrix} 0 & 1 & -3 \\ 0 & 0 & 0 \\ 0 & 1 & -1 \end{pmatrix} = 1\cdot\big(2(-1+3)\big) - 0 = 4 \ne 0 ,
+\begin{aligned}
+\det \P
+  &= 1\cdot\det\begin{pmatrix} 1 & 0 & -3 \\ 0 & 2 & 0 \\ 1 & 0 & -1 \end{pmatrix} + (-1)(-1)^{3+3}\det\begin{pmatrix} 0 & 1 & -3 \\ 0 & 0 & 0 \\ 0 & 1 & -1 \end{pmatrix} \\
+  &= 1\cdot\big(2(-1+3)\big) - 0 = 4 \ne 0 ,
+\end{aligned}
 \]
 the second determinant vanishing because it has a zero row, and the first being \( 2\det\begin{pmatrix} 1 & -3 \\ 1 & -1 \end{pmatrix} = 2 \cdot 2 = 4 \) by expansion along its second row.
 
@@ -699,7 +718,11 @@ Work over \( F = \nF_2 \), so that \( M_2(\nF_2) \) has \( 16 \) elements.
 
 (c) Total \( 2 + 2 + 1 + 1 = 6 \) classes, with representatives
 \[
-\C(x^2) = \begin{pmatrix} 0 & 0 \\ 1 & 0 \end{pmatrix}, \quad 0, \quad \C\big((x+1)^2\big) = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}, \quad \I_2, \quad \diag(0,1), \quad \C(x^2+x+1) = \begin{pmatrix} 0 & 1 \\ 1 & 1 \end{pmatrix},
+\begin{aligned}
+&\C(x^2) = \begin{pmatrix} 0 & 0 \\ 1 & 0 \end{pmatrix}, \quad 0, \quad \C\big((x+1)^2\big) = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}, \\
+&\I_2, \quad \diag(0,1), \quad \C(x^2+x+1) = \begin{pmatrix} 0 & 1 \\ 1 & 1 \end{pmatrix},
+\end{aligned}
+
 \]
 using \( -1 = 1 \) in \( \nF_2 \). (For \( (x+1)^2 = x^2+1 \) the coefficients are \( a_0 = 1, a_1 = 0 \), so \( \C = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix} \), the coordinate swap.)
 

@@ -15,8 +15,10 @@ The plan is at `~/.claude/plans/cached-gathering-sedgewick.md`. The outline of a
 | 6 | ch06-determinants | Determinants | deployed |
 | 7 | ch07-block-matrices | Block matrices | deployed |
 | 8 | ch08-eigenvalues | Eigenvalues and diagonalization | deployed |
-| 9 | ch09-canonical-forms | Canonical forms | drafting |
-| 9–23 | | see plan | not started |
+| 9 | ch09-canonical-forms | Canonical forms | deployed |
+| 10 | ch10-inner-products | Inner product spaces | drafting (blueprint done, sections out to agents) |
+| 11 | ch11-spectral-theory | Spectral theory | blueprint written |
+| 12–23 | | see plan | not started |
 
 ## Open forward promises
 
@@ -53,6 +55,10 @@ Add a line when a section promises something later ("proved in Chapter 5"); tick
 - [ ] Ch 2 → Ch 10: least squares
 
 ## Deferred to the whole-book pass (M7)
+
+- Proof endings: STYLE asks every proof to close with "This shows …"/"as claimed". Observance is uneven — Ch 8 has 9 closers for 52 proofs, Ch 9 has 20 for 57, Ch 10 has 24 for 56. Make it consistent book-wide rather than chapter by chapter.
+- Display widths: 215 displays exceed the 39rem text column (39 of them at 130%+), spread over Ch 0–9; Ch 10 has three. Measure with `tools/_measure.html` (see `authoring/measure-displays.md`) and break them with `aligned`.
+- `thm-trace-properties` (Ch 0 §09) numbers its parts 1, 2, 3 with a bare list while almost every other multi-part theorem uses `label=(\alph*)`. Two citations had already drifted to "(c)". Consider converting the theorem and its ~6 numeric citations together.
 
 - Long sections to consider splitting or trimming: Ch 0 §04 functions, §05 relations, §09 matrices; Ch 1 §01–§04; Ch 2 §02 Gaussian elimination (~11.7k raw words), §05 rank.
 - Ch 2 §03: "pivot columns of A" is defined inside `cor-pivot-columns-well-defined`; consider a separate def block.
@@ -91,3 +97,17 @@ Add a line when a section promises something later ("proved in Chapter 5"); tick
 - [x] Ch 8 §11 → Ch 9: Markov powers without diagonalizability (`cor-markov-powers-converge`)
 - [ ] Ch 9 → Ch 15: norms give quantitative bounds for e^A and for powers; ρ(A) ≤ ‖A‖ and the spectral radius as a limit
 - Ch 9 §07 is long (~10k raw); natural seam after the Smith theorem. Ch 9 §04, §06 also long. Consider in M7.
+
+### Chapter 10 (inner product spaces)
+
+- [x] Ch 6 §07 → Ch 10: Gram determinants (`cor-gram-determinant-nonnegative` becomes `thm-gram-matrix-properties`, §02)
+- [x] Ch 4 → Ch 10 §05: the inner product is the data that picks an isomorphism V ≅ V\*; Ch 4's basis map Θ_𝓑 is the Riesz map of the inner product making 𝓑 orthonormal. (Ch 4's warning carries no label, so §05 cites `cor-dimension-dual-space` and `thm-evaluation-natural`; give that warning a label if a hard link is ever wanted.)
+- [x] Ch 4 → Ch 10 §05: annihilator U⁰ corresponds to U^⊥ (`thm-annihilator-vs-orthogonal-complement`)
+- [x] Ch 10 §03/§04/§05 → Ch 10 §06: P_U is self-adjoint; ker(T\*T) = ker T; (nul A)^⊥ = col(A\*) as the four-subspaces theorem; the dual map read through Riesz is the adjoint
+- [x] Ch 2 §07 → Ch 10 §04: the low-degree approximate fit promised where interpolation follows the noise (`exm-least-squares-line`, `exm-least-squares-quadratic`). Chapter 2 itself states no orthogonality, so §06's four subspaces extend Ch 2 rather than discharging a promise.
+- [ ] Ch 10 §01 → Ch 15: general norms; not every norm comes from an inner product, the parallelogram law is the test
+- [ ] Ch 10 §02/§08 → Ch 23: classical Gram–Schmidt is numerically unstable; why the reflection route is used instead
+- [ ] Ch 10 §04 → Ch 12: the pseudoinverse A⁺ packages the least-squares and minimum-norm answers (note: §04 writes the minimum-norm solution x_min; Ch 12 may prefer A⁺b — rename then if so)
+- [ ] Ch 10 §05 → Hilbert spaces: representability needs completeness and continuity (stated as a boundary, not promised)
+- [ ] Ch 10 §06 → Ch 11: all spectral theory of self-adjoint and normal operators
+- [ ] Ch 10 §02 → Ch 11: what an inner product adds once an operator is also given

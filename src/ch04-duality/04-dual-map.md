@@ -32,7 +32,10 @@ In words, clause by clause:
 
 **Well-definedness.** Two things must be checked. First, \( T'\psi \) must lie in \( V^{*} \): it is the composite of the linear maps \( T \colon V \to W \) and \( \psi \colon W \to F \), so it is linear by @thm-composition-linear (a). Second, \( T' \) should be linear, so that \( T' \in \cL(W^{*}, V^{*}) \). By the distributive laws in @thm-composition-linear (d), for \( \psi_1, \psi_2 \in W^{*} \) and \( c \in F \),
 \[
-T'(\psi_1 + \psi_2) = (\psi_1 + \psi_2)T = \psi_1T + \psi_2T = T'\psi_1 + T'\psi_2, \qquad T'(c\psi) = (c\psi)T = c(\psi T) = cT'\psi .
+\begin{aligned}
+T'(\psi_1 + \psi_2) &= (\psi_1 + \psi_2)T = \psi_1T + \psi_2T = T'\psi_1 + T'\psi_2, \\
+T'(c\psi) &= (c\psi)T = c(\psi T) = cT'\psi .
+\end{aligned}
 \]
 
 ::: {#exm-dual-map-examples}
@@ -167,7 +170,10 @@ Let \( T \colon \nR[x]_{\le 2} \to \nR^2 \), \( T(p) = (p(1), p'(1)) \). Use the
 \]
 (b) Let \( p = a + bx + cx^2 \), so \( \varphi_0(p) = a \), \( \varphi_1(p) = b \), \( \varphi_2(p) = c \). Then
 \[
-(T'\eta_1)(p) = \eta_1(Tp) = p(1) = a + b + c, \qquad (T'\eta_2)(p) = \eta_2(Tp) = p'(1) = b + 2c .
+\begin{aligned}
+(T'\eta_1)(p) &= \eta_1(Tp) = p(1) = a + b + c, \\
+(T'\eta_2)(p) &= \eta_2(Tp) = p'(1) = b + 2c .
+\end{aligned}
 \]
 So \( T'\eta_1 = \varphi_0 + \varphi_1 + \varphi_2 \) and \( T'\eta_2 = \varphi_1 + 2\varphi_2 \). Their coordinate vectors in \( \sB^{*} \) are the columns of
 \[
@@ -214,7 +220,10 @@ Let \( V \) and \( W \) be vector spaces over \( F \), and let \( T \in \cL(V, W
 
 *Dimensions.* By the Rank–Nullity Theorem (@thm-rank-nullity) for \( T' \colon W^{*} \to V^{*} \), then (a), then @thm-dimension-annihilator for the subspace \( \im T \) of \( W \),
 \[
-\dim \im T' = m - \dim \ker T' = m - \dim (\im T)^{0} = m - (m - \dim \im T) = \rank T .
+\begin{aligned}
+\dim \im T' &= m - \dim \ker T' = m - \dim (\im T)^{0} \\
+&= m - (m - \dim \im T) = \rank T .
+\end{aligned}
 \]
 By @thm-dimension-annihilator for the subspace \( \ker T \) of \( V \), and Rank–Nullity for \( T \),
 \[
@@ -450,7 +459,10 @@ The reversal of order is now explained: it is the reversal of arrows under duali
 ::: {.solution}
 (a) \( T\v = \w \) has a solution iff \( \w \in \im T \). By @thm-kernel-image-dual-map (a), \( \ker T' = (\im T)^{0} \). By @cor-annihilator-of-annihilator applied to the subspace \( \im T \) of the finite-dimensional space \( W \),
 \[
-\im T = \{ \w \in W : \psi(\w) = 0 \text{ for every } \psi \in (\im T)^{0} \} = \{ \w \in W : \psi(\w) = 0 \text{ for every } \psi \in \ker T' \}.
+\begin{aligned}
+\im T &= \{ \w \in W : \psi(\w) = 0 \text{ for every } \psi \in (\im T)^{0} \} \\
+&= \{ \w \in W : \psi(\w) = 0 \text{ for every } \psi \in \ker T' \}.
+\end{aligned}
 \]
 This is the claim.
 

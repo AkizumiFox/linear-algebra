@@ -257,7 +257,11 @@ Decide whether \( f = 2x^3 - 3x^2 + 4x - 1 \) is irreducible over \( \nQ \).
 ::: {.solution}
 By @thm-rational-root, a rational root \( u/v \) in lowest terms has \( u \mid -1 \) and \( v \mid 2 \) with \( v \ge 1 \). So \( u = \pm 1 \) and \( v \in \{1, 2\} \), and the candidates are \( 1, -1, \tfrac12, -\tfrac12 \). Evaluating,
 \[
-f(1) = 2, \qquad f(-1) = -10, \qquad f\bigl(\tfrac12\bigr) = \tfrac14 - \tfrac34 + 2 - 1 = \tfrac12, \qquad f\bigl(-\tfrac12\bigr) = -\tfrac14 - \tfrac34 - 2 - 1 = -4 .
+\begin{aligned}
+f(1) &= 2, \qquad f(-1) = -10, \\
+f\bigl(\tfrac12\bigr) &= \tfrac14 - \tfrac34 + 2 - 1 = \tfrac12, \\
+f\bigl(-\tfrac12\bigr) &= -\tfrac14 - \tfrac34 - 2 - 1 = -4 .
+\end{aligned}
 \]
 None is \( 0 \), so \( f \) has no rational root. Since \( \deg f = 3 \), @thm-irreducible-deg-2-3 shows that \( f \) is irreducible over \( \nQ \).
 :::

@@ -17,7 +17,10 @@ Each bracket is a \( 2 \times 2 \) determinant. The bracket beside \( a_{11} \) 
 
 Let \( n \ge 2 \), \( \A \in M_n(F) \) and \( i, j \in \{1, \dots, n\} \). The **\( (i, j) \)-minor** of \( \A \) is
 \[
-M_{ij} \coloneqq \det(\text{the } (n-1) \times (n-1) \text{ matrix obtained from } \A \text{ by deleting row } i \text{ and column } j).
+\begin{aligned}
+M_{ij} \coloneqq \det(&\text{the } (n-1) \times (n-1) \text{ matrix obtained from } \A \\
+&\text{by deleting row } i \text{ and column } j).
+\end{aligned}
 \]
 The **\( (i, j) \)-cofactor** of \( \A \) is \( C_{ij} \coloneqq (-1)^{i+j} M_{ij} \).
 :::
@@ -30,7 +33,11 @@ When the matrix matters we write \( M_{ij}(\A) \) and \( C_{ij}(\A) \).
 
 **Examples.** For \( \A = \begin{pmatrix} a & b \\ c & d \end{pmatrix} \), the minors are \( 1 \times 1 \) determinants: \( M_{11} = d \), \( M_{12} = c \), \( M_{21} = b \), \( M_{22} = a \), and the cofactors are \( C_{11} = d \), \( C_{12} = -c \), \( C_{21} = -b \), \( C_{22} = a \). For the matrix \( \A = \begin{pmatrix} 2 & 1 & 3 \\ 0 & 4 & 1 \\ 5 & 2 & 1 \end{pmatrix} \) of the previous sections, the cofactors along column \( 1 \) are
 \[
-C_{11} = +\det \begin{pmatrix} 4 & 1 \\ 2 & 1 \end{pmatrix} = 2, \qquad C_{21} = -\det \begin{pmatrix} 1 & 3 \\ 2 & 1 \end{pmatrix} = 5, \qquad C_{31} = +\det \begin{pmatrix} 1 & 3 \\ 4 & 1 \end{pmatrix} = -11,
+\begin{aligned}
+C_{11} &= +\det \begin{pmatrix} 4 & 1 \\ 2 & 1 \end{pmatrix} = 2, \\
+C_{21} &= -\det \begin{pmatrix} 1 & 3 \\ 2 & 1 \end{pmatrix} = 5, \\
+C_{31} &= +\det \begin{pmatrix} 1 & 3 \\ 4 & 1 \end{pmatrix} = -11,
+\end{aligned}
 \]
 and \( a_{11}C_{11} + a_{21}C_{21} + a_{31}C_{31} = 4 + 0 - 55 = -51 \), which is \( \det \A \) as computed before. For the identity \( \I_n \), \( C_{ii} = \det \I_{n-1} = 1 \), and \( C_{ij} = 0 \) for \( i \ne j \), because deleting row \( i \) and a different column \( j \) leaves a matrix with a zero column.
 
@@ -349,9 +356,11 @@ Let \( \A = \begin{pmatrix} 1 & 2 & -1 \\ 0 & 1 & 3 \\ 2 & 1 & 1 \end{pmatrix} \
 The cofactors are
 \[
 \begin{aligned}
-C_{11} &= +(1 \cdot 1 - 3 \cdot 1) = -2, & C_{12} &= -(0 \cdot 1 - 3 \cdot 2) = 6, & C_{13} &= +(0 \cdot 1 - 1 \cdot 2) = -2, \\
-C_{21} &= -(2 \cdot 1 - (-1) \cdot 1) = -3, & C_{22} &= +(1 \cdot 1 - (-1) \cdot 2) = 3, & C_{23} &= -(1 \cdot 1 - 2 \cdot 2) = 3, \\
-C_{31} &= +(2 \cdot 3 - (-1) \cdot 1) = 7, & C_{32} &= -(1 \cdot 3 - (-1) \cdot 0) = -3, & C_{33} &= +(1 \cdot 1 - 2 \cdot 0) = 1 .
+C_{11} &= +(1 \cdot 1 - 3 \cdot 1) = -2, & C_{12} &= -(0 \cdot 1 - 3 \cdot 2) = 6, \\
+C_{13} &= +(0 \cdot 1 - 1 \cdot 2) = -2, & C_{21} &= -(2 \cdot 1 - (-1) \cdot 1) = -3, \\
+C_{22} &= +(1 \cdot 1 - (-1) \cdot 2) = 3, & C_{23} &= -(1 \cdot 1 - 2 \cdot 2) = 3, \\
+C_{31} &= +(2 \cdot 3 - (-1) \cdot 1) = 7, & C_{32} &= -(1 \cdot 3 - (-1) \cdot 0) = -3, \\
+C_{33} &= +(1 \cdot 1 - 2 \cdot 0) = 1 .
 \end{aligned}
 \]
 Transposing the cofactor matrix (@def-adjugate),
@@ -378,9 +387,12 @@ over \( \nR \). Check your answer by substitution.
 The coefficient matrix is the matrix \( \A \) of @exr-cofactor-expansion-b1, with \( \det \A = 12 \ne 0 \), and \( \b = (-3, 5, 3) \). Expanding each \( \A_k(\b) \) along its first row,
 \[
 \begin{aligned}
-\det \A_1(\b) &= \det \begin{pmatrix} -3 & 2 & -1 \\ 5 & 1 & 3 \\ 3 & 1 & 1 \end{pmatrix} = -3(1 - 3) - 2(5 - 9) - 1(5 - 3) = 6 + 8 - 2 = 12, \\
-\det \A_2(\b) &= \det \begin{pmatrix} 1 & -3 & -1 \\ 0 & 5 & 3 \\ 2 & 3 & 1 \end{pmatrix} = 1(5 - 9) + 3(0 - 6) - 1(0 - 10) = -4 - 18 + 10 = -12, \\
-\det \A_3(\b) &= \det \begin{pmatrix} 1 & 2 & -3 \\ 0 & 1 & 5 \\ 2 & 1 & 3 \end{pmatrix} = 1(3 - 5) - 2(0 - 10) - 3(0 - 2) = -2 + 20 + 6 = 24 .
+\det \A_1(\b) &= \det \begin{pmatrix} -3 & 2 & -1 \\ 5 & 1 & 3 \\ 3 & 1 & 1 \end{pmatrix} \\
+&= -3(1 - 3) - 2(5 - 9) - 1(5 - 3) = 6 + 8 - 2 = 12, \\
+\det \A_2(\b) &= \det \begin{pmatrix} 1 & -3 & -1 \\ 0 & 5 & 3 \\ 2 & 3 & 1 \end{pmatrix} \\
+&= 1(5 - 9) + 3(0 - 6) - 1(0 - 10) = -4 - 18 + 10 = -12, \\
+\det \A_3(\b) &= \det \begin{pmatrix} 1 & 2 & -3 \\ 0 & 1 & 5 \\ 2 & 1 & 3 \end{pmatrix} \\
+&= 1(3 - 5) - 2(0 - 10) - 3(0 - 2) = -2 + 20 + 6 = 24 .
 \end{aligned}
 \]
 By @thm-cramers-rule, \( x_1 = 12/12 = 1 \), \( x_2 = -12/12 = -1 \), \( x_3 = 24/12 = 2 \). Check: \( 1 - 2 - 2 = -3 \), \( -1 + 6 = 5 \), \( 2 - 1 + 2 = 3 \).
@@ -399,7 +411,10 @@ expanding along the row or column that needs the least work.
 ::: {.solution}
 Column \( 3 \) has a single non-zero entry, \( a_{43} = 2 \), whose sign is \( (-1)^{4+3} = -1 \). By @thm-laplace-expansion (a) along column \( 3 \), \( \det \N = -2 M_{43} \), where
 \[
-M_{43} = \det \begin{pmatrix} 2 & 0 & 3 \\ 1 & 4 & -1 \\ 0 & 5 & 2 \end{pmatrix} = 2\big(4 \cdot 2 - (-1) \cdot 5\big) - 0 + 3\big(1 \cdot 5 - 4 \cdot 0\big) = 26 + 15 = 41,
+\begin{aligned}
+M_{43} &= \det \begin{pmatrix} 2 & 0 & 3 \\ 1 & 4 & -1 \\ 0 & 5 & 2 \end{pmatrix} \\
+&= 2\big(4 \cdot 2 - (-1) \cdot 5\big) - 0 + 3\big(1 \cdot 5 - 4 \cdot 0\big) = 26 + 15 = 41,
+\end{aligned}
 \]
 expanding along the first row. Hence \( \det \N = -82 \).
 :::
@@ -465,7 +480,10 @@ Work in \( M_2(\nR[x]) \), using the remarks after @thm-laplace-expansion and @t
 2. \( x\I - \A = \begin{pmatrix} x - a & -b \\ -c & x - d \end{pmatrix} \), so \( \adj(x\I - \A) = \begin{pmatrix} x - d & b \\ c & x - a \end{pmatrix} = x\I - \begin{pmatrix} d & -b \\ -c & a \end{pmatrix} = x\I - \adj \A \). Also \( \A + \adj \A = \begin{pmatrix} a + d & 0 \\ 0 & a + d \end{pmatrix} = (\tr \A) \I \).
 3. Since \( x\I \) commutes with every matrix, expanding with (b) gives
    \[
-   (x\I - \A)(x\I - \adj \A) = x^2 \I - x(\A + \adj \A) + \A \adj \A = x^2 \I - (\tr \A)x \I + (ad - bc) \I,
+   \begin{aligned}
+   (x\I - \A)(x\I - \adj \A) &= x^2 \I - x(\A + \adj \A) + \A \adj \A \\
+   &= x^2 \I - (\tr \A)x \I + (ad - bc) \I,
+   \end{aligned}
    \]
    where \( \A \adj \A = (ad - bc) \I \) is the computation of @thm-two-by-two-inverse over \( \nR \). Finally \( \det(x\I - \A) = (x - a)(x - d) - bc = x^2 - (a + d)x + (ad - bc) \), which is \( x^2 - (\tr \A)x + \det \A \).
 :::

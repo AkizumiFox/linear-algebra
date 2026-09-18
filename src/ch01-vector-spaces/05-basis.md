@@ -299,7 +299,10 @@ The decision "is \( \v_r \) in the span of the kept vectors?" is a small system 
 
 Sift the list \( (\v_1, \dots, \v_6) \) in \( \nR^3 \), where
 \[
-\v_1 = (1, 1, 1), \quad \v_2 = (2, 2, 2), \quad \v_3 = (1, 0, 0), \quad \v_4 = (3, 2, 2), \quad \v_5 = (1, 1, 0), \quad \v_6 = (0, 0, 1).
+\begin{aligned}
+&\v_1 = (1, 1, 1), \quad \v_2 = (2, 2, 2), \quad \v_3 = (1, 0, 0), \\
+&\v_4 = (3, 2, 2), \quad \v_5 = (1, 1, 0), \quad \v_6 = (0, 0, 1).
+\end{aligned}
 \]
 Hence find a basis of \( \nR^3 \) inside the list.
 :::
@@ -468,7 +471,10 @@ Let \( F \) be a field, \( n \ge 1 \), and \( U = \{ p \in F[x]_{\le n} : p(1) =
 
 *Spanning.* Let \( p \in U \). Then \( a_0 = -(a_1 + \dots + a_n) \), so
 \[
-p = a_1x + \dots + a_nx^n - (a_1 + \dots + a_n) = a_1(x - 1) + a_2(x^2 - 1) + \dots + a_n(x^n - 1).
+\begin{aligned}
+p &= a_1x + \dots + a_nx^n - (a_1 + \dots + a_n) \\
+&= a_1(x - 1) + a_2(x^2 - 1) + \dots + a_n(x^n - 1).
+\end{aligned}
 \]
 
 *Independence.* Let \( c_1(x - 1) + \dots + c_n(x^n - 1) = 0 \). For \( 1 \le k \le n \), the coefficient of \( x^k \) on the left is \( c_k \), since \( x^k \) appears in no other term. The zero polynomial has all coefficients \( 0 \), so \( c_k = 0 \) for every \( k \).

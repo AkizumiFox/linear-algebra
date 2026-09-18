@@ -53,8 +53,10 @@ Let \( \A = \begin{pmatrix} 3 & 1 \\ -1 & 1 \end{pmatrix} \in M_2(\nQ) \). Compu
 ::: {.solution}
 *Expanding.* \( \A^2 = \begin{pmatrix} 9 - 1 & 3 + 1 \\ -3 - 1 & -1 + 1 \end{pmatrix} = \begin{pmatrix} 8 & 4 \\ -4 & 0 \end{pmatrix} \). Hence
 \[
-p(\A) = \begin{pmatrix} 8 - 12 + 4 & 4 - 4 \\ -4 + 4 & 0 - 4 + 4 \end{pmatrix} = 0, \qquad
-q(\A) = \begin{pmatrix} 8 - 9 & 4 - 3 \\ -4 + 3 & 0 - 3 \end{pmatrix} = \begin{pmatrix} -1 & 1 \\ -1 & -3 \end{pmatrix}.
+\begin{aligned}
+p(\A) &= \begin{pmatrix} 8 - 12 + 4 & 4 - 4 \\ -4 + 4 & 0 - 4 + 4 \end{pmatrix} = 0, \\
+q(\A) &= \begin{pmatrix} 8 - 9 & 4 - 3 \\ -4 + 3 & 0 - 3 \end{pmatrix} = \begin{pmatrix} -1 & 1 \\ -1 & -3 \end{pmatrix}.
+\end{aligned}
 \]
 *Factoring.* \( p = (x - 2)^2 \), so \( p(\A) = (\A - 2\I)^2 \) by @thm-evaluation-homomorphism (b). Here \( \A - 2\I = \begin{pmatrix} 1 & 1 \\ -1 & -1 \end{pmatrix} \), whose square is \( \begin{pmatrix} 1 - 1 & 1 - 1 \\ -1 + 1 & -1 + 1 \end{pmatrix} = 0 \). Likewise \( q = x(x - 3) \), so
 \[
@@ -295,7 +297,11 @@ Let \( \A = \begin{pmatrix} 0 & 1 & -1 \\ 0 & 0 & 1 \\ 0 & 0 & 1 \end{pmatrix} \
 
 *Bézout.* \( x^2 = (x + 1)(x - 1) + 1 \), so \( 1 \cdot x^2 + \bigl(-(x + 1)\bigr)(x - 1) = 1 \): take \( a = 1 \), \( b = -(x + 1) \). Then
 \[
-\E_1 = b(\A)q(\A) = -(\A + \I_3)(\A - \I_3) = \I_3 - \A^2 = \begin{pmatrix} 1 & 0 & 0 \\ 0 & 1 & -1 \\ 0 & 0 & 0 \end{pmatrix}, \qquad \E_2 = a(\A)p(\A) = \A^2 .
+\begin{aligned}
+\E_1 &= b(\A)q(\A) = -(\A + \I_3)(\A - \I_3) = \I_3 - \A^2 \\
+&= \begin{pmatrix} 1 & 0 & 0 \\ 0 & 1 & -1 \\ 0 & 0 & 0 \end{pmatrix}, \\
+\E_2 &= a(\A)p(\A) = \A^2 .
+\end{aligned}
 \]
 *The summands.* \( \ker \A^2 = \{ (x, y, z) : z = 0 \} = \Span(\e_1, \e_2) \), and \( \ker(\A - \I_3) \) is cut out by \( -x + y - z = 0 \), \( -y + z = 0 \), \( 0 = 0 \), so it is \( \Span((0, 1, 1)) \). By @thm-kernel-splitting (c),
 \[
@@ -465,7 +471,10 @@ Let \( T \in \cL(V) \), and let \( p_1, \dots, p_k \in F[x] \) be non-zero and p
 
 (b) Write \( e_1 + \dots + e_k = 1 + hp \) and \( p_ie_i = h_ip \). By @thm-evaluation-homomorphism, for \( \w \in W \),
 \[
-e_1(T)\w + \dots + e_k(T)\w = \w + h(T)\,p(T)\w = \w, \qquad p_i(T)\bigl(e_i(T)\w\bigr) = h_i(T)\,p(T)\w = \0 .
+\begin{aligned}
+e_1(T)\w + \dots + e_k(T)\w &= \w + h(T)\,p(T)\w = \w, \\
+p_i(T)\bigl(e_i(T)\w\bigr) &= h_i(T)\,p(T)\w = \0 .
+\end{aligned}
 \]
 
 (c) Each \( \ker p_i(T) \subseteq W \), since \( p(T) = \bigl(\prod_{j \ne i} p_j\bigr)(T)\,p_i(T) \). With (b), \( W = \ker p_1(T) + \dots + \ker p_k(T) \). Let \( \u_j \in \ker p_j(T) \). For \( j \ne i \), \( p_j \mid e_i \), say \( e_i = g\,p_j \), so \( e_i(T)\u_j = g(T)\,p_j(T)\u_j = \0 \). And \( e_i = 1 + g'p_i \), so \( e_i(T)\u_i = \u_i + g'(T)\,p_i(T)\u_i = \u_i \). This proves the second statement. Now suppose \( \u_1 + \dots + \u_k = \0 \) with \( \u_j \in \ker p_j(T) \). Applying \( e_i(T) \) gives \( \u_i = \0 \), for each \( i \). By @thm-direct-sum-k-criteria ((b) \( \Rightarrow \) (a)), the sum is direct.

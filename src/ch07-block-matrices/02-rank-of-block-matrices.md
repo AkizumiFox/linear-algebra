@@ -60,8 +60,12 @@ Gaussian elimination changes a matrix by row operations, which are multiplicatio
 
 Fix a partition of \( \M = \begin{pmatrix} \A & \B \\ \C & \D \end{pmatrix} \in M_{(m+p) \times (k+l)}(F) \) with \( \A \in M_{m \times k}(F) \). For matrices \( \X \in M_{m \times p}(F) \) and \( \Y \in M_{k \times l}(F) \), @thm-block-multiplication gives
 \[
-\begin{pmatrix} \I_m & \X \\ 0 & \I_p \end{pmatrix}\begin{pmatrix} \A & \B \\ \C & \D \end{pmatrix} = \begin{pmatrix} \A + \X \C & \B + \X \D \\ \C & \D \end{pmatrix}, \qquad
-\begin{pmatrix} \A & \B \\ \C & \D \end{pmatrix}\begin{pmatrix} \I_k & \Y \\ 0 & \I_l \end{pmatrix} = \begin{pmatrix} \A & \A \Y + \B \\ \C & \C \Y + \D \end{pmatrix}.
+\begin{aligned}
+\begin{pmatrix} \I_m & \X \\ 0 & \I_p \end{pmatrix}\begin{pmatrix} \A & \B \\ \C & \D \end{pmatrix}
+  &= \begin{pmatrix} \A + \X \C & \B + \X \D \\ \C & \D \end{pmatrix}, \\
+\begin{pmatrix} \A & \B \\ \C & \D \end{pmatrix}\begin{pmatrix} \I_k & \Y \\ 0 & \I_l \end{pmatrix}
+  &= \begin{pmatrix} \A & \A \Y + \B \\ \C & \C \Y + \D \end{pmatrix}.
+\end{aligned}
 \]
 In words: multiplying on the **left** adds \( \X \) times block row \( 2 \) to block row \( 1 \), with \( \X \) on the left of the row; multiplying on the **right** adds block column \( 1 \) times \( \Y \) to block column \( 2 \), with \( \Y \) on the right of the column. The lower triangular multipliers \( \begin{pmatrix} \I_m & 0 \\ \X' & \I_p \end{pmatrix} \) and \( \begin{pmatrix} \I_k & 0 \\ \Y' & \I_l \end{pmatrix} \) act the same way in the other direction. Sides matter: the multiplier sits on the side of the product where the matrix operation happens.
 
@@ -112,8 +116,13 @@ The left side is the rank of \( \begin{pmatrix} \A \B \C & 0 \\ 0 & \B \end{pmat
 ::: {.proof}
 Let \( \P = \begin{pmatrix} \A \B \C & 0 \\ 0 & \B \end{pmatrix} \), with row partition \( m, n \) and column partition \( q, p \). By @thm-block-rank-inequalities (b), \( \rank \P = \rank(\A \B \C) + \rank \B \). By @thm-block-multiplication,
 \[
-\begin{pmatrix} \I_m & \A \\ 0 & \I_n \end{pmatrix} \P = \begin{pmatrix} \A \B \C & \A \B \\ 0 & \B \end{pmatrix}, \qquad
-\begin{pmatrix} \A \B \C & \A \B \\ 0 & \B \end{pmatrix}\begin{pmatrix} \I_q & 0 \\ -\C & \I_p \end{pmatrix} = \begin{pmatrix} \A \B \C - \A \B \C & \A \B \\ -\B \C & \B \end{pmatrix} = \begin{pmatrix} 0 & \A \B \\ -\B \C & \B \end{pmatrix}.
+\begin{aligned}
+\begin{pmatrix} \I_m & \A \\ 0 & \I_n \end{pmatrix} \P
+  &= \begin{pmatrix} \A \B \C & \A \B \\ 0 & \B \end{pmatrix}, \\
+\begin{pmatrix} \A \B \C & \A \B \\ 0 & \B \end{pmatrix}\begin{pmatrix} \I_q & 0 \\ -\C & \I_p \end{pmatrix}
+  &= \begin{pmatrix} \A \B \C - \A \B \C & \A \B \\ -\B \C & \B \end{pmatrix} \\
+  &= \begin{pmatrix} 0 & \A \B \\ -\B \C & \B \end{pmatrix}.
+\end{aligned}
 \]
 Multiplying on the right by the block swap \( \begin{pmatrix} 0 & \I_q \\ \I_p & 0 \end{pmatrix} \) exchanges the two block columns and gives \( \Q = \begin{pmatrix} \A \B & 0 \\ \B & -\B \C \end{pmatrix} \). By @thm-block-elimination-rank (a), \( \rank \Q = \rank \P \). By @thm-block-rank-inequalities (c), \( \rank \Q \ge \rank(\A \B) + \rank(-\B \C) = \rank(\A \B) + \rank(\B \C) \), where \( \rank(-\B \C) = \rank(\B \C) \) because \( -\B \C \) and \( \B \C \) have the same column space. Hence \( \rank(\A \B \C) + \rank \B \ge \rank(\A \B) + \rank(\B \C) \).
 :::
@@ -141,15 +150,23 @@ Let \( \A \in M_{m \times n}(F) \) and \( \B \in M_{n \times m}(F) \).
 
 *Using \( \I_m \) as the pivot.* Subtract \( \B \) times block row \( 1 \) from block row \( 2 \), then subtract block column \( 1 \) times \( \A \) from block column \( 2 \). By @thm-block-multiplication,
 \[
-\begin{pmatrix} \I_m & 0 \\ -\B & \I_n \end{pmatrix} \M = \begin{pmatrix} \I_m & \A \\ 0 & \I_n - \B \A \end{pmatrix}, \qquad
-\begin{pmatrix} \I_m & \A \\ 0 & \I_n - \B \A \end{pmatrix}\begin{pmatrix} \I_m & -\A \\ 0 & \I_n \end{pmatrix} = \begin{pmatrix} \I_m & 0 \\ 0 & \I_n - \B \A \end{pmatrix}.
+\begin{aligned}
+\begin{pmatrix} \I_m & 0 \\ -\B & \I_n \end{pmatrix} \M
+  &= \begin{pmatrix} \I_m & \A \\ 0 & \I_n - \B \A \end{pmatrix}, \\
+\begin{pmatrix} \I_m & \A \\ 0 & \I_n - \B \A \end{pmatrix}\begin{pmatrix} \I_m & -\A \\ 0 & \I_n \end{pmatrix}
+  &= \begin{pmatrix} \I_m & 0 \\ 0 & \I_n - \B \A \end{pmatrix}.
+\end{aligned}
 \]
 By @thm-block-elimination-rank (a) and @thm-block-rank-inequalities (b), \( \rank \M = m + \rank(\I_n - \B \A) \).
 
 *Using \( \I_n \) as the pivot.* Subtract \( \A \) times block row \( 2 \) from block row \( 1 \), then subtract block column \( 2 \) times \( \B \) from block column \( 1 \):
 \[
-\begin{pmatrix} \I_m & -\A \\ 0 & \I_n \end{pmatrix} \M = \begin{pmatrix} \I_m - \A \B & 0 \\ \B & \I_n \end{pmatrix}, \qquad
-\begin{pmatrix} \I_m - \A \B & 0 \\ \B & \I_n \end{pmatrix}\begin{pmatrix} \I_m & 0 \\ -\B & \I_n \end{pmatrix} = \begin{pmatrix} \I_m - \A \B & 0 \\ 0 & \I_n \end{pmatrix}.
+\begin{aligned}
+\begin{pmatrix} \I_m & -\A \\ 0 & \I_n \end{pmatrix} \M
+  &= \begin{pmatrix} \I_m - \A \B & 0 \\ \B & \I_n \end{pmatrix}, \\
+\begin{pmatrix} \I_m - \A \B & 0 \\ \B & \I_n \end{pmatrix}\begin{pmatrix} \I_m & 0 \\ -\B & \I_n \end{pmatrix}
+  &= \begin{pmatrix} \I_m - \A \B & 0 \\ 0 & \I_n \end{pmatrix}.
+\end{aligned}
 \]
 So \( \rank \M = \rank(\I_m - \A \B) + n \) in the same way. Comparing the two expressions for \( \rank \M \) proves (a).
 
@@ -231,7 +248,12 @@ Let \( \A \in M_{m \times n}(F) \), \( \B \in M_{n \times m}(F) \) and \( c \in 
 ::: {.solution}
 (a) Since \( c \ne 0 \), put \( \A' = c^{-1}\A \). Then \( c\I_m - \A \B = c(\I_m - \A'\B) \) and \( c\I_n - \B \A = c(\I_n - \B \A') \). Multiplying a matrix by the non-zero scalar \( c \) does not change its column space, hence not its rank. By @exm-rank-i-minus-ab (a) applied to \( \A' \) and \( \B \),
 \[
-\rank(c\I_m - \A \B) + n = \rank(\I_m - \A'\B) + n = \rank(\I_n - \B \A') + m = \rank(c\I_n - \B \A) + m .
+\begin{aligned}
+\rank(c\I_m - \A \B) + n
+  &= \rank(\I_m - \A'\B) + n \\
+  &= \rank(\I_n - \B \A') + m \\
+  &= \rank(c\I_n - \B \A) + m .
+\end{aligned}
 \]
 
 (b) Here \( m = 3 \), \( n = 2 \), and
@@ -263,15 +285,17 @@ Let \( \A \in M_n(F) \).
 ::: {.solution}
 (a) Write \( \I = \I_n \). By @thm-block-multiplication, each step being multiplication by one of the matrices of @thm-block-elimination-rank (a):
 \[
+\begin{aligned}
 \begin{pmatrix} \A & 0 \\ 0 & \I - \A \end{pmatrix}
-\xrightarrow{\ \text{row}_2 + \text{row}_1\ }
-\begin{pmatrix} \A & 0 \\ \A & \I - \A \end{pmatrix}
-\xrightarrow{\ \text{col}_1 + \text{col}_2\ }
-\begin{pmatrix} \A & 0 \\ \I & \I - \A \end{pmatrix}
-\xrightarrow{\ \text{row}_1 - \A\,\text{row}_2\ }
-\begin{pmatrix} 0 & \A^2 - \A \\ \I & \I - \A \end{pmatrix}
-\xrightarrow{\ \text{col}_2 - \text{col}_1(\I - \A)\ }
+&\xrightarrow{\ \text{row}_2 + \text{row}_1\ }
+\begin{pmatrix} \A & 0 \\ \A & \I - \A \end{pmatrix} \\
+&\xrightarrow{\ \text{col}_1 + \text{col}_2\ }
+\begin{pmatrix} \A & 0 \\ \I & \I - \A \end{pmatrix} \\
+&\xrightarrow{\ \text{row}_1 - \A\,\text{row}_2\ }
+\begin{pmatrix} 0 & \A^2 - \A \\ \I & \I - \A \end{pmatrix} \\
+&\xrightarrow{\ \text{col}_2 - \text{col}_1(\I - \A)\ }
 \begin{pmatrix} 0 & \A^2 - \A \\ \I & 0 \end{pmatrix}.
+\end{aligned}
 \]
 The multipliers are, in order, \( \begin{pmatrix} \I & 0 \\ \I & \I \end{pmatrix} \) on the left, \( \begin{pmatrix} \I & 0 \\ \I & \I \end{pmatrix} \) on the right, \( \begin{pmatrix} \I & -\A \\ 0 & \I \end{pmatrix} \) on the left and \( \begin{pmatrix} \I & -(\I - \A) \\ 0 & \I \end{pmatrix} \) on the right. In the third step the top row becomes \( \begin{pmatrix} \A - \A \I & 0 - \A(\I - \A) \end{pmatrix} = \begin{pmatrix} 0 & \A^2 - \A \end{pmatrix} \), and in the fourth the bottom-right block becomes \( (\I - \A) - \I(\I - \A) = 0 \). Swapping the block columns (@thm-block-elimination-rank (a)) gives \( \begin{pmatrix} \A^2 - \A & 0 \\ 0 & \I \end{pmatrix} \), of rank \( \rank(\A^2 - \A) + n \) by @thm-block-rank-inequalities (b). The first matrix has rank \( \rank \A + \rank(\I - \A) \), and rank is unchanged throughout. Since \( \A^2 - \A = -(\A - \A^2) \) has the same rank as \( \A - \A^2 \), (a) follows.
 
@@ -290,7 +314,13 @@ Let \( \A \in M_{m \times n}(F) \) and \( \B \in M_{n \times m}(F) \).
 ::: {.enumerate options="label=(\alph*)"}
 1. Verify, by block multiplication, the following chain, in which each arrow is multiplication by an invertible block triangular matrix:
 \[
-\begin{pmatrix} \A & 0 \\ 0 & \I_n - \B \A \end{pmatrix} \to \begin{pmatrix} \A & \A \\ 0 & \I_n - \B \A \end{pmatrix} \to \begin{pmatrix} \A & \A \\ \B \A & \I_n \end{pmatrix} \to \begin{pmatrix} \A - \A \B \A & \A \\ 0 & \I_n \end{pmatrix} \to \begin{pmatrix} \A - \A \B \A & 0 \\ 0 & \I_n \end{pmatrix}.
+\begin{aligned}
+\begin{pmatrix} \A & 0 \\ 0 & \I_n - \B \A \end{pmatrix}
+&\to \begin{pmatrix} \A & \A \\ 0 & \I_n - \B \A \end{pmatrix}
+\to \begin{pmatrix} \A & \A \\ \B \A & \I_n \end{pmatrix} \\
+&\to \begin{pmatrix} \A - \A \B \A & \A \\ 0 & \I_n \end{pmatrix}
+\to \begin{pmatrix} \A - \A \B \A & 0 \\ 0 & \I_n \end{pmatrix}.
+\end{aligned}
 \]
 Name each multiplier and the side it acts on.
 2. Deduce that \( \rank(\A - \A \B \A) = \rank \A + \rank(\I_n - \B \A) - n \).
@@ -335,15 +365,18 @@ Let \( \A \in M_n(F) \).
 ::: {.solution}
 (a) Write \( \I = \I_n \) and \( \P = \A + \I \). Since \( \operatorname{char} F \ne 2 \), \( 2 \ne 0 \) in \( F \), so \( \frac12 \) exists and \( -2\I \) is invertible. By @thm-block-multiplication, with each multiplier from @thm-block-elimination-rank (a):
 \[
+\begin{aligned}
 \begin{pmatrix} \A - \I & 0 \\ 0 & \P \end{pmatrix}
-\xrightarrow{\ \text{col}_1 + \text{col}_2\ }
+&\xrightarrow{\ \text{col}_1 + \text{col}_2\ }
 \begin{pmatrix} \A - \I & 0 \\ \P & \P \end{pmatrix}
 \xrightarrow{\ \text{row}_1 - \text{row}_2\ }
-\begin{pmatrix} -2\I & -\P \\ \P & \P \end{pmatrix}
-\xrightarrow{\ \text{col}_2 - \text{col}_1 \cdot \frac12 \P\ }
-\begin{pmatrix} -2\I & 0 \\ \P & \P - \frac12 \P^2 \end{pmatrix}
-\xrightarrow{\ \text{row}_2 + \frac12 \P\,\text{row}_1\ }
+\begin{pmatrix} -2\I & -\P \\ \P & \P \end{pmatrix} \\
+&\xrightarrow{\ \text{col}_2 - \text{col}_1 \cdot \frac12 \P\ }
+\begin{pmatrix} -2\I & 0 \\ \P & \P - \frac12 \P^2 \end{pmatrix} \\
+&\xrightarrow{\ \text{row}_2 + \frac12 \P\,\text{row}_1\ }
 \begin{pmatrix} -2\I & 0 \\ 0 & \P - \frac12 \P^2 \end{pmatrix}.
+\end{aligned}
+
 \]
 In the second step \( (\A - \I) - \P = -2\I \); in the third, \( -\P - (-2\I)\tfrac12 \P = 0 \) and \( \P - \P\cdot\frac12 \P = \P - \frac12\P^2 \); in the fourth, \( \P + \frac12\P(-2\I) = 0 \). Finally
 \[

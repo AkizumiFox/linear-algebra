@@ -157,8 +157,9 @@ Write \( \A = \P \J \P^{-1} \) with \( \J = \J_{k_1}(\lambda_1) \oplus \dots \op
 
 \( (\Leftarrow) \) Suppose every eigenvalue satisfies (i) or (ii). Fix a block. If \( \lvert\lambda_i\rvert < 1 \), then \( \J_{k_i}(\lambda_i)^{m} \to 0 \) by @thm-matrix-powers-converge-to-zero applied to the block \( \J_{k_i}(\lambda_i) \), whose only eigenvalue is \( \lambda_i \). If \( \lambda_i = 1 \), then \( k_i = 1 \) by (ii) and \( \J_1(1)^{m} = (1) \) for every \( m \). By @thm-block-diagonal-arithmetic (b), \( \J^{m} \) is the direct sum of these, so
 \[
-\J^{m} \longrightarrow \E \coloneqq \text{the diagonal matrix with } 1 \text{ in the positions of the } \lambda_i = 1 \text{ blocks and } 0 \text{ elsewhere.}
+\J^{m} \longrightarrow \E ,
 \]
+where \( \E \) is the diagonal matrix carrying \( 1 \) in the positions of the blocks with \( \lambda_i = 1 \) and \( 0 \) everywhere else.
 By @lem-powers-transfer-along-similarity (a), \( \A^{m} \to \P \E \P^{-1} \).
 
 It remains to identify \( \P \E \P^{-1} \). The matrix \( \E \) is the matrix in the basis \( \sB \) of the projection onto

@@ -149,9 +149,11 @@ Let \( \A = \begin{pmatrix} 1 & -2 & 0 \\ 3 & 1 & 4 \end{pmatrix} \) and \( \B =
 ::: {.solution}
 Entry by entry,
 \[
-  \A + \B = \begin{pmatrix} 3 & 0 & -1 \\ 3 & -4 & 5 \end{pmatrix}, \quad
-  3\A = \begin{pmatrix} 3 & -6 & 0 \\ 9 & 3 & 12 \end{pmatrix}, \quad
-  \A - 2\B = \begin{pmatrix} 1 - 4 & -2 - 4 & 0 + 2 \\ 3 - 0 & 1 + 10 & 4 - 2 \end{pmatrix} = \begin{pmatrix} -3 & -6 & 2 \\ 3 & 11 & 2 \end{pmatrix}.
+  \begin{aligned}
+  \A + \B &= \begin{pmatrix} 3 & 0 & -1 \\ 3 & -4 & 5 \end{pmatrix}, \\
+  3\A &= \begin{pmatrix} 3 & -6 & 0 \\ 9 & 3 & 12 \end{pmatrix}, \\
+  \A - 2\B &= \begin{pmatrix} 1 - 4 & -2 - 4 & 0 + 2 \\ 3 - 0 & 1 + 10 & 4 - 2 \end{pmatrix} = \begin{pmatrix} -3 & -6 & 2 \\ 3 & 11 & 2 \end{pmatrix}.
+  \end{aligned}
 \]
 :::
 
@@ -189,8 +191,10 @@ Suppose new variables \( y_1, y_2 \) are given in terms of \( x_1, x_2 \), and \
 Record each substitution by its table of coefficients: \( \B = \begin{pmatrix} 2 & 1 \\ 1 & 4 \end{pmatrix} \) for \( \y \) in terms of \( \x \), and \( \A = \begin{pmatrix} 1 & 2 \\ 3 & -1 \end{pmatrix} \) for \( \z \) in terms of \( \y \). Substituting,
 \[
   \begin{aligned}
-  z_1 &= (2x_1 + x_2) + 2(x_1 + 4x_2) = (1 \cdot 2 + 2 \cdot 1)x_1 + (1 \cdot 1 + 2 \cdot 4)x_2 = 4x_1 + 9x_2, \\
-  z_2 &= 3(2x_1 + x_2) - (x_1 + 4x_2) = (3 \cdot 2 + (-1) \cdot 1)x_1 + (3 \cdot 1 + (-1) \cdot 4)x_2 = 5x_1 - x_2 .
+  z_1 &= (2x_1 + x_2) + 2(x_1 + 4x_2) \\
+  &= (1 \cdot 2 + 2 \cdot 1)x_1 + (1 \cdot 1 + 2 \cdot 4)x_2 = 4x_1 + 9x_2, \\
+  z_2 &= 3(2x_1 + x_2) - (x_1 + 4x_2) \\
+  &= (3 \cdot 2 + (-1) \cdot 1)x_1 + (3 \cdot 1 + (-1) \cdot 4)x_2 = 5x_1 - x_2 .
   \end{aligned}
 \]
 So \( \z \) in terms of \( \x \) has coefficient table \( \begin{pmatrix} 4 & 9 \\ 5 & -1 \end{pmatrix} \). Look at how each entry arose: the coefficient of \( x_k \) in \( z_i \) is \( a_{i1} b_{1k} + a_{i2} b_{2k} \), row \( i \) of \( \A \) against column \( k \) of \( \B \). The entrywise product \( \begin{pmatrix} 2 & 2 \\ 3 & -4 \end{pmatrix} \) has nothing to do with the substitution. This forces the definition.
@@ -223,9 +227,10 @@ Let \( \A = \begin{pmatrix} 2 & -1 \\ 0 & 3 \end{pmatrix} \) and \( \B = \begin{
 ::: {.solution}
 Row \( i \) of \( \A \) against column \( k \) of \( \B \):
 \[
-  \A\B = \begin{pmatrix} 2 \cdot 1 + (-1)(-2) & 2 \cdot 4 + (-1) \cdot 1 \\ 0 \cdot 1 + 3 \cdot (-2) & 0 \cdot 4 + 3 \cdot 1 \end{pmatrix} = \begin{pmatrix} 4 & 7 \\ -6 & 3 \end{pmatrix},
-  \qquad
-  \B\A = \begin{pmatrix} 1 \cdot 2 + 4 \cdot 0 & 1 \cdot (-1) + 4 \cdot 3 \\ -2 \cdot 2 + 1 \cdot 0 & (-2)(-1) + 1 \cdot 3 \end{pmatrix} = \begin{pmatrix} 2 & 11 \\ -4 & 5 \end{pmatrix}.
+  \begin{aligned}
+  \A\B &= \begin{pmatrix} 2 \cdot 1 + (-1)(-2) & 2 \cdot 4 + (-1) \cdot 1 \\ 0 \cdot 1 + 3 \cdot (-2) & 0 \cdot 4 + 3 \cdot 1 \end{pmatrix} = \begin{pmatrix} 4 & 7 \\ -6 & 3 \end{pmatrix}, \\
+  \B\A &= \begin{pmatrix} 1 \cdot 2 + 4 \cdot 0 & 1 \cdot (-1) + 4 \cdot 3 \\ -2 \cdot 2 + 1 \cdot 0 & (-2)(-1) + 1 \cdot 3 \end{pmatrix} = \begin{pmatrix} 2 & 11 \\ -4 & 5 \end{pmatrix}.
+  \end{aligned}
 \]
 Both products are defined, and they are different.
 :::
@@ -460,9 +465,10 @@ For 1, \( ((\A\tp)\tp)_{ij} = (\A\tp)_{ji} = a_{ij} \) by @def-transpose. For 2 
 
 For 4, both sides lie in \( M_{p \times m}(F) \). Fix \( 1 \le i \le p \) and \( 1 \le k \le m \). By @def-transpose and @def-matrix-multiplication,
 \[
-  \bigl((\A\B)\tp\bigr)_{ik} = (\A\B)_{ki} = \sum_{j=1}^{n} a_{kj} b_{ji},
-  \qquad
-  (\B\tp \A\tp)_{ik} = \sum_{j=1}^{n} (\B\tp)_{ij} (\A\tp)_{jk} = \sum_{j=1}^{n} b_{ji} a_{kj} .
+  \begin{aligned}
+  \bigl((\A\B)\tp\bigr)_{ik} &= (\A\B)_{ki} = \sum_{j=1}^{n} a_{kj} b_{ji}, \\
+  (\B\tp \A\tp)_{ik} &= \sum_{j=1}^{n} (\B\tp)_{ij} (\A\tp)_{jk} = \sum_{j=1}^{n} b_{ji} a_{kj} .
+  \end{aligned}
 \]
 The two sums agree term by term because multiplication in \( F \) is commutative. Hence \( (\A\B)\tp = \B\tp \A\tp \). This proves the theorem.
 :::
@@ -637,9 +643,10 @@ Where does the formula come from? Try to kill the off-diagonal entries of \( \A 
 ::: {.proof}
 Write \( \Delta = ad - bc \) and \( \tilde \A = \begin{pmatrix} d & -b \\ -c & a \end{pmatrix} \). By @def-matrix-multiplication and commutativity of multiplication in \( F \),
 \[
-  \A \tilde \A = \begin{pmatrix} ad - bc & -ab + ba \\ cd - dc & -cb + da \end{pmatrix} = \Delta \I_2,
-  \qquad
-  \tilde \A \A = \begin{pmatrix} da - bc & db - bd \\ -ca + ac & -cb + ad \end{pmatrix} = \Delta \I_2 .
+  \begin{aligned}
+  \A \tilde \A &= \begin{pmatrix} ad - bc & -ab + ba \\ cd - dc & -cb + da \end{pmatrix} = \Delta \I_2, \\
+  \tilde \A \A &= \begin{pmatrix} da - bc & db - bd \\ -ca + ac & -cb + ad \end{pmatrix} = \Delta \I_2 .
+  \end{aligned}
 \]
 
 (\( \Leftarrow \)) Suppose \( \Delta \neq 0 \), so \( \Delta^{-1} \) exists in \( F \). By @thm-matrix-multiplication-properties (scalars), \( \A(\Delta^{-1}\tilde \A) = \Delta^{-1}(\A\tilde \A) = \Delta^{-1}\Delta \I_2 = \I_2 \), and likewise \( (\Delta^{-1}\tilde \A)\A = \I_2 \). Hence \( \A \) is invertible with \( \A^{-1} = \Delta^{-1}\tilde \A \), which is the stated formula.
@@ -704,9 +711,12 @@ For 1, fix \( j \) and use induction on \( k \) (@thm-induction). For \( k = 0 \
 
 For 2, let \( p = \sum_{i=0}^{m} a_i x^i \) and \( q = \sum_{j=0}^{l} b_j x^j \). The statement for sums follows from @thm-matrix-addition-properties, since \( (a_i + b_i)\A^i = a_i \A^i + b_i \A^i \). For products, by @def-polynomial-ring the coefficient of \( x^k \) in \( pq \) is \( \sum_{i + j = k} a_i b_j \), so
 \[
-  (pq)(\A) = \sum_{k} \Bigl( \sum_{i + j = k} a_i b_j \Bigr) \A^{k}
-  = \sum_{i=0}^{m} \sum_{j=0}^{l} (a_i b_j) \A^{i} \A^{j}
-  = \Bigl( \sum_{i=0}^{m} a_i \A^i \Bigr) \Bigl( \sum_{j=0}^{l} b_j \A^j \Bigr) = p(\A)\,q(\A),
+  \begin{aligned}
+  (pq)(\A)
+  &= \sum_{k} \Bigl( \sum_{i + j = k} a_i b_j \Bigr) \A^{k}
+  = \sum_{i=0}^{m} \sum_{j=0}^{l} (a_i b_j) \A^{i} \A^{j} \\
+  &= \Bigl( \sum_{i=0}^{m} a_i \A^i \Bigr) \Bigl( \sum_{j=0}^{l} b_j \A^j \Bigr) = p(\A)\,q(\A),
+  \end{aligned}
 \]
 where the second equality uses part 1 and @thm-matrix-addition-properties, and the third uses distributivity and the scalar rule \( (a_i \A^i)(b_j \A^j) = (a_i b_j) \A^i \A^j \) from @thm-matrix-multiplication-properties.
 
@@ -960,7 +970,8 @@ is the inverse of \( \U \).
   \begin{aligned}
   (\U\V)_{12} &= a \cdot \bigl(-b(ad)^{-1}\bigr) + b d^{-1} = -bd^{-1} + bd^{-1} = 0, \\
   (\U\V)_{23} &= d \cdot \bigl(-e(df)^{-1}\bigr) + e f^{-1} = -ef^{-1} + ef^{-1} = 0, \\
-  (\U\V)_{13} &= a (be - cd)(adf)^{-1} + b\bigl(-e(df)^{-1}\bigr) + c f^{-1} = (be - cd)(df)^{-1} - be(df)^{-1} + cd(df)^{-1} = 0 .
+  (\U\V)_{13} &= a (be - cd)(adf)^{-1} + b\bigl(-e(df)^{-1}\bigr) + c f^{-1} \\
+  &= (be - cd)(df)^{-1} - be(df)^{-1} + cd(df)^{-1} = 0 .
   \end{aligned}
 \]
 Hence \( \U\V = \I_3 \). For \( \V\U \), again the diagonal entries are \( 1 \) and the entries below the diagonal are \( 0 \), and
@@ -968,7 +979,8 @@ Hence \( \U\V = \I_3 \). For \( \V\U \), again the diagonal entries are \( 1 \) 
   \begin{aligned}
   (\V\U)_{12} &= a^{-1} b - b(ad)^{-1} d = a^{-1}b - a^{-1}b = 0, \\
   (\V\U)_{23} &= d^{-1} e - e(df)^{-1} f = 0, \\
-  (\V\U)_{13} &= a^{-1} c - b(ad)^{-1} e + (be - cd)(adf)^{-1} f = a^{-1}c - be(ad)^{-1} + be(ad)^{-1} - cd(ad)^{-1} = 0,
+  (\V\U)_{13} &= a^{-1} c - b(ad)^{-1} e + (be - cd)(adf)^{-1} f \\
+  &= a^{-1}c - be(ad)^{-1} + be(ad)^{-1} - cd(ad)^{-1} = 0,
   \end{aligned}
 \]
 using \( cd(ad)^{-1} = ca^{-1} \). Hence \( \V\U = \I_3 \), and \( \V = \U^{-1} \). Both products had to be checked, since we may not yet use that one implies the other.

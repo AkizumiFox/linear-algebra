@@ -174,7 +174,10 @@ Let \( T = T_{\A} \colon F^n \to F^m \). Its kernel is \( \nul(\A) \), and @thm-
 ::: {.proof}
 Let \( T = T_{\A} \colon F^n \to F^m \), \( T(\x) = \A\x \), so that \( \ker T = \nul(\A) \). Every functional on \( F^m \) is \( \varphi_{\y} \) for a unique \( \y \in F^m \), as recalled at the start of this section. By @def-dual-map, associativity of matrix multiplication, and @thm-transpose-properties,
 \[
-T'(\varphi_{\y})(\x) = \varphi_{\y}(\A\x) = \y\tp(\A\x) = (\y\tp \A)\x = (\A\tp\y)\tp\x = \varphi_{\A\tp\y}(\x) \qquad (\x \in F^n),
+\begin{aligned}
+T'(\varphi_{\y})(\x) &= \varphi_{\y}(\A\x) = \y\tp(\A\x) = (\y\tp \A)\x \\
+&= (\A\tp\y)\tp\x = \varphi_{\A\tp\y}(\x) \qquad (\x \in F^n),
+\end{aligned}
 \]
 so \( T'(\varphi_{\y}) = \varphi_{\A\tp\y} \). The columns of \( \A\tp \) are \( \a_1, \dots, \a_m \), where \( \a_i\tp \) are the rows of \( \A \), so \( \A\tp\y = y_1\a_1 + \dots + y_m\a_m \) by @thm-matrix-times-vector-columns. As \( \y \) runs over \( F^m \), these are all the combinations of \( \a_1, \dots, \a_m \), and since transposing respects combinations (@thm-transpose-properties), they are exactly the vectors \( \a \) with \( \a\tp \in \row(\A) \) (@def-row-space). Hence
 \[

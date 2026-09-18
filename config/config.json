@@ -90,7 +90,12 @@
         "src/ch06-determinants",
         "src/ch07-block-matrices",
         "src/ch08-eigenvalues",
-        "src/ch09-canonical-forms"
+        "src/ch09-canonical-forms",
+        {
+            "dir": "src/ch10-inner-products",
+            "part": "Part III \u00b7 Inner Products and Spectral Theory"
+        },
+        "src/ch11-spectral-theory"
     ],
     "macros": "latex/macros.tex",
     "templates": {
