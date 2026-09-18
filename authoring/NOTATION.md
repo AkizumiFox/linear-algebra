@@ -54,7 +54,7 @@ This list is fixed. A chapter that needs a new symbol adds it here, and a new ma
 | `\rank T`, `\nullity T` | dim im T, dim ker T |
 | `\I`, `\I_n`, `\id_V` | identity matrix (bold); identity operator |
 | `\A, \B, \C` | matrices, **bold** upright capitals (`\mathbf`), like vectors. Entries stay plain: `a_{ij}`, or `(\A)_{ij}`. The macros `\A … \Z` give the bold letters |
-| `\A\tp` | transpose, rendered **A**ᵀ |
+| `\A\tp` | transpose: `\tp` is `^{\top}`, rendered **A**⊤ |
 | `\A^{*}` | conjugate transpose (and adjoint of an operator) |
 | `\mtx{T}{\sB}{\sC}` | matrix of T from basis 𝓑 (input) to 𝓒 (output), rendered [T]_𝓑^𝓒; `[T]_{\sB}` when 𝓑 = 𝓒 |
 | `\mtx{\id}{\sB}{\sC}` | change-of-coordinates matrix from 𝓑 to 𝓒 |
