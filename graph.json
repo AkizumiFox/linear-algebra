@@ -120,11 +120,20 @@
   {
    "id": "ch13-forms",
    "name": "Chapter 13",
-   "title": "Forms",
-   "url": "",
-   "results": 0,
+   "title": "Bilinear and Quadratic Forms",
+   "url": "ch13-forms/index.html",
+   "results": 181,
    "chapterNumber": 13,
    "part": "Part IV \u00b7 Forms and Multilinear Algebra"
+  },
+  {
+   "id": "ch14-tensors",
+   "name": "Chapter 14",
+   "title": "Tensors",
+   "url": "",
+   "results": 0,
+   "chapterNumber": 14,
+   "part": ""
   }
  ],
  "edges": [
@@ -201,6 +210,12 @@
    "implied": true
   },
   {
+   "source": "ch00-foundations",
+   "target": "ch13-forms",
+   "weight": 38,
+   "implied": true
+  },
+  {
    "source": "ch01-vector-spaces",
    "target": "ch02-linear-systems",
    "weight": 64,
@@ -267,6 +282,12 @@
    "implied": true
   },
   {
+   "source": "ch01-vector-spaces",
+   "target": "ch13-forms",
+   "weight": 15,
+   "implied": true
+  },
+  {
    "source": "ch02-linear-systems",
    "target": "ch03-linear-maps",
    "weight": 58,
@@ -327,6 +348,12 @@
    "implied": true
   },
   {
+   "source": "ch02-linear-systems",
+   "target": "ch13-forms",
+   "weight": 5,
+   "implied": true
+  },
+  {
    "source": "ch03-linear-maps",
    "target": "ch04-duality",
    "weight": 122,
@@ -381,6 +408,12 @@
    "implied": true
   },
   {
+   "source": "ch03-linear-maps",
+   "target": "ch13-forms",
+   "weight": 36,
+   "implied": true
+  },
+  {
    "source": "ch04-duality",
    "target": "ch05-polynomials",
    "weight": 18,
@@ -407,6 +440,12 @@
   {
    "source": "ch04-duality",
    "target": "ch10-inner-products",
+   "weight": 21,
+   "implied": true
+  },
+  {
+   "source": "ch04-duality",
+   "target": "ch13-forms",
    "weight": 21,
    "implied": true
   },
@@ -453,6 +492,12 @@
    "implied": true
   },
   {
+   "source": "ch05-polynomials",
+   "target": "ch13-forms",
+   "weight": 1,
+   "implied": true
+  },
+  {
    "source": "ch06-determinants",
    "target": "ch07-block-matrices",
    "weight": 38,
@@ -486,6 +531,12 @@
    "source": "ch06-determinants",
    "target": "ch12-psd-and-svd",
    "weight": 49,
+   "implied": true
+  },
+  {
+   "source": "ch06-determinants",
+   "target": "ch13-forms",
+   "weight": 42,
    "implied": true
   },
   {
@@ -561,9 +612,27 @@
    "implied": true
   },
   {
+   "source": "ch10-inner-products",
+   "target": "ch13-forms",
+   "weight": 24,
+   "implied": true
+  },
+  {
    "source": "ch11-spectral-theory",
    "target": "ch12-psd-and-svd",
    "weight": 77,
+   "implied": false
+  },
+  {
+   "source": "ch11-spectral-theory",
+   "target": "ch13-forms",
+   "weight": 12,
+   "implied": true
+  },
+  {
+   "source": "ch12-psd-and-svd",
+   "target": "ch13-forms",
+   "weight": 12,
    "implied": false
   }
  ]

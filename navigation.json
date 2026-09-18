@@ -844,9 +844,90 @@
       ]
     },
     {
-      "title": "Forms",
+      "title": "Bilinear and Quadratic Forms",
       "number": 13,
       "part": "Part IV · Forms and Multilinear Algebra",
+      "collapsed": true,
+      "path": "ch13-forms/index.html",
+      "sections": [
+        {
+          "title": "Bilinear Forms and Their Matrices",
+          "number": "13.1",
+          "path": "ch13-forms/01-bilinear-forms.html",
+          "filename": "01-bilinear-forms.md"
+        },
+        {
+          "title": "Congruence",
+          "number": "13.2",
+          "path": "ch13-forms/02-congruence.html",
+          "filename": "02-congruence.md"
+        },
+        {
+          "title": "Three Kinds of Form",
+          "number": "13.3",
+          "path": "ch13-forms/03-symmetric-alternating-hermitian.html",
+          "filename": "03-symmetric-alternating-hermitian.md"
+        },
+        {
+          "title": "Completing the Square",
+          "number": "13.4",
+          "path": "ch13-forms/04-diagonalizing-symmetric-forms.html",
+          "filename": "04-diagonalizing-symmetric-forms.md"
+        },
+        {
+          "title": "Sylvester's Law of Inertia",
+          "number": "13.5",
+          "path": "ch13-forms/05-sylvesters-law-of-inertia.html",
+          "filename": "05-sylvesters-law-of-inertia.md"
+        },
+        {
+          "title": "Definiteness and Second Derivatives",
+          "number": "13.6",
+          "path": "ch13-forms/06-definiteness-and-second-derivatives.html",
+          "filename": "06-definiteness-and-second-derivatives.md"
+        },
+        {
+          "title": "Where the Form Vanishes",
+          "number": "13.7",
+          "path": "ch13-forms/07-isotropic-vectors-and-hyperbolic-planes.html",
+          "filename": "07-isotropic-vectors-and-hyperbolic-planes.md"
+        },
+        {
+          "title": "Witt's Extension and Cancellation Theorems",
+          "number": "13.8",
+          "path": "ch13-forms/08-witts-theorems.html",
+          "filename": "08-witts-theorems.md"
+        },
+        {
+          "title": "Alternating Forms and Darboux Bases",
+          "number": "13.9",
+          "path": "ch13-forms/09-symplectic-forms.html",
+          "filename": "09-symplectic-forms.md"
+        },
+        {
+          "title": "Groups Defined by Forms",
+          "number": "13.10",
+          "path": "ch13-forms/10-the-classical-groups.html",
+          "filename": "10-the-classical-groups.md"
+        },
+        {
+          "title": "Minkowski Space",
+          "number": "13.11",
+          "path": "ch13-forms/11-minkowski-space.html",
+          "filename": "11-minkowski-space.md"
+        },
+        {
+          "title": "A First Look at Clifford Algebras",
+          "number": "13.12",
+          "path": "ch13-forms/12-clifford-algebras.html",
+          "filename": "12-clifford-algebras.md"
+        }
+      ]
+    },
+    {
+      "title": "Tensors",
+      "number": 14,
+      "part": "",
       "collapsed": true,
       "path": null,
       "sections": []
