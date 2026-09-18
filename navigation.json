@@ -761,6 +761,95 @@
           "filename": "11-defect-from-normality.md"
         }
       ]
+    },
+    {
+      "title": "Positive Matrices and the Singular Value Decomposition",
+      "number": 12,
+      "part": "",
+      "collapsed": true,
+      "path": "ch12-psd-and-svd/index.html",
+      "sections": [
+        {
+          "title": "Positive Semidefinite and Positive Definite Matrices",
+          "number": "12.1",
+          "path": "ch12-psd-and-svd/01-positive-definite-matrices.html",
+          "filename": "01-positive-definite-matrices.md"
+        },
+        {
+          "title": "Square Roots and the Cholesky Factorization",
+          "number": "12.2",
+          "path": "ch12-psd-and-svd/02-square-roots-and-cholesky.html",
+          "filename": "02-square-roots-and-cholesky.md"
+        },
+        {
+          "title": "Gram Matrices",
+          "number": "12.3",
+          "path": "ch12-psd-and-svd/03-gram-matrices.html",
+          "filename": "03-gram-matrices.md"
+        },
+        {
+          "title": "Two Forms at Once",
+          "number": "12.4",
+          "path": "ch12-psd-and-svd/04-simultaneous-diagonalization.html",
+          "filename": "04-simultaneous-diagonalization.md"
+        },
+        {
+          "title": "The Loewner Order",
+          "number": "12.5",
+          "path": "ch12-psd-and-svd/05-the-loewner-order.html",
+          "filename": "05-the-loewner-order.md"
+        },
+        {
+          "title": "Positive Matrices in Blocks",
+          "number": "12.6",
+          "path": "ch12-psd-and-svd/06-block-positive-matrices.html",
+          "filename": "06-block-positive-matrices.md"
+        },
+        {
+          "title": "Products Entry by Entry",
+          "number": "12.7",
+          "path": "ch12-psd-and-svd/07-schur-product-theorem.html",
+          "filename": "07-schur-product-theorem.md"
+        },
+        {
+          "title": "The Singular Value Decomposition",
+          "number": "12.8",
+          "path": "ch12-psd-and-svd/08-singular-value-decomposition.html",
+          "filename": "08-singular-value-decomposition.md"
+        },
+        {
+          "title": "Polar Decomposition and Takagi's Factorization",
+          "number": "12.9",
+          "path": "ch12-psd-and-svd/09-polar-decomposition.html",
+          "filename": "09-polar-decomposition.md"
+        },
+        {
+          "title": "Low-Rank Approximation",
+          "number": "12.10",
+          "path": "ch12-psd-and-svd/10-low-rank-approximation.html",
+          "filename": "10-low-rank-approximation.md"
+        },
+        {
+          "title": "The Moore–Penrose Pseudoinverse",
+          "number": "12.11",
+          "path": "ch12-psd-and-svd/11-pseudoinverse.html",
+          "filename": "11-pseudoinverse.md"
+        },
+        {
+          "title": "Projections Revisited",
+          "number": "12.12",
+          "path": "ch12-psd-and-svd/12-projections-revisited.html",
+          "filename": "12-projections-revisited.md"
+        }
+      ]
+    },
+    {
+      "title": "Forms",
+      "number": 13,
+      "part": "Part IV · Forms and Multilinear Algebra",
+      "collapsed": true,
+      "path": null,
+      "sections": []
     }
   ]
 }

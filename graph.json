@@ -107,6 +107,24 @@
    "results": 170,
    "chapterNumber": 11,
    "part": ""
+  },
+  {
+   "id": "ch12-psd-and-svd",
+   "name": "Chapter 12",
+   "title": "Positive Matrices and the Singular Value Decomposition",
+   "url": "ch12-psd-and-svd/index.html",
+   "results": 159,
+   "chapterNumber": 12,
+   "part": ""
+  },
+  {
+   "id": "ch13-forms",
+   "name": "Chapter 13",
+   "title": "Forms",
+   "url": "",
+   "results": 0,
+   "chapterNumber": 13,
+   "part": "Part IV \u00b7 Forms and Multilinear Algebra"
   }
  ],
  "edges": [
@@ -177,6 +195,12 @@
    "implied": true
   },
   {
+   "source": "ch00-foundations",
+   "target": "ch12-psd-and-svd",
+   "weight": 3,
+   "implied": true
+  },
+  {
    "source": "ch01-vector-spaces",
    "target": "ch02-linear-systems",
    "weight": 64,
@@ -237,6 +261,12 @@
    "implied": true
   },
   {
+   "source": "ch01-vector-spaces",
+   "target": "ch12-psd-and-svd",
+   "weight": 1,
+   "implied": true
+  },
+  {
    "source": "ch02-linear-systems",
    "target": "ch03-linear-maps",
    "weight": 58,
@@ -291,6 +321,12 @@
    "implied": true
   },
   {
+   "source": "ch02-linear-systems",
+   "target": "ch12-psd-and-svd",
+   "weight": 27,
+   "implied": true
+  },
+  {
    "source": "ch03-linear-maps",
    "target": "ch04-duality",
    "weight": 122,
@@ -336,6 +372,12 @@
    "source": "ch03-linear-maps",
    "target": "ch11-spectral-theory",
    "weight": 24,
+   "implied": true
+  },
+  {
+   "source": "ch03-linear-maps",
+   "target": "ch12-psd-and-svd",
+   "weight": 21,
    "implied": true
   },
   {
@@ -405,6 +447,12 @@
    "implied": true
   },
   {
+   "source": "ch05-polynomials",
+   "target": "ch12-psd-and-svd",
+   "weight": 4,
+   "implied": true
+  },
+  {
    "source": "ch06-determinants",
    "target": "ch07-block-matrices",
    "weight": 38,
@@ -435,6 +483,12 @@
    "implied": true
   },
   {
+   "source": "ch06-determinants",
+   "target": "ch12-psd-and-svd",
+   "weight": 49,
+   "implied": true
+  },
+  {
    "source": "ch07-block-matrices",
    "target": "ch08-eigenvalues",
    "weight": 22,
@@ -459,6 +513,12 @@
    "implied": true
   },
   {
+   "source": "ch07-block-matrices",
+   "target": "ch12-psd-and-svd",
+   "weight": 22,
+   "implied": true
+  },
+  {
    "source": "ch08-eigenvalues",
    "target": "ch09-canonical-forms",
    "weight": 155,
@@ -477,6 +537,12 @@
    "implied": true
   },
   {
+   "source": "ch08-eigenvalues",
+   "target": "ch12-psd-and-svd",
+   "weight": 8,
+   "implied": true
+  },
+  {
    "source": "ch09-canonical-forms",
    "target": "ch11-spectral-theory",
    "weight": 20,
@@ -486,6 +552,18 @@
    "source": "ch10-inner-products",
    "target": "ch11-spectral-theory",
    "weight": 191,
+   "implied": false
+  },
+  {
+   "source": "ch10-inner-products",
+   "target": "ch12-psd-and-svd",
+   "weight": 132,
+   "implied": true
+  },
+  {
+   "source": "ch11-spectral-theory",
+   "target": "ch12-psd-and-svd",
+   "weight": 77,
    "implied": false
   }
  ]
