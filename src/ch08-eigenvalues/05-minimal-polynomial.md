@@ -23,12 +23,12 @@ I_T = \{ p \in F[x] : p(T) = 0 \} = \langle m_T \rangle .
 \]
 Equivalently, \( m_T \) is the monic polynomial of **least degree** with \( m_T(T) = 0 \).
 
-For \( A \in M_n(F) \), the minimal polynomial is \( m_A \coloneqq m_{T_A} \): the monic polynomial of least degree with \( m_A(A) = 0 \).
+For \( \A \in M_n(F) \), the minimal polynomial is \( m_{\A} \coloneqq m_{T_{\A}} \): the monic polynomial of least degree with \( m_{\A}(\A) = 0 \).
 :::
 
 In words: we look at **all** polynomials \( p \) with \( p(T) = 0 \), where \( p(T) \) replaces \( x^k \) by \( T^k \) and the constant term \( c \) by \( c\,\id_V \) (@def-polynomial-of-operator). They are exactly the multiples of one polynomial \( m_T \). Among the generators of this ideal, which differ by non-zero constant factors, we pick **the monic** one. The second sentence of the definition gives the same polynomial described by size: it is the monic polynomial of **least degree** that kills \( T \).
 
-**Well-definedness.** Three things need checking, and Chapter 5 did all three. *Existence:* \( I_T \ne \{0\} \) because \( V \) is finite-dimensional (@thm-annihilator-ideal (c)). *Uniqueness:* a non-zero ideal of \( F[x] \) has exactly one monic generator (@thm-ideals-principal). *The two descriptions agree:* the same theorem says that the monic generator is the unique monic polynomial of least degree in the ideal. For a matrix, \( p(T_A) = 0 \) if and only if \( p(A) = 0 \), because \( [p(T_A)]_{\sE} = p(A) \) in the standard basis \( \sE \) (@cor-matrix-of-polynomial-of-operator). So \( I_{T_A} = \{ p : p(A) = 0 \} \), and the matrix version is the operator version for \( T_A \).
+**Well-definedness.** Three things need checking, and Chapter 5 did all three. *Existence:* \( I_T \ne \{0\} \) because \( V \) is finite-dimensional (@thm-annihilator-ideal (c)). *Uniqueness:* a non-zero ideal of \( F[x] \) has exactly one monic generator (@thm-ideals-principal). *The two descriptions agree:* the same theorem says that the monic generator is the unique monic polynomial of least degree in the ideal. For a matrix, \( p(T_{\A}) = 0 \) if and only if \( p(\A) = 0 \), because \( [p(T_{\A})]_{\sE} = p(\A) \) in the standard basis \( \sE \) (@cor-matrix-of-polynomial-of-operator). So \( I_{T_{\A}} = \{ p : p(\A) = 0 \} \), and the matrix version is the operator version for \( T_{\A} \).
 
 The name records the second description: \( m_T \) is the annihilating polynomial of minimal degree. The first description is the one we use in proofs, because it hands us a divisibility for free.
 
@@ -67,34 +67,34 @@ Each such product divides \( f \), with cofactor \( p_1^{e_1 - f_1} \cdots p_k^{
 
 **Examples.** Each computation follows the same plan: find one annihilating polynomial, list its monic divisors with @lem-monic-divisors, and discard those that do not annihilate.
 
-- **A diagonal matrix with a repeated entry.** Let \( A = \diag(1, 1, 2) \). Diagonal matrices multiply entry by entry, so
+- **A diagonal matrix with a repeated entry.** Let \( \A = \diag(1, 1, 2) \). Diagonal matrices multiply entry by entry, so
   \[
-  (A - I)(A - 2I) = \diag(0, 0, 1)\,\diag(-1, -1, 0) = 0 .
+  (\A - \I)(\A - 2\I) = \diag(0, 0, 1)\,\diag(-1, -1, 0) = 0 .
   \]
-  By @thm-minimal-polynomial-divides, \( m_A \) is a monic divisor of \( (x - 1)(x - 2) \): one of \( 1 \), \( x - 1 \), \( x - 2 \), \( (x - 1)(x - 2) \). None of the first three annihilates \( A \), since \( I \), \( A - I = \diag(0, 0, 1) \) and \( A - 2I = \diag(-1, -1, 0) \) are non-zero. So \( m_A = (x - 1)(x - 2) \). The repeated diagonal entry \( 1 \) appears only **once** in \( m_A \), while the characteristic polynomial is \( p_A = (x - 1)^2(x - 2) \).
-- **A matrix with too few eigenvectors.** Let \( J = \begin{pmatrix} 1 & 1 \\ 0 & 1 \end{pmatrix} \) over any field. Then \( J - I = \begin{pmatrix} 0 & 1 \\ 0 & 0 \end{pmatrix} \ne 0 \), and \( (J - I)^2 = 0 \). So \( m_J \) is a monic divisor of \( (x - 1)^2 \), namely \( 1 \), \( x - 1 \) or \( (x - 1)^2 \), and the first two do not annihilate \( J \). Hence \( m_J = (x - 1)^2 \), which equals \( p_J \).
+  By @thm-minimal-polynomial-divides, \( m_{\A} \) is a monic divisor of \( (x - 1)(x - 2) \): one of \( 1 \), \( x - 1 \), \( x - 2 \), \( (x - 1)(x - 2) \). None of the first three annihilates \( \A \), since \( \I \), \( \A - \I = \diag(0, 0, 1) \) and \( \A - 2\I = \diag(-1, -1, 0) \) are non-zero. So \( m_{\A} = (x - 1)(x - 2) \). The repeated diagonal entry \( 1 \) appears only **once** in \( m_{\A} \), while the characteristic polynomial is \( p_{\A} = (x - 1)^2(x - 2) \).
+- **A matrix with too few eigenvectors.** Let \( \J = \begin{pmatrix} 1 & 1 \\ 0 & 1 \end{pmatrix} \) over any field. Then \( \J - \I = \begin{pmatrix} 0 & 1 \\ 0 & 0 \end{pmatrix} \ne 0 \), and \( (\J - \I)^2 = 0 \). So \( m_{\J} \) is a monic divisor of \( (x - 1)^2 \), namely \( 1 \), \( x - 1 \) or \( (x - 1)^2 \), and the first two do not annihilate \( \J \). Hence \( m_{\J} = (x - 1)^2 \), which equals \( p_{\J} \).
 - **Projections.** Chapter 5 found, by this plan, that a projection \( P \) with \( P \ne 0 \) and \( P \ne \id_V \) has \( m_P = x^2 - x \) (the examples after @thm-annihilator-ideal).
 - **Differentiation.** Let \( D \) be differentiation on \( \nR[x]_{\le n} \). Then \( D^{n+1} = 0 \) and \( D^n \ne 0 \) (@exm-differentiation-nilpotent). By @lem-monic-divisors, the monic divisors of \( x^{n+1} \) are the powers \( x^j \) with \( 0 \le j \le n + 1 \). For \( j \le n \), \( D^j \ne 0 \), since \( D^n = D^{n-j}D^j \) would otherwise be \( 0 \). Hence \( m_D = x^{n+1} \), of degree \( n + 1 = \dim \nR[x]_{\le n} \).
 - **Degenerate cases.** On \( V \ne \{\0\} \), the identity has \( m = x - 1 \) and the zero operator has \( m = x \): each is killed by a polynomial of degree \( 1 \), which is the least possible degree. More generally \( m_{c\,\id_V} = x - c \), and every \( 1 \times 1 \) matrix \( (c) \) has \( m = x - c \). On \( V = \{\0\} \), even the constant \( 1 \) annihilates, so \( m_T = 1 \). This last case is the reason for the hypothesis \( V \ne \{\0\} \) in @thm-minimal-polynomial-divides.
 
-**Non-example by minimal change.** For \( J \) above, take \( q = x - 1 \) instead of \( (x - 1)^2 \). It is still monic, it has the least degree a minimal polynomial can have on a non-zero space, and its only root is the eigenvalue \( 1 \) of \( J \). What fails is the clause \( q(J) = 0 \): \( q(J) = J - I \ne 0 \). In the other direction, \( (x - 1)^3 \) is monic and does annihilate \( J \), but it fails the clause \( I_J = \langle q \rangle \): the annihilating polynomial \( (x - 1)^2 \) is not a multiple of \( (x - 1)^3 \).
+**Non-example by minimal change.** For \( \J \) above, take \( q = x - 1 \) instead of \( (x - 1)^2 \). It is still monic, it has the least degree a minimal polynomial can have on a non-zero space, and its only root is the eigenvalue \( 1 \) of \( \J \). What fails is the clause \( q(\J) = 0 \): \( q(\J) = \J - \I \ne 0 \). In the other direction, \( (x - 1)^3 \) is monic and does annihilate \( \J \), but it fails the clause \( I_{\J} = \langle q \rangle \): the annihilating polynomial \( (x - 1)^2 \) is not a multiple of \( (x - 1)^3 \).
 
 ::: {.check}
-Find the minimal polynomial of \( 2I_3 \) and of \( N = \begin{pmatrix} 0 & 1 & 0 \\ 0 & 0 & 1 \\ 0 & 0 & 0 \end{pmatrix} \in M_3(F) \).
+Find the minimal polynomial of \( 2\I_3 \) and of \( \N = \begin{pmatrix} 0 & 1 & 0 \\ 0 & 0 & 1 \\ 0 & 0 & 0 \end{pmatrix} \in M_3(F) \).
 :::
 
 ::: {.solution}
-\( 2I_3 - 2I_3 = 0 \), so \( m_{2I_3} \) divides \( x - 2 \); it is not \( 1 \), since \( I_3 \ne 0 \). Hence \( m_{2I_3} = x - 2 \). For \( N \): \( N\e_1 = \0 \), \( N\e_2 = \e_1 \), \( N\e_3 = \e_2 \), so \( N^2\e_3 = \e_1 \ne \0 \) and \( N^3 \) kills \( \e_1, \e_2, \e_3 \). Thus \( N^3 = 0 \ne N^2 \). By @lem-monic-divisors, \( m_N \in \{1, x, x^2, x^3\} \), and only \( x^3 \) annihilates \( N \) (the others give \( I_3, N, N^2 \ne 0 \)). So \( m_N = x^3 \).
+\( 2\I_3 - 2\I_3 = 0 \), so \( m_{2\I_3} \) divides \( x - 2 \); it is not \( 1 \), since \( \I_3 \ne 0 \). Hence \( m_{2\I_3} = x - 2 \). For \( \N \): \( \N\e_1 = \0 \), \( \N\e_2 = \e_1 \), \( \N\e_3 = \e_2 \), so \( \N^2\e_3 = \e_1 \ne \0 \) and \( \N^3 \) kills \( \e_1, \e_2, \e_3 \). Thus \( \N^3 = 0 \ne \N^2 \). By @lem-monic-divisors, \( m_{\N} \in \{1, x, x^2, x^3\} \), and only \( x^3 \) annihilates \( \N \) (the others give \( \I_3, \N, \N^2 \ne 0 \)). So \( m_{\N} = x^3 \).
 :::
 
 **Why this definition.** Each clause has a job.
 
-- *Monic.* The polynomials \( m \) and \( 5m \) generate the same ideal, so "a generator" is determined only up to a non-zero constant. Insisting on leading coefficient \( 1 \) picks one, and makes statements like "\( m_A = (x - 1)(x - 2) \)" meaningful.
+- *Monic.* The polynomials \( m \) and \( 5m \) generate the same ideal, so "a generator" is determined only up to a non-zero constant. Insisting on leading coefficient \( 1 \) picks one, and makes statements like "\( m_{\A} = (x - 1)(x - 2) \)" meaningful.
 - *Generator, not only least degree.* The two descriptions give the same polynomial. Stating the definition through the ideal puts @thm-minimal-polynomial-divides in front of us, and divisibility is the property we use.
 - *Finite dimension.* Without it, \( I_T \) can be \( \{0\} \), and then there is nothing to name. For multiplication by \( x \) on \( F[x] \), \( p(S)(1) = p \), so \( p(S) \ne 0 \) for every \( p \ne 0 \) (the remark after @thm-annihilating-polynomial-exists). The same happens for the right shift on \( F^{\nN} \).
 
 ::: {.warning}
-**The minimal polynomial is not the characteristic polynomial.** For \( I_2 \), \( m = x - 1 \) while \( p = (x - 1)^2 \); for \( \diag(1, 1, 2) \) above, \( m = (x - 1)(x - 2) \) while \( p = (x - 1)^2(x - 2) \). The two can differ in their exponents, and \( m \) can have smaller degree than the size of the matrix. How they are related is the subject of the next section. Its main theorem is one that Chapter 6 warned against "proving" by substituting \( x = A \) into \( \det(xI - A) \); that shortcut is not a proof and must not be used here either.
+**The minimal polynomial is not the characteristic polynomial.** For \( \I_2 \), \( m = x - 1 \) while \( p = (x - 1)^2 \); for \( \diag(1, 1, 2) \) above, \( m = (x - 1)(x - 2) \) while \( p = (x - 1)^2(x - 2) \). The two can differ in their exponents, and \( m \) can have smaller degree than the size of the matrix. How they are related is the subject of the next section. Its main theorem is one that Chapter 6 warned against "proving" by substituting \( x = \A \) into \( \det(x\I - \A) \); that shortcut is not a proof and must not be used here either.
 :::
 
 ## The roots are the eigenvalues
@@ -108,30 +108,30 @@ Let \( V \) be finite-dimensional, \( T \in \cL(V) \) and \( \lambda \in F \). T
 :::
 
 ::: {.idea}
-(⇐) is a one-liner: apply \( m_T(T) = 0 \) to an eigenvector \( \v \). Since \( T \) scales \( \v \) by \( \lambda \), every polynomial in \( T \) scales \( \v \) by the value of the polynomial at \( \lambda \). For (⇒), a root gives a factor: \( m_T = (x - \lambda)q \). The cofactor \( q \) has smaller degree, so by minimality it does **not** kill \( T \), and some vector \( \w \) survives it. Then \( q(T)\w \) is non-zero and is killed by \( T - \lambda\,\id_V \). The eigenvector is manufactured by the part of \( m_T \) we removed.
+\( (\Leftarrow) \) is a one-liner: apply \( m_T(T) = 0 \) to an eigenvector \( \v \). Since \( T \) scales \( \v \) by \( \lambda \), every polynomial in \( T \) scales \( \v \) by the value of the polynomial at \( \lambda \). For \( (\Rightarrow) \), a root gives a factor: \( m_T = (x - \lambda)q \). The cofactor \( q \) has smaller degree, so by minimality it does **not** kill \( T \), and some vector \( \w \) survives it. Then \( q(T)\w \) is non-zero and is killed by \( T - \lambda\,\id_V \). The eigenvector is manufactured by the part of \( m_T \) we removed.
 :::
 
 ::: {.proof}
-(⇐) Let \( \v \ne \0 \) with \( T\v = \lambda\v \). By @exr-eigenvalues-and-eigenvectors-b3 (a), \( p(T)\v = p(\lambda)\v \) for every \( p \in F[x] \). With \( p = m_T \),
+\( (\Leftarrow) \) Let \( \v \ne \0 \) with \( T\v = \lambda\v \). By @exr-eigenvalues-and-eigenvectors-b3 (a), \( p(T)\v = p(\lambda)\v \) for every \( p \in F[x] \). With \( p = m_T \),
 \[
 \0 = m_T(T)\v = m_T(\lambda)\v .
 \]
 Since \( \v \ne \0 \), @thm-zero-product gives \( m_T(\lambda) = 0 \).
 
-(⇒) Suppose \( m_T(\lambda) = 0 \). By @thm-remainder-theorem (b), \( m_T = (x - \lambda)q \) for some \( q \in F[x] \), and \( q \) is monic with \( \deg q = \deg m_T - 1 \) by @thm-degree-of-product. By @thm-minimal-polynomial-divides, a non-zero polynomial of degree less than \( \deg m_T \) does not annihilate \( T \); so \( q(T) \ne 0 \), and there is \( \w \in V \) with \( \v \coloneqq q(T)\w \ne \0 \). By @thm-evaluation-homomorphism (b),
+\( (\Rightarrow) \) Suppose \( m_T(\lambda) = 0 \). By @thm-remainder-theorem (b), \( m_T = (x - \lambda)q \) for some \( q \in F[x] \), and \( q \) is monic with \( \deg q = \deg m_T - 1 \) by @thm-degree-of-product. By @thm-minimal-polynomial-divides, a non-zero polynomial of degree less than \( \deg m_T \) does not annihilate \( T \); so \( q(T) \ne 0 \), and there is \( \w \in V \) with \( \v \coloneqq q(T)\w \ne \0 \). By @thm-evaluation-homomorphism (b),
 \[
 (T - \lambda\,\id_V)\v = (T - \lambda\,\id_V)\,q(T)\w = m_T(T)\w = \0 .
 \]
 So \( T\v = \lambda\v \) with \( \v \ne \0 \), and \( \lambda \) is an eigenvalue of \( T \).
 
-If \( \dim V \ge 1 \), the eigenvalues of \( T \) are exactly the roots of \( p_T \) in \( F \) (@thm-eigenvalue-characterizations, (a) ⇔ (e)), so \( m_T \) and \( p_T \) have the same roots in \( F \). This proves the theorem.
+If \( \dim V \ge 1 \), the eigenvalues of \( T \) are exactly the roots of \( p_T \) in \( F \) (@thm-eigenvalue-characterizations, (a) \( \Leftrightarrow \) (e)), so \( m_T \) and \( p_T \) have the same roots in \( F \). This proves the theorem.
 :::
 
-So the minimal polynomial knows the spectrum, just as the characteristic polynomial does, although the multiplicities of the roots may differ. The examples bear this out. \( \diag(1, 1, 2) \) has spectrum \( \{1, 2\} \), the roots of \( (x - 1)(x - 2) \). \( J \) has spectrum \( \{1\} \), the root of \( (x - 1)^2 \). The rotation \( R \) of \( \nR^2 \) by a right angle has \( m_R = x^2 + 1 \) (the check after @thm-annihilator-ideal), with no real root, and indeed \( \spec(R) = \emptyset \) over \( \nR \). Its minimal polynomial has no linear factor at all.
+So the minimal polynomial knows the spectrum, just as the characteristic polynomial does, although the multiplicities of the roots may differ. The examples bear this out. \( \diag(1, 1, 2) \) has spectrum \( \{1, 2\} \), the roots of \( (x - 1)(x - 2) \). \( \J \) has spectrum \( \{1\} \), the root of \( (x - 1)^2 \). The rotation \( R \) of \( \nR^2 \) by a right angle has \( m_R = x^2 + 1 \) (the check after @thm-annihilator-ideal), with no real root, and indeed \( \spec(R) = \emptyset \) over \( \nR \). Its minimal polynomial has no linear factor at all.
 
 Two consequences are worth stating.
 
-- **Invertibility.** Taking \( \lambda = 0 \): for \( V \ne \{\0\} \), \( T \) is invertible if and only if \( m_T(0) \ne 0 \). Indeed \( m_T(0) = 0 \) if and only if \( 0 \in \spec(T) \), if and only if \( T = T - 0\,\id_V \) is not invertible (@thm-eigenvalue-characterizations, (a) ⇔ (c) with \( \lambda = 0 \); for matrices this is @thm-invertible-tfae-eigen). Chapter 5 proved the same statement without eigenvalues (@exr-polynomials-of-operators-c1 (c)).
+- **Invertibility.** Taking \( \lambda = 0 \): for \( V \ne \{\0\} \), \( T \) is invertible if and only if \( m_T(0) \ne 0 \). Indeed \( m_T(0) = 0 \) if and only if \( 0 \in \spec(T) \), if and only if \( T = T - 0\,\id_V \) is not invertible (@thm-eigenvalue-characterizations, (a) \( \Leftrightarrow \) (c) with \( \lambda = 0 \); for matrices this is @thm-invertible-tfae-eigen). Chapter 5 proved the same statement without eigenvalues (@exr-polynomials-of-operators-c1 (c)).
 - **Over \( \nC \).** If \( F = \nC \) and \( V \ne \{\0\} \), then \( m_T \) splits (@cor-complex-polynomial-splits), and its roots are the distinct eigenvalues \( \lambda_1, \dots, \lambda_k \). So
   \[
   m_T = (x - \lambda_1)^{s_1} \cdots (x - \lambda_k)^{s_k} \qquad \text{with every } s_i \ge 1 .
@@ -151,7 +151,7 @@ Let \( V \) be finite-dimensional and \( T \in \cL(V) \). Let \( d \ge 0 \) be t
 \[
 T^d = c_0\,\id_V + c_1T + \dots + c_{d-1}T^{d-1},
 \]
-and \( m_T = x^d - c_{d-1}x^{d-1} - \dots - c_1x - c_0 \). In particular \( \deg m_T = d \). The same holds for \( A \in M_n(F) \), with powers of \( A \) in \( M_n(F) \).
+and \( m_T = x^d - c_{d-1}x^{d-1} - \dots - c_1x - c_0 \). In particular \( \deg m_T = d \). The same holds for \( \A \in M_n(F) \), with powers of \( \A \) in \( M_n(F) \).
 :::
 
 ::: {.proof}
@@ -165,27 +165,27 @@ Let \( q = x^d - c_{d-1}x^{d-1} - \dots - c_0 \). It is monic, and \( q(T) = 0 \
 
 Find the minimal polynomial of
 \[
-A = \begin{pmatrix} 3 & 2 & -2 \\ -2 & -1 & 2 \\ -2 & -2 & 3 \end{pmatrix} \in M_3(\nR),
+\A = \begin{pmatrix} 3 & 2 & -2 \\ -2 & -1 & 2 \\ -2 & -2 & 3 \end{pmatrix} \in M_3(\nR),
 \]
 the matrix of @exm-diagonalize-3x3, without using its eigenvalues.
 :::
 
 ::: {.solution}
-*Degree \( 1 \).* \( A \) is not a scalar multiple of \( I_3 \), since its \( (1, 2) \)-entry is non-zero. So \( (I_3, A) \) is independent.
+*Degree \( 1 \).* \( \A \) is not a scalar multiple of \( \I_3 \), since its \( (1, 2) \)-entry is non-zero. So \( (\I_3, \A) \) is independent.
 
 *Degree \( 2 \).* Multiplying out,
 \[
-A^2 = \begin{pmatrix} 9 & 8 & -8 \\ -8 & -7 & 8 \\ -8 & -8 & 9 \end{pmatrix}.
+\A^2 = \begin{pmatrix} 9 & 8 & -8 \\ -8 & -7 & 8 \\ -8 & -8 & 9 \end{pmatrix}.
 \]
-We look for \( a, b \) with \( A^2 = aA + bI_3 \). The \( (1, 2) \)-entries give \( 8 = 2a \), so \( a = 4 \). The \( (1, 1) \)-entries give \( 9 = 3a + b \), so \( b = -3 \). Now check every entry of \( 4A - 3I_3 \):
+We look for \( a, b \) with \( \A^2 = a\A + b\I_3 \). The \( (1, 2) \)-entries give \( 8 = 2a \), so \( a = 4 \). The \( (1, 1) \)-entries give \( 9 = 3a + b \), so \( b = -3 \). Now check every entry of \( 4\A - 3\I_3 \):
 \[
-4A - 3I_3 = \begin{pmatrix} 12 - 3 & 8 & -8 \\ -8 & -4 - 3 & 8 \\ -8 & -8 & 12 - 3 \end{pmatrix} = \begin{pmatrix} 9 & 8 & -8 \\ -8 & -7 & 8 \\ -8 & -8 & 9 \end{pmatrix} = A^2 .
+4\A - 3\I_3 = \begin{pmatrix} 12 - 3 & 8 & -8 \\ -8 & -4 - 3 & 8 \\ -8 & -8 & 12 - 3 \end{pmatrix} = \begin{pmatrix} 9 & 8 & -8 \\ -8 & -7 & 8 \\ -8 & -8 & 9 \end{pmatrix} = \A^2 .
 \]
-So \( (I_3, A, A^2) \) is dependent, and \( d = 2 \). By @prp-minimal-polynomial-first-dependence,
+So \( (\I_3, \A, \A^2) \) is dependent, and \( d = 2 \). By @prp-minimal-polynomial-first-dependence,
 \[
-m_A = x^2 - 4x + 3 = (x - 1)(x - 3).
+m_{\A} = x^2 - 4x + 3 = (x - 1)(x - 3).
 \]
-This fits @thm-minimal-polynomial-roots: @exm-diagonalize-3x3 found the eigenvalues \( 1 \) and \( 3 \), and \( p_A = (x - 1)^2(x - 3) \). Once again the repeated eigenvalue \( 1 \) appears only once in \( m_A \). Section 8 explains that this is exactly why \( A \) was diagonalizable.
+This fits @thm-minimal-polynomial-roots: @exm-diagonalize-3x3 found the eigenvalues \( 1 \) and \( 3 \), and \( p_{\A} = (x - 1)^2(x - 3) \). Once again the repeated eigenvalue \( 1 \) appears only once in \( m_{\A} \). Section 8 explains that this is exactly why \( \A \) was diagonalizable.
 :::
 
 **Method 2: eigenvalues and trial exponents.** Suppose \( p_T \) splits, \( p_T = (x - \lambda_1)^{a_1} \cdots (x - \lambda_k)^{a_k} \) with distinct \( \lambda_i \). By @thm-minimal-polynomial-roots, every \( x - \lambda_i \) divides \( m_T \). If we find **any** annihilating polynomial of the form \( q = (x - \lambda_1)^{t_1} \cdots (x - \lambda_k)^{t_k} \), then \( m_T \mid q \). By @lem-monic-divisors, \( m_T = (x - \lambda_1)^{s_1} \cdots (x - \lambda_k)^{s_k} \) with \( 1 \le s_i \le t_i \), so only finitely many candidates remain, and we test them from the smallest degree up. The next section proves that \( q = p_T \) always annihilates \( T \), so the search always succeeds with \( t_i \le a_i \). Here we verify that directly.
@@ -193,27 +193,27 @@ This fits @thm-minimal-polynomial-roots: @exm-diagonalize-3x3 found the eigenval
 ::: {#exm-minimal-polynomial-by-eigenvalues}
 [The Minimal Polynomial from the Eigenvalues]
 
-Let \( A = \begin{pmatrix} 2 & 0 & 1 \\ 1 & 3 & 1 \\ 1 & 0 & 2 \end{pmatrix} \in M_3(\nR) \), with \( p_A = (x - 1)(x - 3)^2 \) (@exm-charpoly-small). Find \( m_A \).
+Let \( \A = \begin{pmatrix} 2 & 0 & 1 \\ 1 & 3 & 1 \\ 1 & 0 & 2 \end{pmatrix} \in M_3(\nR) \), with \( p_{\A} = (x - 1)(x - 3)^2 \) (@exm-charpoly-small). Find \( m_{\A} \).
 :::
 
 ::: {.solution}
-By @thm-minimal-polynomial-roots, both \( x - 1 \) and \( x - 3 \) divide \( m_A \), so the candidate of least degree is \( (x - 1)(x - 3) \). With
+By @thm-minimal-polynomial-roots, both \( x - 1 \) and \( x - 3 \) divide \( m_{\A} \), so the candidate of least degree is \( (x - 1)(x - 3) \). With
 \[
-A - I = \begin{pmatrix} 1 & 0 & 1 \\ 1 & 2 & 1 \\ 1 & 0 & 1 \end{pmatrix}, \qquad A - 3I = \begin{pmatrix} -1 & 0 & 1 \\ 1 & 0 & 1 \\ 1 & 0 & -1 \end{pmatrix},
+\A - \I = \begin{pmatrix} 1 & 0 & 1 \\ 1 & 2 & 1 \\ 1 & 0 & 1 \end{pmatrix}, \qquad \A - 3\I = \begin{pmatrix} -1 & 0 & 1 \\ 1 & 0 & 1 \\ 1 & 0 & -1 \end{pmatrix},
 \]
 the product is
 \[
-(A - I)(A - 3I) = \begin{pmatrix} 0 & 0 & 0 \\ 2 & 0 & 2 \\ 0 & 0 & 0 \end{pmatrix} \ne 0 .
+(\A - \I)(\A - 3\I) = \begin{pmatrix} 0 & 0 & 0 \\ 2 & 0 & 2 \\ 0 & 0 & 0 \end{pmatrix} \ne 0 .
 \]
-So \( m_A \ne (x - 1)(x - 3) \). Raise one exponent and try \( (x - 1)(x - 3)^2 \) (had this failed, the other candidate of degree \( 3 \), namely \( (x - 1)^2(x - 3) \), would come next). Polynomials in \( A \) commute (@thm-evaluation-homomorphism (c)), so we can multiply the matrix just found by \( A - 3I \) on the right:
+So \( m_{\A} \ne (x - 1)(x - 3) \). Raise one exponent and try \( (x - 1)(x - 3)^2 \) (had this failed, the other candidate of degree \( 3 \), namely \( (x - 1)^2(x - 3) \), would come next). Polynomials in \( \A \) commute (@thm-evaluation-homomorphism (c)), so we can multiply the matrix just found by \( \A - 3\I \) on the right:
 \[
-(A - I)(A - 3I)^2 = \begin{pmatrix} 0 & 0 & 0 \\ 2 & 0 & 2 \\ 0 & 0 & 0 \end{pmatrix}\begin{pmatrix} -1 & 0 & 1 \\ 1 & 0 & 1 \\ 1 & 0 & -1 \end{pmatrix} = \begin{pmatrix} 0 & 0 & 0 \\ -2 + 2 & 0 & 2 - 2 \\ 0 & 0 & 0 \end{pmatrix} = 0 .
+(\A - \I)(\A - 3\I)^2 = \begin{pmatrix} 0 & 0 & 0 \\ 2 & 0 & 2 \\ 0 & 0 & 0 \end{pmatrix}\begin{pmatrix} -1 & 0 & 1 \\ 1 & 0 & 1 \\ 1 & 0 & -1 \end{pmatrix} = \begin{pmatrix} 0 & 0 & 0 \\ -2 + 2 & 0 & 2 - 2 \\ 0 & 0 & 0 \end{pmatrix} = 0 .
 \]
-So \( m_A \mid (x - 1)(x - 3)^2 \), and by @lem-monic-divisors, \( m_A = (x - 1)^{s}(x - 3)^{t} \) with \( 1 \le s \le 1 \) and \( 1 \le t \le 2 \). The case \( t = 1 \) was excluded, so
+So \( m_{\A} \mid (x - 1)(x - 3)^2 \), and by @lem-monic-divisors, \( m_{\A} = (x - 1)^{s}(x - 3)^{t} \) with \( 1 \le s \le 1 \) and \( 1 \le t \le 2 \). The case \( t = 1 \) was excluded, so
 \[
-m_A = (x - 1)(x - 3)^2 = p_A .
+m_{\A} = (x - 1)(x - 3)^2 = p_{\A} .
 \]
-In Section 3 we found \( g(3) = 1 < 2 = a(3) \) for this matrix. The exponent \( 2 \) of \( x - 3 \) in \( m_A \) is the polynomial trace of the same shortage of eigenvectors.
+In Section 3 we found \( g(3) = 1 < 2 = a(3) \) for this matrix. The exponent \( 2 \) of \( x - 3 \) in \( m_{\A} \) is the polynomial trace of the same shortage of eigenvectors.
 :::
 
 The product in Method 2 need not be multiplied out completely: to rule out a candidate it is enough to find **one** non-zero entry, and to confirm one, the factored form usually makes the zero visible.
@@ -225,35 +225,35 @@ The minimal polynomial belongs to the operator, not to a basis. That is what mak
 ::: {#thm-minimal-polynomial-similarity}
 [Similar Matrices Have the Same Minimal Polynomial]
 
-Let \( V \) be finite-dimensional with a basis \( \sB \), and let \( T \in \cL(V) \). Then \( m_T = m_{[T]_{\sB}} \). If \( A, B \in M_n(F) \) are similar, then \( m_A = m_B \).
+Let \( V \) be finite-dimensional with a basis \( \sB \), and let \( T \in \cL(V) \). Then \( m_T = m_{[T]_{\sB}} \). If \( \A, \B \in M_n(F) \) are similar, then \( m_{\A} = m_{\B} \).
 :::
 
 ::: {.proof}
-By @cor-matrix-of-polynomial-of-operator, \( [p(T)]_{\sB} = p([T]_{\sB}) \) for every \( p \in F[x] \). An operator is zero exactly when its matrix is zero (@thm-linear-maps-isomorphic-to-matrices), so \( p(T) = 0 \) if and only if \( p([T]_{\sB}) = 0 \). Thus \( T \) and \( [T]_{\sB} \) have the same ideal of annihilating polynomials, and hence the same monic generator. If \( B = P^{-1}AP \), then \( p(B) = P^{-1}p(A)P \) by @prp-similarity-invariants (c), so again \( p(A) = 0 \) if and only if \( p(B) = 0 \), and \( m_A = m_B \).
+By @cor-matrix-of-polynomial-of-operator, \( [p(T)]_{\sB} = p([T]_{\sB}) \) for every \( p \in F[x] \). An operator is zero exactly when its matrix is zero (@thm-linear-maps-isomorphic-to-matrices), so \( p(T) = 0 \) if and only if \( p([T]_{\sB}) = 0 \). Thus \( T \) and \( [T]_{\sB} \) have the same ideal of annihilating polynomials, and hence the same monic generator. If \( \B = \P^{-1}\A \P \), then \( p(\B) = \P^{-1}p(\A)\P \) by @prp-similarity-invariants (c), so again \( p(\A) = 0 \) if and only if \( p(\B) = 0 \), and \( m_{\A} = m_{\B} \).
 :::
 
-The theorem gives a quick non-similarity test. For instance \( I_2 \) and \( J = \begin{pmatrix} 1 & 1 \\ 0 & 1 \end{pmatrix} \) have the same characteristic polynomial, but \( m_{I_2} = x - 1 \ne (x - 1)^2 = m_J \), so they are not similar.
+The theorem gives a quick non-similarity test. For instance \( \I_2 \) and \( \J = \begin{pmatrix} 1 & 1 \\ 0 & 1 \end{pmatrix} \) have the same characteristic polynomial, but \( m_{\I_2} = x - 1 \ne (x - 1)^2 = m_{\J} \), so they are not similar.
 
-Chapter 7 showed that a block diagonal matrix computes polynomials blockwise: \( p(A \oplus B) = p(A) \oplus p(B) \) (@thm-block-diagonal-arithmetic (b)). So a polynomial kills \( A \oplus B \) exactly when it kills both blocks. In the language of ideals, the answer is the least common multiple.
+Chapter 7 showed that a block diagonal matrix computes polynomials blockwise: \( p(\A \oplus \B) = p(\A) \oplus p(\B) \) (@thm-block-diagonal-arithmetic (b)). So a polynomial kills \( \A \oplus \B \) exactly when it kills both blocks. In the language of ideals, the answer is the least common multiple.
 
 ::: {#prp-minimal-polynomial-block-diagonal}
 [Minimal Polynomial of a Block Diagonal Matrix]
 
-Let \( A \in M_k(F) \) and \( B \in M_l(F) \) with \( k, l \ge 1 \). Then \( m_{A \oplus B} = \operatorname{lcm}(m_A, m_B) \).
+Let \( \A \in M_k(F) \) and \( \B \in M_l(F) \) with \( k, l \ge 1 \). Then \( m_{\A \oplus \B} = \operatorname{lcm}(m_{\A}, m_{\B}) \).
 :::
 
 ::: {.proof}
-Let \( p \in F[x] \). By @thm-block-diagonal-arithmetic (b), \( p(A \oplus B) = p(A) \oplus p(B) \), which is zero if and only if \( p(A) = 0 \) and \( p(B) = 0 \). By @thm-minimal-polynomial-divides, this holds if and only if \( p \in \langle m_A \rangle \cap \langle m_B \rangle \). So \( I_{A \oplus B} = \langle m_A \rangle \cap \langle m_B \rangle \). This ideal contains \( m_{A \oplus B} \ne 0 \), and by @def-lcm-polynomials its monic generator is \( \operatorname{lcm}(m_A, m_B) \). By @def-minimal-polynomial its monic generator is also \( m_{A \oplus B} \), and the monic generator is unique (@thm-ideals-principal).
+Let \( p \in F[x] \). By @thm-block-diagonal-arithmetic (b), \( p(\A \oplus \B) = p(\A) \oplus p(\B) \), which is zero if and only if \( p(\A) = 0 \) and \( p(\B) = 0 \). By @thm-minimal-polynomial-divides, this holds if and only if \( p \in \langle m_{\A} \rangle \cap \langle m_{\B} \rangle \). So \( I_{\A \oplus \B} = \langle m_{\A} \rangle \cap \langle m_{\B} \rangle \). This ideal contains \( m_{\A \oplus \B} \ne 0 \), and by @def-lcm-polynomials its monic generator is \( \operatorname{lcm}(m_{\A}, m_{\B}) \). By @def-minimal-polynomial its monic generator is also \( m_{\A \oplus \B} \), and the monic generator is unique (@thm-ideals-principal).
 :::
 
-For example, \( \diag(1, 1, 2) = I_2 \oplus (2) \) has \( m = \operatorname{lcm}(x - 1, x - 2) = (x - 1)(x - 2) \), as computed above. And \( J \oplus (1) \) has \( m = \operatorname{lcm}\big((x - 1)^2, x - 1\big) = (x - 1)^2 \): a block can contribute a factor that the other block already contains, and then the factor is not repeated. This is the difference from the characteristic polynomial, which multiplies: \( p_{A \oplus B} = p_A\,p_B \).
+For example, \( \diag(1, 1, 2) = \I_2 \oplus (2) \) has \( m = \operatorname{lcm}(x - 1, x - 2) = (x - 1)(x - 2) \), as computed above. And \( \J \oplus (1) \) has \( m = \operatorname{lcm}\big((x - 1)^2, x - 1\big) = (x - 1)^2 \): a block can contribute a factor that the other block already contains, and then the factor is not repeated. This is the difference from the characteristic polynomial, which multiplies: \( p_{\A \oplus \B} = p_{\A}\,p_{\B} \).
 
 ::: {.warning}
 **Equal minimal polynomials do not make matrices similar.** \( \diag(1, 1, 2) \) and \( \diag(1, 2, 2) \) both have minimal polynomial \( (x - 1)(x - 2) \), by @prp-minimal-polynomial-block-diagonal. But their characteristic polynomials \( (x - 1)^2(x - 2) \) and \( (x - 1)(x - 2)^2 \) differ, so they are not similar (@thm-charpoly-similarity-invariant).
 :::
 
 ::: {.remark}
-Even the minimal and characteristic polynomials **together** do not decide similarity. With \( J = \begin{pmatrix} 1 & 1 \\ 0 & 1 \end{pmatrix} \), the matrices \( J \oplus J \) and \( J \oplus I_2 \) in \( M_4(F) \) both have characteristic polynomial \( (x - 1)^4 \) and, by @prp-minimal-polynomial-block-diagonal, minimal polynomial \( (x - 1)^2 \), as \( \operatorname{lcm}\big((x - 1)^2, (x - 1)^2\big) \) and \( \operatorname{lcm}\big((x - 1)^2, x - 1\big) \) are both \( (x - 1)^2 \). Yet \( (J \oplus J) - I_4 \) has rank \( 2 \) and \( (J \oplus I_2) - I_4 \) has rank \( 1 \); if \( B = P^{-1}AP \), then \( B - I = P^{-1}(A - I)P \), so these ranks would have to agree (@prp-similarity-invariants (a)), and the two matrices are not similar. The invariant that does decide similarity is the subject of Chapter 9.
+Even the minimal and characteristic polynomials **together** do not decide similarity. With \( \J = \begin{pmatrix} 1 & 1 \\ 0 & 1 \end{pmatrix} \), the matrices \( \J \oplus \J \) and \( \J \oplus \I_2 \) in \( M_4(F) \) both have characteristic polynomial \( (x - 1)^4 \) and, by @prp-minimal-polynomial-block-diagonal, minimal polynomial \( (x - 1)^2 \), as \( \operatorname{lcm}\big((x - 1)^2, (x - 1)^2\big) \) and \( \operatorname{lcm}\big((x - 1)^2, x - 1\big) \) are both \( (x - 1)^2 \). Yet \( (\J \oplus \J) - \I_4 \) has rank \( 2 \) and \( (\J \oplus \I_2) - \I_4 \) has rank \( 1 \); if \( \B = \P^{-1}\A \P \), then \( \B - \I = \P^{-1}(\A - \I)\P \), so these ranks would have to agree (@prp-similarity-invariants (a)), and the two matrices are not similar. The invariant that does decide similarity is the subject of Chapter 9.
 :::
 
 ## Exercises
@@ -265,10 +265,10 @@ Even the minimal and characteristic polynomials **together** do not decide simil
 
 ::: {.enumerate options="label=(\alph*)"}
 1. Define the minimal polynomial of an operator \( T \) on a finite-dimensional space, and give its two equivalent descriptions.
-2. True or false: \( m_A = p_A \) for every \( A \in M_n(F) \). Justify your answer.
+2. True or false: \( m_{\A} = p_{\A} \) for every \( \A \in M_n(F) \). Justify your answer.
 3. State the relation between the roots of \( m_T \) and the eigenvalues of \( T \).
-4. Let \( A \ne 0 \) satisfy \( A^3 = 0 \). Which polynomials can \( m_A \) be?
-5. True or false: if \( m_A = m_B \), then \( A \sim B \). Justify your answer.
+4. Let \( \A \ne 0 \) satisfy \( \A^3 = 0 \). Which polynomials can \( m_{\A} \) be?
+5. True or false: if \( m_{\A} = m_{\B} \), then \( \A \sim \B \). Justify your answer.
 6. Explain why multiplication by \( x \) on \( F[x] \) has no minimal polynomial.
 :::
 ::::
@@ -276,11 +276,11 @@ Even the minimal and characteristic polynomials **together** do not decide simil
 ::: {.solution}
 (a) \( m_T \) is the unique monic polynomial with \( \{ p : p(T) = 0 \} = \langle m_T \rangle \); equivalently, the monic polynomial of least degree with \( m_T(T) = 0 \) (@def-minimal-polynomial).
 
-(b) False. For \( I_2 \), \( m = x - 1 \) and \( p = (x - 1)^2 \).
+(b) False. For \( \I_2 \), \( m = x - 1 \) and \( p = (x - 1)^2 \).
 
 (c) They coincide: \( m_T(\lambda) = 0 \) if and only if \( \lambda \) is an eigenvalue of \( T \) (@thm-minimal-polynomial-roots).
 
-(d) By @thm-minimal-polynomial-divides, \( m_A \mid x^3 \), so \( m_A \in \{1, x, x^2, x^3\} \) by @lem-monic-divisors. It is not \( 1 \) (as \( I \ne 0 \)) and not \( x \) (as \( A \ne 0 \)). So \( m_A = x^2 \) or \( m_A = x^3 \), and both occur: \( \begin{pmatrix} 0 & 1 \\ 0 & 0 \end{pmatrix} \) and the matrix \( N \) of the Quick check.
+(d) By @thm-minimal-polynomial-divides, \( m_{\A} \mid x^3 \), so \( m_{\A} \in \{1, x, x^2, x^3\} \) by @lem-monic-divisors. It is not \( 1 \) (as \( \I \ne 0 \)) and not \( x \) (as \( \A \ne 0 \)). So \( m_{\A} = x^2 \) or \( m_{\A} = x^3 \), and both occur: \( \begin{pmatrix} 0 & 1 \\ 0 & 0 \end{pmatrix} \) and the matrix \( \N \) of the Quick check.
 
 (e) False. \( \diag(1, 1, 2) \) and \( \diag(1, 2, 2) \) have the same minimal polynomial but different characteristic polynomials.
 
@@ -295,33 +295,33 @@ Even the minimal and characteristic polynomials **together** do not decide simil
 Find the minimal polynomial of each real matrix.
 
 ::: {.enumerate options="label=(\alph*)"}
-1. \( A_1 = \begin{pmatrix} 4 & -1 \\ 1 & 2 \end{pmatrix} \).
-2. \( A_2 = \begin{pmatrix} 1 & 1 & 1 \\ 1 & 1 & 1 \\ 1 & 1 & 1 \end{pmatrix} \).
-3. \( A_3 = \begin{pmatrix} 2 & 1 & 1 \\ 0 & 1 & -1 \\ -1 & -1 & 1 \end{pmatrix} \), given that \( p_{A_3} = (x - 1)^2(x - 2) \).
-4. \( A_4 = \begin{pmatrix} 2 & 1 & 1 \\ -1 & 0 & -1 \\ 1 & 1 & 2 \end{pmatrix} \), given that \( p_{A_4} = (x - 1)^2(x - 2) \).
+1. \( \A_1 = \begin{pmatrix} 4 & -1 \\ 1 & 2 \end{pmatrix} \).
+2. \( \A_2 = \begin{pmatrix} 1 & 1 & 1 \\ 1 & 1 & 1 \\ 1 & 1 & 1 \end{pmatrix} \).
+3. \( \A_3 = \begin{pmatrix} 2 & 1 & 1 \\ 0 & 1 & -1 \\ -1 & -1 & 1 \end{pmatrix} \), given that \( p_{\A_3} = (x - 1)^2(x - 2) \).
+4. \( \A_4 = \begin{pmatrix} 2 & 1 & 1 \\ -1 & 0 & -1 \\ 1 & 1 & 2 \end{pmatrix} \), given that \( p_{\A_4} = (x - 1)^2(x - 2) \).
 :::
 
-Hence decide whether \( A_3 \) and \( A_4 \) are similar.
+Hence decide whether \( \A_3 \) and \( \A_4 \) are similar.
 ::::
 
 ::: {.solution}
-(a) \( A_1 \) is not scalar, so \( \deg m_{A_1} \ge 2 \). Here \( \tr A_1 = 6 \) and \( \det A_1 = 9 \), and \( A_1^2 = \begin{pmatrix} 15 & -6 \\ 6 & 3 \end{pmatrix} = 6A_1 - 9I_2 \), as one checks entry by entry. By @prp-minimal-polynomial-first-dependence, \( m_{A_1} = x^2 - 6x + 9 = (x - 3)^2 \).
+(a) \( \A_1 \) is not scalar, so \( \deg m_{\A_1} \ge 2 \). Here \( \tr \A_1 = 6 \) and \( \det \A_1 = 9 \), and \( \A_1^2 = \begin{pmatrix} 15 & -6 \\ 6 & 3 \end{pmatrix} = 6\A_1 - 9\I_2 \), as one checks entry by entry. By @prp-minimal-polynomial-first-dependence, \( m_{\A_1} = x^2 - 6x + 9 = (x - 3)^2 \).
 
-(b) \( A_2 \) is not scalar. Every entry of \( A_2^2 \) is \( 1 + 1 + 1 = 3 \), so \( A_2^2 = 3A_2 \). By @prp-minimal-polynomial-first-dependence, \( m_{A_2} = x^2 - 3x = x(x - 3) \).
+(b) \( \A_2 \) is not scalar. Every entry of \( \A_2^2 \) is \( 1 + 1 + 1 = 3 \), so \( \A_2^2 = 3\A_2 \). By @prp-minimal-polynomial-first-dependence, \( m_{\A_2} = x^2 - 3x = x(x - 3) \).
 
-(c) By @thm-minimal-polynomial-roots, \( (x - 1)(x - 2) \mid m_{A_3} \). First candidate:
+(c) By @thm-minimal-polynomial-roots, \( (x - 1)(x - 2) \mid m_{\A_3} \). First candidate:
 \[
-(A_3 - I)(A_3 - 2I) = \begin{pmatrix} 1 & 1 & 1 \\ 0 & 0 & -1 \\ -1 & -1 & 0 \end{pmatrix}\begin{pmatrix} 0 & 1 & 1 \\ 0 & -1 & -1 \\ -1 & -1 & -1 \end{pmatrix} = \begin{pmatrix} -1 & -1 & -1 \\ 1 & 1 & 1 \\ 0 & 0 & 0 \end{pmatrix} \ne 0 .
+(\A_3 - \I)(\A_3 - 2\I) = \begin{pmatrix} 1 & 1 & 1 \\ 0 & 0 & -1 \\ -1 & -1 & 0 \end{pmatrix}\begin{pmatrix} 0 & 1 & 1 \\ 0 & -1 & -1 \\ -1 & -1 & -1 \end{pmatrix} = \begin{pmatrix} -1 & -1 & -1 \\ 1 & 1 & 1 \\ 0 & 0 & 0 \end{pmatrix} \ne 0 .
 \]
-Next candidate: multiplying this on the left by \( A_3 - I \), the rows of the result are \( (1, 1, 1)M \), \( (0, 0, -1)M \) and \( (-1, -1, 0)M \), where \( M \) is the matrix just found. Since the rows of \( M \) sum to zero and its third row is zero, all three products are \( \0 \). So \( (A_3 - I)^2(A_3 - 2I) = 0 \), and by @lem-monic-divisors, \( m_{A_3} = (x - 1)^2(x - 2) \).
+Next candidate: multiplying this on the left by \( \A_3 - \I \), the rows of the result are \( (1, 1, 1)\M \), \( (0, 0, -1)\M \) and \( (-1, -1, 0)\M \), where \( \M \) is the matrix just found. Since the rows of \( \M \) sum to zero and its third row is zero, all three products are \( \0 \). So \( (\A_3 - \I)^2(\A_3 - 2\I) = 0 \), and by @lem-monic-divisors, \( m_{\A_3} = (x - 1)^2(x - 2) \).
 
-(d) Again \( (x - 1)(x - 2) \mid m_{A_4} \), and
+(d) Again \( (x - 1)(x - 2) \mid m_{\A_4} \), and
 \[
-(A_4 - I)(A_4 - 2I) = \begin{pmatrix} 1 & 1 & 1 \\ -1 & -1 & -1 \\ 1 & 1 & 1 \end{pmatrix}\begin{pmatrix} 0 & 1 & 1 \\ -1 & -2 & -1 \\ 1 & 1 & 0 \end{pmatrix} = 0,
+(\A_4 - \I)(\A_4 - 2\I) = \begin{pmatrix} 1 & 1 & 1 \\ -1 & -1 & -1 \\ 1 & 1 & 1 \end{pmatrix}\begin{pmatrix} 0 & 1 & 1 \\ -1 & -2 & -1 \\ 1 & 1 & 0 \end{pmatrix} = 0,
 \]
-since each column of the second matrix has entries summing to \( 0 \) and each row of the first is a multiple of \( (1, 1, 1) \). So \( m_{A_4} = (x - 1)(x - 2) \).
+since each column of the second matrix has entries summing to \( 0 \) and each row of the first is a multiple of \( (1, 1, 1) \). So \( m_{\A_4} = (x - 1)(x - 2) \).
 
-Hence \( m_{A_3} \ne m_{A_4} \), and by @thm-minimal-polynomial-similarity \( A_3 \) and \( A_4 \) are **not** similar, although their characteristic polynomials agree. (This matches @exr-multiplicities-b1, where the same two matrices appear as \( A_2 \) and \( A_3 \), with \( g(1) = 1 \) for the first and \( g(1) = 2 \) for the second.)
+Hence \( m_{\A_3} \ne m_{\A_4} \), and by @thm-minimal-polynomial-similarity \( \A_3 \) and \( \A_4 \) are **not** similar, although their characteristic polynomials agree. (This matches @exr-multiplicities-b1, where the same two matrices appear as \( \A_2 \) and \( \A_3 \), with \( g(1) = 1 \) for the first and \( g(1) = 2 \) for the second.)
 :::
 
 :::: {#exr-minimal-polynomial-b2}
@@ -347,28 +347,28 @@ Let \( V \ne \{\0\} \) be finite-dimensional and \( T \in \cL(V) \) with \( T^2 
 :::: {#exr-minimal-polynomial-b3}
 [B3: Companion matrices]
 
-Let \( n \ge 2 \), \( p = x^n + a_{n-1}x^{n-1} + \dots + a_1x + a_0 \in F[x] \), and let \( C = C(p) \) be its companion matrix (@exr-characteristic-polynomial-c1).
+Let \( n \ge 2 \), \( p = x^n + a_{n-1}x^{n-1} + \dots + a_1x + a_0 \in F[x] \), and let \( \C = \C(p) \) be its companion matrix (@exr-characteristic-polynomial-c1).
 
 ::: {.enumerate options="label=(\alph*)"}
-1. Show that \( C\e_k = \e_{k+1} \) for \( 1 \le k \le n - 1 \), so \( C^k\e_1 = \e_{k+1} \) for \( 0 \le k \le n - 1 \).
-2. Deduce that no non-zero polynomial of degree less than \( n \) annihilates \( C \).
-3. Show that \( p(C)\e_1 = \0 \), and hence \( p(C)\e_{k+1} = \0 \) for all \( k \le n - 1 \).
-4. Deduce that \( m_C = p = p_C \).
+1. Show that \( \C\e_k = \e_{k+1} \) for \( 1 \le k \le n - 1 \), so \( \C^k\e_1 = \e_{k+1} \) for \( 0 \le k \le n - 1 \).
+2. Deduce that no non-zero polynomial of degree less than \( n \) annihilates \( \C \).
+3. Show that \( p(\C)\e_1 = \0 \), and hence \( p(\C)\e_{k+1} = \0 \) for all \( k \le n - 1 \).
+4. Deduce that \( m_{\C} = p = p_{\C} \).
 :::
 ::::
 
 ::: {.solution}
-(a) Column \( k \) of \( C \), for \( k \le n - 1 \), has a single \( 1 \) in row \( k + 1 \), so \( C\e_k = \e_{k+1} \). By induction on \( k \), \( C^k\e_1 = C(C^{k-1}\e_1) = C\e_k = \e_{k+1} \).
+(a) Column \( k \) of \( \C \), for \( k \le n - 1 \), has a single \( 1 \) in row \( k + 1 \), so \( \C\e_k = \e_{k+1} \). By induction on \( k \), \( \C^k\e_1 = \C(\C^{k-1}\e_1) = \C\e_k = \e_{k+1} \).
 
-(b) Let \( q = \sum_{k=0}^{d} b_kx^k \ne 0 \) with \( d \le n - 1 \). By (a), \( q(C)\e_1 = \sum_k b_kC^k\e_1 = \sum_k b_k\e_{k+1} \), which is not \( \0 \) because some \( b_k \ne 0 \). So \( q(C) \ne 0 \).
+(b) Let \( q = \sum_{k=0}^{d} b_kx^k \ne 0 \) with \( d \le n - 1 \). By (a), \( q(\C)\e_1 = \sum_k b_k\C^k\e_1 = \sum_k b_k\e_{k+1} \), which is not \( \0 \) because some \( b_k \ne 0 \). So \( q(\C) \ne 0 \).
 
-(c) By (a), \( C^n\e_1 = C\e_n \), the last column \( (-a_0, \dots, -a_{n-1}) = -\sum_{k=0}^{n-1} a_k\e_{k+1} \). Hence
+(c) By (a), \( \C^n\e_1 = \C\e_n \), the last column \( (-a_0, \dots, -a_{n-1}) = -\sum_{k=0}^{n-1} a_k\e_{k+1} \). Hence
 \[
-p(C)\e_1 = C^n\e_1 + \sum_{k=0}^{n-1} a_kC^k\e_1 = -\sum_k a_k\e_{k+1} + \sum_k a_k\e_{k+1} = \0 .
+p(\C)\e_1 = \C^n\e_1 + \sum_{k=0}^{n-1} a_k\C^k\e_1 = -\sum_k a_k\e_{k+1} + \sum_k a_k\e_{k+1} = \0 .
 \]
-For \( k \le n - 1 \), polynomials in \( C \) commute (@thm-evaluation-homomorphism (c)), so \( p(C)\e_{k+1} = p(C)C^k\e_1 = C^kp(C)\e_1 = \0 \).
+For \( k \le n - 1 \), polynomials in \( \C \) commute (@thm-evaluation-homomorphism (c)), so \( p(\C)\e_{k+1} = p(\C)\C^k\e_1 = \C^kp(\C)\e_1 = \0 \).
 
-(d) By (c), \( p(C) \) kills the standard basis, so \( p(C) = 0 \) and \( m_C \mid p \). By (b), \( \deg m_C \ge n = \deg p \). Two monic polynomials, one dividing the other, with \( \deg m_C \ge \deg p \), are equal (@prp-divisibility-properties (c), (d)). So \( m_C = p \), and \( p = p_C \) by @exr-characteristic-polynomial-c1 (b). Every monic polynomial of degree \( n \ge 2 \) is therefore the minimal polynomial of some \( n \times n \) matrix.
+(d) By (c), \( p(\C) \) kills the standard basis, so \( p(\C) = 0 \) and \( m_{\C} \mid p \). By (b), \( \deg m_{\C} \ge n = \deg p \). Two monic polynomials, one dividing the other, with \( \deg m_{\C} \ge \deg p \), are equal (@prp-divisibility-properties (c), (d)). So \( m_{\C} = p \), and \( p = p_{\C} \) by @exr-characteristic-polynomial-c1 (b). Every monic polynomial of degree \( n \ge 2 \) is therefore the minimal polynomial of some \( n \times n \) matrix.
 :::
 
 ### C. Going deeper
@@ -381,7 +381,7 @@ Let \( \dim V = n \ge 1 \) and \( T \in \cL(V) \). A vector \( \v \) is a **cycl
 ::: {.enumerate options="label=(\alph*)"}
 1. Prove that if \( T \) has a cyclic vector, then \( \deg m_T \ge n \).
 2. Suppose \( \v \) is cyclic and \( T^n\v = -(a_0\v + a_1T\v + \dots + a_{n-1}T^{n-1}\v) \). Show that the matrix of \( T \) in the basis \( (\v, \dots, T^{n-1}\v) \) is the companion matrix of \( p = x^n + a_{n-1}x^{n-1} + \dots + a_0 \) (for \( n \ge 2 \)), and deduce \( m_T = p_T = p \).
-3. Find a cyclic vector for \( J = \begin{pmatrix} 1 & 1 \\ 0 & 1 \end{pmatrix} \), and show that \( I_2 \) has none.
+3. Find a cyclic vector for \( \J = \begin{pmatrix} 1 & 1 \\ 0 & 1 \end{pmatrix} \), and show that \( \I_2 \) has none.
 :::
 
 (The converse of (a), that \( \deg m_T = n \) forces a cyclic vector, is proved in Chapter 9.)
@@ -390,9 +390,9 @@ Let \( \dim V = n \ge 1 \) and \( T \in \cL(V) \). A vector \( \v \) is a **cycl
 ::: {.solution}
 (a) Let \( q = \sum_{k=0}^{d} b_kx^k \ne 0 \) with \( d \le n - 1 \). Then \( q(T)\v = \sum_k b_kT^k\v \ne \0 \), because the vectors \( T^k\v \), \( k \le n - 1 \), are independent and some \( b_k \ne 0 \). So \( q(T) \ne 0 \), and by @thm-minimal-polynomial-divides, \( \deg m_T \ge n \).
 
-(b) Let \( \sB = (\v, T\v, \dots, T^{n-1}\v) \). For \( k \le n - 2 \), \( T(T^k\v) = T^{k+1}\v \), the \( (k + 2) \)-th basis vector, so column \( k + 1 \) of \( [T]_{\sB} \) is \( \e_{k+2} \). The last column is \( \coord{T^n\v}{\sB} = (-a_0, \dots, -a_{n-1}) \). This is \( C(p) \). By @thm-minimal-polynomial-similarity and @exr-minimal-polynomial-b3 (d), \( m_T = m_{C(p)} = p \). By @def-charpoly-operator and @exr-characteristic-polynomial-c1 (b), \( p_T = p_{C(p)} = p \). (For \( n = 1 \), \( T\v = -a_0\v \) and \( T = -a_0\,\id_V \), so \( m_T = p_T = x + a_0 \) directly.)
+(b) Let \( \sB = (\v, T\v, \dots, T^{n-1}\v) \). For \( k \le n - 2 \), \( T(T^k\v) = T^{k+1}\v \), the \( (k + 2) \)-th basis vector, so column \( k + 1 \) of \( [T]_{\sB} \) is \( \e_{k+2} \). The last column is \( \coord{T^n\v}{\sB} = (-a_0, \dots, -a_{n-1}) \). This is \( \C(p) \). By @thm-minimal-polynomial-similarity and @exr-minimal-polynomial-b3 (d), \( m_T = m_{\C(p)} = p \). By @def-charpoly-operator and @exr-characteristic-polynomial-c1 (b), \( p_T = p_{\C(p)} = p \). (For \( n = 1 \), \( T\v = -a_0\v \) and \( T = -a_0\,\id_V \), so \( m_T = p_T = x + a_0 \) directly.)
 
-(c) \( J\e_2 = (1, 1) \), and \( (\e_2, (1, 1)) \) is independent, so \( \e_2 \) is cyclic. For \( I_2 \), every \( \v \) has \( I_2\v = \v \), so \( (\v, I_2\v) \) is dependent. This matches (a): \( \deg m_{I_2} = 1 < 2 \).
+(c) \( \J\e_2 = (1, 1) \), and \( (\e_2, (1, 1)) \) is independent, so \( \e_2 \) is cyclic. For \( \I_2 \), every \( \v \) has \( \I_2\v = \v \), so \( (\v, \I_2\v) \) is dependent. This matches (a): \( \deg m_{\I_2} = 1 < 2 \).
 :::
 
 :::: {#exr-minimal-polynomial-c2}
@@ -404,7 +404,7 @@ Let \( V \) be finite-dimensional, \( T \in \cL(V) \), and \( U \) a \( T \)-inv
 1. Prove that \( p(T|_U) = p(T)|_U \) and \( p(\bar T)(\v + U) = p(T)\v + U \) for every \( p \in F[x] \).
 2. Deduce that \( m_{T|_U} \mid m_T \) and \( m_{\bar T} \mid m_T \).
 3. Prove that \( m_T \mid m_{T|_U}\,m_{\bar T} \).
-4. For \( J = \begin{pmatrix} 1 & 1 \\ 0 & 1 \end{pmatrix} \) and \( U = \Span(\e_1) \), compute all three minimal polynomials, and show that \( m_T \) need not equal \( \operatorname{lcm}(m_{T|_U}, m_{\bar T}) \).
+4. For \( \J = \begin{pmatrix} 1 & 1 \\ 0 & 1 \end{pmatrix} \) and \( U = \Span(\e_1) \), compute all three minimal polynomials, and show that \( m_T \) need not equal \( \operatorname{lcm}(m_{T|_U}, m_{\bar T}) \).
 :::
 
 *Hint: for (c), apply \( m_{\bar T}(T) \) to \( \v \) and ask where the result lies.*
@@ -417,5 +417,5 @@ Let \( V \) be finite-dimensional, \( T \in \cL(V) \), and \( U \) a \( T \)-inv
 
 (c) Let \( \v \in V \). By (a), \( m_{\bar T}(T)\v + U = m_{\bar T}(\bar T)(\v + U) = \0 + U \), so \( \u \coloneqq m_{\bar T}(T)\v \in U \). By (a) again, \( m_{T|_U}(T)\u = m_{T|_U}(T|_U)\u = \0 \). Hence \( (m_{T|_U}\,m_{\bar T})(T)\v = m_{T|_U}(T)\,m_{\bar T}(T)\v = \0 \) (@thm-evaluation-homomorphism (b)). As \( \v \) was arbitrary, \( m_{T|_U}m_{\bar T} \) annihilates \( T \), and \( m_T \mid m_{T|_U}m_{\bar T} \) by @thm-minimal-polynomial-divides.
 
-(d) \( J\e_1 = \e_1 \), so \( T|_U = \id_U \) and \( m_{T|_U} = x - 1 \). The quotient \( F^2/U \) has basis \( \e_2 + U \), and \( \bar T(\e_2 + U) = (1, 1) + U = \e_2 + U \), so \( \bar T = \id \) and \( m_{\bar T} = x - 1 \). But \( m_J = (x - 1)^2 \), computed earlier. So \( m_J = m_{T|_U}m_{\bar T} \), while \( \operatorname{lcm}(m_{T|_U}, m_{\bar T}) = x - 1 \ne m_J \). Compare @prp-minimal-polynomial-block-diagonal: when \( U \) has an invariant complement the lcm is right, but in general it is not.
+(d) \( \J\e_1 = \e_1 \), so \( T|_U = \id_U \) and \( m_{T|_U} = x - 1 \). The quotient \( F^2/U \) has basis \( \e_2 + U \), and \( \bar T(\e_2 + U) = (1, 1) + U = \e_2 + U \), so \( \bar T = \id \) and \( m_{\bar T} = x - 1 \). But \( m_{\J} = (x - 1)^2 \), computed earlier. So \( m_{\J} = m_{T|_U}m_{\bar T} \), while \( \operatorname{lcm}(m_{T|_U}, m_{\bar T}) = x - 1 \ne m_{\J} \). Compare @prp-minimal-polynomial-block-diagonal: when \( U \) has an invariant complement the lcm is right, but in general it is not.
 :::

@@ -31,17 +31,17 @@ Let \( T \in \cL(V) \) and \( U = \Span(\u_1, \dots, \u_k) \). Then \( U \) is \
 :::
 
 ::: {.proof}
-(⇒) Each \( \u_i \) lies in \( U \). (⇐) Let \( \u = c_1\u_1 + \dots + c_k\u_k \in U \). By @thm-linear-combination, \( T\u = c_1T\u_1 + \dots + c_kT\u_k \), a linear combination of vectors of \( U \), which lies in \( U \) because \( U \) is a subspace (@thm-subspace-test).
+\( (\Rightarrow) \) Each \( \u_i \) lies in \( U \). \( (\Leftarrow) \) Let \( \u = c_1\u_1 + \dots + c_k\u_k \in U \). By @thm-linear-combination, \( T\u = c_1T\u_1 + \dots + c_kT\u_k \), a linear combination of vectors of \( U \), which lies in \( U \) because \( U \) is a subspace (@thm-subspace-test).
 :::
 
 **Examples.**
 
 - **The trivial subspaces.** For every \( T \in \cL(V) \), both \( \{\0\} \) and \( V \) are \( T \)-invariant: \( T\0 = \0 \) (@thm-zero-maps-to-zero), and \( T\v \in V \) always. These are the degenerate cases, and they matter as a warning about what the word does **not** tell us: invariance carries information only for subspaces strictly between \( \{\0\} \) and \( V \). At the other extreme, for \( T = c\,\id_V \) **every** subspace is invariant, since \( c\u \in U \) whenever \( \u \in U \).
 - **Kernel and image.** \( \ker T \) is invariant: if \( \u \in \ker T \), then \( T\u = \0 \in \ker T \). So is \( \im T \): if \( \w \in \im T \), then \( T\w \) is \( T \) of something, so \( T\w \in \im T \). More generally, for every polynomial \( p \in F[x] \), the subspaces \( \ker p(T) \) and \( \im p(T) \) are \( T \)-invariant, by @thm-kernel-image-of-polynomial-invariant (b). For instance \( \ker(T - c\,\id_V) \) is invariant for every scalar \( c \).
-- **A line in the plane.** Let \( A = \begin{pmatrix} 2 & 1 \\ 0 & 3 \end{pmatrix} \) act on \( \nR^2 \). The line \( \Span(\e_1) \) is invariant, by @lem-invariance-on-spanning-list, because \( A\e_1 = (2, 0) = 2\e_1 \in \Span(\e_1) \). The line \( \Span((1, 1)) \) is invariant as well, since \( A(1, 1) = (3, 3) = 3\,(1, 1) \).
+- **A line in the plane.** Let \( \A = \begin{pmatrix} 2 & 1 \\ 0 & 3 \end{pmatrix} \) act on \( \nR^2 \). The line \( \Span(\e_1) \) is invariant, by @lem-invariance-on-spanning-list, because \( \A\e_1 = (2, 0) = 2\e_1 \in \Span(\e_1) \). The line \( \Span((1, 1)) \) is invariant as well, since \( \A(1, 1) = (3, 3) = 3\,(1, 1) \).
 - **Polynomials of bounded degree.** Let \( D \colon F[x] \to F[x] \) be differentiation (@exm-differentiation). For each \( k \in \nN \), the subspace \( F[x]_{\le k} \) is \( D \)-invariant, because differentiating does not raise the degree. It is spanned by \( 1, x, \dots, x^k \), and \( D(x^j) = jx^{j-1} \in F[x]_{\le k} \).
 
-**Non-example by minimal change.** Keep \( A = \begin{pmatrix} 2 & 1 \\ 0 & 3 \end{pmatrix} \) and replace the line \( \Span(\e_1) \) by the line \( \Span(\e_2) \). It is still a subspace, and \( A\e_2 = (1, 3) \) is still some vector of \( \nR^2 \). What fails is the clause "\( T\u \in U \) for every \( \u \in U \)" at \( \u = \e_2 \): the vector \( (1, 3) \) is not a multiple of \( \e_2 \). In the same way, \( \Span(x, x^2) \) inside \( \nR[x]_{\le 3} \) is not \( D \)-invariant, because \( D(x) = 1 \notin \Span(x, x^2) \).
+**Non-example by minimal change.** Keep \( \A = \begin{pmatrix} 2 & 1 \\ 0 & 3 \end{pmatrix} \) and replace the line \( \Span(\e_1) \) by the line \( \Span(\e_2) \). It is still a subspace, and \( \A\e_2 = (1, 3) \) is still some vector of \( \nR^2 \). What fails is the clause "\( T\u \in U \) for every \( \u \in U \)" at \( \u = \e_2 \): the vector \( (1, 3) \) is not a multiple of \( \e_2 \). In the same way, \( \Span(x, x^2) \) inside \( \nR[x]_{\le 3} \) is not \( D \)-invariant, because \( D(x) = 1 \notin \Span(x, x^2) \).
 
 The examples with lines all have the same shape, which is worth recording now, because the whole next section grows out of it.
 
@@ -80,7 +80,7 @@ The same computation over \( \nC \) does not end in a contradiction: \( 1 + \lam
 **Why this definition.** Two variations suggest themselves, and both are worse.
 
 - *Demand \( T(U) = U \).* Then \( \ker T \) would fail whenever \( T \) is not injective, since then \( T(\ker T) = \{\0\} \ne \ker T \). But the kernel is exactly the kind of subspace that produces a zero block, and @thm-invariant-subspace-block-triangular needs only the inclusion.
-- *Demand \( T\u = \u \) for every \( \u \in U \).* That says \( T \) acts as the identity on \( U \), a far stronger condition. The line \( \Span((1, 1)) \) above is invariant under \( A \), but \( A \) triples its vectors.
+- *Demand \( T\u = \u \) for every \( \u \in U \).* That says \( T \) acts as the identity on \( U \), a far stronger condition. The line \( \Span((1, 1)) \) above is invariant under \( \A \), but \( \A \) triples its vectors.
 
 The name records that the subspace, as a whole, is unchanged in the sense that it is carried into itself; its individual vectors may move.
 
@@ -130,9 +130,9 @@ Let \( V \) be finite-dimensional, \( T \in \cL(V) \), and \( U \) a subspace wi
 1. \( U \) is \( T \)-invariant if and only if \( [T]_{\sB} \) has zero lower-left \( l \times k \) block.
 2. In that case
 \[
-[T]_{\sB} = \begin{pmatrix} [T|_U]_{\sB_U} & B \\ 0 & [\bar T]_{\bar\sB} \end{pmatrix}
+[T]_{\sB} = \begin{pmatrix} [T|_U]_{\sB_U} & \B \\ 0 & [\bar T]_{\bar\sB} \end{pmatrix}
 \]
-for some \( B \in M_{k \times l}(F) \), and
+for some \( \B \in M_{k \times l}(F) \), and
 \[
 \det T = \det(T|_U)\,\det \bar T, \qquad p_T = p_{T|_U}\; p_{\bar T} .
 \]
@@ -142,11 +142,11 @@ for some \( B \in M_{k \times l}(F) \), and
 ::: {.proof}
 Part (a), and the block form in (b), are @thm-invariant-subspace-block-triangular in the language of @def-invariant-subspace and @def-restriction-operator; \( \bar\sB \) is a basis of \( V/U \) by @thm-dimension-quotient.
 
-Write \( A = [T|_U]_{\sB_U} \in M_k(F) \) and \( D = [\bar T]_{\bar\sB} \in M_l(F) \). By @def-det-operator and @thm-det-block-triangular, \( \det T = \det[T]_{\sB} = \det A \det D = \det(T|_U)\det\bar T \). For the characteristic polynomials,
+Write \( \A = [T|_U]_{\sB_U} \in M_k(F) \) and \( \D = [\bar T]_{\bar\sB} \in M_l(F) \). By @def-det-operator and @thm-det-block-triangular, \( \det T = \det[T]_{\sB} = \det \A \det \D = \det(T|_U)\det\bar T \). For the characteristic polynomials,
 \[
-xI_{k+l} - [T]_{\sB} = \begin{pmatrix} xI_k - A & -B \\ 0 & xI_l - D \end{pmatrix}
+x\I_{k+l} - [T]_{\sB} = \begin{pmatrix} x\I_k - \A & -\B \\ 0 & x\I_l - \D \end{pmatrix}
 \]
-is block upper triangular with square diagonal blocks, as a matrix over \( F[x] \). The block triangular determinant holds over the commutative ring \( F[x] \) (the remark after @thm-det-block-triangular), so \( \det(xI - [T]_{\sB}) = \det(xI_k - A)\det(xI_l - D) \). By @def-charpoly-operator, this says \( p_T = p_{T|_U}\,p_{\bar T} \).
+is block upper triangular with square diagonal blocks, as a matrix over \( F[x] \). The block triangular determinant holds over the commutative ring \( F[x] \) (the remark after @thm-det-block-triangular), so \( \det(x\I - [T]_{\sB}) = \det(x\I_k - \A)\det(x\I_l - \D) \). By @def-charpoly-operator, this says \( p_T = p_{T|_U}\,p_{\bar T} \).
 :::
 
 The theorem is the reason invariant subspaces matter. It splits the study of \( T \) into the study of two operators on smaller spaces, and every quantity that sees only the diagonal blocks splits with it. For differentiation on \( \nR[x]_{\le 2} \), in the basis \( (1, x, x^2) \),
@@ -192,13 +192,13 @@ Read the matrix one block of columns at a time. The columns of block \( j \) are
 :::
 
 ::: {.proof}
-By @thm-direct-sum-k-criteria ((a) ⇒ (d)), \( \sB \) is a basis of \( V \). Fix \( j \) and a vector \( \b \) of \( \sB_j \); the column of \( [T]_{\sB} \) belonging to \( \b \) is \( \coord{T\b}{\sB} \) (@def-matrix-of-linear-map). We claim: \( T\b \in U_j \) if and only if the entries of this column outside the rows of block \( j \) are all \( 0 \). If \( T\b \in U_j = \Span(\sB_j) \), then \( T\b \) is a combination of \( \sB_j \) alone, which is a representation in the basis \( \sB \) with zero coefficients outside block \( j \); by @thm-unique-representation, it is **the** coordinate vector. Conversely, if those entries vanish, then \( T\b \) is a combination of \( \sB_j \), so it lies in \( U_j \).
+By @thm-direct-sum-k-criteria ((a) \( \Rightarrow \) (d)), \( \sB \) is a basis of \( V \). Fix \( j \) and a vector \( \b \) of \( \sB_j \); the column of \( [T]_{\sB} \) belonging to \( \b \) is \( \coord{T\b}{\sB} \) (@def-matrix-of-linear-map). We claim: \( T\b \in U_j \) if and only if the entries of this column outside the rows of block \( j \) are all \( 0 \). If \( T\b \in U_j = \Span(\sB_j) \), then \( T\b \) is a combination of \( \sB_j \) alone, which is a representation in the basis \( \sB \) with zero coefficients outside block \( j \); by @thm-unique-representation, it is **the** coordinate vector. Conversely, if those entries vanish, then \( T\b \) is a combination of \( \sB_j \), so it lies in \( U_j \).
 
-(a) ⇒ (b). If \( U_j \) is invariant, then \( T\b \in U_j \) for each \( \b \) in \( \sB_j \), so by the claim every block \( (i, j) \) with \( i \ne j \) is zero. As \( j \) was arbitrary, \( [T]_{\sB} \) is block diagonal. Moreover the entries of column \( \b \) in the rows of block \( j \) are the coordinates of \( T\b = T|_{U_j}\b \) in \( \sB_j \), so the \( (j, j) \) block is \( [T|_{U_j}]_{\sB_j} \).
+(a) \( \Rightarrow \) (b). If \( U_j \) is invariant, then \( T\b \in U_j \) for each \( \b \) in \( \sB_j \), so by the claim every block \( (i, j) \) with \( i \ne j \) is zero. As \( j \) was arbitrary, \( [T]_{\sB} \) is block diagonal. Moreover the entries of column \( \b \) in the rows of block \( j \) are the coordinates of \( T\b = T|_{U_j}\b \) in \( \sB_j \), so the \( (j, j) \) block is \( [T|_{U_j}]_{\sB_j} \).
 
-(b) ⇒ (a). If the blocks \( (i, j) \) with \( i \ne j \) vanish, the claim gives \( T\b \in U_j \) for every \( \b \) in \( \sB_j \), and \( U_j \) is invariant by @lem-invariance-on-spanning-list.
+(b) \( \Rightarrow \) (a). If the blocks \( (i, j) \) with \( i \ne j \) vanish, the claim gives \( T\b \in U_j \) for every \( \b \) in \( \sB_j \), and \( U_j \) is invariant by @lem-invariance-on-spanning-list.
 
-Finally, \( xI - [T]_{\sB} \) is block diagonal with diagonal blocks \( xI_{n_j} - [T|_{U_j}]_{\sB_j} \). Its determinant over \( F[x] \) is the product of the determinants of these blocks (the remark after @thm-det-block-triangular, applied by induction on the number of blocks), which is \( p_T = \prod_j p_{T|_{U_j}} \) by @def-charpoly-operator.
+Finally, \( x\I - [T]_{\sB} \) is block diagonal with diagonal blocks \( x\I_{n_j} - [T|_{U_j}]_{\sB_j} \). Its determinant over \( F[x] \) is the product of the determinants of these blocks (the remark after @thm-det-block-triangular, applied by induction on the number of blocks), which is \( p_T = \prod_j p_{T|_{U_j}} \) by @def-charpoly-operator.
 :::
 
 So an operator that preserves each piece of a direct sum decomposition is, in a suitable basis, a list of independent smaller operators. The best possible case is a decomposition into invariant **lines**: then every block is \( 1 \times 1 \), and \( [T]_{\sB} \) is diagonal. By @prp-one-dimensional-invariant, that happens exactly when \( V \) has a basis of vectors \( \v \) with \( T\v = \lambda\v \). This observation is the starting point of the next section.
@@ -206,7 +206,7 @@ So an operator that preserves each piece of a direct sum decomposition is, in a 
 A tempting shortcut is to assume that once one invariant subspace is found, a complement of it can be chosen invariant too, and the matrix becomes block diagonal. This fails.
 
 ::: {.warning}
-**The complement of an invariant subspace need not be invariant.** Let \( N = \begin{pmatrix} 0 & 1 \\ 0 & 0 \end{pmatrix} \) act on \( F^2 \). The line \( U = \Span(\e_1) \) is invariant, since \( N\e_1 = \0 \). Every complement of \( U \) is a line \( W = \Span((a, 1)) \) for some \( a \in F \) (a line not equal to \( U \) contains a vector with second entry \( 1 \)). But \( N(a, 1) = (1, 0) \), which is not a multiple of \( (a, 1) \). So **no** complement of \( U \) is \( N \)-invariant, and no basis makes \( [N] \) block diagonal with two \( 1 \times 1 \) blocks.
+**The complement of an invariant subspace need not be invariant.** Let \( \N = \begin{pmatrix} 0 & 1 \\ 0 & 0 \end{pmatrix} \) act on \( F^2 \). The line \( U = \Span(\e_1) \) is invariant, since \( \N\e_1 = \0 \). Every complement of \( U \) is a line \( W = \Span((a, 1)) \) for some \( a \in F \) (a line not equal to \( U \) contains a vector with second entry \( 1 \)). But \( \N(a, 1) = (1, 0) \), which is not a multiple of \( (a, 1) \). So **no** complement of \( U \) is \( \N \)-invariant, and no basis makes \( [\N] \) block diagonal with two \( 1 \times 1 \) blocks.
 :::
 
 ::: {.check}
@@ -253,19 +253,19 @@ The question has a trap: "invariant subspace" requires a subspace, and a union o
 :::: {#exr-invariant-subspaces-b1}
 [B1: All invariant subspaces of a diagonal matrix]
 
-Let \( A = \diag(1, 2) \) act on \( \nR^2 \). Find all \( A \)-invariant subspaces of \( \nR^2 \).
+Let \( \A = \diag(1, 2) \) act on \( \nR^2 \). Find all \( \A \)-invariant subspaces of \( \nR^2 \).
 ::::
 
 ::: {.solution}
-As in @exm-rotation-invariant-subspaces, a subspace of \( \nR^2 \) is \( \{\0\} \), \( \nR^2 \), or a line \( \Span(\v) \) with \( \v = (a, b) \ne \0 \). The first two are invariant. By @prp-one-dimensional-invariant, the line is invariant if and only if \( A\v = \lambda\v \) for some \( \lambda \in \nR \), that is,
+As in @exm-rotation-invariant-subspaces, a subspace of \( \nR^2 \) is \( \{\0\} \), \( \nR^2 \), or a line \( \Span(\v) \) with \( \v = (a, b) \ne \0 \). The first two are invariant. By @prp-one-dimensional-invariant, the line is invariant if and only if \( \A\v = \lambda\v \) for some \( \lambda \in \nR \), that is,
 \[
 a = \lambda a, \qquad 2b = \lambda b .
 \]
-If \( a \ne 0 \), the first equation gives \( \lambda = 1 \), and then \( 2b = b \) gives \( b = 0 \); so \( \v \) is a multiple of \( \e_1 \). If \( a = 0 \), then \( b \ne 0 \), the second equation gives \( \lambda = 2 \), and \( \v \) is a multiple of \( \e_2 \). Conversely \( A\e_1 = \e_1 \) and \( A\e_2 = 2\e_2 \). Hence the invariant subspaces are exactly
+If \( a \ne 0 \), the first equation gives \( \lambda = 1 \), and then \( 2b = b \) gives \( b = 0 \); so \( \v \) is a multiple of \( \e_1 \). If \( a = 0 \), then \( b \ne 0 \), the second equation gives \( \lambda = 2 \), and \( \v \) is a multiple of \( \e_2 \). Conversely \( \A\e_1 = \e_1 \) and \( \A\e_2 = 2\e_2 \). Hence the invariant subspaces are exactly
 \[
 \{\0\}, \qquad \Span(\e_1), \qquad \Span(\e_2), \qquad \nR^2 .
 \]
-Compare with the identity \( I_2 \), for which every line is invariant: changing one diagonal entry from \( 1 \) to \( 2 \) destroys all lines except the two axes.
+Compare with the identity \( \I_2 \), for which every line is invariant: changing one diagonal entry from \( 1 \) to \( 2 \) destroys all lines except the two axes.
 :::
 
 :::: {#exr-invariant-subspaces-b2}
@@ -320,33 +320,33 @@ We use @lem-invariance-on-spanning-list throughout.
 
 Let \( F \) be any field and
 \[
-N = \begin{pmatrix} 0 & 1 & 0 \\ 0 & 0 & 1 \\ 0 & 0 & 0 \end{pmatrix} \in M_3(F),
+\N = \begin{pmatrix} 0 & 1 & 0 \\ 0 & 0 & 1 \\ 0 & 0 & 0 \end{pmatrix} \in M_3(F),
 \]
-acting on \( F^3 \), so \( N\e_1 = \0 \), \( N\e_2 = \e_1 \), \( N\e_3 = \e_2 \). Put \( W_0 = \{\0\} \), \( W_1 = \Span(\e_1) \), \( W_2 = \Span(\e_1, \e_2) \), \( W_3 = F^3 \).
+acting on \( F^3 \), so \( \N\e_1 = \0 \), \( \N\e_2 = \e_1 \), \( \N\e_3 = \e_2 \). Put \( W_0 = \{\0\} \), \( W_1 = \Span(\e_1) \), \( W_2 = \Span(\e_1, \e_2) \), \( W_3 = F^3 \).
 
 ::: {.enumerate options="label=(\alph*)"}
-1. Show that each \( W_j \) is \( N \)-invariant.
-2. Let \( U \) be an \( N \)-invariant subspace, and let \( j \) be the largest index such that some vector of \( U \) has a non-zero \( j \)-th entry (put \( j = 0 \) if \( U = \{\0\} \)). Prove that \( U = W_j \).
-3. Deduce that the \( N \)-invariant subspaces are exactly \( W_0 \subset W_1 \subset W_2 \subset W_3 \), and that any two of them are comparable under inclusion.
+1. Show that each \( W_j \) is \( \N \)-invariant.
+2. Let \( U \) be an \( \N \)-invariant subspace, and let \( j \) be the largest index such that some vector of \( U \) has a non-zero \( j \)-th entry (put \( j = 0 \) if \( U = \{\0\} \)). Prove that \( U = W_j \).
+3. Deduce that the \( \N \)-invariant subspaces are exactly \( W_0 \subset W_1 \subset W_2 \subset W_3 \), and that any two of them are comparable under inclusion.
 :::
 
-*Hint: for (b), apply \( N \) and \( N^2 \) to a vector with non-zero \( j \)-th entry.*
+*Hint: for (b), apply \( \N \) and \( \N^2 \) to a vector with non-zero \( j \)-th entry.*
 ::::
 
 ::: {.solution}
-(a) \( W_0 \) and \( W_3 \) are invariant for every operator. By @lem-invariance-on-spanning-list, \( W_1 \) is invariant since \( N\e_1 = \0 \), and \( W_2 \) is invariant since \( N\e_1 = \0 \) and \( N\e_2 = \e_1 \) lie in \( W_2 \).
+(a) \( W_0 \) and \( W_3 \) are invariant for every operator. By @lem-invariance-on-spanning-list, \( W_1 \) is invariant since \( \N\e_1 = \0 \), and \( W_2 \) is invariant since \( \N\e_1 = \0 \) and \( \N\e_2 = \e_1 \) lie in \( W_2 \).
 
-(b) If \( U = \{\0\} \), then \( j = 0 \) and \( U = W_0 \). Otherwise \( j \ge 1 \). By the choice of \( j \), every vector of \( U \) has entries \( 0 \) beyond position \( j \), so \( U \subseteq W_j \). Pick \( \v = (a, b, c) \in U \) with non-zero \( j \)-th entry. We have \( N\v = (b, c, 0) \) and \( N^2\v = (c, 0, 0) \), and all of these lie in \( U \) by invariance.
+(b) If \( U = \{\0\} \), then \( j = 0 \) and \( U = W_0 \). Otherwise \( j \ge 1 \). By the choice of \( j \), every vector of \( U \) has entries \( 0 \) beyond position \( j \), so \( U \subseteq W_j \). Pick \( \v = (a, b, c) \in U \) with non-zero \( j \)-th entry. We have \( \N\v = (b, c, 0) \) and \( \N^2\v = (c, 0, 0) \), and all of these lie in \( U \) by invariance.
 
-*Case \( j = 3 \).* Here \( c \ne 0 \). Then \( \e_1 = c^{-1}N^2\v \in U \), \( \e_2 = c^{-1}(N\v - b\e_1) \in U \) and \( \e_3 = c^{-1}(\v - a\e_1 - b\e_2) \in U \). So \( W_3 \subseteq U \).
+*Case \( j = 3 \).* Here \( c \ne 0 \). Then \( \e_1 = c^{-1}\N^2\v \in U \), \( \e_2 = c^{-1}(\N\v - b\e_1) \in U \) and \( \e_3 = c^{-1}(\v - a\e_1 - b\e_2) \in U \). So \( W_3 \subseteq U \).
 
-*Case \( j = 2 \).* Here \( c = 0 \) and \( b \ne 0 \). Then \( \e_1 = b^{-1}N\v \in U \) and \( \e_2 = b^{-1}(\v - a\e_1) \in U \), so \( W_2 \subseteq U \).
+*Case \( j = 2 \).* Here \( c = 0 \) and \( b \ne 0 \). Then \( \e_1 = b^{-1}\N\v \in U \) and \( \e_2 = b^{-1}(\v - a\e_1) \in U \), so \( W_2 \subseteq U \).
 
 *Case \( j = 1 \).* Here \( b = c = 0 \) and \( a \ne 0 \), so \( \e_1 = a^{-1}\v \in U \) and \( W_1 \subseteq U \).
 
 In each case \( W_j \subseteq U \subseteq W_j \), so \( U = W_j \).
 
-(c) By (a) each \( W_j \) is invariant, and by (b) every invariant subspace is one of them. Since \( W_0 \subset W_1 \subset W_2 \subset W_3 \), any two are comparable. In particular \( N \) has exactly one invariant line, \( W_1 \), and exactly one invariant plane, \( W_2 \). Contrast @exr-invariant-subspaces-b1, where \( \diag(1, 2) \) has two invariant lines (in the sense of @prp-one-dimensional-invariant), neither containing the other.
+(c) By (a) each \( W_j \) is invariant, and by (b) every invariant subspace is one of them. Since \( W_0 \subset W_1 \subset W_2 \subset W_3 \), any two are comparable. In particular \( \N \) has exactly one invariant line, \( W_1 \), and exactly one invariant plane, \( W_2 \). Contrast @exr-invariant-subspaces-b1, where \( \diag(1, 2) \) has two invariant lines (in the sense of @prp-one-dimensional-invariant), neither containing the other.
 :::
 
 :::: {#exr-invariant-subspaces-c2}

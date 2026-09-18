@@ -6,15 +6,15 @@ Chapter 8 left one gap wide open. When an operator has too few eigenvectors, its
 
 Take the standing counterexample of Chapter 8,
 \[
-J = \begin{pmatrix} 2 & 1 \\ 0 & 2 \end{pmatrix} \in M_2(F),
+\J = \begin{pmatrix} 2 & 1 \\ 0 & 2 \end{pmatrix} \in M_2(F),
 \]
-and let \( N = J - 2I \). The only eigenvalue is \( 2 \), and \( E_2(J) = \ker N = \Span(\e_1) \) is a line: one eigenvector direction where we need two, so \( J \) is not diagonalizable over any field (@thm-diagonalization (e)).
+and let \( \N = \J - 2\I \). The only eigenvalue is \( 2 \), and \( E_2(\J) = \ker \N = \Span(\e_1) \) is a line: one eigenvector direction where we need two, so \( \J \) is not diagonalizable over any field (@thm-diagonalization (e)).
 
-Now look at what \( N \) does to the missing direction \( \e_2 \). One application does not kill \( \e_2 \), but two do:
+Now look at what \( \N \) does to the missing direction \( \e_2 \). One application does not kill \( \e_2 \), but two do:
 \[
-N\e_2 = \e_1, \qquad N^2\e_2 = N\e_1 = \0 .
+\N\e_2 = \e_1, \qquad \N^2\e_2 = \N\e_1 = \0 .
 \]
-So \( \e_2 \) is killed by \( N^2 \), and \( \ker N^2 = F^2 \) is everything. The eigenspace was too small, but the kernel of the **square** is as big as we could wish.
+So \( \e_2 \) is killed by \( \N^2 \), and \( \ker \N^2 = F^2 \) is everything. The eigenspace was too small, but the kernel of the **square** is as big as we could wish.
 
 This is the whole idea. Instead of asking for vectors killed by \( T - \lambda\,\id_V \), ask for vectors killed by **some power** of \( T - \lambda\,\id_V \). The eigenvectors are still there (they are killed at the first step), and there may be more.
 
@@ -42,7 +42,7 @@ Let \( V \) be a vector space over \( F \), let \( T \in \cL(V) \) and \( \lambd
 \[
 G_\lambda(T) \coloneqq \{\, \v \in V : (T - \lambda\,\id_V)^k\,\v = \0 \text{ for some integer } k \ge 1 \,\} = \bigcup_{k \ge 1} \ker (T - \lambda\,\id_V)^k .
 \]
-For \( A \in M_n(F) \) we write \( G_\lambda(A) = G_\lambda(T_A) \).
+For \( \A \in M_n(F) \) we write \( G_\lambda(\A) = G_\lambda(T_{\A}) \).
 :::
 
 So \( G_\lambda(T) \) consists of \( \0 \) together with all generalized eigenvectors for \( \lambda \). Writing \( N = T - \lambda\,\id_V \) for the rest of this subsection, the definition says \( G_\lambda(T) = \ker N \cup \ker N^2 \cup \ker N^3 \cup \dots \).
@@ -55,23 +55,23 @@ Now use the subspace test (@thm-subspace-test). We have \( \0 \in \ker N \subset
 
 **Examples.**
 
-- **The standing counterexample.** For \( J = \begin{pmatrix} 2 & 1 \\ 0 & 2 \end{pmatrix} \), we computed \( \ker(J - 2I) = \Span(\e_1) \) and \( \ker(J - 2I)^2 = F^2 \). So \( G_2(J) = F^2 \), while \( E_2(J) \) is only a line. The generalized eigenspace is strictly bigger than the eigenspace, and it is all of \( F^2 \).
-- **A diagonalizable operator gains nothing.** Let \( A = \diag(2, 5) \) over \( \nQ \). Then \( (A - 2I)^k = \diag(0, 3^k) \), whose kernel is \( \Span(\e_1) \) for every \( k \ge 1 \). So \( G_2(A) = E_2(A) = \Span(\e_1) \), and likewise \( G_5(A) = E_5(A) = \Span(\e_2) \). Enlarging an eigenspace of a diagonalizable operator does nothing, a fact we prove in general below.
+- **The standing counterexample.** For \( \J = \begin{pmatrix} 2 & 1 \\ 0 & 2 \end{pmatrix} \), we computed \( \ker(\J - 2\I) = \Span(\e_1) \) and \( \ker(\J - 2\I)^2 = F^2 \). So \( G_2(\J) = F^2 \), while \( E_2(\J) \) is only a line. The generalized eigenspace is strictly bigger than the eigenspace, and it is all of \( F^2 \).
+- **A diagonalizable operator gains nothing.** Let \( \A = \diag(2, 5) \) over \( \nQ \). Then \( (\A - 2\I)^k = \diag(0, 3^k) \), whose kernel is \( \Span(\e_1) \) for every \( k \ge 1 \). So \( G_2(\A) = E_2(\A) = \Span(\e_1) \), and likewise \( G_5(\A) = E_5(\A) = \Span(\e_2) \). Enlarging an eigenspace of a diagonalizable operator does nothing, a fact we prove in general below.
 - **Differentiation.** Let \( D \in \cL(F[x]_{\le n}) \) be differentiation. Then \( D^{n+1} = 0 \) (@exm-differentiation-nilpotent), so **every** polynomial is killed by a power of \( D \), that is, of \( D - 0\,\id \), and \( G_0(D) = F[x]_{\le n} \). By contrast \( E_0(D) = \ker D \) is the line of constants when \( F = \nR \). Here the generalized eigenspace for the single eigenvalue \( 0 \) is the whole space, of dimension \( n + 1 \).
-- **A scalar not among the eigenvalues.** For the same \( A = \diag(2, 5) \) and \( \lambda = 7 \), the matrix \( (A - 7I)^k = \diag((-5)^k, (-2)^k) \) is invertible, so its kernel is \( \{\0\} \) for every \( k \). Hence \( G_7(A) = \{\0\} \). The definition makes sense for every \( \lambda \in F \), and gives the zero space unless \( \lambda \) is an eigenvalue.
+- **A scalar not among the eigenvalues.** For the same \( \A = \diag(2, 5) \) and \( \lambda = 7 \), the matrix \( (\A - 7\I)^k = \diag((-5)^k, (-2)^k) \) is invertible, so its kernel is \( \{\0\} \) for every \( k \). Hence \( G_7(\A) = \{\0\} \). The definition makes sense for every \( \lambda \in F \), and gives the zero space unless \( \lambda \) is an eigenvalue.
 - **A degenerate case.** On a space of dimension \( 1 \), every operator is \( \lambda\,\id \) for one scalar \( \lambda \), and \( G_\lambda = V \), \( G_\mu = \{\0\} \) for \( \mu \ne \lambda \). Small as it is, this is the model for a \( 1 \times 1 \) Jordan block.
-- **No eigenvalues at all.** The rotation \( R \) of \( \nR^2 \) by a right angle has no real eigenvalue (@exm-rotation-invariant-subspaces), and indeed \( G_\lambda(R) = \{\0\} \) for every \( \lambda \in \nR \): if \( (R - \lambda I)^k\v = \0 \) with \( \v \ne \0 \), then \( R - \lambda I \) would not be injective, so \( \lambda \) would be an eigenvalue. Over \( \nC \), where \( p_R = x^2 + 1 = (x - i)(x + i) \) splits, \( G_i(R) \) and \( G_{-i}(R) \) are the two eigenlines.
+- **No eigenvalues at all.** The rotation \( R \) of \( \nR^2 \) by a right angle has no real eigenvalue (@exm-rotation-invariant-subspaces), and indeed \( G_\lambda(R) = \{\0\} \) for every \( \lambda \in \nR \): if \( (R - \lambda \I)^k\v = \0 \) with \( \v \ne \0 \), then \( R - \lambda \I \) would not be injective, so \( \lambda \) would be an eigenvalue. Over \( \nC \), where \( p_R = x^2 + 1 = (x - i)(x + i) \) splits, \( G_i(R) \) and \( G_{-i}(R) \) are the two eigenlines.
 
-**Non-example by minimal change.** Keep \( A = \diag(2, 5) \) over \( \nQ \) and take \( \v = (1, 1) \). This vector **is** killed by a polynomial in \( A \) whose roots are eigenvalues:
+**Non-example by minimal change.** Keep \( \A = \diag(2, 5) \) over \( \nQ \) and take \( \v = (1, 1) \). This vector **is** killed by a polynomial in \( \A \) whose roots are eigenvalues:
 \[
-(A - 2I)(A - 5I)\v = \0 ,
+(\A - 2\I)(\A - 5\I)\v = \0 ,
 \]
-as one checks entry by entry. But it is a generalized eigenvector for **neither** eigenvalue: \( (A - 2I)^k\v = (0, 3^k) \ne \0 \) and \( (A - 5I)^k\v = ((-3)^k, 0) \ne \0 \) for every \( k \ge 1 \). The failing clause is that the definition demands a power of a **single** factor \( T - \lambda\,\id_V \), not a product of different factors. (Of course \( \v = \e_1 + \e_2 \) is a *sum* of two generalized eigenvectors; that is the decomposition theorem below, not the definition.)
+as one checks entry by entry. But it is a generalized eigenvector for **neither** eigenvalue: \( (\A - 2\I)^k\v = (0, 3^k) \ne \0 \) and \( (\A - 5\I)^k\v = ((-3)^k, 0) \ne \0 \) for every \( k \ge 1 \). The failing clause is that the definition demands a power of a **single** factor \( T - \lambda\,\id_V \), not a product of different factors. (Of course \( \v = \e_1 + \e_2 \) is a *sum* of two generalized eigenvectors; that is the decomposition theorem below, not the definition.)
 
 **Why this definition.** Three clauses are doing work. The vector must be non-zero, or every \( G_\lambda \) would contain a "generalized eigenvector" and the word would carry no information. The exponent must be allowed to grow, because nothing tells us in advance how many steps a vector needs: for \( D \) on \( \nR[x]_{\le n} \) the polynomial \( x^n \) needs \( n + 1 \) steps. And the power is a power of one factor, which is what makes \( G_\lambda \) one piece attached to one eigenvalue. The name is the honest one: these are the vectors that behave like eigenvectors after enough applications of \( T - \lambda\,\id_V \).
 
 ::: {.warning}
-**\( G_\lambda(T) \) is usually bigger than \( E_\lambda(T) \), and "generalized eigenvector" includes the ordinary ones.** The inclusion \( E_\lambda(T) \subseteq G_\lambda(T) \) always holds, and it is strict exactly when \( T \) has too few eigenvectors for \( \lambda \): for \( J = \begin{pmatrix} 2 & 1 \\ 0 & 2 \end{pmatrix} \), \( \dim E_2 = 1 \) and \( \dim G_2 = 2 \). So a generalized eigenvector need not satisfy \( T\v = \lambda\v \): the vector \( \e_2 \) satisfies \( J\e_2 = \e_1 + 2\e_2 \). Conversely, do not read "generalized" as "not an eigenvector": every eigenvector is a generalized eigenvector.
+**\( G_\lambda(T) \) is usually bigger than \( E_\lambda(T) \), and "generalized eigenvector" includes the ordinary ones.** The inclusion \( E_\lambda(T) \subseteq G_\lambda(T) \) always holds, and it is strict exactly when \( T \) has too few eigenvectors for \( \lambda \): for \( \J = \begin{pmatrix} 2 & 1 \\ 0 & 2 \end{pmatrix} \), \( \dim E_2 = 1 \) and \( \dim G_2 = 2 \). So a generalized eigenvector need not satisfy \( T\v = \lambda\v \): the vector \( \e_2 \) satisfies \( \J\e_2 = \e_1 + 2\e_2 \). Conversely, do not read "generalized" as "not an eigenvector": every eigenvector is a generalized eigenvector.
 :::
 
 ## The kernel chain stabilizes
@@ -118,7 +118,7 @@ Can \( \ker N \subsetneq \ker N^2 = \ker N^3 \) happen? Can \( \ker N = \ker N^2
 :::
 
 ::: {.solution}
-The first can: for \( N = \begin{pmatrix} 0 & 1 \\ 0 & 0 \end{pmatrix} \) on \( F^2 \) we have \( \ker N = \Span(\e_1) \) and \( \ker N^2 = F^2 = \ker N^3 \), since \( N^2 = 0 \). Here \( s = 2 \).
+The first can: for \( \N = \begin{pmatrix} 0 & 1 \\ 0 & 0 \end{pmatrix} \) on \( F^2 \) we have \( \ker \N = \Span(\e_1) \) and \( \ker \N^2 = F^2 = \ker \N^3 \), since \( \N^2 = 0 \). Here \( s = 2 \).
 
 The second cannot, by @thm-kernel-chain-stabilizes (b) with \( m = 1 \): equality at one step forces equality at every later step. This is why the theorem says the strict inclusions come **first** and the equalities **after**; the chain never resumes growing.
 :::
@@ -143,7 +143,7 @@ Let \( V \) be a finite-dimensional vector space over \( F \) with \( \dim V = n
 
 (b) By (a), \( G_\lambda(T) = \ker N^n \) is the kernel of a polynomial in \( T \), so \( T \) maps it into itself (@thm-kernel-image-of-polynomial-invariant (b)). And \( E_\lambda(T) = \ker N \subseteq \ker N^n \).
 
-(c) (⇐) If \( \lambda \) is an eigenvalue, then \( E_\lambda(T) \ne \{\0\} \) (@thm-eigenvalue-characterizations), and \( E_\lambda(T) \subseteq G_\lambda(T) \) by (b). (⇒) If \( \v \in G_\lambda(T) \) is non-zero, take \( k \ge 1 \) least with \( N^k\v = \0 \), which exists by the definition of \( G_\lambda(T) \) and @thm-well-ordering. Then \( \w = N^{k-1}\v \ne \0 \) by minimality of \( k \) (for \( k = 1 \) this reads \( \w = \v \ne \0 \)), while \( N\w = N^k\v = \0 \). So \( \w \in \ker N \) is non-zero and \( \lambda \) is an eigenvalue.
+(c) \( (\Leftarrow) \) If \( \lambda \) is an eigenvalue, then \( E_\lambda(T) \ne \{\0\} \) (@thm-eigenvalue-characterizations), and \( E_\lambda(T) \subseteq G_\lambda(T) \) by (b). \( (\Rightarrow) \) If \( \v \in G_\lambda(T) \) is non-zero, take \( k \ge 1 \) least with \( N^k\v = \0 \), which exists by the definition of \( G_\lambda(T) \) and @thm-well-ordering. Then \( \w = N^{k-1}\v \ne \0 \) by minimality of \( k \) (for \( k = 1 \) this reads \( \w = \v \ne \0 \)), while \( N\w = N^k\v = \0 \). So \( \w \in \ker N \) is non-zero and \( \lambda \) is an eigenvalue.
 
 (d) This is the computation just made: \( \w = N^{k-1}\v \) is non-zero and lies in \( \ker N = E_\lambda(T) \).
 :::
@@ -194,9 +194,9 @@ with each \( V_i \) invariant and non-zero. By @cor-primary-components-dimension
 
 *Claim: \( G_i = V_i \).* Fix \( i \) and write \( G = G_i \), \( \lambda = \lambda_i \), \( a = a_i \), \( N = T - \lambda\,\id_V \).
 
-(⊇) \( V_i = \ker N^{s_i} \subseteq \bigcup_{j \ge 1}\ker N^j = G \).
+\( (\supseteq) \) \( V_i = \ker N^{s_i} \subseteq \bigcup_{j \ge 1}\ker N^j = G \).
 
-(⊆) It suffices to prove \( \dim G \le a \): then \( V_i \subseteq G \) and \( \dim V_i = a \ge \dim G \) force \( \dim V_i = \dim G \), and @thm-dim-impl-eq, applied to the subspace \( V_i \) of \( G \), gives \( V_i = G \).
+\( (\subseteq) \) It suffices to prove \( \dim G \le a \): then \( V_i \subseteq G \) and \( \dim V_i = a \ge \dim G \) force \( \dim V_i = \dim G \), and @thm-dim-impl-eq, applied to the subspace \( V_i \) of \( G \), gives \( V_i = G \).
 
 First, *the only eigenvalue of \( T|_G \) is \( \lambda \)*. Indeed, \( G \) is \( T \)-invariant (@cor-generalized-eigenspace-is-kernel (b)), so the restriction makes sense (@def-restriction-operator). Let \( \mu \in F \) be an eigenvalue of \( T|_G \), with eigenvector \( \v \in G \), \( \v \ne \0 \). From \( T\v = \mu\v \) we get \( N\v = (\mu - \lambda)\v \), hence \( N^n\v = (\mu - \lambda)^n\v \) by induction. But \( G = \ker N^n \) by @cor-generalized-eigenspace-is-kernel (a), so \( (\mu - \lambda)^n\v = \0 \) with \( \v \ne \0 \), which forces the scalar \( (\mu - \lambda)^n \) to be \( 0 \) (@thm-zero-product), and so \( \mu = \lambda \), since a field has no zero divisors (@thm-field-basic-properties).
 
@@ -220,47 +220,47 @@ Two consistency checks. Summing dimensions in (a) and using (c) gives \( \sum_i 
 
 Let
 \[
-A = \begin{pmatrix} 2 & 1 & -1 & -2 \\ -3 & 3 & -1 & 1 \\ 3 & -1 & 3 & -1 \\ -3 & 1 & -1 & 3 \end{pmatrix} \in M_4(\nQ), \qquad p_A = (x - 2)^3(x - 5).
+\A = \begin{pmatrix} 2 & 1 & -1 & -2 \\ -3 & 3 & -1 & 1 \\ 3 & -1 & 3 & -1 \\ -3 & 1 & -1 & 3 \end{pmatrix} \in M_4(\nQ), \qquad p_{\A} = (x - 2)^3(x - 5).
 \]
-Find \( E_2(A) \), \( G_2(A) \), \( G_5(A) \), the stabilization index of \( A - 2I \), and the minimal polynomial. Verify @thm-generalized-eigenspace-decomposition on this matrix.
+Find \( E_2(\A) \), \( G_2(\A) \), \( G_5(\A) \), the stabilization index of \( \A - 2\I \), and the minimal polynomial. Verify @thm-generalized-eigenspace-decomposition on this matrix.
 :::
 
 ::: {.solution}
-*The eigenspace.* Write \( N = A - 2I \), so
+*The eigenspace.* Write \( \N = \A - 2\I \), so
 \[
-N = \begin{pmatrix} 0 & 1 & -1 & -2 \\ -3 & 1 & -1 & 1 \\ 3 & -1 & 1 & -1 \\ -3 & 1 & -1 & 1 \end{pmatrix}.
+\N = \begin{pmatrix} 0 & 1 & -1 & -2 \\ -3 & 1 & -1 & 1 \\ 3 & -1 & 1 & -1 \\ -3 & 1 & -1 & 1 \end{pmatrix}.
 \]
-Rows \( 2 \) and \( 4 \) are equal and row \( 3 \) is their negative, so the row space is spanned by rows \( 1 \) and \( 2 \), which are not proportional; hence \( \rank N = 2 \) and \( \nullity N = 2 \) (@thm-rank-nullity-matrix). The kernel is cut out by
+Rows \( 2 \) and \( 4 \) are equal and row \( 3 \) is their negative, so the row space is spanned by rows \( 1 \) and \( 2 \), which are not proportional; hence \( \rank \N = 2 \) and \( \nullity \N = 2 \) (@thm-rank-nullity-matrix). The kernel is cut out by
 \[
 x_2 - x_3 - 2x_4 = 0, \qquad -3x_1 + x_2 - x_3 + x_4 = 0 .
 \]
 Subtracting the first equation from the second gives \( -3x_1 + 3x_4 = 0 \), so \( x_1 = x_4 \), and then \( x_2 = x_3 + 2x_4 \). With \( x_3 = s \) and \( x_4 = t \) free,
 \[
-E_2(A) = \{ (t,\, s + 2t,\, s,\, t) \} = \Span\big((0, 1, 1, 0),\ (1, 2, 0, 1)\big), \qquad g_A(2) = 2 .
+E_2(\A) = \{ (t,\, s + 2t,\, s,\, t) \} = \Span\big((0, 1, 1, 0),\ (1, 2, 0, 1)\big), \qquad g_{\A}(2) = 2 .
 \]
-Since \( a_A(2) = 3 > 2 \), the matrix is not diagonalizable (@thm-diagonalization (e)).
+Since \( a_{\A}(2) = 3 > 2 \), the matrix is not diagonalizable (@thm-diagonalization (e)).
 
 *The generalized eigenspace.* Squaring,
 \[
-N^2 = 9\begin{pmatrix} 0 & 0 & 0 & 0 \\ -1 & 0 & 0 & 1 \\ 1 & 0 & 0 & -1 \\ -1 & 0 & 0 & 1 \end{pmatrix},
+\N^2 = 9\begin{pmatrix} 0 & 0 & 0 & 0 \\ -1 & 0 & 0 & 1 \\ 1 & 0 & 0 & -1 \\ -1 & 0 & 0 & 1 \end{pmatrix},
 \]
-which has rank \( 1 \), so \( \ker N^2 \) has dimension \( 3 \) and is the hyperplane
+which has rank \( 1 \), so \( \ker \N^2 \) has dimension \( 3 \) and is the hyperplane
 \[
-\ker N^2 = \{\, \x : x_1 = x_4 \,\}= \Span\big(\e_2,\ \e_3,\ \e_1 + \e_4\big).
+\ker \N^2 = \{\, \x : x_1 = x_4 \,\}= \Span\big(\e_2,\ \e_3,\ \e_1 + \e_4\big).
 \]
-The chain of kernels has dimensions \( 0, 2, 3 \) so far. Since \( \ker N^2 \subseteq G_2(A) \) and \( \dim G_2(A) = a_A(2) = 3 = \dim \ker N^2 \) by part (c) of the theorem, we get \( G_2(A) = \ker N^2 \), and the stabilization index is \( s = 2 \). One can see the stabilization by hand as well: multiplying out gives \( N^3 = 3N^2 \), so \( \ker N^3 = \ker N^2 \) directly.
+The chain of kernels has dimensions \( 0, 2, 3 \) so far. Since \( \ker \N^2 \subseteq G_2(\A) \) and \( \dim G_2(\A) = a_{\A}(2) = 3 = \dim \ker \N^2 \) by part (c) of the theorem, we get \( G_2(\A) = \ker \N^2 \), and the stabilization index is \( s = 2 \). One can see the stabilization by hand as well: multiplying out gives \( \N^3 = 3\N^2 \), so \( \ker \N^3 = \ker \N^2 \) directly.
 
-*The second generalized eigenspace.* Here \( a_A(5) = 1 \), so \( \dim G_5(A) = 1 \) and \( G_5(A) = E_5(A) \) by part (b) — its \( s \) must be \( 1 \). Solving \( (A - 5I)\x = \0 \) gives \( G_5(A) = E_5(A) = \Span\big((0, 1, -1, 1)\big) \). As a check, \( A(0, 1, -1, 1) = (1 + 1 - 2,\ 3 + 1 + 1,\ -1 - 3 - 1,\ 1 + 1 + 3) = (0, 5, -5, 5) \).
+*The second generalized eigenspace.* Here \( a_{\A}(5) = 1 \), so \( \dim G_5(\A) = 1 \) and \( G_5(\A) = E_5(\A) \) by part (b) — its \( s \) must be \( 1 \). Solving \( (\A - 5\I)\x = \0 \) gives \( G_5(\A) = E_5(\A) = \Span\big((0, 1, -1, 1)\big) \). As a check, \( \A(0, 1, -1, 1) = (1 + 1 - 2,\ 3 + 1 + 1,\ -1 - 3 - 1,\ 1 + 1 + 3) = (0, 5, -5, 5) \).
 
-*The decomposition.* \( \nQ^4 = G_2(A) \oplus G_5(A) \), of dimensions \( 3 + 1 = 4 \), and the sum is direct because \( (0, 1, -1, 1) \notin G_2(A) \): its first and last coordinates are \( 0 \ne 1 \).
+*The decomposition.* \( \nQ^4 = G_2(\A) \oplus G_5(\A) \), of dimensions \( 3 + 1 = 4 \), and the sum is direct because \( (0, 1, -1, 1) \notin G_2(\A) \): its first and last coordinates are \( 0 \ne 1 \).
 
-*The minimal polynomial.* The stabilization indices are \( s_1 = 2 \) at \( \lambda = 2 \) and \( s_2 = 1 \) at \( \lambda = 5 \), and part (d) of the theorem identifies these indices as the exponents in \( m_A \), so \( m_A = (x - 2)^2(x - 5) \). Consistently, \( (A - 2I)(A - 5I) \ne 0 \): the two factors are coprime, so the kernel of the product is \( \ker(A - 2I) \oplus \ker(A - 5I) \) (@thm-kernel-splitting (a)), of dimension \( 2 + 1 = 3 < 4 \).
+*The minimal polynomial.* The stabilization indices are \( s_1 = 2 \) at \( \lambda = 2 \) and \( s_2 = 1 \) at \( \lambda = 5 \), and part (d) of the theorem identifies these indices as the exponents in \( m_{\A} \), so \( m_{\A} = (x - 2)^2(x - 5) \). Consistently, \( (\A - 2\I)(\A - 5\I) \ne 0 \): the two factors are coprime, so the kernel of the product is \( \ker(\A - 2\I) \oplus \ker(\A - 5\I) \) (@thm-kernel-splitting (a)), of dimension \( 2 + 1 = 3 < 4 \).
 
-*A basis adapted to the splitting.* Take \( \sB = \big(\e_2,\ \e_3,\ \e_1 + \e_4,\ (0, 1, -1, 1)\big) \), a basis of \( G_2 \) followed by one of \( G_5 \). By part (e), \( [T_A]_{\sB} \) is block diagonal with a \( 3 \times 3 \) block and the \( 1 \times 1 \) block \( (5) \).
+*A basis adapted to the splitting.* Take \( \sB = \big(\e_2,\ \e_3,\ \e_1 + \e_4,\ (0, 1, -1, 1)\big) \), a basis of \( G_2 \) followed by one of \( G_5 \). By part (e), \( [T_{\A}]_{\sB} \) is block diagonal with a \( 3 \times 3 \) block and the \( 1 \times 1 \) block \( (5) \).
 :::
 
 ::: {.warning}
-**The dimension of \( G_\lambda \) is the algebraic multiplicity, not the number of steps the chain takes.** In the example, \( \dim G_2 = 3 \) while the chain \( \{\0\} \subsetneq \ker N \subsetneq \ker N^2 = G_2 \) stabilizes after \( s = 2 \) steps. The two numbers measure different things: \( a(\lambda) = \dim G_\lambda \) is the total size of the piece, and \( s \) is the exponent of \( x - \lambda \) in the minimal polynomial. All that holds in general is \( 1 \le s \le a(\lambda) \) and \( g(\lambda) \le a(\lambda) \) (@thm-geometric-le-algebraic).
+**The dimension of \( G_\lambda \) is the algebraic multiplicity, not the number of steps the chain takes.** In the example, \( \dim G_2 = 3 \) while the chain \( \{\0\} \subsetneq \ker \N \subsetneq \ker \N^2 = G_2 \) stabilizes after \( s = 2 \) steps. The two numbers measure different things: \( a(\lambda) = \dim G_\lambda \) is the total size of the piece, and \( s \) is the exponent of \( x - \lambda \) in the minimal polynomial. All that holds in general is \( 1 \le s \le a(\lambda) \) and \( g(\lambda) \le a(\lambda) \) (@thm-geometric-le-algebraic).
 :::
 
 Finally, a word on what we may not yet assume. The decomposition needs \( p_T \) to split, which is automatic over \( \nC \) (@cor-complex-polynomial-splits) but fails, for instance, for a rotation of \( \nR^2 \), whose generalized eigenspaces over \( \nR \) are all \( \{\0\} \) and certainly do not fill \( \nR^2 \). Operators over an arbitrary field need the coarser primary decomposition of Chapter 8, whose pieces we return to in Section 6.
@@ -287,7 +287,7 @@ Finally, a word on what we may not yet assume. The decomposition needs \( p_T \)
 
 (b) The kernels increase; once two consecutive ones are equal, all later ones equal them; the strict inclusions come first, and the chain has stabilized by step \( \dim V \), so \( G_\lambda(T) = \ker(T - \lambda\,\id_V)^{\dim V} \).
 
-(c) False. For \( J = \begin{pmatrix} 2 & 1 \\ 0 & 2 \end{pmatrix} \), the vector \( \e_2 \) lies in \( G_2(J) \) but \( J\e_2 = \e_1 + 2\e_2 \ne 2\e_2 \). Only the vectors of \( E_\lambda(T) \subseteq G_\lambda(T) \) satisfy the eigenvector equation.
+(c) False. For \( \J = \begin{pmatrix} 2 & 1 \\ 0 & 2 \end{pmatrix} \), the vector \( \e_2 \) lies in \( G_2(\J) \) but \( \J\e_2 = \e_1 + 2\e_2 \ne 2\e_2 \). Only the vectors of \( E_\lambda(T) \subseteq G_\lambda(T) \) satisfy the eigenvector equation.
 
 (d) True, by @cor-generalized-eigenspace-is-kernel (c).
 
@@ -304,21 +304,21 @@ Finally, a word on what we may not yet assume. The decomposition needs \( p_T \)
 For each operator, find all generalized eigenspaces, and compare each with the corresponding eigenspace.
 
 ::: {.enumerate options="label=(\alph*)"}
-1. \( A_1 = \begin{pmatrix} 3 & 1 \\ 0 & 3 \end{pmatrix} \in M_2(\nQ) \).
-2. \( A_2 = \begin{pmatrix} 2 & 1 & 1 \\ 0 & 1 & -1 \\ -1 & -1 & 1 \end{pmatrix} \in M_3(\nR) \), which has \( m_{A_2} = (x - 1)^2(x - 2) \) (@exr-primary-decomposition-b2).
+1. \( \A_1 = \begin{pmatrix} 3 & 1 \\ 0 & 3 \end{pmatrix} \in M_2(\nQ) \).
+2. \( \A_2 = \begin{pmatrix} 2 & 1 & 1 \\ 0 & 1 & -1 \\ -1 & -1 & 1 \end{pmatrix} \in M_3(\nR) \), which has \( m_{\A_2} = (x - 1)^2(x - 2) \) (@exr-primary-decomposition-b2).
 3. \( D \in \cL(\nR[x]_{\le 3}) \), differentiation.
-4. The rotation \( R = \begin{pmatrix} 0 & -1 \\ 1 & 0 \end{pmatrix} \), first over \( \nR \) and then over \( \nC \).
+4. The rotation \( \R = \begin{pmatrix} 0 & -1 \\ 1 & 0 \end{pmatrix} \), first over \( \nR \) and then over \( \nC \).
 :::
 ::::
 
 ::: {.solution}
-(a) \( p_{A_1} = (x - 3)^2 \), so \( 3 \) is the only eigenvalue, and \( G_\lambda = \{\0\} \) for \( \lambda \ne 3 \) (@cor-generalized-eigenspace-is-kernel (c)). Since \( (A_1 - 3I)^2 = 0 \), \( G_3(A_1) = \nQ^2 \), while \( E_3(A_1) = \ker\begin{pmatrix} 0 & 1 \\ 0 & 0 \end{pmatrix} = \Span(\e_1) \) is a line.
+(a) \( p_{\A_1} = (x - 3)^2 \), so \( 3 \) is the only eigenvalue, and \( G_\lambda = \{\0\} \) for \( \lambda \ne 3 \) (@cor-generalized-eigenspace-is-kernel (c)). Since \( (\A_1 - 3\I)^2 = 0 \), \( G_3(\A_1) = \nQ^2 \), while \( E_3(\A_1) = \ker\begin{pmatrix} 0 & 1 \\ 0 & 0 \end{pmatrix} = \Span(\e_1) \) is a line.
 
-(b) From \( m_{A_2} = (x - 1)^2(x - 2) \) and @thm-generalized-eigenspace-decomposition (a), \( G_1 = \ker(A_2 - I)^2 \) and \( G_2 = \ker(A_2 - 2I) \). Chapter 8 computed these: \( G_1 = \Span((-1, 1, 0), (0, 0, 1)) \), the plane \( x + y = 0 \), and \( G_2 = \Span((0, -1, 1)) \). The eigenspace \( E_1(A_2) = \Span((-1, 1, 0)) \) is a line strictly inside \( G_1 \), while \( E_2(A_2) = G_2 \) because \( s_2 = 1 \). All other \( G_\lambda \) are \( \{\0\} \).
+(b) From \( m_{\A_2} = (x - 1)^2(x - 2) \) and @thm-generalized-eigenspace-decomposition (a), \( G_1 = \ker(\A_2 - \I)^2 \) and \( G_2 = \ker(\A_2 - 2\I) \). Chapter 8 computed these: \( G_1 = \Span((-1, 1, 0), (0, 0, 1)) \), the plane \( x + y = 0 \), and \( G_2 = \Span((0, -1, 1)) \). The eigenspace \( E_1(\A_2) = \Span((-1, 1, 0)) \) is a line strictly inside \( G_1 \), while \( E_2(\A_2) = G_2 \) because \( s_2 = 1 \). All other \( G_\lambda \) are \( \{\0\} \).
 
 (c) \( D^4 = 0 \) (@exm-differentiation-nilpotent), so \( G_0(D) = \nR[x]_{\le 3} \), of dimension \( 4 \), while \( E_0(D) = \ker D = \nR \) is the line of constants. Since \( p_D = x^4 \) has \( 0 \) as its only root, every other generalized eigenspace is \( \{\0\} \).
 
-(d) Over \( \nR \), \( p_R = x^2 + 1 \) has no root, so \( R \) has no eigenvalue and \( G_\lambda(R) = \{\0\} \) for every \( \lambda \in \nR \). The generalized eigenspaces do **not** fill \( \nR^2 \); the hypothesis that \( p_R \) splits fails. Over \( \nC \), \( p_R = (x - i)(x + i) \) splits with \( a(i) = a(-i) = 1 \), so \( G_i(R) = E_i(R) = \Span((1, -i)) \) and \( G_{-i}(R) = E_{-i}(R) = \Span((1, i)) \), and \( \nC^2 = G_i \oplus G_{-i} \). (Check: \( R(1, -i) = (i, 1) = i(1, -i) \).)
+(d) Over \( \nR \), \( p_{\R} = x^2 + 1 \) has no root, so \( \R \) has no eigenvalue and \( G_\lambda(\R) = \{\0\} \) for every \( \lambda \in \nR \). The generalized eigenspaces do **not** fill \( \nR^2 \); the hypothesis that \( p_{\R} \) splits fails. Over \( \nC \), \( p_{\R} = (x - i)(x + i) \) splits with \( a(i) = a(-i) = 1 \), so \( G_i(\R) = E_i(\R) = \Span((1, -i)) \) and \( G_{-i}(\R) = E_{-i}(\R) = \Span((1, i)) \), and \( \nC^2 = G_i \oplus G_{-i} \). (Check: \( \R(1, -i) = (i, 1) = i(1, -i) \).)
 :::
 
 :::: {#exr-generalized-eigenspaces-b2}
@@ -346,28 +346,28 @@ Let \( V \) be finite-dimensional with \( \dim V = n \), and let \( N \in \cL(V)
 
 Let
 \[
-A = \begin{pmatrix} 1 & 1 & 0 & 0 \\ 0 & 1 & 1 & 0 \\ 0 & 0 & 2 & 1 \\ 0 & 0 & 0 & 2 \end{pmatrix} \in M_4(\nQ).
+\A = \begin{pmatrix} 1 & 1 & 0 & 0 \\ 0 & 1 & 1 & 0 \\ 0 & 0 & 2 & 1 \\ 0 & 0 & 0 & 2 \end{pmatrix} \in M_4(\nQ).
 \]
 
 ::: {.enumerate options="label=(\alph*)"}
-1. Write down \( p_A \) and the algebraic multiplicities.
-2. Compute \( E_1(A) \), \( G_1(A) \), \( E_2(A) \) and \( G_2(A) \), and check \( \dim G_\lambda = a_A(\lambda) \).
-3. Verify that \( \nQ^4 = G_1(A) \oplus G_2(A) \), and find \( m_A \).
+1. Write down \( p_{\A} \) and the algebraic multiplicities.
+2. Compute \( E_1(\A) \), \( G_1(\A) \), \( E_2(\A) \) and \( G_2(\A) \), and check \( \dim G_\lambda = a_{\A}(\lambda) \).
+3. Verify that \( \nQ^4 = G_1(\A) \oplus G_2(\A) \), and find \( m_{\A} \).
 :::
 ::::
 
 ::: {.solution}
-(a) \( A \) is upper triangular, so \( p_A = (x - 1)^2(x - 2)^2 \) (@thm-det-triangular), and \( a_A(1) = a_A(2) = 2 \).
+(a) \( \A \) is upper triangular, so \( p_{\A} = (x - 1)^2(x - 2)^2 \) (@thm-det-triangular), and \( a_{\A}(1) = a_{\A}(2) = 2 \).
 
-(b) \( A - I = \begin{pmatrix} 0 & 1 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 1 & 1 \\ 0 & 0 & 0 & 1 \end{pmatrix} \) has rank \( 3 \) (rows \( 1, 2, 4 \) are independent and row \( 3 \) is the sum of rows \( 2 \) and \( 4 \)), so \( E_1(A) = \Span(\e_1) \). Squaring,
+(b) \( \A - \I = \begin{pmatrix} 0 & 1 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 1 & 1 \\ 0 & 0 & 0 & 1 \end{pmatrix} \) has rank \( 3 \) (rows \( 1, 2, 4 \) are independent and row \( 3 \) is the sum of rows \( 2 \) and \( 4 \)), so \( E_1(\A) = \Span(\e_1) \). Squaring,
 \[
-(A - I)^2 = \begin{pmatrix} 0 & 0 & 1 & 0 \\ 0 & 0 & 1 & 1 \\ 0 & 0 & 1 & 2 \\ 0 & 0 & 0 & 1 \end{pmatrix},
+(\A - \I)^2 = \begin{pmatrix} 0 & 0 & 1 & 0 \\ 0 & 0 & 1 & 1 \\ 0 & 0 & 1 & 2 \\ 0 & 0 & 0 & 1 \end{pmatrix},
 \]
-of rank \( 2 \), with kernel \( \Span(\e_1, \e_2) \); so \( G_1(A) = \Span(\e_1, \e_2) \), of dimension \( 2 = a_A(1) \). (Membership can be seen directly: \( (A - I)\e_2 = \e_1 \) and \( (A - I)\e_1 = \0 \).)
+of rank \( 2 \), with kernel \( \Span(\e_1, \e_2) \); so \( G_1(\A) = \Span(\e_1, \e_2) \), of dimension \( 2 = a_{\A}(1) \). (Membership can be seen directly: \( (\A - \I)\e_2 = \e_1 \) and \( (\A - \I)\e_1 = \0 \).)
 
-Similarly \( A - 2I = \begin{pmatrix} -1 & 1 & 0 & 0 \\ 0 & -1 & 1 & 0 \\ 0 & 0 & 0 & 1 \\ 0 & 0 & 0 & 0 \end{pmatrix} \) has rank \( 3 \), so \( E_2(A) \) is a line; solving gives \( E_2(A) = \Span((1, 1, 1, 0)) \). And \( (A - 2I)^2 = \begin{pmatrix} 1 & -2 & 1 & 0 \\ 0 & 1 & -1 & 1 \\ 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 \end{pmatrix} \) has rank \( 2 \); its kernel is cut out by \( x_1 - 2x_2 + x_3 = 0 \) and \( x_2 - x_3 + x_4 = 0 \), so \( G_2(A) = \Span((1, 1, 1, 0), (-2, -1, 0, 1)) \), of dimension \( 2 = a_A(2) \). (Check: \( (A - 2I)(-2, -1, 0, 1) = (1, 1, 1, 0) \), the eigenvector.)
+Similarly \( \A - 2\I = \begin{pmatrix} -1 & 1 & 0 & 0 \\ 0 & -1 & 1 & 0 \\ 0 & 0 & 0 & 1 \\ 0 & 0 & 0 & 0 \end{pmatrix} \) has rank \( 3 \), so \( E_2(\A) \) is a line; solving gives \( E_2(\A) = \Span((1, 1, 1, 0)) \). And \( (\A - 2\I)^2 = \begin{pmatrix} 1 & -2 & 1 & 0 \\ 0 & 1 & -1 & 1 \\ 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 \end{pmatrix} \) has rank \( 2 \); its kernel is cut out by \( x_1 - 2x_2 + x_3 = 0 \) and \( x_2 - x_3 + x_4 = 0 \), so \( G_2(\A) = \Span((1, 1, 1, 0), (-2, -1, 0, 1)) \), of dimension \( 2 = a_{\A}(2) \). (Check: \( (\A - 2\I)(-2, -1, 0, 1) = (1, 1, 1, 0) \), the eigenvector.)
 
-(c) The four vectors \( \e_1, \e_2, (1,1,1,0), (-2,-1,0,1) \) form a basis of \( \nQ^4 \): the matrix with these columns is upper triangular with diagonal \( 1, 1, 1, 1 \), hence invertible. So the sum is direct and equals \( \nQ^4 \), as @thm-generalized-eigenspace-decomposition (a) predicts. Both stabilization indices are \( 2 \) (the eigenspaces are lines, the generalized eigenspaces planes), so \( m_A = (x - 1)^2(x - 2)^2 = p_A \).
+(c) The four vectors \( \e_1, \e_2, (1,1,1,0), (-2,-1,0,1) \) form a basis of \( \nQ^4 \): the matrix with these columns is upper triangular with diagonal \( 1, 1, 1, 1 \), hence invertible. So the sum is direct and equals \( \nQ^4 \), as @thm-generalized-eigenspace-decomposition (a) predicts. Both stabilization indices are \( 2 \) (the eigenspaces are lines, the generalized eigenspaces planes), so \( m_{\A} = (x - 1)^2(x - 2)^2 = p_{\A} \).
 :::
 
 ### C. Going deeper
@@ -381,7 +381,7 @@ Let \( V \) be finite-dimensional with \( \dim V = n \), and let \( N \in \cL(V)
 1. Prove that \( U \cap W = \{\0\} \), and deduce \( V = U \oplus W \).
 2. Prove that \( U \) and \( W \) are \( N \)-invariant, that \( N|_U \) is nilpotent, and that \( N|_W \) is invertible.
 3. Identify \( U \) as a generalized eigenspace of \( N \).
-4. Compute \( U \) and \( W \) for \( N = \begin{pmatrix} 0 & 1 \\ 0 & 1 \end{pmatrix} \in M_2(\nQ) \).
+4. Compute \( U \) and \( W \) for \( \N = \begin{pmatrix} 0 & 1 \\ 0 & 1 \end{pmatrix} \in M_2(\nQ) \).
 :::
 
 *Hint: for (a), if \( \v = N^n\w \) and \( N^n\v = \0 \), look at which kernel \( \w \) lies in.*
@@ -394,7 +394,7 @@ Let \( V \) be finite-dimensional with \( \dim V = n \), and let \( N \in \cL(V)
 
 (c) \( U = \ker N^n = G_0(N) \), by @cor-generalized-eigenspace-is-kernel (a) with \( \lambda = 0 \). So the Fitting decomposition splits \( V \) into the generalized eigenspace for \( 0 \) and a part on which \( N \) is invertible.
 
-(d) Here \( n = 2 \) and \( N^2 = \begin{pmatrix} 0 & 1 \\ 0 & 1 \end{pmatrix} = N \), so \( U = \ker N = \Span(\e_1) \) and \( W = \im N = \Span((1, 1)) \). Indeed \( \nQ^2 = \Span(\e_1) \oplus \Span((1,1)) \), \( N \) is zero on \( U \), and \( N(1, 1) = (1, 1) \), so \( N|_W \) is the identity.
+(d) Here \( n = 2 \) and \( \N^2 = \begin{pmatrix} 0 & 1 \\ 0 & 1 \end{pmatrix} = \N \), so \( U = \ker \N = \Span(\e_1) \) and \( W = \im \N = \Span((1, 1)) \). Indeed \( \nQ^2 = \Span(\e_1) \oplus \Span((1,1)) \), \( \N \) is zero on \( U \), and \( \N(1, 1) = (1, 1) \), so \( \N|_W \) is the identity.
 :::
 
 :::: {#exr-generalized-eigenspaces-c2}

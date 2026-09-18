@@ -90,13 +90,13 @@ In particular \( T \) has at most \( n \) eigenvalues. For \( \A \in M_n(F) \): 
 :::
 
 ::: {.proof}
-(a) ⇔ (b). By @def-eigenvalue and @def-eigenspace, \( \lambda \) is an eigenvalue exactly when \( E_\lambda(T) = \ker(T - \lambda\,\id_V) \) contains a non-zero vector. By @thm-injective-iff-trivial-kernel, this happens exactly when \( T - \lambda\,\id_V \) is not injective.
+(a) \( \Leftrightarrow \) (b). By @def-eigenvalue and @def-eigenspace, \( \lambda \) is an eigenvalue exactly when \( E_\lambda(T) = \ker(T - \lambda\,\id_V) \) contains a non-zero vector. By @thm-injective-iff-trivial-kernel, this happens exactly when \( T - \lambda\,\id_V \) is not injective.
 
-(b) ⇔ (c). \( V \) is finite-dimensional, so by @thm-invertible-operator-tfae ((a) ⇔ (b)) an operator on \( V \) is invertible if and only if it is injective.
+(b) \( \Leftrightarrow \) (c). \( V \) is finite-dimensional, so by @thm-invertible-operator-tfae ((a) \( \Leftrightarrow \) (b)) an operator on \( V \) is invertible if and only if it is injective.
 
-(c) ⇔ (d). The operators \( \lambda\,\id_V - T \) and \( T - \lambda\,\id_V \) differ by the factor \( -1 \), so one is invertible exactly when the other is. By @thm-det-operator-properties, \( \lambda\,\id_V - T \) is invertible if and only if \( \det(\lambda\,\id_V - T) \ne 0 \).
+(c) \( \Leftrightarrow \) (d). The operators \( \lambda\,\id_V - T \) and \( T - \lambda\,\id_V \) differ by the factor \( -1 \), so one is invertible exactly when the other is. By @thm-det-operator-properties, \( \lambda\,\id_V - T \) is invertible if and only if \( \det(\lambda\,\id_V - T) \ne 0 \).
 
-(c) ⇔ (e). Fix a basis \( \sB \) of \( V \) and put \( \A = [T]_{\sB} \). By @cor-matrix-of-polynomial-of-operator, \( [\lambda\,\id_V - T]_{\sB} = \lambda \I_n - \A \), and by @thm-rank-map-equals-rank-matrix (b), \( \lambda\,\id_V - T \) is invertible if and only if \( \lambda \I_n - \A \) is. By @thm-charpoly-root-iff-singular ((a), (i) ⇔ (ii)), \( \lambda \I_n - \A \) is not invertible if and only if \( p_{\A}(\lambda) = 0 \), and \( p_{\A} = p_T \) by @def-charpoly-operator.
+(c) \( \Leftrightarrow \) (e). Fix a basis \( \sB \) of \( V \) and put \( \A = [T]_{\sB} \). By @cor-matrix-of-polynomial-of-operator, \( [\lambda\,\id_V - T]_{\sB} = \lambda \I_n - \A \), and by @thm-rank-map-equals-rank-matrix (b), \( \lambda\,\id_V - T \) is invertible if and only if \( \lambda \I_n - \A \) is. By @thm-charpoly-root-iff-singular ((a), (i) \( \Leftrightarrow \) (ii)), \( \lambda \I_n - \A \) is not invertible if and only if \( p_{\A}(\lambda) = 0 \), and \( p_{\A} = p_T \) by @def-charpoly-operator.
 
 The bound on the number of eigenvalues is @thm-charpoly-root-iff-singular (b) applied to \( \A \), since by (e) the eigenvalues of \( T \) are the roots of \( p_{\A} \) in \( F \). The statement for matrices is the case \( T = T_{\A} \), \( \sB \) standard, \( [T_{\A}]_{\sB} = \A \).
 :::
@@ -148,9 +148,9 @@ You can watch eigenvectors in the widget below. It shows the unit square and its
     \draw[dashed] (0,0) rectangle (1,1);
     \fill[gray!25] (0,0) -- (2,0) -- (3,3) -- (1,3) -- cycle;
     \draw (0,0) -- (2,0) -- (3,3) -- (1,3) -- cycle;
-    \draw[very thick, ->] (0,0) -- (2,0) node[below] {$A\mathbf{e}_1 = (2,0)$};
-    \draw[very thick, ->] (0,0) -- (1,3) node[left] {$A\mathbf{e}_2 = (1,3)$};
-    \fill (3,3) circle (1.5pt) node[right] {$A(1,1) = (3,3)$};
+    \draw[very thick, ->] (0,0) -- (2,0) node[below] {$\A\mathbf{e}_1 = (2,0)$};
+    \draw[very thick, ->] (0,0) -- (1,3) node[left] {$\A\mathbf{e}_2 = (1,3)$};
+    \fill (3,3) circle (1.5pt) node[right] {$\A(1,1) = (3,3)$};
 \end{tikzpicture}
 \end{center}
 
@@ -174,7 +174,7 @@ For instance \( \spec\begin{pmatrix} 1 & 2 \\ 3 & 2 \end{pmatrix} = \{4, -1\} \)
 - **The right shift.** Let \( R(s_0, s_1, s_2, \dots) = (0, s_0, s_1, \dots) \) on \( F^{\nN} \) (@exm-shift). If \( R\s = \lambda\s \), compare entries: \( 0 = \lambda s_0 \), and \( s_k = \lambda s_{k+1} \) for all \( k \ge 0 \). If \( \lambda = 0 \), the second equation gives \( s_k = 0 \) for all \( k \). If \( \lambda \ne 0 \), the first gives \( s_0 = 0 \), and then \( s_{k+1} = \lambda^{-1}s_k \) gives \( s_1 = 0 \), \( s_2 = 0 \), and so on by induction. Either way \( \s = \0 \). So \( \spec(R) = \emptyset \), over **every** field.
 
 ::: {.warning}
-**In infinite dimension, "not invertible" does not produce an eigenvalue.** The step (b) ⇔ (c) of @thm-eigenvalue-characterizations used finite dimension. The right shift \( R \) is injective but not surjective (@exm-shift-kernel-image), so \( R - 0 \cdot \id \) is not invertible, yet \( 0 \) is not an eigenvalue of \( R \): nothing non-zero is sent to \( \0 \).
+**In infinite dimension, "not invertible" does not produce an eigenvalue.** The step (b) \( \Leftrightarrow \) (c) of @thm-eigenvalue-characterizations used finite dimension. The right shift \( R \) is injective but not surjective (@exm-shift-kernel-image), so \( R - 0 \cdot \id \) is not invertible, yet \( 0 \) is not an eigenvalue of \( R \): nothing non-zero is sent to \( \0 \).
 :::
 
 ## Distinct eigenvalues give independent eigenvectors
@@ -216,9 +216,9 @@ and \( T \) has at most \( \dim V \) distinct eigenvalues.
 :::
 
 ::: {.proof}
-By @thm-direct-sum-k-criteria ((b) ⇒ (a)), it suffices to show: if \( \u_1 + \dots + \u_k = \0 \) with \( \u_i \in E_{\lambda_i}(T) \), then every \( \u_i = \0 \). Suppose not, and let \( S \) be the non-empty set of indices \( i \) with \( \u_i \ne \0 \). For \( i \in S \), \( \u_i \) is an eigenvector of \( T \) for \( \lambda_i \), and these eigenvalues are distinct. By @thm-distinct-eigenvalues-independent, the list \( (\u_i)_{i \in S} \) is linearly independent. But \( \sum_{i \in S} 1 \cdot \u_i = \sum_{i=1}^{k} \u_i = \0 \) is a relation with all coefficients \( 1 \ne 0 \), a contradiction. So the sum is direct.
+By @thm-direct-sum-k-criteria ((b) \( \Rightarrow \) (a)), it suffices to show: if \( \u_1 + \dots + \u_k = \0 \) with \( \u_i \in E_{\lambda_i}(T) \), then every \( \u_i = \0 \). Suppose not, and let \( S \) be the non-empty set of indices \( i \) with \( \u_i \ne \0 \). For \( i \in S \), \( \u_i \) is an eigenvector of \( T \) for \( \lambda_i \), and these eigenvalues are distinct. By @thm-distinct-eigenvalues-independent, the list \( (\u_i)_{i \in S} \) is linearly independent. But \( \sum_{i \in S} 1 \cdot \u_i = \sum_{i=1}^{k} \u_i = \0 \) is a relation with all coefficients \( 1 \ne 0 \), a contradiction. So the sum is direct.
 
-If \( V \) is finite-dimensional, @thm-direct-sum-k-criteria ((a) ⇒ (e)) gives \( \dim(E_{\lambda_1}(T) \oplus \dots \oplus E_{\lambda_k}(T)) = \sum_i \dim E_{\lambda_i}(T) \), and this is at most \( \dim V \) by @thm-subspace-dimension. If the \( \lambda_i \) are eigenvalues, each \( \dim E_{\lambda_i}(T) \ge 1 \), so \( k \le \dim V \).
+If \( V \) is finite-dimensional, @thm-direct-sum-k-criteria ((a) \( \Rightarrow \) (e)) gives \( \dim(E_{\lambda_1}(T) \oplus \dots \oplus E_{\lambda_k}(T)) = \sum_i \dim E_{\lambda_i}(T) \), and this is at most \( \dim V \) by @thm-subspace-dimension. If the \( \lambda_i \) are eigenvalues, each \( \dim E_{\lambda_i}(T) \ge 1 \), so \( k \le \dim V \).
 :::
 
 The corollary gives a second, polynomial-free proof that an operator on an \( n \)-dimensional space has at most \( n \) eigenvalues. Section 4 shows that \( T \) has a diagonal matrix exactly when the inequality is an equality.
@@ -234,14 +234,14 @@ Let \( V \) be a finite-dimensional vector space over \( \nC \) with \( V \ne \{
 :::
 
 ::: {.proof}
-Let \( n = \dim V \ge 1 \). By @thm-charpoly-coefficients and @def-charpoly-operator, \( p_T \in \nC[x] \) is monic of degree \( n \ge 1 \), so it is not constant. By the Fundamental Theorem of Algebra (@thm-fundamental-theorem-of-algebra), \( p_T(\lambda) = 0 \) for some \( \lambda \in \nC \). By @thm-eigenvalue-characterizations ((e) ⇒ (a)), \( \lambda \) is an eigenvalue of \( T \). For \( \A \in M_n(\nC) \), apply this to \( T_{\A} \).
+Let \( n = \dim V \ge 1 \). By @thm-charpoly-coefficients and @def-charpoly-operator, \( p_T \in \nC[x] \) is monic of degree \( n \ge 1 \), so it is not constant. By the Fundamental Theorem of Algebra (@thm-fundamental-theorem-of-algebra), \( p_T(\lambda) = 0 \) for some \( \lambda \in \nC \). By @thm-eigenvalue-characterizations ((e) \( \Rightarrow \) (a)), \( \lambda \) is an eigenvalue of \( T \). For \( \A \in M_n(\nC) \), apply this to \( T_{\A} \).
 :::
 
 Alternatively, determinants can be avoided altogether, and the proof then shows where the eigenvector comes from. By @thm-annihilating-polynomial-exists, there is a non-zero \( p \in \nC[x] \) with \( p(T) = 0 \). It is not a non-zero constant \( c \), since \( c\,\id_V \ne 0 \) on \( V \ne \{\0\} \). By @cor-complex-polynomial-splits, \( p = c(x - z_1)\cdots(x - z_m) \) with \( c \ne 0 \) and \( m \ge 1 \), so by @thm-evaluation-homomorphism (a) and (b),
 \[
 0 = p(T) = c\,(T - z_1\id_V)(T - z_2\id_V)\cdots(T - z_m\id_V).
 \]
-Since \( c \ne 0 \), multiplying by \( c^{-1} \) shows that the composite \( (T - z_1\id_V)\cdots(T - z_m\id_V) \) is the zero operator, which is not injective on \( V \ne \{\0\} \). A composition of injective maps is injective (@thm-composition-preserves (a), applied \( m - 1 \) times), so at least one factor \( T - z_j\id_V \) is not injective, and \( z_j \) is an eigenvalue by @thm-eigenvalue-characterizations ((b) ⇒ (a)).
+Since \( c \ne 0 \), multiplying by \( c^{-1} \) shows that the composite \( (T - z_1\id_V)\cdots(T - z_m\id_V) \) is the zero operator, which is not injective on \( V \ne \{\0\} \). A composition of injective maps is injective (@thm-composition-preserves (a), applied \( m - 1 \) times), so at least one factor \( T - z_j\id_V \) is not injective, and \( z_j \) is an eigenvalue by @thm-eigenvalue-characterizations ((b) \( \Rightarrow \) (a)).
 
 Both routes use the Fundamental Theorem of Algebra, and both need all three hypotheses. Over \( \nR \) the rotation has no eigenvalue. In infinite dimension the right shift on \( \nC^{\nN} \) has none, and indeed no non-zero polynomial annihilates it: for \( p = a_0 + a_1x + \dots + a_Nx^N \ne 0 \), the sequence \( p(R)(1, 0, 0, \dots) = (a_0, a_1, \dots, a_N, 0, \dots) \) is not zero. On \( V = \{\0\} \) there is nothing to be an eigenvector. This theorem pays off the promise made in Chapter 5, and it is the base step of every structure theorem over \( \nC \) in this book: find one eigenvector, then look at what is left.
 
@@ -320,7 +320,7 @@ Likewise, an operator \( T \) on a finite-dimensional space \( V \ne \{\0\} \) i
 :::
 
 ::: {.proof}
-By @def-eigenspace, \( E_0(\A) = \ker(T_{\A} - 0\,\id) = \ker T_{\A} \). So \( 0 \notin \spec(\A) \) if and only if \( \ker T_{\A} = \{\0\} \), if and only if \( T_{\A} \) is injective (@thm-injective-iff-trivial-kernel), if and only if \( \A \) is invertible (@thm-invertible-tfae-det, (a) ⇔ (b)). For an operator, \( E_0(T) = \ker T \), and @thm-invertible-operator-tfae ((a) ⇔ (c)) finishes the same way.
+By @def-eigenspace, \( E_0(\A) = \ker(T_{\A} - 0\,\id) = \ker T_{\A} \). So \( 0 \notin \spec(\A) \) if and only if \( \ker T_{\A} = \{\0\} \), if and only if \( T_{\A} \) is injective (@thm-injective-iff-trivial-kernel), if and only if \( \A \) is invertible (@thm-invertible-tfae-det, (a) \( \Leftrightarrow \) (b)). For an operator, \( E_0(T) = \ker T \), and @thm-invertible-operator-tfae ((a) \( \Leftrightarrow \) (c)) finishes the same way.
 :::
 
 For example, \( \spec\begin{pmatrix} 1 & 2 \\ 3 & 2 \end{pmatrix} = \{4, -1\} \) does not contain \( 0 \), so that matrix is invertible, while \( \begin{pmatrix} 1 & 2 \\ 2 & 4 \end{pmatrix} \) has the eigenvalue \( 0 \) and is singular.

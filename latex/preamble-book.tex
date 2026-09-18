@@ -55,3 +55,8 @@
 % Tables written by Pandoc (column widths use \real from calc)
 \usepackage{longtable,booktabs,array,calc}
 \providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+% hyperref is loaded by the pandoc template after latex/macros.tex, and it
+% reclaims \H (the Hungarian-umlaut accent). Restore the bold matrix H once
+% the preamble is over, so \H means the matrix in Chapter 7 onwards.
+\AtBeginDocument{\def\H{\mathbf{H}}}

@@ -1,6 +1,6 @@
 # The Rational Canonical Form
 
-Everything so far has needed the characteristic polynomial to split. Section 5 removed that need from the building block: a companion matrix \( C(p) \) exists for every monic \( p \), and it is the matrix of an operator on a cyclic subspace. What is left is to cut an arbitrary space into cyclic pieces. This section does that, over an **arbitrary field**, and the result is a genuine canonical form: a list of polynomials attached to \( T \), from which the matrix is written down mechanically, and which two operators share exactly when they are similar. Along the way we learn that similarity does not change if the field is enlarged.
+Everything so far has needed the characteristic polynomial to split. Section 5 removed that need from the building block: a companion matrix \( \C(p) \) exists for every monic \( p \), and it is the matrix of an operator on a cyclic subspace. What is left is to cut an arbitrary space into cyclic pieces. This section does that, over an **arbitrary field**, and the result is a genuine canonical form: a list of polynomials attached to \( T \), from which the matrix is written down mechanically, and which two operators share exactly when they are similar. Along the way we learn that similarity does not change if the field is enlarged.
 
 ## The plan
 
@@ -8,7 +8,7 @@ The goal, stated before its parts are named:
 
 **Every operator on a non-zero finite-dimensional space decomposes the space into cyclic subspaces \( Z(\v_1; T), \dots, Z(\v_r; T) \) whose annihilators form a divisibility chain \( d_1 \mid d_2 \mid \dots \mid d_r = m_T \), and that chain is determined by \( T \).**
 
-In the adapted basis the matrix is then \( C(d_1) \oplus \dots \oplus C(d_r) \), by @thm-cyclic-subspace-basis (b) and @thm-direct-sum-invariant-block-diagonal. So the whole content is the decomposition, and it is the hardest theorem of the chapter. The route has three steps, and each one is a tool we already have.
+In the adapted basis the matrix is then \( \C(d_1) \oplus \dots \oplus \C(d_r) \), by @thm-cyclic-subspace-basis (b) and @thm-direct-sum-invariant-block-diagonal. So the whole content is the decomposition, and it is the hardest theorem of the chapter. The route has three steps, and each one is a tool we already have.
 
 - **Step 1 (one prime at a time).** Chapter 8's primary decomposition splits \( V = V_1 \oplus \dots \oplus V_k \), where \( m_{T|_{V_i}} = p_i^{e_i} \) is a power of a single monic irreducible (@thm-primary-decomposition). Nothing more is needed from the general theory.
 - **Step 2 (inside one prime power).** On a piece with \( m_T = p^e \), the operator \( P = p(T) \) is nilpotent, and the structure theorem for nilpotent operators was proved by induction, with \( \im N \) as the smaller space to which the hypothesis applies (@thm-nilpotent-structure). We run the same induction with \( P \) in place of \( N \) and cyclic subspaces \( Z(\u; T) \) in place of the spans of chains. The outcome is a decomposition into cyclic pieces whose annihilators are powers \( p^{e_1} \ge p^{e_2} \ge \dots \) of the one prime.
@@ -87,7 +87,7 @@ and the directness of Step 1 forces \( f_i(T)\w_i = \0 \) for every \( i \le q \
 \[
 \y_i = g_i(T)\,p^{l_i}(T)\u_i = g_i(T)\z_i \in Z(\z_i; T) \qquad (i \le q) .
 \]
-For \( i > q \), \( \y_i \in Z(\u_i;T) = Z(\z_i;T) \) by definition. So the relation \( \y_1 + \dots + \y_m = \0 \) is a relation between vectors of the independent subspaces \( Z(\z_1;T), \dots, Z(\z_m;T) \) of Step 3, and every \( \y_i = \0 \). By @thm-direct-sum-k-criteria ((b) ⇒ (a)) the sum \( \sum_i Z(\u_i;T) \) is direct, and by the count its dimension is \( n \), so it is all of \( V \) (@thm-dim-impl-eq).
+For \( i > q \), \( \y_i \in Z(\u_i;T) = Z(\z_i;T) \) by definition. So the relation \( \y_1 + \dots + \y_m = \0 \) is a relation between vectors of the independent subspaces \( Z(\z_1;T), \dots, Z(\z_m;T) \) of Step 3, and every \( \y_i = \0 \). By @thm-direct-sum-k-criteria ((b) \( \Rightarrow \) (a)) the sum \( \sum_i Z(\u_i;T) \) is direct, and by the count its dimension is \( n \), so it is all of \( V \) (@thm-dim-impl-eq).
 
 Finally the exponents. We have \( k_1 = l_1 + 1 = e \), the \( k_i \) with \( i \le q \) decrease because the \( l_i \) do, and the remaining ones equal \( 1 \le k_q \); so after listing the pieces in this order, \( e = k_1 \ge \dots \ge k_m \ge 1 \). The dimension formula \( \dim V = d\sum_i k_i \) is the count above. This completes the induction.
 :::
@@ -126,7 +126,7 @@ Run the plan. Primary decomposition gives one piece per prime; @thm-primary-cycl
 \[
 V_i = Z(\v_{i1}; T) \oplus \dots \oplus Z(\v_{i m_i}; T), \qquad m_{T,\v_{ij}} = p_i^{e_{ij}} .
 \]
-Combining with Step 1, \( V \) is the direct sum of **all** the subspaces \( Z(\v_{ij}; T) \): a basis of \( V \) is obtained by concatenating bases of the \( V_i \), each of which is a concatenation of bases of its own pieces, so @thm-direct-sum-k-criteria ((d) ⇒ (a)) applies.
+Combining with Step 1, \( V \) is the direct sum of **all** the subspaces \( Z(\v_{ij}; T) \): a basis of \( V \) is obtained by concatenating bases of the \( V_i \), each of which is a concatenation of bases of its own pieces, so @thm-direct-sum-k-criteria ((d) \( \Rightarrow \) (a)) applies.
 
 **Step 3.** Let \( r = \max_i m_i \) and, for \( 1 \le j \le r \), put \( j' = r + 1 - j \) and
 \[
@@ -144,17 +144,17 @@ the left side is contained in the right, because the right side is a \( T \)-inv
 \[
 \dim Z(\v_j;T) = \deg d_j = \sum_{i} \deg p_i^{e_{ij'}} = \sum_{i} \dim Z(\v_{ij'};T),
 \]
-by @thm-cyclic-subspace-basis (a) and @thm-direct-sum-k-criteria ((a) ⇒ (e)); so they are equal (@thm-dim-impl-eq).
+by @thm-cyclic-subspace-basis (a) and @thm-direct-sum-k-criteria ((a) \( \Rightarrow \) (e)); so they are equal (@thm-dim-impl-eq).
 
 *The decomposition.* Each subspace \( Z(\v_{i j_0};T) \), with \( 1 \le j_0 \le m_i \), occurs in exactly one of the sums just displayed, namely the one with \( j = r + 1 - j_0 \); so every pair \( (i, j_0) \) is used exactly once and
 \[
 \sum_{j=1}^{r} Z(\v_j; T) = \sum_{i,j} Z(\v_{ij}; T) = V ,
 \]
-and \( \sum_j \dim Z(\v_j;T) = \sum_{i,j}\dim Z(\v_{ij};T) = \dim V \). By @thm-direct-sum-k-criteria ((e) ⇒ (a)) the sum over \( j \) is direct, and it equals \( V \).
+and \( \sum_j \dim Z(\v_j;T) = \sum_{i,j}\dim Z(\v_{ij};T) = \dim V \). By @thm-direct-sum-k-criteria ((e) \( \Rightarrow \) (a)) the sum over \( j \) is direct, and it equals \( V \).
 
-(c) Each \( Z(\v_j;T) \) is \( T \)-invariant and non-zero, so by @thm-direct-sum-invariant-block-diagonal there is a basis \( \sB \) of \( V \) with \( [T]_{\sB} = [T|_{Z(\v_1;T)}] \oplus \dots \oplus [T|_{Z(\v_r;T)}] \). Then \( xI - [T]_{\sB} \) is block diagonal with the blocks \( xI - [T|_{Z(\v_j;T)}] \), so @thm-det-block-triangular, applied \( r - 1 \) times, gives
+(c) Each \( Z(\v_j;T) \) is \( T \)-invariant and non-zero, so by @thm-direct-sum-invariant-block-diagonal there is a basis \( \sB \) of \( V \) with \( [T]_{\sB} = [T|_{Z(\v_1;T)}] \oplus \dots \oplus [T|_{Z(\v_r;T)}] \). Then \( x\I - [T]_{\sB} \) is block diagonal with the blocks \( x\I - [T|_{Z(\v_j;T)}] \), so @thm-det-block-triangular, applied \( r - 1 \) times, gives
 \[
-p_T = \det\big(xI - [T]_{\sB}\big) = \prod_{j=1}^{r} p_{T|_{Z(\v_j;T)}}
+p_T = \det\big(x\I - [T]_{\sB}\big) = \prod_{j=1}^{r} p_{T|_{Z(\v_j;T)}}
 \]
 (@def-charpoly-operator). By @thm-cyclic-subspace-basis (c), \( p_{T|_{Z(\v_j;T)}} = m_{T,\v_j} = d_j \). Hence \( p_T = d_1\cdots d_r \), and comparing degrees gives \( \sum_j \deg d_j = \deg p_T = \dim V \) (@thm-charpoly-coefficients).
 
@@ -267,7 +267,7 @@ Let \( V \ne \{\0\} \) be finite-dimensional over \( F \) and \( T \in \cL(V) \)
 \[
 d_1 \mid d_2 \mid \dots \mid d_r
 \]
-of @thm-cyclic-decomposition, which by @cor-invariant-factors-unique (a) do not depend on the decomposition. The **elementary divisors** of \( T \) are the prime powers occurring in the factorizations of \( d_1, \dots, d_r \), listed with repetition; by @cor-invariant-factors-unique (b) they are the annihilators of the pieces in any decomposition of \( V \) into cyclic subspaces with prime-power annihilators. For \( A \in M_n(F) \) the invariant factors and elementary divisors are those of \( T_A \).
+of @thm-cyclic-decomposition, which by @cor-invariant-factors-unique (a) do not depend on the decomposition. The **elementary divisors** of \( T \) are the prime powers occurring in the factorizations of \( d_1, \dots, d_r \), listed with repetition; by @cor-invariant-factors-unique (b) they are the annihilators of the pieces in any decomposition of \( V \) into cyclic subspaces with prime-power annihilators. For \( \A \in M_n(F) \) the invariant factors and elementary divisors are those of \( T_{\A} \).
 :::
 
 In words: the invariant factors are the annihilators of the cyclic pieces, ordered so that each divides the next; the largest is \( m_T \), and their product is \( p_T \). The elementary divisors are the same information cut along the primes. Each list determines the other: one by factoring, the other by the regrouping recipe of Step 3 in the proof of @thm-cyclic-decomposition, which @cor-invariant-factors-unique (c) shows to be forced.
@@ -297,15 +297,15 @@ Everything is now assembled. Writing the matrix down is @thm-cyclic-subspace-bas
 
 Let \( V \ne \{\0\} \) be a finite-dimensional vector space over **any** field \( F \), and let \( T \in \cL(V) \) have invariant factors \( d_1 \mid d_2 \mid \dots \mid d_r \). Then there is a basis \( \sB \) of \( V \) with
 \[
-[T]_{\sB} = C(d_1) \oplus C(d_2) \oplus \dots \oplus C(d_r) ,
+[T]_{\sB} = \C(d_1) \oplus \C(d_2) \oplus \dots \oplus \C(d_r) ,
 \]
-and this matrix is determined by \( T \). It is called the **rational canonical form** of \( T \). Equivalently, every \( A \in M_n(F) \) with \( n \ge 1 \) is similar to exactly one matrix of the form \( C(d_1) \oplus \dots \oplus C(d_r) \) with \( d_1 \mid \dots \mid d_r \) monic and non-constant.
+and this matrix is determined by \( T \). It is called the **rational canonical form** of \( T \). Equivalently, every \( \A \in M_n(F) \) with \( n \ge 1 \) is similar to exactly one matrix of the form \( \C(d_1) \oplus \dots \oplus \C(d_r) \) with \( d_1 \mid \dots \mid d_r \) monic and non-constant.
 :::
 
 ::: {.proof}
-By @thm-cyclic-decomposition, \( V = Z(\v_1;T) \oplus \dots \oplus Z(\v_r;T) \) with \( m_{T,\v_j} = d_j \). Each piece is \( T \)-invariant and non-zero, and by @thm-cyclic-subspace-basis (a), (b) the list \( \sB_j = (\v_j, T\v_j, \dots, T^{\deg d_j - 1}\v_j) \) is a basis of \( Z(\v_j;T) \) in which the matrix of the restriction is \( C(d_j) \). Let \( \sB \) be \( \sB_1, \dots, \sB_r \) written one after another; by @thm-direct-sum-invariant-block-diagonal, \( \sB \) is a basis of \( V \) and \( [T]_{\sB} = C(d_1) \oplus \dots \oplus C(d_r) \). The blocks are determined by \( T \), since the \( d_j \) are (@cor-invariant-factors-unique (a)).
+By @thm-cyclic-decomposition, \( V = Z(\v_1;T) \oplus \dots \oplus Z(\v_r;T) \) with \( m_{T,\v_j} = d_j \). Each piece is \( T \)-invariant and non-zero, and by @thm-cyclic-subspace-basis (a), (b) the list \( \sB_j = (\v_j, T\v_j, \dots, T^{\deg d_j - 1}\v_j) \) is a basis of \( Z(\v_j;T) \) in which the matrix of the restriction is \( \C(d_j) \). Let \( \sB \) be \( \sB_1, \dots, \sB_r \) written one after another; by @thm-direct-sum-invariant-block-diagonal, \( \sB \) is a basis of \( V \) and \( [T]_{\sB} = \C(d_1) \oplus \dots \oplus \C(d_r) \). The blocks are determined by \( T \), since the \( d_j \) are (@cor-invariant-factors-unique (a)).
 
-For a matrix \( A \in M_n(F) \), apply this to \( T_A \) and use @thm-similar-iff-same-operator. For the uniqueness in the matrix form, suppose \( A \sim C(f_1) \oplus \dots \oplus C(f_s) \) with \( f_1 \mid \dots \mid f_s \) monic and non-constant. By @thm-similar-iff-same-operator there is a basis \( \sC \) of \( F^n \) with \( [T_A]_{\sC} = C(f_1) \oplus \dots \oplus C(f_s) \). Let \( U_j \) be the span of the segment of \( \sC \) belonging to the \( j \)-th block; then \( F^n = U_1 \oplus \dots \oplus U_s \) with each \( U_j \) invariant and \( [T_A|_{U_j}] = C(f_j) \) (@thm-direct-sum-invariant-block-diagonal). By @thm-companion-char-min, @thm-minimal-polynomial-similarity and @def-charpoly-operator, \( m_{T_A|_{U_j}} = p_{T_A|_{U_j}} = f_j \), so \( T_A|_{U_j} \) is cyclic (@thm-cyclic-iff-min-equals-char) and \( U_j = Z(\u_j; T_A) \) for some \( \u_j \) with \( m_{T_A,\u_j} = f_j \) (@thm-cyclic-subspace-basis (c)). This is a decomposition as in @thm-cyclic-decomposition, so \( (f_1, \dots, f_s) = (d_1, \dots, d_r) \) by @cor-invariant-factors-unique (a). Hence the matrix is the rational canonical form of \( A \).
+For a matrix \( \A \in M_n(F) \), apply this to \( T_{\A} \) and use @thm-similar-iff-same-operator. For the uniqueness in the matrix form, suppose \( \A \sim \C(f_1) \oplus \dots \oplus \C(f_s) \) with \( f_1 \mid \dots \mid f_s \) monic and non-constant. By @thm-similar-iff-same-operator there is a basis \( \sC \) of \( F^n \) with \( [T_{\A}]_{\sC} = \C(f_1) \oplus \dots \oplus \C(f_s) \). Let \( U_j \) be the span of the segment of \( \sC \) belonging to the \( j \)-th block; then \( F^n = U_1 \oplus \dots \oplus U_s \) with each \( U_j \) invariant and \( [T_{\A}|_{U_j}] = \C(f_j) \) (@thm-direct-sum-invariant-block-diagonal). By @thm-companion-char-min, @thm-minimal-polynomial-similarity and @def-charpoly-operator, \( m_{T_{\A}|_{U_j}} = p_{T_{\A}|_{U_j}} = f_j \), so \( T_{\A}|_{U_j} \) is cyclic (@thm-cyclic-iff-min-equals-char) and \( U_j = Z(\u_j; T_{\A}) \) for some \( \u_j \) with \( m_{T_{\A},\u_j} = f_j \) (@thm-cyclic-subspace-basis (c)). This is a decomposition as in @thm-cyclic-decomposition, so \( (f_1, \dots, f_s) = (d_1, \dots, d_r) \) by @cor-invariant-factors-unique (a). Hence the matrix is the rational canonical form of \( \A \).
 :::
 
 This pays off the promise made in Section 3: **there is a canonical form over every field.** No hypothesis on \( F \) was used, and none is needed. The form is canonical in the strong sense: the blocks come in a prescribed order, dictated by divisibility, so two operators have the *same* form, not merely similar forms.
@@ -313,30 +313,30 @@ This pays off the promise made in Section 3: **there is a canonical form over ev
 ::: {#cor-similar-iff-same-invariant-factors}
 [Similarity via the Invariant Factors]
 
-Let \( A, B \in M_n(F) \) with \( n \ge 1 \). The following are equivalent:
+Let \( \A, \B \in M_n(F) \) with \( n \ge 1 \). The following are equivalent:
 
 ::: {.enumerate options="label=(\alph*)"}
-1. \( A \sim B \);
-2. \( A \) and \( B \) have the same invariant factors;
-3. \( A \) and \( B \) have the same elementary divisors, up to order;
-4. \( \dim\ker p(A)^{k} = \dim\ker p(B)^{k} \) for every monic irreducible \( p \in F[x] \) and every \( k \ge 1 \).
+1. \( \A \sim \B \);
+2. \( \A \) and \( \B \) have the same invariant factors;
+3. \( \A \) and \( \B \) have the same elementary divisors, up to order;
+4. \( \dim\ker p(\A)^{k} = \dim\ker p(\B)^{k} \) for every monic irreducible \( p \in F[x] \) and every \( k \ge 1 \).
 :::
 :::
 
 ::: {.proof}
-(a) ⇒ (d). If \( B = P^{-1}AP \), then \( p(B)^k = P^{-1}p(A)^kP \) (@prp-similarity-invariants (c)), so the two have the same rank (@prp-similarity-invariants (a)) and hence the same nullity (@thm-rank-nullity-matrix).
+(a) \( \Rightarrow \) (d). If \( \B = \P^{-1}\A \P \), then \( p(\B)^k = \P^{-1}p(\A)^k\P \) (@prp-similarity-invariants (c)), so the two have the same rank (@prp-similarity-invariants (a)) and hence the same nullity (@thm-rank-nullity-matrix).
 
-(d) ⇒ (b). By @cor-invariant-factors-unique (c), the invariant factors of a matrix are computed from the numbers \( \dim\ker p(\cdot)^{k} \) alone: those numbers give the counts \( c_p(k) \), which give the length \( r \) and the exponents \( v_p(d_j) \). Equal numbers therefore give equal invariant factors.
+(d) \( \Rightarrow \) (b). By @cor-invariant-factors-unique (c), the invariant factors of a matrix are computed from the numbers \( \dim\ker p(\cdot)^{k} \) alone: those numbers give the counts \( c_p(k) \), which give the length \( r \) and the exponents \( v_p(d_j) \). Equal numbers therefore give equal invariant factors.
 
-(b) ⇔ (c). The elementary divisors are the prime powers in the factorizations of the invariant factors (@def-invariant-factors), so (b) ⇒ (c). Conversely, \( c_p(k) \) is the number of elementary divisors of the form \( p^{f} \) with \( f \ge k \) (@cor-invariant-factors-unique (b) and (c)), so the list of elementary divisors determines every \( c_p(k) \), hence the invariant factors by @cor-invariant-factors-unique (c); so (c) ⇒ (b).
+(b) \( \Leftrightarrow \) (c). The elementary divisors are the prime powers in the factorizations of the invariant factors (@def-invariant-factors), so (b) \( \Rightarrow \) (c). Conversely, \( c_p(k) \) is the number of elementary divisors of the form \( p^{f} \) with \( f \ge k \) (@cor-invariant-factors-unique (b) and (c)), so the list of elementary divisors determines every \( c_p(k) \), hence the invariant factors by @cor-invariant-factors-unique (c); so (c) \( \Rightarrow \) (b).
 
-(b) ⇒ (a). Both matrices are similar to \( C(d_1) \oplus \dots \oplus C(d_r) \) (@thm-rational-canonical-form), and similarity is an equivalence relation (@exm-similarity).
+(b) \( \Rightarrow \) (a). Both matrices are similar to \( \C(d_1) \oplus \dots \oplus \C(d_r) \) (@thm-rational-canonical-form), and similarity is an equivalence relation (@exm-similarity).
 :::
 
-So the invariant factors are a **complete set of similarity invariants over every field**, which is the promise of Chapter 6 kept in full; @cor-similar-iff-same-jordan-form was the special case in which \( p_A \) splits. Counting similarity classes becomes counting divisibility chains: over any field, the classes of \( n \times n \) matrices with a given characteristic polynomial \( p \) correspond to the ways of writing \( p = d_1\cdots d_r \) with \( d_1 \mid \dots \mid d_r \) monic and non-constant.
+So the invariant factors are a **complete set of similarity invariants over every field**, which is the promise of Chapter 6 kept in full; @cor-similar-iff-same-jordan-form was the special case in which \( p_{\A} \) splits. Counting similarity classes becomes counting divisibility chains: over any field, the classes of \( n \times n \) matrices with a given characteristic polynomial \( p \) correspond to the ways of writing \( p = d_1\cdots d_r \) with \( d_1 \mid \dots \mid d_r \) monic and non-constant.
 
 ::: {.warning}
-**The invariant factors are not the factors of \( p_A \) in any naive sense, and \( m_A \) alone is only the last of them.** For \( A = \diag(1,1,2) \) over \( \nQ \) the invariant factors are \( d_1 = x - 1 \) and \( d_2 = (x-1)(x-2) = m_A \), and \( d_1d_2 = (x-1)^2(x-2) = p_A \); the factorization of \( p_A \) into linear factors plays no role in the chain. Nor does the chain have length \( \deg p_A \): here \( r = 2 \) for a \( 3 \times 3 \) matrix, and \( r = 1 \) exactly when \( A \) is cyclic (@thm-cyclic-iff-min-equals-char).
+**The invariant factors are not the factors of \( p_{\A} \) in any naive sense, and \( m_{\A} \) alone is only the last of them.** For \( \A = \diag(1,1,2) \) over \( \nQ \) the invariant factors are \( d_1 = x - 1 \) and \( d_2 = (x-1)(x-2) = m_{\A} \), and \( d_1d_2 = (x-1)^2(x-2) = p_{\A} \); the factorization of \( p_{\A} \) into linear factors plays no role in the chain. Nor does the chain have length \( \deg p_{\A} \): here \( r = 2 \) for a \( 3 \times 3 \) matrix, and \( r = 1 \) exactly when \( \A \) is cyclic (@thm-cyclic-iff-min-equals-char).
 :::
 
 ## Elementary divisors, and the way back to Jordan
@@ -348,7 +348,7 @@ Cutting the pieces as finely as possible gives a second form, usually with more 
 
 Let \( V \ne \{\0\} \) be finite-dimensional over \( F \), let \( T \in \cL(V) \), and let \( q_1, \dots, q_N \) be the elementary divisors of \( T \). Then there is a basis \( \sB \) of \( V \) with
 \[
-[T]_{\sB} = C(q_1) \oplus C(q_2) \oplus \dots \oplus C(q_N) ,
+[T]_{\sB} = \C(q_1) \oplus \C(q_2) \oplus \dots \oplus \C(q_N) ,
 \]
 and the blocks are determined by \( T \) up to their order.
 :::
@@ -364,15 +364,15 @@ When the characteristic polynomial splits, this is the Jordan form in disguise, 
 
 Let \( \lambda \in F \) and \( k \ge 1 \). Then
 \[
-C\big((x - \lambda)^k\big) \sim J_k(\lambda) .
+\C\big((x - \lambda)^k\big) \sim \J_k(\lambda) .
 \]
-Consequently, if \( p_T \) splits over \( F \), then the elementary divisors of \( T \) are the polynomials \( (x - \lambda)^k \) for the Jordan blocks \( J_k(\lambda) \) of \( T \), and the elementary divisor form of @thm-elementary-divisor-form and the Jordan form of \( T \) are obtained from one another by replacing each block \( C\big((x-\lambda)^k\big) \) by \( J_k(\lambda) \) and conversely.
+Consequently, if \( p_T \) splits over \( F \), then the elementary divisors of \( T \) are the polynomials \( (x - \lambda)^k \) for the Jordan blocks \( \J_k(\lambda) \) of \( T \), and the elementary divisor form of @thm-elementary-divisor-form and the Jordan form of \( T \) are obtained from one another by replacing each block \( \C\big((x-\lambda)^k\big) \) by \( \J_k(\lambda) \) and conversely.
 :::
 
 ::: {.proof}
-Put \( J = J_k(\lambda) \). Then \( J - \lambda I = J_k(0) \) satisfies \( J_k(0)^k = 0 \ne J_k(0)^{k-1} \), so \( (x - \lambda)^k \) annihilates \( J \) and no smaller power does; by @lem-monic-divisors and @thm-minimal-polynomial-divides, \( m_J = (x-\lambda)^k \). Also \( p_J = (x - \lambda)^k \) (@thm-det-triangular), so \( m_J = p_J \) and \( J \) is cyclic (@thm-cyclic-iff-min-equals-char). By the last sentence of that theorem, \( J \) is similar to \( C(m_J) = C\big((x-\lambda)^k\big) \).
+Put \( \J = \J_k(\lambda) \). Then \( \J - \lambda \I = \J_k(0) \) satisfies \( \J_k(0)^k = 0 \ne \J_k(0)^{k-1} \), so \( (x - \lambda)^k \) annihilates \( \J \) and no smaller power does; by @lem-monic-divisors and @thm-minimal-polynomial-divides, \( m_{\J} = (x-\lambda)^k \). Also \( p_{\J} = (x - \lambda)^k \) (@thm-det-triangular), so \( m_{\J} = p_{\J} \) and \( \J \) is cyclic (@thm-cyclic-iff-min-equals-char). By the last sentence of that theorem, \( \J \) is similar to \( \C(m_{\J}) = \C\big((x-\lambda)^k\big) \).
 
-Now suppose \( p_T \) splits and let \( \sB \) be a Jordan basis, with \( [T]_{\sB} = J_{k_1}(\mu_1) \oplus \dots \oplus J_{k_m}(\mu_m) \) (@thm-jordan-canonical-form). Each block corresponds to a \( T \)-invariant subspace \( U_l \), spanned by the segment of \( \sB \) belonging to it, with \( V = U_1 \oplus \dots \oplus U_m \) and \( [T|_{U_l}] = J_{k_l}(\mu_l) \). By the first paragraph, \( m_{T|_{U_l}} = p_{T|_{U_l}} = (x - \mu_l)^{k_l} \), so \( T|_{U_l} \) is cyclic: there is \( \v_l \in U_l \) with \( U_l = Z(\v_l; T) \) and \( m_{T,\v_l} = (x-\mu_l)^{k_l} \) (@thm-cyclic-iff-min-equals-char, @thm-cyclic-subspace-basis (c)). Since \( x - \mu_l \) is irreducible, being of degree \( 1 \), this exhibits \( V \) as a direct sum of cyclic subspaces with prime-power annihilators, so by @cor-invariant-factors-unique (b) the elementary divisors of \( T \) are exactly the polynomials \( (x - \mu_l)^{k_l} \). Replacing each Jordan block by the similar companion block, or conversely, therefore turns one form into the other.
+Now suppose \( p_T \) splits and let \( \sB \) be a Jordan basis, with \( [T]_{\sB} = \J_{k_1}(\mu_1) \oplus \dots \oplus \J_{k_m}(\mu_m) \) (@thm-jordan-canonical-form). Each block corresponds to a \( T \)-invariant subspace \( U_l \), spanned by the segment of \( \sB \) belonging to it, with \( V = U_1 \oplus \dots \oplus U_m \) and \( [T|_{U_l}] = \J_{k_l}(\mu_l) \). By the first paragraph, \( m_{T|_{U_l}} = p_{T|_{U_l}} = (x - \mu_l)^{k_l} \), so \( T|_{U_l} \) is cyclic: there is \( \v_l \in U_l \) with \( U_l = Z(\v_l; T) \) and \( m_{T,\v_l} = (x-\mu_l)^{k_l} \) (@thm-cyclic-iff-min-equals-char, @thm-cyclic-subspace-basis (c)). Since \( x - \mu_l \) is irreducible, being of degree \( 1 \), this exhibits \( V \) as a direct sum of cyclic subspaces with prime-power annihilators, so by @cor-invariant-factors-unique (b) the elementary divisors of \( T \) are exactly the polynomials \( (x - \mu_l)^{k_l} \). Replacing each Jordan block by the similar companion block, or conversely, therefore turns one form into the other.
 :::
 
 ::: {.remark}
@@ -386,45 +386,45 @@ Here is a striking consequence, and one that would be hard to guess. Two rationa
 ::: {#lem-rank-field-independent}
 [Rank Does Not Change with the Field]
 
-Let \( K \) be a subfield of a field \( L \) and let \( M \in M_{m \times n}(K) \). Then the rank of \( M \) computed over \( K \) equals its rank computed over \( L \).
+Let \( K \) be a subfield of a field \( L \) and let \( \M \in M_{m \times n}(K) \). Then the rank of \( \M \) computed over \( K \) equals its rank computed over \( L \).
 :::
 
 ::: {.proof}
-If \( M = 0 \), both ranks are \( 0 \). Otherwise, by @thm-rank-via-minors (a), each rank is the largest \( k \) such that some \( k \times k \) minor of \( M \) is non-zero. The minors are determinants of submatrices of \( M \), computed by the Leibniz formula from the entries of \( M \) (@def-determinant), so they are the **same elements of \( K \)** whichever field we regard \( M \) in. And an element of \( K \) is zero in \( K \) if and only if it is zero in \( L \). So the two largest such \( k \) agree.
+If \( \M = 0 \), both ranks are \( 0 \). Otherwise, by @thm-rank-via-minors (a), each rank is the largest \( k \) such that some \( k \times k \) minor of \( \M \) is non-zero. The minors are determinants of submatrices of \( \M \), computed by the Leibniz formula from the entries of \( \M \) (@def-determinant), so they are the **same elements of \( K \)** whichever field we regard \( \M \) in. And an element of \( K \) is zero in \( K \) if and only if it is zero in \( L \). So the two largest such \( k \) agree.
 :::
 
 ::: {#cor-similarity-field-independent}
 [Similarity Is Independent of the Field]
 
-Let \( K \) be a subfield of \( L \) and let \( A, B \in M_n(K) \), \( n \ge 1 \). If \( A \) and \( B \) are similar over \( L \), then they are similar over \( K \):
+Let \( K \) be a subfield of \( L \) and let \( \A, \B \in M_n(K) \), \( n \ge 1 \). If \( \A \) and \( \B \) are similar over \( L \), then they are similar over \( K \):
 \[
-A = Q^{-1}BQ \ \text{ for some invertible } Q \in M_n(L) \implies A = P^{-1}BP \ \text{ for some invertible } P \in M_n(K) .
+\A = \Q^{-1}\B \Q \ \text{ for some invertible } \Q \in M_n(L) \implies \A = \P^{-1}\B \P \ \text{ for some invertible } \P \in M_n(K) .
 \]
 :::
 
 ::: {.idea}
-Similarity over \( K \) is decided by the numbers \( \dim\ker p(A)^k \) for the monic irreducibles \( p \) of \( K[x] \) (@cor-similar-iff-same-invariant-factors). Each such number is a nullity of a matrix with entries in \( K \), and nullities do not notice a larger field. Similarity over \( L \) makes the numbers agree when computed over \( L \), hence over \( K \).
+Similarity over \( K \) is decided by the numbers \( \dim\ker p(\A)^k \) for the monic irreducibles \( p \) of \( K[x] \) (@cor-similar-iff-same-invariant-factors). Each such number is a nullity of a matrix with entries in \( K \), and nullities do not notice a larger field. Similarity over \( L \) makes the numbers agree when computed over \( L \), hence over \( K \).
 :::
 
 ::: {.proof}
-Let \( p \in K[x] \) be monic irreducible and \( k \ge 1 \). The matrices \( p(A)^k \) and \( p(B)^k \) have entries in \( K \). Since \( A \) and \( B \) are similar over \( L \), say \( A = Q^{-1}BQ \), we have \( p(A)^k = Q^{-1}p(B)^kQ \) (@prp-similarity-invariants (c)), so these two matrices have the same rank over \( L \) (@prp-similarity-invariants (a)). By @lem-rank-field-independent their ranks over \( K \) are the same numbers, hence
+Let \( p \in K[x] \) be monic irreducible and \( k \ge 1 \). The matrices \( p(\A)^k \) and \( p(\B)^k \) have entries in \( K \). Since \( \A \) and \( \B \) are similar over \( L \), say \( \A = \Q^{-1}\B \Q \), we have \( p(\A)^k = \Q^{-1}p(\B)^k\Q \) (@prp-similarity-invariants (c)), so these two matrices have the same rank over \( L \) (@prp-similarity-invariants (a)). By @lem-rank-field-independent their ranks over \( K \) are the same numbers, hence
 \[
-\dim\ker p(A)^{k} = n - \rank p(A)^k = n - \rank p(B)^k = \dim\ker p(B)^{k}
+\dim\ker p(\A)^{k} = n - \rank p(\A)^k = n - \rank p(\B)^k = \dim\ker p(\B)^{k}
 \]
-over \( K \), by @thm-rank-nullity-matrix. As \( p \) and \( k \) were arbitrary, @cor-similar-iff-same-invariant-factors ((d) ⇒ (a)) gives \( A \sim B \) over \( K \).
+over \( K \), by @thm-rank-nullity-matrix. As \( p \) and \( k \) were arbitrary, @cor-similar-iff-same-invariant-factors ((d) \( \Rightarrow \) (a)) gives \( \A \sim \B \) over \( K \).
 :::
 
-The invariant factors are computed in \( K[x] \) and never need a root; that is the whole reason. Note what the corollary does **not** say: the invariant factors themselves do change with the field, since the irreducible polynomials do. Over \( \nQ \) the matrix \( C\big((x^2+1)^2\big) \) has the single invariant factor \( (x^2+1)^2 \) and the single elementary divisor \( (x^2+1)^2 \); over \( \nC \) its invariant factor is unchanged, but its elementary divisors are \( (x-i)^2 \) and \( (x+i)^2 \), and its Jordan form is \( J_2(i) \oplus J_2(-i) \). What is field-independent is the **answer to the similarity question**, not the bookkeeping.
+The invariant factors are computed in \( K[x] \) and never need a root; that is the whole reason. Note what the corollary does **not** say: the invariant factors themselves do change with the field, since the irreducible polynomials do. Over \( \nQ \) the matrix \( \C\big((x^2+1)^2\big) \) has the single invariant factor \( (x^2+1)^2 \) and the single elementary divisor \( (x^2+1)^2 \); over \( \nC \) its invariant factor is unchanged, but its elementary divisors are \( (x-i)^2 \) and \( (x+i)^2 \), and its Jordan form is \( \J_2(i) \oplus \J_2(-i) \). What is field-independent is the **answer to the similarity question**, not the bookkeeping.
 
 ## Computing the forms
 
 ::: {.algorithm}
-**Invariant factors, elementary divisors and the two forms of \( A \in M_n(F) \).**
+**Invariant factors, elementary divisors and the two forms of \( \A \in M_n(F) \).**
 
-1. Compute \( p_A \) and factor it into monic irreducibles over \( F \): \( p_A = p_1^{a_1}\cdots p_k^{a_k} \).
-2. For each \( i \) and each \( k \ge 1 \), compute \( \dim\ker p_i(A)^k \) until it stops growing, and read off the exponents of the elementary divisors for \( p_i \) from @prp-elementary-divisors-from-kernels, subtracting twice for exact counts. (Equivalently: find \( m_A \) and, in small cases, use \( \sum_{i,j} e_{ij}\deg p_i = n \) with \( \max_j e_{ij} = \) the exponent of \( p_i \) in \( m_A \).)
-3. Group the exponents of each prime into a row, in decreasing order, and multiply down the columns, numbering them backwards: the first column gives \( d_r = m_A \), the second \( d_{r-1} \), the last \( d_1 \).
-4. Write \( C(d_1) \oplus \dots \oplus C(d_r) \), or \( \bigoplus_{i,j} C(p_i^{e_{ij}}) \).
+1. Compute \( p_{\A} \) and factor it into monic irreducibles over \( F \): \( p_{\A} = p_1^{a_1}\cdots p_k^{a_k} \).
+2. For each \( i \) and each \( k \ge 1 \), compute \( \dim\ker p_i(\A)^k \) until it stops growing, and read off the exponents of the elementary divisors for \( p_i \) from @prp-elementary-divisors-from-kernels, subtracting twice for exact counts. (Equivalently: find \( m_{\A} \) and, in small cases, use \( \sum_{i,j} e_{ij}\deg p_i = n \) with \( \max_j e_{ij} = \) the exponent of \( p_i \) in \( m_{\A} \).)
+3. Group the exponents of each prime into a row, in decreasing order, and multiply down the columns, numbering them backwards: the first column gives \( d_r = m_{\A} \), the second \( d_{r-1} \), the last \( d_1 \).
+4. Write \( \C(d_1) \oplus \dots \oplus \C(d_r) \), or \( \bigoplus_{i,j} \C(p_i^{e_{ij}}) \).
 5. For a basis: find a cyclic generator for each piece, as in Section 5.
 :::
 
@@ -458,13 +458,13 @@ Check: \( d_1 \mid d_2 \) and \( d_1d_2 = (x-1)^2(x^2+1)^2 = p_T \).
 
 *The forms.* With \( d_2 = (x-1)(x^2+1)^2 = (x-1)(x^4+2x^2+1) = x^5 - x^4 + 2x^3 - 2x^2 + x - 1 \),
 \[
-C(d_1) \oplus C(d_2) = (1) \oplus \begin{pmatrix} 0 & 0 & 0 & 0 & 1 \\ 1 & 0 & 0 & 0 & -1 \\ 0 & 1 & 0 & 0 & 2 \\ 0 & 0 & 1 & 0 & -2 \\ 0 & 0 & 0 & 1 & 1 \end{pmatrix},
+\C(d_1) \oplus \C(d_2) = (1) \oplus \begin{pmatrix} 0 & 0 & 0 & 0 & 1 \\ 1 & 0 & 0 & 0 & -1 \\ 0 & 1 & 0 & 0 & 2 \\ 0 & 0 & 1 & 0 & -2 \\ 0 & 0 & 0 & 1 & 1 \end{pmatrix},
 \]
 of total size \( 1 + 5 = 6 \). The elementary divisor form is smaller-blocked:
 \[
-C(x-1) \oplus C(x-1) \oplus C\big((x^2+1)^2\big) = (1) \oplus (1) \oplus \begin{pmatrix} 0 & 0 & 0 & -1 \\ 1 & 0 & 0 & 0 \\ 0 & 1 & 0 & -2 \\ 0 & 0 & 1 & 0 \end{pmatrix},
+\C(x-1) \oplus \C(x-1) \oplus \C\big((x^2+1)^2\big) = (1) \oplus (1) \oplus \begin{pmatrix} 0 & 0 & 0 & -1 \\ 1 & 0 & 0 & 0 \\ 0 & 1 & 0 & -2 \\ 0 & 0 & 1 & 0 \end{pmatrix},
 \]
-of total size \( 1 + 1 + 4 = 6 \). Read as a complex matrix, the second form splits further: over \( \nC \) we have \( x^2 + 1 = (x-i)(x+i) \), so the elementary divisors become \( x-1, x-1, (x-i)^2, (x+i)^2 \) — the invariant factors \( d_1, d_2 \) are unchanged — and @cor-companion-linear-power-is-jordan turns the elementary divisor form into the Jordan form \( (1) \oplus (1) \oplus J_2(i) \oplus J_2(-i) \). Over \( \nQ \) no further splitting is possible, since \( x^2+1 \) is irreducible there.
+of total size \( 1 + 1 + 4 = 6 \). Read as a complex matrix, the second form splits further: over \( \nC \) we have \( x^2 + 1 = (x-i)(x+i) \), so the elementary divisors become \( x-1, x-1, (x-i)^2, (x+i)^2 \) — the invariant factors \( d_1, d_2 \) are unchanged — and @cor-companion-linear-power-is-jordan turns the elementary divisor form into the Jordan form \( (1) \oplus (1) \oplus \J_2(i) \oplus \J_2(-i) \). Over \( \nQ \) no further splitting is possible, since \( x^2+1 \) is irreducible there.
 :::
 
 ::: {#exm-rational-form-4x4}
@@ -472,52 +472,52 @@ of total size \( 1 + 1 + 4 = 6 \). Read as a complex matrix, the second form spl
 
 Let
 \[
-A = \begin{pmatrix} 0 & -1 & 1 & 0 \\ 1 & 0 & 0 & 1 \\ 0 & 0 & 0 & -1 \\ 0 & 0 & 1 & 0 \end{pmatrix} \in M_4(\nQ), \qquad p_A = (x^2+1)^2 .
+\A = \begin{pmatrix} 0 & -1 & 1 & 0 \\ 1 & 0 & 0 & 1 \\ 0 & 0 & 0 & -1 \\ 0 & 0 & 1 & 0 \end{pmatrix} \in M_4(\nQ), \qquad p_{\A} = (x^2+1)^2 .
 \]
-Find the invariant factors of \( A \), its rational canonical form (@thm-rational-canonical-form), and an invertible \( P \in M_4(\nQ) \) realizing it.
+Find the invariant factors of \( \A \), its rational canonical form (@thm-rational-canonical-form), and an invertible \( \P \in M_4(\nQ) \) realizing it.
 :::
 
 ::: {.solution}
-*The characteristic polynomial.* In \( 2 \times 2 \) blocks, \( A = \begin{pmatrix} R & I_2 \\ 0 & R \end{pmatrix} \) with \( R = \begin{pmatrix} 0 & -1 \\ 1 & 0 \end{pmatrix} \), so \( xI - A \) is block upper triangular and \( p_A = (\det(xI_2 - R))^2 = (x^2+1)^2 \) (@thm-det-block-triangular), as stated.
+*The characteristic polynomial.* In \( 2 \times 2 \) blocks, \( \A = \begin{pmatrix} \R & \I_2 \\ 0 & \R \end{pmatrix} \) with \( \R = \begin{pmatrix} 0 & -1 \\ 1 & 0 \end{pmatrix} \), so \( x\I - \A \) is block upper triangular and \( p_{\A} = (\det(x\I_2 - \R))^2 = (x^2+1)^2 \) (@thm-det-block-triangular), as stated.
 
-*The minimal polynomial.* By @thm-minimal-polynomial-divides and @lem-monic-divisors, \( m_A \) is \( x^2+1 \) or \( (x^2+1)^2 \). Compute \( A^2 \): its columns are \( A \) applied to the columns of \( A \). With \( \c_1, \dots, \c_4 \) the columns of \( A \),
+*The minimal polynomial.* By @thm-minimal-polynomial-divides and @lem-monic-divisors, \( m_{\A} \) is \( x^2+1 \) or \( (x^2+1)^2 \). Compute \( \A^2 \): its columns are \( \A \) applied to the columns of \( \A \). With \( \c_1, \dots, \c_4 \) the columns of \( \A \),
 \[
-A\c_1 = A(0,1,0,0) = (-1,0,0,0), \qquad A\c_2 = A(-1,0,0,0) = (0,-1,0,0),
+\A\c_1 = \A(0,1,0,0) = (-1,0,0,0), \qquad \A\c_2 = \A(-1,0,0,0) = (0,-1,0,0),
 \]
 \[
-A\c_3 = A(1,0,0,1) = (0,1,0,0) + (0,1,-1,0) = (0,2,-1,0), \qquad A\c_4 = A(0,1,-1,0) = (-1,0,0,0) + (-1,0,0,-1) = (-2,0,0,-1).
+\A\c_3 = \A(1,0,0,1) = (0,1,0,0) + (0,1,-1,0) = (0,2,-1,0), \qquad \A\c_4 = \A(0,1,-1,0) = (-1,0,0,0) + (-1,0,0,-1) = (-2,0,0,-1).
 \]
 So
 \[
-A^2 = \begin{pmatrix} -1 & 0 & 0 & -2 \\ 0 & -1 & 2 & 0 \\ 0 & 0 & -1 & 0 \\ 0 & 0 & 0 & -1 \end{pmatrix}, \qquad A^2 + I = \begin{pmatrix} 0 & 0 & 0 & -2 \\ 0 & 0 & 2 & 0 \\ 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 \end{pmatrix} \ne 0 .
+\A^2 = \begin{pmatrix} -1 & 0 & 0 & -2 \\ 0 & -1 & 2 & 0 \\ 0 & 0 & -1 & 0 \\ 0 & 0 & 0 & -1 \end{pmatrix}, \qquad \A^2 + \I = \begin{pmatrix} 0 & 0 & 0 & -2 \\ 0 & 0 & 2 & 0 \\ 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 \end{pmatrix} \ne 0 .
 \]
-Hence \( m_A = (x^2+1)^2 = p_A \), and \( A \) is cyclic (@thm-cyclic-iff-min-equals-char). So \( r = 1 \), the single invariant factor is \( d_1 = (x^2+1)^2 = x^4 + 2x^2 + 1 \), and the rational canonical form is
+Hence \( m_{\A} = (x^2+1)^2 = p_{\A} \), and \( \A \) is cyclic (@thm-cyclic-iff-min-equals-char). So \( r = 1 \), the single invariant factor is \( d_1 = (x^2+1)^2 = x^4 + 2x^2 + 1 \), and the rational canonical form is
 \[
-C(d_1) = \begin{pmatrix} 0 & 0 & 0 & -1 \\ 1 & 0 & 0 & 0 \\ 0 & 1 & 0 & -2 \\ 0 & 0 & 1 & 0 \end{pmatrix}.
+\C(d_1) = \begin{pmatrix} 0 & 0 & 0 & -1 \\ 1 & 0 & 0 & 0 \\ 0 & 1 & 0 & -2 \\ 0 & 0 & 1 & 0 \end{pmatrix}.
 \]
 The elementary divisor form (@thm-elementary-divisor-form) is the same matrix, since \( x^2+1 \) is irreducible over \( \nQ \) and \( d_1 \) is already a prime power.
 
-*A cyclic vector.* By @thm-cyclic-iff-min-equals-char we need \( \v \) with \( m_{A,\v} = m_A \); since \( A^2 + I \ne 0 \), pick \( \v \) with \( (A^2+I)\v \ne \0 \). The third column of \( A^2 + I \) is non-zero, so \( \v = \e_3 \) works: then \( (A^2+I)\v \ne \0 \), so \( m_{A,\v} \nmid x^2+1 \), and as \( m_{A,\v} \) divides \( (x^2+1)^2 \) it must equal \( (x^2+1)^2 \) (@lem-monic-divisors). Its chain is
+*A cyclic vector.* By @thm-cyclic-iff-min-equals-char we need \( \v \) with \( m_{\A,\v} = m_{\A} \); since \( \A^2 + \I \ne 0 \), pick \( \v \) with \( (\A^2+\I)\v \ne \0 \). The third column of \( \A^2 + \I \) is non-zero, so \( \v = \e_3 \) works: then \( (\A^2+\I)\v \ne \0 \), so \( m_{\A,\v} \nmid x^2+1 \), and as \( m_{\A,\v} \) divides \( (x^2+1)^2 \) it must equal \( (x^2+1)^2 \) (@lem-monic-divisors). Its chain is
 \[
-\v = (0,0,1,0), \quad A\v = (1,0,0,1), \quad A^2\v = (0,2,-1,0), \quad A^3\v = A(0,2,-1,0) = (-2,0,0,0) + (-1,0,0,-1) = (-3,0,0,-1) ,
+\v = (0,0,1,0), \quad \A\v = (1,0,0,1), \quad \A^2\v = (0,2,-1,0), \quad \A^3\v = \A(0,2,-1,0) = (-2,0,0,0) + (-1,0,0,-1) = (-3,0,0,-1) ,
 \]
-reading columns of \( A \) as before. Hence
+reading columns of \( \A \) as before. Hence
 \[
-P = \begin{pmatrix} 0 & 1 & 0 & -3 \\ 0 & 0 & 2 & 0 \\ 1 & 0 & -1 & 0 \\ 0 & 1 & 0 & -1 \end{pmatrix}, \qquad P^{-1}AP = C\big((x^2+1)^2\big) .
+\P = \begin{pmatrix} 0 & 1 & 0 & -3 \\ 0 & 0 & 2 & 0 \\ 1 & 0 & -1 & 0 \\ 0 & 1 & 0 & -1 \end{pmatrix}, \qquad \P^{-1}\A \P = \C\big((x^2+1)^2\big) .
 \]
-*Invertibility of \( P \).* Expanding \( \det P \) along the third row, whose entries are \( (1, 0, -1, 0) \) (@thm-laplace-expansion), and then each \( 3 \times 3 \) determinant along its own first column,
+*Invertibility of \( \P \).* Expanding \( \det \P \) along the third row, whose entries are \( (1, 0, -1, 0) \) (@thm-laplace-expansion), and then each \( 3 \times 3 \) determinant along its own first column,
 \[
-\det P = 1\cdot\det\begin{pmatrix} 1 & 0 & -3 \\ 0 & 2 & 0 \\ 1 & 0 & -1 \end{pmatrix} + (-1)(-1)^{3+3}\det\begin{pmatrix} 0 & 1 & -3 \\ 0 & 0 & 0 \\ 0 & 1 & -1 \end{pmatrix} = 1\cdot\big(2(-1+3)\big) - 0 = 4 \ne 0 ,
+\det \P = 1\cdot\det\begin{pmatrix} 1 & 0 & -3 \\ 0 & 2 & 0 \\ 1 & 0 & -1 \end{pmatrix} + (-1)(-1)^{3+3}\det\begin{pmatrix} 0 & 1 & -3 \\ 0 & 0 & 0 \\ 0 & 1 & -1 \end{pmatrix} = 1\cdot\big(2(-1+3)\big) - 0 = 4 \ne 0 ,
 \]
 the second determinant vanishing because it has a zero row, and the first being \( 2\det\begin{pmatrix} 1 & -3 \\ 1 & -1 \end{pmatrix} = 2 \cdot 2 = 4 \) by expansion along its second row.
 
-*The check.* The identity \( AP = P\,C(d_1) \) reads column by column as \( A\v = A\v \), \( A(A\v) = A^2\v \), \( A(A^2\v) = A^3\v \) — true by construction — and
+*The check.* The identity \( \A \P = \P\,\C(d_1) \) reads column by column as \( \A\v = \A\v \), \( \A(\A\v) = \A^2\v \), \( \A(\A^2\v) = \A^3\v \) — true by construction — and
 \[
-A(A^3\v) = -\v - 2A^2\v ,
+\A(\A^3\v) = -\v - 2\A^2\v ,
 \]
-which is the annihilator relation \( A^4 + 2A^2 + I = 0 \) applied to \( \v \). Verifying it directly: \( A(-3,0,0,-1) = -3(0,1,0,0) - (0,1,-1,0) = (0,-4,1,0) \), while
+which is the annihilator relation \( \A^4 + 2\A^2 + \I = 0 \) applied to \( \v \). Verifying it directly: \( \A(-3,0,0,-1) = -3(0,1,0,0) - (0,1,-1,0) = (0,-4,1,0) \), while
 \[
--\v - 2A^2\v = -(0,0,1,0) - 2(0,2,-1,0) = (0, -4, 2 - 1, 0) = (0,-4,1,0) . \checkmark
+-\v - 2\A^2\v = -(0,0,1,0) - 2(0,2,-1,0) = (0, -4, 2 - 1, 0) = (0,-4,1,0) . \checkmark
 \]
 :::
 
@@ -543,7 +543,7 @@ which is the annihilator relation \( A^4 + 2A^2 + I = 0 \) applied to \( \v \). 
 
 (b) The invariant factors are the polynomials \( d_1 \mid \dots \mid d_r \) of that theorem; the elementary divisors are the prime powers occurring in their factorizations, listed with repetition (@def-invariant-factors). Both are determined by \( T \) (@cor-invariant-factors-unique).
 
-(c) The matrix \( C(d_1) \oplus \dots \oplus C(d_r) \), which is \( [T]_{\sB} \) for a suitable basis; it exists over **every** field (@thm-rational-canonical-form).
+(c) The matrix \( \C(d_1) \oplus \dots \oplus \C(d_r) \), which is \( [T]_{\sB} \) for a suitable basis; it exists over **every** field (@thm-rational-canonical-form).
 
 (d) True, by @cor-similarity-field-independent with \( K = \nQ \) and \( L = \nC \).
 
@@ -573,19 +573,19 @@ In each case \( T \) is an operator on a \( \nQ \)-vector space with the stated 
 \]
 are possible, with invariant factors \( \big((x-2)^2, (x-2)^2\big) \) and \( \big(x-2, x-2, (x-2)^2\big) \) and rational forms
 \[
-C\big((x-2)^2\big) \oplus C\big((x-2)^2\big), \qquad (2) \oplus (2) \oplus C\big((x-2)^2\big),
+\C\big((x-2)^2\big) \oplus \C\big((x-2)^2\big), \qquad (2) \oplus (2) \oplus \C\big((x-2)^2\big),
 \]
-where \( C\big((x-2)^2\big) = C(x^2 - 4x + 4) = \begin{pmatrix} 0 & -4 \\ 1 & 4 \end{pmatrix} \). (The extra datum that decides is \( \dim\ker(T - 2\,\id) \), which is \( 2 \) in the first case and \( 3 \) in the second, by @prp-elementary-divisors-from-kernels.)
+where \( \C\big((x-2)^2\big) = \C(x^2 - 4x + 4) = \begin{pmatrix} 0 & -4 \\ 1 & 4 \end{pmatrix} \). (The extra datum that decides is \( \dim\ker(T - 2\,\id) \), which is \( 2 \) in the first case and \( 3 \) in the second, by @prp-elementary-divisors-from-kernels.)
 
 (b) \( x^2 - 2 \) is irreducible over \( \nQ \), since \( \sqrt2 \notin \nQ \) (@thm-sqrt2-irrational, @thm-irreducible-deg-2-3 (b)). The exponents are powers of \( x^2-2 \) with largest \( 2 \) summing to \( 3 \): only \( 2, 1 \). So the elementary divisors are \( (x^2-2)^2 \) and \( x^2 - 2 \), the invariant factors are \( d_1 = x^2 - 2 \) and \( d_2 = (x^2-2)^2 = x^4 - 4x^2 + 4 \), and the rational form is
 \[
-C(x^2-2) \oplus C\big((x^2-2)^2\big) = \begin{pmatrix} 0 & 2 \\ 1 & 0 \end{pmatrix} \oplus \begin{pmatrix} 0 & 0 & 0 & -4 \\ 1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 4 \\ 0 & 0 & 1 & 0 \end{pmatrix},
+\C(x^2-2) \oplus \C\big((x^2-2)^2\big) = \begin{pmatrix} 0 & 2 \\ 1 & 0 \end{pmatrix} \oplus \begin{pmatrix} 0 & 0 & 0 & -4 \\ 1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 4 \\ 0 & 0 & 1 & 0 \end{pmatrix},
 \]
 of size \( 2 + 4 = 6 = \deg p_T \).
 
 (c) Both primes have largest exponent \( 1 \) and total contribution \( 2 \), so the elementary divisors are \( x-1, x-1, x+1, x+1 \). Arranging by prime, \( x-1: 1,1 \) and \( x+1 : 1,1 \), so \( r = 2 \) and \( d_2 = (x-1)(x+1) = m_T \), \( d_1 = (x-1)(x+1) \). The rational form is
 \[
-C(x^2-1) \oplus C(x^2-1) = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix} \oplus \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix} .
+\C(x^2-1) \oplus \C(x^2-1) = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix} \oplus \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix} .
 \]
 (This operator is diagonalizable, with \( \diag(1,1,-1,-1) \) as its Jordan form; the rational form is a different matrix representing the same operator.)
 :::
@@ -593,34 +593,34 @@ C(x^2-1) \oplus C(x^2-1) = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix} \oplus \
 :::: {#exr-rational-canonical-form-b2}
 [B2: Rational forms of matrices]
 
-For each matrix, find \( p_A \), \( m_A \), the invariant factors, the rational canonical form (@thm-rational-canonical-form) and the elementary divisor form (@thm-elementary-divisor-form).
+For each matrix, find \( p_{\A} \), \( m_{\A} \), the invariant factors, the rational canonical form (@thm-rational-canonical-form) and the elementary divisor form (@thm-elementary-divisor-form).
 
 ::: {.enumerate options="label=(\alph*)"}
-1. \( A_1 = \begin{pmatrix} 0 & 1 & 0 \\ 0 & 0 & 1 \\ 1 & 0 & 0 \end{pmatrix} \in M_3(\nQ) \).
-2. \( A_2 = \diag(1, 1, 2) \in M_3(\nQ) \).
-3. \( A_3 = \begin{pmatrix} 0 & -1 & 0 & 0 \\ 1 & 0 & 0 & 0 \\ 0 & 0 & 0 & -1 \\ 0 & 0 & 1 & 0 \end{pmatrix} \in M_4(\nQ) \).
+1. \( \A_1 = \begin{pmatrix} 0 & 1 & 0 \\ 0 & 0 & 1 \\ 1 & 0 & 0 \end{pmatrix} \in M_3(\nQ) \).
+2. \( \A_2 = \diag(1, 1, 2) \in M_3(\nQ) \).
+3. \( \A_3 = \begin{pmatrix} 0 & -1 & 0 & 0 \\ 1 & 0 & 0 & 0 \\ 0 & 0 & 0 & -1 \\ 0 & 0 & 1 & 0 \end{pmatrix} \in M_4(\nQ) \).
 :::
 ::::
 
 ::: {.solution}
-(a) Reading the columns, \( A_1\e_1 = \e_3 \), \( A_1\e_3 = \e_2 \) and \( A_1\e_2 = \e_1 \), so \( A_1^3 = I \) and the polynomial \( x^3 - 1 \) annihilates \( A_1 \). Also \( A_1^2\e_1 = A_1\e_3 = \e_2 \), so \( (\e_1, A_1\e_1, A_1^2\e_1) = (\e_1, \e_3, \e_2) \) is a basis of \( \nQ^3 \) and \( \e_1 \) is a cyclic vector. Hence \( \deg m_{A_1} = 3 \) (@thm-cyclic-iff-min-equals-char), and since \( m_{A_1} \) is monic of degree \( 3 \) dividing \( x^3 - 1 \), we get \( m_{A_1} = p_{A_1} = x^3 - 1 \). The single invariant factor is \( d_1 = x^3 - 1 \), and the rational canonical form is
+(a) Reading the columns, \( \A_1\e_1 = \e_3 \), \( \A_1\e_3 = \e_2 \) and \( \A_1\e_2 = \e_1 \), so \( \A_1^3 = \I \) and the polynomial \( x^3 - 1 \) annihilates \( \A_1 \). Also \( \A_1^2\e_1 = \A_1\e_3 = \e_2 \), so \( (\e_1, \A_1\e_1, \A_1^2\e_1) = (\e_1, \e_3, \e_2) \) is a basis of \( \nQ^3 \) and \( \e_1 \) is a cyclic vector. Hence \( \deg m_{\A_1} = 3 \) (@thm-cyclic-iff-min-equals-char), and since \( m_{\A_1} \) is monic of degree \( 3 \) dividing \( x^3 - 1 \), we get \( m_{\A_1} = p_{\A_1} = x^3 - 1 \). The single invariant factor is \( d_1 = x^3 - 1 \), and the rational canonical form is
 \[
-C(x^3-1) = \begin{pmatrix} 0 & 0 & 1 \\ 1 & 0 & 0 \\ 0 & 1 & 0 \end{pmatrix} .
+\C(x^3-1) = \begin{pmatrix} 0 & 0 & 1 \\ 1 & 0 & 0 \\ 0 & 1 & 0 \end{pmatrix} .
 \]
 Over \( \nQ \), \( x^3 - 1 = (x-1)(x^2+x+1) \) with both factors irreducible (the quadratic has no rational root). So the elementary divisors are \( x - 1 \) and \( x^2+x+1 \), and the elementary divisor form is
 \[
-(1) \oplus C(x^2+x+1) = (1) \oplus \begin{pmatrix} 0 & -1 \\ 1 & -1 \end{pmatrix} .
+(1) \oplus \C(x^2+x+1) = (1) \oplus \begin{pmatrix} 0 & -1 \\ 1 & -1 \end{pmatrix} .
 \]
 
-(b) \( p_{A_2} = (x-1)^2(x-2) \) and \( m_{A_2} = (x-1)(x-2) \) (@prp-minimal-polynomial-block-diagonal). Elementary divisors: \( x - 1, x-1, x-2 \). Invariant factors: \( d_2 = (x-1)(x-2) = m_{A_2} \) and \( d_1 = x-1 \). Rational form
+(b) \( p_{\A_2} = (x-1)^2(x-2) \) and \( m_{\A_2} = (x-1)(x-2) \) (@prp-minimal-polynomial-block-diagonal). Elementary divisors: \( x - 1, x-1, x-2 \). Invariant factors: \( d_2 = (x-1)(x-2) = m_{\A_2} \) and \( d_1 = x-1 \). Rational form
 \[
-(1) \oplus C\big((x-1)(x-2)\big) = (1) \oplus \begin{pmatrix} 0 & -2 \\ 1 & 3 \end{pmatrix},
+(1) \oplus \C\big((x-1)(x-2)\big) = (1) \oplus \begin{pmatrix} 0 & -2 \\ 1 & 3 \end{pmatrix},
 \]
-elementary divisor form \( (1) \oplus (1) \oplus (2) = \diag(1,1,2) = A_2 \) itself.
+elementary divisor form \( (1) \oplus (1) \oplus (2) = \diag(1,1,2) = \A_2 \) itself.
 
-(c) \( A_3 = R \oplus R \) with \( R = \begin{pmatrix} 0 & -1 \\ 1 & 0 \end{pmatrix} \), and \( p_R = x^2+1 \), \( m_R = x^2+1 \), so \( p_{A_3} = (x^2+1)^2 \) (@thm-det-block-triangular applied to \( xI - A_3 \), which is block diagonal over \( \nQ[x] \)) and \( m_{A_3} = \operatorname{lcm}(x^2+1, x^2+1) = x^2+1 \) (@prp-minimal-polynomial-block-diagonal). Since \( x^2+1 \) is irreducible over \( \nQ \), the elementary divisors are \( x^2+1 \) and \( x^2+1 \); \( r = 2 \) and \( d_1 = d_2 = x^2+1 \). Both forms are
+(c) \( \A_3 = \R \oplus \R \) with \( \R = \begin{pmatrix} 0 & -1 \\ 1 & 0 \end{pmatrix} \), and \( p_{\R} = x^2+1 \), \( m_{\R} = x^2+1 \), so \( p_{\A_3} = (x^2+1)^2 \) (@thm-det-block-triangular applied to \( x\I - \A_3 \), which is block diagonal over \( \nQ[x] \)) and \( m_{\A_3} = \operatorname{lcm}(x^2+1, x^2+1) = x^2+1 \) (@prp-minimal-polynomial-block-diagonal). Since \( x^2+1 \) is irreducible over \( \nQ \), the elementary divisors are \( x^2+1 \) and \( x^2+1 \); \( r = 2 \) and \( d_1 = d_2 = x^2+1 \). Both forms are
 \[
-C(x^2+1) \oplus C(x^2+1) = \begin{pmatrix} 0 & -1 \\ 1 & 0 \end{pmatrix} \oplus \begin{pmatrix} 0 & -1 \\ 1 & 0 \end{pmatrix} = A_3 .
+\C(x^2+1) \oplus \C(x^2+1) = \begin{pmatrix} 0 & -1 \\ 1 & 0 \end{pmatrix} \oplus \begin{pmatrix} 0 & -1 \\ 1 & 0 \end{pmatrix} = \A_3 .
 \]
 Compare @exm-rational-form-4x4: that matrix has the same characteristic polynomial but a different minimal polynomial, so the two are **not** similar.
 :::
@@ -628,7 +628,7 @@ Compare @exm-rational-form-4x4: that matrix has the same characteristic polynomi
 :::: {#exr-rational-canonical-form-b3}
 [B3: Counting similarity classes over a finite field]
 
-Work over \( F = \nF_2 \). For each polynomial \( p \), find the number of similarity classes of matrices \( A \in M_3(\nF_2) \) with \( p_A = p \), and list the invariant factors of each class.
+Work over \( F = \nF_2 \). For each polynomial \( p \), find the number of similarity classes of matrices \( \A \in M_3(\nF_2) \) with \( p_{\A} = p \), and list the invariant factors of each class.
 
 ::: {.enumerate options="label=(\alph*)"}
 1. \( p = (x+1)^3 \).
@@ -644,7 +644,7 @@ Work over \( F = \nF_2 \). For each polynomial \( p \), find the number of simil
 \[
 \big((x+1)^3\big), \qquad \big(x+1,\ (x+1)^2\big), \qquad \big(x+1,\ x+1,\ x+1\big)
 \]
-as lists of invariant factors. So there are \( 3 \) classes, with representatives \( C\big((x+1)^3\big) \), \( (1) \oplus C\big((x+1)^2\big) \) and \( I_3 \) (note \( -1 = 1 \) in \( \nF_2 \)).
+as lists of invariant factors. So there are \( 3 \) classes, with representatives \( \C\big((x+1)^3\big) \), \( (1) \oplus \C\big((x+1)^2\big) \) and \( \I_3 \) (note \( -1 = 1 \) in \( \nF_2 \)).
 
 (b) Now two primes, \( x \) with total exponent \( 1 \) and \( x+1 \) with total exponent \( 2 \). For \( x \) the only option is the single elementary divisor \( x \); for \( x+1 \) the options are \( (x+1)^2 \) or \( x+1, x+1 \). So there are \( 2 \) classes, with invariant factors
 \[
@@ -652,7 +652,7 @@ as lists of invariant factors. So there are \( 3 \) classes, with representative
 \]
 In the first case \( r = 1 \) and the matrix is cyclic; in the second \( r = 2 \).
 
-(c) \( x^3 + x + 1 \) has no root in \( \nF_2 \) (its values at \( 0 \) and \( 1 \) are \( 1 \) and \( 1 \)), so it is irreducible (@thm-irreducible-deg-2-3 (b)). A prime of degree \( 3 \) in a characteristic polynomial of degree \( 3 \) can occur only with exponent \( 1 \), so the only possible list of elementary divisors is \( (x^3+x+1) \) itself: \( 1 \) class, represented by \( C(x^3+x+1) \).
+(c) \( x^3 + x + 1 \) has no root in \( \nF_2 \) (its values at \( 0 \) and \( 1 \) are \( 1 \) and \( 1 \)), so it is irreducible (@thm-irreducible-deg-2-3 (b)). A prime of degree \( 3 \) in a characteristic polynomial of degree \( 3 \) can occur only with exponent \( 1 \), so the only possible list of elementary divisors is \( (x^3+x+1) \) itself: \( 1 \) class, represented by \( \C(x^3+x+1) \).
 :::
 
 ### C. Going deeper
@@ -660,23 +660,23 @@ In the first case \( r = 1 \) and the matrix is cyclic; in the second \( r = 2 \
 :::: {#exr-rational-canonical-form-c1}
 [C1: Which matrices are companion matrices]
 
-Let \( A \in M_n(F) \) with \( n \ge 1 \).
+Let \( \A \in M_n(F) \) with \( n \ge 1 \).
 
 ::: {.enumerate options="label=(\alph*)"}
-1. Prove that \( A \) is similar to a companion matrix if and only if \( m_A = p_A \), and that the companion matrix is then \( C(p_A) \).
-2. Deduce that \( A \) is similar to a companion matrix if and only if its rational canonical form has exactly one block.
+1. Prove that \( \A \) is similar to a companion matrix if and only if \( m_{\A} = p_{\A} \), and that the companion matrix is then \( \C(p_{\A}) \).
+2. Deduce that \( \A \) is similar to a companion matrix if and only if its rational canonical form has exactly one block.
 3. Give an example of a matrix in \( M_2(F) \) that is not similar to any companion matrix.
 :::
 ::::
 
 ::: {.solution}
-(a) (⇐) If \( m_A = p_A \), then \( A \) is cyclic (@thm-cyclic-iff-min-equals-char) and, in the basis generated by a cyclic vector, its matrix is \( C(m_A) = C(p_A) \); so \( A \sim C(p_A) \) (@thm-similar-iff-same-operator).
+(a) \( (\Leftarrow) \) If \( m_{\A} = p_{\A} \), then \( \A \) is cyclic (@thm-cyclic-iff-min-equals-char) and, in the basis generated by a cyclic vector, its matrix is \( \C(m_{\A}) = \C(p_{\A}) \); so \( \A \sim \C(p_{\A}) \) (@thm-similar-iff-same-operator).
 
-(⇒) Suppose \( A \sim C(q) \) for some monic \( q \). By @thm-companion-char-min, \( m_{C(q)} = p_{C(q)} = q \). Similar matrices share both polynomials (@thm-charpoly-similarity-invariant, @thm-minimal-polynomial-similarity), so \( m_A = p_A = q \), and the companion matrix is \( C(p_A) \).
+\( (\Rightarrow) \) Suppose \( \A \sim \C(q) \) for some monic \( q \). By @thm-companion-char-min, \( m_{\C(q)} = p_{\C(q)} = q \). Similar matrices share both polynomials (@thm-charpoly-similarity-invariant, @thm-minimal-polynomial-similarity), so \( m_{\A} = p_{\A} = q \), and the companion matrix is \( \C(p_{\A}) \).
 
-(b) By @thm-rational-canonical-form the form has one block exactly when \( r = 1 \), that is, when \( d_1 = m_A = p_A \) (@thm-cyclic-decomposition (b), (c)). Now apply (a).
+(b) By @thm-rational-canonical-form the form has one block exactly when \( r = 1 \), that is, when \( d_1 = m_{\A} = p_{\A} \) (@thm-cyclic-decomposition (b), (c)). Now apply (a).
 
-(c) \( I_2 \): here \( m = x - 1 \ne (x-1)^2 = p \). Concretely, \( I_2 \) is similar only to itself, and no companion matrix of a monic quadratic is \( I_2 \), since the \( (2,1) \) entry of \( C(q) \) is \( 1 \ne 0 \).
+(c) \( \I_2 \): here \( m = x - 1 \ne (x-1)^2 = p \). Concretely, \( \I_2 \) is similar only to itself, and no companion matrix of a monic quadratic is \( \I_2 \), since the \( (2,1) \) entry of \( \C(q) \) is \( 1 \ne 0 \).
 :::
 
 :::: {#exr-rational-canonical-form-c2}
@@ -686,9 +686,9 @@ Work over \( F = \nF_2 \), so that \( M_2(\nF_2) \) has \( 16 \) elements.
 
 ::: {.enumerate options="label=(\alph*)"}
 1. List the four monic polynomials of degree \( 2 \) over \( \nF_2 \) and factor each into irreducibles.
-2. For each, list the possible lists of invariant factors of a matrix \( A \in M_2(\nF_2) \) with that characteristic polynomial.
+2. For each, list the possible lists of invariant factors of a matrix \( \A \in M_2(\nF_2) \) with that characteristic polynomial.
 3. Conclude the total number of similarity classes in \( M_2(\nF_2) \), and give a representative of each.
-4. Check your count against the orbit sizes: \( \lvert \GL_2(\nF_2)\rvert = 6 \), and the class of \( A \) has \( 6/\lvert\{P : P^{-1}AP = A\}\rvert \) elements.
+4. Check your count against the orbit sizes: \( \lvert \GL_2(\nF_2)\rvert = 6 \), and the class of \( \A \) has \( 6/\lvert\{\P : \P^{-1}\A \P = \A\}\rvert \) elements.
 :::
 ::::
 
@@ -699,11 +699,11 @@ Work over \( F = \nF_2 \), so that \( M_2(\nF_2) \) has \( 16 \) elements.
 
 (c) Total \( 2 + 2 + 1 + 1 = 6 \) classes, with representatives
 \[
-C(x^2) = \begin{pmatrix} 0 & 0 \\ 1 & 0 \end{pmatrix}, \quad 0, \quad C\big((x+1)^2\big) = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}, \quad I_2, \quad \diag(0,1), \quad C(x^2+x+1) = \begin{pmatrix} 0 & 1 \\ 1 & 1 \end{pmatrix},
+\C(x^2) = \begin{pmatrix} 0 & 0 \\ 1 & 0 \end{pmatrix}, \quad 0, \quad \C\big((x+1)^2\big) = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}, \quad \I_2, \quad \diag(0,1), \quad \C(x^2+x+1) = \begin{pmatrix} 0 & 1 \\ 1 & 1 \end{pmatrix},
 \]
-using \( -1 = 1 \) in \( \nF_2 \). (For \( (x+1)^2 = x^2+1 \) the coefficients are \( a_0 = 1, a_1 = 0 \), so \( C = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix} \), the coordinate swap.)
+using \( -1 = 1 \) in \( \nF_2 \). (For \( (x+1)^2 = x^2+1 \) the coefficients are \( a_0 = 1, a_1 = 0 \), so \( \C = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix} \), the coordinate swap.)
 
-(d) The two scalar matrices \( 0 \) and \( I_2 \) commute with everything, so their classes have \( 6/6 = 1 \) element each. For \( \diag(0,1) \), a matrix commutes with it exactly when it is diagonal (compare entries), and the invertible diagonal matrices over \( \nF_2 \) are only \( I_2 \), so the class has \( 6 \) elements. For \( C(x^2) \) and \( C(x^2+1) \) the commutant inside \( \GL_2 \) has \( 2 \) elements — by @exr-cyclic-subspaces-and-companion-matrices-c1 the commutant of a cyclic matrix is \( \{aI + bA\} \), which here has \( 4 \) elements, of which \( 2 \) are invertible — so each class has \( 3 \) elements. For \( C(x^2+x+1) \), whose order is \( 3 \) in \( \GL_2(\nF_2) \), the commutant is \( \{aI + bA\} \) again, with \( 3 \) invertible elements, so the class has \( 2 \) elements. Total:
+(d) The two scalar matrices \( 0 \) and \( \I_2 \) commute with everything, so their classes have \( 6/6 = 1 \) element each. For \( \diag(0,1) \), a matrix commutes with it exactly when it is diagonal (compare entries), and the invertible diagonal matrices over \( \nF_2 \) are only \( \I_2 \), so the class has \( 6 \) elements. For \( \C(x^2) \) and \( \C(x^2+1) \) the commutant inside \( \GL_2 \) has \( 2 \) elements — by @exr-cyclic-subspaces-and-companion-matrices-c1 the commutant of a cyclic matrix is \( \{a\I + b\A\} \), which here has \( 4 \) elements, of which \( 2 \) are invertible — so each class has \( 3 \) elements. For \( \C(x^2+x+1) \), whose order is \( 3 \) in \( \GL_2(\nF_2) \), the commutant is \( \{a\I + b\A\} \) again, with \( 3 \) invertible elements, so the class has \( 2 \) elements. Total:
 \[
 1 + 1 + 6 + 3 + 3 + 2 = 16 = \lvert M_2(\nF_2)\rvert . \checkmark
 \]
@@ -713,8 +713,8 @@ using \( -1 = 1 \) in \( \nF_2 \). (For \( (x+1)^2 = x^2+1 \) the coefficients a
 [C3: A matrix over the rationals is similar to its transpose]
 
 ::: {.enumerate options="label=(\alph*)"}
-1. Let \( A, B \in M_n(\nQ) \) have the same Jordan form over \( \nC \). Prove that \( A \) and \( B \) are similar over \( \nQ \).
-2. Deduce that \( A \sim A\tp \) over \( \nQ \) for every \( A \in M_n(\nQ) \).
+1. Let \( \A, \B \in M_n(\nQ) \) have the same Jordan form over \( \nC \). Prove that \( \A \) and \( \B \) are similar over \( \nQ \).
+2. Deduce that \( \A \sim \A\tp \) over \( \nQ \) for every \( \A \in M_n(\nQ) \).
 3. Which step of (b) would fail for a general field \( K \) in place of \( \nQ \)?
 :::
 
@@ -722,9 +722,9 @@ using \( -1 = 1 \) in \( \nF_2 \). (For \( (x+1)^2 = x^2+1 \) the coefficients a
 ::::
 
 ::: {.solution}
-(a) A matrix in \( M_n(\nQ) \) is also a matrix in \( M_n(\nC) \), and \( p_A \) splits over \( \nC \) (@cor-complex-polynomial-splits), so both have Jordan forms there. Having the same Jordan form, they are similar over \( \nC \) (@cor-similar-iff-same-jordan-form). By @cor-similarity-field-independent with \( K = \nQ \) and \( L = \nC \), they are similar over \( \nQ \).
+(a) A matrix in \( M_n(\nQ) \) is also a matrix in \( M_n(\nC) \), and \( p_{\A} \) splits over \( \nC \) (@cor-complex-polynomial-splits), so both have Jordan forms there. Having the same Jordan form, they are similar over \( \nC \) (@cor-similar-iff-same-jordan-form). By @cor-similarity-field-independent with \( K = \nQ \) and \( L = \nC \), they are similar over \( \nQ \).
 
-(b) Let \( A \in M_n(\nQ) \). Over \( \nC \), \( p_A \) splits, so @exr-jordan-canonical-form-c1 (c) gives \( A \sim A\tp \) over \( \nC \). Both matrices lie in \( M_n(\nQ) \), so @cor-similarity-field-independent gives \( A \sim A\tp \) over \( \nQ \).
+(b) Let \( \A \in M_n(\nQ) \). Over \( \nC \), \( p_{\A} \) splits, so @exr-jordan-canonical-form-c1 (c) gives \( \A \sim \A\tp \) over \( \nC \). Both matrices lie in \( M_n(\nQ) \), so @cor-similarity-field-independent gives \( \A \sim \A\tp \) over \( \nQ \).
 
-(c) The step that fails is the splitting: over a general field \( K \) there is no reason for \( p_A \) to split, and we have not constructed a larger field where it does. (The conclusion is nevertheless true over every field; Section 7 proves it without any splitting, using the Smith normal form of \( xI - A \).) Note that @cor-similarity-field-independent itself needs no hypothesis on \( K \) — only the existence of a suitable \( L \) does.
+(c) The step that fails is the splitting: over a general field \( K \) there is no reason for \( p_{\A} \) to split, and we have not constructed a larger field where it does. (The conclusion is nevertheless true over every field; Section 7 proves it without any splitting, using the Smith normal form of \( x\I - \A \).) Note that @cor-similarity-field-independent itself needs no hypothesis on \( K \) — only the existence of a suitable \( L \) does.
 :::

@@ -153,8 +153,8 @@ Now compare with Chapter 0. By @thm-two-by-two-inverse, \( \A \) is invertible *
     \draw[dashed] (0,0) rectangle (1,1);
     \fill[gray!25] (0,0) -- (2,1) -- (3,4) -- (1,3) -- cycle;
     \draw (0,0) -- (2,1) -- (3,4) -- (1,3) -- cycle;
-    \draw[very thick, ->] (0,0) -- (2,1) node[right] {$A\mathbf{e}_1 = (2,1)$};
-    \draw[very thick, ->] (0,0) -- (1,3) node[left] {$A\mathbf{e}_2 = (1,3)$};
+    \draw[very thick, ->] (0,0) -- (2,1) node[right] {$\A\mathbf{e}_1 = (2,1)$};
+    \draw[very thick, ->] (0,0) -- (1,3) node[left] {$\A\mathbf{e}_2 = (1,3)$};
 \end{tikzpicture}
 \end{center}
 

@@ -2,7 +2,7 @@
 
 Chapter 8 left one question open. Two matrices represent the same operator in different bases exactly when they are similar, and we can now decide similarity in easy cases: diagonalizable matrices are similar precisely when they have the same eigenvalues with the same multiplicities. But the matrices \( \begin{pmatrix} 1 & 1 \\ 0 & 1 \end{pmatrix} \) and \( I_2 \) share their characteristic and minimal polynomials, their rank, their trace and their determinant, and they are still not similar. Something is missing.
 
-This chapter supplies it. When the characteristic polynomial splits, every operator has a **Jordan form**: a direct sum of blocks with one eigenvalue on the diagonal and ones just above it, unique up to the order of the blocks. Two matrices are similar exactly when their Jordan forms agree, so the similarity problem is solved. Over a field where the polynomial does not split, the **rational canonical form** does the same job, and the Smith normal form of \( xI - A \) computes it. The chapter closes with what these forms are for: functions of matrices, the exponential \( e^{tA} \) and linear differential equations, and a complete answer to when the powers \( A^m \) converge.
+This chapter supplies it. When the characteristic polynomial splits, every operator has a **Jordan form**: a direct sum of blocks with one eigenvalue on the diagonal and ones just above it, unique up to the order of the blocks. Two matrices are similar exactly when their Jordan forms agree, so the similarity problem is solved. Over a field where the polynomial does not split, the **rational canonical form** does the same job, and the Smith normal form of \( x\I - \A \) computes it. The chapter closes with what these forms are for: functions of matrices, the exponential \( e^{t\A} \) and linear differential equations, and a complete answer to when the powers \( \A^m \) converge.
 
 **What you need.** From Chapter 1, direct sums, basis extension and complexification (@thm-direct-sum-k-criteria, @thm-basis-extension, @def-complexification). From Chapter 5, the arithmetic of \( F[x] \): division, gcds, Bézout and unique factorization (@thm-polynomial-division, @cor-bezout-polynomials, @thm-unique-factorization-polynomials), and interpolation (@thm-crt-polynomials). From Chapter 6, determinants of block triangular matrices, Cauchy–Binet and the companion matrix of a monic polynomial (@thm-det-block-triangular, @thm-cauchy-binet, @exr-characteristic-polynomial-c1). From Chapter 8, the minimal polynomial, primary decomposition and triangularization (@def-minimal-polynomial, @thm-primary-decomposition, @thm-triangularization).
 
@@ -14,10 +14,10 @@ This chapter supplies it. When the characteristic polynomial splits, every opera
 - **The real Jordan form and the Weyr form.** Avoiding complex numbers for a real matrix, and a rearrangement of the Jordan form with its own uses.
 - **Cyclic subspaces and companion matrices.** One vector and its images can generate everything.
 - **The rational canonical form.** A canonical form over every field, with invariant factors as the complete invariants.
-- **Polynomial matrices and the Smith normal form.** Row and column operations on \( xI - A \) compute the invariant factors.
+- **Polynomial matrices and the Smith normal form.** Row and column operations on \( x\I - \A \) compute the invariant factors.
 - **Semisimple operators and the Jordan–Chevalley decomposition.** Every operator splits uniquely into a diagonalizable part plus a commuting nilpotent part.
-- **Functions of matrices, the exponential and linear differential equations.** \( f(A) \) from the Jordan form, and \( x' = Ax \) solved by \( e^{tA} \).
-- **Convergent and power-bounded matrices.** Exactly when \( A^m \) converges, and to what.
+- **Functions of matrices, the exponential and linear differential equations.** \( f(\A) \) from the Jordan form, and \( x' = \A x \) solved by \( e^{t\A} \).
+- **Convergent and power-bounded matrices.** Exactly when \( \A^m \) converges, and to what.
 
 ## Named moves
 

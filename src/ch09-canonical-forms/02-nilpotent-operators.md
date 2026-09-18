@@ -4,7 +4,7 @@ Section 1 reduced our problem to one piece at a time: on the generalized eigensp
 
 ## Operators killed by a power
 
-The objects have already appeared several times. Differentiation on \( F[x]_{\le n} \) satisfies \( D^{n+1} = 0 \) (@exm-differentiation-nilpotent). The matrix \( \begin{pmatrix} 0 & 1 \\ 0 & 0 \end{pmatrix} \) has square \( 0 \). Over a field of characteristic \( 0 \), a commutator \( [A, B] \) that commutes with \( A \) has some power equal to \( 0 \) (@exr-commutators-and-shoda-c2). Chapter 3 gave these operators their name in passing; here is the definition in full, with the one extra piece of data we shall need.
+The objects have already appeared several times. Differentiation on \( F[x]_{\le n} \) satisfies \( D^{n+1} = 0 \) (@exm-differentiation-nilpotent). The matrix \( \begin{pmatrix} 0 & 1 \\ 0 & 0 \end{pmatrix} \) has square \( 0 \). Over a field of characteristic \( 0 \), a commutator \( [\A, \B] \) that commutes with \( \A \) has some power equal to \( 0 \) (@exr-commutators-and-shoda-c2). Chapter 3 gave these operators their name in passing; here is the definition in full, with the one extra piece of data we shall need.
 
 *A nilpotent operator is one that some power annihilates: repeated application destroys every vector.*
 
@@ -15,7 +15,7 @@ Let \( V \) be a vector space over \( F \) and \( N \in \cL(V) \). We say \( N \
 \[
 N^{s} = 0 \qquad \text{for some integer } s \ge 1 .
 \]
-If \( V \ne \{\0\} \) and \( N \) is nilpotent, the **index of nilpotency** of \( N \) is the **least** such \( s \); equivalently, \( N^{s} = 0 \) and \( N^{s-1} \ne 0 \). A matrix \( A \in M_n(F) \) is **nilpotent** if \( A^{s} = 0 \) for some \( s \ge 1 \), that is, if \( T_A \) is nilpotent.
+If \( V \ne \{\0\} \) and \( N \) is nilpotent, the **index of nilpotency** of \( N \) is the **least** such \( s \); equivalently, \( N^{s} = 0 \) and \( N^{s-1} \ne 0 \). A matrix \( \A \in M_n(F) \) is **nilpotent** if \( \A^{s} = 0 \) for some \( s \ge 1 \), that is, if \( T_{\A} \) is nilpotent.
 :::
 
 In words: one **single** exponent must kill **every** vector at once, and the exponent is at least \( 1 \), so the zero operator is nilpotent (index \( 1 \)) but the identity on \( V \ne \{\0\} \) is not. The index is well defined: the exponents \( s \ge 1 \) with \( N^s = 0 \) form a non-empty set of positive integers, which has a least element (@thm-well-ordering).
@@ -24,14 +24,14 @@ In words: one **single** exponent must kill **every** vector at once, and the ex
 
 - **The shift.** On \( F^k \), let \( N\e_1 = \0 \) and \( N\e_j = \e_{j-1} \) for \( j \ge 2 \). Then \( N^{k} \) kills every \( \e_j \), while \( N^{k-1}\e_k = \e_1 \ne \0 \), so \( N \) is nilpotent of index \( k \). Its matrix in the standard basis has a \( 1 \) in each position \( (j-1, j) \) and zeros elsewhere. This matrix is the model for everything in this section, and we write it
   \[
-  J_k(0) \coloneqq \begin{pmatrix} 0 & 1 & & \\ & 0 & \ddots & \\ & & \ddots & 1 \\ & & & 0 \end{pmatrix} \in M_k(F),
+  \J_k(0) \coloneqq \begin{pmatrix} 0 & 1 & & \\ & 0 & \ddots & \\ & & \ddots & 1 \\ & & & 0 \end{pmatrix} \in M_k(F),
   \]
-  with \( 1 \) in every **superdiagonal** entry \( (j, j+1) \) and \( 0 \) everywhere else. (Section 3 writes \( J_k(\lambda) = \lambda I_k + J_k(0) \) and calls it a Jordan block.) For \( k = 1 \), \( J_1(0) = (0) \).
-- **Differentiation.** \( D \) on \( F[x]_{\le n} \) has \( D^{n+1} = 0 \), and over \( \nR \) the index is exactly \( n + 1 \), since \( D^n x^n = n! \ne 0 \) (@exm-differentiation-nilpotent). Over \( \nR \), in the basis \( (1, x, x^2/2!, \dots, x^n/n!) \), its matrix is exactly \( J_{n+1}(0) \), because \( D(x^j/j!) = x^{j-1}/(j-1)! \).
-- **All entries non-zero.** \( A = \begin{pmatrix} 2 & 4 \\ -1 & -2 \end{pmatrix} \) has \( A^2 = \begin{pmatrix} 4 - 4 & 8 - 8 \\ -2 + 2 & -4 + 4 \end{pmatrix} = 0 \), so \( A \) is nilpotent of index \( 2 \), although no entry of \( A \) is \( 0 \). Nilpotency is not visible from the shape of the entries.
+  with \( 1 \) in every **superdiagonal** entry \( (j, j+1) \) and \( 0 \) everywhere else. (Section 3 writes \( \J_k(\lambda) = \lambda \I_k + \J_k(0) \) and calls it a Jordan block.) For \( k = 1 \), \( \J_1(0) = (0) \).
+- **Differentiation.** \( D \) on \( F[x]_{\le n} \) has \( D^{n+1} = 0 \), and over \( \nR \) the index is exactly \( n + 1 \), since \( D^n x^n = n! \ne 0 \) (@exm-differentiation-nilpotent). Over \( \nR \), in the basis \( (1, x, x^2/2!, \dots, x^n/n!) \), its matrix is exactly \( \J_{n+1}(0) \), because \( D(x^j/j!) = x^{j-1}/(j-1)! \).
+- **All entries non-zero.** \( \A = \begin{pmatrix} 2 & 4 \\ -1 & -2 \end{pmatrix} \) has \( \A^2 = \begin{pmatrix} 4 - 4 & 8 - 8 \\ -2 + 2 & -4 + 4 \end{pmatrix} = 0 \), so \( \A \) is nilpotent of index \( 2 \), although no entry of \( \A \) is \( 0 \). Nilpotency is not visible from the shape of the entries.
 - **The degenerate case.** On a space of dimension \( 1 \) the only nilpotent operator is \( 0 \): if \( N = c\,\id \) and \( N^s = 0 \), then \( c^s = 0 \), so \( c = 0 \). Small as it is, this is why a \( 1 \times 1 \) block in a nilpotent normal form carries a \( 0 \) and nothing else.
 
-**Non-example by minimal change.** Move the \( 1 \) in \( \begin{pmatrix} 0 & 1 \\ 0 & 0 \end{pmatrix} \) to the other off-diagonal position and take \( S = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix} \), the swap of the two coordinates. It is just as sparse, but \( S^2 = I \), so \( S^{2k} = I \ne 0 \) and \( S^{2k+1} = S \ne 0 \) for every \( k \): **no** power vanishes, and the defining clause fails outright. A gentler non-example is \( \diag(0, 1) \), which is singular and has \( 0 \) as an eigenvalue, yet \( \diag(0,1)^k = \diag(0, 1) \ne 0 \); being non-invertible is far from being nilpotent.
+**Non-example by minimal change.** Move the \( 1 \) in \( \begin{pmatrix} 0 & 1 \\ 0 & 0 \end{pmatrix} \) to the other off-diagonal position and take \( \S = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix} \), the swap of the two coordinates. It is just as sparse, but \( \S^2 = \I \), so \( \S^{2k} = \I \ne 0 \) and \( \S^{2k+1} = \S \ne 0 \) for every \( k \): **no** power vanishes, and the defining clause fails outright. A gentler non-example is \( \diag(0, 1) \), which is singular and has \( 0 \) as an eigenvalue, yet \( \diag(0,1)^k = \diag(0, 1) \ne 0 \); being non-invertible is far from being nilpotent.
 
 **Why this definition.** The clause "for some \( s \)" cannot be replaced by a fixed exponent without losing the class, since on \( \nR[x]_{\le n} \) differentiation needs \( n + 1 \) steps. On the other hand the exponent may always be taken to be \( \dim V \), as the next proposition shows, so the definition is not as open-ended as it looks. The name says "zero power": *nil* (nothing) and *potens* (power).
 
@@ -63,7 +63,7 @@ For (a) and (b), the kernel chain of Section 1 does the work: \( N^s = 0 \) says
 
 (c) Let \( s \) be the index and put \( K_k = \ker N^k \), so \( \{\0\} = K_0 \subseteq K_1 \subseteq \dots \subseteq K_s = V \) by (a) and @thm-kernel-chain-stabilizes (a). Choose a basis \( \sB_1 \) of \( K_1 \); extend it to a basis \( \sB_2 \) of \( K_2 \); and continuing, extend \( \sB_{k-1} \) to a basis \( \sB_k \) of \( K_k \) for \( k = 2, \dots, s \) (@thm-basis-extension, legitimate because \( \sB_{k-1} \) is an independent list in \( K_k \)). Then \( \sB = \sB_s = (\v_1, \dots, \v_n) \) is a basis of \( V \), and for each \( k \) the first \( \dim K_k \) of its vectors form a basis of \( K_k \). Let \( 1 \le j \le n \) and let \( k \) be the level at which \( \v_j \) was added, so \( \v_j \in K_k \) and \( \dim K_{k-1} < j \). Then \( N\v_j \in K_{k-1} = \Span(\v_1, \dots, \v_{\dim K_{k-1}}) \subseteq \Span(\v_1, \dots, \v_{j-1}) \). So the \( j \)-th column of \( [N]_{\sB} \) has zeros in rows \( j, j+1, \dots, n \) (@def-matrix-of-linear-map, @thm-unique-representation): the matrix is upper triangular with zero diagonal. Its diagonal entries are, with multiplicity, the eigenvalues of \( N \) (@thm-diagonal-of-triangular-form (b)), and they are all \( 0 \), so \( \spec(N) = \{0\} \).
 
-(b) By (a), \( N^n = 0 \), so \( s \le n \). The polynomial \( x^s \) annihilates \( N \), and \( x^{s-1} \) does not, so \( m_N \mid x^s \) and \( m_N \nmid x^{s-1} \) (@thm-minimal-polynomial-divides). Every monic divisor of \( x^s \) is \( x^j \) with \( 0 \le j \le s \) (@lem-monic-divisors), so \( m_N = x^{s} \). For \( p_N \), use the basis \( \sB \) of (c): there \( xI_n - [N]_{\sB} \) is upper triangular with every diagonal entry equal to \( x \), so \( p_N = x^n \) by @thm-det-triangular and @def-charpoly-operator.
+(b) By (a), \( N^n = 0 \), so \( s \le n \). The polynomial \( x^s \) annihilates \( N \), and \( x^{s-1} \) does not, so \( m_N \mid x^s \) and \( m_N \nmid x^{s-1} \) (@thm-minimal-polynomial-divides). Every monic divisor of \( x^s \) is \( x^j \) with \( 0 \le j \le s \) (@lem-monic-divisors), so \( m_N = x^{s} \). For \( p_N \), use the basis \( \sB \) of (c): there \( x\I_n - [N]_{\sB} \) is upper triangular with every diagonal entry equal to \( x \), so \( p_N = x^n \) by @thm-det-triangular and @def-charpoly-operator.
 
 (d) If \( p_N = x^n \), then \( p_N(N) = N^n = 0 \) by @thm-cayley-hamilton.
 :::
@@ -72,7 +72,7 @@ So nilpotency is detected by the characteristic polynomial: \( N \) is nilpotent
 
 ## What one chain looks like
 
-Look again at \( J_k(0) \) and read its columns, which is where a matrix always tells us what the operator does to basis vectors. With \( \sB = (\b_1, \dots, \b_k) \) the standard basis of \( F^k \), the matrix \( J_k(0) \) says
+Look again at \( \J_k(0) \) and read its columns, which is where a matrix always tells us what the operator does to basis vectors. With \( \sB = (\b_1, \dots, \b_k) \) the standard basis of \( F^k \), the matrix \( \J_k(0) \) says
 \[
 N\b_1 = \0, \qquad N\b_2 = \b_1, \qquad N\b_3 = \b_2, \quad \dots, \quad N\b_k = \b_{k-1} .
 \]
@@ -99,19 +99,19 @@ Let \( N \in \cL(V) \) and let \( (N^{k-1}\u, \dots, N\u, \u) \) be a Jordan cha
 
 ::: {.enumerate options="label=(\alph*)"}
 1. the list is linearly independent, so \( k \le \dim V \) when \( V \) is finite-dimensional;
-2. \( C = \Span(\u, N\u, \dots, N^{k-1}\u) \) is \( N \)-invariant of dimension \( k \), and the matrix of \( N|_{C} \) in the chain, taken in the order of @def-jordan-chain, is \( J_k(0) \).
+2. \( C = \Span(\u, N\u, \dots, N^{k-1}\u) \) is \( N \)-invariant of dimension \( k \), and the matrix of \( N|_{C} \) in the chain, taken in the order of @def-jordan-chain, is \( \J_k(0) \).
 :::
 :::
 
 ::: {.proof}
 (a) Suppose \( a_0\u + a_1N\u + \dots + a_{k-1}N^{k-1}\u = \0 \) with \( a_j \in F \). Apply \( N^{k-1} \). Every term with \( j \ge 1 \) becomes \( a_jN^{k-1+j}\u = \0 \), since \( N^k\u = \0 \) and \( k - 1 + j \ge k \). What remains is \( a_0N^{k-1}\u = \0 \), and \( N^{k-1}\u \ne \0 \), so \( a_0 = 0 \) (@thm-zero-product). Now apply \( N^{k-2} \) to the relation with \( a_0 = 0 \): by the same cancellation only \( a_1N^{k-1}\u = \0 \) survives, so \( a_1 = 0 \). Repeating this for \( N^{k-3}, \dots, N^0 \) gives \( a_2 = \dots = a_{k-1} = 0 \). Hence the list is independent, and an independent list has at most \( \dim V \) entries (@thm-basis-extension).
 
-(b) By (a) the \( k \) spanning vectors are independent, so \( \dim C = k \). Write \( \b_j = N^{k-j}\u \) for \( j = 1, \dots, k \), the chain in order. Then \( N\b_1 = N^{k}\u = \0 \) and \( N\b_j = N^{k-j+1}\u = \b_{j-1} \) for \( j \ge 2 \), so all images lie in \( C \) and \( C \) is \( N \)-invariant (@lem-invariance-on-spanning-list). The \( j \)-th column of the matrix of \( N|_C \) is the coordinate vector of \( N\b_j \), which is \( \0 \) for \( j = 1 \) and \( \e_{j-1} \) for \( j \ge 2 \) (@def-matrix-of-linear-map). That is precisely \( J_k(0) \).
+(b) By (a) the \( k \) spanning vectors are independent, so \( \dim C = k \). Write \( \b_j = N^{k-j}\u \) for \( j = 1, \dots, k \), the chain in order. Then \( N\b_1 = N^{k}\u = \0 \) and \( N\b_j = N^{k-j+1}\u = \b_{j-1} \) for \( j \ge 2 \), so all images lie in \( C \) and \( C \) is \( N \)-invariant (@lem-invariance-on-spanning-list). The \( j \)-th column of the matrix of \( N|_C \) is the coordinate vector of \( N\b_j \), which is \( \0 \) for \( j = 1 \) and \( \e_{j-1} \) for \( j \ge 2 \) (@def-matrix-of-linear-map). That is precisely \( \J_k(0) \).
 :::
 
 ## The structure theorem
 
-Now the goal. If a nilpotent operator could be split into chains, its matrix would be a direct sum of blocks \( J_{k_i}(0) \), and nothing would be left to describe except the list of lengths. That is exactly what happens.
+Now the goal. If a nilpotent operator could be split into chains, its matrix would be a direct sum of blocks \( \J_{k_i}(0) \), and nothing would be left to describe except the list of lengths. That is exactly what happens.
 
 *Every nilpotent operator is a disjoint union of staircases: the space breaks into chains, and the operator shifts each chain one step down.*
 
@@ -132,7 +132,7 @@ such that:
    is a basis of \( V \);
 2. with \( C_i = \Span(\u_i, N\u_i, \dots, N^{k_i-1}\u_i) \), each \( C_i \) is \( N \)-invariant, \( V = C_1 \oplus \dots \oplus C_r \), and
    \[
-   [N]_{\sB} = J_{k_1}(0) \oplus J_{k_2}(0) \oplus \dots \oplus J_{k_r}(0) .
+   [N]_{\sB} = \J_{k_1}(0) \oplus \J_{k_2}(0) \oplus \dots \oplus \J_{k_r}(0) .
    \]
 :::
 :::
@@ -209,10 +209,10 @@ Substituting these zeros back into \( (\ast) \) leaves only the terms with \( i 
 \]
 This is a linear combination of the members of the basis of \( \ker N \) from Step 3, so all the remaining coefficients vanish as well. Hence \( \sB \) is independent, and therefore a basis of \( V \). The lengths satisfy \( \sum_i k_i = n \) by the count above, and reindexing the chains so that the lengths decrease — a permutation of the chains — arranges \( k_1 \ge \dots \ge k_r \). This proves (a), and completes the induction.
 
-(b) Each \( C_i \) is \( N \)-invariant of dimension \( k_i \), with \( [N|_{C_i}] = J_{k_i}(0) \) in its chain, by @lem-jordan-chain-independent (b). The chains together form the basis \( \sB \) of \( V \), so \( V = C_1 + \dots + C_r \). The sum is direct: if \( \c_1 + \dots + \c_r = \0 \) with \( \c_i \in C_i \), then writing each \( \c_i \) in terms of its own chain turns this into a linear combination of the members of the basis \( \sB \) equal to \( \0 \), so every coefficient is \( 0 \) and every \( \c_i = \0 \); now apply @thm-direct-sum-k-criteria ((b) ⇒ (a)). Finally @thm-direct-sum-invariant-block-diagonal gives that \( [N]_{\sB} \) is block diagonal with blocks \( [N|_{C_i}] = J_{k_i}(0) \).
+(b) Each \( C_i \) is \( N \)-invariant of dimension \( k_i \), with \( [N|_{C_i}] = \J_{k_i}(0) \) in its chain, by @lem-jordan-chain-independent (b). The chains together form the basis \( \sB \) of \( V \), so \( V = C_1 + \dots + C_r \). The sum is direct: if \( \c_1 + \dots + \c_r = \0 \) with \( \c_i \in C_i \), then writing each \( \c_i \) in terms of its own chain turns this into a linear combination of the members of the basis \( \sB \) equal to \( \0 \), so every coefficient is \( 0 \) and every \( \c_i = \0 \); now apply @thm-direct-sum-k-criteria ((b) \( \Rightarrow \) (a)). Finally @thm-direct-sum-invariant-block-diagonal gives that \( [N]_{\sB} \) is block diagonal with blocks \( [N|_{C_i}] = \J_{k_i}(0) \).
 :::
 
-The theorem says that a nilpotent operator carries no information beyond the list of chain lengths. In matrix terms: **every nilpotent \( A \in M_n(F) \) is similar to \( J_{k_1}(0) \oplus \dots \oplus J_{k_r}(0) \) for some \( k_1 \ge \dots \ge k_r \ge 1 \) summing to \( n \)** (apply the theorem to \( T_A \) and use @thm-similar-iff-same-operator). The index of nilpotency is \( k_1 \), the largest block (it is also the stabilization index of the kernel chain of @thm-kernel-chain-stabilizes, since \( \ker N^{k_1} = V \)): \( J_{k}(0)^{k} = 0 \) and \( J_k(0)^{k-1} \ne 0 \), and powers of a block diagonal matrix act blockwise (@thm-block-diagonal-arithmetic (b)). Two questions remain: are the lengths unique, and how do we find them without finding the chains? One computation answers both.
+The theorem says that a nilpotent operator carries no information beyond the list of chain lengths. In matrix terms: **every nilpotent \( \A \in M_n(F) \) is similar to \( \J_{k_1}(0) \oplus \dots \oplus \J_{k_r}(0) \) for some \( k_1 \ge \dots \ge k_r \ge 1 \) summing to \( n \)** (apply the theorem to \( T_{\A} \) and use @thm-similar-iff-same-operator). The index of nilpotency is \( k_1 \), the largest block (it is also the stabilization index of the kernel chain of @thm-kernel-chain-stabilizes, since \( \ker N^{k_1} = V \)): \( \J_{k}(0)^{k} = 0 \) and \( \J_k(0)^{k-1} \ne 0 \), and powers of a block diagonal matrix act blockwise (@thm-block-diagonal-arithmetic (b)). Two questions remain: are the lengths unique, and how do we find them without finding the chains? One computation answers both.
 
 ## Block sizes from the ranks of the powers
 
@@ -264,17 +264,17 @@ This spanning list is a sublist of the basis \( \sB \), hence linearly independe
 ::: {#cor-nilpotent-similar-iff-ranks}
 [Similarity of Nilpotent Matrices]
 
-Let \( A, B \in M_n(F) \), \( n \ge 1 \), both nilpotent. Then \( A \sim B \) if and only if
+Let \( \A, \B \in M_n(F) \), \( n \ge 1 \), both nilpotent. Then \( \A \sim \B \) if and only if
 \[
-\rank A^{j} = \rank B^{j} \qquad \text{for every } j = 1, 2, \dots, n - 1 .
+\rank \A^{j} = \rank \B^{j} \qquad \text{for every } j = 1, 2, \dots, n - 1 .
 \]
-Equivalently, \( A \sim B \) if and only if their chain lengths, as lists in decreasing order, agree.
+Equivalently, \( \A \sim \B \) if and only if their chain lengths, as lists in decreasing order, agree.
 :::
 
 ::: {.proof}
-(⇒) If \( A \sim B \), say \( B = P^{-1}AP \), then \( B^j = P^{-1}A^jP \) (@prp-similarity-invariants (c)), so \( \rank A^j = \rank B^j \) (@prp-similarity-invariants (a)).
+\( (\Rightarrow) \) If \( \A \sim \B \), say \( \B = \P^{-1}\A \P \), then \( \B^j = \P^{-1}\A^j\P \) (@prp-similarity-invariants (c)), so \( \rank \A^j = \rank \B^j \) (@prp-similarity-invariants (a)).
 
-(⇐) Since \( \rank T_A^{\,j} = \rank A^{j} \) and \( \rank T_B^{\,j} = \rank B^{j} \) for every \( j \) (@thm-rank-map-equals-rank-matrix (a)), the hypothesis is a statement about the operators. By @thm-nilpotent-structure applied to \( T_A \) and to \( T_B \), together with @thm-similar-iff-same-operator, \( A \) is similar to \( J_{k_1}(0) \oplus \dots \oplus J_{k_r}(0) \) and \( B \) to \( J_{k'_1}(0) \oplus \dots \oplus J_{k'_{r'}}(0) \), with both lists decreasing. Equal ranks of all powers force equal lists, by @thm-nilpotent-block-sizes-from-ranks (c) (the ranks for \( j \ge n \) are all \( 0 \), so the listed range suffices). Hence \( A \) and \( B \) are similar to the same matrix, and \( A \sim B \) because similarity is an equivalence relation (@exm-similarity).
+\( (\Leftarrow) \) Since \( \rank T_{\A}^{\,j} = \rank \A^{j} \) and \( \rank T_{\B}^{\,j} = \rank \B^{j} \) for every \( j \) (@thm-rank-map-equals-rank-matrix (a)), the hypothesis is a statement about the operators. By @thm-nilpotent-structure applied to \( T_{\A} \) and to \( T_{\B} \), together with @thm-similar-iff-same-operator, \( \A \) is similar to \( \J_{k_1}(0) \oplus \dots \oplus \J_{k_r}(0) \) and \( \B \) to \( \J_{k'_1}(0) \oplus \dots \oplus \J_{k'_{r'}}(0) \), with both lists decreasing. Equal ranks of all powers force equal lists, by @thm-nilpotent-block-sizes-from-ranks (c) (the ranks for \( j \ge n \) are all \( 0 \), so the listed range suffices). Hence \( \A \) and \( \B \) are similar to the same matrix, and \( \A \sim \B \) because similarity is an equivalence relation (@exm-similarity).
 :::
 
 ::: {.warning}
@@ -362,54 +362,54 @@ The proof of @thm-nilpotent-structure is an algorithm, but run from the inside o
 
 Let
 \[
-N = \begin{pmatrix} 1 & 0 & 1 & 1 \\ 1 & -1 & 1 & 1 \\ 1 & -1 & 1 & 1 \\ -1 & 0 & -1 & -1 \end{pmatrix} \in M_4(\nQ).
+\N = \begin{pmatrix} 1 & 0 & 1 & 1 \\ 1 & -1 & 1 & 1 \\ 1 & -1 & 1 & 1 \\ -1 & 0 & -1 & -1 \end{pmatrix} \in M_4(\nQ).
 \]
-Show that \( N \) is nilpotent, find its chain lengths, and find a Jordan basis together with an invertible \( P \) with \( P^{-1}NP \) a direct sum of blocks \( J_k(0) \).
+Show that \( \N \) is nilpotent, find its chain lengths, and find a Jordan basis together with an invertible \( \P \) with \( \P^{-1}\N\P \) a direct sum of blocks \( \J_k(0) \).
 :::
 
 ::: {.solution}
 *Nilpotency and ranks.* Multiplying out,
 \[
-N^2 = \begin{pmatrix} 1 & -1 & 1 & 1 \\ 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 \\ -1 & 1 & -1 & -1 \end{pmatrix}, \qquad N^3 = 0 ,
+\N^2 = \begin{pmatrix} 1 & -1 & 1 & 1 \\ 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 \\ -1 & 1 & -1 & -1 \end{pmatrix}, \qquad \N^3 = 0 ,
 \]
-the last because every row of \( N^2 \) is a multiple of \( (1, -1, 1, 1) \), while
+the last because every row of \( \N^2 \) is a multiple of \( (1, -1, 1, 1) \), while
 \[
-(1, -1, 1, 1)\,N = (1 - 1 + 1 - 1,\ \ 0 + 1 - 1 + 0,\ \ 1 - 1 + 1 - 1,\ \ 1 - 1 + 1 - 1) = 0 .
+(1, -1, 1, 1)\,\N = (1 - 1 + 1 - 1,\ \ 0 + 1 - 1 + 0,\ \ 1 - 1 + 1 - 1,\ \ 1 - 1 + 1 - 1) = 0 .
 \]
-Since \( N^2 \ne 0 \), the index is \( 3 \). Rows \( 2 \) and \( 3 \) of \( N \) are equal and row \( 4 = -\)row \( 1 \), so \( \rank N = 2 \), and \( \rank N^2 = 1 \). Thus
+Since \( \N^2 \ne 0 \), the index is \( 3 \). Rows \( 2 \) and \( 3 \) of \( \N \) are equal and row \( 4 = -\)row \( 1 \), so \( \rank \N = 2 \), and \( \rank \N^2 = 1 \). Thus
 \[
 r_0 = 4, \quad r_1 = 2, \quad r_2 = 1, \quad r_3 = 0 .
 \]
 By @thm-nilpotent-block-sizes-from-ranks (c), the number of chains of length \( 1 \) is \( r_0 - 2r_1 + r_2 = 4 - 4 + 1 = 1 \), of length \( 2 \) is \( r_1 - 2r_2 + r_3 = 2 - 2 + 0 = 0 \), and of length \( 3 \) is \( r_2 - 2r_3 + r_4 = 1 - 0 + 0 = 1 \). The partition is \( (3, 1) \): one chain of length \( 3 \) and one of length \( 1 \), matching the picture drawn after @thm-nilpotent-structure.
 
-*The long chain.* We need \( \u_1 \notin \ker N^{2} \). Try \( \u_1 = \e_1 \): the first column of \( N^2 \) is \( (1, 0, 0, -1) \ne \0 \), so \( N^2\e_1 \ne \0 \) and \( \e_1 \) works. Its chain, read off the first columns of \( N \) and \( N^2 \), is
+*The long chain.* We need \( \u_1 \notin \ker \N^{2} \). Try \( \u_1 = \e_1 \): the first column of \( \N^2 \) is \( (1, 0, 0, -1) \ne \0 \), so \( \N^2\e_1 \ne \0 \) and \( \e_1 \) works. Its chain, read off the first columns of \( \N \) and \( \N^2 \), is
 \[
-N^2\e_1 = (1, 0, 0, -1), \qquad N\e_1 = (1, 1, 1, -1), \qquad \e_1 .
+\N^2\e_1 = (1, 0, 0, -1), \qquad \N\e_1 = (1, 1, 1, -1), \qquad \e_1 .
 \]
 
-*The short chain.* \( \ker N \) has dimension \( 2 \) (@thm-rank-nullity-matrix). The equations \( x_1 + x_3 + x_4 = 0 \) (row \( 1 \)) and \( x_1 - x_2 + x_3 + x_4 = 0 \) (row \( 2 \)) give \( x_2 = 0 \) and \( x_1 = -x_3 - x_4 \), so
+*The short chain.* \( \ker \N \) has dimension \( 2 \) (@thm-rank-nullity-matrix). The equations \( x_1 + x_3 + x_4 = 0 \) (row \( 1 \)) and \( x_1 - x_2 + x_3 + x_4 = 0 \) (row \( 2 \)) give \( x_2 = 0 \) and \( x_1 = -x_3 - x_4 \), so
 \[
-\ker N = \Span\big((-1, 0, 1, 0),\ (-1, 0, 0, 1)\big).
+\ker \N = \Span\big((-1, 0, 1, 0),\ (-1, 0, 0, 1)\big).
 \]
-The end of the long chain, \( N^2\e_1 = (1, 0, 0, -1) \), is the second of these basis vectors with a minus sign, so we complete it to a basis of \( \ker N \) with \( \u_2 = (-1, 0, 1, 0) \).
+The end of the long chain, \( \N^2\e_1 = (1, 0, 0, -1) \), is the second of these basis vectors with a minus sign, so we complete it to a basis of \( \ker \N \) with \( \u_2 = (-1, 0, 1, 0) \).
 
 *The basis and the matrix.* Take
 \[
-\sB = \big(\,(1, 0, 0, -1),\ (1, 1, 1, -1),\ \e_1,\ (-1, 0, 1, 0)\,\big), \qquad P = \begin{pmatrix} 1 & 1 & 1 & -1 \\ 0 & 1 & 0 & 0 \\ 0 & 1 & 0 & 1 \\ -1 & -1 & 0 & 0 \end{pmatrix},
+\sB = \big(\,(1, 0, 0, -1),\ (1, 1, 1, -1),\ \e_1,\ (-1, 0, 1, 0)\,\big), \qquad \P = \begin{pmatrix} 1 & 1 & 1 & -1 \\ 0 & 1 & 0 & 0 \\ 0 & 1 & 0 & 1 \\ -1 & -1 & 0 & 0 \end{pmatrix},
 \]
 the matrix whose columns are the vectors of \( \sB \). Its third column has a single non-zero entry, the \( 1 \) in row \( 1 \), so expanding along that column (@thm-laplace-expansion) gives
 \[
-\det P = \det\begin{pmatrix} 0 & 1 & 0 \\ 0 & 1 & 1 \\ -1 & -1 & 0 \end{pmatrix} = -1 ,
+\det \P = \det\begin{pmatrix} 0 & 1 & 0 \\ 0 & 1 & 1 \\ -1 & -1 & 0 \end{pmatrix} = -1 ,
 \]
-the last determinant computed by expanding along its own first column. So \( P \) is invertible and \( \sB \) is a basis. Then
+the last determinant computed by expanding along its own first column. So \( \P \) is invertible and \( \sB \) is a basis. Then
 \[
-P^{-1}NP = J_3(0) \oplus J_1(0) = \begin{pmatrix} 0 & 1 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 \end{pmatrix}.
+\P^{-1}N\P = \J_3(0) \oplus \J_1(0) = \begin{pmatrix} 0 & 1 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 \end{pmatrix}.
 \]
-There is no need to invert \( P \) to check this: the claim \( P^{-1}NP = J \) is the same as \( NP = PJ \), which reads column by column as
+There is no need to invert \( \P \) to check this: the claim \( \P^{-1}N\P = \J \) is the same as \( N\P = \P \J \), which reads column by column as
 \[
-N(1,0,0,-1) = \0, \quad N(1,1,1,-1) = (1,0,0,-1), \quad N\e_1 = (1,1,1,-1), \quad N(-1,0,1,0) = \0 ,
+\N(1,0,0,-1) = \0, \quad \N(1,1,1,-1) = (1,0,0,-1), \quad \N\e_1 = (1,1,1,-1), \quad \N(-1,0,1,0) = \0 ,
 \]
-and these four statements are exactly how the chains were built (the first and last say that the two chain ends lie in \( \ker N \)). As a sample verification, the second row of \( N(1,1,1,-1) \) is \( 1 - 1 + 1 - 1 = 0 \), matching the second coordinate of \( (1, 0, 0, -1) \).
+and these four statements are exactly how the chains were built (the first and last say that the two chain ends lie in \( \ker \N \)). As a sample verification, the second row of \( \N(1,1,1,-1) \) is \( 1 - 1 + 1 - 1 = 0 \), matching the second coordinate of \( (1, 0, 0, -1) \).
 :::
 
 ## Exercises
@@ -432,7 +432,7 @@ and these four statements are exactly how the chains were built (the first and l
 ::: {.solution}
 (a) \( N \in \cL(V) \) is nilpotent if \( N^s = 0 \) for **some** integer \( s \ge 1 \); the index is the least such \( s \) (@def-nilpotent).
 
-(b) For nilpotent \( N \) on \( V \) with \( \dim V = n \ge 1 \), there are chains generated by \( \u_1, \dots, \u_r \) of lengths \( k_1 \ge \dots \ge k_r \ge 1 \) summing to \( n \) whose concatenation is a basis of \( V \) — a Jordan basis — and in it \( [N] = J_{k_1}(0) \oplus \dots \oplus J_{k_r}(0) \) (@thm-nilpotent-structure).
+(b) For nilpotent \( N \) on \( V \) with \( \dim V = n \ge 1 \), there are chains generated by \( \u_1, \dots, \u_r \) of lengths \( k_1 \ge \dots \ge k_r \ge 1 \) summing to \( n \) whose concatenation is a basis of \( V \) — a Jordan basis — and in it \( [N] = \J_{k_1}(0) \oplus \dots \oplus \J_{k_r}(0) \) (@thm-nilpotent-structure).
 
 (c) \( \#\{i : k_i \ge j\} = \rank N^{j-1} - \rank N^{j} \) (@thm-nilpotent-block-sizes-from-ranks (b)).
 
@@ -471,17 +471,17 @@ In each case \( N \) is nilpotent on a space of dimension \( n \) over \( F \). 
 Let \( F \) be any field.
 
 ::: {.enumerate options="label=(\alph*)"}
-1. List the five partitions of \( 4 \), and for each write down the corresponding nilpotent matrix in \( M_4(F) \) as a direct sum of blocks \( J_k(0) \).
-2. For each, compute \( \rank N \), \( \rank N^2 \), \( \rank N^3 \) and the index of nilpotency.
+1. List the five partitions of \( 4 \), and for each write down the corresponding nilpotent matrix in \( M_4(F) \) as a direct sum of blocks \( \J_k(0) \).
+2. For each, compute \( \rank \N \), \( \rank \N^2 \), \( \rank \N^3 \) and the index of nilpotency.
 3. Which pairs among them share the same rank? Which invariant separates each such pair?
-4. Deduce that \( \rank N \) alone is not a complete invariant of nilpotent matrices, but the full list of ranks of powers is.
+4. Deduce that \( \rank \N \) alone is not a complete invariant of nilpotent matrices, but the full list of ranks of powers is.
 :::
 ::::
 
 ::: {.solution}
-(a) \( (4) \): \( J_4(0) \); \( (3,1) \): \( J_3(0) \oplus J_1(0) \); \( (2,2) \): \( J_2(0) \oplus J_2(0) \); \( (2,1,1) \): \( J_2(0) \oplus J_1(0) \oplus J_1(0) \); \( (1,1,1,1) \): the zero matrix.
+(a) \( (4) \): \( \J_4(0) \); \( (3,1) \): \( \J_3(0) \oplus \J_1(0) \); \( (2,2) \): \( \J_2(0) \oplus \J_2(0) \); \( (2,1,1) \): \( \J_2(0) \oplus \J_1(0) \oplus \J_1(0) \); \( (1,1,1,1) \): the zero matrix.
 
-(b) Using \( \rank N^j = \sum_i\max(k_i - j, 0) \) (@thm-nilpotent-block-sizes-from-ranks (a)), the ranks \( (\rank N, \rank N^2, \rank N^3) \) and the index are:
+(b) Using \( \rank \N^j = \sum_i\max(k_i - j, 0) \) (@thm-nilpotent-block-sizes-from-ranks (a)), the ranks \( (\rank \N, \rank \N^2, \rank \N^3) \) and the index are:
 
 - \( (4) \): ranks \( 3, 2, 1 \); index \( 4 \).
 - \( (3,1) \): ranks \( 2, 1, 0 \); index \( 3 \).
@@ -489,9 +489,9 @@ Let \( F \) be any field.
 - \( (2,1,1) \): ranks \( 1, 0, 0 \); index \( 2 \).
 - \( (1,1,1,1) \): ranks \( 0, 0, 0 \); index \( 1 \).
 
-(c) Only \( (3,1) \) and \( (2,2) \) share a rank, namely \( 2 \). They are separated by \( \rank N^2 \) (\( 1 \) against \( 0 \)), equivalently by the index (\( 3 \) against \( 2 \)) or the minimal polynomial (\( x^3 \) against \( x^2 \), @prp-nilpotent-basic (b)).
+(c) Only \( (3,1) \) and \( (2,2) \) share a rank, namely \( 2 \). They are separated by \( \rank \N^2 \) (\( 1 \) against \( 0 \)), equivalently by the index (\( 3 \) against \( 2 \)) or the minimal polynomial (\( x^3 \) against \( x^2 \), @prp-nilpotent-basic (b)).
 
-(d) The pair in (c) shows that equal rank does not imply similarity, while equality of \( \rank N^j \) for all \( j \) does (@cor-nilpotent-similar-iff-ranks).
+(d) The pair in (c) shows that equal rank does not imply similarity, while equality of \( \rank \N^j \) for all \( j \) does (@cor-nilpotent-similar-iff-ranks).
 :::
 
 :::: {#exr-nilpotent-operators-b3}
@@ -499,43 +499,43 @@ Let \( F \) be any field.
 
 Let
 \[
-M = \begin{pmatrix} -1 & -1 & 1 & -1 \\ 1 & 2 & -2 & 1 \\ 1 & 2 & -2 & 1 \\ 1 & 1 & -1 & 1 \end{pmatrix} \in M_4(\nQ).
+\M = \begin{pmatrix} -1 & -1 & 1 & -1 \\ 1 & 2 & -2 & 1 \\ 1 & 2 & -2 & 1 \\ 1 & 1 & -1 & 1 \end{pmatrix} \in M_4(\nQ).
 \]
 
 ::: {.enumerate options="label=(\alph*)"}
-1. Show that \( M^2 = 0 \) and compute \( \rank M \).
-2. Determine the chain lengths of \( M \).
-3. Find a Jordan basis and an invertible \( P \) with \( P^{-1}MP \) a direct sum of blocks \( J_k(0) \). Verify your answer by checking \( MP = PJ \) column by column.
+1. Show that \( \M^2 = 0 \) and compute \( \rank \M \).
+2. Determine the chain lengths of \( \M \).
+3. Find a Jordan basis and an invertible \( \P \) with \( \P^{-1}\M \P \) a direct sum of blocks \( \J_k(0) \). Verify your answer by checking \( \M \P = \P \J \) column by column.
 :::
 
 *Hint: for (c), the tops of the chains may be taken among the standard basis vectors.*
 ::::
 
 ::: {.solution}
-(a) Write \( \m_1, \dots, \m_4 \) for the columns of \( M \), so \( \m_1 = (-1,1,1,1) \), \( \m_2 = (-1,2,2,1) \), \( \m_3 = -\m_2 \) and \( \m_4 = \m_1 \). The columns of \( M^2 \) are \( M\m_1, \dots, M\m_4 \), so it is enough to check the first two. Row by row,
+(a) Write \( \m_1, \dots, \m_4 \) for the columns of \( \M \), so \( \m_1 = (-1,1,1,1) \), \( \m_2 = (-1,2,2,1) \), \( \m_3 = -\m_2 \) and \( \m_4 = \m_1 \). The columns of \( \M^2 \) are \( \M\m_1, \dots, \M\m_4 \), so it is enough to check the first two. Row by row,
 \[
-M\m_1 = (1 - 1 + 1 - 1,\ -1 + 2 - 2 + 1,\ -1 + 2 - 2 + 1,\ -1 + 1 - 1 + 1) = \0,
+\M\m_1 = (1 - 1 + 1 - 1,\ -1 + 2 - 2 + 1,\ -1 + 2 - 2 + 1,\ -1 + 1 - 1 + 1) = \0,
 \]
 \[
-M\m_2 = (1 - 2 + 2 - 1,\ -1 + 4 - 4 + 1,\ -1 + 4 - 4 + 1,\ -1 + 2 - 2 + 1) = \0 .
+\M\m_2 = (1 - 2 + 2 - 1,\ -1 + 4 - 4 + 1,\ -1 + 4 - 4 + 1,\ -1 + 2 - 2 + 1) = \0 .
 \]
-Hence \( M\m_3 = -M\m_2 = \0 \) and \( M\m_4 = M\m_1 = \0 \), so \( M^2 = 0 \). Also \( \im M = \Span(\m_1, \m_2) \) by the relations among the columns, and \( \m_1, \m_2 \) are not proportional, so \( \rank M = 2 \).
+Hence \( \M\m_3 = -\M\m_2 = \0 \) and \( \M\m_4 = \M\m_1 = \0 \), so \( \M^2 = 0 \). Also \( \im \M = \Span(\m_1, \m_2) \) by the relations among the columns, and \( \m_1, \m_2 \) are not proportional, so \( \rank \M = 2 \).
 
 (b) \( r_0, r_1, r_2 = 4, 2, 0 \). Chains of length \( 1 \): \( r_0 - 2r_1 + r_2 = 4 - 4 + 0 = 0 \); of length \( 2 \): \( r_1 - 2r_2 + r_3 = 2 \). So the partition is \( (2, 2) \): two chains of length \( 2 \).
 
-(c) We need two tops \( \u, \w \) with \( M\u, M\w \) independent; since \( \rank M = 2 \) and \( \im M = \Span(\m_1, \m_2) \), the vectors \( \u = \e_1 \) and \( \w = \e_2 \) do it, with \( M\e_1 = \m_1 = (-1, 1, 1, 1) \) and \( M\e_2 = \m_2 = (-1, 2, 2, 1) \). Take
+(c) We need two tops \( \u, \w \) with \( \M\u, \M\w \) independent; since \( \rank \M = 2 \) and \( \im \M = \Span(\m_1, \m_2) \), the vectors \( \u = \e_1 \) and \( \w = \e_2 \) do it, with \( \M\e_1 = \m_1 = (-1, 1, 1, 1) \) and \( \M\e_2 = \m_2 = (-1, 2, 2, 1) \). Take
 \[
-\sB = \big(\,(-1,1,1,1),\ \e_1,\ (-1,2,2,1),\ \e_2\,\big), \qquad P = \begin{pmatrix} -1 & 1 & -1 & 0 \\ 1 & 0 & 2 & 1 \\ 1 & 0 & 2 & 0 \\ 1 & 0 & 1 & 0 \end{pmatrix} .
+\sB = \big(\,(-1,1,1,1),\ \e_1,\ (-1,2,2,1),\ \e_2\,\big), \qquad \P = \begin{pmatrix} -1 & 1 & -1 & 0 \\ 1 & 0 & 2 & 1 \\ 1 & 0 & 2 & 0 \\ 1 & 0 & 1 & 0 \end{pmatrix} .
 \]
-The last column of \( P \) has a single non-zero entry, the \( 1 \) in row \( 2 \), so expanding along it (@thm-laplace-expansion) gives
+The last column of \( \P \) has a single non-zero entry, the \( 1 \) in row \( 2 \), so expanding along it (@thm-laplace-expansion) gives
 \[
-\det P = \det\begin{pmatrix} -1 & 1 & -1 \\ 1 & 0 & 2 \\ 1 & 0 & 1 \end{pmatrix} = -1 \cdot (1 \cdot 1 - 2 \cdot 1) = 1 \ne 0,
+\det \P = \det\begin{pmatrix} -1 & 1 & -1 \\ 1 & 0 & 2 \\ 1 & 0 & 1 \end{pmatrix} = -1 \cdot (1 \cdot 1 - 2 \cdot 1) = 1 \ne 0,
 \]
 where the second determinant was expanded along its second column. So \( \sB \) is a basis, and
 \[
-P^{-1}MP = J_2(0) \oplus J_2(0).
+\P^{-1}\M \P = \J_2(0) \oplus \J_2(0).
 \]
-Column by column, \( MP = PJ \) says: \( M(-1,1,1,1) = \0 \) (first column of \( PJ \) is \( \0 \)); \( M\e_1 = (-1,1,1,1) \) (second column of \( PJ \) is the first column of \( P \)); \( M(-1,2,2,1) = \0 \); and \( M\e_2 = (-1,2,2,1) \). All four were verified in (a) and (c).
+Column by column, \( \M \P = \P \J \) says: \( \M(-1,1,1,1) = \0 \) (first column of \( \P \J \) is \( \0 \)); \( \M\e_1 = (-1,1,1,1) \) (second column of \( \P \J \) is the first column of \( \P \)); \( \M(-1,2,2,1) = \0 \); and \( \M\e_2 = (-1,2,2,1) \). All four were verified in (a) and (c).
 :::
 
 ### C. Going deeper
@@ -543,25 +543,25 @@ Column by column, \( MP = PJ \) says: \( M(-1,1,1,1) = \0 \) (first column of \(
 :::: {#exr-nilpotent-operators-c1}
 [C1: A nilpotent matrix is similar to its transpose]
 
-Let \( A \in M_n(F) \) be nilpotent.
+Let \( \A \in M_n(F) \) be nilpotent.
 
 ::: {.enumerate options="label=(\alph*)"}
-1. Prove that \( A^{\tp} \) is nilpotent and that \( \rank (A^{\tp})^{j} = \rank A^{j} \) for every \( j \ge 1 \).
-2. Deduce that \( A \sim A^{\tp} \).
-3. For \( A = J_3(0) \), find an explicit \( P \) with \( P^{-1}AP = A^{\tp} \).
+1. Prove that \( \A^{\tp} \) is nilpotent and that \( \rank (\A^{\tp})^{j} = \rank \A^{j} \) for every \( j \ge 1 \).
+2. Deduce that \( \A \sim \A^{\tp} \).
+3. For \( \A = \J_3(0) \), find an explicit \( \P \) with \( \P^{-1}\A \P = \A^{\tp} \).
 :::
 ::::
 
 ::: {.solution}
-(a) \( (A^{\tp})^{j} = (A^{j})^{\tp} \) (@thm-transpose-properties), so \( (A^{\tp})^{n} = (A^n)^{\tp} = 0 \) by @prp-nilpotent-basic (a), and \( A^{\tp} \) is nilpotent. A matrix and its transpose have the same rank (@thm-row-rank-equals-column-rank), so \( \rank(A^{\tp})^j = \rank (A^j)^{\tp} = \rank A^j \).
+(a) \( (\A^{\tp})^{j} = (\A^{j})^{\tp} \) (@thm-transpose-properties), so \( (\A^{\tp})^{n} = (\A^n)^{\tp} = 0 \) by @prp-nilpotent-basic (a), and \( \A^{\tp} \) is nilpotent. A matrix and its transpose have the same rank (@thm-row-rank-equals-column-rank), so \( \rank(\A^{\tp})^j = \rank (\A^j)^{\tp} = \rank \A^j \).
 
-(b) Both matrices are nilpotent with equal ranks of all powers, so @cor-nilpotent-similar-iff-ranks gives \( A \sim A^{\tp} \).
+(b) Both matrices are nilpotent with equal ranks of all powers, so @cor-nilpotent-similar-iff-ranks gives \( \A \sim \A^{\tp} \).
 
-(c) \( J_3(0) \) sends \( \e_1 \mapsto \0 \), \( \e_2 \mapsto \e_1 \), \( \e_3 \mapsto \e_2 \), while \( J_3(0)^{\tp} \) sends \( \e_1 \mapsto \e_2 \mapsto \e_3 \mapsto \0 \), that is, it is the shift in the reversed basis. So take the reversal permutation matrix
+(c) \( \J_3(0) \) sends \( \e_1 \mapsto \0 \), \( \e_2 \mapsto \e_1 \), \( \e_3 \mapsto \e_2 \), while \( \J_3(0)^{\tp} \) sends \( \e_1 \mapsto \e_2 \mapsto \e_3 \mapsto \0 \), that is, it is the shift in the reversed basis. So take the reversal permutation matrix
 \[
-P = \begin{pmatrix} 0 & 0 & 1 \\ 0 & 1 & 0 \\ 1 & 0 & 0 \end{pmatrix}, \qquad P^{-1} = P .
+\P = \begin{pmatrix} 0 & 0 & 1 \\ 0 & 1 & 0 \\ 1 & 0 & 0 \end{pmatrix}, \qquad \P^{-1} = \P .
 \]
-Then \( P^{-1}J_3(0)P = J_3(0)^{\tp} \), as one checks column by column: \( J_3(0)P \) has columns \( J_3(0)\e_3 = \e_2 \), \( J_3(0)\e_2 = \e_1 \), \( J_3(0)\e_1 = \0 \), and \( P\,J_3(0)^{\tp} \) has columns \( P\e_2 = \e_2 \), \( P\e_3 = \e_1 \), \( P\0 = \0 \). (The same reversal works for every \( J_k(0) \), and hence, blockwise, for every nilpotent matrix in Jordan form.)
+Then \( \P^{-1}\J_3(0)\P = \J_3(0)^{\tp} \), as one checks column by column: \( \J_3(0)\P \) has columns \( \J_3(0)\e_3 = \e_2 \), \( \J_3(0)\e_2 = \e_1 \), \( \J_3(0)\e_1 = \0 \), and \( \P\,\J_3(0)^{\tp} \) has columns \( \P\e_2 = \e_2 \), \( \P\e_3 = \e_1 \), \( \P\0 = \0 \). (The same reversal works for every \( \J_k(0) \), and hence, blockwise, for every nilpotent matrix in Jordan form.)
 :::
 
 :::: {#exr-nilpotent-operators-c2}
@@ -570,18 +570,18 @@ Then \( P^{-1}J_3(0)P = J_3(0)^{\tp} \), as one checks column by column: \( J_3(
 Let \( V \) be finite-dimensional with \( \dim V = n \ge 1 \), and let \( N \in \cL(V) \) be nilpotent with \( N^{n-1} \ne 0 \).
 
 ::: {.enumerate options="label=(\alph*)"}
-1. Prove that there is a basis of \( V \) in which the matrix of \( N \) is \( J_n(0) \).
+1. Prove that there is a basis of \( V \) in which the matrix of \( N \) is \( \J_n(0) \).
 2. Deduce that \( m_N = p_N = x^n \), and that \( \nullity N = 1 \).
-3. Show that the conclusion of (a) fails for \( N = J_2(0) \oplus J_1(0) \) on a space of dimension \( 3 \), and say which hypothesis fails.
+3. Show that the conclusion of (a) fails for \( \N = \J_2(0) \oplus \J_1(0) \) on a space of dimension \( 3 \), and say which hypothesis fails.
 :::
 
 *Hint: for (a), take a vector outside \( \ker N^{n-1} \), which exists precisely because \( N^{n-1} \ne 0 \).*
 ::::
 
 ::: {.solution}
-(a) Since \( N^{n-1} \ne 0 \), there is \( \u \in V \) with \( N^{n-1}\u \ne \0 \), while \( N^{n}\u = \0 \) by @prp-nilpotent-basic (a). So \( \u \) generates a Jordan chain of length \( n \) (@def-jordan-chain), which is a linearly independent list of \( n = \dim V \) vectors (@lem-jordan-chain-independent (a)), hence a basis of \( V \) (@thm-right-size-basis (a)). In it the matrix of \( N \) is \( J_n(0) \), by @lem-jordan-chain-independent (b) with \( C = V \).
+(a) Since \( N^{n-1} \ne 0 \), there is \( \u \in V \) with \( N^{n-1}\u \ne \0 \), while \( N^{n}\u = \0 \) by @prp-nilpotent-basic (a). So \( \u \) generates a Jordan chain of length \( n \) (@def-jordan-chain), which is a linearly independent list of \( n = \dim V \) vectors (@lem-jordan-chain-independent (a)), hence a basis of \( V \) (@thm-right-size-basis (a)). In it the matrix of \( N \) is \( \J_n(0) \), by @lem-jordan-chain-independent (b) with \( C = V \).
 
 (b) In that basis \( \rank N^j = n - j \) for \( 0 \le j \le n \) (@thm-nilpotent-block-sizes-from-ranks (a) with the single length \( k_1 = n \)), so \( \nullity N = 1 \) by @thm-rank-nullity and the index of nilpotency is \( n \). Hence \( m_N = x^n \) by @prp-nilpotent-basic (b), and \( p_N = x^n \) as well; they coincide, which by @cor-minimal-divides-characteristic is the extreme case \( \deg m_N = n \).
 
-(c) For \( N = J_2(0) \oplus J_1(0) \) on \( F^3 \) we have \( N^2 = 0 \), so \( N^{n-1} = N^2 = 0 \) and the hypothesis \( N^{n-1} \ne 0 \) fails. Accordingly \( N \) is not similar to \( J_3(0) \): its rank is \( 1 \), while \( \rank J_3(0) = 2 \), and similar matrices have equal ranks (@prp-similarity-invariants (a)). Its partition is \( (2, 1) \), not \( (3) \).
+(c) For \( \N = \J_2(0) \oplus \J_1(0) \) on \( F^3 \) we have \( \N^2 = 0 \), so \( \N^{n-1} = \N^2 = 0 \) and the hypothesis \( \N^{n-1} \ne 0 \) fails. Accordingly \( \N \) is not similar to \( \J_3(0) \): its rank is \( 1 \), while \( \rank \J_3(0) = 2 \), and similar matrices have equal ranks (@prp-similarity-invariants (a)). Its partition is \( (2, 1) \), not \( (3) \).
 :::

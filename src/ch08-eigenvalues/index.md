@@ -17,7 +17,7 @@ Not every operator has enough eigenvectors, and the chapter explains precisely w
 - **Triangularization.** An operator has a triangular matrix exactly when its characteristic polynomial splits.
 - **Primary decomposition.** The factorization of the minimal polynomial splits the space, and decides diagonalizability.
 - **Commuting operators.** Operators that commute share eigenvectors, and can be triangularized or diagonalized together.
-- **Spectral mapping, AB and BA.** Eigenvalues of polynomials in an operator, and why \( AB \) and \( BA \) share their non-zero eigenvalues.
+- **Spectral mapping, AB and BA.** Eigenvalues of polynomials in an operator, and why \( \A \B \) and \( \B \A \) share their non-zero eigenvalues.
 - **Powers, recurrences and Markov chains.** Diagonalization at work.
 
 ## Named moves
