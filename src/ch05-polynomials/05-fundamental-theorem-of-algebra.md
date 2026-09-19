@@ -209,7 +209,7 @@ The proof guarantees \( \lvert p(z) \rvert \le 1 - \tfrac12 \cdot \tfrac14 \cdot
 
 The three steps now combine into a proof of @thm-fundamental-theorem-of-algebra.
 
-::: {.proof}
+::: {.proof of="thm-fundamental-theorem-of-algebra"}
 Let \( p \in \nC[x] \) be non-constant. By @lem-minimum-modulus-attained there is \( z_0 \in \nC \) with \( \lvert p(z_0) \rvert \le \lvert p(z) \rvert \) for every \( z \in \nC \). Suppose, for a contradiction, that \( p(z_0) \neq 0 \). By @lem-dalembert there is \( z \) with \( \lvert p(z) \rvert < \lvert p(z_0) \rvert \), contradicting the choice of \( z_0 \). Hence \( p(z_0) = 0 \), and \( z_0 \) is a root of \( p \).
 :::
 

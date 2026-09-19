@@ -810,28 +810,48 @@ local function scan_and_dump_labels(doc)
     local uses = {}
     local block_text = {}  -- label -> prose of its statement and proofs (for title mentions)
     do
-        local current = nil
-        local function add_cites(block)
-            if not current then return end
+        -- A proof (with its idea and claims) belongs to the last *result*, even when an
+        -- example or exercise sits between the statement and the proof: crediting it to the
+        -- example hid the fundamental theorem of algebra's citations from the dependency gate.
+        -- Solutions, remarks, warnings and checks still belong to the block just before them.
+        local RESULT_ENVS = { theorem = true, lemma = true, corollary = true, proposition = true }
+        local PASS_OVER = { example = true, exercise = true }
+        local PROOF_PARTS = { proof = true, proofofclaim = true, claim = true, idea = true }
+        local current, current_kind, current_result = nil, nil, nil
+        local function add_cites(block, owner)
+            if not owner then return end
             block:walk { Cite = function(cite)
                 for _, citation in ipairs(cite.citations) do
-                    if citation.id ~= current then uses[current][citation.id] = true end
+                    if citation.id ~= owner then uses[owner][citation.id] = true end
                 end
             end }
             local without_math = block:walk { Math = function() return pandoc.Space() end }
-            block_text[current] = (block_text[current] or "") .. " " .. pandoc.utils.stringify(without_math)
+            block_text[owner] = (block_text[owner] or "") .. " " .. pandoc.utils.stringify(without_math)
         end
         for _, block in ipairs(doc.blocks) do
             if block.t == "Header" then
-                current = nil
+                current, current_kind, current_result = nil, nil, nil
             elseif block.t == "Div" then
                 local env_type = get_env_type(block)
                 if env_type and ENV_STYLES[env_type] == "big" then
                     current = (block.identifier ~= "" and block.identifier) or nil
+                    current_kind = env_type
                     if current then uses[current] = uses[current] or {} end
-                    add_cites(block)
+                    if RESULT_ENVS[env_type] then current_result = current end
+                    add_cites(block, current)
                 elseif env_type then
-                    add_cites(block)
+                    local owner = current
+                    if PROOF_PARTS[env_type] and PASS_OVER[current_kind] and current_result then
+                        owner = current_result
+                    end
+                    -- An explicit owner wins: `::: {.proof of="thm-x"}` for a proof set apart from
+                    -- its statement (the theorem stated first, lemmas proved, the proof at the end)
+                    local named = block.attributes and block.attributes["of"]
+                    if named and named ~= "" then
+                        owner = named
+                        uses[owner] = uses[owner] or {}
+                    end
+                    add_cites(block, owner)
                 end
             end
         end
