@@ -70,24 +70,49 @@ def copy_math_fonts(book: Book, source: Path):
             shutil.copy2(font, target)
 
 
+# One node process rendering every page at once grows until it is killed, and the kill
+# arrives with an empty stderr, so the build reports "Math rendering failed" with nothing
+# to go on. Rendering in batches keeps each process small and makes the failure legible.
+BATCH = 40
+
+
 def render_math(book: Book, source: Path, pages: list[Path], shards: list[Path]) -> bool:
     """Render the math in the given HTML pages and tooltip shards, in place."""
     if not pages and not shards:
         return True
-    job = {
-        "mathjax": str(source),
-        "macros": mathjax_macros(book.macros_file),
-        "pages": [str(p) for p in pages],
-        "shards": [str(s) for s in shards],
-        "css": str(book.html_dir / "mathjax.css"),
-    }
-    result = subprocess.run(["node", str(RENDERER)], input=json.dumps(job), capture_output=True, text=True)
-    if result.returncode != 0:
-        print_error(f"Math rendering failed: {result.stderr.strip()[-2000:]}")
-        return False
-    summary = json.loads(result.stdout.strip().splitlines()[-1])
-    for error in summary["errors"]:
-        print_warning(f"Math error in {error}")
+    macros = mathjax_macros(book.macros_file)
+    css = book.html_dir / "mathjax.css"
+    # The stylesheet is the same whichever document produces it (it carries the font faces,
+    # not the glyphs of one page), so the first batch writes it and the rest discard theirs.
+    scratch_css = book.build_dir / "tmp" / "mathjax-batch.css"
+    scratch_css.parent.mkdir(parents=True, exist_ok=True)
+
+    batches = [pages[i:i + BATCH] for i in range(0, len(pages), BATCH)] or [[]]
+    batches[-1] = batches[-1]  # shards ride along with the final batch
+    rendered_pages = rendered_shards = 0
+
+    for index, batch in enumerate(batches):
+        job = {
+            "mathjax": str(source),
+            "macros": macros,
+            "pages": [str(p) for p in batch],
+            "shards": [str(s) for s in shards] if index == len(batches) - 1 else [],
+            "css": str(css if index == 0 else scratch_css),
+        }
+        result = subprocess.run(["node", str(RENDERER)], input=json.dumps(job),
+                                capture_output=True, text=True)
+        if result.returncode != 0:
+            detail = result.stderr.strip()[-2000:] or (
+                f"node exited with code {result.returncode} and no message, most likely out of "
+                f"memory on a batch of {len(batch)} pages")
+            print_error(f"Math rendering failed: {detail}")
+            return False
+        summary = json.loads(result.stdout.strip().splitlines()[-1])
+        for error in summary["errors"]:
+            print_warning(f"Math error in {error}")
+        rendered_pages += summary["pages"]
+        rendered_shards += summary["shards"]
+
     copy_math_fonts(book, source)
-    print_success(f"Math rendered: {summary['pages']} pages, {summary['shards']} tooltip files")
+    print_success(f"Math rendered: {rendered_pages} pages, {rendered_shards} tooltip files")
     return True

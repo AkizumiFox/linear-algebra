@@ -114,7 +114,7 @@ Hence \( \A\V = \U\vSigma \). Since \( \V \) is unitary, \( \V^{-1} = \V^{*} \),
 A factorization \( \A = \U\vSigma\V^{*} \) as in the theorem is called **a singular value decomposition** of \( \A \), the columns \( \u_i \) of \( \U \) are **left singular vectors** and the columns \( \v_i \) of \( \V \) are **right singular vectors**. The two equations to keep in mind are the ones the proof produced,
 \[
 \A\v_i = \sigma_i\u_i, \qquad \A^{*}\u_i = \sigma_i\v_i \qquad (i \le r),
-\]
+\]{#eq-singular-vector-pairing}
 the second obtained by applying \( \A^{*} \) to the first and using \( \A^{*}\A\v_i = \sigma_i^2\v_i \). In words: \( \A \) matches up two orthonormal bases, one in each space, stretching the \( i \)-th direction by \( \sigma_i \), and \( \A^{*} \) runs the same correspondence backwards with the same factors.
 
 Here is the picture the Idea described, in the real \( 2 \times 2 \) case.

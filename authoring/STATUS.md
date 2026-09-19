@@ -19,9 +19,10 @@ The plan is at `~/.claude/plans/cached-gathering-sedgewick.md`. The outline of a
 | 10 | ch10-inner-products | Inner product spaces | deployed |
 | 11 | ch11-spectral-theory | Spectral theory | deployed |
 | 12 | ch12-psd-and-svd | Positive matrices and the SVD | deployed |
-| 13 | ch13-forms | Bilinear and quadratic forms | drafting |
-| 14 | ch14-tensors | Tensors and exterior algebra | blueprint written |
-| 15–23 | | see plan | not started |
+| 13 | ch13-forms | Bilinear and quadratic forms | deployed |
+| 14 | ch14-tensors | Tensors and exterior algebra | drafted and refereed |
+| 15 | ch15-norms | Norms and matrix analysis | blueprint written |
+| 16–23 | | see plan | not started |
 
 ## Open forward promises
 
@@ -156,3 +157,11 @@ Add a line when a section promises something later ("proved in Chapter 5"); tick
 - [ ] Ch 13 §12 → Ch 14: tensor algebras; the construction of Cl(q) as a quotient of one; the independence half of `thm-clifford-dimension`. **Chapter 13 states that theorem with its gap marked in the text**, so this debt is visible to readers
 - [ ] Ch 13 §09/§10 → nothing: the Pfaffian transformation rule and Sp(2m,F) ⊆ SL are recorded without proof and nothing may cite them
 - Polish deferred to M7: Ch 13 §§07–08 have no labelled worked examples (`exm-`), and §10 has no Idea blocks, both against the STYLE checklist
+
+### Chapter 14 (tensors and exterior algebra)
+
+- [x] Ch 7 §04 → Ch 14 §03: the Kronecker product is the matrix of a tensor product of maps, in the dictionary-ordered product basis with the first factor slow. The other ordering gives the *swapped* Kronecker product, not a transpose
+- [x] Ch 13 §12 → Ch 14 §10: `Cl(q)` constructed as `T(V)/⟨v ⊗ v − q(v)1⟩`, hence existence, and `dim Cl(q) = 2ⁿ` proved via creation/deletion operators on `Λ V` with no division by 2. The half Chapter 13 marked as missing was independence
+- [x] Ch 3 §10 → Ch 14 §04: the trace as a contraction, with no basis chosen
+- [ ] Ch 14 §08 → Ch 21: Plücker coordinates (hinted, chapter not named in the text)
+- Polish deferred to M7: §10 is the book's longest section (~10.6k words) and carries four major notions against STYLE's two; §03 is also long. Both have natural seams recorded in the referee reports

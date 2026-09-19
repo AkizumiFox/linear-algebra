@@ -101,7 +101,11 @@
             "dir": "src/ch13-forms",
             "part": "Part IV \u00b7 Forms and Multilinear Algebra"
         },
-        "src/ch14-tensors"
+        "src/ch14-tensors",
+        {
+            "dir": "src/ch15-norms",
+            "part": "Part V \u00b7 Matrix Analysis"
+        }
     ],
     "macros": "latex/macros.tex",
     "templates": {

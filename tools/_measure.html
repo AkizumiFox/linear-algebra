@@ -16,12 +16,18 @@
   const out = document.getElementById('out');
   const stage = document.getElementById('stage');
   const lines = [];
+  let measured = 0;
   try {
     const nav = await fetch('navigation.json').then(r => r.json());
+    // Chapter index pages and the extras carry maths too, and measuring only the numbered
+    // sections quietly left about twenty pages unchecked.
     const pages = [];
     for (const ch of nav.chapters || []) {
+      if (ch.path) pages.push(ch.path);
       for (const s of ch.sections || []) if (s.path) pages.push(s.path);
     }
+    for (const e of nav.extras || []) if (e.path) pages.push(e.path);
+    if (nav.preface && nav.preface.path) pages.push(nav.preface.path);
     // The math fonts must be loaded before anything is measured, or fallback
     // metrics make every display look far too wide.
     stage.innerHTML = '<mjx-container display="true"><mjx-math><mjx-mi>x</mjx-mi></mjx-math></mjx-container>';
@@ -35,6 +41,7 @@
       const doc = new DOMParser().parseFromString(html, 'text/html');
       const content = doc.querySelector('.content') || doc.body;
       for (const node of content.querySelectorAll('mjx-container[display="true"]')) {
+        measured++;
         stage.innerHTML = '';
         stage.append(node.cloneNode(true));
         const el = stage.firstElementChild;
@@ -51,7 +58,18 @@
       }
     }
     lines.sort((a, b) => parseInt(b) - parseInt(a));
-    out.textContent = lines.length ? lines.join('\n') : 'none';
+    // A page whose maths was never prerendered carries no mjx-container at all, and the run
+    // would then report a clean book because it found nothing to measure. Refuse to: "none"
+    // must mean "measured everything, nothing overflowed".
+    if (measured === 0) {
+      out.textContent = 'MEASURED NOTHING: no display maths found on any of the ' + pages.length
+          + ' pages. The site is not MathJax-prerendered; run a full build and measure again. '
+          + 'This is NOT a clean result.';
+      return;
+    }
+    out.textContent = lines.length
+        ? lines.join('\n')
+        : 'none (' + measured + ' displays measured on ' + pages.length + ' pages)';
   } catch (error) {
     out.textContent = 'measure failed: ' + error.message;
   }
