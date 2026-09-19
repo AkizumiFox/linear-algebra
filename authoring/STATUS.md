@@ -23,7 +23,8 @@ The plan is at `~/.claude/plans/cached-gathering-sedgewick.md`. The outline of a
 | 14 | ch14-tensors | Tensors and exterior algebra | deployed |
 | 15 | ch15-norms | Norms and matrix analysis | deployed |
 | 16 | ch16-variational | Variational principles and interlacing | deployed |
-| 17–23 | | see plan | not started |
+| 17 | ch17-convexity | Convexity | deployed |
+| 18–23 | | see plan | not started |
 
 ## Open forward promises
 
@@ -173,6 +174,17 @@ Add a line when a section promises something later ("proved in Chapter 5"); tick
 - `tools/check_forward_deps.py` — fails if any label cites one from a later section. The book passes: 2476 labels, zero forward citations, zero dangling. It compares **sections only**, because the third component of a label number counts within a type (`def-connectives` and `thm-contrapositive-equivalent` are both 0.1.1); 3107 within-section citations therefore go unordered and remain the referee's job. Verified against planted violations
 - **M7 triage, 42 sites:** `tools/check_forward_deps.py --exercises` lists every theorem, proposition, corollary or lemma that cites an exercise, across 27 files in Chapters 0, 5, 7, 8, 9, 10, 11, 12, 13, 14 and 15. **This is a candidate list, not a defect list.** Citing an exercise for attribution is fine; a proof that *depends* on one is the rule this book has broken and repaired seven times. Each site needs reading. The two Chapter 15 §01 entries were triaged during that chapter's referee pass and are attribution only
 
+### Chapter 17 (convexity)
+
+- [x] Ch 15 → Ch 17 §04: **dual norms** (`def-dual-norm`, `thm-dual-dual-norm`; pairs 1↔∞ and 2↔2 in §04, general p in §11's `thm-dual-p-norm`). Ch 15's outline and blueprint listed them, but Ch 15 never defined one (and makes no claim to). Ch 17 §04 delivers `def-dual-norm` and ‖·‖** = ‖·‖
+- [x] Ch 16 §06 → Ch 17 §10: a pointwise supremum of linear functions is convex (`prp-sup-of-affine-convex`, quoted verbatim)
+- [x] Ch 15 §01 → Ch 17 §11: Minkowski's inequality. Ch 15 said the book "does not prove and never uses" it; Ch 17 §11 proves it from Hölder (`cor-minkowski-inequality`) and uses it for the dual p-norms, so the Ch 15 sentence was updated to point there (a pointer update, as Ch 15 §08's Eckart–Young pointer was for Ch 16)
+- Ch 15 §01 wrote \( |x_i|^p \) and the exponent \( 1/p \) for real p without defining real powers; the book had **no logarithm**. Ch 17 §11 builds log from Ch 9 §09's exp (`lem-exp-log`) and defines \( t^r = e^{r\log t} \). Ch 15's use was a remark, not a proof step
+- [x] Ch 2 §07 → Ch 17 §06: inequalities and linear programming (`exm-traffic-lp`; Ch 2 names no chapter)
+- [x] Ch 13 §06 said nothing later depends on its imported (A1) symmetry / (A2) Taylor; Ch 17 §10's `thm-convex-second-derivative` does, so the Ch 13 sentence was updated (a pointer update, like the Minkowski one)
+- [ ] Ch 17 §10 → Ch 20: A ↦ tr f(A) is convex for convex f (plan: "Convex and Schur-convex functions")
+- [x] Ch 17 §04 (~line 344): an earlier draft promised §10 a circular "second proof of the triangle inequality" from `cor-norm-as-max`; the final text says only that norms are examples of a max of linear functions, and the revision adds that their convexity was already the triangle inequality
+
 ### Chapter 16 (variational principles and interlacing)
 
 Discharged (to be confirmed by referee):
@@ -187,7 +199,7 @@ Discharged (to be confirmed by referee):
 
 Created:
 - [ ] Ch 16 §01 → Ch 23: Rayleigh quotient iteration
-- [ ] Ch 16 §08 → Ch 18: Birkhoff's theorem on doubly stochastic matrices (no longer needed for Horn; the plan has it in Ch 18 in its own right)
+- [ ] Ch 16 §08 → Ch 18: Birkhoff's theorem on doubly stochastic matrices (no longer needed for Horn; the plan has it in Ch 18 in its own right). **Ch 17 §08 defines `def-doubly-stochastic` (Ω_n), proves the permutation matrices are extreme, and states Birkhoff in two equivalent forms with the equivalence proved — Ch 18 need only prove one form**
 - [x] Ch 16 §08: Horn's converse is **proved in §08** (`lem-horn-two-by-two`, `thm-horn`, `thm-schur-horn`), by induction from a 2×2 rotation. It was first deferred to Ch 20 on the false premise that it needs Birkhoff; the approved outline puts Schur–Horn in Ch 16
 - [ ] Ch 16 §08 → Ch 20: Schur-concavity of the product (x ≺ y, non-negative ⟹ ∏xᵢ ≥ ∏yᵢ) and Schur-concave functions in general
 - [ ] Ch 16 §09 → Ch 19: the Hermitian dilation, used for singular-value perturbation (§10's exercises already use it)

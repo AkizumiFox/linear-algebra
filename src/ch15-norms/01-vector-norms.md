@@ -60,7 +60,7 @@ and a bound valid for every \( i \) bounds the maximum. The \( 2 \)-norm is the 
 So one space carries at least three different norms. For \( \x = (3, -4, 12) \in \nR^3 \) they give \( \norm{\x}_1 = 19 \), \( \norm{\x}_2 = 13 \) and \( \norm{\x}_\infty = 12 \) — three honest answers to "how big is \( \x \)", and no reason yet to prefer one.
 
 ::: {.remark}
-There is a \( p \)-norm \( \norm{\x}_p = \bigl(\sum_i\lvert x_i\rvert^{p}\bigr)^{1/p} \) for every real \( p \ge 1 \), and \( \norm{\x}_\infty \) is its limit as \( p \to \infty \). Its triangle inequality is Minkowski's inequality, which this book does not prove and never uses; only \( p = 1, 2, \infty \) appear below, and each of those was verified above from scratch.
+There is a \( p \)-norm \( \norm{\x}_p = \bigl(\sum_i\lvert x_i\rvert^{p}\bigr)^{1/p} \) for every real \( p \ge 1 \), and \( \norm{\x}_\infty \) is its limit as \( p \to \infty \). Its triangle inequality is Minkowski's inequality, which Chapter 17 proves from Hölder's inequality (and which is the first place real powers \( t^{p} \) and the logarithm are set up properly). This chapter uses only \( p = 1, 2, \infty \), and each of those was verified above from scratch.
 :::
 
 ::: {#exm-induced-and-weighted-norms}

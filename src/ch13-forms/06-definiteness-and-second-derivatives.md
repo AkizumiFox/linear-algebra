@@ -120,7 +120,7 @@ f(\a + \h) = f(\a) + \nabla f(\a)\cdot\h + \tfrac12\,\h\tp\H_f(\a)\h + r(\h),
 where the remainder satisfies \( r(\h)/\norm{\h}^2 \to 0 \) as \( \h \to \0 \).
 :::
 
-These are two standard theorems of multivariable calculus. This book proves neither, and nothing later depends on either; they are quoted only so that the theorem below has hypotheses to stand on, exactly as the theorem of Abel and Ruffini was quoted in Chapter 10. Everything after them is linear algebra.
+These are two standard theorems of multivariable calculus. This book proves neither. They are quoted so that the theorem below has hypotheses to stand on, and Chapter 17 quotes them again for its second-derivative test of convexity, exactly as the theorem of Abel and Ruffini was quoted in Chapter 10. Everything after them is linear algebra.
 
 By (A1) the Hessian is a real symmetric matrix, so it has an inertia, and by @thm-definiteness-by-signature that inertia decides the definiteness of the quadratic form \( \h \mapsto \h\tp\H_f(\a)\h \). One small lemma converts definiteness into a quantitative bound, and it is the only place where a real number is needed rather than a sign.
 

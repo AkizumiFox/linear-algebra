@@ -23,3 +23,7 @@ You are drafting sections of a comprehensive, reader-caring linear algebra textb
 
 ## When done
 Run `./build.py html 2>&1 | grep -i "warn\|error" | head -30` and fix warnings originating in YOUR files (other agents build concurrently; ignore issues from files that aren't yours, and duplicate-label warnings against old content that the blueprint moves elsewhere). Reply with: files written, prose word counts, labels created, blueprint deviations and why, forward promises made (for STATUS.md), claims you were unsure about.
+
+## Building while other agents work
+
+Several drafting agents run at once, and **the scratchpad directory is shared between all of them**. Never build in the shared source tree (concurrent builds corrupt `_build/cache`), and never build in a generically named scratch folder such as `scratchpad/repo/`: in Chapter 17 two agents used the same one and one `rsync --delete`d the other's copy. Copy the repo into a directory named after your own sections, for example `scratchpad/ch17-s05-s07/repo/`, and build there.

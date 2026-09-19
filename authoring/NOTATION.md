@@ -168,13 +168,30 @@ This list is fixed. A chapter that needs a new symbol adds it here, and a new ma
 | index origin | subscripts start at 1 everywhere, with one announced exception: Ch 11 §09 runs rows, columns and entries from \( 0 \) to \( n-1 \), because circulant and Fourier subscripts are read modulo n |
 | `\c \ast \d` | cyclic convolution of two vectors of length n, \( (\c \ast \d)_k = \sum_t c_t d_{k-t} \) with subscripts read modulo n (Ch 11 §09). The product of two circulants is the circulant of the convolution |
 | `[A, B] = AB - BA` | commutator |
-| `\norm{\x}_p` | p-norm. `\norm{A}_F` Frobenius, `\norm{A}_2` spectral/operator 2-norm. Ch 15 §01 defines and verifies only \( p = 1, 2, \infty \); the general \( p \) is recorded there and never used, since its triangle inequality (Minkowski) is not proved in this book |
+| `\norm{\x}_p` | p-norm. `\norm{A}_F` Frobenius, `\norm{A}_2` spectral/operator 2-norm. Ch 15 §01 defines and verifies \( p = 1, 2, \infty \); for general \( 1 \le p \le \infty \) the triangle inequality is Minkowski's inequality, proved in Ch 17 §11 (`cor-minkowski-inequality`) from Hölder's. \( q \) denotes the conjugate exponent, \( 1/p + 1/q = 1 \) |
 | `\norm{f}_\infty` | the **sup norm** \( \max_{t \in [0,1]}\lvert f(t)\rvert \) on \( C[0,1] \) (Ch 15 §01), the same symbol as the \( \infty \)-norm on \( F^n \) and for the same reason. It is the standing infinite-dimensional example, where Ch 15 §02's equivalence theorem fails |
 | `B_{\norm{\cdot}}` | the **closed unit ball** \( \{\v : \norm{\v} \le 1\} \) of a norm (Ch 15 §01). In \( F^n \), `B_1`, `B_2`, `B_\infty` are the balls of the three p-norms; the integer subscript names the norm, not a dimension |
 | `\norm{A}` | operator norm induced by the named vector norm |
 | `\norm{\A}_1`, `\norm{\A}_{\infty}` | the operator norms induced by the vector 1- and ∞-norms (Ch 15 §03): the largest column sum and the largest row sum. Distinct from the entrywise maximum, which is not even submultiplicative, and from \( \norm{f}_{\infty} \), the sup norm on a function space |
 | `\kappa(A)` | condition number |
-| `\conv(S)` | convex hull |
+| `\conv S` | the **convex hull** of S, the set of all convex combinations of points of S (Ch 17 §01, `def-convex-hull`, `thm-convex-hull-combinations`) |
+| `\operatorname{aff} S` | the **affine hull**, the set of affine combinations; a coset \( \x_0 + W_S \) (Ch 17 §01, `def-affine-hull`, `prp-affine-hull-coset`). No macro |
+| `[\x, \y]` | the **segment** \( \{(1-t)\x + t\y : 0 \le t \le 1\} \) (Ch 17 §01). Always with bold vector arguments; not the commutator \( [A, B] \) |
+| `\Delta_n` | the **standard simplex** \( \{t \in \nR^n : t_i \ge 0,\ \sum t_i = 1\} = \conv\{\e_1, \dots, \e_n\} \): n weights (Ch 17 §01, `def-standard-simplex`). Mixed strategies of a game live here (Ch 17 §07) |
+| `\interior S`, `\closure S` | interior and closure of a subset of a finite-dimensional real space (Ch 17 §03, `def-interior-point`); closed and open are defined sequentially in `def-closed-set` (§01) |
+| `P_C(\x)`, `d(\x, C)` | the **nearest point** of a non-empty closed convex set C to x, and the distance (Ch 17 §03, `thm-nearest-point`). For a subspace this is the orthogonal projection of Ch 10 |
+| `p_K`, `h_K`, `K^{\circ}` | the **gauge**, **support function** (value \( +\infty \) allowed) and **polar set** of K (Ch 17 §04) |
+| `\norm{\cdot}_{*}`, `\norm{\cdot}_{**}` | the **dual norm** \( \norm{\y}_* = \max_{\norm{\x}\le 1}\inner{\x}{\y} \) and the bidual, which is the norm itself (Ch 17 §04, `def-dual-norm`, `thm-dual-dual-norm`). Dual of \( \norm{\cdot}_p \) is \( \norm{\cdot}_q \) |
+| `K^{*}` | the **dual cone** \( \{\y : \inner{\x}{\y} \ge 0 \ \forall \x \in K\} \) of a subset K, inside V itself (Ch 17 §05, `def-dual-cone`). Not the dual space \( V^* \); for a subspace it equals \( U^\perp \) and is not written this way |
+| `\operatorname{cone}(\a_1, \dots, \a_m)`, `\operatorname{cone}(\A)` | the **finitely generated cone** (Ch 17 §05, `def-finitely-generated-cone`); \( \operatorname{cone}() = \{\0\} \). No macro |
+| `\x \ge \0`, `\u \le \v`, `\nR^m_{\ge 0}` | **entrywise** order on real vectors, and the non-negative orthant (Ch 17 §05). Unrelated to the Loewner \( \succeq \) |
+| `v(\A)` | the **value** of the matrix game with payoff matrix A (Ch 17 §07, `def-value-of-game`) |
+| `\operatorname{ext} C`, `W_C`, `\dim C` | the **extreme points** of C; the direction space and dimension of a non-empty convex set, \( \dim C = \dim \operatorname{aff} C \) (Ch 17 §01, §08) |
+| `\cD_n`, `\Omega_n` | the real **density matrices** \( \{X = X\tp \succeq 0, \tr X = 1\} \) and the **doubly stochastic** matrices (Ch 17 §08, `def-density-matrix`, `def-doubly-stochastic`). Plain \( \Omega \), not the bold symplectic \( \vOmega_{2m} \) of Ch 13 |
+| `I(\x)`, `\A_I` | the active set of a point of \( \{\A\x \le \b\} \) and the matrix of its active rows (Ch 17 §09) |
+| `\operatorname{epi} f` | the **epigraph** \( \{(\x, s) : s \ge f(\x)\} \) (Ch 17 §10) |
+| `\log`, `t^r` | the natural logarithm, built as the inverse of exp in Ch 17 §11 (`lem-exp-log`), and real powers \( t^r = e^{r\log t} \) for \( t > 0 \), \( 0^r = 0 \) for \( r > 0 \). This gives Ch 15 §01's \( \norm{\cdot}_p \) its meaning |
+| `s_k(\A)` | \( \lambda_1(\A) + \dots + \lambda_k(\A) \), the Ky Fan partial sum (Ch 16 §06, reused in Ch 17 §10) |
 | `\vol` | volume: of a parallelepiped, \|det\| (Ch 6); extended in Ch 12 §03 to the k-dimensional volume of a list of any length in any inner product space, by the base-times-height recursion of `def-k-volume`. The two agree wherever both apply, and Ch 12 §03 proves it |
 | `\x \prec \y`, `\x \prec_w \y`, `\x^{\downarrow}` | **majorization** and **weak (sub)majorization** of real vectors, written with bold vectors (Ch 16 §08, `def-majorization`). \( \x^{\downarrow} \) is \( \x \) sorted decreasingly. \( \x \prec_w \y \): every top-\( k \) partial sum of \( \x^{\downarrow} \) is at most that of \( \y^{\downarrow} \); \( \x \prec \y \) adds equal totals. **It is a preorder on \( \nR^n \), not a partial order** — (1,0) ≺ (0,1) ≺ (1,0) |
 | `\d(\A)` | the **diagonal vector** \( (a_{11}, \dots, a_{nn}) \in \nR^n \) of a Hermitian \( \A \), in its given order (Ch 16 §08). Bold because it is a vector; distinct from `\diag(d_1,\dots,d_n)`, which **builds a matrix** |
