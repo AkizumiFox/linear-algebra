@@ -105,7 +105,8 @@
         {
             "dir": "src/ch15-norms",
             "part": "Part V \u00b7 Matrix Analysis"
-        }
+        },
+        "src/ch16-variational"
     ],
     "macros": "latex/macros.tex",
     "templates": {

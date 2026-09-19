@@ -21,8 +21,8 @@ The plan is at `~/.claude/plans/cached-gathering-sedgewick.md`. The outline of a
 | 12 | ch12-psd-and-svd | Positive matrices and the SVD | deployed |
 | 13 | ch13-forms | Bilinear and quadratic forms | deployed |
 | 14 | ch14-tensors | Tensors and exterior algebra | deployed |
-| 15 | ch15-norms | Norms and matrix analysis | drafted, in referee |
-| 16 | ch16-variational | Variational principles and interlacing | blueprint written |
+| 15 | ch15-norms | Norms and matrix analysis | deployed |
+| 16 | ch16-variational | Variational principles and interlacing | drafting |
 | 17–23 | | see plan | not started |
 
 ## Open forward promises

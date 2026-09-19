@@ -1,0 +1,108 @@
+#!/usr/bin/env python3
+"""Fail if any result cites a result proved in a later section of the book.
+
+Reads `_build/crossref_labels.json`, which the HTML build writes. Every label
+carries a `number` of the form chapter.section.index and a `uses` list of the
+labels cited inside its block and its proof.
+
+**The third component counts within a type, not within the section**: in section
+0.1 both `def-connectives` and `thm-contrapositive-equivalent` are numbered
+0.1.1. So this tool compares sections only. Two labels in the same section are
+reported as unordered, not as an error -- ordering inside a section is a job for
+the section's referee, who can see the text.
+
+Run after `./build.py html`. Exits 1 if anything cites a later section.
+"""
+import json
+import re
+import sys
+from pathlib import Path
+
+INDEX = Path("_build/crossref_labels.json")
+
+
+def parse(number):
+    """('15.4.4') -> (15, 4), the section it lives in; None when unparseable."""
+    parts = number.split(".")
+    if len(parts) != 3:
+        return None
+    try:
+        return int(parts[0]), int(parts[1])
+    except ValueError:
+        return None
+
+
+CHAPTER = re.compile(r"^ch(\d+)[^/]*/(\d+|index)")
+
+
+def from_file(path):
+    """Exercises and examples carry no number, but their path names the section.
+
+    'ch15-norms/04-spectral-radius.html' -> (15, 4); an index page -> (n, 0).
+    """
+    m = CHAPTER.match(path or "")
+    if not m:
+        return None
+    section = 0 if m.group(2) == "index" else int(m.group(2))
+    return int(m.group(1)), section
+
+
+def main():
+    if not INDEX.exists():
+        print(f"{INDEX} not found; run ./build.py html first", file=sys.stderr)
+        return 1
+
+    labels = json.loads(INDEX.read_text())["crossref_labels"]
+
+    order = {}
+    unplaced = []
+    by_path = 0
+    for name, rec in labels.items():
+        key = parse(rec.get("number") or "")
+        if key is None:
+            key = from_file(rec.get("file"))
+            if key is not None:
+                by_path += 1
+        if key is None:
+            unplaced.append(name)
+        else:
+            order[name] = key
+
+    forward = []
+    dangling = []
+    same_section = 0
+    for name, rec in sorted(labels.items()):
+        here = order.get(name)
+        if here is None:
+            continue
+        for cited in rec.get("uses", []):
+            if cited not in labels:
+                dangling.append((name, cited))
+            elif cited in order:
+                there = order[cited]
+                if there > here:
+                    forward.append((name, rec["number"], cited, labels[cited]["number"]))
+                elif there == here:
+                    same_section += 1
+
+    for name, num, cited, cited_num in forward:
+        print(f"forward: {name} ({num}) cites {cited} ({cited_num})")
+    for name, cited in dangling:
+        print(f"dangling: {name} cites {cited}, which is not a label")
+
+    checked = len(order)
+    if forward or dangling:
+        print(f"\n{len(forward)} forward, {len(dangling)} dangling, over {checked} labels")
+        return 1
+
+    skipped = f", {len(unplaced)} could not be placed" if unplaced else ""
+    print(
+        f"No citation crosses into a later section: {checked} labels checked "
+        f"({by_path} of them placed by file path){skipped}; "
+        f"{same_section} citations within a section were not ordered."
+    )
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())
