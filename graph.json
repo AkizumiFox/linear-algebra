@@ -152,6 +152,15 @@
    "results": 175,
    "chapterNumber": 16,
    "part": ""
+  },
+  {
+   "id": "ch17-convexity",
+   "name": "Chapter 17",
+   "title": "Convexity",
+   "url": "ch17-convexity/index.html",
+   "results": 194,
+   "chapterNumber": 17,
+   "part": ""
   }
  ],
  "edges": [
@@ -252,6 +261,12 @@
    "implied": true
   },
   {
+   "source": "ch00-foundations",
+   "target": "ch17-convexity",
+   "weight": 5,
+   "implied": true
+  },
+  {
    "source": "ch01-vector-spaces",
    "target": "ch02-linear-systems",
    "weight": 64,
@@ -342,6 +357,12 @@
    "implied": true
   },
   {
+   "source": "ch01-vector-spaces",
+   "target": "ch17-convexity",
+   "weight": 26,
+   "implied": true
+  },
+  {
    "source": "ch02-linear-systems",
    "target": "ch03-linear-maps",
    "weight": 58,
@@ -426,6 +447,12 @@
    "implied": true
   },
   {
+   "source": "ch02-linear-systems",
+   "target": "ch17-convexity",
+   "weight": 13,
+   "implied": true
+  },
+  {
    "source": "ch03-linear-maps",
    "target": "ch04-duality",
    "weight": 122,
@@ -504,6 +531,12 @@
    "implied": true
   },
   {
+   "source": "ch03-linear-maps",
+   "target": "ch17-convexity",
+   "weight": 10,
+   "implied": true
+  },
+  {
    "source": "ch04-duality",
    "target": "ch05-polynomials",
    "weight": 18,
@@ -549,6 +582,12 @@
    "source": "ch04-duality",
    "target": "ch15-norms",
    "weight": 1,
+   "implied": true
+  },
+  {
+   "source": "ch04-duality",
+   "target": "ch17-convexity",
+   "weight": 16,
    "implied": true
   },
   {
@@ -756,6 +795,12 @@
    "implied": true
   },
   {
+   "source": "ch08-eigenvalues",
+   "target": "ch17-convexity",
+   "weight": 1,
+   "implied": true
+  },
+  {
    "source": "ch09-canonical-forms",
    "target": "ch11-spectral-theory",
    "weight": 20,
@@ -765,6 +810,12 @@
    "source": "ch09-canonical-forms",
    "target": "ch15-norms",
    "weight": 60,
+   "implied": true
+  },
+  {
+   "source": "ch09-canonical-forms",
+   "target": "ch17-convexity",
+   "weight": 2,
    "implied": true
   },
   {
@@ -804,6 +855,12 @@
    "implied": true
   },
   {
+   "source": "ch10-inner-products",
+   "target": "ch17-convexity",
+   "weight": 39,
+   "implied": true
+  },
+  {
    "source": "ch11-spectral-theory",
    "target": "ch12-psd-and-svd",
    "weight": 77,
@@ -825,6 +882,12 @@
    "source": "ch11-spectral-theory",
    "target": "ch16-variational",
    "weight": 94,
+   "implied": true
+  },
+  {
+   "source": "ch11-spectral-theory",
+   "target": "ch17-convexity",
+   "weight": 7,
    "implied": true
   },
   {
@@ -852,6 +915,12 @@
    "implied": true
   },
   {
+   "source": "ch12-psd-and-svd",
+   "target": "ch17-convexity",
+   "weight": 22,
+   "implied": true
+  },
+  {
    "source": "ch13-forms",
    "target": "ch14-tensors",
    "weight": 59,
@@ -864,9 +933,27 @@
    "implied": false
   },
   {
+   "source": "ch13-forms",
+   "target": "ch17-convexity",
+   "weight": 4,
+   "implied": true
+  },
+  {
    "source": "ch15-norms",
    "target": "ch16-variational",
    "weight": 40,
+   "implied": false
+  },
+  {
+   "source": "ch15-norms",
+   "target": "ch17-convexity",
+   "weight": 73,
+   "implied": true
+  },
+  {
+   "source": "ch16-variational",
+   "target": "ch17-convexity",
+   "weight": 30,
    "implied": false
   }
  ]

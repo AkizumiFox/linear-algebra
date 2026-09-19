@@ -1130,6 +1130,81 @@
           "filename": "11-monotone-matrix-functions.md"
         }
       ]
+    },
+    {
+      "title": "Convexity",
+      "number": 17,
+      "part": "",
+      "collapsed": true,
+      "path": "ch17-convexity/index.html",
+      "sections": [
+        {
+          "title": "Convex Sets and Hulls",
+          "number": "17.1",
+          "path": "ch17-convexity/01-convex-sets.html",
+          "filename": "01-convex-sets.md"
+        },
+        {
+          "title": "Carathéodory's Theorem",
+          "number": "17.2",
+          "path": "ch17-convexity/02-caratheodory.html",
+          "filename": "02-caratheodory.md"
+        },
+        {
+          "title": "Separating Hyperplanes",
+          "number": "17.3",
+          "path": "ch17-convexity/03-separation.html",
+          "filename": "03-separation.md"
+        },
+        {
+          "title": "Gauges, Support Functions and Dual Norms",
+          "number": "17.4",
+          "path": "ch17-convexity/04-gauges-support-functions-dual-norms.html",
+          "filename": "04-gauges-support-functions-dual-norms.md"
+        },
+        {
+          "title": "Cones and Farkas's Lemma",
+          "number": "17.5",
+          "path": "ch17-convexity/05-cones-and-farkas.html",
+          "filename": "05-cones-and-farkas.md"
+        },
+        {
+          "title": "Linear Programming Duality",
+          "number": "17.6",
+          "path": "ch17-convexity/06-linear-programming-duality.html",
+          "filename": "06-linear-programming-duality.md"
+        },
+        {
+          "title": "Matrix Games and the Minimax Theorem",
+          "number": "17.7",
+          "path": "ch17-convexity/07-minimax.html",
+          "filename": "07-minimax.md"
+        },
+        {
+          "title": "Extreme Points",
+          "number": "17.8",
+          "path": "ch17-convexity/08-extreme-points.html",
+          "filename": "08-extreme-points.md"
+        },
+        {
+          "title": "Polytopes",
+          "number": "17.9",
+          "path": "ch17-convexity/09-polytopes.html",
+          "filename": "09-polytopes.md"
+        },
+        {
+          "title": "Convex Functions",
+          "number": "17.10",
+          "path": "ch17-convexity/10-convex-functions.html",
+          "filename": "10-convex-functions.md"
+        },
+        {
+          "title": "Three Classical Inequalities",
+          "number": "17.11",
+          "path": "ch17-convexity/11-classical-inequalities.html",
+          "filename": "11-classical-inequalities.md"
+        }
+      ]
     }
   ]
 }
