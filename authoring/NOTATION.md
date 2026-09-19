@@ -125,6 +125,7 @@ This list is fixed. A chapter that needs a new symbol adds it here, and a new ma
 | `A \succeq 0`, `A \succ 0` | positive semidefinite / definite (Hermitian implied) |
 | `A \succeq B` | Loewner order |
 | `\lambda_1(A) \ge \dots \ge \lambda_n(A)` | eigenvalues of a Hermitian A, **decreasing** |
+| `R_{\A}(\x)`, `R_T(\v)` | the **Rayleigh quotient** \( \inner{\A\x}{\x}/\inner{\x}{\x} \) of a Hermitian A at x ≠ 0 (Ch 16 §01, `def-rayleigh-quotient`), and of a self-adjoint operator T. Plain italic R: it is a function, not a matrix, so it is never the bold macro `\R`. The increasing-index form of the min–max theorem appears once, as a remark in Ch 16 §02, and nowhere else |
 | `\sigma_1(A) \ge \dots \ge \sigma_{\min(m,n)}(A) \ge 0` | singular values, decreasing |
 | `A^{+}` | Moore–Penrose pseudoinverse |
 | `A^{1/2}` | positive square root |
@@ -137,6 +138,8 @@ This list is fixed. A chapter that needs a new symbol adds it here, and a new ma
 | `\beta \colon V \times V \to F` | bilinear form. `q(\v) = \beta(\v, \v)` is a quadratic form |
 | `\mtx{\beta}{\sB}{}` | Gram matrix of a bilinear form: \( (\mtx{\beta}{\sB}{})_{ij} = \beta(\v_i, \v_j) \), indices **uncrossed** (Ch 13 §01). Chapter 10's `\G` (`def-gram-matrix`) crosses them, \( \inner{\v_j}{\v_i} \), to stay Hermitian under a conjugate-linear second slot. The two agree for real symmetric data and are transposes otherwise; Ch 13 §01 says so where it matters |
 | `(n_+, n_-, n_0)` | inertia of a real symmetric form: the counts of positive, negative and zero entries in any diagonalization, the same for all of them by Sylvester's law (Ch 13 §05). The **signature** is the pair \( (n_+, n_-) \); the single integer \( n_+ - n_- \) is also called that elsewhere, and Ch 13 §05 says so. Plain subscripts, no macro |
+| `\operatorname{In}(\A)` | the **inertia triple** \( (n_+(\A), n_-(\A), n_0(\A)) \) of a Hermitian \( \A \): its numbers of positive, negative and zero eigenvalues with multiplicity, added entrywise (Ch 16 §10). For real symmetric \( \A \) it is the triple of the row above, by Ch 13 §05's thm-inertia-from-eigenvalues. Spelled with `\operatorname`, like `\operatorname{rad}`; no macro |
+| `\cH(\A)` | the **Hermitian dilation** of \( \A \in M_{m \times n} \): the \( (m+n) \times (m+n) \) Hermitian matrix with blocks \( \0, \A \) on top and \( \A^{*}, \0 \) below, whose eigenvalues are \( \pm\sigma_i(\A) \) and zeros (Ch 16 §09). Calligraphic, so it never meets the Hessian \( \H_f(\a) \) of Ch 13 §06, which is bold |
 | `\operatorname{rad}(\beta)` | radical of a bilinear form (Ch 13 §01): { v ∈ V : β(u, v) = 0 for every u ∈ V }, the kernel of v ↦ β(·, v). β is non-degenerate exactly when it is {0}. Spelled out with `\operatorname`, not a macro |
 | `V \otimes W`, `\v \otimes \w` | tensor product |
 | `\cM(V_1, \dots, V_k; W)` | the space of **multilinear maps** \( V_1 \times \dots \times V_k \to W \) (Ch 14 §01), with the pointwise operations. The semicolon separates inputs from output, which is what distinguishes it from `\cL(V, W)`; for \( k = 1 \) the two agree, and for \( W = F \) its elements are the multilinear forms of Ch 6 §02 |
@@ -173,7 +176,10 @@ This list is fixed. A chapter that needs a new symbol adds it here, and a new ma
 | `\kappa(A)` | condition number |
 | `\conv(S)` | convex hull |
 | `\vol` | volume: of a parallelepiped, \|det\| (Ch 6); extended in Ch 12 §03 to the k-dimensional volume of a list of any length in any inner product space, by the base-times-height recursion of `def-k-volume`. The two agree wherever both apply, and Ch 12 §03 proves it |
-| `x \prec y`, `x \prec_w y` | majorization, weak majorization |
+| `\x \prec \y`, `\x \prec_w \y`, `\x^{\downarrow}` | **majorization** and **weak (sub)majorization** of real vectors, written with bold vectors (Ch 16 §08, `def-majorization`). \( \x^{\downarrow} \) is \( \x \) sorted decreasingly. \( \x \prec_w \y \): every top-\( k \) partial sum of \( \x^{\downarrow} \) is at most that of \( \y^{\downarrow} \); \( \x \prec \y \) adds equal totals. **It is a preorder on \( \nR^n \), not a partial order** — (1,0) ≺ (0,1) ≺ (1,0) |
+| `\d(\A)` | the **diagonal vector** \( (a_{11}, \dots, a_{nn}) \in \nR^n \) of a Hermitian \( \A \), in its given order (Ch 16 §08). Bold because it is a vector; distinct from `\diag(d_1,\dots,d_n)`, which **builds a matrix** |
+| `\vlambda(\A)` | the **eigenvalue vector** \( (\lambda_1(\A), \dots, \lambda_n(\A)) \) of a Hermitian \( \A \), decreasing (Ch 16 §§07–08) |
+| `\cW = (W_1, \dots, W_k)` | a **flag** of subspaces \( W_1 \subset \dots \subset W_k \) of type \( (i_1 < \dots < i_k) \), \( \dim W_j = i_j \), and a list **adapted** to it (Ch 16 §07, `def-flag-adapted-list`) |
 | `x^{\downarrow}` | decreasing rearrangement |
 
 ## Label naming

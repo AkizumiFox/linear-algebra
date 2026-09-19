@@ -22,7 +22,7 @@ The plan is at `~/.claude/plans/cached-gathering-sedgewick.md`. The outline of a
 | 13 | ch13-forms | Bilinear and quadratic forms | deployed |
 | 14 | ch14-tensors | Tensors and exterior algebra | deployed |
 | 15 | ch15-norms | Norms and matrix analysis | deployed |
-| 16 | ch16-variational | Variational principles and interlacing | drafting |
+| 16 | ch16-variational | Variational principles and interlacing | deployed |
 | 17–23 | | see plan | not started |
 
 ## Open forward promises
@@ -147,7 +147,7 @@ Add a line when a section promises something later ("proved in Chapter 5"); tick
 - [ ] Ch 12 → Ch 15: the operator norm, and \( \norm{\A}_2 = \sigma_1 \)
 - [ ] Ch 12 → Ch 16: Courant–Fischer, interlacing, eigenvalue monotonicity in the Loewner order
 - [ ] Ch 12 → Ch 19: perturbation of singular values
-- [ ] Ch 12 → Ch 20: operator monotone functions, unitarily invariant norms, the spectral-norm Eckart–Young
+- [ ] Ch 12 → Ch 20: operator monotone functions (first look now in Ch 16 §11; Loewner's theorem still owed), unitarily invariant norms, Eckart–Young in every unitarily invariant norm. *The spectral-norm case moved to Ch 16 §09 and is paid there*
 - [ ] Ch 12 → Ch 23: PCA and the numerical SVD
 
 ### Chapter 13 (bilinear and quadratic forms)
@@ -169,8 +169,40 @@ Add a line when a section promises something later ("proved in Chapter 5"); tick
 
 ### Book-wide gates
 
+- **PDF errors now fail the build.** pdflatex runs in nonstopmode and writes a PDF even after an error, and the build used to judge success by the file existing. When the check was tightened (Ch 16 release), **38 of 178 sections** turned out to have been shipping damaged PDFs: 12 `.algorithm` blocks (the environment was never defined for LaTeX), 21 displays with a blank line inside `\[ … \]` (one bulk edit, all `\end{aligned}` / blank / `\]`), 20 display lines beginning like list items, 7 environment titles containing `]` (e.g. `\(F[x]\)`), 4 unmapped Unicode characters, one double superscript. All fixed; the web pages had the same displays as stray `[` `]` text, invisible because MathJax still rendered the loose `aligned`. Guards: `build/pdf.py` fails on any TeX error with an `l.<n>` context (an Overfull-box dump line that starts with `!` is not one); `tests/test_pdf_errors.py`; `tests/test_display_math_source.py` lints `src/` for both display shapes
 - `tools/check_forward_deps.py` — fails if any label cites one from a later section. The book passes: 2476 labels, zero forward citations, zero dangling. It compares **sections only**, because the third component of a label number counts within a type (`def-connectives` and `thm-contrapositive-equivalent` are both 0.1.1); 3107 within-section citations therefore go unordered and remain the referee's job. Verified against planted violations
 - **M7 triage, 42 sites:** `tools/check_forward_deps.py --exercises` lists every theorem, proposition, corollary or lemma that cites an exercise, across 27 files in Chapters 0, 5, 7, 8, 9, 10, 11, 12, 13, 14 and 15. **This is a candidate list, not a defect list.** Citing an exercise for attribution is fine; a proof that *depends* on one is the rule this book has broken and repaired seven times. Each site needs reading. The two Chapter 15 §01 entries were triaged during that chapter's referee pass and are attribution only
+
+### Chapter 16 (variational principles and interlacing)
+
+Discharged (to be confirmed by referee):
+- [x] Ch 11 §02 → Ch 16 §§01–02: the optimization description of every eigenvalue of a self-adjoint operator (`cor-courant-fischer-operator`). No analytic fact is *invoked*; the analysis underneath is the fundamental theorem of algebra (Ch 5 §05, via the extreme value theorem), which the spectral theorem rests on
+- [ ] **M7, overclaim in deployed text:** Ch 11 §02 (~line 110) says it avoided the extreme value theorem "so that nothing in this chapter depends on it". Chapter 11 depends on it through the fundamental theorem of algebra. Not edited, since the text is deployed and outside this chapter; reword in the whole-book pass
+- [x] Ch 12 §05 → Ch 16 §02: λ_i(A) ≥ λ_i(B) for every i when A ⪰ B (`cor-loewner-eigenvalue-monotone`)
+- [x] Ch 12 §12 → Ch 16 §01: eigenvalues as extrema of ⟨Ax, x⟩
+- [x] Ch 15 §07 → Ch 16 §03: Hermitian eigenvalues move by at most ‖E‖₂ (`cor-weyl-perturbation`)
+- [x] Ch 12 §10 and Ch 15 §08 → Ch 16 §09: the spectral-norm Eckart–Young (`thm-eckart-young-spectral`)
+- [x] Ch 10 §10 → Ch 16 §04: strict interlacing of the zeros of consecutive orthogonal polynomials (`cor-orthogonal-polynomial-zeros-interlace`). **Missed by the blueprint.** Ch 10 had only *asserted*, inside an exercise solution, that p_k is the characteristic polynomial of the Jacobi matrix; §04 proves it
+- [x] Ch 12 §10 → Ch 16 §06: `lem-orthonormal-capture-bound` recovered as a special case of Ky Fan (`cor-capture-bound-revisited`); the text now says *special*, not *extreme*
+
+Created:
+- [ ] Ch 16 §01 → Ch 23: Rayleigh quotient iteration
+- [ ] Ch 16 §08 → Ch 18: Birkhoff's theorem on doubly stochastic matrices (no longer needed for Horn; the plan has it in Ch 18 in its own right)
+- [x] Ch 16 §08: Horn's converse is **proved in §08** (`lem-horn-two-by-two`, `thm-horn`, `thm-schur-horn`), by induction from a 2×2 rotation. It was first deferred to Ch 20 on the false premise that it needs Birkhoff; the approved outline puts Schur–Horn in Ch 16
+- [ ] Ch 16 §08 → Ch 20: Schur-concavity of the product (x ≺ y, non-negative ⟹ ∏xᵢ ≥ ∏yᵢ) and Schur-concave functions in general
+- [ ] Ch 16 §09 → Ch 19: the Hermitian dilation, used for singular-value perturbation (§10's exercises already use it)
+- Ch 12 → Ch 19 "perturbation of singular values" is now **partly** paid by Ch 16 §09's `cor-singular-value-perturbation` (|σᵢ(A+E) − σᵢ(A)| ≤ ‖E‖₂, no hypothesis on E); Chapter 19 keeps the rest
+- [ ] Ch 16 §09 → Ch 20: Eckart–Young in every unitarily invariant norm (restates Ch 12 §10's promise)
+- [ ] Ch 16 §06 → Ch 17: a pointwise supremum of linear functions is convex (the plan's "Convex functions")
+- [ ] Ch 16 §06 → Ch 20: the Ky Fan partial sums applied to singular values, i.e. the Ky Fan k-norms (plan: "Unitarily invariant norms", "Ky Fan dominance")
+- [ ] Ch 16 §07 → Ch 20: from λ(A)−λ(B) ≺ λ(A−B) (proved in full in §07), the consequences Σφ(xᵢ) ≤ Σφ(yᵢ) for every convex φ and the matching statement for unitarily invariant norms. φ(t) = |t| is §07 exercise C2. This is what §11 means by "the strongest form of Lidskii"
+- [ ] Ch 16 §11 → Ch 20: Loewner's theorem (`thm-loewner-statement`), both directions
+- [ ] Ch 16 §11 → Ch 20: t^p operator monotone on (0,∞) for 0 < p < 1, and not for p > 1. Only p = 1/2 (text) and p = 1/2^k (exercise C1) are proved
+
+Deferred polish (M7), from the Chapter 16 referees; none affects correctness:
+- §04: the letter m means three things (deleted index, number of deleted rows, eigenspace dimension, where NOTATION's g_B(ν) should be used), and Step 3's p collides with p_A. §03/§04 write the eigenvalue list as plain λ(A) where NOTATION now registers bold `\vlambda(\A)`. §03 uses bold E both for the perturbation and for matrix units (Ch 15's precedent)
+- §04 is ~5,300 words; the referee suggested ~400 words of trims (permutation paragraph, the I = {2,3} discussion, the B2 solution tail). §03's `lem-rayleigh-on-eigenspan` (b) is used nowhere
+- **Deployed Ch 10 §10 (~line 111)** says "the node inner product on n nodes"; the section's own setup has n+1 nodes c₀…cₙ on ℝ[x]_{≤n}. Not edited, since it is outside this chapter
 
 ### Chapter 15 (norms and matrix analysis)
 
@@ -179,7 +211,7 @@ Add a line when a section promises something later ("proved in Chapter 5"); tick
 - [x] Ch 12 §08 and §12 → Ch 15 §03: the operator norm named, and `‖A‖₂ = σ₁`
 - [x] Ch 9 §09 → Ch 15 §06: quantitative bounds for `e^A` in place of exact formulas
 - [x] Ch 11 §01 → Ch 15 §05/§07: the "perturb and take a limit" argument made routine
-- [ ] Ch 15 §07 → Ch 16: Weyl's inequality, from Courant–Fischer
+- [x] Ch 15 §07 → Ch 16: Weyl's inequality, from Courant–Fischer (duplicate of the §03 line above; paid by `thm-weyl-inequalities`, `cor-weyl-perturbation`)
 - [ ] Ch 15 §07 → Ch 19: Bauer–Fike (§07's exercise C1 is its engine and could be moved there)
 - [ ] Ch 15 §08 → Ch 16: the spectral-norm Eckart–Young that Ch 12 §10 could not state (Ch 16 §09 proves it from the min–max for singular values; the Ch 15 text originally sent this to Ch 20 and was corrected)
 - [ ] Ch 15 §08 → Ch 20: unitarily invariant norms, and the Eckart–Young theorem for all of them at once
