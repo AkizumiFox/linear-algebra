@@ -167,6 +167,11 @@ Add a line when a section promises something later ("proved in Chapter 5"); tick
 - [ ] Ch 14 §08 → Ch 21: Plücker coordinates (hinted, chapter not named in the text)
 - Polish deferred to M7: §10 is the book's longest section (~10.6k words) and carries four major notions against STYLE's two; §03 is also long. Both have natural seams recorded in the referee reports
 
+### Book-wide gates
+
+- `tools/check_forward_deps.py` — fails if any label cites one from a later section. The book passes: 2476 labels, zero forward citations, zero dangling. It compares **sections only**, because the third component of a label number counts within a type (`def-connectives` and `thm-contrapositive-equivalent` are both 0.1.1); 3107 within-section citations therefore go unordered and remain the referee's job. Verified against planted violations
+- **M7 triage, 42 sites:** `tools/check_forward_deps.py --exercises` lists every theorem, proposition, corollary or lemma that cites an exercise, across 27 files in Chapters 0, 5, 7, 8, 9, 10, 11, 12, 13, 14 and 15. **This is a candidate list, not a defect list.** Citing an exercise for attribution is fine; a proof that *depends* on one is the rule this book has broken and repaired seven times. Each site needs reading. The two Chapter 15 §01 entries were triaged during that chapter's referee pass and are attribution only
+
 ### Chapter 15 (norms and matrix analysis)
 
 - [x] Ch 10 §01 → Ch 15 §01: not every norm comes from an inner product; the parallelogram law is the test. Ch 10's exercise proved the ℝ² case granting homogeneity; §01 supplies the homogeneity limit, drops the dimension hypothesis and adds the complex case
