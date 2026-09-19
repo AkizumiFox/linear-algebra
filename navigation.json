@@ -1205,6 +1205,69 @@
           "filename": "11-classical-inequalities.md"
         }
       ]
+    },
+    {
+      "title": "Non-negative Matrices",
+      "number": 18,
+      "part": "",
+      "collapsed": true,
+      "path": "ch18-nonnegative/index.html",
+      "sections": [
+        {
+          "title": "Positive Matrices and Perron's Theorem",
+          "number": "18.1",
+          "path": "ch18-nonnegative/01-positive-matrices.html",
+          "filename": "01-positive-matrices.md"
+        },
+        {
+          "title": "Irreducibility and Graphs",
+          "number": "18.2",
+          "path": "ch18-nonnegative/02-irreducibility-and-graphs.html",
+          "filename": "02-irreducibility-and-graphs.md"
+        },
+        {
+          "title": "The Perron–Frobenius Theorem",
+          "number": "18.3",
+          "path": "ch18-nonnegative/03-perron-frobenius.html",
+          "filename": "03-perron-frobenius.md"
+        },
+        {
+          "title": "The Collatz–Wielandt Formula",
+          "number": "18.4",
+          "path": "ch18-nonnegative/04-collatz-wielandt.html",
+          "filename": "04-collatz-wielandt.md"
+        },
+        {
+          "title": "Primitive Matrices",
+          "number": "18.5",
+          "path": "ch18-nonnegative/05-primitive-matrices.html",
+          "filename": "05-primitive-matrices.md"
+        },
+        {
+          "title": "Markov Chains",
+          "number": "18.6",
+          "path": "ch18-nonnegative/06-markov-chains.html",
+          "filename": "06-markov-chains.md"
+        },
+        {
+          "title": "Birkhoff's Theorem",
+          "number": "18.7",
+          "path": "ch18-nonnegative/07-birkhoff.html",
+          "filename": "07-birkhoff.md"
+        },
+        {
+          "title": "PageRank",
+          "number": "18.8",
+          "path": "ch18-nonnegative/08-pagerank.html",
+          "filename": "08-pagerank.md"
+        },
+        {
+          "title": "M-Matrices",
+          "number": "18.9",
+          "path": "ch18-nonnegative/09-m-matrices.html",
+          "filename": "09-m-matrices.md"
+        }
+      ]
     }
   ]
 }

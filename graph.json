@@ -161,6 +161,15 @@
    "results": 194,
    "chapterNumber": 17,
    "part": ""
+  },
+  {
+   "id": "ch18-nonnegative",
+   "name": "Chapter 18",
+   "title": "Non-negative Matrices",
+   "url": "ch18-nonnegative/index.html",
+   "results": 145,
+   "chapterNumber": 18,
+   "part": ""
   }
  ],
  "edges": [
@@ -267,6 +276,12 @@
    "implied": true
   },
   {
+   "source": "ch00-foundations",
+   "target": "ch18-nonnegative",
+   "weight": 25,
+   "implied": true
+  },
+  {
    "source": "ch01-vector-spaces",
    "target": "ch02-linear-systems",
    "weight": 64,
@@ -363,6 +378,12 @@
    "implied": true
   },
   {
+   "source": "ch01-vector-spaces",
+   "target": "ch18-nonnegative",
+   "weight": 2,
+   "implied": true
+  },
+  {
    "source": "ch02-linear-systems",
    "target": "ch03-linear-maps",
    "weight": 58,
@@ -453,6 +474,12 @@
    "implied": true
   },
   {
+   "source": "ch02-linear-systems",
+   "target": "ch18-nonnegative",
+   "weight": 19,
+   "implied": true
+  },
+  {
    "source": "ch03-linear-maps",
    "target": "ch04-duality",
    "weight": 122,
@@ -534,6 +561,12 @@
    "source": "ch03-linear-maps",
    "target": "ch17-convexity",
    "weight": 10,
+   "implied": true
+  },
+  {
+   "source": "ch03-linear-maps",
+   "target": "ch18-nonnegative",
+   "weight": 1,
    "implied": true
   },
   {
@@ -657,6 +690,12 @@
    "implied": true
   },
   {
+   "source": "ch05-polynomials",
+   "target": "ch18-nonnegative",
+   "weight": 4,
+   "implied": true
+  },
+  {
    "source": "ch06-determinants",
    "target": "ch07-block-matrices",
    "weight": 38,
@@ -717,6 +756,12 @@
    "implied": true
   },
   {
+   "source": "ch06-determinants",
+   "target": "ch18-nonnegative",
+   "weight": 19,
+   "implied": true
+  },
+  {
    "source": "ch07-block-matrices",
    "target": "ch08-eigenvalues",
    "weight": 22,
@@ -756,6 +801,12 @@
    "source": "ch07-block-matrices",
    "target": "ch16-variational",
    "weight": 16,
+   "implied": true
+  },
+  {
+   "source": "ch07-block-matrices",
+   "target": "ch18-nonnegative",
+   "weight": 6,
    "implied": true
   },
   {
@@ -801,6 +852,12 @@
    "implied": true
   },
   {
+   "source": "ch08-eigenvalues",
+   "target": "ch18-nonnegative",
+   "weight": 72,
+   "implied": true
+  },
+  {
    "source": "ch09-canonical-forms",
    "target": "ch11-spectral-theory",
    "weight": 20,
@@ -816,6 +873,12 @@
    "source": "ch09-canonical-forms",
    "target": "ch17-convexity",
    "weight": 2,
+   "implied": true
+  },
+  {
+   "source": "ch09-canonical-forms",
+   "target": "ch18-nonnegative",
+   "weight": 23,
    "implied": true
   },
   {
@@ -891,6 +954,12 @@
    "implied": true
   },
   {
+   "source": "ch11-spectral-theory",
+   "target": "ch18-nonnegative",
+   "weight": 3,
+   "implied": true
+  },
+  {
    "source": "ch12-psd-and-svd",
    "target": "ch13-forms",
    "weight": 12,
@@ -918,6 +987,12 @@
    "source": "ch12-psd-and-svd",
    "target": "ch17-convexity",
    "weight": 22,
+   "implied": true
+  },
+  {
+   "source": "ch12-psd-and-svd",
+   "target": "ch18-nonnegative",
+   "weight": 5,
    "implied": true
   },
   {
@@ -951,9 +1026,27 @@
    "implied": true
   },
   {
+   "source": "ch15-norms",
+   "target": "ch18-nonnegative",
+   "weight": 46,
+   "implied": true
+  },
+  {
    "source": "ch16-variational",
    "target": "ch17-convexity",
    "weight": 30,
+   "implied": false
+  },
+  {
+   "source": "ch16-variational",
+   "target": "ch18-nonnegative",
+   "weight": 11,
+   "implied": true
+  },
+  {
+   "source": "ch17-convexity",
+   "target": "ch18-nonnegative",
+   "weight": 33,
    "implied": false
   }
  ]
