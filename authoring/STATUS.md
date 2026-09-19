@@ -21,8 +21,9 @@ The plan is at `~/.claude/plans/cached-gathering-sedgewick.md`. The outline of a
 | 12 | ch12-psd-and-svd | Positive matrices and the SVD | deployed |
 | 13 | ch13-forms | Bilinear and quadratic forms | deployed |
 | 14 | ch14-tensors | Tensors and exterior algebra | deployed |
-| 15 | ch15-norms | Norms and matrix analysis | drafting |
-| 16–23 | | see plan | not started |
+| 15 | ch15-norms | Norms and matrix analysis | drafted, in referee |
+| 16 | ch16-variational | Variational principles and interlacing | blueprint written |
+| 17–23 | | see plan | not started |
 
 ## Open forward promises
 
@@ -165,3 +166,18 @@ Add a line when a section promises something later ("proved in Chapter 5"); tick
 - [x] Ch 3 §10 → Ch 14 §04: the trace as a contraction, with no basis chosen
 - [ ] Ch 14 §08 → Ch 21: Plücker coordinates (hinted, chapter not named in the text)
 - Polish deferred to M7: §10 is the book's longest section (~10.6k words) and carries four major notions against STYLE's two; §03 is also long. Both have natural seams recorded in the referee reports
+
+### Chapter 15 (norms and matrix analysis)
+
+- [x] Ch 10 §01 → Ch 15 §01: not every norm comes from an inner product; the parallelogram law is the test. Ch 10's exercise proved the ℝ² case granting homogeneity; §01 supplies the homogeneity limit, drops the dimension hypothesis and adds the complex case
+- [x] Ch 9 §10 → Ch 15 §04: `ρ(A) ≤ ‖A‖` for every induced norm, plus Gelfand. What is new is the **rate**, not the convergence criterion
+- [x] Ch 12 §08 and §12 → Ch 15 §03: the operator norm named, and `‖A‖₂ = σ₁`
+- [x] Ch 9 §09 → Ch 15 §06: quantitative bounds for `e^A` in place of exact formulas
+- [x] Ch 11 §01 → Ch 15 §05/§07: the "perturb and take a limit" argument made routine
+- [ ] Ch 15 §07 → Ch 16: Weyl's inequality, from Courant–Fischer
+- [ ] Ch 15 §07 → Ch 19: Bauer–Fike (§07's exercise C1 is its engine and could be moved there)
+- [ ] Ch 15 §08 → Ch 16: the spectral-norm Eckart–Young that Ch 12 §10 could not state (Ch 16 §09 proves it from the min–max for singular values; the Ch 15 text originally sent this to Ch 20 and was corrected)
+- [ ] Ch 15 §08 → Ch 20: unitarily invariant norms, and the Eckart–Young theorem for all of them at once
+- [ ] Ch 15 §08 → Ch 23: the conditioning of the least-squares *problem* (which involves the residual, not just κ₂(A)); the floating-point model and backward error analysis; the digit-loss comparison between the normal equations and QR
+- Maintenance hazard: Ch 15 §06 cites Chapter 9 §09's imported analysis facts by **number** — (A1), (A4), (A5) — and that list is a plain enumerate with no labels. The three numbers are correct today (checked), but renumbering or inserting an item in Ch 9 §09 would break Ch 15 silently. Same pattern for Ch 15's own (A1)–(A4) list, cited from §§01–06
+- **OUTSTANDING, and older than this chapter:** Ch 11 §10 says the positive definite solution of the Lyapunov equation "is the subject of Chapter 12", and **Chapter 12 never proves it** — "Lyapunov" appears nowhere in Ch 12. Ch 15 §06 delivers the decay half and the conditional half (any positive definite X solving it makes x*Xx decrease), and states in its own text that the existence half is not proved in the book. The Ch 11 §10 sentence still points readers at Chapter 12; **a proposed rewording of it was declined, so the misdirection stands in the deployed text and is recorded here instead**. The usual proof integrates `e^{tA*}Q e^{tA}` over `[0, ∞)`, which needs matrix-valued integrals the book does not set up. **Exactly what Ch 15 does establish** (refereed): `thm-exponential-decay` gives the decay of every solution of `ẋ = Ax` for stable `A`, with an explicit rate, and uses no Lyapunov equation at all; `exr-matrix-exponential-and-calculus-c3` shows that `x*Xx` strictly decreases along every non-zero solution **given** a positive definite `X` solving the equation — but that is an exercise, not body text. The existence of such an `X` is proved nowhere in the book, and §06 says so in its own text

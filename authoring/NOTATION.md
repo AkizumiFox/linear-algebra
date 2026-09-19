@@ -68,6 +68,7 @@ This list is fixed. A chapter that needs a new symbol adds it here, and a new ma
 | `M \approx N` | equivalent over F[x] (Ch 9 §07): N = UMV with U, V invertible over F[x]. Elsewhere `\approx` means "approximately equal"; the two uses never meet |
 | `A \simeq B` | **congruent** (Ch 13 §02): B = P⊤AP for some invertible P, over the field named. The relation of forms, as `\sim` is the relation of maps. Chosen to sit beside `\sim` without colliding with it, with `\approx` (equivalence over F[x]) or with `\cong` (isomorphic); `\simeq` has no other use in the book |
 | `T'` | dual map (transpose of T) W* → V*. The star is reserved for adjoints |
+| `\A'(t)`, `\x'(t)` | the derivative of a matrix- or vector-valued function of a real variable, taken entrywise (Ch 9 §09, Ch 15 §06). The prime on a **map** is the dual map above; the two never meet, since a dual map is not a function of t |
 | `V^{*}`, `\v^{*}` / `\varphi` | dual space; functionals are Greek letters φ, ψ |
 | `U^{0}` | annihilator of U in V* |
 | `\codim U` | codimension, dim V/U |
@@ -164,8 +165,11 @@ This list is fixed. A chapter that needs a new symbol adds it here, and a new ma
 | index origin | subscripts start at 1 everywhere, with one announced exception: Ch 11 §09 runs rows, columns and entries from \( 0 \) to \( n-1 \), because circulant and Fourier subscripts are read modulo n |
 | `\c \ast \d` | cyclic convolution of two vectors of length n, \( (\c \ast \d)_k = \sum_t c_t d_{k-t} \) with subscripts read modulo n (Ch 11 §09). The product of two circulants is the circulant of the convolution |
 | `[A, B] = AB - BA` | commutator |
-| `\norm{\x}_p` | p-norm. `\norm{A}_F` Frobenius, `\norm{A}_2` spectral/operator 2-norm |
+| `\norm{\x}_p` | p-norm. `\norm{A}_F` Frobenius, `\norm{A}_2` spectral/operator 2-norm. Ch 15 §01 defines and verifies only \( p = 1, 2, \infty \); the general \( p \) is recorded there and never used, since its triangle inequality (Minkowski) is not proved in this book |
+| `\norm{f}_\infty` | the **sup norm** \( \max_{t \in [0,1]}\lvert f(t)\rvert \) on \( C[0,1] \) (Ch 15 §01), the same symbol as the \( \infty \)-norm on \( F^n \) and for the same reason. It is the standing infinite-dimensional example, where Ch 15 §02's equivalence theorem fails |
+| `B_{\norm{\cdot}}` | the **closed unit ball** \( \{\v : \norm{\v} \le 1\} \) of a norm (Ch 15 §01). In \( F^n \), `B_1`, `B_2`, `B_\infty` are the balls of the three p-norms; the integer subscript names the norm, not a dimension |
 | `\norm{A}` | operator norm induced by the named vector norm |
+| `\norm{\A}_1`, `\norm{\A}_{\infty}` | the operator norms induced by the vector 1- and ∞-norms (Ch 15 §03): the largest column sum and the largest row sum. Distinct from the entrywise maximum, which is not even submultiplicative, and from \( \norm{f}_{\infty} \), the sup norm on a function space |
 | `\kappa(A)` | condition number |
 | `\conv(S)` | convex hull |
 | `\vol` | volume: of a parallelepiped, \|det\| (Ch 6); extended in Ch 12 §03 to the k-dimensional volume of a list of any length in any inner product space, by the base-times-height recursion of `def-k-volume`. The two agree wherever both apply, and Ch 12 §03 proves it |
