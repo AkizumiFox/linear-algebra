@@ -2,14 +2,22 @@
 """Fail if any result cites a result proved in a later section of the book.
 
 Reads `_build/crossref_labels.json`, which the HTML build writes. Every label
-carries a `number` of the form chapter.section.index and a `uses` list of the
-labels cited inside its block and its proof.
+carries the `file` it lives in and a `uses` list of the labels cited inside its
+block and its proof.
 
-**The third component counts within a type, not within the section**: in section
-0.1 both `def-connectives` and `thm-contrapositive-equivalent` are numbered
-0.1.1. So this tool compares sections only. Two labels in the same section are
-reported as unordered, not as an error -- ordering inside a section is a job for
-the section's referee, who can see the text.
+Every label is placed by its file path -- chapter directory, then the section
+number in the file name -- and by nothing else. **Do not mix in the `number`
+field.** That field is positional: while a chapter has a gap (its section 07
+not yet written, say), the build numbers section 10's results 16.9, while the
+file name still says 10. An earlier version of this tool placed numbered
+results by `number` and exercises by path; the two disagreed across the gap,
+which reported false forward citations and could have hidden a real one.
+
+The tool compares sections only. Labels in the same section are reported as
+unordered, not as errors: the third component of `number` counts within a type
+(`def-connectives` and `thm-contrapositive-equivalent` are both 0.1.1), so it
+cannot order two labels, and ordering inside a section is the job of the
+section's referee, who can see the text.
 
 Run after `./build.py html`. Exits 1 if anything cites a later section.
 """
@@ -19,17 +27,6 @@ import sys
 from pathlib import Path
 
 INDEX = Path("_build/crossref_labels.json")
-
-
-def parse(number):
-    """('15.4.4') -> (15, 4), the section it lives in; None when unparseable."""
-    parts = number.split(".")
-    if len(parts) != 3:
-        return None
-    try:
-        return int(parts[0]), int(parts[1])
-    except ValueError:
-        return None
 
 
 CHAPTER = re.compile(r"^ch(\d+)[^/]*/(\d+|index)")
@@ -90,13 +87,8 @@ def main():
 
     order = {}
     unplaced = []
-    by_path = 0
     for name, rec in labels.items():
-        key = parse(rec.get("number") or "")
-        if key is None:
-            key = from_file(rec.get("file"))
-            if key is not None:
-                by_path += 1
+        key = from_file(rec.get("file"))
         if key is None:
             unplaced.append(name)
         else:
@@ -131,8 +123,7 @@ def main():
 
     skipped = f", {len(unplaced)} could not be placed" if unplaced else ""
     print(
-        f"No citation crosses into a later section: {checked} labels checked "
-        f"({by_path} of them placed by file path){skipped}; "
+        f"No citation crosses into a later section: {checked} labels checked{skipped}; "
         f"{same_section} citations within a section were not ordered."
     )
     return 0
