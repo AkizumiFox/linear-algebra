@@ -925,9 +925,84 @@
       ]
     },
     {
-      "title": "Tensors",
+      "title": "Tensors and Exterior Algebra",
       "number": 14,
       "part": "",
+      "collapsed": true,
+      "path": "ch14-tensors/index.html",
+      "sections": [
+        {
+          "title": "Multilinear Maps",
+          "number": "14.1",
+          "path": "ch14-tensors/01-multilinear-maps.html",
+          "filename": "01-multilinear-maps.md"
+        },
+        {
+          "title": "The Tensor Product",
+          "number": "14.2",
+          "path": "ch14-tensors/02-tensor-product.html",
+          "filename": "02-tensor-product.md"
+        },
+        {
+          "title": "Tensor Products of Maps",
+          "number": "14.3",
+          "path": "ch14-tensors/03-tensor-products-of-maps.html",
+          "filename": "03-tensor-products-of-maps.md"
+        },
+        {
+          "title": "Contraction and the Trace",
+          "number": "14.4",
+          "path": "ch14-tensors/04-contraction-and-trace.html",
+          "filename": "04-contraction-and-trace.md"
+        },
+        {
+          "title": "Index Notation and the Transformation Law",
+          "number": "14.5",
+          "path": "ch14-tensors/05-index-notation.html",
+          "filename": "05-index-notation.md"
+        },
+        {
+          "title": "The Tensor Algebra",
+          "number": "14.6",
+          "path": "ch14-tensors/06-tensor-algebra.html",
+          "filename": "06-tensor-algebra.md"
+        },
+        {
+          "title": "Symmetric Powers",
+          "number": "14.7",
+          "path": "ch14-tensors/07-symmetric-powers.html",
+          "filename": "07-symmetric-powers.md"
+        },
+        {
+          "title": "Exterior Powers",
+          "number": "14.8",
+          "path": "ch14-tensors/08-exterior-powers.html",
+          "filename": "08-exterior-powers.md"
+        },
+        {
+          "title": "The Determinant as a Top Exterior Power",
+          "number": "14.9",
+          "path": "ch14-tensors/09-determinant-as-top-exterior-power.html",
+          "filename": "09-determinant-as-top-exterior-power.md"
+        },
+        {
+          "title": "The Exterior Algebra, and Clifford at Last",
+          "number": "14.10",
+          "path": "ch14-tensors/10-grassmann-and-clifford.html",
+          "filename": "10-grassmann-and-clifford.md"
+        },
+        {
+          "title": "Tensors in Quantum Mechanics",
+          "number": "14.11",
+          "path": "ch14-tensors/11-tensors-in-quantum-mechanics.html",
+          "filename": "11-tensors-in-quantum-mechanics.md"
+        }
+      ]
+    },
+    {
+      "title": "Norms",
+      "number": 15,
+      "part": "Part V · Matrix Analysis",
       "collapsed": true,
       "path": null,
       "sections": []

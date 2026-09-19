@@ -129,11 +129,20 @@
   {
    "id": "ch14-tensors",
    "name": "Chapter 14",
-   "title": "Tensors",
-   "url": "",
-   "results": 0,
+   "title": "Tensors and Exterior Algebra",
+   "url": "ch14-tensors/index.html",
+   "results": 184,
    "chapterNumber": 14,
    "part": ""
+  },
+  {
+   "id": "ch15-norms",
+   "name": "Chapter 15",
+   "title": "Norms",
+   "url": "",
+   "results": 0,
+   "chapterNumber": 15,
+   "part": "Part V \u00b7 Matrix Analysis"
   }
  ],
  "edges": [
@@ -216,6 +225,12 @@
    "implied": true
   },
   {
+   "source": "ch00-foundations",
+   "target": "ch14-tensors",
+   "weight": 9,
+   "implied": true
+  },
+  {
    "source": "ch01-vector-spaces",
    "target": "ch02-linear-systems",
    "weight": 64,
@@ -288,6 +303,12 @@
    "implied": true
   },
   {
+   "source": "ch01-vector-spaces",
+   "target": "ch14-tensors",
+   "weight": 26,
+   "implied": true
+  },
+  {
    "source": "ch02-linear-systems",
    "target": "ch03-linear-maps",
    "weight": 58,
@@ -354,6 +375,12 @@
    "implied": true
   },
   {
+   "source": "ch02-linear-systems",
+   "target": "ch14-tensors",
+   "weight": 1,
+   "implied": true
+  },
+  {
    "source": "ch03-linear-maps",
    "target": "ch04-duality",
    "weight": 122,
@@ -414,6 +441,12 @@
    "implied": true
   },
   {
+   "source": "ch03-linear-maps",
+   "target": "ch14-tensors",
+   "weight": 111,
+   "implied": true
+  },
+  {
    "source": "ch04-duality",
    "target": "ch05-polynomials",
    "weight": 18,
@@ -447,6 +480,12 @@
    "source": "ch04-duality",
    "target": "ch13-forms",
    "weight": 21,
+   "implied": true
+  },
+  {
+   "source": "ch04-duality",
+   "target": "ch14-tensors",
+   "weight": 36,
    "implied": true
   },
   {
@@ -498,6 +537,12 @@
    "implied": true
   },
   {
+   "source": "ch05-polynomials",
+   "target": "ch14-tensors",
+   "weight": 2,
+   "implied": true
+  },
+  {
    "source": "ch06-determinants",
    "target": "ch07-block-matrices",
    "weight": 38,
@@ -540,6 +585,12 @@
    "implied": true
   },
   {
+   "source": "ch06-determinants",
+   "target": "ch14-tensors",
+   "weight": 77,
+   "implied": true
+  },
+  {
    "source": "ch07-block-matrices",
    "target": "ch08-eigenvalues",
    "weight": 22,
@@ -567,6 +618,12 @@
    "source": "ch07-block-matrices",
    "target": "ch12-psd-and-svd",
    "weight": 22,
+   "implied": true
+  },
+  {
+   "source": "ch07-block-matrices",
+   "target": "ch14-tensors",
+   "weight": 24,
    "implied": true
   },
   {
@@ -618,6 +675,12 @@
    "implied": true
   },
   {
+   "source": "ch10-inner-products",
+   "target": "ch14-tensors",
+   "weight": 13,
+   "implied": true
+  },
+  {
    "source": "ch11-spectral-theory",
    "target": "ch12-psd-and-svd",
    "weight": 77,
@@ -633,6 +696,18 @@
    "source": "ch12-psd-and-svd",
    "target": "ch13-forms",
    "weight": 12,
+   "implied": false
+  },
+  {
+   "source": "ch12-psd-and-svd",
+   "target": "ch14-tensors",
+   "weight": 20,
+   "implied": true
+  },
+  {
+   "source": "ch13-forms",
+   "target": "ch14-tensors",
+   "weight": 59,
    "implied": false
   }
  ]
