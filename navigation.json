@@ -1000,12 +1000,61 @@
       ]
     },
     {
-      "title": "Norms",
+      "title": "Norms and Matrix Analysis",
       "number": 15,
       "part": "Part V · Matrix Analysis",
       "collapsed": true,
-      "path": null,
-      "sections": []
+      "path": "ch15-norms/index.html",
+      "sections": [
+        {
+          "title": "Norms",
+          "number": "15.1",
+          "path": "ch15-norms/01-vector-norms.html",
+          "filename": "01-vector-norms.md"
+        },
+        {
+          "title": "All Norms Agree",
+          "number": "15.2",
+          "path": "ch15-norms/02-equivalence-of-norms.html",
+          "filename": "02-equivalence-of-norms.md"
+        },
+        {
+          "title": "Measuring a Matrix",
+          "number": "15.3",
+          "path": "ch15-norms/03-matrix-and-operator-norms.html",
+          "filename": "03-matrix-and-operator-norms.md"
+        },
+        {
+          "title": "The Spectral Radius",
+          "number": "15.4",
+          "path": "ch15-norms/04-spectral-radius.html",
+          "filename": "04-spectral-radius.md"
+        },
+        {
+          "title": "Inverting a Perturbation of the Identity",
+          "number": "15.5",
+          "path": "ch15-norms/05-neumann-series.html",
+          "filename": "05-neumann-series.md"
+        },
+        {
+          "title": "Bounds for the Exponential, and Two Derivatives",
+          "number": "15.6",
+          "path": "ch15-norms/06-matrix-exponential-and-calculus.html",
+          "filename": "06-matrix-exponential-and-calculus.md"
+        },
+        {
+          "title": "Eigenvalues Move Continuously",
+          "number": "15.7",
+          "path": "ch15-norms/07-continuity-of-eigenvalues.html",
+          "filename": "07-continuity-of-eigenvalues.md"
+        },
+        {
+          "title": "How Wrong Can the Answer Be",
+          "number": "15.8",
+          "path": "ch15-norms/08-condition-numbers.html",
+          "filename": "08-condition-numbers.md"
+        }
+      ]
     }
   ]
 }
