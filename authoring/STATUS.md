@@ -20,8 +20,8 @@ The plan is at `~/.claude/plans/cached-gathering-sedgewick.md`. The outline of a
 | 11 | ch11-spectral-theory | Spectral theory | deployed |
 | 12 | ch12-psd-and-svd | Positive matrices and the SVD | deployed |
 | 13 | ch13-forms | Bilinear and quadratic forms | deployed |
-| 14 | ch14-tensors | Tensors and exterior algebra | drafted and refereed |
-| 15 | ch15-norms | Norms and matrix analysis | blueprint written |
+| 14 | ch14-tensors | Tensors and exterior algebra | deployed |
+| 15 | ch15-norms | Norms and matrix analysis | drafting |
 | 16–23 | | see plan | not started |
 
 ## Open forward promises
