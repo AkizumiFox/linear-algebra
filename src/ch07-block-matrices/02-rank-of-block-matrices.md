@@ -376,7 +376,6 @@ Let \( \A \in M_n(F) \).
 &\xrightarrow{\ \text{row}_2 + \frac12 \P\,\text{row}_1\ }
 \begin{pmatrix} -2\I & 0 \\ 0 & \P - \frac12 \P^2 \end{pmatrix}.
 \end{aligned}
-
 \]
 In the second step \( (\A - \I) - \P = -2\I \); in the third, \( -\P - (-2\I)\tfrac12 \P = 0 \) and \( \P - \P\cdot\frac12 \P = \P - \frac12\P^2 \); in the fourth, \( \P + \frac12\P(-2\I) = 0 \). Finally
 \[

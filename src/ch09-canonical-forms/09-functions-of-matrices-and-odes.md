@@ -597,7 +597,6 @@ e^{\K}
   &= \frac{e + e^{-1}}{2}\I + \frac{e - e^{-1}}{2}\K
    = \begin{pmatrix} \tfrac{e+e^{-1}}{2} & \tfrac{e - e^{-1}}{2} \\ \tfrac{e-e^{-1}}{2} & \tfrac{e+e^{-1}}{2}\end{pmatrix},
 \end{aligned}
-
 \]
 where the two scalar sums were identified by adding and subtracting the series for \( e^{1} \) and \( e^{-1} \) term by term (A1). Numerically the diagonal entries are about \( 1.543 \), not \( 2 \), so \( e^{\A+\B} \ne e^{\A}e^{\B} \).
 

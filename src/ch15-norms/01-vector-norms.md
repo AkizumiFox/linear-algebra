@@ -294,8 +294,7 @@ By **the completeness of \( \nR \), fact (A1) of the chapter introduction**, the
 \[
 \begin{aligned}
 &\bigl\lvert \beta(\u,t\v) - t\beta(\u,\v) \bigr\rvert \\
-&\qquad \le \bigl\lvert \beta(\u,t\v) - \beta(\u,q_k\v) \bigr\rvert
- + \lvert q_k - t\rvert\,\lvert\beta(\u,\v)\rvert \\
+&\qquad \le \bigl\lvert \beta(\u,t\v) - \beta(\u,q_k\v) \bigr\rvert + \lvert q_k - t\rvert\,\lvert\beta(\u,\v)\rvert \\
 &\qquad \le \bigl(M\norm{\v} + \lvert\beta(\u,\v)\rvert\bigr)\lvert q_k - t\rvert ,
 \end{aligned}
 \]

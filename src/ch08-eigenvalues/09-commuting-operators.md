@@ -77,7 +77,6 @@ Adding, and using @thm-multiplicity-of-product and then @thm-roots-with-multipli
   &= \sum_{i=1}^{k} \operatorname{mult}_{c_i}(f) + \sum_{i=1}^{k} \operatorname{mult}_{c_i}(g) \\
   &\le \deg f + \deg g .
 \end{aligned}
-
 \]
 So both inequalities above are equalities, and \( f \) and \( g \) split over \( F \) by @thm-roots-with-multiplicity.
 :::

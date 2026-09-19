@@ -512,7 +512,6 @@ Work over \( \nC \).
 &\J_2(1) \oplus \J_2(1) \oplus \J_1(2) \oplus \J_1(2) \\
 \text{and} \quad &\J_2(1) \oplus \J_1(1) \oplus \J_1(1) \oplus \J_1(2) \oplus \J_1(2).
 \end{aligned}
-
 \]
 
 (c) The single number \( g(1) \), which is \( 2 \) for the first and \( 3 \) for the second; equivalently \( \rank(T - \id_V) \) or \( \dim\ker(T - \id_V) \) (@cor-jordan-invariants (b)).

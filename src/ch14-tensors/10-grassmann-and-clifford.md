@@ -662,8 +662,7 @@ Expanding and sorting each wedge,
 \[
 \begin{aligned}
 \u \wedge \w = {}& c_{12}\e_{12} + c_{13}\e_{13} + c_{14}\e_{14} \\
-& + c_{23}\e_{23} + c_{24}\e_{24}
-+ \tfrac{1}{c_{12}}(c_{13}c_{24} - c_{14}c_{23})\,\e_{34} .
+& + c_{23}\e_{23} + c_{24}\e_{24} + \tfrac{1}{c_{12}}(c_{13}c_{24} - c_{14}c_{23})\,\e_{34} .
 \end{aligned}
 \]
 Each of the first five coefficients is read off a single product: for instance the \( \e_{23} \) term comes from \( (-c_{23}\e_3) \wedge \e_2 = c_{23}\e_{23} \), and the \( \e_{13} \) term from \( c_{12}\e_1 \wedge \tfrac{c_{13}}{c_{12}}\e_3 \). The last comes from

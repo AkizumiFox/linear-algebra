@@ -397,7 +397,6 @@ The first bracket is \( x^2 - 4x + 5 \) and the second is \( 2x - 4 = 2(x - 2) \
 p_{\B}(x) &= (x - 2)(x^2 - 4x + 5) - 2(x - 2) \\
   &= (x - 2)(x^2 - 4x + 3) = (x - 1)(x - 2)(x - 3).
 \end{aligned}
-
 \]
 So \( \spec(\B) = \{1, 2, 3\} \). Solving \( (\B - \lambda \I)\x = \0 \):
 

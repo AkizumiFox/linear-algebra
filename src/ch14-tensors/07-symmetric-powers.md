@@ -76,8 +76,7 @@ And now the model: the tensor power, divided by the relations we want to impose.
 
 Let \( C_k \subseteq V^{\otimes k} \) be the span of all the elements
 \[
-\u_1 \otimes \dots \otimes \u_k
-- \u_{\sigma(1)} \otimes \dots \otimes \u_{\sigma(k)},
+\u_1 \otimes \dots \otimes \u_k - \u_{\sigma(1)} \otimes \dots \otimes \u_{\sigma(k)},
 \qquad \u_i \in V, \ \sigma \in S_k ,
 \]
 and let \( q \colon V^{\otimes k} \to V^{\otimes k}/C_k \) be the quotient map (@def-quotient-space). Then \( V^{\otimes k}/C_k \), together with
@@ -94,15 +93,13 @@ Two things to check, and both are one line each once the right tool is named. Th
 ::: {.proof}
 \( C_k \) is a subspace, being a span. The map \( \pi \) is \( k \)-linear, being the \( k \)-linear \( \mu_k \) of @thm-tensor-power-exists followed by the linear map \( q \). It is symmetric: for \( \sigma \in S_k \), the difference
 \[
-\u_1 \otimes \dots \otimes \u_k
-- \u_{\sigma(1)} \otimes \dots \otimes \u_{\sigma(k)}
+\u_1 \otimes \dots \otimes \u_k - \u_{\sigma(1)} \otimes \dots \otimes \u_{\sigma(k)}
 \]
 lies in \( C_k \) by definition, so the two tensors have the same image under \( q \), that is, \( \pi(\u_{\sigma(1)}, \dots, \u_{\sigma(k)}) = \pi(\u_1, \dots, \u_k) \).
 
 Now let \( f \colon V^k \to W \) be symmetric \( k \)-linear. By (T1) there is a unique linear \( \tilde f \colon V^{\otimes k} \to W \) with \( \tilde f(\u_1 \otimes \dots \otimes \u_k) = f(\u_1, \dots, \u_k) \). On a generator of \( C_k \),
 \[
-\tilde f\bigl(\u_1 \otimes \dots \otimes \u_k
-- \u_{\sigma(1)} \otimes \dots \otimes \u_{\sigma(k)}\bigr)
+\tilde f\bigl(\u_1 \otimes \dots \otimes \u_k - \u_{\sigma(1)} \otimes \dots \otimes \u_{\sigma(k)}\bigr)
 = f(\u_1, \dots, \u_k) - f(\u_{\sigma(1)}, \dots, \u_{\sigma(k)}),
 \]
 which is \( 0 \) because \( f \) is symmetric. A linear map vanishing on a spanning set of \( C_k \) vanishes on \( C_k \), so \( C_k \subseteq \ker\tilde f \). By @thm-quotient-universal-property (a) there is exactly one linear \( \bar f \colon V^{\otimes k}/C_k \to W \) with \( \bar f \circ q = \tilde f \), and then

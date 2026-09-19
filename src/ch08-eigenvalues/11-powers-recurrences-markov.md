@@ -118,7 +118,6 @@ Here \( p = x^2 - 4x + 4 = (x - 2)^2 \), and the window matrix is \( \C = \begin
 \C^{k+1} &= \big(2^k\I + k2^{k-1}\N\big)(2\I + \N) \\
   &= 2^{k+1}\I + 2^k\N + k2^k\N + k2^{k-1}\N^2 = 2^{k+1}\I + (k + 1)2^k\N .
 \end{aligned}
-
 \]
 Now \( \x_k = \C^k\x_0 \) with \( \x_0 = (a_0, a_1) \), and \( a_k \) is the first entry. Row \( 1 \) of \( \C^k \) is \( \big(2^k - 2k2^{k-1},\ k2^{k-1}\big) = \big((1 - k)2^k,\ k2^{k-1}\big) \), so
 \[

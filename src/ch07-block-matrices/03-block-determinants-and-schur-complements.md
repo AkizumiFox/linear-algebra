@@ -558,7 +558,6 @@ Let \( n \ge 1 \) and \( \A, \B, \C, \D \in M_n(F) \) with \( \A \C = \C \A \), 
 \det \M &= \det \A\det(\D - \C \A^{-1}\B) \\
   &= \det\big(\A(\D - \C \A^{-1}\B)\big) = \det(\A \D - \A \C \A^{-1}\B) .
 \end{aligned}
-
 \]
 Since \( \A \C = \C \A \), \( \A \C \A^{-1} = \C \A \A^{-1} = \C \), so \( \det \M = \det(\A \D - \C \B) \).
 

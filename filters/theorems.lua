@@ -670,6 +670,7 @@ local SMALL_ENV_INLINE = {
     idea = "ideainline",
     warning = "warninginline",
     check = "checkinline",
+    algorithm = "algorithminline",
 }
 -- Nested variants (no mdframed box) for claim/proof inside another small env
 local SMALL_ENV_NESTED = {
@@ -750,7 +751,8 @@ local function render_env_latex(env_type, number, title_inlines, label_id, conte
     local actual_env = inline_env or latex_env
     local begin_cmd
     if title_str ~= "" then
-        begin_cmd = string.format("\\begin{%s}[%s]", actual_env, title_str)
+        -- Braces keep a "]" inside the title (e.g. "\\(F[x]\\)") from closing the optional argument early
+        begin_cmd = string.format("\\begin{%s}[{%s}]", actual_env, title_str)
     else
         begin_cmd = string.format("\\begin{%s}", actual_env)
     end

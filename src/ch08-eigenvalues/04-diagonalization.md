@@ -464,7 +464,6 @@ p_\tau &= (x - 1)^{n(n+1)/2}(x + 1)^{n(n-1)/2}, \\
 \tr\tau &= \frac{n(n+1)}{2} - \frac{n(n-1)}{2} = n, \\
 \det\tau &= (-1)^{n(n-1)/2}.
 \end{aligned}
-
 \]
 As a check on the trace: in the basis \( (\E_{ij}) \), \( \tau(\E_{ij}) = \E_{ji} \), so the diagonal entry of \( [\tau] \) at \( \E_{ij} \) is \( 1 \) if \( i = j \) and \( 0 \) otherwise, and the trace is \( n \).
 

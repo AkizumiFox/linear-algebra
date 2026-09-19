@@ -101,8 +101,7 @@ The rotation is not a defect to be apologized for; it is a building block. Chapt
 [Real Normal Form of a Normal Operator]
 
 Let \( V \) be a finite-dimensional inner product space over \( \nR \) and let \( T \in \cL(V) \) be normal. Then \( V \) has an orthonormal basis in which the matrix of \( T \) is block diagonal,
-\[
-(c_1) \oplus \dots \oplus (c_p) \oplus \vLambda(\lambda_1) \oplus \dots \oplus \vLambda(\lambda_q),
+\[ (c_1) \oplus \dots \oplus (c_p) \oplus \vLambda(\lambda_1) \oplus \dots \oplus \vLambda(\lambda_q),
 \]
 with \( c_1, \dots, c_p \in \nR \) and, for each \( j \), \( \lambda_j = a_j + b_ji \) with \( b_j > 0 \) and
 \[
@@ -144,9 +143,9 @@ Take traces. Since \( \tr(\X\Y) = \tr(\Y\X) \) (@thm-trace-properties), the two 
 \]
 For a real matrix \( \X \), \( \tr(\X\X\tp) = \sum_{i,j} x_{ij}^2 \ge 0 \), with equality only for \( \X = \0 \). So \( \T_{1l} = \0 \) for every \( l > 1 \): the first block row is clear, and \( \T = \T_{11} \oplus \T' \) where \( \T' \) is the trailing block upper triangular matrix with \( m - 1 \) diagonal blocks. Then
 \[
-\T\tp\T = \T_{11}\tp\T_{11} \oplus \T'\tp\T',
+\T\tp\T = \T_{11}\tp\T_{11} \oplus {\T'}\tp\T',
 \qquad
-\T\T\tp = \T_{11}\T_{11}\tp \oplus \T'\T'\tp,
+\T\T\tp = \T_{11}\T_{11}\tp \oplus \T'{\T'}\tp,
 \]
 so normality of \( \T \) gives normality of \( \T' \), and the inductive hypothesis applies.
 :::

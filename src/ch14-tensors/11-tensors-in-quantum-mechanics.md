@@ -88,8 +88,7 @@ The physical reading is one paragraph long, and the book stops there. Under (Q1)
 ::: {.warning}
 **A sum of simple tensors can still be simple.** "Entangled" does not mean "written as a sum of more than one term". In \( \nC^2 \otimes \nC^2 \),
 \[
-\tfrac12\bigl(\e_1\otimes\f_1 + \e_1\otimes\f_2
- + \e_2\otimes\f_1 + \e_2\otimes\f_2\bigr)
+\tfrac12\bigl(\e_1\otimes\f_1 + \e_1\otimes\f_2 + \e_2\otimes\f_1 + \e_2\otimes\f_2\bigr)
 = \tfrac{\e_1+\e_2}{\sqrt2} \otimes \tfrac{\f_1+\f_2}{\sqrt2},
 \]
 a four-term expression for a product state. Entanglement is a property of the **vector**, not of an expression for it, and deciding it needs an invariant. Supplying one is the job of the rest of this section.
@@ -228,8 +227,7 @@ A non-zero \( \z \in V \otimes W \) is a product state if and only if its Schmid
 
 In \( \nC^2 \otimes \nC^3 \), find the Schmidt decomposition, the Schmidt rank and the Schmidt coefficients of
 \[
-\z = \tfrac12\bigl(\e_1\otimes\f_1 + \e_1\otimes\f_3
- + \e_2\otimes\f_2 - \e_2\otimes\f_3\bigr),
+\z = \tfrac12\bigl(\e_1\otimes\f_1 + \e_1\otimes\f_3 + \e_2\otimes\f_2 - \e_2\otimes\f_3\bigr),
 \]
 where \( \sE \) and \( \sF \) are the standard orthonormal bases.
 :::
@@ -335,8 +333,7 @@ By @cor-schmidt-rank-one-separable and the identification of the Schmidt rank wi
 
 In \( \nC^2\otimes\nC^2 \), let
 \[
-\z = \tfrac{1}{\sqrt{10}}\bigl(\e_1\otimes\f_1 + 2\e_1\otimes\f_2
- + 2\e_2\otimes\f_1 + \e_2\otimes\f_2\bigr).
+\z = \tfrac{1}{\sqrt{10}}\bigl(\e_1\otimes\f_1 + 2\e_1\otimes\f_2 + 2\e_2\otimes\f_1 + \e_2\otimes\f_2\bigr).
 \]
 Find the Schmidt coefficients, the Schmidt rank and a Schmidt decomposition of \( \z \), and verify that \( \sum_k\sigma_k^2 = 1 \).
 :::

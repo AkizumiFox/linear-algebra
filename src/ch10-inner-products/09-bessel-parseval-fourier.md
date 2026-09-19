@@ -180,8 +180,7 @@ Nothing new happens here. The subspace \( W_n \) is finite-dimensional and we ha
 ::: {.proof}
 (a) By @exm-trigonometric-orthonormal the list \( \big(\tfrac{1}{\sqrt2}, \cos x, \sin x, \dots, \cos nx, \sin nx\big) \) is an orthonormal basis of \( W_n \). By @thm-projection-formula (a),
 \[
-P_{W_n}f = \Big\langle f, \tfrac{1}{\sqrt2} \Big\rangle \tfrac{1}{\sqrt2}
-+ \sum_{k=1}^{n}\big(\inner{f}{\cos kx}\cos kx + \inner{f}{\sin kx}\sin kx\big).
+P_{W_n}f = \Big\langle f, \tfrac{1}{\sqrt2} \Big\rangle \tfrac{1}{\sqrt2} + \sum_{k=1}^{n}\big(\inner{f}{\cos kx}\cos kx + \inner{f}{\sin kx}\sin kx\big).
 \]
 The first term is \( \frac{a_0}{\sqrt2}\cdot\frac{1}{\sqrt2} = \frac{a_0}{2} \), and the remaining terms are \( a_k\cos kx + b_k\sin kx \). Hence \( P_{W_n}f = S_nf \).
 

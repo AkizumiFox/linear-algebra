@@ -38,8 +38,7 @@ Arrows, polynomials and matrices are very different objects, but many arguments 
 [Vector Space]
 
 Let \( F \) be a field. A **vector space over \( F \)** is a set \( V \) together with two functions
-\[
-+ \colon V \times V \to V, \ (\u, \v) \mapsto \u + \v, \qquad \cdot \colon F \times V \to V, \ (a, \v) \mapsto a\v,
+\[ + \colon V \times V \to V, \ (\u, \v) \mapsto \u + \v, \qquad \cdot \colon F \times V \to V, \ (a, \v) \mapsto a\v,
 \]
 called **addition** and **scalar multiplication**, such that the following axioms hold.
 

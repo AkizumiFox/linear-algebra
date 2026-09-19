@@ -194,8 +194,7 @@ The same one-line computation works for the other four. The class \( [0] \) sati
 
 *Tables for \( n = 2 \).* Writing \( 0, 1 \) for \( [0], [1] \), the set \( \nF_2 \coloneqq \nZ/2\nZ = \{0, 1\} \) has the tables
 \[
-\begin{array}{c|cc}
-+ & 0 & 1 \\
+\begin{array}{c|cc} + & 0 & 1 \\
 \hline
 0 & 0 & 1 \\
 1 & 1 & 0
@@ -514,8 +513,7 @@ with all coefficient arithmetic in \( \nF_2 \). (The product is what expanding g
 ::: {.solution}
 (a) Using the formulas, with \( 1 + 1 = 0 \) in \( \nF_2 \):
 \[
-\begin{array}{c|c c c c}
-+ & 0 & 1 & \alpha & \beta \\
+\begin{array}{c|c c c c} + & 0 & 1 & \alpha & \beta \\
 \hline
 0 & 0 & 1 & \alpha & \beta \\
 1 & 1 & 0 & \beta & \alpha \\

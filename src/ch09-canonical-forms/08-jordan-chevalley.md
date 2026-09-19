@@ -209,7 +209,6 @@ Hence
 \S &= g(\A) \text{ with } g = x^2 - 4x + 6, \\
 \N &= h(\A) \text{ with } h = -x^2 + 5x - 6 = -(x-2)(x-3) .
 \end{aligned}
-
 \]
 As a cross-check, \( g + h = x \), so \( g(\A) + h(\A) = \A \); and \( \tr \S = 1 + 2 + 4 = 7 = 2 + 2 + 3 \) is the sum of the eigenvalues of \( \A \), while \( \tr \N = 1 + 1 - 2 = 0 \), as it must be for a nilpotent matrix (@prp-nilpotent-basic (c) and @thm-trace-det-eigenvalues).
 :::

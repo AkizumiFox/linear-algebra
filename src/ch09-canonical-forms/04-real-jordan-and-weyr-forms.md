@@ -292,7 +292,6 @@ adding columns \( 1 \) and \( 3 \) of \( \A \); and
   &= (1, 0, 2, 1) = (1,0,1,0) + (0,0,1,0) + (0,0,0,1) \\
   &= \c_1 + \c_3 + \c_4 ,
 \end{aligned}
-
 \]
 the third column of \( \A \). The remaining two are the same kind of one-line computation.
 

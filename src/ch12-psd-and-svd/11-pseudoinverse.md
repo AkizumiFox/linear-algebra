@@ -386,7 +386,7 @@ Now assume \( \A \succeq 0 \) and \( \col(\B) \subseteq \col(\A) \); we show \( 
 \[
 \S = \begin{pmatrix} \I_k & -\A^{+}\B \\ \0 & \I_l \end{pmatrix},
 \]
-which is invertible. Multiplying out and cancelling with the two identities just recorded,
+which is invertible. Multiplying out and canceling with the two identities just recorded,
 \[
 \S^{*}\M\S = \begin{pmatrix} \A & \0 \\ \0 & \C - \B^{*}\A^{+}\B \end{pmatrix} .
 \]

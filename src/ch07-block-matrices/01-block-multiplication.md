@@ -399,7 +399,6 @@ both with row and column partition \( 2, 1 \).
 \A \E + \b\g &= \begin{pmatrix} 3 & 2 \\ 1 & 1 \end{pmatrix} + \begin{pmatrix} 1 & -1 \\ -1 & 1 \end{pmatrix} = \begin{pmatrix} 4 & 1 \\ 0 & 2 \end{pmatrix}, \\
 \A\f + \b h &= \begin{pmatrix} 4 \\ 2 \end{pmatrix} + \begin{pmatrix} 1 \\ -1 \end{pmatrix} = \begin{pmatrix} 5 \\ 1 \end{pmatrix},
 \end{aligned}
-
 \]
 \[
 \c \E + d\g = \begin{pmatrix} 2 & 0 \end{pmatrix} + \begin{pmatrix} 3 & -3 \end{pmatrix} = \begin{pmatrix} 5 & -3 \end{pmatrix}, \qquad \c\f + dh = (0) + (3) = (3).

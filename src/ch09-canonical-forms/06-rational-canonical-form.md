@@ -627,13 +627,11 @@ For each matrix, find \( p_{\A} \), \( m_{\A} \), the invariant factors, the rat
 \C(x^3-1) = \begin{pmatrix} 0 & 0 & 1 \\ 1 & 0 & 0 \\ 0 & 1 & 0 \end{pmatrix} .
 \]
 Over \( \nQ \), \( x^3 - 1 = (x-1)(x^2+x+1) \) with both factors irreducible (the quadratic has no rational root). So the elementary divisors are \( x - 1 \) and \( x^2+x+1 \), and the elementary divisor form is
-\[
-(1) \oplus \C(x^2+x+1) = (1) \oplus \begin{pmatrix} 0 & -1 \\ 1 & -1 \end{pmatrix} .
+\[ (1) \oplus \C(x^2+x+1) = (1) \oplus \begin{pmatrix} 0 & -1 \\ 1 & -1 \end{pmatrix} .
 \]
 
 (b) \( p_{\A_2} = (x-1)^2(x-2) \) and \( m_{\A_2} = (x-1)(x-2) \) (@prp-minimal-polynomial-block-diagonal). Elementary divisors: \( x - 1, x-1, x-2 \). Invariant factors: \( d_2 = (x-1)(x-2) = m_{\A_2} \) and \( d_1 = x-1 \). Rational form
-\[
-(1) \oplus \C\big((x-1)(x-2)\big) = (1) \oplus \begin{pmatrix} 0 & -2 \\ 1 & 3 \end{pmatrix},
+\[ (1) \oplus \C\big((x-1)(x-2)\big) = (1) \oplus \begin{pmatrix} 0 & -2 \\ 1 & 3 \end{pmatrix},
 \]
 elementary divisor form \( (1) \oplus (1) \oplus (2) = \diag(1,1,2) = \A_2 \) itself.
 
@@ -722,7 +720,6 @@ Work over \( F = \nF_2 \), so that \( M_2(\nF_2) \) has \( 16 \) elements.
 &\C(x^2) = \begin{pmatrix} 0 & 0 \\ 1 & 0 \end{pmatrix}, \quad 0, \quad \C\big((x+1)^2\big) = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}, \\
 &\I_2, \quad \diag(0,1), \quad \C(x^2+x+1) = \begin{pmatrix} 0 & 1 \\ 1 & 1 \end{pmatrix},
 \end{aligned}
-
 \]
 using \( -1 = 1 \) in \( \nF_2 \). (For \( (x+1)^2 = x^2+1 \) the coefficients are \( a_0 = 1, a_1 = 0 \), so \( \C = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix} \), the coordinate swap.)
 

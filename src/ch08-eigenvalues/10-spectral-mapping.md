@@ -449,7 +449,6 @@ Let \( \A \in M_{m \times n}(F) \) and \( \B \in M_{n \times m}(F) \).
 \B(\A \B)^k\A &= \B(\A \B)^{k-1}(\A \B)\A = \big(\B(\A \B)^{k-1}\A\big)(\B \A) \\
   &= (\B \A)^k(\B \A) = (\B \A)^{k+1}.
 \end{aligned}
-
 \]
 Now \( (\A \B)^k = \A\,\big(\B(\A \B)^{k-1}\big) \), with \( \A \) of size \( m \times n \) and \( \B(\A \B)^{k-1} \) of size \( n \times m \). By @thm-trace-properties (3),
 \[

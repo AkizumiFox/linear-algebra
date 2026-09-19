@@ -536,7 +536,6 @@ Let
 \M\m_2 &= (1 - 2 + 2 - 1,\ -1 + 4 - 4 + 1,\ -1 + 4 - 4 + 1,\ -1 + 2 - 2 + 1) \\
   &= \0 .
 \end{aligned}
-
 \]
 Hence \( \M\m_3 = -\M\m_2 = \0 \) and \( \M\m_4 = \M\m_1 = \0 \), so \( \M^2 = 0 \). Also \( \im \M = \Span(\m_1, \m_2) \) by the relations among the columns, and \( \m_1, \m_2 \) are not proportional, so \( \rank \M = 2 \).
 

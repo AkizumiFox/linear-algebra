@@ -361,8 +361,7 @@ Determine whether each list is linearly independent, by computing a wedge. Justi
 (b) The minor computation \( (1\cdot 1 - 0\cdot 0,\ 1\cdot 1 - 1\cdot 0,\ 0\cdot 1 - 1\cdot 1) = (1, 1, -1) \) gives, for the first two vectors, \( \e_1\wedge\e_2 + \e_1\wedge\e_3 - \e_2\wedge\e_3 \). Wedging with the third vector \( (1,1,2) \) and keeping only the terms with all three indices distinct,
 \[
 \begin{aligned}
-&\bigl(\e_1\wedge\e_2\bigr)\wedge 2\e_3 + \bigl(\e_1\wedge\e_3\bigr)\wedge\e_2
-- \bigl(\e_2\wedge\e_3\bigr)\wedge\e_1 \\
+&\bigl(\e_1\wedge\e_2\bigr)\wedge 2\e_3 + \bigl(\e_1\wedge\e_3\bigr)\wedge\e_2 - \bigl(\e_2\wedge\e_3\bigr)\wedge\e_1 \\
 &\qquad = (2 - 1 - 1)\,\e_1\wedge\e_2\wedge\e_3 = \0 ,
 \end{aligned}
 \]

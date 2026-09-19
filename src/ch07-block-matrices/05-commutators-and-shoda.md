@@ -163,7 +163,6 @@ By the induction hypothesis there is an invertible \( \Q \in M_{n-1}(F) \) such 
   &= \begin{pmatrix} 1 & \0\tp \\ \0 & \Q^{-1} \end{pmatrix}\begin{pmatrix} 0 & \r\tp \\ \e_1 & \A_1 \end{pmatrix}\begin{pmatrix} 1 & \0\tp \\ \0 & \Q \end{pmatrix} \\
   &= \begin{pmatrix} 0 & \r\tp \Q \\ \Q^{-1}\e_1 & \Q^{-1}\A_1\Q \end{pmatrix} = \begin{pmatrix} 0 & \r\tp \Q \\ \Q^{-1}\e_1 & \Z_1 \end{pmatrix}.
 \end{aligned}
-
 \]
 Its \( (1, 1) \)-entry is \( 0 \), and its other diagonal entries are those of \( \Z_1 \), which are \( 0 \). Since \( \R^{-1}\M \R = (\P \R)^{-1}\A(\P \R) \) by @thm-inverse-matrix-properties (3), and \( \P \R \) is invertible, \( \A \) is similar to a matrix with zero diagonal. This completes the induction.
 :::

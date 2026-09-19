@@ -358,7 +358,6 @@ Let \( n \ge 2 \), \( \A \in M_n(F) \), \( p_{\A} = x^n + c_{n-1}x^{n-1} + \dots
 \S^2 - 6\S + 2\I &= \begin{pmatrix} 8 - 6 + 2 & 10 - 12 & 18 - 18 \\ 16 - 12 & 20 - 24 + 2 & 36 - 36 \\ 2 - 6 & 2 & 4 - 6 + 2 \end{pmatrix} \\
   &= \begin{pmatrix} 4 & -2 & 0 \\ 4 & -2 & 0 \\ -4 & 2 & 0 \end{pmatrix},
 \end{aligned}
-
 \]
 which is the adjugate found in Chapter 6.
 :::

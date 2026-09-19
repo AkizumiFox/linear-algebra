@@ -275,7 +275,6 @@ For each real matrix, find an invertible \( \P \) such that \( \P^{-1}\A \P \) i
 \A(\e_1 + \e_3) &= (3, 2, 3) = 2\e_2 + 3(\e_1 + \e_3), \\
 \A(\e_1 - \e_3) &= (1, 0, -1) = \e_1 - \e_3,
 \end{aligned}
-
 \]
 so
 \[

@@ -345,7 +345,6 @@ Let \( \A = \begin{pmatrix} 2 & 0 \\ 1 & -1 \end{pmatrix} \) and \( \B = \begin{
 \A \otimes \B &= \begin{pmatrix} 2\B & 0\B \\ 1\B & -1\B \end{pmatrix} = \begin{pmatrix} 2 & 2 & 0 & 0 \\ 0 & 6 & 0 & 0 \\ 1 & 1 & -1 & -1 \\ 0 & 3 & 0 & -3 \end{pmatrix}, \\
 \B \otimes \A &= \begin{pmatrix} 1\A & 1\A \\ 0\A & 3\A \end{pmatrix} = \begin{pmatrix} 2 & 0 & 2 & 0 \\ 1 & -1 & 1 & -1 \\ 0 & 0 & 6 & 0 \\ 0 & 0 & 3 & -3 \end{pmatrix}.
 \end{aligned}
-
 \]
 
 (b) \( \tr \A = 1 \), \( \tr \B = 4 \), \( \det \A = -2 \), \( \det \B = 3 \), and both have rank \( 2 \). By @thm-kronecker-rank-trace-det, \( \tr(\A \otimes \B) = 4 \), \( \det(\A \otimes \B) = (-2)^2 \cdot 3^2 = 36 \) and \( \rank(\A \otimes \B) = 4 \). Directly, the diagonal of \( \A \otimes \B \) is \( 2, 6, -1, -3 \), with sum \( 4 \).

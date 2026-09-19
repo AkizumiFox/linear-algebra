@@ -515,7 +515,6 @@ so the Smith normal form is \( \diag(1, 1, x^2, x^2) \), the invariant factors a
 \Delta_3 &= \gcd(x^3,\ x\cdot x^2,\ -x\cdot x,\ x\cdot 1) = x, \\
 \Delta_4 &= x^{4}.
 \end{aligned}
-
 \]
 The Smith normal form is \( \diag(1, 1, x, x^3) \): the invariant factors are \( x \mid x^3 \), \( m_{\A} = x^3 \) is the last of them, and the Jordan form is \( \J_3(0) \oplus \J_1(0) \). Compared with (a) the determinants agree but \( \Delta_3 \) does not, which is exactly why the two matrices are not similar.
 
