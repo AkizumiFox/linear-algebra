@@ -24,7 +24,8 @@ The plan is at `~/.claude/plans/cached-gathering-sedgewick.md`. The outline of a
 | 15 | ch15-norms | Norms and matrix analysis | deployed |
 | 16 | ch16-variational | Variational principles and interlacing | deployed |
 | 17 | ch17-convexity | Convexity | deployed |
-| 18–23 | | see plan | not started |
+| 18 | ch18-nonnegative | Non-negative matrices | deployed |
+| 19–23 | | see plan | not started |
 
 ## Open forward promises
 
@@ -172,7 +173,17 @@ Add a line when a section promises something later ("proved in Chapter 5"); tick
 
 - **PDF errors now fail the build.** pdflatex runs in nonstopmode and writes a PDF even after an error, and the build used to judge success by the file existing. When the check was tightened (Ch 16 release), **38 of 178 sections** turned out to have been shipping damaged PDFs: 12 `.algorithm` blocks (the environment was never defined for LaTeX), 21 displays with a blank line inside `\[ … \]` (one bulk edit, all `\end{aligned}` / blank / `\]`), 20 display lines beginning like list items, 7 environment titles containing `]` (e.g. `\(F[x]\)`), 4 unmapped Unicode characters, one double superscript. All fixed; the web pages had the same displays as stray `[` `]` text, invisible because MathJax still rendered the loose `aligned`. Guards: `build/pdf.py` fails on any TeX error with an `l.<n>` context (an Overfull-box dump line that starts with `!` is not one); `tests/test_pdf_errors.py`; `tests/test_display_math_source.py` lints `src/` for both display shapes
 - `tools/check_forward_deps.py` — fails if any label cites one from a later section. The book passes: 2476 labels, zero forward citations, zero dangling. It compares **sections only**, because the third component of a label number counts within a type (`def-connectives` and `thm-contrapositive-equivalent` are both 0.1.1); 3107 within-section citations therefore go unordered and remain the referee's job. Verified against planted violations
-- **M7 triage, 42 sites:** `tools/check_forward_deps.py --exercises` lists every theorem, proposition, corollary or lemma that cites an exercise, across 27 files in Chapters 0, 5, 7, 8, 9, 10, 11, 12, 13, 14 and 15. **This is a candidate list, not a defect list.** Citing an exercise for attribution is fine; a proof that *depends* on one is the rule this book has broken and repaired seven times. Each site needs reading. The two Chapter 15 §01 entries were triaged during that chapter's referee pass and are attribution only
+- **The scanner credits proofs by position, and it was wrong in two ways** (fixed in `9e2e712`): a proof after an example went to the example, and a proof under its own heading went to nothing — the proofs of the fundamental theorem of algebra and Cayley–Hamilton were invisible to the gate. Now: proofs skip over examples to the last result, and a separated proof names its result, `::: {.proof of="thm-..."}`; `tests/test_proof_ownership.py` fails on an orphan.
+- **M7 triage, 27 sites:** a label followed by *two* proofs before the next label. Most are a theorem with a second proof (then both are correctly credited). But a lemma-with-proof placed between a theorem and its proof credits the theorem's proof to the lemma — Ch 18 §01's Perron was this, fixed by reordering. List with `python3` scan in the Ch 18 session; re-run and read each: ch01 §06 thm-steinitz, §07, §08; ch02 §04, §06; ch03 §03; ch06 §04, §06; ch08 §10; ch09 §07; ch10 §07, §08 (×2); ch11 §05, §07; ch12 §02, §06, §09; ch13 §07, §08; ch16 §02, §04, §07, §08; ch18 §05, §08
+- **M7 triage, 44 sites (42 before the scanner fix exposed two more):** `tools/check_forward_deps.py --exercises` lists every theorem, proposition, corollary or lemma that cites an exercise, across 27 files in Chapters 0, 5, 7, 8, 9, 10, 11, 12, 13, 14 and 15. **This is a candidate list, not a defect list.** Citing an exercise for attribution is fine; a proof that *depends* on one is the rule this book has broken and repaired seven times. Each site needs reading. The two Chapter 15 §01 entries were triaged during that chapter's referee pass and are attribution only
+
+### Chapter 18 (nonnegative matrices)
+
+- [x] Ch 8 §11 → Ch 18 §06 (`thm-markov-limit-primitive`): Perron–Frobenius gives the Markov limit for every stochastic matrix with a positive power, without diagonalizability
+- [x] Ch 17 §08, §11 → Ch 18 §07 (`thm-birkhoff`): Birkhoff's theorem (Ch 17 proved the two forms equivalent and the permutation matrices extreme)
+- [ ] Ch 18 §07, §09 → Ch 20: Hardy–Littlewood–Pólya (x ≺ y ⇔ x = Sy with S doubly stochastic). Ch 18 §07 proves the easy half, `prp-doubly-stochastic-image-majorized` (Sy ≺ y); Ch 20 needs only the converse
+- [ ] Ch 18 §08, §09 → Ch 23: the power method (x_{k+1} = Gx_k for PageRank is one), with rate |λ₂/λ₁|
+- **Transitive exercise dependency (M7 triage):** Ch 8 §10's `prp-left-eigenvectors-transpose` (b) gets p_{Aᵀ} = p_A from `exr-characteristic-polynomial-b2`, and Ch 18 §01's proof of Perron cites that proposition. It is one of the 42 sites `--exercises` lists; fixing it (one line: det(xI − Aᵀ) = det((xI − A)ᵀ)) settles both
 
 ### Chapter 17 (convexity)
 
@@ -199,7 +210,7 @@ Discharged (to be confirmed by referee):
 
 Created:
 - [ ] Ch 16 §01 → Ch 23: Rayleigh quotient iteration
-- [ ] Ch 16 §08 → Ch 18: Birkhoff's theorem on doubly stochastic matrices (no longer needed for Horn; the plan has it in Ch 18 in its own right). **Ch 17 §08 defines `def-doubly-stochastic` (Ω_n), proves the permutation matrices are extreme, and states Birkhoff in two equivalent forms with the equivalence proved — Ch 18 need only prove one form**
+- [x] Ch 16 §08 → Ch 18: Birkhoff's theorem on doubly stochastic matrices (paid in Ch 18 §07) (no longer needed for Horn; the plan has it in Ch 18 in its own right). **Ch 17 §08 defines `def-doubly-stochastic` (Ω_n), proves the permutation matrices are extreme, and states Birkhoff in two equivalent forms with the equivalence proved — Ch 18 need only prove one form**
 - [x] Ch 16 §08: Horn's converse is **proved in §08** (`lem-horn-two-by-two`, `thm-horn`, `thm-schur-horn`), by induction from a 2×2 rotation. It was first deferred to Ch 20 on the false premise that it needs Birkhoff; the approved outline puts Schur–Horn in Ch 16
 - [ ] Ch 16 §08 → Ch 20: Schur-concavity of the product (x ≺ y, non-negative ⟹ ∏xᵢ ≥ ∏yᵢ) and Schur-concave functions in general
 - [ ] Ch 16 §09 → Ch 19: the Hermitian dilation, used for singular-value perturbation (§10's exercises already use it)

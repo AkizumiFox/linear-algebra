@@ -237,3 +237,7 @@ Let ...  This proves the theorem.
 - [ ] Notation matches `NOTATION.md`. No symbol is used before it is introduced, and none is reused with a new meaning.
 - [ ] Labels are unique (grep `src/`), and every `@ref` target exists or is created in this chapter.
 - [ ] No copied text or examples from the references, and no attribution to any person.
+
+## Hyphenation of "non-"
+
+The book writes **non-negative**, **non-singular**, **non-zero**, **non-empty** and **non-degenerate** with a hyphen (non-negative appears 266 times in Chapters 0–17, nonnegative 11). Labels and directory names are exempt, because renaming them breaks links: `thm-nonnegative-rho-eigenvalue` and `src/ch18-nonnegative/` stay as they are, while the prose and the chapter title say "non-negative".

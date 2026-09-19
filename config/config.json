@@ -107,7 +107,8 @@
             "part": "Part V \u00b7 Matrix Analysis"
         },
         "src/ch16-variational",
-        "src/ch17-convexity"
+        "src/ch17-convexity",
+        "src/ch18-nonnegative"
     ],
     "macros": "latex/macros.tex",
     "templates": {
