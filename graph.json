@@ -143,6 +143,15 @@
    "results": 125,
    "chapterNumber": 15,
    "part": "Part V \u00b7 Matrix Analysis"
+  },
+  {
+   "id": "ch16-variational",
+   "name": "Chapter 16",
+   "title": "Variational Principles and Interlacing",
+   "url": "ch16-variational/index.html",
+   "results": 175,
+   "chapterNumber": 16,
+   "part": ""
   }
  ],
  "edges": [
@@ -237,6 +246,12 @@
    "implied": true
   },
   {
+   "source": "ch00-foundations",
+   "target": "ch16-variational",
+   "weight": 9,
+   "implied": true
+  },
+  {
    "source": "ch01-vector-spaces",
    "target": "ch02-linear-systems",
    "weight": 64,
@@ -321,6 +336,12 @@
    "implied": true
   },
   {
+   "source": "ch01-vector-spaces",
+   "target": "ch16-variational",
+   "weight": 8,
+   "implied": true
+  },
+  {
    "source": "ch02-linear-systems",
    "target": "ch03-linear-maps",
    "weight": 58,
@@ -399,6 +420,12 @@
    "implied": true
   },
   {
+   "source": "ch02-linear-systems",
+   "target": "ch16-variational",
+   "weight": 9,
+   "implied": true
+  },
+  {
    "source": "ch03-linear-maps",
    "target": "ch04-duality",
    "weight": 122,
@@ -467,6 +494,12 @@
   {
    "source": "ch03-linear-maps",
    "target": "ch15-norms",
+   "weight": 6,
+   "implied": true
+  },
+  {
+   "source": "ch03-linear-maps",
+   "target": "ch16-variational",
    "weight": 6,
    "implied": true
   },
@@ -579,6 +612,12 @@
    "implied": true
   },
   {
+   "source": "ch05-polynomials",
+   "target": "ch16-variational",
+   "weight": 2,
+   "implied": true
+  },
+  {
    "source": "ch06-determinants",
    "target": "ch07-block-matrices",
    "weight": 38,
@@ -633,6 +672,12 @@
    "implied": true
   },
   {
+   "source": "ch06-determinants",
+   "target": "ch16-variational",
+   "weight": 13,
+   "implied": true
+  },
+  {
    "source": "ch07-block-matrices",
    "target": "ch08-eigenvalues",
    "weight": 22,
@@ -669,6 +714,12 @@
    "implied": true
   },
   {
+   "source": "ch07-block-matrices",
+   "target": "ch16-variational",
+   "weight": 16,
+   "implied": true
+  },
+  {
    "source": "ch08-eigenvalues",
    "target": "ch09-canonical-forms",
    "weight": 155,
@@ -696,6 +747,12 @@
    "source": "ch08-eigenvalues",
    "target": "ch15-norms",
    "weight": 28,
+   "implied": true
+  },
+  {
+   "source": "ch08-eigenvalues",
+   "target": "ch16-variational",
+   "weight": 10,
    "implied": true
   },
   {
@@ -741,6 +798,12 @@
    "implied": true
   },
   {
+   "source": "ch10-inner-products",
+   "target": "ch16-variational",
+   "weight": 43,
+   "implied": true
+  },
+  {
    "source": "ch11-spectral-theory",
    "target": "ch12-psd-and-svd",
    "weight": 77,
@@ -756,6 +819,12 @@
    "source": "ch11-spectral-theory",
    "target": "ch15-norms",
    "weight": 26,
+   "implied": true
+  },
+  {
+   "source": "ch11-spectral-theory",
+   "target": "ch16-variational",
+   "weight": 94,
    "implied": true
   },
   {
@@ -777,9 +846,27 @@
    "implied": false
   },
   {
+   "source": "ch12-psd-and-svd",
+   "target": "ch16-variational",
+   "weight": 160,
+   "implied": true
+  },
+  {
    "source": "ch13-forms",
    "target": "ch14-tensors",
    "weight": 59,
+   "implied": false
+  },
+  {
+   "source": "ch13-forms",
+   "target": "ch16-variational",
+   "weight": 21,
+   "implied": false
+  },
+  {
+   "source": "ch15-norms",
+   "target": "ch16-variational",
+   "weight": 40,
    "implied": false
   }
  ]

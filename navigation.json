@@ -1055,6 +1055,81 @@
           "filename": "08-condition-numbers.md"
         }
       ]
+    },
+    {
+      "title": "Variational Principles and Interlacing",
+      "number": 16,
+      "part": "",
+      "collapsed": true,
+      "path": "ch16-variational/index.html",
+      "sections": [
+        {
+          "title": "The Rayleigh Quotient",
+          "number": "16.1",
+          "path": "ch16-variational/01-the-rayleigh-quotient.html",
+          "filename": "01-the-rayleigh-quotient.md"
+        },
+        {
+          "title": "The Min–Max Theorem",
+          "number": "16.2",
+          "path": "ch16-variational/02-courant-fischer.html",
+          "filename": "02-courant-fischer.md"
+        },
+        {
+          "title": "How Far Eigenvalues Move",
+          "number": "16.3",
+          "path": "ch16-variational/03-weyl-inequalities.html",
+          "filename": "03-weyl-inequalities.md"
+        },
+        {
+          "title": "Deleting a Row and a Column",
+          "number": "16.4",
+          "path": "ch16-variational/04-cauchy-interlacing.html",
+          "filename": "04-cauchy-interlacing.md"
+        },
+        {
+          "title": "Adding a Rank-One Matrix",
+          "number": "16.5",
+          "path": "ch16-variational/05-rank-one-updates.html",
+          "filename": "05-rank-one-updates.md"
+        },
+        {
+          "title": "Subspaces and Sums of Eigenvalues",
+          "number": "16.6",
+          "path": "ch16-variational/06-poincare-and-ky-fan.html",
+          "filename": "06-poincare-and-ky-fan.md"
+        },
+        {
+          "title": "Arbitrary Index Sets",
+          "number": "16.7",
+          "path": "ch16-variational/07-wielandt-and-lidskii.html",
+          "filename": "07-wielandt-and-lidskii.md"
+        },
+        {
+          "title": "The Diagonal and the Spectrum",
+          "number": "16.8",
+          "path": "ch16-variational/08-majorization-and-schur.html",
+          "filename": "08-majorization-and-schur.md"
+        },
+        {
+          "title": "The Same Theory for Singular Values",
+          "number": "16.9",
+          "path": "ch16-variational/09-singular-values-variationally.html",
+          "filename": "09-singular-values-variationally.md"
+        },
+        {
+          "title": "Inertia, Again and Additively",
+          "number": "16.10",
+          "path": "ch16-variational/10-inertia-revisited.html",
+          "filename": "10-inertia-revisited.md"
+        },
+        {
+          "title": "Which Functions Respect the Order",
+          "number": "16.11",
+          "path": "ch16-variational/11-monotone-matrix-functions.html",
+          "filename": "11-monotone-matrix-functions.md"
+        }
+      ]
     }
   ]
 }
