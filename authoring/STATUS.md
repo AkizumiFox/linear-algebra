@@ -25,7 +25,8 @@ The plan is at `~/.claude/plans/cached-gathering-sedgewick.md`. The outline of a
 | 16 | ch16-variational | Variational principles and interlacing | deployed |
 | 17 | ch17-convexity | Convexity | deployed |
 | 18 | ch18-nonnegative | Non-negative matrices | deployed |
-| 19–23 | | see plan | not started |
+| 19 | ch19-perturbation | Perturbation theory | deployed |
+| 20–23 | | see plan | not started |
 
 ## Open forward promises
 
@@ -88,7 +89,7 @@ Add a line when a section promises something later ("proved in Chapter 5"); tick
 - [ ] Ch 6 → Ch 10/12: Gram matrices, √det(AᵀA) area via inner products
 - [ ] Ch 6 → Ch 11: circulants of every size
 - [ ] Ch 6 → Ch 23: matrix-tree theorem
-- [ ] Ch 7 → Ch 11: AX − XB = C uniquely solvable ⇔ no common eigenvalue (over ℂ); Ch 19 quantitative form
+- [x] Ch 7 → Ch 11: AX − XB = C uniquely solvable ⇔ no common eigenvalue (over ℂ); Ch 19 quantitative form (`prp-sep-properties` (d))
 - [ ] Ch 7 → Ch 14: tensor product of maps has matrix A ⊗ B
 - [x] Ch 7 → Ch 8: tr C^k = 0 for all k ⇒ nilpotent, via eigenvalues (over ℂ and its subfields)
 - [x] Ch 7 → Ch 8: p_T = p_{T|U} · p_{T̄} for T mapping U into U
@@ -99,7 +100,7 @@ Add a line when a section promises something later ("proved in Chapter 5"); tick
 - [ ] Ch 8 → Ch 18: Perron–Frobenius gives the Markov limit for regular stochastic matrices
 - [x] Ch 3/6/8 → Ch 9: similarity decided; complete invariants (split case); generalized eigenspaces named; best matrix when g < a
 - [ ] Ch 9 → Ch 9 §06: canonical form over every field (rational form); §07 removes the splitting hypothesis from A ~ Aᵀ
-- [ ] Ch 9 → Ch 19: numerical instability of the Jordan form
+- [x] Ch 9 → Ch 19: numerical instability of the Jordan form (§03's `exm-jordan-root-perturbation`, §04's `thm-bauer-fike-defective`, §11's remark)
 - [x] Ch 3 → Ch 9: A ~ Aᵀ over any field (`cor-a-similar-to-transpose`)
 - [x] Ch 8 §11 → Ch 9: Markov powers without diagonalizability (`cor-markov-powers-converge`)
 - [ ] Ch 9 → Ch 15: norms give quantitative bounds for e^A and for powers; ρ(A) ≤ ‖A‖ and the spectral radius as a limit
@@ -127,9 +128,9 @@ Add a line when a section promises something later ("proved in Chapter 5"); tick
 - [x] Ch 7 §04 → Ch 11 §10: the Sylvester equation is uniquely solvable exactly when the spectra are disjoint (Ch 7 states the promise at the end of the Kronecker section)
 - [ ] Ch 11 §08/§10 → Ch 12: positive operators (the square root built in §08 is what Ch 12 needs for the polar decomposition and the SVD); positive definite solutions of the Lyapunov equation
 - [ ] Ch 11 §05 → Ch 13: congruence versus similarity, and Sylvester's law of inertia (promised twice in §05)
-- [ ] Ch 11 §11 → Ch 19: Bauer–Fike and eigenvalue perturbation
+- [x] Ch 11 §11 → Ch 19: Bauer–Fike and eigenvalue perturbation (`thm-bauer-fike`; the "κ = 1 exactly in the normal case" half is `cor-bauer-fike-normal` (b), proved with an infimum over diagonalizing X)
 - [ ] Ch 11 §10 → Ch 15: Lyapunov stability of \( \dot{\x} = \A\x \)
-- [ ] Ch 11 §10 → Ch 19: conditioning of the Sylvester equation (restates Ch 7 §04's own pointer)
+- [x] Ch 11 §10 → Ch 19: conditioning of the Sylvester equation (Ch 19 §07, `def-sep` and `prp-sep-properties`)
 - [ ] Ch 11 §09 → Ch 23: the FFT as a fast way to apply the Fourier matrix, not a different theorem
 - Stated but deliberately not proved in Ch 11, each flagged in the text: Roth's removal rule (§10, route via Ch 9 §07's characteristic-matrix equivalence), the general Fuglede theorem (§07), general Cartan–Dieudonné (§06), and the connectedness of the unitary group (§08). Nothing later depends on any of them.
 - Note for §11's drafter: `\norm{\A}_F` is already used in Ch 11 §01 exercise C2, defined locally there from the Frobenius inner product of Ch 10 §01. §11 owes the NOTATION.md row.
@@ -148,7 +149,7 @@ Add a line when a section promises something later ("proved in Chapter 5"); tick
 - [ ] Ch 12 §02 → Ch 23: Cholesky costs about half of LU and needs no pivoting
 - [ ] Ch 12 → Ch 15: the operator norm, and \( \norm{\A}_2 = \sigma_1 \)
 - [ ] Ch 12 → Ch 16: Courant–Fischer, interlacing, eigenvalue monotonicity in the Loewner order
-- [ ] Ch 12 → Ch 19: perturbation of singular values
+- [x] Ch 12 → Ch 19: perturbation of singular values (Ch 16 §09's spectral bound plus Ch 19 §10's `thm-mirsky-frobenius`; §10 also does the polar factors)
 - [ ] Ch 12 → Ch 20: operator monotone functions (first look now in Ch 16 §11; Loewner's theorem still owed), unitarily invariant norms, Eckart–Young in every unitarily invariant norm. *The spectral-norm case moved to Ch 16 §09 and is paid there*
 - [ ] Ch 12 → Ch 23: PCA and the numerical SVD
 
@@ -176,6 +177,16 @@ Add a line when a section promises something later ("proved in Chapter 5"); tick
 - **The scanner credits proofs by position, and it was wrong in two ways** (fixed in `9e2e712`): a proof after an example went to the example, and a proof under its own heading went to nothing — the proofs of the fundamental theorem of algebra and Cayley–Hamilton were invisible to the gate. Now: proofs skip over examples to the last result, and a separated proof names its result, `::: {.proof of="thm-..."}`; `tests/test_proof_ownership.py` fails on an orphan.
 - **M7 triage, 27 sites:** a label followed by *two* proofs before the next label. Most are a theorem with a second proof (then both are correctly credited). But a lemma-with-proof placed between a theorem and its proof credits the theorem's proof to the lemma — Ch 18 §01's Perron was this, fixed by reordering. List with `python3` scan in the Ch 18 session; re-run and read each: ch01 §06 thm-steinitz, §07, §08; ch02 §04, §06; ch03 §03; ch06 §04, §06; ch08 §10; ch09 §07; ch10 §07, §08 (×2); ch11 §05, §07; ch12 §02, §06, §09; ch13 §07, §08; ch16 §02, §04, §07, §08; ch18 §05, §08
 - **M7 triage, 44 sites (42 before the scanner fix exposed two more):** `tools/check_forward_deps.py --exercises` lists every theorem, proposition, corollary or lemma that cites an exercise, across 27 files in Chapters 0, 5, 7, 8, 9, 10, 11, 12, 13, 14 and 15. **This is a candidate list, not a defect list.** Citing an exercise for attribution is fine; a proof that *depends* on one is the rule this book has broken and repaired seven times. Each site needs reading. The two Chapter 15 §01 entries were triaged during that chapter's referee pass and are attribution only
+
+### Chapter 19 (perturbation theory)
+
+- **The theorem Chapter 15 quoted is now proved.** Ch 15 §07 said of `thm-roots-depend-continuously` that the book "neither proves nor can prove" it and that a proof "needs complex analysis". Both were false: compactness, fact (A3), plus unique factorization in ℂ[x] suffice. Ch 19 §03 proves it as `thm-roots-continuous`, and **Ch 15 §07's two sentences were reworded** (the only edit this chapter made outside its own directory) to say that the chapter quotes the theorem and Chapter 19 proves it. Ch 18 §03's remark, which says Chapter 15 quotes it without proof, is still accurate and was left alone
+- **A silent PDF defect, found by a referee and now gated.** A non-ASCII character inside a math span is dropped by pdflatex with **no error**, so the PDF gate passed while the printed page read "the angle is less than 13". Six raw degree signs in §§09–10 became `^\circ`, and `tests/test_display_math_source.py` gained `test_no_non_ascii_inside_math`, verified to fail on a planted glyph. The rest of the book was clean
+- Blueprint errors the drafters and referees caught: a repeated eigenvalue was said to have infinite condition number (true only when it is **defective** — I₂ is the counterexample); §06 was sent to Ch 13's `thm-sylvester-inertia`, which covers only real symmetric forms, where Ch 16 §10's `thm-inertia-second-proof` (b) is what the complex case needs; the one-sided Sylvester bound was said to follow in both norms from the singular-pair trick, which gives only the spectral one; Ch 11 §11's "κ = 1 exactly" was stated with a minimum where the infimum is what can be proved
+- Stated but deliberately not proved, each flagged in the text, and nothing depends on either: the π/2 bound for Hermitian pairs with separated spectra (§07) and the two-sided interval form of Davis–Kahan in the spectral norm (§09)
+- [ ] Ch 19 §05, §10 → Ch 20: the Hoffman–Wielandt and Mirsky bounds inside one statement covering every unitarily invariant norm
+- [ ] Ch 19 §04, §06, §11 → Ch 23: backward error, the residual as a certificate, and the algorithms that compute eigenvalues
+- Elsner's matching bound is proved with the factor 2n − 1 (`thm-elsner-matching`); the text says better constants are known and does not pursue them
 
 ### Chapter 18 (nonnegative matrices)
 
@@ -213,7 +224,7 @@ Created:
 - [x] Ch 16 §08 → Ch 18: Birkhoff's theorem on doubly stochastic matrices (paid in Ch 18 §07) (no longer needed for Horn; the plan has it in Ch 18 in its own right). **Ch 17 §08 defines `def-doubly-stochastic` (Ω_n), proves the permutation matrices are extreme, and states Birkhoff in two equivalent forms with the equivalence proved — Ch 18 need only prove one form**
 - [x] Ch 16 §08: Horn's converse is **proved in §08** (`lem-horn-two-by-two`, `thm-horn`, `thm-schur-horn`), by induction from a 2×2 rotation. It was first deferred to Ch 20 on the false premise that it needs Birkhoff; the approved outline puts Schur–Horn in Ch 16
 - [ ] Ch 16 §08 → Ch 20: Schur-concavity of the product (x ≺ y, non-negative ⟹ ∏xᵢ ≥ ∏yᵢ) and Schur-concave functions in general
-- [ ] Ch 16 §09 → Ch 19: the Hermitian dilation, used for singular-value perturbation (§10's exercises already use it)
+- [x] Ch 16 §09 → Ch 19: the Hermitian dilation, used for singular-value perturbation (Ch 19 §10 proves Mirsky's bound with it)
 - Ch 12 → Ch 19 "perturbation of singular values" is now **partly** paid by Ch 16 §09's `cor-singular-value-perturbation` (|σᵢ(A+E) − σᵢ(A)| ≤ ‖E‖₂, no hypothesis on E); Chapter 19 keeps the rest
 - [ ] Ch 16 §09 → Ch 20: Eckart–Young in every unitarily invariant norm (restates Ch 12 §10's promise)
 - [ ] Ch 16 §06 → Ch 17: a pointwise supremum of linear functions is convex (the plan's "Convex functions")
@@ -235,7 +246,7 @@ Deferred polish (M7), from the Chapter 16 referees; none affects correctness:
 - [x] Ch 9 §09 → Ch 15 §06: quantitative bounds for `e^A` in place of exact formulas
 - [x] Ch 11 §01 → Ch 15 §05/§07: the "perturb and take a limit" argument made routine
 - [x] Ch 15 §07 → Ch 16: Weyl's inequality, from Courant–Fischer (duplicate of the §03 line above; paid by `thm-weyl-inequalities`, `cor-weyl-perturbation`)
-- [ ] Ch 15 §07 → Ch 19: Bauer–Fike (§07's exercise C1 is its engine and could be moved there)
+- [x] Ch 15 §07 → Ch 19: Bauer–Fike (Ch 19 §04 reproves the exercise as `lem-perturbed-eigenvalue-resolvent`, crediting it, so no theorem rests on an exercise)
 - [ ] Ch 15 §08 → Ch 16: the spectral-norm Eckart–Young that Ch 12 §10 could not state (Ch 16 §09 proves it from the min–max for singular values; the Ch 15 text originally sent this to Ch 20 and was corrected)
 - [ ] Ch 15 §08 → Ch 20: unitarily invariant norms, and the Eckart–Young theorem for all of them at once
 - [ ] Ch 15 §08 → Ch 23: the conditioning of the least-squares *problem* (which involves the residual, not just κ₂(A)); the floating-point model and backward error analysis; the digit-loss comparison between the normal equations and QR

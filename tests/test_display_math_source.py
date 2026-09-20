@@ -10,6 +10,12 @@ almost right, which is how 21 + 20 displays across Chapters 0-16 went unnoticed.
 2. A line inside the display that begins like a list item ("+ ", "- ", "1. ",
    "(a) " ...). Inside a paragraph that is itself a list item, such as a
    solution beginning "(a)", Markdown starts a nested list there.
+
+A third shape breaks only the PDF, and breaks it silently: a character outside
+ASCII inside a math span. pdflatex drops an unmapped one with no error at all,
+so the PDF gate passes and the sentence loses a symbol. Chapter 19 wrote the
+degree sign as a raw glyph, and the printed book read "the angle is less than
+13". Unicode in ordinary prose is fine; the preamble maps what the book uses.
 """
 
 import re
@@ -18,6 +24,7 @@ from pathlib import Path
 
 SRC = Path(__file__).resolve().parent.parent / "src"
 LIST_MARKER = re.compile(r'^\s{0,3}([-+*]|\d+[.)]|\(\w{1,4}\)|[a-zA-Z][.)]|#\.)\s')
+MATH_SPAN = re.compile(r'\\\((.*?)\\\)|\\\[(.*?)\\\]', re.S)
 
 
 def display_lines():
@@ -39,6 +46,19 @@ class TestDisplayMathSource(unittest.TestCase):
     def test_no_blank_line_inside_a_display(self):
         bad = [f"{p.relative_to(SRC)}:{n}" for p, n, l in display_lines() if not l.strip()]
         self.assertEqual(bad, [], "blank line inside \\[ ... \\] ends the display early")
+
+    def test_no_non_ascii_inside_math(self):
+        bad = []
+        for md in sorted(SRC.rglob("*.md")):
+            text = md.read_text()
+            for match in MATH_SPAN.finditer(text):
+                span = match.group(0)
+                stray = sorted({c for c in span if ord(c) > 127})
+                if stray:
+                    line = text.count("\n", 0, match.start()) + 1
+                    bad.append(f"{md.relative_to(SRC)}:{line}: {' '.join(stray)}")
+        self.assertEqual(bad, [], "pdflatex drops an unmapped character in math with no error; "
+                                  "write it as a command, e.g. ^\\circ for the degree sign")
 
     def test_no_display_line_that_looks_like_a_list_item(self):
         bad = [f"{p.relative_to(SRC)}:{n}: {l.strip()[:40]}"

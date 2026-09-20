@@ -78,7 +78,7 @@ Two things are worth reading off the argument. First, the obstruction is not exo
 
 ## The imported fact
 
-Here is what is true. It is the one statement in this chapter that the book neither proves nor can prove with the tools it has built.
+Here is what is true. It is the one statement in this chapter that the chapter does not prove.
 
 ::: {#thm-roots-depend-continuously}
 [Continuous Dependence of the Roots on the Coefficients]
@@ -97,7 +97,7 @@ is monic of the **same degree** \( n \) and \( \lvert b_j - c_j \rvert < \delta 
 \]
 :::
 
-**This book does not prove this theorem, and quotes it.** A proof needs complex analysis: one encircles each root of \( p \) by a small circle on which \( p \) does not vanish, counts the roots inside by a contour integral, and observes that an integer-valued quantity depending continuously on the coefficients cannot change. Nothing of that machinery is available here, and manufacturing a substitute would take a chapter. The statement is therefore recorded in the manner this book has used before — Chapter 13 §06 with Taylor's theorem, Chapter 10 with the theorem of Abel and Ruffini: named at the point of use, never buried inside a proof that presents itself as self-contained, and never strengthened in passing. What *can* be proved with the tools at hand is that the numbering in the statement has to be chosen afresh for each \( q \), and that was @prp-no-continuous-root-selection.
+**This chapter quotes this theorem, and Chapter 19 proves it.** The classical proof uses complex analysis: one encircles each root of \( p \) by a small circle on which \( p \) does not vanish, counts the roots inside by a contour integral, and observes that an integer-valued quantity depending continuously on the coefficients cannot change. The book never develops that machinery, and it does not need to: compactness, fact (A3), together with unique factorization in \( \nC[x] \), is enough, and Chapter 19 §03 gives that proof. It is postponed there because it belongs with the quantitative bounds on how far roots move. Until then the statement is recorded in the manner this book has used before — Chapter 13 §06 with Taylor's theorem, Chapter 10 with the theorem of Abel and Ruffini: named at the point of use, never buried inside a proof that presents itself as self-contained, and never strengthened in passing. What *can* be proved with the tools at hand is that the numbering in the statement has to be chosen afresh for each \( q \), and that was @prp-no-continuous-root-selection.
 
 Two clauses of the statement carry weight. **Monic of the same degree** is essential: the roots of \( \delta x^2 + x \) are \( 0 \) and \( -1/\delta \), which runs off to infinity as \( \delta \to 0 \), while the limit polynomial \( x \) has the single root \( 0 \). Allowing the leading coefficient to vanish destroys everything, and monic polynomials of a fixed degree are exactly the family where it cannot. And **numbered so that** is the multiset formulation: the permutation matching up the two lists depends on \( q \), and @prp-no-continuous-root-selection says it must.
 
