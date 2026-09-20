@@ -179,6 +179,15 @@
    "results": 152,
    "chapterNumber": 19,
    "part": ""
+  },
+  {
+   "id": "ch20-inequalities",
+   "name": "Chapter 20",
+   "title": "Matrix Inequalities",
+   "url": "ch20-inequalities/index.html",
+   "results": 184,
+   "chapterNumber": 20,
+   "part": ""
   }
  ],
  "edges": [
@@ -294,6 +303,12 @@
    "source": "ch00-foundations",
    "target": "ch19-perturbation",
    "weight": 10,
+   "implied": true
+  },
+  {
+   "source": "ch00-foundations",
+   "target": "ch20-inequalities",
+   "weight": 18,
    "implied": true
   },
   {
@@ -504,6 +519,12 @@
    "source": "ch02-linear-systems",
    "target": "ch19-perturbation",
    "weight": 4,
+   "implied": true
+  },
+  {
+   "source": "ch02-linear-systems",
+   "target": "ch20-inequalities",
+   "weight": 12,
    "implied": true
   },
   {
@@ -735,6 +756,12 @@
    "implied": true
   },
   {
+   "source": "ch05-polynomials",
+   "target": "ch20-inequalities",
+   "weight": 2,
+   "implied": true
+  },
+  {
    "source": "ch06-determinants",
    "target": "ch07-block-matrices",
    "weight": 38,
@@ -807,6 +834,12 @@
    "implied": true
   },
   {
+   "source": "ch06-determinants",
+   "target": "ch20-inequalities",
+   "weight": 2,
+   "implied": true
+  },
+  {
    "source": "ch07-block-matrices",
    "target": "ch08-eigenvalues",
    "weight": 22,
@@ -857,6 +890,12 @@
   {
    "source": "ch07-block-matrices",
    "target": "ch19-perturbation",
+   "weight": 6,
+   "implied": true
+  },
+  {
+   "source": "ch07-block-matrices",
+   "target": "ch20-inequalities",
    "weight": 6,
    "implied": true
   },
@@ -915,6 +954,12 @@
    "implied": true
   },
   {
+   "source": "ch08-eigenvalues",
+   "target": "ch20-inequalities",
+   "weight": 10,
+   "implied": true
+  },
+  {
    "source": "ch09-canonical-forms",
    "target": "ch11-spectral-theory",
    "weight": 20,
@@ -942,6 +987,12 @@
    "source": "ch09-canonical-forms",
    "target": "ch19-perturbation",
    "weight": 4,
+   "implied": true
+  },
+  {
+   "source": "ch09-canonical-forms",
+   "target": "ch20-inequalities",
+   "weight": 13,
    "implied": true
   },
   {
@@ -993,6 +1044,12 @@
    "implied": true
   },
   {
+   "source": "ch10-inner-products",
+   "target": "ch20-inequalities",
+   "weight": 10,
+   "implied": true
+  },
+  {
    "source": "ch11-spectral-theory",
    "target": "ch12-psd-and-svd",
    "weight": 77,
@@ -1032,6 +1089,12 @@
    "source": "ch11-spectral-theory",
    "target": "ch19-perturbation",
    "weight": 53,
+   "implied": true
+  },
+  {
+   "source": "ch11-spectral-theory",
+   "target": "ch20-inequalities",
+   "weight": 97,
    "implied": true
   },
   {
@@ -1077,6 +1140,12 @@
    "implied": true
   },
   {
+   "source": "ch12-psd-and-svd",
+   "target": "ch20-inequalities",
+   "weight": 145,
+   "implied": true
+  },
+  {
    "source": "ch13-forms",
    "target": "ch14-tensors",
    "weight": 59,
@@ -1099,6 +1168,12 @@
    "target": "ch19-perturbation",
    "weight": 1,
    "implied": true
+  },
+  {
+   "source": "ch14-tensors",
+   "target": "ch20-inequalities",
+   "weight": 2,
+   "implied": false
   },
   {
    "source": "ch15-norms",
@@ -1125,6 +1200,12 @@
    "implied": true
   },
   {
+   "source": "ch15-norms",
+   "target": "ch20-inequalities",
+   "weight": 36,
+   "implied": true
+  },
+  {
    "source": "ch16-variational",
    "target": "ch17-convexity",
    "weight": 30,
@@ -1143,6 +1224,12 @@
    "implied": true
   },
   {
+   "source": "ch16-variational",
+   "target": "ch20-inequalities",
+   "weight": 139,
+   "implied": true
+  },
+  {
    "source": "ch17-convexity",
    "target": "ch18-nonnegative",
    "weight": 33,
@@ -1155,9 +1242,27 @@
    "implied": true
   },
   {
+   "source": "ch17-convexity",
+   "target": "ch20-inequalities",
+   "weight": 100,
+   "implied": true
+  },
+  {
    "source": "ch18-nonnegative",
    "target": "ch19-perturbation",
    "weight": 13,
+   "implied": false
+  },
+  {
+   "source": "ch18-nonnegative",
+   "target": "ch20-inequalities",
+   "weight": 9,
+   "implied": true
+  },
+  {
+   "source": "ch19-perturbation",
+   "target": "ch20-inequalities",
+   "weight": 21,
    "implied": false
   }
  ]

@@ -212,6 +212,19 @@
   <url><loc>https://linear-algebra.akizumifox.com/ch19-perturbation/09-davis-kahan.html</loc></url>
   <url><loc>https://linear-algebra.akizumifox.com/ch19-perturbation/10-singular-values-and-polar.html</loc></url>
   <url><loc>https://linear-algebra.akizumifox.com/ch19-perturbation/11-eigenvalue-condition.html</loc></url>
+  <url><loc>https://linear-algebra.akizumifox.com/ch20-inequalities/index.html</loc></url>
+  <url><loc>https://linear-algebra.akizumifox.com/ch20-inequalities/01-hardy-littlewood-polya.html</loc></url>
+  <url><loc>https://linear-algebra.akizumifox.com/ch20-inequalities/02-convex-functions-and-majorization.html</loc></url>
+  <url><loc>https://linear-algebra.akizumifox.com/ch20-inequalities/03-symmetric-gauge-functions.html</loc></url>
+  <url><loc>https://linear-algebra.akizumifox.com/ch20-inequalities/04-unitarily-invariant-norms.html</loc></url>
+  <url><loc>https://linear-algebra.akizumifox.com/ch20-inequalities/05-von-neumann-trace-inequality.html</loc></url>
+  <url><loc>https://linear-algebra.akizumifox.com/ch20-inequalities/06-ky-fan-dominance.html</loc></url>
+  <url><loc>https://linear-algebra.akizumifox.com/ch20-inequalities/07-lidskii-and-its-consequences.html</loc></url>
+  <url><loc>https://linear-algebra.akizumifox.com/ch20-inequalities/08-operator-convexity.html</loc></url>
+  <url><loc>https://linear-algebra.akizumifox.com/ch20-inequalities/09-loewner-matrices.html</loc></url>
+  <url><loc>https://linear-algebra.akizumifox.com/ch20-inequalities/10-loewners-theorem.html</loc></url>
+  <url><loc>https://linear-algebra.akizumifox.com/ch20-inequalities/11-matrix-means-and-inequalities.html</loc></url>
+  <url><loc>https://linear-algebra.akizumifox.com/ch20-inequalities/12-golden-thompson.html</loc></url>
   <url><loc>https://linear-algebra.akizumifox.com/results.html</loc></url>
   <url><loc>https://linear-algebra.akizumifox.com/graph.html</loc></url>
 </urlset>

@@ -1343,6 +1343,87 @@
           "filename": "11-eigenvalue-condition.md"
         }
       ]
+    },
+    {
+      "title": "Matrix Inequalities",
+      "number": 20,
+      "part": "",
+      "collapsed": true,
+      "path": "ch20-inequalities/index.html",
+      "sections": [
+        {
+          "title": "Doubly Stochastic Maps",
+          "number": "20.1",
+          "path": "ch20-inequalities/01-hardy-littlewood-polya.html",
+          "filename": "01-hardy-littlewood-polya.md"
+        },
+        {
+          "title": "Convex Functions of a Majorization",
+          "number": "20.2",
+          "path": "ch20-inequalities/02-convex-functions-and-majorization.html",
+          "filename": "02-convex-functions-and-majorization.md"
+        },
+        {
+          "title": "Symmetric Gauge Functions",
+          "number": "20.3",
+          "path": "ch20-inequalities/03-symmetric-gauge-functions.html",
+          "filename": "03-symmetric-gauge-functions.md"
+        },
+        {
+          "title": "Unitarily Invariant Norms",
+          "number": "20.4",
+          "path": "ch20-inequalities/04-unitarily-invariant-norms.html",
+          "filename": "04-unitarily-invariant-norms.md"
+        },
+        {
+          "title": "The Trace Inequality",
+          "number": "20.5",
+          "path": "ch20-inequalities/05-von-neumann-trace-inequality.html",
+          "filename": "05-von-neumann-trace-inequality.md"
+        },
+        {
+          "title": "Ky Fan Dominance",
+          "number": "20.6",
+          "path": "ch20-inequalities/06-ky-fan-dominance.html",
+          "filename": "06-ky-fan-dominance.md"
+        },
+        {
+          "title": "Lidskii's Theorem in Majorization Form",
+          "number": "20.7",
+          "path": "ch20-inequalities/07-lidskii-and-its-consequences.html",
+          "filename": "07-lidskii-and-its-consequences.md"
+        },
+        {
+          "title": "Operator Convex Functions",
+          "number": "20.8",
+          "path": "ch20-inequalities/08-operator-convexity.html",
+          "filename": "08-operator-convexity.md"
+        },
+        {
+          "title": "Loewner Matrices",
+          "number": "20.9",
+          "path": "ch20-inequalities/09-loewner-matrices.html",
+          "filename": "09-loewner-matrices.md"
+        },
+        {
+          "title": "Loewner's Theorem",
+          "number": "20.10",
+          "path": "ch20-inequalities/10-loewners-theorem.html",
+          "filename": "10-loewners-theorem.md"
+        },
+        {
+          "title": "Means and Matrix Cauchy–Schwarz",
+          "number": "20.11",
+          "path": "ch20-inequalities/11-matrix-means-and-inequalities.html",
+          "filename": "11-matrix-means-and-inequalities.md"
+        },
+        {
+          "title": "Golden–Thompson",
+          "number": "20.12",
+          "path": "ch20-inequalities/12-golden-thompson.html",
+          "filename": "12-golden-thompson.md"
+        }
+      ]
     }
   ]
 }

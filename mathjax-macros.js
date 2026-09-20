@@ -314,6 +314,10 @@ window.BOOK_MACROS = {
  "tp": "^{\\top}",
  "tr": "\\operatorname{tr}",
  "u": "\\mathbf{u}",
+ "uinorm": [
+  "\\left|\\!\\left|\\!\\left| #1 \\right|\\!\\right|\\!\\right|",
+  1
+ ],
  "v": "\\mathbf{v}",
  "vDelta": "\\bm{\\Delta}",
  "vGamma": "\\bm{\\Gamma}",
