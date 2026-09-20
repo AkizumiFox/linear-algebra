@@ -26,7 +26,8 @@ The plan is at `~/.claude/plans/cached-gathering-sedgewick.md`. The outline of a
 | 17 | ch17-convexity | Convexity | deployed |
 | 18 | ch18-nonnegative | Non-negative matrices | deployed |
 | 19 | ch19-perturbation | Perturbation theory | deployed |
-| 20–23 | | see plan | not started |
+| 20 | ch20-inequalities | Matrix inequalities | deployed |
+| 21–23 | | see plan | not started |
 
 ## Open forward promises
 
@@ -150,7 +151,7 @@ Add a line when a section promises something later ("proved in Chapter 5"); tick
 - [ ] Ch 12 → Ch 15: the operator norm, and \( \norm{\A}_2 = \sigma_1 \)
 - [ ] Ch 12 → Ch 16: Courant–Fischer, interlacing, eigenvalue monotonicity in the Loewner order
 - [x] Ch 12 → Ch 19: perturbation of singular values (Ch 16 §09's spectral bound plus Ch 19 §10's `thm-mirsky-frobenius`; §10 also does the polar factors)
-- [ ] Ch 12 → Ch 20: operator monotone functions (first look now in Ch 16 §11; Loewner's theorem still owed), unitarily invariant norms, Eckart–Young in every unitarily invariant norm. *The spectral-norm case moved to Ch 16 §09 and is paid there*
+- [x] Ch 12 → Ch 20: operator monotone functions, unitarily invariant norms, Eckart–Young in every unitarily invariant norm (Ch 20 §04 `thm-von-neumann-correspondence`, §06 `cor-eckart-young-ui`, §10 `thm-loewner` and `cor-power-operator-monotone`). *The spectral-norm case moved to Ch 16 §09 and is paid there*
 - [ ] Ch 12 → Ch 23: PCA and the numerical SVD
 
 ### Chapter 13 (bilinear and quadratic forms)
@@ -178,21 +179,34 @@ Add a line when a section promises something later ("proved in Chapter 5"); tick
 - **M7 triage, 27 sites:** a label followed by *two* proofs before the next label. Most are a theorem with a second proof (then both are correctly credited). But a lemma-with-proof placed between a theorem and its proof credits the theorem's proof to the lemma — Ch 18 §01's Perron was this, fixed by reordering. List with `python3` scan in the Ch 18 session; re-run and read each: ch01 §06 thm-steinitz, §07, §08; ch02 §04, §06; ch03 §03; ch06 §04, §06; ch08 §10; ch09 §07; ch10 §07, §08 (×2); ch11 §05, §07; ch12 §02, §06, §09; ch13 §07, §08; ch16 §02, §04, §07, §08; ch18 §05, §08
 - **M7 triage, 44 sites (42 before the scanner fix exposed two more):** `tools/check_forward_deps.py --exercises` lists every theorem, proposition, corollary or lemma that cites an exercise, across 27 files in Chapters 0, 5, 7, 8, 9, 10, 11, 12, 13, 14 and 15. **This is a candidate list, not a defect list.** Citing an exercise for attribution is fine; a proof that *depends* on one is the rule this book has broken and repaired seven times. Each site needs reading. The two Chapter 15 §01 entries were triaged during that chapter's referee pass and are attribution only
 
+### Chapter 20 (matrix inequalities)
+
+- **The book's first and only permanent import beyond (A1)–(A6).** Loewner's theorem was promised *proved* here four times by Ch 16 §11, and its classification half cannot be proved with the book's analysis. With the author's decision, §10 quotes the Nevanlinna–Pick theory once, as **(A7)** (`thm-pick-nevanlinna`), states what it costs, and proves everything else. Verified by a referee: (A7) appears in no other section, and `cor-power-operator-monotone`, `cor-log-operator-monotone` and `exm-exp-not-monotone` do not use it. The elementary half — operator monotone of order n exactly when every Loewner matrix is positive semidefinite, **for C¹ functions** — is proved in full in §09
+- **The blueprint was wrong three times, each caught by a drafter with a counterexample:** the matrix AM–GM it specified (2|||A*B||| ≤ |||A*A + B*B|||) is false, and the true form is 2σⱼ(A*B) ≤ λⱼ(AA* + BB*); the route given for the polar-factor corollary fails, as do two obvious repairs; and the order-2 criterion is f' ≥ 0 with f[s,t]² ≤ f'(s)f'(t), not a concavity condition
+- **§09 rejected both proof routes the blueprint offered** for the derivative of a matrix function (one needs eigenprojection derivatives Ch 19 does not supply, the other needs polynomial approximation, which is not an imported fact) and proved an exact spectral-projection identity instead. The resulting theorem allows **repeated eigenvalues**, which the criterion's proof needs, since the segment it walks has them at uncountably many points. A referee confirmed the identity symbolically and numerically
+- [x] Ch 12 §09 → Ch 20: the polar factor minimizes the distance in every unitarily invariant norm (Ch 20 §06 `cor-polar-nearest-ui`). *This promise was never in this ledger; it is recorded now because the chapter paid it*
+- Stated with credit and **not proved**, with nothing depending on either: Lieb's concavity theorem (§12) and the Lieb–Thirring extension of the trace power inequality beyond powers of two
+- Golden–Thompson fails for three matrices, with an exact counterexample (three projections at 120°); for three Hermitian matrices the quantity need not even be real, so there is no inequality to state
+- `--exercises` lists one Ch 20 site, `cor-monotone-order-two` → `exr-loewner-matrices-c2` (§09): **triaged, attribution only** — the corollary's proof inlines the logarithm estimate, and the exercise is credited for proving it at leisure
+
 ### Chapter 19 (perturbation theory)
 
 - **The theorem Chapter 15 quoted is now proved.** Ch 15 §07 said of `thm-roots-depend-continuously` that the book "neither proves nor can prove" it and that a proof "needs complex analysis". Both were false: compactness, fact (A3), plus unique factorization in ℂ[x] suffice. Ch 19 §03 proves it as `thm-roots-continuous`, and **Ch 15 §07's two sentences were reworded** (the only edit this chapter made outside its own directory) to say that the chapter quotes the theorem and Chapter 19 proves it. Ch 18 §03's remark, which says Chapter 15 quotes it without proof, is still accurate and was left alone
 - **A silent PDF defect, found by a referee and now gated.** A non-ASCII character inside a math span is dropped by pdflatex with **no error**, so the PDF gate passed while the printed page read "the angle is less than 13". Six raw degree signs in §§09–10 became `^\circ`, and `tests/test_display_math_source.py` gained `test_no_non_ascii_inside_math`, verified to fail on a planted glyph. The rest of the book was clean
 - Blueprint errors the drafters and referees caught: a repeated eigenvalue was said to have infinite condition number (true only when it is **defective** — I₂ is the counterexample); §06 was sent to Ch 13's `thm-sylvester-inertia`, which covers only real symmetric forms, where Ch 16 §10's `thm-inertia-second-proof` (b) is what the complex case needs; the one-sided Sylvester bound was said to follow in both norms from the singular-pair trick, which gives only the spectral one; Ch 11 §11's "κ = 1 exactly" was stated with a minimum where the infimum is what can be proved
 - Stated but deliberately not proved, each flagged in the text, and nothing depends on either: the π/2 bound for Hermitian pairs with separated spectra (§07) and the two-sided interval form of Davis–Kahan in the spectral norm (§09)
-- [ ] Ch 19 §05, §10 → Ch 20: the Hoffman–Wielandt and Mirsky bounds inside one statement covering every unitarily invariant norm
+- [x] Ch 19 §05, §10 → Ch 20: the Hoffman–Wielandt and Mirsky bounds inside one statement covering every unitarily invariant norm (Ch 20 §07 `thm-lidskii-ui`, `cor-hoffman-wielandt-again`, `thm-mirsky-ui`)
+- [ ] **Still open, and now recorded:** Ch 19 §10's square-root and polar-factor bounds (`thm-sqrt-perturbation`, `thm-polar-positive-perturbation`, `thm-polar-unitary-perturbation`) hold only in the spectral and Frobenius norms. Ch 19 §11's sentence sweeps them into the Ch 20 promise; Ch 20 does not extend them, and §07 now says so
 - [ ] Ch 19 §04, §06, §11 → Ch 23: backward error, the residual as a certificate, and the algorithms that compute eigenvalues
 - Elsner's matching bound is proved with the factor 2n − 1 (`thm-elsner-matching`); the text says better constants are known and does not pursue them
+- `--exercises` lists one Ch 19 site, `thm-sqrt-perturbation` → `exr-singular-values-and-polar-c1` (§10): **triaged, attribution only** — the citation is in the warning after the theorem, which the scanner sweeps; the proof cites only Ch 12's square root and §07's `cor-positive-sylvester`
+- Pre-existing chain worth knowing (M7): Ch 19 §01 cites `prp-left-eigenvectors-transpose` (b) for σ(Aᵀ) = σ(A), and that Ch 8 proposition gets p_{Aᵀ} = p_A from an exercise. Same chain as the Ch 18 §01 entry above; one line in Ch 8 fixes all of them
 
 ### Chapter 18 (nonnegative matrices)
 
 - [x] Ch 8 §11 → Ch 18 §06 (`thm-markov-limit-primitive`): Perron–Frobenius gives the Markov limit for every stochastic matrix with a positive power, without diagonalizability
 - [x] Ch 17 §08, §11 → Ch 18 §07 (`thm-birkhoff`): Birkhoff's theorem (Ch 17 proved the two forms equivalent and the permutation matrices extreme)
-- [ ] Ch 18 §07, §09 → Ch 20: Hardy–Littlewood–Pólya (x ≺ y ⇔ x = Sy with S doubly stochastic). Ch 18 §07 proves the easy half, `prp-doubly-stochastic-image-majorized` (Sy ≺ y); Ch 20 needs only the converse
+- [x] Ch 18 §07, §09 → Ch 20: Hardy–Littlewood–Pólya (Ch 20 §01 `thm-hardy-littlewood-polya`, by T-transforms, with D a product of at most n−1 of them for sorted vectors)
 - [ ] Ch 18 §08, §09 → Ch 23: the power method (x_{k+1} = Gx_k for PageRank is one), with rate |λ₂/λ₁|
 - **Transitive exercise dependency (M7 triage):** Ch 8 §10's `prp-left-eigenvectors-transpose` (b) gets p_{Aᵀ} = p_A from `exr-characteristic-polynomial-b2`, and Ch 18 §01's proof of Perron cites that proposition. It is one of the 42 sites `--exercises` lists; fixing it (one line: det(xI − Aᵀ) = det((xI − A)ᵀ)) settles both
 
@@ -204,7 +218,7 @@ Add a line when a section promises something later ("proved in Chapter 5"); tick
 - Ch 15 §01 wrote \( |x_i|^p \) and the exponent \( 1/p \) for real p without defining real powers; the book had **no logarithm**. Ch 17 §11 builds log from Ch 9 §09's exp (`lem-exp-log`) and defines \( t^r = e^{r\log t} \). Ch 15's use was a remark, not a proof step
 - [x] Ch 2 §07 → Ch 17 §06: inequalities and linear programming (`exm-traffic-lp`; Ch 2 names no chapter)
 - [x] Ch 13 §06 said nothing later depends on its imported (A1) symmetry / (A2) Taylor; Ch 17 §10's `thm-convex-second-derivative` does, so the Ch 13 sentence was updated (a pointer update, like the Minkowski one)
-- [ ] Ch 17 §10 → Ch 20: A ↦ tr f(A) is convex for convex f (plan: "Convex and Schur-convex functions")
+- [x] Ch 17 §10, §11 → Ch 20: A ↦ tr f(A) is convex for convex f (Ch 20 §02 `thm-trace-convex`, from `lem-peierls`)
 - [x] Ch 17 §04 (~line 344): an earlier draft promised §10 a circular "second proof of the triangle inequality" from `cor-norm-as-max`; the final text says only that norms are examples of a max of linear functions, and the revision adds that their convexity was already the triangle inequality
 
 ### Chapter 16 (variational principles and interlacing)
@@ -223,15 +237,15 @@ Created:
 - [ ] Ch 16 §01 → Ch 23: Rayleigh quotient iteration
 - [x] Ch 16 §08 → Ch 18: Birkhoff's theorem on doubly stochastic matrices (paid in Ch 18 §07) (no longer needed for Horn; the plan has it in Ch 18 in its own right). **Ch 17 §08 defines `def-doubly-stochastic` (Ω_n), proves the permutation matrices are extreme, and states Birkhoff in two equivalent forms with the equivalence proved — Ch 18 need only prove one form**
 - [x] Ch 16 §08: Horn's converse is **proved in §08** (`lem-horn-two-by-two`, `thm-horn`, `thm-schur-horn`), by induction from a 2×2 rotation. It was first deferred to Ch 20 on the false premise that it needs Birkhoff; the approved outline puts Schur–Horn in Ch 16
-- [ ] Ch 16 §08 → Ch 20: Schur-concavity of the product (x ≺ y, non-negative ⟹ ∏xᵢ ≥ ∏yᵢ) and Schur-concave functions in general
+- [x] Ch 16 §08 → Ch 20: Schur-concavity of the product and Schur-concave functions in general (Ch 20 §02 `def-schur-concave`, `cor-product-schur-concave`)
 - [x] Ch 16 §09 → Ch 19: the Hermitian dilation, used for singular-value perturbation (Ch 19 §10 proves Mirsky's bound with it)
 - Ch 12 → Ch 19 "perturbation of singular values" is now **partly** paid by Ch 16 §09's `cor-singular-value-perturbation` (|σᵢ(A+E) − σᵢ(A)| ≤ ‖E‖₂, no hypothesis on E); Chapter 19 keeps the rest
-- [ ] Ch 16 §09 → Ch 20: Eckart–Young in every unitarily invariant norm (restates Ch 12 §10's promise)
+- [x] Ch 16 §09 → Ch 20: Eckart–Young in every unitarily invariant norm (Ch 20 §06 `cor-eckart-young-ui`, by Ch 12 §10's predicted route through Weyl's singular-value inequality)
 - [ ] Ch 16 §06 → Ch 17: a pointwise supremum of linear functions is convex (the plan's "Convex functions")
-- [ ] Ch 16 §06 → Ch 20: the Ky Fan partial sums applied to singular values, i.e. the Ky Fan k-norms (plan: "Unitarily invariant norms", "Ky Fan dominance")
-- [ ] Ch 16 §07 → Ch 20: from λ(A)−λ(B) ≺ λ(A−B) (proved in full in §07), the consequences Σφ(xᵢ) ≤ Σφ(yᵢ) for every convex φ and the matching statement for unitarily invariant norms. φ(t) = |t| is §07 exercise C2. This is what §11 means by "the strongest form of Lidskii"
-- [ ] Ch 16 §11 → Ch 20: Loewner's theorem (`thm-loewner-statement`), both directions
-- [ ] Ch 16 §11 → Ch 20: t^p operator monotone on (0,∞) for 0 < p < 1, and not for p > 1. Only p = 1/2 (text) and p = 1/2^k (exercise C1) are proved
+- [x] Ch 16 §06 → Ch 20: the Ky Fan partial sums applied to singular values (Ch 20 §04 `def-ky-fan-norm`, §06 `thm-ky-fan-dominance`)
+- [x] Ch 16 §07 → Ch 20: the consequences of λ(A)−λ(B) ≺ λ(A−B) for every convex φ and for every unitarily invariant norm (Ch 20 §02 `thm-karamata`, §07 `thm-lidskii-convex`, `thm-lidskii-ui`)
+- [x] Ch 16 §11 → Ch 20: Loewner's theorem, both directions (Ch 20 §10 `thm-loewner`). **The classification half rests on the chapter's one import, (A7)**, the Nevanlinna–Pick theory, quoted once in §10; the elementary half (operator monotonicity of every order = positivity of every Loewner matrix, for C¹ functions) is proved in full in §09
+- [x] Ch 16 §11 → Ch 20: t^p operator monotone exactly for 0 ≤ p ≤ 1 (Ch 20 §10 `cor-power-operator-monotone`), log operator monotone (`cor-log-operator-monotone`), e^t not (`exm-exp-not-monotone`). **None of the three uses (A7)**; Ch 16 §11 predicted they would need Loewner's theorem and they do not
 
 Deferred polish (M7), from the Chapter 16 referees; none affects correctness:
 - §04: the letter m means three things (deleted index, number of deleted rows, eigenspace dimension, where NOTATION's g_B(ν) should be used), and Step 3's p collides with p_A. §03/§04 write the eigenvalue list as plain λ(A) where NOTATION now registers bold `\vlambda(\A)`. §03 uses bold E both for the perturbation and for matrix units (Ch 15's precedent)
@@ -248,7 +262,7 @@ Deferred polish (M7), from the Chapter 16 referees; none affects correctness:
 - [x] Ch 15 §07 → Ch 16: Weyl's inequality, from Courant–Fischer (duplicate of the §03 line above; paid by `thm-weyl-inequalities`, `cor-weyl-perturbation`)
 - [x] Ch 15 §07 → Ch 19: Bauer–Fike (Ch 19 §04 reproves the exercise as `lem-perturbed-eigenvalue-resolvent`, crediting it, so no theorem rests on an exercise)
 - [ ] Ch 15 §08 → Ch 16: the spectral-norm Eckart–Young that Ch 12 §10 could not state (Ch 16 §09 proves it from the min–max for singular values; the Ch 15 text originally sent this to Ch 20 and was corrected)
-- [ ] Ch 15 §08 → Ch 20: unitarily invariant norms, and the Eckart–Young theorem for all of them at once
+- [x] Ch 15 §08 → Ch 20: unitarily invariant norms (Ch 20 §04), and Eckart–Young for all of them at once (§06)
 - [ ] Ch 15 §08 → Ch 23: the conditioning of the least-squares *problem* (which involves the residual, not just κ₂(A)); the floating-point model and backward error analysis; the digit-loss comparison between the normal equations and QR
 - Maintenance hazard: Ch 15 §06 cites Chapter 9 §09's imported analysis facts by **number** — (A1), (A4), (A5) — and that list is a plain enumerate with no labels. The three numbers are correct today (checked), but renumbering or inserting an item in Ch 9 §09 would break Ch 15 silently. Same pattern for Ch 15's own (A1)–(A4) list, cited from §§01–06
 - **OUTSTANDING, and older than this chapter:** Ch 11 §10 says the positive definite solution of the Lyapunov equation "is the subject of Chapter 12", and **Chapter 12 never proves it** — "Lyapunov" appears nowhere in Ch 12. Ch 15 §06 delivers the decay half and the conditional half (any positive definite X solving it makes x*Xx decrease), and states in its own text that the existence half is not proved in the book. The Ch 11 §10 sentence still points readers at Chapter 12; **a proposed rewording of it was declined, so the misdirection stands in the deployed text and is recorded here instead**. The usual proof integrates `e^{tA*}Q e^{tA}` over `[0, ∞)`, which needs matrix-valued integrals the book does not set up. **Exactly what Ch 15 does establish** (refereed): `thm-exponential-decay` gives the decay of every solution of `ẋ = Ax` for stable `A`, with an explicit rate, and uses no Lyapunov equation at all; `exr-matrix-exponential-and-calculus-c3` shows that `x*Xx` strictly decreases along every non-zero solution **given** a positive definite `X` solving the equation — but that is an exercise, not body text. The existence of such an `X` is proved nowhere in the book, and §06 says so in its own text
