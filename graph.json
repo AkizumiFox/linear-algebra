@@ -170,6 +170,15 @@
    "results": 145,
    "chapterNumber": 18,
    "part": ""
+  },
+  {
+   "id": "ch19-perturbation",
+   "name": "Chapter 19",
+   "title": "Perturbation Theory",
+   "url": "ch19-perturbation/index.html",
+   "results": 152,
+   "chapterNumber": 19,
+   "part": ""
   }
  ],
  "edges": [
@@ -282,6 +291,12 @@
    "implied": true
   },
   {
+   "source": "ch00-foundations",
+   "target": "ch19-perturbation",
+   "weight": 10,
+   "implied": true
+  },
+  {
    "source": "ch01-vector-spaces",
    "target": "ch02-linear-systems",
    "weight": 64,
@@ -384,6 +399,12 @@
    "implied": true
   },
   {
+   "source": "ch01-vector-spaces",
+   "target": "ch19-perturbation",
+   "weight": 4,
+   "implied": true
+  },
+  {
    "source": "ch02-linear-systems",
    "target": "ch03-linear-maps",
    "weight": 58,
@@ -480,6 +501,12 @@
    "implied": true
   },
   {
+   "source": "ch02-linear-systems",
+   "target": "ch19-perturbation",
+   "weight": 4,
+   "implied": true
+  },
+  {
    "source": "ch03-linear-maps",
    "target": "ch04-duality",
    "weight": 122,
@@ -567,6 +594,12 @@
    "source": "ch03-linear-maps",
    "target": "ch18-nonnegative",
    "weight": 1,
+   "implied": true
+  },
+  {
+   "source": "ch03-linear-maps",
+   "target": "ch19-perturbation",
+   "weight": 3,
    "implied": true
   },
   {
@@ -696,6 +729,12 @@
    "implied": true
   },
   {
+   "source": "ch05-polynomials",
+   "target": "ch19-perturbation",
+   "weight": 8,
+   "implied": true
+  },
+  {
    "source": "ch06-determinants",
    "target": "ch07-block-matrices",
    "weight": 38,
@@ -762,6 +801,12 @@
    "implied": true
   },
   {
+   "source": "ch06-determinants",
+   "target": "ch19-perturbation",
+   "weight": 27,
+   "implied": true
+  },
+  {
    "source": "ch07-block-matrices",
    "target": "ch08-eigenvalues",
    "weight": 22,
@@ -806,6 +851,12 @@
   {
    "source": "ch07-block-matrices",
    "target": "ch18-nonnegative",
+   "weight": 6,
+   "implied": true
+  },
+  {
+   "source": "ch07-block-matrices",
+   "target": "ch19-perturbation",
    "weight": 6,
    "implied": true
   },
@@ -858,6 +909,12 @@
    "implied": true
   },
   {
+   "source": "ch08-eigenvalues",
+   "target": "ch19-perturbation",
+   "weight": 42,
+   "implied": true
+  },
+  {
    "source": "ch09-canonical-forms",
    "target": "ch11-spectral-theory",
    "weight": 20,
@@ -879,6 +936,12 @@
    "source": "ch09-canonical-forms",
    "target": "ch18-nonnegative",
    "weight": 23,
+   "implied": true
+  },
+  {
+   "source": "ch09-canonical-forms",
+   "target": "ch19-perturbation",
+   "weight": 4,
    "implied": true
   },
   {
@@ -924,6 +987,12 @@
    "implied": true
   },
   {
+   "source": "ch10-inner-products",
+   "target": "ch19-perturbation",
+   "weight": 53,
+   "implied": true
+  },
+  {
    "source": "ch11-spectral-theory",
    "target": "ch12-psd-and-svd",
    "weight": 77,
@@ -957,6 +1026,12 @@
    "source": "ch11-spectral-theory",
    "target": "ch18-nonnegative",
    "weight": 3,
+   "implied": true
+  },
+  {
+   "source": "ch11-spectral-theory",
+   "target": "ch19-perturbation",
+   "weight": 53,
    "implied": true
   },
   {
@@ -996,6 +1071,12 @@
    "implied": true
   },
   {
+   "source": "ch12-psd-and-svd",
+   "target": "ch19-perturbation",
+   "weight": 56,
+   "implied": true
+  },
+  {
    "source": "ch13-forms",
    "target": "ch14-tensors",
    "weight": 59,
@@ -1011,6 +1092,12 @@
    "source": "ch13-forms",
    "target": "ch17-convexity",
    "weight": 4,
+   "implied": true
+  },
+  {
+   "source": "ch13-forms",
+   "target": "ch19-perturbation",
+   "weight": 1,
    "implied": true
   },
   {
@@ -1032,6 +1119,12 @@
    "implied": true
   },
   {
+   "source": "ch15-norms",
+   "target": "ch19-perturbation",
+   "weight": 90,
+   "implied": true
+  },
+  {
    "source": "ch16-variational",
    "target": "ch17-convexity",
    "weight": 30,
@@ -1044,9 +1137,27 @@
    "implied": true
   },
   {
+   "source": "ch16-variational",
+   "target": "ch19-perturbation",
+   "weight": 77,
+   "implied": true
+  },
+  {
    "source": "ch17-convexity",
    "target": "ch18-nonnegative",
    "weight": 33,
+   "implied": false
+  },
+  {
+   "source": "ch17-convexity",
+   "target": "ch19-perturbation",
+   "weight": 12,
+   "implied": true
+  },
+  {
+   "source": "ch18-nonnegative",
+   "target": "ch19-perturbation",
+   "weight": 13,
    "implied": false
   }
  ]

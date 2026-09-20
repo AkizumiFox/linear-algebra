@@ -1268,6 +1268,81 @@
           "filename": "09-m-matrices.md"
         }
       ]
+    },
+    {
+      "title": "Perturbation Theory",
+      "number": 19,
+      "part": "",
+      "collapsed": true,
+      "path": "ch19-perturbation/index.html",
+      "sections": [
+        {
+          "title": "Gershgorin Discs",
+          "number": "19.1",
+          "path": "ch19-perturbation/01-gershgorin.html",
+          "filename": "01-gershgorin.md"
+        },
+        {
+          "title": "Other Inclusion Regions",
+          "number": "19.2",
+          "path": "ch19-perturbation/02-inclusion-regions.html",
+          "filename": "02-inclusion-regions.md"
+        },
+        {
+          "title": "Continuity of Roots",
+          "number": "19.3",
+          "path": "ch19-perturbation/03-continuity-of-roots.html",
+          "filename": "03-continuity-of-roots.md"
+        },
+        {
+          "title": "The Bauer–Fike Theorem",
+          "number": "19.4",
+          "path": "ch19-perturbation/04-bauer-fike.html",
+          "filename": "04-bauer-fike.md"
+        },
+        {
+          "title": "The Hoffman–Wielandt Theorem",
+          "number": "19.5",
+          "path": "ch19-perturbation/05-hoffman-wielandt.html",
+          "filename": "05-hoffman-wielandt.md"
+        },
+        {
+          "title": "Hermitian Perturbations",
+          "number": "19.6",
+          "path": "ch19-perturbation/06-hermitian-perturbations.html",
+          "filename": "06-hermitian-perturbations.md"
+        },
+        {
+          "title": "The Sylvester Equation Revisited",
+          "number": "19.7",
+          "path": "ch19-perturbation/07-sylvester-bounds.html",
+          "filename": "07-sylvester-bounds.md"
+        },
+        {
+          "title": "Principal Angles",
+          "number": "19.8",
+          "path": "ch19-perturbation/08-principal-angles.html",
+          "filename": "08-principal-angles.md"
+        },
+        {
+          "title": "The Davis–Kahan Theorem",
+          "number": "19.9",
+          "path": "ch19-perturbation/09-davis-kahan.html",
+          "filename": "09-davis-kahan.md"
+        },
+        {
+          "title": "Singular Values and Polar Factors",
+          "number": "19.10",
+          "path": "ch19-perturbation/10-singular-values-and-polar.html",
+          "filename": "10-singular-values-and-polar.md"
+        },
+        {
+          "title": "Condition Numbers of Eigenvalues",
+          "number": "19.11",
+          "path": "ch19-perturbation/11-eigenvalue-condition.html",
+          "filename": "11-eigenvalue-condition.md"
+        }
+      ]
     }
   ]
 }
