@@ -27,7 +27,8 @@ The plan is at `~/.claude/plans/cached-gathering-sedgewick.md`. The outline of a
 | 18 | ch18-nonnegative | Non-negative matrices | deployed |
 | 19 | ch19-perturbation | Perturbation theory | deployed |
 | 20 | ch20-inequalities | Matrix inequalities | deployed |
-| 21–22 | | see plan | not started |
+| 21 | ch21-geometry | Affine and projective geometry | deployed |
+| 22 | | see plan | not started |
 | 23 | ch23-applied | Computation and applications | deployed |
 
 ## Open forward promises
@@ -169,7 +170,7 @@ Add a line when a section promises something later ("proved in Chapter 5"); tick
 - [x] Ch 7 §04 → Ch 14 §03: the Kronecker product is the matrix of a tensor product of maps, in the dictionary-ordered product basis with the first factor slow. The other ordering gives the *swapped* Kronecker product, not a transpose
 - [x] Ch 13 §12 → Ch 14 §10: `Cl(q)` constructed as `T(V)/⟨v ⊗ v − q(v)1⟩`, hence existence, and `dim Cl(q) = 2ⁿ` proved via creation/deletion operators on `Λ V` with no division by 2. The half Chapter 13 marked as missing was independence
 - [x] Ch 3 §10 → Ch 14 §04: the trace as a contraction, with no basis chosen
-- [ ] Ch 14 §08 → Ch 21: Plücker coordinates (hinted, chapter not named in the text)
+- [x] Ch 14 §08 → Ch 21: Plücker coordinates (Ch 21 §10 `def-plucker-coordinates`, `prp-plucker-well-defined`, `thm-plucker-relation`, with the Klein quadric; Ch 14 §10's version is an exercise, credited and reproved)
 - Polish deferred to M7: §10 is the book's longest section (~10.6k words) and carries four major notions against STYLE's two; §03 is also long. Both have natural seams recorded in the referee reports
 
 ### Book-wide gates
@@ -179,6 +180,14 @@ Add a line when a section promises something later ("proved in Chapter 5"); tick
 - **The scanner credits proofs by position, and it was wrong in two ways** (fixed in `9e2e712`): a proof after an example went to the example, and a proof under its own heading went to nothing — the proofs of the fundamental theorem of algebra and Cayley–Hamilton were invisible to the gate. Now: proofs skip over examples to the last result, and a separated proof names its result, `::: {.proof of="thm-..."}`; `tests/test_proof_ownership.py` fails on an orphan.
 - **M7 triage, 27 sites:** a label followed by *two* proofs before the next label. Most are a theorem with a second proof (then both are correctly credited). But a lemma-with-proof placed between a theorem and its proof credits the theorem's proof to the lemma — Ch 18 §01's Perron was this, fixed by reordering. List with `python3` scan in the Ch 18 session; re-run and read each: ch01 §06 thm-steinitz, §07, §08; ch02 §04, §06; ch03 §03; ch06 §04, §06; ch08 §10; ch09 §07; ch10 §07, §08 (×2); ch11 §05, §07; ch12 §02, §06, §09; ch13 §07, §08; ch16 §02, §04, §07, §08; ch18 §05, §08
 - **M7 triage, 44 sites (42 before the scanner fix exposed two more):** `tools/check_forward_deps.py --exercises` lists every theorem, proposition, corollary or lemma that cites an exercise, across 27 files in Chapters 0, 5, 7, 8, 9, 10, 11, 12, 13, 14 and 15. **This is a candidate list, not a defect list.** Citing an exercise for attribution is fine; a proof that *depends* on one is the rule this book has broken and repaired seven times. Each site needs reading. The two Chapter 15 §01 entries were triaged during that chapter's referee pass and are attribution only
+
+### Chapter 21 (affine and projective geometry)
+
+- **Drafted, refereed and revised by a workflow** rather than by hand-launched agents: five section pairs, each flowing draft → referee → revise on its own clock, then an index written against the delivered text, a consistency referee over the seams, and one pass applying its findings. 18 agents, no failures
+- The chapter **imports no analysis at all**, and quotes six results it does not prove, each flagged where a reader meets it and listed in the index
+- Blueprint corrections the drafters made: `def-face` was already taken by Ch 17 §08 (the polyhedron face here is `def-polyhedron-face`); the affine join formula's second case needed the direction-space count, not the naive one; and the duality correspondence's dimension shift had to be stated in projective dimension throughout
+- Pappus over a non-commutative division ring is **stated with credit and not proved** — the book builds neither division rings nor synthetic planes — and nothing depends on it
+- `--exercises` lists three Ch 21 sites: **all triaged, attribution only** — §09's remark about the small-field cases, and §10's two credits to Chapter 14's exercise, which §10 reproves rather than uses
 
 ### Chapter 23 (computation and applications)
 

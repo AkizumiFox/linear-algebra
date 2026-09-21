@@ -200,9 +200,11 @@ Write \( \sigma(\B) \in \nR^{p} \) for the singular value list of \( \B \), and 
 
 \( (\le) \) Let \( \uinorm{\A} \le 1 \). By @thm-von-neumann-trace and then by the defining property of a dual norm (@prp-dual-norm-properties (b), applied to the norm \( \Phi \) of @def-dual-gauge), which gives \( \inner{\x}{\y} \le \Phi(\x)\Phi^{*}(\y) \) for all \( \x, \y \),
 \[
-\lvert\tr(\B^{*}\A)\rvert \le \sum_{i=1}^{p}\sigma_i(\A)\sigma_i(\B)
-\le \Phi(\sigma(\A))\,\Phi^{*}(\sigma(\B)) = \uinorm{\A}\,\Phi^{*}(\sigma(\B))
-\le \Phi^{*}(\sigma(\B)) .
+\begin{aligned}
+\lvert\tr(\B^{*}\A)\rvert &\le \sum_{i=1}^{p}\sigma_i(\A)\sigma_i(\B)
+\le \Phi(\sigma(\A))\,\Phi^{*}(\sigma(\B)) \\
+ &= \uinorm{\A}\,\Phi^{*}(\sigma(\B)) \le \Phi^{*}(\sigma(\B)) .
+\end{aligned}
 \]
 
 \( (\ge) \) By @def-dual-gauge there is \( \x \in \nR^{p} \) with \( \Phi(\x) \le 1 \) and \( \inner{\x}{\sigma(\B)} = \Phi^{*}(\sigma(\B)) \). We may assume \( x_1 \ge \dots \ge x_p \ge 0 \). Indeed, replacing each \( x_i \) by \( \lvert x_i\rvert \) leaves \( \Phi(\x) \) unchanged, by the sign invariance in @def-symmetric-gauge, and does not decrease \( \inner{\x}{\sigma(\B)} \) because every \( \sigma_i(\B) \ge 0 \); sorting the result decreasingly leaves \( \Phi \) unchanged, by the permutation invariance in @def-symmetric-gauge, and does not decrease \( \inner{\x}{\sigma(\B)} \) by the rearrangement inequality (@lem-substochastic-pairing with a permutation matrix). Since \( \Phi^{*}(\sigma(\B)) \) is by definition the largest value of \( \inner{\cdot}{\sigma(\B)} \) on \( \{\Phi \le 1\} \), the value is still exactly \( \Phi^{*}(\sigma(\B)) \). Now put
