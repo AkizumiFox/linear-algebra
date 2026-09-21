@@ -110,7 +110,8 @@
         "src/ch17-convexity",
         "src/ch18-nonnegative",
         "src/ch19-perturbation",
-        "src/ch20-inequalities"
+        "src/ch20-inequalities",
+        {"dir": "src/ch23-applied", "part": "Part VI \u00b7 Geometry, Algebra, Computation"}
     ],
     "macros": "latex/macros.tex",
     "templates": {
