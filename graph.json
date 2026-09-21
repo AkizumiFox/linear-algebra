@@ -190,13 +190,22 @@
    "part": ""
   },
   {
+   "id": "ch21-geometry",
+   "name": "Chapter 21",
+   "title": "Affine and Projective Geometry",
+   "url": "ch21-geometry/index.html",
+   "results": 193,
+   "chapterNumber": 21,
+   "part": "Part VI \u00b7 Geometry, Algebra, Computation"
+  },
+  {
    "id": "ch23-applied",
    "name": "Chapter 23",
    "title": "Computation and Applications",
    "url": "ch23-applied/index.html",
    "results": 218,
    "chapterNumber": 23,
-   "part": "Part VI \u00b7 Geometry, Algebra, Computation"
+   "part": ""
   }
  ],
  "edges": [
@@ -322,6 +331,12 @@
   },
   {
    "source": "ch00-foundations",
+   "target": "ch21-geometry",
+   "weight": 34,
+   "implied": true
+  },
+  {
+   "source": "ch00-foundations",
    "target": "ch23-applied",
    "weight": 35,
    "implied": true
@@ -432,6 +447,12 @@
    "source": "ch01-vector-spaces",
    "target": "ch19-perturbation",
    "weight": 4,
+   "implied": true
+  },
+  {
+   "source": "ch01-vector-spaces",
+   "target": "ch21-geometry",
+   "weight": 50,
    "implied": true
   },
   {
@@ -550,6 +571,12 @@
   },
   {
    "source": "ch02-linear-systems",
+   "target": "ch21-geometry",
+   "weight": 24,
+   "implied": true
+  },
+  {
+   "source": "ch02-linear-systems",
    "target": "ch23-applied",
    "weight": 52,
    "implied": true
@@ -652,6 +679,12 @@
   },
   {
    "source": "ch03-linear-maps",
+   "target": "ch21-geometry",
+   "weight": 63,
+   "implied": true
+  },
+  {
+   "source": "ch03-linear-maps",
    "target": "ch23-applied",
    "weight": 2,
    "implied": true
@@ -708,6 +741,12 @@
    "source": "ch04-duality",
    "target": "ch17-convexity",
    "weight": 16,
+   "implied": true
+  },
+  {
+   "source": "ch04-duality",
+   "target": "ch21-geometry",
+   "weight": 74,
    "implied": true
   },
   {
@@ -796,6 +835,12 @@
   },
   {
    "source": "ch05-polynomials",
+   "target": "ch21-geometry",
+   "weight": 3,
+   "implied": true
+  },
+  {
+   "source": "ch05-polynomials",
    "target": "ch23-applied",
    "weight": 2,
    "implied": true
@@ -880,6 +925,12 @@
   },
   {
    "source": "ch06-determinants",
+   "target": "ch21-geometry",
+   "weight": 15,
+   "implied": true
+  },
+  {
+   "source": "ch06-determinants",
    "target": "ch23-applied",
    "weight": 46,
    "implied": true
@@ -942,6 +993,12 @@
    "source": "ch07-block-matrices",
    "target": "ch20-inequalities",
    "weight": 6,
+   "implied": true
+  },
+  {
+   "source": "ch07-block-matrices",
+   "target": "ch21-geometry",
+   "weight": 2,
    "implied": true
   },
   {
@@ -1114,6 +1171,12 @@
   },
   {
    "source": "ch10-inner-products",
+   "target": "ch21-geometry",
+   "weight": 46,
+   "implied": true
+  },
+  {
+   "source": "ch10-inner-products",
    "target": "ch23-applied",
    "weight": 110,
    "implied": true
@@ -1164,6 +1227,12 @@
    "source": "ch11-spectral-theory",
    "target": "ch20-inequalities",
    "weight": 97,
+   "implied": true
+  },
+  {
+   "source": "ch11-spectral-theory",
+   "target": "ch21-geometry",
+   "weight": 24,
    "implied": true
   },
   {
@@ -1251,9 +1320,21 @@
    "implied": true
   },
   {
+   "source": "ch13-forms",
+   "target": "ch21-geometry",
+   "weight": 65,
+   "implied": true
+  },
+  {
    "source": "ch14-tensors",
    "target": "ch20-inequalities",
    "weight": 2,
+   "implied": false
+  },
+  {
+   "source": "ch14-tensors",
+   "target": "ch21-geometry",
+   "weight": 22,
    "implied": false
   },
   {
@@ -1288,6 +1369,12 @@
   },
   {
    "source": "ch15-norms",
+   "target": "ch21-geometry",
+   "weight": 5,
+   "implied": true
+  },
+  {
+   "source": "ch15-norms",
    "target": "ch23-applied",
    "weight": 55,
    "implied": true
@@ -1318,6 +1405,12 @@
   },
   {
    "source": "ch16-variational",
+   "target": "ch21-geometry",
+   "weight": 4,
+   "implied": true
+  },
+  {
+   "source": "ch16-variational",
    "target": "ch23-applied",
    "weight": 47,
    "implied": true
@@ -1339,6 +1432,12 @@
    "target": "ch20-inequalities",
    "weight": 100,
    "implied": true
+  },
+  {
+   "source": "ch17-convexity",
+   "target": "ch21-geometry",
+   "weight": 99,
+   "implied": false
   },
   {
    "source": "ch17-convexity",

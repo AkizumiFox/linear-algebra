@@ -1426,9 +1426,78 @@
       ]
     },
     {
+      "title": "Affine and Projective Geometry",
+      "number": 21,
+      "part": "Part VI · Geometry, Algebra, Computation",
+      "collapsed": true,
+      "path": "ch21-geometry/index.html",
+      "sections": [
+        {
+          "title": "Affine Spaces and Affine Maps",
+          "number": "21.1",
+          "path": "ch21-geometry/01-affine-spaces.html",
+          "filename": "01-affine-spaces.md"
+        },
+        {
+          "title": "Flats, Independence and Coordinates",
+          "number": "21.2",
+          "path": "ch21-geometry/02-affine-subspaces.html",
+          "filename": "02-affine-subspaces.md"
+        },
+        {
+          "title": "Convex Polyhedra, Geometrically",
+          "number": "21.3",
+          "path": "ch21-geometry/03-polyhedra-and-linear-programming.html",
+          "filename": "03-polyhedra-and-linear-programming.md"
+        },
+        {
+          "title": "Euclidean Motions",
+          "number": "21.4",
+          "path": "ch21-geometry/04-euclidean-motions.html",
+          "filename": "04-euclidean-motions.md"
+        },
+        {
+          "title": "Affine and Euclidean Quadrics",
+          "number": "21.5",
+          "path": "ch21-geometry/05-quadrics.html",
+          "filename": "05-quadrics.md"
+        },
+        {
+          "title": "Projective Space",
+          "number": "21.6",
+          "path": "ch21-geometry/06-projective-space.html",
+          "filename": "06-projective-space.md"
+        },
+        {
+          "title": "Projective Transformations",
+          "number": "21.7",
+          "path": "ch21-geometry/07-projective-transformations.html",
+          "filename": "07-projective-transformations.md"
+        },
+        {
+          "title": "Duality",
+          "number": "21.8",
+          "path": "ch21-geometry/08-projective-duality.html",
+          "filename": "08-projective-duality.md"
+        },
+        {
+          "title": "Desargues and Pappus",
+          "number": "21.9",
+          "path": "ch21-geometry/09-desargues-and-pappus.html",
+          "filename": "09-desargues-and-pappus.md"
+        },
+        {
+          "title": "Conics and Lines in Space",
+          "number": "21.10",
+          "path": "ch21-geometry/10-conics-and-plucker.html",
+          "filename": "10-conics-and-plucker.md"
+        }
+      ]
+    },
+    {
       "title": "Computation and Applications",
       "number": 23,
-      "part": "Part VI · Geometry, Algebra, Computation",
+      "part": "",
       "collapsed": true,
       "path": "ch23-applied/index.html",
       "sections": [
