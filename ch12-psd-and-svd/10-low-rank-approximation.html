@@ -39,7 +39,7 @@ compute is how much was thrown away.">
     <link rel="preload" href="../fonts/stix-two-text-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin="">
 
     <!-- Styles -->
-    <link rel="stylesheet" href="../styles.css?v=e152f16446">
+    <link rel="stylesheet" href="../styles.css?v=150c61cc37">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
         <!-- Math is rendered at build time (build/math.py); this is its stylesheet. MathJax itself
@@ -669,12 +669,17 @@ Approximation</span>
                 as a fraction of variance explained. Those steps need a
                 probabilistic model, a reason to prefer squared error,
                 and an argument that the sample answer says something
-                about the population. Chapter 23 supplies them, along
-                with how a singular value decomposition is actually
-                computed for a large matrix — which is never by forming
-                <span class="math inline"><mjx-container class="MathJax" jax="CHTML" style="font-size: 113.1%; position: relative;" data-tex="\mathbf{A}^{*}\mathbf{A}"><mjx-math class=" MJX-TEX" aria-hidden="true"><mjx-msup><mjx-TeXAtom texclass="ORD"><mjx-mi class="mjx-b"><mjx-c class="mjx-c1D400 TEX-B"></mjx-c></mjx-mi></mjx-TeXAtom><mjx-script style="vertical-align: 0.363em;"><mjx-TeXAtom size="s" texclass="ORD"><mjx-mo class="mjx-n"><mjx-c class="mjx-c2217"></mjx-c></mjx-mo></mjx-TeXAtom></mjx-script></mjx-msup><mjx-TeXAtom texclass="ORD"><mjx-mi class="mjx-b"><mjx-c class="mjx-c1D400 TEX-B"></mjx-c></mjx-mi></mjx-TeXAtom></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mrow data-mjx-texclass="ORD"><mi mathvariant="bold">A</mi></mrow><mrow data-mjx-texclass="ORD"><mo>∗</mo></mrow></msup><mrow data-mjx-texclass="ORD"><mi mathvariant="bold">A</mi></mrow></math></mjx-assistive-mml></mjx-container></span> and
-                finding its eigenvalues, the route taken in every hand
-                computation in this chapter.</p>
+                about a larger population. Chapter 23 §10 supplies the
+                first two — the model for the finite population of the
+                data themselves, where expectation is an average and no
+                measure theory is needed, and three reasons to prefer
+                squared error — and says plainly that the third belongs
+                to probability and statistics, which this book does not
+                develop. It also says why a singular value decomposition
+                is never computed by forming <span class="math inline"><mjx-container class="MathJax" jax="CHTML" style="font-size: 113.1%; position: relative;" data-tex="\mathbf{A}^{*}\mathbf{A}"><mjx-math class=" MJX-TEX" aria-hidden="true"><mjx-msup><mjx-TeXAtom texclass="ORD"><mjx-mi class="mjx-b"><mjx-c class="mjx-c1D400 TEX-B"></mjx-c></mjx-mi></mjx-TeXAtom><mjx-script style="vertical-align: 0.363em;"><mjx-TeXAtom size="s" texclass="ORD"><mjx-mo class="mjx-n"><mjx-c class="mjx-c2217"></mjx-c></mjx-mo></mjx-TeXAtom></mjx-script></mjx-msup><mjx-TeXAtom texclass="ORD"><mjx-mi class="mjx-b"><mjx-c class="mjx-c1D400 TEX-B"></mjx-c></mjx-mi></mjx-TeXAtom></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mrow data-mjx-texclass="ORD"><mi mathvariant="bold">A</mi></mrow><mrow data-mjx-texclass="ORD"><mo>∗</mo></mrow></msup><mrow data-mjx-texclass="ORD"><mi mathvariant="bold">A</mi></mrow></math></mjx-assistive-mml></mjx-container></span> and finding its
+                eigenvalues, the route taken in every hand computation
+                in this chapter; the algorithm that replaces it is
+                assembled nowhere in this book.</p>
                 <div class="warning small-env" data-env-type="warning">
                 <p><em>Warning</em><em>.</em> <strong>The truncation is
                 optimal for this norm, and low rank does not mean
@@ -1112,7 +1117,7 @@ Moore–Penrose Pseudoinverse</span>
     </div>
 
     <!-- Tooltip Script -->
-    <script src="../main.js?v=e152f16446"></script>
+    <script src="../main.js?v=150c61cc37"></script>
             </body>
 
 </html>

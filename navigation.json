@@ -1424,6 +1424,93 @@
           "filename": "12-golden-thompson.md"
         }
       ]
+    },
+    {
+      "title": "Computation and Applications",
+      "number": 23,
+      "part": "Part VI · Geometry, Algebra, Computation",
+      "collapsed": true,
+      "path": "ch23-applied/index.html",
+      "sections": [
+        {
+          "title": "Floating Point and Backward Error",
+          "number": "23.1",
+          "path": "ch23-applied/01-floating-point-and-backward-error.html",
+          "filename": "01-floating-point-and-backward-error.md"
+        },
+        {
+          "title": "Elimination, Pivoting and Cost",
+          "number": "23.2",
+          "path": "ch23-applied/02-elimination-pivoting-and-cost.html",
+          "filename": "02-elimination-pivoting-and-cost.md"
+        },
+        {
+          "title": "Least Squares in Practice",
+          "number": "23.3",
+          "path": "ch23-applied/03-numerical-least-squares.html",
+          "filename": "03-numerical-least-squares.md"
+        },
+        {
+          "title": "The Power Method",
+          "number": "23.4",
+          "path": "ch23-applied/04-power-method-and-inverse-iteration.html",
+          "filename": "04-power-method-and-inverse-iteration.md"
+        },
+        {
+          "title": "The QR Algorithm",
+          "number": "23.5",
+          "path": "ch23-applied/05-the-qr-algorithm.html",
+          "filename": "05-the-qr-algorithm.md"
+        },
+        {
+          "title": "Krylov Subspaces",
+          "number": "23.6",
+          "path": "ch23-applied/06-krylov-subspaces.html",
+          "filename": "06-krylov-subspaces.md"
+        },
+        {
+          "title": "Steepest Descent and Conjugate Gradients",
+          "number": "23.7",
+          "path": "ch23-applied/07-conjugate-gradient.html",
+          "filename": "07-conjugate-gradient.md"
+        },
+        {
+          "title": "Lax Pairs and the Toda Flow",
+          "number": "23.8",
+          "path": "ch23-applied/08-lax-pairs-and-the-toda-flow.html",
+          "filename": "08-lax-pairs-and-the-toda-flow.md"
+        },
+        {
+          "title": "Vibrations",
+          "number": "23.9",
+          "path": "ch23-applied/09-vibrations.html",
+          "filename": "09-vibrations.md"
+        },
+        {
+          "title": "Principal Components",
+          "number": "23.10",
+          "path": "ch23-applied/10-principal-components.html",
+          "filename": "10-principal-components.md"
+        },
+        {
+          "title": "Graph Laplacians",
+          "number": "23.11",
+          "path": "ch23-applied/11-graph-laplacians.html",
+          "filename": "11-graph-laplacians.md"
+        },
+        {
+          "title": "The Fast Fourier Transform",
+          "number": "23.12",
+          "path": "ch23-applied/12-the-fast-fourier-transform.html",
+          "filename": "12-the-fast-fourier-transform.md"
+        },
+        {
+          "title": "Fast Matrix Multiplication",
+          "number": "23.13",
+          "path": "ch23-applied/13-fast-matrix-multiplication.html",
+          "filename": "13-fast-matrix-multiplication.md"
+        }
+      ]
     }
   ]
 }

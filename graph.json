@@ -188,6 +188,15 @@
    "results": 184,
    "chapterNumber": 20,
    "part": ""
+  },
+  {
+   "id": "ch23-applied",
+   "name": "Chapter 23",
+   "title": "Computation and Applications",
+   "url": "ch23-applied/index.html",
+   "results": 218,
+   "chapterNumber": 23,
+   "part": "Part VI \u00b7 Geometry, Algebra, Computation"
   }
  ],
  "edges": [
@@ -312,6 +321,12 @@
    "implied": true
   },
   {
+   "source": "ch00-foundations",
+   "target": "ch23-applied",
+   "weight": 35,
+   "implied": true
+  },
+  {
    "source": "ch01-vector-spaces",
    "target": "ch02-linear-systems",
    "weight": 64,
@@ -416,6 +431,12 @@
   {
    "source": "ch01-vector-spaces",
    "target": "ch19-perturbation",
+   "weight": 4,
+   "implied": true
+  },
+  {
+   "source": "ch01-vector-spaces",
+   "target": "ch23-applied",
    "weight": 4,
    "implied": true
   },
@@ -528,6 +549,12 @@
    "implied": true
   },
   {
+   "source": "ch02-linear-systems",
+   "target": "ch23-applied",
+   "weight": 52,
+   "implied": true
+  },
+  {
    "source": "ch03-linear-maps",
    "target": "ch04-duality",
    "weight": 122,
@@ -621,6 +648,12 @@
    "source": "ch03-linear-maps",
    "target": "ch19-perturbation",
    "weight": 3,
+   "implied": true
+  },
+  {
+   "source": "ch03-linear-maps",
+   "target": "ch23-applied",
+   "weight": 2,
    "implied": true
   },
   {
@@ -762,6 +795,12 @@
    "implied": true
   },
   {
+   "source": "ch05-polynomials",
+   "target": "ch23-applied",
+   "weight": 2,
+   "implied": true
+  },
+  {
    "source": "ch06-determinants",
    "target": "ch07-block-matrices",
    "weight": 38,
@@ -840,6 +879,12 @@
    "implied": true
   },
   {
+   "source": "ch06-determinants",
+   "target": "ch23-applied",
+   "weight": 46,
+   "implied": true
+  },
+  {
    "source": "ch07-block-matrices",
    "target": "ch08-eigenvalues",
    "weight": 22,
@@ -897,6 +942,12 @@
    "source": "ch07-block-matrices",
    "target": "ch20-inequalities",
    "weight": 6,
+   "implied": true
+  },
+  {
+   "source": "ch07-block-matrices",
+   "target": "ch23-applied",
+   "weight": 16,
    "implied": true
   },
   {
@@ -960,6 +1011,12 @@
    "implied": true
   },
   {
+   "source": "ch08-eigenvalues",
+   "target": "ch23-applied",
+   "weight": 6,
+   "implied": true
+  },
+  {
    "source": "ch09-canonical-forms",
    "target": "ch11-spectral-theory",
    "weight": 20,
@@ -993,6 +1050,12 @@
    "source": "ch09-canonical-forms",
    "target": "ch20-inequalities",
    "weight": 13,
+   "implied": true
+  },
+  {
+   "source": "ch09-canonical-forms",
+   "target": "ch23-applied",
+   "weight": 43,
    "implied": true
   },
   {
@@ -1050,6 +1113,12 @@
    "implied": true
   },
   {
+   "source": "ch10-inner-products",
+   "target": "ch23-applied",
+   "weight": 110,
+   "implied": true
+  },
+  {
    "source": "ch11-spectral-theory",
    "target": "ch12-psd-and-svd",
    "weight": 77,
@@ -1098,6 +1167,12 @@
    "implied": true
   },
   {
+   "source": "ch11-spectral-theory",
+   "target": "ch23-applied",
+   "weight": 36,
+   "implied": true
+  },
+  {
    "source": "ch12-psd-and-svd",
    "target": "ch13-forms",
    "weight": 12,
@@ -1143,6 +1218,12 @@
    "source": "ch12-psd-and-svd",
    "target": "ch20-inequalities",
    "weight": 145,
+   "implied": true
+  },
+  {
+   "source": "ch12-psd-and-svd",
+   "target": "ch23-applied",
+   "weight": 68,
    "implied": true
   },
   {
@@ -1206,6 +1287,12 @@
    "implied": true
   },
   {
+   "source": "ch15-norms",
+   "target": "ch23-applied",
+   "weight": 55,
+   "implied": true
+  },
+  {
    "source": "ch16-variational",
    "target": "ch17-convexity",
    "weight": 30,
@@ -1230,6 +1317,12 @@
    "implied": true
   },
   {
+   "source": "ch16-variational",
+   "target": "ch23-applied",
+   "weight": 47,
+   "implied": true
+  },
+  {
    "source": "ch17-convexity",
    "target": "ch18-nonnegative",
    "weight": 33,
@@ -1248,6 +1341,12 @@
    "implied": true
   },
   {
+   "source": "ch17-convexity",
+   "target": "ch23-applied",
+   "weight": 4,
+   "implied": true
+  },
+  {
    "source": "ch18-nonnegative",
    "target": "ch19-perturbation",
    "weight": 13,
@@ -1260,9 +1359,21 @@
    "implied": true
   },
   {
+   "source": "ch18-nonnegative",
+   "target": "ch23-applied",
+   "weight": 9,
+   "implied": true
+  },
+  {
    "source": "ch19-perturbation",
    "target": "ch20-inequalities",
    "weight": 21,
+   "implied": false
+  },
+  {
+   "source": "ch19-perturbation",
+   "target": "ch23-applied",
+   "weight": 20,
    "implied": false
   }
  ]

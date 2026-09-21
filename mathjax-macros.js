@@ -173,6 +173,7 @@ window.BOOK_MACROS = {
   1
  ],
  "f": "\\mathbf{f}",
+ "fl": "\\operatorname{fl}",
  "g": "\\mathbf{g}",
  "h": "\\mathbf{h}",
  "hc": "^{*}",
