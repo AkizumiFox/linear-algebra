@@ -112,6 +112,7 @@
         "src/ch19-perturbation",
         "src/ch20-inequalities",
         {"dir": "src/ch21-geometry", "part": "Part VI \u00b7 Geometry, Algebra, Computation"},
+        "src/ch22-algebras",
         "src/ch23-applied"
     ],
     "macros": "latex/macros.tex",
