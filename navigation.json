@@ -1495,6 +1495,75 @@
       ]
     },
     {
+      "title": "Algebras and Representations",
+      "number": 22,
+      "part": "",
+      "collapsed": true,
+      "path": "ch22-algebras/index.html",
+      "sections": [
+        {
+          "title": "Associative Algebras",
+          "number": "22.1",
+          "path": "ch22-algebras/01-associative-algebras.html",
+          "filename": "01-associative-algebras.md"
+        },
+        {
+          "title": "Ideals and Quotients",
+          "number": "22.2",
+          "path": "ch22-algebras/02-ideals-and-quotients.html",
+          "filename": "02-ideals-and-quotients.md"
+        },
+        {
+          "title": "Simple and Semisimple Algebras",
+          "number": "22.3",
+          "path": "ch22-algebras/03-simple-and-semisimple.html",
+          "filename": "03-simple-and-semisimple.md"
+        },
+        {
+          "title": "Schur's Lemma",
+          "number": "22.4",
+          "path": "ch22-algebras/04-schurs-lemma.html",
+          "filename": "04-schurs-lemma.md"
+        },
+        {
+          "title": "Burnside and the Double Commutant",
+          "number": "22.5",
+          "path": "ch22-algebras/05-double-commutant.html",
+          "filename": "05-double-commutant.md"
+        },
+        {
+          "title": "The Structure Theorem",
+          "number": "22.6",
+          "path": "ch22-algebras/06-wedderburn.html",
+          "filename": "06-wedderburn.md"
+        },
+        {
+          "title": "Group Representations",
+          "number": "22.7",
+          "path": "ch22-algebras/07-group-representations.html",
+          "filename": "07-group-representations.md"
+        },
+        {
+          "title": "Characters and Orthogonality",
+          "number": "22.8",
+          "path": "ch22-algebras/08-characters.html",
+          "filename": "08-characters.md"
+        },
+        {
+          "title": "Finite Abelian Groups and the Fourier Transform",
+          "number": "22.9",
+          "path": "ch22-algebras/09-the-abelian-case.html",
+          "filename": "09-the-abelian-case.md"
+        },
+        {
+          "title": "What the Chapter Buys",
+          "number": "22.10",
+          "path": "ch22-algebras/10-summary-and-transfer.html",
+          "filename": "10-summary-and-transfer.md"
+        }
+      ]
+    },
+    {
       "title": "Computation and Applications",
       "number": 23,
       "part": "",

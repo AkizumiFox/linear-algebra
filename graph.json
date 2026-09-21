@@ -199,6 +199,15 @@
    "part": "Part VI \u00b7 Geometry, Algebra, Computation"
   },
   {
+   "id": "ch22-algebras",
+   "name": "Chapter 22",
+   "title": "Algebras and Representations",
+   "url": "ch22-algebras/index.html",
+   "results": 172,
+   "chapterNumber": 22,
+   "part": ""
+  },
+  {
    "id": "ch23-applied",
    "name": "Chapter 23",
    "title": "Computation and Applications",
@@ -337,6 +346,12 @@
   },
   {
    "source": "ch00-foundations",
+   "target": "ch22-algebras",
+   "weight": 72,
+   "implied": true
+  },
+  {
+   "source": "ch00-foundations",
    "target": "ch23-applied",
    "weight": 35,
    "implied": true
@@ -453,6 +468,12 @@
    "source": "ch01-vector-spaces",
    "target": "ch21-geometry",
    "weight": 50,
+   "implied": true
+  },
+  {
+   "source": "ch01-vector-spaces",
+   "target": "ch22-algebras",
+   "weight": 42,
    "implied": true
   },
   {
@@ -577,6 +598,12 @@
   },
   {
    "source": "ch02-linear-systems",
+   "target": "ch22-algebras",
+   "weight": 10,
+   "implied": true
+  },
+  {
+   "source": "ch02-linear-systems",
    "target": "ch23-applied",
    "weight": 52,
    "implied": true
@@ -685,6 +712,12 @@
   },
   {
    "source": "ch03-linear-maps",
+   "target": "ch22-algebras",
+   "weight": 71,
+   "implied": true
+  },
+  {
+   "source": "ch03-linear-maps",
    "target": "ch23-applied",
    "weight": 2,
    "implied": true
@@ -747,6 +780,12 @@
    "source": "ch04-duality",
    "target": "ch21-geometry",
    "weight": 74,
+   "implied": true
+  },
+  {
+   "source": "ch04-duality",
+   "target": "ch22-algebras",
+   "weight": 25,
    "implied": true
   },
   {
@@ -841,6 +880,12 @@
   },
   {
    "source": "ch05-polynomials",
+   "target": "ch22-algebras",
+   "weight": 30,
+   "implied": true
+  },
+  {
+   "source": "ch05-polynomials",
    "target": "ch23-applied",
    "weight": 2,
    "implied": true
@@ -931,6 +976,12 @@
   },
   {
    "source": "ch06-determinants",
+   "target": "ch22-algebras",
+   "weight": 5,
+   "implied": true
+  },
+  {
+   "source": "ch06-determinants",
    "target": "ch23-applied",
    "weight": 46,
    "implied": true
@@ -1003,6 +1054,12 @@
   },
   {
    "source": "ch07-block-matrices",
+   "target": "ch22-algebras",
+   "weight": 2,
+   "implied": true
+  },
+  {
+   "source": "ch07-block-matrices",
    "target": "ch23-applied",
    "weight": 16,
    "implied": true
@@ -1069,6 +1126,12 @@
   },
   {
    "source": "ch08-eigenvalues",
+   "target": "ch22-algebras",
+   "weight": 43,
+   "implied": true
+  },
+  {
+   "source": "ch08-eigenvalues",
    "target": "ch23-applied",
    "weight": 6,
    "implied": true
@@ -1107,6 +1170,12 @@
    "source": "ch09-canonical-forms",
    "target": "ch20-inequalities",
    "weight": 13,
+   "implied": true
+  },
+  {
+   "source": "ch09-canonical-forms",
+   "target": "ch22-algebras",
+   "weight": 24,
    "implied": true
   },
   {
@@ -1177,6 +1246,12 @@
   },
   {
    "source": "ch10-inner-products",
+   "target": "ch22-algebras",
+   "weight": 20,
+   "implied": true
+  },
+  {
+   "source": "ch10-inner-products",
    "target": "ch23-applied",
    "weight": 110,
    "implied": true
@@ -1233,6 +1308,12 @@
    "source": "ch11-spectral-theory",
    "target": "ch21-geometry",
    "weight": 24,
+   "implied": true
+  },
+  {
+   "source": "ch11-spectral-theory",
+   "target": "ch22-algebras",
+   "weight": 45,
    "implied": true
   },
   {
@@ -1326,6 +1407,12 @@
    "implied": true
   },
   {
+   "source": "ch13-forms",
+   "target": "ch22-algebras",
+   "weight": 13,
+   "implied": true
+  },
+  {
    "source": "ch14-tensors",
    "target": "ch20-inequalities",
    "weight": 2,
@@ -1335,6 +1422,12 @@
    "source": "ch14-tensors",
    "target": "ch21-geometry",
    "weight": 22,
+   "implied": false
+  },
+  {
+   "source": "ch14-tensors",
+   "target": "ch22-algebras",
+   "weight": 21,
    "implied": false
   },
   {
@@ -1456,6 +1549,12 @@
    "target": "ch20-inequalities",
    "weight": 9,
    "implied": true
+  },
+  {
+   "source": "ch18-nonnegative",
+   "target": "ch22-algebras",
+   "weight": 1,
+   "implied": false
   },
   {
    "source": "ch18-nonnegative",
