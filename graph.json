@@ -752,7 +752,7 @@
   {
    "source": "ch03-linear-maps",
    "target": "ch23a-notation",
-   "weight": 26,
+   "weight": 27,
    "implied": true
   },
   {
@@ -1496,7 +1496,7 @@
   {
    "source": "ch13-forms",
    "target": "ch23a-notation",
-   "weight": 29,
+   "weight": 30,
    "implied": true
   },
   {
