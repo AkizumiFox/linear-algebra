@@ -8,11 +8,11 @@ Recall the definition of the matrix of a map (@def-matrix-of-linear-map). If \( 
 
 Recall the reflection from the previous section (@exm-matrix-of-reflection), which motivates this one. Let \( R \colon \nR^2 \to \nR^2 \) be the reflection across the line \( y = x \), so \( R(x, y) = (y, x) \). In the standard basis \( \sE = (\e_1, \e_2) \), we have \( R\e_1 = \e_2 \) and \( R\e_2 = \e_1 \), so
 \[
-[R]_{\sE} = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}.
+\mtx{R}{\sE}{\sE} = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}.
 \]
 Now use the basis \( \sB = ((1, 1), (1, -1)) \), one vector on the mirror line and one perpendicular to it. Then \( R(1, 1) = (1, 1) \) and \( R(1, -1) = (-1, 1) = -(1, -1) \), so
 \[
-[R]_{\sB} = \begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix}.
+\mtx{R}{\sB}{\sB} = \begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix}.
 \]
 The second matrix shows at a glance what \( R \) does: it keeps one direction and flips the other. The two matrices describe the same map, so there must be a rule converting one into the other. The first step is to convert the **coordinates** of a single vector.
 
@@ -40,7 +40,7 @@ In words: to build \( \mtx{\id}{\sB}{\sC} \), take the vectors of the **old** ba
   \[
   \mtx{\id}{\sC}{\sB} = \begin{pmatrix} 1 & -1 & 1 \\ 0 & 1 & -2 \\ 0 & 0 & 1 \end{pmatrix}.
   \]
-- **Degenerate case.** If \( \sC = \sB \), then \( \coord{\v_j}{\sB} = \e_j \), so \( [\id]_{\sB} = \I_n \). Changing nothing is recorded by the identity matrix, as it should be.
+- **Degenerate case.** If \( \sC = \sB \), then \( \coord{\v_j}{\sB} = \e_j \), so \( \mtx{\id}{\sB}{\sB} = \I_n \). Changing nothing is recorded by the identity matrix, as it should be.
 
 **Non-example by minimal change.** Replace the basis \( ((1, 1), (1, -1)) \) by the list \( \sL = ((1, 1), (2, 2)) \). We can still write the matrix with these vectors as columns, but \( \sL \) is not a basis, so "coordinates with respect to \( \sL \)" are not defined: \( (2, 2) = 2(1, 1) + 0(2, 2) = 0(1, 1) + 1(2, 2) \) has two coordinate columns, and \( (1, 0) \) has none. The clause that fails is "\( \sB \) is a basis", which @def-coordinates needs for coordinates to exist and be unique.
 
@@ -67,7 +67,7 @@ Let \( V \) be a vector space of dimension \( n \), and let \( \sB \), \( \sC \)
 
 (b) Since \( \id_V = \id_V \circ \id_V \), @thm-matrix-of-composition, with \( \sB \) on the input, \( \sC \) in the middle and \( \sD \) on the output, gives \( \mtx{\id}{\sB}{\sD} = \mtx{\id}{\sC}{\sD}\mtx{\id}{\sB}{\sC} \).
 
-(c) Taking \( \sD = \sB \) in (b) gives \( \mtx{\id}{\sC}{\sB}\mtx{\id}{\sB}{\sC} = [\id]_{\sB} = \I_n \), where the last equality holds because, writing \( \sB = (\v_1, \dots, \v_n) \), the \( j \)-th column of \( [\id]_{\sB} \) is \( \coord{\v_j}{\sB} = \e_j \). Swapping the roles of \( \sB \) and \( \sC \) gives \( \mtx{\id}{\sB}{\sC}\mtx{\id}{\sC}{\sB} = \I_n \). By @def-invertible-matrix, \( \mtx{\id}{\sB}{\sC} \) is invertible with inverse \( \mtx{\id}{\sC}{\sB} \).
+(c) Taking \( \sD = \sB \) in (b) gives \( \mtx{\id}{\sC}{\sB}\mtx{\id}{\sB}{\sC} = \mtx{\id}{\sB}{\sB} = \I_n \), where the last equality holds because, writing \( \sB = (\v_1, \dots, \v_n) \), the \( j \)-th column of \( \mtx{\id}{\sB}{\sB} \) is \( \coord{\v_j}{\sB} = \e_j \). Swapping the roles of \( \sB \) and \( \sC \) gives \( \mtx{\id}{\sB}{\sC}\mtx{\id}{\sC}{\sB} = \I_n \). By @def-invertible-matrix, \( \mtx{\id}{\sB}{\sC} \) is invertible with inverse \( \mtx{\id}{\sC}{\sB} \).
 :::
 
 So every change-of-coordinates matrix is invertible. The converse is also true, and it will matter when we compare matrices: every invertible matrix is a change-of-coordinates matrix, for a suitable new basis.
@@ -143,7 +143,7 @@ Let \( V \) and \( W \) be finite-dimensional vector spaces over \( F \), let \(
 \]
 In particular, for an operator \( T \in \cL(V) \) and bases \( \sB, \sB' \) of \( V \), with \( \P = \mtx{\id}{\sB'}{\sB} \),
 \[
-[T]_{\sB'} = \P^{-1}\,[T]_{\sB}\,\P .
+\mtx{T}{\sB'}{\sB'} = \P^{-1}\,\mtx{T}{\sB}{\sB}\,\P .
 \]
 :::
 
@@ -154,7 +154,7 @@ Nothing is computed: the formula is the change-of-basis square read along its lo
 ::: {.proof}
 Since \( T = \id_W \circ (T \circ \id_V) \), @thm-matrix-of-composition with bases \( \sB' \), \( \sC \), \( \sC' \) gives \( \mtx{T}{\sB'}{\sC'} = \mtx{\id}{\sC}{\sC'}\,\mtx{T \circ \id_V}{\sB'}{\sC} \). Applying @thm-matrix-of-composition again, with bases \( \sB' \), \( \sB \), \( \sC \), gives \( \mtx{T \circ \id_V}{\sB'}{\sC} = \mtx{T}{\sB}{\sC}\,\mtx{\id}{\sB'}{\sB} \). Combining the two equations proves the first formula.
 
-For an operator, take \( W = V \), \( \sC = \sB \) and \( \sC' = \sB' \). The first formula becomes \( [T]_{\sB'} = \mtx{\id}{\sB}{\sB'}\,[T]_{\sB}\,\P \), and \( \mtx{\id}{\sB}{\sB'} = \P^{-1} \) by @thm-change-of-coordinates (c). This proves the theorem.
+For an operator, take \( W = V \), \( \sC = \sB \) and \( \sC' = \sB' \). The first formula becomes \( \mtx{T}{\sB'}{\sB'} = \mtx{\id}{\sB}{\sB'}\,\mtx{T}{\sB}{\sB}\,\P \), and \( \mtx{\id}{\sB}{\sB'} = \P^{-1} \) by @thm-change-of-coordinates (c). This proves the theorem.
 :::
 
 We will call this move **the change-of-basis square**: whenever a question involves the same map in two bases, draw the square, label the arrows with bases, and read the formula off the long route. It also explains the word "coordinates": a matrix is a map seen through a choice of coordinates, and the side arrows re-express those coordinates.
@@ -162,21 +162,21 @@ We will call this move **the change-of-basis square**: whenever a question invol
 ::: {#exm-reflection-diagonal-basis}
 [The reflection in a mirror-adapted basis]
 
-Let \( R(x, y) = (y, x) \) on \( \nR^2 \), and \( \sB = ((1, 1), (1, -1)) \). Compute \( [R]_{\sB} \) from \( [R]_{\sE} \) using @thm-change-of-basis-maps, and compare with the direct computation at the start of the section.
+Let \( R(x, y) = (y, x) \) on \( \nR^2 \), and \( \sB = ((1, 1), (1, -1)) \). Compute \( \mtx{R}{\sB}{\sB} \) from \( \mtx{R}{\sE}{\sE} \) using @thm-change-of-basis-maps, and compare with the direct computation at the start of the section.
 :::
 
 ::: {.solution}
 Here \( \P = \mtx{\id}{\sB}{\sE} = \begin{pmatrix} 1 & 1 \\ 1 & -1 \end{pmatrix} \), with inverse \( \P^{-1} = \mtx{\id}{\sE}{\sB} = \frac12 \begin{pmatrix} 1 & 1 \\ 1 & -1 \end{pmatrix} \), found in the examples after @def-change-of-coordinates-matrix. Then
 \[
 \begin{aligned}
-\P^{-1}[R]_{\sE}\P
+\P^{-1}\mtx{R}{\sE}{\sE}\P
 &= \frac12 \begin{pmatrix} 1 & 1 \\ 1 & -1 \end{pmatrix} \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix} \begin{pmatrix} 1 & 1 \\ 1 & -1 \end{pmatrix} \\
 &= \frac12 \begin{pmatrix} 1 & 1 \\ 1 & -1 \end{pmatrix} \begin{pmatrix} 1 & -1 \\ 1 & 1 \end{pmatrix}
 = \frac12 \begin{pmatrix} 2 & 0 \\ 0 & -2 \end{pmatrix}
 = \begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix},
 \end{aligned}
 \]
-which agrees with the direct computation. The direct route was shorter here, because we chose \( \sB \) so that \( R \) acts simply on it. The formula earns its keep when the new matrix is not visible by inspection, or when we want to go back from the simple matrix to the standard one: \( [R]_{\sE} = \P\,[R]_{\sB}\,\P^{-1} \).
+which agrees with the direct computation. The direct route was shorter here, because we chose \( \sB \) so that \( R \) acts simply on it. The formula earns its keep when the new matrix is not visible by inspection, or when we want to go back from the simple matrix to the standard one: \( \mtx{R}{\sE}{\sE} = \P\,\mtx{R}{\sB}{\sB}\,\P^{-1} \).
 :::
 
 The next example changes basis in a polynomial space, where "standard" does not mean "best".
@@ -184,11 +184,11 @@ The next example changes basis in a polynomial space, where "standard" does not 
 ::: {#exm-differentiation-rescaled-basis}
 [Differentiation with a rescaled basis]
 
-Let \( D \colon \nR[x]_{\le 2} \to \nR[x]_{\le 2} \) be differentiation, \( \sB = (1, x, x^2) \) and \( \sB' = (1, x, \tfrac12 x^2) \). Find \( [D]_{\sB'} \).
+Let \( D \colon \nR[x]_{\le 2} \to \nR[x]_{\le 2} \) be differentiation, \( \sB = (1, x, x^2) \) and \( \sB' = (1, x, \tfrac12 x^2) \). Find \( \mtx{D}{\sB'}{\sB'} \).
 :::
 
 ::: {.solution}
-In \( \sB \), \( D(1) = 0 \), \( D(x) = 1 \) and \( D(x^2) = 2x \), so \( \A = [D]_{\sB} = \begin{pmatrix} 0 & 1 & 0 \\ 0 & 0 & 2 \\ 0 & 0 & 0 \end{pmatrix} \). The vectors of \( \sB' \) have \( \sB \)-coordinates \( \e_1 \), \( \e_2 \), \( \frac12\e_3 \), so \( \P = \mtx{\id}{\sB'}{\sB} = \diag(1, 1, \tfrac12) \) and \( \P^{-1} = \diag(1, 1, 2) \). Multiplying a matrix on the left by a diagonal matrix scales its rows, and on the right scales its columns, so
+In \( \sB \), \( D(1) = 0 \), \( D(x) = 1 \) and \( D(x^2) = 2x \), so \( \A = \mtx{D}{\sB}{\sB} = \begin{pmatrix} 0 & 1 & 0 \\ 0 & 0 & 2 \\ 0 & 0 & 0 \end{pmatrix} \). The vectors of \( \sB' \) have \( \sB \)-coordinates \( \e_1 \), \( \e_2 \), \( \frac12\e_3 \), so \( \P = \mtx{\id}{\sB'}{\sB} = \diag(1, 1, \tfrac12) \) and \( \P^{-1} = \diag(1, 1, 2) \). Multiplying a matrix on the left by a diagonal matrix scales its rows, and on the right scales its columns, so
 \[
 \P^{-1}\A\P = \begin{pmatrix} 0 & 1 \cdot 1 \cdot 1 & 0 \\ 0 & 0 & 1 \cdot 2 \cdot \tfrac12 \\ 0 & 0 & 0 \end{pmatrix} = \begin{pmatrix} 0 & 1 & 0 \\ 0 & 0 & 1 \\ 0 & 0 & 0 \end{pmatrix}.
 \]
@@ -200,7 +200,7 @@ Let \( T \colon V \to W \), and suppose we change only the basis of \( W \), fro
 :::
 
 ::: {.solution}
-With \( \sB' = \sB \), the left side of the square is \( [\id]_{\sB} = \I_n \). The formula becomes \( \mtx{T}{\sB}{\sC'} = \mtx{\id}{\sC}{\sC'}\,\mtx{T}{\sB}{\sC} \): only a multiplication on the left. Changing the output basis acts on the rows; changing the input basis acts on the columns.
+With \( \sB' = \sB \), the left side of the square is \( \mtx{\id}{\sB}{\sB} = \I_n \). The formula becomes \( \mtx{T}{\sB}{\sC'} = \mtx{\id}{\sC}{\sC'}\,\mtx{T}{\sB}{\sC} \): only a multiplication on the left. Changing the output basis acts on the rows; changing the input basis acts on the columns.
 :::
 
 ## Similar matrices
@@ -237,18 +237,18 @@ The definition was designed to capture one idea, and the next theorem says it ca
 Let \( \A, \B \in M_n(F) \).
 
 ::: {.enumerate options="label=(\alph*)"}
-1. If \( V \) is a vector space of dimension \( n \), \( T \in \cL(V) \), and \( \sB, \sC \) are bases of \( V \), then \( [T]_{\sB} \sim [T]_{\sC} \).
-2. Conversely, suppose \( \A \sim \B \). Let \( V \) be any vector space of dimension \( n \) with a basis \( \sB \), and let \( T \in \cL(V) \) be an operator with \( [T]_{\sB} = \A \). Then there is a basis \( \sC \) of \( V \) with \( [T]_{\sC} = \B \).
+1. If \( V \) is a vector space of dimension \( n \), \( T \in \cL(V) \), and \( \sB, \sC \) are bases of \( V \), then \( \mtx{T}{\sB}{\sB} \sim \mtx{T}{\sC}{\sC} \).
+2. Conversely, suppose \( \A \sim \B \). Let \( V \) be any vector space of dimension \( n \) with a basis \( \sB \), and let \( T \in \cL(V) \) be an operator with \( \mtx{T}{\sB}{\sB} = \A \). Then there is a basis \( \sC \) of \( V \) with \( \mtx{T}{\sC}{\sC} = \B \).
 3. Such an operator \( T \) in (b) always exists. In particular, \( \A \sim \B \) if and only if \( \A \) and \( \B \) are the matrices of the operator \( \x \mapsto \A\x \) on \( F^n \) in the standard basis and in some basis of \( F^n \), respectively.
 :::
 :::
 
 ::: {.proof}
-(a) By @thm-change-of-basis-maps, \( [T]_{\sC} = \P^{-1}[T]_{\sB}\P \) with \( \P = \mtx{\id}{\sC}{\sB} \), which is invertible by @thm-change-of-coordinates (c).
+(a) By @thm-change-of-basis-maps, \( \mtx{T}{\sC}{\sC} = \P^{-1}\mtx{T}{\sB}{\sB}\P \) with \( \P = \mtx{\id}{\sC}{\sB} \), which is invertible by @thm-change-of-coordinates (c).
 
-(b) Suppose \( \B = \P^{-1}\A\P \) with \( \P \) invertible. By @prp-invertible-matrix-change-of-basis, there is a basis \( \sC \) of \( V \) with \( \mtx{\id}{\sC}{\sB} = \P \). By @thm-change-of-basis-maps, \( [T]_{\sC} = \P^{-1}[T]_{\sB}\P = \P^{-1}\A\P = \B \).
+(b) Suppose \( \B = \P^{-1}\A\P \) with \( \P \) invertible. By @prp-invertible-matrix-change-of-basis, there is a basis \( \sC \) of \( V \) with \( \mtx{\id}{\sC}{\sB} = \P \). By @thm-change-of-basis-maps, \( \mtx{T}{\sC}{\sC} = \P^{-1}\mtx{T}{\sB}{\sB}\P = \P^{-1}\A\P = \B \).
 
-(c) Write \( \sB = (\v_1, \dots, \v_n) \). By @thm-linear-transform-basis, there is a linear map \( T \colon V \to V \) with \( T\v_j = a_{1j}\v_1 + \dots + a_{nj}\v_n \) for each \( j \). The \( j \)-th column of \( [T]_{\sB} \) is \( \coord{T\v_j}{\sB} \), which is the \( j \)-th column of \( \A \); so \( [T]_{\sB} = \A \). For \( V = F^n \) with the standard basis \( \sE \), the operator \( \x \mapsto \A\x \) works, since \( \A\e_j \) is the \( j \)-th column of \( \A \) (@thm-matrix-times-vector-columns). The last statement now follows from (a) and (b).
+(c) Write \( \sB = (\v_1, \dots, \v_n) \). By @thm-linear-transform-basis, there is a linear map \( T \colon V \to V \) with \( T\v_j = a_{1j}\v_1 + \dots + a_{nj}\v_n \) for each \( j \). The \( j \)-th column of \( \mtx{T}{\sB}{\sB} \) is \( \coord{T\v_j}{\sB} \), which is the \( j \)-th column of \( \A \); so \( \mtx{T}{\sB}{\sB} = \A \). For \( V = F^n \) with the standard basis \( \sE \), the operator \( \x \mapsto \A\x \) works, since \( \A\e_j \) is the \( j \)-th column of \( \A \) (@thm-matrix-times-vector-columns). The last statement now follows from (a) and (b).
 :::
 
 This is the promise of Chapter 0 kept: similar matrices describe the same operator in two coordinate systems. So a question of the form "are \( \A \) and \( \B \) similar?" is really the question "is there a basis in which the operator \( \x \mapsto \A\x \) has matrix \( \B \)?". Deciding it is one of the central problems of the book, and it will take until Chapter 9 to answer it in general.
@@ -320,15 +320,15 @@ The reflection became diagonal once we chose one basis vector the map keeps and 
 ::: {#exm-projection-adapted-basis}
 [Making a matrix diagonal with a well-chosen basis]
 
-Let \( T \colon \nR^2 \to \nR^2 \), \( T(x, y) = (2x - y,\ 2x - y) \). Find a basis \( \sB \) of \( \nR^2 \) such that \( [T]_{\sB} \) is diagonal, and check the answer with @thm-change-of-basis-maps.
+Let \( T \colon \nR^2 \to \nR^2 \), \( T(x, y) = (2x - y,\ 2x - y) \). Find a basis \( \sB \) of \( \nR^2 \) such that \( \mtx{T}{\sB}{\sB} \) is diagonal, and check the answer with @thm-change-of-basis-maps.
 :::
 
 ::: {.solution}
-In the standard basis \( \A = [T]_{\sE} = \begin{pmatrix} 2 & -1 \\ 2 & -1 \end{pmatrix} \).
+In the standard basis \( \A = \mtx{T}{\sE}{\sE} = \begin{pmatrix} 2 & -1 \\ 2 & -1 \end{pmatrix} \).
 
 Both entries of \( T(x, y) \) are equal, so \( \im T \subseteq \Span((1, 1)) \), and \( T(1, 1) = (1, 1) \) shows \( \im T = \Span((1, 1)) \). The kernel is \( \{ (x, y) : y = 2x \} = \Span((1, 2)) \). So \( T \) fixes \( (1, 1) \) and kills \( (1, 2) \). These two vectors are not multiples of each other, so \( \sB = ((1, 1), (1, 2)) \) is independent, and it is a basis of \( \nR^2 \) by @thm-right-size-basis. Since \( T(1, 1) = 1 \cdot (1, 1) + 0 \cdot (1, 2) \) and \( T(1, 2) = \0 \),
 \[
-[T]_{\sB} = \begin{pmatrix} 1 & 0 \\ 0 & 0 \end{pmatrix}.
+\mtx{T}{\sB}{\sB} = \begin{pmatrix} 1 & 0 \\ 0 & 0 \end{pmatrix}.
 \]
 Check: \( \P = \mtx{\id}{\sB}{\sE} = \begin{pmatrix} 1 & 1 \\ 1 & 2 \end{pmatrix} \) has \( ad - bc = 1 \), so \( \P^{-1} = \begin{pmatrix} 2 & -1 \\ -1 & 1 \end{pmatrix} \) by @thm-two-by-two-inverse. Then
 \[
@@ -359,7 +359,7 @@ The basis in this example consisted of vectors that \( T \) sends to multiples o
 ::: {.solution}
 (a) For bases \( \sB = (\v_1, \dots, \v_n) \) and \( \sC \) of \( V \), \( \mtx{\id}{\sB}{\sC} \) is the matrix of \( \id_V \) with input basis \( \sB \) and output basis \( \sC \) (@def-change-of-coordinates-matrix). Its \( j \)-th column is \( \coord{\v_j}{\sC} \).
 
-(b) \( [T]_{\sB'} = \P^{-1}[T]_{\sB}\P \) with \( \P = \mtx{\id}{\sB'}{\sB} \), whose columns are the \( \sB \)-coordinates of the vectors of \( \sB' \) (@thm-change-of-basis-maps).
+(b) \( \mtx{T}{\sB'}{\sB'} = \P^{-1}\mtx{T}{\sB}{\sB}\P \) with \( \P = \mtx{\id}{\sB'}{\sB} \), whose columns are the \( \sB \)-coordinates of the vectors of \( \sB' \) (@thm-change-of-basis-maps).
 
 (c) False. By @thm-change-of-coordinates (c) the two matrices are inverse to each other, and an invertible matrix usually differs from its inverse: for \( \sB = ((1, 1), (1, -1)) \) and the standard basis \( \sE \) of \( \nR^2 \), \( \mtx{\id}{\sB}{\sE} = \begin{pmatrix} 1 & 1 \\ 1 & -1 \end{pmatrix} \) but \( \mtx{\id}{\sE}{\sB} = \frac12\begin{pmatrix} 1 & 1 \\ 1 & -1 \end{pmatrix} \).
 
@@ -405,15 +405,15 @@ Check: \( 4 - 3(1 + x) + 2(1 + x + x^2) = 3 - x + 2x^2 \).
 Let \( T \colon \nR^2 \to \nR^2 \), \( T(x, y) = (4x - 2y,\ x + y) \), and \( \sB = ((1, 1), (2, 1)) \).
 
 ::: {.enumerate options="label=(\alph*)"}
-1. Compute \( [T]_{\sB} \) directly from @def-matrix-of-linear-map.
+1. Compute \( \mtx{T}{\sB}{\sB} \) directly from @def-matrix-of-linear-map.
 2. Compute it again with @thm-change-of-basis-maps, starting from the standard matrix.
 :::
 :::
 
 ::: {.solution}
-(a) \( T(1, 1) = (2, 2) = 2(1, 1) + 0(2, 1) \) and \( T(2, 1) = (6, 3) = 0(1, 1) + 3(2, 1) \). Hence \( [T]_{\sB} = \diag(2, 3) \).
+(a) \( T(1, 1) = (2, 2) = 2(1, 1) + 0(2, 1) \) and \( T(2, 1) = (6, 3) = 0(1, 1) + 3(2, 1) \). Hence \( \mtx{T}{\sB}{\sB} = \diag(2, 3) \).
 
-(b) \( \A = [T]_{\sE} = \begin{pmatrix} 4 & -2 \\ 1 & 1 \end{pmatrix} \) and \( \P = \mtx{\id}{\sB}{\sE} = \begin{pmatrix} 1 & 2 \\ 1 & 1 \end{pmatrix} \). Here \( ad - bc = -1 \), so by @thm-two-by-two-inverse \( \P^{-1} = \begin{pmatrix} -1 & 2 \\ 1 & -1 \end{pmatrix} \). Then
+(b) \( \A = \mtx{T}{\sE}{\sE} = \begin{pmatrix} 4 & -2 \\ 1 & 1 \end{pmatrix} \) and \( \P = \mtx{\id}{\sB}{\sE} = \begin{pmatrix} 1 & 2 \\ 1 & 1 \end{pmatrix} \). Here \( ad - bc = -1 \), so by @thm-two-by-two-inverse \( \P^{-1} = \begin{pmatrix} -1 & 2 \\ 1 & -1 \end{pmatrix} \). Then
 \[
 \P^{-1}\A\P = \begin{pmatrix} -1 & 2 \\ 1 & -1 \end{pmatrix}\begin{pmatrix} 4 & -2 \\ 1 & 1 \end{pmatrix}\begin{pmatrix} 1 & 2 \\ 1 & 1 \end{pmatrix} = \begin{pmatrix} -2 & 4 \\ 3 & -3 \end{pmatrix}\begin{pmatrix} 1 & 2 \\ 1 & 1 \end{pmatrix} = \begin{pmatrix} 2 & 0 \\ 0 & 3 \end{pmatrix},
 \]
@@ -477,7 +477,7 @@ Let \( n \ge 1 \) and \( \A \in M_n(F) \).
 \]
 Taking \( l = j \) and \( k \ne i \) gives \( a_{ki} = 0 \). Taking \( k = i \) and \( l = j \) gives \( a_{ii} = a_{jj} \). Since \( i \ne j \) were arbitrary (and every index \( i \) has some \( j \ne i \) because \( n \ge 2 \)), all off-diagonal entries of \( \A \) vanish and all diagonal entries are equal to \( c = a_{11} \). Hence \( \A = c\I_n \).
 
-(b) Let \( \P = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix} \), so \( \P^{-1} = \P \). Then \( \N\P = \begin{pmatrix} 1 & 0 \\ 0 & 0 \end{pmatrix} \) and \( \P^{-1}\N\P = \begin{pmatrix} 0 & 0 \\ 1 & 0 \end{pmatrix} = \N\tp \). In terms of operators: \( T\x = \N\x \) has \( T\e_1 = \0 \) and \( T\e_2 = \e_1 \). In the reordered basis \( \sB = (\e_2, \e_1) \), the first basis vector goes to the second and the second goes to \( \0 \), so \( [T]_{\sB} = \N\tp \). The same operator has both matrices, as @thm-similar-iff-same-operator predicts.
+(b) Let \( \P = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix} \), so \( \P^{-1} = \P \). Then \( \N\P = \begin{pmatrix} 1 & 0 \\ 0 & 0 \end{pmatrix} \) and \( \P^{-1}\N\P = \begin{pmatrix} 0 & 0 \\ 1 & 0 \end{pmatrix} = \N\tp \). In terms of operators: \( T\x = \N\x \) has \( T\e_1 = \0 \) and \( T\e_2 = \e_1 \). In the reordered basis \( \sB = (\e_2, \e_1) \), the first basis vector goes to the second and the second goes to \( \0 \), so \( \mtx{T}{\sB}{\sB} = \N\tp \). The same operator has both matrices, as @thm-similar-iff-same-operator predicts.
 :::
 
 ::: {#exr-change-of-basis-c2}
@@ -504,7 +504,7 @@ Let \( \N \in M_2(F) \) with \( \N \ne 0 \) and \( \N^2 = 0 \), and let \( T \co
 
 ::: {.enumerate options="label=(\alph*)"}
 1. Explain why there is \( \v \in F^2 \) with \( \N\v \ne \0 \), and show that \( \sB = (\N\v, \v) \) is a basis of \( F^2 \).
-2. Compute \( [T]_{\sB} \), and deduce that \( \N \sim \begin{pmatrix} 0 & 1 \\ 0 & 0 \end{pmatrix} \).
+2. Compute \( \mtx{T}{\sB}{\sB} \), and deduce that \( \N \sim \begin{pmatrix} 0 & 1 \\ 0 & 0 \end{pmatrix} \).
 3. Hence show that \( \begin{pmatrix} 2 & -4 \\ 1 & -2 \end{pmatrix} \sim \begin{pmatrix} 0 & 1 \\ 0 & 0 \end{pmatrix} \) in \( M_2(\nR) \), with an explicit \( \P \).
 :::
 :::
@@ -512,7 +512,7 @@ Let \( \N \in M_2(F) \) with \( \N \ne 0 \) and \( \N^2 = 0 \), and let \( T \co
 ::: {.solution}
 (a) Since \( \N \ne 0 \), some column \( \N\e_j \) is non-zero (@thm-matrix-times-vector-columns); take \( \v = \e_j \). Let \( a\N\v + b\v = \0 \). Multiplying by \( \N \) and using \( \N^2 = 0 \) gives \( b\N\v = \0 \), so \( b = 0 \) because \( \N\v \ne \0 \) (@thm-zero-product). Then \( a\N\v = \0 \) forces \( a = 0 \) for the same reason. So \( \sB \) is linearly independent of length \( 2 = \dim F^2 \), hence a basis by @thm-right-size-basis.
 
-(b) \( T(\N\v) = \N^2\v = \0 \) and \( T\v = \N\v = 1 \cdot \N\v + 0 \cdot \v \). The columns of \( [T]_{\sB} \) are therefore \( (0, 0) \) and \( (1, 0) \), so \( [T]_{\sB} = \begin{pmatrix} 0 & 1 \\ 0 & 0 \end{pmatrix} \). Also \( [T]_{\sE} = \N \). By @thm-similar-iff-same-operator (a), \( \N \sim \begin{pmatrix} 0 & 1 \\ 0 & 0 \end{pmatrix} \).
+(b) \( T(\N\v) = \N^2\v = \0 \) and \( T\v = \N\v = 1 \cdot \N\v + 0 \cdot \v \). The columns of \( \mtx{T}{\sB}{\sB} \) are therefore \( (0, 0) \) and \( (1, 0) \), so \( \mtx{T}{\sB}{\sB} = \begin{pmatrix} 0 & 1 \\ 0 & 0 \end{pmatrix} \). Also \( \mtx{T}{\sE}{\sE} = \N \). By @thm-similar-iff-same-operator (a), \( \N \sim \begin{pmatrix} 0 & 1 \\ 0 & 0 \end{pmatrix} \).
 
 (c) Let \( \N = \begin{pmatrix} 2 & -4 \\ 1 & -2 \end{pmatrix} \). Then \( \N^2 = \begin{pmatrix} 4 - 4 & -8 + 8 \\ 2 - 2 & -4 + 4 \end{pmatrix} = 0 \) and \( \N \ne 0 \). Take \( \v = \e_1 \), so \( \N\v = (2, 1) \), and \( \sB = ((2, 1), (1, 0)) \). By @thm-change-of-basis-maps, \( \P = \mtx{\id}{\sB}{\sE} = \begin{pmatrix} 2 & 1 \\ 1 & 0 \end{pmatrix} \) satisfies \( \P^{-1}\N\P = \begin{pmatrix} 0 & 1 \\ 0 & 0 \end{pmatrix} \). Check: \( \P^{-1} = \begin{pmatrix} 0 & 1 \\ 1 & -2 \end{pmatrix} \) by @thm-two-by-two-inverse (here \( ad - bc = -1 \)), \( \N\P = \begin{pmatrix} 0 & 2 \\ 0 & 1 \end{pmatrix} \), and \( \P^{-1}\N\P = \begin{pmatrix} 0 & 1 \\ 0 & 0 \end{pmatrix} \).
 :::

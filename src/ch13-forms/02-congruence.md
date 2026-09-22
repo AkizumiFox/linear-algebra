@@ -13,7 +13,7 @@ Two bases \( \sB \) and \( \sB' \) of \( V \) give two matrices for one form. Th
 
 Let \( \beta \) be a bilinear form on a finite-dimensional \( V \), let \( \sB \) and \( \sB' \) be ordered bases of \( V \), and let \( \P = \mtx{\id}{\sB'}{\sB} \) be the change-of-coordinates matrix from \( \sB' \) to \( \sB \). Then
 \[
-\mtx{\beta}{\sB'}{} = \P\tp\,\mtx{\beta}{\sB}{}\,\P .
+\mtx{\beta}{\sB'}{\sB'} = \P\tp\,\mtx{\beta}{\sB}{\sB}\,\P .
 \]
 :::
 
@@ -22,7 +22,7 @@ There is nothing to discover: write the form in \( \sB \)-coordinates, substitut
 :::
 
 ::: {.proof}
-Write \( \A = \mtx{\beta}{\sB}{} \). By @thm-change-of-coordinates (a), \( \coord{\v}{\sB} = \P\coord{\v}{\sB'} \) for every \( \v \in V \). So for all \( \u, \v \in V \), using @thm-form-matrix-determines (a) and then @thm-transpose-properties (part 4),
+Write \( \A = \mtx{\beta}{\sB}{\sB} \). By @thm-change-of-coordinates (a), \( \coord{\v}{\sB} = \P\coord{\v}{\sB'} \) for every \( \v \in V \). So for all \( \u, \v \in V \), using @thm-form-matrix-determines (a) and then @thm-transpose-properties (part 4),
 \[
 \begin{aligned}
 \beta(\u, \v)
@@ -31,7 +31,7 @@ Write \( \A = \mtx{\beta}{\sB}{} \). By @thm-change-of-coordinates (a), \( \coor
 &= \coord{\u}{\sB'}\tp\,\bigl(\P\tp\A\P\bigr)\,\coord{\v}{\sB'} .
 \end{aligned}
 \]
-Thus \( \P\tp\A\P \) is a matrix with the property that characterizes \( \mtx{\beta}{\sB'}{} \), and by the uniqueness in @thm-form-matrix-determines (b) it **is** \( \mtx{\beta}{\sB'}{} \). This proves the theorem.
+Thus \( \P\tp\A\P \) is a matrix with the property that characterizes \( \mtx{\beta}{\sB'}{\sB'} \), and by the uniqueness in @thm-form-matrix-determines (b) it **is** \( \mtx{\beta}{\sB'}{\sB'} \). This proves the theorem.
 :::
 
 Notice that \( \P \) is the same matrix as in @thm-change-of-basis-maps: the change-of-coordinates matrix from the **new** basis to the **old** one, whose columns are the new basis vectors written in old coordinates. Only the way it acts has changed, from \( \P^{-1}\A\P \) to \( \P\tp\A\P \).
@@ -41,9 +41,9 @@ Notice that \( \P \) is the same matrix as in @thm-change-of-basis-maps: the cha
 
 On \( \nR^2 \), let \( \beta(\x, \y) = x_1y_1 + 2x_1y_2 + 2x_2y_1 + x_2y_2 \), so that
 \[
-\A = \mtx{\beta}{\sE}{} = \begin{pmatrix} 1 & 2 \\ 2 & 1 \end{pmatrix}.
+\A = \mtx{\beta}{\sE}{\sE} = \begin{pmatrix} 1 & 2 \\ 2 & 1 \end{pmatrix}.
 \]
-Compute \( \mtx{\beta}{\sB'}{} \) for \( \sB' = \bigl((1, 0),\ (-2, 1)\bigr) \), both by @thm-change-of-basis-form and directly from @def-form-matrix.
+Compute \( \mtx{\beta}{\sB'}{\sB'} \) for \( \sB' = \bigl((1, 0),\ (-2, 1)\bigr) \), both by @thm-change-of-basis-form and directly from @def-form-matrix.
 :::
 
 ::: {.solution}
@@ -194,7 +194,7 @@ The determinant itself is therefore **not** a congruence invariant — @exm-cong
 ::: {#def-discriminant}
 [Discriminant]
 
-Let \( \beta \) be a **non-degenerate** bilinear form on an \( n \)-dimensional \( V \). The **discriminant** of \( \beta \) is the square class of \( \det\mtx{\beta}{\sB}{} \) in \( F^{\times} \), for any ordered basis \( \sB \) of \( V \).
+Let \( \beta \) be a **non-degenerate** bilinear form on an \( n \)-dimensional \( V \). The **discriminant** of \( \beta \) is the square class of \( \det\mtx{\beta}{\sB}{\sB} \) in \( F^{\times} \), for any ordered basis \( \sB \) of \( V \).
 :::
 
 This is well defined by @thm-congruence-determinant-class and @thm-change-of-basis-form: another basis changes the determinant by the square \( (\det\P)^2 \), hence not its class. The discriminant is coarse but genuinely useful, and how much it sees depends entirely on the field. Over \( \nC \) every non-zero number is a square, so there is only one class and the discriminant says nothing. Over \( \nR \) there are two, \( \{t > 0\} \) and \( \{t < 0\} \), so the discriminant records one bit: the sign of the determinant. Over \( \nQ \) there are infinitely many, and the discriminant is a strong invariant.
@@ -281,7 +281,7 @@ Exactly the positive definite symmetric matrices. If \( \B = \P\tp\I_n\P = \P\tp
 :::
 
 ::: {.solution}
-(a) @thm-change-of-basis-form: \( \mtx{\beta}{\sB'}{} = \P\tp\mtx{\beta}{\sB}{}\P \), where \( \P = \mtx{\id}{\sB'}{\sB} \) is the change-of-coordinates matrix from the new basis to the old one.
+(a) @thm-change-of-basis-form: \( \mtx{\beta}{\sB'}{\sB'} = \P\tp\mtx{\beta}{\sB}{\sB}\P \), where \( \P = \mtx{\id}{\sB'}{\sB} \) is the change-of-coordinates matrix from the new basis to the old one.
 
 (b) @def-congruent: \( \B = \P\tp\A\P \) for some invertible \( \P \in M_n(F) \).
 
@@ -344,8 +344,8 @@ So \( \A \simeq \diag(2, -2) \) over \( \nQ \).
 On \( \nR^2 \), let \( \beta(\x, \y) = x_1y_1 - x_1y_2 - x_2y_1 + 2x_2y_2 \).
 
 ::: {.enumerate options="label=(\alph*)"}
-1. Write down \( \A = \mtx{\beta}{\sE}{} \) and expand \( q(\x) = \beta(\x, \x) \) as a polynomial in \( x_1, x_2 \).
-2. Complete the square to find a basis \( \sB' \) with \( \mtx{\beta}{\sB'}{} = \I_2 \). Verify by computing \( \P\tp\A\P \).
+1. Write down \( \A = \mtx{\beta}{\sE}{\sE} \) and expand \( q(\x) = \beta(\x, \x) \) as a polynomial in \( x_1, x_2 \).
+2. Complete the square to find a basis \( \sB' \) with \( \mtx{\beta}{\sB'}{\sB'} = \I_2 \). Verify by computing \( \P\tp\A\P \).
 3. Hence find the eigenvalues of \( \A \) and compare them with those of \( \I_2 \).
 :::
 :::

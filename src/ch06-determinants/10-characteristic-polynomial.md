@@ -178,12 +178,12 @@ This is exactly the case singled out in the remark in §5: the proof of @cor-det
 
 Let \( V \) be a vector space over \( F \) with \( \dim V = n \ge 1 \), and let \( T \in \cL(V) \). The **characteristic polynomial** of \( T \) is
 \[
-p_T(x) \coloneqq p_{[T]_{\sB}}(x) = \det\big(x\I_n - [T]_{\sB}\big),
+p_T(x) \coloneqq p_{\mtx{T}{\sB}{\sB}}(x) = \det\big(x\I_n - \mtx{T}{\sB}{\sB}\big),
 \]
 where \( \sB \) is **any** basis of \( V \).
 :::
 
-This does not depend on \( \sB \): for bases \( \sB \) and \( \sC \), the matrices \( [T]_{\sB} \) and \( [T]_{\sC} \) are similar by @thm-similar-iff-same-operator (a), so they have the same characteristic polynomial by @thm-charpoly-similarity-invariant. By @thm-charpoly-coefficients, \( p_T \) is monic of degree \( \dim V \), with coefficient \( -\tr T \) at \( x^{n-1} \) and constant term \( (-1)^n\det T \) (@def-trace-operator, @def-det-operator).
+This does not depend on \( \sB \): for bases \( \sB \) and \( \sC \), the matrices \( \mtx{T}{\sB}{\sB} \) and \( \mtx{T}{\sC}{\sC} \) are similar by @thm-similar-iff-same-operator (a), so they have the same characteristic polynomial by @thm-charpoly-similarity-invariant. By @thm-charpoly-coefficients, \( p_T \) is monic of degree \( \dim V \), with coefficient \( -\tr T \) at \( x^{n-1} \) and constant term \( (-1)^n\det T \) (@def-trace-operator, @def-det-operator).
 
 ::: {#exm-charpoly-operators}
 [Characteristic Polynomials of Two Operators]
@@ -194,7 +194,7 @@ On \( V = \nR[x]_{\le 2} \), find the characteristic polynomials of differentiat
 ::: {.solution}
 Use the basis \( \sB = (1, x, x^2) \). Since \( D(1) = 0 \), \( D(x) = 1 \), \( D(x^2) = 2x \), and \( S(1) = 1 \), \( S(x) = 1 + x \), \( S(x^2) = 1 + 2x + x^2 \),
 \[
-[D]_{\sB} = \begin{pmatrix} 0 & 1 & 0 \\ 0 & 0 & 2 \\ 0 & 0 & 0 \end{pmatrix}, \qquad [S]_{\sB} = \begin{pmatrix} 1 & 1 & 1 \\ 0 & 1 & 2 \\ 0 & 0 & 1 \end{pmatrix}.
+\mtx{D}{\sB}{\sB} = \begin{pmatrix} 0 & 1 & 0 \\ 0 & 0 & 2 \\ 0 & 0 & 0 \end{pmatrix}, \qquad \mtx{S}{\sB}{\sB} = \begin{pmatrix} 1 & 1 & 1 \\ 0 & 1 & 2 \\ 0 & 0 & 1 \end{pmatrix}.
 \]
 Both are upper triangular, so \( p_D(t) = t^3 \) and \( p_S(t) = (t - 1)^3 \). (We name the variable \( t \) here, since \( x \) is already the variable of the polynomials in \( V \).) As a check, \( \tr S = 3 \) and \( \det S = 1 \), matching the coefficient \( -3 \) of \( t^2 \) and the constant term \( (-1)^3 \cdot 1 \).
 :::
@@ -226,7 +226,7 @@ Let \( \A \in M_n(F) \) with \( n \ge 1 \), and let \( c \in F \).
 
 Notice where the evaluation happens: **first** substitute \( c \), getting a matrix over the field \( F \), **then** use the invertibility test, which is valid over fields. That order is what the warning about \( F[x] \) above requires.
 
-The same holds for an operator \( T \) on \( V \) with \( \dim V = n \ge 1 \): \( p_T(c) = 0 \) if and only if \( c\,\id_V - T \) is not invertible, by (a) applied to \( [T]_{\sB} \) together with @thm-rank-map-equals-rank-matrix (b), since \( [c\,\id_V - T]_{\sB} = c\I - [T]_{\sB} \).
+The same holds for an operator \( T \) on \( V \) with \( \dim V = n \ge 1 \): \( p_T(c) = 0 \) if and only if \( c\,\id_V - T \) is not invertible, by (a) applied to \( \mtx{T}{\sB}{\sB} \) together with @thm-rank-map-equals-rank-matrix (b), since \( \mtx{c\,\id_V - T}{\sB}{\sB} = c\I - \mtx{T}{\sB}{\sB} \).
 
 The scalars \( c \) of this theorem are the **eigenvalues** of \( \A \), and the vectors \( \v \) in (iii) its eigenvectors. They are the subject of Chapter 8, which starts from this theorem.
 

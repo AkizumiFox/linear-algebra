@@ -262,13 +262,13 @@ An invertible operator carries each basis to a basis. Does it keep the orientati
 
 Let \( V \) be a vector space over \( \nR \) with \( \dim V = n \ge 1 \), let \( T \in \cL(V) \) be invertible, and let \( \sB = (\v_1, \dots, \v_n) \) be any basis of \( V \). Then \( T\sB = (T\v_1, \dots, T\v_n) \) is a basis of \( V \), and
 \[
-\mtx{\id}{T\sB}{\sB} = [T]_{\sB}.
+\mtx{\id}{T\sB}{\sB} = \mtx{T}{\sB}{\sB}.
 \]
 Hence \( \sB \) and \( T\sB \) have the same orientation if and only if \( \det T > 0 \), and this does not depend on \( \sB \).
 :::
 
 ::: {.proof}
-Since \( T \) is invertible, it is an isomorphism, so \( T\sB \) is a basis by @thm-isomorphism-preserves-bases. By @def-change-of-coordinates-matrix, column \( j \) of \( \mtx{\id}{T\sB}{\sB} \) is \( \coord{T\v_j}{\sB} \), which is column \( j \) of \( [T]_{\sB} \) by @def-matrix-of-linear-map. Hence the two matrices are equal, and by @def-det-operator, \( \det\mtx{\id}{T\sB}{\sB} = \det T \). By @def-orientation and the symmetry in @thm-two-orientations (a), \( \sB \) and \( T\sB \) have the same orientation exactly when \( \det T > 0 \).
+Since \( T \) is invertible, it is an isomorphism, so \( T\sB \) is a basis by @thm-isomorphism-preserves-bases. By @def-change-of-coordinates-matrix, column \( j \) of \( \mtx{\id}{T\sB}{\sB} \) is \( \coord{T\v_j}{\sB} \), which is column \( j \) of \( \mtx{T}{\sB}{\sB} \) by @def-matrix-of-linear-map. Hence the two matrices are equal, and by @def-det-operator, \( \det\mtx{\id}{T\sB}{\sB} = \det T \). By @def-orientation and the symmetry in @thm-two-orientations (a), \( \sB \) and \( T\sB \) have the same orientation exactly when \( \det T > 0 \).
 :::
 
 An invertible operator with \( \det T > 0 \) is **orientation-preserving**, and one with \( \det T < 0 \) is **orientation-reversing**. Rotations of the plane preserve orientation and reflections reverse it (@exr-orientation-and-volume-c2). In \( \nR^3 \), the map \( \x \mapsto -\x \) reverses orientation, since \( \det(-\I_3) = -1 \): a right hand, pushed through the origin, becomes a left hand.

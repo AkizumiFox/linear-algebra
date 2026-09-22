@@ -29,11 +29,11 @@ In particular this holds for every operator on a non-zero finite-dimensional com
 :::
 
 ::: {.idea}
-Choose a basis in which \( T \) is upper triangular (Section 7). Its diagonal is \( \lambda_1, \dots, \lambda_n \). Products and sums of upper triangular matrices are upper triangular, and their diagonals are computed position by position, so \( q([T]) \) is upper triangular with diagonal \( q(\lambda_1), \dots, q(\lambda_n) \). The characteristic polynomial of a triangular matrix is read off its diagonal.
+Choose a basis \( \sB \) in which \( T \) is upper triangular (Section 7). Its diagonal is \( \lambda_1, \dots, \lambda_n \). Products and sums of upper triangular matrices are upper triangular, and their diagonals are computed position by position, so \( q(\mtx{T}{\sB}{\sB}) \) is upper triangular with diagonal \( q(\lambda_1), \dots, q(\lambda_n) \). The characteristic polynomial of a triangular matrix is read off its diagonal.
 :::
 
 ::: {.proof}
-By @thm-triangularization there is a basis \( \sB \) of \( V \) such that \( \U = [T]_{\sB} \) is upper triangular. By @thm-diagonal-of-triangular-form, its diagonal entries are \( \lambda_1, \dots, \lambda_n \) in some order; renumbering the \( \lambda_i \), we may assume \( u_{ii} = \lambda_i \).
+By @thm-triangularization there is a basis \( \sB \) of \( V \) such that \( \U = \mtx{T}{\sB}{\sB} \) is upper triangular. By @thm-diagonal-of-triangular-form, its diagonal entries are \( \lambda_1, \dots, \lambda_n \) in some order; renumbering the \( \lambda_i \), we may assume \( u_{ii} = \lambda_i \).
 
 ::: {.claim}
 If \( \X, \Y \in M_n(F) \) are upper triangular, then so are \( \X + \Y \), \( c\X \) for \( c \in F \), and \( \X \Y \), with diagonal entries \( x_{ii} + y_{ii} \), \( cx_{ii} \) and \( x_{ii}y_{ii} \).
@@ -43,7 +43,7 @@ The statements for \( \X + \Y \) and \( c\X \) are entrywise. For the product, \
 :::
 :::
 
-By the claim and induction on \( k \), \( \U^k \) is upper triangular with diagonal entries \( \lambda_1^k, \dots, \lambda_n^k \) (for \( k = 0 \), \( \U^0 = \I \)). Writing \( q = \sum_k a_kx^k \), the claim again shows that \( q(\U) = \sum_k a_k\U^k \) is upper triangular with diagonal entries \( \sum_k a_k\lambda_i^k = q(\lambda_i) \). By @cor-matrix-of-polynomial-of-operator, \( [q(T)]_{\sB} = q(\U) \), so by @def-charpoly-operator and the examples after @def-characteristic-polynomial,
+By the claim and induction on \( k \), \( \U^k \) is upper triangular with diagonal entries \( \lambda_1^k, \dots, \lambda_n^k \) (for \( k = 0 \), \( \U^0 = \I \)). Writing \( q = \sum_k a_kx^k \), the claim again shows that \( q(\U) = \sum_k a_k\U^k \) is upper triangular with diagonal entries \( \sum_k a_k\lambda_i^k = q(\lambda_i) \). By @cor-matrix-of-polynomial-of-operator, \( \mtx{q(T)}{\sB}{\sB} = q(\U) \), so by @def-charpoly-operator and the examples after @def-characteristic-polynomial,
 \[
 p_{q(T)} = p_{q(\U)} = \prod_{i=1}^{n} \big(x - q(\lambda_i)\big).
 \]

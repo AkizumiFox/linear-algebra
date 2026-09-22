@@ -94,13 +94,13 @@ In finite dimension, the direct sum \( V = \im P \oplus \ker P \) hands us a bas
 
 Let \( V \) be finite-dimensional and \( P \in \cL(V) \) a projection with \( \rank P = r \). Let \( (\u_1, \dots, \u_r) \) be a basis of \( \im P \) and \( (\w_1, \dots, \w_s) \) a basis of \( \ker P \). Then \( \sB = (\u_1, \dots, \u_r, \w_1, \dots, \w_s) \) is a basis of \( V \), and
 \[
-[P]_{\sB} = \begin{pmatrix} \I_r & 0 \\ 0 & 0 \end{pmatrix} = \diag(1, \dots, 1, 0, \dots, 0),
+\mtx{P}{\sB}{\sB} = \begin{pmatrix} \I_r & 0 \\ 0 & 0 \end{pmatrix} = \diag(1, \dots, 1, 0, \dots, 0),
 \]
 with \( r \) ones.
 :::
 
 ::: {.proof}
-By @thm-projection-direct-sum (a), \( V = \im P \oplus \ker P \), so the concatenated list \( \sB \) is a basis of \( V \) by @thm-direct-sum-k-criteria ((a) \( \Rightarrow \) (d)). Since \( P\u_i = \u_i \) and \( P\w_j = \0 \), the columns of \( [P]_{\sB} \) are \( \e_1, \dots, \e_r \) followed by \( s \) zero columns (@def-matrix-of-linear-map).
+By @thm-projection-direct-sum (a), \( V = \im P \oplus \ker P \), so the concatenated list \( \sB \) is a basis of \( V \) by @thm-direct-sum-k-criteria ((a) \( \Rightarrow \) (d)). Since \( P\u_i = \u_i \) and \( P\w_j = \0 \), the columns of \( \mtx{P}{\sB}{\sB} \) are \( \e_1, \dots, \e_r \) followed by \( s \) zero columns (@def-matrix-of-linear-map).
 :::
 
 Conversely, an operator whose matrix in some basis is \( \diag(1, \dots, 1, 0, \dots, 0) \) is a projection, since that matrix squares to itself. With the change-of-basis square, this gives a way to write down any projection in standard coordinates.
@@ -114,9 +114,9 @@ In \( \nR^3 \), let \( U = \{ (x, y, z) : x + y + z = 0 \} \) and \( L = \Span((
 ::: {.solution}
 *Direct route.* By @exm-plane-line-direct-sum, \( (a, b, c) \) splits as \( \big(a - m, b - m, c - m\big) + m(1, 1, 1) \) with \( m = \frac{a + b + c}{3} \), and the first piece lies in \( U \). So
 \[
-P(a, b, c) = \Big(\tfrac{2a - b - c}{3},\ \tfrac{-a + 2b - c}{3},\ \tfrac{-a - b + 2c}{3}\Big), \qquad [P]_{\sE} = \frac13\begin{pmatrix} 2 & -1 & -1 \\ -1 & 2 & -1 \\ -1 & -1 & 2 \end{pmatrix}.
+P(a, b, c) = \Big(\tfrac{2a - b - c}{3},\ \tfrac{-a + 2b - c}{3},\ \tfrac{-a - b + 2c}{3}\Big), \qquad \mtx{P}{\sE}{\sE} = \frac13\begin{pmatrix} 2 & -1 & -1 \\ -1 & 2 & -1 \\ -1 & -1 & 2 \end{pmatrix}.
 \]
-*Adapted basis.* \( (1, -1, 0) \) and \( (0, -1, 1) \) lie in \( U \) and are independent (look at the first and third entries), so they form a basis of the \( 2 \)-dimensional plane \( U \). With \( \sB = ((1, -1, 0), (0, -1, 1), (1, 1, 1)) \), @cor-projection-matrix gives \( [P]_{\sB} = \diag(1, 1, 0) \), and by @thm-change-of-basis-maps \( [P]_{\sE} = M\,\diag(1, 1, 0)\,M^{-1} \) with \( M = \mtx{\id}{\sB}{\sE} \), whose columns are the vectors of \( \sB \). Multiplying out gives the same matrix as the direct route.
+*Adapted basis.* \( (1, -1, 0) \) and \( (0, -1, 1) \) lie in \( U \) and are independent (look at the first and third entries), so they form a basis of the \( 2 \)-dimensional plane \( U \). With \( \sB = ((1, -1, 0), (0, -1, 1), (1, 1, 1)) \), @cor-projection-matrix gives \( \mtx{P}{\sB}{\sB} = \diag(1, 1, 0) \), and by @thm-change-of-basis-maps \( \mtx{P}{\sE}{\sE} = M\,\diag(1, 1, 0)\,M^{-1} \) with \( M = \mtx{\id}{\sB}{\sE} \), whose columns are the vectors of \( \sB \). Multiplying out gives the same matrix as the direct route.
 
 *Check.* Let \( \A \) be the matrix found. The first column of \( \A^2 \) is \( \A \) applied to \( \frac13(2, -1, -1) \), which is \( \frac19(4 + 1 + 1,\ -2 - 2 + 1,\ -2 + 1 - 2) = \frac13(2, -1, -1) \), the first column of \( \A \); the other columns work the same way by symmetry of the entries. Also \( \A(1, 1, 1) = \0 \) and \( \A(1, -1, 0) = (1, -1, 0) \), as a projection onto \( U \) along \( L \) must satisfy. The division by \( 3 \) needs \( 3 \ne 0 \) in the field, which holds over \( \nR \).
 :::
@@ -140,18 +140,18 @@ For a projection of rank \( r \), the diagonal matrix of @cor-projection-matrix 
 
 Let \( V \) be a finite-dimensional vector space over \( F \) with \( \dim V \ge 1 \), and let \( T \in \cL(V) \). The **trace** of \( T \) is
 \[
-\tr T \coloneqq \tr [T]_{\sB},
+\tr T \coloneqq \tr \mtx{T}{\sB}{\sB},
 \]
 where \( \sB \) is **any** basis of \( V \). (For \( V = \{\0\} \) we set \( \tr T = 0 \).)
 :::
 
 In words: to find \( \tr T \), choose a basis, write down the matrix of \( T \) with that **same** basis on input and output, and add the diagonal entries.
 
-**Well-definedness.** The definition names a basis but claims the answer does not depend on it. Let \( \sB \) and \( \sC \) be bases of \( V \). By @thm-change-of-basis-maps, \( [T]_{\sC} = P^{-1}[T]_{\sB}P \) with \( P = \mtx{\id}{\sC}{\sB} \) invertible, so the two matrices are similar, and by @thm-trace-similarity-invariant they have the same trace. Hence \( \tr T \) depends only on \( T \).
+**Well-definedness.** The definition names a basis but claims the answer does not depend on it. Let \( \sB \) and \( \sC \) be bases of \( V \). By @thm-change-of-basis-maps, \( \mtx{T}{\sC}{\sC} = P^{-1}\mtx{T}{\sB}{\sB}P \) with \( P = \mtx{\id}{\sC}{\sB} \) invertible, so the two matrices are similar, and by @thm-trace-similarity-invariant they have the same trace. Hence \( \tr T \) depends only on \( T \).
 
 **Examples.**
 
-- **Identity.** In every basis, \( [\id_V]_{\sB} = \I_n \), so \( \tr \id_V = n \cdot 1 \), where \( n = \dim V \). Over \( \nR \) this is \( n \); over \( \nF_2 \) it is \( 0 \) when \( n \) is even.
+- **Identity.** In every basis, \( \mtx{\id_V}{\sB}{\sB} = \I_n \), so \( \tr \id_V = n \cdot 1 \), where \( n = \dim V \). Over \( \nR \) this is \( n \); over \( \nF_2 \) it is \( 0 \) when \( n \) is even.
 - **Differentiation.** On \( F[x]_{\le n} \) with the basis \( (1, x, \dots, x^n) \), \( D(x^k) = kx^{k-1} \) has no \( x^k \)-component, so every diagonal entry of the matrix is \( 0 \) and \( \tr D = 0 \).
 - **A shift of the variable.** On \( \nR[x]_{\le 2} \), let \( T(p) = p(x + 1) \). In \( (1, x, x^2) \), \( T(1) = 1 \), \( T(x) = 1 + x \), \( T(x^2) = 1 + 2x + x^2 \), so the matrix is \( \begin{pmatrix} 1 & 1 & 1 \\ 0 & 1 & 2 \\ 0 & 0 & 1 \end{pmatrix} \) and \( \tr T = 3 \).
 - **The reflection.** \( R(x, y) = (y, x) \) has trace \( 0 \), whether computed from \( \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix} \) or from \( \diag(1, -1) \) (@exm-reflection-diagonal-basis).
@@ -177,7 +177,7 @@ Let \( V \) be finite-dimensional with \( n = \dim V \), let \( S, T \in \cL(V) 
 :::
 
 ::: {.proof}
-For \( n = 0 \) all traces are \( 0 \). Otherwise fix a basis \( \sB \) of \( V \). The map \( T \mapsto [T]_{\sB} \) is linear by @thm-linear-maps-isomorphic-to-matrices, so \( [S + T]_{\sB} = [S]_{\sB} + [T]_{\sB} \) and \( [cT]_{\sB} = c[T]_{\sB} \); and \( [ST]_{\sB} = [S]_{\sB}[T]_{\sB} \) by @thm-matrix-of-composition, and likewise for \( TS \). The first three identities now follow from @thm-trace-properties, since \( \tr T \) may be computed in \( \sB \). The last was computed in the examples.
+For \( n = 0 \) all traces are \( 0 \). Otherwise fix a basis \( \sB \) of \( V \). The map \( T \mapsto \mtx{T}{\sB}{\sB} \) is linear by @thm-linear-maps-isomorphic-to-matrices, so \( \mtx{S + T}{\sB}{\sB} = \mtx{S}{\sB}{\sB} + \mtx{T}{\sB}{\sB} \) and \( \mtx{cT}{\sB}{\sB} = c\mtx{T}{\sB}{\sB} \); and \( \mtx{ST}{\sB}{\sB} = \mtx{S}{\sB}{\sB}\mtx{T}{\sB}{\sB} \) by @thm-matrix-of-composition, and likewise for \( TS \). The first three identities now follow from @thm-trace-properties, since \( \tr T \) may be computed in \( \sB \). The last was computed in the examples.
 :::
 
 A first consequence: on a finite-dimensional space \( V \) of dimension \( n \ge 1 \) over a field in which \( n \cdot 1 \ne 0 \), such as \( \nR \), there are no operators with \( ST - TS = \id_V \), since the left side has trace \( 0 \) and the right side has trace \( n \cdot 1 \).
@@ -195,7 +195,7 @@ If \( F \) has characteristic \( 0 \), or characteristic \( p > \dim V \), then 
 :::
 
 ::: {.proof}
-Let \( r = \rank P \). If \( V = \{\0\} \), both sides are \( 0 \). Otherwise, by @cor-projection-matrix there is a basis \( \sB \) with \( [P]_{\sB} = \diag(1, \dots, 1, 0, \dots, 0) \) with \( r \) ones, so \( \tr P = r \cdot 1 \) by @def-trace-operator.
+Let \( r = \rank P \). If \( V = \{\0\} \), both sides are \( 0 \). Otherwise, by @cor-projection-matrix there is a basis \( \sB \) with \( \mtx{P}{\sB}{\sB} = \diag(1, \dots, 1, 0, \dots, 0) \) with \( r \) ones, so \( \tr P = r \cdot 1 \) by @def-trace-operator.
 
 For the second statement, let \( n = \dim V \). Since \( 0 \le r \le n \) and \( r \cdot 1 = \tr P \), it remains to show uniqueness. Suppose \( k \cdot 1 = l \cdot 1 \) for integers \( 0 \le l \le k \le n \). By @lem-integer-multiples, \( (k - l) \cdot 1 + l \cdot 1 = k \cdot 1 = l \cdot 1 \), and adding \( -(l \cdot 1) \) to both sides gives \( (k - l) \cdot 1 = 0 \). If \( k - l > 0 \), then by @def-characteristic the characteristic of \( F \) is non-zero and at most \( k - l \le n \), which contradicts the hypothesis. Hence \( k = l \). In \( \nR \) and \( \nC \), \( r \cdot 1 \) is the number \( r \).
 :::
@@ -234,7 +234,7 @@ So \( \v_{+} \in E_{+} \), \( \v_{-} \in E_{-} \), and \( V = E_{+} + E_{-} \). 
 The operator \( \frac12(\id_V + T) \) is linear by @thm-linear-maps-vector-space, sends \( \v \) to \( \v_{+} \), fixes \( E_{+} \) (where \( T\v = \v \)) and kills \( E_{-} \) (where \( T\v = -\v \)). By the uniqueness in @thm-projection-direct-sum (b), it is the projection onto \( E_{+} \) along \( E_{-} \).
 :::
 
-For the transpose, \( E_{+} \) is the symmetric and \( E_{-} \) the skew-symmetric matrices; for \( f(x) \mapsto f(-x) \), they are the even and odd functions; for the reflection \( R(x, y) = (y, x) \), they are the mirror line \( y = x \) and the perpendicular line \( y = -x \), and the adapted basis \( ((1, 1), (1, -1)) \) is the one of @exm-reflection-diagonal-basis. In finite dimension, a basis of \( E_{+} \) followed by a basis of \( E_{-} \) gives \( [T]_{\sB} = \diag(1, \dots, 1, -1, \dots, -1) \), and so \( \tr T = (\dim E_{+}) \cdot 1 - (\dim E_{-}) \cdot 1 \). In Chapter 8 the non-zero vectors of \( E_{+} \) and \( E_{-} \) will be called eigenvectors with eigenvalues \( 1 \) and \( -1 \).
+For the transpose, \( E_{+} \) is the symmetric and \( E_{-} \) the skew-symmetric matrices; for \( f(x) \mapsto f(-x) \), they are the even and odd functions; for the reflection \( R(x, y) = (y, x) \), they are the mirror line \( y = x \) and the perpendicular line \( y = -x \), and the adapted basis \( ((1, 1), (1, -1)) \) is the one of @exm-reflection-diagonal-basis. In finite dimension, a basis of \( E_{+} \) followed by a basis of \( E_{-} \) gives \( \mtx{T}{\sB}{\sB} = \diag(1, \dots, 1, -1, \dots, -1) \), and so \( \tr T = (\dim E_{+}) \cdot 1 - (\dim E_{-}) \cdot 1 \). In Chapter 8 the non-zero vectors of \( E_{+} \) and \( E_{-} \) will be called eigenvectors with eigenvalues \( 1 \) and \( -1 \).
 
 ::: {.warning}
 **In characteristic \( 2 \) an involution need not split the space.** Over \( \nF_2 \), let \( T\x = \J\x \) with \( \J = \begin{pmatrix} 1 & 1 \\ 0 & 1 \end{pmatrix} \). Then \( \J^2 = \begin{pmatrix} 1 & 2 \\ 0 & 1 \end{pmatrix} = \I_2 \), since \( 2 = 0 \). But \( -1 = 1 \), so \( E_{-} = E_{+} = \ker(\J - \I_2) = \Span(\e_1) \), and \( E_{+} + E_{-} = \Span(\e_1) \ne \nF_2^2 \).

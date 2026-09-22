@@ -74,20 +74,20 @@ The same definition with two different spaces, \( \beta \colon V \times W \to F 
 
 ## The matrix of a form
 
-The displayed expansion above says that a bilinear form on a finite-dimensional space is determined by finitely many numbers: the values \( \beta(\v_i, \v_j) \) on pairs of basis vectors. There are \( n^2 \) of them, they are indexed by a row and a column, and that is a matrix. Chapter 3 recorded a linear map by a matrix in exactly the same spirit (@def-matrix-of-linear-map); here the recipe is even simpler, because there is no basis of an output space to choose.
+The displayed expansion above says that a bilinear form on a finite-dimensional space is determined by finitely many numbers: the values \( \beta(\v_i, \v_j) \) on pairs of basis vectors. There are \( n^2 \) of them, they are indexed by a row and a column, and that is a matrix. Chapter 3 recorded a linear map by a matrix in exactly the same spirit (@def-matrix-of-linear-map), and the only difference is where the bases sit. There the two bases belonged to the input space and the output space. A form has no output space to speak of, but it has two **slots**, and each slot has to be fed a basis before the table can be written down. Throughout this chapter both slots hold vectors of the same \( V \) and we feed them the same basis, so the two choices coincide; the notation still records both, with the subscript naming the basis used on the first slot and the superscript the basis used on the second.
 
 *The matrix of a form is its table of values on pairs of basis vectors.*
 
 ::: {#def-form-matrix}
 [Matrix of a Bilinear Form]
 
-Let \( \beta \) be a bilinear form on a finite-dimensional \( V \) with ordered basis \( \sB = (\v_1, \dots, \v_n) \). The **matrix of \( \beta \) with respect to \( \sB \)**, also called its **Gram matrix**, is the matrix \( \mtx{\beta}{\sB}{} \in M_n(F) \) with entries
+Let \( \beta \) be a bilinear form on a finite-dimensional \( V \) with ordered basis \( \sB = (\v_1, \dots, \v_n) \). The **matrix of \( \beta \) with respect to \( \sB \)**, also called its **Gram matrix**, is the matrix \( \mtx{\beta}{\sB}{\sB} \in M_n(F) \) with entries
 \[
-\bigl(\mtx{\beta}{\sB}{}\bigr)_{ij} \coloneqq \beta(\v_i, \v_j) .
+\bigl(\mtx{\beta}{\sB}{\sB}\bigr)_{ij} \coloneqq \beta(\v_i, \v_j) .
 \]
 :::
 
-In words: the entry in row \( i \) and column \( j \) is the value of \( \beta \) with the \( i \)-th basis vector in the **left** slot and the \( j \)-th in the **right** slot. The order matters, because \( \beta(\v_i, \v_j) \) and \( \beta(\v_j, \v_i) \) need not agree; the convention chosen here is the one that makes the recovery formula below carry no transpose on the **matrix**.
+In words: the entry in row \( i \) and column \( j \) is the value of \( \beta \) with the \( i \)-th basis vector in the **left** slot and the \( j \)-th in the **right** slot. The subscript is the basis read into the left slot and the superscript the basis read into the right one; here they are the same \( \sB \), and the notation writes it twice rather than leaving a slot empty. The order matters, because \( \beta(\v_i, \v_j) \) and \( \beta(\v_j, \v_i) \) need not agree; the convention chosen here is the one that makes the recovery formula below carry no transpose on the **matrix**.
 
 Chapter 10 also called a matrix of pairings a Gram matrix, and the two conventions differ, so it is worth saying how. @def-gram-matrix set \( (\G)_{ij} = \inner{\v_j}{\v_i} \), with the indices crossed, because an inner product is conjugate-linear in its second slot and the crossing is what makes \( \G \) Hermitian and \( \x^{*}\G\x \) come out as a squared norm. A bilinear form has no conjugation to accommodate, so here the natural order is the uncrossed one, which is what makes the recovery formula below free of transposes. For a real symmetric form the two agree; in general each is the transpose of the other.
 
@@ -96,7 +96,7 @@ Nothing needs checking for well-definedness: once \( \sB \) is fixed, each entry
 ::: {#thm-form-matrix-determines}
 [Forms and Matrices Correspond]
 
-Let \( V \) be an \( n \)-dimensional vector space over \( F \) with ordered basis \( \sB \), and let \( \beta \) be a bilinear form on \( V \) with \( \A = \mtx{\beta}{\sB}{} \).
+Let \( V \) be an \( n \)-dimensional vector space over \( F \) with ordered basis \( \sB \), and let \( \beta \) be a bilinear form on \( V \) with \( \A = \mtx{\beta}{\sB}{\sB} \).
 
 ::: {.enumerate options="label=(\alph*)"}
 1. For all \( \u, \v \in V \),
@@ -104,7 +104,7 @@ Let \( V \) be an \( n \)-dimensional vector space over \( F \) with ordered bas
 \beta(\u, \v) = \coord{\u}{\sB}\tp\,\A\,\coord{\v}{\sB} .
 \]
 2. \( \A \) is the **only** matrix in \( M_n(F) \) with this property.
-3. The assignment \( \beta \mapsto \mtx{\beta}{\sB}{} \) is a bijection from the set of bilinear forms on \( V \) onto \( M_n(F) \), and it respects sums and scalar multiples: \( \mtx{\beta + \gamma}{\sB}{} = \mtx{\beta}{\sB}{} + \mtx{\gamma}{\sB}{} \) and \( \mtx{c\beta}{\sB}{} = c\,\mtx{\beta}{\sB}{} \).
+3. The assignment \( \beta \mapsto \mtx{\beta}{\sB}{\sB} \) is a bijection from the set of bilinear forms on \( V \) onto \( M_n(F) \), and it respects sums and scalar multiples: \( \mtx{\beta + \gamma}{\sB}{\sB} = \mtx{\beta}{\sB}{\sB} + \mtx{\gamma}{\sB}{\sB} \) and \( \mtx{c\beta}{\sB}{\sB} = c\,\mtx{\beta}{\sB}{\sB} \).
 :::
 :::
 
@@ -121,11 +121,11 @@ writing \( a_{ij} = \beta(\v_i, \v_j) \) for the entries of \( \A \). The last s
 
 (b) Suppose \( \M \in M_n(F) \) also satisfies \( \beta(\u, \v) = \coord{\u}{\sB}\tp\M\coord{\v}{\sB} \) for all \( \u, \v \). Take \( \u = \v_i \) and \( \v = \v_j \). Then \( \coord{\v_i}{\sB} = \e_i \) and \( \coord{\v_j}{\sB} = \e_j \), so the right-hand side is \( \e_i\tp\M\e_j = m_{ij} \), while the left-hand side is \( \beta(\v_i, \v_j) = a_{ij} \). Hence \( m_{ij} = a_{ij} \) for all \( i, j \), that is, \( \M = \A \).
 
-(c) *Injective.* If \( \mtx{\beta}{\sB}{} = \mtx{\gamma}{\sB}{} \), then by (a) the two forms agree at every pair \( (\u, \v) \), so \( \beta = \gamma \).
+(c) *Injective.* If \( \mtx{\beta}{\sB}{\sB} = \mtx{\gamma}{\sB}{\sB} \), then by (a) the two forms agree at every pair \( (\u, \v) \), so \( \beta = \gamma \).
 
 *Surjective.* Given \( \M \in M_n(F) \), define \( \gamma(\u, \v) \coloneqq \coord{\u}{\sB}\tp\M\coord{\v}{\sB} \). The coordinate map \( \v \mapsto \coord{\v}{\sB} \) is linear (@cor-coordinate-isomorphism), and \( (\x, \y) \mapsto \x\tp\M\y \) is bilinear on \( F^n \) by @exm-bilinear-forms-first (b); composing a bilinear form with a linear map in each slot leaves it bilinear, so \( \gamma \) is a bilinear form on \( V \). By (b) its matrix is \( \M \).
 
-*Linear.* The forms \( \beta + \gamma \) and \( c\beta \) are defined pointwise, so their values at \( (\v_i, \v_j) \) are \( \beta(\v_i,\v_j) + \gamma(\v_i,\v_j) \) and \( c\,\beta(\v_i,\v_j) \). These are the entries of \( \mtx{\beta}{\sB}{} + \mtx{\gamma}{\sB}{} \) and of \( c\,\mtx{\beta}{\sB}{} \). This proves the theorem.
+*Linear.* The forms \( \beta + \gamma \) and \( c\beta \) are defined pointwise, so their values at \( (\v_i, \v_j) \) are \( \beta(\v_i,\v_j) + \gamma(\v_i,\v_j) \) and \( c\,\beta(\v_i,\v_j) \). These are the entries of \( \mtx{\beta}{\sB}{\sB} + \mtx{\gamma}{\sB}{\sB} \) and of \( c\,\mtx{\beta}{\sB}{\sB} \). This proves the theorem.
 :::
 
 So bilinear forms on an \( n \)-dimensional space are the same thing as \( n \times n \) matrices, once a basis is fixed — and in particular they form a vector space of dimension \( n^2 \). The qualification "once a basis is fixed" is not decoration; the next section is entirely about what happens when the basis is changed.
@@ -133,7 +133,7 @@ So bilinear forms on an \( n \)-dimensional space are the same thing as \( n \ti
 ::: {#exm-form-matrices}
 [Four Gram matrices]
 
-Compute \( \mtx{\beta}{\sB}{} \) in each case.
+Compute \( \mtx{\beta}{\sB}{\sB} \) in each case.
 
 ::: {.enumerate options="label=(\alph*)"}
 1. The dot product on \( F^n \), with \( \sB = \sE \) the standard basis.
@@ -144,19 +144,19 @@ Compute \( \mtx{\beta}{\sB}{} \) in each case.
 :::
 
 ::: {.solution}
-(a) \( \beta(\e_i, \e_j) = \delta_{ij} \), so \( \mtx{\beta}{\sE}{} = \I_n \). The dot product is the form whose matrix is the identity.
+(a) \( \beta(\e_i, \e_j) = \delta_{ij} \), so \( \mtx{\beta}{\sE}{\sE} = \I_n \). The dot product is the form whose matrix is the identity.
 
-(b) \( \beta_{\A}(\e_i, \e_j) = \e_i\tp\A\e_j = a_{ij} \), so \( \mtx{\beta_{\A}}{\sE}{} = \A \). Together with @thm-form-matrix-determines (c) this says that on \( F^n \) with the standard basis, "form" and "matrix" are two words for the same data, and \( \x\tp\A\y \) is the general form.
+(b) \( \beta_{\A}(\e_i, \e_j) = \e_i\tp\A\e_j = a_{ij} \), so \( \mtx{\beta_{\A}}{\sE}{\sE} = \A \). Together with @thm-form-matrix-determines (c) this says that on \( F^n \) with the standard basis, "form" and "matrix" are two words for the same data, and \( \x\tp\A\y \) is the general form.
 
 (c) \( \beta(\e_1, \e_1) = 0 \), \( \beta(\e_1, \e_2) = 1 \), \( \beta(\e_2, \e_1) = -1 \), \( \beta(\e_2, \e_2) = 0 \), so
 \[
-\mtx{\beta}{\sE}{} = \begin{pmatrix} 0 & 1 \\ -1 & 0 \end{pmatrix}.
+\mtx{\beta}{\sE}{\sE} = \begin{pmatrix} 0 & 1 \\ -1 & 0 \end{pmatrix}.
 \]
 The matrix is not symmetric, and its diagonal is zero — the two features that will separate this form from the dot product throughout the chapter.
 
 (d) With \( \sB = (1, x, x^2) \) the \( (i,j) \) entry is \( \int_0^1 t^{\,i-1}t^{\,j-1}\dd t = 1/(i + j - 1) \), so
 \[
-\mtx{\beta}{\sB}{} = \begin{pmatrix}
+\mtx{\beta}{\sB}{\sB} = \begin{pmatrix}
 1 & \tfrac12 & \tfrac13 \\[2pt]
 \tfrac12 & \tfrac13 & \tfrac14 \\[2pt]
 \tfrac13 & \tfrac14 & \tfrac15
@@ -234,7 +234,7 @@ In words: non-degeneracy says that no non-zero vector is invisible to the form. 
 ::: {#prp-nondegenerate-iff-invertible}
 [Non-degeneracy is invertibility of the Gram matrix]
 
-Let \( \beta \) be a bilinear form on an \( n \)-dimensional \( V \) with ordered basis \( \sB \), and put \( \A = \mtx{\beta}{\sB}{} \). Then:
+Let \( \beta \) be a bilinear form on an \( n \)-dimensional \( V \) with ordered basis \( \sB \), and put \( \A = \mtx{\beta}{\sB}{\sB} \). Then:
 
 ::: {.enumerate options="label=(\alph*)"}
 1. \( \A \) is the matrix of \( R_\beta \) from the basis \( \sB \) to the dual basis \( \sB^{*} \); that is, \( \A = \mtx{R_\beta}{\sB}{\sB^{*}} \).
@@ -272,9 +272,9 @@ Find \( \operatorname{rad}(\beta) \) and decide degeneracy.
 :::
 
 ::: {.solution}
-(a) \( \mtx{\beta}{\sE}{} = \begin{psmallmatrix} 1 & 0 \\ 0 & 0\end{psmallmatrix} \), of rank \( 1 \), so the radical is one-dimensional by @prp-nondegenerate-iff-invertible (b). Explicitly, \( \beta(\u, \v) = u_1v_1 \) vanishes for all \( \u \) exactly when \( v_1 = 0 \), so \( \operatorname{rad}(\beta) = \Span(\e_2) \). Degenerate.
+(a) \( \mtx{\beta}{\sE}{\sE} = \begin{psmallmatrix} 1 & 0 \\ 0 & 0\end{psmallmatrix} \), of rank \( 1 \), so the radical is one-dimensional by @prp-nondegenerate-iff-invertible (b). Explicitly, \( \beta(\u, \v) = u_1v_1 \) vanishes for all \( \u \) exactly when \( v_1 = 0 \), so \( \operatorname{rad}(\beta) = \Span(\e_2) \). Degenerate.
 
-(b) \( \mtx{\beta}{\sE}{} = \diag(1, -1) \), invertible, so \( \beta \) is non-degenerate. Yet \( \beta\bigl((1,1),(1,1)\bigr) = 1 - 1 = 0 \): a non-zero vector on which the form vanishes when paired **with itself**. Non-degeneracy forbids a vector orthogonal to everything; it says nothing about a vector orthogonal to itself. This form is the one this chapter returns to twice, in the sections on isotropic vectors and on Minkowski space.
+(b) \( \mtx{\beta}{\sE}{\sE} = \diag(1, -1) \), invertible, so \( \beta \) is non-degenerate. Yet \( \beta\bigl((1,1),(1,1)\bigr) = 1 - 1 = 0 \): a non-zero vector on which the form vanishes when paired **with itself**. Non-degeneracy forbids a vector orthogonal to everything; it says nothing about a vector orthogonal to itself. This form is the one this chapter returns to twice, in the sections on isotropic vectors and on Minkowski space.
 
 (c) The matrix is \( 0 \), of rank \( 0 \), and \( \operatorname{rad}(\beta) = V \). This is the extreme degenerate case: every vector is invisible.
 :::
@@ -300,7 +300,7 @@ No, unless \( U = \{\0\} \) — and then only for a silly reason. The restrictio
 
 ::: {.enumerate options="label=(\alph*)"}
 1. Define what it means for \( \beta \colon V \times V \to F \) to be a bilinear form, stating both clauses in full.
-2. Define the matrix \( \mtx{\beta}{\sB}{} \) of a bilinear form with respect to an ordered basis \( \sB \), and state how \( \beta(\u, \v) \) is recovered from it.
+2. Define the matrix \( \mtx{\beta}{\sB}{\sB} \) of a bilinear form with respect to an ordered basis \( \sB \), and state how \( \beta(\u, \v) \) is recovered from it.
 3. Determine whether the following is correct, with a reason: every bilinear form on \( F^n \) is \( \beta(\x, \y) = \x\tp\A\y \) for exactly one \( \A \in M_n(F) \).
 4. Define the radical of \( \beta \) and state what it means for \( \beta \) to be non-degenerate.
 5. Determine whether the following is correct, with a reason: if \( \beta(\v, \v) = 0 \) for some \( \v \ne \0 \), then \( \beta \) is degenerate.
@@ -310,7 +310,7 @@ No, unless \( U = \{\0\} \) — and then only for a silly reason. The restrictio
 ::: {.solution}
 (a) @def-bilinear-form: linearity in the left slot for each fixed right argument, (B1), and linearity in the right slot for each fixed left argument, (B2).
 
-(b) @def-form-matrix: \( \bigl(\mtx{\beta}{\sB}{}\bigr)_{ij} = \beta(\v_i, \v_j) \). Recovery is @thm-form-matrix-determines (a): \( \beta(\u,\v) = \coord{\u}{\sB}\tp\mtx{\beta}{\sB}{}\coord{\v}{\sB} \).
+(b) @def-form-matrix: \( \bigl(\mtx{\beta}{\sB}{\sB}\bigr)_{ij} = \beta(\v_i, \v_j) \). Recovery is @thm-form-matrix-determines (a): \( \beta(\u,\v) = \coord{\u}{\sB}\tp\mtx{\beta}{\sB}{\sB}\coord{\v}{\sB} \).
 
 (c) Correct. Existence and uniqueness are @thm-form-matrix-determines (c) and (b) with \( \sB = \sE \), for which \( \coord{\x}{\sE} = \x \).
 
@@ -353,7 +353,7 @@ Determine which of the following are bilinear forms on the given space. Justify 
 On \( V = \nR[x]_{\le 2} \), define \( \beta(f, g) = f(0)g(0) + f(1)g(1) + f(2)g(2) \).
 
 ::: {.enumerate options="label=(\alph*)"}
-1. Verify that \( \beta \) is a bilinear form and compute \( \mtx{\beta}{\sB}{} \) for \( \sB = (1, x, x^2) \).
+1. Verify that \( \beta \) is a bilinear form and compute \( \mtx{\beta}{\sB}{\sB} \) for \( \sB = (1, x, x^2) \).
 2. Compute \( \beta(1 + x,\ x^2 - 1) \) directly from the definition, and again from the matrix. Check that the answers agree.
 3. Hence decide whether \( \beta \) is non-degenerate.
 :::
@@ -362,17 +362,17 @@ On \( V = \nR[x]_{\le 2} \), define \( \beta(f, g) = f(0)g(0) + f(1)g(1) + f(2)g
 ::: {.solution}
 (a) Each of the three terms is a product of two evaluations, hence bilinear as in @exr-bilinear-forms-b1 (c), and a sum of bilinear forms is bilinear by @thm-form-matrix-determines (c). Numbering rows and columns \( 1, 2, 3 \) for \( 1, x, x^2 \), the \( (i,j) \) entry is \( \sum_{t \in \{0,1,2\}} t^{\,i-1}t^{\,j-1} \), with \( 0^0 = 1 \). So
 \[
-\mtx{\beta}{\sB}{} = \begin{pmatrix} 3 & 3 & 5 \\ 3 & 5 & 9 \\ 5 & 9 & 17 \end{pmatrix}.
+\mtx{\beta}{\sB}{\sB} = \begin{pmatrix} 3 & 3 & 5 \\ 3 & 5 & 9 \\ 5 & 9 & 17 \end{pmatrix}.
 \]
 
 (b) Directly: \( f = 1 + x \) takes the values \( 1, 2, 3 \) at \( 0, 1, 2 \), and \( g = x^2 - 1 \) takes the values \( -1, 0, 3 \). So \( \beta(f, g) = 1(-1) + 2 \cdot 0 + 3 \cdot 3 = 8 \). From the matrix, \( \coord{f}{\sB} = (1,1,0) \) and \( \coord{g}{\sB} = (-1,0,1) \), and
 \[
-\mtx{\beta}{\sB}{}\coord{g}{\sB} = (2, 6, 12),
+\mtx{\beta}{\sB}{\sB}\coord{g}{\sB} = (2, 6, 12),
 \qquad
 (1,1,0) \cdot (2,6,12) = 8 .
 \]
 
-(c) Let \( \M \) be the matrix with rows \( (1, t, t^2) \) for \( t = 0, 1, 2 \). Then \( \mtx{\beta}{\sB}{} = \M\tp\M \), and \( \det\M = 2 \) by the Vandermonde formula (@thm-vandermonde-determinant), so \( \det\mtx{\beta}{\sB}{} = 4 \ne 0 \) by @thm-det-multiplicative and @thm-det-transpose. By @prp-nondegenerate-iff-invertible, \( \beta \) is non-degenerate.
+(c) Let \( \M \) be the matrix with rows \( (1, t, t^2) \) for \( t = 0, 1, 2 \). Then \( \mtx{\beta}{\sB}{\sB} = \M\tp\M \), and \( \det\M = 2 \) by the Vandermonde formula (@thm-vandermonde-determinant), so \( \det\mtx{\beta}{\sB}{\sB} = 4 \ne 0 \) by @thm-det-multiplicative and @thm-det-transpose. By @prp-nondegenerate-iff-invertible, \( \beta \) is non-degenerate.
 :::
 
 ::: {#exr-bilinear-forms-b3}
@@ -403,14 +403,14 @@ They are **not** equal: \( (-3, 0, 1) \) lies in the radical but \( -3 + 0 + 1 =
 Let \( \beta(\x, \y) = x_1y_1 + x_2y_2 \) on \( V = \nF_2^2 \).
 
 ::: {.enumerate options="label=(\alph*)"}
-1. Write down \( \mtx{\beta}{\sE}{} \) and prove that \( \beta \) is non-degenerate.
+1. Write down \( \mtx{\beta}{\sE}{\sE} \) and prove that \( \beta \) is non-degenerate.
 2. Find every \( \v \in V \) with \( \beta(\v, \v) = 0 \).
 3. Hence explain why the argument "\( \beta(\v,\v) = 0 \) only for \( \v = \0 \)" cannot be used to prove non-degeneracy over a general field, even for the dot product.
 :::
 :::
 
 ::: {.solution}
-(a) \( \mtx{\beta}{\sE}{} = \I_2 \), which is invertible, so \( \beta \) is non-degenerate by @prp-nondegenerate-iff-invertible.
+(a) \( \mtx{\beta}{\sE}{\sE} = \I_2 \), which is invertible, so \( \beta \) is non-degenerate by @prp-nondegenerate-iff-invertible.
 
 (b) \( \beta(\v, \v) = v_1^2 + v_2^2 \). In \( \nF_2 \) every element satisfies \( t^2 = t \), so this is \( v_1 + v_2 \), which vanishes for \( \v = (0,0) \) and \( \v = (1,1) \). So the non-zero vector \( (1,1) \) satisfies \( \beta(\v,\v) = 0 \).
 

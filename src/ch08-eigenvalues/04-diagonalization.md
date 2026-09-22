@@ -4,28 +4,28 @@ We can now answer the question of Chapter 3 in the best case. An operator has a 
 
 ## Diagonalizable operators
 
-Chapter 3 introduced similarity to compare the matrices of one operator in different bases (@thm-similar-iff-same-operator), and asked for the simplest representative. Section 2 unwound the wish "\( [T]_{\sB} \) is diagonal" and found that it says exactly that every vector of \( \sB \) is an eigenvector. Diagonal matrices are the matrices we can compute with most easily: they add, multiply, power and invert entry by entry. So the operators that admit such a basis deserve a name.
+Chapter 3 introduced similarity to compare the matrices of one operator in different bases (@thm-similar-iff-same-operator), and asked for the simplest representative. Section 2 unwound the wish "\( \mtx{T}{\sB}{\sB} \) is diagonal" and found that it says exactly that every vector of \( \sB \) is an eigenvector. Diagonal matrices are the matrices we can compute with most easily: they add, multiply, power and invert entry by entry. So the operators that admit such a basis deserve a name.
 
 *An operator is diagonalizable when some basis consists of vectors that the operator only stretches.*
 
 ::: {#def-diagonalizable}
 [Diagonalizable]
 
-Let \( V \) be a finite-dimensional vector space over \( F \). An operator \( T \in \cL(V) \) is **diagonalizable** if there **exists** a basis \( \sB \) of \( V \) such that \( [T]_{\sB} \) is a diagonal matrix.
+Let \( V \) be a finite-dimensional vector space over \( F \). An operator \( T \in \cL(V) \) is **diagonalizable** if there **exists** a basis \( \sB \) of \( V \) such that \( \mtx{T}{\sB}{\sB} \) is a diagonal matrix.
 
 A matrix \( \A \in M_n(F) \) is **diagonalizable over \( F \)** if it is similar to a diagonal matrix: there **exist** an **invertible** \( \P \in M_n(F) \) and a diagonal \( \D \in M_n(F) \) with \( \P^{-1}\A \P = \D \), equivalently \( \A = \P \D \P^{-1} \).
 :::
 
-In words: for an operator, we are free to choose **any** basis, and we ask whether **one** of them makes the matrix diagonal; most bases will not. For a matrix, the change-of-basis matrix \( \P \) and the diagonal entries of \( \D \) must both have entries **in \( F \)**. The two notions match: \( \A \) is diagonalizable over \( F \) if and only if \( T_{\A} \in \cL(F^n) \) is diagonalizable, by @thm-similar-iff-same-operator (c), because the matrices of \( T_{\A} \) in the bases of \( F^n \) are exactly the matrices similar to \( \A \). Likewise, \( T \) is diagonalizable if and only if \( [T]_{\sC} \) is diagonalizable for one, equivalently every, basis \( \sC \) of \( V \), by @thm-similar-iff-same-operator (a) and (b).
+In words: for an operator, we are free to choose **any** basis, and we ask whether **one** of them makes the matrix diagonal; most bases will not. For a matrix, the change-of-basis matrix \( \P \) and the diagonal entries of \( \D \) must both have entries **in \( F \)**. The two notions match: \( \A \) is diagonalizable over \( F \) if and only if \( T_{\A} \in \cL(F^n) \) is diagonalizable, by @thm-similar-iff-same-operator (c), because the matrices of \( T_{\A} \) in the bases of \( F^n \) are exactly the matrices similar to \( \A \). Likewise, \( T \) is diagonalizable if and only if \( \mtx{T}{\sC}{\sC} \) is diagonalizable for one, equivalently every, basis \( \sC \) of \( V \), by @thm-similar-iff-same-operator (a) and (b).
 
 **Examples.**
 
 - **Diagonal matrices** are diagonalizable, with \( \P = \I \). So is every scalar operator \( c\,\id_V \), whose matrix is \( c\I \) in every basis.
 - **The degenerate cases.** Every \( 1 \times 1 \) matrix is diagonal. On \( V = \{\0\} \), the empty basis gives the empty matrix, which counts as diagonal. These cases are harmless, but they remind us that diagonalizability is a question about repeated eigenvalues and missing eigenvectors, which need room to occur.
 - **A \( 2 \times 2 \) matrix.** In @exm-eigenvalues-2x2, \( \A = \begin{pmatrix} 1 & 2 \\ 3 & 2 \end{pmatrix} \) has eigenvectors \( (2, 3) \) for \( 4 \) and \( (1, -1) \) for \( -1 \). They form a basis of \( \nR^2 \), so \( \A \) is diagonalizable, with \( \P = \begin{pmatrix} 2 & 1 \\ 3 & -1 \end{pmatrix} \) and \( \D = \diag(4, -1) \); we check this below.
-- **Projections and involutions.** A projection \( \P \) satisfies \( V = \im \P \oplus \ker \P \) with \( \P \) the identity on \( \im \P \) and zero on \( \ker \P \) (@thm-projection-direct-sum). A basis of \( \im \P \) followed by a basis of \( \ker \P \) gives \( [\P] = \diag(1, \dots, 1, 0, \dots, 0) \). In characteristic not \( 2 \), an involution splits \( V = E_{+} \oplus E_{-} \) (@thm-involution-decomposition), and gives \( \diag(1, \dots, 1, -1, \dots, -1) \) in the same way.
+- **Projections and involutions.** A projection \( \P \) satisfies \( V = \im \P \oplus \ker \P \) with \( \P \) the identity on \( \im \P \) and zero on \( \ker \P \) (@thm-projection-direct-sum). A basis of \( \im \P \) followed by a basis of \( \ker \P \) is a basis \( \sB \) with \( \mtx{\P}{\sB}{\sB} = \diag(1, \dots, 1, 0, \dots, 0) \). In characteristic not \( 2 \), an involution splits \( V = E_{+} \oplus E_{-} \) (@thm-involution-decomposition), and gives \( \diag(1, \dots, 1, -1, \dots, -1) \) in the same way.
 
-**Non-example by minimal change.** Change the \( (1, 2) \)-entry of \( \I_2 \) from \( 0 \) to \( 1 \), giving \( \J = \begin{pmatrix} 1 & 1 \\ 0 & 1 \end{pmatrix} \) over any field \( F \). It is still triangular with the single eigenvalue \( 1 \), and still invertible. What fails is the existence of a basis of eigenvectors: \( E_1(\J) = \ker\begin{pmatrix} 0 & 1 \\ 0 & 0 \end{pmatrix} = \Span(\e_1) \) is a line, so every eigenvector of \( \J \) is a multiple of \( \e_1 \), and no two eigenvectors are independent. By the unwinding in Section 2, no basis makes \( [T_{\J}] \) diagonal. (Directly: if \( \P^{-1}\J \P = \D \) were diagonal, its diagonal entries would be eigenvalues of \( \J \), so \( \D = \I \), and then \( \J = \P \I \P^{-1} = \I \), which is false.)
+**Non-example by minimal change.** Change the \( (1, 2) \)-entry of \( \I_2 \) from \( 0 \) to \( 1 \), giving \( \J = \begin{pmatrix} 1 & 1 \\ 0 & 1 \end{pmatrix} \) over any field \( F \). It is still triangular with the single eigenvalue \( 1 \), and still invertible. What fails is the existence of a basis of eigenvectors: \( E_1(\J) = \ker\begin{pmatrix} 0 & 1 \\ 0 & 0 \end{pmatrix} = \Span(\e_1) \) is a line, so every eigenvector of \( \J \) is a multiple of \( \e_1 \), and no two eigenvectors are independent. By the unwinding in Section 2, no basis \( \sB \) makes \( \mtx{T_{\J}}{\sB}{\sB} \) diagonal. (Directly: if \( \P^{-1}\J \P = \D \) were diagonal, its diagonal entries would be eigenvalues of \( \J \), so \( \D = \I \), and then \( \J = \P \I \P^{-1} = \I \), which is false.)
 
 **Why this definition.** We ask for similarity to a diagonal matrix, not equality, because the basis is ours to choose; a matrix like \( \begin{pmatrix} 1 & 2 \\ 3 & 2 \end{pmatrix} \) has nothing diagonal about it until the right basis is found. We insist that \( \P \) and \( \D \) have entries in \( F \), because otherwise the word would not depend on the field and would hide a real phenomenon: the rotation \( \R = \begin{pmatrix} 0 & -1 \\ 1 & 0 \end{pmatrix} \) has no real eigenvector, so it is not diagonalizable over \( \nR \), while over \( \nC \) it becomes \( \diag(i, -i) \) (Section 2). The name says what the definition promises: the operator can be **made** diagonal.
 
@@ -50,7 +50,7 @@ Let \( V \) be a finite-dimensional vector space over \( F \) with \( \dim V = n
 5. \( p_T \) splits over \( F \), and \( g_T(\lambda_i) = a_T(\lambda_i) \) for every \( i = 1, \dots, k \).
 :::
 
-In that case, if \( \sB \) is a basis of eigenvectors, then \( [T]_{\sB} \) is diagonal, its diagonal entries are the eigenvalues of the corresponding basis vectors, and each \( \lambda_i \) appears on the diagonal exactly \( a_T(\lambda_i) = g_T(\lambda_i) \) times.
+In that case, if \( \sB \) is a basis of eigenvectors, then \( \mtx{T}{\sB}{\sB} \) is diagonal, its diagonal entries are the eigenvalues of the corresponding basis vectors, and each \( \lambda_i \) appears on the diagonal exactly \( a_T(\lambda_i) = g_T(\lambda_i) \) times.
 :::
 
 (For \( k = 0 \) the sum in (c) is \( \{\0\} \) and the sum in (d) is \( 0 \); all five conditions are then false, since \( n \ge 1 \).)
@@ -68,7 +68,7 @@ The hard work was done in Sections 2 and 3; this proof only assembles it.
 :::
 
 ::: {.proof}
-(a) \( \Leftrightarrow \) (b). Let \( \sB = (\v_1, \dots, \v_n) \) be a basis of \( V \). By @def-matrix-of-linear-map, column \( j \) of \( [T]_{\sB} \) is \( \coord{T\v_j}{\sB} \), and this column is \( d_j\e_j \) if and only if \( T\v_j = d_j\v_j \). Hence \( [T]_{\sB} = \diag(d_1, \dots, d_n) \) if and only if \( T\v_j = d_j\v_j \) for every \( j \). Since basis vectors are non-zero, this says that every \( \v_j \) is an eigenvector of \( T \), for the eigenvalue \( d_j \). So a basis makes \( [T]_{\sB} \) diagonal exactly when it consists of eigenvectors, which also proves the final statement about the diagonal entries, apart from the count.
+(a) \( \Leftrightarrow \) (b). Let \( \sB = (\v_1, \dots, \v_n) \) be a basis of \( V \). By @def-matrix-of-linear-map, column \( j \) of \( \mtx{T}{\sB}{\sB} \) is \( \coord{T\v_j}{\sB} \), and this column is \( d_j\e_j \) if and only if \( T\v_j = d_j\v_j \). Hence \( \mtx{T}{\sB}{\sB} = \diag(d_1, \dots, d_n) \) if and only if \( T\v_j = d_j\v_j \) for every \( j \). Since basis vectors are non-zero, this says that every \( \v_j \) is an eigenvector of \( T \), for the eigenvalue \( d_j \). So a basis makes \( \mtx{T}{\sB}{\sB} \) diagonal exactly when it consists of eigenvectors, which also proves the final statement about the diagonal entries, apart from the count.
 
 (b) \( \Rightarrow \) (c). Let \( \sB \) be a basis of eigenvectors. Each vector of \( \sB \) lies in \( E_{\lambda_i}(T) \) for some \( i \), so \( \sB \subseteq E_{\lambda_1}(T) + \dots + E_{\lambda_k}(T) \). This sum is a subspace (@thm-subspace-sum) containing a spanning list of \( V \), so it equals \( V \). By @cor-eigenspaces-direct-sum the sum is direct.
 
@@ -82,7 +82,7 @@ Hence both inequalities are equalities. The second equality, \( \sum_i a_T(\lamb
 
 (e) \( \Rightarrow \) (b). Since \( p_T \) splits, @thm-roots-with-multiplicity gives \( \sum_i a_T(\lambda_i) = n \), and so \( \sum_i g_T(\lambda_i) = n \) by (e). For each \( i \) let \( \sB_i \) be a basis of \( E_{\lambda_i}(T) \), of length \( g_T(\lambda_i) \), and let \( \sB \) be the list \( \sB_1, \dots, \sB_k \). The sum \( W = E_{\lambda_1}(T) + \dots + E_{\lambda_k}(T) \) is direct (@cor-eigenspaces-direct-sum), so by @thm-direct-sum-k-criteria ((a) \( \Rightarrow \) (d)), \( \sB \) is a basis of \( W \), and \( \dim W = n = \dim V \). By @thm-dim-impl-eq, \( W = V \). So \( \sB \) is a basis of \( V \), and its vectors are eigenvectors, being non-zero vectors of eigenspaces.
 
-Finally, suppose \( \sB \) is a basis of eigenvectors, and let \( m_i \) be the number of its vectors with eigenvalue \( \lambda_i \). By (a) \( \Leftrightarrow \) (b), \( [T]_{\sB} \) is diagonal with \( \lambda_i \) appearing \( m_i \) times, so \( p_T = \prod_i (x - \lambda_i)^{m_i} \) (the triangular case after @def-characteristic-polynomial). Since the \( \lambda_i \) are distinct, \( (x - \lambda_i)^{m_i} \) divides \( p_T \) and the remaining factors do not vanish at \( \lambda_i \), so \( m_i = a_T(\lambda_i) \) by @lem-multiplicity-cofactor; and \( a_T(\lambda_i) = g_T(\lambda_i) \) by (e). This proves the theorem.
+Finally, suppose \( \sB \) is a basis of eigenvectors, and let \( m_i \) be the number of its vectors with eigenvalue \( \lambda_i \). By (a) \( \Leftrightarrow \) (b), \( \mtx{T}{\sB}{\sB} \) is diagonal with \( \lambda_i \) appearing \( m_i \) times, so \( p_T = \prod_i (x - \lambda_i)^{m_i} \) (the triangular case after @def-characteristic-polynomial). Since the \( \lambda_i \) are distinct, \( (x - \lambda_i)^{m_i} \) divides \( p_T \) and the remaining factors do not vanish at \( \lambda_i \), so \( m_i = a_T(\lambda_i) \) by @lem-multiplicity-cofactor; and \( a_T(\lambda_i) = g_T(\lambda_i) \) by (e). This proves the theorem.
 :::
 
 This is the theorem promised in Chapter 1, §7: **an operator is diagonalizable exactly when its eigenspaces split \( V \) as a direct sum**, and then \( T \) acts on the \( i \)-th piece as the scalar \( \lambda_i \). In the language of @thm-direct-sum-invariant-block-diagonal, the pieces are invariant, the blocks are \( \lambda_i\I_{g(\lambda_i)} \), and the matrix is block diagonal with scalar blocks.
@@ -457,7 +457,7 @@ A symmetric \( \X = (x_{ij}) \) is determined by its entries on and above the di
 
 The eigenvalues of \( \tau \) lie among \( \pm 1 \) (as in @exr-eigenvalues-and-eigenvectors-b2), and \( n(n+1)/2 + n(n-1)/2 = n^2 = \dim M_n(F) \). If \( n \ge 2 \), both eigenspaces are non-zero, and the dimensions of the eigenspaces add up to \( n^2 \); if \( n = 1 \), \( \tau = \id \) and \( E_1(\tau) \) is everything. Either way @thm-diagonalization ((d) \( \Rightarrow \) (a)) shows that \( \tau \) is diagonalizable.
 
-(b) In a basis of eigenvectors, \( [\tau] = \diag(1, \dots, 1, -1, \dots, -1) \) with \( n(n+1)/2 \) ones and \( n(n-1)/2 \) entries \( -1 \) (@thm-diagonalization). This matrix is triangular, so
+(b) In a basis \( \sB \) of eigenvectors, \( \mtx{\tau}{\sB}{\sB} = \diag(1, \dots, 1, -1, \dots, -1) \) with \( n(n+1)/2 \) ones and \( n(n-1)/2 \) entries \( -1 \) (@thm-diagonalization). This matrix is triangular, so
 \[
 \begin{aligned}
 p_\tau &= (x - 1)^{n(n+1)/2}(x + 1)^{n(n-1)/2}, \\
@@ -465,7 +465,7 @@ p_\tau &= (x - 1)^{n(n+1)/2}(x + 1)^{n(n-1)/2}, \\
 \det\tau &= (-1)^{n(n-1)/2}.
 \end{aligned}
 \]
-As a check on the trace: in the basis \( (\E_{ij}) \), \( \tau(\E_{ij}) = \E_{ji} \), so the diagonal entry of \( [\tau] \) at \( \E_{ij} \) is \( 1 \) if \( i = j \) and \( 0 \) otherwise, and the trace is \( n \).
+As a check on the trace: in the basis \( \sE = (\E_{ij}) \), \( \tau(\E_{ij}) = \E_{ji} \), so the diagonal entry of \( \mtx{\tau}{\sE}{\sE} \) at \( \E_{ij} \) is \( 1 \) if \( i = j \) and \( 0 \) otherwise, and the trace is \( n \).
 
 (c) Over \( \nF_2 \), \( -1 = 1 \). If \( \tau(\X) = \lambda \X \) with \( \X \ne 0 \), then as in @exr-eigenvalues-and-eigenvectors-b2 (a), \( \lambda^2 = 1 \), so \( (\lambda - 1)^2 = \lambda^2 - 2\lambda + 1 = \lambda^2 + 1 = 0 \) and \( \lambda = 1 \). So \( \spec(\tau) = \{1\} \) and \( E_1(\tau) \) is the space of symmetric matrices. The spanning argument in (a) did not divide by \( 2 \), so \( \dim E_1(\tau) = n(n+1)/2 \). For \( n \ge 2 \), \( n(n+1)/2 < n^2 \), so condition (d) of @thm-diagonalization fails, and \( \tau \) is not diagonalizable. For instance, \( \E_{12} \) is not a sum of eigenvectors.
 :::

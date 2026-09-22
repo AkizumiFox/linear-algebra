@@ -33,7 +33,7 @@ whose \( j \)-th column is the coordinate vector of \( T\v_j \) with respect to 
 \[
 T\v_j = a_{1j}\w_1 + a_{2j}\w_2 + \dots + a_{mj}\w_m \qquad (j = 1, \dots, n).
 \]
-When \( V = W \) and \( \sB = \sC \), we write \( [T]_{\sB} \coloneqq \mtx{T}{\sB}{\sB} \) and call it the matrix of the operator \( T \) with respect to \( \sB \).
+When \( V = W \) and \( \sB = \sC \), we call \( \mtx{T}{\sB}{\sB} \) the **matrix of the operator \( T \) with respect to \( \sB \)**; the basis is written in both slots even though it is the same one on each side.
 :::
 
 In words, clause by clause:
@@ -47,14 +47,14 @@ In words, clause by clause:
 ::: {#exm-matrix-of-differentiation}
 [Differentiation on Cubic Polynomials]
 
-Let \( \sE_3 = (1, x, x^2, x^3) \) and \( \sE_2 = (1, x, x^2) \). Find \( \mtx{D}{\sE_3}{\sE_2} \) for \( D \colon \nR[x]_{\le 3} \to \nR[x]_{\le 2} \), and \( [D]_{\sE_3} \) for \( D \) regarded as an operator on \( \nR[x]_{\le 3} \).
+Let \( \sE_3 = (1, x, x^2, x^3) \) and \( \sE_2 = (1, x, x^2) \). Find \( \mtx{D}{\sE_3}{\sE_2} \) for \( D \colon \nR[x]_{\le 3} \to \nR[x]_{\le 2} \), and \( \mtx{D}{\sE_3}{\sE_3} \) for \( D \) regarded as an operator on \( \nR[x]_{\le 3} \).
 :::
 
 ::: {.solution}
 The images of the input basis are \( D(1) = 0 \), \( D(x) = 1 \), \( D(x^2) = 2x \), \( D(x^3) = 3x^2 \). In \( \sE_2 \) their coordinates are \( (0, 0, 0) \), \( (1, 0, 0) \), \( (0, 2, 0) \), \( (0, 0, 3) \); in \( \sE_3 \) the same vectors have a fourth coordinate \( 0 \). So
 \[
 \mtx{D}{\sE_3}{\sE_2} = \begin{pmatrix} 0 & 1 & 0 & 0 \\ 0 & 0 & 2 & 0 \\ 0 & 0 & 0 & 3 \end{pmatrix}, \qquad
-[D]_{\sE_3} = \begin{pmatrix} 0 & 1 & 0 & 0 \\ 0 & 0 & 2 & 0 \\ 0 & 0 & 0 & 3 \\ 0 & 0 & 0 & 0 \end{pmatrix}.
+\mtx{D}{\sE_3}{\sE_3} = \begin{pmatrix} 0 & 1 & 0 & 0 \\ 0 & 0 & 2 & 0 \\ 0 & 0 & 0 & 3 \\ 0 & 0 & 0 & 0 \end{pmatrix}.
 \]
 The same rule \( p \mapsto p' \) gives a \( 3 \times 4 \) or a \( 4 \times 4 \) matrix, depending on the codomain we declare. The superdiagonal \( 1, 2, 3 \) records "\( x^k \mapsto kx^{k-1} \)".
 :::
@@ -64,46 +64,46 @@ The same rule \( p \mapsto p' \) gives a \( 3 \times 4 \) or a \( 4 \times 4 \) 
 
 ::: {.enumerate options="label=(\alph*)"}
 1. Let \( \A \in M_{m \times n}(F) \), and let \( \sE_n \), \( \sE_m \) be the standard bases of \( F^n \), \( F^m \). Show that \( \mtx{T_\A}{\sE_n}{\sE_m} = \A \).
-2. Let \( \sB \) be any basis of an \( n \)-dimensional space \( V \). Find \( [\id_V]_{\sB} \) and the matrix of the zero map \( V \to W \) for any bases.
+2. Let \( \sB \) be any basis of an \( n \)-dimensional space \( V \). Find \( \mtx{\id_V}{\sB}{\sB} \) and the matrix of the zero map \( V \to W \) for any bases.
 :::
 :::
 
 ::: {.solution}
 (a) The \( j \)-th column of \( \mtx{T_\A}{\sE_n}{\sE_m} \) is \( \coord{\A\e_j}{\sE_m} = \A\e_j \), since coordinates in the standard basis of \( F^m \) are the entries themselves; and \( \A\e_j \) is the \( j \)-th column of \( \A \) (@thm-matrix-times-vector-columns). So the matrix of a matrix map in the standard bases is the matrix we started with.
 
-(b) \( \id_V\v_j = \v_j = 0\v_1 + \dots + 1\v_j + \dots + 0\v_n \), so the \( j \)-th column of \( [\id_V]_{\sB} \) is \( \e_j \), and \( [\id_V]_{\sB} = \I_n \). The zero map sends every \( \v_j \) to \( \0 \), whose coordinates are all \( 0 \), so its matrix is the zero matrix of size \( \dim W \times \dim V \), whatever the bases. These degenerate cases fix the expectations "identity map, identity matrix" and "zero map, zero matrix". The first needs the **same** basis on both sides, as the warning below shows.
+(b) \( \id_V\v_j = \v_j = 0\v_1 + \dots + 1\v_j + \dots + 0\v_n \), so the \( j \)-th column of \( \mtx{\id_V}{\sB}{\sB} \) is \( \e_j \), and \( \mtx{\id_V}{\sB}{\sB} = \I_n \). The zero map sends every \( \v_j \) to \( \0 \), whose coordinates are all \( 0 \), so its matrix is the zero matrix of size \( \dim W \times \dim V \), whatever the bases. These degenerate cases fix the expectations "identity map, identity matrix" and "zero map, zero matrix". The first needs the **same** basis on both sides, as the warning below shows.
 :::
 
 ::: {#exm-matrix-of-transpose}
 [The Transpose Map]
 
-Let \( T \colon M_2(F) \to M_2(F) \), \( T(\X) = \X\tp \), and let \( \sE = (\E_{11}, \E_{12}, \E_{21}, \E_{22}) \). Find \( [T]_{\sE} \).
+Let \( T \colon M_2(F) \to M_2(F) \), \( T(\X) = \X\tp \), and let \( \sE = (\E_{11}, \E_{12}, \E_{21}, \E_{22}) \). Find \( \mtx{T}{\sE}{\sE} \).
 :::
 
 ::: {.solution}
 \( T \) is linear by @thm-transpose-properties. Its values on the basis are \( \E_{11}\tp = \E_{11} \), \( \E_{12}\tp = \E_{21} \), \( \E_{21}\tp = \E_{12} \), \( \E_{22}\tp = \E_{22} \). In \( \sE \), these have coordinates \( \e_1, \e_3, \e_2, \e_4 \). So
 \[
-[T]_{\sE} = \begin{pmatrix} 1 & 0 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 0 & 1 \end{pmatrix}.
+\mtx{T}{\sE}{\sE} = \begin{pmatrix} 1 & 0 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 0 & 1 \end{pmatrix}.
 \]
-A map on a space of \( 2 \times 2 \) matrices is described by a \( 4 \times 4 \) matrix, because \( \dim M_2(F) = 4 \). Do not confuse the matrix \( \X \) that \( T \) acts on with the matrix \( [T]_{\sE} \) that describes \( T \).
+A map on a space of \( 2 \times 2 \) matrices is described by a \( 4 \times 4 \) matrix, because \( \dim M_2(F) = 4 \). Do not confuse the matrix \( \X \) that \( T \) acts on with the matrix \( \mtx{T}{\sE}{\sE} \) that describes \( T \).
 :::
 
 ::: {#exm-matrix-of-reflection}
 [A Reflection in Two Bases]
 
-Let \( T \colon \nR^2 \to \nR^2 \) be the reflection across the line \( y = x \), \( T(x, y) = (y, x) \). Find \( [T]_{\sE} \) for the standard basis \( \sE = (\e_1, \e_2) \), and \( [T]_{\sB} \) for \( \sB = (\u_1, \u_2) \) with \( \u_1 = (1, 1) \) and \( \u_2 = (1, -1) \).
+Let \( T \colon \nR^2 \to \nR^2 \) be the reflection across the line \( y = x \), \( T(x, y) = (y, x) \). Find \( \mtx{T}{\sE}{\sE} \) for the standard basis \( \sE = (\e_1, \e_2) \), and \( \mtx{T}{\sB}{\sB} \) for \( \sB = (\u_1, \u_2) \) with \( \u_1 = (1, 1) \) and \( \u_2 = (1, -1) \).
 :::
 
 ::: {.solution}
-\( T\e_1 = (0, 1) = \e_2 \) and \( T\e_2 = \e_1 \), so \( [T]_{\sE} = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix} \).
+\( T\e_1 = (0, 1) = \e_2 \) and \( T\e_2 = \e_1 \), so \( \mtx{T}{\sE}{\sE} = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix} \).
 
 The vectors \( \u_1, \u_2 \) are independent (neither is a multiple of the other), hence a basis of \( \nR^2 \) by @thm-right-size-basis. The first lies **on** the mirror line and the second is **perpendicular** to it: \( T\u_1 = (1, 1) = 1\u_1 + 0\u_2 \) and \( T\u_2 = (-1, 1) = 0\u_1 + (-1)\u_2 \). So
 \[
-[T]_{\sB} = \begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix}.
+\mtx{T}{\sB}{\sB} = \begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix}.
 \]
 In the basis adapted to the geometry, the reflection is visibly "keep one direction, flip the other". The same map has a diagonal matrix in one basis and a non-diagonal one in another. How the two matrices are related is the subject of the next section.
 
-The matrix also works in reverse: from \( [T]_{\sB} \) alone we can recover \( T \). Take \( \v = (3, 1) \). Its coordinates in \( \sB \) solve \( a\u_1 + b\u_2 = (3, 1) \), that is, \( a + b = 3 \) and \( a - b = 1 \), so \( \coord{\v}{\sB} = (2, 1) \), that is, \( \v = 2\u_1 + \u_2 \). By linearity, \( T\v = 2T\u_1 + T\u_2 \). The columns of \( [T]_{\sB} \) say \( T\u_1 = 1\u_1 + 0\u_2 \) and \( T\u_2 = 0\u_1 + (-1)\u_2 \), so \( T\v = 2\u_1 - \u_2 = (1, 3) \), which is indeed \( (y, x) \) at \( (3, 1) \). In coordinates, we turned \( (2, 1) \) into \( (2, -1) = [T]_{\sB}\begin{pmatrix} 2 \\ 1 \end{pmatrix} \); the next subsection proves that this "coordinates in, multiply, combine out" recipe always works.
+The matrix also works in reverse: from \( \mtx{T}{\sB}{\sB} \) alone we can recover \( T \). Take \( \v = (3, 1) \). Its coordinates in \( \sB \) solve \( a\u_1 + b\u_2 = (3, 1) \), that is, \( a + b = 3 \) and \( a - b = 1 \), so \( \coord{\v}{\sB} = (2, 1) \), that is, \( \v = 2\u_1 + \u_2 \). By linearity, \( T\v = 2T\u_1 + T\u_2 \). The columns of \( \mtx{T}{\sB}{\sB} \) say \( T\u_1 = 1\u_1 + 0\u_2 \) and \( T\u_2 = 0\u_1 + (-1)\u_2 \), so \( T\v = 2\u_1 - \u_2 = (1, 3) \), which is indeed \( (y, x) \) at \( (3, 1) \). In coordinates, we turned \( (2, 1) \) into \( (2, -1) = \mtx{T}{\sB}{\sB}\begin{pmatrix} 2 \\ 1 \end{pmatrix} \); the next subsection proves that this "coordinates in, multiply, combine out" recipe always works.
 :::
 
 Here is a non-example by minimal change. In @exm-matrix-of-differentiation, write the coordinate vectors \( \coord{D(x^j)}{\sE_2} \) as **rows** instead of columns. The numbers are the same, but the result is the \( 4 \times 3 \) matrix \( \begin{pmatrix} 0 & 0 & 0 \\ 1 & 0 & 0 \\ 0 & 2 & 0 \\ 0 & 0 & 3 \end{pmatrix} \), and it cannot even be multiplied by the coordinate vector \( (a_0, a_1, a_2, a_3) \) of an input polynomial. The clause that fails is "the \( j \)-th **column** is \( \coord{T\v_j}{\sC} \)".
@@ -113,7 +113,7 @@ Here is a non-example by minimal change. In @exm-matrix-of-differentiation, writ
 ::: {.warning}
 **Three ways to get a matrix of a map wrong.**
 (1) **Columns, not rows.** The \( j \)-th **column** is \( \coord{T\v_j}{\sC} \), as in the non-example above.
-(2) **Order matters.** In @exm-matrix-of-reflection, reordering the standard basis as \( (\e_2, \e_1) \) leaves \( [T] = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix} \) unchanged, but reordering \( \sB \) as \( (\u_2, \u_1) \) gives \( \begin{pmatrix} -1 & 0 \\ 0 & 1 \end{pmatrix} \neq [T]_{\sB} \).
+(2) **Order matters.** In @exm-matrix-of-reflection, reordering the standard basis as \( (\e_2, \e_1) \) leaves the matrix \( \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix} \) unchanged, but reordering \( \sB \) as \( (\u_2, \u_1) \) gives \( \begin{pmatrix} -1 & 0 \\ 0 & 1 \end{pmatrix} \neq \mtx{T}{\sB}{\sB} \).
 (3) **Input subscript, output superscript.** \( \mtx{T}{\sB}{\sC} \) and \( \mtx{T}{\sC}{\sB} \) are different objects, and for \( T \colon V \to W \) with \( V \neq W \) only one of them makes sense. Also \( \mtx{\id_V}{\sB}{\sC} \neq \I_n \) when \( \sB \neq \sC \): for \( \sB = (\e_1, \e_2) \) and \( \sC = (\e_2, \e_1) \) in \( \nR^2 \), \( \mtx{\id}{\sB}{\sC} = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix} \).
 :::
 
@@ -277,17 +277,17 @@ For operators, the theorem applies with \( \sB = \sC = \sD \), and gives powers 
 ::: {#cor-matrix-of-polynomial-of-operator}
 [Matrices of Powers and Polynomials]
 
-Let \( \sB = (\v_1, \dots, \v_n) \) be a basis of a finite-dimensional space \( V \), let \( T, S \in \cL(V) \), \( c \in F \) and \( p \in F[x] \). Then \( [ST]_{\sB} = [S]_{\sB}[T]_{\sB} \), \( [S + T]_{\sB} = [S]_{\sB} + [T]_{\sB} \), \( [cT]_{\sB} = c[T]_{\sB} \), \( [T^k]_{\sB} = ([T]_{\sB})^k \) for \( k \in \nN \), and
+Let \( \sB = (\v_1, \dots, \v_n) \) be a basis of a finite-dimensional space \( V \), let \( T, S \in \cL(V) \), \( c \in F \) and \( p \in F[x] \). Then \( \mtx{ST}{\sB}{\sB} = \mtx{S}{\sB}{\sB}\mtx{T}{\sB}{\sB} \), \( \mtx{S + T}{\sB}{\sB} = \mtx{S}{\sB}{\sB} + \mtx{T}{\sB}{\sB} \), \( \mtx{cT}{\sB}{\sB} = c\mtx{T}{\sB}{\sB} \), \( \mtx{T^k}{\sB}{\sB} = (\mtx{T}{\sB}{\sB})^k \) for \( k \in \nN \), and
 \[
-[p(T)]_{\sB} = p\bigl([T]_{\sB}\bigr).
+\mtx{p(T)}{\sB}{\sB} = p\bigl(\mtx{T}{\sB}{\sB}\bigr).
 \]
 :::
 
 ::: {.proof}
-The first formula is @thm-matrix-of-composition with \( \sB = \sC = \sD \). For sums and scalar multiples, the \( j \)-th column of \( [S + T]_{\sB} \) is \( \coord{S\v_j + T\v_j}{\sB} = \coord{S\v_j}{\sB} + \coord{T\v_j}{\sB} \) by @thm-coordinates-linear, and similarly \( \coord{cT\v_j}{\sB} = c\coord{T\v_j}{\sB} \). For powers we induct on \( k \): \( [T^0]_{\sB} = [\id_V]_{\sB} = \I_n \) by @exm-matrix-of-matrix-map (b), and if \( [T^k]_{\sB} = ([T]_{\sB})^k \), then \( [T^{k+1}]_{\sB} = [T^kT]_{\sB} = ([T]_{\sB})^k[T]_{\sB} = ([T]_{\sB})^{k+1} \), by the first formula and @def-polynomial-of-matrix. Finally, for \( p = \sum_k a_kx^k \), combining the three rules gives \( [p(T)]_{\sB} = \sum_k a_k[T^k]_{\sB} = \sum_k a_k([T]_{\sB})^k = p([T]_{\sB}) \), using @def-polynomial-of-operator and @def-polynomial-of-matrix.
+The first formula is @thm-matrix-of-composition with \( \sB = \sC = \sD \). For sums and scalar multiples, the \( j \)-th column of \( \mtx{S + T}{\sB}{\sB} \) is \( \coord{S\v_j + T\v_j}{\sB} = \coord{S\v_j}{\sB} + \coord{T\v_j}{\sB} \) by @thm-coordinates-linear, and similarly \( \coord{cT\v_j}{\sB} = c\coord{T\v_j}{\sB} \). For powers we induct on \( k \): \( \mtx{T^0}{\sB}{\sB} = \mtx{\id_V}{\sB}{\sB} = \I_n \) by @exm-matrix-of-matrix-map (b), and if \( \mtx{T^k}{\sB}{\sB} = (\mtx{T}{\sB}{\sB})^k \), then \( \mtx{T^{k+1}}{\sB}{\sB} = \mtx{T^kT}{\sB}{\sB} = (\mtx{T}{\sB}{\sB})^k\mtx{T}{\sB}{\sB} = (\mtx{T}{\sB}{\sB})^{k+1} \), by the first formula and @def-polynomial-of-matrix. Finally, for \( p = \sum_k a_kx^k \), combining the three rules gives \( \mtx{p(T)}{\sB}{\sB} = \sum_k a_k\mtx{T^k}{\sB}{\sB} = \sum_k a_k(\mtx{T}{\sB}{\sB})^k = p(\mtx{T}{\sB}{\sB}) \), using @def-polynomial-of-operator and @def-polynomial-of-matrix.
 :::
 
-For example, with \( [D]_{\sE_3} \) from @exm-matrix-of-differentiation, \( ([D]_{\sE_3})^4 = [D^4]_{\sE_3} = 0 \), recovering @exm-differentiation-nilpotent in matrix form.
+For example, with \( \mtx{D}{\sE_3}{\sE_3} \) from @exm-matrix-of-differentiation, \( (\mtx{D}{\sE_3}{\sE_3})^4 = \mtx{D^4}{\sE_3}{\sE_3} = 0 \), recovering @exm-differentiation-nilpotent in matrix form.
 
 ## Linear maps are matrices
 
@@ -352,31 +352,31 @@ The subspaces involved are finite-dimensional (@thm-subspace-dimension), so @thm
 
 (b) \( (\Rightarrow) \) Suppose \( T \) is invertible. By @thm-matrix-of-composition and @exm-matrix-of-matrix-map (b),
 \[
-\mtx{T^{-1}}{\sC}{\sB}\,\A = \mtx{T^{-1}T}{\sB}{\sB} = [\id_V]_{\sB} = \I_n, \qquad \A\,\mtx{T^{-1}}{\sC}{\sB} = \mtx{TT^{-1}}{\sC}{\sC} = [\id_W]_{\sC} = \I_n .
+\mtx{T^{-1}}{\sC}{\sB}\,\A = \mtx{T^{-1}T}{\sB}{\sB} = \mtx{\id_V}{\sB}{\sB} = \I_n, \qquad \A\,\mtx{T^{-1}}{\sC}{\sB} = \mtx{TT^{-1}}{\sC}{\sC} = \mtx{\id_W}{\sC}{\sC} = \I_n .
 \]
 So \( \A \) is invertible with \( \A^{-1} = \mtx{T^{-1}}{\sC}{\sB} \) (@def-invertible-matrix).
 
-\( (\Leftarrow) \) Suppose \( \A \) is invertible. By @thm-linear-maps-isomorphic-to-matrices (for \( \cL(W, V) \) with bases \( \sC \) and \( \sB \)), there is \( S \in \cL(W, V) \) with \( \mtx{S}{\sC}{\sB} = \A^{-1} \). Then by @thm-matrix-of-composition, \( [ST]_{\sB} = \A^{-1}\A = \I_n = [\id_V]_{\sB} \). Since \( T' \mapsto [T']_{\sB} \) is injective on \( \cL(V) \) (@thm-linear-maps-isomorphic-to-matrices), \( ST = \id_V \). By @thm-one-sided-inverse-maps, \( T \) is invertible with \( T^{-1} = S \). This proves the theorem.
+\( (\Leftarrow) \) Suppose \( \A \) is invertible. By @thm-linear-maps-isomorphic-to-matrices (for \( \cL(W, V) \) with bases \( \sC \) and \( \sB \)), there is \( S \in \cL(W, V) \) with \( \mtx{S}{\sC}{\sB} = \A^{-1} \). Then by @thm-matrix-of-composition, \( \mtx{ST}{\sB}{\sB} = \A^{-1}\A = \I_n = \mtx{\id_V}{\sB}{\sB} \). Since \( T' \mapsto \mtx{T'}{\sB}{\sB} \) is injective on \( \cL(V) \) (@thm-linear-maps-isomorphic-to-matrices), \( ST = \id_V \). By @thm-one-sided-inverse-maps, \( T \) is invertible with \( T^{-1} = S \). This proves the theorem.
 :::
 
-So we may add one more item to the Invertible Operator Theorem (@thm-invertible-operator-tfae): for \( T \in \cL(V) \) and **any** basis \( \sB \) of \( V \), \( T \) is invertible if and only if \( [T]_{\sB} \) is invertible. Every item of the Invertible Matrix Theorem (@thm-invertible-tfae) now becomes a test for operators.
+So we may add one more item to the Invertible Operator Theorem (@thm-invertible-operator-tfae): for \( T \in \cL(V) \) and **any** basis \( \sB \) of \( V \), \( T \) is invertible if and only if \( \mtx{T}{\sB}{\sB} \) is invertible. Every item of the Invertible Matrix Theorem (@thm-invertible-tfae) now becomes a test for operators.
 
 ::: {#exm-rank-from-matrix}
 [Rank of \( \X \mapsto \X + \X\tp \)]
 
-Let \( T \colon M_2(\nR) \to M_2(\nR) \), \( T(\X) = \X + \X\tp \), and \( \sE = (\E_{11}, \E_{12}, \E_{21}, \E_{22}) \). Find \( [T]_{\sE} \), use it to find \( \rank T \), a basis of \( \ker T \) and a basis of \( \im T \), and decide whether \( T \) is invertible. Then do the same for the transpose map of @exm-matrix-of-transpose.
+Let \( T \colon M_2(\nR) \to M_2(\nR) \), \( T(\X) = \X + \X\tp \), and \( \sE = (\E_{11}, \E_{12}, \E_{21}, \E_{22}) \). Find \( \mtx{T}{\sE}{\sE} \), use it to find \( \rank T \), a basis of \( \ker T \) and a basis of \( \im T \), and decide whether \( T \) is invertible. Then do the same for the transpose map of @exm-matrix-of-transpose.
 :::
 
 ::: {.solution}
 *Matrix.* \( T(\E_{11}) = 2\E_{11} \), \( T(\E_{12}) = \E_{12} + \E_{21} = T(\E_{21}) \), \( T(\E_{22}) = 2\E_{22} \). So
 \[
-\A = [T]_{\sE} = \begin{pmatrix} 2 & 0 & 0 & 0 \\ 0 & 1 & 1 & 0 \\ 0 & 1 & 1 & 0 \\ 0 & 0 & 0 & 2 \end{pmatrix}.
+\A = \mtx{T}{\sE}{\sE} = \begin{pmatrix} 2 & 0 & 0 & 0 \\ 0 & 1 & 1 & 0 \\ 0 & 1 & 1 & 0 \\ 0 & 0 & 0 & 2 \end{pmatrix}.
 \]
 *Matrix world.* Subtracting row 2 from row 3 turns row 3 into a zero row; moving it to the bottom gives an echelon form with three non-zero rows and pivots in columns 1, 2, 4. So \( \rank \A = 3 \) and \( \nullity \A = 1 \). The free column is column 3, and \( \A\x = \0 \) gives \( x_1 = x_4 = 0 \), \( x_2 = -x_3 \), so \( \nul(\A) = \Span\bigl((0, -1, 1, 0)\bigr) \). By @thm-basis-column-space, the pivot columns \( (2, 0, 0, 0) \), \( (0, 1, 1, 0) \), \( (0, 0, 0, 2) \) form a basis of \( \col(\A) \).
 
 *Translate back.* By @thm-rank-map-equals-rank-matrix, \( \rank T = 3 \). The column \( (0, -1, 1, 0) \) is the coordinate vector of \( \E_{21} - \E_{12} \), so \( \ker T = \Span\left(\begin{pmatrix} 0 & -1 \\ 1 & 0 \end{pmatrix}\right) \), the skew-symmetric matrices. The basis of \( \col(\A) \) translates to \( 2\E_{11} \), \( \E_{12} + \E_{21} \), \( 2\E_{22} \), a basis of \( \im T \), which is therefore the space of symmetric matrices. Since \( \rank \A = 3 < 4 \), \( \A \) is not invertible (@thm-invertible-tfae), and neither is \( T \).
 
-*Transpose.* The matrix \( \P = [\X \mapsto \X\tp]_{\sE} \) from @exm-matrix-of-transpose satisfies \( \P^2 = \I_4 \) (swapping two coordinates twice does nothing). So \( \P \) is invertible with \( \P^{-1} = \P \), and by @thm-rank-map-equals-rank-matrix (b) the transpose map is invertible and is its own inverse, which is \( (\X\tp)\tp = \X \) again.
+*Transpose.* The matrix \( \P = \mtx{\X \mapsto \X\tp}{\sE}{\sE} \) from @exm-matrix-of-transpose satisfies \( \P^2 = \I_4 \) (swapping two coordinates twice does nothing). So \( \P \) is invertible with \( \P^{-1} = \P \), and by @thm-rank-map-equals-rank-matrix (b) the transpose map is invertible and is its own inverse, which is \( (\X\tp)\tp = \X \) again.
 :::
 
 We now have both halves of the working method: a basis turns spaces into \( F^n \) and maps into matrices, and every computation can be done with Chapter 2's tools. What we have not yet controlled is the choice. @exm-matrix-of-reflection shows that one map can have a complicated matrix in one basis and a diagonal one in another; the next section finds the formula relating the two.
@@ -425,7 +425,7 @@ Find the matrix of each operator in the given basis. (Both maps are linear; you 
 ::: {.solution}
 (a) \( T(1) = 1 \), \( T(x) = x + 1 = 1 + x \), \( T(x^2) = (x + 1)^2 = 1 + 2x + x^2 \). Their coordinates are \( (1, 0, 0) \), \( (1, 1, 0) \), \( (1, 2, 1) \), so
 \[
-[T]_{\sE} = \begin{pmatrix} 1 & 1 & 1 \\ 0 & 1 & 2 \\ 0 & 0 & 1 \end{pmatrix}.
+\mtx{T}{\sE}{\sE} = \begin{pmatrix} 1 & 1 & 1 \\ 0 & 1 & 2 \\ 0 & 0 & 1 \end{pmatrix}.
 \]
 (b) Multiplying \( \B \) by a matrix unit \( \E_{kj} \) on the right keeps column \( k \) of \( \B \) and moves it to column \( j \):
 \[
@@ -433,7 +433,7 @@ Find the matrix of each operator in the given basis. (Both maps are linear; you 
 \]
 Reading entries in the order \( (1,1), (1,2), (2,1), (2,2) \) gives the columns \( (1, 0, 3, 0) \), \( (0, 1, 0, 3) \), \( (2, 0, 4, 0) \), \( (0, 2, 0, 4) \), so
 \[
-[T]_{\sE} = \begin{pmatrix} 1 & 0 & 2 & 0 \\ 0 & 1 & 0 & 2 \\ 3 & 0 & 4 & 0 \\ 0 & 3 & 0 & 4 \end{pmatrix}.
+\mtx{T}{\sE}{\sE} = \begin{pmatrix} 1 & 0 & 2 & 0 \\ 0 & 1 & 0 & 2 \\ 3 & 0 & 4 & 0 \\ 0 & 3 & 0 & 4 \end{pmatrix}.
 \]
 :::
 
@@ -478,11 +478,11 @@ Let \( \sE_1 = (1, x) \), \( \sE_2 = (1, x, x^2) \) and \( \sE' \) the standard 
 ::: {#exr-matrix-of-a-map-c1}
 [C1: Upper triangular matrices and invariant subspaces]
 
-Let \( V \) be finite-dimensional and \( T \in \cL(V) \). A subspace \( U \) of \( V \) is **\( T \)-invariant** if \( T\u \in U \) for every \( \u \in U \). Let \( \sB = (\v_1, \dots, \v_n) \) be a basis of \( V \), and for \( 1 \le k \le n \) let \( U_k = \Span(\v_1, \dots, \v_k) \). Prove that \( [T]_{\sB} \) is upper triangular if and only if every \( U_k \) is \( T \)-invariant.
+Let \( V \) be finite-dimensional and \( T \in \cL(V) \). A subspace \( U \) of \( V \) is **\( T \)-invariant** if \( T\u \in U \) for every \( \u \in U \). Let \( \sB = (\v_1, \dots, \v_n) \) be a basis of \( V \), and for \( 1 \le k \le n \) let \( U_k = \Span(\v_1, \dots, \v_k) \). Prove that \( \mtx{T}{\sB}{\sB} \) is upper triangular if and only if every \( U_k \) is \( T \)-invariant.
 :::
 
 ::: {.solution}
-Let \( [T]_{\sB} = (a_{ij}) \), so \( T\v_j = \sum_{i=1}^{n} a_{ij}\v_i \) with unique coefficients (@def-matrix-of-linear-map). By @def-upper-triangular, \( [T]_{\sB} \) is upper triangular iff \( a_{ij} = 0 \) whenever \( i > j \), that is, iff
+Let \( \mtx{T}{\sB}{\sB} = (a_{ij}) \), so \( T\v_j = \sum_{i=1}^{n} a_{ij}\v_i \) with unique coefficients (@def-matrix-of-linear-map). By @def-upper-triangular, \( \mtx{T}{\sB}{\sB} \) is upper triangular iff \( a_{ij} = 0 \) whenever \( i > j \), that is, iff
 \[
 T\v_j \in U_j \quad \text{for every } j = 1, \dots, n. \tag{$\ast$}
 \]
@@ -490,7 +490,7 @@ Indeed, if \( a_{ij} = 0 \) for \( i > j \), then \( T\v_j = \sum_{i \le j} a_{i
 
 \( (\Rightarrow) \) Assume \( (\ast) \), and fix \( k \). For \( j \le k \), \( T\v_j \in U_j \subseteq U_k \). Let \( \u = \sum_{j \le k} c_j\v_j \in U_k \). Then \( T\u = \sum_{j \le k} c_jT\v_j \) by @thm-linear-combination, a combination of vectors of the subspace \( U_k \), so \( T\u \in U_k \) by @thm-span-subspace. Hence \( U_k \) is \( T \)-invariant.
 
-\( (\Leftarrow) \) Assume every \( U_k \) is \( T \)-invariant. For each \( j \), \( \v_j \in U_j \), so \( T\v_j \in U_j \) by invariance of \( U_j \). This is \( (\ast) \), so \( [T]_{\sB} \) is upper triangular.
+\( (\Leftarrow) \) Assume every \( U_k \) is \( T \)-invariant. For each \( j \), \( \v_j \in U_j \), so \( T\v_j \in U_j \) by invariance of \( U_j \). This is \( (\ast) \), so \( \mtx{T}{\sB}{\sB} \) is upper triangular.
 :::
 
 ::: {#exr-matrix-of-a-map-c2}
@@ -500,8 +500,8 @@ Let \( f_1(x) = e^x \), \( f_2(x) = xe^x \), \( f_3(x) = x^2e^x \), and let \( V
 
 ::: {.enumerate options="label=(\alph*)"}
 1. Prove that \( \sB = (f_1, f_2, f_3) \) is a basis of \( V \).
-2. Show that differentiation maps \( V \) into \( V \), and find \( [D]_{\sB} \) for \( D \in \cL(V) \), \( D(f) = f' \).
-3. Hence show that \( D \) is invertible on \( V \), and use \( ([D]_{\sB})^{-1} \) to find a function \( g \in V \) with \( g' = x^2e^x \).
+2. Show that differentiation maps \( V \) into \( V \), and find \( \mtx{D}{\sB}{\sB} \) for \( D \in \cL(V) \), \( D(f) = f' \).
+3. Hence show that \( D \) is invertible on \( V \), and use \( (\mtx{D}{\sB}{\sB})^{-1} \) to find a function \( g \in V \) with \( g' = x^2e^x \).
 :::
 
 *Hint: for (a), divide a vanishing combination by \( e^x \) and count roots.*
@@ -516,13 +516,13 @@ f_1' = e^x = f_1, \qquad f_2' = e^x + xe^x = f_1 + f_2, \qquad f_3' = 2xe^x + x^
 \]
 Each lies in \( V \), and \( D \) is linear, so \( D \) maps every combination of \( f_1, f_2, f_3 \) into \( V \) (@thm-linear-combination). Reading off coordinates as columns,
 \[
-[D]_{\sB} = \begin{pmatrix} 1 & 1 & 0 \\ 0 & 1 & 2 \\ 0 & 0 & 1 \end{pmatrix}.
+\mtx{D}{\sB}{\sB} = \begin{pmatrix} 1 & 1 & 0 \\ 0 & 1 & 2 \\ 0 & 0 & 1 \end{pmatrix}.
 \]
 (c) The matrix is upper triangular with non-zero diagonal entries, and one checks directly that
 \[
 \begin{pmatrix} 1 & -1 & 2 \\ 0 & 1 & -2 \\ 0 & 0 & 1 \end{pmatrix}\begin{pmatrix} 1 & 1 & 0 \\ 0 & 1 & 2 \\ 0 & 0 & 1 \end{pmatrix} = \I_3,
 \]
-so \( [D]_{\sB} \) is invertible with this inverse (@thm-one-sided-inverse). By @thm-rank-map-equals-rank-matrix (b), \( D \) is invertible on \( V \) and \( [D^{-1}]_{\sB} = ([D]_{\sB})^{-1} \). We want \( g = D^{-1}(f_3) \). Since \( \coord{f_3}{\sB} = (0, 0, 1) \), @thm-matrix-of-map-coordinates gives
+so \( \mtx{D}{\sB}{\sB} \) is invertible with this inverse (@thm-one-sided-inverse). By @thm-rank-map-equals-rank-matrix (b), \( D \) is invertible on \( V \) and \( \mtx{D^{-1}}{\sB}{\sB} = (\mtx{D}{\sB}{\sB})^{-1} \). We want \( g = D^{-1}(f_3) \). Since \( \coord{f_3}{\sB} = (0, 0, 1) \), @thm-matrix-of-map-coordinates gives
 \[
 \coord{g}{\sB} = \begin{pmatrix} 1 & -1 & 2 \\ 0 & 1 & -2 \\ 0 & 0 & 1 \end{pmatrix}\begin{pmatrix} 0 \\ 0 \\ 1 \end{pmatrix} = \begin{pmatrix} 2 \\ -2 \\ 1 \end{pmatrix},
 \]

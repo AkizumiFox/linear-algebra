@@ -2,7 +2,7 @@
 
 Chapter 12 studied positive definite matrices at length, and the previous section showed that the signature is what congruence remembers. Putting the two together costs almost nothing and buys two things: a vocabulary that covers the forms Chapter 12 had no name for, the indefinite and the semidefinite ones, and the classical application that made quadratic forms worth studying in the first place. Nothing from Chapter 12 is reproved here. The field is \( \nR \) throughout, since none of the five words below means anything without an order.
 
-Throughout, \( V \) is a finite-dimensional real vector space, \( \beta \) is a **symmetric** bilinear form on \( V \) (@def-symmetric-form), \( q(\v) = \beta(\v,\v) \) is its quadratic form (@def-quadratic-form), and \( \A = \mtx{\beta}{\sB}{} \) is its matrix in a basis \( \sB \) (@def-form-matrix), a real symmetric matrix.
+Throughout, \( V \) is a finite-dimensional real vector space, \( \beta \) is a **symmetric** bilinear form on \( V \) (@def-symmetric-form), \( q(\v) = \beta(\v,\v) \) is its quadratic form (@def-quadratic-form), and \( \A = \mtx{\beta}{\sB}{\sB} \) is its matrix in a basis \( \sB \) (@def-form-matrix), a real symmetric matrix.
 
 ## Five words for the sign of a form
 
@@ -70,7 +70,7 @@ So the five words sort the \( \tfrac12(n+1)(n+2) \) congruence classes of @cor-r
 ::: {#prp-definiteness-tests-for-forms}
 [Chapter 12's Tests, in the Language of Forms]
 
-Let \( \beta \) be a symmetric bilinear form on an \( n \)-dimensional real vector space, \( \A = \mtx{\beta}{\sB}{} \) its matrix in any basis, and \( \A_k \) the top-left \( k \times k \) corner of \( \A \). Then:
+Let \( \beta \) be a symmetric bilinear form on an \( n \)-dimensional real vector space, \( \A = \mtx{\beta}{\sB}{\sB} \) its matrix in any basis, and \( \A_k \) the top-left \( k \times k \) corner of \( \A \). Then:
 
 ::: {.enumerate options="label=(\alph*)"}
 1. \( \beta \) is positive definite \( \iff \) every eigenvalue of \( \A \) is positive \( \iff \) \( \det \A_k > 0 \) for \( k = 1, \dots, n \);

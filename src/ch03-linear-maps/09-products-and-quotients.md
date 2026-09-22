@@ -578,7 +578,7 @@ Let \( V \) be finite-dimensional, \( T \in \cL(V) \), and \( U \) a subspace wi
 1. Prove that \( \bar T(\v + U) \coloneqq T\v + U \) is a well-defined linear operator on \( V/U \).
 2. Let \( (\u_1, \dots, \u_m) \) be a basis of \( U \), extended to a basis \( \sB = (\u_1, \dots, \u_m, \w_1, \dots, \w_s) \) of \( V \). Show that
    \[
-   [T]_{\sB} = \begin{pmatrix} \A & \B \\ 0 & D \end{pmatrix},
+   \mtx{T}{\sB}{\sB} = \begin{pmatrix} \A & \B \\ 0 & D \end{pmatrix},
    \]
    where \( \A \in M_m(F) \) is the matrix of the restriction \( T|_U \colon U \to U \) in \( (\u_1, \dots, \u_m) \), \( D \in M_s(F) \) is the matrix of \( \bar T \) in \( (\w_1 + U, \dots, \w_s + U) \), and \( 0 \) is the \( s \times m \) zero matrix.
 3. Check (b) when \( T \) is differentiation on \( \nR[x]_{\le 2} \), with \( U = \nR[x]_{\le 1} \) and \( \sB = (1, x, x^2) \).
@@ -590,9 +590,9 @@ Let \( V \) be finite-dimensional, \( T \in \cL(V) \), and \( U \) a subspace wi
 ::: {.solution}
 (a) The map \( \pi \circ T \colon V \to V/U \), \( \v \mapsto T\v + U \), is linear as a composition of linear maps (@thm-composition-linear). For \( \u \in U \), \( T\u \in U \), so \( (\pi \circ T)(\u) = U \), the zero of \( V/U \); thus \( U \subseteq \ker(\pi \circ T) \). By @thm-quotient-universal-property (a) there is exactly one linear map \( \bar T \colon V/U \to V/U \) with \( \bar T(\v + U) = T\v + U \).
 
-(b) For \( j \le m \), \( T\u_j \in U \), so it is a combination of \( \u_1, \dots, \u_m \) only, and its \( \sB \)-coordinates are \( 0 \) in the last \( s \) places. These first \( m \) columns, restricted to their first \( m \) entries, are the columns of the matrix \( \A \) of \( T|_U \) (which maps \( U \) to \( U \) by hypothesis and is linear). For the remaining columns, write \( T\w_k = \sum_i b_{ik}\u_i + \sum_l d_{lk}\w_l \). Passing to \( V/U \), where \( \u_i + U = U \) is zero, gives \( \bar T(\w_k + U) = \sum_l d_{lk}(\w_l + U) \). So the \( s \times s \) matrix \( (d_{lk}) \) is the matrix \( D \) of \( \bar T \) in the basis \( (\w_1 + U, \dots, \w_s + U) \) of @thm-dimension-quotient, and the bottom-right block of \( [T]_{\sB} \) is \( D \).
+(b) For \( j \le m \), \( T\u_j \in U \), so it is a combination of \( \u_1, \dots, \u_m \) only, and its \( \sB \)-coordinates are \( 0 \) in the last \( s \) places. These first \( m \) columns, restricted to their first \( m \) entries, are the columns of the matrix \( \A \) of \( T|_U \) (which maps \( U \) to \( U \) by hypothesis and is linear). For the remaining columns, write \( T\w_k = \sum_i b_{ik}\u_i + \sum_l d_{lk}\w_l \). Passing to \( V/U \), where \( \u_i + U = U \) is zero, gives \( \bar T(\w_k + U) = \sum_l d_{lk}(\w_l + U) \). So the \( s \times s \) matrix \( (d_{lk}) \) is the matrix \( D \) of \( \bar T \) in the basis \( (\w_1 + U, \dots, \w_s + U) \) of @thm-dimension-quotient, and the bottom-right block of \( \mtx{T}{\sB}{\sB} \) is \( D \).
 
-(c) \( T(1) = 0 \), \( T(x) = 1 \), \( T(x^2) = 2x \), so \( [T]_{\sB} = \begin{pmatrix} 0 & 1 & 0 \\ 0 & 0 & 2 \\ 0 & 0 & 0 \end{pmatrix} \). Differentiation maps \( U = \nR[x]_{\le 1} \) into itself. The block \( \A = \begin{pmatrix} 0 & 1 \\ 0 & 0 \end{pmatrix} \) is the matrix of \( T \) on \( U \) in \( (1, x) \), the lower-left block is \( \begin{pmatrix} 0 & 0 \end{pmatrix} \), and the block \( D \) is the \( 1 \times 1 \) matrix \( (0) \): indeed \( \bar T(x^2 + U) = 2x + U = U \), the zero coset, since \( 2x \in U \).
+(c) \( T(1) = 0 \), \( T(x) = 1 \), \( T(x^2) = 2x \), so \( \mtx{T}{\sB}{\sB} = \begin{pmatrix} 0 & 1 & 0 \\ 0 & 0 & 2 \\ 0 & 0 & 0 \end{pmatrix} \). Differentiation maps \( U = \nR[x]_{\le 1} \) into itself. The block \( \A = \begin{pmatrix} 0 & 1 \\ 0 & 0 \end{pmatrix} \) is the matrix of \( T \) on \( U \) in \( (1, x) \), the lower-left block is \( \begin{pmatrix} 0 & 0 \end{pmatrix} \), and the block \( D \) is the \( 1 \times 1 \) matrix \( (0) \): indeed \( \bar T(x^2 + U) = 2x + U = U \), the zero coset, since \( 2x \in U \).
 :::
 
 ::: {#exr-products-and-quotients-c3}

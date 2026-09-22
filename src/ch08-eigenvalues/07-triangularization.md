@@ -4,7 +4,7 @@ Section 4 found two ways for diagonalization to fail. The field can be too small
 
 ## Triangular matrices and chains of invariant subspaces
 
-As in Section 2, start with the wish and unwind it. Let \( \sB = (\v_1, \dots, \v_n) \) be a basis of \( V \) and \( T \in \cL(V) \). Column \( j \) of \( [T]_{\sB} \) holds the coordinates of \( T\v_j \) (@def-matrix-of-linear-map). The matrix is upper triangular when every entry below the diagonal is \( 0 \) (@def-upper-triangular), that is, when \( T\v_j \) is a combination of \( \v_1, \dots, \v_j \) only. So the first basis vector must be sent to a multiple of itself, the second into the plane of the first two, and so on. In the language of Section 1, each of the growing spans must be invariant. Chapter 3 proved this as an exercise (@exr-matrix-of-a-map-c1), where the word *invariant* was introduced just for that problem; here it is again, with one more piece of information about the diagonal.
+As in Section 2, start with the wish and unwind it. Let \( \sB = (\v_1, \dots, \v_n) \) be a basis of \( V \) and \( T \in \cL(V) \). Column \( j \) of \( \mtx{T}{\sB}{\sB} \) holds the coordinates of \( T\v_j \) (@def-matrix-of-linear-map). The matrix is upper triangular when every entry below the diagonal is \( 0 \) (@def-upper-triangular), that is, when \( T\v_j \) is a combination of \( \v_1, \dots, \v_j \) only. So the first basis vector must be sent to a multiple of itself, the second into the plane of the first two, and so on. In the language of Section 1, each of the growing spans must be invariant. Chapter 3 proved this as an exercise (@exr-matrix-of-a-map-c1), where the word *invariant* was introduced just for that problem; here it is again, with one more piece of information about the diagonal.
 
 ::: {#thm-triangular-iff-flag}
 [Triangular Matrices and Chains of Invariant Subspaces]
@@ -12,16 +12,16 @@ As in Section 2, start with the wish and unwind it. Let \( \sB = (\v_1, \dots, \
 Let \( V \) be finite-dimensional with basis \( \sB = (\v_1, \dots, \v_n) \), let \( T \in \cL(V) \), and put \( U_0 = \{\0\} \) and \( U_k = \Span(\v_1, \dots, \v_k) \) for \( 1 \le k \le n \). The following are equivalent:
 
 ::: {.enumerate options="label=(\alph*)"}
-1. \( [T]_{\sB} \) is upper triangular;
+1. \( \mtx{T}{\sB}{\sB} \) is upper triangular;
 2. \( T\v_k \in U_k \) for every \( k = 1, \dots, n \);
 3. each \( U_k \) is \( T \)-invariant.
 :::
 
-In that case, if \( d_1, \dots, d_n \) are the diagonal entries of \( [T]_{\sB} \), then \( (T - d_k\,\id_V)(U_k) \subseteq U_{k-1} \) for every \( k \).
+In that case, if \( d_1, \dots, d_n \) are the diagonal entries of \( \mtx{T}{\sB}{\sB} \), then \( (T - d_k\,\id_V)(U_k) \subseteq U_{k-1} \) for every \( k \).
 :::
 
 ::: {.proof}
-Write \( [T]_{\sB} = (a_{ij}) \), so that \( T\v_j = \sum_i a_{ij}\v_i \) with unique coefficients (@def-matrix-of-linear-map, @thm-unique-representation).
+Write \( \mtx{T}{\sB}{\sB} = (a_{ij}) \), so that \( T\v_j = \sum_i a_{ij}\v_i \) with unique coefficients (@def-matrix-of-linear-map, @thm-unique-representation).
 
 (a) \( \Leftrightarrow \) (b). If \( a_{ij} = 0 \) for \( i > j \), then \( T\v_j = \sum_{i \le j} a_{ij}\v_i \in U_j \). Conversely, if \( T\v_j \in U_j \), it has a representation using only \( \v_1, \dots, \v_j \); by uniqueness, \( a_{ij} = 0 \) for \( i > j \).
 
@@ -39,7 +39,7 @@ The operators for which such a basis exists deserve a name.
 ::: {#def-triangularizable}
 [Triangularizable]
 
-Let \( V \) be a finite-dimensional vector space over \( F \). An operator \( T \in \cL(V) \) is **triangularizable over \( F \)** if there **exists** a basis \( \sB \) of \( V \) such that \( [T]_{\sB} \) is upper triangular. A matrix \( \A \in M_n(F) \) is **triangularizable over \( F \)** if there **exist** an **invertible** \( \P \in M_n(F) \) and an upper triangular \( \U \in M_n(F) \) with \( \P^{-1}\A \P = \U \).
+Let \( V \) be a finite-dimensional vector space over \( F \). An operator \( T \in \cL(V) \) is **triangularizable over \( F \)** if there **exists** a basis \( \sB \) of \( V \) such that \( \mtx{T}{\sB}{\sB} \) is upper triangular. A matrix \( \A \in M_n(F) \) is **triangularizable over \( F \)** if there **exist** an **invertible** \( \P \in M_n(F) \) and an upper triangular \( \U \in M_n(F) \) with \( \P^{-1}\A \P = \U \).
 :::
 
 As for diagonalizability, \( \A \) is triangularizable over \( F \) exactly when \( T_{\A} \) is, by @thm-similar-iff-same-operator.
@@ -77,15 +77,15 @@ Let \( V \) be a finite-dimensional vector space over \( F \) with \( \dim V = n
 :::
 
 ::: {.idea}
-Take one eigenvector, extend, recurse. Since \( p_T \) splits, it has a root in \( F \), so \( T \) has an eigenvector \( \v_1 \). Put \( U = \Span(\v_1) \) and extend \( \v_1 \) to a basis. By @thm-invariant-subspace-matrix the matrix looks like
+Take one eigenvector, extend, recurse. Since \( p_T \) splits, it has a root in \( F \), so \( T \) has an eigenvector \( \v_1 \). Put \( U = \Span(\v_1) \) and extend \( \v_1 \) to a basis \( \sB \), with \( \bar\sB \) the basis it induces on \( V/U \). By @thm-invariant-subspace-matrix the matrix looks like
 \[
-\begin{pmatrix} \lambda & \ast \\ 0 & [\bar T] \end{pmatrix},
+\mtx{T}{\sB}{\sB} = \begin{pmatrix} \lambda & \ast \\ 0 & \mtx{\bar T}{\bar\sB}{\bar\sB} \end{pmatrix},
 \]
-where \( \bar T \) is the induced operator on the smaller space \( V/U \). The first column is already right. If \( [\bar T] \) could be made triangular, the whole matrix would be. Now \( \bar T \) lives on a space of dimension \( n - 1 \), and \( p_T = (x - \lambda)\,p_{\bar T} \), so \( p_{\bar T} \) splits too: this is the induction on dimension. The only technical point is that a basis of \( V/U \) lifts to vectors that, together with \( \v_1 \), form a basis of \( V \).
+where \( \bar T \) is the induced operator on the smaller space \( V/U \). The first column is already right. If \( \mtx{\bar T}{\bar\sB}{\bar\sB} \) could be made triangular, the whole matrix would be. Now \( \bar T \) lives on a space of dimension \( n - 1 \), and \( p_T = (x - \lambda)\,p_{\bar T} \), so \( p_{\bar T} \) splits too: this is the induction on dimension. The only technical point is that a basis of \( V/U \) lifts to vectors that, together with \( \v_1 \), form a basis of \( V \).
 :::
 
 ::: {.proof}
-\( (\Rightarrow) \) Let \( [T]_{\sB} \) be upper triangular with diagonal entries \( d_1, \dots, d_n \). The matrix \( x\I_n - [T]_{\sB} \) is upper triangular with diagonal entries \( x - d_i \), and @thm-det-triangular holds over \( F[x] \) (the remark at the end of Chapter 6, §4). So \( p_T = (x - d_1)\cdots(x - d_n) \) by @def-charpoly-operator, which splits (@def-polynomial-splits).
+\( (\Rightarrow) \) Let \( \mtx{T}{\sB}{\sB} \) be upper triangular with diagonal entries \( d_1, \dots, d_n \). The matrix \( x\I_n - \mtx{T}{\sB}{\sB} \) is upper triangular with diagonal entries \( x - d_i \), and @thm-det-triangular holds over \( F[x] \) (the remark at the end of Chapter 6, §4). So \( p_T = (x - d_1)\cdots(x - d_n) \) by @def-charpoly-operator, which splits (@def-polynomial-splits).
 
 \( (\Leftarrow) \) We prove, by induction on \( n \ge 1 \), that every operator on an \( n \)-dimensional space whose characteristic polynomial splits is triangularizable. For \( n = 1 \), every \( 1 \times 1 \) matrix is upper triangular.
 
@@ -97,15 +97,15 @@ Let \( n \ge 2 \), and assume the statement for spaces of dimension \( n - 1 \).
 \]
 Canceling the non-zero factor \( x - c_1 \) (@cor-polynomial-no-zero-divisors (2)) gives \( p_{\bar T} = (x - c_2)\cdots(x - c_n) \), which splits.
 
-*Apply the induction hypothesis.* There is a basis \( \bar\sC = (\w_2 + U, \dots, \w_n + U) \) of \( V/U \) with \( [\bar T]_{\bar\sC} \) upper triangular, for some \( \w_2, \dots, \w_n \in V \).
+*Apply the induction hypothesis.* There is a basis \( \bar\sC = (\w_2 + U, \dots, \w_n + U) \) of \( V/U \) with \( \mtx{\bar T}{\bar\sC}{\bar\sC} \) upper triangular, for some \( \w_2, \dots, \w_n \in V \).
 
 *Lift the basis.* Let \( \sB = (\v_1, \w_2, \dots, \w_n) \). Suppose \( a\v_1 + b_2\w_2 + \dots + b_n\w_n = \0 \). Passing to cosets, and using \( \v_1 \in U \), gives \( b_2(\w_2 + U) + \dots + b_n(\w_n + U) = \0 + U \) (@thm-quotient-space-operations-well-defined). Since \( \bar\sC \) is a basis, all \( b_i = 0 \). Then \( a\v_1 = \0 \) with \( \v_1 \ne \0 \), so \( a = 0 \) (@thm-zero-product). Thus \( \sB \) is a linearly independent list of \( n \) vectors in \( V \), hence a basis (@thm-right-size-basis).
 
 *The matrix.* \( \sB \) extends the basis \( (\v_1) \) of \( U \), and the cosets of the added vectors form \( \bar\sC \). By @thm-invariant-subspace-matrix (b),
 \[
-[T]_{\sB} = \begin{pmatrix} c_1 & \ast \\ 0 & [\bar T]_{\bar\sC} \end{pmatrix},
+\mtx{T}{\sB}{\sB} = \begin{pmatrix} c_1 & \ast \\ 0 & \mtx{\bar T}{\bar\sC}{\bar\sC} \end{pmatrix},
 \]
-where the \( 0 \) is a column of \( n - 1 \) zeros. The block \( [\bar T]_{\bar\sC} \) is upper triangular, so \( [T]_{\sB} \) is upper triangular. This completes the induction.
+where the \( 0 \) is a column of \( n - 1 \) zeros. The block \( \mtx{\bar T}{\bar\sC}{\bar\sC} \) is upper triangular, so \( \mtx{T}{\sB}{\sB} \) is upper triangular. This completes the induction.
 
 For \( \A \in M_n(F) \), apply the result to \( T_{\A} \), using @thm-similar-iff-same-operator.
 :::
@@ -137,7 +137,7 @@ A diagonalization displays the eigenvalues. A triangularization does too, with t
 ::: {#thm-diagonal-of-triangular-form}
 [The Diagonal of a Triangular Form]
 
-Let \( V \) be finite-dimensional with \( \dim V = n \ge 1 \), \( T \in \cL(V) \), and let \( \sB \) be a basis with \( [T]_{\sB} \) upper triangular, with diagonal entries \( d_1, \dots, d_n \). Then:
+Let \( V \) be finite-dimensional with \( \dim V = n \ge 1 \), \( T \in \cL(V) \), and let \( \sB \) be a basis with \( \mtx{T}{\sB}{\sB} \) upper triangular, with diagonal entries \( d_1, \dots, d_n \). Then:
 
 ::: {.enumerate options="label=(\alph*)"}
 1. \( p_T = (x - d_1)(x - d_2)\cdots(x - d_n) \);
@@ -153,7 +153,7 @@ In particular, any two triangular forms of \( T \) have the same diagonal entrie
 
 (b) By @thm-eigenvalue-characterizations, the eigenvalues are the roots of \( p_T \) in \( F \), and \( \lambda \) is a root of \( \prod_i (x - d_i) \) exactly when \( \prod_i (\lambda - d_i) = 0 \), that is, when \( \lambda = d_i \) for some \( i \) (@thm-field-basic-properties). By @thm-multiplicity-of-product, \( a_T(\lambda) = \operatorname{mult}_\lambda(p_T) = \sum_i \operatorname{mult}_\lambda(x - d_i) \). Each term is \( 1 \) if \( d_i = \lambda \) and \( 0 \) otherwise, by @thm-remainder-theorem (b), since \( x - d_i \) is not divisible by \( (x - \lambda)^2 \) for degree reasons. So the sum counts the indices with \( d_i = \lambda \).
 
-(c) By @def-trace-operator, \( \tr T = \tr[T]_{\sB} = \sum_i d_i \). By @def-det-operator and @thm-det-triangular, \( \det T = \det[T]_{\sB} = \prod_i d_i \).
+(c) By @def-trace-operator, \( \tr T = \tr\mtx{T}{\sB}{\sB} = \sum_i d_i \). By @def-det-operator and @thm-det-triangular, \( \det T = \det\mtx{T}{\sB}{\sB} = \prod_i d_i \).
 
 The final statement follows from (b): the number of times \( \lambda \) occurs on the diagonal is \( a_T(\lambda) \), which does not depend on the basis.
 :::
@@ -199,9 +199,9 @@ The last determinant is \( 0 \cdot 1 - (x - 2)(-1) = x - 2 \), so \( p_{\A} = (x
 \[
 \A\e_2 = (0, 2, -1) = 0\,\v_1 + 2\e_2 - \e_3, \qquad \A\e_3 = (1, 1, 2) = 1\,\v_1 + 0\,\e_2 + 2\e_3 .
 \]
-Dropping the \( \v_1 \)-coordinates, the induced operator \( \bar \A \) on \( \nR^3/U \) has, in the basis \( (\e_2 + U, \e_3 + U) \), the matrix
+Dropping the \( \v_1 \)-coordinates, the induced operator \( \bar \A \) on \( \nR^3/U \) has, in the basis \( \bar\sB = (\e_2 + U, \e_3 + U) \), the matrix
 \[
-[\bar \A] = \begin{pmatrix} 2 & 0 \\ -1 & 2 \end{pmatrix},
+\mtx{\bar \A}{\bar\sB}{\bar\sB} = \begin{pmatrix} 2 & 0 \\ -1 & 2 \end{pmatrix},
 \]
 with \( p_{\bar \A} = (x - 2)^2 \), as the proof predicts.
 
@@ -228,7 +228,7 @@ Different choices in Step 2 give different triangular matrices, with the same di
 ::: {.enumerate options="label=(\alph*)"}
 1. Define what it means for \( \A \in M_n(F) \) to be triangularizable over \( F \).
 2. State the Triangularization Theorem.
-3. For a basis \( (\v_1, \dots, \v_n) \), which subspaces must be invariant for \( [T]_{\sB} \) to be upper triangular?
+3. For a basis \( (\v_1, \dots, \v_n) \), which subspaces must be invariant for \( \mtx{T}{\sB}{\sB} \) to be upper triangular?
 4. True or false: every \( \A \in M_n(\nR) \) is triangularizable over \( \nR \). Justify your answer.
 5. True or false: every triangularizable matrix is diagonalizable. Justify your answer.
 6. Let \( \A \in M_4(\nC) \) have \( p_{\A} = (x - 3)^3(x + 1) \). What are the diagonal entries of any upper triangular matrix similar to \( \A \), and what are \( \tr \A \) and \( \det \A \)?
@@ -318,7 +318,7 @@ Let \( \A \in M_n(\nC) \), \( n \ge 1 \), and let \( \P^{-1}\A \P = \U \) be upp
 :::: {#exr-triangularization-c1}
 [C1: A second proof of Cayley–Hamilton]
 
-Let \( V \) be finite-dimensional with \( \dim V = n \ge 1 \), and let \( T \in \cL(V) \) have a basis \( \sB = (\v_1, \dots, \v_n) \) with \( [T]_{\sB} \) upper triangular, with diagonal entries \( d_1, \dots, d_n \). Let \( U_0 = \{\0\} \) and \( U_k = \Span(\v_1, \dots, \v_k) \).
+Let \( V \) be finite-dimensional with \( \dim V = n \ge 1 \), and let \( T \in \cL(V) \) have a basis \( \sB = (\v_1, \dots, \v_n) \) with \( \mtx{T}{\sB}{\sB} \) upper triangular, with diagonal entries \( d_1, \dots, d_n \). Let \( U_0 = \{\0\} \) and \( U_k = \Span(\v_1, \dots, \v_k) \).
 
 ::: {.enumerate options="label=(\alph*)"}
 1. Let \( S_k = (T - d_1\,\id_V)(T - d_2\,\id_V)\cdots(T - d_k\,\id_V) \). Prove by induction on \( k \) that \( S_k(U_k) = \{\0\} \) for \( 1 \le k \le n \).
@@ -358,7 +358,7 @@ Let \( \A \in M_n(\nR) \), \( n \ge 1 \), regarded also as a complex matrix.
 
 (b) By (a), \( \A\x \) and \( \A\y \) lie in \( W = \Span(\x, \y) \), so \( W \) is invariant by @lem-invariance-on-spanning-list. Since \( \z \ne \0 \), at least one of \( \x, \y \) is non-zero, so \( \dim W \ge 1 \), and \( \dim W \le 2 \) since \( W \) is spanned by two vectors.
 
-(c) Choose a basis \( \sB \) of \( V \), let \( \A = [T]_{\sB} \in M_n(\nR) \), and let \( W \) be as in (b). Let \( \Phi \colon V \to \nR^n \) be the coordinate isomorphism \( \v \mapsto \coord{\v}{\sB} \) (@cor-coordinate-isomorphism). Then \( \Phi^{-1}(W) \) is a subspace of the same dimension as \( W \), and for \( \v \in \Phi^{-1}(W) \), \( \Phi(T\v) = \A\Phi(\v) \in W \) (@thm-matrix-of-map-coordinates), so \( T\v \in \Phi^{-1}(W) \).
+(c) Choose a basis \( \sB \) of \( V \), let \( \A = \mtx{T}{\sB}{\sB} \in M_n(\nR) \), and let \( W \) be as in (b). Let \( \Phi \colon V \to \nR^n \) be the coordinate isomorphism \( \v \mapsto \coord{\v}{\sB} \) (@cor-coordinate-isomorphism). Then \( \Phi^{-1}(W) \) is a subspace of the same dimension as \( W \), and for \( \v \in \Phi^{-1}(W) \), \( \Phi(T\v) = \A\Phi(\v) \in W \) (@thm-matrix-of-map-coordinates), so \( T\v \in \Phi^{-1}(W) \).
 
 (d) With \( \x = (0, -2, 1) \) and \( \y = (-2, 1, 0) \): \( \C\x = (2, -1, 0) = -\y \) and \( \C\y = (0, -2, 1) = \x \). So \( \C\z = \C\x + i\C\y = -\y + i\x = i(\x + i\y) = i\z \), and \( \z \) is an eigenvector for \( i \) (here \( a = 0 \), \( b = 1 \), matching (a)). The invariant plane is \( \Span((0, -2, 1), (-2, 1, 0)) \), which is the plane \( x + 2y + 4z = 0 \). Over \( \nR \), \( \C \) also has the eigenvalue \( 2 \) with eigenvector \( (1, 0, 1) \), an invariant line.
 :::

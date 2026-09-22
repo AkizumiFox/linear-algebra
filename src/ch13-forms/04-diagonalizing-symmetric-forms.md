@@ -17,7 +17,7 @@ Let \( \beta \) be a bilinear form on \( V \). Vectors \( \u, \v \in V \) are **
 \]
 :::
 
-The definition is engineered to say exactly one thing about matrices: by @def-form-matrix, \( \sB \) is an orthogonal basis for \( \beta \) precisely when \( \mtx{\beta}{\sB}{} \) is a **diagonal** matrix, with \( q(\v_1), \dots, q(\v_n) \) down the diagonal. Two warnings come free. The vectors of such a basis are not required to satisfy \( q(\v_i) = 1 \), and over a general field they usually cannot be rescaled to. And a vector may be orthogonal to itself: \( q(\v_i) = 0 \) is allowed, and for a degenerate form it is unavoidable.
+The definition is engineered to say exactly one thing about matrices: by @def-form-matrix, \( \sB \) is an orthogonal basis for \( \beta \) precisely when \( \mtx{\beta}{\sB}{\sB} \) is a **diagonal** matrix, with \( q(\v_1), \dots, q(\v_n) \) down the diagonal. Two warnings come free. The vectors of such a basis are not required to satisfy \( q(\v_i) = 1 \), and over a general field they usually cannot be rescaled to. And a vector may be orthogonal to itself: \( q(\v_i) = 0 \) is allowed, and for a degenerate form it is unavoidable.
 
 What an orthogonal basis buys is that \( q \) becomes a sum of squares with no cross terms. If \( \v = c_1\v_1 + \dots + c_n\v_n \) and \( d_i = q(\v_i) \), then expanding by bilinearity and deleting the \( i \ne j \) terms,
 
@@ -83,7 +83,7 @@ The restriction of \( \beta \) to \( W \times W \) is a bilinear form on \( W \)
 
 Concatenating bases of the summands of a direct sum gives a basis of it (@thm-direct-sum-k-criteria, (a) \( \Leftrightarrow \) (d)), so \( \sB = (\v_1, \v_2, \dots, \v_n) \) is a basis of \( V \). It is orthogonal for \( \beta \): for \( j \ge 2 \) we have \( \v_j \in W = \ker\varphi \), so \( \beta(\v_1, \v_j) = \varphi(\v_j) = 0 \), and \( \beta(\v_j, \v_1) = 0 \) by symmetry; and for \( 2 \le i \ne j \) the value \( \beta(\v_i,\v_j) \) is \( 0 \) by the choice of the basis of \( W \). This completes the induction.
 
-For the matrix statement, let \( \A \in M_n(F) \) be symmetric and let \( \beta(\x,\y) = \x\tp\A\y \) on \( V = F^n \), which is symmetric by @prp-form-symmetry-matrix and has \( \mtx{\beta}{\sE}{} = \A \) in the standard basis \( \sE \). Take an orthogonal basis \( \sB \) as above and let \( \P = \mtx{\id}{\sB}{\sE} \), the matrix whose columns are the vectors of \( \sB \), which is invertible. By @thm-change-of-basis-form, \( \mtx{\beta}{\sB}{} = \P\tp\A\P \), and this matrix is diagonal. This proves the theorem.
+For the matrix statement, let \( \A \in M_n(F) \) be symmetric and let \( \beta(\x,\y) = \x\tp\A\y \) on \( V = F^n \), which is symmetric by @prp-form-symmetry-matrix and has \( \mtx{\beta}{\sE}{\sE} = \A \) in the standard basis \( \sE \). Take an orthogonal basis \( \sB \) as above and let \( \P = \mtx{\id}{\sB}{\sE} \), the matrix whose columns are the vectors of \( \sB \), which is invertible. By @thm-change-of-basis-form, \( \mtx{\beta}{\sB}{\sB} = \P\tp\A\P \), and this matrix is diagonal. This proves the theorem.
 :::
 
 Two hypotheses did visible work. Symmetry was used twice: to make \( \beta(\v_j,\v_1) \) vanish along with \( \beta(\v_1,\v_j) \), and to keep the restriction to \( W \) symmetric so the induction could run. The characteristic hypothesis was used exactly once, inside @lem-anisotropic-vector-exists — and that single use is essential: Exercise C2 below exhibits a symmetric matrix over \( \nF_2 \) that is congruent to no diagonal matrix at all.
@@ -220,7 +220,7 @@ Contrast this with similarity, where complex symmetric matrices are not classifi
 [A1]
 
 ::: {.enumerate options="label=(\alph*)"}
-1. Define what it means for an ordered basis to be an **orthogonal basis for a bilinear form** \( \beta \), and say what that means about \( \mtx{\beta}{\sB}{} \).
+1. Define what it means for an ordered basis to be an **orthogonal basis for a bilinear form** \( \beta \), and say what that means about \( \mtx{\beta}{\sB}{\sB} \).
 2. State @thm-symmetric-form-diagonalizable with all of its hypotheses.
 3. Which step of the proof uses \( \operatorname{char} F \ne 2 \), and what exactly is divided by?
 4. Determine whether the following statement is correct, and justify your answer: if \( \P\tp\A\P = \diag(d_1, \dots, d_n) \), then the \( d_i \) are the eigenvalues of \( \A \).
@@ -229,7 +229,7 @@ Contrast this with similarity, where complex symmetric matrices are not classifi
 ::::
 
 ::: {.solution}
-(a) \( \sB = (\v_1,\dots,\v_n) \) is orthogonal for \( \beta \) if \( \beta(\v_i,\v_j) = 0 \) whenever \( i \ne j \). Equivalently \( \mtx{\beta}{\sB}{} \) is diagonal, with entries \( q(\v_i) \).
+(a) \( \sB = (\v_1,\dots,\v_n) \) is orthogonal for \( \beta \) if \( \beta(\v_i,\v_j) = 0 \) whenever \( i \ne j \). Equivalently \( \mtx{\beta}{\sB}{\sB} \) is diagonal, with entries \( q(\v_i) \).
 
 (b) If \( \operatorname{char} F \ne 2 \), \( V \) is finite-dimensional over \( F \) and \( \beta \) is a symmetric bilinear form on \( V \), then \( V \) has an orthogonal basis for \( \beta \); equivalently every symmetric \( \A \in M_n(F) \) is congruent to a diagonal matrix.
 

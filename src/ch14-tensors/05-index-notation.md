@@ -33,7 +33,7 @@ and the evaluation of a functional on a vector is \( \xi(\v) = \xi_i v^i \). The
 **Examples.**
 
 1. **Type \( (1,1) \): an operator.** If \( t \in T^1_1(V) \) corresponds to \( S \in \cL(V) \) under @thm-tensor-hom-iso, then \( T^i_j \) is the \( (i, j) \) entry of \( \mtx{S}{\sB}{\sB} \): the tensor \( \v_i \otimes \varphi^j \) is the operator \( \u \mapsto \varphi^j(\u)\v_i \), whose matrix is \( \E_{ij} \). Upper index = row, lower index = column.
-2. **Type \( (0,2) \): a bilinear form.** If \( t \in T^0_2(V) \) corresponds to the bilinear form \( \beta \) (@prp-dual-of-tensor and @exr-contraction-and-trace-b3), then \( T_{ij} = \beta(\v_i, \v_j) \), which is the Gram matrix \( \mtx{\beta}{\sB}{} \) of @def-form-matrix. Both indices downstairs.
+2. **Type \( (0,2) \): a bilinear form.** If \( t \in T^0_2(V) \) corresponds to the bilinear form \( \beta \) (@prp-dual-of-tensor and @exr-contraction-and-trace-b3), then \( T_{ij} = \beta(\v_i, \v_j) \), which is the Gram matrix \( \mtx{\beta}{\sB}{\sB} \) of @def-form-matrix. Both indices downstairs.
 3. **Contraction.** In components, @def-contraction-slots is "set an upper index equal to a lower one and sum". For \( t \in T^1_1(V) \),
 \[
 C^1_1(t) = T^i_i \quad \Big(= \sum_{i=1}^{n} T^i_i\Big),
@@ -364,7 +364,7 @@ Let \( V \) be finite-dimensional over \( F \) and let \( \beta \) be a non-dege
 ::::
 
 ::: {.solution}
-(a) By @prp-nondegenerate-iff-invertible, \( \beta \) is non-degenerate exactly when \( \G = \mtx{\beta}{\sB}{} \) is invertible.
+(a) By @prp-nondegenerate-iff-invertible, \( \beta \) is non-degenerate exactly when \( \G = \mtx{\beta}{\sB}{\sB} \) is invertible.
 
 (b) By @thm-change-of-basis-form, \( \G' = \P\tp\G\P \), so \( (\G')^{-1} = \P^{-1}\G^{-1}(\P\tp)^{-1} = \Q\G^{-1}\Q\tp \), that is \( (g')^{kl} = q^{k}_{i}q^{l}_{j}g^{ij} \): the inverse array carries two upper indices. Also \( (T')_{l} = p^{r}_{l}T_{r} \) by @thm-tensor-transformation-law. Hence
 \[

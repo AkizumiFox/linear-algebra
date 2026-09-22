@@ -4,7 +4,7 @@ So far we have diagonalized or triangularized one operator at a time. Many probl
 
 ## When can two operators share a basis?
 
-Let \( V \) be finite-dimensional and \( S, T \in \cL(V) \). Suppose one basis \( \sB \) makes both \( [S]_{\sB} \) and \( [T]_{\sB} \) diagonal. Diagonal matrices multiply entry by entry on the diagonal, so \( [S]_{\sB}[T]_{\sB} = [T]_{\sB}[S]_{\sB} \). By @cor-matrix-of-polynomial-of-operator this says \( [ST]_{\sB} = [TS]_{\sB} \), and since \( T \mapsto [T]_{\sB} \) is injective (@thm-linear-maps-isomorphic-to-matrices), \( ST = TS \). So **sharing a diagonalizing basis forces commuting**. The same is not true for triangular matrices: \( \begin{pmatrix} 1 & 1 \\ 0 & 2 \end{pmatrix} \) and \( \begin{pmatrix} 1 & 0 \\ 0 & 2 \end{pmatrix} \) are both upper triangular, and their products in the two orders are \( \begin{pmatrix} 1 & 2 \\ 0 & 4 \end{pmatrix} \) and \( \begin{pmatrix} 1 & 1 \\ 0 & 4 \end{pmatrix} \). We will see, though, that commuting is a convenient sufficient condition in the triangular case as well.
+Let \( V \) be finite-dimensional and \( S, T \in \cL(V) \). Suppose one basis \( \sB \) makes both \( \mtx{S}{\sB}{\sB} \) and \( \mtx{T}{\sB}{\sB} \) diagonal. Diagonal matrices multiply entry by entry on the diagonal, so \( \mtx{S}{\sB}{\sB}\mtx{T}{\sB}{\sB} = \mtx{T}{\sB}{\sB}\mtx{S}{\sB}{\sB} \). By @cor-matrix-of-polynomial-of-operator this says \( \mtx{ST}{\sB}{\sB} = \mtx{TS}{\sB}{\sB} \), and since \( T \mapsto \mtx{T}{\sB}{\sB} \) is injective (@thm-linear-maps-isomorphic-to-matrices), \( ST = TS \). So **sharing a diagonalizing basis forces commuting**. The same is not true for triangular matrices: \( \begin{pmatrix} 1 & 1 \\ 0 & 2 \end{pmatrix} \) and \( \begin{pmatrix} 1 & 0 \\ 0 & 2 \end{pmatrix} \) are both upper triangular, and their products in the two orders are \( \begin{pmatrix} 1 & 2 \\ 0 & 4 \end{pmatrix} \) and \( \begin{pmatrix} 1 & 1 \\ 0 & 4 \end{pmatrix} \). We will see, though, that commuting is a convenient sufficient condition in the triangular case as well.
 
 The question for this section is the converse: if \( ST = TS \), can we find a common basis? Here are the commuting pairs to keep in mind.
 
@@ -118,7 +118,7 @@ Section 7 triangularized one operator by splitting off an eigenvector and passin
 ::: {#thm-simultaneous-triangularization}
 [Simultaneous Triangularization]
 
-Let \( V \) be a finite-dimensional vector space over \( F \) with \( \dim V = n \ge 1 \), and let \( \cF \subseteq \cL(V) \) be a non-empty commuting family such that \( p_T \) splits over \( F \) for every \( T \in \cF \). Then there is **one** basis \( \sB \) of \( V \) such that \( [T]_{\sB} \) is upper triangular for **every** \( T \in \cF \).
+Let \( V \) be a finite-dimensional vector space over \( F \) with \( \dim V = n \ge 1 \), and let \( \cF \subseteq \cL(V) \) be a non-empty commuting family such that \( p_T \) splits over \( F \) for every \( T \in \cF \). Then there is **one** basis \( \sB \) of \( V \) such that \( \mtx{T}{\sB}{\sB} \) is upper triangular for **every** \( T \in \cF \).
 
 In particular, if \( \A_1, \dots, \A_r \in M_n(\nC) \) commute pairwise, there is an invertible \( \P \in M_n(\nC) \) such that \( \P^{-1}\A_i\P \) is upper triangular for every \( i \).
 :::
@@ -136,18 +136,18 @@ The family \( \bar\cF \) is commuting: for \( S, T \in \cF \) and \( \v \in V \)
 \[
 \bar S\bar T(\v + U) = \bar S(T\v + U) = ST\v + U = TS\v + U = \bar T\bar S(\v + U).
 \]
-Each \( p_{\bar T} \) splits by @lem-invariant-charpoly-splits, and \( \dim V/U = n - 1 \) by @thm-dimension-quotient. By the induction hypothesis there are \( \w_2, \dots, \w_n \in V \) such that \( \bar\sB = (\w_2 + U, \dots, \w_n + U) \) is a basis of \( V/U \) in which every \( [\bar T]_{\bar\sB} \) is upper triangular.
+Each \( p_{\bar T} \) splits by @lem-invariant-charpoly-splits, and \( \dim V/U = n - 1 \) by @thm-dimension-quotient. By the induction hypothesis there are \( \w_2, \dots, \w_n \in V \) such that \( \bar\sB = (\w_2 + U, \dots, \w_n + U) \) is a basis of \( V/U \) in which every \( \mtx{\bar T}{\bar\sB}{\bar\sB} \) is upper triangular.
 
 Let \( \sB = (\v_1, \w_2, \dots, \w_n) \). It is linearly independent: if \( a_1\v_1 + a_2\w_2 + \dots + a_n\w_n = \0 \), then passing to \( V/U \), where \( \v_1 + U \) is the zero coset, gives \( a_2(\w_2 + U) + \dots + a_n(\w_n + U) = \0 \), so \( a_2 = \dots = a_n = 0 \) by the independence of \( \bar\sB \); then \( a_1\v_1 = \0 \) with \( \v_1 \ne \0 \) gives \( a_1 = 0 \). A linearly independent list of length \( n = \dim V \) is a basis (@thm-right-size-basis). Now \( \sB \) is a basis of \( U \) extended to a basis of \( V \), and \( \bar\sB \) is exactly the list of cosets in @thm-invariant-subspace-matrix. Hence for every \( T \in \cF \),
 \[
-[T]_{\sB} = \begin{pmatrix} \lambda_T & \ast \\ 0 & [\bar T]_{\bar\sB} \end{pmatrix},
+\mtx{T}{\sB}{\sB} = \begin{pmatrix} \lambda_T & \ast \\ 0 & \mtx{\bar T}{\bar\sB}{\bar\sB} \end{pmatrix},
 \]
 with a \( 1 \times 1 \) upper-left block, a zero column below it, and an upper triangular lower-right block. Such a matrix is upper triangular. This completes the induction.
 
-For the matrix statement, apply this to the family \( \{T_{\A_1}, \dots, T_{\A_r}\} \) on \( \nC^n \), whose characteristic polynomials split by @cor-complex-polynomial-splits, and let \( \P \) have the vectors of \( \sB \) as columns; then \( \P^{-1}\A_i\P = [T_{\A_i}]_{\sB} \) (@thm-change-of-basis-maps).
+For the matrix statement, apply this to the family \( \{T_{\A_1}, \dots, T_{\A_r}\} \) on \( \nC^n \), whose characteristic polynomials split by @cor-complex-polynomial-splits, and let \( \P \) have the vectors of \( \sB \) as columns; then \( \P^{-1}\A_i\P = \mtx{T_{\A_i}}{\sB}{\sB} \) (@thm-change-of-basis-maps).
 :::
 
-A first use: if \( S \) and \( T \) commute and both characteristic polynomials split, the diagonal entries of \( [S + T]_{\sB} \) and \( [ST]_{\sB} \) are the sums and products of the diagonal entries of \( [S]_{\sB} \) and \( [T]_{\sB} \), position by position. For the sum this is entrywise; for the product, the \( (i, i) \)-entry of \( \X \Y \) is \( \sum_k x_{ik}y_{ki} \) (@def-matrix-multiplication), and when \( \X \) and \( \Y \) are upper triangular only \( k = i \) can contribute, since \( x_{ik} = 0 \) for \( k < i \) and \( y_{ki} = 0 \) for \( k > i \). By @thm-diagonal-of-triangular-form, those diagonal entries are the eigenvalues. So the eigenvalues of \( S + T \) are of the form \( \lambda + \mu \), with \( \lambda \) an eigenvalue of \( S \) and \( \mu \) one of \( T \), **paired by position in a common triangular form**. Section 2 warned that nothing like this holds without commuting.
+A first use: if \( S \) and \( T \) commute and both characteristic polynomials split, the diagonal entries of \( \mtx{S + T}{\sB}{\sB} \) and \( \mtx{ST}{\sB}{\sB} \) are the sums and products of the diagonal entries of \( \mtx{S}{\sB}{\sB} \) and \( \mtx{T}{\sB}{\sB} \), position by position. For the sum this is entrywise; for the product, the \( (i, i) \)-entry of \( \X \Y \) is \( \sum_k x_{ik}y_{ki} \) (@def-matrix-multiplication), and when \( \X \) and \( \Y \) are upper triangular only \( k = i \) can contribute, since \( x_{ik} = 0 \) for \( k < i \) and \( y_{ki} = 0 \) for \( k > i \). By @thm-diagonal-of-triangular-form, those diagonal entries are the eigenvalues. So the eigenvalues of \( S + T \) are of the form \( \lambda + \mu \), with \( \lambda \) an eigenvalue of \( S \) and \( \mu \) one of \( T \), **paired by position in a common triangular form**. Section 2 warned that nothing like this holds without commuting.
 
 ## Simultaneous diagonalization
 
@@ -156,7 +156,7 @@ Diagonalization is the stronger wish, and it needs a stronger hypothesis: each o
 ::: {#def-simultaneously-diagonalizable}
 [Simultaneously Diagonalizable]
 
-Let \( V \) be finite-dimensional. A family \( \cF \subseteq \cL(V) \) is **simultaneously diagonalizable** if there is **one** basis \( \sB \) of \( V \) such that \( [T]_{\sB} \) is diagonal for **every** \( T \in \cF \). Matrices \( \A_1, \dots, \A_r \in M_n(F) \) are simultaneously diagonalizable over \( F \) if there is **one** invertible \( \P \in M_n(F) \) with every \( \P^{-1}\A_i\P \) diagonal.
+Let \( V \) be finite-dimensional. A family \( \cF \subseteq \cL(V) \) is **simultaneously diagonalizable** if there is **one** basis \( \sB \) of \( V \) such that \( \mtx{T}{\sB}{\sB} \) is diagonal for **every** \( T \in \cF \). Matrices \( \A_1, \dots, \A_r \in M_n(F) \) are simultaneously diagonalizable over \( F \) if there is **one** invertible \( \P \in M_n(F) \) with every \( \P^{-1}\A_i\P \) diagonal.
 :::
 
 Equivalently, by the unwinding in Section 4, \( V \) has a basis whose vectors are eigenvectors of every \( T \in \cF \). The opening of this section showed that a simultaneously diagonalizable family is commuting. For diagonalizable operators the converse holds.
@@ -174,13 +174,13 @@ Split \( V \) into the eigenspaces of \( T \). On each piece \( T \) is a scalar
 :::
 
 ::: {.proof}
-\( (\Rightarrow) \) Let \( \sB \) be a basis with \( [S]_{\sB} \) and \( [T]_{\sB} \) diagonal. Diagonal matrices commute, so by @cor-matrix-of-polynomial-of-operator, \( [ST]_{\sB} = [S]_{\sB}[T]_{\sB} = [T]_{\sB}[S]_{\sB} = [TS]_{\sB} \). The map \( \R \mapsto [\R]_{\sB} \) is injective (@thm-linear-maps-isomorphic-to-matrices), so \( ST = TS \).
+\( (\Rightarrow) \) Let \( \sB \) be a basis with \( \mtx{S}{\sB}{\sB} \) and \( \mtx{T}{\sB}{\sB} \) diagonal. Diagonal matrices commute, so by @cor-matrix-of-polynomial-of-operator, \( \mtx{ST}{\sB}{\sB} = \mtx{S}{\sB}{\sB}\mtx{T}{\sB}{\sB} = \mtx{T}{\sB}{\sB}\mtx{S}{\sB}{\sB} = \mtx{TS}{\sB}{\sB} \). The map \( \R \mapsto \mtx{\R}{\sB}{\sB} \) is injective (@thm-linear-maps-isomorphic-to-matrices), so \( ST = TS \).
 
 \( (\Leftarrow) \) Suppose \( ST = TS \). Let \( \lambda_1, \dots, \lambda_k \) be the distinct eigenvalues of \( T \), and put \( U_i = E_{\lambda_i}(T) \). Since \( T \) is diagonalizable, @thm-diagonalization (c) gives
 \[
 V = U_1 \oplus \dots \oplus U_k .
 \]
-Each \( U_i \) is \( S \)-invariant (@thm-commuting-preserves-eigenspaces), and \( S \) is diagonalizable, so \( S|_{U_i} \) is diagonalizable by @cor-restriction-diagonalizable. Hence \( U_i \) has a basis \( \sB_i \) of eigenvectors of \( S|_{U_i} \) (@thm-diagonalization (b)), which are eigenvectors of \( S \). They are also eigenvectors of \( T \), being non-zero vectors of \( U_i = E_{\lambda_i}(T) \). Let \( \sB \) be the list \( \sB_1, \dots, \sB_k \). Since the sum is direct, \( \sB \) is a basis of \( V \) by @thm-direct-sum-k-criteria ((a) \( \Rightarrow \) (d)). Every vector of \( \sB \) is an eigenvector of both \( S \) and \( T \), so \( [S]_{\sB} \) and \( [T]_{\sB} \) are diagonal (@thm-diagonalization, (a) \( \Leftrightarrow \) (b)).
+Each \( U_i \) is \( S \)-invariant (@thm-commuting-preserves-eigenspaces), and \( S \) is diagonalizable, so \( S|_{U_i} \) is diagonalizable by @cor-restriction-diagonalizable. Hence \( U_i \) has a basis \( \sB_i \) of eigenvectors of \( S|_{U_i} \) (@thm-diagonalization (b)), which are eigenvectors of \( S \). They are also eigenvectors of \( T \), being non-zero vectors of \( U_i = E_{\lambda_i}(T) \). Let \( \sB \) be the list \( \sB_1, \dots, \sB_k \). Since the sum is direct, \( \sB \) is a basis of \( V \) by @thm-direct-sum-k-criteria ((a) \( \Rightarrow \) (d)). Every vector of \( \sB \) is an eigenvector of both \( S \) and \( T \), so \( \mtx{S}{\sB}{\sB} \) and \( \mtx{T}{\sB}{\sB} \) are diagonal (@thm-diagonalization, (a) \( \Leftrightarrow \) (b)).
 
 For matrices, apply this to \( T_{\A} \) and \( T_{\B} \) on \( F^n \), which are diagonalizable because \( \A \) and \( \B \) are (@def-diagonalizable), and commute because \( \A \B = \B \A \); let \( \P \) have the common eigenvectors as columns, as in Section 4.
 :::
@@ -245,7 +245,7 @@ Let \( V \) be a finite-dimensional vector space over \( F \) with \( \dim V \ge
 :::
 
 ::: {.proof}
-\( (\Rightarrow) \) If one basis makes every \( [T]_{\sB} \) diagonal, any two of these matrices commute, and the argument of @thm-simultaneous-diagonalization \( (\Rightarrow) \) gives \( ST = TS \) for all \( S, T \in \cF \).
+\( (\Rightarrow) \) If one basis makes every \( \mtx{T}{\sB}{\sB} \) diagonal, any two of these matrices commute, and the argument of @thm-simultaneous-diagonalization \( (\Rightarrow) \) gives \( ST = TS \) for all \( S, T \in \cF \).
 
 \( (\Leftarrow) \) Suppose \( \cF \) is commuting. If \( \cF \) is empty, any basis works; assume not.
 
@@ -253,7 +253,7 @@ Let \( V \) be a finite-dimensional vector space over \( F \) with \( \dim V \ge
 
 **Step 2: a finite spanning subfamily.** Let \( N = \dim\cL(V) = (\dim V)^2 \) (@thm-linear-maps-isomorphic-to-matrices). Every linearly independent list in \( \cL(V) \) has length at most \( N \) (@thm-basis-extension), so among the linearly independent lists of members of \( \cF \) there is one of greatest length, say \( (T_1, \dots, T_r) \), with \( r \ge 1 \) because a single non-zero member is independent (if every member of \( \cF \) is \( 0 \), any basis works). For every \( T \in \cF \), the list \( (T_1, \dots, T_r, T) \) is longer, hence dependent, so \( T \in \Span(T_1, \dots, T_r) \) by @lem-append-independent.
 
-**Step 3.** By Step 1 there is a basis \( \sB \) of \( V \) with every \( [T_i]_{\sB} \) diagonal. For \( T \in \cF \), write \( T = c_1T_1 + \dots + c_rT_r \); then \( [T]_{\sB} = c_1[T_1]_{\sB} + \dots + c_r[T_r]_{\sB} \) (@cor-matrix-of-polynomial-of-operator), a linear combination of diagonal matrices, hence diagonal. So \( \sB \) diagonalizes every member of \( \cF \).
+**Step 3.** By Step 1 there is a basis \( \sB \) of \( V \) with every \( \mtx{T_i}{\sB}{\sB} \) diagonal. For \( T \in \cF \), write \( T = c_1T_1 + \dots + c_rT_r \); then \( \mtx{T}{\sB}{\sB} = c_1\mtx{T_1}{\sB}{\sB} + \dots + c_r\mtx{T_r}{\sB}{\sB} \) (@cor-matrix-of-polynomial-of-operator), a linear combination of diagonal matrices, hence diagonal. So \( \sB \) diagonalizes every member of \( \cF \).
 :::
 
 A typical infinite family is \( \{ p(T) : p \in F[x] \} \) for a diagonalizable \( T \). It is commuting, each \( p(T) \) is diagonalizable (Section 8), and here one basis works for the whole family without any of the theorem's machinery, namely an eigenbasis of \( T \): an eigenvector of \( T \) for \( \lambda \) is an eigenvector of \( p(T) \) for \( p(\lambda) \) (@exr-eigenvalues-and-eigenvectors-b3). The theorem says the same for families that are not generated by one operator in so visible a way.
@@ -319,7 +319,7 @@ A common eigenvector is an eigenvector of \( \A \), so it lies in \( E_1(\A) \) 
 \[
 \B\u_1 = (3, 3, 0) = 3\u_1, \qquad \B\u_2 = (-2, 1, 3) = \u_1 + 3\u_2 .
 \]
-So \( [\B|_{E_1(\A)}] = \begin{pmatrix} 3 & 1 \\ 0 & 3 \end{pmatrix} \) in the basis \( (\u_1, \u_2) \). Its only eigenvalue is \( 3 \), and its eigenvectors are the non-zero multiples of \( (1, 0) \), that is, of \( \u_1 \). Hence the common eigenvectors are exactly the non-zero multiples of \( (1, 1, 0) \) and the non-zero multiples of \( (0, 0, 1) \).
+So in the basis \( \sB = (\u_1, \u_2) \), \( \mtx{\B|_{E_1(\A)}}{\sB}{\sB} = \begin{pmatrix} 3 & 1 \\ 0 & 3 \end{pmatrix} \). Its only eigenvalue is \( 3 \), and its eigenvectors are the non-zero multiples of \( (1, 0) \), that is, of \( \u_1 \). Hence the common eigenvectors are exactly the non-zero multiples of \( (1, 1, 0) \) and the non-zero multiples of \( (0, 0, 1) \).
 
 (c) By (b), any list of common eigenvectors lies in \( \Span((1, 1, 0), \e_3) \), a plane, so no three of them form a basis of \( \nR^3 \). Hence no basis diagonalizes both. The failing hypothesis is that \( \B \) is diagonalizable: \( p_{\B} = (x - 3)^2(x - 5) \) (from the block computation, \( p_{\B} = p_{\B|_{E_1(\A)}}\,p_{\bar \B} \), or directly), and \( \B - 3\I = \begin{pmatrix} -1 & 1 & 0 \\ -1 & 1 & 0 \\ 2 & -2 & 2 \end{pmatrix} \) has rank \( 2 \), so \( g_{\B}(3) = 1 < 2 = a_{\B}(3) \).
 :::

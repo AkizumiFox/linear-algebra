@@ -21,7 +21,7 @@ One of the three counts is already known to be an invariant, by a result of Sect
 :::
 
 ::: {.solution}
-The count \( n_0 \). A diagonal matrix has rank equal to its number of non-zero entries, so \( n_+ + n_- = \rank\mtx{\beta}{\sB}{} \), and congruence preserves rank (@thm-congruence-preserves-rank). Hence \( n_+ + n_- \) is the same for every orthogonal basis, and so is \( n_0 = n - (n_+ + n_-) \). What is **not** yet known is how that total splits into positives and negatives — which is exactly the work left for the theorem below.
+The count \( n_0 \). A diagonal matrix has rank equal to its number of non-zero entries, so \( n_+ + n_- = \rank\mtx{\beta}{\sB}{\sB} \), and congruence preserves rank (@thm-congruence-preserves-rank). Hence \( n_+ + n_- \) is the same for every orthogonal basis, and so is \( n_0 = n - (n_+ + n_-) \). What is **not** yet known is how that total splits into positives and negatives — which is exactly the work left for the theorem below.
 :::
 
 ## The law of inertia
@@ -29,7 +29,7 @@ The count \( n_0 \). A diagonal matrix has rank equal to its number of non-zero 
 ::: {#thm-sylvester-inertia}
 [Sylvester's Law of Inertia]
 
-Let \( \beta \) be a symmetric bilinear form on a real vector space \( V \) with \( \dim V = n \), and let \( \sB \) and \( \sB' \) be two orthogonal bases for \( \beta \). Let \( (n_+, n_-, n_0) \) be the numbers of positive, negative and zero diagonal entries of \( \mtx{\beta}{\sB}{} \), and \( (n_+', n_-', n_0') \) the corresponding numbers for \( \mtx{\beta}{\sB'}{} \). Then
+Let \( \beta \) be a symmetric bilinear form on a real vector space \( V \) with \( \dim V = n \), and let \( \sB \) and \( \sB' \) be two orthogonal bases for \( \beta \). Let \( (n_+, n_-, n_0) \) be the numbers of positive, negative and zero diagonal entries of \( \mtx{\beta}{\sB}{\sB} \), and \( (n_+', n_-', n_0') \) the corresponding numbers for \( \mtx{\beta}{\sB'}{\sB'} \). Then
 \[
 n_+ = n_+', \qquad n_- = n_-', \qquad n_0 = n_0' .
 \]
@@ -45,7 +45,7 @@ Write \( \sB = (\v_1, \dots, \v_n) \) and \( \sB' = (\v_1', \dots, \v_n') \), an
 d_1, \dots, d_{n_+} > 0, \qquad d_{n_+'+1}', \dots, d_n' \le 0 .
 \]
 
-As in the Quick check, \( n_+ + n_- = \rank\mtx{\beta}{\sB}{} = \rank\mtx{\beta}{\sB'}{} = n_+' + n_-' \) by @thm-congruence-preserves-rank, and \( n_0 = n - (n_+ + n_-) \). So it suffices to prove \( n_+ = n_+' \); the other two equalities then follow.
+As in the Quick check, \( n_+ + n_- = \rank\mtx{\beta}{\sB}{\sB} = \rank\mtx{\beta}{\sB'}{\sB'} = n_+' + n_-' \) by @thm-congruence-preserves-rank, and \( n_0 = n - (n_+ + n_-) \). So it suffices to prove \( n_+ = n_+' \); the other two equalities then follow.
 
 Suppose not. Swapping the names of the two bases if necessary, we may assume \( n_+ > n_+' \). Put
 \[
@@ -208,7 +208,7 @@ Over \( \nR \), then, a symmetric matrix carries exactly two pieces of congruenc
 ::: {.solution}
 (a) Diagonalize the associated form in an orthogonal basis. The inertia is the triple \( (n_+, n_-, n_0) \) of numbers of positive, negative and zero diagonal entries, and the signature is the pair \( (n_+, n_-) \).
 
-(b) If \( \beta \) is a symmetric bilinear form on a finite-dimensional real vector space and \( \sB, \sB' \) are two orthogonal bases for \( \beta \), then the two matrices \( \mtx{\beta}{\sB}{} \) and \( \mtx{\beta}{\sB'}{} \) have the same numbers of positive, negative and zero diagonal entries.
+(b) If \( \beta \) is a symmetric bilinear form on a finite-dimensional real vector space and \( \sB, \sB' \) are two orthogonal bases for \( \beta \), then the two matrices \( \mtx{\beta}{\sB}{\sB} \) and \( \mtx{\beta}{\sB'}{\sB'} \) have the same numbers of positive, negative and zero diagonal entries.
 
 (c) The count \( n_0 \), equivalently the sum \( n_+ + n_- \), because that sum is the rank and congruence preserves rank (@thm-congruence-preserves-rank).
 

@@ -105,7 +105,7 @@ which says \( t \in D \). Conversely every \( t \in D \) commutes with each \( \
 
 *Conclusion.* \( B \) is a subalgebra of \( \End(W) \) containing \( \id_W \) and acting semisimply, so @thm-double-commutant gives \( B = B'' = D \). Therefore \( \Phi \) is surjective, and with Step 3 it is an isomorphism of algebras onto \( \End(V_1) \times \dots \times \End(V_k) \).
 
-**Step 5: matrices.** Choosing a basis \( \sB_i \) of \( V_i \) makes \( T \mapsto [T]_{\sB_i} \) a linear bijection \( \End(V_i) \to M_{n_i}(F) \) (@thm-linear-maps-isomorphic-to-matrices) which is multiplicative (@thm-matrix-of-composition) and sends \( \id_{V_i} \) to \( \I_{n_i} \), hence an isomorphism of algebras. Doing this in each slot gives
+**Step 5: matrices.** Choosing a basis \( \sB_i \) of \( V_i \) makes \( T \mapsto \mtx{T}{\sB_i}{\sB_i} \) a linear bijection \( \End(V_i) \to M_{n_i}(F) \) (@thm-linear-maps-isomorphic-to-matrices) which is multiplicative (@thm-matrix-of-composition) and sends \( \id_{V_i} \) to \( \I_{n_i} \), hence an isomorphism of algebras. Doing this in each slot gives
 \[
 A \cong M_{n_1}(F) \times \dots \times M_{n_k}(F).
 \]

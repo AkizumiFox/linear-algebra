@@ -28,7 +28,7 @@ For \( \A \in M_n(F) \), the minimal polynomial is \( m_{\A} \coloneqq m_{T_{\A}
 
 In words: we look at **all** polynomials \( p \) with \( p(T) = 0 \), where \( p(T) \) replaces \( x^k \) by \( T^k \) and the constant term \( c \) by \( c\,\id_V \) (@def-polynomial-of-operator). They are exactly the multiples of one polynomial \( m_T \). Among the generators of this ideal, which differ by non-zero constant factors, we pick **the monic** one. The second sentence of the definition gives the same polynomial described by size: it is the monic polynomial of **least degree** that kills \( T \).
 
-**Well-definedness.** Three things need checking, and Chapter 5 did all three. *Existence:* \( I_T \ne \{0\} \) because \( V \) is finite-dimensional (@thm-annihilator-ideal (c)). *Uniqueness:* a non-zero ideal of \( F[x] \) has exactly one monic generator (@thm-ideals-principal). *The two descriptions agree:* the same theorem says that the monic generator is the unique monic polynomial of least degree in the ideal. For a matrix, \( p(T_{\A}) = 0 \) if and only if \( p(\A) = 0 \), because \( [p(T_{\A})]_{\sE} = p(\A) \) in the standard basis \( \sE \) (@cor-matrix-of-polynomial-of-operator). So \( I_{T_{\A}} = \{ p : p(\A) = 0 \} \), and the matrix version is the operator version for \( T_{\A} \).
+**Well-definedness.** Three things need checking, and Chapter 5 did all three. *Existence:* \( I_T \ne \{0\} \) because \( V \) is finite-dimensional (@thm-annihilator-ideal (c)). *Uniqueness:* a non-zero ideal of \( F[x] \) has exactly one monic generator (@thm-ideals-principal). *The two descriptions agree:* the same theorem says that the monic generator is the unique monic polynomial of least degree in the ideal. For a matrix, \( p(T_{\A}) = 0 \) if and only if \( p(\A) = 0 \), because \( \mtx{p(T_{\A})}{\sE}{\sE} = p(\A) \) in the standard basis \( \sE \) (@cor-matrix-of-polynomial-of-operator). So \( I_{T_{\A}} = \{ p : p(\A) = 0 \} \), and the matrix version is the operator version for \( T_{\A} \).
 
 The name records the second description: \( m_T \) is the annihilating polynomial of minimal degree. The first description is the one we use in proofs, because it hands us a divisibility for free.
 
@@ -225,11 +225,11 @@ The minimal polynomial belongs to the operator, not to a basis. That is what mak
 ::: {#thm-minimal-polynomial-similarity}
 [Similar Matrices Have the Same Minimal Polynomial]
 
-Let \( V \) be finite-dimensional with a basis \( \sB \), and let \( T \in \cL(V) \). Then \( m_T = m_{[T]_{\sB}} \). If \( \A, \B \in M_n(F) \) are similar, then \( m_{\A} = m_{\B} \).
+Let \( V \) be finite-dimensional with a basis \( \sB \), and let \( T \in \cL(V) \). Then \( m_T = m_{\mtx{T}{\sB}{\sB}} \). If \( \A, \B \in M_n(F) \) are similar, then \( m_{\A} = m_{\B} \).
 :::
 
 ::: {.proof}
-By @cor-matrix-of-polynomial-of-operator, \( [p(T)]_{\sB} = p([T]_{\sB}) \) for every \( p \in F[x] \). An operator is zero exactly when its matrix is zero (@thm-linear-maps-isomorphic-to-matrices), so \( p(T) = 0 \) if and only if \( p([T]_{\sB}) = 0 \). Thus \( T \) and \( [T]_{\sB} \) have the same ideal of annihilating polynomials, and hence the same monic generator. If \( \B = \P^{-1}\A \P \), then \( p(\B) = \P^{-1}p(\A)\P \) by @prp-similarity-invariants (c), so again \( p(\A) = 0 \) if and only if \( p(\B) = 0 \), and \( m_{\A} = m_{\B} \).
+By @cor-matrix-of-polynomial-of-operator, \( \mtx{p(T)}{\sB}{\sB} = p(\mtx{T}{\sB}{\sB}) \) for every \( p \in F[x] \). An operator is zero exactly when its matrix is zero (@thm-linear-maps-isomorphic-to-matrices), so \( p(T) = 0 \) if and only if \( p(\mtx{T}{\sB}{\sB}) = 0 \). Thus \( T \) and \( \mtx{T}{\sB}{\sB} \) have the same ideal of annihilating polynomials, and hence the same monic generator. If \( \B = \P^{-1}\A \P \), then \( p(\B) = \P^{-1}p(\A)\P \) by @prp-similarity-invariants (c), so again \( p(\A) = 0 \) if and only if \( p(\B) = 0 \), and \( m_{\A} = m_{\B} \).
 :::
 
 The theorem gives a quick non-similarity test. For instance \( \I_2 \) and \( \J = \begin{pmatrix} 1 & 1 \\ 0 & 1 \end{pmatrix} \) have the same characteristic polynomial, but \( m_{\I_2} = x - 1 \ne (x - 1)^2 = m_{\J} \), so they are not similar.
@@ -394,7 +394,7 @@ Let \( \dim V = n \ge 1 \) and \( T \in \cL(V) \). A vector \( \v \) is a **cycl
 ::: {.solution}
 (a) Let \( q = \sum_{k=0}^{d} b_kx^k \ne 0 \) with \( d \le n - 1 \). Then \( q(T)\v = \sum_k b_kT^k\v \ne \0 \), because the vectors \( T^k\v \), \( k \le n - 1 \), are independent and some \( b_k \ne 0 \). So \( q(T) \ne 0 \), and by @thm-minimal-polynomial-divides, \( \deg m_T \ge n \).
 
-(b) Let \( \sB = (\v, T\v, \dots, T^{n-1}\v) \). For \( k \le n - 2 \), \( T(T^k\v) = T^{k+1}\v \), the \( (k + 2) \)-th basis vector, so column \( k + 1 \) of \( [T]_{\sB} \) is \( \e_{k+2} \). The last column is \( \coord{T^n\v}{\sB} = (-a_0, \dots, -a_{n-1}) \). This is \( \C(p) \). By @thm-minimal-polynomial-similarity and @exr-minimal-polynomial-b3 (d), \( m_T = m_{\C(p)} = p \). By @def-charpoly-operator and @exr-characteristic-polynomial-c1 (b), \( p_T = p_{\C(p)} = p \). (For \( n = 1 \), \( T\v = -a_0\v \) and \( T = -a_0\,\id_V \), so \( m_T = p_T = x + a_0 \) directly.)
+(b) Let \( \sB = (\v, T\v, \dots, T^{n-1}\v) \). For \( k \le n - 2 \), \( T(T^k\v) = T^{k+1}\v \), the \( (k + 2) \)-th basis vector, so column \( k + 1 \) of \( \mtx{T}{\sB}{\sB} \) is \( \e_{k+2} \). The last column is \( \coord{T^n\v}{\sB} = (-a_0, \dots, -a_{n-1}) \). This is \( \C(p) \). By @thm-minimal-polynomial-similarity and @exr-minimal-polynomial-b3 (d), \( m_T = m_{\C(p)} = p \). By @def-charpoly-operator and @exr-characteristic-polynomial-c1 (b), \( p_T = p_{\C(p)} = p \). (For \( n = 1 \), \( T\v = -a_0\v \) and \( T = -a_0\,\id_V \), so \( m_T = p_T = x + a_0 \) directly.)
 
 (c) \( \J\e_2 = (1, 1) \), and \( (\e_2, (1, 1)) \) is independent, so \( \e_2 \) is cyclic. For \( \I_2 \), every \( \v \) has \( \I_2\v = \v \), so \( (\v, \I_2\v) \) is dependent. This matches (a): \( \deg m_{\I_2} = 1 < 2 \).
 :::

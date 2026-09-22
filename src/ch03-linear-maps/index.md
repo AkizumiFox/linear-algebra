@@ -25,5 +25,5 @@ Two subspaces measure how far a linear map is from being injective and surjectiv
 - **Count with Rank–Nullity.** When \( \dim V = \dim W \), injective, surjective and bijective are the same; check the easiest one.
 - **Basis of the kernel, then extend.** The proof pattern behind Rank–Nullity, the same one that proved the dimension formula for sums.
 - **Abstract space → write down a matrix.** Choose a basis that makes the map simple, then compute with its matrix.
-- **The change-of-basis square.** Go around the square instead of across it: \( [T]_{\sB'} = \P^{-1}[T]_{\sB}\P \).
+- **The change-of-basis square.** Go around the square instead of across it: \( \mtx{T}{\sB'}{\sB'} = \P^{-1}\mtx{T}{\sB}{\sB}\P \).
 - **Check well-definedness on cosets.** Every operation on a quotient space, and every map out of one, starts with this check.

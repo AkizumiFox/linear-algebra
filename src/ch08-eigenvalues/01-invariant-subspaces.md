@@ -1,12 +1,12 @@
 # Invariant Subspaces
 
-Chapter 3 raised a question it could not answer: given an operator \( T \) on a finite-dimensional space, how simple can its matrix \( [T]_{\sB} \) be made by choosing the basis \( \sB \) well? Chapter 7 found the first piece of an answer. A zero block in the lower-left corner of \( [T]_{\sB} \) appears exactly when the first few basis vectors span a subspace that \( T \) maps into itself. This section gives that property a name, collects the standard examples, and shows that it can fail badly: some operators map almost no subspace into itself. It ends by recording how such subspaces cut an operator, and its characteristic polynomial, into smaller pieces. The next section looks at the smallest non-zero case, a line, and finds eigenvectors there.
+Chapter 3 raised a question it could not answer: given an operator \( T \) on a finite-dimensional space, how simple can its matrix \( \mtx{T}{\sB}{\sB} \) be made by choosing the basis \( \sB \) well? Chapter 7 found the first piece of an answer. A zero block in the lower-left corner of \( \mtx{T}{\sB}{\sB} \) appears exactly when the first few basis vectors span a subspace that \( T \) maps into itself. This section gives that property a name, collects the standard examples, and shows that it can fail badly: some operators map almost no subspace into itself. It ends by recording how such subspaces cut an operator, and its characteristic polynomial, into smaller pieces. The next section looks at the smallest non-zero case, a line, and finds eigenvectors there.
 
 ## Subspaces an operator maps into itself
 
 After a vector space we studied its subspaces, and after linear maps their kernels and images. For an operator \( T \in \cL(V) \), the domain and the codomain are the same space, so a new question makes sense: which subspaces of \( V \) are compatible with \( T \)?
 
-Here is the result that makes the question worth asking. Let \( V \) be finite-dimensional, \( T \in \cL(V) \), and \( U \) a subspace with \( \{\0\} \ne U \ne V \). Take a basis \( (\u_1, \dots, \u_k) \) of \( U \) and extend it to a basis \( \sB = (\u_1, \dots, \u_k, \w_1, \dots, \w_l) \) of \( V \). By @thm-invariant-subspace-block-triangular, the lower-left \( l \times k \) block of \( [T]_{\sB} \) is zero **if and only if** \( T\u \in U \) for every \( \u \in U \). For example, the cyclic shift \( T(x, y, z) = (y, z, x) \) on \( \nR^3 \) keeps the plane \( x + y + z = 0 \) in place, and in @exm-cyclic-shift-block-triangular this produced a matrix with a zero corner. The property "\( T \) maps \( U \) into \( U \)" is what we need to control, so it gets a name.
+Here is the result that makes the question worth asking. Let \( V \) be finite-dimensional, \( T \in \cL(V) \), and \( U \) a subspace with \( \{\0\} \ne U \ne V \). Take a basis \( (\u_1, \dots, \u_k) \) of \( U \) and extend it to a basis \( \sB = (\u_1, \dots, \u_k, \w_1, \dots, \w_l) \) of \( V \). By @thm-invariant-subspace-block-triangular, the lower-left \( l \times k \) block of \( \mtx{T}{\sB}{\sB} \) is zero **if and only if** \( T\u \in U \) for every \( \u \in U \). For example, the cyclic shift \( T(x, y, z) = (y, z, x) \) on \( \nR^3 \) keeps the plane \( x + y + z = 0 \) in place, and in @exm-cyclic-shift-block-triangular this produced a matrix with a zero corner. The property "\( T \) maps \( U \) into \( U \)" is what we need to control, so it gets a name.
 
 *A subspace is invariant under \( T \) when \( T \) never moves a vector of the subspace out of it.*
 
@@ -127,10 +127,10 @@ With these names, the matrix theorem of Chapter 7 reads as follows. We add the c
 Let \( V \) be finite-dimensional, \( T \in \cL(V) \), and \( U \) a subspace with \( \{\0\} \ne U \ne V \). Let \( \sB_U = (\u_1, \dots, \u_k) \) be a basis of \( U \), extended to a basis \( \sB = (\u_1, \dots, \u_k, \w_1, \dots, \w_l) \) of \( V \), and put \( \bar\sB = (\w_1 + U, \dots, \w_l + U) \).
 
 ::: {.enumerate options="label=(\alph*)"}
-1. \( U \) is \( T \)-invariant if and only if \( [T]_{\sB} \) has zero lower-left \( l \times k \) block.
+1. \( U \) is \( T \)-invariant if and only if \( \mtx{T}{\sB}{\sB} \) has zero lower-left \( l \times k \) block.
 2. In that case
 \[
-[T]_{\sB} = \begin{pmatrix} [T|_U]_{\sB_U} & \B \\ 0 & [\bar T]_{\bar\sB} \end{pmatrix}
+\mtx{T}{\sB}{\sB} = \begin{pmatrix} \mtx{T|_U}{\sB_U}{\sB_U} & \B \\ 0 & \mtx{\bar T}{\bar\sB}{\bar\sB} \end{pmatrix}
 \]
 for some \( \B \in M_{k \times l}(F) \), and
 \[
@@ -142,18 +142,18 @@ for some \( \B \in M_{k \times l}(F) \), and
 ::: {.proof}
 Part (a), and the block form in (b), are @thm-invariant-subspace-block-triangular in the language of @def-invariant-subspace and @def-restriction-operator; \( \bar\sB \) is a basis of \( V/U \) by @thm-dimension-quotient.
 
-Write \( \A = [T|_U]_{\sB_U} \in M_k(F) \) and \( \D = [\bar T]_{\bar\sB} \in M_l(F) \). By @def-det-operator and @thm-det-block-triangular, \( \det T = \det[T]_{\sB} = \det \A \det \D = \det(T|_U)\det\bar T \). For the characteristic polynomials,
+Write \( \A = \mtx{T|_U}{\sB_U}{\sB_U} \in M_k(F) \) and \( \D = \mtx{\bar T}{\bar\sB}{\bar\sB} \in M_l(F) \). By @def-det-operator and @thm-det-block-triangular, \( \det T = \det\mtx{T}{\sB}{\sB} = \det \A \det \D = \det(T|_U)\det\bar T \). For the characteristic polynomials,
 \[
-x\I_{k+l} - [T]_{\sB} = \begin{pmatrix} x\I_k - \A & -\B \\ 0 & x\I_l - \D \end{pmatrix}
+x\I_{k+l} - \mtx{T}{\sB}{\sB} = \begin{pmatrix} x\I_k - \A & -\B \\ 0 & x\I_l - \D \end{pmatrix}
 \]
-is block upper triangular with square diagonal blocks, as a matrix over \( F[x] \). The block triangular determinant holds over the commutative ring \( F[x] \) (the remark after @thm-det-block-triangular), so \( \det(x\I - [T]_{\sB}) = \det(x\I_k - \A)\det(x\I_l - \D) \). By @def-charpoly-operator, this says \( p_T = p_{T|_U}\,p_{\bar T} \).
+is block upper triangular with square diagonal blocks, as a matrix over \( F[x] \). The block triangular determinant holds over the commutative ring \( F[x] \) (the remark after @thm-det-block-triangular), so \( \det(x\I - \mtx{T}{\sB}{\sB}) = \det(x\I_k - \A)\det(x\I_l - \D) \). By @def-charpoly-operator, this says \( p_T = p_{T|_U}\,p_{\bar T} \).
 :::
 
-The theorem is the reason invariant subspaces matter. It splits the study of \( T \) into the study of two operators on smaller spaces, and every quantity that sees only the diagonal blocks splits with it. For differentiation on \( \nR[x]_{\le 2} \), in the basis \( (1, x, x^2) \),
+The theorem is the reason invariant subspaces matter. It splits the study of \( T \) into the study of two operators on smaller spaces, and every quantity that sees only the diagonal blocks splits with it. For differentiation on \( \nR[x]_{\le 2} \), with \( U = \nR[x]_{\le 1} \) and \( \sB = (1, x, x^2) \),
 \[
-[D]_{\sB} = \left(\begin{array}{cc|c} 0 & 1 & 0 \\ 0 & 0 & 2 \\ \hline 0 & 0 & 0 \end{array}\right),
+\mtx{D}{\sB}{\sB} = \left(\begin{array}{cc|c} 0 & 1 & 0 \\ 0 & 0 & 2 \\ \hline 0 & 0 & 0 \end{array}\right),
 \]
-with upper-left block \( [D|_U] = \begin{pmatrix} 0 & 1 \\ 0 & 0 \end{pmatrix} \), lower-right block \( [\bar D] = (0) \), and \( p_D = x^3 = x^2 \cdot x \). Section 7 of this chapter will run this splitting repeatedly, by induction on the dimension.
+with upper-left block \( \mtx{D|_U}{\sB_U}{\sB_U} = \begin{pmatrix} 0 & 1 \\ 0 & 0 \end{pmatrix} \), lower-right block \( \mtx{\bar D}{\bar\sB}{\bar\sB} = (0) \), and \( p_D = x^3 = x^2 \cdot x \). Section 7 of this chapter will run this splitting repeatedly, by induction on the dimension.
 
 ## Sums, intersections and direct sums
 
@@ -178,12 +178,12 @@ Let \( V \) be finite-dimensional with \( V = U_1 \oplus \dots \oplus U_k \), wh
 
 ::: {.enumerate options="label=(\alph*)"}
 1. each \( U_i \) is \( T \)-invariant;
-2. \( [T]_{\sB} \) is block diagonal with respect to the partition \( n_1, \dots, n_k \).
+2. \( \mtx{T}{\sB}{\sB} \) is block diagonal with respect to the partition \( n_1, \dots, n_k \).
 :::
 
 In that case
 \[
-[T]_{\sB} = [T|_{U_1}]_{\sB_1} \oplus \dots \oplus [T|_{U_k}]_{\sB_k}, \qquad p_T = p_{T|_{U_1}} \cdots\, p_{T|_{U_k}} .
+\mtx{T}{\sB}{\sB} = \mtx{T|_{U_1}}{\sB_1}{\sB_1} \oplus \dots \oplus \mtx{T|_{U_k}}{\sB_k}{\sB_k}, \qquad p_T = p_{T|_{U_1}} \cdots\, p_{T|_{U_k}} .
 \]
 :::
 
@@ -192,21 +192,21 @@ Read the matrix one block of columns at a time. The columns of block \( j \) are
 :::
 
 ::: {.proof}
-By @thm-direct-sum-k-criteria ((a) \( \Rightarrow \) (d)), \( \sB \) is a basis of \( V \). Fix \( j \) and a vector \( \b \) of \( \sB_j \); the column of \( [T]_{\sB} \) belonging to \( \b \) is \( \coord{T\b}{\sB} \) (@def-matrix-of-linear-map). We claim: \( T\b \in U_j \) if and only if the entries of this column outside the rows of block \( j \) are all \( 0 \). If \( T\b \in U_j = \Span(\sB_j) \), then \( T\b \) is a combination of \( \sB_j \) alone, which is a representation in the basis \( \sB \) with zero coefficients outside block \( j \); by @thm-unique-representation, it is **the** coordinate vector. Conversely, if those entries vanish, then \( T\b \) is a combination of \( \sB_j \), so it lies in \( U_j \).
+By @thm-direct-sum-k-criteria ((a) \( \Rightarrow \) (d)), \( \sB \) is a basis of \( V \). Fix \( j \) and a vector \( \b \) of \( \sB_j \); the column of \( \mtx{T}{\sB}{\sB} \) belonging to \( \b \) is \( \coord{T\b}{\sB} \) (@def-matrix-of-linear-map). We claim: \( T\b \in U_j \) if and only if the entries of this column outside the rows of block \( j \) are all \( 0 \). If \( T\b \in U_j = \Span(\sB_j) \), then \( T\b \) is a combination of \( \sB_j \) alone, which is a representation in the basis \( \sB \) with zero coefficients outside block \( j \); by @thm-unique-representation, it is **the** coordinate vector. Conversely, if those entries vanish, then \( T\b \) is a combination of \( \sB_j \), so it lies in \( U_j \).
 
-(a) \( \Rightarrow \) (b). If \( U_j \) is invariant, then \( T\b \in U_j \) for each \( \b \) in \( \sB_j \), so by the claim every block \( (i, j) \) with \( i \ne j \) is zero. As \( j \) was arbitrary, \( [T]_{\sB} \) is block diagonal. Moreover the entries of column \( \b \) in the rows of block \( j \) are the coordinates of \( T\b = T|_{U_j}\b \) in \( \sB_j \), so the \( (j, j) \) block is \( [T|_{U_j}]_{\sB_j} \).
+(a) \( \Rightarrow \) (b). If \( U_j \) is invariant, then \( T\b \in U_j \) for each \( \b \) in \( \sB_j \), so by the claim every block \( (i, j) \) with \( i \ne j \) is zero. As \( j \) was arbitrary, \( \mtx{T}{\sB}{\sB} \) is block diagonal. Moreover the entries of column \( \b \) in the rows of block \( j \) are the coordinates of \( T\b = T|_{U_j}\b \) in \( \sB_j \), so the \( (j, j) \) block is \( \mtx{T|_{U_j}}{\sB_j}{\sB_j} \).
 
 (b) \( \Rightarrow \) (a). If the blocks \( (i, j) \) with \( i \ne j \) vanish, the claim gives \( T\b \in U_j \) for every \( \b \) in \( \sB_j \), and \( U_j \) is invariant by @lem-invariance-on-spanning-list.
 
-Finally, \( x\I - [T]_{\sB} \) is block diagonal with diagonal blocks \( x\I_{n_j} - [T|_{U_j}]_{\sB_j} \). Its determinant over \( F[x] \) is the product of the determinants of these blocks (the remark after @thm-det-block-triangular, applied by induction on the number of blocks), which is \( p_T = \prod_j p_{T|_{U_j}} \) by @def-charpoly-operator.
+Finally, \( x\I - \mtx{T}{\sB}{\sB} \) is block diagonal with diagonal blocks \( x\I_{n_j} - \mtx{T|_{U_j}}{\sB_j}{\sB_j} \). Its determinant over \( F[x] \) is the product of the determinants of these blocks (the remark after @thm-det-block-triangular, applied by induction on the number of blocks), which is \( p_T = \prod_j p_{T|_{U_j}} \) by @def-charpoly-operator.
 :::
 
-So an operator that preserves each piece of a direct sum decomposition is, in a suitable basis, a list of independent smaller operators. The best possible case is a decomposition into invariant **lines**: then every block is \( 1 \times 1 \), and \( [T]_{\sB} \) is diagonal. By @prp-one-dimensional-invariant, that happens exactly when \( V \) has a basis of vectors \( \v \) with \( T\v = \lambda\v \). This observation is the starting point of the next section.
+So an operator that preserves each piece of a direct sum decomposition is, in a suitable basis, a list of independent smaller operators. The best possible case is a decomposition into invariant **lines**: then every block is \( 1 \times 1 \), and \( \mtx{T}{\sB}{\sB} \) is diagonal. By @prp-one-dimensional-invariant, that happens exactly when \( V \) has a basis of vectors \( \v \) with \( T\v = \lambda\v \). This observation is the starting point of the next section.
 
 A tempting shortcut is to assume that once one invariant subspace is found, a complement of it can be chosen invariant too, and the matrix becomes block diagonal. This fails.
 
 ::: {.warning}
-**The complement of an invariant subspace need not be invariant.** Let \( \N = \begin{pmatrix} 0 & 1 \\ 0 & 0 \end{pmatrix} \) act on \( F^2 \). The line \( U = \Span(\e_1) \) is invariant, since \( \N\e_1 = \0 \). Every complement of \( U \) is a line \( W = \Span((a, 1)) \) for some \( a \in F \) (a line not equal to \( U \) contains a vector with second entry \( 1 \)). But \( \N(a, 1) = (1, 0) \), which is not a multiple of \( (a, 1) \). So **no** complement of \( U \) is \( \N \)-invariant, and no basis makes \( [\N] \) block diagonal with two \( 1 \times 1 \) blocks.
+**The complement of an invariant subspace need not be invariant.** Let \( \N = \begin{pmatrix} 0 & 1 \\ 0 & 0 \end{pmatrix} \) act on \( F^2 \). The line \( U = \Span(\e_1) \) is invariant, since \( \N\e_1 = \0 \). Every complement of \( U \) is a line \( W = \Span((a, 1)) \) for some \( a \in F \) (a line not equal to \( U \) contains a vector with second entry \( 1 \)). But \( \N(a, 1) = (1, 0) \), which is not a multiple of \( (a, 1) \). So **no** complement of \( U \) is \( \N \)-invariant, and no basis \( \sB \) makes \( \mtx{\N}{\sB}{\sB} \) block diagonal with two \( 1 \times 1 \) blocks.
 :::
 
 ::: {.check}
@@ -230,7 +230,7 @@ The question has a trap: "invariant subspace" requires a subspace, and a union o
 3. True or false: if \( U \) is \( T \)-invariant, then \( T\u = \u \) for every \( \u \in U \). Justify your answer.
 4. True or false: if \( U \) is invariant under \( S \) and under \( T \), then \( U \) is invariant under \( S + T \) and under \( ST \). Justify your answer.
 5. For \( \v \ne \0 \), what condition on \( T\v \) makes \( \Span(\v) \) invariant?
-6. In a basis whose first \( k \) vectors form a basis of a \( T \)-invariant subspace \( U \), which block of \( [T]_{\sB} \) is zero, and what are the two diagonal blocks?
+6. In a basis whose first \( k \) vectors form a basis of a \( T \)-invariant subspace \( U \), which block of \( \mtx{T}{\sB}{\sB} \) is zero, and what are the two diagonal blocks?
 :::
 ::::
 
@@ -245,7 +245,7 @@ The question has a trap: "invariant subspace" requires a subspace, and a union o
 
 (e) \( T\v = \lambda\v \) for some scalar \( \lambda \) (@prp-one-dimensional-invariant).
 
-(f) The lower-left block is zero. The upper-left block is \( [T|_U]_{\sB_U} \) and the lower-right block is the matrix of the induced operator \( \bar T \) on \( V/U \) (@thm-invariant-subspace-matrix).
+(f) The lower-left block is zero. The upper-left block is \( \mtx{T|_U}{\sB_U}{\sB_U} \) and the lower-right block is the matrix of the induced operator \( \bar T \) on \( V/U \) (@thm-invariant-subspace-matrix).
 :::
 
 ### B. Practice

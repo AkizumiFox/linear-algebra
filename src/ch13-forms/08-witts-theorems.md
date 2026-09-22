@@ -27,7 +27,7 @@ Two clauses need pointing at. The map must be a **bijection**, so that the inver
 
 Three readings make the notion concrete.
 
-- **Isometry is congruence in disguise.** If \( \sB \) is a basis of \( V \) and \( \sB' \) one of \( V' \), then \( \sigma \) is an isometry exactly when the Gram matrices satisfy \( \mtx{\beta}{\sB}{} = \P\tp\,\mtx{\beta'}{\sB'}{}\,\P \) with \( \P = \mtx{\sigma}{\sB}{\sB'} \). So \( (V,\beta) \cong (V',\beta') \) if and only if their Gram matrices are congruent (@def-congruent). Every classification theorem of this chapter is therefore a classification up to isometry.
+- **Isometry is congruence in disguise.** If \( \sB \) is a basis of \( V \) and \( \sB' \) one of \( V' \), then \( \sigma \) is an isometry exactly when the Gram matrices satisfy \( \mtx{\beta}{\sB}{\sB} = \P\tp\,\mtx{\beta'}{\sB'}{\sB'}\,\P \) with \( \P = \mtx{\sigma}{\sB}{\sB'} \). So \( (V,\beta) \cong (V',\beta') \) if and only if their Gram matrices are congruent (@def-congruent). Every classification theorem of this chapter is therefore a classification up to isometry.
 - **Over \( \nR \).** Two real spaces with non-degenerate symmetric forms are isometric exactly when they have the same signature, by @cor-real-symmetric-classification. So, writing \( \nR^{p,q} \) for \( \nR^{p+q} \) carrying the form of signature \( (p,q) \), we have \( \nR^{2,1} \not\cong \nR^{1,2} \) even though both are three-dimensional and both non-degenerate.
 - **The degenerate case.** An isometry carries \( \operatorname{rad}(\beta) \) onto \( \operatorname{rad}(\beta') \), because \( \beta'(\sigma\u, \sigma\v) = \beta(\u,\v) \) and \( \sigma \) is onto. In particular isometric spaces have radicals of equal dimension.
 

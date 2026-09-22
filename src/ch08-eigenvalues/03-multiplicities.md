@@ -36,7 +36,7 @@ When \( T \) or \( \A \) is clear from context we write simply \( a(\lambda) \) 
 
 In words: \( a_T(\lambda) \) is the **largest** \( m \) such that \( (x - \lambda)^m \) divides \( p_T \). It is a statement about a polynomial and can be computed by factoring. \( g_T(\lambda) \) is the dimension of the subspace of solutions of \( T\v = \lambda\v \), including \( \0 \). It is the largest number of **linearly independent** eigenvectors for \( \lambda \), not the number of eigenvectors, which is infinite over an infinite field. For matrices the second formula comes from @thm-rank-nullity-matrix applied to \( \A - \lambda \I_n \), and it is the one we compute with: find the rank of \( \A - \lambda \I \) by elimination and subtract from \( n \).
 
-**Well-definedness.** Both numbers are defined for every \( \lambda \in F \), eigenvalue or not. By @thm-eigenvalue-characterizations, \( \lambda \) is an eigenvalue if and only if \( p_T(\lambda) = 0 \), if and only if \( a_T(\lambda) \ge 1 \); and by @def-eigenvalue, if and only if \( E_\lambda(T) \ne \{\0\} \), that is, \( g_T(\lambda) \ge 1 \). So for a scalar that is not an eigenvalue both multiplicities are \( 0 \), and for an eigenvalue both are at least \( 1 \). Neither depends on a basis: \( p_T \) does not (@def-charpoly-operator), and \( E_\lambda(T) \) is defined without one. If \( \sB \) is a basis of \( V \), then \( a_T(\lambda) = a_{[T]_{\sB}}(\lambda) \) because \( p_T = p_{[T]_{\sB}} \), and \( g_T(\lambda) = g_{[T]_{\sB}}(\lambda) \) because the coordinate map is an isomorphism from \( \ker(T - \lambda\,\id_V) \) onto \( \nul([T]_{\sB} - \lambda \I) \) (@thm-rank-map-equals-rank-matrix (a) and @cor-matrix-of-polynomial-of-operator).
+**Well-definedness.** Both numbers are defined for every \( \lambda \in F \), eigenvalue or not. By @thm-eigenvalue-characterizations, \( \lambda \) is an eigenvalue if and only if \( p_T(\lambda) = 0 \), if and only if \( a_T(\lambda) \ge 1 \); and by @def-eigenvalue, if and only if \( E_\lambda(T) \ne \{\0\} \), that is, \( g_T(\lambda) \ge 1 \). So for a scalar that is not an eigenvalue both multiplicities are \( 0 \), and for an eigenvalue both are at least \( 1 \). Neither depends on a basis: \( p_T \) does not (@def-charpoly-operator), and \( E_\lambda(T) \) is defined without one. If \( \sB \) is a basis of \( V \), then \( a_T(\lambda) = a_{\mtx{T}{\sB}{\sB}}(\lambda) \) because \( p_T = p_{\mtx{T}{\sB}{\sB}} \), and \( g_T(\lambda) = g_{\mtx{T}{\sB}{\sB}}(\lambda) \) because the coordinate map is an isomorphism from \( \ker(T - \lambda\,\id_V) \) onto \( \nul(\mtx{T}{\sB}{\sB} - \lambda \I) \) (@thm-rank-map-equals-rank-matrix (a) and @cor-matrix-of-polynomial-of-operator).
 
 **Examples.**
 
@@ -85,11 +85,11 @@ Start from the smallest subspace in sight, \( E_\lambda(T) \). Take a basis of i
 ::: {.proof}
 Since \( \lambda \) is an eigenvalue, \( E_\lambda(T) \ne \{\0\} \), so \( g = g_T(\lambda) \ge 1 \). Let \( (\v_1, \dots, \v_g) \) be a basis of \( E_\lambda(T) \). By @thm-basis-extension, it extends to a basis \( \sB = (\v_1, \dots, \v_g, \w_1, \dots, \w_{n-g}) \) of \( V \).
 
-*Case \( g = n \).* Then \( T\v_i = \lambda\v_i \) for every basis vector, so \( [T]_{\sB} = \lambda \I_n \) by @def-matrix-of-linear-map, and \( p_T = (x - \lambda)^n \) by the triangular case of @def-characteristic-polynomial. Hence \( a_T(\lambda) = n = g \).
+*Case \( g = n \).* Then \( T\v_i = \lambda\v_i \) for every basis vector, so \( \mtx{T}{\sB}{\sB} = \lambda \I_n \) by @def-matrix-of-linear-map, and \( p_T = (x - \lambda)^n \) by the triangular case of @def-characteristic-polynomial. Hence \( a_T(\lambda) = n = g \).
 
-*Case \( g < n \).* For \( i \le g \), \( T\v_i = \lambda\v_i \), so column \( i \) of \( [T]_{\sB} \) is \( \lambda\e_i \). Hence
+*Case \( g < n \).* For \( i \le g \), \( T\v_i = \lambda\v_i \), so column \( i \) of \( \mtx{T}{\sB}{\sB} \) is \( \lambda\e_i \). Hence
 \[
-[T]_{\sB} = \begin{pmatrix} \lambda \I_g & \B \\ 0 & \D \end{pmatrix}, \qquad x\I_n - [T]_{\sB} = \begin{pmatrix} (x - \lambda)\I_g & -\B \\ 0 & x\I_{n-g} - \D \end{pmatrix},
+\mtx{T}{\sB}{\sB} = \begin{pmatrix} \lambda \I_g & \B \\ 0 & \D \end{pmatrix}, \qquad x\I_n - \mtx{T}{\sB}{\sB} = \begin{pmatrix} (x - \lambda)\I_g & -\B \\ 0 & x\I_{n-g} - \D \end{pmatrix},
 \]
 for some \( \B \in M_{g \times (n-g)}(F) \) and \( \D \in M_{n-g}(F) \). The second matrix is block upper triangular over \( F[x] \) with square diagonal blocks. By @thm-det-block-triangular, which holds over the commutative ring \( F[x] \) (the remark after it), and @def-charpoly-operator,
 \[

@@ -45,7 +45,7 @@ Its **span** \( H = \Span(\u, \w) \) is called a **hyperbolic plane** for \( \be
 The definition looks as though it asks for one condition, but it quietly supplies three more. Alternation already gives \( \beta(\u,\u) = \beta(\w,\w) = 0 \), and skewness gives \( \beta(\w, \u) = -1 \). So the matrix of \( \beta \) restricted to \( H \) in the ordered basis \( (\u, \w) \) is exactly \( \begin{psmallmatrix} 0 & 1 \\ -1 & 0\end{psmallmatrix} \). Also, \( \u \) and \( \w \) are automatically linearly independent: if \( \w = c\u \) then \( \beta(\u,\w) = c\,\beta(\u,\u) = 0 \ne 1 \), and \( \u \ne \0 \) for the same reason. So \( H \) really is a plane, \( \dim H = 2 \), and \( \beta \) restricted to \( H \) is non-degenerate.
 
 ::: {.warning}
-**An alternating form is never diagonalizable, except when it is zero.** Section 4 found an orthogonal basis for every symmetric form in characteristic \( \ne 2 \); no such basis exists here. If \( \sB \) is any basis and \( \mtx{\beta}{\sB}{} \) is diagonal, then its off-diagonal entries vanish by assumption and its diagonal entries vanish because \( \beta \) is alternating, so \( \mtx{\beta}{\sB}{} = \0 \) and \( \beta = 0 \). The standard form below is a block form, and it has to be: the \( 2 \times 2 \) block is irreducible.
+**An alternating form is never diagonalizable, except when it is zero.** Section 4 found an orthogonal basis for every symmetric form in characteristic \( \ne 2 \); no such basis exists here. If \( \sB \) is any basis and \( \mtx{\beta}{\sB}{\sB} \) is diagonal, then its off-diagonal entries vanish by assumption and its diagonal entries vanish because \( \beta \) is alternating, so \( \mtx{\beta}{\sB}{\sB} = \0 \) and \( \beta = 0 \). The standard form below is a block form, and it has to be: the \( 2 \times 2 \) block is irreducible.
 :::
 
 ## Splitting off a hyperbolic pair
@@ -109,7 +109,7 @@ of \( V \) such that, for all \( i, j \),
 and \( \beta(\z_k, \v) = 0 \) for every \( k \) and every \( \v \in V \). Equivalently, in this basis
 
 \[
-\mtx{\beta}{\sB}{} = \vOmega_{2m} \oplus \0_{n-2m}, \qquad
+\mtx{\beta}{\sB}{\sB} = \vOmega_{2m} \oplus \0_{n-2m}, \qquad
 \vOmega_{2m} \coloneqq \begin{pmatrix} \0 & \I_m \\ -\I_m & \0 \end{pmatrix} .
 \]{#eq-standard-alternating-matrix}
 
@@ -117,7 +117,7 @@ In particular:
 
 ::: {.enumerate options="label=(\alph*)"}
 1. every alternating \( \A \in M_n(F) \) is congruent to \( \vOmega_{2m} \oplus \0_{n-2m} \) for exactly one \( m \);
-2. if \( \beta \) is non-degenerate then \( n = 2m \) is **even** and \( \mtx{\beta}{\sB}{} = \vOmega_{n} \).
+2. if \( \beta \) is non-degenerate then \( n = 2m \) is **even** and \( \mtx{\beta}{\sB}{\sB} = \vOmega_{n} \).
 :::
 :::
 
@@ -140,7 +140,7 @@ of \( W \) in which \( \beta|_W(\u_i, \w_j) = \delta_{ij} \), all other pairings
 
 Putting \( \u_1 \) and \( \w_1 \) in front gives a basis of \( V = H \oplus W \). The required equations hold: within \( H \) they are the definition of a hyperbolic pair together with alternation; within \( W \) they are the induction hypothesis; and across the two, every pairing of \( \u_1 \) or \( \w_1 \) with a vector of \( W \) vanishes because \( W = H^{\perp_\beta} \) and \( \beta \) is skew-symmetric. Finally each \( \z_k \) lies in \( \operatorname{rad}(\beta|_W) = \operatorname{rad}(\beta) \) by @lem-alternating-hyperbolic-pair (c), which is the last assertion.
 
-**The matrix.** Order the basis as \( \sB = (\u_1, \dots, \u_m, \w_1, \dots, \w_m, \z_1, \dots, \z_{n-2m}) \). By @def-form-matrix the \( (i,j) \) entry of \( \mtx{\beta}{\sB}{} \) is the pairing of the \( i \)-th and \( j \)-th basis vectors, and the equations above say precisely that the top-left \( m \times m \) block and the \( \w \)-\( \w \) block are \( \0 \), the \( \u \)-\( \w \) block is \( \I_m \), the \( \w \)-\( \u \) block is \( -\I_m \), and every row and column indexed by a \( \z_k \) is zero. That is @eq-standard-alternating-matrix.
+**The matrix.** Order the basis as \( \sB = (\u_1, \dots, \u_m, \w_1, \dots, \w_m, \z_1, \dots, \z_{n-2m}) \). By @def-form-matrix the \( (i,j) \) entry of \( \mtx{\beta}{\sB}{\sB} \) is the pairing of the \( i \)-th and \( j \)-th basis vectors, and the equations above say precisely that the top-left \( m \times m \) block and the \( \w \)-\( \w \) block are \( \0 \), the \( \u \)-\( \w \) block is \( \I_m \), the \( \w \)-\( \u \) block is \( -\I_m \), and every row and column indexed by a \( \z_k \) is zero. That is @eq-standard-alternating-matrix.
 
 **(a).** Given alternating \( \A \in M_n(F) \), let \( \beta(\x,\y) = \x\tp\A\y \) on \( F^n \); it is alternating by @prp-alternating-form-matrix (b). The basis just constructed gives \( \P\tp\A\P = \vOmega_{2m}\oplus\0_{n-2m} \) with \( \P \) the matrix whose columns are the basis vectors, by @thm-change-of-basis-form, so \( \A \simeq \vOmega_{2m}\oplus\0_{n-2m} \). Uniqueness of \( m \): congruence preserves rank (@thm-congruence-preserves-rank), and \( \rank(\vOmega_{2m}\oplus\0_{n-2m}) = 2m \) because \( \vOmega_{2m} \) is invertible, its square being \( -\I_{2m} \). So \( 2m = \rank\A \) is determined by \( \A \).
 

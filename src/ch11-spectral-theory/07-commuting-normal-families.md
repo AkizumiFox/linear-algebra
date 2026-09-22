@@ -23,9 +23,9 @@ One more ingredient is needed before the recursion can run: after cutting \( V \
 ::: {#thm-simultaneous-unitary-diagonalization}
 [One Orthonormal Eigenbasis for a Commuting Family]
 
-Let \( V \neq \{\0\} \) be a finite-dimensional **complex** inner product space and let \( \cF \subseteq \cL(V) \) be a non-empty commuting family of **normal** operators. Then \( V \) has an orthonormal basis \( \sB \) each of whose vectors is an eigenvector of every \( T \in \cF \); equivalently, \( [T]_{\sB} \) is diagonal for every \( T \in \cF \).
+Let \( V \neq \{\0\} \) be a finite-dimensional **complex** inner product space and let \( \cF \subseteq \cL(V) \) be a non-empty commuting family of **normal** operators. Then \( V \) has an orthonormal basis \( \sB \) each of whose vectors is an eigenvector of every \( T \in \cF \); equivalently, \( \mtx{T}{\sB}{\sB} \) is diagonal for every \( T \in \cF \).
 
-Conversely, if some orthonormal basis \( \sB \) makes every \( [T]_{\sB} \) diagonal, then \( \cF \) is commuting and every member of \( \cF \) is normal.
+Conversely, if some orthonormal basis \( \sB \) makes every \( \mtx{T}{\sB}{\sB} \) diagonal, then \( \cF \) is commuting and every member of \( \cF \) is normal.
 :::
 
 ::: {.idea}
@@ -65,7 +65,7 @@ is commuting, since \( (S|_{V_i})(T|_{V_i}) = (ST)|_{V_i} = (TS)|_{V_i} = (T|_{V
 
 By the inductive hypothesis applied to \( V_i \neq \{\0\} \) and \( \cF_i \), there is an orthonormal basis \( \sB_i \) of \( V_i \) whose vectors are eigenvectors of every \( S|_{V_i} \); such a vector \( \v \in V_i \) satisfies \( S\v = (S|_{V_i})\v = \mu\v \), so it is an eigenvector of \( S \) itself. Let \( \sB \) be the concatenation \( \sB_1, \dots, \sB_k \). It is orthonormal, because each \( \sB_i \) is and because \( V_i \perp V_j \) for \( i \neq j \), and it has \( \sum_i \dim V_i = n \) vectors, so it is an orthonormal basis of \( V \) (@thm-orthogonal-independent and @thm-right-size-basis). Every vector of \( \sB \) is an eigenvector of every \( T \in \cF \). This completes the induction.
 
-For the converse, suppose every \( [T]_{\sB} \) is diagonal with \( \sB \) orthonormal. Diagonal matrices commute, so \( [ST]_{\sB} = [TS]_{\sB} \) and hence \( ST = TS \) (@thm-linear-maps-isomorphic-to-matrices). And \( [T^{*}]_{\sB} = ([T]_{\sB})^{*} \) by @thm-matrix-of-adjoint is diagonal as well, so \( [T^{*}T]_{\sB} \) and \( [TT^{*}]_{\sB} \) are products of diagonal matrices in the two orders, hence equal; so \( T \) is normal. This proves the theorem.
+For the converse, suppose every \( \mtx{T}{\sB}{\sB} \) is diagonal with \( \sB \) orthonormal. Diagonal matrices commute, so \( \mtx{ST}{\sB}{\sB} = \mtx{TS}{\sB}{\sB} \) and hence \( ST = TS \) (@thm-linear-maps-isomorphic-to-matrices). And \( \mtx{T^{*}}{\sB}{\sB} = (\mtx{T}{\sB}{\sB})^{*} \) by @thm-matrix-of-adjoint is diagonal as well, so \( \mtx{T^{*}T}{\sB}{\sB} \) and \( \mtx{TT^{*}}{\sB}{\sB} \) are products of diagonal matrices in the two orders, hence equal; so \( T \) is normal. This proves the theorem.
 :::
 
 Notice which hypothesis did which job. *Commuting* made the eigenspaces of \( T_0 \) invariant under the rest of the family; *normal* made those eigenspaces orthogonal and made the restrictions normal again; and *complex* is what makes \( T_0 \) have any eigenvalues at all. Drop any one of the three and the argument stops.
@@ -79,7 +79,7 @@ Let \( \A_1, \dots, \A_r \in M_n(\nC) \) be normal and pairwise commuting. Then 
 :::
 
 ::: {.proof}
-Apply @thm-simultaneous-unitary-diagonalization to the family \( \{T_{\A_1}, \dots, T_{\A_r}\} \) on \( \nC^n \). Each \( T_{\A_i} \) is normal because \( T_{\A_i}^{*} = T_{\A_i^{*}} \) (@thm-matrix-of-adjoint, the standard basis being orthonormal) and \( \A_i^{*}\A_i = \A_i\A_i^{*} \); and the operators commute because the matrices do. Let \( \U \) have the resulting orthonormal basis \( \sB \) as its columns; then \( \U \in \Unit(n) \) by @thm-isometry-characterizations (f), and \( \U^{*}\A_i\U = \U^{-1}\A_i\U = [T_{\A_i}]_{\sB} \) is diagonal by @thm-change-of-basis-maps. Nothing in the argument used that the family is finite.
+Apply @thm-simultaneous-unitary-diagonalization to the family \( \{T_{\A_1}, \dots, T_{\A_r}\} \) on \( \nC^n \). Each \( T_{\A_i} \) is normal because \( T_{\A_i}^{*} = T_{\A_i^{*}} \) (@thm-matrix-of-adjoint, the standard basis being orthonormal) and \( \A_i^{*}\A_i = \A_i\A_i^{*} \); and the operators commute because the matrices do. Let \( \U \) have the resulting orthonormal basis \( \sB \) as its columns; then \( \U \in \Unit(n) \) by @thm-isometry-characterizations (f), and \( \U^{*}\A_i\U = \U^{-1}\A_i\U = \mtx{T_{\A_i}}{\sB}{\sB} \) is diagonal by @thm-change-of-basis-maps. Nothing in the argument used that the family is finite.
 :::
 
 ::: {#cor-simultaneous-orthogonal-real}
@@ -158,7 +158,7 @@ Let \( V \) be a finite-dimensional complex inner product space and let \( S, T 
 :::
 
 ::: {.proof}
-If \( V = \{\0\} \) there is nothing to prove. Otherwise apply @thm-simultaneous-unitary-diagonalization to the family \( \{S, T\} \): there is an orthonormal basis \( \sB \) with \( [S]_{\sB} = \D \) and \( [T]_{\sB} = \D' \) both diagonal. Then \( [S+T]_{\sB} = \D + \D' \) and \( [ST]_{\sB} = \D\D' \) are diagonal, so every vector of \( \sB \) is an eigenvector of both operators, and both are normal by @thm-spectral-complex.
+If \( V = \{\0\} \) there is nothing to prove. Otherwise apply @thm-simultaneous-unitary-diagonalization to the family \( \{S, T\} \): there is an orthonormal basis \( \sB \) with \( \mtx{S}{\sB}{\sB} = \D \) and \( \mtx{T}{\sB}{\sB} = \D' \) both diagonal. Then \( \mtx{S+T}{\sB}{\sB} = \D + \D' \) and \( \mtx{ST}{\sB}{\sB} = \D\D' \) are diagonal, so every vector of \( \sB \) is an eigenvector of both operators, and both are normal by @thm-spectral-complex.
 :::
 
 ::: {.remark}
@@ -186,7 +186,7 @@ If we ask only for triangular matrices, normality may be dropped entirely. Chapt
 ::: {#thm-simultaneous-unitary-triangularization}
 [Simultaneous Unitary Triangularization]
 
-Let \( V \neq \{\0\} \) be a finite-dimensional complex inner product space and let \( \cF \subseteq \cL(V) \) be a non-empty commuting family. Then there is an orthonormal basis \( \sB \) of \( V \) such that \( [T]_{\sB} \) is upper triangular for **every** \( T \in \cF \). In particular, if \( \A_1, \dots, \A_r \in M_n(\nC) \) commute pairwise, there is \( \U \in \Unit(n) \) with every \( \U^{*}\A_i\U \) upper triangular.
+Let \( V \neq \{\0\} \) be a finite-dimensional complex inner product space and let \( \cF \subseteq \cL(V) \) be a non-empty commuting family. Then there is an orthonormal basis \( \sB \) of \( V \) such that \( \mtx{T}{\sB}{\sB} \) is upper triangular for **every** \( T \in \cF \). In particular, if \( \A_1, \dots, \A_r \in M_n(\nC) \) commute pairwise, there is \( \U \in \Unit(n) \) with every \( \U^{*}\A_i\U \) upper triangular.
 :::
 
 ::: {.idea}
@@ -198,9 +198,9 @@ Induction on \( n = \dim V \ge 1 \). For \( n = 1 \) every \( 1 \times 1 \) matr
 
 Let \( n \ge 2 \) and assume the theorem in dimension \( n - 1 \). The family \( \cF^{*} = \{T^{*} : T \in \cF\} \) is commuting: for \( S, T \in \cF \), \( S^{*}T^{*} = (TS)^{*} = (ST)^{*} = T^{*}S^{*} \) by @thm-adjoint-properties. Since \( V \) is a complex space, @thm-commuting-common-eigenvector provides \( \u \neq \0 \) with \( T^{*}\u = \nu_T\u \) for every \( T \in \cF \); dividing by \( \norm{\u} \), take \( \norm{\u} = 1 \).
 
-Put \( W = \Span(\u) \) and \( U = W^{\perp} \), of dimension \( n - 1 \) by @thm-orthogonal-decomposition (c). For each \( T \in \cF \) the line \( W \) is \( T^{*} \)-invariant, since \( T^{*}\u = \nu_T\u \), so \( U \) is \( T \)-invariant by @lem-adjoint-eigenline-complement. The family \( \{T|_U : T \in \cF\} \) is commuting, by the same computation on restrictions as in the proof of @thm-simultaneous-unitary-diagonalization. By the inductive hypothesis there is an orthonormal basis \( (\v_1, \dots, \v_{n-1}) \) of \( U \) in which every \( [T|_U] \) is upper triangular.
+Put \( W = \Span(\u) \) and \( U = W^{\perp} \), of dimension \( n - 1 \) by @thm-orthogonal-decomposition (c). For each \( T \in \cF \) the line \( W \) is \( T^{*} \)-invariant, since \( T^{*}\u = \nu_T\u \), so \( U \) is \( T \)-invariant by @lem-adjoint-eigenline-complement. The family \( \{T|_U : T \in \cF\} \) is commuting, by the same computation on restrictions as in the proof of @thm-simultaneous-unitary-diagonalization. By the inductive hypothesis there is an orthonormal basis \( \sB_U = (\v_1, \dots, \v_{n-1}) \) of \( U \) such that \( \mtx{T|_U}{\sB_U}{\sB_U} \) is upper triangular for every \( T \in \cF \).
 
-Let \( \sB = (\v_1, \dots, \v_{n-1}, \u) \). It is orthonormal, since \( \u \) is a unit vector orthogonal to \( U \), and it has \( n \) vectors, so it is an orthonormal basis of \( V \). Fix \( T \in \cF \). For \( j \le n-1 \), \( T\v_j = T|_U\v_j \in \Span(\v_1, \dots, \v_j) \), because the matrix of \( T|_U \) is upper triangular; so the \( j \)-th column of \( [T]_{\sB} \) has zeros below row \( j \). The last column is unconstrained, and an upper triangular matrix permits any entries there. Hence \( [T]_{\sB} \) is upper triangular, which completes the induction.
+Let \( \sB = (\v_1, \dots, \v_{n-1}, \u) \). It is orthonormal, since \( \u \) is a unit vector orthogonal to \( U \), and it has \( n \) vectors, so it is an orthonormal basis of \( V \). Fix \( T \in \cF \). For \( j \le n-1 \), \( T\v_j = T|_U\v_j \in \Span(\v_1, \dots, \v_j) \), because \( \mtx{T|_U}{\sB_U}{\sB_U} \) is upper triangular; so the \( j \)-th column of \( \mtx{T}{\sB}{\sB} \) has zeros below row \( j \). The last column is unconstrained, and an upper triangular matrix permits any entries there. Hence \( \mtx{T}{\sB}{\sB} \) is upper triangular, which completes the induction.
 
 For the matrix statement, apply this to the operators \( T_{\A_i} \) on \( \nC^n \) and let \( \U \) have the vectors of \( \sB \) as columns, as in @cor-simultaneous-unitary-matrix.
 :::
@@ -332,9 +332,9 @@ Note on the hypotheses: a theorem of Fuglede says that in (a) the operator \( S 
 :::
 
 ::: {.solution}
-(a) By @thm-simultaneous-unitary-diagonalization applied to the commuting family \( \{S, T\} \) of normal operators, there is an orthonormal basis \( \sB \) with \( [S]_{\sB} = \D \) and \( [T]_{\sB} = \D' \) diagonal. By @thm-matrix-of-adjoint, \( [T^{*}]_{\sB} = (\D')^{*} \), which is the diagonal matrix with the conjugated entries. Diagonal matrices commute, so
+(a) By @thm-simultaneous-unitary-diagonalization applied to the commuting family \( \{S, T\} \) of normal operators, there is an orthonormal basis \( \sB \) with \( \mtx{S}{\sB}{\sB} = \D \) and \( \mtx{T}{\sB}{\sB} = \D' \) diagonal. By @thm-matrix-of-adjoint, \( \mtx{T^{*}}{\sB}{\sB} = (\D')^{*} \), which is the diagonal matrix with the conjugated entries. Diagonal matrices commute, so
 \[
-[ST^{*}]_{\sB} = \D(\D')^{*} = (\D')^{*}\D = [T^{*}S]_{\sB},
+\mtx{ST^{*}}{\sB}{\sB} = \D(\D')^{*} = (\D')^{*}\D = \mtx{T^{*}S}{\sB}{\sB},
 \]
 and \( ST^{*} = T^{*}S \) because a map is determined by its matrix (@thm-linear-maps-isomorphic-to-matrices). Exchanging the roles of \( S \) and \( T \) gives \( TS^{*} = S^{*}T \).
 

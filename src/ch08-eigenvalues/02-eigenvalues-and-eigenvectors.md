@@ -4,9 +4,9 @@ The previous section ended with an observation: an operator has a diagonal matri
 
 ## When is a matrix diagonal?
 
-Chapter 3 asked how simple \( [T]_{\sB} \) can be made by choosing \( \sB \). The simplest square matrices are the diagonal ones, so start with the wish and unwind it.
+Chapter 3 asked how simple \( \mtx{T}{\sB}{\sB} \) can be made by choosing \( \sB \). The simplest square matrices are the diagonal ones, so start with the wish and unwind it.
 
-Let \( V \) be finite-dimensional with basis \( \sB = (\v_1, \dots, \v_n) \), and \( T \in \cL(V) \). By @def-matrix-of-linear-map, column \( j \) of \( [T]_{\sB} \) holds the coordinates of \( T\v_j \). The matrix is \( \diag(\lambda_1, \dots, \lambda_n) \) exactly when column \( j \) is \( \lambda_j\e_j \) for each \( j \), that is,
+Let \( V \) be finite-dimensional with basis \( \sB = (\v_1, \dots, \v_n) \), and \( T \in \cL(V) \). By @def-matrix-of-linear-map, column \( j \) of \( \mtx{T}{\sB}{\sB} \) holds the coordinates of \( T\v_j \). The matrix is \( \diag(\lambda_1, \dots, \lambda_n) \) exactly when column \( j \) is \( \lambda_j\e_j \) for each \( j \), that is,
 \[
 T\v_j = \lambda_j\v_j \qquad (j = 1, \dots, n).
 \]
@@ -66,7 +66,7 @@ Let \( T(x, y, z) = (x, z, y) \) on \( \nR^3 \). Which of \( \e_1 \), \( (0, 1, 
 :::
 
 ::: {.solution}
-\( T\e_1 = \e_1 \), so \( \e_1 \) is an eigenvector for \( 1 \). \( T(0, 1, 1) = (0, 1, 1) \), an eigenvector for \( 1 \) as well. \( T(0, 1, -1) = (0, -1, 1) = -(0, 1, -1) \), an eigenvector for \( -1 \). \( T\e_2 = \e_3 \), which is not a multiple of \( \e_2 \), so \( \e_2 \) is **not** an eigenvector. The three eigenvectors form a basis of \( \nR^3 \), and in that basis \( [T] = \diag(1, 1, -1) \).
+\( T\e_1 = \e_1 \), so \( \e_1 \) is an eigenvector for \( 1 \). \( T(0, 1, 1) = (0, 1, 1) \), an eigenvector for \( 1 \) as well. \( T(0, 1, -1) = (0, -1, 1) = -(0, 1, -1) \), an eigenvector for \( -1 \). \( T\e_2 = \e_3 \), which is not a multiple of \( \e_2 \), so \( \e_2 \) is **not** an eigenvector. The three eigenvectors form a basis \( \sB \) of \( \nR^3 \), and \( \mtx{T}{\sB}{\sB} = \diag(1, 1, -1) \).
 :::
 
 ## Finding eigenvalues
@@ -96,9 +96,9 @@ In particular \( T \) has at most \( n \) eigenvalues. For \( \A \in M_n(F) \): 
 
 (c) \( \Leftrightarrow \) (d). The operators \( \lambda\,\id_V - T \) and \( T - \lambda\,\id_V \) differ by the factor \( -1 \), so one is invertible exactly when the other is. By @thm-det-operator-properties, \( \lambda\,\id_V - T \) is invertible if and only if \( \det(\lambda\,\id_V - T) \ne 0 \).
 
-(c) \( \Leftrightarrow \) (e). Fix a basis \( \sB \) of \( V \) and put \( \A = [T]_{\sB} \). By @cor-matrix-of-polynomial-of-operator, \( [\lambda\,\id_V - T]_{\sB} = \lambda \I_n - \A \), and by @thm-rank-map-equals-rank-matrix (b), \( \lambda\,\id_V - T \) is invertible if and only if \( \lambda \I_n - \A \) is. By @thm-charpoly-root-iff-singular ((a), (i) \( \Leftrightarrow \) (ii)), \( \lambda \I_n - \A \) is not invertible if and only if \( p_{\A}(\lambda) = 0 \), and \( p_{\A} = p_T \) by @def-charpoly-operator.
+(c) \( \Leftrightarrow \) (e). Fix a basis \( \sB \) of \( V \) and put \( \A = \mtx{T}{\sB}{\sB} \). By @cor-matrix-of-polynomial-of-operator, \( \mtx{\lambda\,\id_V - T}{\sB}{\sB} = \lambda \I_n - \A \), and by @thm-rank-map-equals-rank-matrix (b), \( \lambda\,\id_V - T \) is invertible if and only if \( \lambda \I_n - \A \) is. By @thm-charpoly-root-iff-singular ((a), (i) \( \Leftrightarrow \) (ii)), \( \lambda \I_n - \A \) is not invertible if and only if \( p_{\A}(\lambda) = 0 \), and \( p_{\A} = p_T \) by @def-charpoly-operator.
 
-The bound on the number of eigenvalues is @thm-charpoly-root-iff-singular (b) applied to \( \A \), since by (e) the eigenvalues of \( T \) are the roots of \( p_{\A} \) in \( F \). The statement for matrices is the case \( T = T_{\A} \), \( \sB \) standard, \( [T_{\A}]_{\sB} = \A \).
+The bound on the number of eigenvalues is @thm-charpoly-root-iff-singular (b) applied to \( \A \), since by (e) the eigenvalues of \( T \) are the roots of \( p_{\A} \) in \( F \). The statement for matrices is the case \( T = T_{\A} \), \( \sB \) standard, \( \mtx{T_{\A}}{\sB}{\sB} = \A \).
 :::
 
 For matrices, this is @thm-charpoly-root-iff-singular read in the new language: Chapter 6 found the scalars \( c \) with \( c\I - \A \) singular, and those are the eigenvalues. It gives a procedure with two steps.
@@ -503,7 +503,7 @@ An operator \( T \in \cL(V) \) is **nilpotent** if \( T^k = 0 \) for some intege
 ::: {.solution}
 (a) By @thm-charpoly-coefficients, \( p_{\A} \in \nR[x] \) is monic of degree \( n \), which is odd. By @cor-odd-degree-real-root, \( p_{\A}(\lambda) = 0 \) for some \( \lambda \in \nR \), and \( \lambda \) is an eigenvalue of \( \A \) by @thm-eigenvalue-characterizations.
 
-(b) Let \( \dim V = 3 \) over \( \nR \) and \( T \in \cL(V) \). Choose a basis \( \sB \). By (a), the real matrix \( [T]_{\sB} \) has a real eigenvalue \( \lambda \), which is a root of \( p_{[T]_{\sB}} = p_T \) (@thm-eigenvalue-characterizations, @def-charpoly-operator). So \( \lambda \) is an eigenvalue of \( T \), again by @thm-eigenvalue-characterizations, and \( T \) has an eigenvector \( \v \) for it. By @prp-one-dimensional-invariant, \( \Span(\v) \) is invariant.
+(b) Let \( \dim V = 3 \) over \( \nR \) and \( T \in \cL(V) \). Choose a basis \( \sB \). By (a), the real matrix \( \mtx{T}{\sB}{\sB} \) has a real eigenvalue \( \lambda \), which is a root of \( p_{\mtx{T}{\sB}{\sB}} = p_T \) (@thm-eigenvalue-characterizations, @def-charpoly-operator). So \( \lambda \) is an eigenvalue of \( T \), again by @thm-eigenvalue-characterizations, and \( T \) has an eigenvector \( \v \) for it. By @prp-one-dimensional-invariant, \( \Span(\v) \) is invariant.
 
 (c) Let \( \R = \begin{pmatrix} 0 & -1 \\ 1 & 0 \end{pmatrix} \) and \( \A = \R \oplus \R \in M_4(\nR) \). Then \( x\I_4 - \A = (x\I_2 - \R) \oplus (x\I_2 - \R) \) is block diagonal, so by the block triangular determinant over \( \nR[x] \) (the remark after @thm-det-block-triangular), \( p_{\A} = p_{\R}^2 = (x^2 + 1)^2 \). For real \( \lambda \), \( (\lambda^2 + 1)^2 \ge 1 > 0 \), so \( p_{\A} \) has no real root, and \( \A \) has no real eigenvalue. The argument of (a) needs odd degree.
 :::

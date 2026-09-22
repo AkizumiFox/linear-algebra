@@ -76,7 +76,7 @@ where \( \delta_{il} = 1 \) if \( i = l \) and \( 0 \) otherwise. So for \( 0 \l
 \]
 since \( \B_{-1} = \B_n = 0 \). Hence \( p_{\A}(\A) = 0 \).
 
-**The operator version.** Let \( \sB \) be a basis of \( V \) and \( \A = [T]_{\sB} \). By @def-charpoly-operator, \( p_T = p_{\A} \). By @cor-matrix-of-polynomial-of-operator, \( [p_T(T)]_{\sB} = p_T(\A) = p_{\A}(\A) = 0 \), so \( p_T(T) = 0 \) (@thm-linear-maps-isomorphic-to-matrices). This proves the theorem.
+**The operator version.** Let \( \sB \) be a basis of \( V \) and \( \A = \mtx{T}{\sB}{\sB} \). By @def-charpoly-operator, \( p_T = p_{\A} \). By @cor-matrix-of-polynomial-of-operator, \( \mtx{p_T(T)}{\sB}{\sB} = p_T(\A) = p_{\A}(\A) = 0 \), so \( p_T(T) = 0 \) (@thm-linear-maps-isomorphic-to-matrices). This proves the theorem.
 :::
 
 Compare with the fake proof. There, \( \A \) was pushed into the entries of \( x\I - \A \). Here, (1) is first unpacked into the \( n + 1 \) matrix equations (2), which contain no \( x \) at all, and \( \A \) enters only when we multiply those equations by \( \A^k \). Every multiplication is on the **left**, so no commutativity of matrices was used; the only commutativity used is inside \( F[x] \), in the adjugate identity.
@@ -134,7 +134,7 @@ By @thm-charpoly-coefficients, \( c_0 = (-1)^n\det \A \), which is non-zero when
 \[
 \A\big(\A^{n-1} + c_{n-1}\A^{n-2} + \dots + c_1\I\big) = \A^n + c_{n-1}\A^{n-1} + \dots + c_1\A = -c_0\I .
 \]
-Multiplying by \( -c_0^{-1} \), the matrix in parentheses times \( -c_0^{-1} \) is a right inverse of \( \A \), hence the inverse by @thm-one-sided-inverse. For an operator, apply this to \( [T]_{\sB} \) and use @cor-matrix-of-polynomial-of-operator.
+Multiplying by \( -c_0^{-1} \), the matrix in parentheses times \( -c_0^{-1} \) is a right inverse of \( \A \), hence the inverse by @thm-one-sided-inverse. For an operator, apply this to \( \mtx{T}{\sB}{\sB} \) and use @cor-matrix-of-polynomial-of-operator.
 :::
 
 So inverting an \( n \times n \) matrix never requires more than its first \( n - 1 \) powers and the coefficients of \( p_{\A} \). The theorem also reduces **every** power of \( \A \) to the first \( n - 1 \). Divide \( x^N \) by \( p_{\A} \) (@thm-polynomial-division): \( x^N = q\,p_{\A} + r \) with \( \deg r < n \). Then by @thm-evaluation-homomorphism and @thm-cayley-hamilton,

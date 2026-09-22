@@ -333,11 +333,11 @@ Now \( (1,0,3) = -2\e_1 + 3(1,0,1) \), so \( (\A^2 - 3\A + 2\I)\e_1 = \0 \) and 
 \[
 m_{\A,\e_1} = (x-1)(x-2) = x^2 - 3x + 2 ,
 \]
-and by @thm-cyclic-subspace-basis, \( Z(\e_1; \A) = \Span\big(\e_1, (1,0,1)\big) = \Span(\e_1, \e_3) \), of dimension \( 2 \), with
+and by @thm-cyclic-subspace-basis, \( Z(\e_1; \A) = \Span\big(\e_1, (1,0,1)\big) = \Span(\e_1, \e_3) \), of dimension \( 2 \), with basis \( \sB_1 = \big(\e_1, \A\e_1\big) \) and
 \[
-\big[T_{\A}|_{Z(\e_1;\A)}\big] = \C\big(x^2 - 3x + 2\big) = \begin{pmatrix} 0 & -2 \\ 1 & 3 \end{pmatrix}
+\mtx{T_{\A}|_{Z(\e_1;\A)}}{\sB_1}{\sB_1} = \C\big(x^2 - 3x + 2\big) = \begin{pmatrix} 0 & -2 \\ 1 & 3 \end{pmatrix} .
 \]
-in the basis \( \big(\e_1, \A\e_1\big) \). In particular \( \e_1 \) is **not** cyclic for \( \A \): its cyclic subspace is a plane, not \( \nQ^3 \).
+In particular \( \e_1 \) is **not** cyclic for \( \A \): its cyclic subspace is a plane, not \( \nQ^3 \).
 
 (c) Try \( \v = \e_2 \). Then
 \[

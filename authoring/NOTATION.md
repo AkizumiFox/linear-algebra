@@ -40,7 +40,7 @@ This list is fixed. A chapter that needs a new symbol adds it here, and a new ma
 
 ## Linear maps and matrices
 
-**Bold is for matrices and vectors, never for maps or spaces.** A matrix is bold (`\A`), a vector is bold lowercase (`\v`), an operator or linear map is plain italic (T, S), and a vector space is plain italic (V, U, W). A Greek letter that names a matrix is bold too, through `\vLambda`, `\vPi`, … , which render bold upright like `\A`. A letter that names a matrix is bold everywhere it appears, including in `[T]_{\sB}`-style expressions where the result is a matrix but the letter T is a map.
+**Bold is for matrices and vectors, never for maps or spaces.** A matrix is bold (`\A`), a vector is bold lowercase (`\v`), an operator or linear map is plain italic (T, S), and a vector space is plain italic (V, U, W). A Greek letter that names a matrix is bold too, through `\vLambda`, `\vPi`, … , which render bold upright like `\A`. A letter that names a matrix is bold everywhere it appears. The converse matters too: the argument of `\mtx` is the **map**, so it stays plain italic even though the result is a matrix — write `\mtx{T}{\sB}{\sB}`, never `\mtx{\T}{\sB}{\sB}`.
 
 | Type | Meaning |
 |---|---|
@@ -56,7 +56,7 @@ This list is fixed. A chapter that needs a new symbol adds it here, and a new ma
 | `\A, \B, \C` | matrices, **bold** upright capitals (`\mathbf`), like vectors. Entries stay plain: `a_{ij}`, or `(\A)_{ij}`. The macros `\A … \Z` give the bold letters |
 | `\A\tp` | transpose: `\tp` is `^{\top}`, rendered **A**⊤ |
 | `\A^{*}` | conjugate transpose (and adjoint of an operator) |
-| `\mtx{T}{\sB}{\sC}` | matrix of T from basis 𝓑 (input) to 𝓒 (output), rendered [T]_𝓑^𝓒; `[T]_{\sB}` when 𝓑 = 𝓒 |
+| `\mtx{T}{\sB}{\sC}` | matrix of T from basis 𝓑 (input) to 𝓒 (output), rendered [T]_𝓑^𝓒. The subscript is the basis on the first slot, the superscript the basis on the second; **both are always written**, so an operator in one basis is `\mtx{T}{\sB}{\sB}`, never the same call with the third argument left empty |
 | `\mtx{\id}{\sB}{\sC}` | change-of-coordinates matrix from 𝓑 to 𝓒 |
 | `\tr A`, `\det A` | trace, determinant |
 | `\adj A` | adjugate |
@@ -136,7 +136,7 @@ This list is fixed. A chapter that needs a new symbol adds it here, and a new ma
 | Type | Meaning |
 |---|---|
 | `\beta \colon V \times V \to F` | bilinear form. `q(\v) = \beta(\v, \v)` is a quadratic form |
-| `\mtx{\beta}{\sB}{}` | Gram matrix of a bilinear form: \( (\mtx{\beta}{\sB}{})_{ij} = \beta(\v_i, \v_j) \), indices **uncrossed** (Ch 13 §01). Chapter 10's `\G` (`def-gram-matrix`) crosses them, \( \inner{\v_j}{\v_i} \), to stay Hermitian under a conjugate-linear second slot. The two agree for real symmetric data and are transposes otherwise; Ch 13 §01 says so where it matters |
+| `\mtx{\beta}{\sB}{\sB}` | Gram matrix of a bilinear form: \( (\mtx{\beta}{\sB}{\sB})_{ij} = \beta(\v_i, \v_j) \), indices **uncrossed** (Ch 13 §01). The subscript is the basis fed to the first slot of the form and the superscript the basis fed to the second; Ch 13 uses the same basis on both, and writes it twice rather than leaving the superscript empty. Chapter 10's `\G` (`def-gram-matrix`) crosses them, \( \inner{\v_j}{\v_i} \), to stay Hermitian under a conjugate-linear second slot. The two agree for real symmetric data and are transposes otherwise; Ch 13 §01 says so where it matters |
 | `(n_+, n_-, n_0)` | inertia of a real symmetric form: the counts of positive, negative and zero entries in any diagonalization, the same for all of them by Sylvester's law (Ch 13 §05). The **signature** is the pair \( (n_+, n_-) \); the single integer \( n_+ - n_- \) is also called that elsewhere, and Ch 13 §05 says so. Plain subscripts, no macro |
 | `\operatorname{In}(\A)` | the **inertia triple** \( (n_+(\A), n_-(\A), n_0(\A)) \) of a Hermitian \( \A \): its numbers of positive, negative and zero eigenvalues with multiplicity, added entrywise (Ch 16 §10). For real symmetric \( \A \) it is the triple of the row above, by Ch 13 §05's thm-inertia-from-eigenvalues. Spelled with `\operatorname`, like `\operatorname{rad}`; no macro |
 | `\cH(\A)` | the **Hermitian dilation** of \( \A \in M_{m \times n} \): the \( (m+n) \times (m+n) \) Hermitian matrix with blocks \( \0, \A \) on top and \( \A^{*}, \0 \) below, whose eigenvalues are \( \pm\sigma_i(\A) \) and zeros (Ch 16 §09). Calligraphic, so it never meets the Hessian \( \H_f(\a) \) of Ch 13 §06, which is bold |

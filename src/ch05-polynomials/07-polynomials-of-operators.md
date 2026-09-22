@@ -42,7 +42,7 @@ For \( p = \sum_k a_kx^k \), distributivity (@thm-composition-linear) gives \( S
 
 Parts (a) and (b) together say that \( p \mapsto p(T) \) is a **homomorphism of algebras**: it translates every identity built from sums, scalar multiples and products of polynomials into the same identity for operators. (This map should not be confused with the evaluation map \( V \to V^{**} \) of Chapter 4; here we evaluate polynomials, not functionals.) Part (d) is what we will use most. It says that anything commuting with \( T \) commutes with the whole family of polynomials in \( T \).
 
-For matrices nothing new is needed. If \( V \) is finite-dimensional with basis \( \sB \), then \( [p(T)]_{\sB} = p([T]_{\sB}) \) by @cor-matrix-of-polynomial-of-operator. So every statement in this section holds verbatim for \( \A \in M_n(F) \), applied to the operator \( T_{\A} \).
+For matrices nothing new is needed. If \( V \) is finite-dimensional with basis \( \sB \), then \( \mtx{p(T)}{\sB}{\sB} = p(\mtx{T}{\sB}{\sB}) \) by @cor-matrix-of-polynomial-of-operator. So every statement in this section holds verbatim for \( \A \in M_n(F) \), applied to the operator \( T_{\A} \).
 
 ::: {#exm-polynomial-of-2x2}
 [Two Ways to Evaluate]

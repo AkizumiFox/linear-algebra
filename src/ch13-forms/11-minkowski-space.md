@@ -18,7 +18,7 @@ whose quadratic form is \( q(\x) = x_1^2 - x_2^2 - x_3^2 - x_4^2 \). The first c
 
 In words: \( \eta \) is the dot product of \( \nR^4 \) with three of its four signs reversed. Its matrix in the standard basis \( \sE \) is
 \[
-\mtx{\eta}{\sE}{} = \diag(1, -1, -1, -1),
+\mtx{\eta}{\sE}{\sE} = \diag(1, -1, -1, -1),
 \]
 which is symmetric, so \( \eta \) is a symmetric form (@def-symmetric-form), and it is diagonal, so \( \sE \) is an orthogonal basis for \( \eta \) (@def-orthogonal-basis-form). Reading off the signs, the signature of \( \eta \) is \( (1, 3) \) and its inertia is \( (1, 3, 0) \) (@def-signature). The form is **non-degenerate**: \( \eta(\e_1, \x) = x_1 \) and \( \eta(\e_j, \x) = -x_j \) for \( j = 2, 3, 4 \), so a vector paired to zero with everything has all four coordinates zero (@def-nondegenerate).
 
@@ -113,9 +113,9 @@ Two features of the picture deserve to be said out loud. The shaded region is **
 
 ## Hyperbolic rotations
 
-Now the isometries. The group attached to \( \eta \) is the isometry group of its matrix (@def-isometry-group-of-form), which is \( \Orth(1,3) \) in the notation of @def-classical-groups: the matrices \( \P \) with \( \P\tp\mtx{\eta}{\sE}{}\P = \mtx{\eta}{\sE}{} \). Its elements are the **Lorentz transformations**. We classify them in dimension \( 2 \), where \( \eta \) becomes
+Now the isometries. The group attached to \( \eta \) is the isometry group of its matrix (@def-isometry-group-of-form), which is \( \Orth(1,3) \) in the notation of @def-classical-groups: the matrices \( \P \) with \( \P\tp\mtx{\eta}{\sE}{\sE}\P = \mtx{\eta}{\sE}{\sE} \). Its elements are the **Lorentz transformations**. We classify them in dimension \( 2 \), where \( \eta \) becomes
 \[
-\eta_2(\x, \y) = x_1y_1 - x_2y_2 , \qquad \mtx{\eta_2}{\sE}{} = \diag(1,-1) .
+\eta_2(\x, \y) = x_1y_1 - x_2y_2 , \qquad \mtx{\eta_2}{\sE}{\sE} = \diag(1,-1) .
 \]
 
 The classification of \( \Orth(2) \) in @thm-orthogonal-2x2 rested on one geometric fact: a unit vector of the Euclidean plane is \( (\cos\theta, \sin\theta) \) for exactly one \( \theta \in [0, 2\pi) \). Replace the circle by the hyperbola and the same proof runs. We need the corresponding parametrization, and we take it from calculus:
@@ -297,7 +297,7 @@ At @lem-reversed-cauchy-schwarz, whose proof uses \( a, b > 0 \) to get \( ab > 
 :::
 
 ::: {.solution}
-(a) The convention is \( (+,-,-,-) \), so \( \mtx{\eta}{\sE}{} = \diag(1,-1,-1,-1) \), with signature \( (1,3) \) and inertia \( (1,3,0) \) (@def-signature). The opposite convention \( (-,+,+,+) \) uses \( -\eta \) and has signature \( (3,1) \).
+(a) The convention is \( (+,-,-,-) \), so \( \mtx{\eta}{\sE}{\sE} = \diag(1,-1,-1,-1) \), with signature \( (1,3) \) and inertia \( (1,3,0) \) (@def-signature). The opposite convention \( (-,+,+,+) \) uses \( -\eta \) and has signature \( (3,1) \).
 
 (b) For \( \x \ne \0 \): timelike means \( q(\x) > 0 \), null means \( q(\x) = 0 \), spacelike means \( q(\x) < 0 \) (@def-causal-character). "Null" renames "non-zero isotropic vector" (@def-isotropic-vector).
 

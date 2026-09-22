@@ -270,7 +270,7 @@ Write the matrix in an orthonormal basis adapted to \( U \). Invariance kills th
 :::
 
 ::: {.proof}
-Choose an orthonormal basis \( (\e_1, \dots, \e_r) \) of \( U \) and extend it to an orthonormal basis \( \sB \) of \( V \) (@cor-extend-orthonormal-basis). Since \( T\e_j \in U \) for \( j \le r \), the first \( r \) columns of \( \A = \mtx{T}{\sB}{\sB} \) have zeros below row \( r \), so
+Choose an orthonormal basis \( \sB_U = (\e_1, \dots, \e_r) \) of \( U \) and extend it to an orthonormal basis \( \sB \) of \( V \) (@cor-extend-orthonormal-basis). Since \( T\e_j \in U \) for \( j \le r \), the first \( r \) columns of \( \A = \mtx{T}{\sB}{\sB} \) have zeros below row \( r \), so
 \[
 \A = \begin{pmatrix} \B & \C \\ \0 & \D \end{pmatrix},
 \]
@@ -280,7 +280,7 @@ with \( \B \) of size \( r \times r \). Because \( \sB \) is orthonormal, \( \mt
 \]
 Taking traces and using \( \tr(\B^{*}\B) = \tr(\B\B^{*}) \) (@thm-trace-properties (3)) gives \( \tr(\C\C^{*}) = 0 \). But \( \tr(\C\C^{*}) = \sum_{i,j}\lvert c_{ij}\rvert^2 \), a sum of non-negative reals, so \( \C = \0 \).
 
-Hence \( \A = \B \oplus \D \). Reading the last \( n - r \) columns, \( T\e_j \in U^{\perp} \) for \( j > r \), so \( U^{\perp} \) is \( T \)-invariant; reading the first \( r \) columns of \( \A^{*} \), \( U \) is \( T^{*} \)-invariant. Finally \( \mtx{T|_U}{}{} = \B \) and the \( (1,1) \) blocks above now read \( \B^{*}\B = \B\B^{*} \), so \( T|_U \) is normal. This shows all three claims.
+Hence \( \A = \B \oplus \D \). Reading the last \( n - r \) columns, \( T\e_j \in U^{\perp} \) for \( j > r \), so \( U^{\perp} \) is \( T \)-invariant; reading the first \( r \) columns of \( \A^{*} \), \( U \) is \( T^{*} \)-invariant. Finally \( \mtx{T|_U}{\sB_U}{\sB_U} = \B \) and the \( (1,1) \) blocks above now read \( \B^{*}\B = \B\B^{*} \), so \( T|_U \) is normal. This shows all three claims.
 :::
 
 ::: {.warning}

@@ -159,7 +159,7 @@ The subspace \( H = \Span(\e,\f) \) is then called a **hyperbolic plane**, and \
 
 Four things follow at once. First, \( \e \) and \( \f \) are linearly independent: if \( \f = c\e \) then \( \beta(\e,\f) = c\,q(\e) = 0 \ne 1 \). So \( H \) really is a plane, \( \dim H = 2 \). Second, in the basis \( (\e,\f) \) the Gram matrix of \( \beta|_H \) is
 \[
-\mtx{\beta|_H}{(\e,\f)}{} = \begin{pmatrix} 0 & 1 \\ 1 & 0\end{pmatrix},
+\mtx{\beta|_H}{(\e,\f)}{(\e,\f)} = \begin{pmatrix} 0 & 1 \\ 1 & 0\end{pmatrix},
 \]
 whose determinant is \( -1 \ne 0 \), so \( \beta|_H \) is **non-degenerate** (@prp-nondegenerate-iff-invertible) and @prp-nondegenerate-restriction-splits applies to it. Third, \( q(a\e + b\f) = 2ab \), so on a hyperbolic plane \( q \) takes **every** value in \( F \): given \( c \in F \), take \( a = c/2 \) and \( b = 1 \). Fourth, over \( \nR \) the Gram matrix has eigenvalues \( 1 \) and \( -1 \), so a hyperbolic plane has signature \( (1,1) \) and is the unique real example up to congruence.
 

@@ -267,23 +267,23 @@ Let \( V = U \oplus W \) be finite-dimensional with \( U \ne \{\0\} \ne W \), le
 
 ::: {.enumerate options="label=(\alph*)"}
 1. \( T \) maps \( U \) into \( U \) and \( W \) into \( W \);
-2. \( [T]_{\sB} \) is block diagonal with respect to the partition \( k, l \).
+2. \( \mtx{T}{\sB}{\sB} \) is block diagonal with respect to the partition \( k, l \).
 :::
 
-In that case \( [T]_{\sB} = [T|_U]_{\sB_U} \oplus [T|_W]_{\sB_W} \).
+In that case \( \mtx{T}{\sB}{\sB} = \mtx{T|_U}{\sB_U}{\sB_U} \oplus \mtx{T|_W}{\sB_W}{\sB_W} \).
 :::
 
 ::: {.proof}
-By @thm-direct-sum-k-criteria, \( \sB \) is a basis of \( V \). By @def-matrix-of-linear-map, column \( j \le k \) of \( [T]_{\sB} \) holds the coordinates of \( T\u_j \), and column \( k + q \) those of \( T\w_q \).
+By @thm-direct-sum-k-criteria, \( \sB \) is a basis of \( V \). By @def-matrix-of-linear-map, column \( j \le k \) of \( \mtx{T}{\sB}{\sB} \) holds the coordinates of \( T\u_j \), and column \( k + q \) those of \( T\w_q \).
 
-(a) \( \Rightarrow \) (b). Since \( T\u_j \in U = \Span(\sB_U) \), write \( T\u_j = \sum_{i} a_{ij}\u_i \). By uniqueness of coordinates (@thm-unique-representation), the last \( l \) entries of column \( j \) are \( 0 \) and the first \( k \) are \( a_{1j}, \dots, a_{kj} \), which is column \( j \) of \( [T|_U]_{\sB_U} \). In the same way \( T\w_q = \sum_p d_{pq}\w_p \), so column \( k + q \) is \( 0 \) in its first \( k \) entries and equals column \( q \) of \( [T|_W]_{\sB_W} \) in its last \( l \). This shows \( [T]_{\sB} = [T|_U]_{\sB_U} \oplus [T|_W]_{\sB_W} \).
+(a) \( \Rightarrow \) (b). Since \( T\u_j \in U = \Span(\sB_U) \), write \( T\u_j = \sum_{i} a_{ij}\u_i \). By uniqueness of coordinates (@thm-unique-representation), the last \( l \) entries of column \( j \) are \( 0 \) and the first \( k \) are \( a_{1j}, \dots, a_{kj} \), which is column \( j \) of \( \mtx{T|_U}{\sB_U}{\sB_U} \). In the same way \( T\w_q = \sum_p d_{pq}\w_p \), so column \( k + q \) is \( 0 \) in its first \( k \) entries and equals column \( q \) of \( \mtx{T|_W}{\sB_W}{\sB_W} \) in its last \( l \). This shows \( \mtx{T}{\sB}{\sB} = \mtx{T|_U}{\sB_U}{\sB_U} \oplus \mtx{T|_W}{\sB_W}{\sB_W} \).
 
 (b) \( \Rightarrow \) (a). If the \( (2, 1) \) block is zero, then the coordinates of each \( T\u_j \) vanish in the last \( l \) places, so \( T\u_j \in \Span(\sB_U) = U \). For \( \u = \sum_j c_j\u_j \in U \), linearity gives \( T\u = \sum_j c_jT\u_j \in U \), since \( U \) is a subspace. The \( (1, 2) \) block being zero gives \( T\w_q \in W \) in the same way, and hence \( T \) maps \( W \) into \( W \).
 :::
 
 For example, let \( T = \frac{d^2}{dx^2} \) on \( \nR[x]_{\le 3} = U \oplus W \) with \( U = \Span(1, x^2) \) (even polynomials) and \( W = \Span(x, x^3) \) (odd polynomials). Since \( T(1) = 0 \), \( T(x^2) = 2 \), \( T(x) = 0 \) and \( T(x^3) = 6x \), \( T \) maps each piece into itself, and in the basis \( \sB = (1, x^2, x, x^3) \)
 \[
-[T]_{\sB} = \begin{pmatrix} 0 & 2 \\ 0 & 0 \end{pmatrix} \oplus \begin{pmatrix} 0 & 6 \\ 0 & 0 \end{pmatrix}.
+\mtx{T}{\sB}{\sB} = \begin{pmatrix} 0 & 2 \\ 0 & 0 \end{pmatrix} \oplus \begin{pmatrix} 0 & 6 \\ 0 & 0 \end{pmatrix}.
 \]
 In the standard order \( (1, x, x^2, x^3) \) the same operator has the matrix with \( 2 \) in position \( (1, 3) \) and \( 6 \) in position \( (2, 4) \), which is not block diagonal for the partition \( 2, 2 \). **Ordering the basis to match the decomposition is part of the method.**
 
@@ -295,10 +295,10 @@ If \( T \) maps only one subspace \( U \) into itself, we can still take a basis
 Let \( V \) be finite-dimensional, \( T \in \cL(V) \), and \( U \) a subspace with \( \{\0\} \ne U \ne V \). Let \( \sB_U = (\u_1, \dots, \u_k) \) be a basis of \( U \), extended to a basis \( \sB = (\u_1, \dots, \u_k, \w_1, \dots, \w_l) \) of \( V \).
 
 ::: {.enumerate options="label=(\alph*)"}
-1. \( T \) maps \( U \) into \( U \) if and only if the lower-left \( l \times k \) block of \( [T]_{\sB} \) is zero.
+1. \( T \) maps \( U \) into \( U \) if and only if the lower-left \( l \times k \) block of \( \mtx{T}{\sB}{\sB} \) is zero.
 2. In that case the rule \( \bar T(\v + U) = T\v + U \) defines an operator \( \bar T \) on \( V/U \), and
 \[
-[T]_{\sB} = \begin{pmatrix} [T|_U]_{\sB_U} & \B \\ 0 & [\bar T]_{\bar\sB} \end{pmatrix}
+\mtx{T}{\sB}{\sB} = \begin{pmatrix} \mtx{T|_U}{\sB_U}{\sB_U} & \B \\ 0 & \mtx{\bar T}{\bar\sB}{\bar\sB} \end{pmatrix}
 \]
 for some \( \B \in M_{k \times l}(F) \), where \( \bar\sB = (\w_1 + U, \dots, \w_l + U) \) is a basis of \( V/U \).
 :::
@@ -309,23 +309,23 @@ Read the matrix one column at a time. The first \( k \) columns describe \( T\u_
 :::
 
 ::: {.proof}
-(a) Column \( j \le k \) of \( [T]_{\sB} \) is the coordinate vector of \( T\u_j \) (@def-matrix-of-linear-map), and by @thm-unique-representation its last \( l \) entries vanish if and only if \( T\u_j \in \Span(\u_1, \dots, \u_k) = U \). If \( T \) maps \( U \) into \( U \), this holds for every \( j \). Conversely, if it holds for every \( j \), then for \( \u = \sum_j c_j\u_j \in U \) we get \( T\u = \sum_j c_jT\u_j \in U \), because \( U \) is a subspace.
+(a) Column \( j \le k \) of \( \mtx{T}{\sB}{\sB} \) is the coordinate vector of \( T\u_j \) (@def-matrix-of-linear-map), and by @thm-unique-representation its last \( l \) entries vanish if and only if \( T\u_j \in \Span(\u_1, \dots, \u_k) = U \). If \( T \) maps \( U \) into \( U \), this holds for every \( j \). Conversely, if it holds for every \( j \), then for \( \u = \sum_j c_j\u_j \in U \) we get \( T\u = \sum_j c_jT\u_j \in U \), because \( U \) is a subspace.
 
 (b) Let \( \pi \colon V \to V/U \) be the quotient map, linear with kernel \( U \) (@thm-quotient-space-operations-well-defined). The composite \( \pi T \) is linear (@thm-composition-linear), and for \( \u \in U \), \( \pi(T\u) = \0 \) because \( T\u \in U \). So \( U \subseteq \ker(\pi T) \), and by @thm-quotient-universal-property (a) there is exactly one linear \( \bar T \colon V/U \to V/U \) with \( \bar T(\v + U) = T\v + U \). By @thm-dimension-quotient, \( \bar\sB \) is a basis of \( V/U \).
 
-By (a), the lower-left block is zero, and as in the proof of @thm-direct-sum-block-diagonal, the upper-left block is \( [T|_U]_{\sB_U} \). For \( 1 \le q \le l \), write \( T\w_q = \sum_{i=1}^{k} b_{iq}\u_i + \sum_{p=1}^{l} d_{pq}\w_p \), so that column \( k + q \) of \( [T]_{\sB} \) is \( (b_{1q}, \dots, b_{kq}, d_{1q}, \dots, d_{lq}) \). Applying the linear map \( \pi \), and using \( \pi(\u_i) = \0 \),
+By (a), the lower-left block is zero, and as in the proof of @thm-direct-sum-block-diagonal, the upper-left block is \( \mtx{T|_U}{\sB_U}{\sB_U} \). For \( 1 \le q \le l \), write \( T\w_q = \sum_{i=1}^{k} b_{iq}\u_i + \sum_{p=1}^{l} d_{pq}\w_p \), so that column \( k + q \) of \( \mtx{T}{\sB}{\sB} \) is \( (b_{1q}, \dots, b_{kq}, d_{1q}, \dots, d_{lq}) \). Applying the linear map \( \pi \), and using \( \pi(\u_i) = \0 \),
 \[
 \bar T(\w_q + U) = \pi(T\w_q) = \sum_{p=1}^{l} d_{pq}\,(\w_p + U) .
 \]
-By @def-matrix-of-linear-map, column \( q \) of \( [\bar T]_{\bar\sB} \) is \( (d_{1q}, \dots, d_{lq}) \), which is the lower-right part of column \( k + q \) of \( [T]_{\sB} \). This proves (b), with \( \B = (b_{iq}) \).
+By @def-matrix-of-linear-map, column \( q \) of \( \mtx{\bar T}{\bar\sB}{\bar\sB} \) is \( (d_{1q}, \dots, d_{lq}) \), which is the lower-right part of column \( k + q \) of \( \mtx{T}{\sB}{\sB} \). This proves (b), with \( \B = (b_{iq}) \).
 :::
 
-The upper-left block depends only on the basis \( \sB_U \), and the lower-right block only on the cosets \( \w_1 + U, \dots, \w_l + U \). So replacing each \( \w_q \) by \( \w_q + \u'_q \) with \( \u'_q \in U \) can change the top-right block \( \B \), but leaves both diagonal blocks unchanged. The theorem splits \( T \) into two smaller operators, and every quantity that sees only diagonal blocks splits with it. By @thm-det-block-triangular, \( \det T = \det(T|_U)\det\bar T \). Applied over \( F[x] \) (Chapter 6 §8 notes that the block triangular determinant holds over any commutative ring), \( x\I - [T]_{\sB} = \begin{pmatrix} x\I_k - [T|_U]_{\sB_U} & -\B \\ 0 & x\I_l - [\bar T]_{\bar\sB} \end{pmatrix} \) gives \( p_T = p_{T|_U}\,p_{\bar T} \). Chapter 8 builds on exactly this factorization.
+The upper-left block depends only on the basis \( \sB_U \), and the lower-right block only on the cosets \( \w_1 + U, \dots, \w_l + U \). So replacing each \( \w_q \) by \( \w_q + \u'_q \) with \( \u'_q \in U \) can change the top-right block \( \B \), but leaves both diagonal blocks unchanged. The theorem splits \( T \) into two smaller operators, and every quantity that sees only diagonal blocks splits with it. By @thm-det-block-triangular, \( \det T = \det(T|_U)\det\bar T \). Applied over \( F[x] \) (Chapter 6 §8 notes that the block triangular determinant holds over any commutative ring), \( x\I - \mtx{T}{\sB}{\sB} = \begin{pmatrix} x\I_k - \mtx{T|_U}{\sB_U}{\sB_U} & -\B \\ 0 & x\I_l - \mtx{\bar T}{\bar\sB}{\bar\sB} \end{pmatrix} \) gives \( p_T = p_{T|_U}\,p_{\bar T} \). Chapter 8 builds on exactly this factorization.
 
 ::: {#exm-cyclic-shift-block-triangular}
 [A Plane Mapped into Itself]
 
-Let \( T \colon \nR^3 \to \nR^3 \), \( T(x, y, z) = (y, z, x) \), and \( U = \{ (x, y, z) : x + y + z = 0 \} \). Show that \( T \) maps \( U \) into \( U \), find \( [T]_{\sB} \) for the basis \( \sB = (\u_1, \u_2, \e_3) \) with \( \u_1 = (1, -1, 0) \), \( \u_2 = (0, 1, -1) \), and interpret the lower-right block.
+Let \( T \colon \nR^3 \to \nR^3 \), \( T(x, y, z) = (y, z, x) \), and \( U = \{ (x, y, z) : x + y + z = 0 \} \). Show that \( T \) maps \( U \) into \( U \), find \( \mtx{T}{\sB}{\sB} \) for the basis \( \sB = (\u_1, \u_2, \e_3) \) with \( \u_1 = (1, -1, 0) \), \( \u_2 = (0, 1, -1) \), and interpret the lower-right block.
 :::
 
 ::: {.solution}
@@ -339,7 +339,7 @@ T\e_3 &= (0, 1, 0) = \u_2 + \e_3,
 \]
 so
 \[
-[T]_{\sB} = \left(\begin{array}{cc|c} -1 & 1 & 0 \\ -1 & 0 & 1 \\ \hline 0 & 0 & 1 \end{array}\right).
+\mtx{T}{\sB}{\sB} = \left(\begin{array}{cc|c} -1 & 1 & 0 \\ -1 & 0 & 1 \\ \hline 0 & 0 & 1 \end{array}\right).
 \]
 The lower-left block is zero, as @thm-invariant-subspace-block-triangular predicts. The lower-right block \( (1) \) says \( \bar T(\e_3 + U) = \e_3 + U \), so \( \bar T \) is the identity on the line \( \nR^3/U \). Indeed \( T\v - \v = (y - x, z - y, x - z) \) has entries summing to \( 0 \), so \( T\v + U = \v + U \) for every \( \v \): \( T \) moves vectors, but never changes the sum of their coordinates, and that sum is all that \( \nR^3/U \) remembers.
 :::
@@ -357,7 +357,7 @@ The lower-left block is zero, as @thm-invariant-subspace-block-triangular predic
 3. True or false: the top-left block of that product is \( \A'\A + \C'\B \). Justify your answer.
 4. True or false: if \( \A \in M_k(F) \) and \( \B \in M_l(F) \), then \( \A \oplus \B = \B \oplus \A \). Justify your answer.
 5. True or false: if \( \M = \begin{pmatrix} \A & \B \\ 0 & \D \end{pmatrix} \) with \( \A \), \( \D \) square is invertible, then \( \M^{-1} \) is block upper triangular. Justify your answer.
-6. In a basis whose first \( k \) vectors form a basis of \( U \), what does a zero lower-left block of \( [T]_{\sB} \) say about \( T \)?
+6. In a basis whose first \( k \) vectors form a basis of \( U \), what does a zero lower-left block of \( \mtx{T}{\sB}{\sB} \) say about \( T \)?
 :::
 ::::
 
@@ -441,7 +441,7 @@ Let \( \P = \begin{pmatrix} 0 & 1 & -1 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{pmatrix} \
 
 ::: {.enumerate options="label=(\alph*)"}
 1. Show that \( \P^2 = \P \), that \( \P\u = \u \) for \( \u \in U \) and \( \P\e_1 = \0 \), and that \( \nR^3 = U \oplus W \).
-2. Let \( \sB = ((1, 1, 0), (0, 1, 1), \e_1) \). Use @thm-direct-sum-block-diagonal to write down \( [T_{\P}]_{\sB} \) without computing, and confirm it as \( \S^{-1}\P \S \), where \( \S \) has the vectors of \( \sB \) as columns.
+2. Let \( \sB = ((1, 1, 0), (0, 1, 1), \e_1) \). Use @thm-direct-sum-block-diagonal to write down \( \mtx{T_{\P}}{\sB}{\sB} \) without computing, and confirm it as \( \S^{-1}\P \S \), where \( \S \) has the vectors of \( \sB \) as columns.
 3. Hence find \( \P^{100} \) and \( \tr \P \).
 :::
 ::::
@@ -449,7 +449,7 @@ Let \( \P = \begin{pmatrix} 0 & 1 & -1 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{pmatrix} \
 ::: {.solution}
 (a) Multiplying, \( \P^2 \) has rows \( (0, 1, -1) \), \( (0, 1, 0) \), \( (0, 0, 1) \), so \( \P^2 = \P \). Also \( \P(1, 1, 0) = (1, 1, 0) \), \( \P(0, 1, 1) = (0, 1, 1) \) and \( \P\e_1 = \0 \) (the first column is zero), so \( \P \) fixes every vector of \( U \) by linearity. The three vectors of \( \sB \) are the columns of \( \S = \begin{pmatrix} 1 & 0 & 1 \\ 1 & 1 & 0 \\ 0 & 1 & 0 \end{pmatrix} \), and expanding along the last column, \( \det \S = 1 \cdot (1 - 0) = 1 \ne 0 \). So \( \S \) is invertible (@thm-det-nonzero-iff-invertible), its columns form a basis of \( \nR^3 \) (@thm-invertible-tfae), and \( \nR^3 = U \oplus W \) by @thm-direct-sum-k-criteria.
 
-(b) \( T_{\P} \) maps \( U \) into \( U \) (as the identity) and \( W \) into \( W \) (as zero). By @thm-direct-sum-block-diagonal, \( [T_{\P}]_{\sB} = \I_2 \oplus (0) = \diag(1, 1, 0) \). By @thm-change-of-basis-maps, \( [T_{\P}]_{\sB} = \S^{-1}\P \S \). Here \( \S^{-1} = \begin{pmatrix} 0 & 1 & -1 \\ 0 & 0 & 1 \\ 1 & -1 & 1 \end{pmatrix} \) (check \( \S \S^{-1} = \I_3 \)), and \( \P \S \) has columns \( \P(1, 1, 0) = (1, 1, 0) \), \( \P(0, 1, 1) = (0, 1, 1) \), \( \P\e_1 = \0 \), so \( \S^{-1}\P \S = \S^{-1}\begin{pmatrix} 1 & 0 & 0 \\ 1 & 1 & 0 \\ 0 & 1 & 0 \end{pmatrix} = \diag(1, 1, 0) \).
+(b) \( T_{\P} \) maps \( U \) into \( U \) (as the identity) and \( W \) into \( W \) (as zero). By @thm-direct-sum-block-diagonal, \( \mtx{T_{\P}}{\sB}{\sB} = \I_2 \oplus (0) = \diag(1, 1, 0) \). By @thm-change-of-basis-maps, \( \mtx{T_{\P}}{\sB}{\sB} = \S^{-1}\P \S \). Here \( \S^{-1} = \begin{pmatrix} 0 & 1 & -1 \\ 0 & 0 & 1 \\ 1 & -1 & 1 \end{pmatrix} \) (check \( \S \S^{-1} = \I_3 \)), and \( \P \S \) has columns \( \P(1, 1, 0) = (1, 1, 0) \), \( \P(0, 1, 1) = (0, 1, 1) \), \( \P\e_1 = \0 \), so \( \S^{-1}\P \S = \S^{-1}\begin{pmatrix} 1 & 0 & 0 \\ 1 & 1 & 0 \\ 0 & 1 & 0 \end{pmatrix} = \diag(1, 1, 0) \).
 
 (c) \( \P = \S\diag(1, 1, 0)\S^{-1} \), so \( \P^{100} = \S\diag(1, 1, 0)^{100}\S^{-1} = \S\diag(1, 1, 0)\S^{-1} = \P \) by @thm-block-diagonal-arithmetic (b) (or directly from \( \P^2 = \P \)). By @thm-trace-similarity-invariant, \( \tr \P = \tr\diag(1, 1, 0) = 2 \), which matches \( 0 + 1 + 1 \).
 :::
@@ -463,7 +463,7 @@ Let \( n \ge 1 \).
 
 ::: {.enumerate options="label=(\alph*)"}
 1. For \( \X \in M_n(F) \), let \( \N_{\X} = \begin{pmatrix} 0 & \X \\ 0 & 0 \end{pmatrix} \in M_{2n}(F) \). Show that \( \N_{\X}^2 = 0 \) and that \( \rank \N_{\X} = \rank \X \).
-2. Let \( V \) have dimension \( 2n \), and let \( T \in \cL(V) \) satisfy \( T^2 = 0 \) and \( \rank T = n \). Show that \( \im T = \ker T \). Choose \( \w_1, \dots, \w_n \) with \( (T\w_1, \dots, T\w_n) \) a basis of \( \im T \), and put \( \u_i = T\w_i \). Prove that \( \sB = (\u_1, \dots, \u_n, \w_1, \dots, \w_n) \) is a basis of \( V \) and that \( [T]_{\sB} = \N_{\I_n} \).
+2. Let \( V \) have dimension \( 2n \), and let \( T \in \cL(V) \) satisfy \( T^2 = 0 \) and \( \rank T = n \). Show that \( \im T = \ker T \). Choose \( \w_1, \dots, \w_n \) with \( (T\w_1, \dots, T\w_n) \) a basis of \( \im T \), and put \( \u_i = T\w_i \). Prove that \( \sB = (\u_1, \dots, \u_n, \w_1, \dots, \w_n) \) is a basis of \( V \) and that \( \mtx{T}{\sB}{\sB} = \N_{\I_n} \).
 3. Deduce that for every invertible \( \X \in M_n(F) \), the matrix \( \N_{\X} \) is similar to \( \N_{\I_n} \).
 :::
 
@@ -475,9 +475,9 @@ Let \( n \ge 1 \).
 
 (b) If \( \v = T\x \in \im T \), then \( T\v = T^2\x = \0 \), so \( \im T \subseteq \ker T \). By @thm-rank-nullity, \( \dim\ker T = 2n - n = n = \dim\im T \), so \( \im T = \ker T \) by @thm-dim-impl-eq. The vectors \( \w_i \) exist because \( (T\w_1, \dots, T\w_n) \) can be any basis of \( \im T \), each of whose vectors is \( T \) of something.
 
-Let \( \sum_i a_i\u_i + \sum_i b_i\w_i = \0 \). Applying \( T \), and using \( T\u_i = T^2\w_i = \0 \), gives \( \sum_i b_i\u_i = \0 \). The \( \u_i \) form a basis of \( \im T \), so all \( b_i = 0 \), and then \( \sum_i a_i\u_i = \0 \) gives all \( a_i = 0 \). So \( \sB \) is a linearly independent list of \( 2n = \dim V \) vectors, hence a basis (@thm-right-size-basis). Since \( T\u_i = \0 \) and \( T\w_i = \u_i \), column \( i \le n \) of \( [T]_{\sB} \) is zero and column \( n + i \) is \( \e_i \). So \( [T]_{\sB} = \begin{pmatrix} 0 & \I_n \\ 0 & 0 \end{pmatrix} = \N_{\I_n} \).
+Let \( \sum_i a_i\u_i + \sum_i b_i\w_i = \0 \). Applying \( T \), and using \( T\u_i = T^2\w_i = \0 \), gives \( \sum_i b_i\u_i = \0 \). The \( \u_i \) form a basis of \( \im T \), so all \( b_i = 0 \), and then \( \sum_i a_i\u_i = \0 \) gives all \( a_i = 0 \). So \( \sB \) is a linearly independent list of \( 2n = \dim V \) vectors, hence a basis (@thm-right-size-basis). Since \( T\u_i = \0 \) and \( T\w_i = \u_i \), column \( i \le n \) of \( \mtx{T}{\sB}{\sB} \) is zero and column \( n + i \) is \( \e_i \). So \( \mtx{T}{\sB}{\sB} = \begin{pmatrix} 0 & \I_n \\ 0 & 0 \end{pmatrix} = \N_{\I_n} \).
 
-(c) If \( \X \) is invertible, then by (a) the operator \( T = T_{\N_{\X}} \) on \( F^{2n} \) satisfies \( T^2 = 0 \) and \( \rank T = \rank \N_{\X} = \rank \X = n \) (@thm-rank-map-equals-rank-matrix, and @thm-invertible-tfae for \( \rank \X = n \)). By (b) there is a basis \( \sB \) with \( [T]_{\sB} = \N_{\I_n} \). The matrix of \( T \) in the standard basis is \( \N_{\X} \), so \( \N_{\X} \) and \( \N_{\I_n} \) are similar by @thm-similar-iff-same-operator.
+(c) If \( \X \) is invertible, then by (a) the operator \( T = T_{\N_{\X}} \) on \( F^{2n} \) satisfies \( T^2 = 0 \) and \( \rank T = \rank \N_{\X} = \rank \X = n \) (@thm-rank-map-equals-rank-matrix, and @thm-invertible-tfae for \( \rank \X = n \)). By (b) there is a basis \( \sB \) with \( \mtx{T}{\sB}{\sB} = \N_{\I_n} \). The matrix of \( T \) in the standard basis is \( \N_{\X} \), so \( \N_{\X} \) and \( \N_{\I_n} \) are similar by @thm-similar-iff-same-operator.
 :::
 
 :::: {#exr-block-multiplication-c2}

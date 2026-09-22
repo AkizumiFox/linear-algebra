@@ -162,9 +162,9 @@ by @thm-cyclic-subspace-basis (a) and @thm-direct-sum-k-criteria ((a) \( \Righta
 \]
 and \( \sum_j \dim Z(\v_j;T) = \sum_{i,j}\dim Z(\v_{ij};T) = \dim V \). By @thm-direct-sum-k-criteria ((e) \( \Rightarrow \) (a)) the sum over \( j \) is direct, and it equals \( V \).
 
-(c) Each \( Z(\v_j;T) \) is \( T \)-invariant and non-zero, so by @thm-direct-sum-invariant-block-diagonal there is a basis \( \sB \) of \( V \) with \( [T]_{\sB} = [T|_{Z(\v_1;T)}] \oplus \dots \oplus [T|_{Z(\v_r;T)}] \). Then \( x\I - [T]_{\sB} \) is block diagonal with the blocks \( x\I - [T|_{Z(\v_j;T)}] \), so @thm-det-block-triangular, applied \( r - 1 \) times, gives
+(c) Each \( Z(\v_j;T) \) is \( T \)-invariant and non-zero, so choose a basis \( \sB_j \) of \( Z(\v_j;T) \) for each \( j \) and let \( \sB \) be \( \sB_1, \dots, \sB_r \) written one after another. By @thm-direct-sum-invariant-block-diagonal, \( \sB \) is a basis of \( V \) and \( \mtx{T}{\sB}{\sB} = \mtx{T|_{Z(\v_1;T)}}{\sB_1}{\sB_1} \oplus \dots \oplus \mtx{T|_{Z(\v_r;T)}}{\sB_r}{\sB_r} \). Then \( x\I - \mtx{T}{\sB}{\sB} \) is block diagonal with the blocks \( x\I - \mtx{T|_{Z(\v_j;T)}}{\sB_j}{\sB_j} \), so @thm-det-block-triangular, applied \( r - 1 \) times, gives
 \[
-p_T = \det\big(x\I - [T]_{\sB}\big) = \prod_{j=1}^{r} p_{T|_{Z(\v_j;T)}}
+p_T = \det\big(x\I - \mtx{T}{\sB}{\sB}\big) = \prod_{j=1}^{r} p_{T|_{Z(\v_j;T)}}
 \]
 (@def-charpoly-operator). By @thm-cyclic-subspace-basis (c), \( p_{T|_{Z(\v_j;T)}} = m_{T,\v_j} = d_j \). Hence \( p_T = d_1\cdots d_r \), and comparing degrees gives \( \sum_j \deg d_j = \deg p_T = \dim V \) (@thm-charpoly-coefficients).
 
@@ -307,15 +307,15 @@ Everything is now assembled. Writing the matrix down is @thm-cyclic-subspace-bas
 
 Let \( V \ne \{\0\} \) be a finite-dimensional vector space over **any** field \( F \), and let \( T \in \cL(V) \) have invariant factors \( d_1 \mid d_2 \mid \dots \mid d_r \). Then there is a basis \( \sB \) of \( V \) with
 \[
-[T]_{\sB} = \C(d_1) \oplus \C(d_2) \oplus \dots \oplus \C(d_r) ,
+\mtx{T}{\sB}{\sB} = \C(d_1) \oplus \C(d_2) \oplus \dots \oplus \C(d_r) ,
 \]
 and this matrix is determined by \( T \). It is called the **rational canonical form** of \( T \). Equivalently, every \( \A \in M_n(F) \) with \( n \ge 1 \) is similar to exactly one matrix of the form \( \C(d_1) \oplus \dots \oplus \C(d_r) \) with \( d_1 \mid \dots \mid d_r \) monic and non-constant.
 :::
 
 ::: {.proof}
-By @thm-cyclic-decomposition, \( V = Z(\v_1;T) \oplus \dots \oplus Z(\v_r;T) \) with \( m_{T,\v_j} = d_j \). Each piece is \( T \)-invariant and non-zero, and by @thm-cyclic-subspace-basis (a), (b) the list \( \sB_j = (\v_j, T\v_j, \dots, T^{\deg d_j - 1}\v_j) \) is a basis of \( Z(\v_j;T) \) in which the matrix of the restriction is \( \C(d_j) \). Let \( \sB \) be \( \sB_1, \dots, \sB_r \) written one after another; by @thm-direct-sum-invariant-block-diagonal, \( \sB \) is a basis of \( V \) and \( [T]_{\sB} = \C(d_1) \oplus \dots \oplus \C(d_r) \). The blocks are determined by \( T \), since the \( d_j \) are (@cor-invariant-factors-unique (a)).
+By @thm-cyclic-decomposition, \( V = Z(\v_1;T) \oplus \dots \oplus Z(\v_r;T) \) with \( m_{T,\v_j} = d_j \). Each piece is \( T \)-invariant and non-zero, and by @thm-cyclic-subspace-basis (a), (b) the list \( \sB_j = (\v_j, T\v_j, \dots, T^{\deg d_j - 1}\v_j) \) is a basis of \( Z(\v_j;T) \) in which the matrix of the restriction is \( \C(d_j) \). Let \( \sB \) be \( \sB_1, \dots, \sB_r \) written one after another; by @thm-direct-sum-invariant-block-diagonal, \( \sB \) is a basis of \( V \) and \( \mtx{T}{\sB}{\sB} = \C(d_1) \oplus \dots \oplus \C(d_r) \). The blocks are determined by \( T \), since the \( d_j \) are (@cor-invariant-factors-unique (a)).
 
-For a matrix \( \A \in M_n(F) \), apply this to \( T_{\A} \) and use @thm-similar-iff-same-operator. For the uniqueness in the matrix form, suppose \( \A \sim \C(f_1) \oplus \dots \oplus \C(f_s) \) with \( f_1 \mid \dots \mid f_s \) monic and non-constant. By @thm-similar-iff-same-operator there is a basis \( \sC \) of \( F^n \) with \( [T_{\A}]_{\sC} = \C(f_1) \oplus \dots \oplus \C(f_s) \). Let \( U_j \) be the span of the segment of \( \sC \) belonging to the \( j \)-th block; then \( F^n = U_1 \oplus \dots \oplus U_s \) with each \( U_j \) invariant and \( [T_{\A}|_{U_j}] = \C(f_j) \) (@thm-direct-sum-invariant-block-diagonal). By @thm-companion-char-min, @thm-minimal-polynomial-similarity and @def-charpoly-operator, \( m_{T_{\A}|_{U_j}} = p_{T_{\A}|_{U_j}} = f_j \), so \( T_{\A}|_{U_j} \) is cyclic (@thm-cyclic-iff-min-equals-char) and \( U_j = Z(\u_j; T_{\A}) \) for some \( \u_j \) with \( m_{T_{\A},\u_j} = f_j \) (@thm-cyclic-subspace-basis (c)). This is a decomposition as in @thm-cyclic-decomposition, so \( (f_1, \dots, f_s) = (d_1, \dots, d_r) \) by @cor-invariant-factors-unique (a). Hence the matrix is the rational canonical form of \( \A \).
+For a matrix \( \A \in M_n(F) \), apply this to \( T_{\A} \) and use @thm-similar-iff-same-operator. For the uniqueness in the matrix form, suppose \( \A \sim \C(f_1) \oplus \dots \oplus \C(f_s) \) with \( f_1 \mid \dots \mid f_s \) monic and non-constant. By @thm-similar-iff-same-operator there is a basis \( \sC \) of \( F^n \) with \( \mtx{T_{\A}}{\sC}{\sC} = \C(f_1) \oplus \dots \oplus \C(f_s) \). Let \( \sC_j \) be the segment of \( \sC \) belonging to the \( j \)-th block and let \( U_j \) be its span; then \( F^n = U_1 \oplus \dots \oplus U_s \) with each \( U_j \) invariant and \( \mtx{T_{\A}|_{U_j}}{\sC_j}{\sC_j} = \C(f_j) \) (@thm-direct-sum-invariant-block-diagonal). By @thm-companion-char-min, @thm-minimal-polynomial-similarity and @def-charpoly-operator, \( m_{T_{\A}|_{U_j}} = p_{T_{\A}|_{U_j}} = f_j \), so \( T_{\A}|_{U_j} \) is cyclic (@thm-cyclic-iff-min-equals-char) and \( U_j = Z(\u_j; T_{\A}) \) for some \( \u_j \) with \( m_{T_{\A},\u_j} = f_j \) (@thm-cyclic-subspace-basis (c)). This is a decomposition as in @thm-cyclic-decomposition, so \( (f_1, \dots, f_s) = (d_1, \dots, d_r) \) by @cor-invariant-factors-unique (a). Hence the matrix is the rational canonical form of \( \A \).
 :::
 
 This pays off the promise made in Section 3: **there is a canonical form over every field.** No hypothesis on \( F \) was used, and none is needed. The form is canonical in the strong sense: the blocks come in a prescribed order, dictated by divisibility, so two operators have the *same* form, not merely similar forms.
@@ -358,7 +358,7 @@ Cutting the pieces as finely as possible gives a second form, usually with more 
 
 Let \( V \ne \{\0\} \) be finite-dimensional over \( F \), let \( T \in \cL(V) \), and let \( q_1, \dots, q_N \) be the elementary divisors of \( T \). Then there is a basis \( \sB \) of \( V \) with
 \[
-[T]_{\sB} = \C(q_1) \oplus \C(q_2) \oplus \dots \oplus \C(q_N) ,
+\mtx{T}{\sB}{\sB} = \C(q_1) \oplus \C(q_2) \oplus \dots \oplus \C(q_N) ,
 \]
 and the blocks are determined by \( T \) up to their order.
 :::
@@ -382,7 +382,7 @@ Consequently, if \( p_T \) splits over \( F \), then the elementary divisors of 
 ::: {.proof}
 Put \( \J = \J_k(\lambda) \). Then \( \J - \lambda \I = \J_k(0) \) satisfies \( \J_k(0)^k = 0 \ne \J_k(0)^{k-1} \), so \( (x - \lambda)^k \) annihilates \( \J \) and no smaller power does; by @lem-monic-divisors and @thm-minimal-polynomial-divides, \( m_{\J} = (x-\lambda)^k \). Also \( p_{\J} = (x - \lambda)^k \) (@thm-det-triangular), so \( m_{\J} = p_{\J} \) and \( \J \) is cyclic (@thm-cyclic-iff-min-equals-char). By the last sentence of that theorem, \( \J \) is similar to \( \C(m_{\J}) = \C\big((x-\lambda)^k\big) \).
 
-Now suppose \( p_T \) splits and let \( \sB \) be a Jordan basis, with \( [T]_{\sB} = \J_{k_1}(\mu_1) \oplus \dots \oplus \J_{k_m}(\mu_m) \) (@thm-jordan-canonical-form). Each block corresponds to a \( T \)-invariant subspace \( U_l \), spanned by the segment of \( \sB \) belonging to it, with \( V = U_1 \oplus \dots \oplus U_m \) and \( [T|_{U_l}] = \J_{k_l}(\mu_l) \). By the first paragraph, \( m_{T|_{U_l}} = p_{T|_{U_l}} = (x - \mu_l)^{k_l} \), so \( T|_{U_l} \) is cyclic: there is \( \v_l \in U_l \) with \( U_l = Z(\v_l; T) \) and \( m_{T,\v_l} = (x-\mu_l)^{k_l} \) (@thm-cyclic-iff-min-equals-char, @thm-cyclic-subspace-basis (c)). Since \( x - \mu_l \) is irreducible, being of degree \( 1 \), this exhibits \( V \) as a direct sum of cyclic subspaces with prime-power annihilators, so by @cor-invariant-factors-unique (b) the elementary divisors of \( T \) are exactly the polynomials \( (x - \mu_l)^{k_l} \). Replacing each Jordan block by the similar companion block, or conversely, therefore turns one form into the other.
+Now suppose \( p_T \) splits and let \( \sB \) be a Jordan basis, with \( \mtx{T}{\sB}{\sB} = \J_{k_1}(\mu_1) \oplus \dots \oplus \J_{k_m}(\mu_m) \) (@thm-jordan-canonical-form). Each block corresponds to a \( T \)-invariant subspace \( U_l \), spanned by the segment \( \sB_l \) of \( \sB \) belonging to it, with \( V = U_1 \oplus \dots \oplus U_m \) and \( \mtx{T|_{U_l}}{\sB_l}{\sB_l} = \J_{k_l}(\mu_l) \). By the first paragraph, \( m_{T|_{U_l}} = p_{T|_{U_l}} = (x - \mu_l)^{k_l} \), so \( T|_{U_l} \) is cyclic: there is \( \v_l \in U_l \) with \( U_l = Z(\v_l; T) \) and \( m_{T,\v_l} = (x-\mu_l)^{k_l} \) (@thm-cyclic-iff-min-equals-char, @thm-cyclic-subspace-basis (c)). Since \( x - \mu_l \) is irreducible, being of degree \( 1 \), this exhibits \( V \) as a direct sum of cyclic subspaces with prime-power annihilators, so by @cor-invariant-factors-unique (b) the elementary divisors of \( T \) are exactly the polynomials \( (x - \mu_l)^{k_l} \). Replacing each Jordan block by the similar companion block, or conversely, therefore turns one form into the other.
 :::
 
 ::: {.remark}
@@ -568,7 +568,7 @@ which is the annihilator relation \( \A^4 + 2\A^2 + \I = 0 \) applied to \( \v \
 
 (b) The invariant factors are the polynomials \( d_1 \mid \dots \mid d_r \) of that theorem; the elementary divisors are the prime powers occurring in their factorizations, listed with repetition (@def-invariant-factors). Both are determined by \( T \) (@cor-invariant-factors-unique).
 
-(c) The matrix \( \C(d_1) \oplus \dots \oplus \C(d_r) \), which is \( [T]_{\sB} \) for a suitable basis; it exists over **every** field (@thm-rational-canonical-form).
+(c) The matrix \( \C(d_1) \oplus \dots \oplus \C(d_r) \), which is \( \mtx{T}{\sB}{\sB} \) for a suitable basis; it exists over **every** field (@thm-rational-canonical-form).
 
 (d) True, by @cor-similarity-field-independent with \( K = \nQ \) and \( L = \nC \).
 

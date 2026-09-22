@@ -252,16 +252,16 @@ By @thm-similar-iff-same-operator, all matrices of one operator in the various b
 
 Let \( V \) be a finite-dimensional vector space over \( F \) with \( \dim V \ge 1 \), and let \( T \in \cL(V) \). The **determinant** of \( T \) is
 \[
-\det T \coloneqq \det [T]_{\sB},
+\det T \coloneqq \det \mtx{T}{\sB}{\sB},
 \]
 where \( \sB \) is **any** basis of \( V \). For \( V = \{\0\} \) we set \( \det T = 1 \).
 :::
 
-**Well-definedness.** If \( \sB \) and \( \sC \) are bases of \( V \), then \( [T]_{\sC} = \P^{-1}[T]_{\sB}\P \) with \( \P = \mtx{\id}{\sC}{\sB} \) invertible, by @thm-change-of-basis-maps and @thm-similar-iff-same-operator (a). By @cor-det-similarity-invariant the two determinants agree. The convention for \( V = \{\0\} \) is the empty product, and it keeps the next theorem true in that case.
+**Well-definedness.** If \( \sB \) and \( \sC \) are bases of \( V \), then \( \mtx{T}{\sC}{\sC} = \P^{-1}\mtx{T}{\sB}{\sB}\P \) with \( \P = \mtx{\id}{\sC}{\sB} \) invertible, by @thm-change-of-basis-maps and @thm-similar-iff-same-operator (a). By @cor-det-similarity-invariant the two determinants agree. The convention for \( V = \{\0\} \) is the empty product, and it keeps the next theorem true in that case.
 
 **Examples.**
 
-- **Scalars.** For \( c \in F \) and \( \dim V = n \ge 1 \), \( [c\,\id_V]_{\sB} = c\I_n \) in every basis, so \( \det(c\,\id_V) = c^n \) by @thm-det-triangular.
+- **Scalars.** For \( c \in F \) and \( \dim V = n \ge 1 \), \( \mtx{c\,\id_V}{\sB}{\sB} = c\I_n \) in every basis, so \( \det(c\,\id_V) = c^n \) by @thm-det-triangular.
 - **A reflection.** \( R(x, y) = (y, x) \) on \( \nR^2 \) has standard matrix \( \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix} \), of determinant \( -1 \). In the basis \( ((1, 1), (1, -1)) \) its matrix is \( \diag(1, -1) \) (@exm-reflection-diagonal-basis), again of determinant \( -1 \), as it must be.
 - **Differentiation.** On \( \nR[x]_{\le 3} \) with basis \( (1, x, x^2, x^3) \), the matrix of \( \D \) is upper triangular with zero diagonal (@exm-matrix-of-differentiation), so \( \det \D = 0 \).
 
@@ -278,7 +278,7 @@ and \( T \) is invertible if and only if \( \det T \ne 0 \).
 :::
 
 ::: {.proof}
-If \( V = \{\0\} \), all determinants are \( 1 \) and the only operator is \( \id_V \), which is invertible. Otherwise fix a basis \( \sB \) of \( V \). By @thm-matrix-of-composition, \( [ST]_{\sB} = [S]_{\sB}[T]_{\sB} \), so \( \det(ST) = \det S \det T \) by @thm-det-multiplicative. Next \( [\id_V]_{\sB} = \I_n \), of determinant \( 1 \). Finally, by @thm-rank-map-equals-rank-matrix (b), \( T \) is invertible if and only if \( [T]_{\sB} \) is, which by @thm-det-nonzero-iff-invertible holds if and only if \( \det T = \det [T]_{\sB} \ne 0 \).
+If \( V = \{\0\} \), all determinants are \( 1 \) and the only operator is \( \id_V \), which is invertible. Otherwise fix a basis \( \sB \) of \( V \). By @thm-matrix-of-composition, \( \mtx{ST}{\sB}{\sB} = \mtx{S}{\sB}{\sB}\mtx{T}{\sB}{\sB} \), so \( \det(ST) = \det S \det T \) by @thm-det-multiplicative. Next \( \mtx{\id_V}{\sB}{\sB} = \I_n \), of determinant \( 1 \). Finally, by @thm-rank-map-equals-rank-matrix (b), \( T \) is invertible if and only if \( \mtx{T}{\sB}{\sB} \) is, which by @thm-det-nonzero-iff-invertible holds if and only if \( \det T = \det \mtx{T}{\sB}{\sB} \ne 0 \).
 :::
 
 So the determinant is a property of the operator, not of the coordinates. Differentiation on \( \nR[x]_{\le 3} \) is not invertible because its determinant is \( 0 \), whichever basis we compute in. In the section on orientation and volume we will see what the number \( \det T \) measures geometrically.
@@ -388,7 +388,7 @@ Let \( T \colon \nR[x]_{\le 3} \to \nR[x]_{\le 3} \), \( T(p) = p(x + 1) \). Fin
 ::: {.solution}
 In the basis \( \sB = (1, x, x^2, x^3) \), \( T(1) = 1 \), \( T(x) = 1 + x \), \( T(x^2) = 1 + 2x + x^2 \) and \( T(x^3) = 1 + 3x + 3x^2 + x^3 \). So
 \[
-[T]_{\sB} = \begin{pmatrix} 1 & 1 & 1 & 1 \\ 0 & 1 & 2 & 3 \\ 0 & 0 & 1 & 3 \\ 0 & 0 & 0 & 1 \end{pmatrix},
+\mtx{T}{\sB}{\sB} = \begin{pmatrix} 1 & 1 & 1 & 1 \\ 0 & 1 & 2 & 3 \\ 0 & 0 & 1 & 3 \\ 0 & 0 & 0 & 1 \end{pmatrix},
 \]
 which is upper triangular with ones on the diagonal. By @def-det-operator and @thm-det-triangular, \( \det T = 1 \). Since \( \det T \ne 0 \), \( T \) is invertible by @thm-det-operator-properties. (Its inverse is \( p \mapsto p(x - 1) \).)
 :::
@@ -422,18 +422,18 @@ Let \( \A \in M_n(F) \), and let \( L_{\A} \colon M_n(F) \to M_n(F) \), \( L_{\A
 \]
 
 ::: {.enumerate options="label=(\alph*)"}
-1. Order the matrix units column by column, \( \sB = (\E_{11}, \E_{21}, \dots, \E_{n1}, \E_{12}, \dots, \E_{n2}, \dots, \E_{1n}, \dots, \E_{nn}) \). Show that \( [L_{\A}]_{\sB} \) consists of \( n \) copies of \( \A \) placed along the diagonal, with zeros elsewhere.
+1. Order the matrix units column by column, \( \sB = (\E_{11}, \E_{21}, \dots, \E_{n1}, \E_{12}, \dots, \E_{n2}, \dots, \E_{1n}, \dots, \E_{nn}) \). Show that \( \mtx{L_{\A}}{\sB}{\sB} \) consists of \( n \) copies of \( \A \) placed along the diagonal, with zeros elsewhere.
 2. Show that \( L_{\A\B} = L_{\A} L_{\B} \), and prove the formula when \( \A \) is an elementary matrix.
 3. Prove the formula for invertible \( \A \), and then for non-invertible \( \A \).
 :::
 
-*Hint: for a swap matrix, identify \( [L_{\P_{ij}}]_{\sB} \) as a permutation matrix and use @exr-existence-and-uniqueness-b2.*
+*Hint: for a swap matrix, identify \( \mtx{L_{\P_{ij}}}{\sB}{\sB} \) as a permutation matrix and use @exr-existence-and-uniqueness-b2.*
 :::
 
 ::: {.solution}
 ::: {.enumerate options="label=(\alph*)"}
-1. By @thm-three-views-of-product, the \( l \)-th column of \( \A\E_{kl} \) is \( \A\e_k \), the \( k \)-th column of \( \A \), and the other columns are zero. So \( \A\E_{kl} = \sum_{i} a_{ik}\E_{il} \). In \( \sB \), the coordinates of this vector are zero outside the \( l \)-th block of \( n \) positions, and inside that block they are the \( k \)-th column of \( \A \). Hence the columns of \( [L_{\A}]_{\sB} \) belonging to the \( l \)-th block are those of \( \A \), placed in the rows of the \( l \)-th block: \( [L_{\A}]_{\sB} \) has \( n \) copies of \( \A \) along the diagonal.
-2. \( L_{\A\B}(\X) = \A\B\X = L_{\A}(L_{\B}(\X)) \) by associativity. Now let \( \E \) be elementary. If \( \E = \I_n + c\E_{ij} \) with \( i \ne j \), then by (a) \( [L_{\E}]_{\sB} \) is triangular (upper if \( i < j \), lower if \( i > j \)) with all diagonal entries \( 1 \), so \( \det L_{\E} = 1 = (\det \E)^n \) by @thm-det-triangular and @thm-det-row-operations (e). If \( \E = \D_i(c) \), then \( [L_{\E}]_{\sB} \) is diagonal with \( c \) appearing \( n \) times and \( 1 \) elsewhere, so \( \det L_{\E} = c^n = (\det \E)^n \). If \( \E = \P_{ij} \), then \( [L_{\E}]_{\sB} \) has exactly one \( 1 \) in each row and column, so it is a permutation matrix \( \P_\sigma \) (@def-permutation-matrix), and \( \sigma \) exchanges the positions of \( \E_{il} \) and \( \E_{jl} \) for each \( l \): \( \sigma \) is a product of \( n \) disjoint transpositions. By @exr-existence-and-uniqueness-b2, @thm-sign-multiplicative and @cor-sign-transposition, \( \det L_{\E} = \sgn(\sigma) = (-1)^n = (\det \E)^n \).
+1. By @thm-three-views-of-product, the \( l \)-th column of \( \A\E_{kl} \) is \( \A\e_k \), the \( k \)-th column of \( \A \), and the other columns are zero. So \( \A\E_{kl} = \sum_{i} a_{ik}\E_{il} \). In \( \sB \), the coordinates of this vector are zero outside the \( l \)-th block of \( n \) positions, and inside that block they are the \( k \)-th column of \( \A \). Hence the columns of \( \mtx{L_{\A}}{\sB}{\sB} \) belonging to the \( l \)-th block are those of \( \A \), placed in the rows of the \( l \)-th block: \( \mtx{L_{\A}}{\sB}{\sB} \) has \( n \) copies of \( \A \) along the diagonal.
+2. \( L_{\A\B}(\X) = \A\B\X = L_{\A}(L_{\B}(\X)) \) by associativity. Now let \( \E \) be elementary. If \( \E = \I_n + c\E_{ij} \) with \( i \ne j \), then by (a) \( \mtx{L_{\E}}{\sB}{\sB} \) is triangular (upper if \( i < j \), lower if \( i > j \)) with all diagonal entries \( 1 \), so \( \det L_{\E} = 1 = (\det \E)^n \) by @thm-det-triangular and @thm-det-row-operations (e). If \( \E = \D_i(c) \), then \( \mtx{L_{\E}}{\sB}{\sB} \) is diagonal with \( c \) appearing \( n \) times and \( 1 \) elsewhere, so \( \det L_{\E} = c^n = (\det \E)^n \). If \( \E = \P_{ij} \), then \( \mtx{L_{\E}}{\sB}{\sB} \) has exactly one \( 1 \) in each row and column, so it is a permutation matrix \( \P_\sigma \) (@def-permutation-matrix), and \( \sigma \) exchanges the positions of \( \E_{il} \) and \( \E_{jl} \) for each \( l \): \( \sigma \) is a product of \( n \) disjoint transpositions. By @exr-existence-and-uniqueness-b2, @thm-sign-multiplicative and @cor-sign-transposition, \( \det L_{\E} = \sgn(\sigma) = (-1)^n = (\det \E)^n \).
 3. If \( \A \) is invertible, then \( \A = \E_1 \cdots \E_k \) with elementary \( \E_m \) (@thm-invertible-tfae (d)). By (b) and @thm-det-operator-properties, \( \det L_{\A} = \det L_{\E_1} \cdots \det L_{\E_k} = (\det \E_1)^n \cdots (\det \E_k)^n = (\det \E_1 \cdots \det \E_k)^n = (\det \A)^n \), where the last step is @thm-det-multiplicative. If \( \A \) is not invertible, there is \( \v \ne \0 \) with \( \A\v = \0 \) (@thm-invertible-tfae (b)). The matrix \( \X = \begin{pmatrix} \v & \0 & \cdots & \0 \end{pmatrix} \) is non-zero and \( \A\X = 0 \), so \( L_{\A} \) is not injective, hence not invertible, and \( \det L_{\A} = 0 \) by @thm-det-operator-properties. Also \( \det \A = 0 \) by @thm-det-nonzero-iff-invertible, so \( (\det \A)^n = 0 \) as \( n \ge 1 \).
 :::
 :::

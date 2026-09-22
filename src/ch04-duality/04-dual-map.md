@@ -395,7 +395,7 @@ No such statement holds for \( V \cong V^{*} \). Suppose that for every finite-d
 ::: {#exr-dual-map-b1}
 [B1: Differentiation in dual bases]
 
-Let \( D \colon \nR[x]_{\le 2} \to \nR[x]_{\le 2} \), \( D(p) = p' \), and let \( \sB = (1, x, x^2) \) with dual basis \( \sB^{*} = (\varphi_0, \varphi_1, \varphi_2) \), \( \varphi_k(p) = \) the coefficient of \( x^k \) in \( p \). Compute \( D'\varphi_0 \), \( D'\varphi_1 \), \( D'\varphi_2 \) directly, write down \( [D']_{\sB^{*}} \), and check that it is \( ([D]_{\sB})\tp \). Hence describe \( \ker D' \) and \( \im D' \), and verify @thm-kernel-image-dual-map.
+Let \( D \colon \nR[x]_{\le 2} \to \nR[x]_{\le 2} \), \( D(p) = p' \), and let \( \sB = (1, x, x^2) \) with dual basis \( \sB^{*} = (\varphi_0, \varphi_1, \varphi_2) \), \( \varphi_k(p) = \) the coefficient of \( x^k \) in \( p \). Compute \( D'\varphi_0 \), \( D'\varphi_1 \), \( D'\varphi_2 \) directly, write down \( \mtx{D'}{\sB^{*}}{\sB^{*}} \), and check that it is \( (\mtx{D}{\sB}{\sB})\tp \). Hence describe \( \ker D' \) and \( \im D' \), and verify @thm-kernel-image-dual-map.
 :::
 
 ::: {.solution}
@@ -403,9 +403,9 @@ Let \( p = a + bx + cx^2 \), so \( Dp = b + 2cx \). Then \( (D'\varphi_0)(p) = \
 \[
 D'\varphi_0 = \varphi_1, \qquad D'\varphi_1 = 2\varphi_2, \qquad D'\varphi_2 = 0 .
 \]
-The coordinate vectors \( (0, 1, 0) \), \( (0, 0, 2) \), \( (0, 0, 0) \) are the columns of \( [D']_{\sB^{*}} \). On the other side, \( D(1) = 0 \), \( D(x) = 1 \), \( D(x^2) = 2x \), so
+The coordinate vectors \( (0, 1, 0) \), \( (0, 0, 2) \), \( (0, 0, 0) \) are the columns of \( \mtx{D'}{\sB^{*}}{\sB^{*}} \). On the other side, \( D(1) = 0 \), \( D(x) = 1 \), \( D(x^2) = 2x \), so
 \[
-[D]_{\sB} = \begin{pmatrix} 0 & 1 & 0 \\ 0 & 0 & 2 \\ 0 & 0 & 0 \end{pmatrix}, \qquad [D']_{\sB^{*}} = \begin{pmatrix} 0 & 0 & 0 \\ 1 & 0 & 0 \\ 0 & 2 & 0 \end{pmatrix} = ([D]_{\sB})\tp,
+\mtx{D}{\sB}{\sB} = \begin{pmatrix} 0 & 1 & 0 \\ 0 & 0 & 2 \\ 0 & 0 & 0 \end{pmatrix}, \qquad \mtx{D'}{\sB^{*}}{\sB^{*}} = \begin{pmatrix} 0 & 0 & 0 \\ 1 & 0 & 0 \\ 0 & 2 & 0 \end{pmatrix} = (\mtx{D}{\sB}{\sB})\tp,
 \]
 as @thm-matrix-of-dual-map predicts.
 

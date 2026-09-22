@@ -176,9 +176,9 @@ where \( a_i = a_T(\lambda_i) \) and \( 1 \le s_i \le a_i \). Write \( G_i = G_{
 2. each \( G_i \) is \( T \)-invariant and non-zero, with \( E_{\lambda_i}(T) \subseteq G_i \), and \( E_{\lambda_i}(T) = G_i \) if and only if \( s_i = 1 \);
 3. \( \dim G_i = a_i \) and \( p_{T|_{G_i}} = (x - \lambda_i)^{a_i} \);
 4. \( N_i^{a_i} = 0 \); that is, \( T|_{G_i} = \lambda_i\,\id_{G_i} + N_i \) with \( N_i \) nilpotent, of stabilization index \( s_i \);
-5. if \( \sB \) is a basis of \( V \) obtained by writing bases of \( G_1, \dots, G_k \) one after another, then
+5. if \( \sB \) is a basis of \( V \) obtained by writing bases \( \sB_1, \dots, \sB_k \) of \( G_1, \dots, G_k \) one after another, then
    \[
-   [T]_{\sB} = [T|_{G_1}]\ \oplus\ \dots\ \oplus\ [T|_{G_k}]
+   \mtx{T}{\sB}{\sB} = \mtx{T|_{G_1}}{\sB_1}{\sB_1}\ \oplus\ \dots\ \oplus\ \mtx{T|_{G_k}}{\sB_k}{\sB_k}
    \]
    is block diagonal, with the \( i \)-th block of size \( a_i \).
 :::
@@ -211,7 +211,7 @@ so \( p_{T|_G} \) is a monic divisor of \( p_T = \prod_j (x - \lambda_j)^{a_j} \
 
 (d) By @thm-primary-decomposition (c) and the claim, \( m_{T|_{G_i}} = (x - \lambda_i)^{s_i} \). For an integer \( j \ge 0 \), the operator \( N_i^{\,j} \) is \( (x - \lambda_i)^j \) evaluated at \( T|_{G_i} \), so \( N_i^{\,j} = 0 \) if and only if \( (x - \lambda_i)^{s_i} \) divides \( (x - \lambda_i)^{j} \) (@thm-minimal-polynomial-divides), that is, if and only if \( j \ge s_i \). Since \( s_i \le a_i \), this gives \( N_i^{\,a_i} = 0 \), and it identifies \( s_i \) as the least exponent killing \( N_i \). Hence \( \ker N_i^{\,s_i} = G_i \) while \( \ker N_i^{\,s_i - 1} \subsetneq G_i \), so the stabilization index of \( N_i \) is \( s_i \).
 
-(e) Each \( G_i \) is invariant and non-zero, and \( V = \bigoplus_i G_i \), so @thm-direct-sum-invariant-block-diagonal gives the block diagonal shape, the \( i \)-th block being \( [T|_{G_i}] \) in the chosen basis of \( G_i \), of size \( \dim G_i = a_i \).
+(e) Each \( G_i \) is invariant and non-zero, and \( V = \bigoplus_i G_i \), so @thm-direct-sum-invariant-block-diagonal gives the block diagonal shape, the \( i \)-th block being \( \mtx{T|_{G_i}}{\sB_i}{\sB_i} \), of size \( \dim G_i = a_i \).
 :::
 
 Read (d) again, since it is the plan for the rest of the chapter. **On its generalized eigenspace, \( T \) is a scalar plus a nilpotent operator.** The scalar part is as simple as an operator can be. So the only question left is what a nilpotent operator looks like in a well-chosen basis, and that is the subject of the next section. Once it is answered, (e) assembles the answers for the different eigenvalues into one matrix for \( T \).
@@ -259,7 +259,7 @@ The chain of kernels has dimensions \( 0, 2, 3 \) so far. Since \( \ker \N^2 \su
 
 *The minimal polynomial.* The stabilization indices are \( s_1 = 2 \) at \( \lambda = 2 \) and \( s_2 = 1 \) at \( \lambda = 5 \), and part (d) of the theorem identifies these indices as the exponents in \( m_{\A} \), so \( m_{\A} = (x - 2)^2(x - 5) \). Consistently, \( (\A - 2\I)(\A - 5\I) \ne 0 \): the two factors are coprime, so the kernel of the product is \( \ker(\A - 2\I) \oplus \ker(\A - 5\I) \) (@thm-kernel-splitting (a)), of dimension \( 2 + 1 = 3 < 4 \).
 
-*A basis adapted to the splitting.* Take \( \sB = \big(\e_2,\ \e_3,\ \e_1 + \e_4,\ (0, 1, -1, 1)\big) \), a basis of \( G_2 \) followed by one of \( G_5 \). By part (e), \( [T_{\A}]_{\sB} \) is block diagonal with a \( 3 \times 3 \) block and the \( 1 \times 1 \) block \( (5) \).
+*A basis adapted to the splitting.* Take \( \sB = \big(\e_2,\ \e_3,\ \e_1 + \e_4,\ (0, 1, -1, 1)\big) \), a basis of \( G_2 \) followed by one of \( G_5 \). By part (e), \( \mtx{T_{\A}}{\sB}{\sB} \) is block diagonal with a \( 3 \times 3 \) block and the \( 1 \times 1 \) block \( (5) \).
 :::
 
 ::: {.warning}

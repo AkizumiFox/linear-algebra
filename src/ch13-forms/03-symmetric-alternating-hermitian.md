@@ -34,7 +34,7 @@ The matrix of a form (@def-form-matrix) turns the condition into a matrix condit
 ::: {#prp-form-symmetry-matrix}
 [Symmetry Is Visible in the Matrix]
 
-Let \( \sB \) be a basis of \( V \) and \( \A = \mtx{\beta}{\sB}{} \). Then \( \beta \) is symmetric if and only if \( \A\tp = \A \).
+Let \( \sB \) be a basis of \( V \) and \( \A = \mtx{\beta}{\sB}{\sB} \). Then \( \beta \) is symmetric if and only if \( \A\tp = \A \).
 :::
 
 ::: {.proof}
@@ -67,7 +67,7 @@ Each condition reads off the matrix, and the two readings differ by the diagonal
 ::: {#prp-alternating-form-matrix}
 [Alternation and Skewness in the Matrix]
 
-Let \( \sB = (\v_1, \dots, \v_n) \) be a basis of \( V \) and \( \A = \mtx{\beta}{\sB}{} \). Then:
+Let \( \sB = (\v_1, \dots, \v_n) \) be a basis of \( V \) and \( \A = \mtx{\beta}{\sB}{\sB} \). Then:
 
 ::: {.enumerate options="label=(\alph*)"}
 1. \( \beta \) is skew-symmetric if and only if \( \A\tp = -\A \);
@@ -206,7 +206,7 @@ Two clauses deserve separate readings. The first says how to build \( q \) from 
 
 Insisting on symmetry costs nothing in characteristic \( \ne 2 \). If \( q(\v) = \beta(\v,\v) \) for some bilinear \( \beta \), then by @thm-symmetric-alternating-decomposition we may split \( \beta = \beta_s + \beta_a \), and \( \beta_a(\v,\v) = 0 \), so \( q(\v) = \beta_s(\v,\v) \) with \( \beta_s \) symmetric. The alternating part is invisible to \( q \).
 
-In coordinates, with \( \A = \mtx{\beta}{\sB}{} \) symmetric and \( \x = \coord{\v}{\sB} \),
+In coordinates, with \( \A = \mtx{\beta}{\sB}{\sB} \) symmetric and \( \x = \coord{\v}{\sB} \),
 
 \[
 q(\v) = \x\tp\A\x = \sum_{i} a_{ii}x_i^2 + 2\sum_{i<j} a_{ij}x_ix_j ,
@@ -340,7 +340,7 @@ Three kinds of form, then, and three matrix shapes: symmetric, alternating, Herm
 
 (b) Alternating always implies skew-symmetric (@thm-alternating-vs-skew (a)). The converse holds if and only if \( \operatorname{char} F \ne 2 \); in characteristic \( 2 \) the dot product on \( \nF_2^2 \) is skew-symmetric and not alternating.
 
-(c) With \( \A = \mtx{\beta}{\sB}{} \): symmetric means \( \A\tp = \A \); skew-symmetric means \( \A\tp = -\A \); alternating means \( \A\tp = -\A \) together with \( a_{ii} = 0 \) for all \( i \) (@prp-form-symmetry-matrix, @prp-alternating-form-matrix).
+(c) With \( \A = \mtx{\beta}{\sB}{\sB} \): symmetric means \( \A\tp = \A \); skew-symmetric means \( \A\tp = -\A \); alternating means \( \A\tp = -\A \) together with \( a_{ii} = 0 \) for all \( i \) (@prp-form-symmetry-matrix, @prp-alternating-form-matrix).
 
 (d) Incorrect. Since \( \operatorname{char}\nQ = 0 \ne 2 \), only the **symmetric** part is determined: any alternating form has \( \beta(\v,\v) = 0 \) identically, so \( \beta \) and \( \beta + \beta_a \) have the same quadratic form for every alternating \( \beta_a \). What is true is @thm-polarization-forms, which determines \( \beta \) among *symmetric* forms.
 
@@ -431,7 +431,7 @@ Let \( V \) be a vector space over \( \nF_2 \) with \( \dim V = n \ge 1 \).
 ::: {.solution}
 (a) Let \( \beta \) be alternating. By @thm-alternating-vs-skew (a), \( \beta(\u,\v) = -\beta(\v,\u) \). Over \( \nF_2 \) we have \( -1 = 1 \), so \( -\beta(\v,\u) = \beta(\v,\u) \) and \( \beta \) is symmetric.
 
-(b) Fix a basis \( \sB \). The map \( \beta \mapsto \mtx{\beta}{\sB}{} \) is a linear bijection from bilinear forms to \( M_n(\nF_2) \) (@thm-form-matrix-determines). By @prp-alternating-form-matrix (b), \( \beta \) is alternating exactly when its matrix satisfies \( \A\tp = -\A \) with zero diagonal; over \( \nF_2 \) the first condition is \( \A\tp = \A \), so the image is the set of symmetric matrices with zero diagonal. Such a matrix is determined freely by its entries \( a_{ij} \) with \( i < j \), of which there are \( \binom{n}{2} \). These conditions are linear, so the set of alternating forms is a subspace, of dimension \( n(n-1)/2 \).
+(b) Fix a basis \( \sB \). The map \( \beta \mapsto \mtx{\beta}{\sB}{\sB} \) is a linear bijection from bilinear forms to \( M_n(\nF_2) \) (@thm-form-matrix-determines). By @prp-alternating-form-matrix (b), \( \beta \) is alternating exactly when its matrix satisfies \( \A\tp = -\A \) with zero diagonal; over \( \nF_2 \) the first condition is \( \A\tp = \A \), so the image is the set of symmetric matrices with zero diagonal. Such a matrix is determined freely by its entries \( a_{ij} \) with \( i < j \), of which there are \( \binom{n}{2} \). These conditions are linear, so the set of alternating forms is a subspace, of dimension \( n(n-1)/2 \).
 
 (c) For \( n = 2 \) the dimension is \( 1 \), so the space of alternating forms is \( \{\0, \beta\} \) for a single non-zero \( \beta \), whose matrix must be \( \begin{psmallmatrix} 0 & 1 \\ 1 & 0 \end{psmallmatrix} \) — the only symmetric \( \nF_2 \)-matrix with zero diagonal other than \( \0 \). Concretely \( \beta(\x,\y) = x_1y_2 + x_2y_1 \), and indeed \( \beta(\x,\x) = 2x_1x_2 = 0 \).
 :::

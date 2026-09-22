@@ -109,7 +109,7 @@ Chapter 3 already knows the shape of a projection up to a change of basis: with 
 
 Let \( V \) be an \( n \)-dimensional inner product space over \( F \) and let \( P \in \cL(V) \) be a projection of rank \( r \). Let \( (\f_1, \dots, \f_r) \) be any orthonormal basis of \( \im P \) and \( (\f_{r+1}, \dots, \f_n) \) any orthonormal basis of \( (\im P)^{\perp} \). Then \( \sB = (\f_1, \dots, \f_n) \) is an orthonormal basis of \( V \), and
 \[
-[P]_{\sB} = \begin{pmatrix} \I_r & \X \\ 0 & 0 \end{pmatrix}
+\mtx{P}{\sB}{\sB} = \begin{pmatrix} \I_r & \X \\ 0 & 0 \end{pmatrix}
 \]
 for some \( \X \in M_{r \times (n - r)}(F) \). Moreover \( P \) is an orthogonal projection if and only if \( \X = 0 \).
 :::
@@ -121,11 +121,11 @@ Only two facts are used, and both are already proved. First, \( P \) fixes its i
 ::: {.proof}
 Write \( U = \im P \), so \( \dim U = r \) and \( \dim U^{\perp} = n - r \) by @thm-orthogonal-decomposition (c). Each \( \f_i \) with \( i \le r \) is orthogonal to each \( \f_j \) with \( j > r \), since the first lies in \( U \) and the second in \( U^{\perp} \); so \( \sB \) is an orthonormal list of \( n \) vectors, hence an orthonormal basis of \( V \) (@thm-orthogonal-independent).
 
-For \( i \le r \) we have \( \f_i \in \im P \), so \( P\f_i = \f_i \) by @thm-projection-direct-sum (a), and column \( i \) of \( [P]_{\sB} \) is \( \e_i \). For \( j > r \) we have \( P\f_j \in \im P = U = \Span(\f_1, \dots, \f_r) \), so \( P\f_j = \sum_{i \le r} x_{ij}\f_i \) for scalars \( x_{ij} \in F \), and column \( j \) has zeros in rows \( r + 1, \dots, n \). Collecting the \( x_{ij} \) into \( \X \) gives the displayed shape.
+For \( i \le r \) we have \( \f_i \in \im P \), so \( P\f_i = \f_i \) by @thm-projection-direct-sum (a), and column \( i \) of \( \mtx{P}{\sB}{\sB} \) is \( \e_i \). For \( j > r \) we have \( P\f_j \in \im P = U = \Span(\f_1, \dots, \f_r) \), so \( P\f_j = \sum_{i \le r} x_{ij}\f_i \) for scalars \( x_{ij} \in F \), and column \( j \) has zeros in rows \( r + 1, \dots, n \). Collecting the \( x_{ij} \) into \( \X \) gives the displayed shape.
 
-For the last claim, \( \sB \) is orthonormal, so \( [P^{*}]_{\sB} = ([P]_{\sB})^{*} \) by @thm-matrix-of-adjoint, and
+For the last claim, \( \sB \) is orthonormal, so \( \mtx{P^{*}}{\sB}{\sB} = (\mtx{P}{\sB}{\sB})^{*} \) by @thm-matrix-of-adjoint, and
 \[
-([P]_{\sB})^{*} = \begin{pmatrix} \I_r & 0 \\ \X^{*} & 0 \end{pmatrix} .
+(\mtx{P}{\sB}{\sB})^{*} = \begin{pmatrix} \I_r & 0 \\ \X^{*} & 0 \end{pmatrix} .
 \]
 The two matrices agree if and only if \( \X = 0 \). Since an operator is determined by its matrix in a basis, \( P^{*} = P \) if and only if \( \X = 0 \), and \( P^{*} = P \) says \( P \) is an orthogonal projection by @thm-idempotent-orthogonal-iff-selfadjoint.
 :::
@@ -140,7 +140,7 @@ the two matrices \( (\A^{*}\X\B)^{*}(\A^{*}\X\B) \) and \( \X^{*}\X \) are unita
 
 Take \( n = 2 \) and \( r = 1 \), so that \( \X \) is a single scalar \( x \in F \), and
 \[
-[P]_{\sB} = \begin{pmatrix} 1 & x \\ 0 & 0 \end{pmatrix},
+\mtx{P}{\sB}{\sB} = \begin{pmatrix} 1 & x \\ 0 & 0 \end{pmatrix},
 \qquad \sB = (\f_1, \f_2),
 \]
 with \( \f_1 \) spanning the line \( \im P \) and \( \f_2 \) spanning the perpendicular line \( (\im P)^{\perp} \). Everything about \( P \) can be read off this one number.
@@ -188,7 +188,7 @@ on \( \nR^2 \), verify that it is a projection, put it in the form of @thm-idemp
 \]
 an orthonormal basis of \( \im\Q \) and of \( (\im\Q)^{\perp} \) respectively. Then \( \Q\f_1 = \f_1 \) and \( \Q\f_2 = \tfrac{1}{\sqrt2}(3, 3) = 3\f_1 \), so \( x = 3 \) and
 \[
-[\Q]_{\sB} = \begin{pmatrix} 1 & 3 \\ 0 & 0 \end{pmatrix} .
+\mtx{\Q}{\sB}{\sB} = \begin{pmatrix} 1 & 3 \\ 0 & 0 \end{pmatrix} .
 \]
 Hence \( \cot\theta = 3 \). Checking against the two lines directly: the angle between \( (1, 1) \) and \( (1, 2) \) has \( \cos\theta = 3/\sqrt{10} \) and \( \sin\theta = 1/\sqrt{10} \), so \( \cot\theta = 3 \), and the largest value of \( \norm{\Q\v} \) on the unit circle is \( \sqrt{1 + 9} = \sqrt{10} = 1/\sin\theta \). The two routes agree.
 :::
@@ -266,7 +266,7 @@ Let \( \A = \begin{pmatrix} 0 & 1 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{pmatrix} \)
 
 ::: {.enumerate options="label=(\alph*)"}
 1. Verify that \( \A \) is a projection and find \( \im\A \) and \( \ker\A \).
-2. Find an orthonormal basis \( \sB \) of \( \nR^3 \) as in @thm-idempotent-canonical-form and write down \( [\A]_{\sB} \).
+2. Find an orthonormal basis \( \sB \) of \( \nR^3 \) as in @thm-idempotent-canonical-form and write down \( \mtx{\A}{\sB}{\sB} \).
 3. Hence determine whether \( \A \) is an orthogonal projection, and find \( \rank\A \) without row reducing.
 :::
 :::
@@ -280,7 +280,7 @@ Let \( \A = \begin{pmatrix} 0 & 1 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{pmatrix} \)
 \]
 Hence
 \[
-[\A]_{\sB} = \begin{pmatrix} 1 & 0 & -1 \\ 0 & 1 & 0 \\ 0 & 0 & 0 \end{pmatrix},
+\mtx{\A}{\sB}{\sB} = \begin{pmatrix} 1 & 0 & -1 \\ 0 & 1 & 0 \\ 0 & 0 & 0 \end{pmatrix},
 \qquad \X = \begin{pmatrix} -1 \\ 0 \end{pmatrix} .
 \]
 
