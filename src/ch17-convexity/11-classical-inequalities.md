@@ -155,7 +155,7 @@ For \( \y \ne \0 \) the maximum is attained at \( \x \) with \( x_i = \sigma_i\l
 :::
 
 ::: {.idea}
-Hölder's inequality bounds \( \inner{\x}{\y} \) by \( \norm{\y}_q \) on the whole unit ball. To show the bound is attained, give \( x_i \) the sign of \( y_i \) and make \( \lvert x_i\rvert^p \) proportional to \( \lvert y_i\rvert^q \), which is when Young's inequality is an equality in each coordinate. That is the stated witness, and a direct computation checks it.
+Hölder's inequality bounds \( \inner{\x}{\y} \) by \( \norm{\y}_q \) on the whole unit ball. To show the bound is attained, give \( x_i \) the sign of \( y_i \) and make \( \lvert x_i\rvert^p \) proportional to \( \lvert y_i\rvert^q \), which is when Young's inequality (@lem-young) is an equality in each coordinate. That is the stated witness, and a direct computation checks it.
 :::
 
 ::: {.proof}

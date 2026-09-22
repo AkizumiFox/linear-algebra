@@ -75,7 +75,7 @@ are equal, and the second is \( [\lambda_m(\B), \lambda_1(\B)] \) with both ends
 :::
 
 ::: {.remark}
-**Which analysis was invoked: none.** The existence of a maximum of a function over an infinite set is normally an analytic fact — the set of unit vectors of \( W \) is compact, by fact (A3) of Chapter 15's introduction, and \( R_{\A} \) is continuous on it, so the extreme value theorem, fact (A4), applies. That route is available and correct. It is not needed. The spectral theorem, already proved in Chapter 11, produces the maximizing vector by name, and @lem-rayleigh-range-on-subspace inherits that. Nothing in this section, or in §01, uses an item of Chapter 15's imported-analysis list. The analysis has not vanished, only moved: the spectral theorem rests on the fundamental theorem of algebra, whose proof in Chapter 5 §05 uses the extreme value theorem on a closed disc.
+**Which analysis was invoked: none.** The existence of a maximum of a function over an infinite set is normally an analytic fact — the set of unit vectors of \( W \) is compact, by fact (A3) of Chapter 15's introduction, and \( R_{\A} \) is continuous on it, so the extreme value theorem, fact (A4), applies. That route is available and correct. It is not needed. The spectral theorem, already proved in Chapter 11, produces the maximizing vector by name, and @lem-rayleigh-range-on-subspace inherits that. Nothing in this section, or in §01, uses an item of Chapter 15's imported-analysis list. The analysis has not vanished, only moved: the spectral theorem rests on the fundamental theorem of algebra (@thm-fundamental-theorem-of-algebra), whose proof in Chapter 5 §05 uses the extreme value theorem on a closed disc.
 :::
 
 ## Every eigenvalue is a min–max

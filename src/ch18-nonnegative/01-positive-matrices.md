@@ -160,7 +160,7 @@ Let \( \A = \begin{pmatrix} 1 & 2 \\ 1 & 0 \end{pmatrix} \) and \( \B = \begin{p
 :::
 
 ::: {.solution}
-\( 0 \le \A \le \B \), with a difference only in the \( (2,2) \) entry. By the \( 2 \times 2 \) formula \( p(x) = x^2 - (\tr)x + \det \), \( p_{\A}(x) = x^2 - x - 2 = (x - 2)(x + 1) \), so \( \rho(\A) = 2 \), and \( p_{\B}(x) = x^2 - 2x - 1 \), with roots \( 1 \pm \sqrt2 \), so \( \rho(\B) = 1 + \sqrt2 \approx 2.414 \). Indeed \( \rho(\A) \le \rho(\B) \). In both cases the eigenvalue of largest modulus is positive, which Perron's theorem below guarantees for the positive \( \B \).
+\( 0 \le \A \le \B \), with a difference only in the \( (2,2) \) entry. By the \( 2 \times 2 \) formula \( p(x) = x^2 - (\tr)x + \det \), \( p_{\A}(x) = x^2 - x - 2 = (x - 2)(x + 1) \), so \( \rho(\A) = 2 \), and \( p_{\B}(x) = x^2 - 2x - 1 \), with roots \( 1 \pm \sqrt2 \), so \( \rho(\B) = 1 + \sqrt2 \approx 2.414 \). Indeed \( \rho(\A) \le \rho(\B) \). In both cases the eigenvalue of largest modulus is positive, which Perron's theorem below (@thm-perron) guarantees for the positive \( \B \).
 :::
 
 ## Perron's theorem
@@ -471,7 +471,7 @@ For each part of @thm-perron, (a) to (d), give a non-negative \( 2 \times 2 \) m
 
 (b) \( \I_2 \): \( \rho = 1 \) is a double eigenvalue and \( E_1 = \nR^2 \). Step 5 fails: \( \u - \theta\v \) can be non-zero and non-negative with a zero entry, since \( \A\y > \0 \) is no longer forced.
 
-(c) \( \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix} \): the eigenvalue \( -1 \) has modulus \( \rho = 1 \). Step 4 fails: equality in the triangle inequality is automatic when each row has a single non-zero term, so it aligns nothing.
+(c) \( \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix} \): the eigenvalue \( -1 \) has modulus \( \rho = 1 \). Step 4 fails: equality in the triangle inequality (@lem-triangle-equality-complex) is automatic when each row has a single non-zero term, so it aligns nothing.
 
 (d) \( \diag(2, 1) \): the eigenvector \( \e_2 \ge \0 \) belongs to \( 1 \ne 2 = \rho \). Step 7 fails, because the left eigenvector for \( 2 \) is \( \e_1 \), which is not positive, and \( \e_1\tp\e_2 = 0 \) is no contradiction.
 

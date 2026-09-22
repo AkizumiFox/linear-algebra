@@ -203,7 +203,7 @@ The scalars \( \lambda_1, \dots, \lambda_k \) are distinct, so by Lagrange inter
 \[
 p(\lambda_i) = \conj{\lambda_i} \qquad (i = 1, \dots, k) .
 \]
-Let \( (\e_1, \dots, \e_n) \) be an orthonormal basis of eigenvectors (@thm-spectral-complex), with \( T\e_j = \mu_j\e_j \) where each \( \mu_j \) is one of the \( \lambda_i \). Then \( p(T)\e_j = p(\mu_j)\e_j = \conj{\mu_j}\e_j = T^{*}\e_j \), the first equality because \( \e_j \) is an eigenvector (@exr-eigenvalues-and-eigenvectors-b3 (a)) and the last by @thm-normal-eigenvector-shared. The operators \( p(T) \) and \( T^{*} \) agree on a basis, hence are equal (@thm-linear-transform-basis).
+Let \( (\e_1, \dots, \e_n) \) be an orthonormal basis of eigenvectors (@thm-spectral-complex), with \( T\e_j = \mu_j\e_j \) where each \( \mu_j \) is one of the \( \lambda_i \). Then \( p(T)\e_j = p(\mu_j)\e_j = \conj{\mu_j}\e_j = T^{*}\e_j \), the first equality because \( T^{i}\e_j = \mu_j^{i}\e_j \) for every \( i \ge 0 \), by induction from \( T\e_j = \mu_j\e_j \), and the last by @thm-normal-eigenvector-shared. The operators \( p(T) \) and \( T^{*} \) agree on a basis, hence are equal (@thm-linear-transform-basis).
 :::
 
 One consequence is worth stating on its own. Any operator \( S \) that commutes with \( T \) also commutes with every polynomial in \( T \), hence with \( T^{*} \). So for normal operators the apparently stronger requirement "commutes with \( T \) and with \( T^{*} \)" is no requirement at all, and Section 7 will use this to diagonalize whole commuting families at once. The polynomial depends on \( T \) and not only on its size: for \( T = \id_V \) one may take the constant \( p = 1 \), while for the matrix \( \diag(1, i) \) the conditions \( p(1) = 1 \) and \( p(i) = -i \) are met by

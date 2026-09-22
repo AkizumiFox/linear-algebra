@@ -137,7 +137,7 @@ Put \( A = \Span(\cS) \). It is a subspace containing \( \id_V \), and it is clo
 \[
 A = \left\{ \begin{pmatrix} x & -y \\ y & x \end{pmatrix} : x, y \in \nR \right\},
 \]
-the span of \( \I_2 \) and \( \Q = \begin{pmatrix} 0 & -1 \\ 1 & 0 \end{pmatrix} \). Since \( \Q^2 = -\I_2 \), this is a subalgebra, and it acts irreducibly: an invariant line would be spanned by a real eigenvector of \( \Q \), and \( p_{\Q} = x^2 + 1 \) has no real root. Yet \( \dim A = 2 \), not \( 4 \), so \( A \ne M_2(\nR) \). This is the same witness §04 used against the second half of Schur's lemma, and the reason is the same: an operator on a real space need have no eigenvalue, and Step 2 of the proof needs one.
+the span of \( \I_2 \) and \( \Q = \begin{pmatrix} 0 & -1 \\ 1 & 0 \end{pmatrix} \). Since \( \Q^2 = -\I_2 \), this is a subalgebra, and it acts irreducibly: an invariant line would be spanned by a real eigenvector of \( \Q \), and \( p_{\Q} = x^2 + 1 \) has no real root. Yet \( \dim A = 2 \), not \( 4 \), so \( A \ne M_2(\nR) \). This is the same witness §04 used against the second half of Schur's lemma (@thm-schurs-lemma), and the reason is the same: an operator on a real space need have no eigenvalue, and Step 2 of the proof needs one.
 :::
 
 ::: {.check}

@@ -112,7 +112,7 @@ Let \( V \) be finite-dimensional, \( T \in \cL(V) \) and \( \lambda \in F \). T
 :::
 
 ::: {.proof}
-\( (\Leftarrow) \) Let \( \v \ne \0 \) with \( T\v = \lambda\v \). By @exr-eigenvalues-and-eigenvectors-b3 (a), \( p(T)\v = p(\lambda)\v \) for every \( p \in F[x] \). With \( p = m_T \),
+\( (\Leftarrow) \) Let \( \v \ne \0 \) with \( T\v = \lambda\v \). Then \( T^{j}\v = \lambda^{j}\v \) for every \( j \ge 0 \), by induction: it holds for \( j = 0 \), and \( T^{j+1}\v = T^{j}(T\v) = T^{j}(\lambda\v) = \lambda T^{j}\v = \lambda^{j+1}\v \), the first equality by @def-polynomial-of-operator. Writing \( p = \sum_j c_jx^j \), @def-polynomial-of-operator gives \( p(T)\v = \sum_j c_jT^{j}\v = p(\lambda)\v \) for every \( p \in F[x] \). With \( p = m_T \),
 \[
 \0 = m_T(T)\v = m_T(\lambda)\v .
 \]

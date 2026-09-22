@@ -166,7 +166,7 @@ which is legitimate because \( c_1 \neq 0 \) and \( \lambda_1 \neq 0 \). Every r
 \[
 \norm{\z_k}_2 \le M t^{k}, \qquad M = \sum_{i\ge2}\frac{\lvert c_i\rvert}{\lvert c_1\rvert}\norm{\v_i}_2 ,
 \]
-by the triangle inequality. Put \( \y_k = \v_1 + \z_k \). Then \( \u_1 = \A^{k}\e_1/\tau_k = \omega_k\,\y_k/\norm{\y_k}_2 \) for the scalar \( \omega_k = c_1\lambda_1^{k}\norm{\y_k}_2/\tau_k \), and \( \lvert\omega_k\rvert = 1 \) because \( \norm{\u_1}_2 = 1 \).
+by the triangle inequality (@cor-triangle-inequality). Put \( \y_k = \v_1 + \z_k \). Then \( \u_1 = \A^{k}\e_1/\tau_k = \omega_k\,\y_k/\norm{\y_k}_2 \) for the scalar \( \omega_k = c_1\lambda_1^{k}\norm{\y_k}_2/\tau_k \), and \( \lvert\omega_k\rvert = 1 \) because \( \norm{\u_1}_2 = 1 \).
 
 **Step 3: the residual is small.** Since \( \A\v_1 = \lambda_1\v_1 \), the vector \( \v_1 \) drops out of \( (\A - \lambda_1\I)\y_k \), leaving
 \[

@@ -304,7 +304,7 @@ The first row gives \( (2 - 2i)x = 2y \), that is, \( y = (1 - i)x \); take \( \
 
 ## The invertible matrix theorem grows
 
-Chapter 2 listed eight conditions equivalent to invertibility (@thm-invertible-tfae), and Chapter 6 added the determinant (@thm-invertible-tfae-det). Eigenvalues give one more: a matrix is singular exactly when it kills a non-zero vector, which is to say, when it stretches some non-zero vector by the factor \( 0 \).
+Chapter 2 listed eight conditions equivalent to invertibility (@thm-invertible-tfae), Chapter 3 restated them for operators (@thm-invertible-operator-tfae), and Chapter 6 added the determinant (@thm-invertible-tfae-det). Eigenvalues give one more: a matrix is singular exactly when it kills a non-zero vector, which is to say, when it stretches some non-zero vector by the factor \( 0 \).
 
 ::: {#thm-invertible-tfae-eigen}
 [Invertible Matrix Theorem, with Eigenvalues]

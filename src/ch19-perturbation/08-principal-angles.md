@@ -57,7 +57,7 @@ P_U\v = \sum_{i=1}^{k}\inner{\v}{\q_i}\q_i = \sum_{i=1}^{k}\q_i(\q_i^{*}\v) = \Q
 \]
 the last step being column-times-row expansion of \( \Q\Q^{*} \).
 
-(b) By (a), \( \norm{\Q\y}^2 = \y^{*}\Q^{*}\Q\y = \y^{*}\y = \norm{\y}^2 \). Hence \( \norm{\Q\Y\x} = \norm{\Y\x} \) for every \( \x \), and taking the maximum over unit \( \x \) (@def-operator-norm) gives \( \norm{\Q\Y}_2 = \norm{\Y}_2 \). For the Frobenius norm, \( \norm{\Q\Y}_F^2 = \tr(\Y^{*}\Q^{*}\Q\Y) = \tr(\Y^{*}\Y) = \norm{\Y}_F^2 \). Next, \( \norm{\Z\Q^{*}}_F^2 = \tr(\Q\Z^{*}\Z\Q^{*}) = \tr(\Z^{*}\Z\Q^{*}\Q) = \norm{\Z}_F^2 \), by @thm-trace-properties (c). For the spectral norm, let \( \x \in F^n \). By the first sentence and (a), \( \norm{\Q^{*}\x} = \norm{\Q\Q^{*}\x} = \norm{P_U\x} \le \norm{\x} \) (@thm-projection-formula (c)). So \( \norm{\Z\Q^{*}\x} \le \norm{\Z}_2\norm{\Q^{*}\x} \le \norm{\Z}_2\norm{\x} \) by @thm-operator-norm-properties (a), and \( \norm{\Z\Q^{*}}_2 \le \norm{\Z}_2 \). Conversely, choose a unit \( \y \in F^k \) with \( \norm{\Z\y} = \norm{\Z}_2 \) (@lem-operator-norm-attained). Then \( \x = \Q\y \) is a unit vector with \( \Z\Q^{*}\x = \Z\y \), so \( \norm{\Z\Q^{*}}_2 \ge \norm{\Z}_2 \).
+(b) By (a), \( \norm{\Q\y}^2 = \y^{*}\Q^{*}\Q\y = \y^{*}\y = \norm{\y}^2 \). Hence \( \norm{\Q\Y\x} = \norm{\Y\x} \) for every \( \x \), and taking the maximum over unit \( \x \) (@def-operator-norm) gives \( \norm{\Q\Y}_2 = \norm{\Y}_2 \). For the Frobenius norm, \( \norm{\Q\Y}_F^2 = \tr(\Y^{*}\Q^{*}\Q\Y) = \tr(\Y^{*}\Y) = \norm{\Y}_F^2 \). Next, \( \norm{\Z\Q^{*}}_F^2 = \tr(\Q\Z^{*}\Z\Q^{*}) = \tr(\Z^{*}\Z\Q^{*}\Q) = \norm{\Z}_F^2 \), by @thm-trace-properties (3). For the spectral norm, let \( \x \in F^n \). By the first sentence and (a), \( \norm{\Q^{*}\x} = \norm{\Q\Q^{*}\x} = \norm{P_U\x} \le \norm{\x} \) (@thm-projection-formula (c)). So \( \norm{\Z\Q^{*}\x} \le \norm{\Z}_2\norm{\Q^{*}\x} \le \norm{\Z}_2\norm{\x} \) by @thm-operator-norm-properties (a), and \( \norm{\Z\Q^{*}}_2 \le \norm{\Z}_2 \). Conversely, choose a unit \( \y \in F^k \) with \( \norm{\Z\y} = \norm{\Z}_2 \) (@lem-operator-norm-attained). Then \( \x = \Q\y \) is a unit vector with \( \Z\Q^{*}\x = \Z\y \), so \( \norm{\Z\Q^{*}}_2 \ge \norm{\Z}_2 \).
 
 (c) Let \( \Q' \) be another orthonormal basis matrix of \( U \), and put \( \R = \Q^{*}\Q' \in M_k(F) \). Each column of \( \Q' \) lies in \( U \), where \( P_U \) is the identity, so \( \Q' = P_U\Q' = \Q\Q^{*}\Q' = \Q\R \) by (a). Then \( \R^{*}\R = \Q'^{*}\Q\Q^{*}\Q' = \Q'^{*}P_U\Q' = \Q'^{*}\Q' = \I_k \), so the square matrix \( \R \) is unitary (@def-unitary-orthogonal).
 
@@ -131,7 +131,7 @@ using \( \R'\R'^{*} = \I_l \). Since \( \R^{*} = \R^{-1} \), this is similar to 
 ::: {#prp-principal-vectors}
 [Principal Vectors]
 
-In the setting of @def-principal-angles, let \( \Q_W^{*}\Q_U = \Y\vSigma\Z^{*} \) be a singular value decomposition, with \( \Y \in M_l(F) \) and \( \Z \in M_k(F) \) unitary, columns \( \y_1, \dots, \y_l \) and \( \z_1, \dots, \z_k \). Put
+In the setting of @def-principal-angles, let \( \Q_W^{*}\Q_U = \Y\vSigma\Z^{*} \) be a singular value decomposition (@thm-svd), with \( \Y \in M_l(F) \) and \( \Z \in M_k(F) \) unitary, columns \( \y_1, \dots, \y_l \) and \( \z_1, \dots, \z_k \). Put
 \[
 \u_i = \Q_U\z_i \ (1 \le i \le k), \qquad \w_j = \Q_W\y_j \ (1 \le j \le l) .
 \]
@@ -243,7 +243,7 @@ Put \( \D = P_U - P_W \), and let \( \Q_U, \Q_W \) be orthonormal basis matrices
 &= \tr(P_U) + \tr(P_W) - \tr(P_UP_W) - \tr(P_WP_U) .
 \end{aligned}
 \]
-By @thm-trace-properties (c), \( \tr(P_U) = \tr(\Q_U^{*}\Q_U) = \tr(\I_k) = k \), likewise \( \tr(P_W) = k \), and \( \tr(P_WP_U) = \tr(P_UP_W) \). Also
+By @thm-trace-properties (3), \( \tr(P_U) = \tr(\Q_U^{*}\Q_U) = \tr(\I_k) = k \), likewise \( \tr(P_W) = k \), and \( \tr(P_WP_U) = \tr(P_UP_W) \). Also
 \[
 \begin{aligned}
 \tr(P_UP_W) &= \tr(\Q_U\Q_U^{*}\Q_W\Q_W^{*}) \\

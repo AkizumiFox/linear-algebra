@@ -107,7 +107,12 @@ The Hadamard product is bilinear, so expanding both sums,
 = \sum_{i,j} \lambda_i\mu_j\,\z_{ij}\z_{ij}^{*} ,
 \]
 
-where \( \z_{ij} = \u_i \circ \w_j \) and the second equality is @lem-hadamard-rank-one. Each \( \z_{ij}\z_{ij}^{*} \) is positive semidefinite by @exm-psd-first-examples (b), and each coefficient \( \lambda_i\mu_j \) is a non-negative real number. A non-negative combination of positive semidefinite matrices is positive semidefinite (@exr-positive-definite-matrices-c2 (a)), so \( \A \circ \B \succeq 0 \).
+where \( \z_{ij} = \u_i \circ \w_j \) and the second equality is @lem-hadamard-rank-one. Each \( \z_{ij}\z_{ij}^{*} \) is positive semidefinite by @exm-psd-first-examples (b), and each coefficient \( \lambda_i\mu_j \) is a non-negative real number. A non-negative combination of positive semidefinite matrices is positive semidefinite (@exr-positive-definite-matrices-c2 (a)): the combination is Hermitian, being a real combination of Hermitian matrices, and for every \( \x \),
+\[
+\inner{\Bigl(\textstyle\sum_{i,j}\lambda_i\mu_j\z_{ij}\z_{ij}^{*}\Bigr)\x}{\x}
+= \sum_{i,j}\lambda_i\mu_j\inner{\z_{ij}\z_{ij}^{*}\x}{\x} \ \ge\ 0 ,
+\]
+every term being a product of non-negative reals. So \( \A \circ \B \succeq 0 \).
 
 (b) Let \( \varepsilon > 0 \) be the smallest eigenvalue of \( \B \), which is positive by @thm-pd-characterizations (b). The matrix \( \B - \varepsilon\I \) is Hermitian with eigenvalues \( \mu_j - \varepsilon \ge 0 \), so \( \B - \varepsilon\I \succeq 0 \) by @thm-psd-characterizations (b). Since \( \circ \) is bilinear and \( \A \circ \I = \diag(a_{11}, \dots, a_{nn}) \),
 
@@ -145,7 +150,7 @@ Entry by entry,
 \A \circ \B = \begin{pmatrix} 2 & -1 & 0 \\ -1 & 4 & -1 \\ 0 & -1 & 6 \end{pmatrix} ,
 \]
 
-whose leading principal minors are \( 2 \), \( 8 - 1 = 7 \) and \( 2(24 - 1) + 1(-6 - 0) = 46 - 6 = 40 \). All positive, so \( \A \circ \B \succ 0 \), as @thm-schur-product (b) promised. Note that the eigenvalues of \( \A \circ \B \) have nothing to do with those of \( \A \) and \( \B \), and that \( \det(\A \circ \B) = 40 \) is much larger than \( \det \A\det \B = 4 \cdot 2 = 8 \). The next theorem explains part of that: it forces \( \det(\A \circ \B) \ge \det\A \prod_i b_{ii} = 24 \). Getting down to the product \( \det\A\det\B \) needs Hadamard's inequality as well, which is @exr-schur-product-theorem-c2.
+whose leading principal minors are \( 2 \), \( 8 - 1 = 7 \) and \( 2(24 - 1) + 1(-6 - 0) = 46 - 6 = 40 \). All positive, so \( \A \circ \B \succ 0 \), as @thm-schur-product (b) promised. Note that the eigenvalues of \( \A \circ \B \) have nothing to do with those of \( \A \) and \( \B \), and that \( \det(\A \circ \B) = 40 \) is much larger than \( \det \A\det \B = 4 \cdot 2 = 8 \). The next theorem explains part of that: it forces \( \det(\A \circ \B) \ge \det\A \prod_i b_{ii} = 24 \). Getting down to the product \( \det\A\det\B \) needs Hadamard's inequality (@thm-hadamard-inequality) as well, which is @exr-schur-product-theorem-c2.
 :::
 
 ::: {.check}

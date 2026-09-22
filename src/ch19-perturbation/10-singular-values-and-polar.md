@@ -230,7 +230,7 @@ So \( \X = \W - \I \) solves \( \Q\X + \X\P = \Y \), with \( \Y \) the left side
 \[
 \norm{\W - \I} \le \frac{\norm{\Y}}{\sigma_n(\A) + \sigma_n(\B)}
 \]
-in both norms. By @lem-spectral-frobenius-toolkit (c) and (a), \( \norm{\V^{*}(\A - \B)} = \norm{\A - \B} \) and \( \norm{(\A - \B)^{*}\U} = \norm{(\A - \B)^{*}} = \norm{\A - \B} \), so \( \norm{\Y} \le 2\norm{\A - \B} \) by the triangle inequality. Finally \( \U - \V = \V(\V^{*}\U - \I) = \V(\W - \I) \), so \( \norm{\U - \V} = \norm{\W - \I} \) by @lem-spectral-frobenius-toolkit (c). Combining the three displays proves the theorem.
+in both norms. By @lem-spectral-frobenius-toolkit (c) and (a), \( \norm{\V^{*}(\A - \B)} = \norm{\A - \B} \) and \( \norm{(\A - \B)^{*}\U} = \norm{(\A - \B)^{*}} = \norm{\A - \B} \), so \( \norm{\Y} \le 2\norm{\A - \B} \) by the triangle inequality in either norm (@thm-operator-norm-properties (b), @cor-triangle-inequality). Finally \( \U - \V = \V(\V^{*}\U - \I) = \V(\W - \I) \), so \( \norm{\U - \V} = \norm{\W - \I} \) by @lem-spectral-frobenius-toolkit (c). Combining the three displays proves the theorem.
 :::
 
 Notice the difference from @thm-polar-positive-perturbation. There the constant was a condition number, but here only \( \sigma_n \) appears. The unitary factor feels how close \( \A \) is to the singular matrices, which is \( \sigma_n(\A) \) by @cor-distance-to-singular, and nothing else.
@@ -483,7 +483,7 @@ using (a) to bound the denominator from below. This holds in both norms because 
 
 (c) If \( \norm{\E}_2 \le \tfrac12 \) then \( 2 - \norm{\E}_2 \ge \tfrac32 \), and (b) in the Frobenius norm gives \( \norm{\U - \I}_F \le \tfrac43\norm{\E}_F \).
 
-For comparison, @cor-unitary-nearest says that \( \U \) is at least as close to \( \A \) as any unitary matrix is, and \( \I \) is one, so \( \norm{\A - \U}_F \le \norm{\A - \I}_F = \norm{\E}_F \). The triangle inequality then gives
+For comparison, @cor-unitary-nearest says that \( \U \) is at least as close to \( \A \) as any unitary matrix is, and \( \I \) is one, so \( \norm{\A - \U}_F \le \norm{\A - \I}_F = \norm{\E}_F \). The triangle inequality (@cor-triangle-inequality) then gives
 \[
 \norm{\U - \I}_F \le \norm{\U - \A}_F + \norm{\A - \I}_F \le 2\norm{\E}_F .
 \]

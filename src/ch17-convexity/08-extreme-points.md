@@ -254,7 +254,7 @@ so \( \y = \z \).
 
 *No other point is extreme.* If \( \norm{\x}_2 < 1 \), put \( \v = (1 - \norm{\x}_2)\e_1 \); then \( \norm{\x \pm \v}_2 \le \norm{\x}_2 + (1 - \norm{\x}_2) = 1 \).
 
-In (a) and (b), Minkowski's theorem now makes \( B_1 \) the hull of the \( 2n \) points \( \pm\e_i \), and \( B_\infty \) the hull of the \( 2^n \) sign vectors. In (c) it says only that the ball is the hull of the sphere, and the infinitely many extreme points are why \( B_2 \) is not a polytope.
+In (a) and (b), Minkowski's theorem (@thm-minkowski-extreme) now makes \( B_1 \) the hull of the \( 2n \) points \( \pm\e_i \), and \( B_\infty \) the hull of the \( 2^n \) sign vectors. In (c) it says only that the ball is the hull of the sphere, and the infinitely many extreme points are why \( B_2 \) is not a polytope.
 :::
 
 ## Density matrices
@@ -485,7 +485,7 @@ with equality only if \( x = a \) and \( y = x^2 = a^2 \). So \( (a, a^2) \) is 
 
 *No other point is extreme.* Let \( (x, y) \in P \) with \( y \ne x^2 \), so \( x^2 < y \le 1 \). If \( y < 1 \), let \( \varepsilon = \min(y - x^2, 1 - y) > 0 \); then \( (x, y \pm \varepsilon) \in P \) and \( (x, y) \) is their midpoint. If \( y = 1 \), then \( \lvert x \rvert < 1 \); let \( \varepsilon = 1 - \lvert x \rvert > 0 \); then \( (x \pm \varepsilon)^2 \le (\lvert x\rvert + \varepsilon)^2 = 1 \), so \( (x \pm \varepsilon, 1) \in P \), and \( (x, 1) \) is their midpoint. So \( \operatorname{ext} P = \{(a, a^2) : -1 \le a \le 1\} \).
 
-(c) None: every point \( \x \) of the strip is the midpoint of \( \x \pm \e_1 \), which lie in the strip. The strip is closed and convex but not bounded, so Minkowski's theorem does not apply.
+(c) None: every point \( \x \) of the strip is the midpoint of \( \x \pm \e_1 \), which lie in the strip. The strip is closed and convex but not bounded, so Minkowski's theorem (@thm-minkowski-extreme) does not apply.
 :::
 
 :::: {#exr-extreme-points-b2}

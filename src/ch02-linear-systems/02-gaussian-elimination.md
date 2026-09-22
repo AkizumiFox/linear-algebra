@@ -294,7 +294,7 @@ which by @thm-row-ops-preserve-solutions has the same solutions as the original.
 Check: \( (1, 2, 0, -1) \) gives \( 4 + 0 - 1 = 3 \), \( 1 + 2 + 0 = 3 \) and \( 2 + 2 + 0 - 1 = 3 \); and \( (-2, 1, 1, 0) \) gives \( 2 - 2 + 0 = 0 \), \( -2 + 1 + 1 = 0 \) and \( -4 + 1 + 3 + 0 = 0 \). This is the "particular plus homogeneous" form of @thm-general-solution-structure.
 :::
 
-A computer algebra system does the same computation exactly. In the online version the cell below can be edited and run, which is a good way to check a hand computation.
+The same computation can be carried out in exact arithmetic. In the online version the cell below can be edited and run, which is a good way to check a hand computation.
 
 ```{.python .run #cell-gauss-jordan-check}
 from sympy import Matrix

@@ -228,7 +228,7 @@ Consider all positive integers of the form \( ax + ny \). There is a smallest on
 ::: {.proof}
 Let \( S = \{ ax + ny : x, y \in \nZ \} \cap \{1, 2, 3, \dots\} \). Since \( n = a \cdot 0 + n \cdot 1 \ge 1 \), we have \( n \in S \), so \( S \) is a non-empty subset of \( \nN \). By the well-ordering principle (@thm-well-ordering), \( S \) has a smallest element \( d = ax_0 + ny_0 \).
 
-By division with remainder (@exr-proofs-c2), \( a = qd + r \) for some integers \( q, r \) with \( 0 \le r < d \). Then
+Next we divide \( a \) by \( d \), using well-ordering a second time. Let \( R \) be the collection of non-negative integers of the form \( a - qd \) with \( q \in \nZ \). Taking \( q = -\lvert a \rvert \) gives \( a + \lvert a \rvert d \), which is non-negative because \( d \ge 1 \) forces \( \lvert a \rvert d \ge \lvert a \rvert \ge -a \); so \( R \) is non-empty, and by @thm-well-ordering it has a least element \( r = a - qd \ge 0 \). If \( r \ge d \), then \( r - d = a - (q + 1)d \) would lie in \( R \) and be smaller than \( r \), contradicting minimality. Hence \( 0 \le r < d \), and \( a = qd + r \); this is the division with remainder of @exr-proofs-c2, repeated here in the one case the proof needs. Now
 \[
 r = a - q(ax_0 + ny_0) = a(1 - qx_0) + n(-qy_0)
 \]

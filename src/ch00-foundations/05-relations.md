@@ -397,7 +397,7 @@ Determine which of the following are equivalence relations. For those that are, 
 :::
 
 ::: {.solution}
-(a) Equivalence relation. *Reflexive:* \( a + a = 2a \) is even. *Symmetric:* \( b + a = a + b \). *Transitive:* if \( a + b \) and \( b + c \) are even, then \( a + c = (a + b) + (b + c) - 2b \) is a sum of even integers, hence even. There are two classes: the even integers and the odd integers. (In fact \( a + b \) is even exactly when \( a - b = (a + b) - 2b \) is even, so this is congruence modulo \( 2 \).)
+(a) Equivalence relation. *Reflexive:* \( a + a = 2a \) is even. *Symmetric:* \( b + a = a + b \). *Transitive:* if \( a + b \) and \( b + c \) are even, then \( a + c = (a + b) + (b + c) - 2b \) is a sum of even integers, hence even (@prp-sum-of-evens). There are two classes: the even integers and the odd integers. (In fact \( a + b \) is even exactly when \( a - b = (a + b) - 2b \) is even, so this is congruence modulo \( 2 \).)
 
 (b) Not an equivalence relation. Reflexivity fails: \( 0 - 0 = 0 \) is even, so \( 0 \not\sim 0 \). (Transitivity also fails: \( 0 \sim 1 \) and \( 1 \sim 2 \), but \( 0 - 2 \) is even.)
 

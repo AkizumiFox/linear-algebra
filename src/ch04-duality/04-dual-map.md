@@ -387,7 +387,7 @@ No such statement holds for \( V \cong V^{*} \). Suppose that for every finite-d
 
 (e) True. \( T' \) maps \( (\nR^3)^{*} \), of dimension \( 3 \), to \( (\nR^4)^{*} \), of dimension \( 4 \), so it cannot be surjective (@cor-rank-nullity-consequences (d)). This matches @cor-injective-iff-dual-surjective: \( T \) cannot be injective.
 
-(f) The Rank–Nullity Theorem and the dimension formula for annihilators, \( \dim U + \dim U^{0} = \dim V \) (together with \( \ker T' = (\im T)^{0} \)).
+(f) The Rank–Nullity Theorem (@thm-rank-nullity) and the dimension formula for annihilators, \( \dim U + \dim U^{0} = \dim V \) (@thm-dimension-annihilator), together with \( \ker T' = (\im T)^{0} \).
 :::
 
 ### B. Practice

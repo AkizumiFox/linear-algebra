@@ -440,7 +440,7 @@ Determine which of the following statements hold for **all** \( \A, \B, \C \in M
 \[
 \rank(\A \otimes \B) = \rank \A\rank \B \le m \cdot q < n \cdot q = nq,
 \]
-so the \( nq \times nq \) matrix \( \A \otimes \B \) is not invertible (@thm-invertible-tfae). If \( m > n \), then \( p < q \), and \( \rank \A\rank \B \le n \cdot p < m \cdot p = mp = nq \) in the same way.
+so the \( nq \times nq \) matrix \( \A \otimes \B \) is not invertible (@thm-invertible-tfae-det (d)). If \( m > n \), then \( p < q \), and \( \rank \A\rank \B \le n \cdot p < m \cdot p = mp = nq \) in the same way.
 
 (c) Take \( \A = \begin{pmatrix} 1 \\ 2 \end{pmatrix} \) and \( \B = \begin{pmatrix} 3 & 1 \end{pmatrix} \). Then \( \A \otimes \B = \begin{pmatrix} 1\B \\ 2\B \end{pmatrix} = \begin{pmatrix} 3 & 1 \\ 6 & 2 \end{pmatrix} \), the outer product \( \A \B \), of rank \( 1 \cdot 1 = 1 \): its second row is twice its first. So it is square and non-zero but singular, as (b) predicts.
 :::

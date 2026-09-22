@@ -277,7 +277,7 @@ Do the definite case first and reach the general case by a limit. For \( \M \suc
 \det \M = \det \A \cdot \det(\M/\A) .
 \]
 
-The matrix \( \A^{-1} \) is positive definite (@exr-positive-definite-matrices-b3), so \( \Q \coloneqq \B^{*}\A^{-1}\B \succeq 0 \) by @prp-congruence-positivity (a) with \( \S = \B \). Since \( \C = (\M/\A) + \Q \), @lem-det-psd-increment with \( \P = \M/\A \) gives \( \det \C \ge \det(\M/\A) \), with equality if and only if \( \Q = 0 \). Multiplying by \( \det \A > 0 \),
+The matrix \( \A^{-1} \) is positive definite. Indeed the eigenvalues of \( \A \) are positive (@thm-pd-characterizations (b)), so \( \A \) is invertible (@thm-invertible-tfae-eigen); the identity \( (\A^{-1})^{*} = (\A^{*})^{-1} = \A^{-1} \) makes \( \A^{-1} \) Hermitian; and @prp-congruence-positivity (b) with the invertible \( \S = \A^{-1} \) turns \( \S^{*}\A\S = \A^{-1}\A\A^{-1} = \A^{-1} \) into \( \A^{-1} \succ 0 \). (This is @exr-positive-definite-matrices-b3.) So \( \Q \coloneqq \B^{*}\A^{-1}\B \succeq 0 \) by @prp-congruence-positivity (a) with \( \S = \B \). Since \( \C = (\M/\A) + \Q \), @lem-det-psd-increment with \( \P = \M/\A \) gives \( \det \C \ge \det(\M/\A) \), with equality if and only if \( \Q = 0 \). Multiplying by \( \det \A > 0 \),
 
 \[
 \det \M = \det \A\det(\M/\A) \le \det \A\det \C ,
@@ -339,7 +339,11 @@ so that \( \A' \) is the submatrix on rows and columns \( 2, \dots, n \). By @th
 
 the second step being the inductive hypothesis applied to \( \A' \). This is the inequality.
 
-For equality, suppose first that some \( a_{ii} = 0 \). Then @exr-positive-definite-matrices-c3 (b) makes row \( i \) and column \( i \) of \( \A \) zero, so \( \det \A = 0 \); and the right-hand side is \( 0 \) too, so equality holds. If \( \A \) is diagonal, both sides are the product of the diagonal entries. Conversely, suppose equality holds and every \( a_{ii} > 0 \). Then \( \det \A = a_{11}\cdots a_{nn} > 0 \), so \( \A \) is invertible, and a positive semidefinite matrix with no zero eigenvalue is positive definite (@thm-pd-characterizations (b)). Both inequalities in the display are therefore equalities. The first is the equality case of @cor-fischer-inequality for the positive definite \( \A \), so \( \b = \0 \): the first row and column vanish off the diagonal. The second is the equality case of the inductive hypothesis for \( \A' \), whose diagonal entries are positive, so \( \A' \) is diagonal. Hence \( \A \) is diagonal, and the induction is complete.
+For equality, suppose first that some \( a_{ii} = 0 \). Fix \( j \ne i \) and put \( I = \{i, j\} \). By @thm-psd-characterizations ((a) \( \Rightarrow \) (e)) the principal minor on the rows and columns \( I \) is \( \ge 0 \), so
+\[
+0 \le \det \A_{I,I} = a_{ii}a_{jj} - \lvert a_{ij}\rvert^2 = -\lvert a_{ij}\rvert^2 ,
+\]
+forcing \( a_{ij} = 0 \); and \( a_{ji} = \conj{a_{ij}} = 0 \) because \( \A \) is Hermitian. As \( j \ne i \) was arbitrary, row \( i \) and column \( i \) of \( \A \) are zero (which is @exr-positive-definite-matrices-c3 (b)) and \( \det \A = 0 \); the right-hand side is \( 0 \) too, so equality holds. If \( \A \) is diagonal, both sides are the product of the diagonal entries. Conversely, suppose equality holds and every \( a_{ii} > 0 \). Then \( \det \A = a_{11}\cdots a_{nn} > 0 \), so \( \A \) is invertible, and a positive semidefinite matrix with no zero eigenvalue is positive definite (@thm-pd-characterizations (b)). Both inequalities in the display are therefore equalities. The first is the equality case of @cor-fischer-inequality for the positive definite \( \A \), so \( \b = \0 \): the first row and column vanish off the diagonal. The second is the equality case of the inductive hypothesis for \( \A' \), whose diagonal entries are positive, so \( \A' \) is diagonal. Hence \( \A \) is diagonal, and the induction is complete.
 
 (b) Put \( \A = \B^{*}\B \), which is positive semidefinite by @thm-psd-characterizations (c). Its \( (j, j) \) entry is \( \b_j^{*}\b_j = \norm{\b_j}^2 \). By @thm-det-multiplicative, and because \( \det(\B^{*}) = \conj{\det \B} \) — the star transposes, which does not change the determinant (@thm-det-transpose), and conjugates every entry, which conjugates the determinant —
 

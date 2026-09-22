@@ -310,7 +310,7 @@ Pole and polar — the correspondence a conic sets up between the points and the
 ::: {.enumerate options="label=(\alph*)"}
 1. Define the dual projective space of \( \nP(V) \), and say what its dimension is.
 2. Let \( S \) be a plane in \( \nP^4(F) \). Compute \( \dim S^{0} \).
-3. True or false, with a reason: the duality correspondence is a bijection from the points of \( \nP(V) \) to the points of \( \nP(V) \).
+3. True or false, with a reason: the duality correspondence of @thm-duality-correspondence is a bijection from the points of \( \nP(V) \) to the points of \( \nP(V) \).
 4. In \( \nP^2 \), what is the dual of the statement "three distinct points are collinear"?
 5. What are \( \emptyset^{0} \) and \( \nP(V)^{0} \)?
 :::

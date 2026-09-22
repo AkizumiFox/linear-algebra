@@ -107,7 +107,7 @@ Now read \( \A \) as an element of \( M_n(\nC) \), acting on \( \nC^n \) with th
 :::
 
 ::: {.remark}
-There is a second, very different route to (b): the function \( \v \mapsto \inner{T\v}{\v} \) is real-valued and continuous on the unit sphere of \( V \), which is closed and bounded, so it attains a maximum, and a vector where it does so turns out to be an eigenvector for the largest eigenvalue. That argument is shorter to state but it is analysis, not algebra, and it needs the extreme value theorem; we keep to the algebraic route so that nothing in this chapter depends on it. The maximization picture returns in Chapter 16, where the Rayleigh quotient and the Courant–Fischer theorem describe every eigenvalue of a self-adjoint operator by optimization.
+There is a second, very different route to (b): the function \( \v \mapsto \inner{T\v}{\v} \) is real-valued and continuous on the unit sphere of \( V \), which is closed and bounded, so it attains a maximum, and a vector where it does so turns out to be an eigenvector for the largest eigenvalue. That argument is shorter to state but it is analysis, not algebra, and it appeals to the extreme value theorem directly. We keep to the algebraic route, which reaches that theorem only at one remove: the proof just given rests on @cor-complex-polynomial-splits, hence on the fundamental theorem of algebra (@thm-fundamental-theorem-of-algebra), and the proof of that in Chapter 5 uses the extreme value theorem on a closed disc. The maximization picture returns in Chapter 16, where the Rayleigh quotient and the Courant–Fischer theorem describe every eigenvalue of a self-adjoint operator by optimization.
 :::
 
 ::: {.check}

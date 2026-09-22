@@ -105,7 +105,7 @@ Each \( \det \E_m \) is \( -1 \), \( 1 \), or some \( c \ne 0 \), since a scalin
 By @lem-square-rref-identity-or-zero-row, either \( \R = \I_n \), and then \( \det \R = 1 \ne 0 \); or the last row of \( \R \) is zero. In the second case, scaling that row by \( 0 \) leaves \( \R \) unchanged, so \( \det \R = 0 \cdot \det \R = 0 \) by @thm-det-row-operations (b). Hence \( \det \A \ne 0 \) if and only if \( \R = \I_n \), which by @thm-invertible-tfae holds if and only if \( \A \) is invertible.
 :::
 
-This is the promised addition to the list of equivalent conditions. We collect it with the conditions from Chapter 3 about the map \( T_{\A} \colon \x \mapsto \A\x \), and with two conditions about rows that the determinant makes easy.
+This is the promised addition to the list of equivalent conditions. We collect it with the conditions from Chapter 3 about the map \( T_{\A} \colon \x \mapsto \A\x \) (@thm-invertible-operator-tfae), and with two conditions about rows that the determinant makes easy.
 
 ::: {#thm-invertible-tfae-det}
 [Invertible Matrix Theorem, with Determinants]

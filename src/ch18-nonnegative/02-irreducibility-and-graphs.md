@@ -306,7 +306,7 @@ Strong induction on \( n \): if \( \A \) is irreducible there is nothing to do, 
 :::
 
 ::: {.proof}
-(a) Strong induction on \( n \). If \( \A \) is irreducible, which includes the case \( n = 1 \), take \( \P = \I \) and \( m = 1 \). Otherwise \( n \ge 2 \), and there are a permutation matrix \( \P_0 \) and \( 1 \le k \le n - 1 \) with
+(a) Strong induction on \( n \) (@thm-strong-induction). If \( \A \) is irreducible, which includes the case \( n = 1 \), take \( \P = \I \) and \( m = 1 \). Otherwise \( n \ge 2 \), and there are a permutation matrix \( \P_0 \) and \( 1 \le k \le n - 1 \) with
 \[
 \P_0\tp\A\P_0 = \begin{pmatrix} \B & \C \\ 0 & \D \end{pmatrix}, \qquad \B \in M_k(F),\ \D \in M_{n-k}(F) .
 \]

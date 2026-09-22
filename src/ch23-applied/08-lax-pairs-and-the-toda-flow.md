@@ -94,11 +94,11 @@ Rewrite the bracket in terms of \( \M \). Since \( \L = x\I - \M \) and \( x\I \
 \[
 [\B, \L] = \B(x\I - \M) - (x\I - \M)\B = \M\B - \B\M ,
 \]
-so \( \M' = -\L' = -[\B, \L] = \B\M - \M\B \). Writing \( \M = \M(t) \) and using the linearity of the trace (@thm-trace-properties (a)),
+so \( \M' = -\L' = -[\B, \L] = \B\M - \M\B \). Writing \( \M = \M(t) \) and using the linearity of the trace (@thm-trace-properties (1)),
 \[
 f'(t) = \tr\bigl(\adj\M\,\B\M\bigr) - \tr\bigl(\adj\M\,\M\B\bigr).
 \]
-A cyclic shift (@thm-trace-properties (c)) moves \( \M \) to the front of the first trace, so
+A cyclic shift (@thm-trace-properties (3)) moves \( \M \) to the front of the first trace, so
 \[
 f'(t) = \tr\bigl(\M\,\adj\M\,\B\bigr) - \tr\bigl(\adj\M\,\M\,\B\bigr).
 \]
@@ -141,11 +141,11 @@ Prove directly from the Lax equation, without @thm-lax-isospectral, that \( \tr\
 :::
 
 ::: {.solution}
-The trace of a matrix is a linear function of its entries, so \( (\tr\L)'(t) = \tr(\L'(t)) \) by (D1) and @thm-trace-properties (a). Then
+The trace of a matrix is a linear function of its entries, so \( (\tr\L)'(t) = \tr(\L'(t)) \) by (D1) and @thm-trace-properties (1). Then
 \[
 \tr\L'(t) = \tr(\B\L) - \tr(\L\B) = 0
 \]
-by @thm-trace-properties (c). So \( \tr\L \) has zero derivative on \( I \) and is constant by fact (A6) of Chapter 15's introduction. The same argument applied to \( \L^m \) gives \( \tr(\L^m)' = 0 \) for every \( m \ge 1 \) (@exr-lax-pairs-and-the-toda-flow-c1).
+by @thm-trace-properties (3). So \( \tr\L \) has zero derivative on \( I \) and is constant by fact (A6) of Chapter 15's introduction. The same argument applied to \( \L^m \) gives \( \tr(\L^m)' = 0 \) for every \( m \ge 1 \) (@exr-lax-pairs-and-the-toda-flow-c1).
 :::
 
 ## The Toda flow
@@ -368,7 +368,7 @@ That is the general lesson, and it is worth naming as one of this chapter's move
 ::: {.solution}
 (a) A pair \( \L, \B \colon I \to M_n(\nC) \) with \( \L \) differentiable and \( \L'(t) = \B(t)\L(t) - \L(t)\B(t) \) for all \( t \in I \). Only \( \L \) must be differentiable.
 
-(b) The characteristic polynomial of \( \L(t) \) is independent of \( t \). The proof uses Jacobi's formula (@thm-derivative-of-det) and the adjugate identity (@thm-adjugate-identity), together with \( \tr(\X\Y) = \tr(\Y\X) \) (@thm-trace-properties (c)).
+(b) The characteristic polynomial of \( \L(t) \) is independent of \( t \). The proof uses Jacobi's formula (@thm-derivative-of-det) and the adjugate identity (@thm-adjugate-identity), together with \( \tr(\X\Y) = \tr(\Y\X) \) (@thm-trace-properties (3)).
 
 (c) Incorrect. @exm-lax-nilpotent-curve has \( \L(t) = \begin{psmallmatrix} t & -t^2 \\ 1 & -t\end{psmallmatrix} \), which is non-constant while its characteristic polynomial \( x^2 \) is constant. Isospectral is much weaker than constant.
 
@@ -488,7 +488,7 @@ Since \( \rho^2 = c^2 + s^2 = \tfrac12(e^{2t} + e^{-2t}) \) and \( 2cs = \tfrac1
 Let \( (\L, \B) \) be a Lax pair on \( I \).
 
 ::: {.enumerate options="label=(\alph*)"}
-1. Prove that \( t \mapsto \tr\bigl(\L(t)^{m}\bigr) \) is constant for every integer \( m \ge 1 \). *Hint: the product rule, then @thm-trace-properties (c).*
+1. Prove that \( t \mapsto \tr\bigl(\L(t)^{m}\bigr) \) is constant for every integer \( m \ge 1 \). *Hint: the product rule, then @thm-trace-properties (3).*
 2. Deduce, for \( n = 2 \), that the characteristic polynomial of \( \L(t) \) is constant, without using @thm-lax-isospectral.
 :::
 ::::
@@ -498,7 +498,7 @@ Let \( (\L, \B) \) be a Lax pair on \( I \).
 \[
 (\L^m)' = \sum_{j=0}^{m-1}\L^{j}\,\L'\,\L^{m-1-j} .
 \]
-The trace is linear (@thm-trace-properties (a)) and unchanged by a cyclic shift (@thm-trace-properties (c)), so each summand contributes \( \tr(\L^{m-1}\L') \), and
+The trace is linear (@thm-trace-properties (1)) and unchanged by a cyclic shift (@thm-trace-properties (3)), so each summand contributes \( \tr(\L^{m-1}\L') \), and
 \[
 \bigl(\tr\L^m\bigr)' = m\,\tr\bigl(\L^{m-1}\L'\bigr) = m\,\tr\bigl(\L^{m-1}(\B\L - \L\B)\bigr).
 \]

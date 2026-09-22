@@ -95,7 +95,7 @@ Let \( \A \in M_{m \times n}(F) \) and let \( 1 \le k \le n \), with \( \sigma_k
 &= \max_{\substack{W \le F^n \\ \dim W = k}}\ \min_{\0 \ne \x \in W}\ \frac{\norm{\A\x}}{\norm{\x}} .
 \end{aligned}
 \]
-The outer minimum is attained at \( W = \Span(\v_k, \dots, \v_n) \) and the outer maximum at \( W = \Span(\v_1, \dots, \v_k) \), for the right singular vectors of any singular value decomposition of \( \A \).
+The outer minimum is attained at \( W = \Span(\v_k, \dots, \v_n) \) and the outer maximum at \( W = \Span(\v_1, \dots, \v_k) \), for the right singular vectors of any singular value decomposition of \( \A \) (@thm-svd).
 :::
 
 ::: {.idea}
@@ -291,7 +291,7 @@ A matrix \( \B \) of rank at most \( k \) has a large null space — dimension a
 :::
 
 ::: {.proof}
-*The lower bound.* Let \( \rank\B \le k \). By Rank–Nullity for matrices (@thm-rank-nullity-matrix), \( \dim\nul(\B) = n - \rank\B \ge n - k \). Let \( H = \Span(\v_1, \dots, \v_{k+1}) \), where \( \v_1, \dots, \v_n \) are the right singular vectors of a fixed singular value decomposition of \( \A \); then \( \dim H = k + 1 \). Since
+*The lower bound.* Let \( \rank\B \le k \). By Rank–Nullity for matrices (@thm-rank-nullity-matrix), \( \dim\nul(\B) = n - \rank\B \ge n - k \). Let \( H = \Span(\v_1, \dots, \v_{k+1}) \), where \( \v_1, \dots, \v_n \) are the right singular vectors of a fixed singular value decomposition of \( \A \) (@thm-svd); then \( \dim H = k + 1 \). Since
 \[
 \dim\nul(\B) + \dim H \ \ge\ (n - k) + (k + 1) = n + 1 > n ,
 \]
@@ -376,7 +376,7 @@ A singular matrix has rank at most \( n - 1 \), so this is the spectral Eckart�
 :::
 
 ::: {.proof}
-A matrix \( \B \in M_n(F) \) is singular if and only if \( \rank\B \le n - 1 \) (@thm-invertible-tfae). So the set over which the minimum is taken is exactly the set appearing in @thm-eckart-young-spectral with \( k = n - 1 \), and that theorem gives the value \( \sigma_{(n-1)+1}(\A) = \sigma_n(\A) \), attained at \( \A_{n-1} \). The matrix \( \A_{n-1} \) is singular because its rank is \( \min(n-1, \rank\A) = n - 1 < n \).
+A matrix \( \B \in M_n(F) \) is singular if and only if \( \rank\B \le n - 1 \) (@thm-invertible-tfae-det (d)). So the set over which the minimum is taken is exactly the set appearing in @thm-eckart-young-spectral with \( k = n - 1 \), and that theorem gives the value \( \sigma_{(n-1)+1}(\A) = \sigma_n(\A) \), attained at \( \A_{n-1} \). The matrix \( \A_{n-1} \) is singular because its rank is \( \min(n-1, \rank\A) = n - 1 < n \).
 
 For the second expression: since \( \rank\A = n \), exactly \( n \) singular values of \( \A \) are non-zero (@thm-svd), so \( \sigma_n(\A) > 0 \). By @def-condition-number and @prp-condition-number-properties (d), \( \norm{\A}_2\norm{\A^{-1}}_2 = \kappa_2(\A) = \sigma_1(\A)/\sigma_n(\A) \), and \( \norm{\A}_2 = \sigma_1(\A) \) by @thm-operator-norm-formulas (c); dividing, \( \norm{\A^{-1}}_2 = 1/\sigma_n(\A) \). Dividing the minimum \( \sigma_n(\A) \) by \( \norm{\A}_2 = \sigma_1(\A) \) gives \( \sigma_n/\sigma_1 = 1/\kappa_2(\A) \), the last display. This proves the corollary.
 :::
@@ -445,7 +445,7 @@ since the entries of \( \A\x \) are those of \( \B\x \) together with \( \r^{*}\
 
 *First chain.* By @eq-row-deletion-split, \( \norm{\B\x}/\norm{\x} \le \norm{\A\x}/\norm{\x} \) for every \( \x \ne \0 \). Both \( \A \) and \( \B \) have \( n \) columns, so @thm-singular-value-minmax describes \( \sigma_i(\A) \) and \( \sigma_i(\B) \) as a minimum over the *same* family of subspaces of \( F^n \), of a maximum of these two objective functions. A pointwise smaller function has a smaller maximum on each subspace and hence a smaller minimum over the family, so \( \sigma_i(\B) \le \sigma_i(\A) \) for every \( i \le n \).
 
-*Second chain.* Fix \( 1 \le i \le n - 1 \). Let \( \w_1, \dots, \w_n \) be the right singular vectors of a singular value decomposition of \( \B \), and put \( T = \Span(\w_i, \dots, \w_n) \), of dimension \( n - i + 1 \); by @lem-stretch-in-singular-coordinates (a) applied to \( \B \),
+*Second chain.* Fix \( 1 \le i \le n - 1 \). Let \( \w_1, \dots, \w_n \) be the right singular vectors of a singular value decomposition of \( \B \) (@thm-svd), and put \( T = \Span(\w_i, \dots, \w_n) \), of dimension \( n - i + 1 \); by @lem-stretch-in-singular-coordinates (a) applied to \( \B \),
 \[
 \norm{\B\x} \le \sigma_i(\B)\norm{\x} \qquad (\x \in T) .
 \]

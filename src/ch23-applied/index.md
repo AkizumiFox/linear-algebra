@@ -50,7 +50,7 @@ Several classical results in this subject have proofs longer than the sections t
 
 ## What you need
 
-This chapter draws on almost the whole book. Chapters 4, 13 and 14 are the exceptions: duality, bilinear forms and tensor products are not used here. Chapter 20 supplies the sentence the chapter answers, but none of its theorems.
+This chapter draws on almost the whole book. Chapters 4, 13, 14, 21 and 22 are the exceptions: duality, bilinear forms, tensor products, affine and projective geometry, and algebras and representations are not used here. Chapter 20 supplies the sentence the chapter answers, but none of its theorems.
 
 - **Chapter 0 §06 and §09** — the complex numbers §07 and §12 work in, and the definition of the matrix product with its three views and the trace, which between them supply every operation count in the chapter: @thm-conjugate-properties, @thm-complex-triangle-inequality, @exm-roots-of-unity, @def-matrix-multiplication, @exm-matrix-multiplication, @thm-three-views-of-product, @thm-trace-properties.
 - **Chapter 1 §06** — basis extension, which §06 uses to finish an orthonormal list, and "a subspace of the full dimension is the whole space", which §11 uses to identify a column space: @thm-basis-extension, @thm-dim-impl-eq.

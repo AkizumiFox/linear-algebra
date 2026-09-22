@@ -44,7 +44,7 @@ Let \( G \) be a finite abelian group and let the field be \( \nC \). Then:
 :::
 
 ::: {.idea}
-Only (a) is deep, and Section 4 did it: in a commutative algebra every element commutes with the whole algebra, so Schur's lemma makes every element act as a scalar, and then every line is invariant, so an irreducible representation can only be a line. The rest is bookkeeping about \( 1 \times 1 \) matrices, together with the observation that a finite group makes every value a root of unity.
+Only (a) is deep, and Section 4 did it: in a commutative algebra every element commutes with the whole algebra, so Schur's lemma (@thm-schurs-lemma) makes every element act as a scalar, and then every line is invariant, so an irreducible representation can only be a line. The rest is bookkeeping about \( 1 \times 1 \) matrices, together with the observation that a finite group makes every value a root of unity.
 :::
 
 ::: {.proof}

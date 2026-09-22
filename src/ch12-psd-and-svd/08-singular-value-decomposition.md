@@ -72,7 +72,7 @@ where \( \vSigma \in M_{m \times n}(\nR) \) has \( (\vSigma)_{ii} = \sigma_i \) 
 :::
 
 ::: {.idea}
-Picture the \( 2 \times 2 \) real case. A matrix carries the unit circle to an ellipse, and an ellipse has two perpendicular axes; the theorem says that the two unit vectors sent to the ends of those axes are themselves perpendicular. That is exactly what Chapter 11's principal axis theorem said about the level curves of a quadratic form, and the link is that \( \norm{\A\x}^2 = \x^{*}(\A^{*}\A)\x \) **is** a quadratic form, with matrix \( \A^{*}\A \). So the plan is: ① diagonalize \( \A^{*}\A \) by the spectral theorem, getting an orthonormal basis \( \v_1, \dots, \v_n \) with \( \A^{*}\A\v_i = \sigma_i^2\v_i \); ② compute \( \inner{\A\v_i}{\A\v_j} \) and watch the eigenvalue equation force it to be \( \sigma_i^2\delta_{ij} \), so the images are already orthogonal; ③ normalize the non-zero ones to unit vectors \( \u_i \), and, if there are fewer than \( m \) of them, pad the list out to an orthonormal basis of \( F^m \); ④ read \( \A\V = \U\vSigma \) off column by column.
+Picture the \( 2 \times 2 \) real case. A matrix carries the unit circle to an ellipse, and an ellipse has two perpendicular axes; the theorem says that the two unit vectors sent to the ends of those axes are themselves perpendicular. That is exactly what Chapter 11's principal axis theorem (@thm-principal-axes) said about the level curves of a quadratic form, and the link is that \( \norm{\A\x}^2 = \x^{*}(\A^{*}\A)\x \) **is** a quadratic form, with matrix \( \A^{*}\A \). So the plan is: ① diagonalize \( \A^{*}\A \) by the spectral theorem, getting an orthonormal basis \( \v_1, \dots, \v_n \) with \( \A^{*}\A\v_i = \sigma_i^2\v_i \); ② compute \( \inner{\A\v_i}{\A\v_j} \) and watch the eigenvalue equation force it to be \( \sigma_i^2\delta_{ij} \), so the images are already orthogonal; ③ normalize the non-zero ones to unit vectors \( \u_i \), and, if there are fewer than \( m \) of them, pad the list out to an orthonormal basis of \( F^m \); ④ read \( \A\V = \U\vSigma \) off column by column.
 :::
 
 ::: {.proof}
@@ -116,6 +116,10 @@ A factorization \( \A = \U\vSigma\V^{*} \) as in the theorem is called **a singu
 \A\v_i = \sigma_i\u_i, \qquad \A^{*}\u_i = \sigma_i\v_i \qquad (i \le r),
 \]{#eq-singular-vector-pairing}
 the second obtained by applying \( \A^{*} \) to the first and using \( \A^{*}\A\v_i = \sigma_i^2\v_i \). In words: \( \A \) matches up two orthonormal bases, one in each space, stretching the \( i \)-th direction by \( \sigma_i \), and \( \A^{*} \) runs the same correspondence backwards with the same factors.
+
+::: {.remark}
+**The last item on the invertibility list.** For a square \( \A \in M_n(F) \), the count at the end of the theorem says that all \( n \) singular values are non-zero exactly when \( \rank \A = n \), which is invertibility (@thm-invertible-tfae-det (d)). This is the item Chapter 2 promised when it began the list (@thm-invertible-tfae), later grown in @thm-invertible-tfae-det, @thm-invertible-tfae-eigen and @thm-invertible-tfae-positive, and it is the last one the book adds.
+:::
 
 Here is the picture the Idea described, in the real \( 2 \times 2 \) case.
 
@@ -451,7 +455,7 @@ Determine which of the following statements are correct. For those that are corr
 
 (c) Incorrect, with the same \( \N \): \( \N^2 = \0 \) has both singular values \( 0 \), while \( \sigma_1(\N)^2 = 1 \). (It is correct for \( \A \succeq 0 \), and more generally for normal \( \A \), because then the singular values are the moduli of the eigenvalues and \( \A^2 \) has eigenvalues \( \lambda_i^2 \).)
 
-(d) Correct. If \( \A \in M_n(F) \) then, by @thm-svd, the number of non-zero singular values is \( \rank\A \), and \( \A \) is invertible exactly when \( \rank\A = n \) (@thm-invertible-tfae). A non-square matrix is never invertible.
+(d) Correct. If \( \A \in M_n(F) \) then, by @thm-svd, the number of non-zero singular values is \( \rank\A \), and \( \A \) is invertible exactly when \( \rank\A = n \) (@thm-invertible-tfae-det (d)). A non-square matrix is never invertible.
 :::
 
 ### C. Going deeper

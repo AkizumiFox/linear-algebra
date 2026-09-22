@@ -180,7 +180,7 @@ Let \( \A \in M_n(F) \) be Hermitian. The following are equivalent.
 :::
 
 ::: {.idea}
-The spectral theorem makes (a) and (b) two readings of one diagonal matrix, since an orthonormal change of basis does not change the sign of a quadratic form. From (b) the square root of Chapter 11 produces \( \C \), and \( \C \) is its own \( \B \). The step \( (c) \Rightarrow (a) \) is the identity \( \inner{\B^{*}\B\x}{\x} = \norm{\B\x}^2 \), already proved in Chapter 11 as an exercise. For (e), a principal submatrix is what the form does to vectors supported on a few coordinates, which gives \( (a) \Rightarrow (e) \) at once; the return trip uses @lem-det-shift-principal-minors to show that \( \det(\A + t\I) > 0 \) for every \( t > 0 \), so that no \( -t \) can be an eigenvalue.
+The spectral theorem makes (a) and (b) two readings of one diagonal matrix, since an orthonormal change of basis does not change the sign of a quadratic form. From (b) the square root of Chapter 11 produces \( \C \), and \( \C \) is its own \( \B \). The step \( (c) \Rightarrow (a) \) is the identity \( \inner{\B^{*}\B\x}{\x} = \norm{\B\x}^2 \), one line of moving \( \B^{*} \) across. For (e), a principal submatrix is what the form does to vectors supported on a few coordinates, which gives \( (a) \Rightarrow (e) \) at once; the return trip uses @lem-det-shift-principal-minors to show that \( \det(\A + t\I) > 0 \) for every \( t > 0 \), so that no \( -t \) can be an eigenvalue.
 :::
 
 ::: {.proof}
@@ -198,7 +198,11 @@ every term being a product of two non-negative reals.
 
 **(d) \( \Rightarrow \) (c).** Take \( \B = \C \); then \( \B^{*}\B = \C^{*}\C = \C^2 = \A \).
 
-**(c) \( \Rightarrow \) (a).** \( (\B^{*}\B)^{*} = \B^{*}\B \), and \( \inner{\B^{*}\B\x}{\x} = \norm{\B\x}^2 \ge 0 \) for every \( \x \). Both statements are @exr-self-adjoint-operators-c1 (a), applied to the map \( \x \mapsto \B\x \).
+**(c) \( \Rightarrow \) (a).** Conjugate-transposing twice, \( (\B^{*}\B)^{*} = \B^{*}(\B^{*})^{*} = \B^{*}\B \), which is (P1). And for every \( \x \),
+\[
+\inner{\B^{*}\B\x}{\x} = \x^{*}\B^{*}\B\x = (\B\x)^{*}(\B\x) = \norm{\B\x}^2 \ \ge\ 0 ,
+\]
+which is (P2). Both facts are recorded in operator form in @exr-self-adjoint-operators-c1 (a), applied to the map \( \x \mapsto \B\x \).
 
 **(a) \( \Rightarrow \) (e).** Let \( I = \{i_1 < \dots < i_k\} \). Given \( \y \in F^k \), let \( \x \in F^n \) have \( x_{i_p} = y_p \) and all other entries \( 0 \). Then \( \x^{*}\A\x = \y^{*}\A_{I,I}\y \), because the terms \( \conj{x_i}a_{ij}x_j \) with \( i \notin I \) or \( j \notin I \) vanish. So \( \A_{I,I} \) is Hermitian and satisfies (P2), that is \( \A_{I,I} \succeq 0 \). By the equivalence (a) \( \Leftrightarrow \) (b) applied to \( \A_{I,I} \), all its eigenvalues are \( \ge 0 \). Diagonalizing it as \( \A_{I,I} = \U\D\U^{*} \) as above, with \( \U^{*} = \U^{-1} \), and taking determinants (@thm-det-multiplicative, @cor-det-inverse),
 \[
@@ -335,7 +339,7 @@ all positive. The reason the two routes must agree is that \( \A \) is the Gram 
 
 ## The invertible matrix theorem grows
 
-Chapter 2 listed eight conditions equivalent to invertibility (@thm-invertible-tfae); Chapter 6 added the determinant (@thm-invertible-tfae-det) and Chapter 8 the eigenvalue \( 0 \) (@thm-invertible-tfae-eigen). Positivity adds a pair, and they are the ones used whenever a square system is attacked through least squares.
+Chapter 2 listed eight conditions equivalent to invertibility (@thm-invertible-tfae); Chapter 3 restated them for operators (@thm-invertible-operator-tfae); Chapter 6 added the determinant (@thm-invertible-tfae-det) and Chapter 8 the eigenvalue \( 0 \) (@thm-invertible-tfae-eigen). Positivity adds a pair, and they are the ones used whenever a square system is attacked through least squares.
 
 ::: {#thm-invertible-tfae-positive}
 [Invertible Matrix Theorem, with Positive Definiteness]
@@ -352,12 +356,12 @@ For a general \( \A \in M_{m \times n}(F) \), one always has \( \A^{*}\A \succeq
 :::
 
 ::: {.proof}
-Let \( \A \in M_{m \times n}(F) \). Then \( \A^{*}\A \) is positive semidefinite by @thm-psd-characterizations ((c) \( \Rightarrow \) (a)). Whether it is definite is decided by the identity \( \inner{\A^{*}\A\x}{\x} = \norm{\A\x}^2 \) of @exr-self-adjoint-operators-c1 (a): the left side is \( > 0 \) for every \( \x \ne \0 \) exactly when \( \A\x \ne \0 \) for every \( \x \ne \0 \), that is, exactly when \( \nul(\A) = \{\0\} \), that is, exactly when the columns of \( \A \) are linearly independent. The same conclusion comes from @lem-kernel-normal-equations, which says \( \nul(\A^{*}\A) = \nul(\A) \) and so lets one read the condition off \( \A \) directly.
+Let \( \A \in M_{m \times n}(F) \). Then \( \A^{*}\A \) is positive semidefinite by @thm-psd-characterizations ((c) \( \Rightarrow \) (a)). Whether it is definite is decided by the identity \( \inner{\A^{*}\A\x}{\x} = \x^{*}\A^{*}\A\x = \norm{\A\x}^2 \), computed in the proof of @thm-psd-characterizations ((c) \( \Rightarrow \) (a)) and recorded in operator form in @exr-self-adjoint-operators-c1 (a): the left side is \( > 0 \) for every \( \x \ne \0 \) exactly when \( \A\x \ne \0 \) for every \( \x \ne \0 \), that is, exactly when \( \nul(\A) = \{\0\} \), that is, exactly when the columns of \( \A \) are linearly independent. The same conclusion comes from @lem-kernel-normal-equations, which says \( \nul(\A^{*}\A) = \nul(\A) \) and so lets one read the condition off \( \A \) directly.
 
 Now let \( \A \) be square. Then "\( \nul(\A) = \{\0\} \)" is item (b) of @thm-invertible-tfae, which gives (a) \( \Leftrightarrow \) (b). Also \( \A \) is invertible if and only if \( \A^{*} \) is, since \( (\A^{-1})^{*} \) is a two-sided inverse of \( \A^{*} \) and conversely; applying (a) \( \Leftrightarrow \) (b) to \( \A^{*} \) therefore gives (a) \( \Leftrightarrow \) (c).
 :::
 
-The two new items look like a detour — why test \( \A^{*}\A \) when \( \A \) itself is available? Because \( \A^{*}\A \) is Hermitian and positive, and everything in this chapter applies to it. Chapter 10 already used it once, in the normal equations of least squares; Section 8 will use it again, to build the singular value decomposition of a matrix that is not even square.
+The two new items look like a detour — why test \( \A^{*}\A \) when \( \A \) itself is available? Because \( \A^{*}\A \) is Hermitian and positive, and everything in this chapter applies to it. Chapter 10 already used it once, in the normal equations of least squares; Section 8 will use it again, to build the singular value decomposition of a matrix that is not even square, and that decomposition supplies the last item of the list: a square matrix is invertible exactly when none of its singular values is zero.
 
 ## Exercises
 

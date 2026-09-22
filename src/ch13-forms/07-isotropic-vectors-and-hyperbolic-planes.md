@@ -68,6 +68,31 @@ A subspace \( W \subseteq V \) is **totally isotropic** for \( \beta \) if \( \b
 
 The two formulations agree because \( W \subseteq W^{\perp_\beta} \) says exactly that every \( \w \in W \) is orthogonal to every \( \u \in W \). A third formulation is available in characteristic \( \ne 2 \) and is the one to use in practice: \( W \) is totally isotropic if and only if \( q(\w) = 0 \) for every \( \w \in W \). One direction is immediate; the other is @thm-polarization-forms applied to the restricted form, which recovers \( \beta \) on \( W \) from \( q \) on \( W \) and so makes it zero. In the \( \nR^4 \) example above we checked exactly this: \( q \) vanished on \( W \), and therefore so did \( \beta \).
 
+Before the first theorem, one dimension count has to be on the table, because almost everything in this section and the next is a step away from it. @exr-bilinear-forms-c2 set it as an exercise in Section 1; here it is with a proof, so that the results below rest on it rather than on the exercise.
+
+::: {#lem-perp-dimension}
+[Dimension of an Orthogonal Complement]
+
+Let \( \beta \) be a **non-degenerate** bilinear form on \( V \) with \( \dim V = n \), and let \( U \subseteq V \) be a subspace. Then \( U^{\perp_\beta} \) is a subspace of \( V \), and
+\[
+\dim U^{\perp_\beta} = n - \dim U .
+\]
+:::
+
+::: {.idea}
+Freezing the second slot of \( \beta \) turns it into a map \( V \to V^{*} \), and restricting a functional to \( U \) turns \( V^{*} \) into \( U^{*} \). The composite has kernel exactly \( U^{\perp_\beta} \), and non-degeneracy makes both maps surjective, so Rank–Nullity converts "onto \( U^{*} \)" into the count.
+:::
+
+::: {.proof}
+Let \( R \colon V \to V^{*} \) send \( \v \) to the functional \( \beta(\cdot, \v) \) — the map called \( R_\beta \) in Section 1 — and let \( \rho \colon V^{*} \to U^{*} \) be restriction to \( U \). Both are linear, so \( S \coloneqq \rho \circ R \colon V \to U^{*} \) is linear, and \( S(\v) = \beta(\cdot, \v)\big|_U \). By the definition of \( U^{\perp_\beta} \), a vector \( \v \) lies in \( U^{\perp_\beta} \) exactly when \( \beta(\u, \v) = 0 \) for every \( \u \in U \), that is, exactly when \( S(\v) = 0 \). Hence \( U^{\perp_\beta} = \ker S \), which is a subspace.
+
+Since \( \beta \) is non-degenerate, \( R \) is an isomorphism (@prp-nondegenerate-iff-invertible (c)), and \( \rho \) is surjective (@thm-dual-of-subspace). A composite of two surjections is a surjection, so \( \rank S = \dim U^{*} = \dim U \) (@cor-dimension-dual-space). By Rank–Nullity (@thm-rank-nullity),
+\[
+\dim U^{\perp_\beta} = \dim\ker S = n - \rank S = n - \dim U ,
+\]
+as claimed.
+:::
+
 Totally isotropic subspaces cannot be too large.
 
 ::: {#prp-totally-isotropic-bound}
@@ -77,7 +102,7 @@ Let \( \beta \) be a non-degenerate symmetric form on \( V \) with \( \dim V = n
 :::
 
 ::: {.proof}
-Since \( \beta \) is non-degenerate, \( \dim W^{\perp_\beta} = n - \dim W \) by @exr-bilinear-forms-c2 (b). Since \( W \) is totally isotropic, \( W \subseteq W^{\perp_\beta} \), so \( \dim W \le n - \dim W \), which is the claim.
+Since \( \beta \) is non-degenerate, \( \dim W^{\perp_\beta} = n - \dim W \) by @lem-perp-dimension. Since \( W \) is totally isotropic, \( W \subseteq W^{\perp_\beta} \), so \( \dim W \le n - \dim W \), which is the claim.
 :::
 
 ::: {.warning}
@@ -113,7 +138,7 @@ Two things to check and one dimension count. The intersection \( U \cap U^{\perp
 ::: {.proof}
 Write \( U^{\perp} = U^{\perp_\beta} \). A vector \( \v \in U \cap U^{\perp} \) lies in \( U \) and satisfies \( \beta(\u,\v) = 0 \) for every \( \u \in U \), so \( \v \in \operatorname{rad}(\beta|_{U\times U}) \), which is \( \{\0\} \) by hypothesis (@def-nondegenerate). Hence \( U \cap U^{\perp} = \{\0\} \) and the sum \( U + U^{\perp} \) is direct (@thm-direct-sum-criteria).
 
-Since \( \beta \) is non-degenerate on \( V \), @exr-bilinear-forms-c2 (b) gives \( \dim U^{\perp} = n - \dim U \). So \( \dim(U \oplus U^{\perp}) = n \), and a subspace of \( V \) of dimension \( n \) is \( V \) (@thm-dim-impl-eq). The sum is orthogonal by the definition of \( U^{\perp} \) together with the symmetry of \( \beta \), so \( V = U \perp U^{\perp} \).
+Since \( \beta \) is non-degenerate on \( V \), @lem-perp-dimension gives \( \dim U^{\perp} = n - \dim U \). So \( \dim(U \oplus U^{\perp}) = n \), and a subspace of \( V \) of dimension \( n \) is \( V \) (@thm-dim-impl-eq). The sum is orthogonal by the definition of \( U^{\perp} \) together with the symmetry of \( \beta \), so \( V = U \perp U^{\perp} \).
 
 Finally let \( \w \in U^{\perp} \) satisfy \( \beta(\x, \w) = 0 \) for every \( \x \in U^{\perp} \). For \( \u \in U \) we also have \( \beta(\u,\w) = 0 \), since \( \w \in U^{\perp} \). Every \( \v \in V \) is \( \u + \x \) with \( \u \in U \) and \( \x \in U^{\perp} \), so \( \beta(\v,\w) = 0 \) for every \( \v \in V \), that is \( \w \in \operatorname{rad}(\beta) = \{\0\} \). This proves the proposition.
 :::
@@ -451,7 +476,7 @@ Let \( \beta \) be non-degenerate symmetric on \( V \) with \( \dim V = n \), an
 :::
 
 ::: {.solution}
-(a) The dimension is @exr-bilinear-forms-c2 (b), using non-degeneracy, and the inclusion is @def-totally-isotropic-subspace.
+(a) The dimension is @lem-perp-dimension, using non-degeneracy, and the inclusion is @def-totally-isotropic-subspace.
 
 (b) For \( \u, \v \in W^{\perp_\beta} \) and \( \w, \w' \in W \),
 \[

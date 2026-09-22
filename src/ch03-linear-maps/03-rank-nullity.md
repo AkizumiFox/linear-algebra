@@ -254,7 +254,7 @@ Find the dimension of each subspace.
 :::
 
 ::: {.solution}
-(a) \( U = \ker \tr \), where \( \tr \colon M_n(F) \to F \) is linear (@exm-trace-matrices). Its image is a subspace of \( F \) containing \( \tr \E_{11} = 1 \), so it contains \( c \cdot 1 = c \) for every \( c \in F \); it is all of \( F \), and \( \rank \tr = 1 \). Since \( \dim M_n(F) = n^2 \) (@exm-standard-bases), @thm-rank-nullity gives \( \dim U = n^2 - 1 \).
+(a) \( U = \ker \tr \), where \( \tr \colon M_n(F) \to F \) is linear (@exm-trace-matrices). Its image is a subspace of \( F \) (@thm-prop-image) containing \( \tr \E_{11} = 1 \), so it contains \( c \cdot 1 = c \) for every \( c \in F \); it is all of \( F \), and \( \rank \tr = 1 \). Since \( \dim M_n(F) = n^2 \) (@exm-standard-bases), @thm-rank-nullity gives \( \dim U = n^2 - 1 \).
 
 (b) \( U' = \ker \psi \), where \( \psi \colon \nR[x]_{\le n} \to \nR \), \( \psi(p) = \int_0^1 p(t)\,\dd t \), is linear by @exr-linear-maps-b3 (b). Since \( \psi(1) = 1 \), the image is a subspace of \( \nR \) containing \( 1 \), hence all of \( \nR \), so \( \rank \psi = 1 \). By @thm-rank-nullity, \( \dim U' = (n + 1) - 1 = n \).
 :::

@@ -109,7 +109,7 @@ Now compute that trace entry by entry. The matrix \( \vSigma_{\A}^{*} \in M_{n \
 \[
 \tr(\A^{*}\B) = \sum_{k=1}^{p}\sum_{l=1}^{p}\sigma_k(\A)\,\sigma_l(\B)\,m_{kl}\,n_{lk} ,
 \]{#eq-von-neumann-weights}
-all indices being in range because \( p \le m \) and \( p \le n \). By the triangle inequality,
+all indices being in range because \( p \le m \) and \( p \le n \). By the triangle inequality (@thm-complex-triangle-inequality),
 \[
 \bigl\lvert\tr(\A^{*}\B)\bigr\rvert \ \le\ \sum_{k=1}^{p}\sum_{l=1}^{p}\sigma_k(\A)\,\sigma_l(\B)\,d_{kl},
 \qquad d_{kl} \coloneqq \lvert m_{kl}\rvert\,\lvert n_{lk}\rvert .
@@ -331,7 +331,7 @@ Write \( \uinorm{\A}_{(p)} = \sum_{i}\sigma_i(\A) \) for the trace norm of @def-
 ::: {.solution}
 (a) The spectral norm is a unitarily invariant norm, and its gauge is \( \Phi = \norm{\cdot}_\infty \) (@lem-ui-norm-of-diagonal, @thm-operator-norm-formulas (c)). By @cor-trace-duality applied to that norm, the maximum in the statement equals \( \Phi^{*}(\sigma(\A)) = \norm{\sigma(\A)}_1 = \sum_i\sigma_i(\A) \), using @prp-dual-of-one-two-infinity (b).
 
-(b) Conjugate transposition is additive, so \( \tr((\A+\B)^{*}\Q) = \tr(\A^{*}\Q) + \tr(\B^{*}\Q) \) for every \( \Q \). Given \( \A, \B \), choose by (a) a \( \Q \) with \( \norm{\Q}_2 \le 1 \) attaining the maximum for \( \A + \B \); then, by the triangle inequality for the modulus and (a) again,
+(b) Conjugate transposition is additive, so \( \tr((\A+\B)^{*}\Q) = \tr(\A^{*}\Q) + \tr(\B^{*}\Q) \) for every \( \Q \). Given \( \A, \B \), choose by (a) a \( \Q \) with \( \norm{\Q}_2 \le 1 \) attaining the maximum for \( \A + \B \); then, by the triangle inequality for the modulus (@thm-complex-triangle-inequality) and (a) again,
 \[
 \uinorm{\A + \B}_{(p)} = \lvert\tr((\A+\B)^{*}\Q)\rvert
 \le \lvert\tr(\A^{*}\Q)\rvert + \lvert\tr(\B^{*}\Q)\rvert

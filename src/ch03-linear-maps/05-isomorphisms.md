@@ -221,7 +221,7 @@ Let \( V \) and \( W \) be finite-dimensional vector spaces over \( F \) with \(
 :::
 
 ::: {.idea}
-Without any dimension hypothesis, \( ST = \id_V \) already gives half of what we need: \( T \) must be injective, since \( S \) recovers \( \v \) from \( T\v \). The missing half, surjectivity, is exactly what the Rank–Nullity Theorem supplies for free when \( \dim V = \dim W \) is finite. Once \( T \) is known to be invertible, we cancel it: \( S = (ST)T^{-1} = T^{-1} \). So the one hypothesis the infinite-dimensional counterexamples violate, finite equal dimension, is spent on a single line: injective \( \Rightarrow \) surjective.
+Without any dimension hypothesis, \( ST = \id_V \) already gives half of what we need: \( T \) must be injective, since \( S \) recovers \( \v \) from \( T\v \). The missing half, surjectivity, is exactly what the Rank–Nullity Theorem (@thm-rank-nullity) supplies for free when \( \dim V = \dim W \) is finite. Once \( T \) is known to be invertible, we cancel it: \( S = (ST)T^{-1} = T^{-1} \). So the one hypothesis the infinite-dimensional counterexamples violate, finite equal dimension, is spent on a single line: injective \( \Rightarrow \) surjective.
 :::
 
 ::: {.proof}
@@ -233,7 +233,7 @@ Therefore \( TS = TT^{-1} = \id_W \). Finally \( S = T^{-1} \) is an isomorphism
 :::
 
 ::: {.remark}
-Compare the two proofs. For matrices (@thm-one-sided-inverse), the step "\( \B\x = \0 \) has only the trivial solution, hence \( \B \) is invertible" came from row reduction, through the Invertible Matrix Theorem. Here the same step, "injective, hence bijective", comes from Rank–Nullity, with no matrices at all. Once we can write maps as matrices (next section), the two theorems become the same theorem seen from two sides.
+Compare the two proofs. For matrices (@thm-one-sided-inverse), the step "\( \B\x = \0 \) has only the trivial solution, hence \( \B \) is invertible" came from row reduction, through the Invertible Matrix Theorem (@thm-invertible-tfae). Here the same step, "injective, hence bijective", comes from Rank–Nullity, with no matrices at all. Once we can write maps as matrices (next section), the two theorems become the same theorem seen from two sides.
 :::
 
 In practice this means: **to verify that \( S \) is the inverse of \( T \) between spaces of the same finite dimension, one composition suffices.** By symmetry, \( TS = \id_W \) also implies \( ST = \id_V \): apply the theorem with the roles of \( T \) and \( S \) (and of \( V \) and \( W \)) swapped.

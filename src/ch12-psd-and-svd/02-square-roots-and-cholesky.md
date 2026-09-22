@@ -178,33 +178,62 @@ for some lower triangular \( \L \in M_n(F) \) whose diagonal entries are **real 
 ::: {.idea}
 \( (\Leftarrow) \) is one line: such an \( \L \) is invertible, and \( \L\L^{*} = (\L^{*})^{*}\L^{*} \) is @thm-pd-characterizations (c) with \( \B = \L^{*} \).
 
-\( (\Rightarrow) \) is Chapter 2's construction with its hypothesis supplied. Sylvester's criterion makes every leading corner invertible, which is exactly what elimination without row swaps needs; the \( \L\D\L^{*} \) factorization then appears, and the pivots are the ratios \( \det\A_k/\det\A_{k-1} \), hence positive. Absorbing \( \D^{1/2} \) into \( \L \) finishes it. For uniqueness, strip the positive diagonal off each candidate \( \L \); what is left is an LU factorization of \( \A \), and Chapter 2 already proved those unique.
+\( (\Rightarrow) \) is Chapter 2's elimination with its hypothesis supplied, run symmetrically. One pass clears the first column and the first row at once and leaves a smaller matrix that is again positive definite, so an induction produces \( \A = \M\D\M^{*} \) with \( \M \) unit lower triangular and every pivot \( d_k > 0 \). Absorbing \( \D^{1/2} \) into \( \M \) finishes it. For uniqueness, strip the positive diagonal off each candidate \( \L \); what is left is an LU factorization of \( \A \), and Chapter 2 already proved those unique.
 :::
 
 ::: {.proof}
 \( (\Leftarrow) \) Suppose \( \A = \L\L^{*} \) with \( \L \) lower triangular and every \( \ell_{kk} > 0 \). Then \( \L \) is invertible by @lem-triangular-invertible, hence so is \( \L^{*} \), and \( \A = (\L^{*})^{*}\L^{*} \) is positive definite by @thm-pd-characterizations ((c) \( \Rightarrow \) (a)).
 
-\( (\Rightarrow) \) Suppose \( \A \succ 0 \). By Sylvester's criterion (@thm-pd-characterizations (d)), \( \det \A_k > 0 \) for every \( k \), so every leading principal submatrix \( \A_k \) is invertible (@thm-invertible-tfae-det). By @exr-lu-factorization-c1 (c) there is an LU factorization \( \A = \M\U \) with \( \M \) unit lower triangular and \( \U \) upper triangular and invertible. Let \( \D = \diag(u_{11}, \dots, u_{nn}) \), which is invertible by @lem-triangular-invertible.
+\( (\Rightarrow) \) Suppose \( \A \succ 0 \).
 
 ::: {.claim}
-\( \A = \M\D\M^{*} \), and the entries \( u_{11}, \dots, u_{nn} \) of \( \D \) are real.
+There are a unit lower triangular \( \M \in M_n(F) \) and a diagonal \( \D = \diag(d_1, \dots, d_n) \) whose entries are **real and strictly positive**, with \( \A = \M\D\M^{*} \).
 :::
 
 ::: {.proof}
-Let \( \V = \D^{-1}\U \), which is unit upper triangular, so that \( \A = \M\D\V \). Since \( \A^{*} = \A \),
+Induction on \( n \). For \( n = 1 \), the single entry is \( a_{11} = \inner{\A\e_1}{\e_1} > 0 \) by (P2) of @def-positive-semidefinite in its strict form, so \( \M = (1) \) and \( \D = (a_{11}) \) will do.
+
+Let \( n \ge 2 \). Since \( \A^{*} = \A \), we may write
 \[
-\A = \A^{*} = (\M\D\V)^{*} = \V^{*}\D^{*}\M^{*} = \V^{*}\,(\D^{*}\M^{*}) .
+\A = \begin{pmatrix} \alpha & \c^{*} \\ \c & \A' \end{pmatrix},
+\qquad \alpha = a_{11},\quad \c \in F^{n-1},\quad \A' \in M_{n-1}(F)\ \text{Hermitian} .
 \]
-Here \( \V^{*} \) is unit lower triangular and \( \D^{*}\M^{*} \) is upper triangular with diagonal \( \conj{u_{11}}, \dots, \conj{u_{nn}} \), so this is a second LU factorization of the invertible matrix \( \A \). By @thm-lu-unique, \( \V^{*} = \M \) and \( \D^{*}\M^{*} = \U = \D\V = \D\M^{*} \). Canceling the invertible \( \M^{*} \) gives \( \D^{*} = \D \), that is, every \( u_{kk} \) is real; and \( \A = \M\D\V = \M\D\M^{*} \).
+Here \( \alpha = \inner{\A\e_1}{\e_1} > 0 \), so \( \alpha^{-1} \) exists and is a positive real number. Put
+\[
+\S \coloneqq \A' - \alpha^{-1}\c\c^{*} ,
+\]
+which is Hermitian, since \( (\c\c^{*})^{*} = \c\c^{*} \) and \( \alpha \) is real.
+
+*The smaller matrix is again positive definite.* Let \( \y \in F^{n-1} \) with \( \y \ne \0 \), set \( t = -\alpha^{-1}\c^{*}\y \) and \( \x = (t, \y) \in F^n \), which is non-zero because \( \y \) is. Multiplying out in blocks (@thm-block-multiplication),
+\[
+\inner{\A\x}{\x} = \x^{*}\A\x
+= \alpha\lvert t\rvert^2 + \conj{t}\,\c^{*}\y + \y^{*}\c\,t + \y^{*}\A'\y .
+\]
+With \( \c^{*}\y = -\alpha t \) and \( \y^{*}\c = \conj{\c^{*}\y} = -\alpha\conj{t} \), the first three terms are
+\[
+\alpha\lvert t\rvert^2 - \alpha\lvert t\rvert^2 - \alpha\lvert t\rvert^2 = -\alpha\lvert t\rvert^2 = -\alpha^{-1}\lvert \c^{*}\y\rvert^2 ,
+\]
+so \( \inner{\A\x}{\x} = \y^{*}\bigl(\A' - \alpha^{-1}\c\c^{*}\bigr)\y = \inner{\S\y}{\y} \). The left side is \( > 0 \) because \( \A \succ 0 \) and \( \x \ne \0 \). Hence \( \S \succ 0 \).
+
+*The induction step.* By the induction hypothesis, \( \S = \M'\D'(\M')^{*} \) with \( \M' \in M_{n-1}(F) \) unit lower triangular and \( \D' = \diag(d_2, \dots, d_n) \) real with positive entries. Put
+\[
+\M = \begin{pmatrix} 1 & \0\tp \\ \alpha^{-1}\c & \M' \end{pmatrix},
+\qquad
+\D = \begin{pmatrix} \alpha & \0\tp \\ \0 & \D' \end{pmatrix} .
+\]
+Then \( \M \) is unit lower triangular and \( \D \) is diagonal with the positive real entries \( \alpha, d_2, \dots, d_n \). Block multiplication (@thm-block-multiplication) gives
+\[
+\M\D\M^{*}
+= \begin{pmatrix} \alpha & \0\tp \\ \c & \M'\D' \end{pmatrix}
+  \begin{pmatrix} 1 & \alpha^{-1}\c^{*} \\ \0 & (\M')^{*} \end{pmatrix}
+= \begin{pmatrix} \alpha & \c^{*} \\ \c & \alpha^{-1}\c\c^{*} + \M'\D'(\M')^{*} \end{pmatrix} ,
+\]
+and \( \alpha^{-1}\c\c^{*} + \M'\D'(\M')^{*} = \alpha^{-1}\c\c^{*} + \S = \A' \). So \( \M\D\M^{*} = \A \), which proves the claim.
 :::
 
-Over \( \nR \) the claim is @thm-ldlt, and the proof just given is that proof with \( {}^{*} \) in place of \( \tp \).
+The claim is one pass of elimination performed symmetrically, and \( d_1 = \alpha, d_2, \dots, d_n \) are its pivots. Over \( \nR \) it is the \( \L\D\L\tp \) factorization of @thm-ldlt with the hypothesis that makes every pivot positive.
 
-Write \( d_k = u_{kk} \). Leading principal submatrices of a product of a lower and an upper triangular matrix multiply (@exr-lu-factorization-c1 (a)); applying that twice, first to \( \A = \M(\D\M^{*}) \) and then to \( \D\M^{*} \), gives \( \A_k = \M_k\D_k(\M^{*})_k = \M_k\D_k\M_k^{*} \) for every \( k \). Taking determinants with @thm-det-multiplicative and @thm-det-triangular,
-\[
-\det \A_k = 1 \cdot (d_1\cdots d_k) \cdot 1 = d_1\cdots d_k .
-\]
-Hence \( d_1 = \det \A_1 > 0 \) and, for \( k \ge 2 \), \( d_k = \det \A_k/\det \A_{k-1} > 0 \). So \( \D^{1/2} \coloneqq \diag(\sqrt{d_1}, \dots, \sqrt{d_n}) \) is a real matrix, and putting
+Write \( d_1, \dots, d_n \) for the diagonal entries of \( \D \), all of them positive real numbers. Then \( \D^{1/2} \coloneqq \diag(\sqrt{d_1}, \dots, \sqrt{d_n}) \) is a real matrix, and putting
 \[
 \L = \M\D^{1/2}
 \]
@@ -222,6 +251,10 @@ The second factor is upper triangular, its \( (k, l) \)-entry being \( (\vDelta_
 \M_1 = \M_2 \qquad\text{and}\qquad \vDelta_1^2\M_1^{*} = \vDelta_2^2\M_2^{*} .
 \]
 Canceling the invertible \( \M_1^{*} = \M_2^{*} \) gives \( \vDelta_1^2 = \vDelta_2^2 \), and since both have positive diagonal entries, \( \vDelta_1 = \vDelta_2 \). Hence \( \L_1 = \M_1\vDelta_1 = \M_2\vDelta_2 = \L_2 \). This proves the theorem.
+:::
+
+::: {.remark}
+The pivots are determinant ratios. For \( i, j \le k \), a term of \( (\M\D\M^{*})_{ij} = \sum_l m_{il}(\D\M^{*})_{lj} \) with \( l > k \) has \( l > i \) and so \( m_{il} = 0 \); the sum therefore stops at \( l = k \), which says that the leading principal submatrices multiply: \( \A_k = \M_k\D_k(\M^{*})_k = \M_k\D_k\M_k^{*} \). Taking determinants with @thm-det-multiplicative and @thm-det-triangular gives \( \det \A_k = d_1\cdots d_k \), so \( d_1 = \det \A_1 \) and \( d_k = \det \A_k/\det \A_{k-1} \) for \( k \ge 2 \). Read the other way, this is Sylvester's criterion (@thm-pd-characterizations (d)) appearing inside the elimination: the leading minors are positive exactly when the pivots are.
 :::
 
 Reading the equation \( \A = \L\L^{*} \) entry by entry turns it into a recipe, and the recipe is the standard way to factor by hand. Comparing the \( (j, j) \) entry of both sides gives \( a_{jj} = \sum_{k \le j}\lvert \ell_{jk}\rvert^2 \), and comparing the \( (i, j) \) entry for \( i > j \) gives \( a_{ij} = \sum_{k \le j}\ell_{ik}\conj{\ell_{jk}} \). Solving each for its one new unknown, column by column:

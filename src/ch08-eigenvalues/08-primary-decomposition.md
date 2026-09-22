@@ -8,7 +8,7 @@ Here is the question. Diagonalization splits \( V \) into eigenspaces, and it ca
 \[
 m_T = p_1^{e_1} p_2^{e_2} \cdots p_k^{e_k},
 \]
-with \( p_1, \dots, p_k \) **distinct** monic irreducible polynomials and exponents \( e_i \ge 1 \). Powers of distinct irreducibles have no common factor, so the kernel splitting lemma of Chapter 5, in its form with \( k \) factors (@exr-polynomials-of-operators-c2), applies to them. It gives a direct sum. The new information is what happens on the pieces.
+with \( p_1, \dots, p_k \) **distinct** monic irreducible polynomials and exponents \( e_i \ge 1 \). Powers of distinct irreducibles have no common factor, so the kernel splitting lemma of Chapter 5 (@thm-kernel-splitting) applies to them, peeling off one factor at a time. It gives a direct sum. The new information is what happens on the pieces.
 
 *The primary decomposition splits \( V \) into one invariant piece for each irreducible factor of \( m_T \), and on that piece the operator is killed by exactly that factor's power.*
 
@@ -38,15 +38,48 @@ In words: (a) every vector is **uniquely** a sum of pieces, one from each \( V_i
 ::: {.proof}
 *Coprime.* Let \( i \ne j \) and \( d = \gcd(p_i^{e_i}, p_j^{e_j}) \), which is monic. By @lem-monic-divisors, \( d = p_i^{f} \) and \( d = p_j^{g} \) for some \( f, g \ge 0 \). By the uniqueness in @thm-unique-factorization-polynomials, and since \( p_i \ne p_j \), this forces \( f = g = 0 \), so \( d = 1 \).
 
-(a) and (d). If \( k = 1 \), then \( V_1 = \ker m_T(T) = V \) and \( h_1 = 1 \) works. If \( k \ge 2 \), apply @exr-polynomials-of-operators-c2 (d) to the pairwise coprime polynomials \( p_1^{e_1}, \dots, p_k^{e_k} \), whose product \( m_T \) annihilates \( T \). It gives \( V = V_1 \oplus \dots \oplus V_k \), with the projections given by polynomials \( h_i(T) \).
+(a) and (d). These follow from the kernel splitting lemma, applied one factor at a time.
+
+::: {.claim}
+Let \( U \) be a vector space over \( F \), let \( R \in \cL(U) \), and let \( q_1, \dots, q_r \in F[x] \) be pairwise coprime with \( (q_1 \cdots q_r)(R) = 0 \). Then \( U = \ker q_1(R) \oplus \dots \oplus \ker q_r(R) \), and for each \( i \) the projection of \( U \) onto \( \ker q_i(R) \) along the sum of the other summands is \( g_i(R) \) for some \( g_i \in F[x] \).
+:::
+
+::: {.proof}
+Induction on \( r \), with \( U \) and \( R \) allowed to vary at each step. For \( r = 1 \), \( q_1(R) = 0 \) gives \( \ker q_1(R) = U \), and \( g_1 = 1 \) works.
+
+Let \( r \ge 2 \) and put \( q = q_2 \cdots q_r \). Since \( q_1 \) is coprime to each of \( q_2, \dots, q_r \), it is coprime to \( q \), and \( aq_1 + bq = 1 \) for some \( a, b \in F[x] \) (@lem-coprime-product (a)). As \( (q_1q)(R) = 0 \), @thm-kernel-splitting (c) gives
+\[
+U = \ker q_1(R) \oplus W, \qquad W \coloneqq \ker q(R),
+\]
+with the projections onto the two summands along each other equal to \( (bq)(R) \) and \( (aq_1)(R) \).
+
+The subspace \( W \) is \( R \)-invariant (@thm-kernel-image-of-polynomial-invariant (b)); write \( S = R|_W \). Because \( W \) is \( R \)-invariant, \( S^{j}\w = R^{j}\w \) for every \( j \ge 0 \) and \( \w \in W \), hence \( g(S)\w = g(R)\w \) for every \( g \in F[x] \). In particular \( q(S) = 0 \). By the induction hypothesis applied to \( W \), \( S \in \cL(W) \) and \( q_2, \dots, q_r \),
+\[
+W = \ker q_2(S) \oplus \dots \oplus \ker q_r(S),
+\]
+with the projection of \( W \) onto its \( i \)-th summand equal to \( h_i(S) \) for some \( h_i \in F[x] \). For \( i \ge 2 \) we have \( q_i \mid q \), so \( \ker q_i(R) \subseteq \ker q(R) = W \), and therefore
+\[
+\ker q_i(S) = \{\, \w \in W : q_i(R)\w = \0 \,\} = \ker q_i(R) \cap W = \ker q_i(R) .
+\]
+
+So \( U = \ker q_1(R) + \dots + \ker q_r(R) \), and the sum is direct: if \( \0 = \u_1 + \dots + \u_r \) with \( \u_i \in \ker q_i(R) \), then \( \u_2 + \dots + \u_r \in W \), so \( \u_1 = \0 \) and \( \u_2 + \dots + \u_r = \0 \) by the directness of \( U = \ker q_1(R) \oplus W \), and then every \( \u_i = \0 \) by the directness of \( W \) (@thm-direct-sum-k-criteria, (a) \( \Rightarrow \) (b) and back).
+
+Finally the projections. For \( \v \in U \), the component in \( \ker q_1(R) \) is \( (bq)(R)\v \). For \( i \ge 2 \), the component of \( \v \) in \( \ker q_i(R) \) is the component in \( \ker q_i(S) \) of the \( W \)-part \( (aq_1)(R)\v \), namely \( h_i(S)(aq_1)(R)\v = \big(h_i\,aq_1\big)(R)\v \), the middle step because \( g(S) \) and \( g(R) \) agree on \( W \). Each projection is therefore a polynomial in \( R \).
+:::
+
+The polynomials \( p_1^{e_1}, \dots, p_k^{e_k} \) are pairwise coprime by the paragraph above, and their product \( m_T \) annihilates \( T \). The Claim, applied to \( V \), \( T \) and these polynomials, gives \( V = V_1 \oplus \dots \oplus V_k \) with each projection \( h_i(T) \) a polynomial in \( T \). This proves (a) and (d).
 
 (b) Each \( V_i \) is the kernel of a polynomial in \( T \), so it is \( T \)-invariant by @thm-kernel-image-of-polynomial-invariant (b). That \( V_i \ne \{\0\} \) will follow from (c): the minimal polynomial of an operator on the zero space is \( 1 \), and \( p_i^{e_i} \ne 1 \).
 
-(c) Let \( q_i = m_{T|_{V_i}} \). By @exr-minimal-polynomial-c2 (a), \( p_i^{e_i}(T|_{V_i}) = p_i^{e_i}(T)|_{V_i} = 0 \), so \( q_i \mid p_i^{e_i} \) (@thm-minimal-polynomial-divides), and \( q_i = p_i^{f_i} \) with \( 0 \le f_i \le e_i \) by @lem-monic-divisors. Put \( q = q_1 \cdots q_k \). For \( \v_i \in V_i \), polynomials in \( T \) commute (@thm-evaluation-homomorphism (c)), so
+(c) Each \( V_i \) is \( T \)-invariant by (b), so \( (T|_{V_i})^{j}\v = T^{j}\v \) for every \( j \ge 0 \) and \( \v \in V_i \), and hence
+\[
+g(T|_{V_i}) = g(T)|_{V_i} \qquad \text{for every } g \in F[x] . \tag{$\ast$}
+\]
+Let \( q_i = m_{T|_{V_i}} \). By \( (\ast) \), \( p_i^{e_i}(T|_{V_i}) = p_i^{e_i}(T)|_{V_i} = 0 \), so \( q_i \mid p_i^{e_i} \) (@thm-minimal-polynomial-divides), and \( q_i = p_i^{f_i} \) with \( 0 \le f_i \le e_i \) by @lem-monic-divisors. Put \( q = q_1 \cdots q_k \). For \( \v_i \in V_i \), polynomials in \( T \) commute (@thm-evaluation-homomorphism (c)), so
 \[
 q(T)\v_i = \Big(\prod_{j \ne i} q_j\Big)(T)\; q_i(T)\v_i = \Big(\prod_{j \ne i} q_j\Big)(T)\; q_i(T|_{V_i})\v_i = \0 ,
 \]
-using @exr-minimal-polynomial-c2 (a) again. By (a), every \( \v \in V \) is a sum of such \( \v_i \), so \( q(T) = 0 \), and \( m_T \mid q \) by @thm-minimal-polynomial-divides. Comparing degrees (@prp-divisibility-properties (c), @thm-degree-of-product),
+using \( (\ast) \) again. By (a), every \( \v \in V \) is a sum of such \( \v_i \), so \( q(T) = 0 \), and \( m_T \mid q \) by @thm-minimal-polynomial-divides. Comparing degrees (@prp-divisibility-properties (c), @thm-degree-of-product),
 \[
 \sum_{i=1}^{k} e_i \deg p_i = \deg m_T \le \deg q = \sum_{i=1}^{k} f_i \deg p_i .
 \]
@@ -122,7 +155,7 @@ In that case \( \lambda_1, \dots, \lambda_k \) are the distinct eigenvalues of \
 :::
 
 ::: {.proof}
-(a) \( \Rightarrow \) (b). Let \( \lambda_1, \dots, \lambda_k \) be the distinct eigenvalues of \( T \), let \( \sB \) be a basis of eigenvectors (@thm-diagonalization (b)), and put \( q = (x - \lambda_1)\cdots(x - \lambda_k) \). For \( \v \in \sB \) with eigenvalue \( \lambda_j \), @exr-eigenvalues-and-eigenvectors-b3 (a) gives \( q(T)\v = q(\lambda_j)\v = \0 \), as \( x - \lambda_j \) is a factor of \( q \). So \( q(T) \) and the zero operator agree on a basis, and \( q(T) = 0 \) by the uniqueness in @thm-linear-transform-basis. Hence \( m_T \mid q \), and by @lem-monic-divisors \( m_T \) is a product of some of the factors \( x - \lambda_i \). Each \( \lambda_i \) is a root of \( m_T \) by @thm-minimal-polynomial-roots, so no factor is missing, and \( m_T = q \).
+(a) \( \Rightarrow \) (b). Let \( \lambda_1, \dots, \lambda_k \) be the distinct eigenvalues of \( T \), let \( \sB \) be a basis of eigenvectors (@thm-diagonalization (b)), and put \( q = (x - \lambda_1)\cdots(x - \lambda_k) \). For \( \v \in \sB \) with eigenvalue \( \lambda_j \), induction on \( i \) gives \( T^{i}\v = \lambda_j^{i}\v \), hence \( q(T)\v = q(\lambda_j)\v = \0 \), as \( x - \lambda_j \) is a factor of \( q \). So \( q(T) \) and the zero operator agree on a basis, and \( q(T) = 0 \) by the uniqueness in @thm-linear-transform-basis. Hence \( m_T \mid q \), and by @lem-monic-divisors \( m_T \) is a product of some of the factors \( x - \lambda_i \). Each \( \lambda_i \) is a root of \( m_T \) by @thm-minimal-polynomial-roots, so no factor is missing, and \( m_T = q \).
 
 (b) \( \Rightarrow \) (c). Take \( q = m_T \).
 
@@ -168,7 +201,7 @@ Let \( V \) be finite-dimensional, \( T \in \cL(V) \) diagonalizable, and \( U \
 :::
 
 ::: {.proof}
-If \( U = \{\0\} \), the empty basis gives the empty (diagonal) matrix, and both statements are trivial. Let \( U \ne \{\0\} \). By @thm-diagonalizable-iff-minimal-distinct-linear ((a) \( \Rightarrow \) (b)), \( m_T = (x - \lambda_1)\cdots(x - \lambda_k) \) with distinct \( \lambda_i \), the eigenvalues of \( T \). By @exr-minimal-polynomial-c2 (a), \( m_T(T|_U) = m_T(T)|_U = 0 \), so \( m_T \) is a product of distinct linear factors annihilating \( T|_U \). By @thm-diagonalizable-iff-minimal-distinct-linear ((c) \( \Rightarrow \) (a)), \( T|_U \) is diagonalizable.
+If \( U = \{\0\} \), the empty basis gives the empty (diagonal) matrix, and both statements are trivial. Let \( U \ne \{\0\} \). By @thm-diagonalizable-iff-minimal-distinct-linear ((a) \( \Rightarrow \) (b)), \( m_T = (x - \lambda_1)\cdots(x - \lambda_k) \) with distinct \( \lambda_i \), the eigenvalues of \( T \). Since \( U \) is \( T \)-invariant, \( (T|_U)^{j}\u = T^{j}\u \) for every \( j \ge 0 \) and \( \u \in U \), so \( m_T(T|_U) = m_T(T)|_U = 0 \) and \( m_T \) is a product of distinct linear factors annihilating \( T|_U \). By @thm-diagonalizable-iff-minimal-distinct-linear ((c) \( \Rightarrow \) (a)), \( T|_U \) is diagonalizable.
 
 For the decomposition, @thm-diagonalization (c) applied to \( T|_U \) gives \( U = \bigoplus_\mu E_\mu(T|_U) \), over the eigenvalues \( \mu \) of \( T|_U \). An eigenvector of \( T|_U \) is an eigenvector of \( T \) lying in \( U \), so \( E_\mu(T|_U) = U \cap E_\mu(T) \), and every such \( \mu \) is in \( \spec(T) \). For \( \lambda \in \spec(T) \) that is not an eigenvalue of \( T|_U \), \( U \cap E_\lambda(T) = \{\0\} \), and adding zero summands does not change a direct sum.
 :::

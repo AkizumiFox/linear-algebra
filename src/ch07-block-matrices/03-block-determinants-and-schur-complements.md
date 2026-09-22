@@ -426,7 +426,7 @@ Compute \( \M/\A \) for the upper-left block \( \A \). Hence find \( \det \M \) 
 \[
 \C \A^{-1} = \begin{pmatrix} -1 & 3 \\ -1 & 2 \end{pmatrix}, \qquad \C \A^{-1}\B = \begin{pmatrix} 8 & 3 \\ 5 & 2 \end{pmatrix}, \qquad \M/\A = \begin{pmatrix} 1 & 2 \\ 1 & 2 \end{pmatrix}.
 \]
-By @thm-schur-determinant, \( \det \M = \det \A\det(\M/\A) = 1 \cdot 0 = 0 \). By @thm-schur-rank, \( \rank \M = 2 + \rank(\M/\A) = 2 + 1 = 3 \), since \( \M/\A \) is non-zero with equal rows. So \( \M \) is not invertible (@thm-invertible-tfae).
+By @thm-schur-determinant, \( \det \M = \det \A\det(\M/\A) = 1 \cdot 0 = 0 \). By @thm-schur-rank, \( \rank \M = 2 + \rank(\M/\A) = 2 + 1 = 3 \), since \( \M/\A \) is non-zero with equal rows. So \( \M \) is not invertible (@thm-invertible-tfae-det (d)).
 :::
 
 :::: {#exr-block-determinants-and-schur-complements-b2}

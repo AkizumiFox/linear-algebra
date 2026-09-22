@@ -185,7 +185,7 @@ So far (a), (b), (c), (d) are equivalent.
 Combining the four parts, all eight conditions are equivalent. This proves the theorem.
 :::
 
-In practice the theorem is a menu. To show a matrix **is** invertible, pick the most convenient item, very often (b): take a solution of \( \A\x = \0 \) and show it is \( \0 \). To show a matrix is **not** invertible, exhibit one non-zero solution of \( \A\x = \0 \), or one linear relation among the columns. In later chapters the list grows: kernels and images of linear maps in Chapter 3, determinants in Chapter 6, eigenvalues in Chapter 8, and singular values in Chapter 12.
+In practice the theorem is a menu. To show a matrix **is** invertible, pick the most convenient item, very often (b): take a solution of \( \A\x = \0 \) and show it is \( \0 \). To show a matrix is **not** invertible, exhibit one non-zero solution of \( \A\x = \0 \), or one linear relation among the columns. In later chapters the list grows: kernels and images of linear maps in Chapter 3, determinants in Chapter 6, eigenvalues in Chapter 8, and positive definiteness and singular values in Chapter 12.
 
 ::: {.check}
 Is \( \A = \begin{pmatrix} 1 & 2 & 3 \\ 0 & 1 & 1 \\ 1 & 3 & 4 \end{pmatrix} \in M_3(\nR) \) invertible? Use whichever item of @thm-invertible-tfae is quickest.

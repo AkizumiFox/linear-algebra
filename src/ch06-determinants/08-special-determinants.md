@@ -84,7 +84,7 @@ In a field, a product is non-zero if and only if every factor is non-zero (@thm-
 Now the promised two-line proof of @thm-interpolation-unique. Given distinct \( x_0, \dots, x_n \) and values \( y_0, \dots, y_n \), a polynomial \( p = c_0 + c_1x + \dots + c_nx^n \) satisfies \( p(x_i) = y_i \) for all \( i \) if and only if \( \V(x_0, \dots, x_n)\,\c = \y \), since row \( i \) of this system reads \( c_0 + c_1x_i + \dots + c_nx_i^n = y_i \). By @cor-vandermonde-nonzero the matrix is invertible, so the system has exactly one solution \( \c = \V(x_0, \dots, x_n)^{-1}\y \) (@thm-invertible-tfae), and the interpolating polynomial exists and is unique.
 
 ::: {.remark}
-This is not a proof from nothing. The root bound of Chapter 5 did the real work inside @thm-vandermonde-determinant, exactly as the root bound did in Chapter 2. What the determinant adds is an explicit number: it says how close to singular the interpolation problem is, since nodes that nearly coincide make the product small.
+This is not a proof from nothing. The root bound of Chapter 5 (@cor-root-bound-general) did the real work inside @thm-vandermonde-determinant, exactly as the root bound did in Chapter 2 (@lem-root-bound). What the determinant adds is an explicit number: it says how close to singular the interpolation problem is, since nodes that nearly coincide make the product small.
 :::
 
 ::: {.warning}

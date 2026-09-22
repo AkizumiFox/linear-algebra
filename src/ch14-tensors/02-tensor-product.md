@@ -253,7 +253,7 @@ and it is an isomorphism, carrying \( \e_i \otimes \f_j \) to the matrix unit \(
 :::
 
 ::: {.proof}
-The map \( (\x, \y) \mapsto \x\y\tp \) is bilinear, since its \( (i, j) \) entry is \( x_iy_j \) (@exr-multilinear-maps-b1 (c)). By (T1) there is a unique linear \( \Theta \) with \( \Theta(\x \otimes \y) = \x\y\tp \). On standard basis vectors, \( \e_i\f_j\tp \) has a single \( 1 \) in position \( (i, j) \), so \( \Theta(\e_i \otimes \f_j) = \E_{ij} \).
+The map \( (\x, \y) \mapsto \x\y\tp \) is bilinear: its \( (i, j) \) entry is \( x_iy_j \), and with \( \y \) frozen, \( (\x + \x')\y\tp = \x\y\tp + \x'\y\tp \) and \( (c\x)\y\tp = c(\x\y\tp) \) by @thm-matrix-multiplication-properties (2) and (4); freezing \( \x \) is the same computation (@exr-multilinear-maps-b1 (c)). By (T1) there is a unique linear \( \Theta \) with \( \Theta(\x \otimes \y) = \x\y\tp \). On standard basis vectors, \( \e_i\f_j\tp \) has a single \( 1 \) in position \( (i, j) \), so \( \Theta(\e_i \otimes \f_j) = \E_{ij} \).
 
 By @thm-tensor-basis the \( mn \) tensors \( \e_i \otimes \f_j \) form a basis of \( F^m \otimes F^n \), and the \( mn \) matrix units form a basis of \( M_{m \times n}(F) \) (@exm-standard-bases (c)). By @thm-linear-transform-basis there is a linear \( \Psi \colon M_{m \times n}(F) \to F^m \otimes F^n \) with \( \Psi(\E_{ij}) = \e_i \otimes \f_j \). Then \( \Psi\Theta \) and \( \Theta\Psi \) are linear maps fixing a basis, hence are the identities by the uniqueness half of @thm-linear-transform-basis. So \( \Theta \) is an isomorphism.
 

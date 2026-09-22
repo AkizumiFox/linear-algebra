@@ -113,7 +113,8 @@
         "src/ch20-inequalities",
         {"dir": "src/ch21-geometry", "part": "Part VI \u00b7 Geometry, Algebra, Computation"},
         "src/ch22-algebras",
-        "src/ch23-applied"
+        "src/ch23-applied",
+        {"dir": "src/ch23a-notation", "title": "Notation"}
     ],
     "macros": "latex/macros.tex",
     "templates": {

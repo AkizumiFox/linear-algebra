@@ -52,7 +52,7 @@ With the linear functional \( \varphi_i(\x) = \a_i\tp\x \), each set \( \{\x : \
 :::
 
 ::: {.warning}
-**A polyhedron need not have any vertices, even when it is not empty.** The strip \( \{\x \in \nR^2 : -1 \le x_1 + x_2 \le 1\} \) is a closed convex set with no extreme points at all: every point \( \x \) of it is the midpoint of \( \x \pm (1, -1) \), which lie in it. Minkowski's theorem does not apply because the strip is unbounded, and in the language of the next theorem, its constraint rows \( \pm(1, 1) \) have rank \( 1 < 2 \).
+**A polyhedron need not have any vertices, even when it is not empty.** The strip \( \{\x \in \nR^2 : -1 \le x_1 + x_2 \le 1\} \) is a closed convex set with no extreme points at all: every point \( \x \) of it is the midpoint of \( \x \pm (1, -1) \), which lie in it. Minkowski's theorem (@thm-minkowski-extreme) does not apply because the strip is unbounded, and in the language of the next theorem, its constraint rows \( \pm(1, 1) \) have rank \( 1 < 2 \).
 :::
 
 ## Vertices are basic feasible points
@@ -331,7 +331,7 @@ a polyhedron with \( 2^n \) rows. At \( \e_1 \), the active rows are the \( \s \
 2. True or false: every polyhedron is a polytope. Justify your answer.
 3. True or false: the intersection of two polytopes in \( \nR^n \) is a polytope. Justify your answer.
 4. State the criterion of @thm-vertices-basic-feasible for a point of \( \{\x : \A\x \le \b\} \) to be a vertex.
-5. True or false: every inequality produced by Fourier–Motzkin elimination is needed to describe the projection. Justify your answer.
+5. True or false: every inequality produced by Fourier–Motzkin elimination (@lem-fourier-motzkin) is needed to describe the projection. Justify your answer.
 :::
 ::::
 

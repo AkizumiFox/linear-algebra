@@ -256,7 +256,7 @@ Apply the theorem with \( k = 1 \). The only thing to supply is \( \delta \): ev
 :::
 
 ::: {.proof}
-Put \( \varepsilon = \norm{\E}_2 \). By @cor-weyl-perturbation, \( \lvert\lambda_j(\widetilde{\A}) - \lambda_j(\A)\rvert \le \varepsilon \) for every \( j \). Hence for \( j \ne i \), by the triangle inequality in \( \nR \),
+Put \( \varepsilon = \norm{\E}_2 \). By @cor-weyl-perturbation, \( \lvert\lambda_j(\widetilde{\A}) - \lambda_j(\A)\rvert \le \varepsilon \) for every \( j \). Hence for \( j \ne i \), by the triangle inequality in \( \nR \) (@thm-complex-triangle-inequality),
 \[
 \begin{aligned}
 \lvert\lambda_j(\widetilde{\A}) - \lambda_i(\A)\rvert

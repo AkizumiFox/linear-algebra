@@ -72,7 +72,7 @@ Part (a) is the isometry \( \vecop \) plus the fact that the smallest stretch of
 ::: {.proof}
 (a) Let \( \X \in M_{m \times n}(\nC) \) and \( \x = \vecop\X \). The entries of \( \x \) are those of \( \X \), so \( \norm{\x}_2 = \norm{\X}_F \), and likewise \( \norm{\A\X - \X\B}_F = \norm{\K\x}_2 \) by @eq-sylvester-kronecker. Since \( \vecop \) is a bijection from \( M_{m \times n}(\nC) \) onto \( \nC^{mn} \) (@def-vec-operator), the set whose minimum defines \( \operatorname{sep}_F(\A, \B) \) equals \( \{\norm{\K\x}_2 : \norm{\x}_2 = 1\} \). By @lem-stretch-in-singular-coordinates (b) with \( k \) equal to the size \( mn \) of \( \K \), the head subspace is all of \( \nC^{mn} \), and the minimum of \( \norm{\K\x}/\norm{\x} \) over \( \x \ne \0 \) exists and equals \( \sigma_{mn}(\K) \). Restricting to unit vectors changes nothing, since the quotient is unchanged when \( \x \) is scaled.
 
-(b) By @thm-svd, the number of non-zero singular values of \( \K \) is \( \rank\K \). Since \( \sigma_{mn}(\K) \) is the smallest, it is non-zero exactly when all \( mn \) of them are, that is, when \( \rank\K = mn \), which says that \( \K \) is invertible (@thm-invertible-tfae). By @eq-sylvester-kronecker, \( \K \) is invertible exactly when \( \cS \) is, and by @thm-sylvester-equation ((a) \( \Leftrightarrow \) (b)) that happens exactly when \( \spec(\A) \cap \spec(\B) = \varnothing \). Combining with (a) proves (b).
+(b) By @thm-svd, the number of non-zero singular values of \( \K \) is \( \rank\K \). Since \( \sigma_{mn}(\K) \) is the smallest, it is non-zero exactly when all \( mn \) of them are, that is, when \( \rank\K = mn \), which says that \( \K \) is invertible (@thm-invertible-tfae-det (d)). By @eq-sylvester-kronecker, \( \K \) is invertible exactly when \( \cS \) is, and by @thm-sylvester-equation ((a) \( \Leftrightarrow \) (b)) that happens exactly when \( \spec(\A) \cap \spec(\B) = \varnothing \). Combining with (a) proves (b).
 
 (c) Fix \( i, j \). Choose an eigenvector \( \x \) of \( \A \) for \( \lambda_i \), and, by @prp-left-eigenvectors-transpose (b), a left eigenvector \( \y \) of \( \B \) for \( \mu_j \), so that \( \y\tp\B = \mu_j\y\tp \) (@def-left-eigenvector). Scale both to length \( 1 \), and put \( \X = \x\y\tp \). Its \( (p, q) \) entry is \( x_py_q \), so
 \[
@@ -420,7 +420,7 @@ Let \( \A \in M_m(\nC) \), \( \B \in M_n(\nC) \), \( \E \in M_m(\nC) \) and \( \
 \]
 For the second, \( \norm{\X\F}_F = \norm{(\X\F)^{*}}_F = \norm{\F^{*}\X^{*}}_F \), since conjugate transposition does not change the moduli of the entries. By the first part this is at most \( \norm{\F^{*}}_2\norm{\X^{*}}_F = \norm{\F^{*}}_2\norm{\X}_F \). Finally \( \norm{\F^{*}}_2 = \norm{\F}_2 \): if \( \F = \U\vSigma\V^{*} \) is a singular value decomposition, then \( \F^{*} = \V\vSigma\tp\U^{*} \) is one for \( \F^{*} \), with the same diagonal, so \( \sigma_1(\F^{*}) = \sigma_1(\F) \) by @thm-singular-values-unique and @thm-operator-norm-formulas (c).
 
-(b) Let \( \norm{\X}_F = 1 \). By the triangle inequality and (a),
+(b) Let \( \norm{\X}_F = 1 \). By the triangle inequality (@cor-triangle-inequality, the Frobenius norm being induced by an inner product) and (a),
 \[
 \begin{aligned}
 \norm{(\A + \E)\X - \X(\B + \F)}_F &\ge \norm{\A\X - \X\B}_F - \norm{\E\X}_F - \norm{\X\F}_F \\

@@ -343,7 +343,7 @@ Let \( (\v_1, \dots, \v_k) \) be a list in a finite-dimensional inner product sp
 ::: {.solution}
 (a) Let \( U = \Span(\v_1, \dots, \v_k) \), \( r = \dim U \), and let \( (\e_1, \dots, \e_r) \) be an orthonormal basis of \( U \), which exists by @thm-gram-schmidt. Let \( \A \in M_{r \times k}(F) \) have as its \( j \)-th column the coordinate vector of \( \v_j \). As computed in the proof of @thm-gram-matrix-properties (d), \( \G = \A^{*}\A \). By @cor-rank-adjoint (b), \( \rank\G = \rank(\A^{*}\A) = \rank\A \). Finally \( \rank\A = r \): the columns of \( \A \) span \( F^{r} \), because the coordinate map \( U \to F^{r} \) is an isomorphism carrying the spanning list \( (\v_1, \dots, \v_k) \) of \( U \) to the columns of \( \A \).
 
-(b) \( \G \) is a \( k \times k \) matrix, so it is invertible if and only if \( \rank\G = k \) (@thm-invertible-tfae). By (a) that says \( \dim\Span(\v_1, \dots, \v_k) = k \), which holds exactly when the list is independent.
+(b) \( \G \) is a \( k \times k \) matrix, so it is invertible if and only if \( \rank\G = k \) (@thm-invertible-tfae-det (d)). By (a) that says \( \dim\Span(\v_1, \dots, \v_k) = k \), which holds exactly when the list is independent.
 :::
 
 :::: {#exr-gram-matrices-c2}

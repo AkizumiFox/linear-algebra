@@ -43,7 +43,7 @@ Take \( p(x) = x^2 - x - 1 \), with \( M = 1 \). Its roots are \( (1 \pm \sqrt5)
 
 ## The roots move continuously
 
-Here is the theorem of Chapter 15, restated in full under its own label, since from now on it is a proved result.
+Here is the theorem of Chapter 15 (@thm-roots-depend-continuously), restated in full under its own label, since from now on it is a proved result.
 
 ::: {#thm-roots-continuous}
 [Continuous Dependence of the Roots on the Coefficients]
@@ -117,7 +117,7 @@ By @cor-det-product-eigenvalues-again applied to \( \A - \mu\I \), whose eigenva
 \]
 The \( j \)-th column of \( (\A - \mu\I)\U \) is \( (\A - \mu\I)\u_j \). Hadamard's inequality @thm-hadamard-inequality (b) bounds the determinant by the product of the column lengths.
 
-For \( j = 1 \), \( (\A - \mu\I)\x = \A\x - \B\x = (\A - \B)\x \), so \( \norm{(\A - \mu\I)\u_1}_2 \le \norm{\A - \B}_2 \) by @thm-operator-norm-properties (a). For \( j \ge 2 \), the triangle inequality gives \( \norm{(\A - \mu\I)\u_j}_2 \le \norm{\A}_2 + \lvert\mu\rvert \), and \( \lvert\mu\rvert \le \rho(\B) \le \norm{\B}_2 \) by @thm-spectral-radius-le-norm. Writing \( \delta = \min_i\lvert \lambda_i - \mu\rvert \), each factor on the left is at least \( \delta \), so
+For \( j = 1 \), \( (\A - \mu\I)\x = \A\x - \B\x = (\A - \B)\x \), so \( \norm{(\A - \mu\I)\u_1}_2 \le \norm{\A - \B}_2 \) by @thm-operator-norm-properties (a). For \( j \ge 2 \), the triangle inequality (@cor-triangle-inequality) gives \( \norm{(\A - \mu\I)\u_j}_2 \le \norm{\A}_2 + \lvert\mu\rvert \), and \( \lvert\mu\rvert \le \rho(\B) \le \norm{\B}_2 \) by @thm-spectral-radius-le-norm. Writing \( \delta = \min_i\lvert \lambda_i - \mu\rvert \), each factor on the left is at least \( \delta \), so
 \[
 \delta^{n} \le \prod_{i=1}^{n}\lvert \lambda_i - \mu\rvert
 \le \norm{\A - \B}_2\,\bigl(\norm{\A}_2 + \norm{\B}_2\bigr)^{n-1} .
@@ -188,7 +188,7 @@ Let \( \D = \diag(a_{11}, \dots, a_{nn}) \) and slide from \( \D \) to \( \A \) 
 :::
 
 ::: {.proof}
-*The two unions are at positive distance.* Let \( i \in S \) and \( j \notin S \). The discs \( D_i(\A) \) and \( D_j(\A) \) are disjoint, so \( \lvert a_{ii} - a_{jj}\rvert > r_i(\A) + r_j(\A) \); otherwise the point on the segment from \( a_{ii} \) to \( a_{jj} \) at distance \( \min\{r_i(\A), \lvert a_{ii} - a_{jj}\rvert\} \) from \( a_{ii} \) would lie in both. For \( z \in D_i(\A) \) and \( w \in D_j(\A) \), the triangle inequality gives
+*The two unions are at positive distance.* Let \( i \in S \) and \( j \notin S \). The discs \( D_i(\A) \) and \( D_j(\A) \) are disjoint, so \( \lvert a_{ii} - a_{jj}\rvert > r_i(\A) + r_j(\A) \); otherwise the point on the segment from \( a_{ii} \) to \( a_{jj} \) at distance \( \min\{r_i(\A), \lvert a_{ii} - a_{jj}\rvert\} \) from \( a_{ii} \) would lie in both. For \( z \in D_i(\A) \) and \( w \in D_j(\A) \), the triangle inequality (@thm-complex-triangle-inequality) gives
 \[
 \lvert z - w\rvert \ge \lvert a_{ii} - a_{jj}\rvert - r_i(\A) - r_j(\A) > 0 .
 \]

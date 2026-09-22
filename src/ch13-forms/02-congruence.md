@@ -22,7 +22,7 @@ There is nothing to discover: write the form in \( \sB \)-coordinates, substitut
 :::
 
 ::: {.proof}
-Write \( \A = \mtx{\beta}{\sB}{} \). By @thm-change-of-coordinates (a), \( \coord{\v}{\sB} = \P\coord{\v}{\sB'} \) for every \( \v \in V \). So for all \( \u, \v \in V \), using @thm-form-matrix-determines (a) and then @thm-transpose-properties (d),
+Write \( \A = \mtx{\beta}{\sB}{} \). By @thm-change-of-coordinates (a), \( \coord{\v}{\sB} = \P\coord{\v}{\sB'} \) for every \( \v \in V \). So for all \( \u, \v \in V \), using @thm-form-matrix-determines (a) and then @thm-transpose-properties (part 4),
 \[
 \begin{aligned}
 \beta(\u, \v)
@@ -115,7 +115,7 @@ Congruence is an equivalence relation on \( M_n(F) \) (@def-equivalence-relation
 ::: {.proof}
 *Reflexive:* \( \A = \I_n\tp\A\I_n \).
 
-*Symmetric:* suppose \( \B = \P\tp\A\P \) with \( \P \) invertible, and put \( \Q = \P^{-1} \), which is invertible. By @thm-transpose-properties (d), \( \Q\tp\P\tp = (\P\Q)\tp = \I_n\tp = \I_n \), so
+*Symmetric:* suppose \( \B = \P\tp\A\P \) with \( \P \) invertible, and put \( \Q = \P^{-1} \), which is invertible. By @thm-transpose-properties (part 4), \( \Q\tp\P\tp = (\P\Q)\tp = \I_n\tp = \I_n \), so
 \[
 \Q\tp\B\Q = \bigl(\Q\tp\P\tp\bigr)\A\bigl(\P\Q\bigr) = \I_n\A\I_n = \A .
 \]

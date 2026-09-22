@@ -445,7 +445,7 @@ Determine which of the following subsets of \( \nR^2 \) or \( \nR^3 \) are conve
 ::::
 
 ::: {.solution}
-(a) A convex cone. It is non-empty, containing \( \0 \). If \( x_1 \ge \lvert x_2\rvert \), \( y_1 \ge \lvert y_2\rvert \) and \( a, b \ge 0 \), then by the triangle inequality for real numbers
+(a) A convex cone. It is non-empty, containing \( \0 \). If \( x_1 \ge \lvert x_2\rvert \), \( y_1 \ge \lvert y_2\rvert \) and \( a, b \ge 0 \), then by the triangle inequality for real numbers (@thm-complex-triangle-inequality)
 \[
 \lvert ax_2 + by_2\rvert \le a\lvert x_2\rvert + b\lvert y_2\rvert \le ax_1 + by_1 .
 \]

@@ -353,7 +353,7 @@ Induct on \( n \), and make the induction bite by fixing one coordinate at a tim
 :::
 
 ::: {.proof}
-Induction on \( n \). For \( n = 1 \), \( \Orth(1) = \{[1], [-1]\} \) by @exr-isometries-and-unitary-maps-c1 (c); \( [1] \) is the empty product and \( [-1] = \H_{\e_1} \), one reflection.
+Induction on \( n \). For \( n = 1 \), a matrix \( [a] \in \Orth(1) \) satisfies \( a^{2} = [a]\tp[a] = 1 \), so \( (a-1)(a+1) = 0 \) and \( a = \pm 1 \); thus \( \Orth(1) = \{[1], [-1]\} \), where \( [1] \) is the empty product and \( [-1] = \H_{\e_1} \), one reflection.
 
 Let \( n \ge 2 \) and assume the statement in dimension \( n - 1 \). Let \( \Q \in \Orth(n) \) and set \( \x = \Q\e_1 \), a unit vector since \( T_{\Q} \) is an isometry (@thm-isometry-characterizations).
 

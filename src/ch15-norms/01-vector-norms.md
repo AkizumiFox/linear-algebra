@@ -49,7 +49,7 @@ Check each of them against @def-norm.
 ::: {.solution}
 (N1) holds for all three: each is a sum, a square root of a sum, or a maximum of the non-negative numbers \( \lvert x_i\rvert \), so each is \( \ge 0 \); and each vanishes only when every \( \lvert x_i \rvert = 0 \), that is, only for \( \x = \0 \). (N2) holds because \( \lvert cx_i\rvert = \lvert c\rvert\lvert x_i\rvert \) for every \( i \), and the common factor \( \lvert c \rvert \) comes out of a sum, out of a square root of a sum of squares, and out of a maximum of non-negative numbers alike.
 
-For (N3), the \( 1 \)-norm inherits it one coordinate at a time: \( \lvert x_i + y_i\rvert \le \lvert x_i\rvert + \lvert y_i\rvert \) for each \( i \) by the triangle inequality in \( F \), and summing over \( i \) gives \( \norm{\x + \y}_1 \le \norm{\x}_1 + \norm{\y}_1 \). The \( \infty \)-norm inherits it too, but from one coordinate rather than all: for each \( i \),
+For (N3), the \( 1 \)-norm inherits it one coordinate at a time: \( \lvert x_i + y_i\rvert \le \lvert x_i\rvert + \lvert y_i\rvert \) for each \( i \) by the triangle inequality for the modulus (@thm-complex-triangle-inequality, which covers \( F = \nR \) as well), and summing over \( i \) gives \( \norm{\x + \y}_1 \le \norm{\x}_1 + \norm{\y}_1 \). The \( \infty \)-norm inherits it too, but from one coordinate rather than all: for each \( i \),
 \[
 \lvert x_i + y_i\rvert \le \lvert x_i\rvert + \lvert y_i\rvert
 \le \norm{\x}_\infty + \norm{\y}_\infty ,

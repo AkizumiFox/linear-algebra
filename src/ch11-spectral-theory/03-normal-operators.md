@@ -427,7 +427,7 @@ Let \( V \) be a finite-dimensional complex inner product space with \( V \neq \
 
 (b) The quarter turn \( \R_{\pi/2} = \begin{pmatrix} 0 & -1 \\ 1 & 0\end{pmatrix} \) is orthogonal, hence normal. A \( 1 \)-dimensional invariant subspace would be spanned by a real eigenvector, and \( \R_{\pi/2} \) has none: its characteristic polynomial is \( x^2 + 1 \), with no real root. So its only invariant subspaces are \( \{\0\} \) and \( \nR^2 \), while \( \dim \nR^2 = 2 \).
 
-(c) Only in the existence of an eigenvector. Over \( \nC \) that is the Fundamental Theorem of Algebra reaching the characteristic polynomial; over \( \nR \) the polynomial may have no root, which is exactly what (b) exploits. Note that @prp-normal-invariant-reducing still holds over \( \nR \) — it says nothing about invariant subspaces *existing*.
+(c) Only in the existence of an eigenvector. Over \( \nC \) that is the Fundamental Theorem of Algebra (@thm-fundamental-theorem-of-algebra) reaching the characteristic polynomial; over \( \nR \) the polynomial may have no root, which is exactly what (b) exploits. Note that @prp-normal-invariant-reducing still holds over \( \nR \) — it says nothing about invariant subspaces *existing*.
 :::
 
 ::: {#exr-normal-operators-c2}

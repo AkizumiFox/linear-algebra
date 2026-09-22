@@ -221,7 +221,7 @@ There is \( \w \in V \) with \( q(\w) = 0 \), \( \beta(\z,\w) = 1 \) and \( \bet
 :::
 
 ::: {.proof}
-Consider the linear map \( S \colon V \to U^{*} \) sending \( \v \) to the restriction of \( \beta(\cdot,\v) \) to \( U \). Its kernel is \( U^{\perp_\beta} \), which has dimension \( \dim V - \dim U \) by @exr-bilinear-forms-c2 (b), since \( \beta \) is non-degenerate. By Rank–Nullity (@thm-rank-nullity), \( \rank S = \dim U = \dim U^{*} \), so \( S \) is onto. Let \( \psi_{\z} \in U^{*} \) be the functional with \( \psi_{\z}(\z) = 1 \) and \( \psi_{\z}(U_0) = 0 \), which exists because \( U = \Span(\z)\oplus U_0 \). Pick \( \w_0 \in V \) with \( S(\w_0) = \psi_{\z} \), that is \( \beta(\z,\w_0) = 1 \) and \( \beta(\u_0,\w_0) = 0 \) for \( \u_0 \in U_0 \).
+Consider the linear map \( S \colon V \to U^{*} \) sending \( \v \) to the restriction of \( \beta(\cdot,\v) \) to \( U \). Its kernel is \( U^{\perp_\beta} \), which has dimension \( \dim V - \dim U \) by @lem-perp-dimension, since \( \beta \) is non-degenerate. By Rank–Nullity (@thm-rank-nullity), \( \rank S = \dim U = \dim U^{*} \), so \( S \) is onto. Let \( \psi_{\z} \in U^{*} \) be the functional with \( \psi_{\z}(\z) = 1 \) and \( \psi_{\z}(U_0) = 0 \), which exists because \( U = \Span(\z)\oplus U_0 \). Pick \( \w_0 \in V \) with \( S(\w_0) = \psi_{\z} \), that is \( \beta(\z,\w_0) = 1 \) and \( \beta(\u_0,\w_0) = 0 \) for \( \u_0 \in U_0 \).
 
 Put \( \w = \w_0 - \tfrac12 q(\w_0)\,\z \), which uses \( \operatorname{char} F \ne 2 \). Since \( q(\z) = 0 \) and \( \beta(\u,\z) = 0 \) for every \( \u \in U \),
 \[
@@ -300,7 +300,7 @@ For (a), extend the isometry \( U \to U' \) to the whole of \( V \) and watch wh
 \[
 \beta(\u', \varphi\x) = \beta(\varphi\u, \varphi\x) = \beta(\u,\x) = 0 ,
 \]
-so \( \varphi(U^{\perp_\beta}) \subseteq U'^{\perp_\beta} \). Both subspaces have dimension \( \dim V - \dim U \) by @exr-bilinear-forms-c2 (b), using \( \dim U = \dim U' \), and \( \varphi \) is injective, so the inclusion is an equality. Restricting \( \varphi \) gives an isometry \( U^{\perp_\beta} \to U'^{\perp_\beta} \).
+so \( \varphi(U^{\perp_\beta}) \subseteq U'^{\perp_\beta} \). Both subspaces have dimension \( \dim V - \dim U \) by @lem-perp-dimension, using \( \dim U = \dim U' \), and \( \varphi \) is injective, so the inclusion is an equality. Restricting \( \varphi \) gives an isometry \( U^{\perp_\beta} \to U'^{\perp_\beta} \).
 
 (b) First, \( W = U^{\perp_\beta} \): the orthogonality in \( V = U \perp W \) gives \( W \subseteq U^{\perp_\beta} \), and both have dimension \( \dim V - \dim U \), so they are equal (@thm-dim-impl-eq). Likewise \( W' = U'^{\perp_{\beta'}} \).
 

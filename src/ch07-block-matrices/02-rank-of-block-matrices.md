@@ -170,7 +170,7 @@ By @thm-block-elimination-rank (a) and @thm-block-rank-inequalities (b), \( \ran
 \]
 So \( \rank \M = \rank(\I_m - \A \B) + n \) in the same way. Comparing the two expressions for \( \rank \M \) proves (a).
 
-(b) For \( m = n \) the two added terms are equal and cancel. A square matrix is invertible exactly when its rank is \( n \) (@thm-invertible-tfae), so \( \I_n - \A \B \) is invertible if and only if \( \I_n - \B \A \) is.
+(b) For \( m = n \) the two added terms are equal and cancel. A square matrix is invertible exactly when its rank is \( n \) (@thm-invertible-tfae-det (d)), so \( \I_n - \A \B \) is invertible if and only if \( \I_n - \B \A \) is.
 
 (c) Here \( \A \B = \begin{pmatrix} 1 & 0 \\ 0 & 1 \end{pmatrix} = \I_2 \), so \( \rank(\I_2 - \A \B) = 0 \), and
 \[

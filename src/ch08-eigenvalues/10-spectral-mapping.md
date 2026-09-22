@@ -127,7 +127,7 @@ The same holds for \( \A \in M_n(F) \) when \( F \) is a subfield of \( \nC \), 
 :::
 
 ::: {.proof}
-(a) \( \Rightarrow \) (b). This is @exr-eigenvalues-and-eigenvectors-c2 (a), applied to \( T_{\A} \) on \( \nC^n \ne \{\0\} \).
+(a) \( \Rightarrow \) (b). Let \( \A^{s} = 0 \) with \( s \ge 1 \). If \( \A\v = \lambda\v \) with \( \v \ne \0 \), then \( \A^{s}\v = \lambda^{s}\v \) by induction on \( s \), so \( \lambda^{s}\v = \0 \) and \( \lambda^{s} = 0 \) by @thm-zero-product; hence \( \lambda = 0 \), since a product of non-zero scalars is non-zero (@thm-field-basic-properties (f)). So \( \spec(\A) \subseteq \{0\} \). Conversely \( \A \) is not injective: if it were, its \( s \)-fold composite \( \A^{s} \) would be injective too (@thm-composition-preserves (a)), whereas \( \A^{s} = 0 \) is not injective on \( \nC^{n} \ne \{\0\} \). Hence \( 0 \in \spec(\A) \) by @thm-eigenvalue-characterizations ((b) \( \Rightarrow \) (a)), and \( \spec(\A) = \{0\} \).
 
 (b) \( \Rightarrow \) (c). By @cor-complex-polynomial-splits, \( p_{\A} = (x - z_1)\cdots(x - z_n) \) with \( z_i \in \nC \). Each \( z_i \) is an eigenvalue (@thm-eigenvalue-characterizations), hence \( 0 \), so \( p_{\A} = x^n \).
 
@@ -266,7 +266,11 @@ Let \( \A \in M_n(F) \) and \( \lambda \in F \).
 ::: {.proof}
 (a) By @thm-transpose-properties, \( (\y\tp \A)\tp = \A\tp\y \) and \( (\lambda\y\tp)\tp = \lambda\y \). Since transposing twice gives back the original, \( \y\tp \A = \lambda\y\tp \) if and only if \( \A\tp\y = \lambda\y \).
 
-(b) By @exr-characteristic-polynomial-b2, \( p_{\A\tp} = p_{\A} \), so \( a_{\A\tp}(\lambda) = a_{\A}(\lambda) \), and \( \spec(\A\tp) = \spec(\A) \) by @thm-eigenvalue-characterizations. With (a), \( \A \) has a left eigenvector for \( \lambda \) if and only if \( \lambda \in \spec(\A\tp) = \spec(\A) \). Finally, \( \A\tp - \lambda \I = (\A - \lambda \I)\tp \), which has the same rank as \( \A - \lambda \I \) (@thm-row-rank-equals-column-rank), so by @thm-rank-nullity-matrix, \( g_{\A\tp}(\lambda) = n - \rank(\A - \lambda \I)\tp = n - \rank(\A - \lambda \I) = g_{\A}(\lambda) \).
+(b) First, \( p_{\A\tp} = p_{\A} \): by @thm-transpose-properties, \( (x\I - \A)\tp = x\I - \A\tp \), and transposing does not change a determinant (@thm-det-transpose, which holds over the commutative ring \( F[x] \) by the remark after it), so
+\[
+p_{\A\tp} = \det(x\I - \A\tp) = \det\big((x\I - \A)\tp\big) = \det(x\I - \A) = p_{\A} .
+\]
+Hence \( a_{\A\tp}(\lambda) = a_{\A}(\lambda) \), and \( \spec(\A\tp) = \spec(\A) \) by @thm-eigenvalue-characterizations. With (a), \( \A \) has a left eigenvector for \( \lambda \) if and only if \( \lambda \in \spec(\A\tp) = \spec(\A) \). Finally, \( \A\tp - \lambda \I = (\A - \lambda \I)\tp \), which has the same rank as \( \A - \lambda \I \) (@thm-row-rank-equals-column-rank), so by @thm-rank-nullity-matrix, \( g_{\A\tp}(\lambda) = n - \rank(\A - \lambda \I)\tp = n - \rank(\A - \lambda \I) = g_{\A}(\lambda) \).
 :::
 
 ::: {.remark}

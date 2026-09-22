@@ -350,7 +350,7 @@ Let \( \A \in M_n(\nC) \) be invertible with singular values \( \sigma_1 \ge \do
 ::::
 
 ::: {.solution}
-(a) By @thm-invertible-tfae, \( \B \) is singular if and only if \( \rank\B \le n-1 \). So the minimum is over the set appearing in @cor-eckart-young-ui with \( k = n-1 \), and that corollary gives the value \( \Phi(\sigma_{n}, 0, \dots, 0) \), attained at the truncation \( \A_{n-1} \), which is singular because its rank is \( n - 1 \).
+(a) By @thm-invertible-tfae-det (d), \( \B \) is singular if and only if \( \rank\B \le n-1 \). So the minimum is over the set appearing in @cor-eckart-young-ui with \( k = n-1 \), and that corollary gives the value \( \Phi(\sigma_{n}, 0, \dots, 0) \), attained at the truncation \( \A_{n-1} \), which is singular because its rank is \( n - 1 \).
 
 (b) The vector \( (\sigma_n, 0, \dots, 0) \) is \( \sigma_n\e_1 \), and \( \Phi \) is a norm, so \( \Phi(\sigma_n\e_1) = \sigma_n\Phi(\e_1) \) as \( \sigma_n > 0 \). For the spectral norm \( \Phi = \norm{\cdot}_\infty \) and \( \Phi(\e_1) = 1 \); for the Frobenius norm \( \Phi = \norm{\cdot}_2 \) and \( \Phi(\e_1) = 1 \); for the trace norm \( \Phi = \norm{\cdot}_1 \) and \( \Phi(\e_1) = 1 \). All three give \( \sigma_n \). This is not an accident: the normalization \( \Phi(\e_1) = 1 \) of Section 4 is exactly the condition that makes every unitarily invariant norm agree on rank-one matrices with one non-zero singular value.
 :::

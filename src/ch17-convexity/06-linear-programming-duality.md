@@ -354,7 +354,7 @@ Computing optimal solutions of large linear programs is a subject in its own rig
 ::: {.solution}
 (a) Minimize \( 3y_1 + y_2 \) subject to \( y_1 + y_2 \ge 2 \), \( y_1 - y_2 \ge 1 \), \( \y \ge \0 \). The columns of \( \A \) become the rows of \( \A\tp \), and \( \b = (3, 1) \) and \( \c = (2, 1) \) exchange roles.
 
-(b) Weak duality: if \( \x \) is feasible for (P) and \( \y \) for (D), then \( \c\tp\x \le \b\tp\y \). Strong duality: if both are feasible, both have optimal solutions with equal values. If exactly one is feasible, that one is unbounded.
+(b) Weak duality (@thm-weak-duality): if \( \x \) is feasible for (P) and \( \y \) for (D), then \( \c\tp\x \le \b\tp\y \). Strong duality (@thm-strong-duality): if both are feasible, both have optimal solutions with equal values. If exactly one is feasible, that one is unbounded.
 
 (c) Incorrect. Both programs can be infeasible, as for \( \A = \begin{psmallmatrix} 1 & -1 \\ -1 & 1\end{psmallmatrix} \), \( \b = (-1, -1) \), \( \c = (1, 1) \) in this section. What is true, by @thm-strong-duality (c), is that if (P) is infeasible **and** (D) is feasible, then (D) is unbounded.
 

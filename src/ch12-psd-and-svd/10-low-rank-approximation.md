@@ -382,7 +382,7 @@ Let \( \A \in M_n(F) \) be invertible, with singular values \( \sigma_1 \ge \dot
 ::::
 
 ::: {.solution}
-(a) A singular \( \B \in M_n(F) \) has \( \rank\B \le n - 1 \) (@thm-invertible-tfae). By @thm-eckart-young with \( k = n - 1 \),
+(a) A singular \( \B \in M_n(F) \) has \( \rank\B \le n - 1 \) (@thm-invertible-tfae-det (d)). By @thm-eckart-young with \( k = n - 1 \),
 \[
 \norm{\A - \B}_F \ \ge\ \Bigl(\sum_{i > n-1}\sigma_i^2\Bigr)^{1/2} = \sigma_n .
 \]
