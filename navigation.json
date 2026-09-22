@@ -1649,6 +1649,14 @@
           "filename": "13-fast-matrix-multiplication.md"
         }
       ]
+    },
+    {
+      "title": "Notation",
+      "number": 23,
+      "part": "",
+      "collapsed": true,
+      "path": "ch23a-notation/index.html",
+      "sections": []
     }
   ]
 }

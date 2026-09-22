@@ -25,17 +25,17 @@
             if (stored.toc === 'collapsed') root.dataset.toc = 'collapsed';
         })();
     </script>
-        <meta name="description" content="Linear Algebra is often the
-first place where a student encounters the true power of mathematical
-abstraction.">
+        <meta name="description" content="This is a book about linear
+algebra, written for someone reading it alone, with no lecture to fill
+the gaps and nobody to ask.">
             <link rel="canonical" href="https://linear-algebra.akizumifox.com/index.html">
     <meta property="og:url" content="https://linear-algebra.akizumifox.com/index.html">
         <meta property="og:type" content="article">
     <meta property="og:site_name" content="Linear Algebra">
     <meta property="og:title" content="Preface">
-        <meta property="og:description" content="Linear Algebra is often
-the first place where a student encounters the true power of
-mathematical abstraction.">
+        <meta property="og:description" content="This is a book about
+linear algebra, written for someone reading it alone, with no lecture to
+fill the gaps and nobody to ask.">
         <link rel="icon" href="./favicon.svg" type="image/svg+xml">
 
     <!-- Fonts: STIX Two Text (matches MathJax's math font), served with the site -->
@@ -135,66 +135,204 @@ Algebra</a>
                 <div id="preface">
 
                 </div>
-                <p>Linear Algebra is often the first place where a
-                student encounters the true power of mathematical
-                abstraction. In an introductory course, one learns to
-                manipulate matrices, solve systems of linear equations,
-                and perhaps calculate eigenvalues. But <em>Advanced</em>
-                Linear Algebra is about something deeper: it is the
-                study of structures.</p>
-                <h2 id="the-philosophy-of-this-book">The Philosophy of
-                this Book</h2>
-                <p>The central theme of these notes is the transition
-                from concrete calculation to abstract reasoning. We
-                begin not with numbers, but with axioms. By choosing to
-                define mathematical objects—be they vectors, linear
-                transformations, or inner products—entirely by how they
-                behave rather than what they are, we unlock a universal
-                language.</p>
-                <p>A theorem proved for an abstract vector space is a
-                theorem proved simultaneously for geometric arrows, for
-                polynomials, for continuous functions, and for quantum
-                states. This “solve once, apply everywhere” philosophy
-                is the heartbeat of modern mathematics.</p>
-                <h2 id="how-to-use-these-notes">How to Use These
-                Notes</h2>
-                <p>This book is designed to be a rigorous companion for
-                a second course in linear algebra. Each chapter is
-                structured to build a solid theoretical foundation:</p>
-                <ul>
-                <li><strong>Rigorous Definitions</strong>: We start with
-                precise mathematical statements to ensure no ambiguity
-                in our logic.</li>
-                <li><strong>Complete Proofs</strong>: Every major result
-                is accompanied by a full proof. Mathematics is not a
-                spectator sport; I encourage you to attempt the proofs
-                yourself before reading the solutions.</li>
-                <li><strong>Illustrative Examples</strong>: Abstract
-                theory is balanced with concrete examples to build
-                intuition.</li>
-                <li><strong>Exercises</strong>: Practice problems are
-                provided at the end of sections to test your
-                understanding.</li>
-                </ul>
-                <h2 id="prerequisites">Prerequisites</h2>
-                <p>To get the most out of these notes, you should have a
-                solid grasp of:</p>
-                <ul>
-                <li><strong>Introductory Linear Algebra</strong>: You
-                should be comfortable with matrix multiplication,
-                determinants, and Gaussian elimination.</li>
-                <li><strong>Calculus</strong>: Familiarity with
-                derivatives and integrals is assumed for some of our
-                more advanced examples.</li>
-                <li><strong>Mathematical Maturity</strong>: A basic
-                understanding of logic and proof techniques (induction,
-                contradiction, contrapositive) is essential. These are
-                reviewed briefly in Chapter 0.</li>
-                </ul>
-                <hr />
-                <p>Welcome to the world of abstract linear algebra. I
-                hope you find as much beauty in these structures as I
-                do.</p>
+                <p>This is a book about linear algebra, written for
+                someone reading it alone, with no lecture to fill the
+                gaps and nobody to ask.</p>
+                <p>It has twenty-four chapters and two hundred and
+                thirty-six sections, in six parts. It begins at Chapter
+                0 with statements, proofs, sets, functions, equivalence
+                relations, fields, polynomials and matrices: the tools
+                everything else is built from, and where careful readers
+                first stumble. It ends with representation theory and
+                with numerical computation.</p>
+                <h2 id="what-is-in-the-book">What is in the book</h2>
+                <p><strong>Part I, Spaces and Maps.</strong> Vector
+                spaces and dimension; linear systems and elimination,
+                proved rather than recited; linear maps, rank and
+                nullity; and duality, where a subspace is traded for the
+                measurements that vanish on it.</p>
+                <p><strong>Part II, Determinants and the Structure of
+                Operators.</strong> Polynomial arithmetic first, because
+                the structure of an operator is read off polynomials.
+                Then determinants, built from what a signed volume must
+                do and not from a formula; block matrices; eigenvalues;
+                and the canonical forms that finally decide when two
+                matrices are similar.</p>
+                <p><strong>Part III, Inner Products and Spectral
+                Theory.</strong> Length and angle arrive, ten chapters
+                in. Orthonormal bases, projections and least squares;
+                the spectral theorems; positive matrices and the
+                singular value decomposition.</p>
+                <p><strong>Part IV, Forms and Multilinear
+                Algebra.</strong> The measuring is taken away again and
+                the pairing kept: bilinear and quadratic forms,
+                congruence, inertia, the classical groups. Then tensor,
+                symmetric and exterior powers, where the determinant
+                reappears as an induced map on a line.</p>
+                <p><strong>Part V, Matrix Analysis.</strong> Six
+                chapters on how big things are and how far they move:
+                norms, variational principles and interlacing,
+                convexity, non-negative matrices, perturbation theory,
+                matrix inequalities.</p>
+                <p><strong>Part VI, Geometry, Algebra,
+                Computation.</strong> Affine and projective geometry;
+                algebras and their representations; and a last chapter
+                on how any of this is computed, and what a computed
+                answer means.</p>
+                <h2 id="what-we-promise-about-proof">What we promise
+                about proof</h2>
+                <p>This is the part worth reading before the rest,
+                because it is unusual and because we keep it.</p>
+                <p>Every result in this book is in one of two states,
+                and we always say which. Either it is <strong>proved
+                here</strong>, from material that came earlier — never
+                from a later section, and never from an exercise — or it
+                is <strong>stated with credit and marked plainly as not
+                proved here</strong>, in which case nothing in the book
+                depends on it. There is no third state. We never leave a
+                gap and then build on it.</p>
+                <p>Keeping that promise costs something, and we would
+                rather the cost were visible. Chapter 6 defines the
+                volume of a parallelepiped by the determinant, proves
+                that no other definition obeys the rules volume must
+                obey, and then states without proof that this agrees
+                with Lebesgue measure, and that nothing depends on it.
+                Chapter 23 lists section by section every classical
+                result it quotes and does not prove, and then says that
+                no theorem in the book rests on any of them.</p>
+                <p>From Part V on, each chapter opens by listing what it
+                borrows. The clearest instance is Chapter 15. It leans
+                on analysis harder than anything before it, so its
+                opening page numbers the analytic facts it quotes —
+                completeness, monotone convergence, compactness of
+                closed bounded sets, the extreme value theorem, the
+                intermediate value theorem and the mean value theorem —
+                as (A1) to (A6), and every later use names the fact
+                again by its number. Chapters 16 to 19 and 21 to 23 add
+                nothing to that list and say so. Chapter 20 adds exactly
+                one item, (A7), a theorem about functions of a complex
+                variable that linear algebra cannot produce; it states
+                it once and then sets out which of its own results rest
+                on it and which do not.</p>
+                <p>That accounting matters to us more than any single
+                theorem in the book.</p>
+                <h2 id="what-a-section-looks-like">What a section looks
+                like</h2>
+                <p>Sections are all built the same way.</p>
+                <p>A section opens with two to four sentences: where we
+                are, what question is open, what this section does. A
+                new idea then arrives through a hook — a naive notion
+                shown failing, an expression that keeps recurring and
+                deserves a name, or a theorem we want and cannot yet
+                state. There is a one-line slogan in plain words, then
+                the definition, with the small words that carry the
+                weight set in bold, then the definition read back clause
+                by clause, because a definition is to be parsed and not
+                memorized.</p>
+                <p>Examples follow, simplest first, each checked against
+                the definition one clause at a time, spread across the
+                families the book cares about — tuples, polynomials,
+                functions, matrices — with one degenerate case among
+                them. Then a non-example, made by changing an example as
+                little as possible, so that the exact clause that fails
+                can be named. Where there is a trap, a warning names it
+                with a concrete failing case, before you can fall into
+                it.</p>
+                <p>Theorems come with a sentence saying what need they
+                fill. Most come with an Idea: a few lines of plain prose
+                on how the proof was found. That is where “why would
+                anyone try that” is answered. The proof is kept separate
+                and does mathematics from its first sentence.</p>
+                <p>Scattered through the text are Quick checks, about
+                three hundred and fifty of them: one short question,
+                with the answer folded away just below. Take them. They
+                are the cheapest way to find out whether reading felt
+                like understanding.</p>
+                <p>Every section ends with exercises in three groups.
+                <strong>A</strong> is one question in several parts, to
+                be answered before moving on. <strong>B</strong> is
+                practice like the worked examples. <strong>C</strong>
+                goes deeper: a prove-and-deduce pair, a counterexample,
+                a change of field. There are more than fifteen hundred
+                exercises, each with a complete written solution, folded
+                away until you ask for it.</p>
+                <h2 id="what-we-assume">What we assume</h2>
+                <p>The book is algebraic. For most of its length the
+                scalars are an arbitrary field, and the arguments use
+                the field axioms and what is built from them. Chapters
+                10 to 12 and much of Part V restrict to the real and
+                complex numbers, and say why each time: a length needs
+                an order so that it can be positive, and a conjugation
+                so that it can be real.</p>
+                <p>Analysis does enter, because it must — the
+                Fundamental Theorem of Algebra is not a theorem of
+                algebra — but it never enters silently. Chapter 5
+                isolates the two analytic facts its proof of that
+                theorem uses and proves everything else. Chapter 9 names
+                five facts from analysis before building the matrix
+                exponential. Chapter 13 names the two results its
+                second-derivative test assumes. Chapter 15 gives the
+                standing list, and every chapter after it cites that
+                list by number.</p>
+                <p>So we do not ask you to know calculus. We ask you to
+                accept, where the book says so, a short list of named
+                facts about the real numbers. If you have met
+                continuity, compactness and the mean value theorem
+                before, Part V will read faster. If you have not, you
+                can still follow every proof, because each one says
+                which fact it uses and states it.</p>
+                <p>What we do assume is some comfort with proof: reading
+                one, and writing one. Chapter 0 supplies the vocabulary
+                and the standard moves — contrapositive, contradiction,
+                induction, double inclusion, checking that something is
+                well defined — and it is a chapter rather than an
+                appendix because those are where readers stumble. We
+                assume no previous linear algebra: matrices, elimination
+                and determinants are built here from nothing. A reader
+                who has taken a first course will move quickly through
+                the early chapters, and should still not skip them,
+                since the vocabulary of the whole book is fixed
+                there.</p>
+                <h2 id="how-to-read-it">How to read it</h2>
+                <p>Read Parts I, II and III in order. They are the
+                spine, and nothing later stands without them. Chapters 0
+                to 4 fix the language; Chapters 5 to 9 answer one
+                question, how simple the matrix of an operator can be
+                made; Chapters 10 to 12 answer it again with lengths and
+                angles present.</p>
+                <p>After that the book branches, and every chapter’s
+                opening page tells you what it needs. Spend a minute on
+                it first. It gives the chapter’s story, the earlier
+                results it uses with a link to each, a roadmap of one
+                sentence per section, and the named moves the chapter
+                introduces.</p>
+                <p>Part IV can be deferred, though not skipped. Chapter
+                16 uses its law of inertia; Chapter 21 uses its
+                quadratic forms and, for one section, its exterior
+                powers; Chapter 22 needs its definition of an algebra
+                and its free vector space. Chapter 23 uses neither
+                chapter at all. Part V is best read in order, with
+                Chapter 15 as its gate. Part VI’s three chapters are
+                independent of one another, and each names on its
+                opening page the earlier chapters it never cites.</p>
+                <p>If you came for one theorem, enter here. For the
+                spectral theorems and the singular value decomposition:
+                Chapters 1, 3, 5, 6 and 8, then 10 to 12. For the Jordan
+                form: Chapters 1, 3, 5 to 8, then 9. For
+                Perron–Frobenius, Markov chains and PageRank: Chapters 8
+                and 9, then 15, then 17 and 18. For interlacing and
+                majorization: Chapters 10 to 12, then 15, 16, 17 and 19,
+                then 20. For representation theory: Chapter 22, after
+                Chapters 0 to 5, 8, 9 and 11, with Chapter 13 §12 and
+                Chapter 14 for the language of algebras.</p>
+                <p>The proofs are written to be read with a pen. Where a
+                move is not visible, a clause says why we make it; where
+                a clause of a definition is delicate, a non-example
+                fails on that clause and no other. None of that replaces
+                closing the book and trying to state the theorem
+                yourself. When something will not come, the chapter’s
+                opening page usually names the earlier result you are
+                missing.</p>
             </article>
 
             <!-- Page Navigation -->

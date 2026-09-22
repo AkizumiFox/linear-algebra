@@ -122,7 +122,7 @@
    "name": "Chapter 13",
    "title": "Bilinear and Quadratic Forms",
    "url": "ch13-forms/index.html",
-   "results": 181,
+   "results": 182,
    "chapterNumber": 13,
    "part": "Part IV \u00b7 Forms and Multilinear Algebra"
   },
@@ -215,6 +215,15 @@
    "results": 218,
    "chapterNumber": 23,
    "part": ""
+  },
+  {
+   "id": "ch23a-notation",
+   "name": "Chapter 23",
+   "title": "Notation",
+   "url": "ch23a-notation/index.html",
+   "results": 0,
+   "chapterNumber": 23,
+   "part": ""
   }
  ],
  "edges": [
@@ -263,7 +272,7 @@
   {
    "source": "ch00-foundations",
    "target": "ch08-eigenvalues",
-   "weight": 43,
+   "weight": 46,
    "implied": true
   },
   {
@@ -299,13 +308,13 @@
   {
    "source": "ch00-foundations",
    "target": "ch14-tensors",
-   "weight": 9,
+   "weight": 10,
    "implied": true
   },
   {
    "source": "ch00-foundations",
    "target": "ch15-norms",
-   "weight": 8,
+   "weight": 9,
    "implied": true
   },
   {
@@ -317,25 +326,25 @@
   {
    "source": "ch00-foundations",
    "target": "ch17-convexity",
-   "weight": 5,
+   "weight": 6,
    "implied": true
   },
   {
    "source": "ch00-foundations",
    "target": "ch18-nonnegative",
-   "weight": 25,
+   "weight": 26,
    "implied": true
   },
   {
    "source": "ch00-foundations",
    "target": "ch19-perturbation",
-   "weight": 10,
+   "weight": 13,
    "implied": true
   },
   {
    "source": "ch00-foundations",
    "target": "ch20-inequalities",
-   "weight": 18,
+   "weight": 20,
    "implied": true
   },
   {
@@ -354,6 +363,12 @@
    "source": "ch00-foundations",
    "target": "ch23-applied",
    "weight": 35,
+   "implied": true
+  },
+  {
+   "source": "ch00-foundations",
+   "target": "ch23a-notation",
+   "weight": 47,
    "implied": true
   },
   {
@@ -395,13 +410,13 @@
   {
    "source": "ch01-vector-spaces",
    "target": "ch08-eigenvalues",
-   "weight": 47,
+   "weight": 49,
    "implied": true
   },
   {
    "source": "ch01-vector-spaces",
    "target": "ch09-canonical-forms",
-   "weight": 50,
+   "weight": 53,
    "implied": true
   },
   {
@@ -483,9 +498,15 @@
    "implied": true
   },
   {
+   "source": "ch01-vector-spaces",
+   "target": "ch23a-notation",
+   "weight": 19,
+   "implied": true
+  },
+  {
    "source": "ch02-linear-systems",
    "target": "ch03-linear-maps",
-   "weight": 58,
+   "weight": 59,
    "implied": false
   },
   {
@@ -503,13 +524,13 @@
   {
    "source": "ch02-linear-systems",
    "target": "ch06-determinants",
-   "weight": 43,
+   "weight": 44,
    "implied": true
   },
   {
    "source": "ch02-linear-systems",
    "target": "ch07-block-matrices",
-   "weight": 32,
+   "weight": 29,
    "implied": true
   },
   {
@@ -539,7 +560,7 @@
   {
    "source": "ch02-linear-systems",
    "target": "ch12-psd-and-svd",
-   "weight": 27,
+   "weight": 21,
    "implied": true
   },
   {
@@ -563,7 +584,7 @@
   {
    "source": "ch02-linear-systems",
    "target": "ch16-variational",
-   "weight": 9,
+   "weight": 8,
    "implied": true
   },
   {
@@ -581,13 +602,13 @@
   {
    "source": "ch02-linear-systems",
    "target": "ch19-perturbation",
-   "weight": 4,
+   "weight": 3,
    "implied": true
   },
   {
    "source": "ch02-linear-systems",
    "target": "ch20-inequalities",
-   "weight": 12,
+   "weight": 11,
    "implied": true
   },
   {
@@ -609,9 +630,15 @@
    "implied": true
   },
   {
+   "source": "ch02-linear-systems",
+   "target": "ch23a-notation",
+   "weight": 18,
+   "implied": true
+  },
+  {
    "source": "ch03-linear-maps",
    "target": "ch04-duality",
-   "weight": 122,
+   "weight": 123,
    "implied": false
   },
   {
@@ -623,7 +650,7 @@
   {
    "source": "ch03-linear-maps",
    "target": "ch06-determinants",
-   "weight": 28,
+   "weight": 29,
    "implied": true
   },
   {
@@ -635,7 +662,7 @@
   {
    "source": "ch03-linear-maps",
    "target": "ch08-eigenvalues",
-   "weight": 82,
+   "weight": 85,
    "implied": true
   },
   {
@@ -659,13 +686,13 @@
   {
    "source": "ch03-linear-maps",
    "target": "ch12-psd-and-svd",
-   "weight": 21,
+   "weight": 22,
    "implied": true
   },
   {
    "source": "ch03-linear-maps",
    "target": "ch13-forms",
-   "weight": 36,
+   "weight": 37,
    "implied": true
   },
   {
@@ -723,6 +750,12 @@
    "implied": true
   },
   {
+   "source": "ch03-linear-maps",
+   "target": "ch23a-notation",
+   "weight": 26,
+   "implied": true
+  },
+  {
    "source": "ch04-duality",
    "target": "ch05-polynomials",
    "weight": 18,
@@ -755,7 +788,7 @@
   {
    "source": "ch04-duality",
    "target": "ch13-forms",
-   "weight": 21,
+   "weight": 23,
    "implied": true
   },
   {
@@ -789,9 +822,15 @@
    "implied": true
   },
   {
+   "source": "ch04-duality",
+   "target": "ch23a-notation",
+   "weight": 9,
+   "implied": true
+  },
+  {
    "source": "ch05-polynomials",
    "target": "ch06-determinants",
-   "weight": 6,
+   "weight": 7,
    "implied": false
   },
   {
@@ -803,7 +842,7 @@
   {
    "source": "ch05-polynomials",
    "target": "ch08-eigenvalues",
-   "weight": 104,
+   "weight": 106,
    "implied": true
   },
   {
@@ -821,7 +860,7 @@
   {
    "source": "ch05-polynomials",
    "target": "ch11-spectral-theory",
-   "weight": 24,
+   "weight": 27,
    "implied": true
   },
   {
@@ -851,7 +890,7 @@
   {
    "source": "ch05-polynomials",
    "target": "ch16-variational",
-   "weight": 2,
+   "weight": 4,
    "implied": true
   },
   {
@@ -891,9 +930,15 @@
    "implied": true
   },
   {
+   "source": "ch05-polynomials",
+   "target": "ch23a-notation",
+   "weight": 9,
+   "implied": true
+  },
+  {
    "source": "ch06-determinants",
    "target": "ch07-block-matrices",
-   "weight": 38,
+   "weight": 41,
    "implied": false
   },
   {
@@ -905,7 +950,7 @@
   {
    "source": "ch06-determinants",
    "target": "ch09-canonical-forms",
-   "weight": 66,
+   "weight": 67,
    "implied": true
   },
   {
@@ -923,7 +968,7 @@
   {
    "source": "ch06-determinants",
    "target": "ch12-psd-and-svd",
-   "weight": 49,
+   "weight": 53,
    "implied": true
   },
   {
@@ -947,7 +992,7 @@
   {
    "source": "ch06-determinants",
    "target": "ch16-variational",
-   "weight": 13,
+   "weight": 14,
    "implied": true
   },
   {
@@ -959,13 +1004,13 @@
   {
    "source": "ch06-determinants",
    "target": "ch19-perturbation",
-   "weight": 27,
+   "weight": 28,
    "implied": true
   },
   {
    "source": "ch06-determinants",
    "target": "ch20-inequalities",
-   "weight": 2,
+   "weight": 3,
    "implied": true
   },
   {
@@ -984,6 +1029,12 @@
    "source": "ch06-determinants",
    "target": "ch23-applied",
    "weight": 46,
+   "implied": true
+  },
+  {
+   "source": "ch06-determinants",
+   "target": "ch23a-notation",
+   "weight": 16,
    "implied": true
   },
   {
@@ -1013,7 +1064,7 @@
   {
    "source": "ch07-block-matrices",
    "target": "ch12-psd-and-svd",
-   "weight": 22,
+   "weight": 24,
    "implied": true
   },
   {
@@ -1065,9 +1116,15 @@
    "implied": true
   },
   {
+   "source": "ch07-block-matrices",
+   "target": "ch23a-notation",
+   "weight": 7,
+   "implied": true
+  },
+  {
    "source": "ch08-eigenvalues",
    "target": "ch09-canonical-forms",
-   "weight": 155,
+   "weight": 149,
    "implied": false
   },
   {
@@ -1079,13 +1136,13 @@
   {
    "source": "ch08-eigenvalues",
    "target": "ch11-spectral-theory",
-   "weight": 82,
+   "weight": 81,
    "implied": true
   },
   {
    "source": "ch08-eigenvalues",
    "target": "ch12-psd-and-svd",
-   "weight": 8,
+   "weight": 10,
    "implied": true
   },
   {
@@ -1137,6 +1194,12 @@
    "implied": true
   },
   {
+   "source": "ch08-eigenvalues",
+   "target": "ch23a-notation",
+   "weight": 13,
+   "implied": true
+  },
+  {
    "source": "ch09-canonical-forms",
    "target": "ch11-spectral-theory",
    "weight": 20,
@@ -1185,9 +1248,15 @@
    "implied": true
   },
   {
+   "source": "ch09-canonical-forms",
+   "target": "ch23a-notation",
+   "weight": 23,
+   "implied": true
+  },
+  {
    "source": "ch10-inner-products",
    "target": "ch11-spectral-theory",
-   "weight": 191,
+   "weight": 190,
    "implied": false
   },
   {
@@ -1229,7 +1298,7 @@
   {
    "source": "ch10-inner-products",
    "target": "ch19-perturbation",
-   "weight": 53,
+   "weight": 57,
    "implied": true
   },
   {
@@ -1253,13 +1322,19 @@
   {
    "source": "ch10-inner-products",
    "target": "ch23-applied",
-   "weight": 110,
+   "weight": 111,
+   "implied": true
+  },
+  {
+   "source": "ch10-inner-products",
+   "target": "ch23a-notation",
+   "weight": 30,
    "implied": true
   },
   {
    "source": "ch11-spectral-theory",
    "target": "ch12-psd-and-svd",
-   "weight": 77,
+   "weight": 81,
    "implied": false
   },
   {
@@ -1323,6 +1398,12 @@
    "implied": true
   },
   {
+   "source": "ch11-spectral-theory",
+   "target": "ch23a-notation",
+   "weight": 10,
+   "implied": true
+  },
+  {
    "source": "ch12-psd-and-svd",
    "target": "ch13-forms",
    "weight": 12,
@@ -1343,7 +1424,7 @@
   {
    "source": "ch12-psd-and-svd",
    "target": "ch16-variational",
-   "weight": 160,
+   "weight": 163,
    "implied": true
   },
   {
@@ -1361,7 +1442,7 @@
   {
    "source": "ch12-psd-and-svd",
    "target": "ch19-perturbation",
-   "weight": 56,
+   "weight": 57,
    "implied": true
   },
   {
@@ -1374,6 +1455,12 @@
    "source": "ch12-psd-and-svd",
    "target": "ch23-applied",
    "weight": 68,
+   "implied": true
+  },
+  {
+   "source": "ch12-psd-and-svd",
+   "target": "ch23a-notation",
+   "weight": 17,
    "implied": true
   },
   {
@@ -1396,12 +1483,6 @@
   },
   {
    "source": "ch13-forms",
-   "target": "ch19-perturbation",
-   "weight": 1,
-   "implied": true
-  },
-  {
-   "source": "ch13-forms",
    "target": "ch21-geometry",
    "weight": 65,
    "implied": true
@@ -1410,6 +1491,12 @@
    "source": "ch13-forms",
    "target": "ch22-algebras",
    "weight": 13,
+   "implied": true
+  },
+  {
+   "source": "ch13-forms",
+   "target": "ch23a-notation",
+   "weight": 29,
    "implied": true
   },
   {
@@ -1429,6 +1516,12 @@
    "target": "ch22-algebras",
    "weight": 21,
    "implied": false
+  },
+  {
+   "source": "ch14-tensors",
+   "target": "ch23a-notation",
+   "weight": 31,
+   "implied": true
   },
   {
    "source": "ch15-norms",
@@ -1451,7 +1544,7 @@
   {
    "source": "ch15-norms",
    "target": "ch19-perturbation",
-   "weight": 90,
+   "weight": 93,
    "implied": true
   },
   {
@@ -1473,6 +1566,12 @@
    "implied": true
   },
   {
+   "source": "ch15-norms",
+   "target": "ch23a-notation",
+   "weight": 11,
+   "implied": true
+  },
+  {
    "source": "ch16-variational",
    "target": "ch17-convexity",
    "weight": 30,
@@ -1487,13 +1586,13 @@
   {
    "source": "ch16-variational",
    "target": "ch19-perturbation",
-   "weight": 77,
+   "weight": 79,
    "implied": true
   },
   {
    "source": "ch16-variational",
    "target": "ch20-inequalities",
-   "weight": 139,
+   "weight": 140,
    "implied": true
   },
   {
@@ -1506,6 +1605,12 @@
    "source": "ch16-variational",
    "target": "ch23-applied",
    "weight": 47,
+   "implied": true
+  },
+  {
+   "source": "ch16-variational",
+   "target": "ch23a-notation",
+   "weight": 11,
    "implied": true
   },
   {
@@ -1539,6 +1644,12 @@
    "implied": true
   },
   {
+   "source": "ch17-convexity",
+   "target": "ch23a-notation",
+   "weight": 28,
+   "implied": true
+  },
+  {
    "source": "ch18-nonnegative",
    "target": "ch19-perturbation",
    "weight": 13,
@@ -1552,14 +1663,14 @@
   },
   {
    "source": "ch18-nonnegative",
-   "target": "ch22-algebras",
-   "weight": 1,
-   "implied": false
+   "target": "ch23-applied",
+   "weight": 9,
+   "implied": true
   },
   {
    "source": "ch18-nonnegative",
-   "target": "ch23-applied",
-   "weight": 9,
+   "target": "ch23a-notation",
+   "weight": 29,
    "implied": true
   },
   {
@@ -1572,6 +1683,36 @@
    "source": "ch19-perturbation",
    "target": "ch23-applied",
    "weight": 20,
+   "implied": false
+  },
+  {
+   "source": "ch19-perturbation",
+   "target": "ch23a-notation",
+   "weight": 12,
+   "implied": true
+  },
+  {
+   "source": "ch20-inequalities",
+   "target": "ch23a-notation",
+   "weight": 12,
+   "implied": false
+  },
+  {
+   "source": "ch21-geometry",
+   "target": "ch23a-notation",
+   "weight": 43,
+   "implied": false
+  },
+  {
+   "source": "ch22-algebras",
+   "target": "ch23a-notation",
+   "weight": 47,
+   "implied": false
+  },
+  {
+   "source": "ch23-applied",
+   "target": "ch23a-notation",
+   "weight": 35,
    "implied": false
   }
  ]
