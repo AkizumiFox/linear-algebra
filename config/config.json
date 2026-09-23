@@ -142,5 +142,9 @@
     "ch02-linear-transformations/": "ch03-linear-maps/"
   },
   "repo-url": "https://github.com/AkizumiFox/linear-algebra",
-  "source-branch": "main"
+  "source-branch": "main",
+  "license": {
+    "name": "CC BY-NC-SA 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/"
+  }
 }

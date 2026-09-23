@@ -22,8 +22,7 @@ list of all results and a dependency graph.
 
 ## Layout
 
-- `src/`: the published chapters: ch00 foundations, ch01 vector spaces, ch02 linear transformations.
-- `drafts/`: chapters that are not built yet, ch03 determinants and ch04 diagonalization. To publish one, see the note at the top of the file.
+- `src/`: the book, 24 chapters in six parts, plus the preface and the notation page.
 - `config/config.json`: this book's settings (chapters, environments and counters, deploy target). `latex/macros.tex`: the macros, used by both the PDF and the website.
 - `build/`, `filters/`, `templates/`, `latex/*.sty`: the engine, shared by any book built with it (see "Another book" in `BUILD.md`).
 - `spelling.txt`: words the spell check accepts. `.github/workflows/`: build and deploy on push (see `BUILD.md`).
@@ -36,7 +35,8 @@ list of all results and a dependency graph.
 - The Markdown edition was `~/blog/my-book-project`, which was never under version control, and it grew out of `~/blog/LinearAlgebra` (GitHub: AkizumiFox/LinearAlgebra, Quarto).
 - On 2026-09-14 the separate LaTeX edition (`main.tex`, `chapters/`, `book-template.sty`) was retired:
   - Every definition, theorem, proof and example in its ch00–ch01 was already in `src/`.
-  - Its ch03 and ch04 fragments moved to `drafts/`.
+  - Its ch03 and ch04 fragments moved to `drafts/`, and were deleted on 2026-09-23 once
+    Chapters 6, 8 and 11 had superseded them, as the blueprints for those chapters directed.
   - It remains in the tex git history.
 - The same day, these fixes went into `src/`:
   - ℚ now requires q ≠ 0.
