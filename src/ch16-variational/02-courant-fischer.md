@@ -309,7 +309,10 @@ What has been bought is comparison. Two Hermitian matrices are now comparable ei
 ::: {.enumerate options="label=(\alph*)"}
 1. State both lines of @thm-courant-fischer, being careful about which dimension goes with which line.
 2. State @lem-subspace-intersection, and say at which point of the proof of @thm-courant-fischer it is used and what it is used on.
-3. Determine whether the following is correct, and justify your answer: \( \lambda_k(\A) = \min_{\dim W = k}\max_{\0\ne\x\in W}R_{\A}(\x) \).
+3. Determine whether the following is correct, and justify your answer:
+   \[
+   \lambda_k(\A) = \min_{\dim W = k}\ \max_{\0\ne\x\in W} R_{\A}(\x) .
+   \]
 4. Write the first line of @thm-courant-fischer in the increasing-index convention \( \mu_1 \le \dots \le \mu_n \).
 5. Explain in one or two sentences why @thm-loewner-basic (b) could not be extended to intermediate eigenvalues by the argument Chapter 12 used, and what @thm-courant-fischer supplies instead.
 :::

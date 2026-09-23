@@ -21,12 +21,17 @@
 \newif\if@skipgeometry\@skipgeometryfalse
 \newif\if@skiphyperref\@skiphyperreffalse
 \newif\if@skiptitlesec\@skiptitlesecfalse
+\newif\if@skipenv\@skipenvfalse
 
 \DeclareOption{quarto}{\@quartomodetrue\@skipgeometrytrue\@skiphyperreftrue\@skiptitlesectrue}
 \DeclareOption{quartoenv}{\@quartoenvtrue\@skipgeometrytrue\@skiphyperreftrue\@skiptitlesectrue}
 \DeclareOption{skipgeometry}{\@skipgeometrytrue}
 \DeclareOption{skiphyperref}{\@skiphyperreftrue}
 \DeclareOption{skiptitlesec}{\@skiptitlesectrue}
+% skipenv: define no theorem styles, boxes or theorem-like environments here.
+% latex/theorem-envs.sty defines them all, in sleek's framed style, from the
+% book's config. Everything else in this file (macros, colours, helpers) stays.
+\DeclareOption{skipenv}{\@skipenvtrue}
 \ProcessOptions\relax
 
 % ======================================================================================
@@ -239,6 +244,13 @@
 % THEOREM STYLES CONFIGURATION
 % ======================================================================================
 
+% QED symbol. Outside the skipenv block on purpose: latex/theorem-envs.sty ends a proof
+% with \qed but sets no symbol, so skipping this would silently give amsthm's hollow box
+% in every proof in the book.
+\renewcommand{\qedsymbol}{$\blacksquare$}
+
+\if@skipenv\else
+
 % Definition style (teal)
 \newtheoremstyle{definitionstyle}%
 {10pt}{0pt}{\normalfont\parindent=0pt}{}{}%
@@ -274,8 +286,6 @@
 {\sffamily\Large\color{propositioncolor}\bfseries\thmname{#1}\nobreakspace\thmnumber{#2}%
 \thmnote{\nobreakspace\sffamily\bfseries\color{black}---\nobreakspace#3}}
 
-% QED symbol
-\renewcommand{\qedsymbol}{$\blacksquare$}
 
 % ======================================================================================
 % THEOREM COUNTERS AND ENVIRONMENTS
@@ -804,6 +814,8 @@
 }{%
     \endconclusionbox%
 }
+
+\fi % \if@skipenv -- end of the theorem styles, boxes and environments
 
 % ======================================================================================
 % FIGURE HELPER
