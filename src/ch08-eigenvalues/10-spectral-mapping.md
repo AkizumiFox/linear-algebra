@@ -216,7 +216,14 @@ and \( \B\w \ne \0 \), since \( \A(\B\w) = \lambda\w \ne \0 \). So \( \B\w \) is
 \[
 p_{\u\v\tp}(x) = x^{n-1}\,(x - \v\tp\u).
 \]
-For instance, the all-ones matrix \( \1\1\tp \in M_n(\nR) \), with \( \1 = (1, \dots, 1) \), has \( p = x^{n-1}(x - n) \): eigenvalue \( 0 \) with multiplicity \( n - 1 \), and eigenvalue \( n \). Evaluating at \( -1 \) recovers @thm-matrix-determinant-lemma: \( \det(\I + \u\v\tp) = (-1)^n\det(-\I - \u\v\tp) = (-1)^n\,p_{\u\v\tp}(-1) = (-1)^n(-1)^{n-1}(-1 - \v\tp\u) = 1 + \v\tp\u \).
+For instance, the all-ones matrix \( \1\1\tp \in M_n(\nR) \), with \( \1 = (1, \dots, 1) \), has \( p = x^{n-1}(x - n) \): eigenvalue \( 0 \) with multiplicity \( n - 1 \), and eigenvalue \( n \). Evaluating at \( -1 \) recovers @thm-matrix-determinant-lemma:
+\[
+\begin{aligned}
+\det(\I + \u\v\tp)
+  &= (-1)^n\det(-\I - \u\v\tp) = (-1)^n\,p_{\u\v\tp}(-1) \\
+  &= (-1)^n(-1)^{n-1}(-1 - \v\tp\u) = 1 + \v\tp\u .
+\end{aligned}
+\]
 
 ::: {.warning}
 **The zero eigenvalue behaves differently, and \( \A \B \) need not be similar to \( \B \A \).** Take \( \A = \E_{12} \) and \( \B = \E_{11} \) in \( M_2(F) \). Then \( \A \B = \E_{12}\E_{11} = 0 \) and \( \B \A = \E_{11}\E_{12} = \E_{12} \). Both have \( p = x^2 \), as the theorem demands. But \( g_{\A \B}(0) = 2 \) while \( g_{\B \A}(0) = 1 \), and \( \A \B = 0 \) is similar only to \( 0 \), so \( \A \B \not\sim \B \A \). For rectangular matrices even the algebraic multiplicities of \( 0 \) differ, by \( |m - n| \).

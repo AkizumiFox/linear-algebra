@@ -356,7 +356,10 @@ f &= 4 + 1\cdot(x - 1) + \frac{6}{2}(x - 1)^2 + \frac{6}{6}(x - 1)^3 \\
 &= 4 + (x - 1) + 3(x - 1)^2 + (x - 1)^3 .
 \end{aligned}
 \]
-Check by expanding: \( (x - 1)^3 + 3(x - 1)^2 + (x - 1) + 4 = (x^3 - 3x^2 + 3x - 1) + (3x^2 - 6x + 3) + (x - 1) + 4 = x^3 - 2x + 5 \).
+Check by expanding: \( (x - 1)^3 + 3(x - 1)^2 + (x - 1) + 4 \) equals
+\[
+(x^3 - 3x^2 + 3x - 1) + (3x^2 - 6x + 3) + (x - 1) + 4 = x^3 - 2x + 5 .
+\]
 
 The expansion also reads off root information at \( 1 \): the constant term \( f(1) = 4 \neq 0 \), so \( 1 \) is not a root. In general, \( \operatorname{mult}_c(f) \) is the index of the first non-zero coordinate of \( f \) in the basis \( \sB_c \) (over any field, by part (a); in characteristic \( 0 \) these coordinates are the Taylor coefficients), because \( f = (x - c)^m\bigl(b_m + b_{m+1}(x - c) + \cdots\bigr) \) and the bracket is \( b_m \) at \( c \).
 :::

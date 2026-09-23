@@ -111,7 +111,14 @@ Let \( T \in \cL(V) \) and let \( U \) be a \( T \)-invariant subspace of \( V \
 :::
 :::
 
-**Well-definedness.** For (a), the rule makes sense as a map **into \( U \)** only because \( U \) is invariant; it is linear because \( T \) is, and \( U \) carries the operations of \( V \). For (b), the rule is phrased in terms of a representative \( \v \) of the coset, so we must check that it does not depend on that choice. Suppose \( \v + U = \v' + U \). Then \( \v - \v' \in U \) (@lem-coset-equality), so \( T\v - T\v' = T(\v - \v') \in U \) by invariance, and hence \( T\v + U = T\v' + U \). Linearity follows from the coset operations (@thm-quotient-space-operations-well-defined): for instance \( \bar T\big((\v + U) + (\w + U)\big) = \bar T(\v + \w + U) = T\v + T\w + U = \bar T(\v + U) + \bar T(\w + U) \), and scalars work the same way. Invariance was used exactly once in each part, which is where the hypothesis earns its place.
+**Well-definedness.** For (a), the rule makes sense as a map **into \( U \)** only because \( U \) is invariant; it is linear because \( T \) is, and \( U \) carries the operations of \( V \). For (b), the rule is phrased in terms of a representative \( \v \) of the coset, so we must check that it does not depend on that choice. Suppose \( \v + U = \v' + U \). Then \( \v - \v' \in U \) (@lem-coset-equality), so \( T\v - T\v' = T(\v - \v') \in U \) by invariance, and hence \( T\v + U = T\v' + U \). Linearity follows from the coset operations (@thm-quotient-space-operations-well-defined): for instance
+\[
+\begin{aligned}
+\bar T\big((\v + U) + (\w + U)\big) &= \bar T(\v + \w + U) = T\v + T\w + U \\
+&= \bar T(\v + U) + \bar T(\w + U),
+\end{aligned}
+\]
+and scalars work the same way. Invariance was used exactly once in each part, which is where the hypothesis earns its place.
 
 **Examples.**
 
@@ -206,7 +213,7 @@ So an operator that preserves each piece of a direct sum decomposition is, in a 
 A tempting shortcut is to assume that once one invariant subspace is found, a complement of it can be chosen invariant too, and the matrix becomes block diagonal. This fails.
 
 ::: {.warning}
-**The complement of an invariant subspace need not be invariant.** Let \( \N = \begin{pmatrix} 0 & 1 \\ 0 & 0 \end{pmatrix} \) act on \( F^2 \). The line \( U = \Span(\e_1) \) is invariant, since \( \N\e_1 = \0 \). Every complement of \( U \) is a line \( W = \Span((a, 1)) \) for some \( a \in F \) (a line not equal to \( U \) contains a vector with second entry \( 1 \)). But \( \N(a, 1) = (1, 0) \), which is not a multiple of \( (a, 1) \). So **no** complement of \( U \) is \( \N \)-invariant, and no basis \( \sB \) makes \( \mtx{\N}{\sB}{\sB} \) block diagonal with two \( 1 \times 1 \) blocks.
+**The complement of an invariant subspace need not be invariant.** Let \( \N = \begin{pmatrix} 0 & 1 \\ 0 & 0 \end{pmatrix} \) act on \( F^2 \). The line \( U = \Span(\e_1) \) is invariant, since \( \N\e_1 = \0 \). Every complement of \( U \) is a line \( W = \Span((a, 1)) \) for some \( a \in F \) (a line not equal to \( U \) contains a vector with second entry \( 1 \)). But \( \N(a, 1) = (1, 0) \), which is not a multiple of \( (a, 1) \). So **no** complement of \( U \) is \( \N \)-invariant, and no basis \( \sB \) makes \( \mtx{T_{\N}}{\sB}{\sB} \) block diagonal with two \( 1 \times 1 \) blocks.
 :::
 
 ::: {.check}

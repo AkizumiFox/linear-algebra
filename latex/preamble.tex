@@ -107,3 +107,11 @@
 % reclaims \H (the Hungarian-umlaut accent). Restore the bold matrix H once
 % the preamble is over, so \H means the matrix in Chapter 7 onwards.
 \AtBeginDocument{\def\H{\mathbf{H}}}
+
+% Let TeX stretch a line rather than run it into the margin. Measured over three
+% full builds: 1em removes 61% of the body's overfull boxes (285 -> 110) and
+% changes no label number, no page number and no heading break. 3em reaches 38
+% but starts re-breaking subsection headings onto two conspicuously loose lines,
+% which reads worse than the overrun it fixes. Most of the book's remaining
+% overfull boxes are in the Contents, which this does not touch.
+\emergencystretch=1em

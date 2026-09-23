@@ -237,7 +237,13 @@ On \( \Span(\e_1,\e_3) \) it is \( \begin{psmallmatrix} 5 & -2 \\ -2 & 0\end{psm
 \approx (5.702,\ 1,\ -0.702) .
 \]
 
-(b) The shifts are \( \vlambda(\A) - \vlambda(\B) = (5 - \tfrac{5+\sqrt{41}}2,\ 0,\ \tfrac{\sqrt{41}-5}{2}) = (\tfrac{5 - \sqrt{41}}2,\ 0,\ \tfrac{\sqrt{41}-5}2) \approx (-0.702,\ 0,\ 0.702) \). Sorted decreasingly this is \( (0.702, 0, -0.702) \), with running totals \( 0.702,\ 0.702,\ 0 \). The list \( \vlambda(\E) = (2, 0, -2) \) has running totals \( 2, 2, 0 \). Each of the first two is larger, and the totals agree at \( 0 \). So the majorization holds.
+(b) The shifts are
+\[
+\begin{aligned}
+\vlambda(\A) - \vlambda(\B) &= (5 - \tfrac{5+\sqrt{41}}2,\ 0,\ \tfrac{\sqrt{41}-5}{2}) \\
+&= (\tfrac{5 - \sqrt{41}}2,\ 0,\ \tfrac{\sqrt{41}-5}2) \approx (-0.702,\ 0,\ 0.702) .
+\end{aligned}
+\] Sorted decreasingly this is \( (0.702, 0, -0.702) \), with running totals \( 0.702,\ 0.702,\ 0 \). The list \( \vlambda(\E) = (2, 0, -2) \) has running totals \( 2, 2, 0 \). Each of the first two is larger, and the totals agree at \( 0 \). So the majorization holds.
 
 (c) Write \( c = \tfrac{\sqrt{41}-5}{2} \approx 0.702 \). The left-hand matrix is \( \diag(-c, 0, c) \), whose singular values are \( (c, c, 0) \); the right-hand matrix is \( \E \), whose singular values are \( (2, 2, 0) \). Spectral: \( c \le 2 \). Frobenius: \( c\sqrt2 \approx 0.993 \le 2\sqrt2 \approx 2.828 \). Trace: \( 2c \approx 1.403 \le 4 \). Squaring the Frobenius comparison gives
 \[

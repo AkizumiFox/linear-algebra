@@ -115,7 +115,7 @@ which lies in \( V_1 \), is \( \0 \) on \( V_2 \), and fixes \( (1, 0, 1) \).
 
 *The adapted basis.* \( \C(1, 0, 1) = (2, 0, 2) \). On \( V_2 \), \( \C(-2, 1, 0) = (0, -2, 1) = -2(-2, 1, 0) + (-4, 0, 1) \) and \( \C(-4, 0, 1) = (2, -5, 2) = -5(-2, 1, 0) + 2(-4, 0, 1) \). So in the basis \( \sB = \big((1, 0, 1), (-2, 1, 0), (-4, 0, 1)\big) \),
 \[
-\mtx{\C}{\sB}{\sB} = (2) \oplus \begin{pmatrix} -2 & -5 \\ 1 & 2 \end{pmatrix}.
+\mtx{T_{\C}}{\sB}{\sB} = (2) \oplus \begin{pmatrix} -2 & -5 \\ 1 & 2 \end{pmatrix}.
 \]
 The second block has trace \( 0 \) and determinant \( -4 + 5 = 1 \), so its characteristic polynomial is \( x^2 + 1 \); it is not a scalar matrix, so its minimal polynomial is also \( x^2 + 1 \), as (c) says. Over \( \nR \), no further splitting of \( V_2 \) is possible, since \( \C \) has no eigenvector in \( V_2 \). Over \( \nC \), the factor \( x^2 + 1 = (x - i)(x + i) \) splits, and so does the plane.
 :::

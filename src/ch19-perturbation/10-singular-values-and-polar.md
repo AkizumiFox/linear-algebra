@@ -416,7 +416,14 @@ Let \( \S, \T \in M_n(\nC) \) be positive semidefinite.
 ::::
 
 ::: {.solution}
-(a) Expanding, \( (\S - \T)^2 + (\S - \T)\T + \T(\S - \T) = \S^2 - \S\T - \T\S + \T^2 + \S\T - \T^2 + \T\S - \T^2 = \S^2 - \T^2 \). Since \( (\S - \T)\x = \lambda\x \) with \( \lambda \) real (@thm-self-adjoint-real-eigenvalues) and \( \S - \T \) Hermitian, also \( \x^{*}(\S - \T) = \lambda\x^{*} \). Hence \( \x^{*}(\S - \T)^2\x = \lambda^2\x^{*}\x = \lambda^2 \), \( \x^{*}(\S - \T)\T\x = \lambda\,\x^{*}\T\x \) and \( \x^{*}\T(\S - \T)\x = \lambda\,\x^{*}\T\x \). Adding gives the claim.
+(a) Expanding,
+\[
+\begin{aligned}
+&(\S - \T)^2 + (\S - \T)\T + \T(\S - \T) \\
+&\qquad = \S^2 - \S\T - \T\S + \T^2 + \S\T - \T^2 + \T\S - \T^2 = \S^2 - \T^2 .
+\end{aligned}
+\]
+Since \( (\S - \T)\x = \lambda\x \) with \( \lambda \) real (@thm-self-adjoint-real-eigenvalues) and \( \S - \T \) Hermitian, also \( \x^{*}(\S - \T) = \lambda\x^{*} \). Hence \( \x^{*}(\S - \T)^2\x = \lambda^2\x^{*}\x = \lambda^2 \), \( \x^{*}(\S - \T)\T\x = \lambda\,\x^{*}\T\x \) and \( \x^{*}\T(\S - \T)\x = \lambda\,\x^{*}\T\x \). Adding gives the claim.
 
 (b) \( \x^{*}\T\x \ge 0 \) because \( \T \succeq 0 \), so if \( \lambda \ge 0 \), (a) gives \( \lambda^2 \le \x^{*}(\S^2 - \T^2)\x \). By @thm-cauchy-schwarz and @thm-operator-norm-properties (a), \( \x^{*}\M\x \le \norm{\M\x}\norm{\x} \le \norm{\M}_2 \) for any \( \M \) and unit \( \x \). So \( \lambda^2 \le \norm{\S^2 - \T^2}_2 \).
 

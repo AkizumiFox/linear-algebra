@@ -448,7 +448,10 @@ Back-substituting, \( r_2 = g - x r_1 = g - x(f - g) = -x f + (1 + x) g \). Divi
 \[
 x + 1 = \Bigl( -\frac{x}{2} \Bigr) f + \frac{x + 1}{2}\, g .
 \]
-Check: \( -\tfrac{x}{2}(x^3 + x^2 + x + 1) + \tfrac{x+1}{2}(x^3 + x + 2) = \tfrac12\bigl( -x^4 - x^3 - x^2 - x + x^4 + x^3 + x^2 + 3x + 2 \bigr) = x + 1 \).
+Check: \( -\tfrac{x}{2}(x^3 + x^2 + x + 1) + \tfrac{x+1}{2}(x^3 + x + 2) \) equals
+\[
+\tfrac12\bigl( -x^4 - x^3 - x^2 - x + x^4 + x^3 + x^2 + 3x + 2 \bigr) = x + 1 .
+\]
 
 Hence: let \( z \in \nC \). If \( f(z) = g(z) = 0 \), then evaluating the identity above in \( \nC \) (@thm-evaluation-respects-operations) gives \( z + 1 = 0 \). Conversely, \( x + 1 \) divides \( f \) and \( g \) (@thm-gcd-properties (a)), so \( -1 \) is a root of both. Therefore \( -1 \) is the only common complex root.
 :::

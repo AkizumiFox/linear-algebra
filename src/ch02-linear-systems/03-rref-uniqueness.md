@@ -314,7 +314,14 @@ By @exr-rref-uniqueness-b2, two matrices of the same size are row equivalent exa
 1. \( \P \xrightarrow{R_2 \to R_2 - 2R_1} \begin{pmatrix} 1 & 2 & 3 \\ 0 & 1 & 1 \end{pmatrix} \xrightarrow{R_1 \to R_1 - 2R_2} \begin{pmatrix} 1 & 0 & 1 \\ 0 & 1 & 1 \end{pmatrix} \), and \( \Q \xrightarrow{R_2 \to R_2 - 3R_1} \begin{pmatrix} 1 & 1 & 2 \\ 0 & 1 & 1 \end{pmatrix} \xrightarrow{R_1 \to R_1 - R_2} \begin{pmatrix} 1 & 0 & 1 \\ 0 & 1 & 1 \end{pmatrix} \). The RREFs are equal, so \( \P \) and \( \Q \) are row equivalent.
 2. \( \P \xrightarrow{R_2 \to R_2 - R_1} \begin{pmatrix} 1 & 1 & 1 \\ 0 & 1 & 2 \\ 0 & 1 & 2 \end{pmatrix} \xrightarrow{R_1 \to R_1 - R_2} \begin{pmatrix} 1 & 0 & -1 \\ 0 & 1 & 2 \\ 0 & 1 & 2 \end{pmatrix} \xrightarrow{R_3 \to R_3 - R_2} \begin{pmatrix} 1 & 0 & -1 \\ 0 & 1 & 2 \\ 0 & 0 & 0 \end{pmatrix} \).
 
-   \( \Q \xrightarrow{R_3 \to R_3 - R_1} \begin{pmatrix} 1 & 0 & -1 \\ 0 & 1 & 2 \\ 0 & 1 & 3 \end{pmatrix} \xrightarrow{R_3 \to R_3 - R_2} \begin{pmatrix} 1 & 0 & -1 \\ 0 & 1 & 2 \\ 0 & 0 & 1 \end{pmatrix} \xrightarrow{R_1 \to R_1 + R_3} \begin{pmatrix} 1 & 0 & 0 \\ 0 & 1 & 2 \\ 0 & 0 & 1 \end{pmatrix} \xrightarrow{R_2 \to R_2 - 2R_3} \I_3 \).
+   \[
+   \begin{aligned}
+   \Q &\xrightarrow{R_3 \to R_3 - R_1} \begin{pmatrix} 1 & 0 & -1 \\ 0 & 1 & 2 \\ 0 & 1 & 3 \end{pmatrix}
+   \xrightarrow{R_3 \to R_3 - R_2} \begin{pmatrix} 1 & 0 & -1 \\ 0 & 1 & 2 \\ 0 & 0 & 1 \end{pmatrix} \\
+   &\xrightarrow{R_1 \to R_1 + R_3} \begin{pmatrix} 1 & 0 & 0 \\ 0 & 1 & 2 \\ 0 & 0 & 1 \end{pmatrix}
+   \xrightarrow{R_2 \to R_2 - 2R_3} \I_3 .
+   \end{aligned}
+   \]
 
    The RREFs differ (one has a zero row, the other is \( \I_3 \)), so \( \P \) and \( \Q \) are **not** row equivalent. Consistently with @cor-pivot-columns-well-defined, \( \P \) has pivot columns 1, 2 while \( \Q \) has 1, 2, 3.
 :::

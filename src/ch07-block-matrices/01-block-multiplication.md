@@ -431,7 +431,15 @@ Then \( \A^{-1}\B = \begin{pmatrix} -1 & -1 \\ 3 & 2 \end{pmatrix} \) and \( -\A
 \[
 \M^{-1} = \begin{pmatrix} 1 & -1 & 1 & -1 \\ -1 & 2 & -3 & 4 \\ 0 & 0 & 1 & -2 \\ 0 & 0 & 0 & 1 \end{pmatrix}.
 \]
-Check the top-right block of \( \M \M^{-1} \): \( \A(-\A^{-1}\B \D^{-1}) + \B \D^{-1} = \begin{pmatrix} 2 & 1 \\ 1 & 1 \end{pmatrix}\begin{pmatrix} 1 & -1 \\ -3 & 4 \end{pmatrix} + \begin{pmatrix} 1 & 0 \\ 2 & 1 \end{pmatrix}\begin{pmatrix} 1 & -2 \\ 0 & 1 \end{pmatrix} = \begin{pmatrix} -1 & 2 \\ -2 & 3 \end{pmatrix} + \begin{pmatrix} 1 & -2 \\ 2 & -3 \end{pmatrix} = 0 \), as it must be.
+Check the top-right block of \( \M \M^{-1} \):
+\[
+\begin{aligned}
+\A(-\A^{-1}\B \D^{-1}) + \B \D^{-1}
+  &= \begin{pmatrix} 2 & 1 \\ 1 & 1 \end{pmatrix}\begin{pmatrix} 1 & -1 \\ -3 & 4 \end{pmatrix} + \begin{pmatrix} 1 & 0 \\ 2 & 1 \end{pmatrix}\begin{pmatrix} 1 & -2 \\ 0 & 1 \end{pmatrix} \\
+  &= \begin{pmatrix} -1 & 2 \\ -2 & 3 \end{pmatrix} + \begin{pmatrix} 1 & -2 \\ 2 & -3 \end{pmatrix} = 0 ,
+\end{aligned}
+\]
+as it must be.
 :::
 
 :::: {#exr-block-multiplication-b3}

@@ -648,7 +648,14 @@ Let \( G = \nZ/6\nZ \).
 ::: {.solution}
 (a) The group is abelian of order \( 6 \), so there are six classes, six irreducible characters, all of degree \( 1 \), given by \( \chi_m([j]) = \omega^{jm} \) with \( \omega = e^{2\pi i/6} \) (@exm-cyclic-irreducibles). The table has \( (m, j) \)-entry \( \omega^{jm} \), with \( \omega^6 = 1 \).
 
-(b) \( \inner{\chi_1}{\chi_4} = \tfrac16\sum_{j=0}^{5}\omega^{j}\conj{\omega^{4j}} = \tfrac16\sum_j \omega^{-3j} = \tfrac16\sum_j(-1)^{j} = \tfrac16(1-1+1-1+1-1) = 0 \), using \( \omega^{-3} = \omega^{3} = -1 \). And \( \inner{\chi_2}{\chi_2} = \tfrac16\sum_j \omega^{2j}\conj{\omega^{2j}} = \tfrac16\sum_j \lvert\omega^{2j}\rvert^2 = \tfrac16\cdot 6 = 1 \).
+(b) Here
+\[
+\begin{aligned}
+\inner{\chi_1}{\chi_4} &= \tfrac16\sum_{j=0}^{5}\omega^{j}\conj{\omega^{4j}} = \tfrac16\sum_j \omega^{-3j} \\
+&= \tfrac16\sum_j(-1)^{j} = \tfrac16(1-1+1-1+1-1) = 0 ,
+\end{aligned}
+\]
+using \( \omega^{-3} = \omega^{3} = -1 \). And \( \inner{\chi_2}{\chi_2} = \tfrac16\sum_j \omega^{2j}\conj{\omega^{2j}} = \tfrac16\sum_j \lvert\omega^{2j}\rvert^2 = \tfrac16\cdot 6 = 1 \).
 :::
 
 ### C. Going deeper

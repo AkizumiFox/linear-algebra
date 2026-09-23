@@ -188,7 +188,7 @@ on \( \nR^2 \), verify that it is a projection, put it in the form of @thm-idemp
 \]
 an orthonormal basis of \( \im\Q \) and of \( (\im\Q)^{\perp} \) respectively. Then \( \Q\f_1 = \f_1 \) and \( \Q\f_2 = \tfrac{1}{\sqrt2}(3, 3) = 3\f_1 \), so \( x = 3 \) and
 \[
-\mtx{\Q}{\sB}{\sB} = \begin{pmatrix} 1 & 3 \\ 0 & 0 \end{pmatrix} .
+\mtx{T_{\Q}}{\sB}{\sB} = \begin{pmatrix} 1 & 3 \\ 0 & 0 \end{pmatrix} .
 \]
 Hence \( \cot\theta = 3 \). Checking against the two lines directly: the angle between \( (1, 1) \) and \( (1, 2) \) has \( \cos\theta = 3/\sqrt{10} \) and \( \sin\theta = 1/\sqrt{10} \), so \( \cot\theta = 3 \), and the largest value of \( \norm{\Q\v} \) on the unit circle is \( \sqrt{1 + 9} = \sqrt{10} = 1/\sin\theta \). The two routes agree.
 :::
@@ -266,7 +266,7 @@ Let \( \A = \begin{pmatrix} 0 & 1 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{pmatrix} \)
 
 ::: {.enumerate options="label=(\alph*)"}
 1. Verify that \( \A \) is a projection and find \( \im\A \) and \( \ker\A \).
-2. Find an orthonormal basis \( \sB \) of \( \nR^3 \) as in @thm-idempotent-canonical-form and write down \( \mtx{\A}{\sB}{\sB} \).
+2. Find an orthonormal basis \( \sB \) of \( \nR^3 \) as in @thm-idempotent-canonical-form and write down \( \mtx{T_{\A}}{\sB}{\sB} \).
 3. Hence determine whether \( \A \) is an orthogonal projection, and find \( \rank\A \) without row reducing.
 :::
 :::
@@ -280,7 +280,7 @@ Let \( \A = \begin{pmatrix} 0 & 1 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{pmatrix} \)
 \]
 Hence
 \[
-\mtx{\A}{\sB}{\sB} = \begin{pmatrix} 1 & 0 & -1 \\ 0 & 1 & 0 \\ 0 & 0 & 0 \end{pmatrix},
+\mtx{T_{\A}}{\sB}{\sB} = \begin{pmatrix} 1 & 0 & -1 \\ 0 & 1 & 0 \\ 0 & 0 & 0 \end{pmatrix},
 \qquad \X = \begin{pmatrix} -1 \\ 0 \end{pmatrix} .
 \]
 

@@ -223,7 +223,15 @@ The blocks are \( \A = \begin{pmatrix} 1 & 1 \\ 1 & 2 \end{pmatrix} \), \( \B = 
 -\S^{-1}\C \A^{-1} &= -\begin{pmatrix} 1 & 0 \\ 1 & -1 \end{pmatrix}\begin{pmatrix} -1 & 0 \\ -1 & 1 \end{pmatrix} = \begin{pmatrix} 1 & 0 \\ 0 & 1 \end{pmatrix},
 \end{aligned}
 \]
-and \( \A^{-1} + \A^{-1}\B \S^{-1}\C \A^{-1} = \A^{-1} + (\A^{-1}\B \S^{-1})(\C \A^{-1}) = \begin{pmatrix} 2 & -1 \\ -1 & 1 \end{pmatrix} + \begin{pmatrix} 0 & 1 \\ -1 & 0 \end{pmatrix}\begin{pmatrix} -1 & 0 \\ -1 & 1 \end{pmatrix} = \begin{pmatrix} 2 & -1 \\ -1 & 1 \end{pmatrix} + \begin{pmatrix} -1 & 1 \\ 1 & 0 \end{pmatrix} = \begin{pmatrix} 1 & 0 \\ 0 & 1 \end{pmatrix} \).
+and
+\[
+\begin{aligned}
+\A^{-1} + \A^{-1}\B \S^{-1}\C \A^{-1}
+  &= \A^{-1} + (\A^{-1}\B \S^{-1})(\C \A^{-1}) \\
+  &= \begin{pmatrix} 2 & -1 \\ -1 & 1 \end{pmatrix} + \begin{pmatrix} 0 & 1 \\ -1 & 0 \end{pmatrix}\begin{pmatrix} -1 & 0 \\ -1 & 1 \end{pmatrix} \\
+  &= \begin{pmatrix} 2 & -1 \\ -1 & 1 \end{pmatrix} + \begin{pmatrix} -1 & 1 \\ 1 & 0 \end{pmatrix} = \begin{pmatrix} 1 & 0 \\ 0 & 1 \end{pmatrix} .
+\end{aligned}
+\]
 Hence
 \[
 \M^{-1} = \left(\begin{array}{cc|cc} 1 & 0 & 0 & -1 \\ 0 & 1 & 1 & 0 \\ \hline 1 & 0 & 1 & 0 \\ 0 & 1 & 1 & -1 \end{array}\right).

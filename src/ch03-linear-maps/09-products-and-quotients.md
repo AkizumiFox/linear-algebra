@@ -28,7 +28,16 @@ a(\v_1, \dots, \v_k) &\coloneqq (a\v_1, \dots, a\v_k).
 
 In words: the \( i \)-th entry of a sum is the sum of the \( i \)-th entries, computed **in \( V_i \)**, and similarly for scalar multiples. Two elements are equal exactly when all their entries are equal. Every operation happens inside one \( V_i \) at a time, which is why all the \( V_i \) must share the field \( F \): the same scalar \( a \) has to act on every entry.
 
-**It is a vector space.** Both operations land in \( V_1 \times \dots \times V_k \), since \( \v_i + \w_i \in V_i \) and \( a\v_i \in V_i \). Each axiom of @def-vector-space is an equation between lists, so it holds when it holds in each entry, and in each entry it is the same axiom in \( V_i \). For example, (VS6) reads \( (a + b)(\v_1, \dots, \v_k) = ((a + b)\v_1, \dots, (a + b)\v_k) = (a\v_1 + b\v_1, \dots, a\v_k + b\v_k) = a(\v_1, \dots, \v_k) + b(\v_1, \dots, \v_k) \), using (VS6) in each \( V_i \). The zero vector is \( (\0, \dots, \0) \), with the zero of \( V_i \) in the \( i \)-th entry, and the additive inverse of \( (\v_1, \dots, \v_k) \) is \( (-\v_1, \dots, -\v_k) \). The other axioms are checked in exactly the same way.
+**It is a vector space.** Both operations land in \( V_1 \times \dots \times V_k \), since \( \v_i + \w_i \in V_i \) and \( a\v_i \in V_i \). Each axiom of @def-vector-space is an equation between lists, so it holds when it holds in each entry, and in each entry it is the same axiom in \( V_i \). For example, (VS6) reads
+\[
+\begin{aligned}
+(a + b)(\v_1, \dots, \v_k)
+  &= ((a + b)\v_1, \dots, (a + b)\v_k) \\
+  &= (a\v_1 + b\v_1, \dots, a\v_k + b\v_k) \\
+  &= a(\v_1, \dots, \v_k) + b(\v_1, \dots, \v_k),
+\end{aligned}
+\]
+using (VS6) in each \( V_i \). The zero vector is \( (\0, \dots, \0) \), with the zero of \( V_i \) in the \( i \)-th entry, and the additive inverse of \( (\v_1, \dots, \v_k) \) is \( (-\v_1, \dots, -\v_k) \). The other axioms are checked in exactly the same way.
 
 **Examples.**
 
@@ -416,7 +425,14 @@ Let \( S \colon V/U \to V/W \), \( S(\v + U) = \v + W \).
 
 *Well defined.* If \( \v + U = \v' + U \), then \( \v - \v' \in U \subseteq W \), so \( \v + W = \v' + W \) by @lem-coset-equality (b). By @thm-well-defined-on-quotient (a), applied to \( V \to V/W \), \( \v \mapsto \v + W \), the rule defines a function on \( V/U \).
 
-*Linear and surjective.* \( S((\v + U) + (\w + U)) = S((\v + \w) + U) = (\v + \w) + W = S(\v + U) + S(\w + U) \), and similarly for scalars, by @def-quotient-space in both quotients. Every \( \v + W \) equals \( S(\v + U) \).
+*Linear and surjective.*
+\[
+\begin{aligned}
+S((\v + U) + (\w + U)) &= S((\v + \w) + U) = (\v + \w) + W \\
+&= S(\v + U) + S(\w + U),
+\end{aligned}
+\]
+and similarly for scalars, by @def-quotient-space in both quotients. Every \( \v + W \) equals \( S(\v + U) \).
 
 *Kernel.* \( S(\v + U) = W \) means \( \v \in W \). If \( \v \in W \), then \( \v + U \in W/U \). Conversely, if \( \v + U = \w + U \) with \( \w \in W \), then \( \v - \w \in U \subseteq W \), so \( \v \in W \). Hence \( \ker S = W/U \). In particular \( W/U \) is a subspace of \( V/U \), by @thm-prop-kernel.
 

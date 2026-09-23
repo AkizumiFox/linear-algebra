@@ -292,7 +292,14 @@ The same bookkeeping shows that the dimension formula of @thm-projective-dimensi
 \[
 \dim(S \vee T) + \dim(S \cap T) = \dim S + \dim T
 \]
-into \( (n-1-\dim(S \cap T)) + (n-1-\dim(S \vee T)) = (n-1-\dim S) + (n-1-\dim T) \), which is the same equation after canceling \( 2(n-1) \). A self-dual theorem is one whose dual gives nothing new, and that is a useful thing to be able to detect.
+into
+\[
+\begin{aligned}
+&(n-1-\dim(S \cap T)) + (n-1-\dim(S \vee T)) \\
+&\qquad = (n-1-\dim S) + (n-1-\dim T),
+\end{aligned}
+\]
+which is the same equation after canceling \( 2(n-1) \). A self-dual theorem is one whose dual gives nothing new, and that is a useful thing to be able to detect.
 
 ::: {.warning}
 **The dual of "point" is not "line"; it is "hyperplane", and which dimension that is depends on \( n \).** In the projective plane, \( n = 2 \), and \( 2 - 1 - 0 = 1 \): points dualize to lines, which is why @cor-dual-of-two-points-one-line looks like a swap of the two words. In \( \nP^3 \), \( n = 3 \), so points dualize to **planes** (\( 3 - 1 - 0 = 2 \)) and lines dualize to lines (\( 3 - 1 - 1 = 1 \)). The correct dual of "two distinct points lie on a unique line" in \( \nP^3 \) is "two distinct planes meet in a unique line", and that is true. The careless dual, "two distinct lines meet in a point", is **false** in \( \nP^3 \): the lines \( \nP(\Span(\e_0, \e_1)) \) and \( \nP(\Span(\e_2, \e_3)) \) have \( \Span(\e_0,\e_1) \cap \Span(\e_2,\e_3) = \{\0\} \), so they do not meet at all. Always compute \( n - 1 - d \); never translate by the words alone.

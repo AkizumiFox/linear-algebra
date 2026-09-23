@@ -174,7 +174,7 @@ Split \( V \) into the eigenspaces of \( T \). On each piece \( T \) is a scalar
 :::
 
 ::: {.proof}
-\( (\Rightarrow) \) Let \( \sB \) be a basis with \( \mtx{S}{\sB}{\sB} \) and \( \mtx{T}{\sB}{\sB} \) diagonal. Diagonal matrices commute, so by @cor-matrix-of-polynomial-of-operator, \( \mtx{ST}{\sB}{\sB} = \mtx{S}{\sB}{\sB}\mtx{T}{\sB}{\sB} = \mtx{T}{\sB}{\sB}\mtx{S}{\sB}{\sB} = \mtx{TS}{\sB}{\sB} \). The map \( \R \mapsto \mtx{\R}{\sB}{\sB} \) is injective (@thm-linear-maps-isomorphic-to-matrices), so \( ST = TS \).
+\( (\Rightarrow) \) Let \( \sB \) be a basis with \( \mtx{S}{\sB}{\sB} \) and \( \mtx{T}{\sB}{\sB} \) diagonal. Diagonal matrices commute, so by @cor-matrix-of-polynomial-of-operator, \( \mtx{ST}{\sB}{\sB} = \mtx{S}{\sB}{\sB}\mtx{T}{\sB}{\sB} = \mtx{T}{\sB}{\sB}\mtx{S}{\sB}{\sB} = \mtx{TS}{\sB}{\sB} \). The map \( R \mapsto \mtx{R}{\sB}{\sB} \) is injective (@thm-linear-maps-isomorphic-to-matrices), so \( ST = TS \).
 
 \( (\Leftarrow) \) Suppose \( ST = TS \). Let \( \lambda_1, \dots, \lambda_k \) be the distinct eigenvalues of \( T \), and put \( U_i = E_{\lambda_i}(T) \). Since \( T \) is diagonalizable, @thm-diagonalization (c) gives
 \[

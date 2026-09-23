@@ -168,7 +168,15 @@ Write \( \J = \J_{k_1}(\mu_1) \oplus \dots \oplus \J_{k_m}(\mu_m) \), with \( \m
 
 (a) \( \J \) is upper triangular with diagonal entries \( \mu_i \) repeated \( k_i \) times, so \( p_T = \prod_{i=1}^{m}(x - \mu_i)^{k_i} \) (@thm-det-triangular, @def-charpoly-operator). Grouping equal \( \mu_i \) and using that the multiplicity of \( \lambda \) as a root of a product of powers of distinct linear factors is the exponent it carries (@lem-multiplicity-cofactor), \( a_T(\lambda) = \sum_{\mu_i = \lambda}k_i \). The last claim follows since \( \spec(T) \) is the set of roots of \( p_T \) (@thm-eigenvalue-characterizations).
 
-(b) Take \( j = 1 \) in @thm-jordan-canonical-form (b): the number of \( \lambda \)-blocks of size \( \ge 1 \), which is all of them, equals \( \rank(T - \lambda\,\id_V)^0 - \rank(T - \lambda\,\id_V) = n - \rank(T - \lambda\,\id_V) = \dim\ker(T - \lambda\,\id_V) = g_T(\lambda) \), by @thm-rank-nullity and @def-geometric-multiplicity.
+(b) Take \( j = 1 \) in @thm-jordan-canonical-form (b): the number of \( \lambda \)-blocks of size \( \ge 1 \), which is all of them, equals
+\[
+\begin{aligned}
+\rank(T - \lambda\,\id_V)^0 - \rank(T - \lambda\,\id_V)
+  &= n - \rank(T - \lambda\,\id_V) \\
+  &= \dim\ker(T - \lambda\,\id_V) = g_T(\lambda),
+\end{aligned}
+\]
+by @thm-rank-nullity and @def-geometric-multiplicity.
 
 (c) First, \( m_{\J_k(\nu)} = (x - \nu)^k \) for every \( \nu \in F \): the polynomial \( (x - \nu)^k \) annihilates \( \J_k(\nu) \) because \( \J_k(\nu) - \nu \I = \J_k(0) \) and \( \J_k(0)^k = 0 \), while \( \J_k(0)^{k-1} \ne 0 \), so no smaller power of \( x - \nu \) annihilates it; and \( m_{\J_k(\nu)} \) divides \( p_{\J_k(\nu)} = (x - \nu)^k \) (@cor-minimal-divides-characteristic), hence is a power of \( x - \nu \) (@lem-monic-divisors). Applying @prp-minimal-polynomial-block-diagonal \( m - 1 \) times,
 \[

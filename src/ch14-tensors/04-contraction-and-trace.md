@@ -255,7 +255,14 @@ t = 2\,\v_1 \otimes \varphi^1 - \v_1 \otimes \varphi^2 + 3\,\v_2 \otimes \varphi
 \mtx{S}{\sB}{\sB} = \begin{pmatrix} 2 & -1 & 0 \\ 0 & 3 & 0 \\ 1 & 0 & -4 \end{pmatrix}.
 \]
 
-(b) \( C^1_1(t) = 2\varphi^1(\v_1) - \varphi^2(\v_1) + 3\varphi^2(\v_2) + \varphi^1(\v_3) - 4\varphi^3(\v_3) = 2 - 0 + 3 + 0 - 4 = 1 \), and the diagonal of the matrix in (a) sums to \( 2 + 3 - 4 = 1 \).
+(b) Here
+\[
+\begin{aligned}
+C^1_1(t) &= 2\varphi^1(\v_1) - \varphi^2(\v_1) + 3\varphi^2(\v_2) + \varphi^1(\v_3) - 4\varphi^3(\v_3) \\
+&= 2 - 0 + 3 + 0 - 4 = 1 ,
+\end{aligned}
+\]
+and the diagonal of the matrix in (a) sums to \( 2 + 3 - 4 = 1 \).
 
 (c) By @cor-trace-of-tensor-product, \( \tr(S \otimes S) = (\tr S)^2 = 1 \).
 :::

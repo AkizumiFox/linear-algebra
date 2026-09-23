@@ -409,7 +409,14 @@ Let \( \A = \begin{pmatrix} 7 & 4 & 4 \\ 1 & 0 & -1 \\ -1 & -2 & -1 \end{pmatrix
 
 (b) By @prp-gershgorin-scaling (b), the radii of \( \D^{-1}\A\D \) are \( r_1 = 8/d \), \( r_2 = 1\cdot d + 1 = d + 1 \) and \( r_3 = 1\cdot d + 2 = d + 2 \), with centers \( 7, 0, -1 \). The first disc misses the second when \( 8/d + d + 1 < 7 \), and misses the third when \( 8/d + d + 2 < 8 \): both say \( d + 8/d < 6 \). Multiplying by \( d > 0 \), this is \( d^2 - 6d + 8 < 0 \), that is, \( (d - 2)(d - 4) < 0 \), so \( 2 < d < 4 \). At \( d = 2 \) the discs touch.
 
-(c) \( \A(-6, -1, 1) = (-42 - 4 + 4,\ -6 + 0 - 1,\ 6 + 2 - 1) = (-42, -7, 7) = 7\,(-6, -1, 1) \), so \( 7 \) is an eigenvalue. For \( d = 3 \) the first scaled disc is \( \lvert z - 7\rvert \le \tfrac83 \), which contains \( 7 \). The eigenvector peaks at the first coordinate, so @thm-gershgorin already placed \( 7 \) in \( D_1 \); the scaled theorem places it in the smaller disc.
+(c) Here
+\[
+\begin{aligned}
+\A(-6, -1, 1) &= (-42 - 4 + 4,\ -6 + 0 - 1,\ 6 + 2 - 1) \\
+&= (-42, -7, 7) = 7\,(-6, -1, 1) ,
+\end{aligned}
+\]
+so \( 7 \) is an eigenvalue. For \( d = 3 \) the first scaled disc is \( \lvert z - 7\rvert \le \tfrac83 \), which contains \( 7 \). The eigenvector peaks at the first coordinate, so @thm-gershgorin already placed \( 7 \) in \( D_1 \); the scaled theorem places it in the smaller disc.
 :::
 
 ### C. Going deeper

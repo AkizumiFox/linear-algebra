@@ -295,7 +295,7 @@ Row \( i \) is \( (1, x_i, x_i^2, x_i^3) \) with nodes \( -1, 0, 1, 2 \), so thi
 \[
 (0 - (-1))(1 - (-1))(2 - (-1))(1 - 0)(2 - 0)(2 - 1) = 1 \cdot 2 \cdot 3 \cdot 1 \cdot 2 \cdot 1 = 12 .
 \]
-(Check by expanding along row \( 2 \), which is \( (1, 0, 0, 0) \): the determinant is \( (-1)^{2+1}\det\begin{pmatrix} -1 & 1 & -1 \\ 1 & 1 & 1 \\ 2 & 4 & 8 \end{pmatrix} = -\big({-1}(8 - 4) - 1(8 - 2) - 1(4 - 2)\big) = -(-4 - 6 - 2) = 12 \).) Hence the coefficient matrix of the interpolation system is invertible, and there is exactly one \( p \in \nR[x]_{\le 3} \) with the given values.
+(Check by expanding along row \( 2 \), which is \( (1, 0, 0, 0) \): the determinant is \( (-1)^{2+1}\det\begin{pmatrix} -1 & 1 & -1 \\ 1 & 1 & 1 \\ 2 & 4 & 8 \end{pmatrix} \), that is \( -\big({-1}(8 - 4) - 1(8 - 2) - 1(4 - 2)\big) = -(-4 - 6 - 2) = 12 \).) Hence the coefficient matrix of the interpolation system is invertible, and there is exactly one \( p \in \nR[x]_{\le 3} \) with the given values.
 :::
 
 :::: {#exr-special-determinants-b2}
