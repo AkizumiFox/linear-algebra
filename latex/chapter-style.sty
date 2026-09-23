@@ -231,6 +231,11 @@
 \renewcommand{\cftpartaftersnum}{}
 \setlength{\cftchapnumwidth}{3.5em}
 \setlength{\cftsecnumwidth}{4.5em}
+% The deepest entries are four-component numbers (14.1.6.1), which do not fit
+% tocloft's default box: 484 "Overfull \hbox ... detected at" warnings, all of
+% them this one cause. Nothing collides on the page -- the number box is simply
+% narrower than its contents -- but it is 81% of the book's overfull count.
+\setlength{\cftsubsecnumwidth}{5.5em}
 
 \setlength{\cftchapindent}{1.5em}
 \setlength{\cftsecindent}{3.0em}
