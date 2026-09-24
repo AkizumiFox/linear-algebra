@@ -203,6 +203,17 @@ Add a line when a section promises something later ("proved in Chapter 5"); tick
 - Section numbering did not move (3965 labels, 19408 references) and the HTML edition is unaffected; this changes print only.
 - One content fix came with it: an exercise item in Chapter 16 §02 ran off the page clipped mid-formula, and is a display now, as 91 other exercise items already are.
 
+- **`latex/sleek/` is gone (2026-09-24).** The two vendored files were replaced by
+  `latex/page-style.sty` (base packages, the 2.5cm page, the fancyhdr frame,
+  `\arraystretch`) and `latex/theorem-frame.sty` (the `bookframe` mdframed style and the
+  `mdthm` key for `\declaretheorem`), written from the documentation of `geometry`,
+  `fancyhdr`, `parskip`, `mdframed` and `thmtools` rather than from the vendored code,
+  because the upstream repository was gone and the licence could not be established.
+  `LICENSE` no longer carves a directory out. The print edition did not move: 3,326 pages
+  either way, 110 overfull boxes, worst 72.2pt, the same `\newlabel` numbering, and all 262
+  section PDFs pixel-identical. `latex/README.md` says what the two files hold.
+  **`parfill` still must not come back.**
+
 ### M7, the whole-book pass
 
 - **Run as a workflow**, 11 agents: six over disjoint chapter bands (00–03, 04–07, 08–11, 12–15, 16–19, 20–23) doing the same four jobs on their own chapters, a preface author and a notation-page author beside them, then a TFAE auditor and a whole-book referee, then one pass applying the findings. The run was interrupted once by a session ending and resumed from cache; bands C–F were told to treat the half-finished edits already on disk as unverified proposals, which is how the duplicated-`@`-reference failure mode was avoided

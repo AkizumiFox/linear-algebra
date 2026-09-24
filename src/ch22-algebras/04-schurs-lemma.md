@@ -205,7 +205,7 @@ That is Chapter 8's argument, with its steps given their names: "minimal non-zer
 
 The other half of Chapter 8 §09, simultaneous diagonalization, needs one more ingredient: that the whole space splits into such lines, not just that one of them exists. Section 3's language names that ingredient — the algebra must act semisimply — and in the presence of an inner product it comes for free.
 
-:::: {#prp-adjoint-closed-acts-semisimply}
+:::: {#prp-adjoint-closed-acts-semisimply .optional}
 [Closed Under Adjoints Implies Semisimple]
 
 Let \( V \) be a finite-dimensional inner product space over \( F = \nR \) or \( F = \nC \), and let \( A \subseteq \cL(V) \) be a subalgebra containing \( \id_V \) and closed under adjoints: \( T \in A \) implies \( T^{*} \in A \) (@def-adjoint). Then:

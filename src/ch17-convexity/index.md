@@ -14,13 +14,16 @@ The words **closed** and **open** are defined in §01, in the sequential form in
 
 ## What you need
 
+- **Chapter 0 §06 and §09** — the triangle inequality for complex numbers, which §11 uses twice, and the trace, which §10 uses once: @thm-complex-triangle-inequality, @thm-trace-properties.
 - **Chapter 1** — independence and dimension, used to count points: @def-linear-independence, @thm-size-bounds, @thm-span-subspace, @thm-basis-extension, and the dimension formula @thm-dimension-formula-subspace-dim. Zorn's lemma (@thm-zorn) is mentioned once, to mark where the infinite-dimensional Hahn–Banach theorem would begin.
 - **Chapter 3** — cosets, which are the affine subspaces of this chapter: @def-coset, @lem-coset-equality; and @thm-rank-nullity.
-- **Chapter 4** — linear functionals and hyperplanes, the raw material of every separation argument: @def-linear-functional, @thm-functionals-on-fn, @def-hyperplane, @thm-hyperplane-kernel-functional, @prp-affine-subspace-intersection.
-- **Chapter 9 §09** — the exponential of a number, with that section's imported facts (A1)–(A3), from which §11 builds the logarithm and real powers: @thm-exponential-properties.
+- **Chapter 2 §04 and §05** — the Invertible Matrix Theorem and the rank facts §09 counts the vertices of a polyhedron with: @thm-invertible-tfae, @thm-rank-nullity-matrix, @thm-row-rank-equals-column-rank.
+- **Chapter 4** — linear functionals and hyperplanes, the raw material of every separation argument: @def-linear-functional, @thm-functionals-on-fn, @def-hyperplane, @thm-hyperplane-kernel-functional, @prp-affine-subspace-intersection. This chapter is named for its language and not as a step in an argument: §§01, 03, 04, 05 and 09 cite it in the text, to say which abstract object a half-space or an affine hyperplane is, and two examples use it, but no proof here rests on it. Once \( V = \nR^n \), what is worked with is the concrete \( \x \mapsto \a\tp\x \).
+- **Chapter 9 §09** — the exponential of a number, with that section's imported facts (A1)–(A3), from which §11 builds the logarithm and real powers: @thm-exponential-properties. The reference sits in the text of §11 that sets the construction up, not inside a proof.
 - **Chapter 10** — the inner product and the orthogonal projection, which §03 generalizes from subspaces to closed convex sets: @def-inner-product, @thm-cauchy-schwarz, @thm-orthogonal-decomposition, @def-orthogonal-projection, @thm-projection-formula, @thm-best-approximation.
+- **Chapter 11 §05** — the real spectral theorem, which is how §08 finds the extreme points of the density matrices and of the interval \( \0 \preceq \X \preceq \I \): @cor-spectral-real-matrix.
 - **Chapter 12** — positivity: @def-positive-semidefinite, @thm-psd-characterizations, @def-loewner-order.
-- **Chapter 13 §06** — the Hessian and the second-derivative test, @def-hessian and @thm-second-derivative-test, with that section's Taylor assumption.
+- **Chapter 13 §06** — the Hessian and the second-derivative test, @def-hessian and @thm-second-derivative-test, with that section's Taylor assumption. As with Chapter 9, §10 names these in the text, to say what it is generalizing and which imported facts it borrows; the proofs cite the assumptions, not the theorem.
 - **Chapter 15** — norms, their unit balls and their equivalence, compactness, and the operator norm: @def-norm, @def-unit-ball, @prp-p-norm-inequalities, @lem-reverse-triangle-norm, @thm-norm-equivalence, @cor-convergence-norm-independent, @cor-closed-bounded-compact, @def-operator-norm, @thm-operator-norm-formulas.
 - **Chapter 16** — the places where convexity was met: @thm-ky-fan and @cor-ky-fan-subadditive, @def-majorization and @thm-schur-horn, @lem-am-gm, @def-operator-monotone and @prp-square-operator-convex.
 

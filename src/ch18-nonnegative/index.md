@@ -17,7 +17,10 @@ The list is Chapter 15's, facts (A1)–(A6) of that chapter's introduction, cite
 ## What you need
 
 - **Chapter 0 §06** — the modulus of a complex number and the triangle inequality: @thm-conjugate-properties, @thm-complex-triangle-inequality.
+- **Chapter 1 §§06 and 07** — two counting facts, both in §07's proof of Birkhoff's theorem: the size bound on an independent list, and the dimension formula for a sum of subspaces: @thm-size-bounds, @thm-dimension-formula-subspace-dim.
 - **Chapter 2 §04** — permutation matrices, which relabel coordinates: @def-permutation-matrix, @lem-permutation-matrices.
+- **Chapter 3 §03** — Rank–Nullity, used once, in §06, to give the kernel of \( \x \mapsto \1\tp\x \) its dimension: @thm-rank-nullity.
+- **Chapter 5 §05** — that a polynomial over \( \nC \) splits, which is how §§01 and 03 count the eigenvalues of a non-negative matrix: @cor-complex-polynomial-splits.
 - **Chapters 6 and 7** — the characteristic polynomial and block triangular matrices: @thm-charpoly-similarity-invariant, @thm-det-block-triangular, @thm-block-multiplication.
 - **Chapter 8** — eigenvalues and their multiplicities, invariant subspaces, left eigenvectors, the spectral mapping theorem, and the Markov chains this chapter returns to: @def-algebraic-multiplicity, @thm-invariant-subspace-matrix, @def-left-eigenvector, @prp-left-eigenvectors-transpose, @thm-left-right-biorthogonal, @thm-spectral-mapping, @def-stochastic-matrix, @def-markov-chain, @thm-markov-limit-diagonalizable.
 - **Chapter 9** — generalized eigenspaces, and the convergence of matrix powers and of the Neumann series: @thm-generalized-eigenspace-decomposition, @thm-matrix-powers-converge, @cor-markov-powers-converge, @thm-neumann-series-spectral.

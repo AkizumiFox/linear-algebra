@@ -21,11 +21,15 @@ The list is Chapter 15's, facts (A1)–(A6) of that chapter's introduction, toge
 
 ## What you need
 
+- **Chapter 0 §06 and §09** — the triangle inequality for complex numbers, which is the first move of nearly every estimate in the chapter (§§01, 02, 03, 09 and 11), and the trace, which §08 computes with: @thm-complex-triangle-inequality, @thm-trace-properties.
+- **Chapter 1 §06** — basis extension, once, in §11, to turn an eigenvector into the first column of an invertible matrix: @thm-basis-extension.
+- **Chapter 2 §05 and §07** — Rank–Nullity for matrices and the factor theorem, both in §11: @thm-rank-nullity-matrix, @lem-factor-theorem-linear.
+- **Chapter 3 §10** — that a projection's image is the subspace it projects onto, which is what lets §08 compare two subspaces by comparing their projections: @thm-projection-direct-sum.
 - **Chapter 5** — polynomials over \( \nC \): @cor-complex-polynomial-splits, @thm-unique-factorization-polynomials, @thm-repeated-root-derivative.
 - **Chapter 6** — determinants, the adjugate and minors: @def-adjugate, @thm-adjugate-identity, @thm-rank-via-minors, @thm-charpoly-coefficients, @thm-charpoly-root-iff-singular, @thm-det-block-triangular.
 - **Chapter 7** — block matrices and the Kronecker and vec identities: @thm-block-multiplication, @thm-vec-identity.
 - **Chapter 8** — eigenvalues, multiplicities, diagonalization and left eigenvectors: @thm-eigenvalue-characterizations, @def-algebraic-multiplicity, @thm-geometric-le-algebraic, @def-diagonalizable, @thm-diagonalization, @def-left-eigenvector, @prp-left-eigenvectors-transpose, @prp-left-right-eigen-expansion.
-- **Chapter 9** — the Jordan form, and its warning that the form is unstable: @thm-jordan-canonical-form, @def-jordan-block.
+- **Chapter 9** — the Jordan form, and its warning that the form is unstable: @thm-jordan-canonical-form, @def-jordan-block. Here the Jordan form is the thing being measured rather than a tool: §§04 and 11 discuss it in the text and pay off Chapter 9's promise, and no proof in the chapter cites it.
 - **Chapter 10** — inner products, orthogonal projections, unitary maps and the unitary invariance of the Frobenius norm: @thm-cauchy-schwarz, @def-orthogonal-projection, @thm-orthogonal-decomposition, @cor-extend-orthonormal-basis, @thm-isometry-characterizations, @lem-frobenius-unitarily-invariant.
 - **Chapter 11** — Schur's theorem, the spectral theorem, the Sylvester equation and the departure from normality: @thm-schur-triangularization, @cor-spectral-complex-matrix, @thm-normal-eigenvector-shared, @def-sylvester-operator, @thm-sylvester-equation, @cor-block-diagonalization, @def-departure-from-normality, @exm-eigenvalue-sensitivity.
 - **Chapter 12** — the singular value and polar decompositions, and Hadamard's inequality: @thm-svd, @def-singular-values, @thm-polar-decomposition, @thm-hadamard-inequality.
