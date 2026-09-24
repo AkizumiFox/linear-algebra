@@ -818,11 +818,20 @@ local function scan_and_dump_labels(doc)
         local PASS_OVER = { example = true, exercise = true }
         local PROOF_PARTS = { proof = true, proofofclaim = true, claim = true, idea = true }
         local current, current_kind, current_result = nil, nil, nil
-        local function add_cites(block, owner)
+        -- `kind` is the environment the citation was written in: the owning result's own
+        -- type for its statement, or "proof", "idea", "remark", "solution" ... for a block
+        -- that follows it. A consumer needs it to tell a proof's dependency (remove it and
+        -- the theorem is unproved) from a remark's (remove it and a sentence is reworded).
+        local function add_cites(block, owner, kind)
             if not owner then return end
+            uses[owner] = uses[owner] or {}
             block:walk { Cite = function(cite)
                 for _, citation in ipairs(cite.citations) do
-                    if citation.id ~= owner then uses[owner][citation.id] = true end
+                    if citation.id ~= owner then
+                        local kinds = uses[owner][citation.id]
+                        if not kinds then kinds = {}; uses[owner][citation.id] = kinds end
+                        kinds[kind] = true
+                    end
                 end
             end }
             local without_math = block:walk { Math = function() return pandoc.Space() end }
@@ -838,7 +847,7 @@ local function scan_and_dump_labels(doc)
                     current_kind = env_type
                     if current then uses[current] = uses[current] or {} end
                     if RESULT_ENVS[env_type] then current_result = current end
-                    add_cites(block, current)
+                    add_cites(block, current, env_type)
                 elseif env_type then
                     local owner = current
                     if PROOF_PARTS[env_type] and PASS_OVER[current_kind] and current_result then
@@ -851,17 +860,28 @@ local function scan_and_dump_labels(doc)
                         owner = named
                         uses[owner] = uses[owner] or {}
                     end
-                    add_cites(block, owner)
+                    add_cites(block, owner, env_type)
                 end
             end
         end
     end
+    -- Two views of the same data: `uses` stays the flat sorted list every consumer already
+    -- reads, and `uses_kinds` adds, per cited label, the sorted environments that cited it.
     local uses_lists = {}
+    local uses_kinds = {}
     for label, set in pairs(uses) do
         local list = {}
-        for id in pairs(set) do table.insert(list, id) end
+        local kinds_by_id = {}
+        for id, kindset in pairs(set) do
+            table.insert(list, id)
+            local kinds = {}
+            for kind in pairs(kindset) do table.insert(kinds, kind) end
+            table.sort(kinds)
+            kinds_by_id[id] = kinds
+        end
         table.sort(list)
         uses_lists[label] = list
+        uses_kinds[label] = kinds_by_id
     end
 
     -- Prose for the spell check: no mathematics, code or raw LaTeX
@@ -940,7 +960,7 @@ local function scan_and_dump_labels(doc)
     if doc.meta.scan_mode then
         local json_str = pandoc.json.encode({labels = collected, refs = refs, text = text,
             description = table.concat(description, " "), prose = prose, uses = uses_lists,
-            block_text = block_text})
+            uses_kinds = uses_kinds, block_text = block_text})
         print("SCAN_RESULT:" .. json_str)
         return pandoc.Pandoc({}, doc.meta)
     end

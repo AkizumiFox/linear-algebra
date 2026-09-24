@@ -76,7 +76,8 @@ def _scan_page(book: Book, page: Page, meta_file) -> dict | None:
             data = json.loads(line[len("SCAN_RESULT:"):])
             data = {"labels": data.get("labels") or {}, "refs": data.get("refs") or [], "text": data.get("text") or "",
                     "description": data.get("description") or "", "prose": data.get("prose") or "",
-                    "uses": data.get("uses") or {}, "block_text": data.get("block_text") or {},
+                    "uses": data.get("uses") or {}, "uses_kinds": data.get("uses_kinds") or {},
+                    "block_text": data.get("block_text") or {},
                     "errors": errors}
             cache_file.parent.mkdir(parents=True, exist_ok=True)
             cache_file.write_text(json.dumps(data), encoding="utf-8")
@@ -102,8 +103,12 @@ def scan_labels(book: Book) -> dict:
         if data is None:
             continue
         uses = data.get("uses") or {}
+        # uses_kinds: cited label -> the environments that cited it ("proof", "remark", the
+        # owning result's own type for its statement). `uses` keeps its flat-list shape.
+        uses_kinds = data.get("uses_kinds") or {}
         for label_id, info in data["labels"].items():
             info = dict(info, file=page.html_path, shard=page.shard, uses=uses.get(label_id, []),
+                        uses_kinds=uses_kinds.get(label_id, {}),
                         text=(data.get("block_text") or {}).get(label_id, ""))
             global_labels.setdefault(label_id, info)
         scan_files[page.html_path] = {

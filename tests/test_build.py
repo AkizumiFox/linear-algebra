@@ -21,6 +21,7 @@ sys.path.insert(0, str(ENGINE_ROOT))
 from build.book import Book  # noqa: E402
 from build.check import check_xref_links  # noqa: E402
 from build.extras import _implied_edges  # noqa: E402
+from tools import reading_path  # noqa: E402
 
 
 def run_build(book_dir: Path, *args: str) -> subprocess.CompletedProcess:
@@ -221,6 +222,33 @@ class TestHtmlBuild(FixtureBookCase):
         self.assertIn("graph.js?v=", self.page("graph.html"))
         navigation = json.loads((self.html / "navigation.json").read_text())
         self.assertEqual([e["path"] for e in navigation["extras"]], ["results.html", "graph.html"])
+
+    def test_citation_kinds_recorded_beside_uses(self):
+        """`uses` keeps its flat shape; `uses_kinds` says which block made each citation.
+
+        thm-second cites thm-main in its statement, def-thing in its proof and
+        lem-helper in a remark. Only the proof citation is a hard dependency:
+        drop def-thing and thm-second is unproved, drop lem-helper and a
+        sentence needs rewording.
+        """
+        record = self.labels()["thm-second"]
+        self.assertEqual(sorted(record["uses"]), ["def-thing", "lem-helper", "thm-main"])
+        self.assertEqual(record["uses_kinds"], {
+            "thm-main": ["theorem"],        # the statement's own environment
+            "def-thing": ["proof"],
+            "lem-helper": ["remark"],
+        })
+        # every cited label is accounted for, in both directions
+        for info in self.labels().values():
+            self.assertEqual(set(info["uses_kinds"]), set(info["uses"]))
+
+    def test_reading_path_uses_the_built_index(self):
+        """The section graph over the fixture: a proof edge is hard, a remark edge is not."""
+        graph = reading_path.graph_from_labels(self.labels())
+        hard = graph.closure(["ch01-basics/02"])
+        self.assertEqual(hard.sections, ["ch01-basics/01", "ch01-basics/02"])
+        self.assertTrue(graph.is_closed(hard))
+        self.assertEqual(graph.unknown_kinds, 0)
 
     def test_title_mentions_become_dependencies(self):
         labels = self.labels()
