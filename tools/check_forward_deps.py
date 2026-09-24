@@ -37,13 +37,13 @@ def from_file(path):
 
     'ch15-norms/04-spectral-radius.html' -> (15, '', 4); an index page -> (n, '', 0).
 
-    A chapter directory may carry a letter after its number: `ch23a-notation` is
-    an appendix to Chapter 23 that must not be renamed, because `latex` and
-    `theorems.lua` rely on it reading as chapter 23 so that no part banner and no
-    "Chapter 24" is emitted (see `authoring/STATUS.md`). That letter is the middle
-    component of the key, so `ch23a-notation/index` -> (23, 'a', 0) sorts *after*
-    every section of `ch23-applied`, which keys as (23, '', n). Reading the page as
-    (23, 0) -- section zero of Chapter 23 -- would place it before Chapter 23's own
+    A chapter directory may carry a letter after its number: `ch24a-notation` is
+    an appendix to Chapter 24 that must not be renamed, because `latex` and
+    `theorems.lua` rely on it reading as chapter 24 so that no part banner and no
+    "Chapter 25" is emitted (see `authoring/STATUS.md`). That letter is the middle
+    component of the key, so `ch24a-notation/index` -> (24, 'a', 0) sorts *after*
+    every section of `ch24-applied`, which keys as (24, '', n). Reading the page as
+    (24, 0) -- section zero of Chapter 24 -- would place it before Chapter 24's own
     sections and misreport any label put there.
     """
     m = CHAPTER.match(path or "")

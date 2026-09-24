@@ -127,7 +127,7 @@ The converse is a different matter. It is a separate statement, and it can be fa
 **The converse is not the contrapositive.** "If \( x = 2 \), then \( x^2 = 4 \)" is true for every real number \( x \). Its converse "if \( x^2 = 4 \), then \( x = 2 \)" is false: \( x = -2 \) satisfies the hypothesis and fails the conclusion. Proving \( P \Rightarrow Q \) never proves \( Q \Rightarrow P \).
 :::
 
-Later in the book the converse question comes up constantly. In Chapter 2 we will see that if a square matrix \( \A \) is invertible, then \( \A\x = \0 \) has only the solution \( \x = \0 \). The converse, "if \( \A\x = \0 \) has only the solution \( \x = \0 \), then \( \A \) is invertible", also turns out to be true for square matrices. But it is a separate theorem, it needs its own proof, and that proof takes real work.
+Later in the book the converse question comes up constantly. In Chapter 3 we will see that if a square matrix \( \A \) is invertible, then \( \A\x = \0 \) has only the solution \( \x = \0 \). The converse, "if \( \A\x = \0 \) has only the solution \( \x = \0 \), then \( \A \) is invertible", also turns out to be true for square matrices. But it is a separate theorem, it needs its own proof, and that proof takes real work.
 
 ::: {.check}
 Consider "if an integer \( n \) is divisible by \( 6 \), then \( n \) is even". Write its converse and its contrapositive, and decide which of the three statements are true for every integer \( n \).

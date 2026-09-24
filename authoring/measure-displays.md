@@ -56,7 +56,7 @@ To measure a phone-width column instead, change `#stage { width: 39rem }` to 20r
 what fixes the width is *breaking* the chain across lines inside it, or shortening it. Never
 shrink the font, and never reach for `\psmallmatrix` to buy width.
 
-Two shapes did the whole of the first inline pass (18 formulas, Chapters 2--22):
+Two shapes did the whole of the first inline pass (18 formulas, Chapters 2--23):
 
 - **Break the chain into `\begin{aligned}`**, the book's one multi-line idiom (607 uses; there
   is no `split` or `align` anywhere). Watch what this costs: an `aligned` row is as wide as
@@ -64,7 +64,7 @@ Two shapes did the whole of the first inline pass (18 formulas, Chapters 2--22):
   the left-hand side is itself half the column, the aligned display will still overflow.
 - **Move the left-hand side into the prose.** When the chain opens with something long --
   "Check by expanding: \\( <long left side> \\) equals" -- the sentence can carry it and the
-  display starts at the first `=`. This is what `ch05-polynomials/02` and `04` do.
+  display starts at the first `=`. This is what `ch06-polynomials/02` and `04` do.
 
   The third option, used once, is to cut the span in two in the running text
   ("the determinant is \\( X \\), that is \\( Y = 12 \\)"), which suits a parenthetical that a

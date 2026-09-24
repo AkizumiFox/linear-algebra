@@ -220,7 +220,7 @@ Addition is entrywise on both sides, so it is respected. For scaling, let \( a, 
 The two agree, so the map respects scalar multiplication. It sends the basis \( (\e_1, \dots, \e_n) \) of \( (\nR^n)_\nC \) from @thm-complexification-basis to the standard basis of \( \nC^n \).
 :::
 
-So \( (\nR^n)_\nC \) is \( \nC^n \) in disguise; in Chapter 3 such a bijection will be called an isomorphism. In the same way \( (M_n(\nR))_\nC \) is \( M_n(\nC) \), and \( (\nR[x]_{\le n})_\nC \) is \( \nC[x]_{\le n} \). The construction earns its keep in Chapter 8, where real matrices without real eigenvalues, like the rotation above, get complex ones, and in Chapter 11, in the spectral theory of real operators.
+So \( (\nR^n)_\nC \) is \( \nC^n \) in disguise; in Chapter 2 such a bijection will be called an isomorphism. In the same way \( (M_n(\nR))_\nC \) is \( M_n(\nC) \), and \( (\nR[x]_{\le n})_\nC \) is \( \nC[x]_{\le n} \). The construction earns its keep in Chapter 9, where real matrices without real eigenvalues, like the rotation above, get complex ones, and in Chapter 12, in the spectral theory of real operators.
 
 ## Exercises
 

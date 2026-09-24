@@ -274,8 +274,8 @@ class TestCommandLine(unittest.TestCase):
 class TestAgainstTheRealBook(unittest.TestCase):
     """Skipped unless the book has been built: the paths the preface advertises."""
 
-    TARGETS = ["ch12-psd-and-svd/08", "ch11-spectral-theory/04", "ch09-canonical-forms/03",
-               "ch18-nonnegative/05", "ch22-algebras/08"]
+    TARGETS = ["ch13-psd-and-svd/08", "ch12-spectral-theory/04", "ch10-canonical-forms/03",
+               "ch19-nonnegative/05", "ch23-algebras/08"]
 
     def setUp(self):
         if not reading_path.INDEX.exists():

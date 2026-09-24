@@ -217,7 +217,7 @@ By @thm-unique-representation these are the only expressions of \( \u + \v \) an
 For the last statement, let \( (a_1, \dots, a_n) \in F^n \) and \( \w = a_1\v_1 + \dots + a_n\v_n \). By @def-coordinates, \( \coord{\w}{\sB} = (a_1, \dots, a_n) \). If also \( \coord{\w'}{\sB} = (a_1, \dots, a_n) \), then by definition \( \w' = a_1\v_1 + \dots + a_n\v_n = \w \).
 :::
 
-So a basis of length \( n \) sets up a one-to-one correspondence \( \v \mapsto \coord{\v}{\sB} \) between \( V \) and \( F^n \) that respects addition and scaling. Any question about sums and multiples in \( V \) can be answered in \( F^n \) instead. In Chapter 3 we will call such a correspondence an **isomorphism**.
+So a basis of length \( n \) sets up a one-to-one correspondence \( \v \mapsto \coord{\v}{\sB} \) between \( V \) and \( F^n \) that respects addition and scaling. Any question about sums and multiples in \( V \) can be answered in \( F^n \) instead. In Chapter 2 we will call such a correspondence an **isomorphism**.
 
 ## Every finite spanning list contains a basis
 
@@ -292,7 +292,7 @@ Finally, suppose \( (\v_1, \dots, \v_m) \) spans \( V \). Then \( S_m \) is a su
 
 Alternatively, one can delete instead of keep. As long as the list is dependent, the Linear Dependence Lemma (@thm-linear-dependence-lemma) locates an entry lying in the span of the entries before it, and deleting that entry does not change the span. Each deletion shortens the list, so the process stops after at most \( m \) steps. Sifting performs the same idea in a single left-to-right pass.
 
-The decision "is \( \v_r \) in the span of the kept vectors?" is a small system of equations. For now we solve these systems by hand; Chapter 2 gives a systematic method.
+The decision "is \( \v_r \) in the span of the kept vectors?" is a small system of equations. For now we solve these systems by hand; Chapter 3 gives a systematic method.
 
 ::: {#exm-sifting}
 [Sifting a List in \( \nR^3 \)]

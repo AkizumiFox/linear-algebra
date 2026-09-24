@@ -8,7 +8,7 @@ Use `./build.py <command>` (or `python -m build <command>`) from the project roo
 |------|---------|
 | Live preview while writing | `./build.py serve` (`--port 8000`) |
 | Build the website | `./build.py html` |
-| Build one page | `./build.py html src/ch02-linear-transformations/03-rank-nullity.md` |
+| Build one page | `./build.py html src/ch02-linear-maps/03-rank-nullity.md` |
 | Build per-section PDFs | `./build.py pdf` (or one file, as above) |
 | Build the combined book PDF | `./build.py book` |
 | Build everything | `./build.py all` |

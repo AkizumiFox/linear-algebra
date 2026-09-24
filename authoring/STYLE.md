@@ -13,7 +13,7 @@ The method comes from the kwok-proof skill (`/home/akizumi/coding/kw/skill/kwok-
 **Hard rules**
 - **Nobody is named.** The book never names, quotes or alludes to the lecturer the skill was distilled from. It uses his method silently. Never write "as X would say", course weeks or theorem numbers from his notes.
 - **No copying.** The reference PDFs in `linear-algebra-textbook/` are copyrighted. You may use them to check which topics exist and whether a statement is true. Do not paraphrase their prose or copy their examples or exercises. Standard theorems are common property, but the explanation, the examples and the exercises must be our own.
-- **No forward references in proofs.** A proof may cite only results that appear **earlier** in the book: an earlier section, or earlier in the same section. The blueprint lists what each section may use. A forward pointer in the prose ("we will prove in Chapter 9 that …") is fine. It must never be a step in an argument.
+- **No forward references in proofs.** A proof may cite only results that appear **earlier** in the book: an earlier section, or earlier in the same section. The blueprint lists what each section may use. A forward pointer in the prose ("we will prove in Chapter 10 that …") is fine. It must never be a step in an argument.
 - **Every claim is true.** Check every computation (with sympy, privately: the book text never mentions software, "sympy confirms" or how a result was verified; write a by-hand check the reader can follow instead), and state every hypothesis (field, finite dimension, char ≠ 2, …). If you are unsure, compute it (sympy) or leave a `TODO(verify)` comment. Never guess.
 
 ---
@@ -151,13 +151,13 @@ Some results are worth stating and proving and yet nobody is obliged to read the
 
 `.optional` goes on the statement's div, beside its id. Both editions then print a marker on the title line — *Optional: nothing later depends on this.* — and the reader may skip the block, its Idea and its proof without wondering what they lost.
 
-**What it buys.** The reading paths (`tools/reading_path.py`) treat an optional result's citations as context rather than prerequisites. Nothing requires the result, so nothing it cites can be required through it, and it puts no section on anybody's path. That is the point: `thm-adjoint-vs-dual`, a two-line verification that the adjoint is the dual map read through Riesz, put two sections of Chapter 4 and one of Chapter 1 onto seven of the ten reading paths. Marked optional, it puts nothing on any of them, and the label stays in the book.
+**What it buys.** The reading paths (`tools/reading_path.py`) treat an optional result's citations as context rather than prerequisites. Nothing requires the result, so nothing it cites can be required through it, and it puts no section on anybody's path. That is the point: `thm-adjoint-vs-dual`, a two-line verification that the adjoint is the dual map read through Riesz, put two sections of Chapter 5 and one of Chapter 1 onto seven of the ten reading paths. Marked optional, it puts nothing on any of them, and the label stays in the book.
 
 **The invariant.** *Nothing anywhere may be proved from an optional result.* No proof, proof idea, claim or written solution may cite one — in the whole book, not just later in the section. `tools/check_optional.py` checks it and `./build.py check` fails on it, naming the citing sites:
 
 ```
-ch11-spectral-theory/04: thm-spectral cites thm-aside in its proof,
-but thm-aside is marked optional (ch10-inner-products/06)
+ch12-spectral-theory/04: thm-spectral cites thm-aside in its proof,
+but thm-aside is marked optional (ch11-inner-products/06)
 ```
 
 When that fires, one of two things is true: the result is genuinely used, so drop `.optional`; or the citing argument can be written without it, so write it that way. Never both mark a result optional and lean on it — the marker is a promise printed on the page.
@@ -223,7 +223,7 @@ Each section ends with `## Exercises` and three groups.
 - **Voice.** "We" for the author and reader together; "you" sparingly, for direct advice. Median sentence 12–18 words. Paragraphs of 1–4 sentences. Vary rhythm; no walls of text.
 - **Emphasis.** Bold is for defined terms and load-bearing small words, italics for slogans and light emphasis. No exclamation marks, and no "Note that" at the start of every other sentence.
 - **Names.** Name results by content ("the Rank–Nullity Theorem"), with `@label`. Titles of named theorems match exactly so the dependency graph picks up mentions.
-- **Promises.** Every forward promise ("we will see in @sec…" or "in Chapter 8") must be paid off. When writing, add each promise to `authoring/STATUS.md`.
+- **Promises.** Every forward promise ("we will see in @sec…" or "in Chapter 9") must be paid off. When writing, add each promise to `authoring/STATUS.md`.
 - **Spelling.** American spelling: "normalize", "color", "behavior", "center". Mathematical names keep their accents (Gershgorin, Schur, Cauchy–Schwarz with an en dash).
 - **Math delimiters.** `\( … \)` inline and `\[ … \]` display, never `$` (except inside TikZ and inside `\tag{$\ast$}`). Numbered equations take `{#eq-slug}` **on the same line as the closing `\]`, with no space** (`\]{#eq-normal-equations}`), and are cited with `@eq-slug`; on its own line, or after a blank line, the label is just text.
 - **Relation symbols are typeset, never plain characters.** Write `\( \Rightarrow \)`, `\( \subseteq \)`, `\( \in \)`, `\( \le \)`, not the unicode characters — including proof-direction tags `\( (\Rightarrow) \)` and chains such as `(a) \( \Rightarrow \) (b)`. (An arrow used rhetorically, as in "abstract space → write down a matrix", is ordinary prose and stays plain, as does an environment title such as `[The 2 × 2 puzzle]`.)
@@ -270,4 +270,4 @@ Let ...  This proves the theorem.
 
 ## Hyphenation of "non-"
 
-The book writes **non-negative**, **non-singular**, **non-zero**, **non-empty** and **non-degenerate** with a hyphen (non-negative appears 266 times in Chapters 0–17, nonnegative 11). Labels and directory names are exempt, because renaming them breaks links: `thm-nonnegative-rho-eigenvalue` and `src/ch18-nonnegative/` stay as they are, while the prose and the chapter title say "non-negative".
+The book writes **non-negative**, **non-singular**, **non-zero**, **non-empty** and **non-degenerate** with a hyphen (non-negative appears 266 times in Chapters 0–18, nonnegative 11). Labels and directory names are exempt, because renaming them breaks links: `thm-nonnegative-rho-eigenvalue` and `src/ch19-nonnegative/` stay as they are, while the prose and the chapter title say "non-negative".

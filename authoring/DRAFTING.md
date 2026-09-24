@@ -26,4 +26,4 @@ Run `./build.py html 2>&1 | grep -i "warn\|error" | head -30` and fix warnings o
 
 ## Building while other agents work
 
-Several drafting agents run at once, and **the scratchpad directory is shared between all of them**. Never build in the shared source tree (concurrent builds corrupt `_build/cache`), and never build in a generically named scratch folder such as `scratchpad/repo/`: in Chapter 17 two agents used the same one and one `rsync --delete`d the other's copy. Copy the repo into a directory named after your own sections, for example `scratchpad/ch17-s05-s07/repo/`, and build there.
+Several drafting agents run at once, and **the scratchpad directory is shared between all of them**. Never build in the shared source tree (concurrent builds corrupt `_build/cache`), and never build in a generically named scratch folder such as `scratchpad/repo/`: in Chapter 18 two agents used the same one and one `rsync --delete`d the other's copy. Copy the repo into a directory named after your own sections, for example `scratchpad/ch17-s05-s07/repo/`, and build there.

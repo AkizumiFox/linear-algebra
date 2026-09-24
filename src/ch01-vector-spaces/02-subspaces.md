@@ -155,7 +155,7 @@ The other two conditions fail as well, as we saw in the previous section: \( (3,
 \end{tikzpicture}
 \end{center}
 
-The solid line \( U \) passes through the origin; the dashed line \( L \) is parallel to it and misses the origin. The line \( L \) is a translate of a subspace, a kind of set we will study in Chapter 3, but it is not a subspace.
+The solid line \( U \) passes through the origin; the dashed line \( L \) is parallel to it and misses the origin. The line \( L \) is a translate of a subspace, a kind of set we will study in Chapter 4, but it is not a subspace.
 
 The line \( U \) is the set of solutions of one homogeneous equation. The same three checks work for any number of homogeneous equations, written as one matrix equation.
 
@@ -185,7 +185,7 @@ Therefore \( a\x \in N \). This shows that \( N \) is closed under scalar multip
 Hence \( N \) is a subspace of \( F^n \) by the subspace test (@thm-subspace-test).
 :::
 
-With \( \A = \begin{pmatrix} 1 & 2 \end{pmatrix} \) and \( F = \nR \), this is @exm-line-subspace again, and with \( \A = \begin{pmatrix} 1 & 1 & -1 \end{pmatrix} \) it is the plane \( P \) from the start of the section. The word **homogeneous** (right-hand side \( \0 \)) is essential: @exm-line-not-subspace is a system with right-hand side \( 3 \). This subspace will be called the null space of \( \A \) in Chapter 2.
+With \( \A = \begin{pmatrix} 1 & 2 \end{pmatrix} \) and \( F = \nR \), this is @exm-line-subspace again, and with \( \A = \begin{pmatrix} 1 & 1 & -1 \end{pmatrix} \) it is the plane \( P \) from the start of the section. The word **homogeneous** (right-hand side \( \0 \)) is essential: @exm-line-not-subspace is a system with right-hand side \( 3 \). This subspace will be called the null space of \( \A \) in Chapter 3.
 
 Next, polynomials. The pair "degree at most \( n \)" and "degree exactly \( n \)" is another minimal change. The previous section checked the first of them by hand; here it is as a three-check move.
 
@@ -283,7 +283,7 @@ By definition, \( T \) is a subset of \( M_n(F) \).
 Hence \( T \) is a subspace of \( M_n(F) \) by the subspace test (@thm-subspace-test).
 :::
 
-The pattern in the last two examples, and in @exm-null-space-subspace, is the same: the condition defining the set is "some rule that respects sums and scalar multiples sends the element to zero". Chapter 3 gives such rules a name, linear maps, and this pattern becomes a single theorem about their kernels.
+The pattern in the last two examples, and in @exm-null-space-subspace, is the same: the condition defining the set is "some rule that respects sums and scalar multiples sends the element to zero". Chapter 2 gives such rules a name, linear maps, and this pattern becomes a single theorem about their kernels.
 
 ## Non-examples
 

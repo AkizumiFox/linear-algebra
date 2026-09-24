@@ -197,11 +197,11 @@ Read the table as a set of minimal changes. Shrinking the domain from \( \nR \) 
 Do not confuse injectivity with the statement "\( x_1 = x_2 \Rightarrow f(x_1) = f(x_2) \)". That implication is true for **every** function; it is the second clause of @def-function. Injectivity is its converse, "\( f(x_1) = f(x_2) \Rightarrow x_1 = x_2 \)", and \( x \mapsto x^2 \) on \( \nR \) satisfies the first but not the second.
 :::
 
-**Why these definitions.** Surjectivity depends on the codomain, and injectivity on the domain, so neither is a property of a formula alone; this is why @def-function insists on both sets. The names are descriptive: "in-jective" throws the domain *into* the codomain without collisions, and "sur-jective" (French *sur*, onto) lands *onto* all of it. In Chapter 3 we will meet a fast test for linear maps: a linear map is injective exactly when the only input sent to \( \0 \) is \( \0 \). That test is special to linear maps and fails for general functions, which is one reason the general definitions come first.
+**Why these definitions.** Surjectivity depends on the codomain, and injectivity on the domain, so neither is a property of a formula alone; this is why @def-function insists on both sets. The names are descriptive: "in-jective" throws the domain *into* the codomain without collisions, and "sur-jective" (French *sur*, onto) lands *onto* all of it. In Chapter 2 we will meet a fast test for linear maps: a linear map is injective exactly when the only input sent to \( \0 \) is \( \0 \). That test is special to linear maps and fails for general functions, which is one reason the general definitions come first.
 
 ## Composition
 
-If the outputs of one function can be fed into another, we can run them in sequence. This is the operation that matrix multiplication will describe in Chapter 3.
+If the outputs of one function can be fed into another, we can run them in sequence. This is the operation that matrix multiplication will describe in Chapter 4.
 
 ::: {#def-composition}
 [Composition]
@@ -449,7 +449,7 @@ The same reversal will appear for matrices as \( (\A\B)^{-1} = \B^{-1} \A^{-1} \
 
 ## Maps between finite sets
 
-For functions between two finite sets **of the same size**, one of the two conditions comes for free. This is the pigeonhole principle, and it is the ancestor of a move used constantly from Chapter 3 on: instead of checking both injectivity and surjectivity, count, and check only one.
+For functions between two finite sets **of the same size**, one of the two conditions comes for free. This is the pigeonhole principle, and it is the ancestor of a move used constantly from Chapter 2 on: instead of checking both injectivity and surjectivity, count, and check only one.
 
 We write \( \lvert X \rvert \) for the number of elements of a finite set \( X \). We use two counting facts about lists without proof: a list of \( n \) entries with a repeated entry contains at most \( n - 1 \) distinct elements, and a subset of a finite set \( Y \) with \( \lvert Y \rvert \) elements is all of \( Y \).
 
@@ -473,7 +473,7 @@ Let \( n = \lvert X \rvert = \lvert Y \rvert \), and write \( X = \{x_1, \dots, 
 So if \( f \) is injective or surjective, the two directions show that it is both, that is, bijective.
 :::
 
-For a finite set \( X \), this applies to every \( f \colon X \to X \): such a map is injective if and only if it is surjective. In Chapter 3 the same shape of statement returns for linear maps \( V \to V \) on a finite-dimensional space, with dimension playing the role of the number of elements.
+For a finite set \( X \), this applies to every \( f \colon X \to X \): such a map is injective if and only if it is surjective. In Chapter 2 the same shape of statement returns for linear maps \( V \to V \) on a finite-dimensional space, with dimension playing the role of the number of elements.
 
 ::: {.warning}
 The theorem needs finiteness. The map \( g \colon \nN \to \nN \), \( g(n) = 2n \), is injective but misses every odd number, so it is not surjective, even though domain and codomain are the same set. Infinite sets have room for an injection into a proper part of themselves.
@@ -635,7 +635,7 @@ Let \( f \colon X \to Y \) and \( A_1, A_2 \subseteq X \).
 \[
 g = g \circ \id_X = g \circ (f \circ f^{-1}) = (g \circ f) \circ f^{-1} = \id_X \circ f^{-1} = f^{-1},
 \]
-using @thm-composition-associative. Hence \( f \circ g = f \circ f^{-1} = \id_X \), as claimed. (For \( X = \nN \) this fails: with \( f(n) = n + 1 \) and \( g_0 \) from C1(b), \( g_0 \circ f = \id_{\nN} \) but \( f(g_0(0)) = 1 \ne 0 \). The matrix version of (d), "\( \A\B = \I \) implies \( \B\A = \I \) for square matrices", is proved in Chapter 2.)
+using @thm-composition-associative. Hence \( f \circ g = f \circ f^{-1} = \id_X \), as claimed. (For \( X = \nN \) this fails: with \( f(n) = n + 1 \) and \( g_0 \) from C1(b), \( g_0 \circ f = \id_{\nN} \) but \( f(g_0(0)) = 1 \ne 0 \). The matrix version of (d), "\( \A\B = \I \) implies \( \B\A = \I \) for square matrices", is proved in Chapter 3.)
 :::
 
 ::: {#exr-functions-c3}

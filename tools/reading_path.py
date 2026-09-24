@@ -83,7 +83,7 @@ def _load_forward_deps():
     """`from_file` places a file as (chapter, letter, section); don't reimplement it.
 
     It is the one place that knows a chapter directory may carry a letter
-    (`ch23a-notation` sorts after every section of `ch23-applied`) and that an
+    (`ch24a-notation` sorts after every section of `ch24-applied`) and that an
     index page is section 0. Imported by path because `tools/` is not a package.
     """
     spec = importlib.util.spec_from_file_location(

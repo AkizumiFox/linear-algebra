@@ -382,7 +382,7 @@ By @thm-field-basic-properties (f), \( r \cdot 1 = 0 \) or \( s \cdot 1 = 0 \). 
 So the characteristic is \( 0 \), \( 2 \), \( 3 \), \( 5 \), \( 7 \), and so on. Together with @exr-fields-c2, this says a finite field always has prime characteristic.
 
 ::: {.warning}
-In a field of characteristic \( 2 \), such as \( \nF_2 \), we have \( 1 + 1 = 0 \), so \( -1 = 1 \) and \( x = -x \) for **every** \( x \). The familiar argument "\( x = -x \), so \( 2x = 0 \), so \( x = 0 \)" divides by \( 2 = 1 + 1 \), which is \( 0 \) there. For example, in \( \nF_2 \) the element \( 1 \) satisfies \( 1 = -1 \) but is not \( 0 \). This is why later results, notably on symmetric bilinear forms in Chapter 13, carry the hypothesis "characteristic \( \ne 2 \)".
+In a field of characteristic \( 2 \), such as \( \nF_2 \), we have \( 1 + 1 = 0 \), so \( -1 = 1 \) and \( x = -x \) for **every** \( x \). The familiar argument "\( x = -x \), so \( 2x = 0 \), so \( x = 0 \)" divides by \( 2 = 1 + 1 \), which is \( 0 \) there. For example, in \( \nF_2 \) the element \( 1 \) satisfies \( 1 = -1 \) but is not \( 0 \). This is why later results, notably on symmetric bilinear forms in Chapter 14, carry the hypothesis "characteristic \( \ne 2 \)".
 :::
 
 With fields in hand, the stage for linear algebra is set: in Chapter 1, a vector space is defined **over a field** \( F \), and every result proved there holds at once for \( \nQ \), \( \nR \), \( \nC \), \( \nQ(\sqrt2) \) and \( \nF_p \).

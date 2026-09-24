@@ -1,6 +1,6 @@
 # Groups and Permutations
 
-Several structures in this chapter have quietly behaved alike. The invertible \( n \times n \) matrices, the non-zero elements of a field, and the bijections of a set can each be combined, have an element that does nothing, and can be undone. This short section gives that common structure a name, proves its basic rules once, and introduces the permutations that the determinant in Chapter 6 is built from. We keep it brief: groups are a language for us here, not a subject.
+Several structures in this chapter have quietly behaved alike. The invertible \( n \times n \) matrices, the non-zero elements of a field, and the bijections of a set can each be combined, have an element that does nothing, and can be undone. This short section gives that common structure a name, proves its basic rules once, and introduces the permutations that the determinant in Chapter 7 is built from. We keep it brief: groups are a language for us here, not a subject.
 
 ## Groups
 
@@ -132,7 +132,7 @@ Since \( \varphi(e_G)\varphi(e_G) = \varphi(e_G e_G) = \varphi(e_G) = \varphi(e_
 so \( ab^{-1} \in \ker \varphi \). By @thm-subgroup-test, \( \ker \varphi \) is a subgroup. This proves the theorem.
 :::
 
-Two homomorphisms will matter later: the determinant \( \GL_n(F) \to F \setminus \{0\} \) and the sign \( S_n \to \{1, -1\} \), both in Chapter 6. Linear maps in Chapter 3 are, among other things, homomorphisms of additive groups, and their kernels will be one of our main tools.
+Two homomorphisms will matter later: the determinant \( \GL_n(F) \to F \setminus \{0\} \) and the sign \( S_n \to \{1, -1\} \), both in Chapter 7. Linear maps in Chapter 2 are, among other things, homomorphisms of additive groups, and their kernels will be one of our main tools.
 
 ## Permutations
 
@@ -194,7 +194,7 @@ Suppose every permutation in \( S_n \) is a product of transpositions, and let \
 This completes the induction, and proves the theorem.
 :::
 
-The product is not unique: \( (1\ 2\ 3) = (1\ 3)(1\ 2) = (1\ 2)(2\ 3) \), and one can always insert \( (1\ 2)(1\ 2) = \id \). What turns out to be unique is whether the number of transpositions is even or odd. That fact defines the **sign** of a permutation, which we do not define here; it is the subject of Chapter 6, where it builds the determinant.
+The product is not unique: \( (1\ 2\ 3) = (1\ 3)(1\ 2) = (1\ 2)(2\ 3) \), and one can always insert \( (1\ 2)(1\ 2) = \id \). What turns out to be unique is whether the number of transpositions is even or odd. That fact defines the **sign** of a permutation, which we do not define here; it is the subject of Chapter 7, where it builds the determinant.
 
 ## Exercises
 

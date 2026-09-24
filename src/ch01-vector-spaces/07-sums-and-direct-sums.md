@@ -181,7 +181,7 @@ a combination of the basis \( (\v_1, \dots, \v_r, \u_1, \dots, \u_s) \) of \( U 
 as claimed.
 :::
 
-The proof also works when some of \( r, s, t \) are \( 0 \): an empty list is independent and spans \( \{\0\} \), and every step reads correctly with empty sums. The move "basis of the smallest space, extend, Big Claim, count" is worth learning as a unit. It proves Rank–Nullity in Chapter 3 with the same four blocks.
+The proof also works when some of \( r, s, t \) are \( 0 \): an empty list is independent and spans \( \{\0\} \), and every step reads correctly with empty sums. The move "basis of the smallest space, extend, Big Claim, count" is worth learning as a unit. It proves Rank–Nullity in Chapter 2 with the same four blocks.
 
 The formula is often used to find one of the four numbers from the other three. Here are two uses, one by counting and one by computing.
 
@@ -239,7 +239,7 @@ Let \( U_1, \dots, U_k \) be subspaces of a vector space \( V \) over \( F \). T
 In that case we write the sum as \( U_1 \oplus \dots \oplus U_k \). We write \( V = U_1 \oplus \dots \oplus U_k \) to mean that \( V = U_1 + \dots + U_k \) **and** the sum is direct.
 :::
 
-In words: existence of a splitting is automatic, since that is what membership in the sum means. The content of "direct" is **uniqueness**: if \( \u_1 + \dots + \u_k = \u_1' + \dots + \u_k' \) with \( \u_i, \u_i' \in U_i \), then \( \u_i = \u_i' \) for **every** \( i \). The symbol \( \oplus \) does not build a new space. It is the same subspace \( U_1 + \dots + U_k \), with a property recorded in the notation. (Chapter 3 builds an "external" direct sum out of spaces that do not sit inside a common \( V \).)
+In words: existence of a splitting is automatic, since that is what membership in the sum means. The content of "direct" is **uniqueness**: if \( \u_1 + \dots + \u_k = \u_1' + \dots + \u_k' \) with \( \u_i, \u_i' \in U_i \), then \( \u_i = \u_i' \) for **every** \( i \). The symbol \( \oplus \) does not build a new space. It is the same subspace \( U_1 + \dots + U_k \), with a property recorded in the notation. (Chapter 4 builds an "external" direct sum out of spaces that do not sit inside a common \( V \).)
 
 **Examples.**
 
@@ -465,7 +465,7 @@ The proof made a choice: the vectors \( \w_1, \dots, \w_r \) that extend the bas
 **A complement is not unique.** In \( \nR^2 \), the \( x \)-axis \( U \) (solid) has the complement \( W \), the \( y \)-axis (dashed), and also the complement \( W' \), the line \( y = x \) (dotted), as shown in the examples after @def-direct-sum. So "the complement of \( U \)" is meaningless, and \( U \oplus W = U \oplus W' \) does **not** allow us to cancel \( U \) and conclude \( W = W' \). What all complements share is their dimension. Also, a complement is not the set complement \( V \setminus U \), which does not even contain \( \0 \).
 :::
 
-Complements matter because a splitting \( V = U \oplus W \) lets us study \( V \) one piece at a time. In Chapter 3 each such splitting gives a projection of \( V \) onto \( U \) along \( W \), and the warning above becomes visible there: different complements give different projections. In Chapter 8 the eigenspaces of a diagonalizable operator split \( V \) as a direct sum, and that is what makes such operators easy to understand.
+Complements matter because a splitting \( V = U \oplus W \) lets us study \( V \) one piece at a time. In Chapter 4 each such splitting gives a projection of \( V \) onto \( U \) along \( W \), and the warning above becomes visible there: different complements give different projections. In Chapter 9 the eigenspaces of a diagonalizable operator split \( V \) as a direct sum, and that is what makes such operators easy to understand.
 
 ## Exercises
 

@@ -1,6 +1,6 @@
 # Relations, Equivalence Classes and Quotients
 
-Mathematics constantly declares different-looking things to be "the same": \( \tfrac12 \) and \( \tfrac24 \) are the same number, 14:00 and 2 p.m. are the same time, and in Chapter 3 two vectors will count as the same when their difference lies in a fixed subspace. This section makes "the same, for present purposes" precise. The notion is an equivalence relation. Gluing equivalent things together produces a new set, the quotient, and the one real danger of working with quotients is defining a function on them that secretly depends on a choice. We will learn to check for that.
+Mathematics constantly declares different-looking things to be "the same": \( \tfrac12 \) and \( \tfrac24 \) are the same number, 14:00 and 2 p.m. are the same time, and in Chapter 4 two vectors will count as the same when their difference lies in a fixed subspace. This section makes "the same, for present purposes" precise. The notion is an equivalence relation. Gluing equivalent things together produces a new set, the quotient, and the one real danger of working with quotients is defining a function on them that secretly depends on a choice. We will learn to check for that.
 
 ## Relations
 
@@ -113,7 +113,7 @@ No. It is reflexive (\( a^2 \ge 0 \)) and symmetric, but not transitive: \( 1 \s
 **Why these three conditions.** They are precisely what the next subsection needs. Reflexivity will guarantee that every element lies in its own class, so no class is empty and nothing is lost. Symmetry and transitivity together will guarantee that two classes are either identical or disjoint. Drop any one of them and the picture of \( X \) cut cleanly into pieces falls apart, as the non-examples above show.
 
 ::: {.remark}
-Two equivalence relations on matrices are central later: *row equivalence*, which records that one matrix can be reached from another by row operations, and *similarity*, which records that two square matrices describe the same linear map in different coordinates. Both are introduced once matrices are available, later in this chapter, and studied in Chapters 2 and 3.
+Two equivalence relations on matrices are central later: *row equivalence*, which records that one matrix can be reached from another by row operations, and *similarity*, which records that two square matrices describe the same linear map in different coordinates. Both are introduced once matrices are available, later in this chapter, and studied in Chapters 3 and 4.
 :::
 
 ## Equivalence classes and partitions
@@ -336,7 +336,7 @@ so \( a + b \equiv a' + b' \pmod n \), and \( [a + b] = [a' + b'] \) by the same
 In \( \nZ/4\nZ \), \( [3] + [2] = [5] = [1] \), since \( 5 - 1 = 4 \). Choosing other names gives the same answer, as it must: \( [7] + [-2] = [5] = [1] \).
 :::
 
-This is the same principle as @thm-well-defined-on-quotient, applied to a function of two variables. The same check (@exr-relations-b3) shows multiplication \( [a][b] \coloneqq [ab] \) is well defined. With these operations, \( \nZ/p\nZ \) for a prime \( p \) will become our first finite field later in this chapter, and the identical pattern, now with "\( \v \sim \w \) if \( \v - \w \in U \)", will build quotient vector spaces in Chapter 3.
+This is the same principle as @thm-well-defined-on-quotient, applied to a function of two variables. The same check (@exr-relations-b3) shows multiplication \( [a][b] \coloneqq [ab] \) is well defined. With these operations, \( \nZ/p\nZ \) for a prime \( p \) will become our first finite field later in this chapter, and the identical pattern, now with "\( \v \sim \w \) if \( \v - \w \in U \)", will build quotient vector spaces in Chapter 4.
 
 ::: {.warning}
 A rule written in terms of a representative is not automatically a function on classes. Define it, then check it. For example, "\( [a] \mapsto a \)" from \( \nZ/5\nZ \) to \( \nZ \) is not a function, because \( [0] = [5] \) would be sent to both \( 0 \) and \( 5 \). The check is not a formality: forgetting it is the most common error in any argument that uses quotients.

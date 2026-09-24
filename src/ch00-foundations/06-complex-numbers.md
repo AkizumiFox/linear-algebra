@@ -417,10 +417,10 @@ a_n z^n + a_{n-1} z^{n-1} + \dots + a_1 z + a_0 = 0.
 \]
 :::
 
-We do not prove this theorem here. Its proof needs tools we have not built, and it is proved in Chapter 5. Nothing in Chapters 0–4 depends on it.
+We do not prove this theorem here. Its proof needs tools we have not built, and it is proved in Chapter 6. Nothing in Chapters 0–5 depends on it.
 
 ::: {.remark}
-Combined with division of polynomials (also in Chapter 5), the theorem gives the form in which it is usually applied: every complex polynomial of degree \( n \ge 1 \) **splits into linear factors**, \( a_n z^n + \dots + a_0 = a_n (z - z_1)(z - z_2) \cdots (z - z_n) \) for some \( z_1, \dots, z_n \in \nC \), not necessarily distinct. For linear algebra this is the fact that every complex square matrix has an eigenvalue, the starting point of the theory of canonical forms.
+Combined with division of polynomials (also in Chapter 6), the theorem gives the form in which it is usually applied: every complex polynomial of degree \( n \ge 1 \) **splits into linear factors**, \( a_n z^n + \dots + a_0 = a_n (z - z_1)(z - z_2) \cdots (z - z_n) \) for some \( z_1, \dots, z_n \in \nC \), not necessarily distinct. For linear algebra this is the fact that every complex square matrix has an eigenvalue, the starting point of the theory of canonical forms.
 :::
 
 One companion fact needs no heavy machinery. If the coefficients \( a_0, \dots, a_n \) are **real** and \( p(z) = a_n z^n + \dots + a_0 \) has \( p(z_0) = 0 \), then applying @thm-conjugate-properties (a) and (b) term by term, and \( \conj{a_k} = a_k \), gives \( p(\conj{z_0}) = \conj{p(z_0)} = \conj{0} = 0 \). So the non-real roots of a real polynomial come in conjugate pairs. For example, \( z^2 - 2z + 5 \) has the roots \( 1 + 2i \) and \( 1 - 2i \): indeed \( (1 + 2i)^2 - 2(1 + 2i) + 5 = (-3 + 4i) - (2 + 4i) + 5 = 0 \).

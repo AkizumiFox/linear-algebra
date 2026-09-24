@@ -48,7 +48,7 @@ Show that each vector is a linear combination of the given list.
 :::
 :::
 
-Notice that the question in (a) was a small system of equations in the unknown coefficients. That is typical: deciding whether a vector is a combination of a list means deciding whether a system of linear equations has a solution. Here we solve such systems by hand; Chapter 2 gives a systematic method.
+Notice that the question in (a) was a small system of equations in the unknown coefficients. That is typical: deciding whether a vector is a combination of a list means deciding whether a system of linear equations has a solution. Here we solve such systems by hand; Chapter 3 gives a systematic method.
 
 ## The span
 

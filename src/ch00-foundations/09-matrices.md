@@ -1,6 +1,6 @@
 # Matrices
 
-You have probably met matrices as tables of numbers that are multiplied by a strange rule. This section rebuilds them over an arbitrary field \( F \) and answers the questions a computational course leaves open. Why is the product defined the way it is? Which rules of school algebra survive, and which fail? What does it mean to divide by a matrix? Everything later in the book, from Gaussian elimination in Chapter 2 to the matrix of a linear map in Chapter 3, rests on the answers.
+You have probably met matrices as tables of numbers that are multiplied by a strange rule. This section rebuilds them over an arbitrary field \( F \) and answers the questions a computational course leaves open. Why is the product defined the way it is? Which rules of school algebra survive, and which fail? What does it mean to divide by a matrix? Everything later in the book, from Gaussian elimination in Chapter 3 to the matrix of a linear map in Chapter 4, rests on the answers.
 
 Throughout, \( F \) is a field (@def-field). Nothing here uses more about \( F \) than the field axioms, so every statement holds over \( \nQ \), \( \nR \), \( \nC \) and \( \nF_p \) alike.
 
@@ -253,7 +253,7 @@ For instance \( (\B\A)_{13} = 3 \cdot 2 + 1 \cdot 1 = 7 \). The last two product
 
 Here is a non-example by minimal change. Take the same six entries as \( \B \), but arrange them in two rows: \( \C = \begin{pmatrix} 3 & 2 & 1 \\ 1 & 1 & 0 \end{pmatrix} \in M_{2 \times 3}(\nR) \). The entries are still real numbers and \( \A \) is unchanged. But \( \A \) has \( 3 \) columns and \( \C \) has \( 2 \) rows, so forming \( \A\C \) would pair a row of length \( 3 \) with a column of length \( 2 \). The clause "**the number of columns of \( \A \) equals the number of rows of \( \B \)**" fails, and \( \A\C \) is **not defined**.
 
-Why this definition, and not the entrywise one? Because it is the only rule under which "the table of a combined substitution is the product of the tables". In Chapter 3 the same fact becomes: the matrix of a composition of linear maps is the product of their matrices. Every property of matrix multiplication, good or bad, comes from this.
+Why this definition, and not the entrywise one? Because it is the only rule under which "the table of a combined substitution is the product of the tables". In Chapter 4 the same fact becomes: the matrix of a composition of linear maps is the product of their matrices. Every property of matrix multiplication, good or bad, comes from this.
 
 ## Three views of a product
 
@@ -622,7 +622,7 @@ Now a non-example by minimal change. The matrix \( \diag(1, 2) \) is invertible,
 Why does the definition insist on a **square** matrix and on **both** equations? For non-square matrices one-sided inverses can exist without the other side: with \( \C = \begin{pmatrix} 1 & 0 \end{pmatrix} \in M_{1 \times 2}(\nR) \) and \( \D = \begin{pmatrix} 1 \\ 0 \end{pmatrix} \), we get \( \C\D = \begin{pmatrix} 1 \end{pmatrix} = \I_1 \) but \( \D\C = \begin{pmatrix} 1 & 0 \\ 0 & 0 \end{pmatrix} \neq \I_2 \). Demanding both equations makes the inverse unique (part 1) and makes both cancellation laws (part 6) hold.
 
 ::: {.warning}
-**For square matrices, \( \A\B = \I_n \) already implies \( \B\A = \I_n \). This is true, but it is not obvious, and we do not know it yet.** Nothing in this chapter proves it: the entries of \( \A\B \) and \( \B\A \) are different sums. It is proved in Chapter 2, using row reduction. Until then, to show that \( \B \) is the inverse of \( \A \), check **both** \( \A\B = \I_n \) and \( \B\A = \I_n \). (The non-square example above shows that some argument is needed.)
+**For square matrices, \( \A\B = \I_n \) already implies \( \B\A = \I_n \). This is true, but it is not obvious, and we do not know it yet.** Nothing in this chapter proves it: the entries of \( \A\B \) and \( \B\A \) are different sums. It is proved in Chapter 3, using row reduction. Until then, to show that \( \B \) is the inverse of \( \A \), check **both** \( \A\B = \I_n \) and \( \B\A = \I_n \). (The non-square example above shows that some argument is needed.)
 :::
 
 For \( 2 \times 2 \) matrices, invertibility is decided by one number.
@@ -666,7 +666,7 @@ These cases cover every \( \A \). Now suppose, for a contradiction, that \( \A \
 contradicting \( \x \neq \0 \). Hence \( \A \) is not invertible. This proves the theorem.
 :::
 
-The number \( ad - bc \) will return in Chapter 6 as the determinant of \( \A \). Here it arose from a single multiplication, and the proof used nothing beyond the field axioms, so the theorem holds over every field. For instance, \( \begin{pmatrix} 2 & 1 \\ 5 & 3 \end{pmatrix} \) has \( ad - bc = 6 - 5 = 1 \), which explains the inverse found in @exm-inverse-matrices; and \( \begin{pmatrix} 1 & 2 \\ 2 & 4 \end{pmatrix} \) has \( ad - bc = 0 \), so it is singular, with \( \A(2, -1) = \0 \).
+The number \( ad - bc \) will return in Chapter 7 as the determinant of \( \A \). Here it arose from a single multiplication, and the proof used nothing beyond the field axioms, so the theorem holds over every field. For instance, \( \begin{pmatrix} 2 & 1 \\ 5 & 3 \end{pmatrix} \) has \( ad - bc = 6 - 5 = 1 \), which explains the inverse found in @exm-inverse-matrices; and \( \begin{pmatrix} 1 & 2 \\ 2 & 4 \end{pmatrix} \) has \( ad - bc = 0 \), so it is singular, with \( \A(2, -1) = \0 \).
 
 ## Powers and polynomials of a matrix
 
@@ -777,7 +777,7 @@ For the numerical part, \( \P^{-1} = \begin{pmatrix} 1 & -1 \\ 0 & 1 \end{pmatri
 Finally, if \( \P^{-1} \I_2 \P = \diag(1, 2) \) for some invertible \( \P \), then \( \diag(1, 2) = \P^{-1}\P = \I_2 \), which is false. (Alternatively: similar matrices have equal traces by @thm-trace-properties, and \( \tr \diag(1, 2) = 3 \neq 2 = \tr \I_2 \).) Hence \( \diag(1, 2) \not\sim \I_2 \).
 :::
 
-In Chapter 3 we will see that similar matrices describe the same linear map in two different coordinate systems. That is why a quantity like the trace, which similar matrices share, is really a property of the map and not of the matrix. Deciding when two matrices are similar is one of the main problems of this book.
+In Chapter 4 we will see that similar matrices describe the same linear map in two different coordinate systems. That is why a quantity like the trace, which similar matrices share, is really a property of the map and not of the matrix. Deciding when two matrices are similar is one of the main problems of this book.
 
 ::: {#exm-row-equivalence}
 [Row equivalence]
@@ -799,7 +799,7 @@ For the computation, \( \E \) is invertible, with inverse \( \begin{pmatrix} 1 &
 So \( \E \) subtracted twice row 1 from row 2, which is the first step of Gaussian elimination on \( \A \).
 :::
 
-In Chapter 2 we will see that every elementary row operation is multiplication on the left by an invertible matrix, and that row equivalence is exactly "reachable by a sequence of row operations". This is why Gaussian elimination never changes the solutions of a linear system.
+In Chapter 3 we will see that every elementary row operation is multiplication on the left by an invertible matrix, and that row equivalence is exactly "reachable by a sequence of row operations". This is why Gaussian elimination never changes the solutions of a linear system.
 
 ## Exercises
 
@@ -959,7 +959,7 @@ is the inverse of \( \U \).
 3. Explain how the entries of \( \V \) can be found, column by column, by solving \( \U\v_k = \e_k \).
 :::
 
-*The general case, for all \( n \), follows from the methods of Chapter 2.*
+*The general case, for all \( n \), follows from the methods of Chapter 3.*
 :::
 
 ::: {.solution}

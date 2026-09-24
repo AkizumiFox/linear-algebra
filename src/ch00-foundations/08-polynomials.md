@@ -359,14 +359,14 @@ Similarly \( x^2 \neq x \) as polynomials, but \( 0^2 = 0 \) and \( 1^2 = 1 \), 
 **A polynomial is not a function.** Two different polynomials can define the same polynomial function, as \( x^2 + x \) and \( 0 \) do over \( \nF_2 \). So "\( p(c) = 0 \) for every \( c \in F \)" does **not** imply \( p = 0 \) in general, and we may never read off coefficients or a degree from the values alone. This happens over every finite field: if \( F = \{c_1, \dots, c_q\} \), then \( (x - c_1)(x - c_2) \cdots (x - c_q) \) has degree \( q \) by @thm-degree-of-product, yet vanishes at every \( c_i \) by @thm-evaluation-respects-operations. Over \( \nF_p \), @exr-polynomials-c2 below gives the shorter example \( x^p - x \).
 :::
 
-Over an infinite field such as \( \nQ \), \( \nR \) or \( \nC \), the problem disappears: a polynomial whose function is zero is the zero polynomial, so polynomials and polynomial functions can be identified. We prove this in Chapter 2 (in the section on applications of linear systems), once we can count roots. Until then, whenever we say two polynomials are equal we mean their coefficients agree.
+Over an infinite field such as \( \nQ \), \( \nR \) or \( \nC \), the problem disappears: a polynomial whose function is zero is the zero polynomial, so polynomials and polynomial functions can be identified. We prove this in Chapter 3 (in the section on applications of linear systems), once we can count roots. Until then, whenever we say two polynomials are equal we mean their coefficients agree.
 
 ## Looking ahead
 
 Two tools will be built on this section later.
 
 ::: {.remark}
-**Division with remainder.** Over a field, if \( f, g \in F[x] \) and \( g \neq 0 \), there are unique \( q, r \in F[x] \) with \( f = qg + r \) and \( \deg r < \deg g \). This is long division of polynomials, and the convention \( \deg 0 = -\infty \) makes "\( \deg r < \deg g \)" cover the case \( r = 0 \). We state it here only for orientation; it is proved in Chapter 5 and is not used before then.
+**Division with remainder.** Over a field, if \( f, g \in F[x] \) and \( g \neq 0 \), there are unique \( q, r \in F[x] \) with \( f = qg + r \) and \( \deg r < \deg g \). This is long division of polynomials, and the convention \( \deg 0 = -\infty \) makes "\( \deg r < \deg g \)" cover the case \( r = 0 \). We state it here only for orientation; it is proved in Chapter 6 and is not used before then.
 :::
 
 ::: {.remark}

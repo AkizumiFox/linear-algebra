@@ -80,11 +80,11 @@
       "name": "Computer science and machine learning",
       "description": "The singular value decomposition and what is built on it: low-rank approximation, the pseudoinverse, principal components, graph Laplacians and PageRank.",
       "targets": [
-        "ch12-psd-and-svd/10",
-        "ch12-psd-and-svd/11",
-        "ch18-nonnegative/08",
-        "ch23-applied/10",
-        "ch23-applied/11"
+        "ch13-psd-and-svd/10",
+        "ch13-psd-and-svd/11",
+        "ch19-nonnegative/08",
+        "ch24-applied/10",
+        "ch24-applied/11"
       ]
     },
     {
@@ -92,12 +92,12 @@
       "name": "Economics and econometrics",
       "description": "Least squares, definiteness and the second-derivative test, linear programming duality and matrix games, Markov chains, and the M-matrices behind an input-output model.",
       "targets": [
-        "ch10-inner-products/04",
-        "ch13-forms/06",
-        "ch17-convexity/06",
-        "ch17-convexity/07",
-        "ch18-nonnegative/06",
-        "ch18-nonnegative/09"
+        "ch11-inner-products/04",
+        "ch14-forms/06",
+        "ch18-convexity/06",
+        "ch18-convexity/07",
+        "ch19-nonnegative/06",
+        "ch19-nonnegative/09"
       ]
     },
     {
@@ -105,11 +105,11 @@
       "name": "Pure mathematics and algebra",
       "description": "Canonical forms over an arbitrary field, quadratic forms and Witt's theorems, the exterior algebra, and the characters of a finite group.",
       "targets": [
-        "ch09-canonical-forms/06",
-        "ch09-canonical-forms/07",
-        "ch13-forms/08",
-        "ch14-tensors/10",
-        "ch22-algebras/08"
+        "ch10-canonical-forms/06",
+        "ch10-canonical-forms/07",
+        "ch14-forms/08",
+        "ch15-tensors/10",
+        "ch23-algebras/08"
       ]
     },
     {
@@ -117,12 +117,12 @@
       "name": "Optimization and operations research",
       "description": "Least squares, separating hyperplanes, linear programming duality, polytopes and convex functions, the Loewner order, and conjugate gradients.",
       "targets": [
-        "ch10-inner-products/04",
-        "ch12-psd-and-svd/05",
-        "ch17-convexity/06",
-        "ch17-convexity/09",
-        "ch17-convexity/11",
-        "ch23-applied/07"
+        "ch11-inner-products/04",
+        "ch13-psd-and-svd/05",
+        "ch18-convexity/06",
+        "ch18-convexity/09",
+        "ch18-convexity/11",
+        "ch24-applied/07"
       ]
     },
     {
@@ -130,11 +130,11 @@
       "name": "Physics and quantum mechanics",
       "description": "The matrix exponential, the functional calculus of a normal operator, Minkowski space, tensor products in quantum mechanics, and the normal modes of a vibrating structure.",
       "targets": [
-        "ch09-canonical-forms/09",
-        "ch11-spectral-theory/08",
-        "ch13-forms/11",
-        "ch14-tensors/11",
-        "ch23-applied/09"
+        "ch10-canonical-forms/09",
+        "ch12-spectral-theory/08",
+        "ch14-forms/11",
+        "ch15-tensors/11",
+        "ch24-applied/09"
       ]
     },
     {
@@ -142,12 +142,12 @@
       "name": "Electrical engineering and signal processing",
       "description": "Orthogonal expansions, the QR factorization, circulants and the discrete Fourier transform, the singular value decomposition, conditioning, and the fast Fourier transform.",
       "targets": [
-        "ch10-inner-products/08",
-        "ch10-inner-products/09",
-        "ch11-spectral-theory/09",
-        "ch12-psd-and-svd/08",
-        "ch15-norms/08",
-        "ch23-applied/12"
+        "ch11-inner-products/08",
+        "ch11-inner-products/09",
+        "ch12-spectral-theory/09",
+        "ch13-psd-and-svd/08",
+        "ch16-norms/08",
+        "ch24-applied/12"
       ]
     },
     {
@@ -155,11 +155,11 @@
       "name": "Statistics",
       "description": "Least squares in theory and in floating point, Gram matrices, two quadratic forms diagonalized at once, and principal components.",
       "targets": [
-        "ch10-inner-products/04",
-        "ch12-psd-and-svd/03",
-        "ch12-psd-and-svd/04",
-        "ch23-applied/03",
-        "ch23-applied/10"
+        "ch11-inner-products/04",
+        "ch13-psd-and-svd/03",
+        "ch13-psd-and-svd/04",
+        "ch24-applied/03",
+        "ch24-applied/10"
       ]
     },
     {
@@ -167,13 +167,13 @@
       "name": "Graphics and geometry",
       "description": "Signed volume and orientation, the shape of a rotation, the polar decomposition, Euclidean motions, projective transformations, quadrics, and line coordinates in space.",
       "targets": [
-        "ch06-determinants/09",
-        "ch11-spectral-theory/06",
-        "ch12-psd-and-svd/09",
-        "ch21-geometry/04",
-        "ch21-geometry/05",
-        "ch21-geometry/07",
-        "ch21-geometry/10"
+        "ch07-determinants/09",
+        "ch12-spectral-theory/06",
+        "ch13-psd-and-svd/09",
+        "ch22-geometry/04",
+        "ch22-geometry/05",
+        "ch22-geometry/07",
+        "ch22-geometry/10"
       ]
     },
     {
@@ -181,11 +181,11 @@
       "name": "Control theory",
       "description": "The matrix exponential and linear differential equations, convergent and power-bounded matrices, the Sylvester and Lyapunov equations, the spectral radius, and Krylov subspaces.",
       "targets": [
-        "ch09-canonical-forms/09",
-        "ch09-canonical-forms/10",
-        "ch11-spectral-theory/10",
-        "ch15-norms/04",
-        "ch23-applied/06"
+        "ch10-canonical-forms/09",
+        "ch10-canonical-forms/10",
+        "ch12-spectral-theory/10",
+        "ch16-norms/04",
+        "ch24-applied/06"
       ]
     },
     {
@@ -194,10 +194,10 @@
       "description": "The algebra that codes and lattices are built from: changing the field, rank over a finite field, irreducible polynomials, the Chinese remainder theorem, and the Smith normal form.",
       "targets": [
         "ch01-vector-spaces/09",
-        "ch02-linear-systems/05",
-        "ch05-polynomials/03",
-        "ch05-polynomials/06",
-        "ch09-canonical-forms/07"
+        "ch03-linear-systems/05",
+        "ch06-polynomials/03",
+        "ch06-polynomials/06",
+        "ch10-canonical-forms/07"
       ]
     }
   ],
@@ -207,45 +207,46 @@
       "part": "Part I · Spaces and Maps"
     },
     "src/ch01-vector-spaces",
-    "src/ch02-linear-systems",
-    "src/ch03-linear-maps",
-    "src/ch04-duality",
+    "src/ch02-linear-maps",
+    "src/ch03-linear-systems",
+    "src/ch04-matrices-of-maps",
+    "src/ch05-duality",
     {
-      "dir": "src/ch05-polynomials",
+      "dir": "src/ch06-polynomials",
       "part": "Part II · Determinants and the Structure of Operators"
     },
-    "src/ch06-determinants",
-    "src/ch07-block-matrices",
-    "src/ch08-eigenvalues",
-    "src/ch09-canonical-forms",
+    "src/ch07-determinants",
+    "src/ch08-block-matrices",
+    "src/ch09-eigenvalues",
+    "src/ch10-canonical-forms",
     {
-      "dir": "src/ch10-inner-products",
+      "dir": "src/ch11-inner-products",
       "part": "Part III · Inner Products and Spectral Theory"
     },
-    "src/ch11-spectral-theory",
-    "src/ch12-psd-and-svd",
+    "src/ch12-spectral-theory",
+    "src/ch13-psd-and-svd",
     {
-      "dir": "src/ch13-forms",
+      "dir": "src/ch14-forms",
       "part": "Part IV · Forms and Multilinear Algebra"
     },
-    "src/ch14-tensors",
+    "src/ch15-tensors",
     {
-      "dir": "src/ch15-norms",
+      "dir": "src/ch16-norms",
       "part": "Part V · Matrix Analysis"
     },
-    "src/ch16-variational",
-    "src/ch17-convexity",
-    "src/ch18-nonnegative",
-    "src/ch19-perturbation",
-    "src/ch20-inequalities",
+    "src/ch17-variational",
+    "src/ch18-convexity",
+    "src/ch19-nonnegative",
+    "src/ch20-perturbation",
+    "src/ch21-inequalities",
     {
-      "dir": "src/ch21-geometry",
+      "dir": "src/ch22-geometry",
       "part": "Part VI · Geometry, Algebra, Computation"
     },
-    "src/ch22-algebras",
-    "src/ch23-applied",
+    "src/ch23-algebras",
+    "src/ch24-applied",
     {
-      "dir": "src/ch23a-notation",
+      "dir": "src/ch24a-notation",
       "title": "Notation"
     }
   ],
@@ -264,9 +265,37 @@
   "deploy-push-url": "git@github.com:AkizumiFox/linear-algebra.git",
   "issues-url": "https://github.com/AkizumiFox/linear-algebra/issues/new",
   "redirects": {
-    "ch02-linear-transformations/01-linear-transformations.html": "ch03-linear-maps/01-linear-maps.html",
-    "ch03-linear-maps/01-linear-transformations.html": "ch03-linear-maps/01-linear-maps.html",
-    "ch02-linear-transformations/": "ch03-linear-maps/"
+    "ch02-linear-transformations/01-linear-transformations.html": "ch02-linear-maps/01-linear-maps.html",
+    "ch03-linear-maps/01-linear-transformations.html": "ch02-linear-maps/01-linear-maps.html",
+    "ch02-linear-transformations/": "ch02-linear-maps/",
+    "ch03-linear-maps/06-matrix-of-a-map.html": "ch04-matrices-of-maps/01-matrix-of-a-map.html",
+    "ch03-linear-maps/07-change-of-basis.html": "ch04-matrices-of-maps/02-change-of-basis.html",
+    "ch03-linear-maps/08-rank-factorization.html": "ch04-matrices-of-maps/03-rank-factorization.html",
+    "ch03-linear-maps/09-products-and-quotients.html": "ch04-matrices-of-maps/04-products-and-quotients.html",
+    "ch03-linear-maps/10-projections-and-trace.html": "ch04-matrices-of-maps/05-projections-and-trace.html",
+    "ch03-linear-maps/": "ch02-linear-maps/",
+    "ch02-linear-systems/": "ch03-linear-systems/",
+    "ch23a-notation/": "ch24a-notation/",
+    "ch04-duality/": "ch05-duality/",
+    "ch05-polynomials/": "ch06-polynomials/",
+    "ch06-determinants/": "ch07-determinants/",
+    "ch07-block-matrices/": "ch08-block-matrices/",
+    "ch08-eigenvalues/": "ch09-eigenvalues/",
+    "ch09-canonical-forms/": "ch10-canonical-forms/",
+    "ch10-inner-products/": "ch11-inner-products/",
+    "ch11-spectral-theory/": "ch12-spectral-theory/",
+    "ch12-psd-and-svd/": "ch13-psd-and-svd/",
+    "ch13-forms/": "ch14-forms/",
+    "ch14-tensors/": "ch15-tensors/",
+    "ch15-norms/": "ch16-norms/",
+    "ch16-variational/": "ch17-variational/",
+    "ch17-convexity/": "ch18-convexity/",
+    "ch18-nonnegative/": "ch19-nonnegative/",
+    "ch19-perturbation/": "ch20-perturbation/",
+    "ch20-inequalities/": "ch21-inequalities/",
+    "ch21-geometry/": "ch22-geometry/",
+    "ch22-algebras/": "ch23-algebras/",
+    "ch23-applied/": "ch24-applied/"
   },
   "repo-url": "https://github.com/AkizumiFox/linear-algebra",
   "source-branch": "main",

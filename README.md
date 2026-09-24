@@ -36,7 +36,7 @@ list of all results and a dependency graph.
 - On 2026-09-14 the separate LaTeX edition (`main.tex`, `chapters/`, `book-template.sty`) was retired:
   - Every definition, theorem, proof and example in its ch00–ch01 was already in `src/`.
   - Its ch03 and ch04 fragments moved to `drafts/`, and were deleted on 2026-09-23 once
-    Chapters 6, 8 and 11 had superseded them, as the blueprints for those chapters directed.
+    Chapters 7, 9 and 12 had superseded them, as the blueprints for those chapters directed.
   - It remains in the tex git history.
 - The same day, these fixes went into `src/`:
   - ℚ now requires q ≠ 0.
