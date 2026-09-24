@@ -293,6 +293,10 @@ class TestAgainstTheRealBook(unittest.TestCase):
     def test_every_citation_has_a_recorded_kind(self):
         self.assertEqual(self.graph.unknown_kinds, 0)
 
+    def test_no_optional_result_carries_a_hard_edge(self):
+        """The marker's whole effect on the graph, checked on the book itself."""
+        self.assertFalse([c.site() for c in self.graph.citations if c.from_optional and c.hard])
+
 
 class TestExercisePolicy(unittest.TestCase):
     """`hard_kinds` is the policy knob, and the solution is the case that needs one."""

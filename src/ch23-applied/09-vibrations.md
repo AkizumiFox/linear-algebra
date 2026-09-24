@@ -377,7 +377,7 @@ Part (b) needs \( \K \succeq 0 \) and not merely \( \K = \K\tp \): for a \( 1 \t
 
 The third change is to hold one mass still — to **pin** it. Constraining \( x_p = 0 \) leaves a system with \( n - 1 \) degrees of freedom whose matrices are obtained by deleting row and column \( p \).
 
-::: {#prp-pinning-interlaces}
+::: {#prp-pinning-interlaces .optional}
 [Pinning Interlaces the Frequencies]
 
 Let \( (\M, \K) \) be a mass–spring system with \( n \ge 2 \) degrees of freedom and natural frequencies \( \omega_1 \le \dots \le \omega_n \). Fix \( p \), let \( I = \{1, \dots, n\}\setminus\{p\} \), and let \( \M' = \M_{I,I} \) and \( \K' = \K_{I,I} \) be the principal submatrices on \( I \). Then \( (\M', \K') \) is a mass–spring system with \( n-1 \) degrees of freedom, and its natural frequencies \( \mu_1 \le \dots \le \mu_{n-1} \) satisfy

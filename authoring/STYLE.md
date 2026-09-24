@@ -140,6 +140,34 @@ For each theorem:
 - **Dominant coordinate + triangle inequality** (Gershgorin-type bounds).
 - **Refute with one small witness** and name what fails.
 
+### Optional results
+
+Some results are worth stating and proving and yet nobody is obliged to read them: an illustration of a definition just given, a remark that deserves a proof, a bridge showing how this corner of the book meets another. Keep writing them. Mark them:
+
+```markdown
+::: {#thm-adjoint-vs-dual .optional}
+[The Adjoint Is the Dual Map Read Through Riesz]
+```
+
+`.optional` goes on the statement's div, beside its id. Both editions then print a marker on the title line — *Optional: nothing later depends on this.* — and the reader may skip the block, its Idea and its proof without wondering what they lost.
+
+**What it buys.** The reading paths (`tools/reading_path.py`) treat an optional result's citations as context rather than prerequisites. Nothing requires the result, so nothing it cites can be required through it, and it puts no section on anybody's path. That is the point: `thm-adjoint-vs-dual`, a two-line verification that the adjoint is the dual map read through Riesz, put two sections of Chapter 4 and one of Chapter 1 onto seven of the ten reading paths. Marked optional, it puts nothing on any of them, and the label stays in the book.
+
+**The invariant.** *Nothing anywhere may be proved from an optional result.* No proof, proof idea, claim or written solution may cite one — in the whole book, not just later in the section. `tools/check_optional.py` checks it and `./build.py check` fails on it, naming the citing sites:
+
+```
+ch11-spectral-theory/04: thm-spectral cites thm-aside in its proof,
+but thm-aside is marked optional (ch10-inner-products/06)
+```
+
+When that fires, one of two things is true: the result is genuinely used, so drop `.optional`; or the citing argument can be written without it, so write it that way. Never both mark a result optional and lean on it — the marker is a promise printed on the page.
+
+Prose, statements, remarks, warnings and quick checks may point at an optional result freely. That is how a connection is meant to be referred to.
+
+**When to reach for it.** An illustration, or a connection between two parts of the book. Reach for it especially when a short result cites material from a chapter the surrounding section otherwise never needs; the marker is what lets the material stay without taxing the reader. Never use it on something a later proof needs, and never as a way to keep a result whose citations you would rather not justify. If in doubt, ask what breaks if the reader skips it: if the answer is anything but "a sentence elsewhere loses a pointer", it is not optional.
+
+Run `python3 tools/check_optional.py --list` to see everything currently marked.
+
 ## 5. Examples, checks, warnings, remarks
 
 - **Examples** `::: {#exm-slug}` with a `[Title]` first line. State the question inside the example. Put the worked answer in a following `::: {.solution}`; it starts folded on the web. Use integer data chosen so the computation is clean (characteristic polynomials that factor, pivots that are ±1 or small).
@@ -224,6 +252,7 @@ Let ...  This proves the theorem.
 - **Environment prefixes:** `thm`, `lem`, `cor`, `prp` (shared counter); `def`; `exm`; `exr`; `cnj`. Small blocks with no label: `.proof`, `.solution`, `.remark`, `.claim`, `.idea`, `.warning`, `.check`, `.algorithm`.
 - **Labels** are lowercase-hyphenated and describe content (`thm-steinitz-exchange`, not `thm-3`). They are global across the book and must be unique.
 - **References:** `@thm-rank-nullity` renders as "Theorem 3.12" with a hover preview; `@eq-slug` works for equations.
+- **Optional results:** `::: {#thm-foo .optional}` marks a result nothing later depends on (§4). Nothing may be proved from one; `./build.py check` enforces it.
 - **Labeled lists:** `::: {.enumerate options="label=(VS\arabic*)"}` wraps an ordered list.
 - **Web-only content:** `::: {.content-visible when-format="html"}`.
 
@@ -236,6 +265,7 @@ Let ...  This proves the theorem.
 - [ ] Every B-type task has a worked example in the text.
 - [ ] Notation matches `NOTATION.md`. No symbol is used before it is introduced, and none is reused with a new meaning.
 - [ ] Labels are unique (grep `src/`), and every `@ref` target exists or is created in this chapter.
+- [ ] Anything marked `.optional` is genuinely skippable: no proof, idea, claim or solution anywhere cites it (`python3 tools/check_optional.py`).
 - [ ] No copied text or examples from the references, and no attribution to any person.
 
 ## Hyphenation of "non-"

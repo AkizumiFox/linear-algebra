@@ -234,7 +234,7 @@ is a Fiedler vector, and the signs of its entries split the vertices as \( \{1, 
 
 Compare the Fiedler value \( 0.4384\ldots \) of this graph with the value \( 6 \) for \( K_6 \). Small means "nearly disconnected", and the bridge is what makes it small. One general fact in that direction is immediate from Chapter 16.
 
-::: {#prp-fiedler-edge-monotone}
+::: {#prp-fiedler-edge-monotone .optional}
 [Adding an Edge Raises No Eigenvalue]
 
 Let \( G \) be a graph on \( m \) vertices with at least one edge, and let \( G' \) be \( G \) with one extra edge joining \( u \ne v \). Then \( \L' = \L + \w\w\tp \) with \( \w = \e_u - \e_v \), and

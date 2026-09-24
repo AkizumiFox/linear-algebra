@@ -57,3 +57,7 @@ fixture rest on it.
 @def-thing is named here and nowhere used, which makes this a **soft** edge: the graph
 carries it, and no reading path follows it.
 :::
+
+::: {.remark}
+Compare @thm-aside, which no proof is allowed to lean on.
+:::

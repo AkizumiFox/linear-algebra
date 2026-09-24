@@ -281,17 +281,13 @@ When \( \sB \) is orthonormal, \( \G = \I \) and the rule collapses to @thm-matr
 
 ## The adjoint and the dual map
 
-Two backward maps are now attached to \( T \): the dual map \( T' \colon W^{*} \to V^{*} \) of @def-dual-map, which needs no inner product and sends a functional \( f \) to \( f \circ T \), and the adjoint \( T^{*} \colon W \to V \), which does need one. The Riesz map converts one into the other. Nothing later in the book uses the comparison, so a reader who has not met Chapter 4 can take the square below on trust and move on to the next subsection.
+Two backward maps are now attached to \( T \): the dual map \( T' \colon W^{*} \to V^{*} \) of @def-dual-map, which needs no inner product and sends a functional \( f \) to \( f \circ T \), and the adjoint \( T^{*} \colon W \to V \), which does need one. The Riesz map converts one into the other. This subsection is a connection, not a tool: nothing later in the book is proved with it, so a reader who has not met Chapter 4 can go straight to the next subsection and lose nothing.
 
 Recall from @cor-riesz-isomorphism the Riesz map, the conjugate-linear bijection
 \[
 \Phi_V \colon V \to V^{*}, \qquad \Phi_V(\u) \coloneqq \inner{\cdot}{\u},
 \]
-and likewise \( \Phi_W \) for \( W \). The following square commutes: the two backward maps run horizontally, the two Riesz maps vertically, and the two routes from \( W \) to \( V^{*} \) agree, which is to say that
-\[
-\Phi_V \circ T^{*} = T' \circ \Phi_W .
-\]
-Both sides send a vector of \( W \) to a functional on \( V \), and evaluating each at a vector of \( V \) turns both into \( \inner{T\v}{\w} \); @exr-adjoints-c4 asks for those two lines.
+and likewise \( \Phi_W \) for \( W \). The following square commutes: the two backward maps run horizontally, the two Riesz maps vertically, and the two routes from \( W \) to \( V^{*} \) agree.
 
 \begin{center}
 \begin{tikzpicture}[
@@ -309,6 +305,27 @@ Both sides send a vector of \( W \) to a functional on \( V \), and evaluating e
     {the vertical maps are the Riesz maps, one for each space};
 \end{tikzpicture}
 \end{center}
+
+::: {#thm-adjoint-vs-dual .optional}
+[The Adjoint Is the Dual Map Read Through Riesz]
+
+Let \( V, W \) be finite-dimensional inner product spaces over \( F \) and \( T \in \cL(V, W) \). Then
+\[
+\Phi_V \circ T^{*} = T' \circ \Phi_W .
+\]
+:::
+
+::: {.proof}
+Both sides send \( \w \in W \) to a functional on \( V \), so evaluate them at an arbitrary \( \v \in V \). By @def-dual-map and the definition of \( \Phi_W \),
+\[
+\bigl(T'(\Phi_W\w)\bigr)(\v) = (\Phi_W\w)(T\v) = \inner{T\v}{\w} ,
+\]
+while by @def-adjoint and the definition of \( \Phi_V \),
+\[
+\bigl(\Phi_V(T^{*}\w)\bigr)(\v) = \inner{\v}{T^{*}\w} = \inner{T\v}{\w} .
+\]
+The two agree for all \( \v \) and all \( \w \), so the two maps are equal.
+:::
 
 Read backwards, the identity says \( T^{*} = \Phi_V^{-1}T'\Phi_W \): transport a vector of \( W \) into \( W^{*} \), pull it back with the dual map, transport it back into \( V \). So the adjoint carries no information that \( T' \) does not already carry; what it carries is the inner product used to transport. The matrix statements match too. In dual bases the matrix of \( T' \) is the transpose of the matrix of \( T \) (@thm-matrix-of-dual-map); in orthonormal bases the matrix of \( T^{*} \) is the conjugate transpose (@thm-matrix-of-adjoint). The extra conjugation is the price of \( \Phi_V \) being conjugate-linear, and over \( \nR \) it disappears, which is why the two constructions are so easily confused there.
 
@@ -695,31 +712,4 @@ Let \( V \) be a finite-dimensional inner product space, let \( \sB = (\b_1, \do
 Taking \( \x = \e_j \) and \( \y = \e_i \) reads off the \( (i, j) \) entries, so \( \G\A = \B^{*}\G \). The Gram matrix is invertible (@thm-gram-matrix-properties (c)), so \( \B^{*} = \G\A\G^{-1} \), and starring both sides gives \( \B = (\G^{-1})^{*}\A^{*}\G^{*} = \G^{-1}\A^{*}\G \), using \( \G^{*} = \G \) (@thm-gram-matrix-properties (a)) and hence \( (\G^{-1})^{*} = \G^{-1} \).
 
 (c) If \( \sB \) is orthonormal then \( g_{ij} = \delta_{ij} \), so \( \G = \I \) and the formula reads \( \B = \A^{*} \), which is @thm-matrix-of-adjoint. In @exm-adjoint-nonorthonormal-basis the computation in the remark after it is exactly this formula, with \( \G = \begin{pmatrix} 1 & 1 \\ 1 & 2 \end{pmatrix} \).
-:::
-
-::: {#exr-adjoints-c4}
-[C4: The adjoint is the dual map read through Riesz]
-
-Let \( V, W \) be finite-dimensional inner product spaces over \( F \), let \( T \in \cL(V, W) \), let \( T' \colon W^{*} \to V^{*} \) be the dual map (@def-dual-map) and let \( \Phi_V, \Phi_W \) be the Riesz maps (@cor-riesz-isomorphism).
-
-::: {.enumerate options="label=(\alph*)"}
-1. Prove that \( \Phi_V \circ T^{*} = T' \circ \Phi_W \), so that the square drawn in the section commutes.
-2. Deduce that \( T^{*} = \Phi_V^{-1} \circ T' \circ \Phi_W \), and explain in one sentence why this says that the adjoint carries no information the dual map does not, beyond the choice of inner product.
-:::
-
-*Hint: for (a), both sides send a vector of \( W \) to a functional on \( V \), so evaluate them at an arbitrary vector of \( V \).*
-:::
-
-::: {.solution}
-(a) Let \( \w \in W \) and \( \v \in V \). By @def-dual-map the dual map sends a functional \( f \in W^{*} \) to \( f \circ T \), and \( \Phi_W\w = \inner{\cdot}{\w} \), so
-\[
-\bigl(T'(\Phi_W\w)\bigr)(\v) = (\Phi_W\w)(T\v) = \inner{T\v}{\w} .
-\]
-On the other side \( \Phi_V(T^{*}\w) = \inner{\cdot}{T^{*}\w} \), so by @def-adjoint
-\[
-\bigl(\Phi_V(T^{*}\w)\bigr)(\v) = \inner{\v}{T^{*}\w} = \inner{T\v}{\w} .
-\]
-The two functionals agree at every \( \v \in V \), so they are equal, and this holds for every \( \w \in W \). Hence \( \Phi_V \circ T^{*} = T' \circ \Phi_W \).
-
-(b) The Riesz maps are bijections (@cor-riesz-isomorphism), so \( \Phi_V \) may be inverted in (a), giving \( T^{*} = \Phi_V^{-1} \circ T' \circ \Phi_W \). Reading the right-hand side from right to left: transport a vector of \( W \) into \( W^{*} \), pull it back with \( T' \), transport it back into \( V \). Every step but the two transports is \( T' \), so the adjoint adds nothing to the dual map except the inner product used to identify a space with its dual.
 :::

@@ -21,6 +21,14 @@ a parameter, `hard_kinds`, and the book publishes both answers side by side --
 a reading path (`HARD_KINDS`) and a path for a reader who also works the
 exercises (`EXERCISE_KINDS`) -- rather than choosing for the reader.
 
+One more thing can make an edge soft: the result that made it. A result marked
+`::: {#thm-foo .optional}` is one no reader is obliged to read -- an illustration,
+or a bridge to another part of the book. Nothing requires it, so nothing it cites
+can be required through it, and **every** citation it makes is soft, whatever
+block it was written in. Its own section still shows as context on the soft view.
+That is only honest while nothing proves anything from an optional result, which
+`tools/check_optional.py` enforces and `./build.py check` fails on.
+
 The graph is built **section by section**, not chapter by chapter (chapter-level
 closures are roughly twice the size) and not from `scan.json`'s per-page `refs`,
 which is what the dependency-graph page uses today: `refs` counts every citation
@@ -121,9 +129,11 @@ class Citation:
     cited: str          # cited label
     kinds: tuple        # the environments it was cited from, sorted
     hard: bool
+    from_optional: bool = False   # the citing result is marked .optional, so never hard
 
     def site(self) -> str:
-        return f"{self.citing} ({'/'.join(self.kinds)}) -> {self.cited}"
+        optional = " [optional]" if self.from_optional else ""
+        return f"{self.citing} ({'/'.join(self.kinds)}){optional} -> {self.cited}"
 
 
 @dataclass
@@ -159,11 +169,13 @@ class ClosureCheck:
 class SectionGraph:
     """Sections and the citations between them, split into hard and soft edges."""
 
-    def __init__(self, citations, sections, titles=None, hard_kinds=HARD_KINDS):
+    def __init__(self, citations, sections, titles=None, hard_kinds=HARD_KINDS,
+                 optional=()):
         self.citations = list(citations)
         self.sections = dict(sections)               # section id -> sort key
         self.titles = dict(titles or {})
         self.hard_kinds = frozenset(hard_kinds)      # which policy built these edges
+        self.optional = frozenset(optional)          # labels nothing is obliged to read
         self.unknown_kinds = sum(1 for c in self.citations if UNKNOWN_KIND in c.kinds)
         self.hard_out = defaultdict(list)
         self.soft_out = defaultdict(list)
@@ -283,6 +295,9 @@ def graph_from_labels(labels: dict, titles=None, hard_kinds=HARD_KINDS) -> Secti
     also works the exercises.
     """
     hard_kinds = frozenset(hard_kinds)
+    # A result nothing is obliged to read cannot make anything else required: the
+    # reader who skips it never follows its citations. So its edges are all soft.
+    optional = {name for name, rec in labels.items() if rec.get("optional")}
     sections = {}
     where = {}
     for name, rec in labels.items():
@@ -304,10 +319,13 @@ def graph_from_labels(labels: dict, titles=None, hard_kinds=HARD_KINDS) -> Secti
             if dst is None or dst == src:
                 continue
             kinds = tuple(kinds_by_label.get(cited) or (UNKNOWN_KIND,))
+            from_optional = name in optional
             citations.append(Citation(src=src, dst=dst, citing=name, cited=cited,
                                       kinds=kinds,
-                                      hard=any(k in hard_kinds for k in kinds)))
-    return SectionGraph(citations, sections, titles, hard_kinds)
+                                      hard=(not from_optional
+                                            and any(k in hard_kinds for k in kinds)),
+                                      from_optional=from_optional))
+    return SectionGraph(citations, sections, titles, hard_kinds, optional)
 
 
 def load_titles(path=NAVIGATION) -> dict:
@@ -455,6 +473,9 @@ def main(argv=None):
         print("  added only by soft citations: " + ", ".join(added))
     if graph.unknown_kinds:
         print(f"  ({graph.unknown_kinds} citations had no recorded kind and were counted soft)")
+    if graph.optional:
+        print(f"  ({len(graph.optional)} results are marked optional; nothing may be proved "
+              f"from one, so every citation they make is soft)")
 
     print(f"\nWeakest links (pulled in by at most {args.weakest} hard citation"
           f"{'s' if args.weakest != 1 else ''}):")

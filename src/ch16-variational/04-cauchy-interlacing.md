@@ -265,7 +265,7 @@ Let \( \T\u = \nu\u \) and suppose \( u_k = 0 \); we show \( \u = \0 \). If \( k
 If some eigenspace \( E_{\nu}(\T) \) contained two independent vectors \( \u, \u' \), then \( u'_k\u - u_k\u' \) would be a non-zero vector of \( E_{\nu}(\T) \) — non-zero by independence, since \( u_k \ne 0 \) — with last coordinate \( 0 \), which we have just excluded. So each eigenspace is a line. Since \( \T \) is real symmetric, its eigenspaces have dimensions adding up to \( k \) (@cor-spectral-real-matrix), so there are \( k \) of them, that is, \( k \) distinct eigenvalues. This proves the lemma.
 :::
 
-::: {#cor-orthogonal-polynomial-zeros-interlace}
+::: {#cor-orthogonal-polynomial-zeros-interlace .optional}
 [Zeros of Orthogonal Polynomials Interlace]
 
 Let \( (p_k) \) be the monic orthogonal polynomial sequence of an inner product on \( \nR[x] \) to which @thm-three-term-recurrence applies, with coefficients \( a_k \) and \( b_k > 0 \); for the node inner product on \( \nR[x]_{\le n} \) read everything below for \( k + 1 \le n \). For \( k \ge 1 \) let \( \T_k \) (the **Jacobi matrix** of the sequence) be the \( k \times k \) real symmetric tridiagonal matrix with diagonal \( a_0, a_1, \dots, a_{k-1} \) and entries \( \sqrt{b_1}, \dots, \sqrt{b_{k-1}} \) just above and just below it.

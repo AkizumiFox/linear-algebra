@@ -279,6 +279,24 @@ local function get_label_id(div)
     return div.identifier
 end
 
+-- `::: {#thm-foo .optional}` marks a result that is worth stating and proving but that
+-- no reader is obliged to read: an illustration, or a bridge to another part of the
+-- book. The class is recorded on the label (scan_and_dump_labels), printed as a marker
+-- in both editions, and enforced -- nothing anywhere may prove anything from an optional
+-- result, which tools/check_optional.py checks and ./build.py check fails on.
+local OPTIONAL_CLASS = "optional"
+
+-- What the marker says. One sentence, both halves of the promise: the reader may skip
+-- it, and skipping it costs nothing later.
+local OPTIONAL_NOTE = "Optional: nothing later depends on this."
+
+local function is_optional(div)
+    for _, class in ipairs(div.classes or {}) do
+        if class == OPTIONAL_CLASS then return true end
+    end
+    return false
+end
+
 -- Extract title from first element in div (if any)
 local function extract_title(div)
     if #div.content == 0 then return nil end
@@ -564,7 +582,7 @@ end
 -- HTML Output (Theorems)
 -- =============================================================================
 
-local function render_env_html(env_type, number, title_inlines, label_id, content)
+local function render_env_html(env_type, number, title_inlines, label_id, content, optional)
     local display_name = ENVIRONMENT_NAMES[env_type] or env_type
     local style = ENV_STYLES[env_type] or "big"
     
@@ -601,9 +619,11 @@ local function render_env_html(env_type, number, title_inlines, label_id, conten
             table.insert(content, 1, pandoc.Para(title_content))
         end
         
+        local classes = {env_type, "small-env"}
+        if optional then table.insert(classes, OPTIONAL_CLASS) end
         local attrs = pandoc.Attr(
             label_id or "",
-            {env_type, "small-env"},
+            classes,
             {["data-env-type"] = env_type}
         )
         return pandoc.Div(content, attrs)
@@ -624,6 +644,16 @@ local function render_env_html(env_type, number, title_inlines, label_id, conten
             table.insert(title_content, pandoc.Str(")"))
         end
         
+        -- The optional marker rides on the title line, after the name and the number:
+        -- the reader meets it exactly where they decide whether to read on.
+        if optional then
+            table.insert(title_content, pandoc.Space())
+            table.insert(title_content, pandoc.Span(
+                {pandoc.Str(OPTIONAL_NOTE)},
+                pandoc.Attr("", {"env-optional"})
+            ))
+        end
+
         -- Create the title span
         local title_span = pandoc.Span(
             title_content,
@@ -643,9 +673,12 @@ local function render_env_html(env_type, number, title_inlines, label_id, conten
             table.insert(attributes, {"style", "--env-color: " .. colors.border})
         end
         
+        local classes = {env_type, "env"}
+        if optional then table.insert(classes, OPTIONAL_CLASS) end
+
         local attrs = pandoc.Attr(
             label_id or "",
-            {env_type, "env"},
+            classes,
             attributes
         )
         
@@ -679,7 +712,7 @@ local SMALL_ENV_NESTED = {
     proofofclaim = "proofnested",
 }
 
-local function render_env_latex(env_type, number, title_inlines, label_id, content, is_nested)
+local function render_env_latex(env_type, number, title_inlines, label_id, content, is_nested, optional)
     local c, s
     if doc_meta and doc_meta["book-mode"] and pandoc.utils.stringify(doc_meta["book-mode"]) == "true" then
         c = current_file_chapter
@@ -767,6 +800,12 @@ local function render_env_latex(env_type, number, title_inlines, label_id, conte
     -- Wrap content with begin/end
     local result = {}
     table.insert(result, pandoc.RawBlock("latex", begin_cmd))
+    -- The optional marker: a quiet first line inside the box, set like the box's own
+    -- furniture (latex/theorem-envs.sty), so it reads as part of the frame and not as a
+    -- banner. After the \label, so a reference still points at the statement.
+    if optional then
+        table.insert(result, pandoc.RawBlock("latex", "\\bookoptionalnote"))
+    end
     for _, block in ipairs(content) do
         table.insert(result, block)
     end
@@ -935,6 +974,9 @@ local function scan_and_dump_labels(doc)
                     local record = label_record(env_type, number, title_inlines)
                     record.html_content = html_content
                     record.id = label_id
+                    -- Only optional results carry the field, so a consumer reading
+                    -- crossref_labels.json can treat its absence as "required".
+                    if is_optional(div) then record.optional = true end
                     collected[label_id] = record
                 end
             end
@@ -1075,10 +1117,12 @@ local function render_environment(div)
     local title_inlines = processed and processed.title_inlines or nil
     
     local is_nested = processed and processed.is_nested or false
+    local optional = is_optional(div)
     if FORMAT:match("html") then
-        return render_env_html(env_type, number, title_inlines, label_id, div.content)
+        return render_env_html(env_type, number, title_inlines, label_id, div.content, optional)
     elseif FORMAT:match("latex") then
-        return render_env_latex(env_type, number, title_inlines, label_id, div.content, is_nested)
+        return render_env_latex(env_type, number, title_inlines, label_id, div.content,
+                                is_nested, optional)
     else
         return nil  -- Keep original for other formats
     end

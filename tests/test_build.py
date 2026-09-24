@@ -21,6 +21,7 @@ sys.path.insert(0, str(ENGINE_ROOT))
 from build.book import Book  # noqa: E402
 from build.check import check_xref_links  # noqa: E402
 from build.extras import _implied_edges  # noqa: E402
+from tools import check_optional  # noqa: E402
 from tools import reading_path  # noqa: E402
 
 
@@ -273,6 +274,40 @@ class TestHtmlBuild(FixtureBookCase):
         for info in self.labels().values():
             self.assertEqual(set(info["uses_kinds"]), set(info["uses"]))
 
+    def test_an_optional_result_says_so_and_is_recorded(self):
+        """`::: {#thm-aside .optional}`: a marker on the page, a flag on the label."""
+        page = self.page("ch02-more/01-refs.html")
+        self.assertIn('class="theorem env optional"', page)
+        # pandoc wraps the page's HTML, so match across the line breaks
+        self.assertRegex(page, r'class="env-optional">Optional:\s+nothing\s+later\s+depends\s+on\s+'
+                               r'this\.</span>')
+        self.assertTrue(self.labels()["thm-aside"]["optional"])
+        # and nothing else in the fixture carries the flag
+        self.assertEqual([name for name, info in self.labels().items() if info.get("optional")],
+                         ["thm-aside"])
+
+    def test_an_optional_results_citations_are_not_prerequisites(self):
+        """thm-aside's proof cites lem-helper in Chapter 1, and that pulls nothing in.
+
+        Nothing requires thm-aside, so nothing can be required through it. The soft
+        view still shows Chapter 1 as context, and the remark in §02 that points at
+        thm-aside is the way an optional result is meant to be referred to.
+        """
+        graph = reading_path.graph_from_labels(self.labels())
+        self.assertEqual(graph.optional, frozenset({"thm-aside"}))
+        hard = graph.closure(["ch02-more/01"])
+        self.assertEqual(hard.sections, ["ch02-more/01"])
+        self.assertIn("ch01-basics/01", graph.closure(["ch02-more/01"], hard_only=False).sections)
+        self.assertTrue(graph.is_closed(hard), graph.is_closed(hard).report())
+
+    def test_check_fails_when_a_proof_leans_on_an_optional_result(self):
+        labels = self.labels()
+        labels["thm-area"]["uses"] = sorted(set(labels["thm-area"]["uses"]) | {"thm-aside"})
+        labels["thm-area"]["uses_kinds"]["thm-aside"] = ["proof"]
+        violations = check_optional.find_violations(labels)
+        self.assertEqual([v[0] for v in violations], ["thm-area"])
+        self.assertIn("marked optional", check_optional.report(violations))
+
     def test_reading_path_uses_the_built_index(self):
         """The section graph over the fixture: a proof edge is hard, a remark edge is not."""
         graph = reading_path.graph_from_labels(self.labels())
@@ -378,6 +413,14 @@ class TestFullBuild(FixtureBookCase):
         tex = (self.book.build_dir / "tmp" / "latex-book" / "book.tex").read_text()
         self.assertIn(r"\hyperref[thm-main]{Theorem~\ref*{thm-main}}", tex)
         self.assertIn(r"\begin{enumerate}[label=(A\arabic*)]", tex)
+
+    def test_pdf_optional_marker(self):
+        """The printed edition makes the same promise as the web one, inside the box."""
+        tex = (self.book.build_dir / "tmp" / "latex-book" / "book.tex").read_text()
+        self.assertIn("\\begin{theorem}[{An Aside}]\\label{thm-aside}\n\n\\bookoptionalnote", tex)
+        self.assertEqual(tex.count(r"\bookoptionalnote"), 1)
+        section = (self.book.build_dir / "tmp" / "pdf-single" / "ch02-more" / "01-refs.tex").read_text()
+        self.assertIn(r"\bookoptionalnote", section)
 
 
 if __name__ == "__main__":
