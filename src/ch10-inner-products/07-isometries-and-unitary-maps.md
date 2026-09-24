@@ -229,6 +229,57 @@ For real \( \A \) the determinant is real, and the real numbers of modulus \( 1 
 **\( \lvert\lambda\rvert = 1 \) does not mean \( \lambda = \pm1 \), and \( \det \A = 1 \) does not mean "rotation".** The matrix \( -\I_4 \in \SO(4) \) has determinant \( (-1)^4 = 1 \), but it fixes no non-zero vector, so it is not a rotation about an axis in any sense. Likewise \( -\I_3 \in \Orth(3) \) has determinant \( -1 \) but is not a reflection in a plane: a reflection fixes a plane pointwise, and \( -\I_3 \) fixes only \( \0 \). The clean classification below is a feature of dimensions \( 2 \) and \( 3 \), not a general theorem.
 :::
 
+## The Frobenius norm and unitary factors
+
+Section 1 made \( M_{m \times n}(F) \) into an inner product space by declaring
+\[
+\inner{\A}{\B} = \tr(\B^{*}\A) ,
+\]
+the **Frobenius inner product**, and observing that it is nothing but the standard inner product of \( F^{mn} \) after the entries are listed in a single column. Its induced norm (@def-induced-norm) was named there but never given a symbol. This is the place to give it one, because the single property that makes it useful is a statement about unitary factors, and unitary factors have only just arrived.
+
+For \( \A \in M_{m \times n}(\nC) \), the **Frobenius norm** of \( \A \) is
+\[
+\norm{\A}_F \coloneqq \sqrt{\inner{\A}{\A}}
+= \Bigl( \sum_{i,j} \lvert a_{ij} \rvert^2 \Bigr)^{1/2} .
+\]
+The subscript \( F \) is there because \( \norm{\cdot} \) with no subscript already means the norm of a *vector*, and a matrix will later be asked to be both. Two remarks on the formula. First, it treats \( \A \) as a list of \( mn \) numbers and forgets that they are arranged in a rectangle: it is blind to the difference between \( \begin{pmatrix} 1 & 0 \\ 0 & 0\end{pmatrix} \) and \( \begin{pmatrix} 0 & 1 \\ 0 & 0\end{pmatrix} \). Second, it is computable with no eigenvalues, no row reduction and no choices: add up \( mn \) squared moduli.
+
+The trace form of the same quantity is the one that does the work.
+
+::: {.check}
+Why is \( \norm{\A}_F^2 = \tr(\A^{*}\A) \)?
+:::
+
+::: {.solution}
+The \( (j, j) \) entry of \( \A^{*}\A \) is \( \sum_i \conj{a_{ij}}a_{ij} = \sum_i \lvert a_{ij}\rvert^2 \), the squared length of the \( j \)-th column. Summing over \( j \) sweeps every entry of \( \A \) exactly once, so \( \tr(\A^{*}\A) = \sum_{i,j}\lvert a_{ij}\rvert^2 \). Equivalently, it is \( \inner{\A}{\A} \) read off the definition of the Frobenius inner product.
+:::
+
+Now the property that makes this the right yardstick whenever orthonormal bases are in play: unitary factors are invisible to it.
+
+::: {#lem-frobenius-unitarily-invariant}
+[Unitary Invariance of the Frobenius Norm]
+
+Let \( \A \in M_{m \times n}(\nC) \), let \( \U \in \Unit(m) \) and let \( \V \in \Unit(n) \). Then
+\[
+\norm{\U\A}_F = \norm{\A}_F = \norm{\A\V}_F .
+\]
+In particular, if \( \A \) is square and \( \U \) is unitary then \( \norm{\U^{*}\A\U}_F = \norm{\A}_F \).
+:::
+
+::: {.proof}
+Using \( \norm{\B}_F^2 = \tr(\B^{*}\B) \), then \( (\U\A)^{*} = \A^{*}\U^{*} \) and \( \U^{*}\U = \I_m \),
+\[
+\norm{\U\A}_F^2 = \tr(\A^{*}\U^{*}\U\A) = \tr(\A^{*}\A) = \norm{\A}_F^2 .
+\]
+For the right-hand factor, @thm-trace-properties (3) lets the \( \V \) travel around the trace, and \( \V\V^{*} = \I_n \):
+\[
+\norm{\A\V}_F^2 = \tr(\V^{*}\A^{*}\A\V) = \tr(\A^{*}\A\V\V^{*}) = \norm{\A}_F^2 .
+\]
+Both norms are non-negative reals, so equality of the squares gives equality of the norms. For the last statement, \( \U^{*} \) is unitary too, since \( (\U^{*})^{*}\U^{*} = \U\U^{*} = \I \); apply the first equality to the left factor \( \U^{*} \) and the second to the right factor \( \U \).
+:::
+
+The consequence to keep in mind is this. If \( T \in \cL(V) \) is an operator on a finite-dimensional complex inner product space and we compute \( \norm{\mtx{T}{\sB}{\sB}}_F \) in an **orthonormal** basis \( \sB \), the answer does not depend on which orthonormal basis we chose, because two such matrices differ by a unitary similarity (@thm-change-of-basis-maps). So the Frobenius norm is a property of \( T \), not of our coordinates — exactly like the trace and the determinant, and unlike, say, the largest entry.
+
 ## Rotations and reflections of the plane
 
 In dimension \( 2 \) the group \( \Orth(2) \) can be written down completely, and the two determinant values split it into exactly the two families the words suggest. For \( \theta \in \nR \) put

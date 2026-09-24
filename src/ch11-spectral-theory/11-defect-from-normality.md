@@ -4,56 +4,14 @@ Every theorem so far in this chapter has been a yes-or-no statement. An operator
 
 Throughout, \( \A \in M_n(\nC) \) and \( \nC^n \) carries the standard inner product. Eigenvalues are always counted **in \( \nC \)** and **with algebraic multiplicity**, so that an \( n \times n \) matrix always has a list of exactly \( n \) of them (@cor-complex-polynomial-splits).
 
-## The Frobenius norm, officially
+## The yardstick
 
-Chapter 10 made \( M_{m \times n}(F) \) into an inner product space in its first section, by declaring
+Sizes here are measured in the **Frobenius norm**, which Chapter 10 §07 defined as the norm induced by the Frobenius inner product:
 \[
-\inner{\A}{\B} = \tr(\B^{*}\A) ,
+\norm{\A}_F = \sqrt{\inner{\A}{\A}} = \Bigl( \sum_{i,j}\lvert a_{ij}\rvert^2 \Bigr)^{1/2}
+= \sqrt{\tr(\A^{*}\A)} ,
 \]
-the **Frobenius inner product**, and observing that it is nothing but the standard inner product of \( F^{mn} \) after the entries are listed in a single column. Its induced norm (@def-induced-norm) was named there too, but never given a symbol, and we have already borrowed one on the quiet in @exr-schur-triangularization-c2. It is time to make it official, because the whole of this section is written in it.
-
-For \( \A \in M_{m \times n}(\nC) \), the **Frobenius norm** of \( \A \) is
-\[
-\norm{\A}_F \coloneqq \sqrt{\inner{\A}{\A}}
-= \Bigl( \sum_{i,j} \lvert a_{ij} \rvert^2 \Bigr)^{1/2} .
-\]
-The subscript \( F \) is there because \( \norm{\cdot} \) with no subscript already means the norm of a *vector*, and a matrix will shortly be asked to be both. Two remarks on the formula. First, it treats \( \A \) as a list of \( mn \) numbers and forgets that they are arranged in a rectangle: it is blind to the difference between \( \begin{pmatrix} 1 & 0 \\ 0 & 0\end{pmatrix} \) and \( \begin{pmatrix} 0 & 1 \\ 0 & 0\end{pmatrix} \). Second, it is computable with no eigenvalues, no row reduction and no choices: add up \( mn \) squared moduli.
-
-The trace form of the same quantity is the one that does the work.
-
-::: {.check}
-Why is \( \norm{\A}_F^2 = \tr(\A^{*}\A) \)?
-:::
-
-::: {.solution}
-The \( (j, j) \) entry of \( \A^{*}\A \) is \( \sum_i \conj{a_{ij}}a_{ij} = \sum_i \lvert a_{ij}\rvert^2 \), the squared length of the \( j \)-th column. Summing over \( j \) sweeps every entry of \( \A \) exactly once, so \( \tr(\A^{*}\A) = \sum_{i,j}\lvert a_{ij}\rvert^2 \). Equivalently, it is \( \inner{\A}{\A} \) read off the definition of the Frobenius inner product.
-:::
-
-Now the property that makes the Frobenius norm the right yardstick in a chapter about orthonormal bases: unitary factors are invisible to it.
-
-::: {#lem-frobenius-unitarily-invariant}
-[Unitary Invariance of the Frobenius Norm]
-
-Let \( \A \in M_{m \times n}(\nC) \), let \( \U \in \Unit(m) \) and let \( \V \in \Unit(n) \). Then
-\[
-\norm{\U\A}_F = \norm{\A}_F = \norm{\A\V}_F .
-\]
-In particular, if \( \A \) is square and \( \U \) is unitary then \( \norm{\U^{*}\A\U}_F = \norm{\A}_F \).
-:::
-
-::: {.proof}
-Using \( \norm{\B}_F^2 = \tr(\B^{*}\B) \), then \( (\U\A)^{*} = \A^{*}\U^{*} \) and \( \U^{*}\U = \I_m \),
-\[
-\norm{\U\A}_F^2 = \tr(\A^{*}\U^{*}\U\A) = \tr(\A^{*}\A) = \norm{\A}_F^2 .
-\]
-For the right-hand factor, @thm-trace-properties (3) lets the \( \V \) travel around the trace, and \( \V\V^{*} = \I_n \):
-\[
-\norm{\A\V}_F^2 = \tr(\V^{*}\A^{*}\A\V) = \tr(\A^{*}\A\V\V^{*}) = \norm{\A}_F^2 .
-\]
-Both norms are non-negative reals, so equality of the squares gives equality of the norms. For the last statement, \( \U^{*} \) is unitary too, since \( (\U^{*})^{*}\U^{*} = \U\U^{*} = \I \); apply the first equality to the left factor \( \U^{*} \) and the second to the right factor \( \U \).
-:::
-
-The consequence to keep in mind is this. If \( T \in \cL(V) \) is an operator on a finite-dimensional complex inner product space and we compute \( \norm{\mtx{T}{\sB}{\sB}}_F \) in an **orthonormal** basis \( \sB \), the answer does not depend on which orthonormal basis we chose, because two such matrices differ by a unitary similarity (@thm-change-of-basis-maps). So the Frobenius norm is a property of \( T \), not of our coordinates — exactly like the trace and the determinant, and unlike, say, the largest entry.
+where \( \inner{\A}{\B} = \tr(\B^{*}\A) \). It is the right instrument here for one reason, proved there: unitary factors are invisible to it, so \( \norm{\U\A}_F = \norm{\A}_F = \norm{\A\V}_F \) for unitary \( \U \) and \( \V \), and in particular a unitary similarity leaves it alone (@lem-frobenius-unitarily-invariant). Everything below follows from that one sentence and from Schur's theorem.
 
 ## Schur's inequality
 

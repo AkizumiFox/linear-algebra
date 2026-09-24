@@ -434,7 +434,7 @@ Chapter 8 reached the same conclusion from the flag of invariant subspaces (@exr
 :::: {#exr-schur-triangularization-c2}
 [C2: The Frobenius norm is unitarily invariant]
 
-For \( \A \in M_{m \times n}(\nC) \) write \( \norm{\A}_F^2 \coloneqq \sum_{i, j} \lvert a_{ij} \rvert^2 \); this is the norm induced by the Frobenius inner product \( \inner{\A}{\B} = \tr(\B^{*}\A) \) of Chapter 10, Section 1.
+Chapter 10 §07 introduced the Frobenius norm \( \norm{\A}_F = \bigl(\sum_{i, j} \lvert a_{ij} \rvert^2\bigr)^{1/2} \) and proved (a) and (b) below as @lem-frobenius-unitarily-invariant. Prove them again here without looking, since the argument is two lines and (c) is what this section is for.
 
 ::: {.enumerate options="label=(\alph*)"}
 1. Prove that \( \norm{\A}_F^2 = \tr(\A^{*}\A) \).

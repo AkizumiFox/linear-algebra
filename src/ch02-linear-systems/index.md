@@ -11,7 +11,7 @@ We do not treat the algorithm as a recipe. We prove that row operations never ch
 - **Three views of a linear system.** Intersecting lines and planes, combinations of columns, and a single matrix equation; the shape of the solution set as a particular solution plus the homogeneous solutions.
 - **Gaussian elimination.** Row operations, echelon and reduced echelon forms, and how to read the solutions off the reduced form.
 - **Uniqueness of the reduced form.** Different sequences of row operations always reach the same reduced matrix, so pivot columns are well defined.
-- **Elementary matrices and inverses.** Row operations as left multiplication, the invertible matrix theorem, and computing inverses by row reduction.
+- **Elementary matrices and inverses.** Row operations as left multiplication, the invertible matrix theorem, computing inverses by row reduction, and the permutation matrices that later chapters use to relabel coordinates.
 - **Rank.** Row space, column space and null space; row rank equals column rank; the Rouché–Capelli theorem; and a toolkit for the questions of Chapter 1.
 - **LU factorization.** Storing elimination as a product of triangular matrices, with and without row swaps.
 - **Applications.** Polynomial interpolation, balancing chemical equations, networks, and a puzzle over \( \nF_2 \).

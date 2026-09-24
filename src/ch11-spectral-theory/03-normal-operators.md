@@ -227,7 +227,7 @@ the last step because a scalar leaves the second slot conjugated. Subtracting, \
 ::: {#thm-normal-powers}
 [A Normal Operator Has No Hidden Kernel]
 
-Let \( T \in \cL(V) \) be normal. Then \( \ker T^{k} = \ker T \) for every integer \( k \ge 1 \). In particular, a normal nilpotent operator is the zero operator.
+Let \( T \in \cL(V) \) be normal. Then \( \ker T^{k} = \ker T \) for every integer \( k \ge 1 \). In particular, if \( T^{k} = 0 \) for some \( k \ge 1 \) — that is, if \( T \) is **nilpotent** (@def-nilpotent) — then \( T = 0 \).
 :::
 
 ::: {.idea}
@@ -246,7 +246,7 @@ so \( \w = T\v = \0 \) and \( \v \in \ker T \). Hence \( \ker T^2 = \ker T \).
 
 Now induct on \( k \). The cases \( k = 1, 2 \) are done. Let \( k \ge 2 \) and assume \( \ker T^{k} = \ker T \). If \( T^{k+1}\v = \0 \), then \( T^{2}\bigl(T^{k-1}\v\bigr) = \0 \), so \( T^{k}\v = T\bigl(T^{k-1}\v\bigr) = \0 \) by the case \( k = 2 \), and then \( T\v = \0 \) by the inductive hypothesis. So \( \ker T^{k+1} \subseteq \ker T \), and the reverse inclusion is again free.
 
-Finally, if \( T \) is nilpotent (@def-nilpotent), say \( T^{k} = 0 \), then \( \ker T = \ker T^{k} = V \), so \( T = 0 \).
+Finally, if \( T^{k} = 0 \) for some \( k \ge 1 \), then \( \ker T = \ker T^{k} = V \), so \( T = 0 \).
 :::
 
 This is the sentence that explains why normal operators never produce Jordan blocks. Over \( \nC \), a Jordan block of size \( m \ge 2 \) for the eigenvalue \( \lambda \) contributes a vector killed by \( (T - \lambda\,\id_V)^{m} \) but not by \( T - \lambda\,\id_V \) (@def-jordan-chain). For a normal \( T \) the operator \( T - \lambda\,\id_V \) is normal, as the proof of @thm-normal-eigenvector-shared showed, so @thm-normal-powers forbids such a vector. Every block in the Jordan form of a normal operator therefore has size \( 1 \), and a normal operator on a complex space is diagonalizable (@thm-jordan-canonical-form, @def-diagonalizable).

@@ -361,6 +361,44 @@ Multiplying out confirms it: the last two factors give \( \begin{pmatrix} 2 & 1 
 which agrees with @thm-two-by-two-inverse, since \( ad - bc = 1 \). The factorization is not unique: a different sequence of operations gives different factors.
 :::
 
+## Permutation matrices
+
+A row swap is one elementary matrix. Doing several of them in a row is not, but the product is still a matrix of a single recognizable kind, and it is worth naming here because it turns up far beyond this chapter: it is how a relabeling of coordinates becomes a matrix.
+
+::: {#def-permutation-matrix}
+[Permutation matrix]
+
+Let \( \sigma \in S_n \) be a permutation of \( \{1, \dots, n\} \). The **permutation matrix** of \( \sigma \) is
+\[
+\P_\sigma = \begin{pmatrix} \e_{\sigma(1)} & \e_{\sigma(2)} & \cdots & \e_{\sigma(n)} \end{pmatrix} \in M_n(F),
+\]
+the matrix whose \( j \)-th column is \( \e_{\sigma(j)} \). A matrix is a **permutation matrix** if it equals \( \P_\sigma \) for some \( \sigma \in S_n \).
+:::
+
+Equivalently, a permutation matrix has exactly one \( 1 \) in each row and in each column, and zeros elsewhere. The identity is \( \P_{\id} \), and \( \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix} \) is \( \P_\tau \) for the transposition \( \tau = (1\ 2) \), which is also the elementary matrix \( \P_{12} \). By contrast \( \begin{pmatrix} 1 & 1 \\ 0 & 1 \end{pmatrix} \) is **not** a permutation matrix: each column is still non-zero, but its first row contains two \( 1 \)'s, and its second column \( (1, 1) \) is not a standard basis vector.
+
+::: {#lem-permutation-matrices}
+[Permutation matrices]
+
+Let \( \sigma, \tau \in S_n \).
+
+::: {.enumerate options="label=(\alph*)"}
+1. \( \P_\sigma \P_\tau = \P_{\sigma \circ \tau} \). In particular a product of permutation matrices is a permutation matrix.
+2. \( \P_\sigma \) is invertible and \( \P_\sigma^{-1} = \P_\sigma\tp \).
+3. If \( \tau = (r\ s) \) is a transposition, then \( \P_\tau \) is the elementary matrix \( \P_{rs} \) that swaps rows \( r \) and \( s \), and \( \P_\tau^2 = \I \).
+:::
+:::
+
+::: {.proof}
+(a) By @thm-matrix-times-vector-columns, \( \P_\tau \e_j = \e_{\tau(j)} \) and so \( \P_\sigma \P_\tau \e_j = \P_\sigma \e_{\tau(j)} = \e_{\sigma(\tau(j))} \). So the \( j \)-th column of \( \P_\sigma \P_\tau \) is \( \e_{(\sigma \circ \tau)(j)} \), for every \( j \), which is the claim.
+
+(b) By @thm-three-views-of-product, \( (\P_\sigma\tp \P_\sigma)_{ij} = \e_{\sigma(i)}\tp \e_{\sigma(j)} \), which is \( 1 \) if \( \sigma(i) = \sigma(j) \) and \( 0 \) otherwise. Since \( \sigma \) is injective, \( \sigma(i) = \sigma(j) \) exactly when \( i = j \). Hence \( \P_\sigma\tp \P_\sigma = \I \), and by @thm-one-sided-inverse, \( \P_\sigma \) is invertible with inverse \( \P_\sigma\tp \).
+
+(c) Swapping rows \( r \) and \( s \) of \( \I \) produces a matrix whose column \( r \) is \( \e_s \), whose column \( s \) is \( \e_r \), and whose other columns \( j \) are \( \e_j \). These are the columns \( \e_{\tau(j)} \), so the swap matrix is \( \P_\tau \). Since \( \tau \circ \tau = \id \), part (a) gives \( \P_\tau^2 = \P_{\id} = \I \). This proves the lemma.
+:::
+
+By (c) and @thm-row-op-is-left-multiplication, \( \P_\tau \A \) is \( \A \) with rows \( r \) and \( s \) swapped, and by (a) every permutation matrix is a product of such swaps applied in turn, since for \( n \ge 2 \) every permutation is a product of transpositions (@thm-transpositions-generate). So \( \P_\sigma\A \) is always \( \A \) with its rows rearranged.
+
 ## Row equivalence, revisited
 
 Two descriptions of "row equivalent" are now on the table. @exm-row-equivalence of Chapter 0 said \( \B = \E\A \) for some invertible \( \E \). @def-row-equivalent says \( \B \) is reachable from \( \A \) by finitely many row operations. Chapter 0 promised that they agree, and now it is one line each way.

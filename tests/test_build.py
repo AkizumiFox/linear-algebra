@@ -210,18 +210,49 @@ class TestHtmlBuild(FixtureBookCase):
         self.assertIn('data-ref="thm-main"', results)
         self.assertIn('href="ch01-basics/01-first.html#thm-main"', results)
         self.assertIn("Main Theorem", results)
-        # The graph is chapter-level: nodes are chapters, edges carry citation counts
+        # The graph is chapter-level: nodes are chapters, edges count the citations made
+        # *inside a result*. Chapter 2 §01's opening prose names three of Chapter 1's
+        # results and that is deliberately not an edge -- counting prose is what made the
+        # old graph nearly complete. The one edge comes from §02's proof of thm-area.
         graph = json.loads((self.html / "graph.json").read_text())
         self.assertEqual([n["id"] for n in graph["nodes"]], ["ch01-basics", "ch02-more"])
         self.assertTrue(any(e["source"] == "ch01-basics" and e["target"] == "ch02-more" and e["weight"] >= 1
                             for e in graph["edges"]), graph["edges"])
+        # and the remark beside it is carried as a soft citation, not as a dependency
+        self.assertTrue(any(e["soft"] >= 1 for e in graph["edges"]), graph["edges"])
         self.assertTrue(all(e["source"] != e["target"] for e in graph["edges"]))
         # Only the transitive reduction is drawn; the rest carry implied = true
         self.assertTrue(all("implied" in e for e in graph["edges"]), graph["edges"])
         self.assertIn('data-graph="graph.json"', self.page("graph.html"))
         self.assertIn("graph.js?v=", self.page("graph.html"))
         navigation = json.loads((self.html / "navigation.json").read_text())
-        self.assertEqual([e["path"] for e in navigation["extras"]], ["results.html", "graph.html"])
+        self.assertEqual([e["path"] for e in navigation["extras"]],
+                         ["paths.html", "results.html", "graph.html"])
+
+    def test_graph_data_carries_the_closures_the_picker_needs(self):
+        """A reader picks a target; the graph looks its closure up rather than walking."""
+        graph = json.loads((self.html / "graph.json").read_text())
+        self.assertEqual(graph["total"], 4)
+        self.assertEqual([p["slug"] for p in graph["profiles"]], ["example"])
+        closure = graph["closures"]["ch01-basics/02"]
+        self.assertEqual(closure["n"], 2)                   # 01 and 02 of Chapter 1
+        self.assertEqual(closure["chapters"], {"0": 2})     # keyed by chapter position
+        self.assertLessEqual(closure["n"], closure["nx"])   # exercises never shorten a path
+        # Soft citations are carried alongside the hard ones rather than drawn
+        self.assertTrue(all("soft" in e and "weight" in e for e in graph["edges"]))
+
+    def test_reading_path_pages_are_generated_and_closed(self):
+        index = self.page("paths.html")
+        self.assertIn('href="path-example.html"', index)
+        self.assertIn("An example reader", index)
+        page = self.page("path-example.html")
+        self.assertIn('href="ch01-basics/01-first.html"', page)
+        self.assertIn('href="ch01-basics/02-second.html"', page)
+        self.assertIn("2 of the book's 4 sections", index + page)
+        # The path a reader is handed must contain its own prerequisites
+        graph = reading_path.graph_from_labels(self.labels())
+        closure = graph.closure(["ch01-basics/02"])
+        self.assertTrue(graph.is_closed(closure), graph.is_closed(closure).report())
 
     def test_citation_kinds_recorded_beside_uses(self):
         """`uses` keeps its flat shape; `uses_kinds` says which block made each citation.

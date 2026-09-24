@@ -14,7 +14,7 @@ The gain is out of all proportion to the cost. Length gives the Cauchy–Schwarz
 - **Least squares and minimum-norm solutions.** What to do with an inconsistent system: the normal equations, and the smallest solution of an underdetermined one.
 - **The Riesz representation theorem.** Every linear functional is an inner product with one fixed vector, which is the chosen isomorphism \( V \cong V^{*} \) that Chapter 4 could not supply.
 - **The adjoint.** Moving an operator to the other side of an inner product, the matrix \( \A^{*} \), and the four fundamental subspaces in orthogonal form.
-- **Isometries and unitary maps.** The maps that preserve all lengths, their many equivalent descriptions, and the classification of \( \Orth(2) \).
+- **Isometries and unitary maps.** The maps that preserve all lengths, their many equivalent descriptions, the Frobenius norm and its blindness to unitary factors, and the classification of \( \Orth(2) \).
 - **QR, Householder and Hessenberg.** Gram–Schmidt as a matrix factorization, reflections that do the same job more robustly, and the first step of a serious eigenvalue algorithm.
 - **Bessel, Parseval and Fourier series.** What an orthonormal list captures of a vector, and the classical Fourier coefficients as an instance.
 - **Orthogonal polynomials.** Gram–Schmidt on \( 1, x, x^2, \dots \), the three-term recurrence, real roots, and Gaussian quadrature.

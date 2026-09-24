@@ -15,6 +15,12 @@ That distinction is the whole point of this tool:
   exercise, a solution or a check. Remove the cited result and a sentence needs
   rewording, or an exercise loses its point, but nothing is left unproved.
 
+The one case that is genuinely both is the solution: a solution is the proof of
+its exercise, and solutions make half of the book's citations. So the policy is
+a parameter, `hard_kinds`, and the book publishes both answers side by side --
+a reading path (`HARD_KINDS`) and a path for a reader who also works the
+exercises (`EXERCISE_KINDS`) -- rather than choosing for the reader.
+
 The graph is built **section by section**, not chapter by chapter (chapter-level
 closures are roughly twice the size) and not from `scan.json`'s per-page `refs`,
 which is what the dependency-graph page uses today: `refs` counts every citation
@@ -32,10 +38,14 @@ Command line
     python3 tools/reading_path.py ch11-spectral-theory/04 ch12-psd-and-svd/08 --soft
     python3 tools/reading_path.py ch18-nonnegative/05 --json
     python3 tools/reading_path.py ch22-algebras/08 --weakest 3
+    python3 tools/reading_path.py --list-profiles
+    python3 tools/reading_path.py --profile statistics --with-exercises
 
 A target is written `<chapter directory>/<section number>`, the way the file
 names it: `ch12-psd-and-svd/08`, or `ch12-psd-and-svd/index` for a chapter's
-index page. Run `./build.py html` first.
+index page. A profile is a named set of targets kept in `config/config.json`,
+which is also what the generated reading-path pages are built from. Run
+`./build.py html` first.
 
 Importable
 ----------
@@ -58,6 +68,7 @@ TOOLS = Path(__file__).resolve().parent
 ROOT = TOOLS.parent
 INDEX = ROOT / "_build" / "crossref_labels.json"
 NAVIGATION = ROOT / "_build" / "html" / "navigation.json"
+CONFIG = ROOT / "config" / "config.json"
 
 
 def _load_forward_deps():
@@ -81,6 +92,12 @@ from_file = _load_forward_deps().from_file
 # goes away. `claim` and `proofofclaim` are here for completeness: in practice a
 # claim sits inside the proof div, so its citations already arrive as "proof".
 HARD_KINDS = frozenset({"proof", "proofofclaim", "claim", "idea"})
+
+# The same, for a reader who also works the exercises. A solution *is* the proof of
+# its exercise, and solutions make 5,778 of the book's 11,612 citations, so whether
+# they count is the one question the reader has to answer for themselves. The two
+# reading-path variants are the two answers; nothing here picks one.
+EXERCISE_KINDS = HARD_KINDS | {"solution"}
 
 # A citation whose kind is unknown (an index written before `uses_kinds` existed)
 # is counted soft, and the count is reported rather than silently assumed.
@@ -142,10 +159,11 @@ class ClosureCheck:
 class SectionGraph:
     """Sections and the citations between them, split into hard and soft edges."""
 
-    def __init__(self, citations, sections, titles=None):
+    def __init__(self, citations, sections, titles=None, hard_kinds=HARD_KINDS):
         self.citations = list(citations)
         self.sections = dict(sections)               # section id -> sort key
         self.titles = dict(titles or {})
+        self.hard_kinds = frozenset(hard_kinds)      # which policy built these edges
         self.unknown_kinds = sum(1 for c in self.citations if UNKNOWN_KIND in c.kinds)
         self.hard_out = defaultdict(list)
         self.soft_out = defaultdict(list)
@@ -257,8 +275,14 @@ class SectionGraph:
 # Loading
 # =============================================================================
 
-def graph_from_labels(labels: dict, titles=None) -> SectionGraph:
-    """Build the section graph from a `crossref_labels` mapping."""
+def graph_from_labels(labels: dict, titles=None, hard_kinds=HARD_KINDS) -> SectionGraph:
+    """Build the section graph from a `crossref_labels` mapping.
+
+    `hard_kinds` is the policy: which citing environments make an edge a
+    prerequisite rather than context. Pass `EXERCISE_KINDS` for the reader who
+    also works the exercises.
+    """
+    hard_kinds = frozenset(hard_kinds)
     sections = {}
     where = {}
     for name, rec in labels.items():
@@ -282,8 +306,8 @@ def graph_from_labels(labels: dict, titles=None) -> SectionGraph:
             kinds = tuple(kinds_by_label.get(cited) or (UNKNOWN_KIND,))
             citations.append(Citation(src=src, dst=dst, citing=name, cited=cited,
                                       kinds=kinds,
-                                      hard=any(k in HARD_KINDS for k in kinds)))
-    return SectionGraph(citations, sections, titles)
+                                      hard=any(k in hard_kinds for k in kinds)))
+    return SectionGraph(citations, sections, titles, hard_kinds)
 
 
 def load_titles(path=NAVIGATION) -> dict:
@@ -305,12 +329,26 @@ def load_titles(path=NAVIGATION) -> dict:
     return titles
 
 
-def load_graph(index=INDEX, navigation=NAVIGATION) -> SectionGraph:
+def load_graph(index=INDEX, navigation=NAVIGATION, hard_kinds=HARD_KINDS) -> SectionGraph:
     index = Path(index)
     if not index.exists():
         raise FileNotFoundError(f"{index} not found; run ./build.py html first")
     labels = json.loads(index.read_text(encoding="utf-8"))["crossref_labels"]
-    return graph_from_labels(labels, load_titles(navigation))
+    return graph_from_labels(labels, load_titles(navigation), hard_kinds)
+
+
+def load_profiles(config=CONFIG) -> list:
+    """The reader profiles, from `config/config.json`'s `reading-paths`.
+
+    Each is `{"slug", "name", "description", "targets"}`. They live in the config
+    so that the author can add one, or change where one aims, without touching
+    code; the build reads the same list to generate the pages.
+    """
+    path = Path(config)
+    if not path.exists():
+        return []
+    data = json.loads(path.read_text(encoding="utf-8"))
+    return list(data.get("reading-paths") or [])
 
 
 # =============================================================================
@@ -329,8 +367,15 @@ def _print_path(graph, closure, label):
 def main(argv=None):
     parser = argparse.ArgumentParser(
         description="The sections a reader needs in order to read the given ones.")
-    parser.add_argument("targets", nargs="+", metavar="SECTION",
+    parser.add_argument("targets", nargs="*", metavar="SECTION",
                         help="e.g. ch12-psd-and-svd/08")
+    parser.add_argument("--profile", metavar="SLUG",
+                        help="take the targets from a reader profile in config/config.json")
+    parser.add_argument("--list-profiles", action="store_true",
+                        help="print the reader profiles and their targets, then stop")
+    parser.add_argument("--with-exercises", action="store_true",
+                        help="count a solution as the proof of its exercise, so exercises "
+                             "bring their prerequisites onto the path too")
     parser.add_argument("--soft", action="store_true",
                         help="also close over soft citations (statements, remarks, solutions)")
     parser.add_argument("--weakest", type=int, default=2, metavar="N",
@@ -339,16 +384,38 @@ def main(argv=None):
     parser.add_argument("--verify", action="store_true",
                         help="only check that the path is closed; exit 1 if it is not")
     parser.add_argument("--index", default=INDEX, help="path to crossref_labels.json")
+    parser.add_argument("--config", default=CONFIG, help="path to config.json (for --profile)")
     args = parser.parse_args(argv)
 
+    profiles = load_profiles(args.config)
+    if args.list_profiles:
+        for profile in profiles:
+            print(f"{profile.get('slug', '?'):<20} {profile.get('name', '')}")
+            print(f"  {'; '.join(profile.get('targets') or [])}")
+        if not profiles:
+            print("no reader profiles in the config", file=sys.stderr)
+            return 1
+        return 0
+
+    targets = list(args.targets)
+    if args.profile:
+        chosen = next((p for p in profiles if p.get("slug") == args.profile), None)
+        if chosen is None:
+            print(f"no reader profile {args.profile!r}; try --list-profiles", file=sys.stderr)
+            return 1
+        targets += list(chosen.get("targets") or [])
+    if not targets:
+        parser.error("give at least one section, or --profile")
+
+    kinds = EXERCISE_KINDS if args.with_exercises else HARD_KINDS
     try:
-        graph = load_graph(args.index)
+        graph = load_graph(args.index, hard_kinds=kinds)
     except FileNotFoundError as exc:
         print(exc, file=sys.stderr)
         return 1
     try:
-        hard = graph.closure(args.targets, hard_only=True)
-        full = graph.closure(args.targets, hard_only=False)
+        hard = graph.closure(targets, hard_only=True)
+        full = graph.closure(targets, hard_only=False)
     except KeyError as exc:
         print(exc.args[0], file=sys.stderr)
         return 1
@@ -379,7 +446,7 @@ def main(argv=None):
         return 0 if check else 1
 
     total = len(graph.sections)
-    _print_path(graph, hard, "Hard dependencies (proof, idea, claim)")
+    _print_path(graph, hard, "Prerequisites (" + ", ".join(sorted(graph.hard_kinds)) + ")")
     print(f"\n{len(hard)} of {total} sections on hard edges; "
           f"{len(full)} of {total} once soft citations count too "
           f"(+{len(full) - len(hard)}).")

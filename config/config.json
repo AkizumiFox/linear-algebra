@@ -74,6 +74,133 @@
       "check"
     ]
   },
+  "reading-paths": [
+    {
+      "slug": "computer-science",
+      "name": "Computer science and machine learning",
+      "description": "The singular value decomposition and what is built on it: low-rank approximation, the pseudoinverse, principal components, graph Laplacians and PageRank.",
+      "targets": [
+        "ch12-psd-and-svd/10",
+        "ch12-psd-and-svd/11",
+        "ch18-nonnegative/08",
+        "ch23-applied/10",
+        "ch23-applied/11"
+      ]
+    },
+    {
+      "slug": "economics",
+      "name": "Economics and econometrics",
+      "description": "Least squares, definiteness and the second-derivative test, linear programming duality and matrix games, Markov chains, and the M-matrices behind an input-output model.",
+      "targets": [
+        "ch10-inner-products/04",
+        "ch13-forms/06",
+        "ch17-convexity/06",
+        "ch17-convexity/07",
+        "ch18-nonnegative/06",
+        "ch18-nonnegative/09"
+      ]
+    },
+    {
+      "slug": "pure-mathematics",
+      "name": "Pure mathematics and algebra",
+      "description": "Canonical forms over an arbitrary field, quadratic forms and Witt's theorems, the exterior algebra, and the characters of a finite group.",
+      "targets": [
+        "ch09-canonical-forms/06",
+        "ch09-canonical-forms/07",
+        "ch13-forms/08",
+        "ch14-tensors/10",
+        "ch22-algebras/08"
+      ]
+    },
+    {
+      "slug": "optimization",
+      "name": "Optimization and operations research",
+      "description": "Least squares, separating hyperplanes, linear programming duality, polytopes and convex functions, the Loewner order, and conjugate gradients.",
+      "targets": [
+        "ch10-inner-products/04",
+        "ch12-psd-and-svd/05",
+        "ch17-convexity/06",
+        "ch17-convexity/09",
+        "ch17-convexity/11",
+        "ch23-applied/07"
+      ]
+    },
+    {
+      "slug": "physics",
+      "name": "Physics and quantum mechanics",
+      "description": "The matrix exponential, the functional calculus of a normal operator, Minkowski space, tensor products in quantum mechanics, and the normal modes of a vibrating structure.",
+      "targets": [
+        "ch09-canonical-forms/09",
+        "ch11-spectral-theory/08",
+        "ch13-forms/11",
+        "ch14-tensors/11",
+        "ch23-applied/09"
+      ]
+    },
+    {
+      "slug": "signal-processing",
+      "name": "Electrical engineering and signal processing",
+      "description": "Orthogonal expansions, the QR factorization, circulants and the discrete Fourier transform, the singular value decomposition, conditioning, and the fast Fourier transform.",
+      "targets": [
+        "ch10-inner-products/08",
+        "ch10-inner-products/09",
+        "ch11-spectral-theory/09",
+        "ch12-psd-and-svd/08",
+        "ch15-norms/08",
+        "ch23-applied/12"
+      ]
+    },
+    {
+      "slug": "statistics",
+      "name": "Statistics",
+      "description": "Least squares in theory and in floating point, Gram matrices, two quadratic forms diagonalized at once, and principal components.",
+      "targets": [
+        "ch10-inner-products/04",
+        "ch12-psd-and-svd/03",
+        "ch12-psd-and-svd/04",
+        "ch23-applied/03",
+        "ch23-applied/10"
+      ]
+    },
+    {
+      "slug": "graphics",
+      "name": "Graphics and geometry",
+      "description": "Signed volume and orientation, the shape of a rotation, the polar decomposition, Euclidean motions, projective transformations, quadrics, and line coordinates in space.",
+      "targets": [
+        "ch06-determinants/09",
+        "ch11-spectral-theory/06",
+        "ch12-psd-and-svd/09",
+        "ch21-geometry/04",
+        "ch21-geometry/05",
+        "ch21-geometry/07",
+        "ch21-geometry/10"
+      ]
+    },
+    {
+      "slug": "control",
+      "name": "Control theory",
+      "description": "The matrix exponential and linear differential equations, convergent and power-bounded matrices, the Sylvester and Lyapunov equations, the spectral radius, and Krylov subspaces.",
+      "targets": [
+        "ch09-canonical-forms/09",
+        "ch09-canonical-forms/10",
+        "ch11-spectral-theory/10",
+        "ch15-norms/04",
+        "ch23-applied/06"
+      ]
+    },
+    {
+      "slug": "coding-theory",
+      "name": "Coding theory and cryptography",
+      "description": "The algebra that codes and lattices are built from: changing the field, rank over a finite field, irreducible polynomials, the Chinese remainder theorem, and the Smith normal form.",
+      "targets": [
+        "ch01-vector-spaces/09",
+        "ch02-linear-systems/05",
+        "ch05-polynomials/03",
+        "ch05-polynomials/06",
+        "ch09-canonical-forms/07"
+      ]
+    }
+  ],
   "chapters": [
     {
       "dir": "src/ch00-foundations",

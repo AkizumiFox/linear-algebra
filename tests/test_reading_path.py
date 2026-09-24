@@ -48,6 +48,14 @@ BOOK = {
     "def-g": label("ch04-end/01-one.html", {}, kind="definition"),
 }
 
+# The same book with one exercise added to ch02/02, whose written solution leans on
+# def-g over in ch04. A solution is the proof of its exercise, so that citation is
+# hard for a reader who works the exercises and soft for one who does not, which is
+# the whole distinction the two published variants of every path rest on.
+EXERCISE_BOOK = dict(
+    BOOK, **{"exr-h": label("ch02-middle/02-two.html", {"def-g": ["solution"]},
+                            kind="exercise")})
+
 
 class TestSectionKeys(unittest.TestCase):
 
@@ -284,6 +292,83 @@ class TestAgainstTheRealBook(unittest.TestCase):
 
     def test_every_citation_has_a_recorded_kind(self):
         self.assertEqual(self.graph.unknown_kinds, 0)
+
+
+class TestExercisePolicy(unittest.TestCase):
+    """`hard_kinds` is the policy knob, and the solution is the case that needs one."""
+
+    def test_a_solution_is_soft_for_the_reader_who_skips_the_exercises(self):
+        graph = graph_from_labels(EXERCISE_BOOK)
+        self.assertNotIn("ch04-end/01", graph.closure(["ch02-middle/02"]).sections)
+
+    def test_a_solution_is_hard_for_the_reader_who_works_them(self):
+        graph = graph_from_labels(EXERCISE_BOOK, hard_kinds=reading_path.EXERCISE_KINDS)
+        path = graph.closure(["ch02-middle/02"])
+        self.assertEqual(path.sections, ["ch02-middle/02", "ch04-end/01"])
+        self.assertTrue(graph.is_closed(path))
+
+    def test_the_longer_variant_contains_the_shorter_one(self):
+        reading = graph_from_labels(EXERCISE_BOOK)
+        with_exercises = graph_from_labels(EXERCISE_BOOK,
+                                           hard_kinds=reading_path.EXERCISE_KINDS)
+        for target in sorted(reading.sections):
+            short = set(reading.closure([target]).sections)
+            long = set(with_exercises.closure([target]).sections)
+            self.assertTrue(short <= long, target)
+
+    def test_the_graph_remembers_which_policy_built_it(self):
+        self.assertEqual(graph_from_labels(BOOK).hard_kinds, reading_path.HARD_KINDS)
+        self.assertIn("solution", reading_path.EXERCISE_KINDS)
+        self.assertTrue(reading_path.HARD_KINDS < reading_path.EXERCISE_KINDS)
+
+
+class TestProfiles(unittest.TestCase):
+    """The reader profiles live in the config so the author can edit them without code."""
+
+    def test_profiles_are_read_from_a_config(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            config = Path(tmp) / "config.json"
+            config.write_text(json.dumps({"reading-paths": [
+                {"slug": "demo", "name": "Demo", "description": "d",
+                 "targets": ["ch02-middle/01"]}]}))
+            profiles = reading_path.load_profiles(config)
+        self.assertEqual([p["slug"] for p in profiles], ["demo"])
+
+    def test_a_missing_config_is_not_an_error(self):
+        self.assertEqual(reading_path.load_profiles("/nonexistent/config.json"), [])
+
+    def test_the_books_own_profiles_are_well_formed(self):
+        for profile in reading_path.load_profiles():
+            for key in ("slug", "name", "description", "targets"):
+                self.assertTrue(profile.get(key), f"{profile.get('slug')}: {key}")
+            self.assertRegex(profile["slug"], r"^[a-z0-9-]+$")
+
+
+class TestPublishedProfilesAgainstTheRealBook(unittest.TestCase):
+    """Skipped unless the book has been built: every published path must be closed."""
+
+    def setUp(self):
+        if not reading_path.INDEX.exists():
+            self.skipTest("run ./build.py html first")
+        self.profiles = reading_path.load_profiles()
+        if not self.profiles:
+            self.skipTest("no reader profiles in the config")
+
+    def test_every_published_path_is_closed_in_both_variants(self):
+        for kinds in (reading_path.HARD_KINDS, reading_path.EXERCISE_KINDS):
+            graph = reading_path.load_graph(hard_kinds=kinds)
+            for profile in self.profiles:
+                path = graph.closure(profile["targets"])
+                check = graph.is_closed(path)
+                self.assertTrue(check, f"{profile['slug']}:\n{check.report()}")
+                for target in profile["targets"]:
+                    self.assertIn(target, path.sections)
+
+    def test_every_target_names_a_real_section(self):
+        graph = reading_path.load_graph()
+        for profile in self.profiles:
+            for target in profile["targets"]:
+                self.assertEqual(graph.resolve(target), target)
 
 
 if __name__ == "__main__":

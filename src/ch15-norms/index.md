@@ -30,11 +30,11 @@ Nothing else analytic enters silently. Where a section needs a fact outside this
 The chapter is built on results the book already has. Gathered by source, so that a reader can go back to one place at a time:
 
 - **Chapter 1 and Chapter 3** — bases, dimension and coordinates: @def-basis, @def-dimension, @def-coordinates, @thm-coordinates-linear, @cor-coordinate-isomorphism.
-- **Chapter 10 §01** — the inner product and the norm it induces, with their three properties and the two inequalities that follow: @def-inner-product, @def-induced-norm, @thm-norm-properties, @thm-cauchy-schwarz, @cor-triangle-inequality, together with the two exercises that recover an inner product from its norm, @exr-inner-products-c1 and @exr-inner-products-c2.
+- **Chapter 10 §01 and §07** — the inner product and the norm it induces, with their three properties and the two inequalities that follow: @def-inner-product, @def-induced-norm, @thm-norm-properties, @thm-cauchy-schwarz, @cor-triangle-inequality, together with the two exercises that recover an inner product from its norm, @exr-inner-products-c1 and @exr-inner-products-c2; and, from §07, the Frobenius norm and its unitary invariance, @lem-frobenius-unitarily-invariant.
 - **Chapter 10 §04 and §08** — least squares and the \( \Q\R \) factorization whose stability claim was deferred: @thm-least-squares, @cor-least-squares-unique, @thm-qr-factorization.
 - **Chapter 9 §10** — the whole convergence apparatus that this chapter re-proves with numbers attached: @def-entrywise-convergence, @lem-powers-transfer-along-similarity, @thm-matrix-powers-converge-to-zero, @thm-matrix-powers-bounded, @thm-matrix-powers-converge, @thm-neumann-series-spectral, @cor-markov-powers-converge.
 - **Chapter 9 §09 and §03** — the matrix exponential and the Jordan form: @def-matrix-exponential, @thm-exponential-series-converges, @thm-exponential-properties, @thm-jordan-canonical-form.
-- **Chapter 11** — Schur triangularization with its density corollary, and the Frobenius norm with the defect it measures: @thm-schur-triangularization, @cor-schur-normal-matrix-nearby, @lem-frobenius-unitarily-invariant, @thm-schur-inequality, @def-departure-from-normality.
+- **Chapter 11** — Schur triangularization with its density corollary, and the defect the Frobenius norm measures: @thm-schur-triangularization, @cor-schur-normal-matrix-nearby, @thm-schur-inequality, @def-departure-from-normality.
 - **Chapter 12** — the singular value decomposition and the two constructions built on it: @thm-svd, @def-singular-values, @def-pseudoinverse.
 
 ## Roadmap

@@ -359,51 +359,24 @@ since the first column of the right factor is zero. Taking \( c = 0 \) and \( c 
 
 @exm-no-lu-factorization showed that some matrices, even invertible ones, have no LU factorization, because elimination meets a zero pivot with a non-zero entry below it. The cure in Gaussian elimination is to swap rows. We now show that the swaps can all be collected in front, as a single matrix that rearranges the rows of \( \A \) **before** elimination starts. After that rearrangement, no swaps are needed.
 
-Matrices that rearrange rows have a name.
+Matrices that rearrange rows were named in @def-permutation-matrix: \( \P_\sigma \) has \( j \)-th column \( \e_{\sigma(j)} \), a product of permutation matrices is one, \( \P_\sigma^{-1} = \P_\sigma\tp \), and a transposition gives the row-swap elementary matrix (@lem-permutation-matrices). One more fact about them is needed here and nowhere else, because it is about the Gauss transforms of this section: a swap that leaves the first \( k \) coordinates alone can be pushed through \( \G_k \).
 
-::: {#def-permutation-matrix}
-[Permutation matrix]
+::: {#lem-swap-past-gauss-transform}
+[Pushing a Swap Past a Gauss Transform]
 
-Let \( \sigma \in S_n \) be a permutation of \( \{1, \dots, n\} \). The **permutation matrix** of \( \sigma \) is
-\[
-\P_\sigma = \begin{pmatrix} \e_{\sigma(1)} & \e_{\sigma(2)} & \cdots & \e_{\sigma(n)} \end{pmatrix} \in M_n(F),
-\]
-the matrix whose \( j \)-th column is \( \e_{\sigma(j)} \). A matrix is a **permutation matrix** if it equals \( \P_\sigma \) for some \( \sigma \in S_n \).
-:::
-
-Equivalently, a permutation matrix has exactly one \( 1 \) in each row and in each column, and zeros elsewhere. The identity is \( \P_{\id} \). The matrix \( \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix} \) of @exm-no-lu-factorization is \( \P_\tau \) for the transposition \( \tau = (1\ 2) \). By contrast \( \begin{pmatrix} 1 & 1 \\ 0 & 1 \end{pmatrix} \) is **not** a permutation matrix: each column is still non-zero, but its first row contains two \( 1 \)'s, and its second column \( (1, 1) \) is not a standard basis vector.
-
-::: {#lem-permutation-matrices}
-[Permutation matrices]
-
-Let \( \sigma, \tau \in S_n \).
-
-::: {.enumerate options="label=(\alph*)"}
-1. \( \P_\sigma \P_\tau = \P_{\sigma \circ \tau} \). In particular a product of permutation matrices is a permutation matrix.
-2. \( \P_\sigma \) is invertible and \( \P_\sigma^{-1} = \P_\sigma\tp \).
-3. If \( \tau = (r\ s) \) is a transposition, then \( \P_\tau \) is the elementary matrix \( \P_{rs} \) that swaps rows \( r \) and \( s \), and \( \P_\tau^2 = \I \).
-4. Let \( 1 \le k < r < s \le n \), let \( \tau = (r\ s) \), and let \( \v \in F^n \) have its first \( k \) entries zero. Then \( \P_\tau \v \) has its first \( k \) entries zero, and
+Let \( 1 \le k < r < s \le n \), let \( \tau = (r\ s) \), and let \( \v \in F^n \) have its first \( k \) entries zero. Then \( \P_\tau \v \) has its first \( k \) entries zero, and
 \[
 \P_\tau\, \G_k(\v)\, \P_\tau = \G_k(\P_\tau \v).
 \]
 :::
-:::
 
 ::: {.proof}
-(a) By @thm-matrix-times-vector-columns, \( \P_\tau \e_j = \e_{\tau(j)} \) and so \( \P_\sigma \P_\tau \e_j = \P_\sigma \e_{\tau(j)} = \e_{\sigma(\tau(j))} \). So the \( j \)-th column of \( \P_\sigma \P_\tau \) is \( \e_{(\sigma \circ \tau)(j)} \), for every \( j \), which is the claim.
-
-(b) By @thm-three-views-of-product, \( (\P_\sigma\tp \P_\sigma)_{ij} = \e_{\sigma(i)}\tp \e_{\sigma(j)} \), which is \( 1 \) if \( \sigma(i) = \sigma(j) \) and \( 0 \) otherwise. Since \( \sigma \) is injective, \( \sigma(i) = \sigma(j) \) exactly when \( i = j \). Hence \( \P_\sigma\tp \P_\sigma = \I \), and by @thm-one-sided-inverse, \( \P_\sigma \) is invertible with inverse \( \P_\sigma\tp \).
-
-(c) Swapping rows \( r \) and \( s \) of \( \I \) produces a matrix whose column \( r \) is \( \e_s \), whose column \( s \) is \( \e_r \), and whose other columns \( j \) are \( \e_j \). These are the columns \( \e_{\tau(j)} \), so the swap matrix is \( \P_\tau \). Since \( \tau \circ \tau = \id \), part (a) gives \( \P_\tau^2 = \P_{\id} = \I \).
-
-(d) Write \( \P = \P_\tau \). Its effect on a vector is to exchange entries \( r \) and \( s \), which are both beyond position \( k \), so \( \P\v \) still has its first \( k \) entries zero. Since \( k \neq r, s \), we have \( \P\e_k = \e_{\tau(k)} = \e_k \). By (b) and (c), \( \P\tp = \P^{-1} = \P \), so \( \e_k\tp \P = \e_k\tp \P\tp = (\P\e_k)\tp = \e_k\tp \) by @thm-transpose-properties. Therefore
+Write \( \P = \P_\tau \). Its effect on a vector is to exchange entries \( r \) and \( s \), which are both beyond position \( k \), so \( \P\v \) still has its first \( k \) entries zero. Since \( k \neq r, s \), we have \( \P\e_k = \e_{\tau(k)} = \e_k \). By @lem-permutation-matrices (b) and (c), \( \P\tp = \P^{-1} = \P \), so \( \e_k\tp \P = \e_k\tp \P\tp = (\P\e_k)\tp = \e_k\tp \) by @thm-transpose-properties. Therefore
 \[
 \P(\I + \v\,\e_k\tp)\P = \P^2 + (\P\v)(\e_k\tp \P) = \I + (\P\v)\,\e_k\tp = \G_k(\P\v),
 \]
-using \( \P^2 = \I \) from (c). This proves the lemma.
+using \( \P^2 = \I \) from @lem-permutation-matrices (c). This proves the lemma.
 :::
-
-By (c) and @thm-row-op-is-left-multiplication, \( \P_\tau \A \) is \( \A \) with rows \( r \) and \( s \) swapped, and by (a) every permutation matrix is a product of such swaps applied in turn, since for \( n \ge 2 \) every permutation is a product of transpositions (@thm-transpositions-generate). So \( \P\A \) is always \( \A \) with its rows rearranged.
 
 ::: {#def-plu-factorization}
 [PLU factorization]
@@ -453,7 +426,7 @@ This also holds in the first case of the algorithm, where \( \P_k = \I \) and \(
 \[
 \G_m(-\boldsymbol{\ell}_m) \P_m \cdots \G_1(-\boldsymbol{\ell}_1) \P_1 = \G_m(-\boldsymbol{\ell}_m^{(m)}) \cdots \G_1(-\boldsymbol{\ell}_1^{(m)})\; \P_m \cdots \P_1 .
 \]
-For \( m = 1 \) both sides are \( \G_1(-\boldsymbol{\ell}_1) \P_1 \). Suppose the claim holds for \( m \), and multiply it on the left by \( \G_{m+1}(-\boldsymbol{\ell}_{m+1}) \P_{m+1} \). The matrix \( \P_{m+1} \) is \( \I \) or swaps rows \( m+1 \) and \( r_{m+1} > m + 1 \), both beyond every \( k \le m \). So by @lem-permutation-matrices (c) and (d), for each \( k \le m \) and each vector \( \v \) with its first \( k \) entries zero,
+For \( m = 1 \) both sides are \( \G_1(-\boldsymbol{\ell}_1) \P_1 \). Suppose the claim holds for \( m \), and multiply it on the left by \( \G_{m+1}(-\boldsymbol{\ell}_{m+1}) \P_{m+1} \). The matrix \( \P_{m+1} \) is \( \I \) or swaps rows \( m+1 \) and \( r_{m+1} > m + 1 \), both beyond every \( k \le m \). So by @lem-permutation-matrices (c) and @lem-swap-past-gauss-transform, for each \( k \le m \) and each vector \( \v \) with its first \( k \) entries zero,
 \[
 \P_{m+1}\, \G_k(\v) = \P_{m+1}\, \G_k(\v)\, \P_{m+1} \P_{m+1} = \G_k(\P_{m+1}\v)\, \P_{m+1},
 \]

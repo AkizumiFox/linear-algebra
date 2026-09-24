@@ -220,6 +220,7 @@ def navigation_data(book: Book) -> dict:
         "author": book.author,
         "home": {"title": preface.title, "path": preface.html_path} if preface else None,
         "extras": [
+            {"title": "Reading paths", "path": "paths.html", "icon": "bi-signpost-split"},
             {"title": "List of results", "path": "results.html", "icon": "bi-list-ol"},
             {"title": "Dependency graph", "path": "graph.html", "icon": "bi-diagram-3"},
         ],
@@ -360,7 +361,8 @@ def generate_site_files(book: Book):
     """robots.txt and sitemap.xml (when deploy-domain is set) and a 404 page."""
     domain = (book.config.get("deploy-domain") or "").strip()
     if domain:
-        paths = [p.html_path for p in book.pages] + ["results.html", "graph.html"]
+        from .extras import extra_page_names   # local import: extras imports this module
+        paths = [p.html_path for p in book.pages] + extra_page_names(book)
         urls = "\n".join(f"  <url><loc>https://{domain}/{path}</loc></url>" for path in paths)
         _write_if_changed(book.html_dir / "sitemap.xml",
                           '<?xml version="1.0" encoding="UTF-8"?>\n'
